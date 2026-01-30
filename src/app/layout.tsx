@@ -1,4 +1,4 @@
-import type { Metadata } from 'next'
+import type { Metadata, Viewport } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
@@ -9,6 +9,10 @@ import { SITE_NAME } from '@/lib/constants'
 const inter = Inter({ subsets: ['latin'] })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+
+export const viewport: Viewport = {
+  themeColor: '#0176D3', // Salesforce blue
+}
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -30,7 +34,6 @@ export const metadata: Metadata = {
     ],
   },
   manifest: '/site.webmanifest',
-  themeColor: '#0176D3', // Salesforce blue
   openGraph: {
     title: `Salesforce Certification Practice Questions & Study Guides | ${SITE_NAME}`,
     description:
