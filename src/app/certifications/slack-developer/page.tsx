@@ -1,0 +1,110 @@
+import CertificationCard from '@/components/CertificationCard'
+import ExamPrepContent from '@/components/ExamPrepContent'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageIntro from '@/components/CertPageIntro'
+import RelatedCertifications from '@/components/RelatedCertifications'
+import CertTableOfContents from '@/components/CertTableOfContents'
+import { getCertMetadata, getCertH1Text, slugToDisplayName } from '@/lib/cert-seo-data'
+import QuestionCard from '@/components/QuestionCard'
+import { Metadata } from 'next'
+import { getExamWeightage } from '@/lib/exam-weightage-data'
+
+const slug = 'slack-developer'
+export const metadata = getCertMetadata(slug)
+
+const sampleQuestions = [
+  {
+    question: "Which Slack API is used to build interactive components like buttons and menus?",
+    options: ["REST API only", "Block Kit", "Web API", "Events API only"],
+    correctAnswer: 1,
+    explanation: "Block Kit is the UI framework for designing interactive message surfaces in Slack apps.",
+  },
+  {
+    question: "What is the purpose of Slack App Manifests?",
+    options: ["To deploy to Heroku", "To define app configuration in YAML", "To send emails", "To configure CPQ"],
+    correctAnswer: 1,
+    explanation: "App Manifests allow you to define Slack app configuration (scopes, events, shortcuts) in YAML.",
+  },
+  {
+    question: "Which Slack event type is fired when a user joins a channel?",
+    options: ["message", "member_joined_channel", "app_mention", "reaction_added"],
+    correctAnswer: 1,
+    explanation: "member_joined_channel is the event emitted when a user joins a public or private channel.",
+  },
+  {
+    question: "What does the Slack Web API method chat.postMessage do?",
+    options: ["Delete a message", "Post a message to a channel", "Create a channel", "List users"],
+    correctAnswer: 1,
+    explanation: "chat.postMessage sends a message to a channel, user DM, or other conversation.",
+  },
+  {
+    question: "Which OAuth scope is required to post messages as your app?",
+    options: ["users:read", "chat:write", "channels:history", "im:read"],
+    correctAnswer: 1,
+    explanation: "chat:write allows the app to post messages to channels and conversations.",
+  },
+]
+
+export default function SlackDeveloperPage() {
+  const examSections = getExamWeightage(slug)
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+      <CertPageIntro slug={slug} />
+      
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Main Content */}
+        <div className="lg:col-span-3">
+          <CertificationCard
+            title={slugToDisplayName(slug)}
+            code="Slack Developer"
+            description="Certified Slack Developers have deep knowledge of the Slack Platform and Slack's APIs and possess the knowledge, skills, and experience to design and build custom applications within Slack."
+            examDetails={{ questions: 60, passingScore: '~68%', duration: '105 min', cost: '$200' }}
+            topics={['Slack APIs', 'Block Kit', 'Events', 'Interactivity', 'OAuth', 'Bolt Framework', 'App Manifests', 'Security', 'Testing', 'Deployment']}
+            examSections={examSections}
+            h1Text={getCertH1Text(slug)}
+          />
+
+          <div id="exam-prep">
+            <ExamPrepContent slug={slug} />
+          </div>
+
+          <div id="practice-questions" className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sample Practice Questions</h2>
+            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            {sampleQuestions.map((q, index) => (
+              <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
+            ))}
+          </div>
+          
+          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Want More Practice Questions?</h3>
+            <p className="text-gray-600 mb-6">Get access to our complete question bank with detailed explanations.</p>
+            <a href="/contact" className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">Contact Us for Full Access</a>
+          </div>
+
+          <div id="related-certs">
+            <RelatedCertifications currentSlug={slug} />
+          </div>
+
+          {/* FAQ section - rendered after H1 for proper SEO structure */}
+          <div id="faq">
+            <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
+          </div>
+        </div>
+
+        {/* Sidebar - Table of Contents */}
+        <aside className="lg:col-span-1">
+          <CertTableOfContents
+            sections={[
+              { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'practice-questions', title: 'Practice Questions' },
+              { id: 'more-questions', title: 'Get More Questions' },
+              { id: 'related-certs', title: 'Related Certifications' },
+              { id: 'faq', title: 'Frequently Asked Questions' }]}
+          />
+        </aside>
+      </div>
+    </div>
+  )
+}

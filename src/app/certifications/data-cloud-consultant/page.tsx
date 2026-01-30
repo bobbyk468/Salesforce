@@ -1,0 +1,110 @@
+import CertificationCard from '@/components/CertificationCard'
+import ExamPrepContent from '@/components/ExamPrepContent'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageIntro from '@/components/CertPageIntro'
+import RelatedCertifications from '@/components/RelatedCertifications'
+import CertTableOfContents from '@/components/CertTableOfContents'
+import { getCertMetadata, getCertH1Text, slugToDisplayName } from '@/lib/cert-seo-data'
+import QuestionCard from '@/components/QuestionCard'
+import { Metadata } from 'next'
+import { getExamWeightage } from '@/lib/exam-weightage-data'
+
+const slug = 'data-cloud-consultant'
+export const metadata = getCertMetadata(slug)
+
+const sampleQuestions = [
+  {
+    question: "What is the primary purpose of Salesforce Data Cloud?",
+    options: ["Only storage", "Unifying and activating customer data across sources for a single view", "Email only", "CPQ only"],
+    correctAnswer: 1,
+    explanation: "Data Cloud unifies data from multiple sources to create a single, actionable view of the customer.",
+  },
+  {
+    question: "Which concept in Data Cloud represents a unified profile of a customer?",
+    options: ["Lead", "Data Model Object", "Identity Resolution", "Segment"],
+    correctAnswer: 2,
+    explanation: "Identity Resolution links records across sources to create a unified identity and profile.",
+  },
+  {
+    question: "What is a Segment in Data Cloud?",
+    options: ["A report", "A group of profiles that meet defined criteria for activation", "An email", "A campaign"],
+    correctAnswer: 1,
+    explanation: "Segments define audiences based on profile attributes and can be activated across channels.",
+  },
+  {
+    question: "Which role does a Data Cloud Consultant typically fulfill?",
+    options: ["Email marketing only", "Implementing and consulting on enterprise data platforms in a customer-facing role", "Slack configuration only", "UI design only"],
+    correctAnswer: 1,
+    explanation: "Data Cloud Consultants implement and consult on Data Cloud in customer-facing roles.",
+  },
+  {
+    question: "What does activation mean in Data Cloud?",
+    options: ["Deleting data", "Sending segment data to destinations (e.g., Marketing Cloud, Advertising)", "Backup only", "Reporting only"],
+    correctAnswer: 1,
+    explanation: "Activation sends segment and profile data to downstream systems for campaigns and personalization.",
+  },
+]
+
+export default function DataCloudConsultantPage() {
+  const examSections = getExamWeightage(slug)
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+      <CertPageIntro slug={slug} />
+      
+      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Main Content */}
+        <div className="lg:col-span-3">
+          <CertificationCard
+            title={slugToDisplayName(slug)}
+            code="Data Cloud"
+            description="Certified Data Cloud Consultants have experience implementing and consulting on enterprise data platforms in a customer-facing role."
+            examDetails={{ questions: 60, passingScore: '~65%', duration: '105 min', cost: '$200' }}
+            topics={['Data Cloud Basics', 'Identity Resolution', 'Data Model', 'Segments', 'Activation', 'Connectors', 'Transformations', 'Governance', 'Reporting', 'Best Practices']}
+            examSections={examSections}
+            h1Text={getCertH1Text(slug)}
+          />
+
+          <div id="exam-prep">
+            <ExamPrepContent slug={slug} />
+          </div>
+
+          <div id="practice-questions" className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sample Practice Questions</h2>
+            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            {sampleQuestions.map((q, index) => (
+              <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
+            ))}
+          </div>
+          
+          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Want More Practice Questions?</h3>
+            <p className="text-gray-600 mb-6">Get access to our complete question bank with detailed explanations.</p>
+            <a href="/contact" className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">Contact Us for Full Access</a>
+          </div>
+
+          <div id="related-certs">
+            <RelatedCertifications currentSlug={slug} />
+          </div>
+
+          {/* FAQ section - rendered after H1 for proper SEO structure */}
+          <div id="faq">
+            <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
+          </div>
+        </div>
+
+        {/* Sidebar - Table of Contents */}
+        <aside className="lg:col-span-1">
+          <CertTableOfContents
+            sections={[
+              { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'practice-questions', title: 'Practice Questions' },
+              { id: 'more-questions', title: 'Get More Questions' },
+              { id: 'related-certs', title: 'Related Certifications' },
+              { id: 'faq', title: 'Frequently Asked Questions' }]}
+          />
+        </aside>
+      </div>
+    </div>
+  )
+}
