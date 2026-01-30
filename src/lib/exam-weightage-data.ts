@@ -265,11 +265,6 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Content and Journey Builder', percentage: 25 },
     { name: 'Analytics and Administration', percentage: 25 },
   ],
-  'marketing-cloud-engagement-foundations': [
-    { name: 'Marketing Cloud Overview', percentage: 35 },
-    { name: 'Subscriber and Data', percentage: 35 },
-    { name: 'Content and Sends', percentage: 30 },
-  ],
   'application-architect': [
     { name: 'Data Architecture', percentage: 25 },
     { name: 'Integration Architecture', percentage: 25 },
