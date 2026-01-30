@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import type { Metadata } from 'next'
 import {
   Shield,
   Code,
@@ -22,6 +23,13 @@ import {
 import FaqAccordion from '@/components/FaqAccordion'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+
+export const metadata: Metadata = {
+  alternates: { canonical: siteUrl },
+  openGraph: { url: siteUrl },
+}
 
 const certificationCategories = [
   {
@@ -227,8 +235,6 @@ const faqItems = [
 ]
 
 export default function Home() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
-
   /** Use official "Salesforce Certified X" naming for all certs in the grid. */
   const categoriesWithOfficialNames = certificationCategories.map((cat) => ({
     ...cat,
