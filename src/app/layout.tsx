@@ -71,6 +71,7 @@ export const metadata: Metadata = {
   other: {
     'article:published_time': '2025-01-01T00:00:00Z',
     'article:modified_time': '2025-01-30T00:00:00Z',
+    'msvalidate.01': 'C988188920AE8258DD5A37CE98DE4B96', // Bing Webmaster Tools
   },
 }
 
