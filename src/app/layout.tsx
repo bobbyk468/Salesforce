@@ -65,6 +65,9 @@ export const metadata: Metadata = {
     index: true,
     follow: true,
   },
+  verification: {
+    google: 'AYiD5uBX-IrXU2ct31djzowDhOENDWAtm8NBBn0P01o',
+  },
   other: {
     'article:published_time': '2025-01-01T00:00:00Z',
     'article:modified_time': '2025-01-30T00:00:00Z',
