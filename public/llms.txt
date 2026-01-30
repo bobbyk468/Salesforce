@@ -1,0 +1,42 @@
+# Trailblaze Prep
+
+> Trailblaze Prep is an independent resource for Salesforce certification preparation: practice questions, section-wise exam weightage, and study guides for Admin, Developer, Consultant, Architect, and more. Browse by role and start free.
+
+Key pages:
+
+- Home: overview of certifications by role, FAQ, and certification path
+- All Certifications: list of every certification with links to individual study pages
+- Certification Path: recommended order and dependencies
+- Become a CTA: information on the Technical Architect credential
+- About: mission and content approach
+- Contact: email and WhatsApp
+
+Each certification page includes: official exam name and code, section weightage, study plan, sample practice questions, related certifications, and FAQ.
+
+## Main
+
+- [Home](https://trailblazeprep.com/)
+- [All Salesforce Certifications](https://trailblazeprep.com/certifications)
+- [Certification Path](https://trailblazeprep.com/certification-path)
+- [Become a CTA](https://trailblazeprep.com/become-cta)
+- [About](https://trailblazeprep.com/about)
+- [Contact](https://trailblazeprep.com/contact)
+
+## Certification roles (category index)
+
+- [Associate](https://trailblazeprep.com/certifications/role/associate)
+- [Administrator](https://trailblazeprep.com/certifications/role/administrator)
+- [Developer](https://trailblazeprep.com/certifications/role/developer)
+- [Consultant](https://trailblazeprep.com/certifications/role/consultant)
+- [Marketing](https://trailblazeprep.com/certifications/role/marketing)
+- [Architect](https://trailblazeprep.com/certifications/role/architect)
+- [Accredited Professional](https://trailblazeprep.com/certifications/role/accredited-professional)
+- [Sales](https://trailblazeprep.com/certifications/role/sales)
+- [Designer](https://trailblazeprep.com/certifications/role/designer)
+- [Tableau](https://trailblazeprep.com/certifications/role/tableau)
+
+## Optional
+
+- [Terms of Use](https://trailblazeprep.com/terms)
+- [Privacy Policy](https://trailblazeprep.com/privacy)
+- [Sitemap (XML)](https://trailblazeprep.com/sitemap.xml)

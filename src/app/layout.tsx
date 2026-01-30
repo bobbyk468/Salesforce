@@ -4,7 +4,8 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactSidebar from '@/components/ContactSidebar'
-import { SITE_NAME } from '@/lib/constants'
+import GoogleAnalytics from '@/components/GoogleAnalytics'
+import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -14,14 +15,18 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
+// Title kept to 50–60 chars for SERPs; template adds " | Trailblaze Prep" for child pages
+const defaultTitle = `Salesforce Cert Practice & Study Guides | ${SITE_NAME}`
+const defaultDescription =
+  'Prepare for Salesforce certifications with practice questions, exam weightage, and study guides. Browse by role—Admin, Developer, Consultant, Architect. Start free.'
+
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `Salesforce Certification Practice Questions & Study Guides | ${SITE_NAME}`,
+    default: defaultTitle,
     template: `%s | ${SITE_NAME}`,
   },
-  description:
-    'Prepare for every Salesforce certification with practice questions, section-wise exam weightage, and study guides. Know where to focus and when you\'re ready—browse by role and start free. Admin, Developer, Consultant, Architect & more.',
+  description: defaultDescription,
   keywords:
     'Salesforce certification, Salesforce practice questions, Salesforce exam weightage, ADM-201, Platform Administrator, Sales Cloud, Service Cloud, Marketing Cloud, Salesforce study guide',
   icons: {
@@ -35,9 +40,8 @@ export const metadata: Metadata = {
   },
   manifest: '/site.webmanifest',
   openGraph: {
-    title: `Salesforce Certification Practice Questions & Study Guides | ${SITE_NAME}`,
-    description:
-      'Prepare for every Salesforce certification with practice questions, section-wise exam weightage, and study guides. Know where to focus—browse by role and start free.',
+    title: defaultTitle,
+    description: defaultDescription,
     type: 'website',
     locale: 'en_US',
     url: siteUrl,
@@ -47,14 +51,14 @@ export const metadata: Metadata = {
         url: `${siteUrl}/og-image.png`,
         width: 1200,
         height: 630,
-        alt: 'Trailblaze Prep - Salesforce Certification Practice Questions & Study Guides',
+        alt: 'Trailblaze Prep - Salesforce certification practice questions and study guides',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Salesforce Certification Practice Questions & Study Guides',
-    description: 'Practice questions, exam weightage, and study guides for all Salesforce certifications. Browse by role and start free.',
+    title: defaultTitle,
+    description: defaultDescription,
     images: [`${siteUrl}/og-image.png`],
   },
   robots: {
@@ -80,7 +84,7 @@ export default function RootLayout({
     description:
       'Independent Salesforce certification preparation resource: practice questions, section-wise exam weightage, and study guides for Admin, Developer, Consultant, Architect, and more.',
     logo: `${siteUrl}/logo.png`,
-    sameAs: [],
+    sameAs: SOCIAL_LINKS.filter(Boolean),
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
@@ -98,6 +102,7 @@ export default function RootLayout({
         <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
       </head>
       <body className={inter.className}>
+        <GoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
