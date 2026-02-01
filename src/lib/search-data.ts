@@ -56,13 +56,12 @@ export const POPULAR_SEARCHES: SearchResult[] = (() => {
     '/certifications/service-cloud',
     '/certifications/technical-architect',
   ]
-  return hrefs
-    .map((href) => {
-      const cert = SEARCHABLE_CERTS.find((c) => c.href === href)
-      if (!cert) return null
-      return { ...cert, examCode: HREF_TO_EXAM_CODE[href] }
-    })
-    .filter((c): c is SearchResult => c !== null)
+  const result: SearchResult[] = []
+  for (const href of hrefs) {
+    const cert = SEARCHABLE_CERTS.find((c) => c.href === href)
+    if (cert) result.push({ ...cert, examCode: HREF_TO_EXAM_CODE[href] })
+  }
+  return result
 })()
 
 /** Exam code suggestions for quick search (code, name, href). */
