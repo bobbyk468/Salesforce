@@ -15,8 +15,8 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
-// Title kept to 50–60 chars for SERPs; template adds " | Trailblaze Prep" for child pages
-const defaultTitle = `Salesforce Cert Practice & Study Guides | ${SITE_NAME}`
+// Homepage/default title: includes "Certification" + "Practice Questions" for higher-intent SEO
+const defaultTitle = `Salesforce Certification Practice Questions & Study Guides | ${SITE_NAME}`
 const defaultDescription =
   'Prepare for Salesforce certifications with practice questions, exam weightage, and study guides. Browse by role—Admin, Developer, Consultant, Architect. Start free.'
 
