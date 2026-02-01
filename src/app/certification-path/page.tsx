@@ -38,10 +38,13 @@ const STAGE_STYLES: Record<PathStage, { bg: string; border: string; label: strin
   },
 }
 
+const pathTitle = 'Salesforce Certification Paths | Trailblaze Prep'
+const pathDescription =
+  'Salesforce certification paths from Admin to CTA. Plan your journey from foundational to advanced certifications including Developer, Architect, and more.'
+
 export const metadata: Metadata = {
-  title: 'Salesforce Certification Paths | Basic to Advanced | Trailblaze Prep',
-  description:
-    'Plan your certification journey with clear paths from foundational to advanced: Platform Admin, Developer, Architect (CTA), Marketing Cloud, Tableau, MuleSoft, and more.',
+  title: { absolute: pathTitle },
+  description: pathDescription,
   keywords:
     'Salesforce certification path, certification roadmap, CTA path, admin path, developer path, Salesforce career path',
 }
@@ -50,9 +53,8 @@ const pathBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Certification Paths
 
 export default function CertificationPathPage() {
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'Salesforce Certification Paths | Basic to Advanced | Trailblaze Prep',
-    description:
-      'Plan your certification journey with clear paths from foundational to advanced: Platform Admin, Developer, Architect (CTA), Marketing Cloud, Tableau, MuleSoft, and more.',
+    name: pathTitle,
+    description: pathDescription,
     path: '/certification-path',
     breadcrumbItems: pathBreadcrumb,
   })

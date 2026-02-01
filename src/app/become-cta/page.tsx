@@ -4,10 +4,13 @@ import { Award, Target, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react'
 import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount } from '@/lib/cta-journey-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
+const ctaDescription =
+  'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'
+
 export const metadata: Metadata = {
-  title: 'Become a CTA | Certified Technical Architect Path from Beginner | Trailblaze Prep',
-  description:
-    'Step-by-step path to Salesforce Certified Technical Architect (CTA) from beginner. Covers maximum certifications: Foundations, Admin, Developer, Domain Architects, Application & System Architect, CTA board.',
+  title: { absolute: ctaTitle },
+  description: ctaDescription,
   keywords:
     'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',
 }
@@ -38,9 +41,8 @@ export default function BecomeCtaPage() {
   const totalCerts = getCtaJourneyCertCount()
   const requiredCerts = getCtaJourneyRequiredCount()
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'Become a CTA | Certified Technical Architect Path from Beginner | Trailblaze Prep',
-    description:
-      'Step-by-step path to Salesforce Certified Technical Architect (CTA) from beginner. Covers maximum certifications: Foundations, Admin, Developer, Domain Architects, Application & System Architect, CTA board.',
+    name: ctaTitle,
+    description: ctaDescription,
     path: '/become-cta',
     breadcrumbItems: becomeCtaBreadcrumb,
   })

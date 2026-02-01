@@ -1,10 +1,12 @@
 import type { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const contactDescription =
+  'Contact Trailblaze Prep for questions about Salesforce certification prep, practice questions, and study guides for Admin, Developer, and Consultant exams.'
+
 export const metadata: Metadata = {
   title: 'Contact Us',
-  description:
-    'Contact Trailblaze Prep for questions about practice questions, study guides, or certification prep. We respond to inquiries about Admin, Developer, Consultant, and other Salesforce credentials.',
+  description: contactDescription,
 }
 
 const contactBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }]
@@ -12,8 +14,7 @@ const contactBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Contact', url: '
 export default function ContactLayout({ children }: { children: React.ReactNode }) {
   const webPageJsonLd = getWebPageJsonLd({
     name: 'Contact Us | Trailblaze Prep',
-    description:
-      'Contact Trailblaze Prep for questions about practice questions, study guides, or certification prep. We respond to inquiries about Admin, Developer, Consultant, and other Salesforce credentials.',
+    description: contactDescription,
     path: '/contact',
     breadcrumbItems: contactBreadcrumb,
   })
