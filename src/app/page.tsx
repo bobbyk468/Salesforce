@@ -475,8 +475,8 @@ export default function Home() {
 
       {/* What Makes Us Different - Card-style panel (distinct background) */}
       <section className="py-20 px-4 bg-salesforce-blue/5" aria-labelledby="different-heading">
-        <div className="max-w-6xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <div className="text-center mb-12">
+        <div className="max-w-6xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
+          <div className="text-center mb-12 pb-10 border-b border-gray-100">
             <h2 id="different-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Makes Us Different
             </h2>
@@ -543,13 +543,15 @@ export default function Home() {
 
       {/* What You Get - Card-style panel (distinct background) */}
       <section className="py-20 px-4 bg-gray-100/80" aria-labelledby="features-heading">
-        <div className="max-w-7xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
-            What You Get
-          </h2>
-          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+        <div className="max-w-7xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
+          <div className="text-center pb-10 mb-10 border-b border-gray-100">
+            <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
+              What You Get
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto">
             Practice questions, updated content, and materials aligned with official exam outlines.
-          </p>
+            </p>
+          </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature) => (
               <div
@@ -586,13 +588,15 @@ export default function Home() {
 
       {/* What's Inside Each Certification Page - Card-style panel (distinct background) */}
       <section className="py-20 px-4 bg-slate-50/90" aria-labelledby="how-it-works-heading">
-        <div className="max-w-4xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
-            What&apos;s Inside Each Certification Page
-          </h2>
-          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-            Every certification page gives you section-wise exam weightage, exam tips, prerequisites, and sample practice questions with explanations—so you know where to focus and what to expect.
-          </p>
+        <div className="max-w-4xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
+          <div className="text-center pb-10 mb-10 border-b border-gray-100">
+            <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
+              What&apos;s Inside Each Certification Page
+            </h2>
+            <p className="text-center text-gray-600 max-w-2xl mx-auto">
+              Every certification page gives you section-wise exam weightage, exam tips, prerequisites, and sample practice questions with explanations—so you know where to focus and what to expect.
+            </p>
+          </div>
           <div className="rounded-2xl border-l-4 border-salesforce-blue bg-salesforce-blue/5 border border-gray-100 shadow-md p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
