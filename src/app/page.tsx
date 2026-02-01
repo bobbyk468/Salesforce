@@ -213,8 +213,8 @@ const features = [
   },
   {
     icon: TrendingUp,
-    title: 'Proven Results',
-    description: 'Study materials and practice questions aligned with official exam outlines to help you prepare',
+    title: 'Aligned with Official Exam Outlines',
+    description: 'Content aligned with official Salesforce exam blueprints so you study what’s actually on the exam. Trusted by 1,000+ learners.',
     proof: { learners: '1,000+', rating: 4.8 },
   },
 ]
@@ -473,9 +473,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Makes Us Different - Shaded panel that pops */}
-      <section className="py-20 px-4 bg-gradient-to-b from-salesforce-blue/5 to-white" aria-labelledby="different-heading">
-        <div className="max-w-6xl mx-auto rounded-3xl border-2 border-salesforce-blue/20 bg-white shadow-lg p-8 md:p-12 ring-1 ring-salesforce-blue/5">
+      {/* What Makes Us Different - Card-style panel */}
+      <section className="py-20 px-4 bg-gray-100/60" aria-labelledby="different-heading">
+        <div className="max-w-6xl mx-auto rounded-3xl border-2 border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-2 ring-salesforce-blue/10">
           <div className="text-center mb-12">
             <h2 id="different-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Makes Us Different
@@ -541,14 +541,14 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Practice Questions / Updated Content / Proven Results - Shaded cards that pop */}
-      <section className="py-20 px-4 bg-white" aria-labelledby="features-heading">
-        <div className="max-w-7xl mx-auto">
+      {/* What You Get - Card-style panel */}
+      <section className="py-20 px-4 bg-gray-100/60" aria-labelledby="features-heading">
+        <div className="max-w-7xl mx-auto rounded-3xl border-2 border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-2 ring-salesforce-blue/10">
           <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
             What You Get
           </h2>
           <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
-            Practice questions, updated content, and proven study materials—all aligned with official exam outlines.
+            Practice questions, updated content, and materials aligned with official exam outlines.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature) => (
@@ -584,9 +584,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What's Inside Each Certification Page - Shaded panel that pops */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-salesforce-blue/5" aria-labelledby="how-it-works-heading">
-        <div className="max-w-4xl mx-auto rounded-3xl border-2 border-salesforce-blue/20 bg-white shadow-lg p-8 md:p-12 ring-1 ring-salesforce-blue/5">
+      {/* What's Inside Each Certification Page - Card-style panel */}
+      <section className="py-20 px-4 bg-gray-100/60" aria-labelledby="how-it-works-heading">
+        <div className="max-w-4xl mx-auto rounded-3xl border-2 border-salesforce-blue/25 bg-white shadow-xl p-8 md:p-12 ring-2 ring-salesforce-blue/10">
           <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
             What&apos;s Inside Each Certification Page
           </h2>

@@ -75,7 +75,7 @@ export default function CertSearch() {
   return (
     <div className="relative w-full max-w-xs">
       <label htmlFor="cert-search" className="sr-only">
-        Search certifications by exam code or name
+        Search certifications (e.g. ADM-201, Platform Developer I)
       </label>
       <div className="relative">
         <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
@@ -88,7 +88,7 @@ export default function CertSearch() {
           onKeyDown={handleKeyDown}
           onFocus={handleFocus}
           onBlur={handleBlur}
-          placeholder="Try: ADM-201, PD1, Platform Developer I…"
+          placeholder="Try: ADM-201, Platform Developer I…"
           className="w-full pl-9 pr-4 py-2 rounded-lg border border-gray-200 text-sm text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-salesforce-blue/30 focus:border-salesforce-blue"
           aria-autocomplete="list"
           aria-controls="cert-search-results"
