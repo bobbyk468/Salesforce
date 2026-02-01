@@ -31,8 +31,10 @@ export const metadata: Metadata = {
   openGraph: { url: siteUrl },
 }
 
+/** Role slug for "View all" link: /certifications/role/[slug] */
 const certificationCategories = [
   {
+    slug: 'associate',
     title: 'Associate',
     description: 'Foundational credentials for the Customer 360 Platform',
     icon: GraduationCap,
@@ -45,6 +47,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'administrator',
     title: 'Administrator',
     description: 'Master Salesforce administration, security, and automation',
     icon: Shield,
@@ -62,6 +65,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'developer',
     title: 'Developer',
     description: 'Build custom applications with Apex, LWC, MuleSoft, and more',
     icon: Code,
@@ -80,6 +84,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'consultant',
     title: 'Consultant',
     description: 'Design and implement solutions across Sales, Service, and industry clouds',
     icon: Briefcase,
@@ -99,6 +104,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'marketing',
     title: 'Marketing',
     description: 'Digital marketing automation and customer engagement',
     icon: Mail,
@@ -114,6 +120,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'architect',
     title: 'Architect',
     description: 'Design secure, scalable, high-performing solutions on the platform',
     icon: Layout,
@@ -132,6 +139,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'accredited-professional',
     title: 'Accredited Professional',
     description: 'Product and industry credentials for Salesforce Partners',
     icon: BadgeCheck,
@@ -155,6 +163,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'sales',
     title: 'Sales Professional',
     description: 'Sales excellence and customer-centric methodology',
     icon: Target,
@@ -164,6 +173,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'designer',
     title: 'Designer',
     description: 'Human-centered experience strategy and UX design',
     icon: Palette,
@@ -174,6 +184,7 @@ const certificationCategories = [
     ],
   },
   {
+    slug: 'tableau',
     title: 'Tableau',
     description: 'Analytics and data visualization with Tableau',
     icon: TrendingUp,
@@ -460,9 +471,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Makes Us Different - Card-style section */}
-      <section className="py-20 px-4 bg-gray-50/80" aria-labelledby="different-heading">
-        <div className="max-w-6xl mx-auto rounded-3xl border border-gray-100 bg-white shadow-sm p-8 md:p-12">
+      {/* What Makes Us Different - Shaded panel that pops */}
+      <section className="py-20 px-4 bg-gradient-to-b from-salesforce-blue/5 to-white" aria-labelledby="different-heading">
+        <div className="max-w-6xl mx-auto rounded-3xl border-2 border-salesforce-blue/20 bg-white shadow-lg p-8 md:p-12 ring-1 ring-salesforce-blue/5">
           <div className="text-center mb-12">
             <h2 id="different-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Makes Us Different
@@ -474,8 +485,8 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Feature 1 */}
-            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-6">
+            <div className="rounded-2xl border-l-4 border-salesforce-blue bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-salesforce-blue/30 transition-all">
+              <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue/10 rounded-2xl mb-6">
                 <BarChart3 className="h-8 w-8 text-salesforce-blue" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">
@@ -487,7 +498,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
+            <div className="rounded-2xl border-l-4 border-purple-500 bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-purple-200 transition-all">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6">
                 <Lightbulb className="h-8 w-8 text-purple-600" />
               </div>
@@ -500,7 +511,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
+            <div className="rounded-2xl border-l-4 border-green-500 bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-green-200 transition-all">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-6">
                 <FileQuestion className="h-8 w-8 text-green-600" />
               </div>
@@ -514,7 +525,7 @@ export default function Home() {
           </div>
 
           {/* Update Notice */}
-          <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-6 flex items-start gap-4">
+          <div className="bg-salesforce-blue/10 border-l-4 border-salesforce-blue border border-salesforce-blue/20 rounded-xl p-6 flex items-start gap-4">
             <div className="flex-shrink-0">
               <RefreshCw className="h-6 w-6 text-salesforce-blue" />
             </div>
@@ -528,20 +539,23 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section - Card-style emphasis: Practice Questions, Updated Content, Proven Results */}
-      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50/50" aria-labelledby="features-heading">
+      {/* Practice Questions / Updated Content / Proven Results - Shaded cards that pop */}
+      <section className="py-20 px-4 bg-white" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
-          <h2 id="features-heading" className="sr-only">
-            Practice Questions, Updated Content, Proven Results
+          <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
+            What You Get
           </h2>
+          <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
+            Practice questions, updated content, and proven study materials—all aligned with official exam outlines.
+          </p>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature) => (
               <div
                 key={feature.title}
-                className="text-center p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:border-salesforce-blue/20 transition-all duration-200"
+                className="text-center p-8 rounded-2xl border-l-4 border-salesforce-blue border border-gray-100 bg-salesforce-blue/5 shadow-md hover:shadow-lg hover:bg-salesforce-blue/10 transition-all duration-200"
               >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue/10 rounded-2xl mb-5">
-                  <feature.icon className="h-8 w-8 text-salesforce-blue" />
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue rounded-2xl mb-5 text-white">
+                  <feature.icon className="h-8 w-8" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
@@ -551,16 +565,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What's Inside Each Certification Page - Card-style section */}
-      <section className="py-20 px-4 bg-white" aria-labelledby="how-it-works-heading">
-        <div className="max-w-4xl mx-auto rounded-3xl border border-gray-100 bg-gray-50/50 shadow-sm p-8 md:p-12">
+      {/* What's Inside Each Certification Page - Shaded panel that pops */}
+      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-salesforce-blue/5" aria-labelledby="how-it-works-heading">
+        <div className="max-w-4xl mx-auto rounded-3xl border-2 border-salesforce-blue/20 bg-white shadow-lg p-8 md:p-12 ring-1 ring-salesforce-blue/5">
           <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
             What&apos;s Inside Each Certification Page
           </h2>
           <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
             Every certification page gives you section-wise exam weightage, exam tips, prerequisites, and sample practice questions with explanations—so you know where to focus and what to expect.
           </p>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
+          <div className="rounded-2xl border-l-4 border-salesforce-blue bg-salesforce-blue/5 border border-gray-100 shadow-md p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-salesforce-blue/10 rounded-full mb-3">
@@ -610,34 +624,45 @@ export default function Home() {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categoriesWithOfficialNames.map((category) => (
-              <div
-                key={category.title}
-                className="bg-white rounded-xl shadow-lg overflow-hidden card-hover border border-gray-100 hover:border-salesforce-blue/50 transition-all duration-200"
-              >
-                <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                  <category.icon className="h-12 w-12 mb-4" />
-                  <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
-                  <p className="text-white/80">{category.description}</p>
+            {categoriesWithOfficialNames.map((category) => {
+              const topCerts = category.certifications.slice(0, 4)
+              const viewAllHref = `/certifications/role/${category.slug}`
+              return (
+                <div
+                  key={category.title}
+                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-salesforce-blue/50 transition-all duration-200"
+                >
+                  <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
+                    <category.icon className="h-12 w-12 mb-4" />
+                    <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
+                    <p className="text-white/80">{category.description}</p>
+                  </div>
+                  <div className="p-6">
+                    <ul className="space-y-3">
+                      {topCerts.map((cert) => (
+                        <li key={cert.href}>
+                          <Link
+                            href={cert.href}
+                            className="flex items-center text-gray-700 hover:text-salesforce-blue transition-colors group"
+                          >
+                            <Award className="h-5 w-5 mr-2 text-gray-400 group-hover:text-salesforce-blue flex-shrink-0" />
+                            <span>{cert.name}</span>
+                            <ArrowRight className="h-4 w-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
+                          </Link>
+                        </li>
+                      ))}
+                    </ul>
+                    <Link
+                      href={viewAllHref}
+                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark transition-colors"
+                    >
+                      View all {category.title} certs
+                      <ArrowRight className="h-4 w-4" />
+                    </Link>
+                  </div>
                 </div>
-                <div className="p-6">
-                  <ul className="space-y-3">
-                    {category.certifications.map((cert) => (
-                      <li key={cert.href}>
-                        <Link
-                          href={cert.href}
-                          className="flex items-center text-gray-700 hover:text-salesforce-blue transition-colors group"
-                        >
-                          <Award className="h-5 w-5 mr-2 text-gray-400 group-hover:text-salesforce-blue" />
-                          <span>{cert.name}</span>
-                          <ArrowRight className="h-4 w-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity" />
-                        </Link>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
-              </div>
-            ))}
+              )
+            })}
           </div>
         </div>
       </section>
