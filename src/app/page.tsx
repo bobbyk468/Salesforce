@@ -460,9 +460,9 @@ export default function Home() {
         </div>
       </section>
 
-      {/* What Makes Us Different - Visual Section */}
-      <section className="py-20 px-4 bg-gradient-to-b from-gray-50 to-white" aria-labelledby="different-heading">
-        <div className="max-w-6xl mx-auto">
+      {/* What Makes Us Different - Card-style section */}
+      <section className="py-20 px-4 bg-gray-50/80" aria-labelledby="different-heading">
+        <div className="max-w-6xl mx-auto rounded-3xl border border-gray-100 bg-white shadow-sm p-8 md:p-12">
           <div className="text-center mb-12">
             <h2 id="different-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               What Makes Us Different
@@ -474,7 +474,7 @@ export default function Home() {
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {/* Feature 1 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-blue-100 rounded-2xl mb-6">
                 <BarChart3 className="h-8 w-8 text-salesforce-blue" />
               </div>
@@ -487,7 +487,7 @@ export default function Home() {
             </div>
 
             {/* Feature 2 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6">
                 <Lightbulb className="h-8 w-8 text-purple-600" />
               </div>
@@ -500,7 +500,7 @@ export default function Home() {
             </div>
 
             {/* Feature 3 */}
-            <div className="bg-white rounded-2xl shadow-lg p-8 border border-gray-100 hover:shadow-xl transition-shadow">
+            <div className="bg-gray-50/50 rounded-2xl shadow-sm p-8 border border-gray-100 hover:shadow-md hover:border-salesforce-blue/20 transition-all">
               <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-6">
                 <FileQuestion className="h-8 w-8 text-green-600" />
               </div>
@@ -528,13 +528,19 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Features Section */}
-      <section className="py-20 px-4 bg-white">
+      {/* Features Section - Card-style emphasis: Practice Questions, Updated Content, Proven Results */}
+      <section className="py-20 px-4 bg-gradient-to-b from-white to-gray-50/50" aria-labelledby="features-heading">
         <div className="max-w-7xl mx-auto">
+          <h2 id="features-heading" className="sr-only">
+            Practice Questions, Updated Content, Proven Results
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {features.map((feature) => (
-              <div key={feature.title} className="text-center p-6">
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue/10 rounded-full mb-4">
+              <div
+                key={feature.title}
+                className="text-center p-8 rounded-2xl border border-gray-100 bg-white shadow-sm hover:shadow-md hover:border-salesforce-blue/20 transition-all duration-200"
+              >
+                <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue/10 rounded-2xl mb-5">
                   <feature.icon className="h-8 w-8 text-salesforce-blue" />
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
@@ -545,16 +551,16 @@ export default function Home() {
         </div>
       </section>
 
-      {/* How it works / What's inside a certification page */}
-      <section className="py-20 px-4 bg-gray-50" aria-labelledby="how-it-works-heading">
-        <div className="max-w-4xl mx-auto">
+      {/* What's Inside Each Certification Page - Card-style section */}
+      <section className="py-20 px-4 bg-white" aria-labelledby="how-it-works-heading">
+        <div className="max-w-4xl mx-auto rounded-3xl border border-gray-100 bg-gray-50/50 shadow-sm p-8 md:p-12">
           <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
             What&apos;s Inside Each Certification Page
           </h2>
           <p className="text-center text-gray-600 mb-10 max-w-2xl mx-auto">
             Every certification page gives you section-wise exam weightage, exam tips, prerequisites, and sample practice questions with explanations—so you know where to focus and what to expect.
           </p>
-          <div className="bg-white rounded-2xl border border-gray-100 shadow-lg p-8">
+          <div className="bg-white rounded-2xl border border-gray-100 shadow-sm p-8">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               <div className="text-center">
                 <div className="inline-flex items-center justify-center w-12 h-12 bg-salesforce-blue/10 rounded-full mb-3">
