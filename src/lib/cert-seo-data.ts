@@ -46,39 +46,37 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect-review-board': 'CTA Review Board',
 }
 
-/** Short title for <title>: under 60 chars to avoid truncation in SERPs. Front-loads "Practice Questions" for intent. */
+/** Page <title>: always includes "Practice Questions & Study Guide" for intent; no mid-title truncation. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
-  const maxMain = 60 - brand.length // 47 chars for main part
+  const suffix = ' Practice Questions & Study Guide'
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const certName = slugToDisplayName(slug)
   const primaryName = getCertPrimaryName(slug, certName)
   const shortTitles: Record<string, string> = {
-    administrator: 'Salesforce Certified Platform Administrator Practice Questions & Study Guide',
-    'advanced-administrator': 'Salesforce Certified Advanced Administrator Practice Questions & Study Guide',
-    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant Practice Questions & Study Guide',
-    'service-cloud': 'Salesforce Certified Service Cloud Consultant Practice Questions & Study Guide',
-    'app-builder': 'Salesforce Certified Platform App Builder Practice Questions & Study Guide',
-    'developer-1': 'Salesforce Certified Platform Developer I Practice Questions & Study Guide',
-    'developer-2': 'Salesforce Certified Platform Developer II Practice Questions & Study Guide',
-    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist Practice Questions & Study Guide',
-    'data-architect': 'Salesforce Certified Data Architect Practice Questions & Study Guide',
-    'pardot-specialist': 'Salesforce Certified Account Engagement (Pardot) Specialist Practice Questions & Study Guide',
-    'experience-cloud': 'Salesforce Certified Experience Cloud Consultant Practice Questions & Study Guide',
-    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I Practice Questions & Study Guide',
-    'integration-architect': 'Salesforce Certified Integration Architect Practice Questions & Study Guide',
-    'application-architect': 'Salesforce Certified Application Architect Practice Questions & Study Guide',
+    administrator: 'Salesforce Certified Platform Administrator' + suffix,
+    'advanced-administrator': 'Salesforce Certified Advanced Administrator' + suffix,
+    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant' + suffix,
+    'service-cloud': 'Salesforce Certified Service Cloud Consultant' + suffix,
+    'app-builder': 'Salesforce Certified Platform App Builder' + suffix,
+    'developer-1': 'Salesforce Certified Platform Developer I' + suffix,
+    'developer-2': 'Salesforce Certified Platform Developer II' + suffix,
+    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist' + suffix,
+    'data-architect': 'Salesforce Certified Data Architect' + suffix,
+    'pardot-specialist': 'Salesforce Certified Account Engagement (Pardot) Specialist' + suffix,
+    'experience-cloud': 'Salesforce Certified Experience Cloud Consultant' + suffix,
+    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I' + suffix,
+    'integration-architect': 'Salesforce Certified Integration Architect' + suffix,
+    'application-architect': 'Salesforce Certified Application Architect' + suffix,
   }
   const main = shortTitles[slug]
-  if (main) return main.length <= maxMain ? main + brand : main.slice(0, maxMain - 3) + '...' + brand
-  
-  // Fallback: primaryName + Practice Questions & Study Guide
+  if (main) return main + brand
+
+  // Fallback: primaryName + Practice Questions & Study Guide (always include phrase)
   const baseName = primaryName.replace(/\s*\([^)]+\)\s*$/, '').trim() || primaryName
   const hasCodeInName = examCode && primaryName.includes(examCode)
   const displayName = examCode && !hasCodeInName ? `${baseName} (${examCode})` : primaryName
-  let title = `${displayName} Practice Questions & Study Guide` + brand
-  if (title.length > 60) title = title.slice(0, 57) + '...'
-  return title
+  return `${displayName}${suffix}${brand}`
 }
 
 /** Unique meta description 140–160 chars for certification pages. Rendered as <meta name="description" content="..."> in <head>. */
