@@ -5,7 +5,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'administrator'
@@ -217,6 +217,7 @@ export default function AdministratorPage() {
               ]}
               examSections={examSections}
               h1Text={getCertH1Text(slug)}
+              examWeightageHeading={getCertExamWeightageHeading(slug)}
             />
 
             <div id="exam-prep">
@@ -225,7 +226,7 @@ export default function AdministratorPage() {
 
             <div id="practice-questions" className="mt-12 sm:mt-16">
               <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">Sample Practice Questions</h2>
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{getCertPracticeQuestionsHeading(slug)}</h2>
                 <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
                   Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
                 </p>
@@ -276,7 +277,7 @@ export default function AdministratorPage() {
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
                 { id: 'related-certs', title: 'Related Certifications' },
-                { id: 'faq', title: 'Frequently Asked Questions' },
+                { id: 'faq', title: 'Exam FAQs' },
               ]}
             />
           </aside>

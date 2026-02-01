@@ -215,7 +215,7 @@ const features = [
     icon: TrendingUp,
     title: 'Aligned with Official Exam Outlines',
     description: 'Content aligned with official Salesforce exam blueprints so you study what’s actually on the exam.',
-    proof: { learners: '1,000+', rating: 4.8 },
+    proof: { learners: '10,000+', rating: 4.8 },
   },
 ]
 

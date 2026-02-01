@@ -46,37 +46,37 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect-review-board': 'CTA Review Board',
 }
 
-/** Short title for <title>: under 60 chars to avoid truncation in SERPs. Always includes "Salesforce Certified". */
+/** Short title for <title>: under 60 chars to avoid truncation in SERPs. Front-loads "Practice Questions" for intent. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
   const maxMain = 60 - brand.length // 47 chars for main part
   const examCode = SLUG_TO_EXAM_CODE[slug]
-  const certName = slugToDisplayName(slug) // Already includes "Salesforce Certified"
-  const primaryName = getCertPrimaryName(slug, certName) // Already includes "Salesforce Certified"
+  const certName = slugToDisplayName(slug)
+  const primaryName = getCertPrimaryName(slug, certName)
   const shortTitles: Record<string, string> = {
-    administrator: `Salesforce Certified Platform Administrator (ADM-201) Study Guide`,
-    'advanced-administrator': 'Salesforce Certified Advanced Administrator (ADM-211) Study Guide',
-    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant Practice Questions',
-    'service-cloud': 'Salesforce Certified Service Cloud Consultant Practice Questions',
-    'app-builder': 'Salesforce Certified Platform App Builder Exam Guide',
-    'developer-1': 'Salesforce Certified Platform Developer I (PD1) Exam Guide',
-    'developer-2': 'Salesforce Certified Platform Developer II (PD2) Exam Guide',
-    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist Exam Guide',
-    'data-architect': 'Salesforce Certified Data Architect Practice & Study Guide',
-    'pardot-specialist': 'Salesforce Certified Account Engagement (Pardot) Specialist Exam Guide',
-    'experience-cloud': 'Salesforce Certified Experience Cloud Consultant Exam Guide',
-    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I Exam Guide',
-    'integration-architect': 'Salesforce Certified Integration Architect Exam Guide',
-    'application-architect': 'Salesforce Certified Application Architect Exam Guide',
+    administrator: 'Salesforce Certified Platform Administrator Practice Questions & Study Guide',
+    'advanced-administrator': 'Salesforce Certified Advanced Administrator Practice Questions & Study Guide',
+    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant Practice Questions & Study Guide',
+    'service-cloud': 'Salesforce Certified Service Cloud Consultant Practice Questions & Study Guide',
+    'app-builder': 'Salesforce Certified Platform App Builder Practice Questions & Study Guide',
+    'developer-1': 'Salesforce Certified Platform Developer I Practice Questions & Study Guide',
+    'developer-2': 'Salesforce Certified Platform Developer II Practice Questions & Study Guide',
+    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist Practice Questions & Study Guide',
+    'data-architect': 'Salesforce Certified Data Architect Practice Questions & Study Guide',
+    'pardot-specialist': 'Salesforce Certified Account Engagement (Pardot) Specialist Practice Questions & Study Guide',
+    'experience-cloud': 'Salesforce Certified Experience Cloud Consultant Practice Questions & Study Guide',
+    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I Practice Questions & Study Guide',
+    'integration-architect': 'Salesforce Certified Integration Architect Practice Questions & Study Guide',
+    'application-architect': 'Salesforce Certified Application Architect Practice Questions & Study Guide',
   }
   const main = shortTitles[slug]
   if (main) return main.length <= maxMain ? main + brand : main.slice(0, maxMain - 3) + '...' + brand
   
-  // Fallback: use primaryName (already includes "Salesforce Certified") and add exam code if needed
+  // Fallback: primaryName + Practice Questions & Study Guide
   const baseName = primaryName.replace(/\s*\([^)]+\)\s*$/, '').trim() || primaryName
   const hasCodeInName = examCode && primaryName.includes(examCode)
   const displayName = examCode && !hasCodeInName ? `${baseName} (${examCode})` : primaryName
-  let title = `${displayName} Practice & Study Guide | Trailblaze Prep`
+  let title = `${displayName} Practice Questions & Study Guide` + brand
   if (title.length > 60) title = title.slice(0, 57) + '...'
   return title
 }
@@ -1169,13 +1169,39 @@ export function getCertFaqJsonLd(slug: string, certTitle: string) {
   }
 }
 
-/** Single H1 per cert page: current official name + exam code for SEO (ranks for both current and former names via body copy). */
+/** Single H1 per cert page: Practice Questions & Exam Study Guide for intent-based SEO. */
 export function getCertH1Text(slug: string): string {
   const certName = slugToDisplayName(slug)
   const primaryName = getCertPrimaryName(slug, certName)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const namePart = examCode ? `${primaryName} (${examCode})` : primaryName
-  return `${namePart} Study Guide`
+  return `${namePart} Practice Questions & Exam Study Guide`
+}
+
+/** H2 for "About this exam" section: About the [Cert Name] ([Exam Code]) Exam */
+export function getCertAboutExamHeading(slug: string): string {
+  const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
+  const examCode = SLUG_TO_EXAM_CODE[slug]
+  return examCode ? `About the ${primaryName} (${examCode}) Exam` : `About the ${primaryName} Exam`
+}
+
+/** H3 for exam weightage section: [Cert Name] Exam Weightage by Section */
+export function getCertExamWeightageHeading(slug: string): string {
+  const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
+  return `${primaryName} Exam Weightage by Section`
+}
+
+/** H2 for practice questions section: [Cert Name] Practice Questions (With Explanations) */
+export function getCertPracticeQuestionsHeading(slug: string): string {
+  const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
+  return `${primaryName} Practice Questions (With Explanations)`
+}
+
+/** H2 for FAQ section: [Cert Name] ([Exam Code]) Exam FAQs */
+export function getCertFaqHeading(slug: string): string {
+  const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
+  const examCode = SLUG_TO_EXAM_CODE[slug]
+  return examCode ? `${primaryName} (${examCode}) Exam FAQs` : `${primaryName} Exam FAQs`
 }
 
 /** WebPage JSON-LD for certification pages so validators detect schema. */

@@ -78,7 +78,7 @@ export default function AboutPage() {
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
           <li><strong>Unique practice questions</strong>—Each certification has its own set of original practice questions written to test the concepts covered in that exam, not copied from other sources.</li>
           <li><strong>Original exam tips and strategies</strong>—Our exam tips, prerequisites, focus areas, and study strategies are written based on our analysis of official exam outlines and real-world experience, not duplicated from other sites.</li>
-          <li><strong>Unique descriptions and explanations</strong>—Every certification description and question explanation is written fresh for this site to ensure originality and help with search engine indexing.</li>
+          <li><strong>Unique descriptions and explanations</strong>—Every certification description and question explanation is written fresh for this site to ensure originality.</li>
           <li><strong>Original analysis</strong>—While exam weightage percentages are based on official Salesforce exam outlines (publicly available on Trailhead), our presentation, analysis, and recommendations are original.</li>
         </ul>
         <p className="text-gray-700 mt-4">

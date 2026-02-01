@@ -4,6 +4,7 @@ import {
   getCertBreadcrumb,
   getCertBreadcrumbJsonLd,
   getCertFaq,
+  getCertFaqHeading,
   getCertFaqJsonLd,
   getCertWebPageJsonLd,
   SLUG_TO_EXAM_CODE,
@@ -88,11 +89,12 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
 /** FAQ section component - rendered separately after H1 for proper SEO structure */
 export function CertPageFaq({ slug, certTitle }: CertPageSeoProps) {
   const faqs = getCertFaq(slug, certTitle)
+  const faqHeading = getCertFaqHeading(slug)
   
   return (
     <section className="mt-12 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="cert-faq-heading">
       <h2 id="cert-faq-heading" className="text-xl font-bold text-gray-900 mb-4">
-        Frequently Asked Questions
+        {faqHeading}
       </h2>
       <dl className="space-y-4">
         {faqs.map((item, i) => (

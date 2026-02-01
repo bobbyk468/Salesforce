@@ -14,8 +14,10 @@ interface CertificationCardProps {
   topics: string[]
   /** Section-wise exam weightage (%) - shown when provided */
   examSections?: ExamSection[]
-  /** Optional SEO H1: one primary heading with exam name + keyword (e.g. "Salesforce Administrator (ADM-201) Certification Study Guide") */
+  /** Optional SEO H1: one primary heading with exam name + keyword (e.g. "Salesforce Administrator (ADM-201) Practice Questions & Exam Study Guide") */
   h1Text?: string
+  /** Optional SEO H3 for exam weightage: e.g. "[Cert Name] Exam Weightage by Section" */
+  examWeightageHeading?: string
 }
 
 export default function CertificationCard({
@@ -26,6 +28,7 @@ export default function CertificationCard({
   topics,
   examSections,
   h1Text,
+  examWeightageHeading,
 }: CertificationCardProps) {
   return (
     <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm">
@@ -71,7 +74,7 @@ export default function CertificationCard({
         {/* Exam weightage by section */}
         {examSections && examSections.length > 0 && (
           <div className="mb-6 sm:mb-8">
-            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">Exam Weightage by Section</h3>
+            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">{examWeightageHeading ?? 'Exam Weightage by Section'}</h3>
             <div className="space-y-3 sm:space-y-4">
               {examSections.map((section, i) => (
                 <div key={i} className="flex items-center gap-3 sm:gap-4">

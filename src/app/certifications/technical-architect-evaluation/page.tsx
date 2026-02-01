@@ -4,7 +4,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -78,6 +78,7 @@ export default function TechnicalArchitectEvaluationPage() {
             ]}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
+          examWeightageHeading={getCertExamWeightageHeading(slug)}
           />
 
           <div id="exam-prep">
@@ -85,7 +86,7 @@ export default function TechnicalArchitectEvaluationPage() {
           </div>
 
           <div id="practice-questions" className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sample Practice Questions</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">Practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard
@@ -128,7 +129,7 @@ export default function TechnicalArchitectEvaluationPage() {
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Next Steps' },
               { id: 'related-certs', title: 'Related Certifications' },
-              { id: 'faq', title: 'Frequently Asked Questions' }]}
+              { id: 'faq', title: 'Exam FAQs' }]}
           />
         </aside>
       </div>

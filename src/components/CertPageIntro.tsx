@@ -1,4 +1,4 @@
-import { slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { slugToDisplayName, SLUG_TO_EXAM_CODE, getCertAboutExamHeading } from '@/lib/cert-seo-data'
 import { getCertPrimaryName, getCertFormerName } from '@/lib/cert-name-aliases'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
 import type { CertificationCategory } from '@/lib/certifications-data'
@@ -42,7 +42,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
   return (
     <section className="mb-8 sm:mb-10 rounded-xl sm:rounded-2xl border border-blue-100/50 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="cert-intro-heading">
       <h2 id="cert-intro-heading" className="sr-only">
-        About this {primaryName} study guide
+        {getCertAboutExamHeading(slug)}
       </h2>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
         This page is your <strong className="text-gray-900">{primaryName}</strong>
@@ -51,7 +51,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         {' '}study guide. The certification validates skills that employers look for in Salesforce roles—whether you&apos;re an administrator, consultant, developer, or architect. It is designed for {audience} who want to prove their knowledge with an industry-recognized credential.
       </p>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-        Here you&apos;ll find <strong className="text-gray-900">section-wise exam weightage</strong> so you know exactly which topics carry the most questions, exam tips and prerequisites, a focused study plan, and <strong className="text-gray-900">sample practice questions with detailed explanations</strong>. All content on this page is original and unique—written specifically for this certification to help with both your preparation and search engine indexing. Use this page to align your study with the official outline and to gauge when you&apos;re ready to sit the exam. Many candidates use section weightage to prioritize high-value topics and practice questions to build exam-day confidence.
+        Here you&apos;ll find <strong className="text-gray-900">section-wise exam weightage</strong> so you know exactly which topics carry the most questions, exam tips and prerequisites, a focused study plan, and <strong className="text-gray-900">sample practice questions with detailed explanations</strong>. All content on this page is original and unique—written specifically for this certification to help with your preparation. Use this page to align your study with the official outline and to gauge when you&apos;re ready to sit the exam. Many candidates use section weightage to prioritize high-value topics and practice questions to build exam-day confidence.
       </p>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
         Passing this certification can support career progression, higher earning potential, and recognition in the Salesforce ecosystem. Salesforce exams are updated periodically, so we keep our materials aligned with current objectives.

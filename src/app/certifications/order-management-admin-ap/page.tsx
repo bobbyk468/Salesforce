@@ -4,7 +4,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -33,6 +33,7 @@ export default function OrderManagementAdminAPPage() {
           <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Order Management', 'Orchestration', 'Fulfillment', 'Administration', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
+          examWeightageHeading={getCertExamWeightageHeading(slug)}
           />
 
           <div id="exam-prep">
@@ -40,7 +41,7 @@ export default function OrderManagementAdminAPPage() {
           </div>
 
           <div id="practice-questions" className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">Sample Practice Questions</h2>
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
@@ -69,7 +70,7 @@ export default function OrderManagementAdminAPPage() {
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },
-              { id: 'faq', title: 'Frequently Asked Questions' }]}
+              { id: 'faq', title: 'Exam FAQs' }]}
           />
         </aside>
       </div>
