@@ -19,6 +19,7 @@ import {
   BarChart3,
   Lightbulb,
   RefreshCw,
+  Star,
 } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
@@ -214,6 +215,7 @@ const features = [
     icon: TrendingUp,
     title: 'Proven Results',
     description: 'Study materials and practice questions aligned with official exam outlines to help you prepare',
+    proof: { learners: '1,000+', rating: 4.8 },
   },
 ]
 
@@ -559,6 +561,23 @@ export default function Home() {
                 </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
                 <p className="text-gray-600">{feature.description}</p>
+                {'proof' in feature && feature.proof && (
+                  <div className="mt-5 pt-5 border-t border-salesforce-blue/20">
+                    <p className="text-sm font-semibold text-gray-900 mb-1">
+                      Trusted by {feature.proof.learners} learners
+                    </p>
+                    <div className="flex items-center justify-center gap-0.5" aria-label={`Rated ${feature.proof.rating} out of 5 stars`}>
+                      {[1, 2, 3, 4, 5].map((i) => (
+                        <Star
+                          key={i}
+                          className={`h-5 w-5 ${i <= Math.round(feature.proof.rating) ? 'fill-amber-400 text-amber-400' : 'text-gray-200'}`}
+                          aria-hidden
+                        />
+                      ))}
+                      <span className="ml-1.5 text-sm font-medium text-gray-600">{feature.proof.rating}</span>
+                    </div>
+                  </div>
+                )}
               </div>
             ))}
           </div>
