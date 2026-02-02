@@ -1,12 +1,14 @@
 import type { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
 const contactDescription =
   'Contact Trailblaze Prep for questions about Salesforce certification prep, practice questions, and study guides for Admin, Developer, and Consultant exams.'
 
 export const metadata: Metadata = {
   title: 'Contact Us',
   description: contactDescription,
+  alternates: { canonical: `${baseUrl}/contact` },
 }
 
 const contactBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }]

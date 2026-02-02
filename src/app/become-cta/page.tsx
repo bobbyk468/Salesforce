@@ -4,6 +4,7 @@ import { Award, Target, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react'
 import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount } from '@/lib/cta-journey-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
 const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
 const ctaDescription =
   'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'
@@ -11,6 +12,7 @@ const ctaDescription =
 export const metadata: Metadata = {
   title: { absolute: ctaTitle },
   description: ctaDescription,
+  alternates: { canonical: `${baseUrl}/become-cta` },
   keywords:
     'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',
 }

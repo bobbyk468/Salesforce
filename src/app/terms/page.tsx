@@ -2,10 +2,13 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+
 export const metadata: Metadata = {
   title: { absolute: 'Terms of Use | Trailblaze Prep' },
   description:
     'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+  alternates: { canonical: `${baseUrl}/terms` },
   robots: {
     index: false,
     follow: true,

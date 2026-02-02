@@ -3,12 +3,14 @@ import { Award, Mail, ExternalLink } from 'lucide-react'
 import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
 const aboutDescription =
   'About Trailblaze Prep: Independent Salesforce certification study resource. Practice questions, study guides, and exam prep. Not affiliated with Salesforce.'
 
 export const metadata = {
   title: { absolute: `About Us | ${SITE_NAME}` },
   description: aboutDescription,
+  alternates: { canonical: `${baseUrl}/about` },
 }
 
 const aboutBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }]
