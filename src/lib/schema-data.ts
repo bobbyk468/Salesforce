@@ -3,7 +3,7 @@
  * schema markup (WebPage, BreadcrumbList) for SEO audits.
  */
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export interface BreadcrumbItem {
   name: string

@@ -3,7 +3,7 @@ import { Award, Mail, ExternalLink } from 'lucide-react'
 import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const aboutDescription =
   'About Trailblaze Prep: Independent Salesforce certification study resource. Practice questions, study guides, and exam prep. Not affiliated with Salesforce.'
 
@@ -16,7 +16,7 @@ export const metadata = {
 const aboutBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }]
 
 export default function AboutPage() {
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',

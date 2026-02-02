@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const certUrls = CERTIFICATION_CATEGORIES.flatMap((cat) =>

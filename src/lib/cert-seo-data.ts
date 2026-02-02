@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 /** Build slug -> display name from certification categories (first occurrence wins) */
 function buildSlugToTitle(): Record<string, string> {

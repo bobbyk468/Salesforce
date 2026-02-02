@@ -38,7 +38,7 @@ const STAGE_STYLES: Record<PathStage, { bg: string; border: string; label: strin
   },
 }
 
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pathTitle = 'Salesforce Certification Paths | Trailblaze Prep'
 const pathDescription =
   'Salesforce certification paths from Admin to CTA. Plan your journey from foundational to advanced certifications including Developer, Architect, and more.'

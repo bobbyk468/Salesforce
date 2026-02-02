@@ -9,7 +9,7 @@ import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 
 const inter = Inter({ subsets: ['latin'] })
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue

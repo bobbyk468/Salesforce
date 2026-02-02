@@ -25,7 +25,7 @@ import FaqAccordion from '@/components/FaqAccordion'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
   alternates: { canonical: siteUrl },

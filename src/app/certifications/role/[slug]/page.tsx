@@ -15,7 +15,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const category = getCategoryBySlug(slug)
   if (!category) return { title: 'Certification Not Found' }
-  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+  const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
   const title = `${category.name} Certifications | Salesforce Study Guide`

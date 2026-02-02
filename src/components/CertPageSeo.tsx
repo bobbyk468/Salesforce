@@ -11,7 +11,7 @@ import {
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
 
-const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'
+const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 interface CertPageSeoProps {
   slug: string

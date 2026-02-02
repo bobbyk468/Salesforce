@@ -9,17 +9,17 @@ export const metadata: Metadata = {
   description:
     'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau. Practice questions and study guides.',
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'}/certifications`,
+    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
   },
   openGraph: {
     title: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep',
     description:
       'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau. Practice questions and study guides.',
     type: 'website',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'}/certifications`,
+    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'}/og-image.png`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image.png`,
         width: 1200,
         height: 630,
         alt: 'All Salesforce Certifications - Practice Questions & Study Guides',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'All Salesforce Certifications | Practice Questions & Study Guides',
     description:
       'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau.',
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://trailblazeprep.com'}/og-image.png`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image.png`],
   },
 }
 
