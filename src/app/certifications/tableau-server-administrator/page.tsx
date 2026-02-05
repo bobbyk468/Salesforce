@@ -10,7 +10,12 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'tableau-server-administrator'
-export const metadata = getCertMetadata(slug)
+const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications/tableau-server-administrator`
+
+export const metadata = {
+  ...getCertMetadata(slug),
+  alternates: { canonical: canonicalUrl },
+}
 
 const sampleQuestions = [
   {
@@ -67,7 +72,7 @@ export default function TableauServerAdministratorPage() {
             ]}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
-          examWeightageHeading={getCertExamWeightageHeading(slug)}
+            examWeightageHeading={getCertExamWeightageHeading(slug)}
           />
 
           <div id="exam-prep">
