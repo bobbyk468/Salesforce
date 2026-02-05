@@ -9,10 +9,6 @@ export const metadata: Metadata = {
   description:
     'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
   alternates: { canonical: `${baseUrl}/privacy` },
-  robots: {
-    index: false,
-    follow: true,
-  },
 }
 
 const privacyBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy' }]

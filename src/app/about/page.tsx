@@ -5,10 +5,10 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const aboutDescription =
-  'About Trailblaze Prep: Independent Salesforce certification study resource. Practice questions, study guides, and exam prep. Not affiliated with Salesforce.'
+  'Trailblaze Prep helps you pass Salesforce certifications. Free practice questions, exam weightage, and study guides for Admin, Developer, Consultant, and more. Start preparing today.'
 
 export const metadata = {
-  title: { absolute: `About Us | ${SITE_NAME}` },
+  title: { absolute: `About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides` },
   description: aboutDescription,
   alternates: { canonical: `${baseUrl}/about` },
 }

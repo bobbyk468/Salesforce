@@ -11,6 +11,17 @@ export async function generateStaticParams() {
   return CERTIFICATION_CATEGORIES.map((c) => ({ slug: c.slug }))
 }
 
+const ROLE_DESCRIPTIONS: Record<string, string> = {
+  consultant:
+    'Salesforce Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, and more. Practice questions, exam weightage, and study guides. Certified Salesforce consultant exam prep.',
+  'accredited-professional':
+    'Salesforce Accredited Professional (AP) certifications: industry and product credentials. Practice questions, exam weightage, and study guides for each AP exam. Start preparing.',
+  administrator:
+    'Salesforce Administrator certifications: Platform Administrator (ADM-201), Advanced Administrator, App Builder. Practice questions, exam weightage, and study guides. Start free.',
+  developer:
+    'Salesforce Developer certifications: Platform Developer I & II, JavaScript Developer I, MuleSoft, OmniStudio. Practice questions and exam prep. Prepare for the certification exam.',
+}
+
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params
   const category = getCategoryBySlug(slug)
@@ -19,7 +30,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
   const title = `${category.name} Certifications | Salesforce Study Guide`
-  const description = `Browse all Salesforce ${category.name} certifications. Practice questions, exam weightage, and study materials for each credential. Find your next certification path.`
+  const description =
+    ROLE_DESCRIPTIONS[slug] ||
+    `Browse all Salesforce ${category.name} certifications. Practice questions, exam weightage, and study materials for each credential. Find your next certification path.`
   
   return {
     title: { absolute: title },

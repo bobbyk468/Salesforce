@@ -46,33 +46,13 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect-review-board': 'CTA Review Board',
 }
 
-/** Page <title>: always includes "Practice Questions & Study Guide" for intent; no mid-title truncation. */
+/** Page <title>: always includes "Practice Questions & Study Guide" for intent. All certs use official name from categories. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
   const suffix = ' Practice Questions & Study Guide'
+  if (slugToTitle[slug]) return slugToDisplayName(slug) + suffix + brand
+  const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   const examCode = SLUG_TO_EXAM_CODE[slug]
-  const certName = slugToDisplayName(slug)
-  const primaryName = getCertPrimaryName(slug, certName)
-  const shortTitles: Record<string, string> = {
-    administrator: 'Salesforce Certified Platform Administrator' + suffix,
-    'advanced-administrator': 'Salesforce Certified Advanced Administrator' + suffix,
-    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant' + suffix,
-    'service-cloud': 'Salesforce Certified Service Cloud Consultant' + suffix,
-    'app-builder': 'Salesforce Certified Platform App Builder' + suffix,
-    'developer-1': 'Salesforce Certified Platform Developer I' + suffix,
-    'developer-2': 'Salesforce Certified Platform Developer II' + suffix,
-    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist' + suffix,
-    'data-architect': 'Salesforce Certified Data Architect' + suffix,
-    'pardot-specialist': 'Salesforce Certified Account Engagement (Pardot) Specialist' + suffix,
-    'experience-cloud': 'Salesforce Certified Experience Cloud Consultant' + suffix,
-    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I' + suffix,
-    'integration-architect': 'Salesforce Certified Integration Architect' + suffix,
-    'application-architect': 'Salesforce Certified Application Architect' + suffix,
-  }
-  const main = shortTitles[slug]
-  if (main) return main + brand
-
-  // Fallback: primaryName + Practice Questions & Study Guide (always include phrase)
   const baseName = primaryName.replace(/\s*\([^)]+\)\s*$/, '').trim() || primaryName
   const hasCodeInName = examCode && primaryName.includes(examCode)
   const displayName = examCode && !hasCodeInName ? `${baseName} (${examCode})` : primaryName
@@ -85,16 +65,194 @@ export function getCertMetaDescription(slug: string): string {
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const formerName = getCertFormerName(slug)
   const templates: Record<string, string> = {
+    // Associate
+    'platform-foundations':
+      'Prepare for Platform Foundations with practice questions, exam weightage, and study guide. Salesforce certification prep. Start free.',
+    'ai-associate':
+      'Prepare for Salesforce Certified AI Associate with practice questions, exam weightage, and study guide. Pass the AI certification exam. Start free.',
+    'marketing-cloud-engagement-foundations':
+      'Marketing Cloud Engagement Foundations exam prep: practice questions, section-wise weightage, and study tips. Prepare for the certification.',
+    'mulesoft-integration-foundations':
+      'MuleSoft Integration Foundations: practice questions, exam weightage, and study guide. Prepare for the certification exam. Aligned with outlines.',
+    // Administrator
     administrator:
       'Salesforce Certified Platform Administrator (ADM-201)—formerly Salesforce Certified Administrator. Section-wise exam weightage, 500+ practice questions, study tips. Pass on your first try.',
+    'advanced-administrator':
+      'Advanced Administrator (ADM-211) exam prep: practice questions, section-wise weightage, and study strategies. Prepare for the certification.',
+    'app-builder':
+      'Platform App Builder certification exam prep: section-wise weightage, practice questions, and declarative development tips. Start studying for the exam.',
+    'agentforce-specialist':
+      'Agentforce Specialist certification: practice questions, exam weightage, and study guide. AI and agent-based solutions. Prepare for the exam.',
+    'business-analyst':
+      'Business Analyst certification exam prep: practice questions, section-wise weightage, and study tips. Prepare for the official exam.',
+    'cpq-administrator':
+      'CPQ Administrator certification: practice questions, exam weightage, and study guide. Configure and administer CPQ. Start preparing.',
+    'marketing-cloud-engagement-admin':
+      'Marketing Cloud Engagement Admin exam prep: practice questions, weightage, and study guide. Prepare for the certification. Aligned with outlines.',
+    'slack-administrator':
+      'Slack Administrator certification: practice questions, exam weightage, and study tips. Prepare for the Salesforce Slack Admin exam.',
+    'administrator-practice-test':
+      'Platform Administrator practice test: sample questions, exam weightage, and study tips. Prepare for ADM-201. Start free.',
+    // Developer
+    'developer-1':
+      'Platform Developer I (PD1) exam prep: Apex and LWC practice questions, section-wise weightage, and study strategies. Prepare for the certification.',
+    'developer-2':
+      'Platform Developer II (PD2) exam prep: advanced Apex, LWC, and integration practice questions. Section-wise weightage and study guide.',
+    'javascript-developer-i':
+      'Salesforce JavaScript Developer I study guide: practice questions, exam weightage, and JS/LWC tips. Prepare for the certification exam. Start free.',
+    'b2c-commerce-developer':
+      'B2C Commerce Developer certification: practice questions, exam weightage, and study guide. Prepare for the certification exam.',
+    'industries-cpq-developer':
+      'Industries CPQ Developer exam prep: practice questions, section-wise weightage, and study tips. Prepare for the certification.',
+    'marketing-cloud-engagement-developer':
+      'Marketing Cloud Engagement Developer: practice questions, exam weightage, and study guide. Prepare for the certification. Aligned with outlines.',
+    'mulesoft-developer-i':
+      'MuleSoft Developer I exam prep: practice questions, section-wise weightage, and integration study tips. Prepare for the certification.',
+    'mulesoft-developer-ii':
+      'MuleSoft Developer II certification: practice questions, exam weightage, and study guide. Advanced MuleSoft exam prep.',
+    'mulesoft-hyperautomation-developer':
+      'MuleSoft Hyperautomation Developer exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    'omnistudio-developer':
+      'OmniStudio Developer certification: practice questions, exam weightage, and study tips. Prepare for the certification exam.',
+    'slack-developer':
+      'Slack Developer certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce Slack Developer exam.',
+    // Consultant
+    'crm-analytics-einstein-discovery-consultant':
+      'CRM Analytics & Einstein Discovery Consultant: practice questions, exam weightage, and study guide. Prepare for the certification exam.',
+    'data-cloud-consultant':
+      'Data Cloud Consultant certification: practice questions, section-wise exam weightage, and study tips. Prepare for the official exam. Aligned with outlines.',
+    'education-cloud-consultant':
+      'Education Cloud Consultant exam prep: practice questions, section-wise weightage, and study guide. Prepare for the certification.',
+    'experience-cloud':
+      'Experience Cloud Consultant certification: practice questions, exam weightage, and implementation strategies. Prepare for the exam.',
+    'field-service':
+      'Field Service Consultant certification: practice questions, exam weightage, and study guide. Prepare for the official exam.',
+    'pardot-consultant':
+      'Account Engagement (Pardot) Consultant: practice questions, exam weightage, and study guide. Prepare for the Pardot certification exam.',
+    'marketing-cloud-consultant':
+      'Marketing Cloud Engagement Consultant exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    'nonprofit-cloud':
+      'Nonprofit Cloud Consultant certification: practice questions, exam weightage, and study tips. Prepare for the certification exam.',
+    'nonprofit-success-pack-consultant':
+      'Nonprofit Success Pack (NPSP) Consultant: practice questions, exam weightage, and study guide. Prepare for the NPSP certification.',
+    'omnistudio-consultant':
+      'OmniStudio Consultant certification: practice questions, section-wise weightage, and study tips. Prepare for the exam.',
+    'revenue-cloud-consultant':
+      'Revenue Cloud Consultant exam prep: practice questions, weightage, and study guide. CPQ and billing. Prepare for the certification.',
     'sales-cloud':
       'Prepare for Sales Cloud Consultant certification with practice questions, exam weightage breakdown, solution design strategies, and expert study tips.',
     'service-cloud':
       'Prepare for Service Cloud Consultant certification with practice questions, section-wise weightage, and implementation strategies.',
-    'app-builder':
-      'Prepare for Platform App Builder with section-wise exam weightage, practice questions, and declarative development study tips.',
-    'developer-1':
-      'Prepare for Platform Developer I (PD1) with exam weightage, Apex and LWC practice questions, and study strategies.',
+    'slack-consultant':
+      'Slack Consultant certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce Slack Consultant exam.',
+    // Marketing
+    'email-specialist':
+      'Marketing Cloud Email Specialist: practice questions, exam weightage, and study guide. Prepare for the certification exam. Start free.',
+    'pardot-specialist':
+      'Account Engagement (Pardot) Specialist exam prep: practice questions, section-wise weightage, and study tips. Prepare for the certification.',
+    'email-specialist-practice-test':
+      'Marketing Cloud Email Specialist practice test: sample questions, weightage, and study guide. Prepare for the exam. Start free.',
+    // Architect
+    'application-architect':
+      'Application Architect certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce architect exam.',
+    'data-architect':
+      'Data Architect certification exam prep: practice questions, section-wise weightage, and data modeling study tips. Prepare for the exam.',
+    'integration-architect':
+      'Integration Architect certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce architect exam.',
+    'sharing-visibility-architect':
+      'Sharing and Visibility Architect exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    'system-architect':
+      'System Architect certification: practice questions, exam weightage, and study tips. Prepare for the Salesforce architect exam.',
+    'identity-access-management-architect':
+      'Identity and Access Management Architect: practice questions, exam weightage, and study guide. Prepare for the certification exam.',
+    'dev-lifecycle-deployment-architect':
+      'Dev Lifecycle and Deployment Architect exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    'technical-architect':
+      'Technical Architect (CTA) exam prep: practice questions, exam weightage, and architecture study guide. Prepare for the CTA review.',
+    'technical-architect-evaluation':
+      'CTA Architect Evaluation: practice questions and study guide. Prepare for the Technical Architect evaluation. Aligned with outlines.',
+    'technical-architect-review-board':
+      'CTA Architect Review Board prep: practice questions and study materials. Prepare for the Technical Architect review board.',
+    'b2b-solution-architect':
+      'B2B Solution Architect certification: practice questions, exam weightage, and study guide. Prepare for the certification exam.',
+    'b2c-commerce-architect':
+      'B2C Commerce Architect exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    'b2c-solution-architect':
+      'B2C Solution Architect certification: practice questions, exam weightage, and study tips. Prepare for the certification exam.',
+    'heroku-architect':
+      'Heroku Architect certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce Heroku architect exam.',
+    'mulesoft-catalyst-consultant':
+      'MuleSoft Catalyst Consultant: practice questions, exam weightage, and study guide. Prepare for the MuleSoft certification.',
+    'mulesoft-platform-architect':
+      'MuleSoft Platform Architect certification: practice questions, exam weightage, and study tips. Prepare for the certification exam.',
+    'mulesoft-integration-architect':
+      'MuleSoft Platform Integration Architect exam prep: practice questions, weightage, and study guide. Prepare for the certification.',
+    // Accredited Professional
+    'advanced-field-service-ap':
+      'Advanced Field Service AP exam prep: practice questions, exam weightage, and study guide. Accredited Professional certification.',
+    'b2b-commerce-admin-ap':
+      'B2B Commerce Admin Accredited Professional: practice questions, weightage, and study tips. Prepare for the AP exam.',
+    'b2b-commerce-developer-ap':
+      'B2B Commerce Developer AP certification: practice questions, exam weightage, and study guide. Prepare for the AP exam.',
+    'communications-cloud-ap':
+      'Communications Cloud AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'consumer-goods-cloud-ap':
+      'Consumer Goods Cloud AP: practice questions, exam weightage, and study tips. Prepare for the Accredited Professional exam.',
+    'consumer-goods-tpm-ap':
+      'Consumer Goods TPM AP certification: practice questions, exam weightage, and study guide. Prepare for the AP exam.',
+    'contact-center-ap':
+      'Contact Center AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'cpq-billing-ap':
+      'CPQ and Billing AP certification: practice questions, exam weightage, and study tips. Prepare for the Accredited Professional exam.',
+    'energy-utilities-ap':
+      'Energy and Utilities Cloud AP: practice questions, exam weightage, and study guide. Prepare for the AP certification exam.',
+    'financial-services-cloud-ap':
+      'Financial Services Cloud AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'health-cloud-ap':
+      'Health Cloud AP certification: practice questions, exam weightage, and study tips. Prepare for the Accredited Professional exam.',
+    'heroku-developer-ap':
+      'Heroku Developer AP: practice questions, exam weightage, and study guide. Prepare for the Accredited Professional exam.',
+    'loyalty-management-ap':
+      'Loyalty Management AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'manufacturing-cloud-ap':
+      'Manufacturing Cloud AP: practice questions, exam weightage, and study tips. Prepare for the AP certification exam.',
+    'marketing-cloud-advanced-cross-channel-ap':
+      'Marketing Cloud Advanced Cross Channel AP: practice questions, weightage, and study guide. Prepare for the AP exam.',
+    'marketing-cloud-intelligence-ap':
+      'Marketing Cloud Intelligence Accredited Professional exam prep: practice questions, weightage, and study guide. CDP and analytics. Pass the AP exam.',
+    'marketing-cloud-personalization-ap':
+      'Marketing Cloud Personalization AP: practice questions, exam weightage, and study guide. Prepare for the AP certification exam.',
+    'media-cloud-ap':
+      'Media Cloud AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'net-zero-cloud-ap':
+      'Net Zero Cloud AP: practice questions, exam weightage, and study tips. Prepare for the Accredited Professional exam.',
+    'order-management-admin-ap':
+      'Order Management Administrator AP certification: practice questions, weightage, and study guide. Prepare for the AP exam.',
+    'order-management-developer-ap':
+      'Order Management Developer AP: practice questions, exam weightage, and study guide. Prepare for the AP certification exam.',
+    'process-automation-ap':
+      'Process Automation AP exam prep: practice questions, weightage, and study guide. Accredited Professional certification.',
+    'public-sector-solutions-ap':
+      'Public Sector Solutions AP: practice questions, exam weightage, and study tips. Prepare for the AP certification exam.',
+    // Sales
+    'sales-foundations':
+      'Sales Foundations certification: practice questions, exam weightage, and study guide. Prepare for the Salesforce sales credential.',
+    // Designer
+    'strategy-designer':
+      'Platform Strategy Designer certification: practice questions, exam weightage, and study guide. Prepare for the certification exam.',
+    'ux-designer':
+      'User Experience (UX) Designer certification: practice questions, exam weightage, and study tips. Prepare for the Salesforce UX exam.',
+    // Tableau
+    'tableau-architect':
+      'Tableau Architect certification: practice questions, exam weightage, and study guide. Prepare for the Tableau architect exam.',
+    'tableau-consultant':
+      'Tableau Consultant exam prep: practice questions, weightage, and study guide. Prepare for the Tableau certification.',
+    'tableau-data-analyst':
+      'Tableau Data Analyst certification: practice questions, exam weightage, and study tips. Prepare for the Tableau exam.',
+    'tableau-desktop-foundations':
+      'Tableau Desktop Foundations: practice questions, exam weightage, and study guide. Prepare for the Tableau certification exam.',
+    'tableau-server-administrator':
+      'Tableau Server Administrator exam prep: practice questions, weightage, and study guide. Deploy and manage Tableau Server. Prepare for the exam.',
   }
   const custom = templates[slug]
   if (custom) return custom.length > 160 ? custom.slice(0, 157) + '...' : custom
