@@ -1,8 +1,38 @@
 import { NextResponse } from 'next/server'
 import { CONTACT_EMAIL } from '@/lib/constants'
 
+const RATE_LIMIT_WINDOW_MS = 60_000
+const RATE_LIMIT_MAX = 5
+const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+
+function getClientIp(request: Request) {
+  const forwardedFor = request.headers.get('x-forwarded-for')
+  if (forwardedFor) return forwardedFor.split(',')[0].trim()
+  return request.headers.get('x-real-ip') || 'unknown'
+}
+
+function isRateLimited(ip: string) {
+  const now = Date.now()
+  const entry = rateLimitMap.get(ip)
+  if (!entry || now > entry.resetAt) {
+    rateLimitMap.set(ip, { count: 1, resetAt: now + RATE_LIMIT_WINDOW_MS })
+    return false
+  }
+  if (entry.count >= RATE_LIMIT_MAX) return true
+  entry.count += 1
+  return false
+}
+
 export async function POST(request: Request) {
   try {
+    const clientIp = getClientIp(request)
+    if (isRateLimited(clientIp)) {
+      return NextResponse.json(
+        { error: 'Too many requests. Please wait a minute and try again.' },
+        { status: 429 }
+      )
+    }
+
     const body = await request.json()
     const { username, email, examName, content } = body
 
@@ -15,15 +45,11 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
-      // Fallback: log and return success so form still works; user gets email via mailto or adds Resend later
-      console.log('Contact form submission (RESEND_API_KEY not set):', {
-        to: CONTACT_EMAIL,
-        from: email,
-        username,
-        examName: examName || '(not specified)',
-        content,
-      })
-      return NextResponse.json({ success: true })
+      console.warn('RESEND_API_KEY not set. Contact form temporarily unavailable.')
+      return NextResponse.json(
+        { error: 'Contact form is temporarily unavailable. Please email us directly.' },
+        { status: 503 }
+      )
     }
 
     const res = await fetch('https://api.resend.com/emails', {

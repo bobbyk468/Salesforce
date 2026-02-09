@@ -9,6 +9,13 @@ import CertSearch from './CertSearch'
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
+  const [openDesktopDropdown, setOpenDesktopDropdown] = useState<string | null>(null)
+
+  const handleDesktopBlur = (e: React.FocusEvent<HTMLDivElement>) => {
+    if (!e.currentTarget.contains(e.relatedTarget as Node)) {
+      setOpenDesktopDropdown(null)
+    }
+  }
 
   return (
     <header className="bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm">
@@ -71,20 +78,37 @@ export default function Header() {
           </p>
           <div className="flex flex-wrap items-center gap-2">
             {CERTIFICATION_CATEGORIES.map((category) => (
-              <div key={category.slug} className="relative group">
+              <div
+                key={category.slug}
+                className="relative group"
+                onMouseEnter={() => setOpenDesktopDropdown(category.slug)}
+                onMouseLeave={() => setOpenDesktopDropdown(null)}
+                onFocus={() => setOpenDesktopDropdown(category.slug)}
+                onBlur={handleDesktopBlur}
+              >
                 <Link
                   href={`/certifications/role/${category.slug}`}
                   className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-salesforce-blue hover:text-salesforce-blue hover:bg-salesforce-blue/5 transition-all duration-200 shadow-sm hover:shadow-md"
+                  aria-haspopup="menu"
+                  aria-expanded={openDesktopDropdown === category.slug}
+                  aria-controls={`role-menu-${category.slug}`}
                 >
                   {category.name}
                   <ChevronDown className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-200" />
                 </Link>
                 {/* Dropdown: all certifications in this role (Basic → Advanced order), no View all */}
-                <div className="absolute left-0 top-full mt-2 w-64 max-h-[70vh] overflow-y-auto py-2 bg-white rounded-xl shadow-2xl border border-gray-200 opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-200 z-[60] pointer-events-none group-hover:pointer-events-auto">
+                <div
+                  id={`role-menu-${category.slug}`}
+                  role="menu"
+                  className={`absolute left-0 top-full mt-2 w-64 max-h-[70vh] overflow-y-auto py-2 bg-white rounded-xl shadow-2xl border border-gray-200 transition-all duration-200 z-[60] ${
+                    openDesktopDropdown === category.slug ? 'opacity-100 visible pointer-events-auto' : 'opacity-0 invisible pointer-events-none'
+                  }`}
+                >
                   {category.items.map((item) => (
                     <Link
                       key={item.href}
                       href={item.href}
+                      role="menuitem"
                       className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-salesforce-blue/10 hover:text-salesforce-blue transition-colors duration-150 truncate"
                       aria-label={`View ${item.name} certification page`}
                     >
