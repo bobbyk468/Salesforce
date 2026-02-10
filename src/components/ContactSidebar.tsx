@@ -1,12 +1,25 @@
 'use client'
 
-import { useState } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { Mail, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
 
 interface ContactSidebarProps {
   defaultExamName?: string
 }
+
+const COMMON_EMAIL_DOMAINS = [
+  'gmail.com',
+  'yahoo.com',
+  'outlook.com',
+  'hotmail.com',
+  'live.com',
+  'icloud.com',
+  'aol.com',
+  'mail.com',
+  'protonmail.com',
+  'yandex.com',
+]
 
 export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarProps) {
   const [formData, setFormData] = useState({
@@ -18,11 +31,95 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [error, setError] = useState('')
+  const [emailSuggestions, setEmailSuggestions] = useState<string[]>([])
+  const [selectedSuggestionIndex, setSelectedSuggestionIndex] = useState(-1)
+  const [showSuggestions, setShowSuggestions] = useState(false)
+  const emailInputRef = useRef<HTMLInputElement>(null)
+  const suggestionsRef = useRef<HTMLDivElement>(null)
+
+  const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setFormData({ ...formData, email: value })
+    setError('')
+    
+    // Check if user typed "@" and extract the part after "@"
+    const atIndex = value.indexOf('@')
+    if (atIndex >= 0) {
+      const afterAt = value.substring(atIndex + 1)
+      const beforeAt = value.substring(0, atIndex + 1)
+      
+      // If there's no space and user is typing after "@"
+      if (!afterAt.includes(' ') && !afterAt.includes('@')) {
+        const filtered = COMMON_EMAIL_DOMAINS.filter(domain => 
+          domain.startsWith(afterAt.toLowerCase())
+        )
+        setEmailSuggestions(filtered)
+        setShowSuggestions(filtered.length > 0 && afterAt.length > 0)
+        setSelectedSuggestionIndex(-1)
+      } else {
+        setShowSuggestions(false)
+      }
+    } else {
+      setShowSuggestions(false)
+    }
+  }
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.name]: e.target.value })
-    setError('')
+    if (e.target.name === 'email') {
+      handleEmailChange(e as React.ChangeEvent<HTMLInputElement>)
+    } else {
+      setFormData({ ...formData, [e.target.name]: e.target.value })
+      setError('')
+    }
   }
+
+  const selectSuggestion = (domain: string) => {
+    const atIndex = formData.email.indexOf('@')
+    if (atIndex >= 0) {
+      const beforeAt = formData.email.substring(0, atIndex + 1)
+      setFormData({ ...formData, email: beforeAt + domain })
+    } else {
+      setFormData({ ...formData, email: formData.email + '@' + domain })
+    }
+    setShowSuggestions(false)
+    emailInputRef.current?.focus()
+  }
+
+  const handleEmailKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showSuggestions || emailSuggestions.length === 0) return
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setSelectedSuggestionIndex(prev => 
+        prev < emailSuggestions.length - 1 ? prev + 1 : prev
+      )
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setSelectedSuggestionIndex(prev => (prev > 0 ? prev - 1 : -1))
+    } else if (e.key === 'Enter' && selectedSuggestionIndex >= 0) {
+      e.preventDefault()
+      selectSuggestion(emailSuggestions[selectedSuggestionIndex])
+    } else if (e.key === 'Escape') {
+      setShowSuggestions(false)
+    }
+  }
+
+  // Close suggestions when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (
+        suggestionsRef.current &&
+        !suggestionsRef.current.contains(event.target as Node) &&
+        emailInputRef.current &&
+        !emailInputRef.current.contains(event.target as Node)
+      ) {
+        setShowSuggestions(false)
+      }
+    }
+
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [])
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -90,20 +187,48 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
                   placeholder="Your name"
                 />
               </div>
-              <div>
+              <div className="relative">
                 <label htmlFor="sidebar-email" className="block text-xs font-medium text-gray-600 mb-1">
                   Email *
                 </label>
                 <input
+                  ref={emailInputRef}
                   id="sidebar-email"
                   name="email"
                   type="email"
                   required
                   value={formData.email}
                   onChange={handleChange}
+                  onKeyDown={handleEmailKeyDown}
                   className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-salesforce-blue focus:border-transparent"
                   placeholder="you@example.com"
                 />
+                {showSuggestions && emailSuggestions.length > 0 && (
+                  <div
+                    ref={suggestionsRef}
+                    className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-48 overflow-auto"
+                  >
+                    {emailSuggestions.map((domain, index) => {
+                      const atIndex = formData.email.indexOf('@')
+                      const beforeAt = atIndex >= 0 ? formData.email.substring(0, atIndex + 1) : ''
+                      const fullEmail = beforeAt + domain
+                      
+                      return (
+                        <button
+                          key={domain}
+                          type="button"
+                          onClick={() => selectSuggestion(domain)}
+                          className={`w-full text-left px-3 py-2 text-sm hover:bg-salesforce-blue/10 transition-colors ${
+                            index === selectedSuggestionIndex ? 'bg-salesforce-blue/20' : ''
+                          }`}
+                        >
+                          <span className="text-gray-600">{beforeAt}</span>
+                          <span className="text-gray-900 font-medium">{domain}</span>
+                        </button>
+                      )
+                    })}
+                  </div>
+                )}
               </div>
               <div>
                 <label htmlFor="sidebar-examName" className="block text-xs font-medium text-gray-600 mb-1">
