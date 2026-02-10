@@ -42,7 +42,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
     setFormData({ ...formData, email: value })
     setError('')
     
-    // Check if user typed "@" and extract the part after "@"
+    // Check if email already contains "@" - if so, use domain filtering
     const atIndex = value.indexOf('@')
     if (atIndex >= 0) {
       const afterAt = value.substring(atIndex + 1)
@@ -52,7 +52,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
       if (!afterAt.includes(' ') && !afterAt.includes('@')) {
         const filtered = COMMON_EMAIL_DOMAINS.filter(domain => 
           domain.startsWith(afterAt.toLowerCase())
-        )
+        ).map(domain => beforeAt + domain)
         setEmailSuggestions(filtered)
         setShowSuggestions(filtered.length > 0 && afterAt.length > 0)
         setSelectedSuggestionIndex(-1)
@@ -60,7 +60,18 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
         setShowSuggestions(false)
       }
     } else {
-      setShowSuggestions(false)
+      // Predictive: Show suggestions for what user has typed so far
+      // Only show if user has typed at least 1 character and no "@" yet
+      if (value.length > 0 && !value.includes('@') && !value.includes(' ')) {
+        const prefix = value.toLowerCase()
+        // Generate suggestions for all common domains
+        const suggestions = COMMON_EMAIL_DOMAINS.map(domain => `${prefix}@${domain}`)
+        setEmailSuggestions(suggestions)
+        setShowSuggestions(true)
+        setSelectedSuggestionIndex(-1)
+      } else {
+        setShowSuggestions(false)
+      }
     }
   }
 
@@ -73,14 +84,8 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
     }
   }
 
-  const selectSuggestion = (domain: string) => {
-    const atIndex = formData.email.indexOf('@')
-    if (atIndex >= 0) {
-      const beforeAt = formData.email.substring(0, atIndex + 1)
-      setFormData({ ...formData, email: beforeAt + domain })
-    } else {
-      setFormData({ ...formData, email: formData.email + '@' + domain })
-    }
+  const selectSuggestion = (fullEmail: string) => {
+    setFormData({ ...formData, email: fullEmail })
     setShowSuggestions(false)
     emailInputRef.current?.focus()
   }
@@ -208,22 +213,21 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
                     ref={suggestionsRef}
                     className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-48 overflow-auto"
                   >
-                    {emailSuggestions.map((domain, index) => {
-                      const atIndex = formData.email.indexOf('@')
-                      const beforeAt = atIndex >= 0 ? formData.email.substring(0, atIndex + 1) : ''
-                      const fullEmail = beforeAt + domain
+                    {emailSuggestions.map((fullEmail, index) => {
+                      const atIndex = fullEmail.indexOf('@')
+                      const prefix = atIndex > 0 ? fullEmail.substring(0, atIndex) : ''
+                      const domain = atIndex >= 0 ? fullEmail.substring(atIndex + 1) : fullEmail
                       
                       return (
                         <button
-                          key={domain}
+                          key={`${fullEmail}-${index}`}
                           type="button"
-                          onClick={() => selectSuggestion(domain)}
+                          onClick={() => selectSuggestion(fullEmail)}
                           className={`w-full text-left px-3 py-2 text-sm hover:bg-salesforce-blue/10 transition-colors ${
                             index === selectedSuggestionIndex ? 'bg-salesforce-blue/20' : ''
                           }`}
                         >
-                          <span className="text-gray-600">{beforeAt}</span>
-                          <span className="text-gray-900 font-medium">{domain}</span>
+                          <span className="text-gray-900 font-medium">{fullEmail}</span>
                         </button>
                       )
                     })}
