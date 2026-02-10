@@ -14,7 +14,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 const slug = 'app-builder'
 
 const descriptionText =
-  'Salesforce Platform App Builder (DEV-402) exam guide 2026. $200 exam fee, 60 questions, passing score, free practice questions and study plan.'
+  'No-code Salesforce certification. DEV-402 exam guide 2026: $200 fee, 60 questions, declarative app building. Perfect for admins ready to build custom apps. Free practice questions.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)

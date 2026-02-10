@@ -8,11 +8,30 @@ import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'developer-1'
-export const metadata = getCertMetadata(slug)
+
+const descriptionText =
+  'Coding-focused Salesforce certification. PD1 exam guide 2026: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components. Required for architect paths. Free practice questions.'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
+
+  return {
+    ...baseMetadata,
+    description: descriptionText,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      description: descriptionText,
+    },
+    twitter: {
+      ...baseMetadata.twitter,
+      description: descriptionText,
+    },
+  }
+}
 
 const sampleQuestions = [
   {

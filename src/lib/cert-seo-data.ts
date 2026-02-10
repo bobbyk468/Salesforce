@@ -275,11 +275,25 @@ function getCertMetaTitle(slug: string): string {
     'tableau-desktop-foundations': 'Salesforce Certified Tableau Desktop Foundations',
     'tableau-server-administrator': 'Salesforce Certified Tableau Server Administrator',
   }
-  /** Standard format for all pages: "Exam Guide 2026 | [cost if high-cost-query] | Practice Tests" */
+  /** Standard format for all pages: "Exam Guide 2026 | [cost if high-cost-query] | [differentiated benefit]" */
   const short = shortTitles[slug]
   if (short) {
+    // Custom benefit phrases for key certs to differentiate in SERP
+    const customBenefits: Record<string, string> = {
+      administrator: 'First Cert | No Coding',
+      'app-builder': 'No-Code Apps | Declarative',
+      'developer-1': 'Apex & LWC | Coding',
+    }
+    const customBenefit = customBenefits[slug]
+    
     // For high-cost-query pages, include cost in title
     if (shouldIncludeCostInTitle) {
+      if (customBenefit) {
+        // Use custom benefit phrase for differentiation
+        const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | ${customBenefit}`
+        const full = short + costBenefit + brand
+        return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR} | ${examCost}` + brand : full
+      }
       const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | Practice Tests`
       const full = short + costBenefit + brand
       // If still too long, use shorter version without "Practice Tests"
@@ -319,11 +333,11 @@ export function getCertMetaDescription(slug: string): string {
       'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+      'First Salesforce certification for beginners. ADM-201 exam guide 2026: $200 fee, 60 questions, 65% passing score. No coding required. Free practice questions and study plan.',
     'advanced-administrator':
       'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'app-builder':
-      'Salesforce Platform App Builder (DEV-402) exam guide 2026. $200 exam fee, 60 questions, passing score, free practice questions and study plan.',
+      'No-code Salesforce certification. DEV-402 exam guide 2026: $200 fee, 60 questions, declarative app building. Perfect for admins ready to build custom apps. Free practice questions.',
     'agentforce-specialist':
       'Prepare for the Salesforce Certified Agentforce Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'business-analyst':
@@ -338,7 +352,7 @@ export function getCertMetaDescription(slug: string): string {
       'ADM-201 practice test: real-style questions, section weightage, passing score. Free. Updated 2026. Test yourself before the exam.',
     // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
     'developer-1':
-      'Prepare for the Salesforce Certified Platform Developer I (PD1) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Coding-focused Salesforce certification. PD1 exam guide 2026: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components. Required for architect paths. Free practice questions.',
     'developer-2':
       'Prepare for the Salesforce Certified Platform Developer II (PD2) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'javascript-developer-i':

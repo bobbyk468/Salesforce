@@ -16,7 +16,7 @@ const slug = 'administrator'
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
+  'First Salesforce certification for beginners. ADM-201 exam guide 2026: $200 fee, 60 questions, 65% passing score. No coding required. Free practice questions and study plan.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
