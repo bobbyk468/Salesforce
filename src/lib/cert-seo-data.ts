@@ -55,8 +55,8 @@ function getCertMetaTitle(slug: string): string {
   const benefit = ` (${TITLE_YEAR}) – Syllabus, Cost & Practice Tests`
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
   const shortTitles: Record<string, string> = {
-    // Administrator track (base certs – people start here)
-    administrator: 'Platform Administrator (ADM-201)',
+    // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
+    administrator: 'Salesforce Platform Administrator (ADM-201)',
     'advanced-administrator': 'Advanced Administrator (ADM-211)',
     'app-builder': 'Platform App Builder',
     'agentforce-specialist': 'Agentforce Specialist',
@@ -187,7 +187,7 @@ export function getCertMetaDescription(slug: string): string {
       'MuleSoft Integration Foundations: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'Start here: ADM-201 (Platform Admin). 500+ practice questions, passing score ~65%, exam cost $200. Updated 2026 syllabus. No dumps—real prep. Free.',
+      'Prepare for the Salesforce Platform Administrator (ADM-201) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'advanced-administrator':
       'ADM-211: 500+ practice questions, section weightage, passing score & cost. Next step after Platform Admin. Updated 2026. Beginner-friendly. Start now.',
     'app-builder':
