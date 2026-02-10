@@ -13,12 +13,25 @@ import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
-// Use generateMetadata function to ensure meta description is explicitly set
+// Explicitly generate metadata with description to ensure it renders in <head>
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
+  const explicitDescription = 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
+  
   return {
-    ...baseMetadata,
-    description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+    title: baseMetadata.title,
+    description: explicitDescription, // Explicitly set description
+    keywords: baseMetadata.keywords,
+    alternates: baseMetadata.alternates,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      description: explicitDescription, // Also set in OpenGraph
+    },
+    twitter: {
+      ...baseMetadata.twitter,
+      description: explicitDescription, // Also set in Twitter
+    },
+    other: baseMetadata.other,
   }
 }
 
