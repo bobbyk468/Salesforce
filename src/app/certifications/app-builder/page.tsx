@@ -208,7 +208,7 @@ export default function AppBuilderPage() {
             
             <CertificationCard
             title={slugToDisplayName(slug)}
-            code="App Builder"
+            code="DEV-402"
             description="The Platform App Builder certification validates your skills in designing, building, and deploying custom applications on the Salesforce platform."
             examDetails={{
               questions: 60,
