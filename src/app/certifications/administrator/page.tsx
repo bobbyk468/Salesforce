@@ -13,39 +13,28 @@ import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
-const PAGE_DESCRIPTION =
+// Use generateMetadata to ensure values are fresh and resolved at page generation time
+// This prevents metadata merge conflicts with root layout
+const descriptionText =
   'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
 
-const base = getCertMetadata(slug)
-// Extract title from base.openGraph (which already has the correct title from getCertMetaTitle)
-// base.openGraph.title is set to titleForMeta in getCertMetadata, which is a string
-const pageTitle = (base.openGraph?.title as string) || 'Salesforce Platform Administrator (ADM-201) Exam Guide 2026 | $200 | Trailblaze Prep'
-const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
 
-export const metadata: Metadata = {
-  title: base.title,
-  description: PAGE_DESCRIPTION,
-  alternates: base.alternates,
-  openGraph: {
-    title: pageTitle,
-    description: PAGE_DESCRIPTION,
-    type: 'article',
-    url: `${baseUrl}/certifications/${slug}`,
-    images: [
-      {
-        url: `${baseUrl}/og-image.png`,
-        width: 1200,
-        height: 630,
-        alt: 'Salesforce Platform Administrator - Practice Questions & Study Guide',
-      },
-    ],
-  },
-  twitter: {
-    card: 'summary_large_image',
-    title: pageTitle,
-    description: PAGE_DESCRIPTION,
-    images: [`${baseUrl}/og-image.png`],
-  },
+  return {
+    ...baseMetadata,
+    // Explicitly redefine the top-level description
+    // to ensure it overrides the layout's default
+    description: descriptionText,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      description: descriptionText,
+    },
+    twitter: {
+      ...baseMetadata.twitter,
+      description: descriptionText,
+    },
+  }
 }
 
 /**
