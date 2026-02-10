@@ -9,13 +9,17 @@ import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+import type { Metadata } from 'next'
 
 const slug = 'administrator'
-// Explicitly ensure meta description is set for Administrator page
-const baseMetadata = getCertMetadata(slug)
-export const metadata: typeof baseMetadata = {
-  ...baseMetadata,
-  description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+
+// Use generateMetadata function to ensure meta description is explicitly set
+export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
+  return {
+    ...baseMetadata,
+    description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+  }
 }
 
 /**
