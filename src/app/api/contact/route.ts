@@ -60,9 +60,9 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: `${username} <${email}>`,
+        from: 'Trailblaze Prep <onboarding@resend.dev>',
         to: [CONTACT_EMAIL],
-        replyTo: email,
+        replyTo: `${username} <${email}>`,
         subject: `Contact Form: ${examName ? `[${examName}] ` : ''}${username}`,
         text: `Name: ${username}\nEmail: ${email}\nExam/Certification: ${examName || '(not specified)'}\n\nMessage:\n${content}`,
       }),
