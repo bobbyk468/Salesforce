@@ -11,7 +11,12 @@ import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPra
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'administrator'
-export const metadata = getCertMetadata(slug)
+// Explicitly ensure meta description is set for Administrator page
+const baseMetadata = getCertMetadata(slug)
+export const metadata: typeof baseMetadata = {
+  ...baseMetadata,
+  description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+}
 
 /**
  * ORIGINAL PRACTICE QUESTIONS - Written specifically for this certification page.
