@@ -39,7 +39,7 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'advanced-administrator': 'ADM-211',
   'developer-1': 'PD1',
   'developer-2': 'PD2',
-  'app-builder': 'App Builder',
+  'app-builder': 'DEV-402',
   'administrator-practice-test': 'ADM-201 Practice',
   'email-specialist-practice-test': 'Email Specialist Practice',
   'sales-cloud': 'Sales Cloud Consultant',
@@ -178,7 +178,7 @@ function getCertMetaTitle(slug: string): string {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
     administrator: 'Salesforce Platform Administrator (ADM-201)',
     'advanced-administrator': 'Salesforce Certified Advanced Administrator (ADM-211)',
-    'app-builder': 'Salesforce Platform App Builder',
+    'app-builder': 'Salesforce Platform App Builder (DEV-402)',
     'agentforce-specialist': 'Salesforce Certified Agentforce Specialist',
     'business-analyst': 'Salesforce Business Analyst',
     'cpq-administrator': 'Salesforce Certified CPQ Administrator',
@@ -323,7 +323,7 @@ export function getCertMetaDescription(slug: string): string {
     'advanced-administrator':
       'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'app-builder':
-      'Prepare for the Salesforce Certified Platform App Builder certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Salesforce Platform App Builder (DEV-402) exam guide 2026. $200 exam fee, 60 questions, passing score, free practice questions and study plan.',
     'agentforce-specialist':
       'Prepare for the Salesforce Certified Agentforce Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'business-analyst':

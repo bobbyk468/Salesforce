@@ -8,11 +8,30 @@ import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
-import { Metadata } from 'next'
+import type { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'app-builder'
-export const metadata = getCertMetadata(slug)
+
+const descriptionText =
+  'Salesforce Platform App Builder (DEV-402) exam guide 2026. $200 exam fee, 60 questions, passing score, free practice questions and study plan.'
+
+export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
+
+  return {
+    ...baseMetadata,
+    description: descriptionText,
+    openGraph: {
+      ...baseMetadata.openGraph,
+      description: descriptionText,
+    },
+    twitter: {
+      ...baseMetadata.twitter,
+      description: descriptionText,
+    },
+  }
+}
 
 const sampleQuestions = [
   {
