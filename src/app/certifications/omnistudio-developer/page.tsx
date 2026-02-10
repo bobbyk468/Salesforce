@@ -1,0 +1,119 @@
+import CertificationCard from '@/components/CertificationCard'
+import ExamPrepContent from '@/components/ExamPrepContent'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageIntro from '@/components/CertPageIntro'
+import CertPageCta from '@/components/CertPageCta'
+import ExamFeesSection from '@/components/ExamFeesSection'
+import RelatedCertifications from '@/components/RelatedCertifications'
+import CertTableOfContents from '@/components/CertTableOfContents'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import QuestionCard from '@/components/QuestionCard'
+import { Metadata } from 'next'
+import { getExamWeightage } from '@/lib/exam-weightage-data'
+
+const slug = 'omnistudio-developer'
+export const metadata = getCertMetadata(slug)
+
+const sampleQuestions = [
+  {
+    question: "Which OmniStudio tool is used to create guided, step-by-step digital experiences?",
+    options: ["Apex only", "OmniScript", "Visualforce", "LWC only"],
+    correctAnswer: 1,
+    explanation: "OmniScript provides declarative, step-by-step guided experiences without code.",
+  },
+  {
+    question: "What is DataRaptor used for in OmniStudio?",
+    options: ["Sending emails", "Data extraction, load, and transform (DET, DLT, DTT)", "Slack messages", "CPQ configuration"],
+    correctAnswer: 1,
+    explanation: "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio.",
+  },
+  {
+    question: "Which component displays a compact, card-based view of record data?",
+    options: ["OmniScript", "FlexCard", "DataRaptor", "Integration Procedure"],
+    correctAnswer: 1,
+    explanation: "FlexCards display compact, card-based views of data with declarative layout.",
+  },
+  {
+    question: "What is an Integration Procedure in OmniStudio?",
+    options: ["A report", "A reusable server-side flow that orchestrates APIs and DataRaptors", "An email template", "A dashboard"],
+    correctAnswer: 1,
+    explanation: "Integration Procedures orchestrate server-side logic, APIs, and DataRaptors.",
+  },
+  {
+    question: "Which industry solution commonly uses OmniStudio?",
+    options: ["Retail only", "Financial Services, Insurance, and other industries for digital flows", "Manufacturing only", "Education only"],
+    correctAnswer: 1,
+    explanation: "OmniStudio is used across Financial Services, Insurance, and other industries for digital experiences.",
+  },
+]
+
+export default function OmniStudioDeveloperPage() {
+  const examSections = getExamWeightage(slug)
+  return (
+    <div className="max-w-7xl mx-auto px-4 py-12">
+      <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+      <CertPageIntro slug={slug} />
+        
+        {/* Prominent CTA above fold */}
+        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        {/* Main Content */}
+        <div className="lg:col-span-3">
+            {/* Exam Fees & Registration section */}
+            <ExamFeesSection slug={slug} />
+            
+            <CertificationCard
+            title={slugToDisplayName(slug)}
+            code="OmniStudio Developer"
+            description="Certified OmniStudio Developers have hands-on experience designing and configuring cloud applications using various OmniStudio declarative development tools."
+            examDetails={{ questions: 60, passingScore: '~65%', duration: '105 min', cost: '$200' }}
+            topics={['OmniScript', 'DataRaptor', 'FlexCards', 'Integration Procedures', 'Digital Experience', 'Industries', 'Best Practices', 'Testing', 'Deployment', 'Integration']}
+            examSections={examSections}
+            h1Text={getCertH1Text(slug)}
+          examWeightageHeading={getCertExamWeightageHeading(slug)}
+          />
+
+          <div id="exam-prep">
+            <ExamPrepContent slug={slug} />
+          </div>
+
+          <div id="practice-questions" className="mt-12">
+            <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
+            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            {sampleQuestions.map((q, index) => (
+              <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
+            ))}
+          </div>
+          
+          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
+            <h3 className="text-xl font-bold text-gray-900 mb-4">Want More Practice Questions?</h3>
+            <p className="text-gray-600 mb-6">Get access to our complete question bank with detailed explanations.</p>
+            <a href="/contact" className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">Contact Us for Full Access</a>
+          </div>
+
+          <div id="related-certs">
+            <RelatedCertifications currentSlug={slug} />
+          </div>
+
+          {/* FAQ section - rendered after H1 for proper SEO structure */}
+          <div id="faq">
+            <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
+          </div>
+        </div>
+
+        {/* Sidebar - Table of Contents */}
+        <aside className="lg:col-span-1">
+          <CertTableOfContents
+            sections={[
+              { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'practice-questions', title: 'Practice Questions' },
+              { id: 'more-questions', title: 'Get More Questions' },
+              { id: 'related-certs', title: 'Related Certifications' },
+              { id: 'faq', title: 'Exam FAQs' }]}
+          />
+        </aside>
+      </div>
+    </div>
+  )
+}
