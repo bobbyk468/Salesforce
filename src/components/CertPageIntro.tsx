@@ -48,7 +48,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         This page is your <strong className="text-gray-900">{primaryName}</strong>
         {examCode ? <> (exam code <strong className="text-gray-900">{examCode}</strong>)</> : null}
         {formerName ? <>—formerly <strong className="text-gray-900">{formerName}</strong></> : null}
-        {' '}study guide. The certification validates skills that employers look for in Salesforce roles—whether you&apos;re an administrator, consultant, developer, or architect. It is designed for {audience} who want to prove their knowledge with an industry-recognized credential.
+        {' '}exam study guide. The certification validates skills that employers look for in Salesforce roles—whether you&apos;re an administrator, consultant, developer, or architect. It is designed for {audience} who want to prove their knowledge with an industry-recognized credential.
       </p>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
         Here you&apos;ll find <strong className="text-gray-900">section-wise exam weightage</strong> so you know exactly which topics carry the most questions, exam tips and prerequisites, a focused study plan, and <strong className="text-gray-900">sample practice questions with detailed explanations</strong>. All content on this page is original and unique—written specifically for this certification to help with your preparation. Use this page to align your study with the official outline and to gauge when you&apos;re ready to sit the exam. Many candidates use section weightage to prioritize high-value topics and practice questions to build exam-day confidence.
