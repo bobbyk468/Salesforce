@@ -13,20 +13,27 @@ import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
-// Use STATIC metadata export (not generateMetadata) - Next.js recommendation for non-dynamic content
-// This ensures the meta description renders correctly in <head>
-const baseMetadata = getCertMetadata(slug)
+// Fix per Claude/Gemini recommendations: Explicit assignment instead of spreading
+// to avoid undefined values that can cause meta description to be silently dropped
+const PAGE_DESCRIPTION =
+  'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
+
+const base = getCertMetadata(slug)
+
 export const metadata: Metadata = {
-  ...baseMetadata,
-  description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+  title: base.title,
+  description: PAGE_DESCRIPTION, // Explicit, not spread from base
+  keywords: base.keywords,
+  alternates: base.alternates,
   openGraph: {
-    ...baseMetadata.openGraph,
-    description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+    ...(base.openGraph ?? {}),
+    description: PAGE_DESCRIPTION, // Explicit override
   },
   twitter: {
-    ...baseMetadata.twitter,
-    description: 'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
+    ...(base.twitter ?? {}),
+    description: PAGE_DESCRIPTION, // Explicit override
   },
+  other: base.other,
 }
 
 /**

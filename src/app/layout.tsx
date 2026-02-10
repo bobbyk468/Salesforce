@@ -21,7 +21,9 @@ const defaultDescription =
   'Prepare for Salesforce certifications with practice questions, exam weightage, and study guides. Browse by role—Admin, Developer, Consultant, Architect. Start free.'
 
 export const metadata: Metadata = {
-  metadataBase: new URL(siteUrl),
+  // Hardcode metadataBase for stability (per Gemini recommendation)
+  // Prevents issues if NEXT_PUBLIC_SITE_URL is undefined during build
+  metadataBase: new URL('https://www.trailblazeprep.com'),
   title: {
     default: defaultTitle,
     template: `%s | ${SITE_NAME}`,
