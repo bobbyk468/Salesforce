@@ -157,8 +157,11 @@ function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
   const examCost = getExamCost(slug)
   const benefit = ` (${TITLE_YEAR}) – Syllabus, Cost & Practice Tests`
-  /** High-cost-query pages: include cost in title for better CTR. */
-  const highCostQueryPages = ['administrator', 'app-builder', 'business-analyst', 'sales-cloud', 'developer-1']
+  /** High-cost-query pages: include cost in title for better CTR. Add more certs that have high cost-query volume. */
+  const highCostQueryPages = [
+    'administrator', 'app-builder', 'business-analyst', 'sales-cloud', 'developer-1',
+    'email-specialist', 'data-architect', 'tableau-data-analyst', 'tableau-architect', 'tableau-consultant'
+  ]
   const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
   const shortTitles: Record<string, string> = {
@@ -205,12 +208,12 @@ function getCertMetaTitle(slug: string): string {
     'marketing-cloud-engagement-foundations': 'Salesforce Certified Marketing Cloud Engagement Foundations',
     'mulesoft-integration-foundations': 'Salesforce Certified MuleSoft Integration Foundations',
     // Marketing
-    'email-specialist': 'Salesforce Certified Marketing Cloud Email Specialist',
+    'email-specialist': 'Salesforce Marketing Cloud Email Specialist',
     'pardot-specialist': 'Salesforce Certified Pardot (Account Engagement) Specialist',
     'email-specialist-practice-test': 'Email Specialist Practice Test',
     // Architect ("Salesforce" first for broader queries)
     'application-architect': 'Salesforce Certified Application Architect',
-    'data-architect': 'Salesforce Certified Data Architect',
+    'data-architect': 'Salesforce Data Architect',
     'integration-architect': 'Salesforce Certified Integration Architect',
     'sharing-visibility-architect': 'Salesforce Certified Sharing & Visibility Architect',
     'system-architect': 'Salesforce Certified System Architect',
@@ -471,12 +474,9 @@ export function getCertMetaDescription(slug: string): string {
     'ux-designer':
       'Prepare for the Salesforce Certified UX Designer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Tableau - $250 (except Desktop Foundations $100)
-    'tableau-architect':
-      'Prepare for the Salesforce Certified Tableau Architect certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'tableau-consultant':
-      'Prepare for the Salesforce Certified Tableau Consultant certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'tableau-data-analyst':
-      'Prepare for the Salesforce Certified Tableau Data Analyst certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+    'tableau-architect': 'Salesforce Tableau Architect',
+    'tableau-consultant': 'Salesforce Tableau Consultant',
+    'tableau-data-analyst': 'Salesforce Tableau Data Analyst',
     'tableau-desktop-foundations':
       'Prepare for the Salesforce Certified Tableau Desktop Foundations certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'tableau-server-administrator':
