@@ -7,7 +7,7 @@ import CertPageCta from '@/components/CertPageCta'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertMetaTitle, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import type { Metadata } from 'next'
 
@@ -17,7 +17,9 @@ const PAGE_DESCRIPTION =
   'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
 
 const base = getCertMetadata(slug)
-const pageTitle = getCertMetaTitle(slug)
+// Extract title from base.openGraph (which already has the correct title from getCertMetaTitle)
+// base.openGraph.title is set to titleForMeta in getCertMetadata, which is a string
+const pageTitle = (base.openGraph?.title as string) || 'Salesforce Platform Administrator (ADM-201) Exam Guide 2026 | $200 | Trailblaze Prep'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
