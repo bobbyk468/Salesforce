@@ -45,7 +45,8 @@ export async function POST(request: Request) {
 
     const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
-      console.warn('RESEND_API_KEY not set. Contact form temporarily unavailable.')
+      // Log for debugging (won't expose the key, just confirms it's missing)
+      console.error('[Contact API] RESEND_API_KEY is missing. Available env vars:', Object.keys(process.env).filter(k => k.includes('RESEND')))
       return NextResponse.json(
         { error: 'Contact form is temporarily unavailable. Please email us directly.' },
         { status: 503 }
