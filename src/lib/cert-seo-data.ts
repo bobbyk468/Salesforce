@@ -319,7 +319,7 @@ export function getCertMetaDescription(slug: string): string {
       'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'Prepare for the Salesforce Certified Platform Administrator (ADM-201) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.',
     'advanced-administrator':
       'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'app-builder':
