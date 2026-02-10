@@ -50,11 +50,17 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
       
       // If there's no space and user is typing after "@"
       if (!afterAt.includes(' ') && !afterAt.includes('@')) {
-        const filtered = COMMON_EMAIL_DOMAINS.filter(domain => 
-          domain.startsWith(afterAt.toLowerCase())
-        ).map(domain => beforeAt + domain)
-        setEmailSuggestions(filtered)
-        setShowSuggestions(filtered.length > 0 && afterAt.length > 0)
+        // If user just typed "@" (afterAt is empty), show all domains
+        // Otherwise, filter domains that match what they're typing
+        const domainsToShow = afterAt.length === 0
+          ? COMMON_EMAIL_DOMAINS
+          : COMMON_EMAIL_DOMAINS.filter(domain => 
+              domain.startsWith(afterAt.toLowerCase())
+            )
+        
+        const suggestions = domainsToShow.map(domain => beforeAt + domain)
+        setEmailSuggestions(suggestions)
+        setShowSuggestions(suggestions.length > 0)
         setSelectedSuggestionIndex(-1)
       } else {
         setShowSuggestions(false)
