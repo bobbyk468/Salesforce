@@ -10,7 +10,12 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'email-specialist-practice-test'
-export const metadata = getCertMetadata(slug)
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+// Canonical → main Email Specialist guide to avoid CTR dilution; this page is sub-intent (practice test only).
+export const metadata = {
+  ...getCertMetadata(slug),
+  alternates: { canonical: `${baseUrl}/certifications/email-specialist` },
+}
 
 const sampleQuestions = [
   {

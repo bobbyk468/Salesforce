@@ -57,103 +57,103 @@ function getCertMetaTitle(slug: string): string {
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
     administrator: 'Salesforce Platform Administrator (ADM-201)',
-    'advanced-administrator': 'Advanced Administrator (ADM-211)',
-    'app-builder': 'Platform App Builder',
-    'agentforce-specialist': 'Agentforce Specialist',
-    'business-analyst': 'Business Analyst',
-    'cpq-administrator': 'CPQ Administrator',
-    'marketing-cloud-engagement-admin': 'Marketing Cloud Engagement Admin',
-    'slack-administrator': 'Slack Administrator',
+    'advanced-administrator': 'Salesforce Advanced Administrator (ADM-211)',
+    'app-builder': 'Salesforce Platform App Builder',
+    'agentforce-specialist': 'Salesforce Agentforce Specialist',
+    'business-analyst': 'Salesforce Business Analyst',
+    'cpq-administrator': 'Salesforce CPQ Administrator',
+    'marketing-cloud-engagement-admin': 'Salesforce Marketing Cloud Engagement Admin',
+    'slack-administrator': 'Salesforce Slack Administrator',
     'administrator-practice-test': 'ADM-201 Practice Test',
-    // Developer track
-    'developer-1': 'Platform Developer I (PD1)',
-    'developer-2': 'Platform Developer II (PD2)',
-    'javascript-developer-i': 'JavaScript Developer I',
-    'b2c-commerce-developer': 'B2C Commerce Developer',
-    'industries-cpq-developer': 'Industries CPQ Developer',
-    'marketing-cloud-engagement-developer': 'Marketing Cloud Engagement Developer',
-    'mulesoft-developer-i': 'MuleSoft Developer I',
-    'mulesoft-developer-ii': 'MuleSoft Developer II',
-    'mulesoft-hyperautomation-developer': 'MuleSoft Hyperautomation Developer',
-    'omnistudio-developer': 'OmniStudio Developer',
-    'slack-developer': 'Slack Developer',
-    // Consultant track
-    'sales-cloud': 'Sales Cloud Consultant',
-    'service-cloud': 'Service Cloud Consultant',
-    'data-cloud-consultant': 'Data Cloud Consultant',
-    'crm-analytics-einstein-discovery-consultant': 'CRM Analytics & Einstein Discovery',
-    'education-cloud-consultant': 'Education Cloud Consultant',
-    'experience-cloud': 'Experience Cloud Consultant',
-    'field-service': 'Field Service Consultant',
-    'pardot-consultant': 'Pardot (Account Engagement) Consultant',
-    'marketing-cloud-consultant': 'Marketing Cloud Engagement Consultant',
-    'nonprofit-cloud': 'Nonprofit Cloud Consultant',
-    'nonprofit-success-pack-consultant': 'Nonprofit Success Pack (NPSP)',
-    'omnistudio-consultant': 'OmniStudio Consultant',
-    'revenue-cloud-consultant': 'Revenue Cloud Consultant',
-    'slack-consultant': 'Slack Consultant',
+    // Developer track ("Salesforce" first for broader queries)
+    'developer-1': 'Salesforce Platform Developer I (PD1)',
+    'developer-2': 'Salesforce Platform Developer II (PD2)',
+    'javascript-developer-i': 'Salesforce JavaScript Developer I',
+    'b2c-commerce-developer': 'Salesforce B2C Commerce Developer',
+    'industries-cpq-developer': 'Salesforce Industries CPQ Developer',
+    'marketing-cloud-engagement-developer': 'Salesforce Marketing Cloud Engagement Developer',
+    'mulesoft-developer-i': 'Salesforce MuleSoft Developer I',
+    'mulesoft-developer-ii': 'Salesforce MuleSoft Developer II',
+    'mulesoft-hyperautomation-developer': 'Salesforce MuleSoft Hyperautomation Developer',
+    'omnistudio-developer': 'Salesforce OmniStudio Developer',
+    'slack-developer': 'Salesforce Slack Developer',
+    // Consultant track ("Salesforce" first for broader queries)
+    'sales-cloud': 'Salesforce Sales Cloud Consultant',
+    'service-cloud': 'Salesforce Service Cloud Consultant',
+    'data-cloud-consultant': 'Salesforce Data Cloud Consultant',
+    'crm-analytics-einstein-discovery-consultant': 'Salesforce CRM Analytics & Einstein Discovery',
+    'education-cloud-consultant': 'Salesforce Education Cloud Consultant',
+    'experience-cloud': 'Salesforce Experience Cloud Consultant',
+    'field-service': 'Salesforce Field Service Consultant',
+    'pardot-consultant': 'Salesforce Pardot (Account Engagement) Consultant',
+    'marketing-cloud-consultant': 'Salesforce Marketing Cloud Engagement Consultant',
+    'nonprofit-cloud': 'Salesforce Nonprofit Cloud Consultant',
+    'nonprofit-success-pack-consultant': 'Salesforce Nonprofit Success Pack (NPSP)',
+    'omnistudio-consultant': 'Salesforce OmniStudio Consultant',
+    'revenue-cloud-consultant': 'Salesforce Revenue Cloud Consultant',
+    'slack-consultant': 'Salesforce Slack Consultant',
     // Associate
-    'platform-foundations': 'Platform Foundations',
-    'ai-associate': 'AI Associate',
-    'marketing-cloud-engagement-foundations': 'Marketing Cloud Engagement Foundations',
-    'mulesoft-integration-foundations': 'MuleSoft Integration Foundations',
+    'platform-foundations': 'Salesforce Platform Foundations',
+    'ai-associate': 'Salesforce AI Associate',
+    'marketing-cloud-engagement-foundations': 'Salesforce Marketing Cloud Engagement Foundations',
+    'mulesoft-integration-foundations': 'Salesforce MuleSoft Integration Foundations',
     // Marketing
-    'email-specialist': 'Marketing Cloud Email Specialist',
-    'pardot-specialist': 'Pardot (Account Engagement) Specialist',
+    'email-specialist': 'Salesforce Marketing Cloud Email Specialist',
+    'pardot-specialist': 'Salesforce Pardot (Account Engagement) Specialist',
     'email-specialist-practice-test': 'Email Specialist Practice Test',
-    // Architect
-    'application-architect': 'Application Architect',
-    'data-architect': 'Data Architect',
-    'integration-architect': 'Integration Architect',
-    'sharing-visibility-architect': 'Sharing & Visibility Architect',
-    'system-architect': 'System Architect',
-    'identity-access-management-architect': 'Identity & Access Mgmt Architect',
-    'dev-lifecycle-deployment-architect': 'Dev Lifecycle & Deployment Architect',
-    'technical-architect': 'Technical Architect (CTA)',
+    // Architect ("Salesforce" first for broader queries)
+    'application-architect': 'Salesforce Application Architect',
+    'data-architect': 'Salesforce Data Architect',
+    'integration-architect': 'Salesforce Integration Architect',
+    'sharing-visibility-architect': 'Salesforce Sharing & Visibility Architect',
+    'system-architect': 'Salesforce System Architect',
+    'identity-access-management-architect': 'Salesforce Identity & Access Mgmt Architect',
+    'dev-lifecycle-deployment-architect': 'Salesforce Dev Lifecycle & Deployment Architect',
+    'technical-architect': 'Salesforce Technical Architect (CTA)',
     'technical-architect-evaluation': 'CTA Architect Evaluation',
     'technical-architect-review-board': 'CTA Review Board',
-    'b2b-solution-architect': 'B2B Solution Architect',
-    'b2c-commerce-architect': 'B2C Commerce Architect',
-    'b2c-solution-architect': 'B2C Solution Architect',
-    'heroku-architect': 'Heroku Architect',
-    'mulesoft-catalyst-consultant': 'MuleSoft Catalyst Consultant',
-    'mulesoft-platform-architect': 'MuleSoft Platform Architect',
-    'mulesoft-integration-architect': 'MuleSoft Integration Architect',
-    // Accredited Professional
-    'advanced-field-service-ap': 'Advanced Field Service AP',
-    'b2b-commerce-admin-ap': 'B2B Commerce Admin AP',
-    'b2b-commerce-developer-ap': 'B2B Commerce Developer AP',
-    'communications-cloud-ap': 'Communications Cloud AP',
-    'consumer-goods-cloud-ap': 'Consumer Goods Cloud AP',
-    'consumer-goods-tpm-ap': 'Consumer Goods TPM AP',
-    'contact-center-ap': 'Contact Center AP',
-    'cpq-billing-ap': 'CPQ and Billing AP',
-    'energy-utilities-ap': 'Energy & Utilities AP',
-    'financial-services-cloud-ap': 'Financial Services Cloud AP',
-    'health-cloud-ap': 'Health Cloud AP',
-    'heroku-developer-ap': 'Heroku Developer AP',
-    'loyalty-management-ap': 'Loyalty Management AP',
-    'manufacturing-cloud-ap': 'Manufacturing Cloud AP',
-    'marketing-cloud-advanced-cross-channel-ap': 'Marketing Cloud Advanced Cross Channel AP',
-    'marketing-cloud-intelligence-ap': 'Marketing Cloud Intelligence AP',
-    'marketing-cloud-personalization-ap': 'Marketing Cloud Personalization AP',
-    'media-cloud-ap': 'Media Cloud AP',
-    'net-zero-cloud-ap': 'Net Zero Cloud AP',
-    'order-management-admin-ap': 'Order Management Admin AP',
-    'order-management-developer-ap': 'Order Management Developer AP',
-    'process-automation-ap': 'Process Automation AP',
-    'public-sector-solutions-ap': 'Public Sector Solutions AP',
+    'b2b-solution-architect': 'Salesforce B2B Solution Architect',
+    'b2c-commerce-architect': 'Salesforce B2C Commerce Architect',
+    'b2c-solution-architect': 'Salesforce B2C Solution Architect',
+    'heroku-architect': 'Salesforce Heroku Architect',
+    'mulesoft-catalyst-consultant': 'Salesforce MuleSoft Catalyst Consultant',
+    'mulesoft-platform-architect': 'Salesforce MuleSoft Platform Architect',
+    'mulesoft-integration-architect': 'Salesforce MuleSoft Integration Architect',
+    // Accredited Professional ("Salesforce" context in ecosystem)
+    'advanced-field-service-ap': 'Salesforce Advanced Field Service AP',
+    'b2b-commerce-admin-ap': 'Salesforce B2B Commerce Admin AP',
+    'b2b-commerce-developer-ap': 'Salesforce B2B Commerce Developer AP',
+    'communications-cloud-ap': 'Salesforce Communications Cloud AP',
+    'consumer-goods-cloud-ap': 'Salesforce Consumer Goods Cloud AP',
+    'consumer-goods-tpm-ap': 'Salesforce Consumer Goods TPM AP',
+    'contact-center-ap': 'Salesforce Contact Center AP',
+    'cpq-billing-ap': 'Salesforce CPQ and Billing AP',
+    'energy-utilities-ap': 'Salesforce Energy & Utilities AP',
+    'financial-services-cloud-ap': 'Salesforce Financial Services Cloud AP',
+    'health-cloud-ap': 'Salesforce Health Cloud AP',
+    'heroku-developer-ap': 'Salesforce Heroku Developer AP',
+    'loyalty-management-ap': 'Salesforce Loyalty Management AP',
+    'manufacturing-cloud-ap': 'Salesforce Manufacturing Cloud AP',
+    'marketing-cloud-advanced-cross-channel-ap': 'Salesforce Marketing Cloud Advanced Cross Channel AP',
+    'marketing-cloud-intelligence-ap': 'Salesforce Marketing Cloud Intelligence AP',
+    'marketing-cloud-personalization-ap': 'Salesforce Marketing Cloud Personalization AP',
+    'media-cloud-ap': 'Salesforce Media Cloud AP',
+    'net-zero-cloud-ap': 'Salesforce Net Zero Cloud AP',
+    'order-management-admin-ap': 'Salesforce Order Management Admin AP',
+    'order-management-developer-ap': 'Salesforce Order Management Developer AP',
+    'process-automation-ap': 'Salesforce Process Automation AP',
+    'public-sector-solutions-ap': 'Salesforce Public Sector Solutions AP',
     // Sales
-    'sales-foundations': 'Sales Foundations',
+    'sales-foundations': 'Salesforce Sales Foundations',
     // Designer
-    'strategy-designer': 'Platform Strategy Designer',
-    'ux-designer': 'UX Designer',
-    // Tableau
-    'tableau-architect': 'Tableau Architect',
-    'tableau-consultant': 'Tableau Consultant',
-    'tableau-data-analyst': 'Tableau Data Analyst',
-    'tableau-desktop-foundations': 'Tableau Desktop Foundations',
-    'tableau-server-administrator': 'Tableau Server Administrator',
+    'strategy-designer': 'Salesforce Platform Strategy Designer',
+    'ux-designer': 'Salesforce UX Designer',
+    // Tableau (Salesforce ecosystem)
+    'tableau-architect': 'Salesforce Tableau Architect',
+    'tableau-consultant': 'Salesforce Tableau Consultant',
+    'tableau-data-analyst': 'Salesforce Tableau Data Analyst',
+    'tableau-desktop-foundations': 'Salesforce Tableau Desktop Foundations',
+    'tableau-server-administrator': 'Salesforce Tableau Server Administrator',
   }
   const short = shortTitles[slug]
   if (short) {
@@ -178,192 +178,192 @@ export function getCertMetaDescription(slug: string): string {
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
-      'Platform Foundations: practice questions, section weightage, passing score & cost. Updated 2026. Entry-level cert. Start free.',
+      'Prepare for the Salesforce Platform Foundations certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'ai-associate':
-      'AI Associate: practice questions, weightage, passing score. Updated 2026. Beginner-friendly. Start free.',
+      'Prepare for the Salesforce AI Associate certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-engagement-foundations':
-      'Marketing Cloud Engagement Foundations: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Marketing Cloud Engagement Foundations certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-integration-foundations':
-      'MuleSoft Integration Foundations: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce MuleSoft Integration Foundations certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
       'Prepare for the Salesforce Platform Administrator (ADM-201) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'advanced-administrator':
-      'ADM-211: 500+ practice questions, section weightage, passing score & cost. Next step after Platform Admin. Updated 2026. Beginner-friendly. Start now.',
+      'Prepare for the Salesforce Advanced Administrator (ADM-211) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'app-builder':
-      'App Builder cert: syllabus, exam cost, passing score & weightage. 500+ practice questions. Often taken with ADM-201. Updated 2026. Start free.',
+      'Prepare for the Salesforce Platform App Builder certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'agentforce-specialist':
-      'Agentforce Specialist: practice questions, exam weightage, passing score & cost. AI/agent admin cert. Updated 2026. Beginner-friendly. Learn more.',
+      'Prepare for the Salesforce Agentforce Specialist certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'business-analyst':
-      'Business Analyst cert: practice questions, section weightage, passing score & exam cost. Updated 2026. Start your analyst path. Free prep.',
+      'Prepare for the Salesforce Business Analyst certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'cpq-administrator':
-      'CPQ Administrator: practice questions, weightage, passing score & cost. Configure & administer CPQ. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce CPQ Administrator certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-engagement-admin':
-      'Marketing Cloud Engagement Admin: practice questions, weightage, passing score & cost. Updated 2026. Admin-track cert. Start now.',
+      'Prepare for the Salesforce Marketing Cloud Engagement Admin certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'slack-administrator':
-      'Slack Administrator: practice questions, exam weightage, passing score & cost. Salesforce Slack cert. Updated 2026. Start free.',
+      'Prepare for the Salesforce Slack Administrator certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'administrator-practice-test':
       'ADM-201 practice test: real-style questions, section weightage, passing score. Free. Updated 2026. Test yourself before the exam.',
     // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
     'developer-1':
-      'PD1 exam: Apex & LWC practice questions, section weightage, passing score & cost. Updated 2026. Beginner-friendly. Start free.',
+      'Prepare for the Salesforce Platform Developer I (PD1) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'developer-2':
-      'PD2: advanced Apex, LWC & integration. Practice questions, section weightage, passing score & cost. Updated 2026. Next after PD1. Start now.',
+      'Prepare for the Salesforce Platform Developer II (PD2) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'javascript-developer-i':
-      'JavaScript Developer I: practice questions, weightage, passing score & cost. JS & LWC. Updated 2026. Start free.',
+      'Prepare for the Salesforce JavaScript Developer I certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'b2c-commerce-developer':
-      'B2C Commerce Developer: practice questions, section weightage, passing score & exam cost. Updated 2026. Developer track. Start preparing.',
+      'Prepare for the Salesforce B2C Commerce Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'industries-cpq-developer':
-      'Industries CPQ Developer: practice questions, weightage, passing score & cost. Updated 2026. CPQ development cert. Start free.',
+      'Prepare for the Salesforce Industries CPQ Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-engagement-developer':
-      'Marketing Cloud Engagement Developer: practice questions, weightage, passing score & cost. Updated 2026. Developer track. Learn more.',
+      'Prepare for the Salesforce Marketing Cloud Engagement Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-developer-i':
-      'MuleSoft Developer I: practice questions, section weightage, passing score & cost. Updated 2026. Integration focus. Start now.',
+      'Prepare for the Salesforce MuleSoft Developer I certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-developer-ii':
-      'MuleSoft Developer II: practice questions, weightage, passing score & cost. Updated 2026. Advanced MuleSoft. Start preparing.',
+      'Prepare for the Salesforce MuleSoft Developer II certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-hyperautomation-developer':
-      'MuleSoft Hyperautomation Developer: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce MuleSoft Hyperautomation Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'omnistudio-developer':
-      'OmniStudio Developer: practice questions, exam weightage, passing score & cost. Updated 2026. Developer track. Start now.',
+      'Prepare for the Salesforce OmniStudio Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'slack-developer':
-      'Slack Developer: practice questions, weightage, passing score & cost. Salesforce Slack cert. Updated 2026. Start free.',
+      'Prepare for the Salesforce Slack Developer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
     'crm-analytics-einstein-discovery-consultant':
-      'CRM Analytics & Einstein Discovery: practice questions, weightage, passing score & cost. Updated 2026. Consultant track. Start now.',
+      'Prepare for the Salesforce CRM Analytics & Einstein Discovery Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'data-cloud-consultant':
-      'Data Cloud Consultant: practice questions, section weightage, exam cost. Updated 2026. Aligned with official outline. Prepare now.',
+      'Prepare for the Salesforce Data Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'education-cloud-consultant':
-      'Education Cloud Consultant: practice questions, weightage, passing score & cost. Updated 2026. Consultant track. Start free.',
+      'Prepare for the Salesforce Education Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'experience-cloud':
-      'Experience Cloud Consultant: practice questions, weightage, passing score & cost. Updated 2026. Sites/Community. Start now.',
+      'Prepare for the Salesforce Experience Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'field-service':
-      'Field Service Consultant: practice questions, weightage, passing score & exam cost. Updated 2026. Consultant track. Start preparing.',
+      'Prepare for the Salesforce Field Service Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'pardot-consultant':
-      'Pardot (Account Engagement) Consultant: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Pardot (Account Engagement) Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-consultant':
-      'Marketing Cloud Engagement Consultant: practice questions, weightage, passing score & cost. Updated 2026. Consultant track. Learn more.',
+      'Prepare for the Salesforce Marketing Cloud Engagement Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'nonprofit-cloud':
-      'Nonprofit Cloud Consultant: practice questions, weightage, passing score & cost. Updated 2026. NPO focus. Start now.',
+      'Prepare for the Salesforce Nonprofit Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'nonprofit-success-pack-consultant':
-      'NPSP Consultant: practice questions, weightage, passing score & cost. Nonprofit Success Pack. Updated 2026. Start free.',
+      'Prepare for the Salesforce Nonprofit Success Pack (NPSP) Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'omnistudio-consultant':
-      'OmniStudio Consultant: practice questions, weightage, passing score & cost. Updated 2026. Consultant track. Start preparing.',
+      'Prepare for the Salesforce OmniStudio Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'revenue-cloud-consultant':
-      'Revenue Cloud Consultant: practice questions, weightage, passing score & cost. CPQ & billing. Updated 2026. Start now.',
+      'Prepare for the Salesforce Revenue Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'sales-cloud':
-      'Sales Cloud Consultant: practice questions, weightage, passing score & cost. Updated 2026. Real questions—no dumps. Learn more.',
+      'Prepare for the Salesforce Sales Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'service-cloud':
-      'Service Cloud Consultant: practice questions, weightage, passing score & cost. Updated 2026. Prepare for the exam.',
+      'Prepare for the Salesforce Service Cloud Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'slack-consultant':
-      'Slack Consultant: practice questions, weightage, passing score & cost. Salesforce Slack. Updated 2026. Start free.',
+      'Prepare for the Salesforce Slack Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Marketing (strong CTR)
     'email-specialist':
-      'Marketing Cloud Email Specialist: practice questions, weightage, passing score & cost. Updated 2026. Marketing track. Start free.',
+      'Prepare for the Salesforce Marketing Cloud Email Specialist certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'pardot-specialist':
-      'Pardot (Account Engagement) Specialist: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Pardot (Account Engagement) Specialist certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'email-specialist-practice-test':
       'Email Specialist practice test: real-style questions, weightage, passing score. Free. Updated 2026. Start free.',
-    // Architect (strong CTR)
+    // Architect (Prepare for… format)
     'application-architect':
-      'Application Architect: practice questions, weightage, passing score & cost. Updated 2026. Architect track. Start now.',
+      'Prepare for the Salesforce Application Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'data-architect':
-      'Data Architect: practice questions, section weightage, passing score & cost. Updated 2026. Data modeling. Start preparing.',
+      'Prepare for the Salesforce Data Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'integration-architect':
-      'Integration Architect: practice questions, weightage, passing score & cost. Updated 2026. Architect track. Start free.',
+      'Prepare for the Salesforce Integration Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'sharing-visibility-architect':
-      'Sharing and Visibility Architect: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Sharing and Visibility Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'system-architect':
-      'System Architect: practice questions, weightage, passing score & cost. Updated 2026. Architect track. Learn more.',
+      'Prepare for the Salesforce System Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'identity-access-management-architect':
-      'Identity and Access Management Architect: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce Identity and Access Management Architect certification (2026). Exam details, syllabus, passing score, and practice questions.',
     'dev-lifecycle-deployment-architect':
-      'Dev Lifecycle and Deployment Architect: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Dev Lifecycle and Deployment Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'technical-architect':
-      'Technical Architect (CTA): practice questions, weightage, passing score & cost. Updated 2026. CTA prep. Start preparing.',
+      'Prepare for the Salesforce Technical Architect (CTA) certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'technical-architect-evaluation':
-      'CTA Architect Evaluation: practice questions, weightage & study guide. Updated 2026. CTA path. Start now.',
+      'Prepare for the CTA Architect Evaluation (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'technical-architect-review-board':
-      'CTA Review Board prep: practice questions & study materials. Updated 2026. Technical Architect review. Learn more.',
+      'Prepare for the CTA Architect Review Board (2026). Practice questions and study materials to help you pass.',
     'b2b-solution-architect':
-      'B2B Solution Architect: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce B2B Solution Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'b2c-commerce-architect':
-      'B2C Commerce Architect: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce B2C Commerce Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'b2c-solution-architect':
-      'B2C Solution Architect: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce B2C Solution Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'heroku-architect':
-      'Heroku Architect: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Heroku Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-catalyst-consultant':
-      'MuleSoft Catalyst Consultant: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce MuleSoft Catalyst Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-platform-architect':
-      'MuleSoft Platform Architect: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce MuleSoft Platform Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'mulesoft-integration-architect':
-      'MuleSoft Integration Architect: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
-    // Accredited Professional (strong CTR)
+      'Prepare for the Salesforce MuleSoft Integration Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
+    // Accredited Professional (Prepare for… format; shorten long names to stay ≤160)
     'advanced-field-service-ap':
-      'Advanced Field Service AP: practice questions, weightage, passing score & cost. Updated 2026. AP cert. Start free.',
+      'Prepare for the Salesforce Advanced Field Service AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'b2b-commerce-admin-ap':
-      'B2B Commerce Admin AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce B2B Commerce Admin AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'b2b-commerce-developer-ap':
-      'B2B Commerce Developer AP: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce B2B Commerce Developer AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'communications-cloud-ap':
-      'Communications Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Communications Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'consumer-goods-cloud-ap':
-      'Consumer Goods Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Consumer Goods Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'consumer-goods-tpm-ap':
-      'Consumer Goods TPM AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Consumer Goods TPM AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'contact-center-ap':
-      'Contact Center AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Contact Center AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'cpq-billing-ap':
-      'CPQ and Billing AP: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce CPQ and Billing AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'energy-utilities-ap':
-      'Energy & Utilities AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Energy and Utilities Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'financial-services-cloud-ap':
-      'Financial Services Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Financial Services Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'health-cloud-ap':
-      'Health Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Health Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'heroku-developer-ap':
-      'Heroku Developer AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Heroku Developer AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'loyalty-management-ap':
-      'Loyalty Management AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Loyalty Management AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'manufacturing-cloud-ap':
-      'Manufacturing Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Manufacturing Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-advanced-cross-channel-ap':
-      'Marketing Cloud Advanced Cross Channel AP: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce Marketing Cloud Advanced Cross Channel AP certification (2026). Exam details, syllabus, passing score, and practice questions.',
     'marketing-cloud-intelligence-ap':
-      'Marketing Cloud Intelligence AP: practice questions, weightage, passing score & cost. CDP & analytics. Updated 2026. Start free.',
+      'Prepare for the Salesforce Marketing Cloud Intelligence AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'marketing-cloud-personalization-ap':
-      'Marketing Cloud Personalization AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Marketing Cloud Personalization AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'media-cloud-ap':
-      'Media Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Media Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'net-zero-cloud-ap':
-      'Net Zero Cloud AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Net Zero Cloud AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'order-management-admin-ap':
-      'Order Management Admin AP: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce Order Management Admin AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'order-management-developer-ap':
-      'Order Management Developer AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Order Management Developer AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'process-automation-ap':
-      'Process Automation AP: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Process Automation AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'public-sector-solutions-ap':
-      'Public Sector Solutions AP: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Public Sector Solutions AP certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Sales
     'sales-foundations':
-      'Sales Foundations: practice questions, weightage, passing score & cost. Updated 2026. Sales credential. Start free.',
+      'Prepare for the Salesforce Sales Foundations certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Designer
     'strategy-designer':
-      'Platform Strategy Designer: practice questions, weightage, passing score & cost. Updated 2026. Designer track. Start now.',
+      'Prepare for the Salesforce Platform Strategy Designer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'ux-designer':
-      'UX Designer: practice questions, weightage, passing score & cost. Updated 2026. Salesforce UX exam. Start free.',
+      'Prepare for the Salesforce UX Designer certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     // Tableau
     'tableau-architect':
-      'Tableau Architect: practice questions, weightage, passing score & cost. Updated 2026. Tableau track. Start now.',
+      'Prepare for the Salesforce Tableau Architect certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'tableau-consultant':
-      'Tableau Consultant: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Tableau Consultant certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'tableau-data-analyst':
-      'Tableau Data Analyst: practice questions, weightage, passing score & cost. Updated 2026. Start now.',
+      'Prepare for the Salesforce Tableau Data Analyst certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'tableau-desktop-foundations':
-      'Tableau Desktop Foundations: practice questions, weightage, passing score & cost. Updated 2026. Start free.',
+      'Prepare for the Salesforce Tableau Desktop Foundations certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
     'tableau-server-administrator':
-      'Tableau Server Administrator: practice questions, weightage, passing score & cost. Updated 2026. Start preparing.',
+      'Prepare for the Salesforce Tableau Server Administrator certification (2026). Exam details, syllabus, passing score, and practice questions to help you pass.',
   }
   const custom = templates[slug]
   if (custom) return custom.length > 160 ? custom.slice(0, 157) + '...' : custom
