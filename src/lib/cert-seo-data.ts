@@ -158,22 +158,22 @@ function getCertMetaTitle(slug: string): string {
   const examCost = getExamCost(slug)
   const benefit = ` (${TITLE_YEAR}) – Syllabus, Cost & Practice Tests`
   /** High-cost-query pages: include cost in title for better CTR. */
-  const highCostQueryPages = ['administrator', 'app-builder', 'business-analyst', 'sales-cloud']
+  const highCostQueryPages = ['administrator', 'app-builder', 'business-analyst', 'sales-cloud', 'developer-1']
   const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
-    administrator: shouldIncludeCostInTitle ? `Salesforce Platform Administrator (ADM-201) | ${examCost}` : 'Salesforce Certified Platform Administrator (ADM-201)',
+    administrator: 'Salesforce Platform Administrator (ADM-201)',
     'advanced-administrator': 'Salesforce Certified Advanced Administrator (ADM-211)',
-    'app-builder': shouldIncludeCostInTitle ? `Salesforce Platform App Builder | ${examCost}` : 'Salesforce Certified Platform App Builder',
+    'app-builder': 'Salesforce Platform App Builder',
     'agentforce-specialist': 'Salesforce Certified Agentforce Specialist',
-    'business-analyst': shouldIncludeCostInTitle ? `Salesforce Business Analyst | ${examCost}` : 'Salesforce Certified Business Analyst',
+    'business-analyst': 'Salesforce Business Analyst',
     'cpq-administrator': 'Salesforce Certified CPQ Administrator',
     'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Admin',
     'slack-administrator': 'Salesforce Certified Slack Administrator',
     'administrator-practice-test': 'ADM-201 Practice Test',
     // Developer track ("Salesforce" first for broader queries)
-    'developer-1': 'Salesforce Certified Platform Developer I (PD1)',
+    'developer-1': 'Salesforce Platform Developer I (PD1)',
     'developer-2': 'Salesforce Certified Platform Developer II (PD2)',
     'javascript-developer-i': 'Salesforce Certified JavaScript Developer I',
     'b2c-commerce-developer': 'Salesforce Certified B2C Commerce Developer',
@@ -185,7 +185,7 @@ function getCertMetaTitle(slug: string): string {
     'omnistudio-developer': 'Salesforce Certified OmniStudio Developer',
     'slack-developer': 'Salesforce Certified Slack Developer',
     // Consultant track ("Salesforce" first for broader queries)
-    'sales-cloud': shouldIncludeCostInTitle ? `Salesforce Sales Cloud Consultant | ${examCost}` : 'Salesforce Certified Sales Cloud Consultant',
+    'sales-cloud': 'Salesforce Sales Cloud Consultant',
     'service-cloud': 'Salesforce Certified Service Cloud Consultant',
     'data-cloud-consultant': 'Salesforce Certified Data Cloud Consultant',
     'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery',
@@ -266,11 +266,12 @@ function getCertMetaTitle(slug: string): string {
   const longBenefit = ` (${TITLE_YEAR}) – Exam Guide & Practice Tests`
   const short = shortTitles[slug]
   if (short) {
-    // For high-cost-query pages, use cost in title instead of generic "Cost"
-    if (shouldIncludeCostInTitle && short.includes(examCost)) {
-      const costBenefit = ` (${TITLE_YEAR}) – ${examCost} | Syllabus & Practice Tests`
+    // For high-cost-query pages, use cost in title with cleaner format
+    if (shouldIncludeCostInTitle) {
+      const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | Practice Tests`
       const full = short + costBenefit + brand
-      return full.length > 70 ? short + ` (${TITLE_YEAR}) – ${examCost} | Exam Guide & Practice Tests` + brand : full
+      // If still too long, use shorter version
+      return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR} | ${examCost}` + brand : full
     }
     const full = short + benefit + brand
     return full.length > 70 ? short + longBenefit + brand : full
