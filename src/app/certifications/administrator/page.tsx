@@ -7,33 +7,43 @@ import CertPageCta from '@/components/CertPageCta'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertMetaTitle, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
-// Fix per Claude/Gemini recommendations: Explicit assignment instead of spreading
-// to avoid undefined values that can cause meta description to be silently dropped
 const PAGE_DESCRIPTION =
   'Salesforce Platform Administrator (ADM-201) exam guide 2026. $200 exam fee, 60 questions, 65% passing score, free practice questions and study plan.'
 
 const base = getCertMetadata(slug)
+const pageTitle = getCertMetaTitle(slug)
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
   title: base.title,
-  description: PAGE_DESCRIPTION, // Explicit, not spread from base
-  keywords: base.keywords,
+  description: PAGE_DESCRIPTION,
   alternates: base.alternates,
   openGraph: {
-    ...(base.openGraph ?? {}),
-    description: PAGE_DESCRIPTION, // Explicit override
+    title: pageTitle,
+    description: PAGE_DESCRIPTION,
+    type: 'article',
+    url: `${baseUrl}/certifications/${slug}`,
+    images: [
+      {
+        url: `${baseUrl}/og-image.png`,
+        width: 1200,
+        height: 630,
+        alt: 'Salesforce Platform Administrator - Practice Questions & Study Guide',
+      },
+    ],
   },
   twitter: {
-    ...(base.twitter ?? {}),
-    description: PAGE_DESCRIPTION, // Explicit override
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: PAGE_DESCRIPTION,
+    images: [`${baseUrl}/og-image.png`],
   },
-  other: base.other,
 }
 
 /**

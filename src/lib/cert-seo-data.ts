@@ -508,7 +508,15 @@ export function getCertMetaDescription(slug: string): string {
   const desc = formerName
     ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${examCost} exam fee, section-wise weightage, practice questions, study tips.`
     : base
-  return desc.length > 160 ? desc.slice(0, 157) + '...' : desc
+  
+  const finalDesc = desc.length > 160 ? desc.slice(0, 157) + '...' : desc
+  
+  // Safety guard: ensure we never return undefined (per AI recommendation)
+  // This prevents Next.js from silently dropping the meta description tag
+  return (
+    finalDesc ??
+    `Prepare for the Salesforce ${certName} certification. Practice questions, exam weightage, and study guide.`
+  )
 }
 
 /** SEO metadata for a certification page: unique title <60 chars (absolute), description 140–160, canonical. */
