@@ -2,6 +2,8 @@ import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
+import CertPageCta from '@/components/CertPageCta'
+import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
@@ -26,11 +28,17 @@ export default function MarketingCloudIntelligenceAPPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
       <CertPageIntro slug={slug} />
-      
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        {/* Prominent CTA above fold */}
+        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
-          <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Marketing Cloud Intelligence Professional have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Marketing Cloud Intelligence', 'Analytics', 'CDP', 'Technical Implementation', 'Best Practices']}
+            {/* Exam Fees & Registration section */}
+            <ExamFeesSection slug={slug} />
+            
+            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Marketing Cloud Intelligence Professional have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Marketing Cloud Intelligence', 'Analytics', 'CDP', 'Technical Implementation', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

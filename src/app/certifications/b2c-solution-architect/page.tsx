@@ -2,6 +2,8 @@ import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
+import CertPageCta from '@/components/CertPageCta'
+import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
@@ -26,11 +28,17 @@ export default function B2CSolutionArchitectPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
       <CertPageIntro slug={slug} />
-      
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        {/* Prominent CTA above fold */}
+        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
-          <CertificationCard title={slugToDisplayName(slug)} code="B2C Solution Architect" description="Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2C Commerce', 'Multi-Cloud', 'Solution Design', 'Marketing Cloud', 'Best Practices']}
+            {/* Exam Fees & Registration section */}
+            <ExamFeesSection slug={slug} />
+            
+            <CertificationCard title={slugToDisplayName(slug)} code="B2C Solution Architect" description="Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2C Commerce', 'Multi-Cloud', 'Solution Design', 'Marketing Cloud', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

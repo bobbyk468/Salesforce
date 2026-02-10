@@ -2,6 +2,8 @@ import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
+import CertPageCta from '@/components/CertPageCta'
+import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
@@ -26,11 +28,17 @@ export default function B2BCommerceDeveloperAPPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
       <CertPageIntro slug={slug} />
-      
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
+        
+        {/* Prominent CTA above fold */}
+        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
+        
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
-          <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce in the context of sample apps and real world implementations." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['B2B Commerce', 'Development', 'Customization', 'Storefront', 'APIs', 'Best Practices']}
+            {/* Exam Fees & Registration section */}
+            <ExamFeesSection slug={slug} />
+            
+            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce in the context of sample apps and real world implementations." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['B2B Commerce', 'Development', 'Customization', 'Storefront', 'APIs', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

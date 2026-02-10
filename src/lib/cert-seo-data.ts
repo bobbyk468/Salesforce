@@ -49,18 +49,125 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect-review-board': 'CTA Review Board',
 }
 
+/** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $100 for AP, $400 for Architect, $250 for Tableau, $75 for Foundations, $6000 for CTA. */
+export const SLUG_TO_EXAM_COST: Record<string, string> = {
+  // $200 (most certs - default)
+  administrator: '$200',
+  'advanced-administrator': '$200',
+  'app-builder': '$200',
+  'agentforce-specialist': '$200',
+  'business-analyst': '$200',
+  'cpq-administrator': '$200',
+  'marketing-cloud-engagement-admin': '$200',
+  'slack-administrator': '$200',
+  'developer-1': '$200',
+  'developer-2': '$200',
+  'javascript-developer-i': '$200',
+  'b2c-commerce-developer': '$200',
+  'industries-cpq-developer': '$200',
+  'marketing-cloud-engagement-developer': '$200',
+  'mulesoft-developer-i': '$200',
+  'mulesoft-developer-ii': '$200',
+  'mulesoft-hyperautomation-developer': '$200',
+  'omnistudio-developer': '$200',
+  'slack-developer': '$200',
+  'sales-cloud': '$200',
+  'service-cloud': '$200',
+  'data-cloud-consultant': '$200',
+  'crm-analytics-einstein-discovery-consultant': '$200',
+  'education-cloud-consultant': '$200',
+  'experience-cloud': '$200',
+  'field-service': '$200',
+  'pardot-consultant': '$200',
+  'marketing-cloud-consultant': '$200',
+  'nonprofit-cloud': '$200',
+  'nonprofit-success-pack-consultant': '$200',
+  'omnistudio-consultant': '$200',
+  'revenue-cloud-consultant': '$200',
+  'slack-consultant': '$200',
+  'email-specialist': '$200',
+  'pardot-specialist': '$200',
+  'strategy-designer': '$200',
+  'ai-associate': '$200',
+  'marketing-cloud-engagement-foundations': '$200',
+  'mulesoft-integration-foundations': '$200',
+  // $100 (Accredited Professional)
+  'advanced-field-service-ap': '$100',
+  'b2b-commerce-admin-ap': '$100',
+  'b2b-commerce-developer-ap': '$100',
+  'communications-cloud-ap': '$100',
+  'consumer-goods-cloud-ap': '$100',
+  'consumer-goods-tpm-ap': '$100',
+  'contact-center-ap': '$100',
+  'cpq-billing-ap': '$100',
+  'energy-utilities-ap': '$100',
+  'financial-services-cloud-ap': '$100',
+  'health-cloud-ap': '$100',
+  'heroku-developer-ap': '$100',
+  'loyalty-management-ap': '$100',
+  'manufacturing-cloud-ap': '$100',
+  'marketing-cloud-advanced-cross-channel-ap': '$100',
+  'marketing-cloud-intelligence-ap': '$100',
+  'marketing-cloud-personalization-ap': '$100',
+  'media-cloud-ap': '$100',
+  'net-zero-cloud-ap': '$100',
+  'order-management-admin-ap': '$100',
+  'order-management-developer-ap': '$100',
+  'process-automation-ap': '$100',
+  'public-sector-solutions-ap': '$100',
+  // $400 (Architect certs)
+  'application-architect': '$400',
+  'data-architect': '$400',
+  'integration-architect': '$400',
+  'sharing-visibility-architect': '$400',
+  'system-architect': '$400',
+  'identity-access-management-architect': '$400',
+  'dev-lifecycle-deployment-architect': '$400',
+  'b2b-solution-architect': '$400',
+  'b2c-commerce-architect': '$400',
+  'b2c-solution-architect': '$400',
+  'heroku-architect': '$400',
+  'mulesoft-catalyst-consultant': '$400',
+  'mulesoft-platform-architect': '$400',
+  'mulesoft-integration-architect': '$400',
+  // $250 (Tableau)
+  'tableau-architect': '$250',
+  'tableau-consultant': '$250',
+  'tableau-data-analyst': '$250',
+  'tableau-server-administrator': '$250',
+  'tableau-desktop-foundations': '$100',
+  // $75 (Foundations)
+  'platform-foundations': '$75',
+  'sales-foundations': '$200',
+  // $6000 (CTA)
+  'technical-architect': '$6000',
+  'technical-architect-evaluation': '$6000',
+  'technical-architect-review-board': '$6000',
+  // UX Designer
+  'ux-designer': '$200',
+}
+
+/** Get exam cost for a certification slug. Defaults to $200 if not specified. */
+export function getExamCost(slug: string): string {
+  return SLUG_TO_EXAM_COST[slug] || '$200'
+}
+
 /** Intent-driven title: exam name + year + benefit (cost, syllabus, practice). Aim 55–60 chars before brand for best CTR. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
+  const examCost = getExamCost(slug)
   const benefit = ` (${TITLE_YEAR}) – Syllabus, Cost & Practice Tests`
+  /** High-cost-query pages: include cost in title for better CTR. */
+  const highCostQueryPages = ['administrator', 'app-builder', 'business-analyst', 'sales-cloud']
+  const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
-    administrator: 'Salesforce Certified Platform Administrator (ADM-201)',
+    administrator: shouldIncludeCostInTitle ? `Salesforce Platform Administrator (ADM-201) | ${examCost}` : 'Salesforce Certified Platform Administrator (ADM-201)',
     'advanced-administrator': 'Salesforce Certified Advanced Administrator (ADM-211)',
-    'app-builder': 'Salesforce Certified Platform App Builder',
+    'app-builder': shouldIncludeCostInTitle ? `Salesforce Platform App Builder | ${examCost}` : 'Salesforce Certified Platform App Builder',
     'agentforce-specialist': 'Salesforce Certified Agentforce Specialist',
-    'business-analyst': 'Salesforce Certified Business Analyst',
+    'business-analyst': shouldIncludeCostInTitle ? `Salesforce Business Analyst | ${examCost}` : 'Salesforce Certified Business Analyst',
     'cpq-administrator': 'Salesforce Certified CPQ Administrator',
     'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Admin',
     'slack-administrator': 'Salesforce Certified Slack Administrator',
@@ -78,7 +185,7 @@ function getCertMetaTitle(slug: string): string {
     'omnistudio-developer': 'Salesforce Certified OmniStudio Developer',
     'slack-developer': 'Salesforce Certified Slack Developer',
     // Consultant track ("Salesforce" first for broader queries)
-    'sales-cloud': 'Salesforce Certified Sales Cloud Consultant',
+    'sales-cloud': shouldIncludeCostInTitle ? `Salesforce Sales Cloud Consultant | ${examCost}` : 'Salesforce Certified Sales Cloud Consultant',
     'service-cloud': 'Salesforce Certified Service Cloud Consultant',
     'data-cloud-consultant': 'Salesforce Certified Data Cloud Consultant',
     'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery',
@@ -159,6 +266,12 @@ function getCertMetaTitle(slug: string): string {
   const longBenefit = ` (${TITLE_YEAR}) – Exam Guide & Practice Tests`
   const short = shortTitles[slug]
   if (short) {
+    // For high-cost-query pages, use cost in title instead of generic "Cost"
+    if (shouldIncludeCostInTitle && short.includes(examCost)) {
+      const costBenefit = ` (${TITLE_YEAR}) – ${examCost} | Syllabus & Practice Tests`
+      const full = short + costBenefit + brand
+      return full.length > 70 ? short + ` (${TITLE_YEAR}) – ${examCost} | Exam Guide & Practice Tests` + brand : full
+    }
     const full = short + benefit + brand
     return full.length > 70 ? short + longBenefit + brand : full
   }
@@ -177,205 +290,210 @@ export function getCertMetaDescription(slug: string): string {
   const certName = slugToDisplayName(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const formerName = getCertFormerName(slug)
+  const examCost = getExamCost(slug)
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
-      'Prepare for the Salesforce Certified Platform Foundations certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Foundations certification (2026). $75 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'ai-associate':
-      'Prepare for the Salesforce Certified AI Associate certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified AI Associate certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-engagement-foundations':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Foundations certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Engagement Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-integration-foundations':
-      'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'Prepare for the Salesforce Certified Platform Administrator (ADM-201) certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Administrator (ADM-201) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'advanced-administrator':
-      'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'app-builder':
-      'Prepare for the Salesforce Certified Platform App Builder certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform App Builder certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'agentforce-specialist':
-      'Prepare for the Salesforce Certified Agentforce Specialist certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Agentforce Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'business-analyst':
-      'Prepare for the Salesforce Certified Business Analyst certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Business Analyst certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'cpq-administrator':
-      'Prepare for the Salesforce Certified CPQ Administrator certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified CPQ Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-engagement-admin':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Admin certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Engagement Admin certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'slack-administrator':
-      'Prepare for the Salesforce Certified Slack Administrator certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Slack Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'administrator-practice-test':
       'ADM-201 practice test: real-style questions, section weightage, passing score. Free. Updated 2026. Test yourself before the exam.',
     // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
     'developer-1':
-      'Prepare for the Salesforce Certified Platform Developer I (PD1) certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Developer I (PD1) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'developer-2':
-      'Prepare for the Salesforce Certified Platform Developer II (PD2) certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Developer II (PD2) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'javascript-developer-i':
-      'Prepare for the Salesforce Certified JavaScript Developer I certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified JavaScript Developer I certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'b2c-commerce-developer':
-      'Prepare for the Salesforce Certified B2C Commerce Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2C Commerce Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'industries-cpq-developer':
-      'Prepare for the Salesforce Certified Industries CPQ Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Industries CPQ Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-engagement-developer':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Engagement Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-developer-i':
-      'Prepare for the Salesforce Certified MuleSoft Developer I certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Developer I certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-developer-ii':
-      'Prepare for the Salesforce Certified MuleSoft Developer II certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Developer II certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-hyperautomation-developer':
-      'Prepare for the Salesforce Certified MuleSoft Hyperautomation Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Hyperautomation Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'omnistudio-developer':
-      'Prepare for the Salesforce Certified OmniStudio Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified OmniStudio Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'slack-developer':
-      'Prepare for the Salesforce Certified Slack Developer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Slack Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
     'crm-analytics-einstein-discovery-consultant':
-      'Prepare for the Salesforce Certified CRM Analytics & Einstein Discovery Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified CRM Analytics & Einstein Discovery Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'data-cloud-consultant':
-      'Prepare for the Salesforce Certified Data Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Data Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'education-cloud-consultant':
-      'Prepare for the Salesforce Certified Education Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Education Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'experience-cloud':
-      'Prepare for the Salesforce Certified Experience Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Experience Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'field-service':
-      'Prepare for the Salesforce Certified Field Service Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Field Service Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'pardot-consultant':
-      'Prepare for the Salesforce Certified Pardot (Account Engagement) Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Pardot (Account Engagement) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-consultant':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Engagement Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'nonprofit-cloud':
-      'Prepare for the Salesforce Certified Nonprofit Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Nonprofit Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'nonprofit-success-pack-consultant':
-      'Prepare for the Salesforce Certified Nonprofit Success Pack (NPSP) Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Nonprofit Success Pack (NPSP) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'omnistudio-consultant':
-      'Prepare for the Salesforce Certified OmniStudio Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified OmniStudio Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'revenue-cloud-consultant':
-      'Prepare for the Salesforce Certified Revenue Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Revenue Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'sales-cloud':
-      'Prepare for the Salesforce Certified Sales Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Sales Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'service-cloud':
-      'Prepare for the Salesforce Certified Service Cloud Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Service Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'slack-consultant':
-      'Prepare for the Salesforce Certified Slack Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Slack Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Marketing (strong CTR)
     'email-specialist':
-      'Prepare for the Salesforce Certified Marketing Cloud Email Specialist certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Email Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'pardot-specialist':
-      'Prepare for the Salesforce Certified Pardot (Account Engagement) Specialist certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Pardot (Account Engagement) Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'email-specialist-practice-test':
       'Email Specialist practice test: real-style questions, weightage, passing score. Free. Updated 2026. Start free.',
-    // Architect (Prepare for… format)
+    // Architect (Prepare for… format) - $400
     'application-architect':
-      'Prepare for the Salesforce Certified Application Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Application Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'data-architect':
-      'Prepare for the Salesforce Certified Data Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'integration-architect':
-      'Prepare for the Salesforce Certified Integration Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'sharing-visibility-architect':
-      'Prepare for the Salesforce Certified Sharing and Visibility Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Sharing and Visibility Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'system-architect':
-      'Prepare for the Salesforce Certified System Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified System Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'identity-access-management-architect':
-      'Prepare for the Salesforce Certified Certified Identity and Access Management Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Identity and Access Management Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'dev-lifecycle-deployment-architect':
-      'Prepare for the Salesforce Certified Dev Lifecycle and Deployment Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Dev Lifecycle and Deployment Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'technical-architect':
-      'Prepare for the Salesforce Certified Technical Architect (CTA) certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Technical Architect (CTA) certification (2026). $6000 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'technical-architect-evaluation':
-      'Prepare for the CTA Architect Evaluation (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the CTA Architect Evaluation (2026). $6000 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'technical-architect-review-board':
       'Prepare for the CTA Architect Review Board (2026). Practice questions and study materials to help you pass.',
     'b2b-solution-architect':
-      'Prepare for the Salesforce Certified B2B Solution Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2B Solution Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'b2c-commerce-architect':
-      'Prepare for the Salesforce Certified B2C Commerce Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2C Commerce Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'b2c-solution-architect':
-      'Prepare for the Salesforce Certified B2C Solution Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2C Solution Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'heroku-architect':
-      'Prepare for the Salesforce Certified Heroku Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Heroku Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-catalyst-consultant':
-      'Prepare for the Salesforce Certified MuleSoft Catalyst Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Catalyst Consultant certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-platform-architect':
-      'Prepare for the Salesforce Certified MuleSoft Platform Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified MuleSoft Platform Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'mulesoft-integration-architect':
-      'Prepare for the Salesforce Certified MuleSoft Integration Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    // Accredited Professional (Prepare for… format; shorten long names to stay ≤160)
+      'Prepare for the Salesforce Certified MuleSoft Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+    // Accredited Professional (Prepare for… format; shorten long names to stay ≤160) - $100
     'advanced-field-service-ap':
-      'Prepare for the Salesforce Certified Advanced Field Service AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Advanced Field Service AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'b2b-commerce-admin-ap':
-      'Prepare for the Salesforce Certified B2B Commerce Admin AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2B Commerce Admin AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'b2b-commerce-developer-ap':
-      'Prepare for the Salesforce Certified B2B Commerce Developer AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified B2B Commerce Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'communications-cloud-ap':
-      'Prepare for the Salesforce Certified Communications Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Communications Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'consumer-goods-cloud-ap':
-      'Prepare for the Salesforce Certified Consumer Goods Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Consumer Goods Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'consumer-goods-tpm-ap':
-      'Prepare for the Salesforce Certified Consumer Goods TPM AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Consumer Goods TPM AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'contact-center-ap':
-      'Prepare for the Salesforce Certified Contact Center AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Contact Center AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'cpq-billing-ap':
-      'Prepare for the Salesforce Certified CPQ and Billing AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified CPQ and Billing AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'energy-utilities-ap':
-      'Prepare for the Salesforce Certified Energy and Utilities Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Energy and Utilities Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'financial-services-cloud-ap':
-      'Prepare for the Salesforce Certified Financial Services Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Financial Services Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'health-cloud-ap':
-      'Prepare for the Salesforce Certified Health Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Health Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'heroku-developer-ap':
-      'Prepare for the Salesforce Certified Heroku Developer AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Heroku Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'loyalty-management-ap':
-      'Prepare for the Salesforce Certified Loyalty Management AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Loyalty Management AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'manufacturing-cloud-ap':
-      'Prepare for the Salesforce Certified Manufacturing Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Manufacturing Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-advanced-cross-channel-ap':
-      'Prepare for the Salesforce Certified Certified Marketing Cloud Advanced Cross Channel AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Advanced Cross Channel AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-intelligence-ap':
-      'Prepare for the Salesforce Certified Marketing Cloud Intelligence AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Intelligence AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-personalization-ap':
-      'Prepare for the Salesforce Certified Marketing Cloud Personalization AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Marketing Cloud Personalization AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'media-cloud-ap':
-      'Prepare for the Salesforce Certified Media Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Media Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'net-zero-cloud-ap':
-      'Prepare for the Salesforce Certified Net Zero Cloud AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Net Zero Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'order-management-admin-ap':
-      'Prepare for the Salesforce Certified Order Management Admin AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Order Management Admin AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'order-management-developer-ap':
-      'Prepare for the Salesforce Certified Order Management Developer AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Order Management Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'process-automation-ap':
-      'Prepare for the Salesforce Certified Process Automation AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Process Automation AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'public-sector-solutions-ap':
-      'Prepare for the Salesforce Certified Public Sector Solutions AP certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Public Sector Solutions AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Sales
     'sales-foundations':
-      'Prepare for the Salesforce Certified Sales Foundations certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Sales Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Designer
     'strategy-designer':
-      'Prepare for the Salesforce Certified Platform Strategy Designer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Strategy Designer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'ux-designer':
-      'Prepare for the Salesforce Certified UX Designer certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    // Tableau
+      'Prepare for the Salesforce Certified UX Designer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+    // Tableau - $250 (except Desktop Foundations $100)
     'tableau-architect':
-      'Prepare for the Salesforce Certified Tableau Architect certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Tableau Architect certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'tableau-consultant':
-      'Prepare for the Salesforce Certified Tableau Consultant certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Tableau Consultant certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'tableau-data-analyst':
-      'Prepare for the Salesforce Certified Tableau Data Analyst certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Tableau Data Analyst certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'tableau-desktop-foundations':
-      'Prepare for the Salesforce Certified Tableau Desktop Foundations certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Tableau Desktop Foundations certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'tableau-server-administrator':
-      'Prepare for the Salesforce Certified Tableau Server Administrator certification (2026). Exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Tableau Server Administrator certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
   }
   const custom = templates[slug]
-  if (custom) return custom.length > 160 ? custom.slice(0, 157) + '...' : custom
+  if (custom) {
+    // Replace placeholder cost if present, or add cost for non-template certs
+    const withCost = custom.includes('exam fee') ? custom : custom.replace('Exam weightage', `${examCost} exam fee, exam weightage`)
+    return withCost.length > 160 ? withCost.slice(0, 157) + '...' : withCost
+  }
   const primaryName = getCertPrimaryName(slug, certName)
   const base =
     examCode
-      ? `Prepare for the ${primaryName} exam with section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
-      : `Prepare for the ${primaryName} exam with section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
+      ? `Prepare for the ${primaryName} exam (${examCode}): ${examCost} exam fee, section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
+      : `Prepare for the ${primaryName} exam: ${examCost} exam fee, section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
   const desc = formerName
-    ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. Section-wise weightage, practice questions, study tips.`
+    ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${examCost} exam fee, section-wise weightage, practice questions, study tips.`
     : base
   return desc.length > 160 ? desc.slice(0, 157) + '...' : desc
 }
