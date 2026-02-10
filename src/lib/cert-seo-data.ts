@@ -156,14 +156,21 @@ export function getExamCost(slug: string): string {
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
   const examCost = getExamCost(slug)
-  /** High-cost-query pages: include cost in title for better CTR. Add more certs that have high cost-query volume. */
+  /** High-cost-query pages: include cost in title for better CTR. These certs get high volume of "cost" queries. */
   const highCostQueryPages = [
-    'administrator', 'app-builder', 'business-analyst', 'sales-cloud', 'developer-1',
-    'email-specialist', 'data-architect', 'tableau-data-analyst', 'tableau-architect', 'tableau-consultant',
-    // Add more high-traffic certs that get cost queries
-    'service-cloud', 'marketing-cloud-consultant', 'marketing-cloud-engagement-admin',
-    'application-architect', 'integration-architect', 'system-architect',
-    'developer-2', 'javascript-developer-i', 'pardot-consultant', 'pardot-specialist'
+    // Administrator track (base certs - high traffic)
+    'administrator', 'app-builder', 'business-analyst', 'advanced-administrator',
+    // Developer track (high traffic)
+    'developer-1', 'developer-2', 'javascript-developer-i',
+    // Consultant track (high traffic)
+    'sales-cloud', 'service-cloud', 'marketing-cloud-consultant', 'pardot-consultant',
+    // Marketing track (high traffic)
+    'email-specialist', 'marketing-cloud-engagement-admin', 'marketing-cloud-engagement-developer', 'pardot-specialist',
+    // Architect track (high traffic, higher cost queries)
+    'data-architect', 'application-architect', 'integration-architect', 'system-architect',
+    'sharing-visibility-architect', 'mulesoft-platform-architect',
+    // Tableau (high traffic)
+    'tableau-data-analyst', 'tableau-architect', 'tableau-consultant', 'tableau-server-administrator'
   ]
   const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
