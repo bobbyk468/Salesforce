@@ -156,11 +156,14 @@ export function getExamCost(slug: string): string {
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
   const examCost = getExamCost(slug)
-  const benefit = ` (${TITLE_YEAR}) – Syllabus, Cost & Practice Tests`
   /** High-cost-query pages: include cost in title for better CTR. Add more certs that have high cost-query volume. */
   const highCostQueryPages = [
     'administrator', 'app-builder', 'business-analyst', 'sales-cloud', 'developer-1',
-    'email-specialist', 'data-architect', 'tableau-data-analyst', 'tableau-architect', 'tableau-consultant'
+    'email-specialist', 'data-architect', 'tableau-data-analyst', 'tableau-architect', 'tableau-consultant',
+    // Add more high-traffic certs that get cost queries
+    'service-cloud', 'marketing-cloud-consultant', 'marketing-cloud-engagement-admin',
+    'application-architect', 'integration-architect', 'system-architect',
+    'developer-2', 'javascript-developer-i', 'pardot-consultant', 'pardot-specialist'
   ]
   const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
   /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
@@ -265,19 +268,21 @@ function getCertMetaTitle(slug: string): string {
     'tableau-desktop-foundations': 'Salesforce Certified Tableau Desktop Foundations',
     'tableau-server-administrator': 'Salesforce Certified Tableau Server Administrator',
   }
-  /** When title is long, use "Exam Guide & Practice Tests" for all (matches certified-exam queries). */
-  const longBenefit = ` (${TITLE_YEAR}) – Exam Guide & Practice Tests`
+  /** Standard format for all pages: "Exam Guide 2026 | [cost if high-cost-query] | Practice Tests" */
   const short = shortTitles[slug]
   if (short) {
-    // For high-cost-query pages, use cost in title with cleaner format
+    // For high-cost-query pages, include cost in title
     if (shouldIncludeCostInTitle) {
       const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | Practice Tests`
       const full = short + costBenefit + brand
-      // If still too long, use shorter version
+      // If still too long, use shorter version without "Practice Tests"
       return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR} | ${examCost}` + brand : full
     }
-    const full = short + benefit + brand
-    return full.length > 70 ? short + longBenefit + brand : full
+    // For other pages, use same format without cost
+    const standardBenefit = ` Exam Guide ${TITLE_YEAR} | Practice Tests`
+    const full = short + standardBenefit + brand
+    // If still too long, use shorter version
+    return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR}` + brand : full
   }
   const suffix = ` (${TITLE_YEAR}) Practice Questions & Study Guide`
   if (slugToTitle[slug]) return slugToDisplayName(slug) + suffix + brand
