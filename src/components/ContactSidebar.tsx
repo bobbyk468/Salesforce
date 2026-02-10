@@ -3,6 +3,20 @@
 import { useState, useRef, useEffect } from 'react'
 import { Mail, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
+import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+
+// Get all unique certification names for autocomplete
+const getAllCertificationNames = (): string[] => {
+  const names = new Set<string>()
+  CERTIFICATION_CATEGORIES.forEach(category => {
+    category.items.forEach(item => {
+      names.add(item.name)
+    })
+  })
+  return Array.from(names).sort()
+}
+
+const ALL_CERTIFICATION_NAMES = getAllCertificationNames()
 
 interface ContactSidebarProps {
   defaultExamName?: string
@@ -36,6 +50,13 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
   const [showSuggestions, setShowSuggestions] = useState(false)
   const emailInputRef = useRef<HTMLInputElement>(null)
   const suggestionsRef = useRef<HTMLDivElement>(null)
+  
+  // Exam name autocomplete state
+  const [examSuggestions, setExamSuggestions] = useState<string[]>([])
+  const [selectedExamIndex, setSelectedExamIndex] = useState(-1)
+  const [showExamSuggestions, setShowExamSuggestions] = useState(false)
+  const examInputRef = useRef<HTMLInputElement>(null)
+  const examSuggestionsRef = useRef<HTMLDivElement>(null)
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -81,12 +102,57 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
     }
   }
 
+  const handleExamNameChange = (e: React.ChangeEvent<HTMLInputElement>) => {
+    const value = e.target.value
+    setFormData({ ...formData, examName: value })
+    setError('')
+    
+    // Show suggestions if user has typed at least 1 character
+    if (value.length > 0) {
+      const filtered = ALL_CERTIFICATION_NAMES.filter(name =>
+        name.toLowerCase().includes(value.toLowerCase())
+      )
+      setExamSuggestions(filtered.slice(0, 10)) // Limit to 10 suggestions
+      setShowExamSuggestions(filtered.length > 0)
+      setSelectedExamIndex(-1)
+    } else {
+      setShowExamSuggestions(false)
+    }
+  }
+
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     if (e.target.name === 'email') {
       handleEmailChange(e as React.ChangeEvent<HTMLInputElement>)
+    } else if (e.target.name === 'examName') {
+      handleExamNameChange(e as React.ChangeEvent<HTMLInputElement>)
     } else {
       setFormData({ ...formData, [e.target.name]: e.target.value })
       setError('')
+    }
+  }
+
+  const selectExamSuggestion = (examName: string) => {
+    setFormData({ ...formData, examName })
+    setShowExamSuggestions(false)
+    examInputRef.current?.focus()
+  }
+
+  const handleExamKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
+    if (!showExamSuggestions || examSuggestions.length === 0) return
+
+    if (e.key === 'ArrowDown') {
+      e.preventDefault()
+      setSelectedExamIndex(prev => 
+        prev < examSuggestions.length - 1 ? prev + 1 : prev
+      )
+    } else if (e.key === 'ArrowUp') {
+      e.preventDefault()
+      setSelectedExamIndex(prev => (prev > 0 ? prev - 1 : -1))
+    } else if (e.key === 'Enter' && selectedExamIndex >= 0) {
+      e.preventDefault()
+      selectExamSuggestion(examSuggestions[selectedExamIndex])
+    } else if (e.key === 'Escape') {
+      setShowExamSuggestions(false)
     }
   }
 
@@ -118,6 +184,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
   // Close suggestions when clicking outside
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
+      // Close email suggestions
       if (
         suggestionsRef.current &&
         !suggestionsRef.current.contains(event.target as Node) &&
@@ -125,6 +192,16 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
         !emailInputRef.current.contains(event.target as Node)
       ) {
         setShowSuggestions(false)
+      }
+      
+      // Close exam suggestions
+      if (
+        examSuggestionsRef.current &&
+        !examSuggestionsRef.current.contains(event.target as Node) &&
+        examInputRef.current &&
+        !examInputRef.current.contains(event.target as Node)
+      ) {
+        setShowExamSuggestions(false)
       }
     }
 
@@ -240,19 +317,40 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
                   </div>
                 )}
               </div>
-              <div>
+              <div className="relative">
                 <label htmlFor="sidebar-examName" className="block text-xs font-medium text-gray-600 mb-1">
                   Exam / Certification
                 </label>
                 <input
+                  ref={examInputRef}
                   id="sidebar-examName"
                   name="examName"
                   type="text"
                   value={formData.examName}
                   onChange={handleChange}
+                  onKeyDown={handleExamKeyDown}
                   className="w-full px-3 py-2 border border-gray-200 rounded-lg text-sm focus:ring-2 focus:ring-salesforce-blue focus:border-transparent"
                   placeholder="e.g. Platform Administrator"
                 />
+                {showExamSuggestions && examSuggestions.length > 0 && (
+                  <div
+                    ref={examSuggestionsRef}
+                    className="absolute z-50 w-full mt-1 bg-white border border-gray-200 rounded-lg shadow-lg max-h-48 overflow-auto"
+                  >
+                    {examSuggestions.map((examName, index) => (
+                      <button
+                        key={`${examName}-${index}`}
+                        type="button"
+                        onClick={() => selectExamSuggestion(examName)}
+                        className={`w-full text-left px-3 py-2 text-sm hover:bg-salesforce-blue/10 transition-colors ${
+                          index === selectedExamIndex ? 'bg-salesforce-blue/20' : ''
+                        }`}
+                      >
+                        <span className="text-gray-900 font-medium">{examName}</span>
+                      </button>
+                    ))}
+                  </div>
+                )}
               </div>
               <div>
                 <label htmlFor="sidebar-content" className="block text-xs font-medium text-gray-600 mb-1">
