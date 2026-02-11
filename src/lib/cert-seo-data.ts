@@ -1595,6 +1595,26 @@ export function getCertFaqJsonLd(slug: string, certTitle: string) {
   }
 }
 
+/** JSON-LD HowTo for "How to prepare for [exam]" — supports rich results. */
+export function getCertHowToJsonLd(slug: string, certTitle: string) {
+  const examCode = SLUG_TO_EXAM_CODE[slug]
+  const name = examCode ? `How to prepare for the ${certTitle} (${examCode}) exam` : `How to prepare for the ${certTitle} exam`
+  const url = `${baseUrl}/certifications/${slug}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description: `Step-by-step guide to prepare for the ${certTitle} certification exam: review exam weightage, study by section, practice with questions, and book your exam.`,
+    url,
+    step: [
+      { '@type': 'HowToStep', name: 'Review the exam outline and section weightage', text: 'Check the official exam guide and use the section-wise weightage on this page to prioritize topics.' },
+      { '@type': 'HowToStep', name: 'Study by section', text: 'Use the study plan and exam prep content to cover each section. Focus on high-weight areas first.' },
+      { '@type': 'HowToStep', name: 'Practice with sample questions', text: 'Answer the free practice questions and read the explanations to reinforce your understanding.' },
+      { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, schedule your certification exam on Trailhead or the Salesforce Certification portal.' },
+    ],
+  }
+}
+
 /** Single H1 per cert page: aligned with query intent (Complete 2026 Guide) for CTR. */
 export function getCertH1Text(slug: string): string {
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))

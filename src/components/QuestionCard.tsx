@@ -9,6 +9,8 @@ interface QuestionCardProps {
   options: string[]
   correctAnswer: number
   explanation?: string
+  /** Optional one-line summary always visible for SEO and skim readers (e.g. first sentence of explanation). */
+  explanationSummary?: string
 }
 
 export default function QuestionCard({
@@ -17,6 +19,7 @@ export default function QuestionCard({
   options,
   correctAnswer,
   explanation,
+  explanationSummary,
 }: QuestionCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -44,7 +47,11 @@ export default function QuestionCard({
       
       <div className="p-4 sm:p-6 lg:p-8">
         <p className="text-gray-800 font-medium mb-4 sm:mb-6 text-sm sm:text-base leading-relaxed">{question}</p>
-        
+        {explanationSummary && (
+          <p className="text-gray-600 text-xs sm:text-sm mb-4 leading-relaxed border-l-2 border-salesforce-blue/30 pl-3">
+            <strong className="text-gray-700">Key takeaway:</strong> {explanationSummary}
+          </p>
+        )}
         <div className="space-y-2.5 sm:space-y-3 mb-6 sm:mb-8">
           {options.map((option, index) => {
             let bgColor = 'bg-gray-50 hover:bg-gray-100'

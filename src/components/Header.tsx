@@ -1,12 +1,21 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, Award, ChevronDown } from 'lucide-react'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import CertSearch from './CertSearch'
 
+/** True when we're on a single certification page (e.g. /certifications/administrator), not hub or role. */
+function isCertDetailPage(pathname: string): boolean {
+  const match = pathname.match(/^\/certifications\/([^/]+)$/)
+  return !!match && match[1] !== 'role'
+}
+
 export default function Header() {
+  const pathname = usePathname()
+  const hideRoleBar = isCertDetailPage(pathname ?? '')
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
   const [openDropdown, setOpenDropdown] = useState<string | null>(null)
   const [openDesktopDropdown, setOpenDesktopDropdown] = useState<string | null>(null)
@@ -70,7 +79,8 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Choose your role: all certifications listed per role (Basic → Advanced order), no View all */}
+      {/* Choose your role: hidden on single cert pages to reduce above-the-fold clutter */}
+      {!hideRoleBar && (
       <div className="bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 hidden lg:block">
@@ -121,6 +131,7 @@ export default function Header() {
           </div>
         </div>
       </div>
+      )}
 
       {/* Mobile menu */}
       {mobileMenuOpen && (
@@ -157,6 +168,7 @@ export default function Header() {
           >
             Contact Us
           </Link>
+          {!hideRoleBar && (
           <div className="pt-2 border-t border-gray-100">
             <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Choose your role</p>
             {CERTIFICATION_CATEGORIES.map((category) => (
@@ -186,6 +198,7 @@ export default function Header() {
               </div>
             ))}
           </div>
+          )}
         </div>
       )}
     </header>

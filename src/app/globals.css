@@ -135,3 +135,16 @@ body::before {
     z-index: 10;
   }
 }
+
+/* Print: hide no-print elements; show syllabus checklist content even when details is closed */
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  .print-checklist-only details > div {
+    display: block !important;
+  }
+  .print-checklist-only summary {
+    display: none !important;
+  }
+}

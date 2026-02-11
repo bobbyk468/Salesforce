@@ -6,6 +6,7 @@ import {
   getCertFaq,
   getCertFaqHeading,
   getCertFaqJsonLd,
+  getCertHowToJsonLd,
   getCertWebPageJsonLd,
   SLUG_TO_EXAM_CODE,
 } from '@/lib/cert-seo-data'
@@ -26,6 +27,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const faqs = getCertFaq(slug, certTitle)
   const breadcrumbJsonLd = getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName)
   const faqJsonLd = getCertFaqJsonLd(slug, certTitle)
+  const howToJsonLd = getCertHowToJsonLd(slug, certTitle)
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
 
   const courseJsonLd = {
@@ -57,6 +59,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
       />
       <script
         type="application/ld+json"

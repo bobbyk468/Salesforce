@@ -8,6 +8,7 @@ import CertPageCta from '@/components/CertPageCta'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
+import PrintChecklistButton from '@/components/PrintChecklistButton'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import type { Metadata } from 'next'
@@ -219,6 +220,16 @@ export default function AdministratorPage() {
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} examCode="ADM-201" />
+
+        <section className="my-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5" aria-label="Learner feedback">
+          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Trusted by learners</p>
+          <p className="text-gray-700 text-sm sm:text-base mb-2">
+            <span className="font-bold text-salesforce-blue">10,000+</span> exam takers use Trailblaze Prep to study for Salesforce certifications.
+          </p>
+          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3">
+            &ldquo;The section weightage and practice questions made it clear what to focus on. Passed ADM-201 on my first try.&rdquo;
+          </blockquote>
+        </section>
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -265,23 +276,39 @@ export default function AdministratorPage() {
               examWeightageHeading={getCertExamWeightageHeading(slug)}
             />
 
-            <details id="syllabus-checklist" className="mt-8 rounded-xl border border-gray-200 bg-white overflow-hidden">
-              <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2">
-                <span>ADM-201 exam syllabus checklist</span>
-                <span className="text-gray-500 text-sm font-normal">(click to expand)</span>
-              </summary>
-              <div className="px-5 py-4 border-t border-gray-100">
-                <p className="text-sm text-gray-600 mb-3">Use this list to track your study. Sections are from the official exam outline with approximate weight.</p>
-                <ul className="space-y-2 text-sm text-gray-700">
-                  {(examSections ?? []).map((section, i) => (
-                    <li key={i} className="flex items-center gap-2">
-                      <span className="inline-flex w-5 h-5 rounded border border-gray-300 bg-white flex-shrink-0" aria-hidden="true" />
-                      <span><strong>{section.name}</strong> — {section.percentage}%</span>
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            </details>
+            <div className="print-checklist-only mt-8">
+              <details id="syllabus-checklist" className="rounded-xl border border-gray-200 bg-white overflow-hidden">
+                <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2 no-print">
+                  <span>ADM-201 exam syllabus checklist</span>
+                  <span className="text-gray-500 text-sm font-normal">(click to expand)</span>
+                </summary>
+                <div className="px-5 py-4 border-t border-gray-100">
+                  <p className="text-sm text-gray-600 mb-3 no-print">Use this table to track your study. Sections are from the official exam outline with approximate weight.</p>
+                  <p className="hidden print:block text-sm font-semibold text-gray-900 mb-2">ADM-201 exam syllabus checklist</p>
+                  <div className="overflow-x-auto">
+                    <table className="w-full text-sm text-left border-collapse">
+                      <thead>
+                        <tr className="border-b border-gray-200">
+                          <th className="py-2 pr-4 font-semibold text-gray-900">Section</th>
+                          <th className="py-2 w-20 font-semibold text-gray-900 text-right">Weight</th>
+                        </tr>
+                      </thead>
+                      <tbody>
+                        {(examSections ?? []).map((section, i) => (
+                          <tr key={i} className="border-b border-gray-100">
+                            <td className="py-2.5 pr-4 text-gray-800">{section.name}</td>
+                            <td className="py-2.5 text-right font-medium text-gray-700">{section.percentage}%</td>
+                          </tr>
+                        ))}
+                      </tbody>
+                    </table>
+                  </div>
+                  <div className="mt-3 no-print">
+                    <PrintChecklistButton />
+                  </div>
+                </div>
+              </details>
+            </div>
 
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
@@ -304,6 +331,7 @@ export default function AdministratorPage() {
                     options={q.options}
                     correctAnswer={q.correctAnswer}
                     explanation={q.explanation}
+                    explanationSummary={q.explanation ? (q.explanation.split(/[.!?]/)[0]?.trim() ? q.explanation.split(/[.!?]/)[0].trim() + '.' : q.explanation) : undefined}
                   />
                 ))}
               </div>
@@ -311,9 +339,15 @@ export default function AdministratorPage() {
 
             <div id="more-questions" className="mt-12 sm:mt-16 bg-gradient-to-br from-salesforce-blue/10 via-salesforce-light/5 to-salesforce-blue/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 text-center border border-salesforce-blue/20 shadow-lg">
               <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Get the Full ADM-201 Question Bank</h3>
-              <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-xl mx-auto">
-                500+ practice questions with detailed explanations, aligned to the official exam outline.
+              <p className="text-gray-600 mb-4 text-sm sm:text-base max-w-xl mx-auto">
+                Go beyond the free sample: full bank aligned to the official exam outline.
               </p>
+              <ul className="text-left text-sm text-gray-700 max-w-md mx-auto mb-6 space-y-2 list-disc list-inside">
+                <li><strong>500+ questions</strong> — cover every section and weight band</li>
+                <li><strong>Detailed explanations</strong> — understand why each answer is correct</li>
+                <li><strong>Exam-style format</strong> — similar length and difficulty to the real ADM-201</li>
+                <li><strong>By section</strong> — practice weak areas or do full mock exams</li>
+              </ul>
               <a
                 href="/contact"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
