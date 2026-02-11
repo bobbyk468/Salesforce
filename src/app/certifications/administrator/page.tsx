@@ -17,7 +17,7 @@ const slug = 'administrator'
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'First Salesforce certification for beginners. ADM-201 exam guide 2026: $200 fee, 60 questions, 65% passing score. No coding required. Free practice questions and study plan.'
+  'ADM-201 exam guide: $200 fee, 60 questions, 65% passing. Free practice questions, updated for 2026. Salesforce Administrator certification cost, syllabus & study plan. First cert for beginners—no coding.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -218,11 +218,23 @@ export default function AdministratorPage() {
         <CertPageIntro slug={slug} />
         
         {/* Prominent CTA above fold */}
-        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
+        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} examCode="ADM-201" />
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-3">
+            {/* Who this is for (persona-based study paths) */}
+            <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6" aria-labelledby="who-this-is-for-heading">
+              <h2 id="who-this-is-for-heading" className="text-lg font-bold text-gray-900 mb-3">
+                Who is the ADM-201 for?
+              </h2>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li><strong className="text-gray-900">Beginners:</strong> First Salesforce cert; no coding required. Ideal if you’re new to CRM or Trailhead.</li>
+                <li><strong className="text-gray-900">Career switchers:</strong> Prove admin skills to move into Salesforce roles. Use section weightage to focus study time.</li>
+                <li><strong className="text-gray-900">Experienced admins:</strong> Validate and refresh your knowledge before Advanced Administrator or App Builder.</li>
+              </ul>
+            </section>
+
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
@@ -253,6 +265,24 @@ export default function AdministratorPage() {
               examWeightageHeading={getCertExamWeightageHeading(slug)}
             />
 
+            <details id="syllabus-checklist" className="mt-8 rounded-xl border border-gray-200 bg-white overflow-hidden">
+              <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2">
+                <span>ADM-201 exam syllabus checklist</span>
+                <span className="text-gray-500 text-sm font-normal">(click to expand)</span>
+              </summary>
+              <div className="px-5 py-4 border-t border-gray-100">
+                <p className="text-sm text-gray-600 mb-3">Use this list to track your study. Sections are from the official exam outline with approximate weight.</p>
+                <ul className="space-y-2 text-sm text-gray-700">
+                  {examSections.map((section, i) => (
+                    <li key={i} className="flex items-center gap-2">
+                      <span className="inline-flex w-5 h-5 rounded border border-gray-300 bg-white flex-shrink-0" aria-hidden="true" />
+                      <span><strong>{section.name}</strong> — {section.percentage}%</span>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </details>
+
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
             </div>
@@ -280,15 +310,15 @@ export default function AdministratorPage() {
             </div>
 
             <div id="more-questions" className="mt-12 sm:mt-16 bg-gradient-to-br from-salesforce-blue/10 via-salesforce-light/5 to-salesforce-blue/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 text-center border border-salesforce-blue/20 shadow-lg">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Want More Practice Questions?</h3>
+              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Get the Full ADM-201 Question Bank</h3>
               <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base max-w-xl mx-auto">
-                Get access to our complete question bank with 500+ questions and detailed explanations.
+                500+ practice questions with detailed explanations, aligned to the official exam outline.
               </p>
               <a
                 href="/contact"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
               >
-                Contact Us for Full Access
+                Get Full Question Bank
               </a>
             </div>
 
@@ -331,6 +361,8 @@ export default function AdministratorPage() {
           <aside className="lg:col-span-1">
             <CertTableOfContents
               sections={[
+                { id: 'who-this-is-for-heading', title: 'Who is ADM-201 for?' },
+                { id: 'syllabus-checklist', title: 'Syllabus checklist' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
