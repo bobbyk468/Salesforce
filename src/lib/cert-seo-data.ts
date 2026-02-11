@@ -155,6 +155,10 @@ export function getExamCost(slug: string): string {
 /** Intent-driven title: exam name + year + benefit (cost, syllabus, practice). Aim 55–60 chars before brand for best CTR. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
+  // CTR-optimized title for Administrator (per SEO evaluation: benefit + clarity)
+  if (slug === 'administrator') {
+    return `Salesforce Certified Platform Administrator (ADM-201) Study Guide & Practice Questions${brand}`
+  }
   const examCost = getExamCost(slug)
   /** High-cost-query pages: include cost in title for better CTR. These certs get high volume of "cost" queries. */
   const highCostQueryPages = [

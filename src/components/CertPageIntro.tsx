@@ -59,6 +59,9 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
       <p className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3 mt-3">
         <strong>Last reviewed:</strong> {CONTENT_LAST_UPDATED}. Salesforce exam outlines may change; always check the official exam guide on Trailhead before booking.
       </p>
+      <p className="text-xs sm:text-sm text-gray-600 mt-2">
+        Reviewed against the official {primaryName}{examCode ? ` (${examCode})` : ''} exam guide — {CONTENT_LAST_UPDATED}.
+      </p>
 
       <div className="border-t border-gray-200 pt-4 mt-4 space-y-4">
         <p className="text-xs sm:text-sm text-gray-700">

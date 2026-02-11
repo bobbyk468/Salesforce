@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import QuestionCard from '@/components/QuestionCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -291,6 +292,31 @@ export default function AdministratorPage() {
               </a>
             </div>
 
+            <section id="platform-admin-vs-other" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="comparison-heading">
+              <h2 id="comparison-heading" className="text-xl font-bold text-gray-900 mb-4">
+                Platform Administrator vs Other Salesforce Certifications
+              </h2>
+              <p className="text-gray-600 text-sm mb-4">
+                Choosing the right certification depends on your experience and goals. Here’s how the Platform Administrator (ADM-201) compares to common next steps:
+              </p>
+              <ul className="space-y-3 text-sm text-gray-700">
+                <li>
+                  <strong className="text-gray-900">Platform Administrator vs Advanced Administrator (ADM-211):</strong>{' '}
+                  ADM-201 is the entry-level admin cert; Advanced Administrator builds on it with deeper configuration, integration, and solution design. Take ADM-201 first, then consider{' '}
+                  <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+                    Advanced Administrator (ADM-211) study guide
+                  </Link>.
+                </li>
+                <li>
+                  <strong className="text-gray-900">Platform Administrator vs Platform App Builder (DEV-402):</strong>{' '}
+                  Both are declarative and don’t require coding. App Builder focuses on building custom apps, objects, and Lightning components. If you enjoy customizing the platform after ADM-201, see our{' '}
+                  <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
+                    Platform App Builder (DEV-402) study guide
+                  </Link>.
+                </li>
+              </ul>
+            </section>
+
             <div id="related-certs">
               <RelatedCertifications currentSlug={slug} />
             </div>
@@ -308,6 +334,7 @@ export default function AdministratorPage() {
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
+                { id: 'platform-admin-vs-other', title: 'Platform Admin vs Other Certs' },
                 { id: 'related-certs', title: 'Related Certifications' },
                 { id: 'faq', title: 'Exam FAQs' },
               ]}
