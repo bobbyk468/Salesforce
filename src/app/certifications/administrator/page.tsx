@@ -18,7 +18,7 @@ const slug = 'administrator'
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'ADM-201 exam guide: $200 fee, 60 questions, 65% passing. Free practice questions, updated for 2026. Salesforce Administrator certification cost, syllabus & study plan. First cert for beginners—no coding.'
+  'ADM-201 exam guide: $200 fee, 60 questions, 65% passing. Free practice questions, no sign-up required. Updated for Winter \'26. Salesforce Administrator certification cost, syllabus & study plan. First cert for beginners—no coding.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -223,11 +223,14 @@ export default function AdministratorPage() {
 
         <section className="my-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5" aria-label="Learner feedback">
           <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Trusted by learners</p>
-          <p className="text-gray-700 text-sm sm:text-base mb-2">
+          <p className="text-gray-700 text-sm sm:text-base mb-3">
             <span className="font-bold text-salesforce-blue">10,000+</span> exam takers use Trailblaze Prep to study for Salesforce certifications.
           </p>
-          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3">
+          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3 mb-3">
             &ldquo;The section weightage and practice questions made it clear what to focus on. Passed ADM-201 on my first try.&rdquo;
+          </blockquote>
+          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3">
+            &ldquo;Studying for 6 weeks with the checklist and full question bank—passed with room to spare.&rdquo;
           </blockquote>
         </section>
         
@@ -283,7 +286,7 @@ export default function AdministratorPage() {
                   <span className="text-gray-500 text-sm font-normal">(click to expand)</span>
                 </summary>
                 <div className="px-5 py-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-600 mb-3 no-print">Use this table to track your study. Sections are from the official exam outline with approximate weight.</p>
+                  <p className="text-sm text-gray-600 mb-3 no-print">Use this table to track your study. Sections are from the official exam outline with approximate weight. Key areas per section: setup & configuration, Object Manager & Lightning App Builder, automation (Flow, Process Builder), data & analytics, Sales & Service Cloud, productivity & collaboration.</p>
                   <p className="hidden print:block text-sm font-semibold text-gray-900 mb-2">ADM-201 exam syllabus checklist</p>
                   <div className="overflow-x-auto">
                     <table className="w-full text-sm text-left border-collapse">
@@ -309,6 +312,22 @@ export default function AdministratorPage() {
                 </div>
               </details>
             </div>
+
+            <section className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="study-timeline-heading">
+              <h2 id="study-timeline-heading" className="text-lg font-bold text-gray-900 mb-3">
+                Suggested study timeline (4–6 weeks)
+              </h2>
+              <p className="text-sm text-gray-600 mb-3">
+                If you have an exam date in mind, use this as a guide. Focus on high-weight sections first.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li><strong>Weeks 1–2:</strong> Configuration and Setup, Object Manager and Lightning App Builder (40% combined)</li>
+                <li><strong>Weeks 2–3:</strong> Workflow and Process Automation, Data and Analytics Management (30%)</li>
+                <li><strong>Weeks 3–4:</strong> Sales and Marketing, Service and Support Applications (23%)</li>
+                <li><strong>Weeks 4–5:</strong> Productivity and Collaboration (7%); review weak areas</li>
+                <li><strong>Week 5–6:</strong> Full practice tests and final review</li>
+              </ul>
+            </section>
 
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
@@ -342,14 +361,17 @@ export default function AdministratorPage() {
               <p className="text-gray-600 mb-4 text-sm sm:text-base max-w-xl mx-auto">
                 Go beyond the free sample: full bank aligned to the official exam outline.
               </p>
-              <ul className="text-left text-sm text-gray-700 max-w-md mx-auto mb-6 space-y-2 list-disc list-inside">
+              <ul className="text-left text-sm text-gray-700 max-w-md mx-auto mb-4 space-y-2 list-disc list-inside">
                 <li><strong>500+ questions</strong> — cover every section and weight band</li>
                 <li><strong>Detailed explanations</strong> — understand why each answer is correct</li>
                 <li><strong>Exam-style format</strong> — similar length and difficulty to the real ADM-201</li>
                 <li><strong>By section</strong> — practice weak areas or do full mock exams</li>
               </ul>
+              <p className="text-gray-500 text-xs sm:text-sm mb-6 max-w-md mx-auto">
+                Contact us for pricing and access (one-time or subscription). Mention ADM-201 for the full question bank.
+              </p>
               <a
-                href="/contact"
+                href="/contact?exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
               >
                 Get Full Question Bank
@@ -397,6 +419,7 @@ export default function AdministratorPage() {
               sections={[
                 { id: 'who-this-is-for-heading', title: 'Who is ADM-201 for?' },
                 { id: 'syllabus-checklist', title: 'Syllabus checklist' },
+                { id: 'study-timeline-heading', title: 'Suggested study timeline' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },

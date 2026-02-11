@@ -1,6 +1,7 @@
 'use client'
 
 import { useState, useRef, useEffect } from 'react'
+import { useSearchParams } from 'next/navigation'
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
@@ -32,12 +33,17 @@ const COMMON_EMAIL_DOMAINS = [
 ]
 
 export default function ContactPage() {
+  const searchParams = useSearchParams()
+  const examParam = searchParams.get('exam') ? decodeURIComponent(searchParams.get('exam')!) : null
   const [formData, setFormData] = useState({
     name: '',
     email: '',
     subject: '',
     message: '',
   })
+  useEffect(() => {
+    if (examParam) setFormData(prev => ({ ...prev, subject: examParam }))
+  }, [examParam])
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [isSubmitted, setIsSubmitted] = useState(false)
   const [emailSuggestions, setEmailSuggestions] = useState<string[]>([])
@@ -337,7 +343,12 @@ export default function ContactPage() {
                   </div>
                 ) : (
                   <>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-6">Send us a Message</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Send us a Message</h2>
+                    {examParam && (
+                      <p className="text-sm text-gray-600 mb-6">
+                        Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.
+                      </p>
+                    )}
                     <form onSubmit={handleSubmit} className="space-y-6">
                       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         <div>
