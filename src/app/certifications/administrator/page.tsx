@@ -273,7 +273,7 @@ export default function AdministratorPage() {
               <div className="px-5 py-4 border-t border-gray-100">
                 <p className="text-sm text-gray-600 mb-3">Use this list to track your study. Sections are from the official exam outline with approximate weight.</p>
                 <ul className="space-y-2 text-sm text-gray-700">
-                  {examSections.map((section, i) => (
+                  {(examSections ?? []).map((section, i) => (
                     <li key={i} className="flex items-center gap-2">
                       <span className="inline-flex w-5 h-5 rounded border border-gray-300 bg-white flex-shrink-0" aria-hidden="true" />
                       <span><strong>{section.name}</strong> — {section.percentage}%</span>
