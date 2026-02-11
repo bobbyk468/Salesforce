@@ -10,6 +10,7 @@ import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPra
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+import Link from 'next/link'
 
 const slug = 'advanced-administrator'
 export const metadata = getCertMetadata(slug)
@@ -78,7 +79,10 @@ export default function AdvancedAdministratorPage() {
     <div className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
       <CertPageIntro slug={slug} />
-        
+        <p className="text-sm text-gray-600 mb-6">
+          If you haven&apos;t passed the entry-level admin exam yet, start with our{' '}
+          <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">ADM-201 study guide</Link> first.
+        </p>
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         
