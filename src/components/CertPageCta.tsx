@@ -1,5 +1,6 @@
 import { PlayCircle, Download } from 'lucide-react'
 import Link from 'next/link'
+import { SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 
 interface CertPageCtaProps {
   slug: string
@@ -10,8 +11,10 @@ interface CertPageCtaProps {
 
 /** Prominent CTA above the fold (after intro, before certification card) for better CTR and engagement. */
 export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaProps) {
-  const singleDominantCta = !!examCode
-  const primaryLabel = singleDominantCta ? `Start Free ${examCode} Practice Test` : 'Start Free Practice Test'
+  const effectiveExamCode = examCode ?? SLUG_TO_EXAM_CODE[slug]
+  const singleDominantCta = !!effectiveExamCode
+  const primaryLabel = singleDominantCta ? `Start Free ${effectiveExamCode} Practice Test` : 'Start Free Practice Test'
+  const contactHref = `/contact?exam=${encodeURIComponent(effectiveExamCode ?? certTitle)}`
 
   return (
     <div className="my-8 sm:my-10 bg-gradient-to-r from-salesforce-blue via-salesforce-light to-salesforce-blue rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-salesforce-blue/20">
@@ -41,10 +44,10 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
           Join thousands preparing for Salesforce certifications
         </p>
       )}
-      {singleDominantCta && examCode && (
+      {singleDominantCta && (
         <p className="text-center mt-2">
-          <Link href="/contact" className="text-white/90 hover:text-white text-sm font-medium underline underline-offset-2">
-            Get full {examCode} question bank
+          <Link href={contactHref} className="text-white/90 hover:text-white text-sm font-medium underline underline-offset-2">
+            {effectiveExamCode ? `Get full ${effectiveExamCode} question bank` : 'Get full question bank'}
           </Link>
         </p>
       )}

@@ -1,3 +1,4 @@
+import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
@@ -86,11 +87,7 @@ export default function StrategyDesignerPage() {
             ))}
           </div>
           
-          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Want More Practice Questions?</h3>
-            <p className="text-gray-600 mb-6">Get access to our complete question bank with detailed explanations.</p>
-            <a href="/contact" className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95">Contact Us for Full Access</a>
-          </div>
+                    <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />

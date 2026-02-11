@@ -513,19 +513,19 @@ export function getCertMetaDescription(slug: string): string {
       'Prepare for the Salesforce Certified Tableau Server Administrator certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
   }
   const custom = templates[slug]
-  if (custom) {
+  // Keep custom templates only for practice-test pages; otherwise use the standardized description
+  // so all certification pages follow the same meta format as ADM-201.
+  if (custom && slug.endsWith('-practice-test')) {
     // Replace placeholder cost if present, or add cost for non-template certs
     const withCost = custom.includes('exam fee') ? custom : custom.replace('Exam weightage', `${examCost} exam fee, exam weightage`)
     return withCost.length > 160 ? withCost.slice(0, 157) + '...' : withCost
   }
   const primaryName = getCertPrimaryName(slug, certName)
-  const base =
-    examCode
-      ? `Prepare for the ${primaryName} exam (${examCode}): ${examCost} exam fee, section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
-      : `Prepare for the ${primaryName} exam: ${examCost} exam fee, section-wise weightage, practice questions, and study tips. Aligned with official outlines.`
-  const desc = formerName
-    ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${examCost} exam fee, section-wise weightage, practice questions, study tips.`
-    : base
+  const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
+  const desc =
+    formerName && standardized.length < 145
+      ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${standardized}`
+      : standardized
   
   const finalDesc = desc.length > 160 ? desc.slice(0, 157) + '...' : desc
   

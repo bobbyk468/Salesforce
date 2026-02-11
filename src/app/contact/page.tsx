@@ -20,10 +20,14 @@ const getAllCertificationNames = (): string[] => {
 const ALL_CERTIFICATION_NAMES = getAllCertificationNames()
 
 /** Exam param indicates "full question bank" flow: show contextual heading, blurb, and "Request Access & Pricing" button. */
-function isQuestionBankExam(exam: string | null): boolean {
-  if (!exam) return false
-  const lower = exam.toLowerCase()
-  return lower.includes('adm-201') || lower.includes('dev-402') || lower.includes('app builder')
+function isQuestionBankFlow(exam: string | null): boolean {
+  return !!exam && exam.trim().length > 0
+}
+
+function getQuestionBankHeading(exam: string): string {
+  const match = exam.match(/[A-Z]{2,5}-\d{3}/i)
+  if (match) return `Get Full ${match[0].toUpperCase()} Question Bank Access`
+  return 'Get Full Question Bank Access'
 }
 
 const COMMON_EMAIL_DOMAINS = [
@@ -351,16 +355,12 @@ function ContactPageContent() {
                 ) : (
                   <>
                     <h2 className="text-2xl font-bold text-gray-900 mb-2">
-                      {examParam && isQuestionBankExam(examParam) ? ((examParam.toUpperCase().includes('DEV-402') || examParam.toLowerCase().includes('app builder')) ? 'Get Full DEV-402 Question Bank Access' : 'Get Full ADM-201 Question Bank Access') : 'Send us a Message'}
+                      {examParam && isQuestionBankFlow(examParam) ? getQuestionBankHeading(examParam) : 'Send us a Message'}
                     </h2>
                     {examParam && (
                       <p className="text-sm text-gray-600 mb-6">
-                        {isQuestionBankExam(examParam) ? (
-                          (examParam.toUpperCase().includes('DEV-402') || examParam.toLowerCase().includes('app builder')) ? (
-                            <>Exam: <strong>Salesforce Certified Platform App Builder (DEV-402)</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice. Add your message below and we&apos;ll respond with pricing and access details.</>
-                          ) : (
-                            <>Exam: <strong>Salesforce Certified Platform Administrator (ADM-201)</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice. Add your message below and we&apos;ll respond with pricing and access details.</>
-                          )
+                        {isQuestionBankFlow(examParam) ? (
+                          <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice. Add your message below and we&apos;ll respond with pricing and access details.</>
                         ) : (
                           <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.</>
                         )}
@@ -471,7 +471,7 @@ function ContactPageContent() {
                           required
                           rows={6}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-salesforce-blue focus:border-transparent transition-colors resize-none"
-                          placeholder={examParam && isQuestionBankExam(examParam) ? 'e.g. Looking for pricing / access details for the full question bank' : 'Tell us how we can help you...'}
+                          placeholder={examParam && isQuestionBankFlow(examParam) ? 'e.g. Looking for pricing / access details for the full question bank' : 'Tell us how we can help you...'}
                         />
                       </div>
 
@@ -491,7 +491,7 @@ function ContactPageContent() {
                         ) : (
                           <>
                             <Send className="h-5 w-5 mr-2" />
-                            {examParam && isQuestionBankExam(examParam) ? 'Request Access & Pricing' : 'Send Message'}
+                            {examParam && isQuestionBankFlow(examParam) ? 'Request Access & Pricing' : 'Send Message'}
                           </>
                         )}
                       </button>

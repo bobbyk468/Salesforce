@@ -1,3 +1,4 @@
+import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
@@ -108,16 +109,7 @@ export default function TechnicalArchitectEvaluationPage() {
             ))}
           </div>
 
-          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
-            <h3 className="text-xl font-bold text-gray-900 mb-4">Ready for the Review Board?</h3>
-            <p className="text-gray-600 mb-6">After passing the Architect Evaluation, prepare for the Architect Review Board exam with our materials.</p>
-            <a href="/certifications/technical-architect-review-board" className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 mr-2">
-              CTA Review Board
-            </a>
-            <a href="/contact" className="inline-block px-8 py-3 border-2 border-salesforce-blue text-salesforce-blue rounded-lg font-semibold hover:bg-salesforce-blue hover:text-white transition-all duration-200">
-              Contact Us
-            </a>
-          </div>
+                    <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
