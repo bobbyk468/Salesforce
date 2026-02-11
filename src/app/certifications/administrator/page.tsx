@@ -30,7 +30,7 @@ const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'Prepare for the Salesforce Certified Platform Administrator (ADM-201) exam with updated Winter \'26 study guide, section-wise weightage, free practice questions, and full-length mock exams. No sign-up required.'
+  'Prepare for the Salesforce Certified Platform Administrator (ADM-201) exam with a Winter \'26–updated study guide, section-wise weightage, free practice questions, and full mock exams. No sign-up required.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -412,6 +412,9 @@ export default function AdministratorPage() {
               </div>
               <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
                 Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
+              </p>
+              <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
+                If you&apos;re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
               </p>
               <p className="text-gray-500 text-xs max-w-md mx-auto mb-6">
                 Candidates who complete full mock exams report strong first-time pass rates. Contact us for pricing and access—mention ADM-201.

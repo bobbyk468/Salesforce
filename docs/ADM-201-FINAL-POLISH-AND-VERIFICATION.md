@@ -95,7 +95,35 @@ Typical top results for “ADM-201 study guide” / “Salesforce Administrator 
 
 ---
 
-## 5. Next steps
+## 5. Do-not-touch list (ADM-201)
+
+**Do not change, remove, or dilute these.** They are what make the page production-grade and 5/5 in intent, content, and trust.
+
+| Element | Location | Why preserve |
+|--------|----------|---------------|
+| **Title tag** | `getCertMetaTitle('administrator')` / page metadata | CTR-optimized; exact match for “ADM-201 study guide” intent. |
+| **Single H1** | CertificationCard `h1Text` | One H1, exam-aligned; required for SEO and clarity. |
+| **Meta description** | `descriptionText` in administrator `page.tsx` | Benefit-led, Winter ’26, no sign-up; drives CTR. |
+| **Primary CTA** | CertPageCta with `examCode="ADM-201"` | “Start Free ADM-201 Practice Test” — single dominant action. |
+| **Trust block** | 10,000+ learners + two testimonials | Social proof; do not remove or weaken. |
+| **Exam snapshot** | Fee, questions, duration, passing score | Full transparency; expected by candidates. |
+| **Section weightage table** | CertificationCard + syllabus table | Core differentiator; keep table + subtopics. |
+| **Syllabus subtopics** | `ADM_201_SECTION_SUBTOPICS` + table rows | Reference-grade depth; do not trim. |
+| **Suggested study timeline** | 4–6 weeks section | Actionable; weightage-driven. |
+| **Practice questions** | Sample questions + key takeaway + why wrong | Teaching, not just testing; keep structure and depth. |
+| **“What you get” block** | Access / Includes / Validity | Sets expectations; reduces hesitation. |
+| **75%+ and 10–14 days lines** | Readiness + soft urgency | Advisory; no fake scarcity. |
+| **Comparison section** | ADM-201 vs Advanced Admin, vs App Builder | Internal links + intent capture. |
+| **FAQ section** | CertPageFaq + same content as schema | Do not change Q&A; schema is tied to it. |
+| **Disclaimer / maintenance** | CertPageIntro “How this content is maintained” | E-E-A-T and compliance. |
+| **FAQ + HowTo schema** | CertPageSeo (faqJsonLd, howToJsonLd) | Rich results; do not remove. |
+| **Cert mega-menu hidden** | Header on `/certifications/administrator` | Reduces topical dilution; keep. |
+
+**Safe to change (polish only):** Wording of one testimonial, exact date in “Last reviewed,” or microcopy in the upgrade block—as long as intent and structure stay the same.
+
+---
+
+## 6. Next steps
 
 1. **Run the verification checklist** (Section 1) on the live URL after the next deploy.
 2. **Apply the one polish** in Section 3 (syllabus summary: “expand to view or print”) if you want.
