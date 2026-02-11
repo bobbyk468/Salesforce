@@ -2,6 +2,17 @@
 
 Based on a **pure SEO evaluation** (ranking, CTR, crawl efficiency). This doc maps the evaluation’s “Bottom Line” to current implementation.
 
+**Implementation status (all 4 actions done in code):**
+
+| # | Action | Status | Where |
+|---|--------|--------|--------|
+| 1 | Add FAQ schema | ✅ | CertPageSeo → getCertFaqJsonLd (FAQPage + HowTo) |
+| 2 | Set manual meta description | ✅ | administrator/page.tsx → descriptionText in generateMetadata() |
+| 3 | Confirm expandable checklist crawlable | ✅ | Native `<details>`; content in initial HTML (SSR) |
+| 4 | Reduce above-the-fold navigation | ✅ | Header → “Choose your role” hidden on cert detail pages |
+
+If the live site was reviewed before deploy or with cache, re-check after the next deploy. See “Verify on live” below.
+
 ---
 
 ## 1. Add FAQ schema — ✅ Done
