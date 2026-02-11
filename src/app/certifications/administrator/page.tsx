@@ -283,7 +283,7 @@ export default function AdministratorPage() {
               <details id="syllabus-checklist" className="rounded-xl border border-gray-200 bg-white overflow-hidden">
                 <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2 no-print">
                   <span>ADM-201 exam syllabus checklist</span>
-                  <span className="text-gray-500 text-sm font-normal">(click to expand)</span>
+                  <span className="text-gray-500 text-sm font-normal">(expand to view or print)</span>
                 </summary>
                 <div className="px-5 py-4 border-t border-gray-100">
                   <p className="text-sm text-gray-600 mb-3 no-print">Use this table to track your study. Sections are from the official exam outline with approximate weight. Key areas per section: setup & configuration, Object Manager & Lightning App Builder, automation (Flow, Process Builder), data & analytics, Sales & Service Cloud, productivity & collaboration.</p>
