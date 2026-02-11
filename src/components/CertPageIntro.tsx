@@ -62,6 +62,9 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
       <p className="text-xs sm:text-sm text-gray-600 mt-2">
         Reviewed against the official {primaryName}{examCode ? ` (${examCode})` : ''} exam guide — {CONTENT_LAST_UPDATED}.
       </p>
+      <p className="text-xs sm:text-sm text-gray-600 mt-2">
+        <strong>How this content is maintained:</strong> Reviewed each release; aligned to the official exam guide. Content is not affiliated with Salesforce.
+      </p>
 
       <div className="border-t border-gray-200 pt-4 mt-4 space-y-4">
         <p className="text-xs sm:text-sm text-gray-700">

@@ -343,10 +343,16 @@ function ContactPageContent() {
                   </div>
                 ) : (
                   <>
-                    <h2 className="text-2xl font-bold text-gray-900 mb-2">Send us a Message</h2>
+                    <h2 className="text-2xl font-bold text-gray-900 mb-2">
+                      {examParam && examParam.includes('ADM-201') ? 'Get Full ADM-201 Question Bank Access' : 'Send us a Message'}
+                    </h2>
                     {examParam && (
                       <p className="text-sm text-gray-600 mb-6">
-                        Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.
+                        {examParam.includes('ADM-201') ? (
+                          <>Request pricing and access for the full ADM-201 question bank. The exam field below is pre-filled—add your message (e.g. pricing or access details) and we&apos;ll respond shortly.</>
+                        ) : (
+                          <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.</>
+                        )}
                       </p>
                     )}
                     <form onSubmit={handleSubmit} className="space-y-6">
@@ -454,7 +460,7 @@ function ContactPageContent() {
                           required
                           rows={6}
                           className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-salesforce-blue focus:border-transparent transition-colors resize-none"
-                          placeholder="Tell us how we can help you..."
+                          placeholder={examParam?.includes('ADM-201') ? 'e.g. Looking for pricing / access details for the full question bank' : 'Tell us how we can help you...'}
                         />
                       </div>
 

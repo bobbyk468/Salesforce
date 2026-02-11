@@ -1,3 +1,4 @@
+import { Fragment } from 'react'
 import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import QuestionCard from '@/components/QuestionCard'
@@ -15,10 +16,21 @@ import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
+/** ADM-201 section subtopics for expanded syllabus depth (reference-grade content). */
+const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
+  'Configuration and Setup': ['Company settings', 'Fiscal year and currencies', 'UI and accessibility settings', 'Organization limits', 'Login policies'],
+  'Object Manager and Lightning App Builder': ['Custom objects and fields', 'Page layouts', 'Lightning pages and components', 'Record types', 'Compact layouts'],
+  'Workflow and Process Automation': ['Record-triggered Flow', 'Order of execution', 'Process Builder', 'Workflow rules', 'Approval processes', 'Automation limits'],
+  'Data and Analytics Management': ['Data import/export', 'Reports and report types', 'Dashboards', 'Report folders and sharing', 'Analytics permissions'],
+  'Sales and Marketing Applications': ['Lead and opportunity management', 'Campaigns', 'Products and price books', 'Forecasting (if in scope)'],
+  'Service and Support Applications': ['Cases', 'Case assignment rules', 'Knowledge', 'Service Console', 'Entitlements'],
+  'Productivity and Collaboration': ['Chatter', 'Files and content', 'Queues', 'Collaboration tools'],
+}
+
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'ADM-201 exam guide: $200 fee, 60 questions, 65% passing. Free practice questions, no sign-up required. Updated for Winter \'26. Salesforce Administrator certification cost, syllabus & study plan. First cert for beginners—no coding.'
+  'Prepare for the Salesforce Certified Platform Administrator (ADM-201) exam with updated Winter \'26 study guide, section-wise weightage, free practice questions, and full-length mock exams. No sign-up required.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -55,7 +67,11 @@ const sampleQuestions = [
       "Activity History"
     ],
     correctAnswer: 1,
-    explanation: "The Tasks and Events report type allows you to report on activities including calls, meetings, and tasks across all users."
+    explanation: "The Tasks and Events report type allows you to report on activities including calls, meetings, and tasks across all users.",
+    whyWrong: [
+      "Activities with Accounts and Accounts with Activities focus on account-related activities, not standalone tasks/calls across reps.",
+      "Activity History is a related list on records, not a report type for building reports."
+    ]
   },
   {
     question: "What is the maximum number of fields that can be tracked for field history on a custom object?",
@@ -66,7 +82,10 @@ const sampleQuestions = [
       "25 fields"
     ],
     correctAnswer: 2,
-    explanation: "You can track up to 20 fields per object for field history tracking on both standard and custom objects."
+    explanation: "You can track up to 20 fields per object for field history tracking on both standard and custom objects.",
+    whyWrong: [
+      "10, 15, and 25 are not the platform limit; the documented maximum per object is 20."
+    ]
   },
   {
     question: "A user needs to create a report that shows Opportunities grouped by Account and then by Stage. Which report format should be used?",
@@ -77,7 +96,12 @@ const sampleQuestions = [
       "Joined"
     ],
     correctAnswer: 1,
-    explanation: "Summary reports allow you to group rows of data, view subtotals, and create charts. They're ideal for grouping by Account and then by Stage."
+    explanation: "Summary reports allow you to group rows of data, view subtotals, and create charts. They're ideal for grouping by Account and then by Stage.",
+    whyWrong: [
+      "Tabular reports show flat rows only; they do not support grouping or subtotals.",
+      "Matrix reports are for row and column grouping (e.g. cross-tab), not hierarchical grouping by two dimensions.",
+      "Joined reports combine multiple report types and are not the primary format for simple grouping by Account and Stage."
+    ]
   },
   {
     question: "Which permission allows a user to transfer records they don't own?",
@@ -298,10 +322,20 @@ export default function AdministratorPage() {
                       </thead>
                       <tbody>
                         {(examSections ?? []).map((section, i) => (
-                          <tr key={i} className="border-b border-gray-100">
-                            <td className="py-2.5 pr-4 text-gray-800">{section.name}</td>
-                            <td className="py-2.5 text-right font-medium text-gray-700">{section.percentage}%</td>
-                          </tr>
+                          <Fragment key={i}>
+                            <tr className="border-b border-gray-100">
+                              <td className="py-2.5 pr-4 text-gray-800">{section.name}</td>
+                              <td className="py-2.5 text-right font-medium text-gray-700">{section.percentage}%</td>
+                            </tr>
+                            {ADM_201_SECTION_SUBTOPICS[section.name] && (
+                              <tr className="border-b border-gray-50 bg-gray-50/50">
+                                <td colSpan={2} className="py-2 pr-4 pl-4 text-gray-600 text-xs">
+                                  <span className="font-medium text-gray-700">Key subtopics:</span>{' '}
+                                  {ADM_201_SECTION_SUBTOPICS[section.name].join(' • ')}
+                                </td>
+                              </tr>
+                            )}
+                          </Fragment>
                         ))}
                       </tbody>
                     </table>
@@ -351,6 +385,7 @@ export default function AdministratorPage() {
                     correctAnswer={q.correctAnswer}
                     explanation={q.explanation}
                     explanationSummary={q.explanation ? (q.explanation.split(/[.!?]/)[0]?.trim() ? q.explanation.split(/[.!?]/)[0].trim() + '.' : q.explanation) : undefined}
+                    whyWrong={'whyWrong' in q ? (q as { whyWrong?: string[] }).whyWrong : undefined}
                   />
                 ))}
               </div>
@@ -363,12 +398,23 @@ export default function AdministratorPage() {
               </p>
               <ul className="text-left text-sm text-gray-700 max-w-md mx-auto mb-4 space-y-2 list-disc list-inside">
                 <li><strong>500+ questions</strong> — cover every section and weight band</li>
-                <li><strong>Detailed explanations</strong> — understand why each answer is correct</li>
+                <li><strong>Detailed explanations</strong> — understand why each answer is correct (and why others are wrong)</li>
                 <li><strong>Exam-style format</strong> — similar length and difficulty to the real ADM-201</li>
                 <li><strong>By section</strong> — practice weak areas or do full mock exams</li>
               </ul>
-              <p className="text-gray-500 text-xs sm:text-sm mb-6 max-w-md mx-auto">
-                Contact us for pricing and access (one-time or subscription). Mention ADM-201 for the full question bank.
+              <div className="text-left text-sm text-gray-700 max-w-md mx-auto mb-4 p-4 bg-white/60 rounded-lg border border-salesforce-blue/10">
+                <p className="font-semibold text-gray-900 mb-2">What you get:</p>
+                <ul className="space-y-1 list-disc list-inside">
+                  <li><strong>Access:</strong> Web-based; use from any device</li>
+                  <li><strong>Includes:</strong> Timed full-length mocks + section-wise practice tests</li>
+                  <li><strong>Validity:</strong> 30, 60, or 90 days (contact for options)</li>
+                </ul>
+              </div>
+              <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
+                Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
+              </p>
+              <p className="text-gray-500 text-xs max-w-md mx-auto mb-6">
+                Candidates who complete full mock exams report strong first-time pass rates. Contact us for pricing and access—mention ADM-201.
               </p>
               <a
                 href="/contact?exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"

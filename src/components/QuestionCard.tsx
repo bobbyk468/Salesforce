@@ -11,6 +11,8 @@ interface QuestionCardProps {
   explanation?: string
   /** Optional one-line summary always visible for SEO and skim readers (e.g. first sentence of explanation). */
   explanationSummary?: string
+  /** Optional 1–2 lines per wrong option: "Why others are wrong" (teaches, not just tests). */
+  whyWrong?: string[]
 }
 
 export default function QuestionCard({
@@ -20,6 +22,7 @@ export default function QuestionCard({
   correctAnswer,
   explanation,
   explanationSummary,
+  whyWrong,
 }: QuestionCardProps) {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null)
   const [showAnswer, setShowAnswer] = useState(false)
@@ -122,6 +125,16 @@ export default function QuestionCard({
               <>
                 <p className="font-semibold text-gray-800 mt-4 mb-2 text-sm sm:text-base">Why this is correct:</p>
                 <p className="text-gray-700 leading-relaxed text-sm sm:text-base">{explanation}</p>
+                {whyWrong && whyWrong.length > 0 && (
+                  <>
+                    <p className="font-semibold text-gray-800 mt-4 mb-2 text-sm sm:text-base">Why others are wrong:</p>
+                    <ul className="text-gray-700 text-sm sm:text-base space-y-1 list-disc list-inside">
+                      {whyWrong.map((line, i) => (
+                        <li key={i}>{line}</li>
+                      ))}
+                    </ul>
+                  </>
+                )}
               </>
             ) : (
               <p className="text-gray-600 mt-2 text-xs sm:text-sm">Review the official exam outline for more detail on this topic.</p>
