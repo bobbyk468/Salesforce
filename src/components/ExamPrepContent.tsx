@@ -1,5 +1,7 @@
+import Link from 'next/link'
 import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
+import { slugToDisplayName } from '@/lib/cert-seo-data'
 
 interface ExamPrepContentProps {
   slug: string
@@ -7,6 +9,8 @@ interface ExamPrepContentProps {
 
 export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
   const content = getExamPrepContent(slug)
+  const certName = slugToDisplayName(slug)
+  const showSharedFormatSection = slug !== 'administrator'
 
   return (
     <div className="mt-10 sm:mt-12 lg:mt-16 space-y-6 sm:space-y-8">
@@ -81,6 +85,38 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
         </div>
         <p className="p-4 sm:p-5 lg:p-6 text-gray-700 text-xs sm:text-sm leading-relaxed">{content.studyStrategy}</p>
       </div>
+
+      {/* Shared depth section for all certs (ADM-201 has custom detailed version on-page) */}
+      {showSharedFormatSection && (
+        <div className="bg-gradient-to-br from-white via-gray-50/40 to-white rounded-xl sm:rounded-2xl shadow-lg border border-gray-100/70 overflow-hidden hover:shadow-xl transition-shadow duration-300 backdrop-blur-sm">
+          <div className="bg-gradient-to-r from-slate-700/90 to-slate-800/90 p-4 sm:p-5 text-white">
+            <h3 className="font-semibold text-base sm:text-lg">Exam Format and First-Attempt Readiness</h3>
+          </div>
+          <div className="p-4 sm:p-5 lg:p-6 space-y-4">
+            <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
+              Most Salesforce certification exams test applied, scenario-based decision making. For <strong className="text-gray-900">{certName}</strong>,
+              focus on understanding when to use each feature, not just memorizing terms.
+            </p>
+            <ul className="space-y-2 text-xs sm:text-sm text-gray-700 list-disc list-inside">
+              <li>Practice with timed question sets to improve exam-day pacing and confidence.</li>
+              <li>Review why wrong options are wrong; this builds stronger scenario reasoning.</li>
+              <li>Prioritize high-weight topics first, then close gaps with focused revision.</li>
+              <li>Aim for consistent mock performance before booking the exam.</li>
+            </ul>
+            <div className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3">
+              <span className="font-medium text-gray-800">Next steps:</span>{' '}
+              <Link href="#practice-questions" className="text-salesforce-blue font-medium hover:underline">
+                start practice questions
+              </Link>
+              {' '}or review the{' '}
+              <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
+                certification path
+              </Link>
+              {' '}for your next credential.
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   )
 }
