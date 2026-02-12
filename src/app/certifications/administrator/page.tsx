@@ -248,10 +248,13 @@ export default function AdministratorPage() {
             Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce ADM-201 Study Guide &amp; Free Practice Questions (2026)
+            Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions (2026)
           </h1>
           <p className="text-white/90 text-sm sm:text-base max-w-2xl mb-6">
             Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
+          </p>
+          <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
+            The certification was previously known as ADM-201 (Salesforce Certified Administrator). Many candidates still search for &ldquo;ADM-201&rdquo;, while the current official name is Salesforce Certified Platform Administrator.
           </p>
           <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
             <Link

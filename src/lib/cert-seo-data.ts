@@ -155,9 +155,9 @@ export function getExamCost(slug: string): string {
 /** Intent-driven title: exam name + year + benefit (cost, syllabus, practice). Aim 55–60 chars before brand for best CTR. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
-  // CTR-optimized title for Administrator (per SEO audit: year + free + weightage for differentiation)
+  // CTR-optimized title for Administrator: official current name + legacy exam code
   if (slug === 'administrator') {
-    return `Salesforce ADM-201 Study Guide (2026) – Free Practice Questions & Exam Weightage${brand}`
+    return `Salesforce Certified Platform Administrator (ADM-201) Study Guide (2026) – Free Practice Questions${brand}`
   }
   const examCost = getExamCost(slug)
   /** High-cost-query pages: include cost in title for better CTR. These certs get high volume of "cost" queries. */
@@ -1645,9 +1645,9 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
 
 /** Single H1 per cert page: aligned with query intent (Complete 2026 Guide) for CTR. */
 export function getCertH1Text(slug: string): string {
-  // ADM-201: action-oriented H1 with year + free practice questions (per CTR audit)
+  // ADM-201: official current name + legacy code for long-term ranking stability
   if (slug === 'administrator') {
-    return `Salesforce ADM-201 Study Guide & Free Practice Questions (${TITLE_YEAR})`
+    return `Salesforce Certified Platform Administrator (ADM-201) Study Guide & Free Practice Questions (${TITLE_YEAR})`
   }
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   return `${primaryName} – Complete ${TITLE_YEAR} Guide`
