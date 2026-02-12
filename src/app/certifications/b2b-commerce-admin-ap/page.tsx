@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'b2b-commerce-admin-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does B2B Commerce for Administrators AP validate?", options: ["Only development", "Broad knowledge of B2B Commerce and platform capabilities to troubleshoot and solve basic platform issues", "Only marketing", "Only Slack"], correctAnswer: 1, explanation: "Accredited B2B Commerce For Administrators Professionals have developed broad knowledge of the B2B Commerce discipline and platform capabilities." },

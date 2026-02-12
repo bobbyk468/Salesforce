@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'marketing-cloud-intelligence-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Marketing Cloud Intelligence AP validate?", options: ["Only basics", "Skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Marketing Cloud Intelligence Professionals have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers." },

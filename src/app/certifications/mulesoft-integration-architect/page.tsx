@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'mulesoft-integration-architect'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a MuleSoft Platform Integration Architect do?", options: ["Only coding", "Work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations." },

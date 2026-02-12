@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'heroku-architect'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a Heroku Architect do?", options: ["Only coding", "Architect scalable solutions, deploy and manage apps, and manage teams and build-workflows on Heroku", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku." },

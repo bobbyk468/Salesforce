@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { slugToDisplayName, SLUG_TO_EXAM_CODE, getCertAboutExamHeading } from '@/lib/cert-seo-data'
 import { getCertPrimaryName, getCertFormerName } from '@/lib/cert-name-aliases'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
@@ -55,6 +56,16 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
       </p>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
         Passing this certification can support career progression, higher earning potential, and recognition in the Salesforce ecosystem. Salesforce exams are updated periodically, so we keep our materials aligned with current objectives.
+      </p>
+      <p className="text-sm text-gray-700 mb-4">
+        Need a bigger roadmap? Explore the{' '}
+        <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
+          Salesforce certification path
+        </Link>{' '}
+        or browse all exams on the{' '}
+        <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
+          Salesforce certification index
+        </Link>.
       </p>
       <p className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3 mt-3">
         <strong>Last reviewed:</strong> {CONTENT_LAST_UPDATED}. Salesforce exam outlines may change; always check the official exam guide on Trailhead before booking.

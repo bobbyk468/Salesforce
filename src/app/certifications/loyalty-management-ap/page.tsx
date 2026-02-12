@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'loyalty-management-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Loyalty Management AP validate?", options: ["Only basics", "2-3 years experience designing solutions using Loyalty Management and leading implementation within customer organizations", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Loyalty Management Professionals have 2-3 years' experience designing solutions using Loyalty Management and can lead implementation within customer organizations." },

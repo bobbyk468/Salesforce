@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'b2c-commerce-architect'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a B2C Commerce Architect do?", options: ["Only coding", "Design global sites that support multiple brands and channels using standard design patterns", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns." },

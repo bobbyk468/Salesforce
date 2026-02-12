@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'net-zero-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Net Zero Cloud AP validate?", options: ["Only basics", "Knowledge, skills, and experience with managing and collecting key sustainability data", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data." },

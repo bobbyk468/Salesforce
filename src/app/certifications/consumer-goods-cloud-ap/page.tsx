@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'consumer-goods-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Consumer Goods Cloud AP validate?", options: ["Only basics", "Fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Consumer Goods Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets." },

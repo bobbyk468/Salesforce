@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'order-management-developer-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Order Management Developer AP validate?", options: ["Only basics", "Skills and knowledge in configuring and customizing Salesforce Order Management", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Order Management Developer Professionals have demonstrated skills and knowledge in configuring and customizing Salesforce Order Management." },

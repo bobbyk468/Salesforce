@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'b2c-solution-architect'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a B2C Solution Architect do?", options: ["Only coding", "Architect and drive multi-cloud solutions that deliver business value for the customer (B2C focus)", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer." },

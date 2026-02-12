@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'mulesoft-platform-architect'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a MuleSoft Platform Architect do?", options: ["Only coding", "Define and be responsible for an organization's Anypoint Platform strategy", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy." },

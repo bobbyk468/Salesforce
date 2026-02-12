@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'mulesoft-catalyst-consultant'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does a MuleSoft Catalyst Consultant do?", options: ["Only coding", "Use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes." },

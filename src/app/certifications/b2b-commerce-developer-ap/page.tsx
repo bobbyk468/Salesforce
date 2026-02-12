@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'b2b-commerce-developer-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does B2B Commerce for Developers AP validate?", options: ["Only administration", "Configuring and customizing B2B Commerce in the context of sample apps and real-world implementations", "Only marketing", "Only Slack"], correctAnswer: 1, explanation: "Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce." },

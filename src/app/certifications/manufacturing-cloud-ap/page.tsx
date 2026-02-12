@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'manufacturing-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Manufacturing Cloud AP validate?", options: ["Only basics", "Fundamental knowledge and skills to design, build, and deploy solutions across several Marketing Cloud products", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Manufacturing Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions across several Marketing Cloud products." },

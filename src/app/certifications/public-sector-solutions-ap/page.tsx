@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'public-sector-solutions-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Public Sector Solutions AP validate?", options: ["Only basics", "Driving successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that align with a company's vision and business value goals", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Public Sector Solutions Professionals drive successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that best align with a company's vision and business value goals." },

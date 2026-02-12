@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'consumer-goods-tpm-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Consumer Goods Cloud TPM AP validate?", options: ["Only basics", "Knowledge, skills, and experience to discover, design, plan, and deliver product value with Consumer Goods Cloud TPM", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Consumer Goods Cloud TPM Professionals have the knowledge, skills, and experience to discover, design, plan, and deliver product value with Consumer Goods Cloud TPM." },

@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
+import StickyMobileCta from '@/components/StickyMobileCta'
 import {
   getCertBreadcrumb,
   getCertBreadcrumbJsonLd,
@@ -88,6 +89,9 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
           ))}
         </ol>
       </nav>
+
+      {/* Global mobile CTA for certification pages */}
+      <StickyMobileCta />
     </>
   )
 }

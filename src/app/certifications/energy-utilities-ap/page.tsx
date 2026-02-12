@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'energy-utilities-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Energy and Utilities Cloud AP validate?", options: ["Only basics", "Fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Energy and Utilities Cloud Professionals have fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud." },

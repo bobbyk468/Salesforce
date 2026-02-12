@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'media-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Media Cloud AP validate?", options: ["Only basics", "Knowledge, skills, and experience to plan, design, and implement business value through Media Cloud", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Media Cloud Professionals have knowledge, skills, and experience to plan, design, and implement business value to customers through Media Cloud." },

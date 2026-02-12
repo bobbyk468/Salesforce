@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'health-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Health Cloud AP validate?", options: ["Only basics", "Skills and knowledge to implement Salesforce Health Cloud with industry-specific data models", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Health Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Health Cloud solution with industry-specific data models." },

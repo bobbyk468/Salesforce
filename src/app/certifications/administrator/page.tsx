@@ -7,7 +7,6 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
-import StickyMobileCta from '@/components/StickyMobileCta'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
@@ -637,9 +636,6 @@ export default function AdministratorPage() {
           </aside>
         </div>
       </div>
-
-      {/* Sticky mobile CTA: appears on scroll, hides near practice questions */}
-      <StickyMobileCta />
     </div>
   )
 }

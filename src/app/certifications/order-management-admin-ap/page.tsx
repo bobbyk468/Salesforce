@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'order-management-admin-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Order Management Administrator AP validate?", options: ["Only basics", "Experience implementing and consulting on Order Management projects in a customer-facing role", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role." },

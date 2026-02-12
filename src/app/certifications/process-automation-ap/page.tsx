@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'process-automation-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Process Automation AP validate?", options: ["Only basics", "Skills and knowledge in designing, configuring, building, and implementing Process Automation", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Process Automation Professionals have skills and knowledge in designing, configuring, building, and implementing Process Automation." },

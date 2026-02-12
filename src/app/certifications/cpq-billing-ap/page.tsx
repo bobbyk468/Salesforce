@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'cpq-billing-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does CPQ and Billing Consultant AP validate?", options: ["Only basics", "Fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Billing solutions", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions." },

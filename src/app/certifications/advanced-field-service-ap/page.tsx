@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'advanced-field-service-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Advanced Field Service AP validate?", options: ["Only basics", "Designing, configuring, building, and implementing Advanced Field Service", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Advanced Field Service Professionals have demonstrated skills in designing, configuring, building, and implementing Advanced Field Service." },

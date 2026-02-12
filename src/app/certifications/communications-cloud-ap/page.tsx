@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'communications-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Communications Cloud AP validate?", options: ["Only basics", "Knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Communications Cloud Professionals have knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud." },

@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'contact-center-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Contact Center AP validate?", options: ["Only basics", "Fundamental knowledge, skills, and experience to discover, design, plan, and deliver product value with Contact Center", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Contact Center Professionals have fundamental knowledge, skills, and experience to discover, design, plan, and deliver product value with Contact Center." },

@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'financial-services-cloud-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Financial Services Cloud AP validate?", options: ["Only basics", "Skills and knowledge to implement Salesforce Financial Services Cloud", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud." },

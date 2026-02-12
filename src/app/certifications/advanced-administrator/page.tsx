@@ -14,7 +14,9 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
 
 const slug = 'advanced-administrator'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   {

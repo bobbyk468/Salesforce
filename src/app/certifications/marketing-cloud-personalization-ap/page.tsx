@@ -13,7 +13,9 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'marketing-cloud-personalization-ap'
-export const metadata = getCertMetadata(slug)
+export async function generateMetadata() {
+  return getCertMetadata(slug)
+}
 
 const sampleQuestions = [
   { question: "What does Marketing Cloud Personalization AP validate?", options: ["Only basics", "Skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization", "Only reporting", "Only Slack"], correctAnswer: 1, explanation: "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization." },
