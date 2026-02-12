@@ -29,7 +29,6 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 export const metadata: Metadata = {
   alternates: { canonical: siteUrl },
-  openGraph: { url: siteUrl },
 }
 
 /** Role slug for "View all" link: /certifications/role/[slug] */
