@@ -83,6 +83,10 @@ export default function AdvancedAdministratorPage() {
         <p className="text-sm text-gray-600 mb-6">
           If you haven&apos;t passed the entry-level admin exam yet, start with our{' '}
           <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">ADM-201 study guide</Link> first.
+          {' '}For faster prep, use our{' '}
+          <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">ADM-201 exam tips</Link>{' '}
+          and{' '}
+          <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">ADM-201 vs App Builder guide</Link>.
         </p>
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />

@@ -199,6 +199,9 @@ export default function AppBuilderPage() {
       <CertPageIntro slug={slug} />
         <p className="text-sm text-gray-600 mb-6">
           New to Salesforce admin? Our <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Salesforce Administrator (ADM-201) exam prep</Link> is the usual first step.
+          {' '}See our{' '}
+          <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">ADM-201 vs App Builder comparison</Link>{' '}
+          to choose the right certification order.
         </p>
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} examCode="DEV-402" />

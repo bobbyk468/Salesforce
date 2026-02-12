@@ -345,6 +345,17 @@ export default function Home() {
               Contact Us
             </Link>
           </div>
+          <p className="text-sm text-blue-100/85 mt-4">
+            Popular reads:{' '}
+            <Link href="/adm-201-exam-tips-2026" className="underline hover:text-white font-medium">
+              ADM-201 exam tips 2026
+            </Link>
+            {' '}and{' '}
+            <Link href="/adm-201-vs-app-builder" className="underline hover:text-white font-medium">
+              ADM-201 vs App Builder
+            </Link>
+            .
+          </p>
         </div>
       </section>
 

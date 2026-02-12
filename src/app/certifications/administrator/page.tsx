@@ -464,6 +464,17 @@ export default function AdministratorPage() {
                   the Platform App Builder exam
                 </Link>.
               </p>
+              <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+                Want a focused strategy? Read our{' '}
+                <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                  ADM-201 exam tips (2026)
+                </Link>{' '}
+                and detailed{' '}
+                <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
+                  ADM-201 vs App Builder comparison
+                </Link>{' '}
+                before booking your exam.
+              </p>
             </section>
 
             <div id="exam-prep">
