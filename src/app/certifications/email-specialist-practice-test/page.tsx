@@ -16,9 +16,15 @@ const slug = 'email-specialist-practice-test'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 // Canonical → main Email Specialist guide to avoid CTR dilution; this page is sub-intent (practice test only).
 export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
+  const canonical = `${baseUrl}/certifications/email-specialist`
   return {
-    ...getCertMetadata(slug),
-    alternates: { canonical: `${baseUrl}/certifications/email-specialist` },
+    ...baseMetadata,
+    alternates: { canonical },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      url: canonical,
+    },
   }
 }
 

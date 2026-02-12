@@ -9,6 +9,17 @@ export const metadata: Metadata = {
   title: 'Contact Us',
   description: contactDescription,
   alternates: { canonical: `${baseUrl}/contact` },
+  openGraph: {
+    title: 'Contact Us | Trailblaze Prep',
+    description: contactDescription,
+    type: 'website',
+    url: `${baseUrl}/contact`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Contact Us | Trailblaze Prep',
+    description: contactDescription,
+  },
 }
 
 const contactBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Contact', url: '/contact' }]

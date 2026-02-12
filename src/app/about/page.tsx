@@ -11,6 +11,17 @@ export const metadata = {
   title: { absolute: `About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides` },
   description: aboutDescription,
   alternates: { canonical: `${baseUrl}/about` },
+  openGraph: {
+    title: 'About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides',
+    description: aboutDescription,
+    type: 'website',
+    url: `${baseUrl}/about`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides',
+    description: aboutDescription,
+  },
 }
 
 const aboutBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'About', url: '/about' }]

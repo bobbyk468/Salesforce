@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/adm-201-vs-app-builder` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/adm-201-vs-app-builder`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+  },
   keywords:
     'ADM-201 vs App Builder, DEV-402 vs ADM-201, which Salesforce certification first, Salesforce admin vs app builder, ADM-201 difficulty comparison',
 }

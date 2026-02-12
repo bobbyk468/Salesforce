@@ -13,6 +13,17 @@ export const metadata: Metadata = {
   title: { absolute: ctaTitle },
   description: ctaDescription,
   alternates: { canonical: `${baseUrl}/become-cta` },
+  openGraph: {
+    title: ctaTitle,
+    description: ctaDescription,
+    type: 'article',
+    url: `${baseUrl}/become-cta`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: ctaTitle,
+    description: ctaDescription,
+  },
   keywords:
     'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',
 }

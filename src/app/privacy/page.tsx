@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   description:
     'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
   alternates: { canonical: `${baseUrl}/privacy` },
+  openGraph: {
+    title: 'Privacy Policy | Trailblaze Prep',
+    description:
+      'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
+    type: 'website',
+    url: `${baseUrl}/privacy`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Privacy Policy | Trailblaze Prep',
+    description:
+      'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
+  },
 }
 
 const privacyBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Privacy Policy', url: '/privacy' }]

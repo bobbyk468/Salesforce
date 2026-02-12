@@ -9,6 +9,19 @@ export const metadata: Metadata = {
   description:
     'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
   alternates: { canonical: `${baseUrl}/terms` },
+  openGraph: {
+    title: 'Terms of Use | Trailblaze Prep',
+    description:
+      'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+    type: 'website',
+    url: `${baseUrl}/terms`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Terms of Use | Trailblaze Prep',
+    description:
+      'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+  },
   robots: {
     index: false,
     follow: true,

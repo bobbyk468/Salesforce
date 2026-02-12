@@ -47,6 +47,17 @@ export const metadata: Metadata = {
   title: { absolute: pathTitle },
   description: pathDescription,
   alternates: { canonical: `${baseUrl}/certification-path` },
+  openGraph: {
+    title: pathTitle,
+    description: pathDescription,
+    type: 'website',
+    url: `${baseUrl}/certification-path`,
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pathTitle,
+    description: pathDescription,
+  },
   keywords:
     'Salesforce certification path, certification roadmap, CTA path, admin path, developer path, Salesforce career path',
 }

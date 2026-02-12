@@ -16,9 +16,15 @@ const slug = 'administrator-practice-test'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 // Canonical → main administrator guide to avoid CTR dilution; this page is sub-intent (practice test only).
 export async function generateMetadata(): Promise<Metadata> {
+  const baseMetadata = getCertMetadata(slug)
+  const canonical = `${baseUrl}/certifications/administrator`
   return {
-    ...getCertMetadata(slug),
-    alternates: { canonical: `${baseUrl}/certifications/administrator` },
+    ...baseMetadata,
+    alternates: { canonical },
+    openGraph: {
+      ...baseMetadata.openGraph,
+      url: canonical,
+    },
   }
 }
 
