@@ -14,10 +14,12 @@ interface CertificationCardProps {
   topics: string[]
   /** Section-wise exam weightage (%) - shown when provided */
   examSections?: ExamSection[]
-  /** Optional SEO H1: one primary heading with exam name + keyword (e.g. "Salesforce Administrator (ADM-201) Practice Questions & Exam Study Guide") */
+  /** Optional SEO heading text: exam name + keyword (e.g. "Salesforce Administrator (ADM-201) Practice Questions & Exam Study Guide") */
   h1Text?: string
   /** Optional SEO H3 for exam weightage: e.g. "[Cert Name] Exam Weightage by Section" */
   examWeightageHeading?: string
+  /** Heading level for the card title: 'h1' (default, for pages where this IS the H1) or 'h2' (when H1 is rendered elsewhere on the page) */
+  headingLevel?: 'h1' | 'h2'
 }
 
 export default function CertificationCard({
@@ -29,10 +31,11 @@ export default function CertificationCard({
   examSections,
   h1Text,
   examWeightageHeading,
+  headingLevel = 'h1',
 }: CertificationCardProps) {
   return (
     <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm">
-      {/* Header: one H1 per page with exam name and primary keyword for SEO */}
+      {/* Header: heading with exam name and primary keyword for SEO */}
       <div className="gradient-bg p-5 sm:p-6 lg:p-8 text-white">
         <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
           <Award className="h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0" aria-label="Certification badge icon" />
@@ -40,7 +43,11 @@ export default function CertificationCard({
             {code}
           </span>
         </div>
-        <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
+        {headingLevel === 'h1' ? (
+          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
+        ) : (
+          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h2>
+        )}
       </div>
 
       {/* Content */}

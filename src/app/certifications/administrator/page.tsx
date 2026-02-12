@@ -247,9 +247,9 @@ export default function AdministratorPage() {
           <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">
             Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
           </p>
-          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Free ADM-201 Practice Questions, Section-Wise Weightage &amp; Exam Tips
-          </h2>
+          <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
+            Salesforce ADM-201 Study Guide &amp; Free Practice Questions (2026)
+          </h1>
           <p className="text-white/90 text-sm sm:text-base max-w-2xl mb-6">
             Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
           </p>
@@ -328,6 +328,7 @@ export default function AdministratorPage() {
               examSections={examSections}
               h1Text={getCertH1Text(slug)}
               examWeightageHeading={getCertExamWeightageHeading(slug)}
+              headingLevel="h2"
             />
 
             <div className="print-checklist-only mt-8">
