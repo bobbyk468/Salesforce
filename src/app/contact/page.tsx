@@ -1,7 +1,6 @@
 'use client'
 
-import { useState, useRef, useEffect, Suspense } from 'react'
-import { useSearchParams } from 'next/navigation'
+import { useState, useRef, useEffect } from 'react'
 import { Mail, Phone, MapPin, Send, CheckCircle, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
@@ -44,7 +43,6 @@ const COMMON_EMAIL_DOMAINS = [
 ]
 
 function ContactPageContent() {
-  const searchParams = useSearchParams()
   const [examParam, setExamParam] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: '',
@@ -72,7 +70,7 @@ function ContactPageContent() {
 
   useEffect(() => {
     const readExamFromUrl = () => {
-      const examFromQuery = searchParams.get('exam')
+      const examFromQuery = new URLSearchParams(window.location.search).get('exam')
       if (examFromQuery?.trim()) {
         setExamParam(examFromQuery.trim())
         return
@@ -88,7 +86,7 @@ function ContactPageContent() {
     readExamFromUrl()
     window.addEventListener('hashchange', readExamFromUrl)
     return () => window.removeEventListener('hashchange', readExamFromUrl)
-  }, [searchParams])
+  }, [])
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value
@@ -527,30 +525,6 @@ function ContactPageContent() {
   )
 }
 
-function ContactPageFallback() {
-  return (
-    <div className="min-h-screen bg-gray-50">
-      <section className="gradient-bg text-white py-16 px-4">
-        <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-blue-100">
-            Have questions about our study materials? We&apos;d love to hear from you.
-          </p>
-        </div>
-      </section>
-      <section className="py-16 px-4">
-        <div className="max-w-6xl mx-auto flex items-center justify-center min-h-[40vh]">
-          <p className="text-gray-500">Loading contact form...</p>
-        </div>
-      </section>
-    </div>
-  )
-}
-
 export default function ContactPage() {
-  return (
-    <Suspense fallback={<ContactPageFallback />}>
-      <ContactPageContent />
-    </Suspense>
-  )
+  return <ContactPageContent />
 }

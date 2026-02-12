@@ -3,6 +3,7 @@ import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${baseUrl}/og-image`
 
 export const metadata: Metadata = {
   title: { absolute: 'Terms of Use | Trailblaze Prep' },
@@ -15,12 +16,14 @@ export const metadata: Metadata = {
       'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
     type: 'website',
     url: `${baseUrl}/terms`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Terms of Use | Trailblaze Prep' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'Terms of Use | Trailblaze Prep',
     description:
       'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+    images: [ogImageUrl],
   },
   robots: {
     index: true,
