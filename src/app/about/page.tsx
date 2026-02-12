@@ -4,6 +4,7 @@ import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${baseUrl}/og-image`
 const aboutDescription =
   'Trailblaze Prep helps you pass Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, and more.'
 
@@ -16,11 +17,13 @@ export const metadata = {
     description: aboutDescription,
     type: 'website',
     url: `${baseUrl}/about`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'About Trailblaze Prep' }],
   },
   twitter: {
     card: 'summary_large_image',
     title: 'About Trailblaze Prep | Salesforce Certification Prep',
     description: aboutDescription,
+    images: [ogImageUrl],
   },
 }
 

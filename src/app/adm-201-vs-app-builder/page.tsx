@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${siteUrl}/og-image`
 
 const pageTitle = 'ADM-201 vs App Builder (DEV-402): Which Salesforce Cert Should You Take First?'
 const pageDescription =
@@ -18,11 +19,13 @@ export const metadata: Metadata = {
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/adm-201-vs-app-builder`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
+    images: [ogImageUrl],
   },
   keywords:
     'ADM-201 vs App Builder, DEV-402 vs ADM-201, which Salesforce certification first, Salesforce admin vs app builder, ADM-201 difficulty comparison',

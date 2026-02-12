@@ -5,6 +5,7 @@ import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount 
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${baseUrl}/og-image`
 const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
 const ctaDescription =
   'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'
@@ -18,11 +19,13 @@ export const metadata: Metadata = {
     description: ctaDescription,
     type: 'article',
     url: `${baseUrl}/become-cta`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: ctaTitle }],
   },
   twitter: {
     card: 'summary_large_image',
     title: ctaTitle,
     description: ctaDescription,
+    images: [ogImageUrl],
   },
   keywords:
     'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',

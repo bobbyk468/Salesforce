@@ -39,6 +39,7 @@ const STAGE_STYLES: Record<PathStage, { bg: string; border: string; label: strin
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${baseUrl}/og-image`
 const pathTitle = 'Salesforce Certification Paths | Trailblaze Prep'
 const pathDescription =
   'Salesforce certification paths from Admin to CTA. Plan your journey from foundational to advanced certifications including Developer, Architect, and more.'
@@ -52,11 +53,13 @@ export const metadata: Metadata = {
     description: pathDescription,
     type: 'website',
     url: `${baseUrl}/certification-path`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pathTitle }],
   },
   twitter: {
     card: 'summary_large_image',
     title: pathTitle,
     description: pathDescription,
+    images: [ogImageUrl],
   },
   keywords:
     'Salesforce certification path, certification roadmap, CTA path, admin path, developer path, Salesforce career path',

@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${siteUrl}/og-image`
 
 const pageTitle = 'ADM-201 Exam Tips (2026): Pass Salesforce Admin on Your First Attempt'
 const pageDescription =
@@ -18,11 +19,13 @@ export const metadata: Metadata = {
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/adm-201-exam-tips-2026`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
+    images: [ogImageUrl],
   },
   keywords:
     'ADM-201 exam tips 2026, how to pass ADM-201 first attempt, Salesforce Administrator exam tips, ADM-201 study plan, ADM-201 mock test strategy',
