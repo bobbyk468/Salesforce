@@ -536,7 +536,7 @@ export function getCertMetadata(slug: string): Metadata {
       modifiedTime,
       images: [
         {
-          url: `${baseUrl}/og-image.png`,
+          url: `${baseUrl}/og-image`,
           width: 1200,
           height: 630,
           alt: `${primaryName} - Practice Questions & Study Guide`,
@@ -547,7 +547,7 @@ export function getCertMetadata(slug: string): Metadata {
       card: 'summary_large_image',
       title: titleForMeta,
       description: descForMeta,
-      images: [`${baseUrl}/og-image.png`],
+      images: [`${baseUrl}/og-image`],
     },
     other: {
       'article:published_time': publishedTime,

@@ -19,7 +19,7 @@ export const metadata: Metadata = {
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image.png`,
+        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image`,
         width: 1200,
         height: 630,
         alt: 'All Salesforce Certifications - Practice Questions & Study Guides',
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
     title: 'All Salesforce Certifications | Practice Questions & Study Guides',
     description:
       'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more.',
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image.png`],
+    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image`],
   },
 }
 

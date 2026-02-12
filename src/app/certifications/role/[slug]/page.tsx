@@ -45,7 +45,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       images: [
         {
-          url: `${siteUrl}/og-image.png`,
+          url: `${siteUrl}/og-image`,
           width: 1200,
           height: 630,
           alt: `${category.name} Certifications - Salesforce Study Guide`,
@@ -56,7 +56,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteUrl}/og-image.png`],
+      images: [`${siteUrl}/og-image`],
     },
   }
 }

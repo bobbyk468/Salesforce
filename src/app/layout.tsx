@@ -50,7 +50,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: `${siteUrl}/og-image.png`,
+        url: `${siteUrl}/og-image`,
         width: 1200,
         height: 630,
         alt: 'Trailblaze Prep - Salesforce certification practice questions and study guides',
@@ -61,7 +61,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: defaultTitle,
     description: defaultDescription,
-    images: [`${siteUrl}/og-image.png`],
+    images: [`${siteUrl}/og-image`],
   },
   robots: {
     index: true,
