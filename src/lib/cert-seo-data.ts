@@ -169,10 +169,10 @@ function getCertMetaTitle(slug: string): string {
   }
   // Explicit high-intent overrides for pages flagged in crawl reports.
   if (slug === 'developer-1') {
-    return 'Salesforce Certified Platform Developer I (PD1) Exam Guide 2026'
+    return 'Salesforce Certified Platform Developer I (PD1)'
   }
   if (slug === 'cpq-administrator') {
-    return 'Salesforce Certified CPQ Administrator Exam Guide 2026'
+    return 'Salesforce Certified CPQ Administrator'
   }
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
