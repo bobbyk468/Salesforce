@@ -30,7 +30,7 @@ const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'Prepare for the Salesforce ADM-201 exam with updated 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today — no sign-up required.'
+  'Prepare for Salesforce ADM-201 with 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)

@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = 'ADM-201 vs App Builder (DEV-402): Which Salesforce Cert Should You Take First? | Trailblaze Prep'
 const pageDescription =
-  'Compare ADM-201 and DEV-402 by difficulty, exam focus, career outcomes, and study time. Learn which Salesforce certification to take first based on your background and goals.'
+  'Compare ADM-201 and DEV-402 by difficulty, exam focus, career outcomes, and study time to choose the right first Salesforce certification.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

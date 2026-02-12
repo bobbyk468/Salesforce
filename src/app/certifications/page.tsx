@@ -7,14 +7,14 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 export const metadata: Metadata = {
   title: { absolute: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep' },
   description:
-    'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau. Practice questions and study guides.',
+    'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
   },
   openGraph: {
     title: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep',
     description:
-      'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau. Practice questions and study guides.',
+      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
     type: 'website',
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
     images: [
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'All Salesforce Certifications | Practice Questions & Study Guides',
     description:
-      'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau.',
+      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more.',
     images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image.png`],
   },
 }
@@ -44,7 +44,7 @@ export default function CertificationsIndexPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep',
     description:
-      'Browse all Salesforce certifications: Administrator, Developer, Consultant, Marketing, Architect, Associate, Accredited Professional, Sales, Designer, and Tableau. Practice questions and study guides.',
+      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
     path: '/certifications',
     breadcrumbItems: certsBreadcrumb,
   })

@@ -13,13 +13,13 @@ export async function generateStaticParams() {
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   consultant:
-    'Salesforce Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, and more. Practice questions, exam weightage, and study guides. Certified Salesforce consultant exam prep.',
+    'Salesforce Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, and more, with practice questions and concise study guides.',
   'accredited-professional':
-    'Salesforce Accredited Professional (AP) certifications: industry and product credentials. Practice questions, exam weightage, and study guides for each AP exam. Start preparing.',
+    'Salesforce Accredited Professional certifications by product and industry, with practice questions, exam weightage, and study guides for each AP exam.',
   administrator:
-    'Browse all Salesforce Administrator track certifications — ADM-201, Advanced Administrator, App Builder, and more. Compare exams, find study guides, and choose your certification path.',
+    'Browse Salesforce Administrator track certifications: ADM-201, Advanced Administrator, App Builder, and more. Compare exams and find the right study guide.',
   developer:
-    'Salesforce Developer certifications: Platform Developer I & II, JavaScript Developer I, MuleSoft, OmniStudio. Practice questions and exam prep. Prepare for the certification exam.',
+    'Salesforce Developer certifications: Platform Developer I/II, JavaScript, MuleSoft, and OmniStudio, with practice questions, exam weightage, and study guides.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

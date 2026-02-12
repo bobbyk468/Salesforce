@@ -7,7 +7,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = 'ADM-201 Exam Tips (2026): How to Pass Salesforce Administrator First Attempt | Trailblaze Prep'
 const pageDescription =
-  'Actionable ADM-201 exam tips for 2026: study plan, high-weight topics, scenario-based strategy, time management, and mock-test targets to help you pass on your first attempt.'
+  'ADM-201 exam tips for 2026: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

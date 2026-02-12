@@ -15,7 +15,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 const slug = 'developer-1'
 
 const descriptionText =
-  'Coding-focused Salesforce certification. PD1 exam guide 2026: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components. Required for architect paths. Free practice questions.'
+  'PD1 (2026) prep: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components, with free practice questions and exam-weightage guidance.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)

@@ -15,7 +15,7 @@ import Link from 'next/link'
 const slug = 'app-builder'
 
 const descriptionText =
-  'Free DEV-402 practice questions—no sign-up. Platform App Builder exam guide, Winter \'26: $200, 60 questions, declarative app building. Full mock exams & section-wise practice. Start now.'
+  'Free DEV-402 practice questions and Winter \'26 guide: $200 fee, 60 questions, declarative app building, and section-wise practice. Start now.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
