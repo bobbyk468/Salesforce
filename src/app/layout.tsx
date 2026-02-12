@@ -100,6 +100,14 @@ export default function RootLayout({
 
   return (
     <html lang="en">
+      <head>
+        {/* Ahrefs Web Analytics monitor */}
+        <script
+          src="https://analytics.ahrefs.com/analytics.js"
+          data-key="pZm0c/nF2eh+3+9rhHMPQg"
+          async
+        />
+      </head>
       <body className={inter.className}>
         <GoogleAnalytics />
         <script
