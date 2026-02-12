@@ -23,7 +23,7 @@ export const metadata: Metadata = {
       'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
   },
   robots: {
-    index: false,
+    index: true,
     follow: true,
   },
 }
