@@ -329,7 +329,7 @@ export default function Home() {
               href="/certifications/administrator"
               className="px-10 py-4 bg-white text-salesforce-dark rounded-lg font-bold text-lg hover:bg-gray-50 transition-all flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105"
             >
-              Get Started
+              Free ADM-201 Practice Test
               <ArrowRight className="ml-2 h-5 w-5" />
             </Link>
             <Link
@@ -626,7 +626,7 @@ export default function Home() {
                 href="/certifications/administrator"
                 className="inline-flex items-center gap-2 px-6 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
               >
-                View Sample Certification Page
+                ADM-201 Study Guide &amp; Practice Questions
                 <ArrowRight className="h-4 w-4" />
               </Link>
             </div>
@@ -713,7 +713,7 @@ export default function Home() {
             href="/certifications/administrator"
             className="inline-flex items-center px-8 py-4 bg-white text-salesforce-dark rounded-lg font-semibold hover:bg-gray-100 transition-colors"
           >
-            Start Learning
+            Start Free ADM-201 Practice Test
             <ArrowRight className="ml-2 h-5 w-5" />
           </Link>
         </div>

@@ -155,9 +155,9 @@ export function getExamCost(slug: string): string {
 /** Intent-driven title: exam name + year + benefit (cost, syllabus, practice). Aim 55–60 chars before brand for best CTR. */
 function getCertMetaTitle(slug: string): string {
   const brand = ' | Trailblaze Prep'
-  // CTR-optimized title for Administrator (per SEO evaluation: benefit + clarity)
+  // CTR-optimized title for Administrator (per SEO audit: year + free + weightage for differentiation)
   if (slug === 'administrator') {
-    return `Salesforce Certified Platform Administrator (ADM-201) Study Guide & Practice Questions${brand}`
+    return `Salesforce ADM-201 Study Guide (2026) – Free Practice Questions & Exam Weightage${brand}`
   }
   const examCost = getExamCost(slug)
   /** High-cost-query pages: include cost in title for better CTR. These certs get high volume of "cost" queries. */
@@ -337,7 +337,7 @@ export function getCertMetaDescription(slug: string): string {
       'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'First Salesforce certification for beginners. ADM-201 exam guide 2026: $200 fee, 60 questions, 65% passing score. No coding required. Free practice questions and study plan.',
+      'Prepare for the Salesforce ADM-201 exam with updated 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today — no sign-up required.',
     'advanced-administrator':
       'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'app-builder':
@@ -548,11 +548,11 @@ export function getCertMetadata(slug: string): Metadata {
   const formerNameForKeywords = getCertFormerName(slug)
   const keywords =
     slug === 'administrator'
-      ? 'Salesforce Certified Administrator, Salesforce Administrator Certification, ADM-201, Salesforce Administrator exam, practice questions, exam weightage, study guide'
+      ? 'ADM-201 practice test free, ADM-201 mock exam 2026, ADM-201 exam questions, ADM-201 weightage, Salesforce Certified Platform Administrator, ADM-201 study guide, Salesforce admin exam, ADM-201 free practice test, is ADM-201 hard, ADM-201 dumps alternative'
       : `${primaryName}, Salesforce certification, practice questions, exam weightage, study guide${examCode ? `, ${examCode}` : ''}${formerNameForKeywords ? `, ${formerNameForKeywords}` : ''}`
   // Updated 2026 for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'
-  const modifiedTime = '2026-01-01T00:00:00Z'
+  const modifiedTime = '2026-02-12T00:00:00Z'
   
   return {
     title: { absolute: titleForMeta },
@@ -635,8 +635,36 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'No, there is no formal prerequisite. However, Salesforce recommends 6+ months of hands-on experience as a Salesforce Administrator and completion of the Platform Fundamentals trail on Trailhead before taking the exam.',
     },
     {
-      question: 'How difficult is the Platform Administrator certification exam?',
-      answer: 'The Platform Administrator exam is considered intermediate-level. It covers a broad range of topics including configuration, security, automation, and analytics. With proper preparation using Trailhead, hands-on practice, and practice questions, most candidates with 6+ months of experience can pass.',
+      question: 'Is the ADM-201 exam hard?',
+      answer: 'The ADM-201 is considered moderate difficulty. It has 60 multiple-choice questions, a 65% passing score, and 105 minutes. It covers breadth across 7 sections — configuration, automation, security, data, analytics, Sales Cloud, and Service Cloud — but requires no coding. Most candidates who score 75%+ on 3 full mock exams pass on their first attempt.',
+    },
+    {
+      question: 'How many questions are on the ADM-201 exam, and what is the passing score?',
+      answer: 'The ADM-201 exam has 60 multiple-choice questions. You have 105 minutes and need 65% (39 correct answers) to pass. There are also 5 unscored pilot questions, so your actual exam will have 65 questions.',
+    },
+    {
+      question: 'Can I use ADM-201 exam dumps to pass?',
+      answer: 'Exam dumps violate the Salesforce certification NDA and can result in your certification being revoked. More importantly, dumps are often outdated and don\'t help you learn the material. Original practice questions with detailed explanations are a safer and more effective way to prepare.',
+    },
+    {
+      question: 'How long should I study for the ADM-201 exam?',
+      answer: 'Most candidates study for 4–6 weeks with a structured plan. Focus on high-weight sections first (Configuration and Setup at 20%, Object Manager and Lightning App Builder at 20%). Use Trailhead modules, hands-on practice, and mock exams to gauge readiness.',
+    },
+    {
+      question: 'What is the ADM-201 exam fee in 2026?',
+      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam costs $200 USD. Retake fee is also $200. Salesforce sometimes offers discount vouchers through Trailhead events or community programs.',
+    },
+    {
+      question: 'How many ADM-201 questions are scenario-based?',
+      answer: 'Roughly 40–50% of ADM-201 questions are scenario-based. These present a business situation and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options. Practice with scenario-style questions to build this skill.',
+    },
+    {
+      question: 'Is ADM-201 harder than Platform App Builder (DEV-402)?',
+      answer: 'ADM-201 is generally considered slightly easier than Platform App Builder because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is broader — you need to know a little about many topics across 7 exam sections.',
+    },
+    {
+      question: 'What is the best way to pass the ADM-201 exam on the first attempt?',
+      answer: 'Focus on high-weight sections first (Configuration & Setup and Object Manager together are 40%). Practice in a free Developer Edition org. Take timed mock exams and aim for 75%+ before booking. Review wrong answers deeply — understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
     },
   ],
   'app-builder': [
@@ -1617,6 +1645,10 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
 
 /** Single H1 per cert page: aligned with query intent (Complete 2026 Guide) for CTR. */
 export function getCertH1Text(slug: string): string {
+  // ADM-201: action-oriented H1 with year + free practice questions (per CTR audit)
+  if (slug === 'administrator') {
+    return `Salesforce ADM-201 Study Guide & Free Practice Questions (${TITLE_YEAR})`
+  }
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   return `${primaryName} – Complete ${TITLE_YEAR} Guide`
 }

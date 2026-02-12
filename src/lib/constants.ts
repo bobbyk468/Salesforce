@@ -5,7 +5,7 @@ export const WHATSAPP_LINK = 'https://wa.link/p7nc4e'
 export const SITE_NAME = 'Trailblaze Prep'
 
 /** Shown on cert pages and About for E-E-A-T; update when content is refreshed. */
-export const CONTENT_LAST_UPDATED = 'January 2025'
+export const CONTENT_LAST_UPDATED = 'February 2026'
 
 /**
  * Social profile URLs for Organization schema (sameAs) and footer.

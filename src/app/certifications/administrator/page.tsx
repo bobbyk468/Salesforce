@@ -5,7 +5,7 @@ import QuestionCard from '@/components/QuestionCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
-import CertPageCta from '@/components/CertPageCta'
+
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
@@ -30,7 +30,7 @@ const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'Prepare for the Salesforce Certified Platform Administrator (ADM-201) exam with a Winter \'26–updated study guide, section-wise weightage, free practice questions, and full mock exams. No sign-up required.'
+  'Prepare for the Salesforce ADM-201 exam with updated 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today — no sign-up required.'
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -240,23 +240,42 @@ export default function AdministratorPage() {
       
       <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-        <CertPageIntro slug={slug} />
-        
-        {/* Prominent CTA above fold */}
-        <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} examCode="ADM-201" />
 
-        <section className="my-6 rounded-xl border border-gray-100 bg-white p-4 sm:p-5" aria-label="Learner feedback">
-          <p className="text-sm font-semibold text-gray-500 uppercase tracking-wider mb-1">Trusted by learners</p>
-          <p className="text-gray-700 text-sm sm:text-base mb-3">
-            <span className="font-bold text-salesforce-blue">10,000+</span> exam takers use Trailblaze Prep to study for Salesforce certifications.
+        {/* Hero section: action-driven above fold with subheadline + CTA + social proof */}
+        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-xl border border-salesforce-blue/30" aria-label="Hero section">
+          <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">
+            Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
           </p>
-          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3 mb-3">
-            &ldquo;The section weightage and practice questions made it clear what to focus on. Passed ADM-201 on my first try.&rdquo;
-          </blockquote>
-          <blockquote className="text-gray-600 text-sm italic border-l-2 border-salesforce-blue/30 pl-3">
-            &ldquo;Studying for 6 weeks with the checklist and full question bank—passed with room to spare.&rdquo;
-          </blockquote>
+          <h2 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
+            Free ADM-201 Practice Questions, Section-Wise Weightage &amp; Exam Tips
+          </h2>
+          <p className="text-white/90 text-sm sm:text-base max-w-2xl mb-6">
+            Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
+          </p>
+          <div className="flex flex-col sm:flex-row items-center gap-3 sm:gap-4 mb-5">
+            <Link
+              href="#practice-questions"
+              className="flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-salesforce-blue rounded-xl font-bold hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-[0.98] text-base sm:text-lg w-full sm:w-auto border-2 border-white/90"
+            >
+              Start Free Practice Test
+            </Link>
+            <Link
+              href="#exam-weightage"
+              className="flex items-center justify-center gap-2 px-6 py-3 bg-white/15 text-white rounded-lg font-semibold hover:bg-white/25 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto border border-white/30"
+            >
+              View Exam Weightage
+            </Link>
+          </div>
+          {/* Social proof inline */}
+          <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-white/80 text-xs sm:text-sm">
+            <span><strong className="text-white">10,000+</strong> learners use Trailblaze Prep</span>
+            <span className="hidden sm:inline">&bull;</span>
+            <span>&ldquo;Passed ADM-201 on my first try using the weightage and practice questions.&rdquo;</span>
+          </div>
         </section>
+
+        {/* Condensed intro: shorter, benefit-focused (per CTR audit) */}
+        <CertPageIntro slug={slug} />
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -363,6 +382,82 @@ export default function AdministratorPage() {
               </ul>
             </section>
 
+            {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
+            <section id="is-adm-201-hard" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="difficulty-heading">
+              <h2 id="difficulty-heading" className="text-lg font-bold text-gray-900 mb-3">
+                Is the ADM-201 Exam Hard?
+              </h2>
+              <p className="text-sm text-gray-700 mb-3">
+                The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting — but it does <em>not</em> require coding.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
+                <li><strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.</li>
+                <li><strong>65% passing score</strong> — you can miss up to 21 questions and still pass.</li>
+                <li><strong>No coding required</strong> — the exam is entirely declarative (clicks, not code).</li>
+                <li><strong>Broad but not deep</strong> — expect questions across all 7 exam sections, weighted by the official outline.</li>
+              </ul>
+              <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
+                <p className="text-sm text-emerald-700">
+                  Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you&apos;re consistently scoring above 75% in practice, you&apos;re likely ready to book your exam.
+                </p>
+              </div>
+            </section>
+
+            {/* ADM-201 Exam Format Explained — targets "ADM-201 exam format" + "scenario-based questions" queries */}
+            <section id="exam-format" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="exam-format-heading">
+              <h2 id="exam-format-heading" className="text-lg font-bold text-gray-900 mb-3">
+                ADM-201 Exam Format Explained
+              </h2>
+              <p className="text-sm text-gray-700 mb-3">
+                Understanding the exam format helps you prepare smarter. The Salesforce Certified Platform Administrator (ADM-201) exam is a proctored, online or in-person exam delivered through Webassessor/Kryterion. Here is what to expect on exam day:
+              </p>
+
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Total Questions</p>
+                  <p className="text-sm text-gray-700">60 scored + 5 unscored pilot questions = <strong>65 total</strong></p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
+                  <p className="text-sm text-gray-700">105 minutes (~1.6 minutes per question)</p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>
+                  <p className="text-sm text-gray-700">65% (39 of 60 scored questions)</p>
+                </div>
+                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                  <p className="font-semibold text-gray-900 text-sm mb-1">Question Type</p>
+                  <p className="text-sm text-gray-700">Multiple-choice &amp; multiple-select</p>
+                </div>
+              </div>
+
+              <h3 className="text-base font-semibold text-gray-900 mb-2">How Many Questions Are Scenario-Based?</h3>
+              <p className="text-sm text-gray-700 mb-3">
+                Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation — for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; — and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
+              </p>
+              <p className="text-sm text-gray-700 mb-3">
+                Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough — you need to understand <strong>when and why</strong> to use each feature.
+              </p>
+
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
+                <li><strong>Start with high-weight sections:</strong> Configuration &amp; Setup (20%) and Object Manager &amp; Lightning App Builder (20%) together cover 40% of the exam.</li>
+                <li><strong>Use a hands-on org:</strong> Set up a free <Link href="https://developer.salesforce.com/signup" className="text-salesforce-blue hover:underline" target="_blank" rel="noopener noreferrer">Salesforce Developer Edition</Link> and practice every feature you study.</li>
+                <li><strong>Take timed mock exams:</strong> Simulate real conditions — 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
+                <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
+                <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
+              </ul>
+
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
+              <p className="text-sm text-gray-700">
+                ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you&apos;re well-positioned for{' '}
+                <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
+                  the Platform App Builder exam
+                </Link>.
+              </p>
+            </section>
+
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
             </div>
@@ -411,6 +506,62 @@ export default function AdministratorPage() {
               </a>
             </div>
 
+            {/* Ethical comparison: Practice Questions vs Dumps (trust signal + captures dump-searching traffic) */}
+            <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
+              <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
+                ADM-201 Practice Questions vs Exam Dumps — What&apos;s the Difference?
+              </h2>
+              <p className="text-sm text-gray-700 mb-4">
+                Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here&apos;s why original practice questions are a better investment:
+              </p>
+              <div className="overflow-x-auto">
+                <table className="w-full text-sm text-left border-collapse">
+                  <thead>
+                    <tr className="border-b-2 border-gray-200">
+                      <th className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
+                      <th className="py-2.5 pr-4 font-semibold text-emerald-700">Practice Questions</th>
+                      <th className="py-2.5 font-semibold text-red-700">Exam Dumps</th>
+                    </tr>
+                  </thead>
+                  <tbody className="text-gray-700">
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2.5 pr-4 font-medium">Legality</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">100% legitimate</td>
+                      <td className="py-2.5 text-red-600">Violates Salesforce NDA</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2.5 pr-4 font-medium">Learning Value</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">Builds real understanding</td>
+                      <td className="py-2.5 text-red-600">Memorization without comprehension</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2.5 pr-4 font-medium">Accuracy</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">Aligned with current exam outline</td>
+                      <td className="py-2.5 text-red-600">Often outdated or incorrect</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2.5 pr-4 font-medium">Explanations</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">Detailed why-right / why-wrong</td>
+                      <td className="py-2.5 text-red-600">Rarely explained</td>
+                    </tr>
+                    <tr className="border-b border-gray-100">
+                      <td className="py-2.5 pr-4 font-medium">Certification Risk</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">None</td>
+                      <td className="py-2.5 text-red-600">Salesforce can revoke certification</td>
+                    </tr>
+                    <tr>
+                      <td className="py-2.5 pr-4 font-medium">On-the-Job Skills</td>
+                      <td className="py-2.5 pr-4 text-emerald-700">Prepares for real admin tasks</td>
+                      <td className="py-2.5 text-red-600">No transferable knowledge</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+              <p className="text-xs text-gray-500 mt-3">
+                Salesforce actively monitors for dump usage. Invest in legitimate practice materials that build lasting skills.
+              </p>
+            </section>
+
             <section id="platform-admin-vs-other" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="comparison-heading">
               <h2 id="comparison-heading" className="text-xl font-bold text-gray-900 mb-4">
                 Platform Administrator vs Other Salesforce Certifications
@@ -421,16 +572,16 @@ export default function AdministratorPage() {
               <ul className="space-y-3 text-sm text-gray-700">
                 <li>
                   <strong className="text-gray-900">Platform Administrator vs Advanced Administrator (ADM-211):</strong>{' '}
-                  ADM-201 is the entry-level admin cert; Advanced Administrator builds on it with deeper configuration, integration, and solution design. Take ADM-201 first, then consider{' '}
+                  ADM-201 is the entry-level admin cert; Advanced Administrator builds on it with deeper configuration, integration, and solution design. Take ADM-201 first, then consider the{' '}
                   <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
-                    Advanced Administrator (ADM-211) study guide
+                    ADM-211 Advanced Administrator study guide &amp; practice questions
                   </Link>.
                 </li>
                 <li>
                   <strong className="text-gray-900">Platform Administrator vs Platform App Builder (DEV-402):</strong>{' '}
                   Both are declarative and don’t require coding. App Builder focuses on building custom apps, objects, and Lightning components. If you enjoy customizing the platform after ADM-201, see our{' '}
                   <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
-                    Platform App Builder (DEV-402) study guide
+                    DEV-402 Platform App Builder study guide &amp; free practice test
                   </Link>.
                 </li>
               </ul>
@@ -450,13 +601,13 @@ export default function AdministratorPage() {
           <aside className="lg:col-span-1">
             <CertTableOfContents
               sections={[
-                { id: 'who-this-is-for-heading', title: 'Who is ADM-201 for?' },
-                { id: 'syllabus-checklist', title: 'Syllabus checklist' },
-                { id: 'study-timeline-heading', title: 'Suggested study timeline' },
+                { id: 'is-adm-201-hard', title: 'Is ADM-201 Hard?' },
+                { id: 'exam-format', title: 'Exam Format Explained' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
-                { id: 'platform-admin-vs-other', title: 'Platform Admin vs Other Certs' },
+                { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },
+                { id: 'platform-admin-vs-other', title: 'Cert Comparisons' },
                 { id: 'related-certs', title: 'Related Certifications' },
                 { id: 'faq', title: 'Exam FAQs' },
               ]}

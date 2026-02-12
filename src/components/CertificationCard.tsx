@@ -73,7 +73,7 @@ export default function CertificationCard({
 
         {/* Exam weightage by section */}
         {examSections && examSections.length > 0 && (
-          <div className="mb-6 sm:mb-8">
+          <div id="exam-weightage" className="mb-6 sm:mb-8">
             <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">{examWeightageHeading ?? 'Exam Weightage by Section'}</h3>
             <div className="space-y-3 sm:space-y-4">
               {examSections.map((section, i) => (
