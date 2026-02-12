@@ -15,9 +15,11 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 const slug = 'tableau-server-administrator'
 const canonicalUrl = `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications/tableau-server-administrator`
 
-export const metadata = {
-  ...getCertMetadata(slug),
-  alternates: { canonical: canonicalUrl },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    ...getCertMetadata(slug),
+    alternates: { canonical: canonicalUrl },
+  }
 }
 
 const sampleQuestions = [

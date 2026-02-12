@@ -15,9 +15,11 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 const slug = 'administrator-practice-test'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 // Canonical → main administrator guide to avoid CTR dilution; this page is sub-intent (practice test only).
-export const metadata = {
-  ...getCertMetadata(slug),
-  alternates: { canonical: `${baseUrl}/certifications/administrator` },
+export async function generateMetadata(): Promise<Metadata> {
+  return {
+    ...getCertMetadata(slug),
+    alternates: { canonical: `${baseUrl}/certifications/administrator` },
+  }
 }
 
 const sampleQuestions = [
