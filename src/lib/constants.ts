@@ -1,5 +1,5 @@
 export const CONTACT_EMAIL = 'km.krishnamohan25@gmail.com'
-export const WHATSAPP_LINK = 'https://wa.link/p7nc4e'
+export const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=918807570951&text=Hello%2C%0A%0A%20%20%20%20%20%20%20%20Drop%20us%20your%20query'
 
 /** Site brand name: used in header, footer, metadata, and schema. */
 export const SITE_NAME = 'Trailblaze Prep'
