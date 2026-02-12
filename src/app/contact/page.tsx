@@ -45,7 +45,7 @@ const COMMON_EMAIL_DOMAINS = [
 
 function ContactPageContent() {
   const searchParams = useSearchParams()
-  const examParam = searchParams.get('exam') ? decodeURIComponent(searchParams.get('exam')!) : null
+  const [examParam, setExamParam] = useState<string | null>(null)
   const [formData, setFormData] = useState({
     name: '',
     email: '',
@@ -69,6 +69,26 @@ function ContactPageContent() {
   const [showExamSuggestions, setShowExamSuggestions] = useState(false)
   const examInputRef = useRef<HTMLInputElement>(null)
   const examSuggestionsRef = useRef<HTMLDivElement>(null)
+
+  useEffect(() => {
+    const readExamFromUrl = () => {
+      const examFromQuery = searchParams.get('exam')
+      if (examFromQuery?.trim()) {
+        setExamParam(examFromQuery.trim())
+        return
+      }
+
+      const hash = window.location.hash.startsWith('#')
+        ? window.location.hash.slice(1)
+        : window.location.hash
+      const examFromHash = new URLSearchParams(hash).get('exam')
+      setExamParam(examFromHash?.trim() || null)
+    }
+
+    readExamFromUrl()
+    window.addEventListener('hashchange', readExamFromUrl)
+    return () => window.removeEventListener('hashchange', readExamFromUrl)
+  }, [searchParams])
 
   const handleEmailChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const value = e.target.value

@@ -14,7 +14,7 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
   const effectiveExamCode = examCode ?? SLUG_TO_EXAM_CODE[slug]
   const singleDominantCta = !!effectiveExamCode
   const primaryLabel = singleDominantCta ? `Start Free ${effectiveExamCode} Practice Test` : 'Start Free Practice Test'
-  const contactHref = `/contact?exam=${encodeURIComponent(effectiveExamCode ?? certTitle)}`
+  const contactHref = `/contact#exam=${encodeURIComponent(effectiveExamCode ?? certTitle)}`
 
   return (
     <div className="my-8 sm:my-10 bg-gradient-to-r from-salesforce-blue via-salesforce-light to-salesforce-blue rounded-xl sm:rounded-2xl p-6 sm:p-8 shadow-lg border border-salesforce-blue/20">

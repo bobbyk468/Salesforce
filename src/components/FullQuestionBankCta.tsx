@@ -29,7 +29,7 @@ export default function FullQuestionBankCta({ slug, certTitle }: FullQuestionBan
         <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>.
       </p>
       <Link
-        href={`/contact?exam=${encodeURIComponent(contactExamParam)}`}
+        href={`/contact#exam=${encodeURIComponent(contactExamParam)}`}
         className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
       >
         Get Full Question Bank

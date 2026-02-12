@@ -274,7 +274,7 @@ export default function AppBuilderPage() {
               <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>—mention DEV-402.
             </p>
             <a
-              href="/contact?exam=DEV-402"
+              href="/contact#exam=DEV-402"
               className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
             >
               Get Full Question Bank

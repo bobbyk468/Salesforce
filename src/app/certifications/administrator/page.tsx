@@ -520,7 +520,7 @@ export default function AdministratorPage() {
                 <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>—mention ADM-201.
               </p>
               <a
-                href="/contact?exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
+                href="/contact#exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
                 className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
               >
                 Get Full Question Bank
