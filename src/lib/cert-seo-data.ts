@@ -167,6 +167,13 @@ function getCertMetaTitle(slug: string): string {
   if (slug === 'administrator') {
     return 'Salesforce ADM-201 Study Guide (2026) - Free Practice Questions'
   }
+  // Explicit high-intent overrides for pages flagged in crawl reports.
+  if (slug === 'developer-1') {
+    return 'Salesforce Certified Platform Developer I (PD1) Exam Guide 2026'
+  }
+  if (slug === 'cpq-administrator') {
+    return 'Salesforce Certified CPQ Administrator Exam Guide 2026'
+  }
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
