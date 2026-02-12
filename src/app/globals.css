@@ -136,6 +136,11 @@ body::before {
   }
 }
 
+/* Safe area for iOS home indicator (sticky bottom bars) */
+.safe-area-bottom {
+  padding-bottom: env(safe-area-inset-bottom, 0px);
+}
+
 /* Print: hide no-print elements; show syllabus checklist content even when details is closed */
 @media print {
   .no-print {

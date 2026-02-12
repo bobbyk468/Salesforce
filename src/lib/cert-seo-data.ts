@@ -652,7 +652,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the ADM-201 exam fee in 2026?',
-      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam costs $200 USD. Retake fee is also $200. Salesforce sometimes offers discount vouchers through Trailhead events or community programs.',
+      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam costs $200 USD. Retake fee is $100. Salesforce sometimes offers discount vouchers through Trailhead events or community programs.',
     },
     {
       question: 'How many ADM-201 questions are scenario-based?',

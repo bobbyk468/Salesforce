@@ -7,6 +7,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
+import StickyMobileCta from '@/components/StickyMobileCta'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
@@ -290,6 +291,13 @@ export default function AdministratorPage() {
                 <li><strong className="text-gray-900">Career switchers:</strong> Prove admin skills to move into Salesforce roles. Use section weightage to focus study time.</li>
                 <li><strong className="text-gray-900">Experienced admins:</strong> Validate and refresh your knowledge before Advanced Administrator or App Builder.</li>
               </ul>
+              <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+                Not sure which cert to take first? Browse the full{' '}
+                <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
+                  Salesforce certification path
+                </Link>{' '}
+                to compare all credentials by role — Administrator, Developer, Consultant, Architect, and more.
+              </p>
             </section>
 
             {/* Exam Fees & Registration section */}
@@ -615,6 +623,9 @@ export default function AdministratorPage() {
           </aside>
         </div>
       </div>
+
+      {/* Sticky mobile CTA: appears on scroll, hides near practice questions */}
+      <StickyMobileCta />
     </div>
   )
 }
