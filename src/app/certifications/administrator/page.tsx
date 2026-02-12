@@ -11,7 +11,7 @@ import StickyMobileCta from '@/components/StickyMobileCta'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import type { Metadata } from 'next'
 
@@ -326,7 +326,6 @@ export default function AdministratorPage() {
                 "AppExchange"
               ]}
               examSections={examSections}
-              h1Text={getCertH1Text(slug)}
               examWeightageHeading={getCertExamWeightageHeading(slug)}
               headingLevel="h2"
             />
