@@ -15,8 +15,8 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
-// Homepage/default title: includes "Certification" + "Practice Questions" for higher-intent SEO
-const defaultTitle = `Salesforce Certification Practice Questions & Study Guides | ${SITE_NAME}`
+// Homepage/default title kept concise to avoid SERP truncation.
+const defaultTitle = `Salesforce Certification Practice Questions | ${SITE_NAME}`
 const defaultDescription =
   'Prepare for Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, Consultant, and Architect.'
 

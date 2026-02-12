@@ -5,14 +5,14 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 export const metadata: Metadata = {
-  title: { absolute: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep' },
+  title: { absolute: 'All Salesforce Certifications | Trailblaze Prep' },
   description:
     'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
   },
   openGraph: {
-    title: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep',
+    title: 'All Salesforce Certifications | Trailblaze Prep',
     description:
       'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
     type: 'website',
@@ -42,7 +42,7 @@ const certsBreadcrumb: { name: string; url: string }[] = [
 
 export default function CertificationsIndexPage() {
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'All Salesforce Certifications | Practice Questions & Study Guides | Trailblaze Prep',
+    name: 'All Salesforce Certifications | Trailblaze Prep',
     description:
       'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
     path: '/certifications',

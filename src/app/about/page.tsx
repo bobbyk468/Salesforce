@@ -8,18 +8,18 @@ const aboutDescription =
   'Trailblaze Prep helps you pass Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, and more.'
 
 export const metadata = {
-  title: { absolute: `About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides` },
+  title: { absolute: `About Trailblaze Prep | Salesforce Certification Prep` },
   description: aboutDescription,
   alternates: { canonical: `${baseUrl}/about` },
   openGraph: {
-    title: 'About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides',
+    title: 'About Trailblaze Prep | Salesforce Certification Prep',
     description: aboutDescription,
     type: 'website',
     url: `${baseUrl}/about`,
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'About Trailblaze Prep | Salesforce Certification Practice Questions & Study Guides',
+    title: 'About Trailblaze Prep | Salesforce Certification Prep',
     description: aboutDescription,
   },
 }
