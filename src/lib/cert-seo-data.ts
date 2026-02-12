@@ -152,32 +152,22 @@ export function getExamCost(slug: string): string {
   return SLUG_TO_EXAM_COST[slug] || '$200'
 }
 
-/** Intent-driven title: exam name + year + benefit (cost, syllabus, practice). Aim 55–60 chars before brand for best CTR. */
+function clampTitle(raw: string, max = 72): string {
+  const normalized = raw.replace(/\s+/g, ' ').trim()
+  if (normalized.length <= max) return normalized
+  const candidate = normalized.slice(0, max + 1)
+  const splitAt = candidate.lastIndexOf(' ')
+  const cut = splitAt > 40 ? candidate.slice(0, splitAt) : normalized.slice(0, max - 3)
+  return `${cut.trim()}...`
+}
+
+/** Intent-driven title: concise and non-truncated in SERP. */
 function getCertMetaTitle(slug: string): string {
-  const brand = ' | Trailblaze Prep'
-  // CTR-optimized title for Administrator: official current name + legacy exam code
+  // Keep ADM-201 high intent and short.
   if (slug === 'administrator') {
-    return `Salesforce Certified Platform Administrator (ADM-201) Study Guide (2026) – Free Practice Questions${brand}`
+    return 'Salesforce ADM-201 Study Guide (2026) - Free Practice Questions'
   }
-  const examCost = getExamCost(slug)
-  /** High-cost-query pages: include cost in title for better CTR. These certs get high volume of "cost" queries. */
-  const highCostQueryPages = [
-    // Administrator track (base certs - high traffic)
-    'administrator', 'app-builder', 'business-analyst', 'advanced-administrator',
-    // Developer track (high traffic)
-    'developer-1', 'developer-2', 'javascript-developer-i',
-    // Consultant track (high traffic)
-    'sales-cloud', 'service-cloud', 'marketing-cloud-consultant', 'pardot-consultant',
-    // Marketing track (high traffic)
-    'email-specialist', 'marketing-cloud-engagement-admin', 'marketing-cloud-engagement-developer', 'pardot-specialist',
-    // Architect track (high traffic, higher cost queries)
-    'data-architect', 'application-architect', 'integration-architect', 'system-architect',
-    'sharing-visibility-architect', 'mulesoft-platform-architect',
-    // Tableau (high traffic)
-    'tableau-data-analyst', 'tableau-architect', 'tableau-consultant', 'tableau-server-administrator'
-  ]
-  const shouldIncludeCostInTitle = highCostQueryPages.includes(slug)
-  /** Short SERP titles for top certs (under ~43 chars before benefit so total ≤60 before brand). */
+  /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
     administrator: 'Salesforce Platform Administrator (ADM-201)',
@@ -279,44 +269,22 @@ function getCertMetaTitle(slug: string): string {
     'tableau-desktop-foundations': 'Salesforce Certified Tableau Desktop Foundations',
     'tableau-server-administrator': 'Salesforce Certified Tableau Server Administrator',
   }
-  /** Standard format for all pages: "Exam Guide 2026 | [cost if high-cost-query] | [differentiated benefit]" */
   const short = shortTitles[slug]
   if (short) {
-    // Custom benefit phrases for key certs to differentiate in SERP
-    const customBenefits: Record<string, string> = {
-      administrator: 'First Cert | No Coding',
-      'app-builder': 'No-Code Apps | Declarative',
-      'developer-1': 'Apex & LWC | Coding',
-    }
-    const customBenefit = customBenefits[slug]
-    
-    // For high-cost-query pages, include cost in title
-    if (shouldIncludeCostInTitle) {
-      if (customBenefit) {
-        // Use custom benefit phrase for differentiation
-        const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | ${customBenefit}`
-        const full = short + costBenefit + brand
-        return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR} | ${examCost}` + brand : full
-      }
-      const costBenefit = ` Exam Guide ${TITLE_YEAR} | ${examCost} | Practice Tests`
-      const full = short + costBenefit + brand
-      // If still too long, use shorter version without "Practice Tests"
-      return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR} | ${examCost}` + brand : full
-    }
-    // For other pages, use same format without cost
-    const standardBenefit = ` Exam Guide ${TITLE_YEAR} | Practice Tests`
-    const full = short + standardBenefit + brand
-    // If still too long, use shorter version
-    return full.length > 70 ? short + ` Exam Guide ${TITLE_YEAR}` + brand : full
+    // Normalize very long official naming inside title tags.
+    const compactShort = short
+      .replace(/^Salesforce Certified\s+/i, 'Salesforce ')
+      .replace(/\(Account Engagement\)\s*/gi, '')
+    return clampTitle(`${compactShort} Exam Guide ${TITLE_YEAR}`)
   }
-  const suffix = ` (${TITLE_YEAR}) Practice Questions & Study Guide`
-  if (slugToTitle[slug]) return slugToDisplayName(slug) + suffix + brand
+  const suffix = ` ${TITLE_YEAR} Study Guide`
+  if (slugToTitle[slug]) return clampTitle(`${slugToDisplayName(slug)}${suffix}`)
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const baseName = primaryName.replace(/\s*\([^)]+\)\s*$/, '').trim() || primaryName
   const hasCodeInName = examCode && primaryName.includes(examCode)
   const displayName = examCode && !hasCodeInName ? `${baseName} (${examCode})` : primaryName
-  return `${displayName}${suffix}${brand}`
+  return clampTitle(`${displayName}${suffix}`)
 }
 
 /** Unique meta description 140–160 chars for certification pages. Rendered as <meta name="description" content="..."> in <head>. */

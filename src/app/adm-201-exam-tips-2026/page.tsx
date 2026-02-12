@@ -5,7 +5,7 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'ADM-201 Exam Tips (2026): How to Pass Salesforce Administrator First Attempt | Trailblaze Prep'
+const pageTitle = 'ADM-201 Exam Tips (2026): Pass Salesforce Admin on Your First Attempt'
 const pageDescription =
   'ADM-201 exam tips for 2026: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.'
 

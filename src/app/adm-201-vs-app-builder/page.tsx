@@ -5,7 +5,7 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'ADM-201 vs App Builder (DEV-402): Which Salesforce Cert Should You Take First? | Trailblaze Prep'
+const pageTitle = 'ADM-201 vs App Builder (DEV-402): Which Salesforce Cert Should You Take First?'
 const pageDescription =
   'Compare ADM-201 and DEV-402 by difficulty, exam focus, career outcomes, and study time to choose the right first Salesforce certification.'
 
