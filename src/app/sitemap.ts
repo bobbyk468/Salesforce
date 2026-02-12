@@ -4,13 +4,20 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  const excludedCertPaths = new Set([
+    '/certifications/administrator-practice-test',
+    '/certifications/email-specialist-practice-test',
+  ])
+
   const certUrls = CERTIFICATION_CATEGORIES.flatMap((cat) =>
-    cat.items.map((item) => ({
-      url: `${baseUrl}${item.href}`,
-      lastModified: new Date(),
-      changeFrequency: 'weekly' as const,
-      priority: 0.8,
-    }))
+    cat.items
+      .filter((item) => !excludedCertPaths.has(item.href))
+      .map((item) => ({
+        url: `${baseUrl}${item.href}`,
+        lastModified: new Date(),
+        changeFrequency: 'weekly' as const,
+        priority: 0.8,
+      }))
   )
   const uniqueCertUrls = Array.from(
     new Map(certUrls.map((entry) => [entry.url, entry])).values()
@@ -32,7 +39,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/adm-201-vs-app-builder`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/about`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.7 },
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
-    { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     ...roleUrls,
     ...uniqueCertUrls,
