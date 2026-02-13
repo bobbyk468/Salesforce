@@ -67,6 +67,10 @@ export default async function RoleCertificationsPage({ params }: Props) {
   const category = getCategoryBySlug(slug)
 
   if (!category) notFound()
+  const title = `${category.name} Salesforce Certifications (${RELEASE_CURRENT})`
+  const description =
+    ROLE_DESCRIPTIONS[slug] ||
+    `Browse Salesforce ${category.name} certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Find your next certification path and start practicing now.`
 
   const breadcrumb = [
     { name: 'Home', url: '/' },
