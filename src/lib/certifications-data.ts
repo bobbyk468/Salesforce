@@ -194,6 +194,39 @@ export function getRoleSlugForCert(certSlug: string): string | undefined {
 
 /** Related certifications from the same role (2–3) for contextual internal linking. */
 export function getRelatedCerts(certSlug: string): { name: string; href: string; anchorText: string }[] {
+  const relatedOverrides: Record<string, string[]> = {
+    // Hub-and-spoke internal linking for top pages.
+    administrator: ['advanced-administrator', 'app-builder', 'cpq-administrator'],
+    'developer-1': ['developer-2', 'javascript-developer-i', 'mulesoft-developer-i'],
+    'slack-developer': ['slack-administrator', 'slack-consultant', 'developer-1'],
+    'application-architect': ['data-architect', 'sharing-visibility-architect', 'technical-architect-review-board'],
+    // "People also studied" style pairings.
+    'ai-associate': ['data-cloud-consultant', 'administrator'],
+    'pardot-specialist': ['pardot-consultant', 'email-specialist'],
+    'education-cloud-consultant': ['nonprofit-cloud', 'sales-cloud'],
+  }
+
+  const slugToItem = new Map(
+    CERTIFICATION_CATEGORIES.flatMap((cat) =>
+      cat.items.map((item) => [item.href.replace('/certifications/', '').replace(/\/$/, ''), item] as const)
+    )
+  )
+
+  const overrideSlugs = relatedOverrides[certSlug] || []
+  if (overrideSlugs.length > 0) {
+    return overrideSlugs
+      .map((slug) => {
+        const item = slugToItem.get(slug)
+        if (!item) return null
+        return {
+          name: item.name,
+          href: item.href,
+          anchorText: `${item.name} Winter '26 prep guide`,
+        }
+      })
+      .filter((item): item is { name: string; href: string; anchorText: string } => item !== null)
+  }
+
   const certHref = `/certifications/${certSlug}`
   const category = CERTIFICATION_CATEGORIES.find((cat) =>
     cat.items.some((item) => item.href === certHref || item.href === certHref + '/')

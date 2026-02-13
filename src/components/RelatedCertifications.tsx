@@ -16,10 +16,10 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   return (
     <section className="mt-12 sm:mt-16 rounded-xl sm:rounded-2xl border border-purple-100/50 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="related-certs-heading">
       <h2 id="related-certs-heading" className="text-xl font-bold text-gray-900 mb-4">
-        Related certifications
+        People also studied
       </h2>
       <p className="text-gray-600 text-sm mb-4">
-        After this certification, consider these credentials in the same track:
+        Follow this recommended next-step path to stay in the same role track:
       </p>
       <ul className="space-y-2">
         {related.map((item) => (
