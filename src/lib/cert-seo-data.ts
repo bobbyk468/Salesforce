@@ -165,7 +165,7 @@ function clampTitle(raw: string, max = 72): string {
 function getCertMetaTitle(slug: string): string {
   // Keep ADM-201 high intent and short.
   if (slug === 'administrator') {
-    return 'Salesforce ADM-201 Study Guide (2026) - Free Practice Questions'
+    return 'Salesforce Administrator Practice Exam & Study Guide (2026)'
   }
   // Explicit high-intent overrides for pages flagged in crawl reports.
   if (slug === 'developer-1') {
@@ -186,6 +186,12 @@ function getCertMetaTitle(slug: string): string {
   }
   if (slug === 'technical-architect-review-board') {
     return 'Salesforce CTA Review Board Prep: Format, Tips & 2026 Path'
+  }
+  if (slug === 'developer-2') {
+    return 'Salesforce Certified Platform Developer II Study Prep (2026)'
+  }
+  if (slug === 'technical-architect') {
+    return 'Salesforce Certified Technical Architect (CTA) Guide 2026'
   }
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
@@ -314,8 +320,14 @@ export function getCertMetaDescription(slug: string): string {
   const formerName = getCertFormerName(slug)
   const examCost = getExamCost(slug)
   const ctrDescriptionOverrides: Record<string, string> = {
+    administrator:
+      'Ace the Salesforce ADM-201 exam with free 2026 practice questions, section weightage, and a complete study path to help you pass on your first attempt.',
     'slack-developer':
       'Looking for affordable Slack Developer prep? Get our free 2026 study guide, exam breakdowns, and practice tips to pass your Salesforce certification.',
+    'developer-2':
+      'Master the Salesforce Platform Developer II certification with 2026 exam topics, practice questions, and focused prep tips to level up your developer career.',
+    'technical-architect':
+      'Navigate the Salesforce Certified Technical Architect (CTA) path with 2026 prep guidance, board format insights, and key requirements to plan your success.',
     'tableau-data-analyst':
       'Master the Tableau Data Analyst exam with updated 2026 practice questions, detailed explanations, and exam weightage. Start practicing free today.',
     'mulesoft-integration-foundations':
