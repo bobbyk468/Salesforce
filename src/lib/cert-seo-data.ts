@@ -174,6 +174,19 @@ function getCertMetaTitle(slug: string): string {
   if (slug === 'cpq-administrator') {
     return 'Salesforce Certified CPQ Administrator'
   }
+  // GSC-driven CTR quick wins.
+  if (slug === 'slack-developer') {
+    return 'Free Salesforce Slack Developer Study Guide & Prep (2026)'
+  }
+  if (slug === 'tableau-data-analyst') {
+    return 'Tableau Data Analyst Practice Questions - 2026 Exam Prep'
+  }
+  if (slug === 'mulesoft-integration-foundations') {
+    return 'MuleSoft Integration Foundations: 2026 Exam Guide & Fees'
+  }
+  if (slug === 'technical-architect-review-board') {
+    return 'Salesforce CTA Review Board Prep: Format, Tips & 2026 Path'
+  }
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
@@ -300,6 +313,18 @@ export function getCertMetaDescription(slug: string): string {
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const formerName = getCertFormerName(slug)
   const examCost = getExamCost(slug)
+  const ctrDescriptionOverrides: Record<string, string> = {
+    'slack-developer':
+      'Looking for affordable Slack Developer prep? Get our free 2026 study guide, exam breakdowns, and practice tips to pass your Salesforce certification.',
+    'tableau-data-analyst':
+      'Master the Tableau Data Analyst exam with updated 2026 practice questions, detailed explanations, and exam weightage. Start practicing free today.',
+    'mulesoft-integration-foundations':
+      'Find MuleSoft Integration Foundations 2026 exam fees and code, plus free practice questions and study tips to pass on your first try.',
+    'technical-architect-review-board':
+      'Prepare for the Salesforce CTA Review Board with format details, preparation path, and 2026 success tips. Get focused guidance before your board date.',
+  }
+  const override = ctrDescriptionOverrides[slug]
+  if (override) return override.length > 160 ? `${override.slice(0, 157)}...` : override
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
