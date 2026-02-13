@@ -12,6 +12,7 @@ import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const slug = 'advanced-administrator'
 export async function generateMetadata() {
@@ -86,7 +87,7 @@ export default function AdvancedAdministratorPage() {
           If you haven&apos;t passed the entry-level admin exam yet, start with our{' '}
           <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">ADM-201 study guide</Link> first.
           {' '}For faster prep, use our{' '}
-          <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">ADM-201 exam tips</Link>{' '}
+          <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">ADM-201 exam tips ({RELEASE_CURRENT})</Link>{' '}
           and{' '}
           <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">ADM-201 vs App Builder guide</Link>.
         </p>

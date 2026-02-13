@@ -24,6 +24,7 @@ import {
 import FaqAccordion from '@/components/FaqAccordion'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -347,7 +348,7 @@ export default function Home() {
           <p className="text-sm text-blue-100/85 mt-4">
             Popular reads:{' '}
             <Link href="/adm-201-exam-tips-2026" className="underline hover:text-white font-medium">
-              ADM-201 exam tips 2026
+              ADM-201 exam tips {RELEASE_CURRENT}
             </Link>
             {' '}and{' '}
             <Link href="/adm-201-vs-app-builder" className="underline hover:text-white font-medium">

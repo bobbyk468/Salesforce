@@ -1,11 +1,16 @@
 import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
+import { RELEASE_CURRENT } from './release-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-/** Year in titles/H1 for CTR (intent: "updated", "current syllabus"). */
-const TITLE_YEAR = '2026'
+/** Current Salesforce release label in titles/H1 for CTR (intent: "updated", "current syllabus"). */
+const TITLE_YEAR = RELEASE_CURRENT
+
+function withCurrentReleaseLabel(text: string): string {
+  return text.replace(/\b2026\b/g, RELEASE_CURRENT)
+}
 
 /** Build slug -> display name from certification categories (first occurrence wins) */
 function buildSlugToTitle(): Record<string, string> {
@@ -165,7 +170,7 @@ function clampTitle(raw: string, max = 72): string {
 function getCertMetaTitle(slug: string): string {
   // Keep ADM-201 high intent and short.
   if (slug === 'administrator') {
-    return 'Salesforce Administrator Practice Exam & Study Guide (2026)'
+    return `Salesforce Administrator Practice Exam & Study Guide (${TITLE_YEAR})`
   }
   // Explicit high-intent overrides for pages flagged in crawl reports.
   if (slug === 'developer-1') {
@@ -176,22 +181,22 @@ function getCertMetaTitle(slug: string): string {
   }
   // GSC-driven CTR quick wins.
   if (slug === 'slack-developer') {
-    return 'Free Salesforce Slack Developer Study Guide & Prep (2026)'
+    return `Free Salesforce Slack Developer Study Guide & Prep (${TITLE_YEAR})`
   }
   if (slug === 'tableau-data-analyst') {
-    return 'Tableau Data Analyst Practice Questions - 2026 Exam Prep'
+    return `Tableau Data Analyst Practice Questions - ${TITLE_YEAR} Exam Prep`
   }
   if (slug === 'mulesoft-integration-foundations') {
-    return 'MuleSoft Integration Foundations: 2026 Exam Guide & Fees'
+    return `MuleSoft Integration Foundations: ${TITLE_YEAR} Exam Guide & Fees`
   }
   if (slug === 'technical-architect-review-board') {
-    return 'Salesforce CTA Review Board Prep: Format, Tips & 2026 Path'
+    return `Salesforce CTA Review Board Prep: Format, Tips & ${TITLE_YEAR} Path`
   }
   if (slug === 'developer-2') {
-    return 'Salesforce Certified Platform Developer II Study Prep (2026)'
+    return `Salesforce Certified Platform Developer II Study Prep (${TITLE_YEAR})`
   }
   if (slug === 'technical-architect') {
-    return 'Salesforce Certified Technical Architect (CTA) Guide 2026'
+    return `Salesforce Certified Technical Architect (CTA) Guide ${TITLE_YEAR}`
   }
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
@@ -336,7 +341,10 @@ export function getCertMetaDescription(slug: string): string {
       'Prepare for the Salesforce CTA Review Board with format details, preparation path, and 2026 success tips. Get focused guidance before your board date.',
   }
   const override = ctrDescriptionOverrides[slug]
-  if (override) return override.length > 160 ? `${override.slice(0, 157)}...` : override
+  if (override) {
+    const normalizedOverride = withCurrentReleaseLabel(override)
+    return normalizedOverride.length > 160 ? `${normalizedOverride.slice(0, 157)}...` : normalizedOverride
+  }
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
@@ -530,7 +538,8 @@ export function getCertMetaDescription(slug: string): string {
   if (custom && slug.endsWith('-practice-test')) {
     // Replace placeholder cost if present, or add cost for non-template certs
     const withCost = custom.includes('exam fee') ? custom : custom.replace('Exam weightage', `${examCost} exam fee, exam weightage`)
-    return withCost.length > 160 ? withCost.slice(0, 157) + '...' : withCost
+    const normalizedCustom = withCurrentReleaseLabel(withCost)
+    return normalizedCustom.length > 160 ? normalizedCustom.slice(0, 157) + '...' : normalizedCustom
   }
   const primaryName = getCertPrimaryName(slug, certName)
   const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
@@ -539,7 +548,8 @@ export function getCertMetaDescription(slug: string): string {
       ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${standardized}`
       : standardized
   
-  const finalDesc = desc.length > 160 ? desc.slice(0, 157) + '...' : desc
+  const normalizedDesc = withCurrentReleaseLabel(desc)
+  const finalDesc = normalizedDesc.length > 160 ? normalizedDesc.slice(0, 157) + '...' : normalizedDesc
   
   // Safety guard: ensure we never return undefined (per AI recommendation)
   // This prevents Next.js from silently dropping the meta description tag
@@ -560,7 +570,7 @@ export function getCertMetadata(slug: string): Metadata {
   const formerNameForKeywords = getCertFormerName(slug)
   const keywords =
     slug === 'administrator'
-      ? 'ADM-201 practice test free, ADM-201 mock exam 2026, ADM-201 exam questions, ADM-201 weightage, Salesforce Certified Platform Administrator, ADM-201 study guide, Salesforce admin exam, ADM-201 free practice test, is ADM-201 hard, ADM-201 dumps alternative'
+      ? `ADM-201 practice test free, ADM-201 mock exam ${TITLE_YEAR}, ADM-201 exam questions, ADM-201 weightage, Salesforce Certified Platform Administrator, ADM-201 study guide, Salesforce admin exam, ADM-201 free practice test, is ADM-201 hard, ADM-201 dumps alternative`
       : `${primaryName}, Salesforce certification, practice questions, exam weightage, study guide${examCode ? `, ${examCode}` : ''}${formerNameForKeywords ? `, ${formerNameForKeywords}` : ''}`
   // Updated 2026 for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'
@@ -643,12 +653,12 @@ function getCertFaqName(slug: string, certTitle: string): string {
 const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     {
-      question: 'Is there a prerequisite for the Salesforce Certified Platform Administrator exam?',
-      answer: 'No, there is no formal prerequisite. However, Salesforce recommends 6+ months of hands-on experience as a Salesforce Administrator and completion of the Platform Fundamentals trail on Trailhead before taking the exam.',
+      question: 'What is the Salesforce Administrator (ADM-201) passing score in Winter \'26?',
+      answer: 'The ADM-201 passing score is 65%, which means you need at least 39 correct answers out of 60 scored questions. You get 105 minutes, and Salesforce may include 5 unscored pilot questions in the exam session.',
     },
     {
-      question: 'Is the ADM-201 exam hard?',
-      answer: 'The ADM-201 is considered moderate difficulty. It has 60 multiple-choice questions, a 65% passing score, and 105 minutes. It covers breadth across 7 sections — configuration, automation, security, data, analytics, Sales Cloud, and Service Cloud — but requires no coding. Most candidates who score 75%+ on 3 full mock exams pass on their first attempt.',
+      question: 'What is the ADM-201 exam fee in Winter \'26?',
+      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam fee is typically $200 USD, and the retake fee is usually $100 USD. Fees can vary by country taxes, so confirm the final amount in your Salesforce certification checkout page.',
     },
     {
       question: 'How many questions are on the ADM-201 exam, and what is the passing score?',
@@ -663,8 +673,8 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Most candidates study for 4–6 weeks with a structured plan. Focus on high-weight sections first (Configuration and Setup at 20%, Object Manager and Lightning App Builder at 20%). Use Trailhead modules, hands-on practice, and mock exams to gauge readiness.',
     },
     {
-      question: 'What is the ADM-201 exam fee in 2026?',
-      answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam costs $200 USD. Retake fee is $100. Salesforce sometimes offers discount vouchers through Trailhead events or community programs.',
+      question: 'Is there a prerequisite for the Salesforce Certified Platform Administrator exam?',
+      answer: 'There is no formal prerequisite for ADM-201. Salesforce recommends hands-on admin experience and completing foundational Trailhead modules before booking the exam.',
     },
     {
       question: 'How many ADM-201 questions are scenario-based?',
@@ -685,8 +695,8 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Platform Administrator focuses on day-to-day administration, security, and user management. Platform App Builder focuses on declarative development—building custom applications using clicks, not code. App Builder is ideal for those who want to build custom apps without programming.',
     },
     {
-      question: 'Do I need programming experience for the Platform App Builder exam?',
-      answer: 'No, the Platform App Builder certification focuses on declarative (no-code) development. You should be comfortable with data modeling, relationships, automation tools like Flow, and Lightning App Builder, but no programming knowledge is required.',
+      question: 'What is the DEV-402 exam fee and passing score in Winter \'26?',
+      answer: 'The Platform App Builder (DEV-402) exam fee is generally $200 USD with a typical retake fee of $100 USD, and the passing score is 63%. Always verify the latest fee and policy details in your Salesforce certification account before booking.',
     },
   ],
   'sales-cloud': [
@@ -1102,12 +1112,12 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'slack-developer': [
     {
-      question: 'What does a Slack Developer do?',
-      answer: 'Slack Developers build Slack apps, create workflows, integrate Slack with external systems (including Salesforce), and customize Slack experiences using Slack APIs.',
+      question: 'Are there free Salesforce Slack Developer practice exams for Winter \'26?',
+      answer: 'Yes. This page includes free Slack Developer practice questions with explanations for the current Salesforce release so you can test your readiness before paying for the official exam. Use these with hands-on Slack app building practice for best results.',
     },
     {
-      question: 'What programming experience do I need for Slack Developer?',
-      answer: 'You need JavaScript/Node.js knowledge and understanding of REST APIs. Experience with Slack APIs, Events API, and building Slack apps is essential.',
+      question: 'How much does the Salesforce Slack Developer exam cost in Winter \'26?',
+      answer: 'The Salesforce Slack Developer certification exam fee is commonly listed as $200 USD, with retake pricing often around $100 USD. Check the official Salesforce registration page for your region-specific final price and taxes.',
     },
   ],
   'omnistudio-developer': [

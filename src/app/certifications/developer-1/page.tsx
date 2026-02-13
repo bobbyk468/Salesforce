@@ -11,11 +11,12 @@ import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPra
 import QuestionCard from '@/components/QuestionCard'
 import type { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const slug = 'developer-1'
 
 const descriptionText =
-  'PD1 (2026) prep: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components, with free practice questions and exam-weightage guidance.'
+  `PD1 (${RELEASE_CURRENT}) prep: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components, with free practice questions and exam-weightage guidance.`
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)

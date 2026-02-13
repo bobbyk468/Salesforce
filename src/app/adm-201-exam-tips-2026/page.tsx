@@ -2,13 +2,14 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = 'ADM-201 Exam Tips (2026): Pass Salesforce Admin on Your First Attempt'
+const pageTitle = `ADM-201 Exam Tips (${RELEASE_CURRENT}): Pass Salesforce Admin on Your First Attempt`
 const pageDescription =
-  'ADM-201 exam tips for 2026: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.'
+  `ADM-201 exam tips for ${RELEASE_CURRENT}: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -28,12 +29,12 @@ export const metadata: Metadata = {
     images: [ogImageUrl],
   },
   keywords:
-    'ADM-201 exam tips 2026, how to pass ADM-201 first attempt, Salesforce Administrator exam tips, ADM-201 study plan, ADM-201 mock test strategy',
+    `ADM-201 exam tips ${RELEASE_CURRENT}, how to pass ADM-201 first attempt, Salesforce Administrator exam tips, ADM-201 study plan, ADM-201 mock test strategy`,
 }
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'ADM-201 Exam Tips 2026', url: '/adm-201-exam-tips-2026' },
+  { name: `ADM-201 Exam Tips ${RELEASE_CURRENT}`, url: '/adm-201-exam-tips-2026' },
 ]
 
 export default function Adm201ExamTipsPage() {
@@ -52,10 +53,10 @@ export default function Adm201ExamTipsPage() {
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
-          Updated for 2026
+          Updated for {RELEASE_CURRENT}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          ADM-201 Exam Tips (2026): How to Pass on Your First Attempt
+          ADM-201 Exam Tips ({RELEASE_CURRENT}): How to Pass on Your First Attempt
         </h1>
         <p className="text-lg text-gray-600">
           If you are preparing for Salesforce Administrator certification, these practical tips help you focus on high-weight sections,

@@ -12,6 +12,7 @@ import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
 import { getCertMetadata, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 import type { Metadata } from 'next'
 
 const slug = 'administrator'
@@ -30,7 +31,7 @@ const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  'Prepare for Salesforce ADM-201 with 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today.'
+  `Prepare for Salesforce ADM-201 with ${RELEASE_CURRENT} objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today.`
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -247,7 +248,7 @@ export default function AdministratorPage() {
             Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
-            Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions (2026)
+            Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
           </h1>
           <p className="text-white/90 text-sm sm:text-base max-w-2xl mb-6">
             Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
@@ -469,7 +470,7 @@ export default function AdministratorPage() {
               <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
                 Want a focused strategy? Read our{' '}
                 <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
-                  ADM-201 exam tips (2026)
+                  ADM-201 exam tips ({RELEASE_CURRENT})
                 </Link>{' '}
                 and detailed{' '}
                 <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">

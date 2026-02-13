@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${siteUrl}/og-image`
@@ -142,7 +143,7 @@ export default function Adm201VsAppBuilderPage() {
             href="/adm-201-exam-tips-2026"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
-            Read ADM-201 Exam Tips 2026
+            Read ADM-201 Exam Tips {RELEASE_CURRENT}
           </Link>
         </div>
       </section>
