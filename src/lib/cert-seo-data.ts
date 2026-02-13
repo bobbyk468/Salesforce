@@ -12,6 +12,15 @@ function withCurrentReleaseLabel(text: string): string {
   return text.replace(/\b2026\b/g, RELEASE_CURRENT)
 }
 
+function finalizeMetaDescription(text: string): string {
+  const normalized = withCurrentReleaseLabel(text).replace(/\s+/g, ' ').trim()
+  const hasCta = /(start|get|try)\b[\s\S]{0,30}\b(now|today)\b/i.test(normalized)
+  const withCta = hasCta
+    ? normalized
+    : `${normalized.replace(/[.\s]*$/, '')}. Start free practice now.`
+  return withCta.length > 160 ? `${withCta.slice(0, 157)}...` : withCta
+}
+
 /** Build slug -> display name from certification categories (first occurrence wins) */
 function buildSlugToTitle(): Record<string, string> {
   const map: Record<string, string> = {}
@@ -168,36 +177,28 @@ function clampTitle(raw: string, max = 72): string {
 
 /** Intent-driven title: concise and non-truncated in SERP. */
 function getCertMetaTitle(slug: string): string {
-  // Keep ADM-201 high intent and short.
-  if (slug === 'administrator') {
-    return `Salesforce Administrator Practice Exam & Study Guide (${TITLE_YEAR})`
+  // Gemini-inspired CTR overrides for highest opportunity pages.
+  const ctrTitleOverrides: Record<string, string> = {
+    'app-builder': `Platform App Builder Practice Exam (${TITLE_YEAR})`,
+    administrator: `Salesforce Admin Practice Test: Free ${TITLE_YEAR} Prep`,
+    'marketing-cloud-consultant': `Marketing Cloud Consultant Guide (${TITLE_YEAR} Update)`,
+    'business-analyst': `Salesforce Business Analyst Study Guide (${TITLE_YEAR})`,
+    'sales-cloud': `Sales Cloud Consultant Practice Exam: ${TITLE_YEAR}`,
+    'developer-2': `Salesforce Platform Developer II Prep (${TITLE_YEAR})`,
+    'cpq-administrator': `Salesforce CPQ Specialist & Admin Prep (${TITLE_YEAR})`,
+    'pardot-consultant': `Pardot Consultant Study Guide & Prep (${TITLE_YEAR})`,
+    'pardot-specialist': `Pardot Specialist Practice Questions (${TITLE_YEAR})`,
+    'experience-cloud': `Experience Cloud Consultant Exam Path (${TITLE_YEAR})`,
+    'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
+    'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
+    'mulesoft-integration-foundations': `MuleSoft Integration Foundations Guide (${TITLE_YEAR})`,
+    'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
+    'technical-architect': `Salesforce Technical Architect (CTA) Guide (${TITLE_YEAR})`,
   }
-  // Explicit high-intent overrides for pages flagged in crawl reports.
-  if (slug === 'developer-1') {
-    return 'Salesforce Certified Platform Developer I (PD1)'
-  }
-  if (slug === 'cpq-administrator') {
-    return 'Salesforce Certified CPQ Administrator'
-  }
-  // GSC-driven CTR quick wins.
-  if (slug === 'slack-developer') {
-    return `Free Salesforce Slack Developer Study Guide & Prep (${TITLE_YEAR})`
-  }
-  if (slug === 'tableau-data-analyst') {
-    return `Tableau Data Analyst Practice Questions - ${TITLE_YEAR} Exam Prep`
-  }
-  if (slug === 'mulesoft-integration-foundations') {
-    return `MuleSoft Integration Foundations: ${TITLE_YEAR} Exam Guide & Fees`
-  }
-  if (slug === 'technical-architect-review-board') {
-    return `Salesforce CTA Review Board Prep: Format, Tips & ${TITLE_YEAR} Path`
-  }
-  if (slug === 'developer-2') {
-    return `Salesforce Certified Platform Developer II Study Prep (${TITLE_YEAR})`
-  }
-  if (slug === 'technical-architect') {
-    return `Salesforce Certified Technical Architect (CTA) Guide ${TITLE_YEAR}`
-  }
+  const ctrTitle = ctrTitleOverrides[slug]
+  if (ctrTitle) return clampTitle(ctrTitle)
+  // Explicit short title for historical high-volume page.
+  if (slug === 'developer-1') return 'Salesforce Platform Developer I (PD1)'
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
@@ -306,9 +307,9 @@ function getCertMetaTitle(slug: string): string {
     const compactShort = short
       .replace(/^Salesforce Certified\s+/i, 'Salesforce ')
       .replace(/\(Account Engagement\)\s*/gi, '')
-    return clampTitle(`${compactShort} Exam Guide ${TITLE_YEAR}`)
+    return clampTitle(`${compactShort} Practice Questions (${TITLE_YEAR})`)
   }
-  const suffix = ` ${TITLE_YEAR} Study Guide`
+  const suffix = ` Practice Questions (${TITLE_YEAR})`
   if (slugToTitle[slug]) return clampTitle(`${slugToDisplayName(slug)}${suffix}`)
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   const examCode = SLUG_TO_EXAM_CODE[slug]
@@ -325,25 +326,38 @@ export function getCertMetaDescription(slug: string): string {
   const formerName = getCertFormerName(slug)
   const examCost = getExamCost(slug)
   const ctrDescriptionOverrides: Record<string, string> = {
+    'app-builder':
+      `Ace the Salesforce Platform App Builder exam. Get 50+ free practice questions, detailed explanations, and our ${TITLE_YEAR} study guide. Pass today!`,
     administrator:
-      'Ace the Salesforce ADM-201 exam with free 2026 practice questions, section weightage, and a complete study path to help you pass on your first attempt.',
-    'slack-developer':
-      'Looking for affordable Slack Developer prep? Get our free 2026 study guide, exam breakdowns, and practice tips to pass your Salesforce certification.',
+      `Pass the ADM-201 exam with ease. Access free ${TITLE_YEAR} practice questions, section weightage, and a complete study path for the current release.`,
+    'marketing-cloud-consultant':
+      `Master the Marketing Cloud Consultant exam. Includes free practice tests, exam fees, and registration details updated for the ${TITLE_YEAR} release.`,
+    'business-analyst':
+      `Get ready for the Business Analyst certification. Free ${TITLE_YEAR} study resources, exam tips, and practice questions to help you get certified fast.`,
+    'sales-cloud':
+      `Ace the Sales Cloud Consultant certification. Includes updated ${TITLE_YEAR} practice questions, exam tips, and free study guides for the current release.`,
     'developer-2':
-      'Master the Salesforce Platform Developer II certification with 2026 exam topics, practice questions, and focused prep tips to level up your developer career.',
-    'technical-architect':
-      'Navigate the Salesforce Certified Technical Architect (CTA) path with 2026 prep guidance, board format insights, and key requirements to plan your success.',
+      `Level up your dev skills. Get the latest ${TITLE_YEAR} exam topics, practice questions, and expert tips for the Platform Developer II certification.`,
+    'cpq-administrator':
+      `Pass the Salesforce CPQ Admin exam with our updated ${TITLE_YEAR} study guide. Includes practice questions and exam tips for CPQ professionals.`,
+    'pardot-consultant':
+      `Get the latest ${TITLE_YEAR} Pardot Consultant prep. Free practice exams, exam fees, and strategic study tips for the newest Salesforce release.`,
+    'pardot-specialist':
+      `Pass the Pardot Specialist exam on your first try. Access 100% free ${TITLE_YEAR} practice tests and a comprehensive guide for marketing experts.`,
+    'experience-cloud':
+      `Everything you need for the Experience Cloud Consultant exam: ${TITLE_YEAR} study guides, practice questions, and registration tips. Start practicing now.`,
+    'slack-developer':
+      `Looking for affordable Slack Developer prep? Get our free ${TITLE_YEAR} study guide, exam breakdowns, and practice tips to pass your certification.`,
     'tableau-data-analyst':
-      'Master the Tableau Data Analyst exam with updated 2026 practice questions, detailed explanations, and exam weightage. Start practicing free today.',
+      `Master the Tableau Data Analyst exam with updated ${TITLE_YEAR} practice questions, detailed explanations, and exam weightage. Start practicing free today.`,
     'mulesoft-integration-foundations':
-      'Find MuleSoft Integration Foundations 2026 exam fees and code, plus free practice questions and study tips to pass on your first try.',
+      `Find MuleSoft Integration Foundations ${TITLE_YEAR} exam fees and code, plus free practice questions and study tips to pass on your first try.`,
     'technical-architect-review-board':
-      'Prepare for the Salesforce CTA Review Board with format details, preparation path, and 2026 success tips. Get focused guidance before your board date.',
+      `Prepare for the Salesforce CTA Review Board with format details, prep path, and ${TITLE_YEAR} success tips. Get focused guidance before your board date.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
-    const normalizedOverride = withCurrentReleaseLabel(override)
-    return normalizedOverride.length > 160 ? `${normalizedOverride.slice(0, 157)}...` : normalizedOverride
+    return finalizeMetaDescription(override)
   }
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
@@ -538,8 +552,7 @@ export function getCertMetaDescription(slug: string): string {
   if (custom && slug.endsWith('-practice-test')) {
     // Replace placeholder cost if present, or add cost for non-template certs
     const withCost = custom.includes('exam fee') ? custom : custom.replace('Exam weightage', `${examCost} exam fee, exam weightage`)
-    const normalizedCustom = withCurrentReleaseLabel(withCost)
-    return normalizedCustom.length > 160 ? normalizedCustom.slice(0, 157) + '...' : normalizedCustom
+    return finalizeMetaDescription(withCost)
   }
   const primaryName = getCertPrimaryName(slug, certName)
   const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
@@ -548,8 +561,7 @@ export function getCertMetaDescription(slug: string): string {
       ? `${primaryName}${examCode ? ` (${examCode})` : ''}—formerly ${formerName}. ${standardized}`
       : standardized
   
-  const normalizedDesc = withCurrentReleaseLabel(desc)
-  const finalDesc = normalizedDesc.length > 160 ? normalizedDesc.slice(0, 157) + '...' : normalizedDesc
+  const finalDesc = finalizeMetaDescription(desc)
   
   // Safety guard: ensure we never return undefined (per AI recommendation)
   // This prevents Next.js from silently dropping the meta description tag

@@ -3,18 +3,21 @@ import { Award, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice Questions`
+const indexDescription =
+  `Browse Salesforce certifications by role with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Pick your path and start practicing now.`
 
 export const metadata: Metadata = {
-  title: { absolute: 'All Salesforce Certifications | Trailblaze Prep' },
-  description:
-    'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
+  title: { absolute: indexTitle },
+  description: indexDescription,
   alternates: {
     canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
   },
   openGraph: {
-    title: 'All Salesforce Certifications | Trailblaze Prep',
-    description:
-      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
+    title: indexTitle,
+    description: indexDescription,
     type: 'website',
     url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
     images: [
@@ -28,9 +31,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'All Salesforce Certifications | Practice Questions & Study Guides',
-    description:
-      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more.',
+    title: indexTitle,
+    description: indexDescription,
     images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image`],
   },
 }
@@ -42,9 +44,8 @@ const certsBreadcrumb: { name: string; url: string }[] = [
 
 export default function CertificationsIndexPage() {
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'All Salesforce Certifications | Trailblaze Prep',
-    description:
-      'Browse all Salesforce certifications by role: Administrator, Developer, Consultant, Marketing, Architect, and more, with practice questions and study guides.',
+    name: indexTitle,
+    description: indexDescription,
     path: '/certifications',
     breadcrumbItems: certsBreadcrumb,
   })

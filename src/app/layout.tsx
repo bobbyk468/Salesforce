@@ -6,6 +6,7 @@ import Footer from '@/components/Footer'
 import ContactSidebar from '@/components/ContactSidebar'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -16,9 +17,9 @@ export const viewport: Viewport = {
 }
 
 // Homepage/default title kept concise to avoid SERP truncation.
-const defaultTitle = `Salesforce Certification Practice Questions | ${SITE_NAME}`
+const defaultTitle = `Free Salesforce Certification Practice Questions | ${SITE_NAME}`
 const defaultDescription =
-  'Prepare for Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, Consultant, and Architect.'
+  `Prepare for Salesforce certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for Admin, Developer, Consultant, and Architect. Start practicing now.`
 
 export const metadata: Metadata = {
   // Hardcode metadataBase for stability (per Gemini recommendation)

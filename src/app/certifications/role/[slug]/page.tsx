@@ -4,6 +4,7 @@ import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -29,10 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
-  const title = `${category.name} Certifications | Salesforce Study Guide`
+  const title = `${category.name} Salesforce Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
-    `Browse all Salesforce ${category.name} certifications. Practice questions, exam weightage, and study materials for each credential. Find your next certification path.`
+    `Browse Salesforce ${category.name} certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Find your next certification path and start practicing now.`
   
   return {
     title: { absolute: title },
@@ -73,8 +74,8 @@ export default async function RoleCertificationsPage({ params }: Props) {
     { name: `${category.name} Certifications`, url: `/certifications/role/${slug}` },
   ]
   const webPageJsonLd = getWebPageJsonLd({
-    name: `${category.name} Certifications | Salesforce Study Guide`,
-    description: `Browse all Salesforce ${category.name} certifications. Practice questions and study materials for each credential.`,
+    name: title,
+    description,
     path: `/certifications/role/${slug}`,
     breadcrumbItems: breadcrumb,
   })
