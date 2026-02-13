@@ -166,7 +166,7 @@ export function getExamCost(slug: string): string {
   return SLUG_TO_EXAM_COST[slug] || '$200'
 }
 
-function clampTitle(raw: string, max = 72): string {
+function clampTitle(raw: string, max = 60): string {
   const normalized = raw.replace(/\s+/g, ' ').trim()
   if (normalized.length <= max) return normalized
   const candidate = normalized.slice(0, max + 1)
@@ -175,12 +175,44 @@ function clampTitle(raw: string, max = 72): string {
   return `${cut.trim()}...`
 }
 
+function compressTitleWords(raw: string): string {
+  return raw
+    .replace(/^Salesforce\s+/i, '')
+    .replace(/\bCertified\b/gi, '')
+    .replace(/\bCertification\b/gi, '')
+    .replace(/\bAdministrator\b/gi, 'Admin')
+    .replace(/\bDeveloper\b/gi, 'Dev')
+    .replace(/\bArchitect\b/gi, 'Arch')
+    .replace(/\bConsultant\b/gi, 'Consult')
+    .replace(/\bSpecialist\b/gi, 'Spec')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+}
+
+function buildWinterTitle(base: string): string {
+  const candidates = [
+    `${base} (${TITLE_YEAR})`,
+    `${base} Prep (${TITLE_YEAR})`,
+    `${compressTitleWords(base)} (${TITLE_YEAR})`,
+    `${compressTitleWords(base)} Prep (${TITLE_YEAR})`,
+  ]
+  for (const candidate of candidates) {
+    if (candidate.length <= 60) return candidate
+  }
+  return clampTitle(candidates[candidates.length - 1], 60)
+}
+
 /** Intent-driven title: concise and non-truncated in SERP. */
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
     'app-builder': `Platform App Builder Practice Exam (${TITLE_YEAR})`,
     administrator: `Salesforce Admin Practice Test: Free ${TITLE_YEAR} Prep`,
+    'advanced-administrator': `Salesforce Advanced Admin (ADM-211) Prep: ${TITLE_YEAR}`,
+    'email-specialist': `Marketing Cloud Email Specialist Prep (${TITLE_YEAR})`,
+    'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
+    'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
+    'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
     'marketing-cloud-consultant': `Marketing Cloud Consultant Guide (${TITLE_YEAR} Update)`,
     'business-analyst': `Salesforce Business Analyst Study Guide (${TITLE_YEAR})`,
     'sales-cloud': `Sales Cloud Consultant Practice Exam: ${TITLE_YEAR}`,
@@ -189,16 +221,17 @@ function getCertMetaTitle(slug: string): string {
     'pardot-consultant': `Pardot Consultant Study Guide & Prep (${TITLE_YEAR})`,
     'pardot-specialist': `Pardot Specialist Practice Questions (${TITLE_YEAR})`,
     'experience-cloud': `Experience Cloud Consultant Exam Path (${TITLE_YEAR})`,
+    'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
+    'developer-1': `Salesforce PD1 Practice Exam: Free ${TITLE_YEAR} Prep`,
     'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
-    'mulesoft-integration-foundations': `MuleSoft Integration Foundations Guide (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
     'technical-architect': `Salesforce Technical Architect (CTA) Guide (${TITLE_YEAR})`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
   // Explicit short title for historical high-volume page.
-  if (slug === 'developer-1') return 'Salesforce Platform Developer I (PD1)'
+  if (slug === 'developer-1') return `Salesforce PD1 Practice Exam (${TITLE_YEAR})`
   /** Short SERP titles for top certs. */
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
@@ -307,16 +340,15 @@ function getCertMetaTitle(slug: string): string {
     const compactShort = short
       .replace(/^Salesforce Certified\s+/i, 'Salesforce ')
       .replace(/\(Account Engagement\)\s*/gi, '')
-    return clampTitle(`${compactShort} Practice Questions (${TITLE_YEAR})`)
+    return buildWinterTitle(compactShort)
   }
-  const suffix = ` Practice Questions (${TITLE_YEAR})`
-  if (slugToTitle[slug]) return clampTitle(`${slugToDisplayName(slug)}${suffix}`)
+  if (slugToTitle[slug]) return buildWinterTitle(slugToDisplayName(slug))
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const baseName = primaryName.replace(/\s*\([^)]+\)\s*$/, '').trim() || primaryName
   const hasCodeInName = examCode && primaryName.includes(examCode)
   const displayName = examCode && !hasCodeInName ? `${baseName} (${examCode})` : primaryName
-  return clampTitle(`${displayName}${suffix}`)
+  return buildWinterTitle(displayName)
 }
 
 /** Unique meta description 140–160 chars for certification pages. Rendered as <meta name="description" content="..."> in <head>. */
@@ -336,6 +368,16 @@ export function getCertMetaDescription(slug: string): string {
       `Get ready for the Business Analyst certification. Free ${TITLE_YEAR} study resources, exam tips, and practice questions to help you get certified fast.`,
     'sales-cloud':
       `Ace the Sales Cloud Consultant certification. Includes updated ${TITLE_YEAR} practice questions, exam tips, and free study guides for the current release.`,
+    'advanced-administrator':
+      `Pass ADM-211 faster. Use our ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan.`,
+    'email-specialist':
+      `Get certified faster in Email Specialist. Use ${TITLE_YEAR} practice questions, key topic breakdowns, and exam-focused study tips. Start free today.`,
+    'mulesoft-hyperautomation-developer':
+      `Tackle MuleSoft Hyperautomation with confidence. Get ${TITLE_YEAR} exam topics, free practice questions, and practical prep guidance. Start now.`,
+    'sharing-visibility-architect':
+      `Master sharing model scenarios for ${TITLE_YEAR}. Practice architect-level questions and prepare with focused guidance on visibility design decisions.`,
+    'identity-access-management-architect':
+      `Prepare for IAM Architect with ${TITLE_YEAR} scenarios on SSO, OAuth, and access design. Use practice questions and focused exam tips. Start now.`,
     'developer-2':
       `Level up your dev skills. Get the latest ${TITLE_YEAR} exam topics, practice questions, and expert tips for the Platform Developer II certification.`,
     'cpq-administrator':
