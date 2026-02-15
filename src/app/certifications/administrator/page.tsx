@@ -1,8 +1,11 @@
 import { Fragment } from 'react'
 import Link from 'next/link'
+import dynamic from 'next/dynamic'
 import CertificationCard from '@/components/CertificationCard'
-import QuestionCard from '@/components/QuestionCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
+
+const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), { ssr: false })
+const AdministratorCtaSections = dynamic(() => import('@/components/AdministratorCtaSections'), { ssr: false })
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
@@ -17,15 +20,15 @@ import type { Metadata } from 'next'
 
 const slug = 'administrator'
 
-/** ADM-201 section subtopics for expanded syllabus depth (reference-grade content). */
+/** ADM-201 section subtopics (compact for smaller HTML). */
 const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
-  'Configuration and Setup': ['Company settings', 'Fiscal year and currencies', 'UI and accessibility settings', 'Organization limits', 'Login policies'],
-  'Object Manager and Lightning App Builder': ['Custom objects and fields', 'Page layouts', 'Lightning pages and components', 'Record types', 'Compact layouts'],
-  'Workflow and Process Automation': ['Record-triggered Flow', 'Order of execution', 'Process Builder', 'Workflow rules', 'Approval processes', 'Automation limits'],
-  'Data and Analytics Management': ['Data import/export', 'Reports and report types', 'Dashboards', 'Report folders and sharing', 'Analytics permissions'],
-  'Sales and Marketing Applications': ['Lead and opportunity management', 'Campaigns', 'Products and price books', 'Forecasting (if in scope)'],
-  'Service and Support Applications': ['Cases', 'Case assignment rules', 'Knowledge', 'Service Console', 'Entitlements'],
-  'Productivity and Collaboration': ['Chatter', 'Files and content', 'Queues', 'Collaboration tools'],
+  'Configuration and Setup': ['Company settings', 'UI and accessibility', 'Login policies'],
+  'Object Manager and Lightning App Builder': ['Custom objects and fields', 'Page layouts', 'Record types'],
+  'Workflow and Process Automation': ['Record-triggered Flow', 'Process Builder', 'Workflow rules'],
+  'Data and Analytics Management': ['Reports and report types', 'Dashboards', 'Analytics permissions'],
+  'Sales and Marketing Applications': ['Lead and opportunity management', 'Campaigns', 'Products'],
+  'Service and Support Applications': ['Cases', 'Case assignment rules', 'Knowledge'],
+  'Productivity and Collaboration': ['Chatter', 'Files and content', 'Queues'],
 }
 
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
@@ -484,130 +487,13 @@ export default function AdministratorPage() {
               <ExamPrepContent slug={slug} />
             </div>
 
-            <div id="practice-questions" className="mt-12 sm:mt-16">
-              <div className="text-center mb-8 sm:mb-12">
-                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{getCertPracticeQuestionsHeading(slug)}</h2>
-                <p className="text-gray-600 text-sm sm:text-base max-w-2xl mx-auto px-4">
-                  Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
-                </p>
-              </div>
-              
-              <div className="space-y-6 sm:space-y-8">
-                {sampleQuestions.map((q, index) => (
-                  <QuestionCard
-                    key={index}
-                    questionNumber={index + 1}
-                    question={q.question}
-                    options={q.options}
-                    correctAnswer={q.correctAnswer}
-                    explanation={q.explanation}
-                    explanationSummary={q.explanation ? (q.explanation.split(/[.!?]/)[0]?.trim() ? q.explanation.split(/[.!?]/)[0].trim() + '.' : q.explanation) : undefined}
-                    whyWrong={'whyWrong' in q ? (q as { whyWrong?: string[] }).whyWrong : undefined}
-                  />
-                ))}
-              </div>
-            </div>
+            <PracticeQuestionsSection
+              heading={getCertPracticeQuestionsHeading(slug)}
+              introText="Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct."
+              questions={sampleQuestions}
+            />
 
-            <div id="more-questions" className="mt-12 sm:mt-16 bg-gradient-to-br from-salesforce-blue/10 via-salesforce-light/5 to-salesforce-blue/10 rounded-xl sm:rounded-2xl p-6 sm:p-8 lg:p-10 text-center border border-salesforce-blue/20 shadow-lg">
-              <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">Get the Full ADM-201 Question Bank</h3>
-              <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
-                Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
-              </p>
-              <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
-                If you&apos;re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
-              </p>
-              <p className="text-gray-500 text-xs max-w-md mx-auto mb-2">
-                Candidates who complete full mock exams report strong first-time pass rates. For pricing and access, use the contact form below or kindly reach out to{' '}
-                <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>—mention ADM-201.
-              </p>
-              <a
-                href="/contact#exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
-                className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
-              >
-                Get Full Question Bank
-              </a>
-            </div>
-
-            {/* Ethical comparison: Practice Questions vs Dumps (trust signal + captures dump-searching traffic) */}
-            <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
-              <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
-                ADM-201 Practice Questions vs Exam Dumps — What&apos;s the Difference?
-              </h2>
-              <p className="text-sm text-gray-700 mb-4">
-                Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here&apos;s why original practice questions are a better investment:
-              </p>
-              <div className="overflow-x-auto">
-                <table className="w-full text-sm text-left border-collapse">
-                  <thead>
-                    <tr className="border-b-2 border-gray-200">
-                      <th className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
-                      <th className="py-2.5 pr-4 font-semibold text-emerald-700">Practice Questions</th>
-                      <th className="py-2.5 font-semibold text-red-700">Exam Dumps</th>
-                    </tr>
-                  </thead>
-                  <tbody className="text-gray-700">
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2.5 pr-4 font-medium">Legality</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">100% legitimate</td>
-                      <td className="py-2.5 text-red-600">Violates Salesforce NDA</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2.5 pr-4 font-medium">Learning Value</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">Builds real understanding</td>
-                      <td className="py-2.5 text-red-600">Memorization without comprehension</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2.5 pr-4 font-medium">Accuracy</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">Aligned with current exam outline</td>
-                      <td className="py-2.5 text-red-600">Often outdated or incorrect</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2.5 pr-4 font-medium">Explanations</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">Detailed why-right / why-wrong</td>
-                      <td className="py-2.5 text-red-600">Rarely explained</td>
-                    </tr>
-                    <tr className="border-b border-gray-100">
-                      <td className="py-2.5 pr-4 font-medium">Certification Risk</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">None</td>
-                      <td className="py-2.5 text-red-600">Salesforce can revoke certification</td>
-                    </tr>
-                    <tr>
-                      <td className="py-2.5 pr-4 font-medium">On-the-Job Skills</td>
-                      <td className="py-2.5 pr-4 text-emerald-700">Prepares for real admin tasks</td>
-                      <td className="py-2.5 text-red-600">No transferable knowledge</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-              <p className="text-xs text-gray-500 mt-3">
-                Salesforce actively monitors for dump usage. Invest in legitimate practice materials that build lasting skills.
-              </p>
-            </section>
-
-            <section id="platform-admin-vs-other" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="comparison-heading">
-              <h2 id="comparison-heading" className="text-xl font-bold text-gray-900 mb-4">
-                Platform Administrator vs Other Salesforce Certifications
-              </h2>
-              <p className="text-gray-600 text-sm mb-4">
-                Choosing the right certification depends on your experience and goals. Here’s how the Platform Administrator (ADM-201) compares to common next steps:
-              </p>
-              <ul className="space-y-3 text-sm text-gray-700">
-                <li>
-                  <strong className="text-gray-900">Platform Administrator vs Advanced Administrator (ADM-211):</strong>{' '}
-                  ADM-201 is the entry-level admin cert; Advanced Administrator builds on it with deeper configuration, integration, and solution design. Take ADM-201 first, then consider the{' '}
-                  <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
-                    ADM-211 Advanced Administrator study guide &amp; practice questions
-                  </Link>.
-                </li>
-                <li>
-                  <strong className="text-gray-900">Platform Administrator vs Platform App Builder (DEV-402):</strong>{' '}
-                  Both are declarative and don’t require coding. App Builder focuses on building custom apps, objects, and Lightning components. If you enjoy customizing the platform after ADM-201, see our{' '}
-                  <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
-                    DEV-402 Platform App Builder study guide &amp; free practice test
-                  </Link>.
-                </li>
-              </ul>
-            </section>
+            <AdministratorCtaSections />
 
             <div id="related-certs">
               <RelatedCertifications currentSlug={slug} />

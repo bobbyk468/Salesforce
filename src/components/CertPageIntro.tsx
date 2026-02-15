@@ -48,9 +48,9 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
 
       <p className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
         This page is your <strong className="text-gray-900">{primaryName}</strong>
-        {examCode ? <> (exam code <strong className="text-gray-900">{examCode}</strong>)</> : null}
+        {examCode ? <> (exam <strong className="text-gray-900">{examCode}</strong>)</> : null}
         {formerName ? <>—formerly <strong className="text-gray-900">{formerName}</strong></> : null}
-        {' '}study guide. The exam tests skills that employers look for in Salesforce roles. It is for {audience} who want a recognized credential.
+        {' '}study guide. The exam tests skills that employers want. It is for {audience} who want a credential.
       </p>
 
       <h3 className="text-sm font-semibold text-gray-900 mt-4 mb-2">What you get here</h3>

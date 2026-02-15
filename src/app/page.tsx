@@ -23,7 +23,6 @@ import {
 } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
-import { OFFICIAL_CERT_NAMES } from '@/lib/cert-official-names'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -248,15 +247,6 @@ const faqItems = [
 ]
 
 export default function Home() {
-  /** Use official "Salesforce Certified X" naming for all certs in the grid. */
-  const categoriesWithOfficialNames = certificationCategories.map((cat) => ({
-    ...cat,
-    certifications: cat.certifications.map((c) => {
-      const slug = c.href.replace('/certifications/', '').replace(/\/$/, '')
-      return { ...c, name: OFFICIAL_CERT_NAMES[slug] ?? c.name }
-    }),
-  }))
-
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -645,59 +635,33 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Certifications Grid */}
-      <section className="py-20 px-4">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Explore Salesforce Certifications by Role
-            </h2>
-            <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-              Choose your certification path and start preparing with our comprehensive study materials
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {categoriesWithOfficialNames.map((category) => {
-              const topCerts = category.certifications.slice(0, 4)
-              const viewAllHref = `/certifications/role/${category.slug}`
-              return (
-                <div
-                  key={category.title}
-                  className="bg-white rounded-xl shadow-lg overflow-hidden border border-gray-100 hover:border-salesforce-blue/50 transition-all duration-200"
+      {/* Browse by role (compact for smaller HTML; full grid on /certifications) */}
+      <section className="py-20 px-4" aria-labelledby="browse-heading">
+        <div className="max-w-3xl mx-auto text-center">
+          <h2 id="browse-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            Explore Salesforce Certifications by Role
+          </h2>
+          <p className="text-xl text-gray-600 mb-8">
+            Choose your path and start preparing with exam weightage, tips, and practice questions.
+          </p>
+          <ul className="flex flex-wrap justify-center gap-3">
+            {certificationCategories.map((category) => (
+              <li key={category.slug}>
+                <Link
+                  href={`/certifications/role/${category.slug}`}
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/50 hover:text-salesforce-dark transition-colors"
                 >
-                  <div className={`bg-gradient-to-r ${category.color} p-6 text-white`}>
-                    <category.icon className="h-12 w-12 mb-4" />
-                    <h3 className="text-2xl font-bold mb-2">{category.title}</h3>
-                    <p className="text-white/80">{category.description}</p>
-                  </div>
-                  <div className="p-6">
-                    <ul className="space-y-3">
-                      {topCerts.map((cert) => (
-                        <li key={cert.href}>
-                          <Link
-                            href={cert.href}
-                            className="flex items-center text-gray-700 hover:text-salesforce-blue transition-colors group"
-                          >
-                            <Award className="h-5 w-5 mr-2 text-gray-400 group-hover:text-salesforce-blue flex-shrink-0" />
-                            <span>{cert.name}</span>
-                            <ArrowRight className="h-4 w-4 ml-auto opacity-0 group-hover:opacity-100 transition-opacity flex-shrink-0" />
-                          </Link>
-                        </li>
-                      ))}
-                    </ul>
-                    <Link
-                      href={viewAllHref}
-                      className="mt-4 inline-flex items-center gap-1.5 text-sm font-semibold text-salesforce-blue hover:text-salesforce-dark transition-colors"
-                    >
-                      View all {category.title} certs
-                      <ArrowRight className="h-4 w-4" />
-                    </Link>
-                  </div>
-                </div>
-              )
-            })}
-          </div>
+                  {category.title}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </li>
+            ))}
+          </ul>
+          <p className="mt-6">
+            <Link href="/certifications" className="font-semibold text-salesforce-blue hover:text-salesforce-dark">
+              View all certifications
+            </Link>
+          </p>
         </div>
       </section>
 

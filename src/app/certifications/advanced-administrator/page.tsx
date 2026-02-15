@@ -8,8 +8,10 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
-import QuestionCard from '@/components/QuestionCard'
+import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
+
+const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), { ssr: false })
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -131,23 +133,11 @@ export default function AdvancedAdministratorPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
-          <div id="practice-questions" className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
-            </p>
-            
-            {sampleQuestions.map((q, index) => (
-              <QuestionCard
-                key={index}
-                questionNumber={index + 1}
-                question={q.question}
-                options={q.options}
-                correctAnswer={q.correctAnswer}
-                explanation={q.explanation}
-              />
-            ))}
-          </div>
+          <PracticeQuestionsSection
+            heading={getCertPracticeQuestionsHeading(slug)}
+            introText="Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct."
+            questions={sampleQuestions}
+          />
 
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 

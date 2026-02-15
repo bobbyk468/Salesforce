@@ -103,7 +103,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
           {category.items.length} certification{category.items.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.
         </p>
         <p className="text-gray-600">
-          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal.
+          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal. Each cert page has exam weightage and practice questions.
         </p>
       </div>
 

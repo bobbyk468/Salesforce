@@ -57,8 +57,11 @@ export default function CertificationsIndexPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <div className="text-center mb-12">
         <h1 className="text-4xl font-bold text-gray-900 mb-4">All Salesforce Certifications</h1>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 mb-2">
           Browse by role and find practice questions and study materials for every Salesforce credential.
+        </p>
+        <p className="text-gray-600">
+          Each role (Administrator, Developer, Consultant, and more) links to certification pages with exam weightage, study guides, and sample questions.
         </p>
       </div>
 

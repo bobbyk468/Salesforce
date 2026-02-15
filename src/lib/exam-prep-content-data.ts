@@ -27,7 +27,7 @@ const DEFAULT_PREP: ExamPrepContent = {
   ],
   prerequisites: ['Hands-on experience in a Salesforce org', 'Familiarity with the exam outline'],
   focusAreas: ['Highest-weighted sections', 'Scenario-based questions', 'Setup and configuration'],
-  studyStrategy: 'Start with the sections that carry the most weight on the exam. Use a mix of Trailhead, hands-on practice in a dev org, and practice questions. Schedule the exam only after you can explain concepts and pass timed practice tests.',
+  studyStrategy: 'Start with the sections that have the most weight. Use Trailhead, hands-on practice, and practice questions. Book the exam only after you can explain concepts and pass timed practice tests.',
 }
 
 export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
@@ -41,8 +41,8 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     ],
     prerequisites: ['6+ months Salesforce Admin experience', 'Platform Fundamentals or equivalent knowledge'],
     focusAreas: ['Configuration and Setup', 'Object Manager and Lightning App Builder', 'Security and Access', 'Automation (Flow vs Workflow)'],
-    studyStrategy: 'Spend 40% of study time on Configuration, Object Manager, and Lightning App Builder. Use a Developer Edition org to configure real scenarios. Take full-length practice exams under time pressure.',
-    whyItMatters: 'The Admin cert is the gateway to most Salesforce roles and is often required for Consultant and Developer paths.',
+    studyStrategy: 'Spend 40% of study time on Configuration, Object Manager, and Lightning App Builder. Use a Developer Edition org to practice. Take full-length practice exams under time pressure.',
+    whyItMatters: 'The Admin cert is the gateway to most Salesforce roles. It is often required for Consultant and Developer paths.',
   },
   'advanced-administrator': {
     ...DEFAULT_PREP,
@@ -78,8 +78,8 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     ],
     prerequisites: ['Salesforce Certified Administrator', 'Sales Cloud implementation experience'],
     focusAreas: ['Solution Design', 'Sales Cloud Data Model', 'Lead and Opportunity Management', 'Analytics'],
-    studyStrategy: 'Think like a consultant: given a scenario, recommend the right features and configuration. Study the Sales Cloud Implementation Guide and practice designing solutions for sample requirements.',
-    whyItMatters: 'Sales Cloud Consultant is one of the most sought-after certs for implementation and consulting roles.',
+    studyStrategy: 'Think like a consultant. Given a scenario, recommend the right features and configuration. Study the Sales Cloud Implementation Guide and practice with sample requirements.',
+    whyItMatters: 'Sales Cloud Consultant is a top cert for implementation and consulting roles.',
   },
   'service-cloud': {
     ...DEFAULT_PREP,
@@ -104,7 +104,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     prerequisites: ['Programming experience (Java, C#, or similar)', 'Administrator or App Builder recommended'],
     focusAreas: ['Apex and Triggers', 'Lightning Web Components', 'Testing and Deployment', 'Governor Limits'],
     studyStrategy: 'Code daily in a dev org. Build a small LWC + Apex feature and write tests. Memorize key governor limits and practice debugging scenarios.',
-    whyItMatters: 'PD1 is the standard developer cert and is required for many technical and architect paths.',
+    whyItMatters: 'PD1 is the standard developer cert. It is required for many technical and architect paths.',
   },
   'developer-2': {
     ...DEFAULT_PREP,

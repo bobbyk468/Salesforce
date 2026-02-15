@@ -7,7 +7,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "perf:check": "python3 scripts/page_speed_monitor.py"
+    "perf:check": "python3 scripts/page_speed_monitor.py",
+    "validate:seo": "node scripts/validate-technical-seo.mjs",
+    "validate:seo:local": "npm run build && node scripts/validate-technical-seo.mjs --base=http://localhost:3000",
+    "validate:readability": "node scripts/validate-readability.mjs",
+    "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs"
   },
   "dependencies": {
     "next": "^14.2.0",

@@ -66,7 +66,7 @@ export default function CertificationPathPage() {
           Certification Paths
         </h1>
         <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-          From foundational to advanced—see all possible paths and scenarios for every role. Choose a track and follow the steps.
+          From foundational to advanced—see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
         </p>
       </div>
 
