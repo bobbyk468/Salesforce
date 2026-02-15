@@ -52,18 +52,20 @@ export default function TermsPage() {
       </p>
       <div className="prose prose-gray max-w-none space-y-4 text-gray-700">
         <p>
-          By using this site, you agree to use it only for lawful purposes and in accordance with these terms.
-          This site is an independent preparation resource and is not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
+          By using this site, you agree to use it only for lawful purposes and in line with these terms.
+          This site is an independent prep resource. It is not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
         </p>
         <p>
-          <strong>Trademark Notice:</strong> Salesforce, Trailblazer, Trailhead, and all other Salesforce marks are trademarks of salesforce.com, inc. "Trailblaze Prep" is not affiliated with or endorsed by Salesforce's Trailblazer program or Trailhead. Our use of Salesforce certification names is for descriptive purposes only to identify the certifications we help prepare for.
+          <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc.
+          &quot;Trailblaze Prep&quot; is not affiliated with or endorsed by Salesforce&apos;s Trailblazer program or Trailhead.
+          We use certification names only to describe the exams we help you prepare for.
         </p>
         <p>
-          Our practice questions and study materials are designed to help you prepare for Salesforce certification exams.
-          They are exam-style practice materials aligned with official exam outlines—not braindumps or real exam content.
+          Our practice questions and study materials help you prepare for Salesforce certification exams.
+          They are exam-style materials aligned with official outlines. They are not braindumps or real exam content.
         </p>
         <p>
-          For full terms, contact us at the email in the footer. We reserve the right to update these terms at any time.
+          For full terms, contact us at the email in the footer. We may update these terms at any time.
         </p>
       </div>
       <p className="mt-8">

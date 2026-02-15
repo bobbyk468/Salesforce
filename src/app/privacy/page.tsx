@@ -48,13 +48,15 @@ export default function PrivacyPage() {
       </p>
       <div className="prose prose-gray max-w-none space-y-4 text-gray-700">
         <p>
-          We respect your privacy. When you contact us via the contact form, we use the information you provide only to respond to your inquiry.
+          We respect your privacy. When you contact us, we use your details only to respond.
         </p>
         <p>
-          We do not sell your personal information. We may use cookies or similar technologies for site functionality; we do not use them for advertising tracking without your consent.
+          We do not sell your data. We may use cookies for site use. We do not use them for ad tracking without your consent.
         </p>
         <p className="text-sm bg-gray-50 p-4 rounded-lg border border-gray-200">
-          <strong>Trademark Notice:</strong> This site is not affiliated with Salesforce, Inc. Salesforce, Trailblazer, Trailhead, and all Salesforce marks are trademarks of salesforce.com, inc. "Trailblaze Prep" is an independent resource and is not endorsed by or affiliated with Salesforce's Trailblazer program.
+          <strong>Trademark notice:</strong> This site is not affiliated with Salesforce, Inc.
+          Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc.
+          &quot;Trailblaze Prep&quot; is independent and not endorsed by or affiliated with Salesforce&apos;s Trailblazer program.
         </p>
         <p>
           For questions about this policy, contact us at the email in the footer.
