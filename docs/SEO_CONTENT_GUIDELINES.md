@@ -56,6 +56,29 @@ Google's search algorithm:
 
 ---
 
+## Readability (SEO & UX)
+
+SEO tools and users both benefit from **easy-to-read** content. Long sentences and dense paragraphs score as "Very Difficult" in readability audits and can hurt engagement and rankings.
+
+### Guidelines
+
+- **Short sentences** — Aim for 15–20 words or fewer when possible. Break long sentences into two.
+- **Simple words** — Prefer common words (e.g. "use" instead of "utilize", "help" instead of "facilitate") unless the term is technical (e.g. exam codes).
+- **Short paragraphs** — One main idea per paragraph. Use 2–4 sentences per block.
+- **Lists over walls of text** — Use bullet or numbered lists for multiple items (tips, prerequisites, steps).
+- **Subheadings** — Use H2/H3 so users and crawlers can scan (e.g. "What you get here", "Study strategy").
+
+### Where we applied this
+
+- **CertPageIntro** — Short intro sentences + "What you get here" list; shorter footer lines.
+- **Home page** — Hero and section copy shortened; FAQ answers simplified.
+- **About** — Paragraphs split; lists used for "Our approach" and originality.
+- **ExamPrepContent** — Study strategy and "Why it matters" split into one sentence per paragraph; Exam Format list shortened.
+
+When adding new copy (exam tips, descriptions, FAQs), keep sentences short and use lists where it makes sense.
+
+---
+
 ## How to Verify Content Originality
 
 ### 1. **Check for Duplicate Content Online**

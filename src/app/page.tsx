@@ -223,27 +223,27 @@ const faqItems = [
   {
     question: 'How accurate are these practice questions?',
     answer:
-      'Our practice questions are aligned with official Salesforce exam outlines and updated regularly to reflect current exam objectives. They are designed to test the same concepts and skills you will see on the real exam, helping you gauge readiness and identify gaps.',
+      'They are aligned with official Salesforce exam outlines and updated regularly. They test the same concepts you will see on the real exam. Use them to gauge readiness and find gaps.',
   },
   {
     question: 'How often are the questions and study materials updated?',
     answer:
-      'We review and update our content on a regular basis to match the latest Salesforce exam blueprints and product changes. When Salesforce releases new exam versions or weightage changes, we update section weightage and topics accordingly.',
+      'We review and update content to match the latest exam blueprints and product changes. When Salesforce changes exams or weightage, we update our section weightage and topics.',
   },
   {
     question: 'What certifications do you cover?',
     answer:
-      'We cover all major Salesforce certifications: Associate (Platform Foundations, AI Associate, Marketing Cloud Engagement Foundations, MuleSoft Integration Foundations), Administrator, Developer, Consultant (Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, and more), Marketing, Architect, Accredited Professional, Sales Professional, Designer, and Tableau. Each certification page includes section-wise exam weightage, exam tips, prerequisites, and practice questions.',
+      'We cover all major Salesforce certifications: Associate, Administrator, Developer, Consultant, Marketing, Architect, Accredited Professional, Sales, Designer, and Tableau. Each page has exam weightage, tips, prerequisites, and practice questions.',
   },
   {
     question: 'What makes your materials different from other study resources?',
     answer:
-      'We provide section-wise exam weightage for every certification so you know exactly where to focus your study time. Each certification page includes exam tips, prerequisites, focus areas, and a study strategy—not just practice questions. Our content is structured for quick scanning and long-tail search intent.',
+      'We give section-wise exam weightage for every certification so you know where to focus. Each page has exam tips, prerequisites, focus areas, and a study strategy—not just questions. Content is easy to scan.',
   },
   {
     question: 'Do I need hands-on experience before taking a Salesforce certification exam?',
     answer:
-      'Yes. Salesforce recommends hands-on experience in a Developer Edition or Trailhead Playground org for most certifications. Our study materials and practice questions complement hands-on practice; they are not a substitute for using the platform.',
+      'Yes. Salesforce recommends hands-on experience in a Developer Edition or Trailhead Playground for most certs. Our materials support that practice; they are not a substitute for using the platform.',
   },
 ]
 
@@ -316,13 +316,13 @@ export default function Home() {
             Salesforce Certification Resources, Practice Questions & Study Guides
           </h1>
           <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
-            Prepare for every Salesforce certification with practice questions, section-wise exam weightage, and study guides—all in one place.
+            Prepare for every Salesforce certification with practice questions, exam weightage, and study guides in one place.
           </p>
           <p className="text-lg text-blue-100/90 mb-2 max-w-2xl mx-auto">
-            Whether you&apos;re studying for Admin (ADM-201), Platform Developer I, Sales Cloud Consultant, or any of 80+ credentials, we give you exam tips, prerequisites, focus areas, and sample questions so you know where to focus and when you&apos;re ready to sit the exam.
+            Studying for Admin (ADM-201), Developer I, Sales Cloud Consultant, or 80+ other credentials? We give you exam tips, prerequisites, and sample questions.
           </p>
           <p className="text-base text-blue-100/80 mb-8 max-w-2xl mx-auto">
-            Our materials are built for professionals who want clear exam outlines, actionable study strategies, and practice under exam-like conditions—without the clutter.
+            Clear outlines. Actionable study plans. Practice under exam-like conditions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
@@ -366,7 +366,7 @@ export default function Home() {
             Why Use Trailblaze Prep for Your Exam Prep
           </h2>
           <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Built for professionals who want clarity, focus, and confidence before their certification exam.
+            Built for professionals who want clarity and confidence before their exam.
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
@@ -379,7 +379,7 @@ export default function Home() {
                 <h3 className="text-2xl font-bold text-gray-900">Who This Site Is For</h3>
               </div>
               <p className="text-gray-700 leading-relaxed mb-4">
-                Trailblaze Prep is designed for anyone preparing for a Salesforce certification exam—whether you&apos;re an administrator, developer, consultant, architect, or marketer.
+                Trailblaze Prep is for anyone preparing for a Salesforce certification. Admins, developers, consultants, architects, and marketers.
               </p>
               <ul className="space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
@@ -492,7 +492,7 @@ export default function Home() {
               What Makes Us Different
             </h2>
             <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              Unlike generic question banks, we combine three powerful features on every certification page to give you a complete study experience.
+              We combine three features on every certification page for a complete study experience.
             </p>
           </div>
 
@@ -506,7 +506,7 @@ export default function Home() {
                 Exam Weightage by Section
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                See the exact percentage of the exam devoted to each topic. Know exactly where to focus your study time for maximum efficiency.
+                See the exact share of the exam for each topic. Focus your study time where it counts.
               </p>
             </div>
 
@@ -519,7 +519,7 @@ export default function Home() {
                 Exam Prep Content
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Get tips, prerequisites, focus areas, and a study strategy written specifically for each exam. No generic advice—just targeted guidance.
+                Tips, prerequisites, focus areas, and a study plan for each exam. Targeted guidance, not generic advice.
               </p>
             </div>
 
@@ -532,7 +532,7 @@ export default function Home() {
                 Sample Practice Questions
               </h3>
               <p className="text-gray-600 leading-relaxed">
-                Test your knowledge with sample questions and detailed explanations. Practice under exam-like conditions before the real test.
+                Sample questions with clear explanations. Practice under exam-like conditions before the real test.
               </p>
             </div>
           </div>
@@ -545,7 +545,7 @@ export default function Home() {
             <div>
               <h4 className="font-semibold text-gray-900 mb-2">Always Up-to-Date</h4>
               <p className="text-gray-700 text-sm">
-                We keep our content aligned with official exam outlines and update it when Salesforce changes exams, so you&apos;re never studying outdated material.
+                We align content with official exam outlines and update when Salesforce changes exams. No outdated material.
               </p>
             </div>
           </div>
@@ -605,7 +605,7 @@ export default function Home() {
               What&apos;s Inside Each Certification Page
             </h2>
             <p className="text-center text-gray-600 max-w-2xl mx-auto">
-              Every certification page gives you section-wise exam weightage, exam tips, prerequisites, and sample practice questions with explanations—so you know where to focus and what to expect.
+              Each certification page has exam weightage, tips, prerequisites, and sample questions with explanations.
             </p>
           </div>
           <div className="rounded-2xl border-l-4 border-salesforce-blue bg-salesforce-blue/5 border border-gray-100 shadow-md p-8">

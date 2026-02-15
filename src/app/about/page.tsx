@@ -65,9 +65,13 @@ export default function AboutPage() {
         </h2>
         <p className="text-gray-700">
           {SITE_NAME} is an independent study resource for people preparing for Salesforce certification exams.
-          We are not affiliated with, endorsed by, or sponsored by Salesforce, Inc. <strong>Trademark Notice:</strong> Salesforce, Trailblazer, Trailhead, and all other Salesforce marks are trademarks of salesforce.com, inc. "{SITE_NAME}" is not affiliated with or endorsed by Salesforce's Trailblazer program. Our goal is to help you see
-          exactly how each exam is weighted by section, get clear exam tips and prerequisites, and practice with
-          sample questions before you sit the real exam.
+          We are not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
+        </p>
+        <p className="text-gray-700">
+          <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc. &quot;{SITE_NAME}&quot; is not affiliated with or endorsed by Salesforce&apos;s Trailblazer program.
+        </p>
+        <p className="text-gray-700">
+          We help you see how each exam is weighted by section, get clear exam tips and prerequisites, and practice with sample questions before the real exam.
         </p>
       </section>
 
@@ -75,12 +79,14 @@ export default function AboutPage() {
         <h2 id="experience-heading" className="text-xl font-semibold text-gray-900">
           Our approach to exam prep
         </h2>
+        <p className="text-gray-700">We focus on three things:</p>
+        <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
+          <li><strong>Section-wise exam weightage</strong> — So you know where to spend your study time.</li>
+          <li><strong>Exam prep content</strong> — Tips, prerequisites, focus areas, and a study strategy for each certification.</li>
+          <li><strong>Sample practice questions with explanations</strong> — Aligned with official exam outlines.</li>
+        </ul>
         <p className="text-gray-700">
-          We focus on three things that matter for exam prep: (1) <strong>Section-wise exam weightage</strong> so
-          you know where to spend your study time. (2) <strong>Exam prep content</strong>—tips, prerequisites,
-          focus areas, and a study strategy written for each certification. (3) <strong>Sample practice
-          questions with explanations</strong>, aligned with official exam outlines. We do not offer braindumps
-          or real exam questions; our materials are designed to help you learn and validate your knowledge.
+          We do not offer braindumps or real exam questions. Our materials help you learn and check your knowledge.
         </p>
       </section>
 
@@ -89,16 +95,16 @@ export default function AboutPage() {
           Original content for SEO and learning
         </h2>
         <p className="text-gray-700">
-          All content on this site is <strong>original and unique</strong>—written specifically for Trailblaze Prep. We do not copy or scrape content from other websites, study guides, or exam prep resources. Each certification page includes:
+          All content on this site is <strong>original and unique</strong>, written for Trailblaze Prep. We do not copy or scrape from other sites or study guides. Each certification page includes:
         </p>
         <ul className="text-gray-700 space-y-2 list-disc list-inside ml-4">
-          <li><strong>Unique practice questions</strong>—Each certification has its own set of original practice questions written to test the concepts covered in that exam, not copied from other sources.</li>
-          <li><strong>Original exam tips and strategies</strong>—Our exam tips, prerequisites, focus areas, and study strategies are written based on our analysis of official exam outlines and real-world experience, not duplicated from other sites.</li>
-          <li><strong>Unique descriptions and explanations</strong>—Every certification description and question explanation is written fresh for this site to ensure originality.</li>
-          <li><strong>Original analysis</strong>—While exam weightage percentages are based on official Salesforce exam outlines (publicly available on Trailhead), our presentation, analysis, and recommendations are original.</li>
+          <li><strong>Unique practice questions</strong> — Written to test concepts for that exam.</li>
+          <li><strong>Original exam tips and strategies</strong> — Based on official outlines and experience.</li>
+          <li><strong>Unique descriptions and explanations</strong> — Written fresh for this site.</li>
+          <li><strong>Original analysis</strong> — Weightage comes from official outlines; our presentation and recommendations are our own.</li>
         </ul>
         <p className="text-gray-700 mt-4">
-          This original content approach helps ensure that search engines like Google can properly index and rank our pages, as duplicate content can negatively impact SEO. Each page provides unique value to help you prepare for your certification exam.
+          Original content helps search engines index and rank our pages. Each page gives unique value for your exam prep.
         </p>
       </section>
 
@@ -107,11 +113,10 @@ export default function AboutPage() {
           Content freshness
         </h2>
         <p className="text-gray-700">
-          Salesforce exams and outlines change over time. We review and update our content on a regular basis
-          to align with the latest exam blueprints and product changes. Key certification pages and study
-          materials are marked with a <strong>last updated</strong> date (currently {CONTENT_LAST_UPDATED}) so
-          you can see how fresh the content is. Always double-check the official exam guide on Trailhead before
-          booking your exam.
+          Salesforce exams and outlines change. We review and update content to match the latest blueprints and product changes.
+        </p>
+        <p className="text-gray-700">
+          Key pages are marked with a <strong>last updated</strong> date (currently {CONTENT_LAST_UPDATED}). Always check the official exam guide on Trailhead before booking.
         </p>
       </section>
 
@@ -120,16 +125,10 @@ export default function AboutPage() {
           Author and credentials
         </h2>
         <p className="text-gray-700">
-          The content on this site is created by practitioners with experience in Salesforce implementations
-          and certification preparation. We focus on section-wise exam weightage, practice questions with
-          explanations, and study strategies aligned with official outlines. If you hold Salesforce
-          certifications or have years of experience, you can add your credentials and LinkedIn profile below
-          to build trust with visitors.
+          Content is created by practitioners with experience in Salesforce implementations and certification prep. We focus on exam weightage, practice questions with explanations, and study strategies aligned with official outlines.
         </p>
         <p className="text-gray-600 text-sm">
-          <strong>Placeholder:</strong> Add your Salesforce certifications (e.g. Administrator, Sales Cloud
-          Consultant), years of experience, and a link to your LinkedIn profile here. This helps establish
-          E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness) for exam-prep content.
+          <strong>Placeholder:</strong> Add your Salesforce certifications, years of experience, and LinkedIn here. This supports E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness).
         </p>
       </section>
 
@@ -138,12 +137,11 @@ export default function AboutPage() {
           Contact and identity
         </h2>
         <p className="text-gray-700">
-          You can reach us at{' '}
+          Reach us at{' '}
           <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
             {CONTACT_EMAIL}
           </a>
-          . We welcome feedback, correction suggestions, and questions about our materials. For official
-          certification information, exam schedules, and Trailhead learning paths, use{' '}
+          . We welcome feedback and questions. For official certification info and Trailhead, see{' '}
           <a
             href="https://www.salesforce.com/trailblazer/certification"
             target="_blank"
@@ -152,8 +150,7 @@ export default function AboutPage() {
           >
             Salesforce Trailblazer Certification
             <ExternalLink className="h-4 w-4" />
-          </a>
-          .
+          </a>.
         </p>
       </section>
 

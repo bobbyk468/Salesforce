@@ -282,7 +282,7 @@ function ContactPageContent() {
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Whether you have questions about our certification materials, pricing, or just want to say hello, we're here to help.
+                Questions about our materials or pricing? Just want to say hello? We&apos;re here to help.
               </p>
 
               <div className="space-y-6">

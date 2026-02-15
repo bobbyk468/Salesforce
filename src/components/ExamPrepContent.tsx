@@ -19,9 +19,14 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
         <div className="bg-gradient-to-br from-salesforce-blue/10 via-salesforce-light/5 to-salesforce-blue/10 rounded-xl sm:rounded-2xl p-5 sm:p-6 border border-salesforce-blue/30 shadow-md backdrop-blur-sm">
           <div className="flex items-start gap-3 sm:gap-4">
             <Award className="h-5 w-5 sm:h-6 sm:w-6 text-salesforce-blue flex-shrink-0 mt-0.5" />
-            <div>
+            <div className="space-y-2">
               <h3 className="font-semibold text-gray-900 mb-2 text-base sm:text-lg">Why This Certification Matters</h3>
-              <p className="text-gray-700 text-xs sm:text-sm leading-relaxed">{content.whyItMatters}</p>
+              {content.whyItMatters
+                .split(/(?<=[.!?])\s+/)
+                .filter((s) => s.trim().length > 0)
+                .map((sentence, i) => (
+                  <p key={i} className="text-gray-700 text-xs sm:text-sm leading-relaxed">{sentence.trim()}</p>
+                ))}
             </div>
           </div>
         </div>
@@ -77,13 +82,20 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
         </div>
       </div>
 
-      {/* Study strategy */}
+      {/* Study strategy — split into short sentences for readability */}
       <div className="bg-gradient-to-br from-white via-indigo-50/20 to-white rounded-xl sm:rounded-2xl shadow-lg border border-indigo-100/50 overflow-hidden hover:shadow-xl transition-shadow duration-300 backdrop-blur-sm">
         <div className="bg-gradient-to-r from-indigo-600/90 to-purple-600/90 p-4 sm:p-5 text-white flex items-center gap-3">
           <Zap className="h-5 w-5 sm:h-6 sm:w-6 flex-shrink-0" />
           <h3 className="font-semibold text-base sm:text-lg">Study Strategy</h3>
         </div>
-        <p className="p-4 sm:p-5 lg:p-6 text-gray-700 text-xs sm:text-sm leading-relaxed">{content.studyStrategy}</p>
+        <div className="p-4 sm:p-5 lg:p-6 space-y-2 text-gray-700 text-xs sm:text-sm leading-relaxed">
+          {content.studyStrategy
+            .split(/(?<=[.!?])\s+/)
+            .filter((s) => s.trim().length > 0)
+            .map((sentence, i) => (
+              <p key={i}>{sentence.trim()}</p>
+            ))}
+        </div>
       </div>
 
       {/* Shared depth section for all certs (ADM-201 has custom detailed version on-page) */}
@@ -94,25 +106,23 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
           </div>
           <div className="p-4 sm:p-5 lg:p-6 space-y-4">
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-              Most Salesforce certification exams test applied, scenario-based decision making. For <strong className="text-gray-900">{certName}</strong>,
-              focus on understanding when to use each feature, not just memorizing terms.
+              Most Salesforce exams test scenario-based decisions. For <strong className="text-gray-900">{certName}</strong>, focus on when to use each feature, not just terms.
             </p>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700 list-disc list-inside">
-              <li>Practice with timed question sets to improve exam-day pacing and confidence.</li>
-              <li>Review why wrong options are wrong; this builds stronger scenario reasoning.</li>
-              <li>Prioritize high-weight topics first, then close gaps with focused revision.</li>
-              <li>Aim for consistent mock performance before booking the exam.</li>
+              <li>Do timed question sets. Build pacing and confidence.</li>
+              <li>Review why wrong answers are wrong. It improves scenario reasoning.</li>
+              <li>Study high-weight topics first. Then close gaps.</li>
+              <li>Book the exam when your mock scores are steady.</li>
             </ul>
             <div className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3">
-              <span className="font-medium text-gray-800">Next steps:</span>{' '}
+              <span className="font-medium text-gray-800">Next:</span>{' '}
               <Link href="#practice-questions" className="text-salesforce-blue font-medium hover:underline">
-                start practice questions
+                practice questions
               </Link>
-              {' '}or review the{' '}
+              {' '}or{' '}
               <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
                 certification path
-              </Link>
-              {' '}for your next credential.
+              </Link>.
             </div>
           </div>
         </div>

@@ -45,48 +45,56 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
       <h2 id="cert-intro-heading" className="sr-only">
         {getCertAboutExamHeading(slug)}
       </h2>
-      <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
+
+      <p className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
         This page is your <strong className="text-gray-900">{primaryName}</strong>
         {examCode ? <> (exam code <strong className="text-gray-900">{examCode}</strong>)</> : null}
         {formerName ? <>—formerly <strong className="text-gray-900">{formerName}</strong></> : null}
-        {' '}exam study guide. The certification validates skills that employers look for in Salesforce roles—whether you&apos;re an administrator, consultant, developer, or architect. It is designed for {audience} who want to prove their knowledge with an industry-recognized credential.
+        {' '}study guide. The exam tests skills that employers look for in Salesforce roles. It is for {audience} who want a recognized credential.
       </p>
+
+      <h3 className="text-sm font-semibold text-gray-900 mt-4 mb-2">What you get here</h3>
+      <ul className="text-gray-700 text-sm sm:text-base space-y-1.5 mb-4 list-disc list-inside">
+        <li><strong>Section weightage</strong> — See which topics have the most questions.</li>
+        <li><strong>Exam tips and prerequisites</strong> — A clear study plan.</li>
+        <li><strong>Sample practice questions</strong> — With clear explanations.</li>
+      </ul>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-        Here you&apos;ll find <strong className="text-gray-900">section-wise exam weightage</strong> so you know exactly which topics carry the most questions, exam tips and prerequisites, a focused study plan, and <strong className="text-gray-900">sample practice questions with detailed explanations</strong>. All content on this page is original and unique—written specifically for this certification to help with your preparation. Use this page to align your study with the official outline and to gauge when you&apos;re ready to sit the exam. Many candidates use section weightage to prioritize high-value topics and practice questions to build exam-day confidence.
+        Content is written for this certification only. Use it to match your study to the official outline and to see when you&apos;re ready to book the exam.
       </p>
+
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-        Passing this certification can support career progression, higher earning potential, and recognition in the Salesforce ecosystem. Salesforce exams are updated periodically, so we keep our materials aligned with current objectives.
+        Passing can help your career and pay. We keep materials in line with current exam objectives.
       </p>
+
       <p className="text-sm text-gray-700 mb-4">
-        Need a bigger roadmap? Explore the{' '}
+        Need a bigger roadmap? See the{' '}
         <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
-          Salesforce certification path
+          certification path
         </Link>{' '}
-        or browse all exams on the{' '}
+        or{' '}
         <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
-          Salesforce certification index
+          all certifications
         </Link>.
       </p>
+
       <p className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3 mt-3">
-        <strong>Last reviewed:</strong> {CONTENT_LAST_UPDATED}. Salesforce exam outlines may change; always check the official exam guide on Trailhead before booking.
+        <strong>Last reviewed:</strong> {CONTENT_LAST_UPDATED}. Check the official exam guide on Trailhead before booking.
       </p>
       <p className="text-xs sm:text-sm text-gray-600 mt-2">
-        Reviewed against the official {primaryName}{examCode ? ` (${examCode})` : ''} exam guide — {CONTENT_LAST_UPDATED}.
-      </p>
-      <p className="text-xs sm:text-sm text-gray-600 mt-2">
-        <strong>How this content is maintained:</strong> Reviewed each release; aligned to the official exam guide. Content is not affiliated with Salesforce.
+        Reviewed against the official {primaryName}{examCode ? ` (${examCode})` : ''} exam guide. Not affiliated with Salesforce.
       </p>
 
       <div className="border-t border-gray-200 pt-4 mt-4 space-y-4">
         <p className="text-xs sm:text-sm text-gray-700">
-          <strong>Release compatible:</strong>{' '}
+          <strong>Release:</strong>{' '}
           <span className="inline-flex items-center rounded-full bg-salesforce-blue/15 px-2 sm:px-2.5 py-0.5 sm:py-1 text-xs sm:text-sm font-medium text-salesforce-blue border border-salesforce-blue/20">
             {RELEASE_CURRENT}
           </span>
-          {' '}— Study materials and objectives are aligned with the {RELEASE_CURRENT} release (compared to {RELEASE_PREVIOUS}).
+          {' '}— Aligned with {RELEASE_CURRENT} (vs {RELEASE_PREVIOUS}).
         </p>
         <div>
-          <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">What&apos;s new in {RELEASE_CURRENT}:</p>
+          <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">What&apos;s new in {RELEASE_CURRENT}</p>
           <ul className="text-xs sm:text-sm text-gray-700 space-y-1.5 list-disc list-inside pl-2">
             {WHATS_NEW_CURRENT_RELEASE.map((item, i) => (
               <li key={i}>{item}</li>

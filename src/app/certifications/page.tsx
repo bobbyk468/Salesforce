@@ -89,7 +89,7 @@ export default function CertificationsIndexPage() {
       <div className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
         <h3 className="text-xl font-bold text-gray-900 mb-4">Use the navigation menu</h3>
         <p className="text-gray-600 mb-6">
-          Select a role (Associate, Administrator, Developer, Consultant, Marketing, Architect, Accredited Professional, Sales, Designer, or Tableau) from the header to see all certifications in that category.
+          Use the header menu to pick a role (e.g. Administrator, Developer, Consultant). Then see all certifications in that category.
         </p>
         <Link
           href="/"
