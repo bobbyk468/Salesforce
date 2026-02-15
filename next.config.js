@@ -1,6 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
+  compress: true, // gzip responses (Referrer-Policy, XCTO, XFO, CSP already in headers())
+  // Production builds minify JS/CSS (SWC/Terser). "Unminified" audit may be from dev build or tool false positive.
+  productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller
   async redirects() {
     return [
       {
@@ -33,7 +36,7 @@ const nextConfig = {
       { key: 'Content-Security-Policy', value: csp },
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'X-Frame-Options', value: 'DENY' },
-      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' },
+      { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, // fixes "Missing Referrer Policy" audit
     ]
     // Apply to every route: root, all pages, all API routes
     return [

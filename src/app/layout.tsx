@@ -5,6 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import ContactSidebar from '@/components/ContactSidebar'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
+import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
@@ -103,6 +104,7 @@ export default function RootLayout({
     <html lang="en">
       <head />
       <body className={inter.className}>
+        <HreflangLinks />
         <GoogleAnalytics />
         <script
           type="application/ld+json"

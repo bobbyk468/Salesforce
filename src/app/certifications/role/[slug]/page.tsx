@@ -99,8 +99,11 @@ export default async function RoleCertificationsPage({ params }: Props) {
 
       <div className="mb-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">{category.name} Certifications</h1>
-        <p className="text-xl text-gray-600">
+        <p className="text-xl text-gray-600 mb-2">
           {category.items.length} certification{category.items.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.
+        </p>
+        <p className="text-gray-600">
+          Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal.
         </p>
       </div>
 
@@ -124,13 +127,19 @@ export default async function RoleCertificationsPage({ params }: Props) {
         ))}
       </div>
 
-      <div className="mt-12 text-center">
+      <div className="mt-12 text-center flex flex-wrap justify-center gap-3">
         <Link
           href="/certifications"
           className="inline-flex items-center px-6 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
         >
           <ChevronLeft className="h-5 w-5 mr-2" />
           Back to all certifications
+        </Link>
+        <Link
+          href="/"
+          className="inline-flex items-center px-6 py-3 border border-gray-300 text-gray-700 rounded-lg font-semibold hover:bg-gray-50 transition-all duration-200"
+        >
+          Home
         </Link>
       </div>
     </div>

@@ -71,10 +71,14 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         Need a bigger roadmap? See the{' '}
         <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
           certification path
-        </Link>{' '}
-        or{' '}
+        </Link>
+        ,{' '}
         <Link href="/certifications" className="text-salesforce-blue font-medium hover:underline">
           all certifications
+        </Link>
+        , or{' '}
+        <Link href="/" className="text-salesforce-blue font-medium hover:underline">
+          home
         </Link>.
       </p>
 

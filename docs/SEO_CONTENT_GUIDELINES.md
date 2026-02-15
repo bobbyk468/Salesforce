@@ -56,6 +56,15 @@ Google's search algorithm:
 
 ---
 
+## Technical SEO (audit fixes)
+
+- **Hreflang:** `HreflangLinks` in the root layout injects `hreflang="en"` and `hreflang="x-default"` for the current page URL so single-language/region is explicit for crawlers.
+- **Inbound internal links:** Footer brand links to home; CertPageIntro includes a “home” link; role pages have a “Home” button. Ensures the homepage and key hubs get internal links from cert and role pages.
+- **Text-to-HTML ratio:** Certification path page loads paths client-side to shrink initial HTML; role pages have an extra sentence of body text. Prefer adding concise body text over extra markup when expanding pages.
+- **Unminified JS/CSS:** Production builds (`next build`) minify JS and CSS. `productionBrowserSourceMaps: false` in `next.config.js` avoids shipping source maps. If an audit still flags “unminified,” it may be run against a dev build or a false positive.
+
+---
+
 ## Readability (SEO & UX)
 
 SEO tools and users both benefit from **easy-to-read** content. Long sentences and dense paragraphs score as "Very Difficult" in readability audits and can hurt engagement and rankings.
