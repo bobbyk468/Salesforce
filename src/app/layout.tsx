@@ -109,6 +109,14 @@ export default function RootLayout({
   [data-main-layout] { display: grid; grid-template-columns: 1fr 320px; }
 }
 @media (max-width: 1023px) {
+  [data-critical-header] {
+    min-height: 4rem;
+    background: #fff;
+    border-bottom: 1px solid #f3f4f6;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+  }
   [data-lcp-hero] {
     background: linear-gradient(to bottom right, #0176D3, #1B96FF, #0176D3);
     padding: 1.5rem;
@@ -122,6 +130,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <style dangerouslySetInnerHTML={{ __html: criticalLayoutCSS }} />
       </head>
       <body className={inter.className}>
