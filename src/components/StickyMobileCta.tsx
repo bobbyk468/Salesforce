@@ -25,24 +25,25 @@ export default function StickyMobileCta({
     function updateVisibility() {
       // Skip work on desktop where this bar is always hidden.
       if (window.innerWidth >= 1024) {
-        setVisible(false)
+        requestAnimationFrame(() => setVisible(false))
         return
       }
 
       const scrollY = window.scrollY
       if (scrollY < 400) {
-        setVisible(false)
+        requestAnimationFrame(() => setVisible(false))
         return
       }
       const practiceSection = document.getElementById('practice-questions')
       if (practiceSection) {
         const rect = practiceSection.getBoundingClientRect()
         if (rect.top < window.innerHeight && rect.bottom > 0) {
-          setVisible(false)
+          requestAnimationFrame(() => setVisible(false))
           return
         }
       }
-      setVisible(true)
+      // Defer state write to next frame to avoid forced reflow (read getBoundingClientRect then write)
+      requestAnimationFrame(() => setVisible(true))
     }
 
     function onScrollOrResize() {

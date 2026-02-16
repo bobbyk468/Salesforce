@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { List, ChevronDown, ChevronUp } from 'lucide-react'
 
 interface CertTableOfContentsProps {
@@ -10,24 +10,34 @@ interface CertTableOfContentsProps {
 export default function CertTableOfContents({ sections }: CertTableOfContentsProps) {
   const [isOpen, setIsOpen] = useState(false)
   const [activeSection, setActiveSection] = useState<string>('')
+  const rafRef = useRef<number | null>(null)
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + 100
-
-      for (let i = sections.length - 1; i >= 0; i--) {
-        const element = document.getElementById(sections[i].id)
-        if (element && element.offsetTop <= scrollPosition) {
-          setActiveSection(sections[i].id)
-          break
+      if (rafRef.current !== null) return
+      rafRef.current = requestAnimationFrame(() => {
+        rafRef.current = null
+        const scrollPosition = window.scrollY + 100
+        let next: string = ''
+        for (let i = sections.length - 1; i >= 0; i--) {
+          const element = document.getElementById(sections[i].id)
+          if (element && element.offsetTop <= scrollPosition) {
+            next = sections[i].id
+            break
+          }
         }
-      }
+        // Defer setState to next frame to avoid forced reflow (read offsetTop then write)
+        if (next) requestAnimationFrame(() => setActiveSection(next))
+      })
     }
 
-    window.addEventListener('scroll', handleScroll)
+    window.addEventListener('scroll', handleScroll, { passive: true })
     handleScroll() // Check on mount
 
-    return () => window.removeEventListener('scroll', handleScroll)
+    return () => {
+      window.removeEventListener('scroll', handleScroll)
+      if (rafRef.current !== null) cancelAnimationFrame(rafRef.current)
+    }
   }, [sections])
 
   const scrollToSection = (id: string) => {
@@ -36,10 +46,12 @@ export default function CertTableOfContents({ sections }: CertTableOfContentsPro
       const offset = 100 // Account for sticky header
       const elementPosition = element.getBoundingClientRect().top
       const offsetPosition = elementPosition + window.pageYOffset - offset
-
-      window.scrollTo({
-        top: offsetPosition,
-        behavior: 'smooth',
+      // Defer scroll (write) to next frame to avoid forced reflow
+      requestAnimationFrame(() => {
+        window.scrollTo({
+          top: offsetPosition,
+          behavior: 'smooth',
+        })
       })
     }
   }

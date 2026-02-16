@@ -9,7 +9,12 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 | **Mobile**  | ≥ 97        | < 2.5s| 0     | ≤ 50ms|
 | **Desktop** | 100         | < 0.5s| < 0.01| ≤ 60ms|
 
-**Current achieved (Feb 2026):** Mobile 97–99, Desktop 100 (scores vary by run). After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and PageSpeed Insights for **both** form factors. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
+**Current achieved (Feb 2026):** Mobile 99, Desktop 100 (scores vary by run). After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and PageSpeed Insights for **both** form factors. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
+
+### Recent optimizations (Feb 2026)
+
+- **Table DOM:** Syllabus checklist table on administrator page flattened: removed inner `<span>` in “Key subtopics” cells; `font-medium text-gray-700` applied on `<td>` to reduce DOM depth (Lighthouse “Optimize DOM size”).
+- **Forced reflow:** Layout reads (e.g. `getBoundingClientRect`, `offsetTop`, `scrollIntoView`) deferred from same-frame writes: `CertSearch` scrollIntoView in `requestAnimationFrame`; `StickyMobileCta` and `CertTableOfContents` defer `setState` / `scrollTo` to next frame to avoid read-then-write thrashing (Desktop “Forced reflow” ~34 ms). TOC scroll handler throttled with rAF and passive listener.
 
 ### Remaining known issues (accepted / low priority)
 
@@ -17,7 +22,7 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 - **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical CSS inlined for header, content wrapper (`[data-critical-content]`), and hero (`[data-lcp-hero]`) on mobile; H1 at sm breakpoint included. Further gain would require async CSS (risk of FOUC).
 - **Long main-thread tasks:** First-party (chunk 2117) on mobile; GTM + first-party on desktop (GTM deferred). Acceptable at 97+/100.
 - **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay). GTM preconnect was removed from layout to clear Lighthouse “Unused preconnect” (GTM loads late).
-- **Forced reflow (mobile, ~51 ms):** Unattributed in Lighthouse; often from layout reads after DOM updates. Monitor if it grows.
+- **Forced reflow:** Mitigations in place (rAF deferral in CertSearch, StickyMobileCta, CertTableOfContents). Any remaining reflow is unattributed or from Next/third-party; monitor if it grows.
 - **Desktop font CLS (~0.003):** Inter swap can shift text; `adjustFontFallback: true` is set; remaining shift is small.
 
 ## Rule: Fix one without breaking the other

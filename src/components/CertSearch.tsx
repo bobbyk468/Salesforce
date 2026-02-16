@@ -34,7 +34,11 @@ export default function CertSearch() {
   useEffect(() => {
     if (!showResults || !listRef.current) return
     const el = listRef.current.children[focusedIndex] as HTMLElement
-    el?.scrollIntoView({ block: 'nearest' })
+    // Defer scroll to next frame to avoid forced reflow (read-then-write same frame)
+    const id = requestAnimationFrame(() => {
+      el?.scrollIntoView({ block: 'nearest' })
+    })
+    return () => cancelAnimationFrame(id)
   }, [focusedIndex, showResults])
 
   const handleKeyDown = (e: React.KeyboardEvent) => {

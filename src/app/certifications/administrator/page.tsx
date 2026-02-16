@@ -277,9 +277,8 @@ export default function AdministratorPage() {
                             </tr>
                             {ADM_201_SECTION_SUBTOPICS[section.name] && (
                               <tr className="border-b border-gray-50 bg-gray-50/50">
-                                <td colSpan={2} className="py-2 pr-4 pl-4 text-gray-600 text-xs">
-                                  <span className="font-medium text-gray-700">Key subtopics:</span>{' '}
-                                  {ADM_201_SECTION_SUBTOPICS[section.name].join(' • ')}
+                                <td colSpan={2} className="py-2 pr-4 pl-4 text-xs font-medium text-gray-700">
+                                  Key subtopics:{' '}{ADM_201_SECTION_SUBTOPICS[section.name].join(' • ')}
                                 </td>
                               </tr>
                             )}
