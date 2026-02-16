@@ -44,7 +44,9 @@ export default function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-3">
-            <DeferredCertSearch />
+            <div className="min-h-10 min-w-[12rem] max-w-xs w-full flex-shrink-0">
+              <DeferredCertSearch />
+            </div>
             <Link
               href="/certifications"
               className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"

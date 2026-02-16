@@ -108,6 +108,15 @@ export default function RootLayout({
 @media (min-width: 1024px) {
   [data-main-layout] { display: grid; grid-template-columns: 1fr 320px; }
 }
+@media (max-width: 1023px) {
+  [data-lcp-hero] {
+    background: linear-gradient(to bottom right, #0176D3, #1B96FF, #0176D3);
+    padding: 1.5rem;
+    color: #fff;
+    border-radius: 0.75rem;
+  }
+  [data-lcp-hero] h1 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; }
+}
 `
 
   return (

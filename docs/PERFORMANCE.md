@@ -2,6 +2,15 @@
 
 This doc ensures **desktop optimizations never regress mobile** and provides a validation checklist.
 
+## Baseline scores (do not merge if either drops)
+
+| Form factor | Performance | LCP   | CLS   | TBT   |
+|-------------|-------------|-------|-------|-------|
+| **Mobile**  | ≥ 97        | < 2.5s| 0     | ≤ 50ms|
+| **Desktop** | 100         | < 0.5s| < 0.02| ≤ 50ms|
+
+After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and run PageSpeed Insights for **both** Mobile and Desktop. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
+
 ## Rule: Fix one without breaking the other
 
 - **Desktop-only** logic must run only when `min-width: 1024px` (or equivalent). Do not run heavy work or load desktop chunks on mobile.
@@ -17,6 +26,7 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 | `DesktopContactSidebar` | Heavy sidebar; deferred with idle | Only mounted by `DesktopSidebarSlot` when `isDesktop` |
 | `DeferredCertSearch` | Search in header (desktop nav) | `isDesktop` gate; CertSearch chunk loads only when lg+ and after requestIdleCallback |
 | Critical layout CSS (layout.tsx) | Grid 1fr + 320px for sidebar | `@media (min-width: 1024px)` only |
+| Mobile LCP critical CSS (layout.tsx) | Hero gradient + H1 so LCP can paint before main CSS | `@media (max-width: 1023px)` only; targets `[data-lcp-hero]` on cert page |
 
 **Mobile:** Header search is in `hidden lg:flex`; the mobile menu uses `CertSearch` (dynamic import) only when the menu is open. Sidebar column is `hidden lg:block` and `DesktopSidebarSlot` returns `null` on mobile.
 
@@ -29,6 +39,7 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 | `GoogleAnalytics` | GTM long tasks can delay LCP on mobile | **Mobile:** load gtag only after `window.load` + 5s delay so tasks run after LCP. **Desktop:** load on `window.load`. Fallbacks: 10s mobile, 6s desktop. |
 | `Header` | Desktop nav (DeferredCertSearch) must not run on mobile | DeferredCertSearch lives in `hidden lg:flex`; on mobile it still mounts but returns a placeholder and never loads CertSearch. Minimal cost. |
 | Layout grid | CLS on desktop when sidebar appears | Inline critical CSS in `<head>` with `@media (min-width: 1024px)` so mobile is unchanged. |
+| Critical CSS (layout.tsx) | Mobile LCP delayed by render-blocking CSS | Hero styles inlined for `[data-lcp-hero]` inside `@media (max-width: 1023px)` only; desktop gets no extra rules. |
 
 ---
 
@@ -45,12 +56,12 @@ Run after any change that touches layout, analytics, or desktop-only components.
 2. **Lighthouse – Mobile** (PageSpeed Insights or DevTools)
    - URL: `https://www.trailblazeprep.com/certifications/administrator` (or staging)
    - Form factor: **Mobile**
-   - Check: Performance ≥ 90, LCP < 3s if possible, CLS = 0.
-   - If score drops, ensure no new main-thread work or blocking before LCP on mobile.
+   - Check: Performance **≥ 97**, LCP **< 2.5s**, CLS **= 0**, TBT **≤ 50ms** (see baseline table above).
+   - If score drops, ensure no new main-thread work or blocking before LCP on mobile; mobile-only critical CSS must stay in `@media (max-width: 1023px)`.
 
 3. **Lighthouse – Desktop**
    - Same URL, form factor: **Desktop**
-   - Check: Performance ≥ 95, CLS < 0.05.
+   - Check: Performance **100**, CLS **< 0.02**, TBT **≤ 50ms** (see baseline table above).
    - Desktop can tolerate more deferred work (sidebar, search after idle).
 
 4. **Regression check**
