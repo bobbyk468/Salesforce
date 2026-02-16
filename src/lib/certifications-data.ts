@@ -240,6 +240,93 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
   }))
 }
 
+export interface StrategicInternalLink {
+  name: string
+  href: string
+  anchorText: string
+}
+
+function belongsToCategory(certSlug: string, categorySlug: string): boolean {
+  const certHref = `/certifications/${certSlug}`
+  const category = CERTIFICATION_CATEGORIES.find((cat) => cat.slug === categorySlug)
+  if (!category) return false
+  return category.items.some((item) => item.href === certHref || item.href === certHref + '/')
+}
+
+function dedupeLinks(links: StrategicInternalLink[]): StrategicInternalLink[] {
+  const seen = new Set<string>()
+  return links.filter((link) => {
+    if (seen.has(link.href)) return false
+    seen.add(link.href)
+    return true
+  })
+}
+
+/**
+ * Priority internal links for stronger crawl paths:
+ * - Admin-related pages (except Platform Administrator): Platform Administrator -> Administrator role hub
+ * - Developer-related pages: Platform Developer I -> Developer role hub
+ * - Architect-related pages: Application Architect -> Architect role hub
+ */
+export function getStrategicInternalLinks(certSlug: string): StrategicInternalLink[] {
+  const currentHref = `/certifications/${certSlug}`
+  const links: StrategicInternalLink[] = []
+
+  const isAdminRelated =
+    certSlug.includes('admin') ||
+    certSlug.includes('administrator') ||
+    belongsToCategory(certSlug, 'administrator')
+  const isDeveloperRelated = certSlug.includes('developer') || belongsToCategory(certSlug, 'developer')
+  const isArchitectRelated = certSlug.includes('architect') || belongsToCategory(certSlug, 'architect')
+
+  if (isAdminRelated && certSlug !== 'administrator') {
+    links.push(
+      {
+        name: 'Salesforce Certified Platform Administrator',
+        href: '/certifications/administrator',
+        anchorText: 'Salesforce Certified Platform Administrator (ADM-201) study guide',
+      },
+      {
+        name: 'Administrator role certifications',
+        href: '/certifications/role/administrator',
+        anchorText: 'Administrator role certification roadmap and guides',
+      }
+    )
+  }
+
+  if (isDeveloperRelated) {
+    links.push(
+      {
+        name: 'Salesforce Certified Platform Developer I',
+        href: '/certifications/developer-1',
+        anchorText: 'Salesforce Certified Platform Developer I (PD1) study guide',
+      },
+      {
+        name: 'Developer role certifications',
+        href: '/certifications/role/developer',
+        anchorText: 'Developer role certification roadmap and guides',
+      }
+    )
+  }
+
+  if (isArchitectRelated) {
+    links.push(
+      {
+        name: 'Salesforce Certified Application Architect',
+        href: '/certifications/application-architect',
+        anchorText: 'Salesforce Certified Application Architect study guide',
+      },
+      {
+        name: 'Architect role certifications',
+        href: '/certifications/role/architect',
+        anchorText: 'Architect role certification roadmap and guides',
+      }
+    )
+  }
+
+  return dedupeLinks(links).filter((link) => link.href !== currentHref)
+}
+
 /** Level for basic → advanced ordering */
 export type CertificationLevel = 'basic' | 'intermediate' | 'advanced'
 

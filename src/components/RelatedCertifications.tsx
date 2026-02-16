@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { getRelatedCerts } from '@/lib/certifications-data'
+import { getRelatedCerts, getStrategicInternalLinks } from '@/lib/certifications-data'
 
 interface RelatedCertificationsProps {
   currentSlug: string
@@ -10,8 +10,12 @@ interface RelatedCertificationsProps {
  * Contextual internal links: related certifications from the same role with descriptive anchor text.
  */
 export default function RelatedCertifications({ currentSlug }: RelatedCertificationsProps) {
-  const related = getRelatedCerts(currentSlug)
-  if (related.length === 0) return null
+  const strategicLinks = getStrategicInternalLinks(currentSlug)
+  const related = getRelatedCerts(currentSlug).filter(
+    (item) => !strategicLinks.some((strategic) => strategic.href === item.href)
+  )
+  const linksToRender = [...strategicLinks, ...related]
+  if (linksToRender.length === 0) return null
 
   return (
     <section className="mt-12 sm:mt-16 rounded-xl sm:rounded-2xl border border-purple-100/50 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="related-certs-heading">
@@ -22,7 +26,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
         Follow this recommended next-step path to stay in the same role track:
       </p>
       <ul className="space-y-2">
-        {related.map((item) => (
+        {linksToRender.map((item) => (
           <li key={item.href}>
             <Link
               href={item.href}

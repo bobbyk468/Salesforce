@@ -124,6 +124,12 @@ export default function Adm201ExamTipsPage() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
+            href="/certifications/role/administrator"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Browse Administrator Certification Path
+          </Link>
+          <Link
             href="/adm-201-vs-app-builder"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
