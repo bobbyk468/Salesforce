@@ -13,7 +13,7 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 
 ### Remaining known issues (accepted / low priority)
 
-- **Legacy JavaScript (~12 KiB):** Polyfills in chunk 2117; Next.js/SWC bundle. `.browserslistrc` targets modern browsers; further reduction would require build config or dependency updates.
+- **Legacy JavaScript (~12 KiB):** Polyfills (Array.flat, Object.hasOwn, String.trimStart, etc.) live in Next.js/runtime chunks (2117, main, polyfills). `tsconfig` has `target: "ES2022"` and `.browserslistrc` has `not dead` and `not ie 11`; Next.js may still inject these for its runtime. Full removal would require experimental or custom webpack config.
 - **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical hero CSS already inlined; further gain would require broader critical CSS or async CSS (risk of FOUC).
 - **Long main-thread tasks:** First-party (chunk 2117) on mobile; GTM + first-party on desktop (GTM deferred). Acceptable at 97+/100.
 - **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay).
