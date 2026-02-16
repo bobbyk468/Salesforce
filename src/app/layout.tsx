@@ -104,9 +104,17 @@ export default function RootLayout({
     },
   }
 
+  const criticalLayoutCSS = `
+@media (min-width: 1024px) {
+  [data-main-layout] { display: grid; grid-template-columns: 1fr 320px; }
+}
+`
+
   return (
     <html lang="en">
-      <head />
+      <head>
+        <style dangerouslySetInnerHTML={{ __html: criticalLayoutCSS }} />
+      </head>
       <body className={inter.className}>
         <HreflangLinks />
         <GoogleAnalytics />
@@ -116,7 +124,7 @@ export default function RootLayout({
         />
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-grow grid grid-cols-1 lg:grid-cols-[1fr_320px]">
+          <main className="flex-grow grid grid-cols-1 lg:grid-cols-[1fr_320px]" data-main-layout>
             <div className="min-w-0">
               {children}
             </div>

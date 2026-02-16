@@ -395,7 +395,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
               href={WHATSAPP_LINK}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#25D366] text-white rounded-lg font-semibold text-sm hover:bg-[#20BA5A] transition-colors"
+              className="flex items-center justify-center gap-2 w-full py-2.5 bg-[#0D7B4A] text-white rounded-lg font-semibold text-sm hover:bg-[#0A6940] transition-colors"
             >
               <MessageCircle className="h-4 w-4" />
               Chat on WhatsApp
