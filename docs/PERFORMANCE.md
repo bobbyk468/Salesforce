@@ -9,20 +9,17 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 | **Mobile**  | ≥ 97        | < 2.5s| 0     | ≤ 50ms|
 | **Desktop** | 100         | < 0.5s| < 0.01| ≤ 60ms|
 
-**Current achieved (Feb 2026):** Mobile 97–99, Desktop 100 (scores vary by run). After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and PageSpeed Insights for **both** form factors. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
+**Current achieved (Feb 2026):** Mobile 99, Desktop 100 (scores vary by run). After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and PageSpeed Insights for **both** form factors. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
 
 ### Recent optimizations (Feb 2026)
 
-- **Async main CSS:** Post-build script `scripts/async-css-rewrite.mjs` rewrites the Next.js stylesheet link in all static HTML to `media="print" onload="this.media='all'"` so the main CSS no longer blocks first paint; critical CSS in layout still styles LCP. Run automatically via `npm run build`. Noscript fallback included.
 - **Table DOM:** Syllabus checklist table on administrator page flattened: removed inner `<span>` in “Key subtopics” cells; `font-medium text-gray-700` applied on `<td>` to reduce DOM depth (Lighthouse “Optimize DOM size”).
-- **DOM flattening:** CertificationCard exam weightage row: removed one wrapper div (flex-1 min-w-0 now also has flex justify-between; one less nesting level).
-- **Browserslist:** Tightened to `last 1` Chrome/Firefox/Safari/Edge to reduce legacy polyfill surface (Next.js may still ship some in runtime chunks).
 - **Forced reflow:** Layout reads (e.g. `getBoundingClientRect`, `offsetTop`, `scrollIntoView`) deferred from same-frame writes: `CertSearch` scrollIntoView in `requestAnimationFrame`; `StickyMobileCta` and `CertTableOfContents` defer `setState` / `scrollTo` to next frame to avoid read-then-write thrashing (Desktop “Forced reflow” ~34 ms). TOC scroll handler throttled with rAF and passive listener.
 
 ### Remaining known issues (accepted / low priority)
 
 - **Legacy JavaScript (~12 KiB):** Polyfills (Array.flat, Object.hasOwn, String.trimStart, etc.) live in Next.js/runtime chunks (2117, main, polyfills). `tsconfig` has `target: "ES2022"` and `.browserslistrc` has `not dead` and `not ie 11`; Next.js may still inject these for its runtime. Full removal would require experimental or custom webpack config.
-- **Render blocking (mobile):** Main CSS is now loaded async via post-build rewrite (media=print onload); critical CSS inlined for header, content wrapper (`[data-critical-content]`), and hero (`[data-lcp-hero]`) on mobile so LCP can paint without waiting for the full stylesheet. If deploy pipeline does not run the rewrite, main CSS will block again—ensure `npm run build` includes `node scripts/async-css-rewrite.mjs`.
+- **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical CSS inlined for header, content wrapper (`[data-critical-content]`), and hero (`[data-lcp-hero]`) on mobile; H1 at sm breakpoint included. Further gain would require async CSS (risk of FOUC).
 - **Long main-thread tasks:** First-party (chunk 2117) on mobile; GTM + first-party on desktop (GTM deferred). Acceptable at 97+/100.
 - **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay). GTM preconnect was removed from layout to clear Lighthouse “Unused preconnect” (GTM loads late).
 - **Forced reflow:** Mitigations in place (rAF deferral in CertSearch, StickyMobileCta, CertTableOfContents). Any remaining reflow is unattributed or from Next/third-party; monitor if it grows.
@@ -89,5 +86,5 @@ Run after any change that touches layout, analytics, or desktop-only components.
 
 ## Script
 
-- `npm run build` – runs `next build` then `node scripts/async-css-rewrite.mjs` to make main CSS non-blocking in static HTML. Always run before release.
+- `npm run build` – always run before release.
 - Optional: run PageSpeed Insights (or `scripts/page_speed_monitor.py` if configured) for mobile and desktop and compare to previous runs.
