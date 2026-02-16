@@ -9,7 +9,11 @@ import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
-const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({
+  subsets: ['latin'],
+  display: 'swap',
+  adjustFontFallback: true,
+})
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
