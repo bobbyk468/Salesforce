@@ -23,6 +23,17 @@ Aligned with [Trailhead role overviews](https://trailhead.salesforce.com/en/cred
 - **Sales Professional** ([overview](https://trailhead.salesforce.com/en/credentials/salesprofessionaloverview)): Certified Sales Foundations
 - **Designer** ([overview](https://trailhead.salesforce.com/en/credentials/designeroverview)): Platform Strategy Designer, User Experience (UX) Designer
 
+## Auto-push after commit
+
+A Git hook pushes the current branch to `origin` after every commit. It’s in `.githooks/post-commit` and is enabled when the repo uses that directory as the hooks path.
+
+- **Already enabled** in this clone: `git config core.hooksPath .githooks` has been run.
+- **After a fresh clone**, enable it with:
+  ```bash
+  git config core.hooksPath .githooks
+  ```
+- To stop auto-pushing: `git config --unset core.hooksPath`
+
 ## Getting Started
 
 ### Prerequisites
