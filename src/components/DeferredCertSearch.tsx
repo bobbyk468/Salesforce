@@ -5,7 +5,14 @@ import dynamic from 'next/dynamic'
 
 const CertSearch = dynamic(() => import('@/components/CertSearch'), { ssr: false })
 
-const PLACEHOLDER_CLASS = 'min-h-10 min-w-[12rem] max-w-xs w-full rounded-lg border border-gray-200 bg-white'
+/** Match CertSearch root + input dimensions to avoid desktop layout shift (0.014). */
+function SearchPlaceholder() {
+  return (
+    <div className="relative w-full max-w-xs" aria-hidden="true">
+      <div className="h-10 w-full rounded-lg border border-gray-200 bg-white" />
+    </div>
+  )
+}
 
 /**
  * Renders CertSearch only on desktop (lg+) and only after requestIdleCallback,
@@ -40,10 +47,10 @@ export default function DeferredCertSearch() {
   }, [isDesktop])
 
   if (!isDesktop) {
-    return <div className={PLACEHOLDER_CLASS} aria-hidden="true" />
+    return <SearchPlaceholder />
   }
   if (!mounted) {
-    return <div className={PLACEHOLDER_CLASS} aria-hidden="true" />
+    return <SearchPlaceholder />
   }
   return <CertSearch />
 }

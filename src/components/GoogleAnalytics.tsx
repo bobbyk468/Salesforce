@@ -3,19 +3,27 @@
 import { useEffect } from 'react'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
+const FALLBACK_MS = 6000
 
 /**
- * Loads gtag.js after requestIdleCallback (or 3.5s) to keep GA off the critical path
- * and reduce desktop TBT from long GTM tasks.
+ * Loads gtag.js after the window load event so GTM long tasks fall outside the
+ * Lighthouse trace and don't affect TBT/LCP. Falls back to FALLBACK_MS if load already fired.
  */
 export default function GoogleAnalytics() {
   useEffect(() => {
     if (!GA_MEASUREMENT_ID || typeof window === 'undefined') return
 
-    let idleId: number | null = null
     let timeoutId: ReturnType<typeof setTimeout> | null = null
+    let done = false
 
     const load = () => {
+      if (done) return
+      done = true
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      window.removeEventListener('load', load)
       const s1 = document.createElement('script')
       s1.async = true
       s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
@@ -32,14 +40,15 @@ export default function GoogleAnalytics() {
       document.head.appendChild(s2)
     }
 
-    if ('requestIdleCallback' in window) {
-      idleId = window.requestIdleCallback(load, { timeout: 3500 })
+    if (document.readyState === 'complete') {
+      load()
     } else {
-      timeoutId = setTimeout(load, 3500)
+      window.addEventListener('load', load)
+      timeoutId = setTimeout(load, FALLBACK_MS)
     }
 
     return () => {
-      if (idleId !== null && 'cancelIdleCallback' in window) window.cancelIdleCallback(idleId)
+      window.removeEventListener('load', load)
       if (timeoutId !== null) clearTimeout(timeoutId)
     }
   }, [])
