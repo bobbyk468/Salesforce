@@ -59,7 +59,7 @@ export default function PracticeQuestionsSection({
   }
 
   return (
-    <div id="practice-questions" className="mt-12 sm:mt-12">
+    <div id="practice-questions" className="mt-12 sm:mt-12 min-h-[440px] w-full">
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{heading}</h2>
       {introText && (
         <p className="text-gray-600 text-sm sm:text-base max-w-2xl mb-8">

@@ -7,13 +7,17 @@ import ExamPrepContent from '@/components/ExamPrepContent'
 const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), {
   ssr: false,
   loading: () => (
-    <div id="practice-questions" className="mt-12 min-h-[360px]" aria-hidden="true" />
+    <div
+      id="practice-questions"
+      className="mt-12 min-h-[440px] w-full"
+      aria-hidden="true"
+    />
   ),
 })
 const AdministratorCtaSections = dynamic(() => import('@/components/AdministratorCtaSections'), {
   ssr: false,
   loading: () => (
-    <div className="mt-12 min-h-[320px]" aria-hidden="true" />
+    <div className="mt-12 min-h-[340px] w-full" aria-hidden="true" />
   ),
 })
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'

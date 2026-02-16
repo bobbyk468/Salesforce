@@ -1,6 +1,6 @@
 'use client'
 
-import { useState } from 'react'
+import { memo, useState } from 'react'
 import { CheckCircle, XCircle } from 'lucide-react'
 
 interface QuestionCardProps {
@@ -15,7 +15,7 @@ interface QuestionCardProps {
   whyWrong?: string[]
 }
 
-export default function QuestionCard({
+function QuestionCard({
   questionNumber,
   question,
   options,
@@ -145,3 +145,5 @@ export default function QuestionCard({
     </div>
   )
 }
+
+export default memo(QuestionCard)
