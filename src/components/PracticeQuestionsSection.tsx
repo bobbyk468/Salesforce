@@ -15,21 +15,48 @@ interface PracticeQuestionsSectionProps {
   heading: string
   introText?: string
   questions: SampleQuestion[]
+  extraQuestionsKey?: 'administrator'
 }
 
 /**
  * Client-only section so practice questions are not in initial HTML (reduces PageSpeed HTML size).
  * Rendered after hydration; content remains in JS payload but not in first byte HTML.
  */
-export default function PracticeQuestionsSection({ heading, introText, questions }: PracticeQuestionsSectionProps) {
+export default function PracticeQuestionsSection({
+  heading,
+  introText,
+  questions,
+  extraQuestionsKey,
+}: PracticeQuestionsSectionProps) {
   if (!questions?.length) return null
   const initialCount = 5
   const [showAll, setShowAll] = useState(false)
+  const [isLoadingExtras, setIsLoadingExtras] = useState(false)
+  const [extraQuestions, setExtraQuestions] = useState<SampleQuestion[]>([])
+  const hasDeferredExtras = Boolean(extraQuestionsKey)
+  const allQuestions = useMemo(() => [...questions, ...extraQuestions], [questions, extraQuestions])
   const visibleQuestions = useMemo(
-    () => (showAll ? questions : questions.slice(0, initialCount)),
-    [questions, showAll]
+    () => (showAll ? allQuestions : allQuestions.slice(0, initialCount)),
+    [allQuestions, showAll]
   )
-  const hiddenCount = Math.max(questions.length - initialCount, 0)
+  const hiddenCount = Math.max(allQuestions.length - initialCount, 0)
+
+  async function handleShowMore() {
+    if (showAll || isLoadingExtras) return
+
+    if (hasDeferredExtras && extraQuestions.length === 0) {
+      try {
+        setIsLoadingExtras(true)
+        if (extraQuestionsKey === 'administrator') {
+          const mod = await import('@/lib/question-banks/administrator-extra-questions')
+          setExtraQuestions(mod.ADMINISTRATOR_EXTRA_QUESTIONS)
+        }
+      } finally {
+        setIsLoadingExtras(false)
+      }
+    }
+    setShowAll(true)
+  }
 
   return (
     <div id="practice-questions" className="mt-12 sm:mt-12">
@@ -57,10 +84,11 @@ export default function PracticeQuestionsSection({ heading, introText, questions
         <div className="mt-8 text-center">
           <button
             type="button"
-            onClick={() => setShowAll(true)}
+            onClick={handleShowMore}
+            disabled={isLoadingExtras}
             className="inline-flex items-center justify-center rounded-lg bg-salesforce-blue px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-salesforce-dark"
           >
-            Show {hiddenCount} more questions
+            {isLoadingExtras ? 'Loading more questions...' : `Show ${hiddenCount} more questions`}
           </button>
         </div>
       )}

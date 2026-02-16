@@ -139,105 +139,6 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Time-dependent actions are removed from the queue if the record no longer meets the workflow rule criteria when the action is scheduled to execute."
   },
-  {
-    question: "Which Lightning App Builder component allows users to filter records on a record page?",
-    options: [
-      "Related List",
-      "Related Record",
-      "Filter",
-      "List View"
-    ],
-    correctAnswer: 2,
-    explanation: "The Filter component in Lightning App Builder allows users to filter records displayed on a record page using predefined criteria."
-  },
-  {
-    question: "A company wants to ensure that all Leads are automatically assigned to the correct sales rep based on geographic territory. What should be configured?",
-    options: [
-      "Lead Assignment Rules",
-      "Workflow Rules",
-      "Process Builder",
-      "Flow"
-    ],
-    correctAnswer: 0,
-    explanation: "Lead Assignment Rules automatically assign leads to users or queues based on criteria such as geographic territory, industry, or lead source."
-  },
-  {
-    question: "What is the purpose of a Validation Rule?",
-    options: [
-      "To automatically assign records to users",
-      "To prevent invalid data from being saved",
-      "To send email notifications",
-      "To update field values automatically"
-    ],
-    correctAnswer: 1,
-    explanation: "Validation Rules enforce data quality by preventing invalid data from being saved. They check data against criteria and display an error message if the criteria are not met."
-  },
-  {
-    question: "Which sharing setting allows users to see all records in an org regardless of ownership?",
-    options: [
-      "Private",
-      "Public Read Only",
-      "Public Read/Write",
-      "Controlled by Parent"
-    ],
-    correctAnswer: 2,
-    explanation: "Public Read/Write sharing setting allows all users to see, edit, and transfer all records regardless of who owns them."
-  },
-  {
-    question: "A user needs to create a custom field that calculates the number of days between two date fields. Which field type should be used?",
-    options: [
-      "Formula (Number)",
-      "Formula (Date)",
-      "Number",
-      "Date"
-    ],
-    correctAnswer: 0,
-    explanation: "A Formula field with Number return type can calculate the difference between two date fields, returning the number of days as a numeric value."
-  },
-  {
-    question: "What is the maximum number of master-detail relationships allowed on a custom object?",
-    options: [
-      "1",
-      "2",
-      "3",
-      "Unlimited"
-    ],
-    correctAnswer: 1,
-    explanation: "A custom object can have a maximum of 2 master-detail relationships. This limit ensures data integrity and prevents overly complex data models."
-  },
-  {
-    question: "Which feature allows administrators to track changes to specific fields over time?",
-    options: [
-      "Field History Tracking",
-      "Audit Trail",
-      "Change Data Capture",
-      "Field Updates"
-    ],
-    correctAnswer: 0,
-    explanation: "Field History Tracking allows administrators to track changes to specific fields on standard and custom objects, storing up to 20 fields per object."
-  },
-  {
-    question: "A company wants to automatically send an email when an Opportunity reaches the 'Closed Won' stage. Which automation tool should be used?",
-    options: [
-      "Workflow Rule",
-      "Process Builder",
-      "Flow",
-      "All of the above"
-    ],
-    correctAnswer: 2,
-    explanation: "Flow (Record-Triggered Flow) is the recommended automation tool for sending emails when records meet specific criteria. Workflow Rules and Process Builder are being deprecated in favor of Flow."
-  },
-  {
-    question: "What is the purpose of a Roll-Up Summary Field?",
-    options: [
-      "To summarize data from child records",
-      "To link two objects together",
-      "To validate data entry",
-      "To send email notifications"
-    ],
-    correctAnswer: 0,
-    explanation: "Roll-Up Summary Fields calculate values from related records in a master-detail relationship, such as summing amounts, counting records, or finding min/max values."
-  },
 ]
 
 export default function AdministratorPage() {
@@ -256,7 +157,7 @@ export default function AdministratorPage() {
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
 
         {/* Hero section: action-driven above fold with subheadline + CTA + social proof */}
-        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-xl border border-salesforce-blue/30" aria-label="Hero section">
+        <section className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">
           <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">
             Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
           </p>
@@ -278,7 +179,7 @@ export default function AdministratorPage() {
             </Link>
             <Link
               href="#exam-weightage"
-              className="flex items-center justify-center gap-2 px-6 py-3 bg-white/15 text-white rounded-lg font-semibold hover:bg-white/25 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto border border-white/30"
+              className="hidden sm:flex items-center justify-center gap-2 px-6 py-3 bg-white/15 text-white rounded-lg font-semibold hover:bg-white/25 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto border border-white/30"
             >
               See 2026 Exam Weightage
             </Link>
@@ -390,108 +291,123 @@ export default function AdministratorPage() {
               </details>
             </div>
 
-            <section className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_420px]" aria-labelledby="study-timeline-heading">
-              <h2 id="study-timeline-heading" className="text-lg font-bold text-gray-900 mb-3">
+            <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_420px]">
+              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 Suggested study timeline (4–6 weeks)
-              </h2>
-              <p className="text-sm text-gray-600 mb-3">
-                If you have an exam date in mind, use this as a guide. Focus on high-weight sections first.
-              </p>
-              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
-                <li><strong>Weeks 1–2:</strong> Configuration and Setup, Object Manager and Lightning App Builder (40% combined)</li>
-                <li><strong>Weeks 2–3:</strong> Workflow and Process Automation, Data and Analytics Management (30%)</li>
-                <li><strong>Weeks 3–4:</strong> Sales and Marketing, Service and Support Applications (23%)</li>
-                <li><strong>Weeks 4–5:</strong> Productivity and Collaboration (7%); review weak areas</li>
-                <li><strong>Week 5–6:</strong> Full practice tests and final review</li>
-              </ul>
-            </section>
+              </summary>
+              <div className="hidden group-open:block lg:block">
+                <h2 id="study-timeline-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
+                  Suggested study timeline (4–6 weeks)
+                </h2>
+                <p className="text-sm text-gray-600 mb-3">
+                  If you have an exam date in mind, use this as a guide. Focus on high-weight sections first.
+                </p>
+                <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                  <li><strong>Weeks 1–2:</strong> Configuration and Setup, Object Manager and Lightning App Builder (40% combined)</li>
+                  <li><strong>Weeks 2–3:</strong> Workflow and Process Automation, Data and Analytics Management (30%)</li>
+                  <li><strong>Weeks 3–4:</strong> Sales and Marketing, Service and Support Applications (23%)</li>
+                  <li><strong>Weeks 4–5:</strong> Productivity and Collaboration (7%); review weak areas</li>
+                  <li><strong>Week 5–6:</strong> Full practice tests and final review</li>
+                </ul>
+              </div>
+            </details>
 
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
-            <section id="is-adm-201-hard" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_520px]" aria-labelledby="difficulty-heading">
-              <h2 id="difficulty-heading" className="text-lg font-bold text-gray-900 mb-3">
+            <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
+              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 Is the ADM-201 Exam Hard?
-              </h2>
-              <p className="text-sm text-gray-700 mb-3">
-                The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting — but it does <em>not</em> require coding.
-              </p>
-              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
-                <li><strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.</li>
-                <li><strong>65% passing score</strong> — you can miss up to 21 questions and still pass.</li>
-                <li><strong>No coding required</strong> — the exam is entirely declarative (clicks, not code).</li>
-                <li><strong>Broad but not deep</strong> — expect questions across all 7 exam sections, weighted by the official outline.</li>
-              </ul>
-              <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
-                <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
-                <p className="text-sm text-emerald-700">
-                  Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you&apos;re consistently scoring above 75% in practice, you&apos;re likely ready to book your exam.
+              </summary>
+              <div className="hidden group-open:block lg:block">
+                <h2 id="difficulty-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
+                  Is the ADM-201 Exam Hard?
+                </h2>
+                <p className="text-sm text-gray-700 mb-3">
+                  The Salesforce Certified Platform Administrator (ADM-201) exam is considered <strong className="text-gray-900">moderate difficulty</strong>. It tests breadth of knowledge across configuration, automation, security, data management, and reporting — but it does <em>not</em> require coding.
                 </p>
+                <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
+                  <li><strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.</li>
+                  <li><strong>65% passing score</strong> — you can miss up to 21 questions and still pass.</li>
+                  <li><strong>No coding required</strong> — the exam is entirely declarative (clicks, not code).</li>
+                  <li><strong>Broad but not deep</strong> — expect questions across all 7 exam sections, weighted by the official outline.</li>
+                </ul>
+                <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                  <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
+                  <p className="text-sm text-emerald-700">
+                    Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you&apos;re consistently scoring above 75% in practice, you&apos;re likely ready to book your exam.
+                  </p>
+                </div>
               </div>
-            </section>
+            </details>
 
             {/* ADM-201 Exam Format Explained — targets "ADM-201 exam format" + "scenario-based questions" queries */}
-            <section id="exam-format" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_980px]" aria-labelledby="exam-format-heading">
-              <h2 id="exam-format-heading" className="text-lg font-bold text-gray-900 mb-3">
+            <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_980px]">
+              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
                 ADM-201 Exam Format Explained
-              </h2>
-              <p className="text-sm text-gray-700 mb-3">
-                Understanding the exam format helps you prepare smarter. The Salesforce Certified Platform Administrator (ADM-201) exam is a proctored, online or in-person exam delivered through Webassessor/Kryterion. Here is what to expect on exam day:
-              </p>
+              </summary>
+              <div className="hidden group-open:block lg:block">
+                <h2 id="exam-format-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
+                  ADM-201 Exam Format Explained
+                </h2>
+                <p className="text-sm text-gray-700 mb-3">
+                  Understanding the exam format helps you prepare smarter. The Salesforce Certified Platform Administrator (ADM-201) exam is a proctored, online or in-person exam delivered through Webassessor/Kryterion. Here is what to expect on exam day:
+                </p>
 
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
-                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                  <p className="font-semibold text-gray-900 text-sm mb-1">Total Questions</p>
-                  <p className="text-sm text-gray-700">60 scored + 5 unscored pilot questions = <strong>65 total</strong></p>
+                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mb-4">
+                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <p className="font-semibold text-gray-900 text-sm mb-1">Total Questions</p>
+                    <p className="text-sm text-gray-700">60 scored + 5 unscored pilot questions = <strong>65 total</strong></p>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
+                    <p className="text-sm text-gray-700">105 minutes (~1.6 minutes per question)</p>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>
+                    <p className="text-sm text-gray-700">65% (39 of 60 scored questions)</p>
+                  </div>
+                  <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
+                    <p className="font-semibold text-gray-900 text-sm mb-1">Question Type</p>
+                    <p className="text-sm text-gray-700">Multiple-choice &amp; multiple-select</p>
+                  </div>
                 </div>
-                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                  <p className="font-semibold text-gray-900 text-sm mb-1">Time Limit</p>
-                  <p className="text-sm text-gray-700">105 minutes (~1.6 minutes per question)</p>
-                </div>
-                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                  <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>
-                  <p className="text-sm text-gray-700">65% (39 of 60 scored questions)</p>
-                </div>
-                <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
-                  <p className="font-semibold text-gray-900 text-sm mb-1">Question Type</p>
-                  <p className="text-sm text-gray-700">Multiple-choice &amp; multiple-select</p>
-                </div>
+
+                <h3 className="text-base font-semibold text-gray-900 mb-2">How Many Questions Are Scenario-Based?</h3>
+                <p className="text-sm text-gray-700 mb-3">
+                  Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation — for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; — and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
+                </p>
+                <p className="text-sm text-gray-700 mb-3">
+                  Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough — you need to understand <strong>when and why</strong> to use each feature.
+                </p>
+
+                <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
+                <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
+                  <li><strong>Start with high-weight sections:</strong> Configuration &amp; Setup (20%) and Object Manager &amp; Lightning App Builder (20%) together cover 40% of the exam.</li>
+                  <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
+                  <li><strong>Take timed mock exams:</strong> Simulate real conditions — 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
+                  <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
+                  <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
+                </ul>
+
+                <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
+                <p className="text-sm text-gray-700">
+                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you&apos;re well-positioned for{' '}
+                  <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
+                    the Platform App Builder exam
+                  </Link>.
+                </p>
+                <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
+                  Want a focused strategy? Read our{' '}
+                  <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 exam tips ({RELEASE_CURRENT})
+                  </Link>{' '}
+                  and detailed{' '}
+                  <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 vs App Builder comparison
+                  </Link>{' '}
+                  before booking your exam.
+                </p>
               </div>
-
-              <h3 className="text-base font-semibold text-gray-900 mb-2">How Many Questions Are Scenario-Based?</h3>
-              <p className="text-sm text-gray-700 mb-3">
-                Salesforce does not publish the exact breakdown, but based on candidate feedback, roughly <strong>40–50% of ADM-201 questions are scenario-based</strong>. These present a business situation — for example, &ldquo;A sales manager wants to restrict access to a set of records&rdquo; — and ask you to choose the best admin action. The remaining questions test direct knowledge of features, limits, and configuration options.
-              </p>
-              <p className="text-sm text-gray-700 mb-3">
-                Scenario questions require you to <em>apply</em> knowledge, not just recall it. This is why hands-on practice in a Salesforce Developer Edition org (free from Salesforce) is critical. Simply memorizing content is not enough — you need to understand <strong>when and why</strong> to use each feature.
-              </p>
-
-              <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass ADM-201 on Your First Attempt</h3>
-              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-3">
-                <li><strong>Start with high-weight sections:</strong> Configuration &amp; Setup (20%) and Object Manager &amp; Lightning App Builder (20%) together cover 40% of the exam.</li>
-                <li><strong>Use a hands-on org:</strong> Set up a free Salesforce Developer Edition org and practice every feature you study.</li>
-                <li><strong>Take timed mock exams:</strong> Simulate real conditions — 65 questions, 105 minutes, no notes. Most candidates who pass score 75%+ on mocks first.</li>
-                <li><strong>Review wrong answers deeply:</strong> Understand <em>why</em> each wrong option is wrong, not just which option is correct.</li>
-                <li><strong>Complete Trailhead trails:</strong> The official &ldquo;Prepare for Your Salesforce Administrator Certification&rdquo; trail maps directly to exam objectives.</li>
-              </ul>
-
-              <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
-              <p className="text-sm text-gray-700">
-                ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you&apos;re well-positioned for{' '}
-                <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
-                  the Platform App Builder exam
-                </Link>.
-              </p>
-              <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
-                Want a focused strategy? Read our{' '}
-                <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
-                  ADM-201 exam tips ({RELEASE_CURRENT})
-                </Link>{' '}
-                and detailed{' '}
-                <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
-                  ADM-201 vs App Builder comparison
-                </Link>{' '}
-                before booking your exam.
-              </p>
-            </section>
+            </details>
 
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
@@ -501,6 +417,7 @@ export default function AdministratorPage() {
               heading={getCertPracticeQuestionsHeading(slug)}
               introText="Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct."
               questions={sampleQuestions}
+              extraQuestionsKey="administrator"
             />
 
             <AdministratorCtaSections />
