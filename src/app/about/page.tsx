@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import { Award, Mail, ExternalLink } from 'lucide-react'
-import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME } from '@/lib/constants'
+import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -33,12 +33,18 @@ export default function AboutPage() {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const organizationJsonLd = {
     '@context': 'https://schema.org',
-    '@type': 'Organization',
+    '@type': 'EducationalOrganization',
     name: SITE_NAME,
     url: siteUrl,
+    logo: `${siteUrl}/og-image`,
     description:
-      'Independent Salesforce certification preparation resource: practice questions, section-wise exam weightage, and study guides for Admin, Developer, Consultant, Architect, and more.',
-    email: CONTACT_EMAIL,
+      'Trailblaze Prep provides Salesforce certification study guides, exam weightage breakdowns, and practice questions updated for current Salesforce release cycles.',
+    contactPoint: {
+      '@type': 'ContactPoint',
+      contactType: 'customer support',
+      email: CONTACT_EMAIL,
+    },
+    ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.filter(Boolean) } : {}),
   }
   const webPageJsonLd = getWebPageJsonLd({
     name: `About Us | ${SITE_NAME}`,
