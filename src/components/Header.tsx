@@ -44,7 +44,7 @@ export default function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-3">
-            <div className="h-10 min-w-[12rem] max-w-xs w-full flex-shrink-0 flex items-center">
+            <div className="h-10 w-[14rem] flex-shrink-0 flex items-center">
               <DeferredCertSearch />
             </div>
             <Link

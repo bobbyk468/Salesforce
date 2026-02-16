@@ -17,6 +17,8 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 - **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical hero CSS already inlined; further gain would require broader critical CSS or async CSS (risk of FOUC).
 - **Long main-thread tasks:** First-party (chunk 2117) on mobile; GTM + first-party on desktop (GTM deferred). Acceptable at 97+/100.
 - **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay).
+- **Forced reflow (mobile, ~51 ms):** Unattributed in Lighthouse; often from layout reads after DOM updates. Monitor if it grows.
+- **Desktop font CLS (~0.003):** Inter swap can shift text; `adjustFontFallback: true` is set; remaining shift is small.
 
 ## Rule: Fix one without breaking the other
 
