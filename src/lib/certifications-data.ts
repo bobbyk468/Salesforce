@@ -322,6 +322,21 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
         anchorText: 'Architect role certification roadmap and guides',
       }
     )
+    // Next step in the CTA pyramid: keep users in the silo with explicit progression
+    if (certSlug === 'technical-architect') {
+      links.push({
+        name: 'CTA Architect Evaluation',
+        href: '/certifications/technical-architect-evaluation',
+        anchorText: 'Next in CTA pyramid: Architect Evaluation',
+      })
+    }
+    if (certSlug === 'technical-architect-evaluation') {
+      links.push({
+        name: 'CTA Review Board',
+        href: '/certifications/technical-architect-review-board',
+        anchorText: 'Next in CTA pyramid: Review Board',
+      })
+    }
   }
 
   return dedupeLinks(links).filter((link) => link.href !== currentHref)

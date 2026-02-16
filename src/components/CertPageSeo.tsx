@@ -73,6 +73,19 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
     inLanguage: 'en',
   }
 
+  const credentialJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'EducationalOccupationalCredential',
+    name: `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''}`,
+    description: `Professional certification for ${certTitle}. Prepare with exam weightage, study plan, and practice questions.`,
+    credentialCategory: 'professional certification',
+    recognizedBy: {
+      '@type': 'Organization',
+      name: 'Salesforce',
+      url: 'https://www.salesforce.com',
+    },
+  }
+
   return (
     <>
       <script
@@ -98,6 +111,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialJsonLd) }}
       />
 
       {/* Visible breadcrumb */}
