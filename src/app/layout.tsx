@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import ContactSidebar from '@/components/ContactSidebar'
+import DesktopContactSidebar from '@/components/DesktopContactSidebar'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
@@ -118,7 +118,7 @@ export default function RootLayout({
             </div>
             <div className="hidden lg:block border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white min-h-[60vh]">
               <div className="p-6 pl-4 sticky top-24">
-                <ContactSidebar />
+                <DesktopContactSidebar />
               </div>
             </div>
           </main>
