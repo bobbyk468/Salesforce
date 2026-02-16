@@ -1,5 +1,6 @@
 'use client'
 
+import { useMemo, useState } from 'react'
 import QuestionCard from '@/components/QuestionCard'
 
 export interface SampleQuestion {
@@ -22,6 +23,14 @@ interface PracticeQuestionsSectionProps {
  */
 export default function PracticeQuestionsSection({ heading, introText, questions }: PracticeQuestionsSectionProps) {
   if (!questions?.length) return null
+  const initialCount = 5
+  const [showAll, setShowAll] = useState(false)
+  const visibleQuestions = useMemo(
+    () => (showAll ? questions : questions.slice(0, initialCount)),
+    [questions, showAll]
+  )
+  const hiddenCount = Math.max(questions.length - initialCount, 0)
+
   return (
     <div id="practice-questions" className="mt-12 sm:mt-12">
       <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">{heading}</h2>
@@ -31,7 +40,7 @@ export default function PracticeQuestionsSection({ heading, introText, questions
         </p>
       )}
       <div className="space-y-6 sm:space-y-8">
-        {questions.map((q, index) => (
+        {visibleQuestions.map((q, index) => (
           <QuestionCard
             key={index}
             questionNumber={index + 1}
@@ -44,6 +53,17 @@ export default function PracticeQuestionsSection({ heading, introText, questions
           />
         ))}
       </div>
+      {!showAll && hiddenCount > 0 && (
+        <div className="mt-8 text-center">
+          <button
+            type="button"
+            onClick={() => setShowAll(true)}
+            className="inline-flex items-center justify-center rounded-lg bg-salesforce-blue px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-salesforce-dark"
+          >
+            Show {hiddenCount} more questions
+          </button>
+        </div>
+      )}
     </div>
   )
 }
