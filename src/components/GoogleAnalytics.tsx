@@ -3,11 +3,14 @@
 import { useEffect } from 'react'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-const FALLBACK_MS = 6000
+/** Desktop: load soon after load event. Mobile: wait longer so GA long tasks don't delay LCP (4s+). */
+const MOBILE_DELAY_AFTER_LOAD_MS = 5000
+const FALLBACK_DESKTOP_MS = 6000
+const FALLBACK_MOBILE_MS = 10000
 
 /**
- * Loads gtag.js after the window load event so GTM long tasks fall outside the
- * Lighthouse trace and don't affect TBT/LCP. Falls back to FALLBACK_MS if load already fired.
+ * Loads gtag.js after window load. On mobile, adds an extra delay so GTM long tasks
+ * run well after LCP and don't regress mobile performance. Desktop loads on load.
  */
 export default function GoogleAnalytics() {
   useEffect(() => {
@@ -15,6 +18,7 @@ export default function GoogleAnalytics() {
 
     let timeoutId: ReturnType<typeof setTimeout> | null = null
     let done = false
+    const isMobile = () => window.matchMedia('(max-width: 1023px)').matches
 
     const load = () => {
       if (done) return
@@ -23,7 +27,7 @@ export default function GoogleAnalytics() {
         clearTimeout(timeoutId)
         timeoutId = null
       }
-      window.removeEventListener('load', load)
+      window.removeEventListener('load', onLoad)
       const s1 = document.createElement('script')
       s1.async = true
       s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
@@ -40,15 +44,27 @@ export default function GoogleAnalytics() {
       document.head.appendChild(s2)
     }
 
+    const onLoad = () => {
+      if (timeoutId !== null) {
+        clearTimeout(timeoutId)
+        timeoutId = null
+      }
+      if (isMobile()) {
+        timeoutId = setTimeout(load, MOBILE_DELAY_AFTER_LOAD_MS)
+      } else {
+        load()
+      }
+    }
+
     if (document.readyState === 'complete') {
-      load()
+      onLoad()
     } else {
-      window.addEventListener('load', load)
-      timeoutId = setTimeout(load, FALLBACK_MS)
+      window.addEventListener('load', onLoad)
+      timeoutId = setTimeout(load, isMobile() ? FALLBACK_MOBILE_MS : FALLBACK_DESKTOP_MS)
     }
 
     return () => {
-      window.removeEventListener('load', load)
+      window.removeEventListener('load', onLoad)
       if (timeoutId !== null) clearTimeout(timeoutId)
     }
   }, [])

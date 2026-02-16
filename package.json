@@ -11,6 +11,7 @@
     "validate:seo": "node scripts/validate-technical-seo.mjs",
     "validate:seo:local": "npm run build && node scripts/validate-technical-seo.mjs --base=http://localhost:3000",
     "validate:readability": "node scripts/validate-readability.mjs",
+    "validate:perf": "node scripts/validate-performance.mjs",
     "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs"
   },
   "dependencies": {

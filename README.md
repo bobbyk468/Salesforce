@@ -34,6 +34,14 @@ A Git hook pushes the current branch to `origin` after every commit. It’s in `
   ```
 - To stop auto-pushing: `git config --unset core.hooksPath`
 
+## Performance (Mobile & Desktop)
+
+Desktop-only optimizations must not regress mobile. Before merging performance-related changes:
+
+1. Run **`npm run validate:perf`** (runs build and prints a Lighthouse checklist).
+2. Run [PageSpeed Insights](https://pagespeed.web.dev) for **both Mobile and Desktop** on the Administrator cert page and confirm targets (see checklist output).
+3. See **`docs/PERFORMANCE.md`** for desktop-only components, shared-component rules, and the full validation checklist.
+
 ## Getting Started
 
 ### Prerequisites
