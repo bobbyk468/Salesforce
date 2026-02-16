@@ -46,7 +46,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         {getCertAboutExamHeading(slug)}
       </h2>
 
-      <p className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
+      <p data-lcp-intro className="text-gray-700 leading-relaxed mb-3 text-sm sm:text-base">
         This page is your <strong className="text-gray-900">{primaryName}</strong>
         {examCode ? <> (exam <strong className="text-gray-900">{examCode}</strong>)</> : null}
         {formerName ? <>—formerly <strong className="text-gray-900">{formerName}</strong></> : null}
