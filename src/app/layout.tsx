@@ -3,7 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
-import DesktopContactSidebar from '@/components/DesktopContactSidebar'
+import DesktopSidebarSlot from '@/components/DesktopSidebarSlot'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
@@ -116,15 +116,15 @@ export default function RootLayout({
         />
         <div className="min-h-screen flex flex-col">
           <Header />
-          <main className="flex-grow flex">
-            <div className="flex-1 min-w-0">
+          <main className="flex-grow grid grid-cols-1 lg:grid-cols-[1fr_320px]">
+            <div className="min-w-0">
               {children}
             </div>
-            <div className="hidden lg:block border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white min-h-[60vh]">
-              <div className="p-6 pl-4 sticky top-24">
-                <DesktopContactSidebar />
+            <aside className="hidden lg:block w-[320px] min-h-[600px] border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white" aria-label="Contact sidebar">
+              <div className="p-6 pl-4 sticky top-24 w-[320px] min-w-0">
+                <DesktopSidebarSlot />
               </div>
-            </div>
+            </aside>
           </main>
           <Footer />
         </div>

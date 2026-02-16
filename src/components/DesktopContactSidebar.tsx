@@ -8,52 +8,38 @@ const ContactSidebar = dynamic(() => import('@/components/ContactSidebar'), {
 })
 
 /**
- * Mount the heavy interactive sidebar only on desktop viewports.
- * This avoids shipping extra client work on mobile where the sidebar is hidden.
+ * Rendered only on desktop (via DesktopSidebarSlot). Uses a mount gate so the
+ * heavy ContactSidebar does not run during initial hydration, reducing desktop TBT.
+ * Placeholder has fixed width (w-80) to match layout and prevent CLS.
  */
 export default function DesktopContactSidebar() {
-  const [isDesktop, setIsDesktop] = useState(false)
-  const [shouldMount, setShouldMount] = useState(false)
+  const [mounted, setMounted] = useState(false)
 
   useEffect(() => {
-    const media = window.matchMedia('(min-width: 1024px)')
-    const sync = () => setIsDesktop(media.matches)
-    sync()
-    media.addEventListener('change', sync)
-    return () => media.removeEventListener('change', sync)
-  }, [])
-
-  useEffect(() => {
-    if (!isDesktop) {
-      setShouldMount(false)
-      return
-    }
-
     let timeoutId: ReturnType<typeof setTimeout> | null = null
     let idleId: number | null = null
+    const mount = () => setMounted(true)
 
-    const mount = () => setShouldMount(true)
-
-    // Defer non-critical sidebar hydration so desktop LCP/TBT are less impacted.
-    if ('requestIdleCallback' in window) {
-      idleId = window.requestIdleCallback(mount, { timeout: 1200 })
+    if (typeof window !== 'undefined' && 'requestIdleCallback' in window) {
+      idleId = window.requestIdleCallback(mount, { timeout: 2500 })
     } else {
-      timeoutId = setTimeout(mount, 1200)
+      timeoutId = setTimeout(mount, 2500)
     }
-
     return () => {
-      if (idleId !== null && 'cancelIdleCallback' in window) {
+      if (idleId !== null && typeof window !== 'undefined' && 'cancelIdleCallback' in window) {
         window.cancelIdleCallback(idleId)
       }
-      if (timeoutId !== null) {
-        clearTimeout(timeoutId)
-      }
+      if (timeoutId !== null) clearTimeout(timeoutId)
     }
-  }, [isDesktop])
+  }, [])
 
-  if (!isDesktop) return null
-  if (!shouldMount) {
-    return <div className="rounded-2xl border border-gray-100 bg-white min-h-[420px]" aria-hidden="true" />
+  if (!mounted) {
+    return (
+      <div
+        className="w-80 min-h-[420px] bg-transparent"
+        aria-hidden="true"
+      />
+    )
   }
   return <ContactSidebar />
 }

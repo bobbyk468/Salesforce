@@ -4,18 +4,8 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, Award, ChevronDown } from 'lucide-react'
-import dynamic from 'next/dynamic'
+import DeferredCertSearch from './DeferredCertSearch'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-
-const CertSearch = dynamic(() => import('./CertSearch'), {
-  ssr: false,
-  loading: () => (
-    <div
-      className="min-h-10 min-w-[12rem] max-w-xs w-full rounded-lg border border-gray-200 bg-white"
-      aria-hidden="true"
-    />
-  ),
-})
 
 /** True when we're on a single certification page (e.g. /certifications/administrator), not hub or role. */
 function isCertDetailPage(pathname: string): boolean {
@@ -51,7 +41,7 @@ export default function Header() {
           </Link>
 
           <div className="hidden lg:flex items-center gap-3">
-            <CertSearch />
+            <DeferredCertSearch />
             <Link
               href="/certifications"
               className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"
