@@ -4,8 +4,18 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, Award, ChevronDown } from 'lucide-react'
+import dynamic from 'next/dynamic'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import CertSearch from './CertSearch'
+
+const CertSearch = dynamic(() => import('./CertSearch'), {
+  ssr: false,
+  loading: () => (
+    <div
+      className="w-full max-w-xs h-10 rounded-lg border border-gray-200 bg-white"
+      aria-hidden="true"
+    />
+  ),
+})
 
 /** True when we're on a single certification page (e.g. /certifications/administrator), not hub or role. */
 function isCertDetailPage(pathname: string): boolean {
