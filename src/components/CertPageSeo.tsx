@@ -30,6 +30,8 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const faqJsonLd = getCertFaqJsonLd(slug, certTitle)
   const howToJsonLd = getCertHowToJsonLd(slug, certTitle)
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
+  const pageUrl = `${siteBaseUrl}/certifications/${slug}`
+  const nowIso = new Date().toISOString()
 
   const courseJsonLd = {
     '@context': 'https://schema.org',
@@ -45,6 +47,30 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       name: `${certTitle} Certification Exam`,
       courseMode: 'online',
     },
+  }
+
+  const articleJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''} Study Guide and Practice Questions`,
+    description: `Prepare for ${certTitle} with section-wise exam weightage, study plan, and sample practice questions.`,
+    mainEntityOfPage: {
+      '@type': 'WebPage',
+      '@id': pageUrl,
+    },
+    author: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep Editorial Team',
+      url: `${siteBaseUrl}/about`,
+    },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep',
+      url: siteBaseUrl,
+    },
+    datePublished: nowIso,
+    dateModified: nowIso,
+    inLanguage: 'en',
   }
 
   return (
@@ -68,6 +94,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
 
       {/* Visible breadcrumb */}

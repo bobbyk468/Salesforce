@@ -106,6 +106,24 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
           </ul>
         </div>
       </div>
+
+      <div className="border-t border-gray-200 pt-4 mt-4">
+        <h3 className="text-sm font-semibold text-gray-900 mb-2">About this content</h3>
+        <p className="text-xs sm:text-sm text-gray-700">
+          Reviewed by the Trailblaze Prep editorial team (Salesforce-certified practitioners). We align this page to official exam objectives and update release details for {RELEASE_CURRENT}. We do not publish braindumps or leaked exam content.
+        </p>
+        <p className="text-xs sm:text-sm text-gray-700 mt-2">
+          See our{' '}
+          <Link href="/about" className="text-salesforce-blue font-medium hover:underline">
+            methodology and trust policy
+          </Link>
+          {' '}or{' '}
+          <Link href="/contact" className="text-salesforce-blue font-medium hover:underline">
+            contact the team
+          </Link>
+          .
+        </p>
+      </div>
     </section>
   )
 }
