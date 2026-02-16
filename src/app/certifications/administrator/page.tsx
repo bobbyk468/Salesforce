@@ -157,7 +157,7 @@ export default function AdministratorPage() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50/3 rounded-full blur-3xl"></div>
       </div>
       
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
+      <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
 
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}

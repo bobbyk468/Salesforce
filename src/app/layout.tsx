@@ -117,6 +117,14 @@ export default function RootLayout({
     top: 0;
     z-index: 50;
   }
+  [data-critical-content] {
+    max-width: 80rem;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 2rem 1rem;
+    position: relative;
+    z-index: 10;
+  }
   [data-lcp-hero] {
     background: linear-gradient(to bottom right, #0176D3, #1B96FF, #0176D3);
     padding: 1.5rem;
@@ -125,12 +133,14 @@ export default function RootLayout({
   }
   [data-lcp-hero] h1 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; }
 }
+@media (min-width: 640px) and (max-width: 1023px) {
+  [data-lcp-hero] h1 { font-size: 1.5rem; }
+}
 `
 
   return (
     <html lang="en">
       <head>
-        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="" />
         <style dangerouslySetInnerHTML={{ __html: criticalLayoutCSS }} />
       </head>
       <body className={inter.className}>

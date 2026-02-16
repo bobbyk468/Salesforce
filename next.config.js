@@ -1,7 +1,11 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  compress: true, // gzip responses for ALL routes (fixes Uncompressed Page audit when using next start)
+  compress: true,
+  experimental: {
+    optimizePackageImports: ['lucide-react'],
+  },
+  // gzip responses for ALL routes (fixes Uncompressed Page audit when using next start)
   // Production builds minify JS/CSS (SWC/Terser). "Unminified" audit may be from dev build or tool false positive.
   productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller
   async redirects() {

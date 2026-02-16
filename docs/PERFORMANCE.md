@@ -14,9 +14,9 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 ### Remaining known issues (accepted / low priority)
 
 - **Legacy JavaScript (~12 KiB):** Polyfills (Array.flat, Object.hasOwn, String.trimStart, etc.) live in Next.js/runtime chunks (2117, main, polyfills). `tsconfig` has `target: "ES2022"` and `.browserslistrc` has `not dead` and `not ie 11`; Next.js may still inject these for its runtime. Full removal would require experimental or custom webpack config.
-- **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical hero CSS already inlined; further gain would require broader critical CSS or async CSS (risk of FOUC).
+- **Render blocking (mobile):** Main CSS (~10.9 KiB); est. savings 450 ms in some runs. Critical CSS inlined for header, content wrapper (`[data-critical-content]`), and hero (`[data-lcp-hero]`) on mobile; H1 at sm breakpoint included. Further gain would require async CSS (risk of FOUC).
 - **Long main-thread tasks:** First-party (chunk 2117) on mobile; GTM + first-party on desktop (GTM deferred). Acceptable at 97+/100.
-- **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay).
+- **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay). GTM preconnect was removed from layout to clear Lighthouse “Unused preconnect” (GTM loads late).
 - **Forced reflow (mobile, ~51 ms):** Unattributed in Lighthouse; often from layout reads after DOM updates. Monitor if it grows.
 - **Desktop font CLS (~0.003):** Inter swap can shift text; `adjustFontFallback: true` is set; remaining shift is small.
 
@@ -35,7 +35,7 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 | `DesktopContactSidebar` | Heavy sidebar; deferred with idle | Only mounted by `DesktopSidebarSlot` when `isDesktop` |
 | `DeferredCertSearch` | Search in header (desktop nav) | `isDesktop` gate; CertSearch chunk loads only when lg+ and after requestIdleCallback |
 | Critical layout CSS (layout.tsx) | Grid 1fr + 320px for sidebar | `@media (min-width: 1024px)` only |
-| Mobile LCP critical CSS (layout.tsx) | Hero gradient + H1 so LCP can paint before main CSS | `@media (max-width: 1023px)` only; targets `[data-lcp-hero]` on cert page |
+| Mobile LCP critical CSS (layout.tsx) | Hero + content wrapper + H1 so LCP can paint before main CSS | `@media (max-width: 1023px)`; targets `[data-critical-header]`, `[data-critical-content]`, `[data-lcp-hero]`; H1 at sm (640px) inlined |
 
 **Mobile:** Header search is in `hidden lg:flex`; the mobile menu uses `CertSearch` (dynamic import) only when the menu is open. Sidebar column is `hidden lg:block` and `DesktopSidebarSlot` returns `null` on mobile.
 
