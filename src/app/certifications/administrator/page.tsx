@@ -34,7 +34,7 @@ const ADM_201_SECTION_SUBTOPICS: Record<string, string[]> = {
 // Use generateMetadata to ensure values are fresh and resolved at page generation time
 // This prevents metadata merge conflicts with root layout
 const descriptionText =
-  `Prepare for Salesforce ADM-201 with ${RELEASE_CURRENT} objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today.`
+  `Pass Salesforce ADM-201 faster with ${RELEASE_CURRENT} exam weightage, a 4-6 week study plan, and free practice questions with explanations. No sign-up required.`
 
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
@@ -236,7 +236,7 @@ export default function AdministratorPage() {
   return (
     <div className="relative min-h-screen bg-pattern">
       {/* Background decorative elements */}
-      <div className="fixed inset-0 overflow-hidden pointer-events-none z-0">
+      <div className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none z-0 motion-reduce:hidden" aria-hidden="true">
         <div className="absolute top-0 left-1/4 w-96 h-96 bg-salesforce-blue/5 rounded-full blur-3xl animate-pulse"></div>
         <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-salesforce-light/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50/3 rounded-full blur-3xl"></div>
@@ -264,13 +264,13 @@ export default function AdministratorPage() {
               href="#practice-questions"
               className="flex items-center justify-center gap-2 px-8 py-3.5 bg-white text-salesforce-blue rounded-xl font-bold hover:bg-gray-50 transition-all duration-200 shadow-lg hover:shadow-xl active:scale-[0.98] text-base sm:text-lg w-full sm:w-auto border-2 border-white/90"
             >
-              Start Free Practice Test
+              Start Free ADM-201 Practice
             </Link>
             <Link
               href="#exam-weightage"
               className="flex items-center justify-center gap-2 px-6 py-3 bg-white/15 text-white rounded-lg font-semibold hover:bg-white/25 transition-all duration-200 text-sm sm:text-base w-full sm:w-auto border border-white/30"
             >
-              View Exam Weightage
+              See 2026 Exam Weightage
             </Link>
           </div>
           {/* Social proof inline */}
