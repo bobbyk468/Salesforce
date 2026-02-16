@@ -6,10 +6,17 @@ This doc ensures **desktop optimizations never regress mobile** and provides a v
 
 | Form factor | Performance | LCP   | CLS   | TBT   |
 |-------------|-------------|-------|-------|-------|
-| **Mobile**  | ≥ 97        | < 2.5s| 0     | ≤ 50ms|
-| **Desktop** | 100         | < 0.5s| < 0.02| ≤ 50ms|
+| **Mobile**  | ≥ 99        | < 2.2s| 0     | 0 ms  |
+| **Desktop** | 100         | < 0.5s| < 0.01| ≤ 50ms|
 
-After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and run PageSpeed Insights for **both** Mobile and Desktop. Do **not** merge if Mobile drops below 97 or Desktop below 100 without an explicit decision.
+**Current achieved (Feb 2026):** Mobile 99, Desktop 100. After any change to layout, analytics, hero, or desktop-only components: run `npm run validate:perf` and PageSpeed Insights for **both** form factors. Do **not** merge if Mobile drops below 99 or Desktop below 100 without an explicit decision.
+
+### Remaining known issues (accepted / low priority)
+
+- **Legacy JavaScript (~12 KiB):** Polyfills (e.g. Array.at, Object.fromEntries) in chunk 2117; Next.js/SWC bundle. `.browserslistrc` targets modern browsers; further reduction would require build config or dependency updates.
+- **Render blocking (~90 ms mobile):** Main CSS; critical hero CSS already inlined. Further gain would require broader critical CSS or async CSS (risk of FOUC).
+- **Long main-thread tasks:** One first-party task (~50 ms, chunk 2117) on mobile; GTM tasks on desktop (deferred). Acceptable at 99/100.
+- **GTM unused JS (~59 KiB):** Third-party; already loaded after window load (mobile: +5s delay).
 
 ## Rule: Fix one without breaking the other
 
@@ -56,12 +63,12 @@ Run after any change that touches layout, analytics, or desktop-only components.
 2. **Lighthouse – Mobile** (PageSpeed Insights or DevTools)
    - URL: `https://www.trailblazeprep.com/certifications/administrator` (or staging)
    - Form factor: **Mobile**
-   - Check: Performance **≥ 97**, LCP **< 2.5s**, CLS **= 0**, TBT **≤ 50ms** (see baseline table above).
+   - Check: Performance **≥ 99**, LCP **< 2.2s**, CLS **= 0**, TBT **= 0** (see baseline table above).
    - If score drops, ensure no new main-thread work or blocking before LCP on mobile; mobile-only critical CSS must stay in `@media (max-width: 1023px)`.
 
 3. **Lighthouse – Desktop**
    - Same URL, form factor: **Desktop**
-   - Check: Performance **100**, CLS **< 0.02**, TBT **≤ 50ms** (see baseline table above).
+   - Check: Performance **100**, CLS **< 0.01**, TBT **≤ 50ms** (see baseline table above).
    - Desktop can tolerate more deferred work (sidebar, search after idle).
 
 4. **Regression check**
