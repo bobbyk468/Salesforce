@@ -4,8 +4,11 @@ import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import { useState } from 'react'
 import { Menu, X, Award, ChevronDown } from 'lucide-react'
+import dynamic from 'next/dynamic'
 import DeferredCertSearch from './DeferredCertSearch'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+
+const CertSearch = dynamic(() => import('./CertSearch'), { ssr: false })
 
 /** True when we're on a single certification page (e.g. /certifications/administrator), not hub or role. */
 function isCertDetailPage(pathname: string): boolean {
