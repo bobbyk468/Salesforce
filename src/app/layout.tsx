@@ -130,11 +130,15 @@ export default function RootLayout({
     padding: 1.5rem;
     color: #fff;
     border-radius: 0.75rem;
+    margin-bottom: 1.5rem;
   }
   [data-lcp-hero] h1 { font-size: 1.25rem; font-weight: 700; line-height: 1.3; color: #fff; margin-bottom: 0.75rem; }
+  [data-lcp-hero] p { color: rgba(255,255,255,0.9); margin-bottom: 0.5rem; }
+  [data-lcp-hero] p:first-of-type { color: rgba(255,255,255,0.8); font-size: 0.875rem; font-weight: 500; margin-bottom: 0.5rem; }
 }
 @media (min-width: 640px) and (max-width: 1023px) {
   [data-lcp-hero] h1 { font-size: 1.5rem; }
+  [data-lcp-hero] p { font-size: 1rem; }
 }
 `
 
