@@ -133,8 +133,12 @@ export default function AboutPage() {
         <p className="text-gray-700">
           Content is created by practitioners with experience in Salesforce implementations and certification prep. We focus on exam weightage, practice questions with explanations, and study strategies aligned with official outlines.
         </p>
-        <p className="text-gray-600 text-sm">
-          <strong>Placeholder:</strong> Add your Salesforce certifications, years of experience, and LinkedIn here. This supports E-E-A-T (Experience, Expertise, Authoritativeness, Trustworthiness).
+        <p className="text-gray-700">
+          For editorial standards and review workflow, see our{' '}
+          <Link href="/team" className="text-salesforce-blue font-medium hover:underline">
+            Editorial Team page
+          </Link>
+          .
         </p>
       </section>
 

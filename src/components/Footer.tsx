@@ -56,6 +56,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/team" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Editorial Team
+                </Link>
+              </li>
+              <li>
                 <Link href="/certifications/administrator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Administrator practice questions
                 </Link>
@@ -78,6 +83,11 @@ export default function Footer() {
               <li>
                 <Link href="/contact" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Contact
+                </Link>
+              </li>
+              <li>
+                <Link href="/html-sitemap" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  HTML Sitemap
                 </Link>
               </li>
             </ul>
