@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "next build && node scripts/async-css-rewrite.mjs",
     "start": "next start",
     "lint": "next lint",
     "perf:check": "python3 scripts/page_speed_monitor.py",

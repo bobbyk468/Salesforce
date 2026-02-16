@@ -85,19 +85,17 @@ export default function CertificationCard({
             <div className="space-y-3 sm:space-y-4">
               {examSections.map((section, i) => (
                 <div key={i} className="flex items-center gap-3 sm:gap-4">
-                  <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-center text-xs sm:text-sm mb-1.5 sm:mb-2">
-                      <span className="text-gray-700 font-medium truncate pr-2">{section.name}</span>
-                      <span className="text-salesforce-blue font-bold flex-shrink-0 bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
-                        {section.percentage}%
-                      </span>
-                    </div>
-                    <div className="h-2 sm:h-2.5 bg-gray-100 rounded-full overflow-hidden shadow-inner">
-                      <div
-                        className="h-full bg-gradient-to-r from-salesforce-blue via-salesforce-light to-salesforce-blue rounded-full progress-bar shadow-sm"
-                        style={{ width: `${section.percentage}%` }}
-                      />
-                    </div>
+                  <div className="flex-1 min-w-0 flex justify-between items-center text-xs sm:text-sm mb-1.5 sm:mb-2">
+                    <span className="text-gray-700 font-medium truncate pr-2">{section.name}</span>
+                    <span className="text-salesforce-blue font-bold flex-shrink-0 bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
+                      {section.percentage}%
+                    </span>
+                  </div>
+                  <div className="h-2 sm:h-2.5 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                    <div
+                      className="h-full bg-gradient-to-r from-salesforce-blue via-salesforce-light to-salesforce-blue rounded-full progress-bar shadow-sm"
+                      style={{ width: `${section.percentage}%` }}
+                    />
                   </div>
                 </div>
               ))}
