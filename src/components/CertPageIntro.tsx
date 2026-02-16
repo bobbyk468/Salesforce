@@ -41,7 +41,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
   const audience = getAudienceLabel(category)
 
   return (
-    <section className="mb-8 sm:mb-10 rounded-xl sm:rounded-2xl border border-blue-100/50 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="cert-intro-heading">
+    <section className="cert-page-intro mb-8 sm:mb-10 rounded-xl sm:rounded-2xl border border-blue-100/50 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="cert-intro-heading">
       <h2 id="cert-intro-heading" className="sr-only">
         {getCertAboutExamHeading(slug)}
       </h2>
