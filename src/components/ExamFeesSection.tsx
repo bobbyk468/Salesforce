@@ -1,5 +1,5 @@
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
-import { getExamCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
 
 interface ExamFeesSectionProps {
@@ -12,8 +12,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const certName = slugToDisplayName(slug)
   
-  // Retake cost is typically half of exam cost (rounded)
-  const retakeCost = examCost === '$6000' ? '$3000' : examCost === '$400' ? '$200' : examCost === '$250' ? '$125' : examCost === '$100' ? '$50' : examCost === '$75' ? '$37.50' : '$100'
+  const retakeCost = getRetakeCost(slug)
   
   return (
     <section className="mt-8 sm:mt-10 mb-8 sm:mb-10 bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8">

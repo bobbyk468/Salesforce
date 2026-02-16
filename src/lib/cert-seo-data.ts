@@ -104,7 +104,7 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'strategy-designer': '$200',
   'ai-associate': '$200',
   'marketing-cloud-engagement-foundations': '$200',
-  'mulesoft-integration-foundations': '$200',
+  'mulesoft-integration-foundations': '$75',
   // $100 (Accredited Professional)
   'advanced-field-service-ap': '$100',
   'b2b-commerce-admin-ap': '$100',
@@ -166,6 +166,126 @@ export function getExamCost(slug: string): string {
   return SLUG_TO_EXAM_COST[slug] || '$200'
 }
 
+/** Retake cost: MuleSoft Foundations is free; otherwise typically half of exam cost (or $100 default). */
+export function getRetakeCost(slug: string): string {
+  if (slug === 'mulesoft-integration-foundations') return 'Free'
+  const cost = getExamCost(slug)
+  if (cost === '$6000') return '$3000'
+  if (cost === '$400') return '$200'
+  if (cost === '$250') return '$125'
+  if (cost === '$100') return '$50'
+  if (cost === '$75') return '$37.50'
+  return '$100'
+}
+
+/** Exam logistics (questions, passing score, duration) for the Exam logistics section. Overrides only; defaults by cost tier when missing. */
+export type ExamLogisticsDetail = { questions: number | string; passingScore: string; duration: string }
+
+const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
+  administrator: { questions: 60, passingScore: '65%', duration: '105 min' },
+  'advanced-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'app-builder': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'agentforce-specialist': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'business-analyst': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'cpq-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'marketing-cloud-engagement-admin': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'slack-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'developer-1': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'developer-2': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'javascript-developer-i': { questions: 60, passingScore: '~68%', duration: '105 min' },
+  'b2c-commerce-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'industries-cpq-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'marketing-cloud-engagement-developer': { questions: 60, passingScore: '~67%', duration: '105 min' },
+  'mulesoft-developer-i': { questions: 60, passingScore: '~70%', duration: '120 min' },
+  'mulesoft-developer-ii': { questions: 60, passingScore: '~70%', duration: '120 min' },
+  'mulesoft-hyperautomation-developer': { questions: 60, passingScore: '~68%', duration: '105 min' },
+  'omnistudio-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'slack-developer': { questions: 60, passingScore: '~68%', duration: '105 min' },
+  'sales-cloud': { questions: 60, passingScore: '68%', duration: '105 min' },
+  'service-cloud': { questions: 60, passingScore: '67%', duration: '105 min' },
+  'data-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'crm-analytics-einstein-discovery-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'education-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'experience-cloud': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'field-service': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'pardot-consultant': { questions: 60, passingScore: '68%', duration: '105 min' },
+  'marketing-cloud-consultant': { questions: 60, passingScore: '67%', duration: '105 min' },
+  'nonprofit-cloud': { questions: 60, passingScore: '65%', duration: '105 min' },
+  'nonprofit-success-pack-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'omnistudio-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'revenue-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'slack-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'email-specialist': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'pardot-specialist': { questions: 60, passingScore: '72%', duration: '90 min' },
+  'strategy-designer': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'ai-associate': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'marketing-cloud-engagement-foundations': { questions: 40, passingScore: '~65%', duration: '75 min' },
+  'mulesoft-integration-foundations': { questions: 40, passingScore: '70%', duration: '70 min' },
+  'ux-designer': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'platform-foundations': { questions: 40, passingScore: '~65%', duration: '75 min' },
+  'sales-foundations': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'administrator-practice-test': { questions: 60, passingScore: '65%', duration: '105 min' },
+  'email-specialist-practice-test': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  // $100 AP
+  'advanced-field-service-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'b2b-commerce-admin-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'b2b-commerce-developer-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'communications-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'consumer-goods-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'consumer-goods-tpm-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'contact-center-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'cpq-billing-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'energy-utilities-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'financial-services-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'health-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'heroku-developer-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'loyalty-management-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'manufacturing-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'marketing-cloud-advanced-cross-channel-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'marketing-cloud-intelligence-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'marketing-cloud-personalization-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'media-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'net-zero-cloud-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'order-management-admin-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'order-management-developer-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'process-automation-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  'public-sector-solutions-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
+  // $400 Architects
+  'application-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'data-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'integration-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'sharing-visibility-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'system-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'identity-access-management-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'dev-lifecycle-deployment-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'b2b-solution-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'b2c-commerce-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'b2c-solution-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'heroku-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'mulesoft-catalyst-consultant': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'mulesoft-platform-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  'mulesoft-integration-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
+  // Tableau
+  'tableau-architect': { questions: 45, passingScore: '~70%', duration: '90 min' },
+  'tableau-consultant': { questions: 45, passingScore: '~70%', duration: '90 min' },
+  'tableau-data-analyst': { questions: 45, passingScore: '~70%', duration: '90 min' },
+  'tableau-server-administrator': { questions: 45, passingScore: '~70%', duration: '90 min' },
+  'tableau-desktop-foundations': { questions: 40, passingScore: '~65%', duration: '60 min' },
+  // CTA / Board
+  'technical-architect': { questions: 'Board exam', passingScore: 'Board review', duration: 'Board' },
+  'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
+  'technical-architect-review-board': { questions: 'Board scenario', passingScore: 'Board decision', duration: 'Board session' },
+}
+
+/** Returns exam logistics for the Exam logistics section; null if slug not in map (e.g. role page). */
+export function getExamLogistics(slug: string): (ExamLogisticsDetail & { fee: string; retake: string }) | null {
+  const cost = getExamCost(slug)
+  const retake = getRetakeCost(slug)
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  if (!detail) return null
+  return { ...detail, fee: cost, retake }
+}
+
 function clampTitle(raw: string, max = 60): string {
   const normalized = raw.replace(/\s+/g, ' ').trim()
   if (normalized.length <= max) return normalized
@@ -206,7 +326,7 @@ function buildWinterTitle(base: string): string {
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
-    'app-builder': `Platform App Builder Practice Exam (${TITLE_YEAR})`,
+    'app-builder': `${TITLE_YEAR} Salesforce App Builder Study Guide | DEV-402 Prep`,
     administrator: `Salesforce Admin Practice Test: Free ${TITLE_YEAR} Prep`,
     'advanced-administrator': `Salesforce Advanced Admin (ADM-211) Prep: ${TITLE_YEAR}`,
     'email-specialist': `Marketing Cloud Email Specialist Prep (${TITLE_YEAR})`,
@@ -227,6 +347,7 @@ function getCertMetaTitle(slug: string): string {
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
     'technical-architect': `Salesforce Technical Architect (CTA) Guide (${TITLE_YEAR})`,
+    'system-architect': `Salesforce System Architect Study Guide (${TITLE_YEAR}) | Domain Weights & Tips`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -906,6 +1027,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'pardot-consultant': [
     {
+      question: 'What is the passing score for the Pardot Consultant exam?',
+      answer: 'The passing score for the Salesforce Certified Pardot Consultant exam is 68%. The exam consists of 60 multiple-choice questions, and you have 105 minutes to complete it.',
+    },
+    {
+      question: 'Is the Pardot Consultant certification hard?',
+      answer: 'The Pardot Consultant exam is considered intermediate to advanced. It tests not just technical knowledge of the platform but also your ability to design strategic marketing automation solutions for complex business requirements.',
+    },
+    {
+      question: 'What are the prerequisites for the Pardot Consultant certification?',
+      answer: 'The only official prerequisite for the Pardot Consultant exam is to first hold the Salesforce Certified Pardot Specialist credential.',
+    },
+    {
       question: 'What is Account Engagement (formerly Pardot)?',
       answer: 'Account Engagement is Salesforce\'s B2B marketing automation platform that helps marketers generate leads, nurture prospects, and measure marketing ROI through integration with Salesforce CRM.',
     },
@@ -1015,6 +1148,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
   ],
   'mulesoft-integration-foundations': [
+    {
+      question: 'What is the exam code and fee for the MuleSoft Certified Integration Foundations Associate?',
+      answer: 'The MuleSoft Certified Integration Foundations exam (formerly MuleSoft Associate) has a registration fee of $75 USD. It is identified as the MuleSoft Integration Foundations certification in the Webassessor portal.',
+    },
+    {
+      question: 'What is the passing score and retake policy for the MuleSoft Foundations exam?',
+      answer: 'The passing score for the MuleSoft Integration Foundations exam is 70%. If you do not pass on your first attempt, the retake fee is currently free.',
+    },
+    {
+      question: 'How many questions are on the MuleSoft Certified Integration Foundations exam?',
+      answer: 'The exam consists of 40 multiple-choice questions, and you have 70 minutes to complete it. It is a proctored, closed-book exam that can be taken online or at a testing center.',
+    },
     {
       question: 'Is MuleSoft Integration Foundations a good starting point?',
       answer: 'Yes, it\'s an entry-level certification for MuleSoft. It covers integration concepts, Anypoint Platform basics, and API design. No prior MuleSoft experience required, but basic IT knowledge helps.',
@@ -1345,6 +1490,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
   ],
   'tableau-desktop-foundations': [
+    {
+      question: 'Is the Tableau Desktop Foundations exam worth it?',
+      answer: 'Yes, the Tableau Desktop Foundations exam is worth it for professionals looking to validate their core data visualization skills. It serves as a strong starting point before pursuing the more advanced Tableau Desktop Specialist or Certified Data Analyst certifications.',
+    },
+    {
+      question: 'What is the passing score for the Tableau Desktop Foundations exam?',
+      answer: 'Tableau certification exams typically use a scaled scoring system, often around 70–75%. It is recommended to consistently score above 80% on practice exams before attempting the official test.',
+    },
+    {
+      question: 'How do I prepare for the Tableau Desktop Foundations exam?',
+      answer: 'Preparation should focus on connecting to data, basic mapping, creating calculated fields, and building dashboards. Using a structured study guide that follows the official exam domains is the most efficient path to success.',
+    },
     {
       question: 'Is Tableau Desktop Foundations a good starting point?',
       answer: 'Yes, it\'s an entry-level certification for Tableau. It covers connecting to data, creating basic visualizations, and building simple dashboards. No prior Tableau experience required.',

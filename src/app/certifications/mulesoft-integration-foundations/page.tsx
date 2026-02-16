@@ -5,6 +5,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 import CertPageCta from '@/components/CertPageCta'
 import ExamFeesSection from '@/components/ExamFeesSection'
+import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
@@ -56,7 +57,16 @@ export default function MuleSoftIntegrationFoundationsPage() {
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
       <CertPageIntro slug={slug} />
-        
+        <ExamLogisticsSection
+          slug={slug}
+          examCodeNote={
+            <>
+              Book via the official{' '}
+              <a href="https://trailhead.salesforce.com/credentials/verification" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Salesforce credential verification</a>
+              {' '}and Webassessor. No separate alpha-numeric exam code; the exam is listed as MuleSoft Integration Foundations.
+            </>
+          }
+        />
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         
@@ -70,7 +80,7 @@ export default function MuleSoftIntegrationFoundationsPage() {
             title={slugToDisplayName(slug)}
             code="MuleSoft Associate"
             description="The Certified MuleSoft Integrations Foundations certification is designed for individuals who have knowledge of core integration and API-led connectivity terminology and can work as an informed member of a MuleSoft project team."
-            examDetails={{ questions: 40, passingScore: '~65%', duration: '75 min', cost: '$75' }}
+            examDetails={{ questions: 40, passingScore: '70%', duration: '70 min', cost: '$75' }}
             topics={['API-led Connectivity', 'Anypoint Platform', 'APIs', 'Integration Basics', 'System/Process/Experience APIs', 'Terminology', 'Best Practices', 'Team Role']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}

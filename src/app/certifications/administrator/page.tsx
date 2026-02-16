@@ -24,6 +24,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
+import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
@@ -198,6 +199,7 @@ export default function AdministratorPage() {
 
         {/* Condensed intro: shorter, benefit-focused (per CTR audit) */}
         <CertPageIntro slug={slug} />
+        <ExamLogisticsSection slug={slug} />
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
