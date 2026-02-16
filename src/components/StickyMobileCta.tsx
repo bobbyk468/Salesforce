@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, useEffect } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import Link from 'next/link'
 
 interface StickyMobileCtaProps {
@@ -19,16 +19,21 @@ export default function StickyMobileCta({
   label = 'Start 5 Free Questions',
 }: StickyMobileCtaProps) {
   const [visible, setVisible] = useState(false)
+  const rafRef = useRef<number | null>(null)
 
   useEffect(() => {
-    function handleScroll() {
+    function updateVisibility() {
+      // Skip work on desktop where this bar is always hidden.
+      if (window.innerWidth >= 1024) {
+        setVisible(false)
+        return
+      }
+
       const scrollY = window.scrollY
-      // Show after scrolling past hero (~400px)
       if (scrollY < 400) {
         setVisible(false)
         return
       }
-      // Hide if practice-questions section is in viewport (user reached it)
       const practiceSection = document.getElementById('practice-questions')
       if (practiceSection) {
         const rect = practiceSection.getBoundingClientRect()
@@ -40,8 +45,24 @@ export default function StickyMobileCta({
       setVisible(true)
     }
 
-    window.addEventListener('scroll', handleScroll, { passive: true })
-    return () => window.removeEventListener('scroll', handleScroll)
+    function onScrollOrResize() {
+      if (rafRef.current !== null) return
+      rafRef.current = window.requestAnimationFrame(() => {
+        rafRef.current = null
+        updateVisibility()
+      })
+    }
+
+    updateVisibility()
+    window.addEventListener('scroll', onScrollOrResize, { passive: true })
+    window.addEventListener('resize', onScrollOrResize, { passive: true })
+    return () => {
+      window.removeEventListener('scroll', onScrollOrResize)
+      window.removeEventListener('resize', onScrollOrResize)
+      if (rafRef.current !== null) {
+        window.cancelAnimationFrame(rafRef.current)
+      }
+    }
   }, [])
 
   if (!visible) return null

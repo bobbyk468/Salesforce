@@ -4,8 +4,18 @@ import dynamic from 'next/dynamic'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
 
-const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), { ssr: false })
-const AdministratorCtaSections = dynamic(() => import('@/components/AdministratorCtaSections'), { ssr: false })
+const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), {
+  ssr: false,
+  loading: () => (
+    <div id="practice-questions" className="mt-12 min-h-[360px]" aria-hidden="true" />
+  ),
+})
+const AdministratorCtaSections = dynamic(() => import('@/components/AdministratorCtaSections'), {
+  ssr: false,
+  loading: () => (
+    <div className="mt-12 min-h-[320px]" aria-hidden="true" />
+  ),
+})
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
@@ -336,7 +346,7 @@ export default function AdministratorPage() {
               headingLevel="h2"
             />
 
-            <div className="print-checklist-only mt-8">
+            <div className="print-checklist-only mt-8 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
               <details id="syllabus-checklist" className="rounded-xl border border-gray-200 bg-white overflow-hidden">
                 <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2 no-print">
                   <span>ADM-201 exam syllabus checklist</span>
@@ -380,7 +390,7 @@ export default function AdministratorPage() {
               </details>
             </div>
 
-            <section className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="study-timeline-heading">
+            <section className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_420px]" aria-labelledby="study-timeline-heading">
               <h2 id="study-timeline-heading" className="text-lg font-bold text-gray-900 mb-3">
                 Suggested study timeline (4–6 weeks)
               </h2>
@@ -397,7 +407,7 @@ export default function AdministratorPage() {
             </section>
 
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
-            <section id="is-adm-201-hard" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="difficulty-heading">
+            <section id="is-adm-201-hard" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_520px]" aria-labelledby="difficulty-heading">
               <h2 id="difficulty-heading" className="text-lg font-bold text-gray-900 mb-3">
                 Is the ADM-201 Exam Hard?
               </h2>
@@ -419,7 +429,7 @@ export default function AdministratorPage() {
             </section>
 
             {/* ADM-201 Exam Format Explained — targets "ADM-201 exam format" + "scenario-based questions" queries */}
-            <section id="exam-format" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="exam-format-heading">
+            <section id="exam-format" className="mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_980px]" aria-labelledby="exam-format-heading">
               <h2 id="exam-format-heading" className="text-lg font-bold text-gray-900 mb-3">
                 ADM-201 Exam Format Explained
               </h2>
