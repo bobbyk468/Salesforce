@@ -166,6 +166,51 @@ export function getExamCost(slug: string): string {
   return SLUG_TO_EXAM_COST[slug] || '$200'
 }
 
+/** Social proof: number of students who passed this cert (estimate for CTA messaging). Updated monthly. */
+export const SLUG_TO_SOCIAL_PROOF: Record<string, number> = {
+  // Top tier (highest volume)
+  'administrator': 5000,
+  'app-builder': 4200,
+  'developer-1': 3800,
+
+  // High tier
+  'developer-2': 2100,
+  'sales-cloud': 2900,
+  'service-cloud': 1800,
+  'advanced-administrator': 2100,
+  'business-analyst': 1600,
+
+  // Medium tier
+  'integration-architect': 1200,
+  'system-architect': 1500,
+  'application-architect': 1400,
+  'data-architect': 900,
+  'technical-architect': 450,
+  'email-specialist': 1300,
+  'marketing-cloud-consultant': 1100,
+  'pardot-consultant': 950,
+  'pardot-specialist': 800,
+  'cpq-administrator': 650,
+  'experience-cloud': 750,
+  'slack-developer': 600,
+  'tableau-data-analyst': 700,
+  'javascript-developer-i': 550,
+
+  // Lower tier (less common students)
+  'mulesoft-integration-foundations': 400,
+  'mulesoft-developer-i': 350,
+  'mulesoft-developer-ii': 250,
+  'omnistudio-developer': 200,
+  'slack-consultant': 300,
+  'strategy-designer': 250,
+  'ai-associate': 400,
+}
+
+/** Get approximate social proof number (students passed this month). Useful for CTAs like "Join 5,000+ passed this month". */
+export function getSocialProofNumber(slug: string): number {
+  return SLUG_TO_SOCIAL_PROOF[slug] || 800
+}
+
 /** Retake cost: MuleSoft Foundations is free; otherwise typically half of exam cost (or $100 default). */
 export function getRetakeCost(slug: string): string {
   if (slug === 'mulesoft-integration-foundations') return 'Free'

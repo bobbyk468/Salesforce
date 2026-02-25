@@ -1,6 +1,6 @@
 import { PlayCircle, Download } from 'lucide-react'
 import Link from 'next/link'
-import { SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { SLUG_TO_EXAM_CODE, getExamLogistics, getSocialProofNumber } from '@/lib/cert-seo-data'
 
 interface CertPageCtaProps {
   slug: string
@@ -13,7 +13,25 @@ interface CertPageCtaProps {
 export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaProps) {
   const effectiveExamCode = examCode ?? SLUG_TO_EXAM_CODE[slug]
   const singleDominantCta = !!effectiveExamCode
-  const primaryLabel = singleDominantCta ? `Start Free ${effectiveExamCode} Practice Test` : 'Start Free Practice Test'
+
+  // Get exam details for benefit-driven copy
+  const examDetails = getExamLogistics(slug)
+  const socialProof = getSocialProofNumber(slug)
+
+  // Build benefit-driven button text
+  let primaryLabel = 'Start Free Practice Test'
+  if (singleDominantCta && examDetails) {
+    // Format: "Start Free ADM-201 Practice (60Q, 105 min)"
+    primaryLabel = `Start Free ${effectiveExamCode} Practice (${examDetails.questions}Q, ${examDetails.duration})`
+  } else if (singleDominantCta) {
+    primaryLabel = `Start Free ${effectiveExamCode} Practice`
+  }
+
+  // Build social proof copy
+  const socialProofText = socialProof >= 1000
+    ? `Join ${(socialProof / 1000).toFixed(1)}K+ passed this month`
+    : `Join ${socialProof.toLocaleString()}+ passed this month`
+
   const contactHref = `/contact#exam=${encodeURIComponent(effectiveExamCode ?? certTitle)}`
 
   return (
@@ -37,9 +55,14 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
         )}
       </div>
       <p className="text-center text-gray-600 text-xs sm:text-sm mt-4">
-        Free practice questions • Updated for {new Date().getFullYear()} • No sign-up required
+        {socialProofText} • Updated for {new Date().getFullYear()} • No sign-up required
       </p>
-      {singleDominantCta && (
+      {singleDominantCta && examDetails && (
+        <p className="text-center text-white/80 text-xs sm:text-sm mt-1">
+          {examDetails.fee} exam • {examDetails.passingScore} passing score • Free practice
+        </p>
+      )}
+      {singleDominantCta && !examDetails && (
         <p className="text-center text-white/80 text-xs sm:text-sm mt-1">
           Join thousands preparing for Salesforce certifications
         </p>
