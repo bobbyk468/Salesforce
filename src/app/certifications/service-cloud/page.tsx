@@ -180,8 +180,6 @@ export default function ServiceCloudPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -193,6 +191,7 @@ export default function ServiceCloudPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="SVC"
             description="The Service Cloud Consultant certification validates your expertise in designing and implementing Service Cloud solutions for customer service operations."

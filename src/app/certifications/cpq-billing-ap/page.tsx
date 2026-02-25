@@ -31,8 +31,6 @@ export default function CPQBillingAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function CPQBillingAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['CPQ', 'Billing', 'Consulting', 'Scoping', 'Design', 'Deployment', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['CPQ', 'Billing', 'Consulting', 'Scoping', 'Design', 'Deployment', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

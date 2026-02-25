@@ -56,8 +56,6 @@ export default function MarketingCloudEngagementFoundationsPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function MarketingCloudEngagementFoundationsPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Marketing Associate"
             description="The Salesforce Marketing Associate certification is designed for individuals with a foundational understanding of the Salesforce platform and up to six months of experience with Salesforce Marketing Cloud Engagement."

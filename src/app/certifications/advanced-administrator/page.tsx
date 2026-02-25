@@ -85,8 +85,6 @@ export default function AdvancedAdministratorPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         <p className="text-sm text-gray-600 mb-6">
           If you haven&apos;t passed the entry-level admin exam yet, start with our{' '}
           <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">ADM-201 study guide</Link> first.
@@ -105,6 +103,7 @@ export default function AdvancedAdministratorPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="ADM-211"
             description="The Advanced Administrator certification validates your advanced knowledge of Salesforce administration, including complex security models, advanced automation, and performance optimization."

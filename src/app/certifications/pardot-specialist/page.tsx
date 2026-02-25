@@ -81,8 +81,6 @@ export default function PardotSpecialistPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -94,6 +92,7 @@ export default function PardotSpecialistPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Pardot Specialist"
             description="The Pardot Specialist certification validates your skills in B2B marketing automation, lead nurturing, and marketing analytics."

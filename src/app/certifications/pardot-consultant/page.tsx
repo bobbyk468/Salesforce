@@ -81,8 +81,6 @@ export default function PardotConsultantPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -94,6 +92,7 @@ export default function PardotConsultantPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Pardot Consultant"
             description="The Pardot Consultant certification validates your expertise in designing and implementing Pardot solutions aligned with business requirements."

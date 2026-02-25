@@ -57,8 +57,6 @@ export default function SlackDeveloperPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-      <ExamLogisticsSection slug={slug} />
       <p className="text-sm text-gray-600 mb-6">
         If you are managing Slack workspaces rather than building apps, start with{' '}
         <Link href="/certifications/slack-administrator" className="text-salesforce-blue font-medium hover:underline">
@@ -79,6 +77,7 @@ export default function SlackDeveloperPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Slack Developer"
             description="Certified Slack Developers have deep knowledge of the Slack Platform and Slack's APIs and possess the knowledge, skills, and experience to design and build custom applications within Slack."

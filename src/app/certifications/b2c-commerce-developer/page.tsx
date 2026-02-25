@@ -56,8 +56,6 @@ export default function B2CCommerceDeveloperPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function B2CCommerceDeveloperPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="B2C Commerce Developer"
             description="Certified B2C Commerce Cloud Developers have experience as full-stack developers for Salesforce B2C Commerce Digital."

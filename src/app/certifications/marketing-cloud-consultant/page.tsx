@@ -81,8 +81,6 @@ export default function MarketingCloudConsultantPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -94,6 +92,7 @@ export default function MarketingCloudConsultantPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="MC Consultant"
             description="The Marketing Cloud Consultant certification validates your expertise in implementing Marketing Cloud solutions for digital marketing campaigns."

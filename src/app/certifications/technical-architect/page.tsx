@@ -56,8 +56,6 @@ export default function TechnicalArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function TechnicalArchitectPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="CTA"
             description="Salesforce Certified Technical Architects have experience in designing and implementing secure, high-performance, integrated technical solutions using the Force.com platform within the context of a client's architectural landscape."

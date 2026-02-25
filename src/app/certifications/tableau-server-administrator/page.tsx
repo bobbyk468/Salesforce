@@ -97,8 +97,6 @@ export default function TableauServerAdministratorPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -110,6 +108,7 @@ export default function TableauServerAdministratorPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Tableau Server Admin"
             description="Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud. They handle installation, security, user management, sites, and performance."

@@ -81,8 +81,6 @@ export default function AgentforceSpecialistPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -94,6 +92,7 @@ export default function AgentforceSpecialistPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Agentforce"
             description="Certified Agentforce Specialists are responsible for managing and optimizing Agentforce and have deep understanding of both Salesforce platform configuration and Agentforce capabilities."

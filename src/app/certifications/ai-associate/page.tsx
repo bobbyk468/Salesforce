@@ -56,8 +56,6 @@ export default function AIAssociatePage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function AIAssociatePage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="AI Associate"
             description="The Salesforce AI Associate credential is designed for individuals who may have knowledge of AI, whether beginners or more experienced. It validates foundational skills in ethical and responsible handling of data as they apply to AI in CRM."

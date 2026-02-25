@@ -56,8 +56,6 @@ export default function MuleSoftHyperautomationDeveloperPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function MuleSoftHyperautomationDeveloperPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Hyperautomation"
             description="Certified MuleSoft Hyperautomation Developers develop hyperautomation solutions across the Salesforce and MuleSoft products."

@@ -48,8 +48,6 @@ export default function TableauArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -61,6 +59,7 @@ export default function TableauArchitectPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Tableau Architect"
             description="Tableau Architects design and govern enterprise Tableau analytics solutions. They define architecture, governance, scalability, and best practices for Tableau Server and Tableau Cloud."

@@ -31,8 +31,6 @@ export default function B2BCommerceDeveloperAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function B2BCommerceDeveloperAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce in the context of sample apps and real world implementations." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['B2B Commerce', 'Development', 'Customization', 'Storefront', 'APIs', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce in the context of sample apps and real world implementations." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['B2B Commerce', 'Development', 'Customization', 'Storefront', 'APIs', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

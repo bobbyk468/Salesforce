@@ -31,8 +31,6 @@ export default function HerokuArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function HerokuArchitectPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="Heroku Architect" description="Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['Heroku', 'Scalability', 'Deployment', 'Build Workflows', 'Teams', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="Heroku Architect" description="Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['Heroku', 'Scalability', 'Deployment', 'Build Workflows', 'Teams', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

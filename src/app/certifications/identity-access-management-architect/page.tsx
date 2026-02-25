@@ -56,8 +56,6 @@ export default function IdentityAccessManagementArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function IdentityAccessManagementArchitectPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Identity & Access Mgmt"
             description="Certified Platform Identity and Access Management Architects are experts at assessing architecture environments and requirements in order to design sound, high-performing solutions on the Salesforce Platform that meet Single Sign-On (SSO) requirements."

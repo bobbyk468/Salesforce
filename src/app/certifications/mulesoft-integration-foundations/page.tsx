@@ -56,7 +56,6 @@ export default function MuleSoftIntegrationFoundationsPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
         <ExamLogisticsSection
           slug={slug}
           examCodeNote={
@@ -77,6 +76,7 @@ export default function MuleSoftIntegrationFoundationsPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="MuleSoft Associate"
             description="The Certified MuleSoft Integrations Foundations certification is designed for individuals who have knowledge of core integration and API-led connectivity terminology and can work as an informed member of a MuleSoft project team."

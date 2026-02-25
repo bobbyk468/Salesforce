@@ -56,8 +56,6 @@ export default function OmniStudioConsultantPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function OmniStudioConsultantPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="OmniStudio Consultant"
             description="Certified OmniStudio Consultants are experts at designing and implementing solutions utilizing OmniStudio tools that are sustainable and scalable, meet customer business requirements, and contribute to long-term customer success."

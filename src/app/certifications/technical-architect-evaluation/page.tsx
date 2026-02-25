@@ -59,8 +59,6 @@ export default function TechnicalArchitectEvaluationPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -72,6 +70,7 @@ export default function TechnicalArchitectEvaluationPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="CTA Step 1"
             description="The Architect Evaluation is the first step toward CTA. It assesses your ability to design secure, scalable, integrated solutions through scenario-based and multiple-choice questions. Passing this qualifies you for the Architect Review Board."

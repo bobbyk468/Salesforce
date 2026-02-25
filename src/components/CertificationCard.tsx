@@ -1,10 +1,12 @@
 import { Award, Clock, Target, BookOpen } from 'lucide-react'
 import type { ExamSection } from '@/lib/exam-weightage-data'
+import DifficultyBadge from '@/components/DifficultyBadge'
 
 interface CertificationCardProps {
   title: string
   code: string
   description: string
+  slug: string
   examDetails: {
     questions: number | string
     passingScore: string
@@ -26,6 +28,7 @@ export default function CertificationCard({
   title,
   code,
   description,
+  slug,
   examDetails,
   topics,
   examSections,
@@ -37,11 +40,14 @@ export default function CertificationCard({
     <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm">
       {/* Header: heading with exam name and primary keyword for SEO */}
       <div className="gradient-bg p-5 sm:p-6 lg:p-8 text-white">
-        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4">
+        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">
           <Award className="h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0" aria-label="Certification badge icon" />
           <span className="bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-white/30">
             {code}
           </span>
+          <div className="flex-shrink-0">
+            <DifficultyBadge slug={slug} size="sm" />
+          </div>
         </div>
         {headingLevel === 'h1' ? (
           <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>

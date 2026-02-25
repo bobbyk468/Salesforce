@@ -31,8 +31,6 @@ export default function MuleSoftPlatformArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function MuleSoftPlatformArchitectPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="MuleSoft Architect" description="Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['Anypoint Platform', 'API-led', 'Strategy', 'Governance', 'Integration', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="MuleSoft Architect" description="Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['Anypoint Platform', 'API-led', 'Strategy', 'Governance', 'Integration', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

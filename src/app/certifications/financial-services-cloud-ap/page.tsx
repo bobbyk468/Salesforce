@@ -31,8 +31,6 @@ export default function FinancialServicesCloudAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function FinancialServicesCloudAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Financial Services Cloud', 'Wealth Management', 'Banking', 'Insurance', 'Data Model', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Financial Services Cloud', 'Wealth Management', 'Banking', 'Insurance', 'Data Model', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

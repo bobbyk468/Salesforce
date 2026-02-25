@@ -31,8 +31,6 @@ export default function PublicSectorSolutionsAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function PublicSectorSolutionsAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Public Sector Solutions Professionals drive successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that best align with a company's vision and business value goals." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Public Sector', 'Government', 'Implementation', 'Best Practices', 'Business Value']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Public Sector Solutions Professionals drive successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that best align with a company's vision and business value goals." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Public Sector', 'Government', 'Implementation', 'Best Practices', 'Business Value']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
             examWeightageHeading={getCertExamWeightageHeading(slug)}

@@ -31,8 +31,6 @@ export default function LoyaltyManagementAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function LoyaltyManagementAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Loyalty Management Professionals has 2-3 years' experience designing solutions using the Loyalty Management functionality and can lead the implementation of these solutions within a customer organization." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Loyalty Management', 'Loyalty Programs', 'Points', 'Rewards', 'Engagement', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Loyalty Management Professionals has 2-3 years' experience designing solutions using the Loyalty Management functionality and can lead the implementation of these solutions within a customer organization." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Loyalty Management', 'Loyalty Programs', 'Points', 'Rewards', 'Engagement', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

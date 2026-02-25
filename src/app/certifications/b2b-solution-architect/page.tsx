@@ -31,8 +31,6 @@ export default function B2BSolutionArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function B2BSolutionArchitectPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="B2B Architect" description="Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2B Commerce', 'Multi-Cloud', 'CPQ', 'Order Management', 'Solution Design', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="B2B Architect" description="Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2B Commerce', 'Multi-Cloud', 'CPQ', 'Order Management', 'Solution Design', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

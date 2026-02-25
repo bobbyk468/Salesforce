@@ -199,7 +199,6 @@ export default function AdministratorPage() {
 
         {/* Condensed intro: shorter, benefit-focused (per CTR audit) */}
         <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
@@ -227,6 +226,7 @@ export default function AdministratorPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
               title={slugToDisplayName(slug)}
               code="ADM-201"
               description="The Salesforce Administrator Certification (ADM-201) validates your knowledge of Salesforce CRM administration, including data management, security, automation, and analytics. Prepare for the Salesforce Certified Administrator exam with this study guide."

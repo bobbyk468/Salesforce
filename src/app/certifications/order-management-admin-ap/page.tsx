@@ -31,8 +31,6 @@ export default function OrderManagementAdminAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function OrderManagementAdminAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Order Management', 'Orchestration', 'Fulfillment', 'Administration', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Order Management', 'Orchestration', 'Fulfillment', 'Administration', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

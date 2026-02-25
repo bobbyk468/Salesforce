@@ -48,8 +48,6 @@ export default function TableauDataAnalystPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -61,6 +59,7 @@ export default function TableauDataAnalystPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Tableau Data Analyst"
             description="Tableau Data Analysts analyze data and build actionable insights using Tableau. They connect to data, create calculations, and design visualizations that drive business decisions."

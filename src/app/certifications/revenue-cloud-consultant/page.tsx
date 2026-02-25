@@ -56,8 +56,6 @@ export default function RevenueCloudConsultantPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function RevenueCloudConsultantPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Revenue Cloud"
             description="Certified Revenue Cloud Consultants have hands-on experience designing and implementing the Revenue Cloud product on core, and have extensive knowledge of the Product-to-Cash lifecycle."

@@ -31,8 +31,6 @@ export default function MuleSoftCatalystConsultantPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function MuleSoftCatalystConsultantPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="Catalyst" description="Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['MuleSoft Catalyst', 'API-led', 'Delivery', 'Business Outcomes', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="Catalyst" description="Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['MuleSoft Catalyst', 'API-led', 'Delivery', 'Business Outcomes', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

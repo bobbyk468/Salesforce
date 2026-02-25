@@ -56,8 +56,6 @@ export default function IndustriesCPQDeveloperPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function IndustriesCPQDeveloperPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Industries CPQ"
             description="Certified Industries CPQ Developers understand how to develop Industries CPQ (Configure, Price, Quote) applications for the Salesforce Communications, Media, and Energy & Utilities Clouds."

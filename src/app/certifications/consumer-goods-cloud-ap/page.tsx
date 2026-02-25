@@ -31,8 +31,6 @@ export default function ConsumerGoodsCloudAPPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function ConsumerGoodsCloudAPPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="AP" description="Accredited Consumer Goods Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Consumer Goods Cloud', 'Retail Execution', 'Outlets', 'Trade Promotion', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="AP" description="Accredited Consumer Goods Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets." examDetails={{ questions: 60, passingScore: '~65%', duration: '90 min', cost: '$100' }} topics={['Consumer Goods Cloud', 'Retail Execution', 'Outlets', 'Trade Promotion', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

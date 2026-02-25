@@ -197,8 +197,6 @@ export default function AppBuilderPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         <p className="text-sm text-gray-600 mb-6">
           New to Salesforce admin? Our <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Salesforce Administrator (ADM-201) exam prep</Link> is the usual first step.
           {' '}See our{' '}
@@ -215,6 +213,7 @@ export default function AppBuilderPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="DEV-402"
             description="The Platform App Builder certification validates your skills in designing, building, and deploying custom applications on the Salesforce platform."

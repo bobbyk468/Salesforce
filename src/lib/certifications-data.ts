@@ -363,6 +363,80 @@ const CATEGORY_ORDER: { slug: string; level: CertificationLevel }[] = [
   { slug: 'accredited-professional', level: 'advanced' },
 ]
 
+/** Difficulty level for each certification. Used for badge display + filtering. */
+export type DifficultyLevel = 'beginner' | 'intermediate' | 'advanced' | 'expert'
+
+export const CERT_DIFFICULTY_LEVELS: Record<string, DifficultyLevel> = {
+  // Beginner (Associate/Foundations)
+  'platform-foundations': 'beginner',
+  'ai-associate': 'beginner',
+  'marketing-cloud-engagement-foundations': 'beginner',
+  'mulesoft-integration-foundations': 'beginner',
+  'sales-foundations': 'beginner',
+
+  // Intermediate (Admin/Developer/Consultant - most common)
+  'administrator': 'intermediate',
+  'advanced-administrator': 'intermediate',
+  'app-builder': 'intermediate',
+  'business-analyst': 'intermediate',
+  'developer-1': 'intermediate',
+  'developer-2': 'intermediate',
+  'sales-cloud': 'intermediate',
+  'service-cloud': 'intermediate',
+  'email-specialist': 'intermediate',
+  'pardot-specialist': 'intermediate',
+  'pardot-consultant': 'intermediate',
+  'marketing-cloud-consultant': 'intermediate',
+  'cpq-administrator': 'intermediate',
+  'experience-cloud': 'intermediate',
+  'slack-administrator': 'intermediate',
+  'slack-developer': 'intermediate',
+  'ux-designer': 'intermediate',
+  'data-cloud-consultant': 'intermediate',
+  'revenue-cloud-consultant': 'intermediate',
+  'crm-analytics-einstein-discovery-consultant': 'intermediate',
+  'mulesoft-developer-i': 'intermediate',
+  'mulesoft-developer-ii': 'intermediate',
+  'tableau-data-analyst': 'intermediate',
+  'strategy-designer': 'intermediate',
+  'marketing-cloud-engagement-admin': 'intermediate',
+  'marketing-cloud-engagement-developer': 'intermediate',
+  'javascript-developer-i': 'intermediate',
+  'field-service': 'intermediate',
+  'nonprofi-cloud': 'intermediate',
+  'slack-consultant': 'intermediate',
+
+  // Advanced (Architect path / Complex topics)
+  'application-architect': 'advanced',
+  'system-architect': 'advanced',
+  'integration-architect': 'advanced',
+  'data-architect': 'advanced',
+  'sharing-visibility-architect': 'advanced',
+  'identity-access-management-architect': 'advanced',
+  'dev-lifecycle-deployment-architect': 'advanced',
+  'b2b-solution-architect': 'advanced',
+  'b2c-commerce-architect': 'advanced',
+  'heroku-architect': 'advanced',
+  'mulesoft-platform-architect': 'advanced',
+  'mulesoft-integration-architect': 'advanced',
+  'mulesoft-catalyst-consultant': 'advanced',
+  'tableau-architect': 'advanced',
+  'omnistudio-consultant': 'advanced',
+  'omnistudio-developer': 'advanced',
+  'b2c-commerce-developer': 'advanced',
+  'industries-cpq-developer': 'advanced',
+  'mulesoft-hyperautomation-developer': 'advanced',
+
+  // Expert (CTA level / Highest difficulty)
+  'technical-architect': 'expert',
+  'technical-architect-evaluation': 'expert',
+  'technical-architect-review-board': 'expert',
+}
+
+export function getCertDifficultyLevel(slug: string): DifficultyLevel {
+  return CERT_DIFFICULTY_LEVELS[slug] ?? 'intermediate'
+}
+
 /** All certifications, deduplicated and ordered basic → advanced. */
 export const CERTIFICATIONS_ORDERED_BASIC_TO_ADVANCED: CertificationWithLevel[] = (() => {
   const seen = new Set<string>()

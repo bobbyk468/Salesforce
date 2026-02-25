@@ -31,8 +31,6 @@ export default function B2CCommerceArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -43,7 +41,7 @@ export default function B2CCommerceArchitectPage() {
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             
-            <CertificationCard title={slugToDisplayName(slug)} code="B2C Architect" description="Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2C Commerce', 'Global Sites', 'Multi-Brand', 'Channels', 'Design Patterns', 'Best Practices']}
+            <CertificationCard slug={slug} title={slugToDisplayName(slug)} code="B2C Architect" description="Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns." examDetails={{ questions: 60, passingScore: '~68%', duration: '120 min', cost: '$400' }} topics={['B2C Commerce', 'Global Sites', 'Multi-Brand', 'Channels', 'Design Patterns', 'Best Practices']}
             examSections={examSections}
             h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}

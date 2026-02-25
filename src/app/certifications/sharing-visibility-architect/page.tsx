@@ -56,8 +56,6 @@ export default function SharingVisibilityArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -69,6 +67,7 @@ export default function SharingVisibilityArchitectPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Sharing & Visibility"
             description="Certified Platform Sharing and Visibility Architects are fluent in designing sound, scalable, and high-performing technical solutions on the Salesforce Platform that meet sharing and visibility security requirements."

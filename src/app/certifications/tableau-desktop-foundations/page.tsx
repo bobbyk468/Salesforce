@@ -48,8 +48,6 @@ export default function TableauDesktopFoundationsPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-      <CertPageIntro slug={slug} />
-        <ExamLogisticsSection slug={slug} />
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -61,6 +59,7 @@ export default function TableauDesktopFoundationsPage() {
             <ExamFeesSection slug={slug} />
             
             <CertificationCard
+              slug={slug}
             title={slugToDisplayName(slug)}
             code="Tableau Desktop Foundations"
             description="Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards using Tableau Desktop. It is an entry-level credential for analytics and visualization."
