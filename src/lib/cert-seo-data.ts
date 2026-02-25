@@ -326,28 +326,30 @@ function buildWinterTitle(base: string): string {
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
-    'app-builder': `${TITLE_YEAR} Salesforce App Builder Study Guide | DEV-402 Prep`,
+    'app-builder': `Free Salesforce App Builder Practice (DEV-402) | 60 Questions`,
     administrator: `Salesforce Admin Practice Test: Free ${TITLE_YEAR} Prep`,
     'advanced-administrator': `Salesforce Advanced Admin (ADM-211) Prep: ${TITLE_YEAR}`,
     'email-specialist': `Marketing Cloud Email Specialist Prep (${TITLE_YEAR})`,
     'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
     'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
     'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
-    'marketing-cloud-consultant': `Marketing Cloud Consultant Guide (${TITLE_YEAR} Update)`,
-    'business-analyst': `Salesforce Business Analyst Study Guide (${TITLE_YEAR})`,
-    'sales-cloud': `Sales Cloud Consultant Practice Exam: ${TITLE_YEAR}`,
+    'marketing-cloud-consultant': `Pass Marketing Cloud Consultant: Free Exam Practice`,
+    'business-analyst': `Salesforce Business Analyst Exam: Free Practice ${TITLE_YEAR}`,
+    'sales-cloud': `Sales Cloud Consultant Exam: Free Practice & ${TITLE_YEAR} Study`,
     'developer-2': `Salesforce Platform Developer II Prep (${TITLE_YEAR})`,
-    'cpq-administrator': `Salesforce CPQ Specialist & Admin Prep (${TITLE_YEAR})`,
-    'pardot-consultant': `Pardot Consultant Study Guide & Prep (${TITLE_YEAR})`,
+    'cpq-administrator': `Free Salesforce CPQ Admin Practice Exam (${TITLE_YEAR})`,
+    'pardot-consultant': `Free Pardot Consultant Practice (${TITLE_YEAR}) | 68% Pass Score`,
     'pardot-specialist': `Pardot Specialist Practice Questions (${TITLE_YEAR})`,
-    'experience-cloud': `Experience Cloud Consultant Exam Path (${TITLE_YEAR})`,
+    'experience-cloud': `Free Experience Cloud Consultant Practice (${TITLE_YEAR})`,
     'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
     'developer-1': `Salesforce PD1 Practice Exam: Free ${TITLE_YEAR} Prep`,
     'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
     'technical-architect': `Salesforce Technical Architect (CTA) Guide (${TITLE_YEAR})`,
-    'system-architect': `Salesforce System Architect Study Guide (${TITLE_YEAR}) | Domain Weights & Tips`,
+    'system-architect': `System Architect Exam: Study Guide & Domain Weights`,
+    'integration-architect': `Integration Architect Exam: Study Guide & Practice`,
+    'data-architect': `Data Architect Exam: Study Guide & Practice Questions`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -480,15 +482,15 @@ export function getCertMetaDescription(slug: string): string {
   const examCost = getExamCost(slug)
   const ctrDescriptionOverrides: Record<string, string> = {
     'app-builder':
-      `Ace the Salesforce Platform App Builder exam. Get 50+ free practice questions, detailed explanations, and our ${TITLE_YEAR} study guide. Pass today!`,
+      `Free Salesforce App Builder (DEV-402) practice: 60 questions, 105 min exam, ~65% passing score. ${TITLE_YEAR} study guide with detailed explanations. Pass today!`,
     administrator:
       `Pass the ADM-201 exam with ease. Access free ${TITLE_YEAR} practice questions, section weightage, and a complete study path for the current release.`,
     'marketing-cloud-consultant':
-      `Master the Marketing Cloud Consultant exam. Includes free practice tests, exam fees, and registration details updated for the ${TITLE_YEAR} release.`,
+      `Free Marketing Cloud Consultant practice: 60 questions, 67% passing score. $200 exam fee, 105 min. Get ${TITLE_YEAR} study guide with exam tips. Start free now!`,
     'business-analyst':
-      `Get ready for the Business Analyst certification. Free ${TITLE_YEAR} study resources, exam tips, and practice questions to help you get certified fast.`,
+      `Free Business Analyst exam practice (60 questions, ~65% passing score, 105 min). $200 fee. ${TITLE_YEAR} study guide with practice questions & exam tips included.`,
     'sales-cloud':
-      `Ace the Sales Cloud Consultant certification. Includes updated ${TITLE_YEAR} practice questions, exam tips, and free study guides for the current release.`,
+      `Free Sales Cloud Consultant practice exam (60 questions, 68% passing score). $200 fee, 105-min exam. Get ${TITLE_YEAR} study guide, tips, and pass on first try.`,
     'advanced-administrator':
       `Pass ADM-211 faster. Use our ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan.`,
     'email-specialist':
@@ -502,13 +504,13 @@ export function getCertMetaDescription(slug: string): string {
     'developer-2':
       `Level up your dev skills. Get the latest ${TITLE_YEAR} exam topics, practice questions, and expert tips for the Platform Developer II certification.`,
     'cpq-administrator':
-      `Pass the Salesforce CPQ Admin exam with our updated ${TITLE_YEAR} study guide. Includes practice questions and exam tips for CPQ professionals.`,
+      `Free CPQ Administrator practice (60 questions, ~65% passing score, 105 min). $200 exam fee. Get ${TITLE_YEAR} study guide with practice questions & exam tips now.`,
     'pardot-consultant':
-      `Get the latest ${TITLE_YEAR} Pardot Consultant prep. Free practice exams, exam fees, and strategic study tips for the newest Salesforce release.`,
+      `Free Pardot Consultant practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${TITLE_YEAR} study guide with exam topics & strategic tips included.`,
     'pardot-specialist':
       `Pass the Pardot Specialist exam on your first try. Access 100% free ${TITLE_YEAR} practice tests and a comprehensive guide for marketing experts.`,
     'experience-cloud':
-      `Everything you need for the Experience Cloud Consultant exam: ${TITLE_YEAR} study guides, practice questions, and registration tips. Start practicing now.`,
+      `Free Experience Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 exam fee. ${TITLE_YEAR} study guide with practice questions included.`,
     'slack-developer':
       `Looking for affordable Slack Developer prep? Get our free ${TITLE_YEAR} study guide, exam breakdowns, and practice tips to pass your certification.`,
     'tableau-data-analyst':
@@ -517,6 +519,12 @@ export function getCertMetaDescription(slug: string): string {
       `Find MuleSoft Integration Foundations ${TITLE_YEAR} exam fees and code, plus free practice questions and study tips to pass on your first try.`,
     'technical-architect-review-board':
       `Prepare for the Salesforce CTA Review Board with format details, prep path, and ${TITLE_YEAR} success tips. Get focused guidance before your board date.`,
+    'integration-architect':
+      `Free Integration Architect practice: 60 questions, ~68% passing score, 120 min. $400 exam fee, ${TITLE_YEAR} study guide. Prerequisites: App & System Architect.`,
+    'data-architect':
+      `Free Data Architect practice: 60 questions, ~68% passing score, 120 min. $400 fee. ${TITLE_YEAR} study guide. Prerequisites: Application & System Architect certs.`,
+    'system-architect':
+      `Free System Architect practice: 60 questions, ~68% passing score, 120 min. $400 exam fee. ${TITLE_YEAR} study guide with domain weights breakdown & prep tips.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
