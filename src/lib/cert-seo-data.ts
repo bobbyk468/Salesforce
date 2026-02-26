@@ -916,6 +916,34 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'What is the best way to pass the ADM-201 exam on the first attempt?',
       answer: 'Focus on high-weight sections first (Configuration & Setup and Object Manager together are 40%). Practice in a free Developer Edition org. Take timed mock exams and aim for 75%+ before booking. Review wrong answers deeply — understand why each wrong option is wrong, not just which is correct. Complete the official Trailhead preparation trail.',
     },
+    {
+      question: 'What are the 7 exam sections for ADM-201 and which have the highest weight?',
+      answer: 'The 7 sections are: (1) Configuration and Setup (20%), (2) Object Manager and Lightning App Builder (20%), (3) Workflow and Process Automation (15%), (4) Data and Analytics Management (10%), (5) Sales and Marketing Applications (10%), (6) Service and Support Applications (15%), and (7) Productivity and Collaboration (10%). Configuration and Object Manager together account for 40% of the exam.',
+    },
+    {
+      question: 'What is sharing in Salesforce and how is it different from permissions?',
+      answer: 'Permissions control what a user can do across the org (e.g., create records, edit fields). Sharing controls who can see and edit specific records. Users must have permission first, then sharing rules (role hierarchy, sharing rules, manual sharing, team sharing) determine which records they can access.',
+    },
+    {
+      question: 'What is the difference between a role hierarchy and sharing rules in Salesforce?',
+      answer: 'Role hierarchy determines automatic record access based on reporting structure—users above someone in the hierarchy can always see their records. Sharing rules allow you to grant access to records based on criteria (e.g., all accounts in a region) or public groups regardless of hierarchy.',
+    },
+    {
+      question: 'What are org-wide defaults (OWD) and why are they important?',
+      answer: 'Org-wide defaults set the baseline sharing level for each object. Options are: Private (only owner and high-hierarchy users), Public Read-Only (everyone can read), or Public Read/Write. You typically set OWD to Private then use sharing rules and roles to grant appropriate access—this is considered best practice.',
+    },
+    {
+      question: 'What is the difference between a workflow rule and a flow in Salesforce?',
+      answer: 'Workflow Rules (legacy) automate simple, record-change triggered actions like field updates and email alerts. Flows (current) are more powerful and flexible—they support complex business logic, multiple triggers, and can update multiple objects. Salesforce recommends using Flows for new automation rather than Workflows.',
+    },
+    {
+      question: 'What is a Lightning App and when should I create one?',
+      answer: 'A Lightning App is a collection of Lightning pages, tabs, and components that work together for a specific business function. Create a Lightning App when you want to give users a focused experience for a particular role or business process (e.g., Sales App, Support App). Apps appear in the app launcher.',
+    },
+    {
+      question: 'How do I make a Salesforce org compliant with GDPR and data privacy laws?',
+      answer: 'Key steps: (1) Enable Shield Platform Encryption for sensitive data, (2) Set data access policies and retention, (3) Implement field-level security, (4) Use sharing rules to limit access, (5) Enable audit trails and login monitoring, (6) Create data deletion and export processes, (7) Document data handling in your privacy policy.',
+    },
   ],
   'app-builder': [
     {
@@ -925,6 +953,38 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What is the DEV-402 exam fee and passing score in Winter \'26?',
       answer: 'The Platform App Builder (DEV-402) exam fee is generally $200 USD with a typical retake fee of $100 USD, and the passing score is 63%. Always verify the latest fee and policy details in your Salesforce certification account before booking.',
+    },
+    {
+      question: 'How many questions are on the DEV-402 App Builder exam?',
+      answer: 'The DEV-402 exam has 60 multiple-choice questions, with 5 unscored pilot questions. You have 105 minutes, and you need 63% to pass (approximately 38 correct answers out of 60).',
+    },
+    {
+      question: 'What topics are covered in Platform App Builder (DEV-402)?',
+      answer: 'The exam covers Data Modeling (20%), Process Automation (25%), User Interface (20%), Testing, Debugging & Source Control (10%), and Security & Deployment (25%). Focus on hands-on experience with Lightning Pages, Flows, and Formula/Rollup Fields.',
+    },
+    {
+      question: 'Do I need Platform Administrator before taking Platform App Builder?',
+      answer: 'There is no official prerequisite, but Salesforce strongly recommends having Platform Administrator certification and solid admin experience first. App Builder builds on admin concepts, and you\'ll be much better prepared with admin knowledge.',
+    },
+    {
+      question: 'What is the difference between a formula field and a rollup summary field?',
+      answer: 'A Formula Field calculates values based on fields within the same record (e.g., quantity × price = total). A Rollup Summary Field summarizes values from related records in a master-detail relationship (e.g., sum of opportunities on an account). Choose rollup for cross-record calculations.',
+    },
+    {
+      question: 'What is a Lightning Page and how is it different from a custom Visualforce page?',
+      answer: 'Lightning Pages (declarative) are built by dragging and dropping components—no coding needed. Visualforce pages (coded) require programming knowledge. Lightning Pages are the modern approach; Salesforce is moving away from Visualforce.',
+    },
+    {
+      question: 'What is the difference between a regulated field and a standard field in Salesforce?',
+      answer: 'Standard fields are created by Salesforce and cannot be deleted or renamed. Custom fields (including regulated fields) are created by you and can be modified. You can create custom fields but pay attention to field types (text, number, picklist, etc.) since some cannot be changed after creation.',
+    },
+    {
+      question: 'How do Flows work and when should I use them instead of Workflows?',
+      answer: 'Flows are a visual, no-code tool that automate complex business processes. They can handle multiple decision branches, involve multiple objects, and trigger on various events. Workflows are deprecated—Salesforce recommends Flows for all new automation.',
+    },
+    {
+      question: 'What are the best practices for DEV-402 exam preparation?',
+      answer: 'Practice in a real Salesforce org (use free Developer Edition). Build sample apps with custom objects, flows, and Lightning Pages. Study high-weight topics (Process Automation 25%, Security & Deployment 25%). Take practice exams to identify weak spots and aim for 75%+ before booking.',
     },
   ],
   'sales-cloud': [
@@ -1006,6 +1066,38 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'How much experience do I need for Advanced Administrator?',
       answer: 'Salesforce recommends having the Platform Administrator certification and 12+ months of admin experience. You should be comfortable with complex sharing, advanced automation, and cross-object functionality.',
+    },
+    {
+      question: 'What is the passing score and exam fee for ADM-211?',
+      answer: 'The Advanced Administrator (ADM-211) certification has a passing score of 64% and exam fee of typically $200 USD (retake $100 USD). The exam consists of 60 multiple-choice questions with 105 minutes allowed.',
+    },
+    {
+      question: 'What topics are covered in the ADM-211 Advanced Administrator exam?',
+      answer: 'Topics include: Advanced Sharing (SharingReasons, PermissionSetGroups), Advanced Automation (decision trees, dynamic flows), Multi-org and Portal Administration, Advanced Reporting (cross-object filters), Territory Management, and Advanced System Monitoring.',
+    },
+    {
+      question: 'What is the difference between a sharing rule and manual sharing in Salesforce?',
+      answer: 'Sharing Rules automate access for groups of records based on criteria (e.g., all accounts in a region). Manual Sharing allows individual record access to be granted to a specific user temporarily. Use sharing rules for consistent policies; use manual sharing for exceptions.',
+    },
+    {
+      question: 'What are Permission Set Groups and when should I use them?',
+      answer: 'Permission Set Groups bundle multiple Permission Sets together for easier management. Instead of assigning 5 separate Permission Sets individually, you assign 1 group. Use them when multiple users need the same combination of permissions. They simplify large-scale permission management.',
+    },
+    {
+      question: 'What is territory management in Salesforce and why is it important?',
+      answer: 'Territory Management lets you assign opportunity records to multiple users through territory rules independent of role hierarchy. It\'s used when sales reps in different regions should own the same types of opportunities. Complex but important for large sales orgs.',
+    },
+    {
+      question: 'How do I optimize Salesforce org performance?',
+      answer: 'Key tactics: (1) Archive old records to reduce data volume, (2) Optimize rollup summary fields and formulas, (3) Use bulk API for large data operations, (4) Monitor Governor Limits via logs, (5) Use platform cache for frequently accessed data, (6) Monitor storage usage and cleanup old data.',
+    },
+    {
+      question: 'What are Scheduled Actions and how do I use them for automation?',
+      answer: 'Scheduled Actions in Flows let you automate tasks at a future time or recurring intervals without code. Examples: send reminder emails every Monday, follow up with leads after 30 days. They replace the need for scheduled jobs or time-dependent workflows.',
+    },
+    {
+      question: 'How do I audit user and system activity in Salesforce?',
+      answer: 'Use: (1) Setup Audit Trail (tracks admin changes for 6 months), (2) Field Audit Trail (tracks record changes), (3) Login History (user authentication times), (4) Debug Logs (Apex execution), (5) Event Monitoring (comprehensive activity logging). Enable appropriate tools based on your compliance needs.',
     },
   ],
   'developer-2': [

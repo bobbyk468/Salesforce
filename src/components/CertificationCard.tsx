@@ -1,6 +1,7 @@
 import { Award, Clock, Target, BookOpen } from 'lucide-react'
 import type { ExamSection } from '@/lib/exam-weightage-data'
 import DifficultyBadge from '@/components/DifficultyBadge'
+import PrerequisiteAlert from '@/components/PrerequisiteAlert'
 
 interface CertificationCardProps {
   title: string
@@ -59,6 +60,11 @@ export default function CertificationCard({
       {/* Content */}
       <div className="p-5 sm:p-6 lg:p-8">
         <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">{description}</p>
+
+        {/* Prerequisite Alert */}
+        <div className="mb-6 sm:mb-8">
+          <PrerequisiteAlert slug={slug} />
+        </div>
 
         {/* Exam Details */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
