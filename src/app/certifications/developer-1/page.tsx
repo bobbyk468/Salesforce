@@ -276,18 +276,35 @@ export default function Developer1Page() {
             <RelatedCertifications currentSlug={slug} />
           </div>
 
-          {/* Coming from Admin track? Point to ADM-201 resources */}
-          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5" aria-label="Related admin resources">
-            <p className="text-sm text-gray-700">
-              Many PD1 candidates come from the admin track. If you haven&apos;t taken ADM-201 yet, see our{' '}
-              <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">
-                Platform Administrator study guide
-              </Link>
-              {' '}and{' '}
-              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+          {/* PD1 study resources */}
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="pd1-guides-heading">
+            <h2 id="pd1-guides-heading" className="text-base font-semibold text-gray-900 mb-3">PD1 Study Resources</h2>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/pd1-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                  PD1 Exam Tips ({RELEASE_CURRENT}) →
+                </Link>
+                <span className="text-gray-600 ml-2">Governor limits, bulkification, 75% coverage rule, and a mock-test benchmark to pass first attempt.</span>
+              </li>
+              <li>
+                <Link href="/pd1-vs-pd2" className="text-salesforce-blue font-medium hover:underline">
+                  PD1 vs PD2: Which Should You Take First? →
+                </Link>
+                <span className="text-gray-600 ml-2">Difficulty comparison, what changes between the two exams, and when you are ready for PD2.</span>
+              </li>
+              <li>
+                <Link href="/certifications/developer-2" className="text-salesforce-blue font-medium hover:underline">
+                  What comes after PD1? Platform Developer II →
+                </Link>
+                <span className="text-gray-600 ml-2">Advanced Apex, integrations, and design patterns. Requires PD1 certification.</span>
+              </li>
+            </ul>
+            <p className="text-xs text-gray-500 mt-3">
+              Coming from the admin track?{' '}
+              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue hover:underline">
                 ADM-201 exam tips ({RELEASE_CURRENT})
               </Link>
-              {' '}first.
+              {' '}covers the Salesforce fundamentals that overlap with PD1.
             </p>
           </section>
 

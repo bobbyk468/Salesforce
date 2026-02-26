@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -146,6 +147,25 @@ export default function Developer2Page() {
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          {/* PD2 study resources */}
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="pd2-guides-heading">
+            <h2 id="pd2-guides-heading" className="text-base font-semibold text-gray-900 mb-3">Developer Track Resources</h2>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/pd1-vs-pd2" className="text-salesforce-blue font-medium hover:underline">
+                  PD1 vs PD2: Key Differences →
+                </Link>
+                <span className="text-gray-600 ml-2">What gets harder in PD2 and when you are ready to attempt it.</span>
+              </li>
+              <li>
+                <Link href="/pd1-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                  PD1 Exam Tips →
+                </Link>
+                <span className="text-gray-600 ml-2">Governor limits, bulkification, and mock-test benchmarks. Still relevant as PD2 prerequisite review.</span>
+              </li>
+            </ul>
+          </section>
 
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">
