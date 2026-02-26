@@ -11,6 +11,7 @@ import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'email-specialist'
@@ -191,7 +192,11 @@ export default function EmailSpecialistPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-        
+        <p className="text-sm text-gray-600 mb-6">
+          Looking for exam strategy before you start practising? Read our{' '}
+          <Link href="/email-specialist-exam-tips" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Email Specialist exam tips and 4-week study plan</Link>.
+        </p>
+
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         

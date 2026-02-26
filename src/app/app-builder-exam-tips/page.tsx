@@ -1,0 +1,145 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const ogImageUrl = `${siteUrl}/og-image`
+
+const pageTitle = `Platform App Builder Exam Tips (${RELEASE_CURRENT}): DEV-402 Study Guide`
+const pageDescription =
+  `DEV-402 exam tips for ${RELEASE_CURRENT}: 4-week study plan, scenario-based question strategy, high-weight topics, and mock-test benchmarks to pass Platform App Builder first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/app-builder-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/app-builder-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [ogImageUrl],
+  },
+  keywords:
+    `Platform App Builder exam tips ${RELEASE_CURRENT}, how to pass DEV-402, Salesforce App Builder study guide, DEV-402 exam tips, app builder certification tips`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'App Builder Exam Tips', url: '/app-builder-exam-tips' },
+]
+
+export default function AppBuilderExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({
+    name: pageTitle,
+    description: pageDescription,
+    path: '/app-builder-exam-tips',
+    breadcrumbItems,
+  })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({
+    headline: pageTitle,
+    description: pageDescription,
+    path: '/app-builder-exam-tips',
+  })
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Platform App Builder Exam Tips ({RELEASE_CURRENT}): How to Pass DEV-402 First Attempt
+        </h1>
+        <p className="text-lg text-gray-600">
+          The DEV-402 exam is scenario-driven and tests declarative app building across data modelling, automation,
+          security, and app design. These tips show you how to focus your study time and tackle each scenario type.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass DEV-402</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The DEV-402 has 60 questions in 105 minutes. Passing score is 63%. Aim for 76%+ on full mocks before booking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Data Modelling &amp; Management (24%) and Process Automation &amp; Logic (27%) — cover these first.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice declaratively in a Developer Edition org. The exam rewards hands-on understanding of when and why to use each feature.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite — take it first if you haven&apos;t already.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week DEV-402 Study Plan</h2>
+        <div className="space-y-4 text-sm text-gray-700">
+          <p><strong>Week 1:</strong> Data Modelling &amp; Management — object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
+          <p><strong>Week 2:</strong> Process Automation &amp; Logic — Record-Triggered Flows for field updates and cross-object automation, Approval Processes for multi-step human approvals, and when to choose each tool. Workflow Rules and Process Builder are legacy — know them for elimination only.</p>
+          <p><strong>Week 3:</strong> Security &amp; App Design — OWD, role hierarchy, sharing rules, permission sets, field-level security, Lightning App Builder (page types, Dynamic Forms), record types, page layout assignments.</p>
+          <p><strong>Week 4:</strong> Full mock exams (aim for 76%+), revision of weak sections, reporting &amp; dashboards, and mobile/deployment basics. Book the exam only after hitting the mock benchmark consistently.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle DEV-402 Scenario Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Most DEV-402 questions present a business requirement and ask which declarative feature best meets it.
+          The key is identifying the constraint in each scenario before selecting an answer.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Relationship questions:</strong> Use Master-Detail when child records should cascade-delete with the parent and when you need roll-up summary fields. Use Lookup when the child can exist independently. A junction object (two master-detail relationships) solves many-to-many.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Automation questions:</strong> Default answer is Flow (Record-Triggered). Choose Approval Process only when a multi-step human approval with rejection paths is described. Never choose Workflow Rule or Process Builder unless the scenario explicitly forbids Flow.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Security questions:</strong> Read the security model in order — OWD sets the baseline, role hierarchy opens up, sharing rules grant additional access, Field-Level Security and page layouts control visibility. Permission Sets grant permissions beyond a profile. Record Types control picklist values and page layout assignment, not field visibility.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Watch for key phrases:</strong> &ldquo;without code&rdquo; = declarative only; &ldquo;most efficient&rdquo; = native feature over custom-built; &ldquo;administrators only&rdquo; = profile-based; &ldquo;certain users&rdquo; = permission sets or sharing rules.</span></li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="text-sm text-gray-700 mb-2">
+          Use this minimum benchmark before scheduling your DEV-402 exam:
+        </p>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks (60 questions / 105 minutes each)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          The official passing score is 63% (38/60 questions), but scoring at 76%+ on mocks significantly reduces retake risk
+          and accounts for exam-day variance in question difficulty.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Next Step</h2>
+        <p className="text-sm text-gray-700 mb-4">
+          Apply these tips with real DEV-402 practice questions:
+        </p>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link
+            href="/certifications/app-builder"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
+          >
+            Start App Builder Practice Test
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/adm-201-vs-app-builder"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Compare ADM-201 vs App Builder
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

@@ -202,6 +202,8 @@ export default function AppBuilderPage() {
           {' '}See our{' '}
           <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">ADM-201 vs App Builder comparison</Link>{' '}
           to choose the right certification order.
+          {' '}Ready to book? Read our{' '}
+          <Link href="/app-builder-exam-tips" className="text-salesforce-blue font-medium hover:underline">DEV-402 exam tips and study plan</Link>.
         </p>
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} examCode="DEV-402" />
