@@ -6,13 +6,20 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Editorial Team | ${SITE_NAME}`
 const pageDescription =
-  'Meet the Trailblaze Prep editorial team: Salesforce-certified practitioners who write and review our certification study guides and practice questions.'
+  'Trailblaze Prep content is written and reviewed by Salesforce-certified practitioners. Learn about our editorial team, review process, and accuracy standards.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: { canonical: `${baseUrl}/team` },
-  openGraph: { url: `${baseUrl}/team` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website',
+    url: `${baseUrl}/team`,
+    siteName: 'Trailblaze Prep',
+    images: [{ url: `${baseUrl}/og-image`, width: 1200, height: 630, alt: pageTitle }],
+  },
 }
 
 const breadcrumbItems = [

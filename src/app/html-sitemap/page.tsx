@@ -12,7 +12,14 @@ export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: { canonical: `${baseUrl}/html-sitemap` },
-  openGraph: { url: `${baseUrl}/html-sitemap` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'website',
+    url: `${baseUrl}/html-sitemap`,
+    siteName: 'Trailblaze Prep',
+    images: [{ url: `${baseUrl}/og-image`, width: 1200, height: 630, alt: pageTitle }],
+  },
 }
 
 const breadcrumbItems = [
@@ -35,6 +42,8 @@ const corePages = [
   { name: 'App Builder Exam Tips', href: '/app-builder-exam-tips' },
   { name: 'Email Specialist Exam Tips', href: '/email-specialist-exam-tips' },
   { name: 'Tableau Data Analyst Exam Tips', href: '/tableau-data-analyst-exam-tips' },
+  { name: 'MuleSoft Integration Foundations Exam Tips', href: '/mulesoft-integration-foundations-exam-tips' },
+  { name: 'Slack Developer Exam Tips', href: '/slack-developer-exam-tips' },
   { name: 'Salesforce Admin Certification Path', href: '/admin-certification-path' },
   { name: 'Salesforce Developer Certification Path', href: '/developer-certification-path' },
   { name: 'Become a Salesforce CTA', href: '/become-cta' },

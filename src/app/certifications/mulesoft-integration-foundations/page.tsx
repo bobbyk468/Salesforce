@@ -11,6 +11,7 @@ import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
+import Link from 'next/link'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 const slug = 'mulesoft-integration-foundations'
@@ -116,6 +117,10 @@ export default function MuleSoftIntegrationFoundationsPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <p className="text-sm text-gray-600 mb-6">
+          Looking for exam strategy before you start practising? Read our{' '}
+          <Link href="/mulesoft-integration-foundations-exam-tips" className="text-salesforce-blue font-medium hover:underline">MuleSoft Integration Foundations exam tips and 3-week study plan</Link>.
+        </p>
         <ExamLogisticsSection
           slug={slug}
           examCodeNote={

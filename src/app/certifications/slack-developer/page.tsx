@@ -165,6 +165,8 @@ export default function SlackDeveloperPage() {
         <Link href="/certifications/slack-consultant" className="text-salesforce-blue font-medium hover:underline">
           Slack Consultant prep
         </Link>.
+        {' '}Ready to book? Read our{' '}
+        <Link href="/slack-developer-exam-tips" className="text-salesforce-blue font-medium hover:underline">Slack Developer exam tips and 4-week study plan</Link>.
       </p>
         
         {/* Prominent CTA above fold */}
