@@ -1117,6 +1117,14 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'What are the best practices for DEV-402 exam preparation?',
       answer: 'Practice in a real Salesforce org (use free Developer Edition). Build sample apps with custom objects, flows, and Lightning Pages. Study high-weight topics (Process Automation 25%, Security & Deployment 25%). Take practice exams to identify weak spots and aim for 75%+ before booking.',
     },
+    {
+      question: 'What is the Platform App Builder (DEV-402) exam passing score and how many questions are on it?',
+      answer: 'The Platform App Builder (DEV-402) exam has 60 multiple-choice questions and 105 minutes. The passing score is 63% (approximately 38 correct answers). The exam fee is $200 USD (retake $100 USD). There is no formal prerequisite, but Salesforce strongly recommends holding the Platform Administrator certification first.',
+    },
+    {
+      question: 'What is the hardest section of the DEV-402 Platform App Builder exam?',
+      answer: 'Most candidates find the Security and Access section (22%) and Process Automation (24%) the hardest — together they account for nearly half the exam. Security questions require understanding the full sharing model stack: OWD → roles → sharing rules → field-level security → page layouts. Automation questions require knowing when to use Flow vs Approval Process vs legacy Workflow. The key trap: choosing legacy tools (Workflow, Process Builder) over Flow.',
+    },
   ],
   'sales-cloud': [
     {
@@ -1486,6 +1494,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'Do I need Marketing Cloud Consultant before Email Specialist?',
       answer: 'No, Email Specialist is a standalone certification. However, having Marketing Cloud experience and understanding email marketing best practices is essential.',
     },
+    {
+      question: 'What is the passing score and exam fee for the Marketing Cloud Email Specialist certification?',
+      answer: 'The Marketing Cloud Email Specialist exam has 60 multiple-choice questions, 105 minutes, and a passing score of 67%. The exam fee is $200 USD (retake $100 USD). No formal prerequisite, but hands-on Marketing Cloud Email Studio experience is strongly recommended before booking.',
+    },
+    {
+      question: 'What are the highest-weight topics on the Email Specialist exam?',
+      answer: 'The main sections are: Email Marketing Best Practices (15%), Content Creation and Delivery (24%), Marketing Automation (26%), Subscriber and Data Management (26%), and Insights and Analytics (10%). Marketing Automation and Subscriber/Data Management together account for over half the exam — prioritise Journey Builder, Automation Studio, Data Extensions, and list management.',
+    },
+    {
+      question: 'How long should I study for the Marketing Cloud Email Specialist exam?',
+      answer: 'Most candidates with some Marketing Cloud experience study for 4–6 weeks. Hands-on practice in Email Studio, Content Builder, and Automation Studio is essential — reading alone is insufficient. Target 77%+ on timed full mocks (60 Q / 105 min) before booking.',
+    },
+    {
+      question: 'What is the difference between a hard bounce and a soft bounce in Marketing Cloud?',
+      answer: 'Hard bounces are permanent delivery failures — the email address is invalid or the server explicitly rejects it. Marketing Cloud automatically marks hard-bounced addresses as Bounced and excludes them from future sends. Soft bounces are temporary failures (mailbox full, server busy) — Marketing Cloud retries soft bounces before converting them to bounced status. The exam tests which action Marketing Cloud takes automatically for each bounce type.',
+    },
+    {
+      question: 'What AMPscript functions are most commonly tested in the Email Specialist exam?',
+      answer: 'The four most tested AMPscript functions are: Lookup() (retrieve a single value from a Data Extension), LookupRows() (retrieve a full row set), AttributeValue() (get a subscriber attribute value), and IIF() (inline conditional). Also know how to use SET and OUTPUT to assign and display values, and how to reference Data Extension fields inside personalisation strings.',
+    },
   ],
   'marketing-cloud-engagement-admin': [
     {
@@ -1527,6 +1555,22 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What topics are covered in MuleSoft Integration Foundations?',
       answer: 'The exam covers integration concepts (35%), Anypoint Platform basics (35%), and APIs and design (30%). It focuses on concepts rather than deep technical implementation.',
+    },
+    {
+      question: 'What is the difference between MuleSoft Integration Foundations and MuleSoft Developer I?',
+      answer: 'Integration Foundations ($75, 40 questions, 70 min) is a conceptual entry-level cert focused on API-led connectivity terminology and Anypoint Platform awareness — no coding required. MuleSoft Developer I ($200, 60 questions) is a hands-on technical certification requiring knowledge of Anypoint Studio, DataWeave transformations, and building Mule applications. Foundations suits project team members; Developer I is for practising integration developers.',
+    },
+    {
+      question: 'How hard is the MuleSoft Integration Foundations exam?',
+      answer: 'Most candidates find the exam accessible with 1–2 weeks of focused preparation. It tests conceptual understanding — API-led connectivity layers (System, Process, Experience), Anypoint Platform components, and integration terminology. No hands-on coding is required. Candidates with project management or business analyst backgrounds frequently pass with structured study.',
+    },
+    {
+      question: 'How should I study for the MuleSoft Integration Foundations exam?',
+      answer: 'Recommended approach: (1) Complete the MuleSoft Integration Foundations preparation trail on Trailhead, (2) Memorise the three API-led connectivity layers and what each does, (3) Understand each Anypoint Platform component — Design Center, API Manager, Runtime Manager, Anypoint Exchange, and Anypoint Studio, (4) Practice with mock questions. Most candidates are ready in 1–2 weeks with 1–2 hours of daily study.',
+    },
+    {
+      question: 'Can I take the MuleSoft Integration Foundations exam online?',
+      answer: 'Yes. The exam is available as an online-proctored exam through Webassessor or at a Pearson VUE test center. Online proctoring requires a webcam, stable internet connection, and a quiet private space. Notes and reference materials are not permitted during the exam.',
     },
   ],
   'mulesoft-developer-i': [
@@ -1677,6 +1721,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'How much does the Salesforce Slack Developer exam cost in Winter \'26?',
       answer: 'The Salesforce Slack Developer certification exam fee is commonly listed as $200 USD, with retake pricing often around $100 USD. Check the official Salesforce registration page for your region-specific final price and taxes.',
+    },
+    {
+      question: 'What is the passing score and exam format for the Salesforce Slack Developer certification?',
+      answer: 'The Salesforce Slack Developer exam has 60 multiple-choice questions, 105 minutes, and a passing score of approximately 68%. The exam fee is $200 USD (retake $100 USD). No formal prerequisite, but hands-on Slack app development experience using the Slack API and Bolt Framework is strongly recommended.',
+    },
+    {
+      question: 'What topics are covered in the Salesforce Slack Developer exam?',
+      answer: 'The exam covers Slack Platform fundamentals (Block Kit, Events API, Web API), app architecture (Bolt Framework, App Manifests, OAuth, Socket Mode), interactivity (slash commands, modals, shortcuts, actions), distribution and security (workspace permissions, rate limits), and integration patterns (webhooks, external services). Block Kit interactivity and the Bolt Framework are the most heavily tested areas.',
+    },
+    {
+      question: 'How hard is the Salesforce Slack Developer certification?',
+      answer: 'The Slack Developer exam is moderately difficult. Candidates with JavaScript or Node.js experience and hands-on Slack app building practice generally find it manageable with 4–6 weeks of preparation. The main challenge is breadth — Block Kit, Events API, Web API, Bolt Framework, OAuth, Socket Mode, modals, shortcuts, and App Home all need to be understood at a working level.',
+    },
+    {
+      question: 'Do I need to know the Bolt Framework for the Slack Developer exam?',
+      answer: 'Yes. Bolt is Slack\'s official app development framework for JavaScript, Python, and Java. The exam tests when to use Bolt, how it handles events and actions, and how it abstracts OAuth and payload verification. Understand the difference between using the raw Slack Web API vs Bolt, and be able to identify correct event handler patterns in code examples.',
+    },
+    {
+      question: 'What is the difference between the Slack Events API and the Web API?',
+      answer: 'The Events API is push-based — Slack sends event payloads to your app\'s endpoint when subscribed events occur (message posted, user joined, reaction added). The Web API is a request/response HTTP API your app calls to take actions (post messages, open modals, update profiles). Apps use both: Events API to listen and react, Web API to act. Socket Mode delivers Events API payloads over WebSocket instead of HTTP, eliminating the need for a public endpoint.',
     },
   ],
   'omnistudio-developer': [
@@ -1883,6 +1947,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What\'s the difference between Tableau Desktop Foundations and Data Analyst?',
       answer: 'Desktop Foundations is entry-level covering basics. Data Analyst is intermediate-level covering advanced calculations, LOD expressions, and complex visualizations.',
+    },
+    {
+      question: 'What is the passing score and exam fee for the Salesforce Certified Tableau Data Analyst?',
+      answer: 'The Tableau Data Analyst exam has 45 questions, approximately 90 minutes, and a passing score of around 70%. The exam fee is $250 USD. No formal prerequisite, though Salesforce recommends Tableau Desktop experience and real-world data analysis practice before attempting.',
+    },
+    {
+      question: 'What topics are covered in the Tableau Data Analyst exam?',
+      answer: 'The exam covers: connecting to and preparing data (live vs extract, data types, joins, blending), data analysis (LOD expressions, table calculations, parameters, sets), visualisation design (chart selection, formatting, filters, context filters), dashboards and stories (actions, layout, performance), and sharing and collaboration (publishing, permissions, Tableau Server/Cloud). LOD expressions and table calculations are the highest-difficulty topics.',
+    },
+    {
+      question: 'What is the difference between a FIXED, INCLUDE, and EXCLUDE LOD expression in Tableau?',
+      answer: 'FIXED computes an aggregate at a declared dimension level, independent of the view\'s dimensions — used for totals or ratios that must not change as the view changes. INCLUDE adds dimensions to the view\'s existing level of detail, computing at a finer granularity. EXCLUDE removes dimensions from the view\'s level, computing at a coarser level. On the exam: "regardless of the view" → FIXED; "per customer within each region" → INCLUDE; "average across all products, ignoring the product filter" → EXCLUDE.',
+    },
+    {
+      question: 'How long should I study for the Tableau Data Analyst exam?',
+      answer: 'Most candidates need 4–6 weeks of preparation with hands-on Tableau Desktop practice as the core activity. Theory alone is not sufficient — build real dashboards, practise LOD expressions in a workbook, and experiment with context filters and table calculations. Target 80%+ on practice assessments before booking. The exam tests applied knowledge, not just definitions.',
+    },
+    {
+      question: 'What is the difference between data blending and data joining in Tableau?',
+      answer: 'Joining combines tables from the same data source connection at query time — the result is a single table sent to Tableau. Blending links two separate data source connections at the view level — Tableau queries each source independently and combines aggregated results on a common linking dimension. Use joining when tables are in the same database; use blending when data lives in different systems that cannot share a connection.',
     },
   ],
   'tableau-desktop-foundations': [

@@ -49,6 +49,66 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "APIs and connectors are reusable, composable integration assets.",
   },
+  {
+    question: "Which API-led connectivity layer orchestrates calls to multiple System APIs and prepares data for Experience APIs?",
+    options: ["System API", "Experience API", "Process API", "Gateway API"],
+    correctAnswer: 2,
+    explanation: "Process APIs combine and transform data from multiple System APIs before passing it to Experience APIs for consumption.",
+  },
+  {
+    question: "What does the Experience API layer provide?",
+    options: ["Direct connection to backend databases", "Data tailored to the needs of a specific consumer channel such as mobile, web, or partner portal", "Caching for System APIs", "API usage monitoring"],
+    correctAnswer: 1,
+    explanation: "Experience APIs expose data in a format optimised for a specific consumer — mobile app, web portal, or third-party partner.",
+  },
+  {
+    question: "What is DataWeave used for in MuleSoft?",
+    options: ["Database schema design", "Transforming and mapping data between formats such as JSON, XML, and CSV within Mule flows", "API security policy enforcement", "Runtime performance monitoring"],
+    correctAnswer: 1,
+    explanation: "DataWeave is MuleSoft's functional data transformation language used to convert and map data formats within integration flows.",
+  },
+  {
+    question: "Which Anypoint Platform component applies security policies and manages client application access to APIs?",
+    options: ["Runtime Manager", "API Manager", "Anypoint Exchange", "Design Center"],
+    correctAnswer: 1,
+    explanation: "API Manager allows teams to apply SLA tiers, rate limiting, OAuth policies, and client application management to deployed APIs.",
+  },
+  {
+    question: "What is Anypoint Exchange?",
+    options: ["An email marketing tool", "A marketplace for publishing and discovering reusable APIs, connectors, templates, and integration examples", "A Mule runtime environment", "A log monitoring dashboard"],
+    correctAnswer: 1,
+    explanation: "Anypoint Exchange is MuleSoft's asset marketplace where teams share and consume APIs, connectors, and pre-built integration templates.",
+  },
+  {
+    question: "What is a Mule Event in the context of a Mule application?",
+    options: ["An error alert sent to the operations team", "A unit of data flowing through a Mule flow, consisting of a message (payload and attributes) and variables", "A scheduled deployment trigger", "An API audit log entry"],
+    correctAnswer: 1,
+    explanation: "A Mule Event carries the message payload, message attributes (metadata), and flow variables through the integration flow.",
+  },
+  {
+    question: "Which Anypoint Platform tool allows teams to design APIs using RAML or OpenAPI Specification before building them?",
+    options: ["Runtime Manager", "Design Center", "Anypoint Studio", "API Manager"],
+    correctAnswer: 1,
+    explanation: "Design Center's API Designer provides a visual and code editor for creating API specifications in RAML or OAS (OpenAPI).",
+  },
+  {
+    question: "What is the primary purpose of MuleSoft Connectors?",
+    options: ["Writing custom integration code from scratch for every system", "Providing pre-built, reusable components that connect Mule applications to external systems, databases, and SaaS apps", "Monitoring API performance dashboards", "Executing DataWeave transformations"],
+    correctAnswer: 1,
+    explanation: "Connectors provide out-of-the-box connectivity to systems like Salesforce, SAP, databases, and message queues — eliminating repetitive custom integration code.",
+  },
+  {
+    question: "Which Anypoint Platform tool monitors deployed Mule application health, performance, and logs in real time?",
+    options: ["Design Center", "Anypoint Studio", "Runtime Manager", "Exchange"],
+    correctAnswer: 2,
+    explanation: "Runtime Manager provides visibility into deployed Mule apps including deployment status, CPU/memory metrics, and log streaming.",
+  },
+  {
+    question: "What is the core business value of adopting API-led connectivity over point-to-point integration?",
+    options: ["Reduced licensing costs alone", "Reusable, composable APIs that reduce integration complexity, accelerate delivery, and enable cross-team self-service", "Faster initial implementation of the first integration", "Fewer API management tools required"],
+    correctAnswer: 1,
+    explanation: "API-led connectivity enables teams to self-serve reusable APIs, reduces duplicated effort, and reduces integration sprawl across the enterprise.",
+  },
 ]
 
 export default function MuleSoftIntegrationFoundationsPage() {

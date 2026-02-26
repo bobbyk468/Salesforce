@@ -244,6 +244,36 @@ export default function AppBuilderPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Platform App Builder Exam (DEV-402)</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The DEV-402 exam is scenario-based — most questions describe a business requirement and ask which declarative tool or configuration best meets it. Understanding <em>when</em> to use each Salesforce feature matters more than memorising field limits.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Modelling Scenarios</p>
+                <p>When a question asks about relationships: use Master-Detail when child records only make sense in the context of the parent (cascade delete, roll-up summaries). Use Lookup when the child can exist independently. Junction objects solve many-to-many — always two Master-Detail relationships, not two Lookups. Roll-up summary fields only work on Master-Detail relationships.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Decision Tree</p>
+                <p>For most automation questions, the answer is Flow. Record-Triggered Flows handle field updates, record creation, and cross-object automation. Approval Processes handle multi-step human approvals with rejection paths. Workflow Rules and Process Builder are legacy — do not choose them unless the question specifies a constraint preventing Flow use.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security and Visibility Layering</p>
+                <p>The DEV-402 tests the Salesforce security model in sequence: OWD (baseline record access) &rarr; Role Hierarchy (opens up) &rarr; Sharing Rules (grants access to groups) &rarr; Manual Sharing &rarr; Field-Level Security &rarr; Page Layouts. Permission Sets grant additional permissions beyond profiles. Record Types control picklist values and page layout assignment — not field visibility.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">App Design and Lightning App Builder</p>
+                <p>Know the difference between App Page, Record Page, and Home Page in Lightning App Builder. Dynamic Forms move fields out of page layouts onto the Lightning Record Page directly, enabling visibility rules per field. Custom tabs, apps, and navigation items are all configured declaratively — no code required for standard app design.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Exam Strategy</p>
+                <p>Read every scenario for the constraint: &ldquo;without code&rdquo; means declarative only; &ldquo;most efficient&rdquo; usually means the native feature over a custom-built solution. Watch for &ldquo;administrators only&rdquo; (profile-based) vs &ldquo;certain users&rdquo; (permission sets or sharing rules). Passing score is 66% (40/60 questions) — aim for 76%+ on full mocks before booking.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -297,6 +327,7 @@ export default function AppBuilderPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'scenario-tips', title: 'How to Pass DEV-402' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

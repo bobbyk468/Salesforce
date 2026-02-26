@@ -50,6 +50,106 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "chat:write allows the app to post messages to channels and conversations.",
   },
+  {
+    question: "What is the Bolt Framework in Slack app development?",
+    options: [
+      "A deployment pipeline for Slack apps",
+      "Slack's official framework for building apps in JavaScript, Python, and Java with built-in handlers for events, actions, and shortcuts",
+      "A database management tool for Slack data",
+      "A UI design kit for Block Kit layouts"
+    ],
+    correctAnswer: 1,
+    explanation: "Bolt abstracts Slack API complexity, providing a framework with built-in handling for events, actions, shortcuts, and commands.",
+  },
+  {
+    question: "How do you register and handle a slash command in a Slack app?",
+    options: [
+      "Define it in the app's package.json file",
+      "Register it in the App Manifest or App Settings under Slash Commands, then handle the incoming POST payload in your app server",
+      "Add it directly to a Block Kit message surface",
+      "Use only the Slack Web API chat.postMessage method"
+    ],
+    correctAnswer: 1,
+    explanation: "Slash commands are registered in App Settings (or App Manifest), and your server must respond to the incoming POST payload within 3 seconds.",
+  },
+  {
+    question: "What Slack API method is used to open a modal in response to a user interaction?",
+    options: ["chat.postMessage", "views.open", "conversations.open", "users.info"],
+    correctAnswer: 1,
+    explanation: "views.open opens a modal dialog using a trigger_id obtained from an interaction payload. The modal must be opened within 3 seconds of the trigger.",
+  },
+  {
+    question: "What is Socket Mode in Slack apps and when should you use it?",
+    options: [
+      "A real-time database sync method for Slack data",
+      "A connection method that delivers event payloads over a WebSocket, allowing apps to receive events without exposing a public HTTP endpoint",
+      "An OAuth token type for machine-to-machine apps",
+      "A Block Kit interactive element type"
+    ],
+    correctAnswer: 1,
+    explanation: "Socket Mode is ideal for development or firewalled environments — it eliminates the need for a publicly accessible HTTPS endpoint to receive events.",
+  },
+  {
+    question: "What is an Incoming Webhook in Slack?",
+    options: [
+      "A method for receiving messages sent to your app from Slack users",
+      "A simple URL that accepts HTTP POST requests to post messages to a specific Slack channel, without needing a full app installation",
+      "A Block Kit element for embedding external content",
+      "An event fired when a webhook URL is triggered from outside Slack"
+    ],
+    correctAnswer: 1,
+    explanation: "Incoming Webhooks provide a pre-configured URL that accepts HTTP POST requests to post messages to a channel — useful for notifications from external systems.",
+  },
+  {
+    question: "What is the difference between a Global Shortcut and a Message Shortcut in Slack?",
+    options: [
+      "They are identical in functionality and scope",
+      "Global Shortcuts are accessible from the shortcut menu anywhere in Slack; Message Shortcuts appear in the context menu of a specific message",
+      "Message Shortcuts require workspace admin approval before use",
+      "Global Shortcuts only work in direct messages, not channels"
+    ],
+    correctAnswer: 1,
+    explanation: "Global Shortcuts launch from the lightning bolt icon anywhere in Slack; Message Shortcuts appear when right-clicking a specific message.",
+  },
+  {
+    question: "How does Slack enforce API rate limits and what happens when they are exceeded?",
+    options: [
+      "There are no rate limits — all methods are unlimited",
+      "Methods have tiered rate limits per minute per workspace (Tier 1–4). Exceeding limits returns HTTP 429 with a Retry-After header indicating when to retry",
+      "All methods share a single fixed limit of 100 requests per hour",
+      "Rate limits only apply to Incoming Webhooks, not Web API methods"
+    ],
+    correctAnswer: 1,
+    explanation: "Slack Web API methods have tiered rate limits (Tier 1–4). The 429 response includes a Retry-After header — apps must back off and retry after the specified delay.",
+  },
+  {
+    question: "What is the App Home tab in a Slack app?",
+    options: [
+      "A Slack channel automatically created for app notifications",
+      "A dedicated, persistent space where an app displays a customised view for each user, built with Block Kit via views.publish",
+      "The app's settings page in the Slack App Directory",
+      "A tab for managing the app's channel memberships"
+    ],
+    correctAnswer: 1,
+    explanation: "The App Home tab provides each user a private, personalised space. Your app controls the content by calling views.publish with the user ID and Block Kit layout.",
+  },
+  {
+    question: "How must a Slack app respond to an interactive component action such as a button click?",
+    options: [
+      "Send a new message to the channel immediately",
+      "Acknowledge the action within 3 seconds with HTTP 200, then perform any async processing and update the message or open a modal",
+      "Call chat.delete to remove the original message containing the button",
+      "Reply in the message thread only, without acknowledging the payload"
+    ],
+    correctAnswer: 1,
+    explanation: "Slack requires acknowledgement within 3 seconds to avoid showing a timeout error to the user. Use ack() or respond() first, then process asynchronously.",
+  },
+  {
+    question: "Which Slack API delivers event notifications to your app when subscribed events occur in a workspace?",
+    options: ["Web API", "Events API", "Block Kit API", "SCIM Provisioning API"],
+    correctAnswer: 1,
+    explanation: "The Events API sends event payloads to your app's endpoint (or Socket Mode connection) whenever a subscribed event fires — message posted, reaction added, member joined, etc.",
+  },
 ]
 
 export default function SlackDeveloperPage() {
