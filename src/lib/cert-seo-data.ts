@@ -371,23 +371,23 @@ function buildWinterTitle(base: string): string {
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
-    'app-builder': `Pass DEV-402: Salesforce App Builder Study Guide (No Coding)`,
-    administrator: `Master ADM-201: Salesforce Admin Exam Guide | ${TITLE_YEAR} Study`,
-    'advanced-administrator': `Salesforce Advanced Admin (ADM-211) Prep: ${TITLE_YEAR}`,
-    'email-specialist': `Marketing Cloud Email Specialist Prep (${TITLE_YEAR})`,
+    'app-builder': `Pass DEV-402: Salesforce Certified Platform App Builder Study Guide (${TITLE_YEAR})`,
+    administrator: `Master ADM-201: Salesforce Certified Platform Administrator | ${TITLE_YEAR} Study`,
+    'advanced-administrator': `Ace ADM-211: Salesforce Certified Advanced Administrator Prep (${TITLE_YEAR})`,
+    'email-specialist': `Master Salesforce Certified Marketing Cloud Email Specialist (${TITLE_YEAR})`,
     'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
     'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
     'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
     'marketing-cloud-consultant': `Pass Marketing Cloud Consultant: Free Exam Prep | ${TITLE_YEAR}`,
     'business-analyst': `Salesforce Business Analyst Exam: Free Practice ${TITLE_YEAR}`,
     'sales-cloud': `Pass Sales Cloud Consultant: Free Practice Exam (60 Q)`,
-    'developer-2': `Salesforce Platform Developer II Prep (${TITLE_YEAR})`,
+    'developer-2': `Ace PD2: Salesforce Certified Platform Developer II Prep (${TITLE_YEAR})`,
     'cpq-administrator': `Free Salesforce CPQ Admin Practice Exam (${TITLE_YEAR})`,
-    'pardot-consultant': `Free Pardot Consultant Practice (${TITLE_YEAR}) | 68% Pass Score`,
-    'pardot-specialist': `Pardot Specialist Practice Questions (${TITLE_YEAR})`,
+    'pardot-consultant': `Master Account Engagement (Pardot) Consultant Exam (${TITLE_YEAR})`,
+    'pardot-specialist': `Pass Account Engagement (Pardot) Specialist Practice (${TITLE_YEAR})`,
     'experience-cloud': `Free Experience Cloud Consultant Practice (${TITLE_YEAR})`,
     'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
-    'developer-1': `Pass PD1: Salesforce Developer Certification Study (${TITLE_YEAR})`,
+    'developer-1': `Pass PD1: Salesforce Certified Platform Developer I Study (${TITLE_YEAR})`,
     'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
@@ -605,7 +605,7 @@ export function getCertMetaDescription(slug: string): string {
     'advanced-administrator':
       `Pass ADM-211 faster. Use our ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan.`,
     'email-specialist':
-      `Get certified faster in Email Specialist. Use ${TITLE_YEAR} practice questions, key topic breakdowns, and exam-focused study tips. Start free today.`,
+      `Pass the Salesforce Certified Marketing Cloud Email Specialist exam (formerly Email Specialist). ${TITLE_YEAR} practice questions, topic breakdowns, and exam-focused study tips. Start free today.`,
     'mulesoft-hyperautomation-developer':
       `Tackle MuleSoft Hyperautomation with confidence. Get ${TITLE_YEAR} exam topics, free practice questions, and practical prep guidance. Start now.`,
     'sharing-visibility-architect':
@@ -617,9 +617,9 @@ export function getCertMetaDescription(slug: string): string {
     'cpq-administrator':
       `Free CPQ Administrator practice (60 questions, ~65% passing score, 105 min). $200 exam fee. Get ${TITLE_YEAR} study guide with practice questions & exam tips now.`,
     'pardot-consultant':
-      `Free Pardot Consultant practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${TITLE_YEAR} study guide with exam topics & strategic tips included.`,
+      `Pass the Salesforce Certified Account Engagement (Pardot) Consultant exam (formerly Pardot Consultant). 60 questions, 68% passing score. Free ${TITLE_YEAR} study guide + strategic tips.`,
     'pardot-specialist':
-      `Pass the Pardot Specialist exam on your first try. Access 100% free ${TITLE_YEAR} practice tests and a comprehensive guide for marketing experts.`,
+      `Pass the Salesforce Certified Account Engagement (Pardot) Specialist exam (formerly Pardot Specialist). Free ${TITLE_YEAR} practice tests and a complete marketing automation study guide.`,
     'experience-cloud':
       `Free Experience Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 exam fee. ${TITLE_YEAR} study guide with practice questions included.`,
     'slack-developer':
@@ -2195,7 +2195,6 @@ export function getCertWebPageJsonLd(
   roleSlug?: string,
   roleName?: string
 ) {
-  const breadcrumb = getCertBreadcrumb(slug, certTitle, roleSlug, roleName)
   const title = getCertMetaTitle(slug)
   const description = getCertMetaDescription(slug)
   const url = `${baseUrl}/certifications/${slug}`
