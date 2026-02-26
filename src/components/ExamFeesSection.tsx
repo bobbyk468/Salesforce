@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
 import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
@@ -40,6 +41,12 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <p className="text-xs sm:text-sm text-gray-600 mt-1">If you need to retake the exam</p>
         </div>
       </div>
+      <p className="text-xs text-gray-500 mb-4">
+        Comparing certs?{' '}
+        <Link href="/salesforce-certification-cost" className="text-salesforce-blue hover:underline">
+          View all Salesforce exam fees in one place →
+        </Link>
+      </p>
       
       <div className="space-y-4 sm:space-y-5">
         <div className="flex items-start gap-3">

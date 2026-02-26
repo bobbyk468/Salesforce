@@ -90,16 +90,31 @@ export default function CertificationsIndexPage() {
       </div>
 
       <div className="mt-12 bg-salesforce-blue/10 rounded-xl p-8 text-center">
-        <h3 className="text-xl font-bold text-gray-900 mb-4">Use the navigation menu</h3>
+        <h3 className="text-xl font-bold text-gray-900 mb-4">Explore More Certification Resources</h3>
         <p className="text-gray-600 mb-6">
           Use the header menu to pick a role (e.g. Administrator, Developer, Consultant). Then see all certifications in that category.
         </p>
-        <Link
-          href="/"
-          className="inline-block px-8 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
-        >
-          Back to Home
-        </Link>
+        <div className="flex flex-col sm:flex-row gap-3 justify-center">
+          <Link
+            href="/salesforce-certifications-list"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
+          >
+            View Complete Cert List
+            <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/salesforce-certification-cost"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-all duration-200"
+          >
+            Exam Fees &amp; Costs
+          </Link>
+          <Link
+            href="/certification-path"
+            className="inline-flex items-center justify-center gap-2 px-6 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-all duration-200"
+          >
+            Plan Your Cert Path
+          </Link>
+        </div>
       </div>
     </div>
   )

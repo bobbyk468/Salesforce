@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -146,6 +147,25 @@ export default function AgentforceSpecialistPage() {
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          {/* Agentforce study resources */}
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="agentforce-guides-heading">
+            <h2 id="agentforce-guides-heading" className="text-base font-semibold text-gray-900 mb-3">Agentforce Specialist Study Resources</h2>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/agentforce-specialist-exam-tips" className="text-salesforce-blue font-medium hover:underline">
+                  Agentforce Specialist Exam Tips →
+                </Link>
+                <span className="text-gray-600 ml-2">Einstein Trust Layer, Prompt Templates, Agent Topics & Actions, and mock-test benchmark to pass first attempt.</span>
+              </li>
+              <li>
+                <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">
+                  Start with Salesforce AI Associate →
+                </Link>
+                <span className="text-gray-600 ml-2">Build your AI foundation before Agentforce Specialist. Covers AI concepts, responsible AI, and Einstein capabilities.</span>
+              </li>
+            </ul>
+          </section>
 
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">

@@ -24,6 +24,40 @@ export function getBreadcrumbListJsonLd(items: BreadcrumbItem[]) {
   }
 }
 
+/** Article JSON-LD for blog/guide pages. Adds Google Discover + rich-result eligibility. */
+export function getArticleJsonLd({
+  headline,
+  description,
+  path,
+  datePublished,
+  dateModified,
+}: {
+  headline: string
+  description: string
+  path: string
+  datePublished?: string
+  dateModified?: string
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  const now = new Date().toISOString()
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url,
+    datePublished: datePublished ?? now,
+    dateModified: dateModified ?? now,
+    author: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+    publisher: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep',
+      url: baseUrl,
+      logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
+    },
+  }
+}
+
 /** WebPage JSON-LD for any page. Use with BreadcrumbList for full coverage. */
 export function getWebPageJsonLd({
   name,

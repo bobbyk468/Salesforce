@@ -22,9 +22,15 @@ const breadcrumbItems = [
 
 const corePages = [
   { name: 'All Certifications', href: '/certifications' },
+  { name: 'All Salesforce Certifications List', href: '/salesforce-certifications-list' },
   { name: 'Certification Path', href: '/certification-path' },
+  { name: 'Salesforce Certification Cost', href: '/salesforce-certification-cost' },
   { name: 'ADM-201 Exam Tips', href: '/adm-201-exam-tips-2026' },
   { name: 'ADM-201 vs App Builder', href: '/adm-201-vs-app-builder' },
+  { name: 'PD1 Exam Tips', href: '/pd1-exam-tips-2026' },
+  { name: 'PD1 vs PD2', href: '/pd1-vs-pd2' },
+  { name: 'Agentforce Specialist Exam Tips', href: '/agentforce-specialist-exam-tips' },
+  { name: 'Become a Salesforce CTA', href: '/become-cta' },
   { name: 'About', href: '/about' },
   { name: 'Team', href: '/team' },
   { name: 'Contact', href: '/contact' },
