@@ -10,15 +10,33 @@ const nextConfig = {
   productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller
   async redirects() {
     return [
+      // Canonical www redirect (non-www → www)
       {
         source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'trailblazeprep.com',
-          },
-        ],
+        has: [{ type: 'host', value: 'trailblazeprep.com' }],
         destination: 'https://www.trailblazeprep.com/:path*',
+        permanent: true,
+      },
+      // 301 redirects for old cert slugs that were renamed
+      // Old slug → current slug (prevents 404s from external links / Ahrefs)
+      {
+        source: '/certifications/platform-developer-i',
+        destination: '/certifications/developer-1',
+        permanent: true,
+      },
+      {
+        source: '/certifications/platform-developer-ii',
+        destination: '/certifications/developer-2',
+        permanent: true,
+      },
+      {
+        source: '/certifications/marketing-cloud-email-specialist',
+        destination: '/certifications/email-specialist',
+        permanent: true,
+      },
+      {
+        source: '/certifications/tableau-desktop',
+        destination: '/certifications/tableau-desktop-foundations',
         permanent: true,
       },
     ]
