@@ -30,10 +30,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
-  const title = `${category.name} Salesforce Certifications (${RELEASE_CURRENT})`
+  const title = `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
-    `Browse Salesforce ${category.name} certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Find your next certification path and start practicing now.`
+    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for each cert.`
   
   return {
     title: { absolute: title },
@@ -67,10 +67,10 @@ export default async function RoleCertificationsPage({ params }: Props) {
   const category = getCategoryBySlug(slug)
 
   if (!category) notFound()
-  const title = `${category.name} Salesforce Certifications (${RELEASE_CURRENT})`
+  const title = `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
-    `Browse Salesforce ${category.name} certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Find your next certification path and start practicing now.`
+    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for each cert.`
 
   const breadcrumb = [
     { name: 'Home', url: '/' },

@@ -24,7 +24,7 @@ export const viewport: Viewport = {
 // Homepage/default title kept concise to avoid SERP truncation.
 const defaultTitle = `Free Salesforce Certification Practice Questions | ${SITE_NAME}`
 const defaultDescription =
-  `Prepare for Salesforce certifications with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for Admin, Developer, Consultant, and Architect. Start practicing now.`
+  `Free Salesforce certification prep: ${RELEASE_CURRENT} exam weightage, practice questions, and study guides for Admin, Developer, Consultant & Architect.`
 
 export const metadata: Metadata = {
   // Hardcode metadataBase for stability (per Gemini recommendation)

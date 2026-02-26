@@ -7,7 +7,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `ADM-201 Exam Tips (${RELEASE_CURRENT}): Pass Salesforce Admin on Your First Attempt`
+const pageTitle = `ADM-201 Exam Tips (${RELEASE_CURRENT}): Salesforce Admin Study Guide`
 const pageDescription =
   `ADM-201 exam tips for ${RELEASE_CURRENT}: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.`
 

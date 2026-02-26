@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: { canonical: `${baseUrl}/html-sitemap` },
+  openGraph: { url: `${baseUrl}/html-sitemap` },
 }
 
 const breadcrumbItems = [
