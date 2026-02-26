@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -274,6 +275,21 @@ export default function Developer1Page() {
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          {/* Coming from Admin track? Point to ADM-201 resources */}
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5" aria-label="Related admin resources">
+            <p className="text-sm text-gray-700">
+              Many PD1 candidates come from the admin track. If you haven&apos;t taken ADM-201 yet, see our{' '}
+              <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">
+                Platform Administrator study guide
+              </Link>
+              {' '}and{' '}
+              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                ADM-201 exam tips ({RELEASE_CURRENT})
+              </Link>
+              {' '}first.
+            </p>
+          </section>
 
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">

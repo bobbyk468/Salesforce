@@ -431,6 +431,25 @@ export default function AdministratorPage() {
               <RelatedCertifications currentSlug={slug} />
             </div>
 
+            {/* ADM-201 related guides — always-visible internal links */}
+            <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="adm201-guides-heading">
+              <h2 id="adm201-guides-heading" className="text-base font-semibold text-gray-900 mb-3">ADM-201 Study Resources</h2>
+              <ul className="space-y-2 text-sm">
+                <li>
+                  <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 Exam Tips ({RELEASE_CURRENT}) →
+                  </Link>
+                  <span className="text-gray-600 ml-2">Proven strategies, common mistakes, and a day-of checklist for the Platform Administrator exam.</span>
+                </li>
+                <li>
+                  <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 vs App Builder: Which to Take First? →
+                  </Link>
+                  <span className="text-gray-600 ml-2">Side-by-side comparison of difficulty, overlap, and career value to help you choose the right order.</span>
+                </li>
+              </ul>
+            </section>
+
             {/* FAQ section - rendered after H1 for proper SEO structure */}
             <div id="faq">
               <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
