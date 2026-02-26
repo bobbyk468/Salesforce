@@ -94,13 +94,45 @@ export default function RootLayout({
     name: 'Trailblaze Prep',
     url: siteUrl,
     description:
-      'Independent Salesforce certification preparation resource: practice questions, section-wise exam weightage, and study guides for Admin, Developer, Consultant, Architect, and more.',
+      'Independent Salesforce certification preparation resource: free practice questions, section-wise exam weightage, and study guides for all 90 Salesforce credentials — Admin, Developer, Consultant, Architect, Marketing, Designer, Tableau, MuleSoft, and Accredited Professional.',
     logo: `${siteUrl}/logo.png`,
     sameAs: SOCIAL_LINKS.filter(Boolean),
+    foundingDate: '2025',
+    areaServed: 'Worldwide',
+    knowsAbout: [
+      'Salesforce certification preparation',
+      'Salesforce ADM-201 exam',
+      'Salesforce Platform Developer I',
+      'Salesforce Platform Developer II',
+      'Salesforce App Builder',
+      'Salesforce Sales Cloud Consultant',
+      'Salesforce Service Cloud Consultant',
+      'Salesforce Marketing Cloud',
+      'Salesforce Architect certifications',
+      'Salesforce practice questions',
+      'Salesforce exam study guides',
+    ],
     contactPoint: {
       '@type': 'ContactPoint',
       contactType: 'Customer Service',
       email: 'km.krishnamohan25@gmail.com',
+    },
+  }
+
+  const websiteJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
+    name: 'Trailblaze Prep',
+    url: siteUrl,
+    description: 'Free Salesforce certification practice questions, exam weightage, and study guides for all 90 certifications.',
+    publisher: { '@type': 'Organization', name: 'Trailblaze Prep', url: siteUrl },
+    potentialAction: {
+      '@type': 'SearchAction',
+      target: {
+        '@type': 'EntryPoint',
+        urlTemplate: `${siteUrl}/certifications?q={search_term_string}`,
+      },
+      'query-input': 'required name=search_term_string',
     },
   }
 
@@ -155,6 +187,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteJsonLd) }}
         />
         <div className="min-h-screen flex flex-col">
           <Header />
