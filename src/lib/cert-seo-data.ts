@@ -371,23 +371,23 @@ function buildWinterTitle(base: string): string {
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
-    'app-builder': `Free Salesforce App Builder Practice (DEV-402) | 60 Questions`,
-    administrator: `Salesforce Admin Practice Test: Free ${TITLE_YEAR} Prep`,
+    'app-builder': `Pass DEV-402: Salesforce App Builder Study Guide (No Coding)`,
+    administrator: `Master ADM-201: Salesforce Admin Exam Guide | ${TITLE_YEAR} Study`,
     'advanced-administrator': `Salesforce Advanced Admin (ADM-211) Prep: ${TITLE_YEAR}`,
     'email-specialist': `Marketing Cloud Email Specialist Prep (${TITLE_YEAR})`,
     'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
     'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
     'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
-    'marketing-cloud-consultant': `Pass Marketing Cloud Consultant: Free Exam Practice`,
+    'marketing-cloud-consultant': `Pass Marketing Cloud Consultant: Free Exam Prep | ${TITLE_YEAR}`,
     'business-analyst': `Salesforce Business Analyst Exam: Free Practice ${TITLE_YEAR}`,
-    'sales-cloud': `Sales Cloud Consultant Exam: Free Practice & ${TITLE_YEAR} Study`,
+    'sales-cloud': `Pass Sales Cloud Consultant: Free Practice Exam (60 Q)`,
     'developer-2': `Salesforce Platform Developer II Prep (${TITLE_YEAR})`,
     'cpq-administrator': `Free Salesforce CPQ Admin Practice Exam (${TITLE_YEAR})`,
     'pardot-consultant': `Free Pardot Consultant Practice (${TITLE_YEAR}) | 68% Pass Score`,
     'pardot-specialist': `Pardot Specialist Practice Questions (${TITLE_YEAR})`,
     'experience-cloud': `Free Experience Cloud Consultant Practice (${TITLE_YEAR})`,
     'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
-    'developer-1': `Salesforce PD1 Practice Exam: Free ${TITLE_YEAR} Prep`,
+    'developer-1': `Pass PD1: Salesforce Developer Certification Study (${TITLE_YEAR})`,
     'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
@@ -527,15 +527,15 @@ export function getCertMetaDescription(slug: string): string {
   const examCost = getExamCost(slug)
   const ctrDescriptionOverrides: Record<string, string> = {
     'app-builder':
-      `Free Salesforce App Builder (DEV-402) practice: 60 questions, 105 min exam, ~65% passing score. ${TITLE_YEAR} study guide with detailed explanations. Pass today!`,
+      `Master DEV-402 without coding. Free practice questions (60 questions, 105 min, 65% passing score). Build custom Salesforce apps using clicks, not code. ${TITLE_YEAR} complete study guide + explanations.`,
     administrator:
-      `Pass the ADM-201 exam with ease. Access free ${TITLE_YEAR} practice questions, section weightage, and a complete study path for the current release.`,
+      `Pass ADM-201 on your first attempt. Free practice questions, section weightage breakdown, exam tips & study guide. 60 questions, 65% passing score, 105 min. Start ${TITLE_YEAR} prep today.`,
     'marketing-cloud-consultant':
-      `Free Marketing Cloud Consultant practice: 60 questions, 67% passing score. $200 exam fee, 105 min. Get ${TITLE_YEAR} study guide with exam tips. Start free now!`,
+      `Master Marketing Cloud in ${TITLE_YEAR}. Free practice exam (60 questions, 67% passing), exam tips, and proven study method. Pass the consultant certification guaranteed.`,
     'business-analyst':
       `Free Business Analyst exam practice (60 questions, ~65% passing score, 105 min). $200 fee. ${TITLE_YEAR} study guide with practice questions & exam tips included.`,
     'sales-cloud':
-      `Free Sales Cloud Consultant practice exam (60 questions, 68% passing score). $200 fee, 105-min exam. Get ${TITLE_YEAR} study guide, tips, and pass on first try.`,
+      `Pass Sales Cloud Consultant on first try. Free practice exam (60 questions, 68% passing score). Get solution design strategies, exam tips, and ${TITLE_YEAR} study guide now.`,
     'advanced-administrator':
       `Pass ADM-211 faster. Use our ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan.`,
     'email-specialist':
