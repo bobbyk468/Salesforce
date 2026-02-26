@@ -1127,6 +1127,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'What experience do I need before taking the Sales Cloud Consultant exam?',
       answer: 'Salesforce recommends having the Platform Administrator certification and hands-on experience implementing Sales Cloud solutions. You should be comfortable with lead management, opportunity management, forecasting, and territory management.',
     },
+    {
+      question: 'What is the Sales Cloud Consultant passing score and exam fee in Winter \'26?',
+      answer: 'The Sales Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions in the session.',
+    },
+    {
+      question: 'What are the highest-weight topics on the Sales Cloud Consultant exam?',
+      answer: 'The highest-weight sections are Industry Knowledge (15%), Implementation Strategies (15%), Sales Cloud Solution Design (20%), and Marketing and Leads (15%). Together these cover 65% of the exam. Focus on lead-to-opportunity conversion, territory management, forecasting, and campaign influence.',
+    },
+    {
+      question: 'How is Sales Cloud Consultant different from Platform Administrator?',
+      answer: 'Platform Administrator (ADM-201) tests broad admin operations — security, automation, and org setup. Sales Cloud Consultant focuses on designing and implementing sales process solutions for clients: lead management, pipeline, forecasting, territory hierarchies, and marketing campaign integration. The Consultant exam is more scenario-heavy and solution-design oriented.',
+    },
   ],
   'service-cloud': [
     {
@@ -1137,6 +1149,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'Do I need the Platform Administrator certification before Service Cloud Consultant?',
       answer: 'Yes, Salesforce requires the Platform Administrator certification as a prerequisite for the Service Cloud Consultant exam. You should also have hands-on experience configuring Service Cloud features like cases, knowledge, and Omnichannel.',
     },
+    {
+      question: 'What is the Service Cloud Consultant passing score and exam fee in Winter \'26?',
+      answer: 'The Service Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 67%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
+    },
+    {
+      question: 'What are the highest-weight sections in the Service Cloud Consultant exam?',
+      answer: 'The top sections by weight are: Service Cloud Solution Design (17%), Case Management (15%), and Contact Center Analytics (16%). Focus on Omni-Channel routing, entitlements and SLAs, Knowledge base setup, case escalation rules, and CTI integration patterns.',
+    },
+    {
+      question: 'What is the difference between Service Cloud Consultant and Platform Administrator?',
+      answer: 'Platform Administrator covers general Salesforce admin skills. Service Cloud Consultant is focused on designing customer service solutions: cases, entitlements, SLAs, knowledge articles, Omni-Channel, live chat, and reporting for contact centers. The Consultant exam is more architecture and best-practice oriented.',
+    },
   ],
   'developer-1': [
     {
@@ -1146,6 +1170,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'How much coding experience do I need for Platform Developer I?',
       answer: 'While some programming experience is helpful, you can learn Apex and Lightning Web Components through Trailhead. The exam focuses on understanding when to use code vs declarative tools, governor limits, testing, and basic Apex/LWC concepts rather than advanced programming.',
+    },
+    {
+      question: 'What is the PD1 passing score and exam format in Winter \'26?',
+      answer: 'The Platform Developer I (PD1) exam has 60 multiple-choice questions, 110 minutes, and a passing score of 68% (41 correct). Salesforce may include 5 unscored pilot questions. The exam costs $200 USD (retake $100 USD) and is available online-proctored or at a test center.',
+    },
+    {
+      question: 'What are the most common reasons candidates fail PD1?',
+      answer: 'Common failure points: (1) not knowing governor limits (SOQL 100/transaction, DML 150/transaction) and when they trigger, (2) writing DML or SOQL inside a for loop — the exam\'s most common trap, (3) misunderstanding the 75% code coverage rule and how Test.startTest()/stopTest() affect limit resets, and (4) confusing @AuraEnabled, @RestResource, and @InvocableMethod annotations.',
+    },
+    {
+      question: 'How long should I study for PD1 and what mock score means I am ready?',
+      answer: 'Most candidates with some object-oriented programming background need 4–6 weeks. Target benchmark: score 78%+ on three timed full mocks (60 Q / 110 min), taken one week apart. The actual passing threshold is 68%, but the extra buffer accounts for exam nerves and unfamiliar phrasing on the day.',
     },
   ],
   'data-architect': [
@@ -1176,6 +1212,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What Salesforce products are covered in the AI Associate exam?',
       answer: 'The exam covers Einstein capabilities across Sales Cloud, Service Cloud, Marketing Cloud, and Commerce Cloud. You should understand what each Einstein product does, when to use it, and responsible AI principles.',
+    },
+    {
+      question: 'What is the AI Associate passing score and exam fee in Winter \'26?',
+      answer: 'The Salesforce AI Associate exam has 40 multiple-choice questions, 70 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). It is an associate-level credential with no formal prerequisite.',
+    },
+    {
+      question: 'Is the AI Associate exam technical or conceptual?',
+      answer: 'The AI Associate exam is primarily conceptual, not technical. It tests whether you understand AI terminology (machine learning, NLP, predictive AI, generative AI), Salesforce Einstein product categories, and responsible AI principles like bias, transparency, and data privacy. You do not need to write code or configure AI models.',
+    },
+    {
+      question: 'What are the three pillars of responsible AI that appear on the AI Associate exam?',
+      answer: 'The AI Associate exam emphasises Salesforce\'s Trusted AI principles: (1) Responsible — ensuring AI is designed and used ethically, (2) Accountable — maintaining human oversight of AI decisions, and (3) Transparent — making AI reasoning understandable. Expect questions on bias mitigation, data governance, and when AI output should be reviewed by a human.',
     },
   ],
   'platform-foundations': [
@@ -1240,6 +1288,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'How difficult is Platform Developer II compared to Developer I?',
       answer: 'Platform Developer II is significantly more challenging. It requires deep understanding of design patterns, architecture decisions, advanced Apex concepts, and best practices. Most candidates need 2+ years of development experience.',
     },
+    {
+      question: 'What is the PD2 passing score and exam fee in Winter \'26?',
+      answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite — you cannot sit PD2 without it.',
+    },
+    {
+      question: 'What design patterns are tested in Platform Developer II?',
+      answer: 'PD2 tests applied knowledge of: Singleton (one instance per transaction), Strategy (swappable algorithms), Decorator (extending behaviour), Factory (object creation patterns), and Service Layer / Selector / Domain patterns (FFLib enterprise architecture). Expect scenario questions where you must choose the right pattern for a given constraint.',
+    },
+    {
+      question: 'What is the difference between Future, Batch, Queueable, and Scheduled Apex?',
+      answer: 'Future: runs async after the current transaction completes; limited to one record at a time and cannot be chained. Batch: processes large data sets in chunks (up to 50 million records); best for data migration and bulk operations. Queueable: like Future but supports chaining, complex state, and accepts objects. Scheduled: triggers Queueable or Batch at a set time using the Schedulable interface. PD2 expects you to choose the right tool per scenario.',
+    },
   ],
   'javascript-developer-i': [
     {
@@ -1260,6 +1320,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'Do I need Platform Administrator before Experience Cloud Consultant?',
       answer: 'Yes, Platform Administrator is required. You should also have hands-on experience configuring Experience Cloud sites, sharing sets, audiences, and community features.',
     },
+    {
+      question: 'What is the Experience Cloud Consultant passing score and exam fee in Winter \'26?',
+      answer: 'The Experience Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
+    },
+    {
+      question: 'What types of Experience Cloud sites are covered in the exam?',
+      answer: 'The exam covers Customer Community, Partner Community, and Employee Community site types, plus the differences between Lightning template-based sites and Salesforce Tabs + Visualforce sites. Expect questions on digital experiences for portals, self-service, and partner relationship management (PRM).',
+    },
+    {
+      question: 'What are the highest-weight topics in the Experience Cloud Consultant exam?',
+      answer: 'The heaviest sections are: Experience Cloud Configuration (25%) and Sharing, Visibility, and Licensing (20%). Together these account for 45% of the exam. Focus on sharing sets, sharing rules for communities, guest user access, licenses (Customer Community vs Partner Community), and site administration.',
+    },
   ],
   'field-service': [
     {
@@ -1279,6 +1351,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What experience do I need for Data Cloud Consultant?',
       answer: 'You should have Salesforce CRM experience and understanding of data management, marketing, or analytics. Hands-on experience with Data Cloud setup, identity resolution, and activation is recommended.',
+    },
+    {
+      question: 'What is the Data Cloud Consultant passing score and exam fee in Winter \'26?',
+      answer: 'The Salesforce Data Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). Platform Administrator certification is required.',
+    },
+    {
+      question: 'What is identity resolution in Data Cloud and why does it appear on the exam?',
+      answer: 'Identity resolution is the process of matching and merging records from different data sources into a single unified profile (called a Unified Individual). It uses rulesets to reconcile duplicate contacts from CRM, marketing, e-commerce, and other sources. The exam tests how to configure reconciliation rules, match rules, and understand the output — the Unified Individual and its related objects.',
+    },
+    {
+      question: 'What is the difference between a Data Stream and a Data Lake Object in Data Cloud?',
+      answer: 'A Data Stream is the ingestion connector that pulls data into Data Cloud from a source (Salesforce CRM, cloud storage, API). A Data Lake Object (DLO) is the raw table where ingested data is stored before mapping. When you map a DLO to a Data Model Object (DMO), the data becomes available for segmentation, activation, and identity resolution.',
     },
   ],
   'crm-analytics-einstein-discovery-consultant': [
@@ -1614,6 +1698,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'Do I need Platform Administrator before CPQ Administrator?',
       answer: 'Yes, Platform Administrator is required. You should have hands-on CPQ experience configuring products, price rules, and quote processes.',
     },
+    {
+      question: 'What is the CPQ Administrator passing score and exam fee in Winter \'26?',
+      answer: 'The Salesforce CPQ Specialist exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). It is commonly called CPQ Administrator and Platform Administrator certification is required.',
+    },
+    {
+      question: 'What are the highest-weight topics in the CPQ Administrator exam?',
+      answer: 'The top sections are: Bundle Configurations (25%), Pricing (20%), and Quote Templates (15%). Together these cover 60% of the exam. Focus on option constraints, configuration attributes, price rules (lookup and formula rules), discount schedules, and quote line editor behavior.',
+    },
+    {
+      question: 'What is the difference between a price rule and a discount schedule in Salesforce CPQ?',
+      answer: 'A price rule evaluates conditions and injects a calculated price into a field — it is logic-driven and can reference lookup tables, formulas, or custom fields. A discount schedule applies tiered or block discounts based on quantity or term — it is data-driven and configured on the product directly. Both can apply simultaneously and the exam tests when to use each.',
+    },
   ],
   'business-analyst': [
     {
@@ -1624,6 +1720,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'Do I need technical experience for Business Analyst certification?',
       answer: 'No, Business Analyst focuses on business analysis skills rather than technical implementation. However, understanding Salesforce capabilities is essential.',
     },
+    {
+      question: 'What is the Business Analyst passing score and exam fee in Winter \'26?',
+      answer: 'The Salesforce Business Analyst exam has 60 multiple-choice questions, 105 minutes, and a passing score of 72%. The exam fee is $200 USD (retake $100 USD). There is no formal prerequisite, though Salesforce recommends admin experience.',
+    },
+    {
+      question: 'What are the main topic areas in the Salesforce Business Analyst exam?',
+      answer: 'The main sections are: Collaboration with Stakeholders (25%), Customer Discovery (17%), Business Analysis Planning (15%), and User Stories (18%). These four areas account for 75% of the exam. Focus on user story formats (As a... I want... So that...), acceptance criteria, process mapping, and eliciting requirements from stakeholders.',
+    },
+    {
+      question: 'What makes the Business Analyst exam harder than expected?',
+      answer: 'Most candidates underestimate the depth of process analysis and stakeholder management questions. The exam is scenario-based — you must identify the best BA action for a given situation. Common traps: choosing a solution before understanding the root problem, skipping stakeholder validation steps, or writing user stories without clear acceptance criteria.',
+    },
   ],
   'agentforce-specialist': [
     {
@@ -1633,6 +1741,18 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'Do I need Platform Administrator before Agentforce Specialist?',
       answer: 'Yes, Platform Administrator knowledge is recommended. You should have hands-on experience configuring and optimizing AI agents in Salesforce.',
+    },
+    {
+      question: 'What is the Agentforce Specialist passing score and exam fee in Winter \'26?',
+      answer: 'The Agentforce Specialist exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). It is a relatively new credential with content updated for the latest Agentforce capabilities.',
+    },
+    {
+      question: 'What topics are covered in the Agentforce Specialist exam?',
+      answer: 'Key topics include: Agent Builder configuration, defining agent topics and actions, prompt templates, Einstein Trust Layer principles, Agentforce for Sales and Service use cases, grounding AI responses with Salesforce data, and distinguishing Agentforce agents from traditional Einstein bots. Focus on standard vs custom actions and when each is appropriate.',
+    },
+    {
+      question: 'What is the Einstein Trust Layer and why is it important for Agentforce?',
+      answer: 'The Einstein Trust Layer is Salesforce\'s built-in security framework for AI. It masks PII before data reaches external LLMs, audits prompts and responses, and ensures no Salesforce customer data is used to train third-party AI models. The Agentforce Specialist exam tests how Trust Layer protects data during AI interactions and why it matters for enterprise AI governance.',
     },
   ],
   'application-architect': [
