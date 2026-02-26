@@ -62,9 +62,7 @@ export default function CertificationCard({
         <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">{description}</p>
 
         {/* Prerequisite Alert */}
-        <div className="mb-6 sm:mb-8">
-          <PrerequisiteAlert slug={slug} />
-        </div>
+        <PrerequisiteAlert slug={slug} className="mb-6 sm:mb-8" />
 
         {/* Exam Details */}
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
