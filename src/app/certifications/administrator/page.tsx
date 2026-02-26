@@ -436,10 +436,22 @@ export default function AdministratorPage() {
               <h2 id="adm201-guides-heading" className="text-base font-semibold text-gray-900 mb-3">ADM-201 Study Resources</h2>
               <ul className="space-y-2 text-sm">
                 <li>
+                  <Link href="/adm-201-study-guide" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 Complete Study Guide ({RELEASE_CURRENT}) →
+                  </Link>
+                  <span className="text-gray-600 ml-2">All 7 exam sections explained with scenario strategies, key topics, and a 6-week study plan.</span>
+                </li>
+                <li>
                   <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 Exam Tips ({RELEASE_CURRENT}) →
                   </Link>
                   <span className="text-gray-600 ml-2">Proven strategies, common mistakes, and a day-of checklist for the Platform Administrator exam.</span>
+                </li>
+                <li>
+                  <Link href="/admin-certification-path" className="text-salesforce-blue font-medium hover:underline">
+                    Salesforce Admin Certification Path →
+                  </Link>
+                  <span className="text-gray-600 ml-2">What to take after ADM-201: App Builder, Advanced Admin, or Consultant track — with career context.</span>
                 </li>
                 <li>
                   <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue font-medium hover:underline">

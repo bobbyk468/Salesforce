@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -245,6 +246,25 @@ export default function ServiceCloudPage() {
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          {/* Service Cloud study resources */}
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="svc-guides-heading">
+            <h2 id="svc-guides-heading" className="text-base font-semibold text-gray-900 mb-3">Service Cloud Study Resources</h2>
+            <ul className="space-y-2 text-sm">
+              <li>
+                <Link href="/service-cloud-consultant-exam-tips" className="text-salesforce-blue font-medium hover:underline">
+                  Service Cloud Consultant Exam Tips →
+                </Link>
+                <span className="text-gray-600 ml-2">Case management, Omni-Channel routing, entitlements, and Knowledge — scenario strategy for all 5 exam sections.</span>
+              </li>
+              <li>
+                <Link href="/certifications/role/consultant" className="text-salesforce-blue font-medium hover:underline">
+                  Browse Full Consultant Certification Path →
+                </Link>
+                <span className="text-gray-600 ml-2">Service Cloud, Sales Cloud, Experience Cloud, and more consultant credentials compared.</span>
+              </li>
+            </ul>
+          </section>
 
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">
