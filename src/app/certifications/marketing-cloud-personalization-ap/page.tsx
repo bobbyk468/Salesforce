@@ -62,6 +62,33 @@ export default function MarketingCloudPersonalizationAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Personalization: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Catalog and Unified Profile</p>
+                <p>Marketing Cloud Personalization (formerly Interaction Studio) builds Unified Profiles by tracking individual behaviour across channels. The Catalog stores product, article, or content items with attributes — forming the basis for recommendation algorithms. Item types (Products, Articles, Blog Posts) can be configured with custom attributes. Catalog data can be ingested via sitemap, feeds, or API. The Unified Profile aggregates engagement history across web, email, mobile, and in-store touchpoints.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Recipes and Recommendation Strategies</p>
+                <p>Einstein Recipes define how the ML algorithm selects recommended items. Recipe types: Collaborative Filtering (users who viewed/bought X also liked Y), Content Affinity (attributes the individual user prefers), User Trending (popular among similar users). Strategies combine multiple Recipes with explicit rules (exclude viewed items, include only in-stock items, boost by margin). The exam tests how to configure a Strategy for a given personalisation scenario — e.g., homepage recommendations vs cart page cross-sell vs post-purchase email.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Web Campaigns and Server-Side Personalisation</p>
+                <p>Web Campaigns are the delivery mechanism for personalised experiences. Server-Side Campaigns run before the page renders — for personalising page content without DOM flicker. Client-Side Campaigns inject content after page load — for overlays, pop-ups, and callouts. A/B testing is built into campaigns — control group receives the default experience, treatment group receives the personalised version. The exam tests when to use server-side vs client-side delivery and how to configure campaign targeting rules.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Segmentation and Triggered Campaigns</p>
+                <p>Segment Builder creates real-time audience segments based on Unified Profile attributes — engagement score, category affinity, lifecycle stage. Segments update in real time as users engage. Triggered Campaigns fire when a user enters or exits a segment, or performs a specific action (abandons cart, views a product). Triggered messages can fire via email (via Marketing Cloud Journey Builder), mobile push, or real-time web experiences. The exam tests segment design and trigger condition configuration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Channel Integration: Email and Salesforce</p>
+                <p>Email Integration connects Personalization with Marketing Cloud — Einstein Recipe recommendations appear in email templates via AMPscript or Open Time Email. Journey Builder integration enables triggered journeys based on Personalization segment entry. Salesforce CRM integration surfaces personalised recommendations in Sales and Service Cloud records. The exam tests how recommendation blocks are implemented in emails, how to pass user context between channels, and how to measure personalisation lift (revenue per recommendation shown).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MarketingCloudPersonalizationAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

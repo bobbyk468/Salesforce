@@ -5,11 +5,11 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/l
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `ADM-201 Study Guide (${RELEASE_CURRENT}): How to Pass Salesforce Admin`
+const pageTitle = `ADM-201 Study Guide (${RELEASE_CURRENT}): Pass Salesforce Admin`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Complete ADM-201 study guide for ${RELEASE_CURRENT}: all 7 exam sections explained, key topics, scenario strategies, study plan, and practice questions to pass Salesforce Administrator first attempt.`
+  `ADM-201 study guide (${RELEASE_CURRENT}): all 7 exam sections, key topics, and exam scenario strategies. Start free practice today.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

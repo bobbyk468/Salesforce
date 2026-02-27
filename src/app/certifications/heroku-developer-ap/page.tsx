@@ -62,6 +62,33 @@ export default function HerokuDeveloperAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Heroku Developer AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Buildpacks, Runtime & Procfile</p>
+                <p>Heroku detects the language/framework of an app using Buildpacks — Node.js, Python, Ruby, Java, Go, and more are officially supported. Custom Buildpacks extend the detection and build process. The build process: push code → detect buildpack → compile → create slug → deploy to dynos. The Procfile defines process types: `web: node server.js` (HTTP), `worker: node worker.js` (background). Multiple process types can run simultaneously. Eco and Basic dynos sleep after inactivity. The `heroku local` command runs the Procfile locally using `.env` for config vars. The AP exam tests how to configure a Procfile for a multi-process app and how to debug a build failure using build logs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Config Vars, Add-ons & Environment Management</p>
+                <p>Config Vars are environment variables set per Heroku app — accessible in code as `process.env.VAR_NAME`. Never hardcode secrets; always use Config Vars. Add-ons extend Heroku apps with third-party services (databases, email, monitoring, logging) — provisioned via `heroku addons:create`. Each add-on sets Config Vars automatically (e.g., DATABASE_URL for Postgres). Add-on plans scale independently from app dynos. The Heroku CLI (`heroku config:set`, `heroku addons`) manages Config Vars and Add-ons. The AP exam tests how to pass secrets to a Heroku app securely, how to provision and configure an add-on, and how to rotate credentials without downtime.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Connect & Salesforce Integration</p>
+                <p>Heroku Connect maps Salesforce object records to Heroku Postgres tables, syncing data bidirectionally on a configurable schedule. Setup: provision Heroku Connect add-on → authenticate with Salesforce → create mappings (object, fields, direction). Read mappings pull Salesforce data to Postgres. Write mappings push Postgres changes back to Salesforce. Conflict detection handles records modified in both systems simultaneously. The `_hc_lastop`, `_hc_err`, and `isdeleted` system columns track sync status. Connection limits on Salesforce API calls govern sync frequency. The AP exam tests how to configure a Heroku Connect mapping, troubleshoot sync errors, and design for high-volume bidirectional sync within Salesforce API limits.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Async Jobs, Workers & Message Queues</p>
+                <p>Background processing on Heroku uses Worker dynos. Job queues (Redis-backed: Bull, Bee-Queue for Node.js; Celery for Python; Sidekiq for Ruby) decouple work submission from processing. Pattern: web dyno enqueues a job → worker dyno processes it asynchronously. This prevents long-running tasks from blocking HTTP responses and allows independent scaling of web vs. worker processes. Scheduled tasks use Heroku Scheduler add-on (cron-like) or clock processes in the Procfile. Dead Letter Queues capture failed jobs for retry or investigation. The exam tests how to architect a job queue for a given throughput requirement and how to handle job failures gracefully.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Monitoring, Logging & Performance</p>
+                <p>Heroku Logplex aggregates logs from all Dynos, Router, and add-ons into a unified stream — `heroku logs --tail` for real-time viewing. Log Drains forward logs to external services (Papertrail, Datadog, Splunk). Application metrics (response time, throughput, error rate) are visible in the Heroku Dashboard. Dyno metrics show CPU and memory usage — memory leaks cause R14 (memory quota exceeded) errors. R10 (Boot timeout), H10 (App crashed), H12 (Request timeout at 30s) are common Heroku error codes. New Relic, Scout APM, and Datadog add-ons provide application performance monitoring. The exam tests how to diagnose a performance problem using logs and metrics, and how to configure alerting for dyno errors.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function HerokuDeveloperAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

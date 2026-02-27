@@ -193,6 +193,33 @@ export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">CRM Analytics & Einstein Discovery: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Architecture: Datasets & Dataflows</p>
+                <p>CRM Analytics (formerly Tableau CRM / Einstein Analytics) stores data in Datasets — optimized columnar data stores separate from the Salesforce database. Dataflows define how data is extracted from Salesforce objects, joined, aggregated, and loaded into datasets — using a JSON-based recipe. Recipes (Data Prep) provide a visual ETL interface for data transformation. External data can be loaded via CSV upload or connected datasets. Incremental sync keeps datasets fresh with only changed records. The consultant exam tests how to design a dataflow for a multi-object scenario (e.g., joining Accounts, Opportunities, and Cases), how to configure incremental sync, and how to troubleshoot failed dataflow jobs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lenses, Dashboards & Stories</p>
+                <p>Lenses are explorations of a single dataset — ad-hoc visual analysis. Dashboards assemble multiple charts, tables, and filters into a unified analytical experience. Dashboard JSON defines the full layout and query logic — consultants must be able to read and modify dashboard JSON for advanced customization. SAQL (Salesforce Analytics Query Language) powers advanced queries that the UI cannot express. Binding formulas connect filters and widgets — selection in one widget filters another. Stories are AI-generated narratives that explain key drivers in a dataset. The exam tests how to build a dashboard, use bindings for interactive filtering, and write basic SAQL for a custom query.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Discovery Insights & Models</p>
+                <p>Einstein Discovery uses statistical machine learning to find patterns in historical data and generate predictive insights. Stories analyze a dataset and identify the top factors that influence a chosen outcome metric. Predictions deploy a Story as a scoring model — each Salesforce record gets a predicted score. Writeback deploys predictions back to Salesforce fields (e.g., Opportunity Win Probability). Improvement Suggestions recommend actions that increase the probability of a positive outcome. Model refresh keeps predictions current as new data accumulates. The consultant exam tests how to create a Story for a business scenario, interpret the top predictors, and configure writeback to update opportunity or case fields.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security: Row-Level & Field-Level Access</p>
+                <p>CRM Analytics uses a separate security model from Salesforce record sharing. Dataset Security Predicates filter rows based on the logged-in user — referencing user fields like role, profile, or a custom attribute. Inheritance mode automatically applies Salesforce sharing rules to the dataset. User Attributes defined in CRM Analytics can be used in predicates and SAQL. Field-level security hides specific columns from certain users or groups. App sharing (Viewer, Editor, Manager) controls who can access and modify dashboards. The exam tests how to design a security predicate for a hierarchical visibility scenario (managers see their team&apos;s data, reps see only their own).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deployment, Administration & Integration</p>
+                <p>CRM Analytics apps are deployed using packages (change sets or CLI). Template Apps provide pre-built analytics solutions for Sales, Service, and specific industries. Custom apps extend or replace template apps. Connected objects define the Salesforce data sources for a template app — configuring which objects and fields feed each dataset. Scheduled dataflow runs keep datasets refreshed (up to 24 scheduled runs per day). Admin setup includes enabling CRM Analytics, assigning permission sets, and configuring connected objects. Integration with Einstein Discovery requires a CRM Analytics Plus license. The exam tests deployment sequences, template app configuration, and troubleshooting scheduling and data refresh issues.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

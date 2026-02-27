@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Marketing Cloud Email Specialist Exam Tips (${RELEASE_CURRENT}): SFMC Study Guide`
+const pageTitle = `Email Specialist Exam Tips (${RELEASE_CURRENT}): SFMC Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Marketing Cloud Email Specialist exam tips for ${RELEASE_CURRENT}: 4-week study plan, deliverability strategy, AMPscript tips, and mock-test benchmarks to pass on your first attempt.`
+  `Email Specialist exam tips (${RELEASE_CURRENT}): 4-week study plan, deliverability strategies, and scenario tips. Start free practice now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'Email Specialist Exam Tips', url: '/email-specialist-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Email Specialist exam format?',
+    answer: 'The Salesforce Marketing Cloud Email Specialist exam has 60 multiple-choice questions, a 90-minute time limit, a 65% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What sections carry the most weight on the Email Specialist exam?',
+    answer: 'Building and Sending Email (23%), Email Marketing Best Practices (13%), and Marketing Cloud Connect (13%) are the highest-weight sections. Together they account for nearly 50% of the exam.',
+  },
+  {
+    question: 'How long does it take to prepare for the Email Specialist exam?',
+    answer: '4–5 weeks of focused study. Prioritise deliverability, Journey Builder basics, Subscriber Management, and Content Builder. Hands-on practice with a Marketing Cloud sandbox makes scenarios much clearer.',
+  },
+  {
+    question: 'Is the Email Specialist a good first Marketing Cloud certification?',
+    answer: 'Yes — it is the most popular Marketing Cloud entry point and validates core SFMC skills. It is widely recognised and provides a strong foundation before taking Marketing Cloud Admin or Developer exams.',
+  },
+]
+
 export default function EmailSpecialistExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function EmailSpecialistExamTipsPage() {
     description: pageDescription,
     path: '/email-specialist-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

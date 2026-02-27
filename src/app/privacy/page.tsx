@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og-image`
+const ogImageUrl = `${baseUrl}/og?t=Privacy%20Policy%20%7C%20Trailblaze%20Prep`
 
 export const metadata: Metadata = {
   title: { absolute: 'Privacy Policy | Trailblaze Prep' },

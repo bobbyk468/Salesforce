@@ -234,10 +234,37 @@ export default function NonprofitCloudPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Nonprofit Cloud Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">NPSP Core Data Model: Households and Affiliations</p>
+                <p>Nonprofit Success Pack (NPSP) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named &quot;[Last Name] Household.&quot; This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership) — distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit&apos;s engagement model and explains the household model to clients who are new to NPSP.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Fundraising: Opportunities, Payments, and Recurring Donations</p>
+                <p>In NPSP, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity — a single donation can have multiple scheduled payments. Recurring Donations create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation&apos;s fundraising model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Program Management: Services and Deliveries</p>
+                <p>Program Management Module (PMM) tracks services delivered to beneficiaries. Key objects: Program (a service offering — food bank, job training), Program Engagement (a specific client&apos;s ongoing participation in a program), Service (a type of service — food box delivery, coaching session), Service Delivery (a specific instance of a service delivered to a client on a date). The consultant configures PMM to match the organisation&apos;s service model, sets up program-specific fields, and designs reports to measure program outcomes and client outcomes over time.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Grant Management: Funds and Allocations</p>
+                <p>NPSP uses General Accounting Units (GAUs) to track restricted funds and allocations. A GAU represents a fund, grant, or project that donors and grantors restrict their gifts to. GAU Allocations split a donation between multiple GAUs (e.g., 60% to the education programme, 40% to general operations). The Award object (in Grants Management package) tracks grant applications, awards, and reporting requirements from funders. The consultant configures the fund management structure to support the organisation&apos;s grant reporting and restricted fund accounting needs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting and Impact Measurement</p>
+                <p>Nonprofits need to demonstrate impact to funders and stakeholders. NPSP provides built-in reports for fundraising KPIs: donor retention rate, average gift size, year-over-year giving comparison, LYBUNT/SYBUNT analysis (Lapsed/Some Year But Unfortunately Not This year donors). Program impact reports track service delivery volume and client outcomes. CRM Analytics for Nonprofits provides pre-built dashboards for major donor portfolio analysis, campaign performance, and program impact measurement. The consultant designs the reporting strategy to support annual reports, grant reporting, and board presentations.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
-            
+
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}
@@ -267,6 +294,7 @@ export default function NonprofitCloudPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

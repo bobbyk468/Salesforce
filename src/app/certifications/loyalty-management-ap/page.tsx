@@ -62,6 +62,33 @@ export default function LoyaltyManagementAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Loyalty Management AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Program Design: Tiers & Points</p>
+                <p>Salesforce Loyalty Management structures programs around a Loyalty Program with one or more Tiers (e.g., Silver, Gold, Platinum) and a Currency (points, miles, cashback). Tier Groups define the criteria for tier qualification — spending thresholds, visit counts, or points earned. Tier Period determines how long earned status lasts and when it resets (anniversary, calendar year). The Loyalty Member object tracks each enrolled customer&apos;s current tier, points balance, and program history. Qualifying vs. Non-Qualifying Points: qualifying points count toward tier status; non-qualifying points are bonus awards that don&apos;t affect tier. The AP exam tests how to configure a tier structure with custom qualification rules and how tier periods interact with reset logic.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Points Accrual & Redemption Rules</p>
+                <p>Accrual Rules define how members earn points — by transaction amount, product category, channel, or event. Accrual Rate can be a fixed amount or a percentage of spend. Partner Accruals allow members to earn points at non-Salesforce partner businesses via API. Redemption Rules define how points are spent — minimum redemption threshold, redemption value (100 points = $1), and eligible products. Vouchers are generated upon redemption and tracked as Loyalty Vouchers. Point Expiry Rules define when dormant points expire and send pre-expiry notifications. The exam tests how to configure an accrual rule for a partner scenario, how to set a redemption rule with a minimum threshold, and how expiry notifications are triggered.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Promotions & Member Engagement</p>
+                <p>Loyalty Promotions offer bonus points or tier benefits for specific activities during a promotional period. Promotion Eligibility Rules restrict which members can participate (by tier, segment, or geography). Benefit Types include points multipliers, free products, and discount vouchers. Promotions are linked to a Loyalty Program and activated for a date range. Member Engagement events (birthday, milestone, referral) trigger automatic point awards or benefit grants. Engagement Attributes store program-specific data on the member profile. The exam tests how to configure a time-limited promotion with eligibility rules, how to award bonus points for a lifecycle event, and how to use member attributes to personalize promotions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner Integration & Ecosystem</p>
+                <p>Loyalty programs often partner with airlines, hotels, retailers, and financial services to allow cross-brand earning and redemption. Partner Accounts represent participating businesses in Salesforce. Partner Accrual/Redemption endpoints expose REST APIs that partners call to post transactions. Loyalty Connect provides a pre-built API gateway for partner integrations. Transaction Journals record every point earn and burn event with full audit trail. The AP exam tests how to configure a partner-facing API for an earn scenario, how transactions are posted and validated, and how to design the security model so that a partner can only post transactions for their own members.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics & Program Reporting</p>
+                <p>Key Loyalty KPIs: Active Member Rate, Redemption Rate, Point Liability (total outstanding points × redemption value), Tier Attainment Distribution, and Program ROI. CRM Analytics Loyalty apps provide pre-built dashboards for program performance, member engagement, and financial liability. Member 360 views surface all loyalty activity alongside CRM data. Churn prediction identifies at-risk members for proactive re-engagement. Cohort analysis tracks how engagement changes as members progress through tiers. The exam tests which CRM Analytics datasets are populated by Loyalty data, how to measure point liability from journal records, and how to configure a member churn alert.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function LoyaltyManagementAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

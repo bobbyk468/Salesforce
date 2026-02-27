@@ -193,6 +193,33 @@ export default function OmniStudioDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">OmniStudio Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom LWC Integration with OmniStudio</p>
+                <p>OmniStudio Developer extends the platform with custom Lightning Web Components (LWC) embedded within OmniScripts and FlexCards. Custom LWC elements in OmniScripts receive and pass data via the OmniScript SDK methods (omniApplyCallResp, omniUpdateDataJson). Custom FlexCard actions can trigger custom LWC components. The developer creates reusable custom components that follow OmniStudio data contracts — understanding the JSON data model that flows through OmniStudio is critical. The exam tests how to integrate custom LWC with OmniScript data binding.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataRaptor Architecture: Extract, Load, Transform</p>
+                <p>DataRaptor Extract queries Salesforce data using SOQL within a structured configuration — supports parent-child relationships and field mapping. DataRaptor Load creates or updates records using a structured JSON input — supports multi-object transactions (parent + children in one call). DataRaptor Transform maps and reshapes JSON data between two structures — no Salesforce DML involved. Turbo Extract is a simplified, high-performance version of Extract that runs a direct SOQL query. The developer exam tests DataRaptor configuration for complex data transformation scenarios and when each type is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Procedures: Advanced Patterns</p>
+                <p>Advanced IP design: chaining Integration Procedures (calling a sub-IP from a parent IP), conditional branching (If Block, Filter Block), and looping (Loop Block to iterate over arrays). Error handling: Set Error action captures exceptions from HTTP actions or Apex. Response mapping transforms the action response into the IP&apos;s output structure. Combining multiple data sources in one IP — e.g., call DataRaptor Extract for Salesforce data, HTTP Action for external pricing API, then Transform to merge results. The developer designs IPs that are efficient, maintainable, and handle errors gracefully.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Debugging OmniStudio Components</p>
+                <p>OmniScript debug mode activates the step-by-step data viewer — showing the JSON data model at each step. DataRaptor preview allows testing Extract, Load, and Transform configurations with sample inputs without running through a full OmniScript. Integration Procedure test console sends test payloads and inspects responses. FlexCard preview shows the rendered card with sample data. Browser developer tools (Network tab, Console) help debug HTTP Action calls and LWC component errors. The developer uses these tools systematically to isolate issues — checking data, mapping, and API calls independently.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniStudio Deployment and Packaging</p>
+                <p>OmniStudio components are deployed as metadata via Salesforce CLI (sfdx or sf commands). OmniScript and FlexCard definitions export as JSON — they can be version-controlled in Git. DataRaptors and Integration Procedures also export as JSON. Import/Export in the OmniStudio UI allows moving components between orgs. For managed packages (ISV deployment), OmniStudio components follow standard Salesforce packaging rules. The developer understands the deployment sequence — DataRaptors and IPs must be deployed before the OmniScripts that reference them.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function OmniStudioDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

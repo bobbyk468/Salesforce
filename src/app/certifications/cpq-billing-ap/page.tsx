@@ -62,6 +62,33 @@ export default function CPQBillingAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">CPQ Billing AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Quote-to-Cash Process & Billing Setup</p>
+                <p>CPQ Billing extends Salesforce CPQ to handle the full Quote-to-Cash cycle: Quote → Order → Contract → Invoice → Payment. Billing must be enabled in CPQ Settings. The Order object bridges CPQ and Billing — when a Quote is contracted, an Order is created, and Billing creates invoices from Order Products. Billing Policies define the invoice generation schedule, payment terms, and invoice consolidation rules. Legal Entities represent the billing entities within a company — important for multi-national deployments. Tax Integration (Avalara, Vertex) calculates tax on invoices. The AP exam tests the configuration sequence for a new Billing setup and the object relationships in Quote-to-Cash.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Invoice Generation & Billing Rules</p>
+                <p>Invoices are generated from Order Products based on Billing Rules — which define when and how charges are billed. Bill Now generates an invoice immediately. Bill in Advance bills at the start of a period. Bill in Arrears bills at the end of a period. Billing Frequency options: Monthly, Quarterly, Annually, or one-time. Invoice Run triggers invoice generation for all eligible Order Products. Invoice Lines represent individual charges. Credit Notes handle adjustments and cancellations. Billing Batches process large volumes asynchronously. The exam tests how to configure billing rules for common scenarios (annual subscription billed monthly, one-time setup fee billed immediately with first invoice).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Usage-Based Billing</p>
+                <p>Usage Billing handles variable charges based on consumption — API calls, data transfer, seat count. Usage Summaries aggregate raw usage data into billable amounts for an invoice period. Usage Rate Cards define the price per unit or tier. Rated Usage is the calculated charge ready for invoicing. Usage data can be imported via CSV, API, or custom integration. Overage billing charges usage above the included amount in a subscription. The AP exam tests how to configure usage billing for a SaaS scenario (base subscription + overage), how usage summaries feed invoice lines, and how to test the billing calculation with sample usage data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Payment Processing & Dunning</p>
+                <p>Payment Gateways in CPQ Billing connect to payment processors (Stripe, CyberSource, Adyen) to tokenize and charge payment methods. Payment Terms define when payment is due after invoice generation (Net 30, Due on Receipt). Auto-Pay automatically charges the stored payment method on the invoice due date. Dunning Processes handle failed payments — automated retry schedules, dunning emails, and account holds after N failed attempts. Payment Allocations apply payments to specific invoices. Refunds and Credit Memos reverse billed charges. The exam tests how to configure auto-pay, design a dunning workflow, and handle the scenario where a payment fails and needs to be retried.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Recognition & Reporting</p>
+                <p>Revenue Recognition in CPQ Billing aligns with ASC 606 and IFRS 15 standards. Revenue Schedules distribute invoice revenue across the service period rather than recognizing it all at invoice date. Revenue Recognition Rules define when revenue is recognized (ratably over subscription term, point-in-time for one-time charges). Revenue Distribution Transactions record the recognized amounts per period. Finance Period controls define accounting period boundaries. Revenue Reporting surfaces recognized vs. deferred revenue. The exam tests how to configure revenue recognition for a subscription scenario, how to handle amendments that modify in-period revenue schedules, and key reporting objects.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function CPQBillingAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

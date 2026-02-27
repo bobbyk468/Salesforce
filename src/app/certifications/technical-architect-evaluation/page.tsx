@@ -176,6 +176,33 @@ export default function TechnicalArchitectEvaluationPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">CTA Evaluation: Key Concepts for Success</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Scenario-Based Assessment Format</p>
+                <p>The Salesforce CTA (Certified Technical Architect) Review Board is a scenario-based oral examination — not a multiple-choice test. Candidates receive a multi-page business scenario 30 minutes before their 2-hour board session. The scenario describes a fictional company with a complex Salesforce + external system landscape, business requirements, and technical constraints. The candidate must design a complete solution architecture, present it to a panel of 3–4 CTA evaluators, and defend it under challenge. The evaluation tests architectural thinking, communication of trade-offs, adaptability when the scenario changes, and mastery of all Salesforce platform areas.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Decision Justification</p>
+                <p>Every architecture decision must be justified with three elements: the business requirement it satisfies, the technical reasoning (why this approach over alternatives), and the explicit trade-offs (cost, complexity, maintainability, risk). Evaluators specifically probe whether candidates can articulate why they chose X over Y — not just what they chose. Common decision areas: single org vs. multi-org, declarative vs. code, synchronous vs. async, AppExchange vs. custom build, Salesforce-native data store vs. external database. Preparation tip: for each major decision in practice scenarios, explicitly say "I chose X over Y because..." and name the specific trade-offs. Vague answers are probed until the candidate either justifies or concedes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Risk & Trade-off Analysis</p>
+                <p>CTAs are expected to proactively identify risks in their own designs — evaluators expect candidates to say "One risk with this approach is..." before being asked. Risk categories: technical risks (governor limits, data volume, API capacity), business risks (adoption, change management, vendor lock-in), operational risks (monitoring, support, upgrades), and security/compliance risks. Mitigation strategies must be specific — not "we will monitor it" but "we will implement a dead letter queue with alerting and a manual reprocessing workflow for failed events." Risk scoring (probability × impact) demonstrates mature architectural thinking. The evaluation rewards candidates who are intellectually honest about their design&apos;s weaknesses.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Defense of Design Choices</p>
+                <p>The Review Board will challenge design choices with "What if..." and "Why not..." questions to test whether the candidate truly understands the solution or memorized a template. Common challenges: "What if the integration endpoint goes down for 4 hours during business hours?", "What if your MuleSoft solution is over budget — what is the fallback?", "Why didn&apos;t you use a Platform Event here instead of a REST callout?" Candidates should respond with: acknowledge the challenge, explain the impact on the current design, and either defend it (with new justification) or adapt it (with a revised approach). Changing a design under challenge is not failure — it demonstrates that the architect can think dynamically.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Evaluator Rubric & Common Failure Areas</p>
+                <p>The CTA Review Board evaluates candidates on: Breadth (covering all required architecture areas), Depth (detailed, specific answers in each area), Communication (clear diagrams, structured verbal explanations), and Adaptability (handling scenario changes and challenges gracefully). Common failure areas: (1) Focusing only on Salesforce and ignoring external systems. (2) Providing generic answers without specific Salesforce feature references. (3) Failing to address security, data architecture, or integration explicitly. (4) Reacting defensively to challenges instead of engaging constructively. (5) Running out of time before covering all scenario requirements. Preparation: complete 10+ full mock Review Board sessions with peer CTAs or coaches, record and review yourself, and practice under time pressure.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.")}</p>
@@ -208,6 +235,7 @@ export default function TechnicalArchitectEvaluationPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Next Steps' },
               { id: 'related-certs', title: 'Related Certifications' },

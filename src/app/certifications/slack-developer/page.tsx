@@ -194,6 +194,33 @@ export default function SlackDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Slack Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Slack API: Bolt Framework and Authentication</p>
+                <p>The Bolt framework (available for Node.js, Python, Java) simplifies Slack app development by handling OAuth, event dispatching, and middleware. App authentication: Bot token (scoped to workspace, long-lived) vs User token (acts on behalf of a specific user). OAuth 2.0 installation flow for distributing apps to other workspaces. Socket Mode enables the app to receive events without a public HTTP endpoint — useful for development and firewalled environments. HTTP mode requires a public URL and event subscription verification.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Slack Surfaces: Home Tab, Messages, and Modals</p>
+                <p>Home Tab: a persistent, personalised app canvas shown when the user clicks the app in the sidebar — updated via views.publish API. Messages: posted in channels or DMs — can include Block Kit UI elements (buttons, select menus, input fields) for interactivity. Modals: triggered by button clicks or slash commands — multi-step forms with view.push/update/open. Each surface has different use cases: Home Tab for dashboards, Messages for notifications with actions, Modals for data entry. The exam tests which surface to use for a given app interaction pattern.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Block Kit: Interactive UI Components</p>
+                <p>Block Kit is Slack&apos;s UI framework. Block types: Section (text + accessory), Actions (buttons, select menus), Input (form fields), Context (supporting text/images), Header (bold title), Divider. Elements: button (click actions), static_select (dropdown), datepicker, plain_text_input. Block Kit Builder (online tool) lets developers compose and preview UI. Interactivity payloads (block_actions for button clicks, view_submission for modal forms) are sent to the app&apos;s interaction endpoint. The exam tests composing Block Kit payloads for common app UIs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Events API and Slash Commands</p>
+                <p>Events API delivers workspace events (messages posted, users joining, reactions added) to the app&apos;s endpoint. Subscribe to specific event types to minimise payload volume. 3-second response requirement: acknowledge the event with HTTP 200 immediately, process asynchronously if the task takes longer. Slash Commands provide custom commands (/myapp action) — configured in app settings, delivered as HTTP POST to the command endpoint. The exam tests how to subscribe to the correct events and how to handle slash command payloads.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security: Token Management and Signature Verification</p>
+                <p>Never expose bot tokens in client-side code or version control. Store tokens in environment variables or secrets management systems. Slack signs all inbound payloads with a signing secret — verify the X-Slack-Signature header using HMAC-SHA256 to prevent spoofed requests. Token rotation: OAuth tokens can be rotated programmatically. App scopes should follow least privilege — request only the OAuth scopes the app actually needs. The exam tests signature verification implementation and token security best practices.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -219,6 +246,7 @@ export default function SlackDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

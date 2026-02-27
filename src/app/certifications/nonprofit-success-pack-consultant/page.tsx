@@ -193,6 +193,33 @@ export default function NonprofitSuccessPackConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Nonprofit Success Pack Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">NPSP Installation and Configuration</p>
+                <p>NPSP is a managed package installed from AppExchange. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household) — not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Donation Processing and Gift Entry</p>
+                <p>NPSP Batch Gift Entry enables high-volume gift processing with a grid-style interface optimised for data entry staff. Gift commitments (pledges with instalment schedules) are different from Recurring Donations (which auto-generate future Opportunities). Payment processing integrations (Stripe, PayPal, Elevate) handle online donations. The Gift Entry process typically includes: data entry, payment capture, acknowledgement letter generation, and tax receipt production. The consultant configures the Batch Gift Entry templates, defines required fields, and sets up payment matching rules.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customisable Rollups (CRLP)</p>
+                <p>Customisable Rollups (CRLP) replaces the legacy NPSP rollup system with a flexible, admin-configurable framework. Rollup types: Soft Credit rollups, Opportunity rollups to Contact/Account/GAU. Each rollup definition specifies: the source object and field, the rollup operation (SUM, COUNT, AVERAGE, FIRST/LAST DATE), filter criteria (e.g., only Closed Won Opportunities), and the target field on the Contact or Account. CRLP calculates totals like Total Given, Largest Gift, Most Recent Gift Date. The consultant configures CRLP to match the organisation&apos;s donor KPI requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Engagement Plans and Levels</p>
+                <p>Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time — e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts — Bronze, Silver, Gold, Platinum. Level Assignment rules automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation&apos;s major donor stewardship strategy.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Quality and Migration</p>
+                <p>NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP — handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP&apos;s built-in validation plus custom Validation Rules to enforce data completeness. The consultant designs the data migration strategy — mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function NonprofitSuccessPackConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

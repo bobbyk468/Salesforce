@@ -62,6 +62,33 @@ export default function FinancialServicesCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Financial Services Cloud: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FSC Data Model: Households, Individuals, and Financial Accounts</p>
+                <p>Financial Services Cloud extends Salesforce with an industry-specific data model. Key objects: Individual Account (a person account representing a client), Household Account (groups related individuals), Financial Account (a bank account, investment account, or policy), Financial Account Role (relationship between a person and a financial account — primary owner, joint owner, beneficiary). Assets &amp; Liabilities track client net worth components. The consultant must understand the Household model — how contacts relate to household accounts and how rollups aggregate financial data at the household level.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Relationship Management and Referrals</p>
+                <p>Relationship Map visually displays a client&apos;s relationships — family members, business associates, advisors. Relationship Groups define formal groupings (household, trust, business entity). Referral Management tracks leads referred between advisors or from clients. The consultant configures the Relationship Map to reflect the organisation&apos;s coverage model. FSC uses RecordType-specific page layouts for each account type (Individual, Household, Business). The exam tests how to configure Relationship Groups and Referral workflows for a given financial services firm&apos;s client coverage model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Action Plans for Client Lifecycle Management</p>
+                <p>Action Plans define repeatable task sequences — used for new account onboarding, annual reviews, loan processing, and compliance checks. Action Plan Templates define the task sequence, assigned roles, due date offsets, and dependencies between tasks. When an Action Plan is created from a template, tasks are generated automatically and assigned to the appropriate team members. The consultant designs Action Plan Templates for the firm&apos;s key client lifecycle processes, configuring task dependencies and SLA-based due dates.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Rollup Summaries and Financial Aggregations</p>
+                <p>FSC uses custom rollup logic to aggregate financial data at the Household level. Financial Account balances roll up to the Household to show total assets under management (AUM). Customisable Rollups (part of NPSP, also used in FSC) allow administrators to configure rollup calculations without code — defining which field, which object, and which criteria trigger the rollup. The consultant configures rollups to match the firm&apos;s reporting requirements — ensuring Household-level financial summaries are accurate and up-to-date.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Compliance, KYC, and Document Management</p>
+                <p>Financial services firms have strict regulatory requirements. Know Your Customer (KYC) processes verify client identity — typically capturing ID documents, verifying addresses, and screening against watchlists. FSC supports compliance workflows with custom objects for KYC documentation. Document checklist items track which required documents have been collected. Integration with e-signature tools (DocuSign, Adobe Sign) enables digital document execution. The consultant designs the compliance workflow to satisfy regulatory requirements while maintaining a positive client experience.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function FinancialServicesCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

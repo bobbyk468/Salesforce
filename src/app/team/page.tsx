@@ -18,7 +18,7 @@ export const metadata: Metadata = {
     type: 'website',
     url: `${baseUrl}/team`,
     siteName: 'Trailblaze Prep',
-    images: [{ url: `${baseUrl}/og-image`, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
   },
 }
 

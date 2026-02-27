@@ -62,6 +62,33 @@ export default function MuleSoftCatalystConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Catalyst Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Catalyst Methodology: Land, Expand, Engage</p>
+                <p>Catalyst is MuleSoft&apos;s customer success methodology for driving API-led adoption. Land phase: establish the platform, deliver a pilot integration, demonstrate value. Expand phase: increase the number of teams using the platform, publish reusable assets to Exchange, grow the API portfolio. Engage phase: measure adoption metrics, demonstrate ROI, build a self-sustaining API economy. The Catalyst Consultant guides customers through this maturity model — assessing where they are and what the next expansion step looks like.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Enterprise Architecture Assessment</p>
+                <p>The Catalyst Consultant conducts a current-state assessment of the customer&apos;s integration landscape — existing tools (ESB, custom code, point-to-point), API maturity, team structure. The target architecture defines the future state — which integration patterns, which deployment model, which governance model. Gap analysis identifies the roadmap: what to retire, migrate, or build. The consultant aligns the technical architecture with the customer&apos;s business strategy — not just solving integration problems but enabling new digital products and business models.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Programme Strategy</p>
+                <p>API product management treats APIs as products — with versioning strategy, lifecycle management, deprecation policies, and consumer engagement. The consultant helps the customer define: who the API consumers are (internal teams, partners, developers), how APIs are discovered (developer portal), and how they are monetised or governed. Versioning strategy: URI versioning (/v1/, /v2/) vs header versioning. Breaking vs non-breaking changes — the consultant defines the breaking change policy and communication plan.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Centre for Enablement Operating Model</p>
+                <p>The Centre for Enablement (C4E) is the internal team that drives platform adoption. C4E responsibilities: create and publish reusable API templates and connector patterns, provide training and office hours, measure adoption, and enforce governance. The Catalyst Consultant helps establish the C4E — defining the team structure, funding model (platform team budget vs project team allocation), success metrics (asset reuse rate, time-to-first-API, developer NPS). The exam tests C4E design principles and adoption success metrics.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Delivery Playbook and Success Metrics</p>
+                <p>The Catalyst Delivery Playbook defines: sprint cadence for API development (2-week sprints), definition of done (API spec, implementation, tests, documentation, Exchange publication), and team roles (API product owner, integration developer, platform administrator). Success metrics: Number of APIs published, reuse rate (what % of new APIs reuse existing assets), time-to-market for new integrations, integration incidents (reliability). The Catalyst Consultant uses these metrics to demonstrate programme value and justify platform investment.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MuleSoftCatalystConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

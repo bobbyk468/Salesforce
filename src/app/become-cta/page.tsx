@@ -5,8 +5,8 @@ import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount 
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og-image`
 const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
+const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(ctaTitle)}`
 const ctaDescription =
   'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'
 

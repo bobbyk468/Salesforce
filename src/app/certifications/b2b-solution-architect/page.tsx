@@ -62,6 +62,33 @@ export default function B2BSolutionArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2B Solution Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Solution Architecture Fundamentals</p>
+                <p>B2B Solution Architects design end-to-end solutions spanning Sales Cloud, Service Cloud, Experience Cloud, B2B Commerce, and external systems. Architecture decisions must balance functional requirements, non-functional requirements (scalability, performance, security), and total cost of ownership. The Salesforce Well-Architected framework (Trusted, Easy, Adaptable) guides design trade-offs. Architects produce solution design documents, data models, integration diagrams, and governance plans. The exam presents business scenarios and tests which combination of Salesforce products and configuration approaches best meets the requirements — always favor declarative over code unless code is clearly necessary.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Cloud Data Architecture</p>
+                <p>B2B scenarios frequently involve Account, Contact, Opportunity, Order, and custom product data shared across Sales, Service, and Commerce clouds. Data governance decisions include: which cloud is the system of record for each object, how to maintain data consistency, and how to handle conflicts. External Data Sources and Salesforce Connect allow external data to appear in Salesforce without ETL. Data Cloud unifies customer data across channels. Master Data Management (MDM) principles prevent duplicate records. The exam tests scenarios where data must flow between clouds — know the object model for each cloud and how standard sharing applies across Salesforce applications.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture Patterns</p>
+                <p>Common B2B integration patterns: Point-to-Point (simple but brittle), Hub-and-Spoke (MuleSoft as integration hub), Event-Driven (Platform Events, Change Data Capture). MuleSoft API-led connectivity uses System, Process, and Experience API layers. Salesforce Connect enables OData-based external object integration. REST/SOAP callouts from Apex require Named Credentials and remote site settings. Bulk API handles high-volume data loads. Idempotent design prevents duplicate processing on retry. The exam tests which integration pattern fits a given latency, volume, and error-handling requirement — know the trade-offs between synchronous and asynchronous patterns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security & Compliance Design</p>
+                <p>B2B solutions must address data residency, access control, and audit requirements. Shield Platform Encryption encrypts data at rest. Event Monitoring captures detailed user activity logs. Field Audit Trail retains field history beyond the standard 18 months. Customer-Managed Keys (Bring Your Own Key) give enterprises control over encryption keys. GDPR and CCPA compliance require Right to Be Forgotten capabilities and data retention policies. Health Check and Security Center provide org-level security scoring. The exam tests how to design security controls that meet enterprise compliance requirements without breaking Salesforce native functionality or Apex logic.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance, Change Management & Scalability</p>
+                <p>Governance frameworks define how changes move from concept to production — org strategy (single org vs. multi-org), release management (change sets, CLI, CI/CD), and team structure (center of excellence). Sandbox strategy: scratch orgs for development, full sandboxes for UAT. Governor limits must be designed around — particularly SOQL limits in triggers, callout limits in async processes, and heap size in batch jobs. Scalability considerations include: large data volumes (skinny tables, custom indexes), high API throughput (Bulk API, async), and global deployments (multi-currency, multi-language). The exam tests the right governance approach for a given enterprise scale and deployment cadence.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function B2BSolutionArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

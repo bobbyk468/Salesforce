@@ -5,11 +5,11 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce Certification Cost (${RELEASE_CURRENT}): Exam Fees & Retake Prices`
+const pageTitle = `Salesforce Cert Cost (${RELEASE_CURRENT}): Exam Fees & Retake Prices`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce certification exam fees for ${RELEASE_CURRENT}: most certs cost $200, Architect certs $400, AP certs $100, Tableau $250, and CTA $6,000. Retake and savings tips included.`
+  `Salesforce exam fees (${RELEASE_CURRENT}): most certs $200, Architects $400, AP certs $150. Retake fees and bundle options fully explained.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

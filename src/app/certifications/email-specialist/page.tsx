@@ -238,9 +238,9 @@ export default function EmailSpecialistPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
-          {/* Study Notes */}
-          <div id="study-notes" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
-            <h2 className="text-2xl font-bold text-gray-900 mb-4">SFMC Email Specialist Study Notes</h2>
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Email Specialist: Key Concepts for the Exam</h2>
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Email Deliverability: SPF, DKIM, and DMARC</p>
@@ -300,7 +300,7 @@ export default function EmailSpecialistPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
-              { id: 'study-notes', title: 'Study Notes' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

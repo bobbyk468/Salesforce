@@ -234,10 +234,37 @@ export default function FieldServicePage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Field Service Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Field Service Objects: Work Orders, Appointments, and Resources</p>
+                <p>The Field Service data model centres on Work Orders (the service job), Work Order Line Items (specific tasks within the job), Service Appointments (the scheduled visit), and Service Resources (the worker, equipment, or crew). Assets track the customer equipment being serviced. Locations store physical addresses for service territories and parts inventory. The consultant must understand how these objects relate and how data flows from a Case &rarr; Work Order &rarr; Service Appointment &rarr; Resource assignment and completion.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Scheduling and the Gantt</p>
+                <p>The Dispatcher Console Gantt view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler — constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Service Territories, Resources, and Skills</p>
+                <p>Service Territories define the geographic areas where resources operate — Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order — resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. The exam tests which combination of territory, resource, and skill configuration matches a given routing scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mobile App and Offline Capabilities</p>
+                <p>The Field Service Mobile app (iOS and Android) allows field technicians to view and complete work orders, update service appointment status, log parts used, and capture signatures. Offline mode allows continued working when network connectivity is unavailable — changes sync when connectivity is restored. Mobile flows guide technicians through inspection checklists and multi-step processes. Inventory management: technicians can view van stock (Products Required), consume parts (Products Consumed), and request restocking. The exam tests mobile configuration options and offline data sync behaviour.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Parts and Inventory Management</p>
+                <p>Products Required list the parts needed for a Work Order before the job. Products Consumed record actual parts used during the service visit. Return Orders handle parts returned to inventory. Locations track physical inventory (van stock, warehouse, customer site). Inventory transfers move stock between locations. The Service Report summarises the completed work, parts used, and technician notes — can be auto-generated and sent to the customer upon job completion. Know the difference between Products Required (planned) and Products Consumed (actual).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
-            
+
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}
@@ -267,6 +294,7 @@ export default function FieldServicePage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -177,6 +177,33 @@ export default function TechnicalArchitectReviewBoardPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">CTA Review Board: Key Concepts for Preparation</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Review Board Format & Logistics</p>
+                <p>The Salesforce CTA Review Board is a 2-hour oral examination conducted virtually (via Zoom) before a panel of 3–4 currently active Salesforce CTAs who serve as evaluators. Candidates receive the scenario document 30 minutes before the session starts — use this time to read carefully, identify all requirements (functional and non-functional), spot constraints, and outline a response structure. The session consists of a ~30-minute presentation (with shared screen for diagrams) followed by ~60–90 minutes of Q&A and probing challenges. A whiteboard tool (or pre-prepared diagrams) is expected. Candidates are scored Pass or Fail with detailed feedback provided regardless of outcome.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Preparing Architecture Diagrams</p>
+                <p>Effective CTA presentations use clear, well-labeled diagrams: Context Diagram (systems involved and their relationships), Integration Architecture Diagram (data flows, protocols, sync/async), Data Model Diagram (key objects, relationships, volumes), Security Architecture Diagram (identity, encryption, sharing), and Deployment Diagram (orgs, sandboxes, CI/CD). Diagrams must be legible when screen-shared — use color coding by system type (Salesforce = blue, external = gray, integration layer = orange). Each diagram should have a legend. Practice presenting each diagram in under 90 seconds with a clear narrative: "This shows... The key decision here is... The trade-off is...". Avoid cluttered diagrams that require extensive explanation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Common Failure Areas & How to Avoid Them</p>
+                <p>Statistical analysis of failed Review Board attempts reveals recurring gaps: (1) Incomplete solution — not addressing all scenario requirements; use a checklist before presenting. (2) Lack of specificity — saying "we will use Salesforce&apos;s security model" without specifying OWD, role hierarchy, sharing rules, or Shield. (3) Ignoring non-functional requirements — scalability, performance, availability, compliance. (4) No integration error handling — every integration must address what happens when it fails. (5) Defensive responses to challenges — treat every challenge as a "help me understand" question, not an attack. (6) Time management — running over on presentation leaves no time for Q&A, which is where most probing happens. Practice with a timer religiously.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Responding to Board Challenges</p>
+                <p>When a Board member challenges your design, use the STAR-A framework: Situation (restate the challenge to show you understood), Think (pause visibly — evaluators want to see you think, not react), Answer (address the specific challenge with a specific answer), Rationale (explain the reasoning), Adapt (if the challenge reveals a genuine gap, update your design on the spot and explain the revision). Never say "I don&apos;t know" — say "My initial design assumed X; given your challenge, I would revise it to Y because..." The Board is not trying to trick you — they are stress-testing your design for production-level robustness. Candidates who engage thoughtfully with challenges often score higher than those whose initial designs were unchallenged.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Success Strategies & Preparation Plan</p>
+                <p>Successful CTA candidates typically follow a 3–6 month structured preparation plan: (1) CTA Bootcamp or coaching program with active CTAs. (2) Weekly mock Review Board sessions — at minimum 8–10 full mock sessions before attempting the real board. (3) Deep-dive study in weak areas: large data volumes, integration architecture, security, and multi-org strategy are the most commonly cited gaps. (4) Build a library of 5–10 practice scenarios (Salesforce provides some; community resources provide more) and practice presenting each. (5) Get comfortable diagramming under time pressure — set a timer for 20 minutes and draw a complete architecture diagram from a scenario. (6) Join the CTA Study Group in the Trailblazer Community for peer feedback and shared resources.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice thinking like a CTA and defending architecture decisions for the Review Board.")}</p>
@@ -209,6 +236,7 @@ export default function TechnicalArchitectReviewBoardPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Previous Step' },
               { id: 'related-certs', title: 'Related Certifications' },

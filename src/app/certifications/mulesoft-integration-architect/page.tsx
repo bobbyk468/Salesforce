@@ -62,6 +62,33 @@ export default function MuleSoftIntegrationArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Integration Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture Patterns</p>
+                <p>Integration patterns: Point-to-point (direct connection between two systems — brittle at scale), Hub-and-spoke (central integration hub mediates all connections — reduces n*(n-1) connections to n connections), API-led (layered API approach — flexible and composable), Event-driven (publish/subscribe decoupling — scalable but eventual consistency). The Integration Architect selects patterns based on: number of systems, latency requirements, scalability needs, and team capability. Know when API-led supersedes traditional hub-and-spoke.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API-Led Connectivity: Three-Layer Architecture</p>
+                <p>System APIs wrap individual backend systems — they insulate the network from system-specific protocols and expose stable REST interfaces regardless of what the backend system uses. Process APIs orchestrate business logic by calling multiple System APIs — they implement the business process without knowing which systems back each System API. Experience APIs tailor the data for specific consumers — mobile app, partner portal, web app — formatting and filtering for the channel. Each layer can be independently scaled and versioned. The exam tests how to assign capabilities to the correct API layer.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture for Integrations</p>
+                <p>OAuth 2.0 client credentials flow for M2M API authentication. Mutual TLS (mTLS) for certificate-based authentication — both client and server present certificates. API Manager policy stacking — apply multiple policies in sequence (auth → rate limit → header injection). Secrets Manager for credential storage — never hardcode credentials in Mule apps. Anypoint Security (separate licence) provides tokenisation, secrets management, and crypto operations. The exam tests how to design a multi-layer security architecture for APIs and integrations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">High Availability, Resilience, and SLAs</p>
+                <p>CloudHub workers can be scaled horizontally (multiple workers) or vertically (larger worker size). Multiple workers in the same region provide active-active high availability — each worker processes a portion of the load. Persistent queues (VM connector with JMS) ensure message delivery even if a worker restarts. Reconnection strategies handle transient network failures. Circuit Breaker pattern prevents cascade failures. The architect designs resilience to meet SLA requirements (e.g., 99.9% uptime, maximum 5-second response time).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Anypoint Governance and Centre for Enablement</p>
+                <p>Centre for Enablement (C4E) is MuleSoft&apos;s operating model for scaling API-led connectivity. The C4E team creates reusable assets (API templates, connector extensions, shared fragments) published to Exchange. Governance: API rating and certification in Exchange, API contract testing, dependency tracking via API Catalog. The Integration Architect designs governance policies — when new versions require review, how breaking changes are managed, and how teams discover and reuse existing assets. The exam tests C4E principles and governance framework design.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MuleSoftIntegrationArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

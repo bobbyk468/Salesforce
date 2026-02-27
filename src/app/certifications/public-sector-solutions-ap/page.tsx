@@ -62,6 +62,33 @@ export default function PublicSectorSolutionsAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Public Sector Solutions AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Case Management for Government</p>
+                <p>Public Sector Solutions (PSS) extends Service Cloud for government constituent service. Cases represent constituent inquiries, complaints, or service requests. Case Classification uses a topic taxonomy to route and report on cases by type. Omni-Channel routes cases to the correct department or agent based on case type and priority. Knowledge Articles provide agents and constituents with self-service answers. Service Level Agreements (SLAs) via Entitlements enforce government response time mandates. Case Escalation Rules auto-escalate aging cases. The AP exam tests how to configure a government case management workflow, how to use knowledge for constituent self-service, and how to enforce compliance with response time SLAs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Licensing & Permitting</p>
+                <p>PSS provides a pre-built Licensing and Permitting solution for government agencies. Business License Applications capture applicant information and supporting documents. Application Flows guide applicants through multi-step digital submission. Document Checklist Items define the required supporting documents. Inspection Tasks link to license applications for compliance verification. Renewal Workflows automate annual or periodic license renewals. Fee Structures define the application fees and payment integration. The exam tests how to configure a license application form, how document checklists are used in the review process, and how to set up renewal automation with payment collection.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Grants Management</p>
+                <p>PSS Grants Management supports the full grant lifecycle from solicitation to closeout. Funding Opportunities represent open grant competitions. Funding Award records track awarded grants including amount, period, and compliance requirements. Application review workflows route applications through scoring and approval. Budget Tracking monitors expenditures against awarded amounts. Progress Reports capture grantee performance data. Grantee portals (Experience Cloud) allow grantees to submit applications, reports, and amendment requests. The AP exam tests how to configure a grant application workflow, how budget tracking interacts with financial data, and how the grantee portal is provisioned.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Inspections & Compliance</p>
+                <p>Government inspections verify compliance with regulations — building permits, health codes, environmental standards. Inspection Visit records capture inspection dates, findings, and outcomes. Violations are documented with severity levels, corrective action requirements, and deadlines. Reinspection workflows schedule follow-up inspections when violations are found. Mobile inspection apps (Salesforce Field Service mobile or custom LWC) provide inspectors with offline access to inspection checklists and violation history. The AP exam tests how to configure an inspection workflow from scheduling through violation resolution, how mobile offline access works for inspectors, and how to generate compliance reports from inspection data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Constituent Engagement & Digital Experience</p>
+                <p>PSS uses Experience Cloud to deliver government digital services to constituents — applying for licenses, reporting issues, tracking case status, and accessing benefits. Self-Registration allows new constituents to create accounts. Identity Verification can integrate with government ID systems or Knowledge-Based Authentication. Constituent Profiles aggregate all interactions (cases, licenses, permits, benefits) on a single constituent record. Einstein Bots deflect routine constituent inquiries before routing to agents. Accessibility (WCAG 2.1 AA compliance) is mandatory for government digital services. The AP exam tests how to configure a constituent self-service portal, how to enable case self-service, and how identity verification integrates with the portal registration flow.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function PublicSectorSolutionsAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

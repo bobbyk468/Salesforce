@@ -193,6 +193,33 @@ export default function SharingVisibilityArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Sharing and Visibility Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OWD and the Security Baseline</p>
+                <p>Organisation-Wide Defaults set the baseline record access: Private (only owner and above in role hierarchy), Public Read Only (all users read, only owner writes), Public Read/Write (all users read and write), Controlled by Parent (detail records follow master). OWD is the minimum &mdash; it can only be opened wider by other mechanisms, never restricted further. The exam tests which OWD setting applies to a given scenario and what the downstream implications are for sharing mechanisms.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Record Sharing: Role Hierarchy, Rules, and Manual Sharing</p>
+                <p>Role Hierarchy automatically grants managers access to their subordinates&apos; records &mdash; this is implicit sharing. Sharing Rules extend access beyond OWD to specific roles, groups, or territories &mdash; either ownership-based or criteria-based. Manual Sharing allows record owners to grant access to specific users for individual records &mdash; not scalable. Apex Sharing (using Share objects) enables programmatic sharing for complex business rules. The exam tests which sharing mechanism is appropriate for each access requirement.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">External User Sharing: Communities and Partner Portals</p>
+                <p>External users follow a different sharing model. Sharing Sets grant external users (Customer Community licence) access to records related to their Account or Contact &mdash; without roles or sharing rules. External Account Hierarchy enables partner users to see records owned by users below them in the partner account hierarchy. Guest User sharing rules grant unauthenticated visitors access to specific records. Know the licence-to-sharing mechanism mapping: Customer Community &rarr; Sharing Sets, Customer Community Plus &rarr; Sharing Rules &amp; Roles, Partner Community &rarr; External Account Hierarchy.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Field and Object Security: Profiles vs Permission Sets</p>
+                <p>Object permissions (CRED: Create, Read, Edit, Delete) are set on Profiles and Permission Sets. Field-Level Security controls which fields a user can see and edit &mdash; also set on Profiles and Permission Sets. The effective permissions are the union of the profile and all assigned permission sets. View All and Modify All object permissions bypass the sharing model for that object. The exam tests layered permission evaluation and when to use Profiles vs Permission Sets for access management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sharing Performance and Audit</p>
+                <p>Sharing recalculation runs automatically when OWD or sharing rules change &mdash; this can be a long-running operation for large orgs. Sharing recalculation can be deferred using the Defer Sharing Recalculation feature. The Sharing Hierarchy viewer shows which mechanisms grant access to a specific record. Shield Platform Encryption encrypts data at rest for fields configured with encryption &mdash; this interacts with sharing and SOQL performance. The exam tests when to use audit tools (Setup Audit Trail, Field History Tracking) and the performance implications of sharing configurations.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function SharingVisibilityArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

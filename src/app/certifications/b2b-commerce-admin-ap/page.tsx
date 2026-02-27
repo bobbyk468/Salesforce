@@ -62,6 +62,33 @@ export default function B2BCommerceAdminAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2B Commerce Admin AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Store Setup & Storefront Configuration</p>
+                <p>B2B Commerce stores are built on Experience Cloud sites. The Commerce Setup Assistant guides the initial configuration of a store, including currency, tax, and locale settings. Storefronts use LWC (Lightning Web Components) for the buyer-facing UI. Store Context defines which products, pricebooks, and catalogs are available to buyers. Buyer Groups link accounts to specific catalogs and price books. Guest Browse allows unauthenticated users to view products but not purchase. The AP exam tests how to configure a store for a specific business model — know which settings live in the store vs. the Experience Cloud site.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Product Catalog & Pricing</p>
+                <p>Entitlement Policies define which products a buyer group can see and purchase. Price Books in B2B Commerce work similarly to standard Salesforce Price Books — assign products with list and negotiated prices. Price Adjustments apply tier-based or account-specific discounts. Product media (images, documents) is managed through CMS (Content Management System) connected to the store. Product variations (color, size) use Variation Parents and Child Products. Category hierarchies organize products for navigation. The exam focuses on catalog entitlements, pricing logic order of operations, and how to configure account-specific pricing without custom development.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Buyer Account & Contact Management</p>
+                <p>Buyer accounts in B2B Commerce are standard Salesforce Accounts with a Buyer Account record associating them to the store. Buyer users are Experience Cloud community users. Buyer Group membership determines catalog and price access. Delegated admin users in the buyer organization can manage their own users. Checkout configuration controls which buyer roles can place orders and set shipping addresses. The exam tests the relationship between Accounts, Contacts, Buyer Accounts, and Buyer Groups — understand how adding a new buyer contact and granting access flows through these objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management & Checkout</p>
+                <p>The B2B Commerce checkout flow is configurable — admins can add, remove, or reorder checkout steps. Cart-to-Order conversion creates a Salesforce Order record. Order Delivery Groups define shipping destinations and methods. Tax integration (Avalara or custom) calculates tax during checkout. Payment Gateway integration handles credit card and purchase order payments. Order History is surfaced back to the buyer in the storefront. The exam tests checkout configuration steps, how to enable purchase order payments, and how the cart-to-order process maps to standard Salesforce order objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration with Salesforce CRM</p>
+                <p>B2B Commerce is natively integrated with Salesforce CRM — buyer accounts map to Account records, orders become Order records, and product data uses the standard Product2 and PricebookEntry objects. Reorder functionality uses order history stored in Salesforce. External data (ERP inventory, pricing) is integrated via OCI (Order Management) or custom APIs. The Commerce Storefront uses Connect REST APIs for all front-end data operations. The exam tests the data flow between the storefront, Experience Cloud, and core CRM — know which objects store what and how standard Salesforce security applies to buyer data.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function B2BCommerceAdminAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

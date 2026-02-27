@@ -193,6 +193,33 @@ export default function PlatformFoundationsPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Platform Foundations: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce Platform Architecture</p>
+                <p>Salesforce is a multi-tenant cloud platform — all customers share the same infrastructure but data is logically isolated. The platform provides automatic upgrades (3 major releases per year: Spring, Summer, Winter), managed scalability, and built-in high availability. The metadata-driven architecture means that customizations (objects, fields, layouts, code) are stored as metadata rather than application code changes. The Lightning Platform delivers Force.com (declarative + code), Experience Cloud (portals), and Einstein (AI) on a common foundation. The Foundations exam tests understanding of the multi-tenant model, what the metadata layer controls, and how Salesforce manages upgrades without breaking customer customizations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Modeling Basics</p>
+                <p>Salesforce organizes data into Objects (equivalent to database tables) and Records (rows). Standard Objects (Account, Contact, Lead, Opportunity, Case) are pre-built. Custom Objects store business-specific data. Fields define the data types stored in an object. Record Types allow different page layouts and picklist values per user group on the same object. Relationships connect objects: Lookup (loose coupling, optional parent), Master-Detail (tight coupling, cascade delete, roll-up summary). External Objects connect to external data via Salesforce Connect. The exam tests field type selection (Formula, Roll-Up Summary, Picklist, Text, Currency), when to use Lookup vs. Master-Detail, and how Record Types enable different business processes on the same object.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Model Overview</p>
+                <p>Salesforce security operates at four levels: Org (login, network access), Object (CRUD via profiles/permission sets), Field (read/edit via profiles/permission sets), and Record (OWD + Role Hierarchy + Sharing). Profiles assign baseline permissions to every user of a type. Permission Sets grant additional permissions to specific users without changing the profile. Permission Set Groups bundle multiple Permission Sets. Org-Wide Defaults (OWD) set the most restrictive baseline access for records. Role Hierarchy and Sharing Rules extend record visibility beyond OWD. The exam tests which security layer to modify to solve a given access problem — know that you always configure the most restrictive layer first, then open up selectively.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Overview: Declarative Tools</p>
+                <p>Salesforce provides a suite of declarative automation tools. Validation Rules prevent records from being saved if data doesn&apos;t meet criteria — fires before save. Formula Fields calculate values automatically from other field values — read-only. Default Field Values pre-fill fields on new records. Record-Triggered Flows execute automation before or after a record save — replaces Process Builder and Workflow Rules. Approval Processes route records through human reviewers. Scheduled Flows process batches of records at a scheduled time. The Foundations exam tests which tool to use for: enforcing data quality (Validation Rule), calculating a derived value (Formula Field), automating a multi-step process (Flow), or requiring manager sign-off (Approval Process).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AppExchange, Ecosystem & Trailhead</p>
+                <p>AppExchange is Salesforce&apos;s marketplace for third-party applications, components, Flows, and Lightning Bolts. Managed Packages are ISV-published solutions that are upgradeable and have protected code. Unmanaged Packages are open-source and not upgradeable. Security Review ensures AppExchange listings meet Salesforce security standards. Partner Ecosystem includes consulting SIs, ISVs, and Salesforce-trained professionals (Trailblazers). Trailhead is the free learning platform — modules, trails, superbadges, and certifications. Trailblazer Community provides forums and user groups. The Foundations exam tests the difference between managed and unmanaged packages, how to evaluate an AppExchange listing, and the role of the Salesforce ecosystem in extending the platform.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function PlatformFoundationsPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

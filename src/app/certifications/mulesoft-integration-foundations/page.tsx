@@ -156,6 +156,33 @@ export default function MuleSoftIntegrationFoundationsPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Integration Foundations: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API-Led Connectivity & Anypoint Platform</p>
+                <p>MuleSoft&apos;s API-led connectivity organizes integrations into three reusable layers: System APIs (connect directly to backend systems — SAP, Salesforce, databases), Process APIs (orchestrate business logic across multiple systems — order processing, customer onboarding), and Experience APIs (tailored for consuming clients — mobile app, web portal, partner). This layered approach promotes reusability — change a System API once and all Process APIs that use it automatically benefit. Anypoint Platform is the unified development and management environment: Anypoint Studio (IDE), Design Center (API design), Exchange (reuse hub), Runtime Manager (deployment), API Manager (governance). The exam tests which API layer handles a given integration scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mule 4 Flows & Core Concepts</p>
+                <p>A Mule 4 application consists of Flows triggered by a Source (HTTP listener, Salesforce trigger, scheduler) and processed by a sequence of Components (transformers, connectors, routers, error handlers). The Mule Event contains a Message (payload + attributes) and Variables. DataWeave 2.0 is the transformation language — `%dw 2.0` scripts transform data between formats (JSON, XML, CSV, Java). Connectors provide pre-built integration with systems: Salesforce Connector, HTTP Connector, Database Connector, Anypoint MQ. Error Handling: Try scope, On Error Continue, On Error Propagate define how errors are caught and handled. The exam tests basic flow design, DataWeave syntax, and error handling patterns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataWeave Transformations</p>
+                <p>DataWeave is MuleSoft&apos;s functional transformation language. Key syntax: `payload` accesses the incoming message body; `.` navigates object fields; `map` transforms arrays; `filter` selects elements; `pluck` converts objects to arrays; `reduce` aggregates; `if/else` handles conditionals. Type coercion converts between data types. Output directives specify the target format: `output application/json`, `output application/xml`. DataWeave modules provide utility functions (strings, dates, crypto). Mapping JSON to XML or flattening nested structures are common exam tasks. The Integration Foundations exam tests reading and writing basic DataWeave scripts for field mapping, conditional logic, and array transformation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connectors & Integration Patterns</p>
+                <p>Common MuleSoft connectors tested in Foundations: HTTP (REST API calls), Salesforce (CRUD, bulk, streaming), Database (SQL queries, stored procs), Anypoint MQ (async messaging), Scheduler (time-based triggers), File (read/write), SMTP (email). Integration patterns: Request-Reply (synchronous REST), Publish-Subscribe (Platform Events, Anypoint MQ topics), Batch Processing (large volume data loads), Polling (scheduled data sync). API-led connectivity promotes the Pub/Sub pattern for decoupling producers and consumers. The exam tests which connector and pattern to apply for a given scenario — synchronous vs. asynchronous, real-time vs. batch, point-to-point vs. hub-and-spoke.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deployment & API Management Basics</p>
+                <p>MuleSoft applications deploy to Anypoint Runtime: CloudHub (Salesforce-managed cloud), Runtime Fabric (customer-managed Kubernetes), or On-Premises. CloudHub workers are the compute units — size by memory and vCores. Anypoint API Manager applies policies to APIs: rate limiting, OAuth 2.0 authentication, IP allowlisting, SLA tiers. API Autodiscovery links a deployed Mule app to an API Manager policy. Exchange hosts reusable assets: API specifications (RAML/OAS), connectors, templates, and examples. The Foundations exam tests the deployment options, how to apply an OAuth policy via API Manager, and how to publish a reusable asset to Anypoint Exchange.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -181,6 +208,7 @@ export default function MuleSoftIntegrationFoundationsPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

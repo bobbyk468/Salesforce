@@ -62,6 +62,33 @@ export default function B2CSolutionArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2C Solution Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Solution Design for B2C Retail</p>
+                <p>B2C Solution Architects design solutions spanning Commerce Cloud (storefront), Marketing Cloud (email/journey), Service Cloud (support), and Order Management (fulfillment). The architect balances business requirements (conversion, retention, support cost) against technical constraints (API limits, data residency, licensing). Salesforce Customer 360 provides a unified identity across clouds via Marketing Cloud Personalization and Data Cloud. The exam presents complex multi-cloud business scenarios and tests which combination of products, connectors, and configuration choices best meets the requirements — know the capabilities and limits of each cloud.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Cloud Integration Patterns</p>
+                <p>Key B2C connectors: Commerce to Marketing Cloud Connector (syncs shopper data and triggers journeys), Commerce to Service Cloud Connector (links shopper profiles to cases), Order Management Connector (syncs orders to Salesforce OMS). Data flows: purchase events → Marketing Cloud → re-engagement journeys; support cases → Service Cloud → order lookup. Marketing Cloud Connect links core Salesforce objects to Marketing Cloud data extensions. Salesforce CDP/Data Cloud unifies identity across all clouds. The architect must know which connector to use, its data latency, and what to do when a connector doesn&apos;t support a required use case (custom integration via API).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Architecture & Customer Identity</p>
+                <p>B2C data architecture centers on the shopper profile: anonymous browser → registered account → unified customer identity. Commerce Cloud Customer record (online profile) maps to Marketing Cloud subscriber and Service Cloud Contact. Duplicate management prevents fragmented profiles when the same customer shops across channels. External ID fields align records across systems. Data Cloud resolves identity using deterministic (email match) and probabilistic rules. GDPR and CCPA compliance requires consent management, preference centers, and Right to Be Forgotten across all connected clouds. The exam tests how identity flows across clouds and what an architect designs to ensure a single coherent customer view.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management & Fulfillment Architecture</p>
+                <p>Salesforce Order Management (SOM) handles post-purchase orchestration: order capture, payment settlement, fulfillment routing, returns, and refunds. The Order Summary object is the central record in SOM. Fulfillment flows route orders to the correct warehouse or drop-shipper based on inventory availability and shipping cost. Change Orders handle post-purchase modifications. Distributed Order Management (DOM) optimizes fulfillment location selection. Integration with WMS (Warehouse Management Systems) and ERP happens via API or MuleSoft. The exam tests how an architect designs the order-to-fulfillment flow, handles partial fulfillment scenarios, and integrates SOM with external warehouse systems.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Non-Functional Requirements & Governance</p>
+                <p>B2C solutions must be designed for scale: peak traffic (Black Friday), global reach (multi-language, multi-currency, multi-region), and high availability (99.99% uptime SLA). Caching strategy across CDN, application, and browser layers reduces load time and infrastructure cost. Disaster recovery design defines RPO (Recovery Point Objective) and RTO (Recovery Time Objective). Release management for B2C spans multiple clouds — changes must be coordinated across Commerce Cloud code deployments, Marketing Cloud journey updates, and Salesforce metadata deployments. The exam tests how an architect balances speed to market against risk, and how to structure a release governance model for a multi-cloud B2C platform.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function B2CSolutionArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

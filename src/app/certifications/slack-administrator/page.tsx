@@ -234,6 +234,33 @@ export default function SlackAdministratorPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Slack Administrator: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Workspace Setup and Channel Management</p>
+                <p>Slack workspaces are the top-level container. Channels are the primary collaboration unit — public (discoverable and joinable by anyone), private (by invitation only), shared (connects multiple workspaces). Default channels are automatically joined when users are added. Channel naming conventions (e.g., #team-, #proj-, #ext-) aid discoverability. User groups are tagged groups of users for notifications and channel management. The administrator manages channel creation policies, retention settings, and default channel assignments.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Permissions, Security, and Compliance</p>
+                <p>Slack admin roles: Primary Owner, Owner, Admin, Member, Guest (Single-channel or Multi-channel). Message retention policies define how long messages and files are kept — configurable per workspace or per channel. Data exports: standard exports include public channel messages; eDiscovery requires Enterprise Grid. IP allowlisting restricts workspace login to authorised networks. SSO (SAML 2.0) integration with corporate IdP centralises authentication. Two-factor authentication can be enforced at the workspace level. The exam tests security configuration options and their scope.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">App Integration and App Directory</p>
+                <p>Slack App Directory provides vetted third-party integrations. Admins can restrict which apps users can install — allow all, custom approval workflow, or block all. Approved apps list manages pre-approved integrations. Slack-Salesforce integration (built by Salesforce) enables Salesforce record alerts, record creation from Slack, and search from Slack. Workflow Builder creates automated workflows triggered by Slack events — message posted, emoji reaction, channel created — without code. Admins govern which workflows members can create and share.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Enterprise Grid Administration</p>
+                <p>Enterprise Grid is Slack&apos;s multi-workspace tier for large organisations. Org-level administrators manage all workspaces from a single console. Workspaces within the Grid can be siloed (members limited to one workspace) or connected via channels. Shared channels enable collaboration between different workspaces or external organisations. Data Residency options allow message storage in specific geographic regions. Centralised user provisioning via SCIM API or HRMS integration. The exam tests org-level vs workspace-level admin distinctions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Workflow Builder and Automation</p>
+                <p>Workflow Builder creates automated workflows without code. Trigger types: Shortcut (user-initiated), New channel member (someone joins), Emoji reaction, Scheduled time, Webhook (from external systems). Steps: Send a message, Open a form (collect structured input), Add to spreadsheet, Create a channel. Workflow variables carry data between steps (form responses, trigger context). Workflows can be shared with other workspace members. The exam tests how to design and troubleshoot Workflow Builder automations for common team processes.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -267,6 +294,7 @@ export default function SlackAdministratorPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

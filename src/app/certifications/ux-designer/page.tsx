@@ -193,6 +193,33 @@ export default function UXDesignerPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">UX Designer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Design Thinking Process: Five Phases</p>
+                <p>Design Thinking is the core framework: <strong>Empathise</strong> (observe users, conduct interviews, develop empathy maps), <strong>Define</strong> (synthesise research into a problem statement — &quot;How Might We&quot; framing), <strong>Ideate</strong> (brainstorm solutions without judgment), <strong>Prototype</strong> (build low-fi or hi-fi representations), <strong>Test</strong> (validate with real users and iterate). The exam presents a UX activity (e.g., &quot;interviewing stakeholders about pain points&quot;) and asks which phase it belongs to.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">UX Research Methods: Qualitative vs Quantitative</p>
+                <p>Qualitative methods explore the &quot;why&quot;: user interviews, contextual inquiry (observing users in their real environment), and moderated usability testing. Quantitative methods measure the &quot;what&quot;: surveys, click analytics, and task completion rates. <strong>Card sorting</strong> tests how users categorise information (used to design navigation). <strong>Tree testing</strong> validates whether users can find content within a proposed structure. <strong>Affinity diagramming</strong> groups qualitative findings into themes. Know which method to select for a given research question.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Wireframes, Prototypes, and the Design Handoff</p>
+                <p><strong>Low-fidelity wireframes</strong> communicate structure, hierarchy, and layout without visual polish — used for early stakeholder alignment. <strong>High-fidelity prototypes</strong> include visual design, real content, and interactive states — used for usability testing and developer handoff. The design handoff documents component specifications, spacing, and interaction behaviours. In Salesforce context, <strong>Experience Builder mockups</strong> and flow screens can be designed declaratively before development. Prototyping prevents rework by catching usability issues early.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Accessibility: WCAG 2.1 and Salesforce SLDS</p>
+                <p>WCAG 2.1 defines four principles (POUR): <strong>Perceivable</strong> (text alternatives for non-text content, sufficient colour contrast), <strong>Operable</strong> (keyboard navigation, no seizure-inducing animations), <strong>Understandable</strong> (clear labels, error messages, consistent navigation), <strong>Robust</strong> (compatible with assistive technologies). The <strong>Salesforce Lightning Design System (SLDS)</strong> provides accessible, pre-built UI components that meet WCAG AA. The exam tests which WCAG principle applies to a given accessibility scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce UX Tooling: Lightning App Builder and Dynamic Forms</p>
+                <p><strong>Lightning App Builder</strong> enables drag-and-drop page composition — Home, Record, and App pages — using standard and custom components. <strong>Dynamic Forms</strong> move fields and sections from the page layout into the record page, enabling conditional visibility based on field values or user permissions. <strong>Dynamic Actions</strong> control button visibility with similar logic. <strong>Compact Layouts</strong> define the fields shown in record highlights, mobile previews, and related lists. Know the difference between page layouts (object-level, profile-based) and dynamic forms (page-level, condition-based).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -200,7 +227,7 @@ export default function UXDesignerPage() {
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}
           </div>
-          
+
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           <div id="related-certs">
@@ -218,6 +245,7 @@ export default function UXDesignerPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

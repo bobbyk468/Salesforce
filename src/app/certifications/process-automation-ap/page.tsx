@@ -62,6 +62,33 @@ export default function ProcessAutomationAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Process Automation AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Flow Builder: Types & Trigger Contexts</p>
+                <p>Flow Builder is the primary automation tool in Salesforce. Flow types: Record-Triggered (fires before/after save on record create/update/delete), Screen Flow (guided UI for users), Scheduled Flow (batch process at a set time), Autolaunched Flow (called programmatically, no UI). Before-Save flows are faster and can update the triggering record without a DML statement — cannot create/update other records. After-Save flows can create/update related records but run after the transaction. The AP exam tests deep Flow configuration: complex branching logic, loop handling, fault paths, and the performance differences between Before-Save and After-Save contexts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Flow Patterns</p>
+                <p>Subflows allow one flow to call another — promotes reusability. Screen Flows can be embedded in Lightning pages, Experience Cloud sites, and utility bars. Dynamic Forms and Dynamic Actions in Lightning App Builder work alongside Screen Flows for fully conditional UI. Collection variables hold multiple records for batch operations within a flow. Loop elements iterate over collections. Decision elements branch based on conditions. Assignment elements modify variable values. Get Records / Create Records / Update Records / Delete Records elements perform DML. The exam tests how to design a flow that processes a collection of related records, handles errors gracefully, and uses a subflow to encapsulate a reusable business logic pattern.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Approval Processes & Entitlements</p>
+                <p>Approval Processes define multi-step human review workflows. Entry Criteria determine which records are eligible. Approver selection: specific user, queue, user field (manager), or related object field. Initial Submission Actions and Recall Actions run automatically when a record enters or exits the process. Step Actions run on approval or rejection at each step. Final Approval / Rejection Actions run at the end of the process. Delegated Approvers allow backups when the primary approver is unavailable. The AP exam tests how to configure a multi-step approval with parallel approvers, how to use dynamic approver assignment based on record fields, and how approval actions interact with other automation (Flows, email alerts).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Triggered Automation: Apex Triggers</p>
+                <p>When declarative automation is insufficient, Apex Triggers provide code-based automation. Triggers fire before/after insert, update, delete, and undelete events. Best practice: one trigger per object, all logic in a handler class (Trigger Handler pattern). Bulkification is mandatory — triggers must handle 200 records at once using collections instead of per-record DML or SOQL. Context variables: `Trigger.new`, `Trigger.old`, `Trigger.isInsert`, `Trigger.isBefore`. Recursion prevention: use a static Boolean flag to prevent triggers from re-firing. The AP exam tests how to design a bulkified trigger with a handler class, how to prevent recursion, and how to write test classes with sufficient bulk data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing, Debugging & Best Practices</p>
+                <p>All Apex automation (triggers, classes) requires ≥75% code coverage for deployment to production. Test classes use `@isTest` annotation, `Test.startTest()` / `Test.stopTest()` to isolate governor limits, and `System.assert` for validation. Flow testing: use the Flow Debug feature in Flow Builder for step-through debugging; unit tests for flows via Apex use `Flow.Interview`. Process Automation audit trail: the Setup Audit Trail records configuration changes. Debug Logs capture detailed execution traces. Automation order of execution matters: Validation Rules → Before Triggers → Before Flows → After Triggers → After Flows → Workflow Rules → Processes → After-Save Flows. The exam tests how to diagnose an automation conflict and the correct sequence of execution.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function ProcessAutomationAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

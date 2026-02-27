@@ -62,6 +62,33 @@ export default function OrderManagementDeveloperAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Order Management Developer AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OMS APIs & Customization</p>
+                <p>Salesforce Order Management exposes a rich set of REST and Apex APIs for order lifecycle management. The `ConnectApi.OrderSummary` class provides Apex access to create, modify, and fulfill orders programmatically. REST APIs support headless integration for external storefronts. Key API operations: Create Order Summary, Adjust Order Product Summaries (price changes, cancellations), Create Fulfillment Order, Create Return Order, Ensure Funds (payment capture). Invocable Apex methods expose OMS operations to Flow and external callers. The developer exam tests how to write Apex that calls OMS Connect APIs, how to handle API exceptions, and how to expose a custom OMS operation as an Invocable Action.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Orchestration with Flow</p>
+                <p>OMS uses Salesforce Flow for order orchestration — automating the sequence of fulfillment, payment, notification, and return steps. Flow Orchestration (multi-stage orchestration) coordinates parallel and sequential work across teams and systems. Record-Triggered Flows respond to order state changes (e.g., when a Fulfillment Order is marked Fulfilled, trigger invoicing). Subflows modularize complex orchestration logic. Platform Events integrate OMS with external systems asynchronously — publish an event when an order state changes, subscribe in MuleSoft or an external ESB. The developer exam tests how to design an order orchestration flow, how to implement a re-try mechanism for failed API calls in a flow, and how to use Platform Events for async integration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom Fulfillment & External Integration</p>
+                <p>External Fulfillment Providers receive Fulfillment Orders via outbound REST calls or Platform Events. The External Fulfillment Provider framework allows developers to register custom adapters that translate Salesforce Fulfillment Orders into 3PL-specific formats. Order callbacks update Salesforce when the 3PL ships or cancels — implemented as inbound REST endpoints in Salesforce (Experience Cloud, Salesforce Sites, or Functions). Error handling: when an external call fails, the flow must log the error, alert ops, and optionally retry. Idempotency keys prevent duplicate fulfillment on retry. The developer exam tests how to implement a custom fulfillment adapter, how to expose an inbound callback endpoint, and how to handle idempotent retries.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing OMS Customizations</p>
+                <p>Testing Order Management Apex requires creating test data for the full order hierarchy: Order Summary → Order Product Summary → Fulfillment Order → Fulfillment Order Line Item. OMS test utilities (ConnectApi mock classes) simulate API responses in test context. Use `Test.setMock(HttpCalloutMock.class, ...)` for external HTTP callouts. Test coverage must cover both happy path and error scenarios (insufficient inventory, payment failure, external system timeout). Integration tests against a Developer Edition or scratch org with OMS enabled validate end-to-end flows. The exam tests how to write a complete unit test for an OMS Apex method, how to mock OMS Connect API calls, and how to achieve &gt;75% coverage on OMS trigger logic.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance & Scalability Considerations</p>
+                <p>High-volume order management requires careful attention to governor limits. Bulk order processing uses Apex Batch jobs rather than synchronous Apex. SOQL queries on Order Summary and child objects must use selective filters — add custom indexes on frequently queried fields (external order ID, status, created date). Platform Event subscriptions use CometD for streaming — design for at-least-once delivery and idempotent consumers. Large Return Order batches should be processed asynchronously to avoid CPU time limits. The OCI inventory check API has rate limits — design a caching layer for high-frequency availability checks. The developer exam tests how to design an OMS customization that handles 10,000+ daily orders without hitting governor limits.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function OrderManagementDeveloperAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

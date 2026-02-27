@@ -62,6 +62,33 @@ export default function NetZeroCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Net Zero Cloud AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Carbon Footprint Data Model</p>
+                <p>Net Zero Cloud (NZC) stores sustainability data in a specialized data model. Footprint records track greenhouse gas (GHG) emissions, energy consumption, water usage, and waste data. Energy Use records capture electricity, natural gas, and fuel consumption by facility and period. Stationary Combustion, Mobile Combustion, Fugitive Emissions, and Purchased Electricity represent Scope 1 and 2 emission sources. Scope 3 categories (business travel, employee commuting, supply chain) require integration with travel management systems and supplier data. The AP exam tests how NZC objects relate to each other, how to input energy data, and how scope classifications are assigned to emission sources.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Emissions Calculations & Emission Factors</p>
+                <p>Net Zero Cloud calculates GHG emissions by multiplying activity data by an Emission Factor — a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments — RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sustainability Reporting & Disclosures</p>
+                <p>Net Zero Cloud generates reports aligned with major sustainability frameworks: GRI (Global Reporting Initiative), TCFD (Task Force on Climate-related Financial Disclosures), CDP, and emerging SEC climate disclosure rules. Disclosure Reports aggregate footprint data by business unit, facility, or reporting period. Audit Trail captures every data submission and approval for assurance purposes. Supplier Scorecards rate suppliers on their emissions intensity and sustainability commitments. Targets & Milestones track progress toward net zero goals (e.g., 50% reduction by 2030, net zero by 2040). The exam tests how to configure a disclosure report, how targets are defined and monitored, and what data flows into supplier scorecards.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Collection & Integration</p>
+                <p>NZC data can be entered manually, uploaded via CSV template, or integrated automatically from utility billing systems, travel management platforms, and ERP systems. Utility Data Connections (partnered utility providers) automate energy data ingestion. Data Quality indicators flag anomalies and missing data for review. Approval Workflows route submitted data through a validation and sign-off process before it is included in reports. MuleSoft and Salesforce Connect are common integration patterns for automating data flows from meters, building management systems, and fleet telematics. The exam tests how to configure a utility data connection, set up an approval workflow, and identify data quality issues in submitted footprint data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Goals, Targets & Climate Action Plans</p>
+                <p>Organizations set emissions reduction targets in NZC at the company, business unit, or asset level. Science-Based Targets (SBTs) require alignment with the 1.5°C or well-below-2°C pathway defined by the SBTi. Baseline Year establishes the reference point for reduction measurement. Reduction Lever tracking records the planned and actual contribution of each initiative (renewable energy procurement, fleet electrification, building efficiency). Progress dashboards show attainment against targets over time. Recalculation logic adjusts baselines for acquisitions, divestitures, and methodology changes. The exam tests how to configure a Science-Based Target, how to link reduction levers to the target, and how recalculation policies affect historical data.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function NetZeroCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

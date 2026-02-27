@@ -193,6 +193,33 @@ export default function TechnicalArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Technical Architect (CTA): Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Principles & Design Governance</p>
+                <p>The Salesforce Certified Technical Architect (CTA) credential is the highest-level Salesforce certification. CTAs demonstrate mastery of designing end-to-end enterprise solutions across the full Salesforce platform and beyond. Core architecture principles: loose coupling, high cohesion, separation of concerns, idempotency, and graceful degradation. The Salesforce Well-Architected framework (Trusted, Easy, Adaptable) guides all design decisions. Architects document designs with ADRs (Architecture Decision Records), data flow diagrams, and integration sequence diagrams. The CTA exam — a Review Board scenario — tests the ability to justify every architectural decision under challenge, explain trade-offs, and adapt the design when the scenario changes mid-presentation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture at Scale</p>
+                <p>Enterprise integration patterns for CTA: Request-Reply (synchronous REST/SOAP), Publish-Subscribe (Platform Events, Change Data Capture, Kafka), Batch (Bulk API, ETL jobs), and Event Streaming (CDC + MuleSoft). MuleSoft API-led connectivity is the standard recommendation for complex multi-system integrations. API Management (throttling, OAuth, versioning) is part of the design. Data consistency patterns: eventual consistency for async, distributed transaction patterns (Saga, Two-Phase Commit) for scenarios requiring atomicity. Governor limits (API daily limits, callout limits, event delivery limits) must be explicitly addressed in the architecture. The Review Board will challenge whether the proposed integration can handle peak load and failure scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Architecture & Large Data Volumes</p>
+                <p>Large Data Volume (LDV) design is a major CTA topic. Strategies: selective SOQL (always use indexed fields), skinny tables (pre-joined table maintained by Salesforce for performance), custom indexes on external IDs and frequently filtered fields, and Batch Apex for processing large data sets. Data archival moves aged records out of the main org to reduce query times. Data model normalization vs. denormalization trade-offs must be explicitly justified. Master Data Management prevents duplicates and maintains data quality at scale. External Objects (Salesforce Connect) keep high-volume external data out of Salesforce storage limits. The CTA must articulate specific LDV mitigations in the Review Board scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture</p>
+                <p>CTA-level security design covers: field-level encryption (Shield Platform Encryption) with trade-offs (deterministic vs. probabilistic encryption, search limitations), Customer-Managed Keys (BYOK), Event Monitoring for user behavior analytics, Field Audit Trail for long-term history, and Health Check/Security Center for org posture. Single Sign-On (SAML 2.0, OAuth 2.0 with JWT) integrates with enterprise identity providers (Okta, Azure AD). Connected App security: IP restrictions, OAuth scopes, certificate-based auth. Multi-Org security: data isolation between orgs in a multi-org strategy. The Review Board tests whether the security design meets compliance requirements (HIPAA, PCI, GDPR) without creating implementation or performance problems.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Solution Architecture: Trade-offs & Justification</p>
+                <p>The CTA Review Board is not a test of knowledge — it is a test of judgment. Every design decision must be justified with business context, technical constraints, and explicit trade-offs. Common scenarios: single org vs. multi-org strategy (data isolation vs. complexity), declarative vs. code (maintainability vs. flexibility), synchronous vs. asynchronous integration (consistency vs. availability), custom solution vs. AppExchange (speed to value vs. lock-in). Architects must anticipate failure modes: what happens when the integration endpoint is down? When the batch job fails at record 50,000? When a key customization hits a governor limit at scale? The Review Board rewards architects who proactively surface risks and design for resilience.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function TechnicalArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

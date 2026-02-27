@@ -62,6 +62,33 @@ export default function EnergyUtilitiesAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Energy and Utilities Cloud: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Energy &amp; Utilities Cloud Data Model</p>
+                <p>Energy &amp; Utilities Cloud (EUC) provides an industry-specific data model for energy providers. Core objects: Account (residential or commercial customer), Premise (the physical service location — address where energy is delivered), Service Point (the meter connection at a premise), Asset (the meter or equipment), Service Order (a field work request — connect, disconnect, meter reading). The consultant understands how customer billing accounts relate to premises and service points in a one-to-many hierarchy, as a single customer may have multiple premises.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniStudio-Powered Customer Journeys</p>
+                <p>Energy &amp; Utilities Cloud uses OmniStudio (FlexCards and OmniScripts) extensively for customer-facing and agent-facing processes. Common OmniScripts: Start Service (new customer onboarding with service point activation), Move In/Move Out (transfer service to a new address), Outage Reporting (customer self-service outage notification). FlexCards surface account balance, recent bills, and active service orders in the customer and agent consoles. The consultant configures pre-built industry OmniStudio components and extends them to match the utility&apos;s specific business rules.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Field Service Integration</p>
+                <p>Energy &amp; Utilities Cloud integrates with Field Service to manage field crew dispatch for service orders (meter installation, disconnect, connect, fault repair). Work Orders created from Service Orders are scheduled and dispatched to field crews using FSL&apos;s scheduling optimisation. Mobile field workers use the FSL Mobile app to complete work orders and update service point status. The consultant designs the integration between EUC service order management and FSL scheduling, ensuring data flows correctly between the customer service and field operations processes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customer Portal and Self-Service</p>
+                <p>Experience Cloud provides the customer-facing portal for energy utility customers. Self-service capabilities: view bills and payment history, make payments, report outages, start/stop/transfer service, manage account preferences. Knowledge articles address common questions (how to read your meter, what to do during an outage). The consultant configures the Experience Cloud site for utility customers — balancing self-service capabilities with the utility&apos;s compliance requirements around data access and service request validation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Billing Integration and Account Management</p>
+                <p>Utility billing systems (SAP IS-U, Oracle CC&amp;B, Avertra) are external to Salesforce — Energy &amp; Utilities Cloud serves as the CRM and customer engagement layer, not the billing system of record. Integration patterns: billing data (current balance, payment history, usage) syncs from the billing system to Salesforce via API or batch. Service requests flow from Salesforce to the billing system to activate or terminate service. The consultant designs the integration architecture — which data to sync, how frequently, and how to handle sync conflicts between systems.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function EnergyUtilitiesAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

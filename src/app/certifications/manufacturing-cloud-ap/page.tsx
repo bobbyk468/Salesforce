@@ -62,6 +62,33 @@ export default function ManufacturingCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Manufacturing Cloud AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account-Based Forecasting & Sales Agreements</p>
+                <p>Manufacturing Cloud centers on the Sales Agreement object — a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales Agreement Terms define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Run Rate Business & Demand Planning</p>
+                <p>Run Rate Business tracks recurring purchase patterns from existing customers who order the same products regularly without a formal sales agreement. Manufacturing Cloud captures this demand by analyzing historical order data and projecting forward consumption. Run Rate Accounts have predictable demand signals that feed into the aggregate forecast. Demand Planning integration connects Manufacturing Cloud forecasts to ERP or S&OP (Sales & Operations Planning) systems. Forecast Collaboration allows multiple stakeholders (sales, supply chain, finance) to view and adjust the forecast. The exam tests how run rate demand is captured, how it differs from agreement-based demand, and how combined forecasts are presented to stakeholders.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner Visit Management & Field Execution</p>
+                <p>Manufacturing Cloud includes Partner Visit Management for field teams that visit dealer and distributor accounts. Visit Plans define visit schedules and objectives. During visits, reps review agreement attainment, discuss upcoming orders, capture competitive intelligence, and update account plans. Action Plans define repeatable activity checklists for common visit scenarios. Assessments capture structured data during visits (dealer satisfaction surveys, inventory counts). Mobile access via the Salesforce app enables reps to complete visit activities offline. The exam tests how to configure a visit plan, associate action plan templates, and surface agreement attainment data on the account page for use during dealer visits.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing, Rebates & Incentive Management</p>
+                <p>Rebate Management in Manufacturing Cloud handles volume-based, growth-based, and promotional rebates paid to distributors and dealers. Rebate Programs define the qualification criteria and payout rates. Rebate Tiers apply higher payout rates at higher volume thresholds. Accruals track the estimated rebate liability as transactions occur. Payouts settle the final rebate amount at the end of the program period. Price Books and contract-level pricing (Negotiated Pricing) define the net price terms in Sales Agreements. The AP exam tests how to configure a tiered rebate program, how accruals are calculated from sales data, and how payouts are processed at program end.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration with ERP & Supply Chain</p>
+                <p>Manufacturing Cloud integrates with ERP systems (SAP, Oracle, Infor) to exchange order data, inventory levels, and financial actuals. MuleSoft is commonly used as the integration middleware for real-time or batch data exchange. Order data from ERP feeds the Sales Agreement attainment calculation. Inventory levels from ERP support demand planning accuracy. Product pricing maintained in ERP is synced to Salesforce Price Books. The AP exam tests the integration architecture for a Manufacturing Cloud + SAP scenario — which data flows in each direction, how to handle data transformation differences, and how to design for resiliency when the ERP is temporarily unavailable.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function ManufacturingCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

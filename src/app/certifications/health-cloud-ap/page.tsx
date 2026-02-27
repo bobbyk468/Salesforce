@@ -62,6 +62,33 @@ export default function HealthCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Health Cloud: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Health Cloud Data Model: Patients, Providers, and Care Plans</p>
+                <p>Health Cloud extends Salesforce for healthcare and life sciences. Key objects: Contact (Patient or Healthcare Provider), Account (Healthcare Provider Organisation), CarePlan (the patient&apos;s treatment plan), Care Plan Problem (a diagnosis or health condition), Care Plan Goal (measurable outcome), Care Plan Task (an action item). HealthcareFacility tracks provider locations. ClinicalEncounter records patient-provider interactions. The consultant designs the Health Cloud data model to match the organisation&apos;s care coordination model — whether focused on payer, provider, or life sciences workflows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Care Plan Management and Coordination</p>
+                <p>Care Plans are the core of Health Cloud — they organise all the clinical and social determinant information for a patient. Care Plan Templates pre-define the standard problems, goals, and tasks for common conditions (diabetes management, post-surgical recovery). Care Team members are assigned roles (primary care manager, specialist, community worker) and have visibility into the plan. The consultant configures Care Plan Templates for the organisation&apos;s common care pathways and designs the Care Team structure to match the clinical care model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Intelligent Appointment Management (IAM)</p>
+                <p>Intelligent Appointment Management (IAM) is Health Cloud&apos;s scheduling module for patient appointments. It enables patient self-scheduling via Experience Cloud portals, agent-assisted scheduling via the Health Console, and provider availability management. Slot management defines available appointment slots by provider, specialty, and location. The system matches patient needs (reason for visit, insurance, location preference) to available providers. The consultant configures IAM for the organisation&apos;s scheduling requirements — walk-in, scheduled, and telemedicine appointment types.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FHIR Integration and EHR Connectivity</p>
+                <p>Health Cloud supports HL7 FHIR R4 (Fast Healthcare Interoperability Resources) for exchanging clinical data with Electronic Health Record (EHR) systems. Salesforce Health Cloud includes a FHIR API connector for mapping FHIR resources (Patient, Encounter, Condition, Observation) to Salesforce Health Cloud objects. Bi-directional integration enables both reading from the EHR (importing patient records, encounters) and writing back (care plan updates, appointment status). The consultant assesses the integration pattern — what data to sync, at what frequency, and how to handle data conflicts between systems.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics and Population Health Management</p>
+                <p>Health Cloud analytics use CRM Analytics (Einstein Analytics) with pre-built Health Cloud datasets and dashboards. Population Health dashboards segment patients by condition, risk score, engagement level, or care gap. Risk stratification identifies high-risk patients who need proactive outreach. Care gap analysis identifies patients overdue for preventive care (annual wellness visits, screenings). Patient lists (list views of patients meeting specific criteria) drive targeted outreach campaigns. The consultant designs the analytics strategy to support value-based care performance measurement.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function HealthCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

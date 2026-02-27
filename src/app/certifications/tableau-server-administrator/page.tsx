@@ -205,6 +205,33 @@ export default function TableauServerAdministratorPage() {
             </ul>
           </section>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tableau Server Administrator: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tableau Server Architecture and Processes</p>
+                <p>Tableau Server runs as a set of processes that can be distributed across multiple nodes. Key processes: VizQL Server (renders views), Application Server (handles web requests, API calls), Data Server (manages data connections and caching), Backgrounder (runs extract refreshes, subscriptions, flows), Data Engine (stores and queries Hyper extract files), Repository (PostgreSQL — stores user, content, and workgroup metadata). Single-node deployments run all processes on one machine. Multi-node clusters distribute processes for scale and redundancy.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Installation, Configuration, and TSM</p>
+                <p>Tableau Services Manager (TSM) is the command-line and web UI administration tool for Tableau Server. tsm configuration set changes server settings. tsm maintenance backup/restore handles server backup and recovery. TSM web UI provides a graphical interface for common admin tasks. Installation: requires a dedicated server, admin user, and product key. Initial configuration: server admin account, authentication mode (local, Active Directory, SAML), SSL/TLS certificate upload. Identity store: Local (Tableau manages users), Active Directory (sync from AD), or LDAP.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Management and Licensing</p>
+                <p>Site Roles determine what users can do: Creator (can create and publish workbooks, edit in web), Explorer (can view and interact, limited edit), Viewer (view only). User limit is set by the licence type. Active Directory group sync automates user management — AD group membership maps to Tableau site roles. Multi-site Tableau Server can have users assigned to multiple sites with different roles per site. Licensing compliance: the admin monitors licence usage and usage reports to ensure the organisation stays within licence limits.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Content Management: Projects and Permissions</p>
+                <p>Projects organise content (workbooks, data sources, flows) in a hierarchy. Top-level projects and nested projects support complex permission models. Permission capabilities: View, Download, Edit, Publish, Connect, Move, Delete — each can be Allowed, Denied, or Inherited. Permissions inherit from the project to its content — child projects inherit from parent unless overridden. Locking project permissions prevents users from changing content permissions. The admin designs the project hierarchy to match organisational structure and governance requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Monitoring, Maintenance, and Troubleshooting</p>
+                <p>Admin Views are built-in dashboards for monitoring server health: Background Tasks, User Activity, Traffic to Views, Disk Space. tsm jobs commands manage and monitor background tasks. Log files in ProgramData/Tableau capture detailed process activity — useful for troubleshooting failed extract refreshes, slow view rendering, and authentication issues. Tableau Server repository (PostgreSQL) can be queried for advanced analytics on server usage. Scheduled extract refreshes: the admin monitors success rates and investigates failures (data source credentials, network issues, query timeouts).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -238,6 +265,7 @@ export default function TableauServerAdministratorPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'server-admin-scenarios', title: 'Admin Scenarios' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

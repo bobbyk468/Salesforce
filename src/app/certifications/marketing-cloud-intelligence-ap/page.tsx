@@ -62,6 +62,33 @@ export default function MarketingCloudIntelligenceAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Intelligence: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Intelligence Platform Architecture</p>
+                <p>Marketing Cloud Intelligence (formerly Datorama) is the marketing analytics and reporting platform. Core concepts: Workspaces contain all data, dashboards, and configuration. Data Streams are the connections bringing data in (API connectors, file uploads, Marketing Cloud connector). The Unified Data Model harmonises data from multiple sources into a common dimension hierarchy: Campaign &rarr; Ad Set &rarr; Ad. All data is mapped to this model for cross-channel reporting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Streams and Harmonisation</p>
+                <p>Data Streams ingest data from: Marketing Cloud Connector (email, journeys, social), API connectors (Facebook Ads, Google Ads, Salesforce CRM), file-based streams (CSV, FTP), custom streams. Each stream maps source fields to Intelligence dimensions (Campaign, Ad, Date) and metrics (Impressions, Clicks, Spend, Conversions). Harmonisation rules standardise naming and categorisation across sources. The exam tests how to configure a new data stream and resolve mapping conflicts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Insights, KPIs, and Custom Metrics</p>
+                <p>Intelligence uses pre-built KPIs (Cost Per Click, Click-Through Rate, ROAS) and supports custom calculated metrics. Fusion Widgets combine metrics from different streams in a single chart. Anomaly Detection flags unusual metric movements. Goals allow planned vs actual comparison for budgets and KPIs. The exam tests how to create custom metrics using formulas, how fusion widgets work, and how to configure goal tracking.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboards and Data Visualisation</p>
+                <p>Dashboards display widgets (charts, tables, scorecards, media widgets) in configurable layouts. Global Date Controls apply a shared date range to all widgets. Audience and dimension filters narrow dashboard scope. Widget-level filters override global filters. Sharing dashboards with external users uses the Public URL or embedded iFrame. The exam tests how to build a dashboard, configure cross-widget filtering, and share reports with stakeholders.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Integration and Automation</p>
+                <p>Intelligence REST API allows external systems to push data, retrieve insights, and manage streams programmatically. Scheduled exports can push Intelligence data to external data warehouses. Zapier integration enables no-code triggers from Intelligence events. The exam tests basic API concepts — authentication, stream management via API, and how to automate data flows between Intelligence and other marketing systems.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MarketingCloudIntelligenceAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

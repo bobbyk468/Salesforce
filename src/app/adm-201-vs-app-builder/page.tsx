@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = 'Admin(ADM-201) vs App Builder (DEV-402): Which Cert Should be First?'
+const pageTitle = 'ADM-201 vs App Builder: Which Cert to Take First?'
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Compare ADM-201 and DEV-402 by difficulty, exam focus, career outcomes, and study time to choose the right first Salesforce certification.'
 
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'ADM-201 vs App Builder', url: '/adm-201-vs-app-builder' },
 ]
 
+const faqItems = [
+  {
+    question: 'Should you take ADM-201 or App Builder first?',
+    answer: 'Always start with ADM-201. The Platform App Builder certification builds directly on admin knowledge — custom objects, validation rules, and automation concepts are shared between both exams. ADM-201 provides the foundation.',
+  },
+  {
+    question: 'Is ADM-201 harder than Platform App Builder?',
+    answer: 'ADM-201 is broader and generally considered harder due to its wider scope — 65 questions across 7 topic areas. App Builder is more focused on declarative development. Candidates with a development background may find App Builder easier.',
+  },
+  {
+    question: 'Do ADM-201 and App Builder share exam content?',
+    answer: 'Yes — approximately 30% of content overlaps, particularly in automation (Flows, Process Builder), data modelling (custom objects, fields), and Lightning App Builder. Studying for both together is efficient.',
+  },
+  {
+    question: 'Which certification is more valuable: ADM-201 or App Builder?',
+    answer: 'ADM-201 is more widely recognised for Salesforce Admin roles and is often required by employers. App Builder is more valuable for developer-adjacent or product builder roles and is a prerequisite for the System Architect certification path.',
+  },
+]
+
 export default function Adm201VsAppBuilderPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function Adm201VsAppBuilderPage() {
     description: pageDescription,
     path: '/adm-201-vs-app-builder',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

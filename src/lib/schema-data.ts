@@ -58,6 +58,24 @@ export function getArticleJsonLd({
   }
 }
 
+export interface FaqItem {
+  question: string
+  answer: string
+}
+
+/** FAQPage JSON-LD for exam-tips, comparison, and path pages. Enables "People Also Ask" rich snippets. */
+export function getFaqPageJsonLd(items: FaqItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: items.map((item) => ({
+      '@type': 'Question',
+      name: item.question,
+      acceptedAnswer: { '@type': 'Answer', text: item.answer },
+    })),
+  }
+}
+
 /** WebPage JSON-LD for any page. Use with BreadcrumbList for full coverage. */
 export function getWebPageJsonLd({
   name,

@@ -12,15 +12,40 @@ export async function generateStaticParams() {
   return CERTIFICATION_CATEGORIES.map((c) => ({ slug: c.slug }))
 }
 
+const ROLE_TITLES: Record<string, string> = {
+  architect:              `Salesforce Architect Certification Guide (${RELEASE_CURRENT})`,
+  consultant:             `Salesforce Consultant Certification Guide (${RELEASE_CURRENT})`,
+  marketing:              `Salesforce Marketing Certification (${RELEASE_CURRENT})`,
+  associate:              `Salesforce Associate Certification (${RELEASE_CURRENT})`,
+  administrator:          `Salesforce Admin Certification: ADM-201 + More (${RELEASE_CURRENT})`,
+  developer:              `Salesforce Developer Certification (${RELEASE_CURRENT})`,
+  tableau:                `Salesforce Tableau Certification Guide (${RELEASE_CURRENT})`,
+  'accredited-professional': `Salesforce Accredited Professional Certs (${RELEASE_CURRENT})`,
+  sales:                  `Salesforce Sales Certification Guide (${RELEASE_CURRENT})`,
+  designer:               `Salesforce Designer Certifications (${RELEASE_CURRENT})`,
+}
+
 const ROLE_DESCRIPTIONS: Record<string, string> = {
+  architect:
+    'Salesforce Architect certification: Application, System, Integration, Data, Technical Architect (CTA). Free practice & study guides. Start free.',
   consultant:
-    'Salesforce Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud, and more, with practice questions and concise study guides.',
+    'Salesforce Consultant certification: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud + more. Free practice & study guides. Start free.',
+  marketing:
+    'Salesforce Marketing certification: Email Specialist, Marketing Cloud Consultant, Pardot + more. Free practice & study guides. Start free.',
+  associate:
+    'Salesforce Associate certification: Platform Foundations ($75) and AI Associate ($200). Free practice & study guides. Start free.',
   'accredited-professional':
-    'Salesforce Accredited Professional certifications by product and industry, with practice questions, exam weightage, and study guides for each AP exam.',
+    'Salesforce Accredited Professional certs: Field Service, B2B Commerce, Health Cloud + more. Free practice & study guides. Start free.',
   administrator:
-    'Browse Salesforce Administrator track certifications: ADM-201, Advanced Administrator, App Builder, and more. Compare exams and find the right study guide.',
+    'Salesforce Administrator certification: ADM-201, Advanced Admin (ADM-211), App Builder (DEV-402) + more. Free practice & study guides. Start free.',
   developer:
-    'Salesforce Developer certifications: Platform Developer I/II, JavaScript, MuleSoft, and OmniStudio, with practice questions, exam weightage, and study guides.',
+    'Salesforce Developer certification: PD1, PD2, JavaScript Developer, MuleSoft, OmniStudio + more. Free practice & study guides. Start free.',
+  tableau:
+    'Salesforce Tableau certification: Tableau Architect, Consultant, Data Analyst, Desktop Foundations + more. Free practice & study guides. Start free.',
+  sales:
+    'Salesforce Sales certification: Sales Cloud Consultant and Certified Sales Foundations. Free practice & study guides. Start free.',
+  designer:
+    'Salesforce Designer certifications: Platform Strategy Designer and UX Designer. Free practice & study guides. Start free.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -30,10 +55,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
-  const title = `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
+  const title = ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
-    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for each cert.`
+    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Start free.`
   
   return {
     title: { absolute: title },
@@ -46,10 +71,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       images: [
         {
-          url: `${siteUrl}/og-image`,
+          url: `${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`,
           width: 1200,
           height: 630,
-          alt: `${category.name} Certifications - Salesforce Study Guide`,
+          alt: `${category.name} Certifications - Free Salesforce Study Guide`,
         },
       ],
     },
@@ -57,7 +82,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteUrl}/og-image`],
+      images: [`${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`],
     },
   }
 }
@@ -67,10 +92,10 @@ export default async function RoleCertificationsPage({ params }: Props) {
   const category = getCategoryBySlug(slug)
 
   if (!category) notFound()
-  const title = `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
+  const title = ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
-    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage for each cert.`
+    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Start free.`
 
   const breadcrumb = [
     { name: 'Home', url: '/' },

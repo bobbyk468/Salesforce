@@ -234,10 +234,37 @@ export default function PardotConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Pardot Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Implementation and Configuration</p>
+                <p>The Pardot Consultant exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture — single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Lead Nurturing Strategy</p>
+                <p>Consultant-level Engagement Studio design covers multi-path programmes, re-engagement campaigns, and cross-business-unit nurturing. Advanced scenarios include pause/resume logic, entry source management (lists, segments, dynamic entry), and Engagement Studio reporting (completions, active, stopped). The consultant selects between Engagement Studio, Automation Rules, and Segmentation Rules for complex nurturing requirements. Know when Salesforce Flow (triggered from Pardot via the connector) is more appropriate than Pardot-native automation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pardot-Salesforce Campaign Alignment</p>
+                <p>Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities — configured via Campaign Influence settings. B2B Marketing Analytics (built on CRM Analytics) provides advanced attribution dashboards. The consultant designs the campaign data model — Campaign Hierarchy, campaign member statuses, and attribution window settings — to align marketing and sales reporting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Scoring, Grading, and Segmentation</p>
+                <p>Scoring Categories maintain separate score totals per product or business unit. Custom scoring rules allow point adjustments for specific activities beyond defaults. Profile criteria drive grading — the consultant designs the grade thresholds (A through F) and profile attributes that match the ideal customer profile. Segmentation Rules create static lists from criteria at a point in time (unlike Dynamic Lists which are ongoing). The consultant architects the scoring and grading model to align with sales qualification criteria.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting, ROI, and B2B Marketing Analytics</p>
+                <p>The Pipeline Report connects Pardot activities to Salesforce Opportunities — showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (Einstein Analytics for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
-            
+
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}
@@ -267,6 +294,7 @@ export default function PardotConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

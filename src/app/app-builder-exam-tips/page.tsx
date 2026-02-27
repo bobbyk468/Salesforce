@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Platform App Builder Exam Tips (${RELEASE_CURRENT}): DEV-402 Study Guide`
+const pageTitle = `App Builder Exam Tips (${RELEASE_CURRENT}): DEV-402 Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `DEV-402 exam tips for ${RELEASE_CURRENT}: 4-week study plan, scenario-based question strategy, high-weight topics, and mock-test benchmarks to pass Platform App Builder first attempt.`
+  `DEV-402 exam tips (${RELEASE_CURRENT}): 4-week study plan, scenario strategies, and high-weight topic focus. Start free practice now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'App Builder Exam Tips', url: '/app-builder-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the App Builder (DEV-402) exam format?',
+    answer: 'The Salesforce Platform App Builder exam (DEV-402) has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What are the highest-weight App Builder topics?',
+    answer: 'Declarative customisation (37%) and Data Modelling (23%) together account for 60% of the exam. Lightning App Builder, custom objects, formula fields, and validation rules are the most tested skills.',
+  },
+  {
+    question: 'How hard is the Platform App Builder exam?',
+    answer: 'Moderate difficulty — it sits one step above ADM-201. Most candidates with admin experience pass in 4–6 weeks of study. Hands-on practice in a Developer Edition org is essential.',
+  },
+  {
+    question: 'What is the difference between ADM-201 and App Builder?',
+    answer: 'ADM-201 tests administration and configuration; App Builder tests building custom applications declaratively using objects, flows, Lightning pages, and the AppExchange. There is about 30% content overlap in automation and data topics.',
+  },
+]
+
 export default function AppBuilderExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function AppBuilderExamTipsPage() {
     description: pageDescription,
     path: '/app-builder-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

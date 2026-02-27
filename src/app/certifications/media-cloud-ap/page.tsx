@@ -62,6 +62,34 @@ export default function MediaCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Media Cloud AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advertising Sales & Order Management</p>
+                <p>Media Cloud provides a purpose-built Advertising Sales Management solution for broadcasters, publishers, and digital media companies. Advertising Orders capture the commitment to deliver a campaign — specifying advertiser, agency, flight dates, placements, and rates. Rate Cards define standard pricing for ad inventory (CPM, flat rate, sponsorship). Avails Management shows available inventory for a given time period and placement. The AP exam tests how to configure an advertising order workflow, how rate cards interact with order line pricing, and how avails are checked during the proposal process.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Rights & Entitlements Management</p>
+                <p>Media companies manage complex rights hierarchies — who has licensed what content, for which territories, channels, and time windows. Rights Records capture the license terms: content asset, licensee, territory, channel type (linear, digital, streaming), exclusivity, and validity period. Rights Conflicts detection flags when proposed usage violates an existing exclusive license. Rights Availabilities show what rights are free for a given asset, territory, and window. The exam tests how to configure rights records, how conflict detection rules work, and how rights availability feeds into proposal and ordering workflows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Management & Billing</p>
+                <p>Media Cloud integrates with Revenue Cloud (CPQ Billing) for subscription and ad revenue management. Recurring subscription billing handles streaming services and digital subscriptions — with proration for mid-period changes. Advertising revenue uses milestone billing tied to campaign delivery and performance. Revenue Recognition (ASC 606) distributes subscription revenue ratably over the service period. Credit and adjustment workflows handle make-goods (compensation for under-delivery of ad campaigns). The exam tests how media-specific billing scenarios map to Revenue Cloud configuration and how make-good credits are processed.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner & Agency Management</p>
+                <p>Media companies work through advertising agencies and content distribution partners. Partner portals (Experience Cloud) give agencies self-service access to propose, book, and track campaigns. Agency hierarchies model holding companies and their subsidiary agencies. Partner Accounts and Contact roles define the relationship between the media company, agency, and end advertiser. Commission structures track agency fees. The AP exam tests how to configure the agency portal for campaign proposal and booking, how agency commission is calculated and tracked, and how partner visibility into campaign performance data is controlled.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics & Campaign Performance</p>
+                <p>Media Cloud reporting tracks advertising campaign delivery, pacing, and performance. Delivery Reports compare contracted impressions/spots against actual delivered figures. Pacing dashboards alert sales ops when a campaign is at risk of under-delivery. Post-Campaign Analysis reports provide the final performance summary for advertiser billing and make-good decisions. CRM Analytics Media Cloud apps provide pre-built revenue and inventory dashboards. Integration with ad servers (DFP, FreeWheel, Operative) pulls in actual delivery data. The exam tests how campaign performance data flows from ad servers into Media Cloud, which standard reports are available, and how under-delivery triggers a make-good workflow.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +113,7 @@ export default function MediaCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

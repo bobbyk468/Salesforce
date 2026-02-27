@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
 const pageTitle = `Agentforce Specialist Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist exam tips for ${RELEASE_CURRENT}: exam weightage, AI agent configuration, Einstein Trust Layer, prompt templates, and mock-test benchmarks to pass first attempt.`
+  `Agentforce Specialist exam tips (${RELEASE_CURRENT}): Einstein Copilot, agent actions, flow automation, and exam topics. Start free now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: `Agentforce Specialist Exam Tips`, url: '/agentforce-specialist-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Agentforce Specialist exam format?',
+    answer: 'The Salesforce Certified Agentforce Specialist exam has 40 multiple-choice questions, a 70-minute time limit, a 63% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What does the Agentforce Specialist exam cover?',
+    answer: 'The exam covers Agentforce agent configuration, AI agent actions, Einstein Copilot customisation, Flow automation integration, and model selection and grounding techniques.',
+  },
+  {
+    question: 'Who should take the Agentforce Specialist certification?',
+    answer: 'Salesforce Admins, Architects, and Consultants who work with or configure AI-powered automation. It is most valuable for professionals implementing Agentforce for customer service or sales use cases.',
+  },
+  {
+    question: 'What study resources are available for Agentforce Specialist?',
+    answer: 'Salesforce Trailhead, the official exam guide, and Agentforce documentation are the primary resources. Because the cert is new, third-party study materials are limited — focus on hands-on practice in a Salesforce org with Agentforce enabled.',
+  },
+]
+
 export default function AgentforceSpecialistExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function AgentforceSpecialistExamTipsPage() {
     description: pageDescription,
     path: '/agentforce-specialist-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

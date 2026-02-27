@@ -230,12 +230,39 @@ export default function ServiceCloudPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Service Cloud Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Case Management: Origins, Assignment, and Escalation</p>
+                <p><strong>Web-to-Case</strong> captures cases from website forms. <strong>Email-to-Case</strong> converts inbound emails into cases. <strong>Case Assignment Rules</strong> route cases to users or queues based on criteria. <strong>Escalation Rules</strong> automatically reassign or send alerts when cases breach time thresholds. The exam frequently presents a routing scenario and asks whether to use Assignment Rules, Omni-Channel, or Escalation Rules — know the trigger condition for each: rules are criteria-based, Omni-Channel is real-time workload-based.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Entitlements, Milestones, and Service Contracts</p>
+                <p><strong>Entitlements</strong> define the support a customer is contractually entitled to (e.g., 24/7 phone support, 4-hour response). <strong>Entitlement Processes</strong> define milestone timelines within an entitlement period. <strong>Milestones</strong> track specific SLA events — First Response, Resolution — with configurable warning and violation actions. <strong>Service Contracts</strong> aggregate entitlements for a customer or account over a contract period. The exam tests the hierarchy: Contract → Entitlement → Entitlement Process → Milestones.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Omni-Channel: Routing Models and Agent Capacity</p>
+                <p><strong>Queue-Based Routing</strong> sends work to a queue and the first available agent picks it up. <strong>Skills-Based Routing</strong> matches cases to agents with the required skill set. <strong>Capacity Models</strong>: Tab-based (each open record counts as one unit), Status-based (agents declare availability by status). Agent <strong>Presence Configurations</strong> define which channels an agent handles and their capacity per channel. The exam tests which routing model and capacity configuration match a given support scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Knowledge Management: Articles, Data Categories, and Case Deflection</p>
+                <p><strong>Knowledge Articles</strong> have a lifecycle: Draft → Review → Published → Archived. <strong>Data Category Groups</strong> control which articles different users and customer portal visitors can see — a common exam topic for multi-product or multi-region organisations. <strong>Case Deflection</strong> surfaces suggested articles before a customer submits a case (requires Knowledge enabled on the community/portal). <strong>Einstein Article Recommendations</strong> suggest relevant articles to agents in real-time based on case fields. Know the difference between Article Types (Lightning Knowledge uses one unified type).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Service Console: Macros, Quick Text, and Einstein Features</p>
+                <p>The <strong>Service Console</strong> is a multi-panel app layout for agents — with split view, utility bar, and subtabs for related records. <strong>Macros</strong> execute a sequence of actions with a single click (update a field, send an email, add a note). <strong>Quick Text</strong> inserts pre-approved message snippets into emails or chats. Einstein for Service adds: <strong>Case Classification</strong> (auto-suggests field values), <strong>Reply Recommendations</strong> (suggests chat responses), and <strong>Next Best Action</strong> (recommendation strategies based on Einstein Recommendation Builder).</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
               {getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             </p>
-            
+
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}
@@ -284,6 +311,7 @@ export default function ServiceCloudPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

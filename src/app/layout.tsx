@@ -22,7 +22,7 @@ export const viewport: Viewport = {
 }
 
 // Homepage/default title kept concise to avoid SERP truncation.
-const defaultTitle = `Free Salesforce Certification Practice Questions | ${SITE_NAME}`
+const defaultTitle = `Free Salesforce Cert Practice Tests | ${SITE_NAME}`
 const defaultDescription =
   `Free Salesforce certification prep: ${RELEASE_CURRENT} exam weightage, practice questions, and study guides for Admin, Developer, Consultant & Architect.`
 
@@ -56,7 +56,7 @@ export const metadata: Metadata = {
     siteName: SITE_NAME,
     images: [
       {
-        url: `${siteUrl}/og-image`,
+        url: `${siteUrl}/og?t=${encodeURIComponent(defaultTitle)}`,
         width: 1200,
         height: 630,
         alt: 'Trailblaze Prep - Salesforce certification practice questions and study guides',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: defaultTitle,
     description: defaultDescription,
-    images: [`${siteUrl}/og-image`],
+    images: [`${siteUrl}/og?t=${encodeURIComponent(defaultTitle)}`],
   },
   robots: {
     index: true,

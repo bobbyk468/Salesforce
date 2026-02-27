@@ -193,6 +193,33 @@ export default function StrategyDesignerPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Strategy Designer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Human-Centered Design Strategy</p>
+                <p>The Strategy Designer cert focuses on applying design thinking at the strategic level — not just UI design but organisational and service design. Design thinking phases: Empathise (deep user research, stakeholder interviews, observation), Define (synthesise insights into a clear problem statement — How Might We framing), Ideate (divergent brainstorming, then convergent selection), Prototype (lo-fi representations to test concepts), Test (validate with users and iterate). The exam tests which phase a given activity belongs to and what artefacts are produced at each stage.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Service Design and Journey Mapping</p>
+                <p>Service Blueprints map the end-to-end service experience from the customer&apos;s viewpoint (frontstage) through the supporting processes (backstage) to the enabling systems and infrastructure. They reveal moments of truth — where the service experience is won or lost. User Journey Maps visualise the emotional arc of a user experience across touchpoints and channels. Ecosystem Maps show the full web of stakeholders and their relationships. The exam tests how to choose and apply the right mapping tool for a given design challenge.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Business Value Framing</p>
+                <p>Strategy Designers must connect design decisions to business outcomes. Value Proposition Design: the Job-to-be-Done framework identifies what customers are trying to accomplish, what pains they experience, and what gains they seek — the value proposition relieves pains and creates gains. ROI of UX: reduced support volume, improved conversion rates, reduced onboarding time. Stakeholder alignment: presenting design concepts to executive sponsors using business language, not design terminology. The exam tests how to frame design decisions in terms of business metrics and stakeholder concerns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Agile UX: Design Sprints and Dual-Track</p>
+                <p>Dual-track Agile separates discovery (what to build) from delivery (how to build it). Discovery track: continuous research, prototype testing, and backlog refinement. Delivery track: sprint development of validated features. Design Sprints (Google Ventures model): 5-day intensive to solve a design challenge from definition to user-tested prototype. Lean UX: minimise waste by building the smallest testable increment. The exam tests how to integrate UX research into agile delivery without creating a waterfall design handoff.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Ethics, Inclusion, and Responsible Design</p>
+                <p>Strategy Designers bear responsibility for the impact of the solutions they recommend. Inclusive design: design for the full spectrum of human diversity — ability, age, culture, language. Dark patterns in UX: manipulative design that tricks users into unintended actions — the strategy designer advocates against these. AI ethics in Salesforce products: fairness, transparency, accountability, and human control (Einstein&apos;s Trusted AI principles apply here). The exam tests how to identify design decisions that could cause harm and how to advocate for more equitable alternatives.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function StrategyDesignerPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

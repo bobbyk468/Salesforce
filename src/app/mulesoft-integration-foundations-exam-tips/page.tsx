@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `MuleSoft Integration Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = `MuleSoft Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Integration Foundations exam tips for ${RELEASE_CURRENT}: 3-week study plan, API-led connectivity explained, Anypoint Platform overview, and mock-test benchmark to pass on your first attempt.`
+  `MuleSoft Foundations exam tips (${RELEASE_CURRENT}): 3-week study plan, API-led connectivity essentials, and mock exam strategies. Start free.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'MuleSoft Integration Foundations Exam Tips', url: '/mulesoft-integration-foundations-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the MuleSoft Integration Foundations exam format?',
+    answer: 'The MuleSoft Integration Foundations exam has 60 multiple-choice questions, a 90-minute time limit, a 66% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What are the highest-weight MuleSoft Foundations topics?',
+    answer: 'API-led connectivity (26%) and MuleSoft Anypoint Platform fundamentals (24%) are the core focus areas. Understanding the System, Process, and Experience API layers is essential.',
+  },
+  {
+    question: 'Is MuleSoft Foundations a prerequisite for other MuleSoft certs?',
+    answer: 'No — it is an entry-level standalone certification. However, the concepts it validates (API-led connectivity, Anypoint Platform) provide a strong foundation before taking MuleSoft Developer I.',
+  },
+  {
+    question: 'How hard is the MuleSoft Integration Foundations exam?',
+    answer: 'It is the easiest MuleSoft certification. 3–4 weeks of study combined with hands-on practice in Anypoint Studio (available as a free trial) is sufficient for most candidates.',
+  },
+]
+
 export default function MuleSoftIntegrationFoundationsExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
     description: pageDescription,
     path: '/mulesoft-integration-foundations-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

@@ -193,6 +193,33 @@ export default function OmniStudioConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">OmniStudio Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FlexCards: Displaying Data Contextually</p>
+                <p>FlexCards display contextual information from Salesforce records or external data sources on a card-style UI. They can be embedded in Experience Cloud pages, Lightning record pages, or other OmniStudio components. Child FlexCards show related record data. Custom actions on FlexCards trigger OmniScripts, open Lightning components, or navigate to records. Data sources: Salesforce SOQL (DataRaptor Extract), Integration Procedures, or Apex. The consultant designs FlexCards to surface the right information in the right context — reducing the need for users to navigate away to find related data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniScripts: Guided User Experiences</p>
+                <p>OmniScripts create guided, multi-step processes for users — similar to a wizard. Steps and groups organise the experience. Elements: Text Input, Select (dropdown), Date Picker, Checkbox, Lookup, Navigation (radio buttons), Formula, and more. Conditional display rules show or hide elements based on prior responses. Data sources populate dropdown options and pre-fill fields. Custom validation rules enforce business rules before moving to the next step. The consultant designs OmniScripts for complex data entry processes like customer onboarding, service requests, or insurance claims.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Procedures: Backend Orchestration</p>
+                <p>Integration Procedures (IPs) orchestrate backend calls without user interaction — they are called by OmniScripts, FlexCards, or other automated processes. Actions within an IP: DataRaptor Extract (query Salesforce), DataRaptor Load (write to Salesforce), HTTP Action (call external REST API), Apex Action (call custom Apex), Set Values (assign variables). IPs support conditional branching and looping. The consultant designs IPs to aggregate data from multiple sources, transform it, and return structured results — keeping business logic out of the UI layer.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataRaptors: Data Access and Transformation</p>
+                <p>DataRaptors are data transformation tools with four types: Extract (read from Salesforce — returns a structured JSON), Load (write to Salesforce — creates or updates records), Transform (map and reshape data between structures without touching Salesforce), Turbo Extract (high-performance read for simple queries using SOQL). DataRaptor Extract replaces SOQL in OmniStudio components. Load handles parent-child record creation in a single operation. The consultant selects the appropriate DataRaptor type based on whether the operation reads, writes, or transforms data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniStudio Architecture in Industry Clouds</p>
+                <p>OmniStudio is the foundation for Salesforce Industry Clouds (Health Cloud, Financial Services Cloud, Communications Cloud, Energy &amp; Utilities). Industry-specific FlexCards and OmniScripts come pre-built with the industry cloud packages — the consultant configures and extends them rather than building from scratch. OmniStudio components integrate with Salesforce standard objects and industry-specific data models. Business Rules Engine (BRE) provides declarative if-then rules that drive OmniScript branching without hard-coding logic. The consultant understands how OmniStudio connects to the broader industry cloud architecture.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function OmniStudioConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

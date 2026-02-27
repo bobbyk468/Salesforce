@@ -193,6 +193,33 @@ export default function MuleSoftDeveloperIIPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Developer II: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced DataWeave: Functions and Modules</p>
+                <p>DataWeave II advanced features: pattern matching (match/case for type-based branching), named functions (fun myFunc(arg) = ...), lambda functions (vars), and custom modules (import from external .dwl files). Complex scenarios: transforming nested arrays, handling nulls with default and orElse, type coercion. The exam presents complex transformation requirements and tests whether the developer can write efficient, readable DataWeave code — understanding when to use map vs reduce vs mapObject is critical.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Batch Processing in Mule</p>
+                <p>Batch Job scope processes large datasets in records. Phases: On Complete (runs after all records processed), On Input (optional pre-processing), Batch Steps (process each record). Batch Aggregator accumulates records before processing — commit size defines how many records are committed together. Failed records can be routed separately. Database.Stateful equivalent: use Batch Job Record Variables to carry state. The exam tests Batch Job configuration for high-volume data processing scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Security: Policies and OAuth</p>
+                <p>Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), OAuth 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically — no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance: Scatter-Gather and Cache Scope</p>
+                <p>Scatter-Gather executes multiple routes in parallel and aggregates responses — ideal for fan-out calls where all responses are needed. Each route runs concurrently; Scatter-Gather waits for all routes to complete before aggregating. Cache Scope stores responses for a configurable TTL — reduces redundant external calls. Reconnection strategies handle transient connectivity failures. Async processing (VM connector, queues) decouples processing speed from response time. The exam tests when each performance pattern is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CI/CD with Anypoint: Maven and CloudHub Deployment</p>
+                <p>Anypoint Maven Plugin enables automated deployment in CI/CD pipelines. pom.xml configuration includes CloudHub credentials, region, and worker configuration. Anypoint CLI provides command-line deployment and management. API Autodiscovery links a deployed Mule app to an API definition in API Manager — enables policy enforcement. The deployment pipeline: unit tests (MUnit) → build JAR → deploy to CloudHub → run integration tests → promote to production. The exam tests CI/CD pipeline design and Maven plugin configuration.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function MuleSoftDeveloperIIPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

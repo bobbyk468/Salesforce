@@ -62,6 +62,33 @@ export default function ContactCenterAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Contact Center AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Omni-Channel Routing & Queues</p>
+                <p>Omni-Channel routes work items (Cases, Chats, Calls) to the most appropriate available agent. Routing Configurations define how work is prioritized and assigned — by queue capacity, agent skill, or least-active. Presence Configurations control which channels an agent can handle simultaneously and their capacity. Service Channels map Salesforce objects (Case, Chat Session, Voice Call) to the routing engine. Queues hold work items pending assignment. The AP exam tests how to configure Omni-Channel for a scenario with multiple channels (voice, chat, email) and mixed-skill agents — know how capacity units work and how to prevent agent overload.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Service Cloud Voice & CTI Integration</p>
+                <p>Service Cloud Voice (SCV) embeds telephony directly into the agent console. Amazon Connect is the native telephony partner, but any BYOT (Bring Your Own Telephony) partner can integrate via the SCV API. Real-Time Transcription captures call text live, enabling Einstein recommendations to surface knowledge articles mid-call. Call Controls (mute, hold, transfer, conference) appear in the Omni-Channel widget. After-call work status prevents new work from routing during wrap-up. CTI (Computer Telephony Integration) via Open CTI embeds third-party phone systems using a JavaScript framework. The exam tests SCV configuration, how transcription data is stored, and how to configure after-call work.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Bots & Digital Engagement</p>
+                <p>Einstein Bots handle routine customer inquiries via chat before escalating to a human agent. Bot Dialogs define conversation flows — intents, entities, and slot-filling collect required information. Bot versions support staged rollout. Einstein Bot Builder uses a visual conversation designer. Escalation from bot to agent preserves conversation context and transcript. Digital Engagement channels: Chat (embedded web), Messaging (SMS, WhatsApp, Facebook Messenger), and Email. Each channel has its own routing configuration. Enhanced Bot (built on Einstein AI) supports more complex NLU. The exam tests how to configure a bot, define intents, and set up escalation routing.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Knowledge Management & Deflection</p>
+                <p>Salesforce Knowledge articles provide agents and customers with searchable help content. Article Types define the structure (field layout) of different content categories. Data Categories control visibility — agents may see all, customers only see published public articles. Einstein Search Suggestions surfaces relevant articles based on case subject and description. Lightning Knowledge uses a unified Article object. Channels: Internal (agent console), Customer (self-service portal), Partner (partner community). Article Usage Metrics track deflection rate. Knowledge Base feeds Einstein Bots and Einstein Article Recommendations. The exam tests Knowledge configuration, how data categories restrict visibility, and how to measure deflection effectiveness.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting & Contact Center Analytics</p>
+                <p>Contact center KPIs: Average Handle Time (AHT), First Contact Resolution (FCR), Customer Satisfaction (CSAT), Queue Wait Time, Abandonment Rate. Omni-Channel Supervisor provides a real-time view of agent availability, queue depth, and work item status. Historical reporting uses standard Salesforce reports on Case, Voice Call, and Chat Transcript objects. CRM Analytics Contact Center apps provide pre-built dashboards. Escalation analysis identifies bot-to-human handoff patterns. The AP exam tests how to configure Omni-Channel Supervisor views, which standard report objects contain which metrics, and how to set up a CSAT survey triggered after case closure.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function ContactCenterAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

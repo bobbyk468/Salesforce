@@ -62,6 +62,33 @@ export default function OrderManagementAdminAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Order Management Admin AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Lifecycle & Order Summary</p>
+                <p>Salesforce Order Management (SOM) tracks the post-purchase lifecycle from order capture through fulfillment and return. The Order Summary is the central object — it holds the canonical state of an order and aggregates Order Product Summaries (line items), Fulfillment Orders, Invoices, and Payment Summaries. Order states: Draft → Activated → Fulfilled → Cancelled. Order Product Summary states: Ordered → Allocated → Fulfilled → Returned. Change Orders handle post-capture modifications (address change, item cancellation, add-on). The AP exam tests the Order Summary data model, how state transitions are triggered, and the relationship between Order Summary and its child objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Fulfillment & Inventory Allocation</p>
+                <p>Fulfillment Orders represent the instruction to a fulfillment location to pick, pack, and ship items. Distributed Order Management (DOM) determines which fulfillment location handles each item based on inventory availability, proximity, and business rules. Fulfillment Location represents a warehouse, store, or 3PL partner. Inventory Availability is checked in real time via OCI (Omnichannel Inventory) API. Partial Fulfillment splits an order across multiple locations or shipments. Fulfillment Order Line Items map to specific order products and quantities. The exam tests how to configure fulfillment rules, how DOM selects locations, and how partial fulfillment is handled when one location has insufficient stock.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Returns, Refunds & Return Merchandise Authorization</p>
+                <p>Return Orders represent a customer&apos;s request to return one or more items. Return Merchandise Authorization (RMA) is the approval to accept a return. Return Order Line Items reference the original Order Product Summaries. Upon receipt of the returned item, a Return Receipt is created and inventory is restocked. Refunds are processed through the original payment method — partial refunds are supported. Credit Memos document the financial adjustment. Exchange workflows replace a returned item with a new one in a single transaction. The AP exam tests the configuration of a return policy, the sequence of return → receipt → refund → inventory restock, and how to set up an exchange flow.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing, Promotions & Tax</p>
+                <p>Order Management uses Price Adjustments to apply discounts at the order level (coupon codes, loyalty discounts) or the line level (product-specific promotions). Price Book Entries set base prices. Tax Policies and Tax Treatments configure tax calculation — either Salesforce Tax or a third-party integration (Avalara, Vertex). Tax is calculated at order capture and re-calculated if the order is modified. Shipping Charges are added as a separate order product. The AP exam tests how to configure a promotion that applies a percentage discount to an entire order, how tax is recalculated on a change order, and how shipping charges are represented in the Order Summary data model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration & OCI (Omnichannel Inventory)</p>
+                <p>OCI (Omnichannel Inventory) is the Salesforce API layer for real-time inventory availability checks across fulfillment locations. External systems (e-commerce platforms, ERP, WMS) integrate with SOM via the Order Management APIs. Webhooks and Platform Events notify external systems of order state changes. External Fulfillment Provider integration sends Fulfillment Orders to 3PL partners. The External Catalog and Pricing APIs support headless commerce scenarios where the storefront is not Salesforce B2B/B2C Commerce. The AP exam tests how to design the integration between a Salesforce-native Commerce Cloud storefront and SOM, how OCI responds to an availability check, and how to handle an external fulfillment partner that cannot receive Salesforce webhooks.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function OrderManagementAdminAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

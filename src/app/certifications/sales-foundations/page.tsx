@@ -193,6 +193,33 @@ export default function SalesFoundationsPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Sales Foundations: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce Platform Basics for Sales</p>
+                <p>The Sales Foundations certification validates fundamental Salesforce platform knowledge in a sales context. Key objects: Lead (unqualified prospect), Account (company or individual), Contact (person at an Account), Opportunity (potential deal), Activity (tasks and events). The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in a single action — data from the Lead is mapped to the new records. Campaigns track marketing efforts and link to Leads and Contacts as Campaign Members. The exam tests basic navigation, record creation, activity logging, and the Lead-to-Opportunity conversion flow.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Leads, Opportunities & Pipeline Management</p>
+                <p>Lead Status (New → Working → Converted/Dead) tracks qualification progress. Lead Assignment Rules automatically route new leads to the right rep or queue based on criteria (geography, industry, source). Opportunity Stages reflect the sales process steps — tied to Probability % for forecasting. Close Date, Amount, and Stage drive the opportunity pipeline view. Opportunity Contact Roles define each contact&apos;s role in the deal (Decision Maker, Evaluator, Economic Buyer). Path provides stage guidance with key fields and coach notes at each stage. The exam tests how to configure lead assignment, how opportunity stages feed forecasting, and what Opportunity Contact Roles represent.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Forecasting & Collaboration</p>
+                <p>Collaborative Forecasting in Salesforce CRM aggregates rep-level opportunity data into manager and VP-level rollups. Forecast Types can be based on Opportunity Amount, Quantity, or a custom field. Forecast Categories (Pipeline, Best Case, Commit, Closed) reflect the rep&apos;s confidence level. Managers can adjust forecasts above or below their team&apos;s submitted amounts. Forecast quotas set individual targets. Chatter (collaboration feed) lets reps and managers discuss opportunities inline. Account Teams define which internal team members have access to an account and its opportunities. The exam tests how to read a collaborative forecast, how adjustments flow up the hierarchy, and what Forecast Categories mean.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Productivity Tools: Email, Calendar & Mobile</p>
+                <p>Salesforce Inbox integrates Outlook/Gmail with Salesforce — log emails to records, view related CRM data in the email client, and schedule meetings with calendar sync. Einstein Activity Capture automatically logs emails and calendar events to related Salesforce records, reducing manual data entry. Salesforce Mobile App lets reps access accounts, opportunities, and tasks on the go. Mobile Quick Actions (Log a Call, New Event) are customizable per object. Einstein Relationship Insights surfaces web and LinkedIn data about contacts and accounts. The exam tests how to configure Einstein Activity Capture, how email-to-case differs from email logging, and which productivity features are available on the mobile app without additional configuration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports, Dashboards & Sales Analytics</p>
+                <p>Sales reports and dashboards provide visibility into pipeline health, quota attainment, and activity metrics. Key sales reports: Opportunities by Stage, Pipeline by Rep, Activities by Type, Lead Conversion Rate, Won/Lost Analysis. Summary reports group opportunities by stage or rep for subtotals. Matrix reports cross-reference rep by quarter for attainment tracking. Dashboards surface key metrics: Pipeline Value, Win Rate, Average Deal Size, Sales Cycle Length. CRM Analytics (Einstein Analytics) Sales Wave provides advanced pre-built dashboards. Report subscriptions deliver scheduled reports via email. The exam tests how to build a pipeline summary report, how to configure a dashboard for a VP of Sales, and how to share reports with the appropriate audience.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function SalesFoundationsPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -165,6 +165,33 @@ export default function TableauConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tableau Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Requirements and Solution Design</p>
+                <p>Tableau Consultants gather requirements by understanding: what business questions need answering, what data sources exist and their quality, who the end users are (executives vs analysts vs frontline), and how the dashboards will be maintained. A good solution design specifies: data source strategy (published vs embedded, live vs extract), visualisation types (matching the analytical question), and the deployment plan (who publishes, who maintains). The consultant also assesses data readiness — is the data structured appropriately for Tableau, or does it need preparation in Prep Builder first?</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Calculations: LOD Expressions</p>
+                <p>Level of Detail (LOD) expressions are Tableau&apos;s most powerful calculation type. FIXED: computes a value at a specific dimension level regardless of the view&apos;s level of detail — e.g., {'{'}FIXED [Region]: SUM([Sales]){'}'} gives sales per region in every row. INCLUDE: adds dimensions to the view LOD for the calculation. EXCLUDE: removes dimensions from the view LOD. Common use cases: cohort analysis, year-over-year comparison at a fixed level, customer-level metrics in transaction-level views. The exam tests which LOD expression type applies to a given analysis scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboard Design Principles</p>
+                <p>Effective dashboard layout: use containers (horizontal and vertical) to control component resizing and alignment. Padding and spacing separate sections visually. Filter placement: global filters affect all sheets; local filters affect one. Dashboard actions (Filter Action, Highlight Action, URL Action, Set Action) create interactivity — clicking one chart filters another. Mobile layout optimization defines a separate layout for phone-size screens. The consultant also validates dashboard performance — too many filters, marks, or cross-database queries degrade user experience.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tableau Prep Builder: Data Preparation</p>
+                <p>Tableau Prep Builder creates Flow pipelines for data cleaning and reshaping before loading to Tableau Desktop or Server. Steps: Input (connect to source), Clean (remove nulls, fix data types, rename fields), Aggregate (roll up), Join (combine tables), Union (stack rows), Pivot (reshape wide to tall or vice versa), Output (Hyper extract, CSV, or Published Data Source). Flows can be published to Tableau Server/Cloud and scheduled for automated refresh. The consultant assesses whether source data requires Prep preprocessing before it can be visualised effectively.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tableau Server Administration for Consultants</p>
+                <p>Consultants configure Tableau Server for clients: create sites (for multi-tenancy — each site is isolated), configure projects and permissions, set up user authentication (Local, Active Directory, SAML SSO), and schedule extract refreshes. Subscriptions send emailed snapshots of views on a schedule. Webhooks trigger external systems when Tableau events occur (publish, refresh completion). The consultant advises on content governance — project structure, who can publish where, certification workflows, and data source governance to prevent fragmented analytics environments.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -197,6 +224,7 @@ export default function TableauConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

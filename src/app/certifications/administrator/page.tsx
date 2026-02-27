@@ -529,7 +529,33 @@ export default function AdministratorPage() {
               <ExamPrepContent slug={slug} />
             </div>
 
-            <PracticeQuestionsSection
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Salesforce Administrator: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Objects, Fields & Data Model</p>
+                <p>Standard Objects (Account, Contact, Lead, Opportunity, Case) are the backbone of Salesforce. Custom Objects extend the platform for business-specific data. Field types include Text, Number, Currency, Date, Picklist, Formula, Lookup, and Master-Detail. Roll-Up Summary fields aggregate child records (count, sum, min, max) — only available on Master-Detail. Junction Objects implement many-to-many relationships using two Master-Detail fields. The ADM-201 exam frequently presents a scenario and asks which field type or relationship to use — know cascade delete rules, sharing implications, and when a Lookup is preferable to Master-Detail.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Model: Profiles, Permission Sets, Roles & Sharing</p>
+                <p>Org-wide defaults (OWDs) set the baseline visibility for every record. Role hierarchy opens up access upward — managers see what their subordinates own. Profiles control what users CAN do (CRUD, page layouts, app access). Permission Sets grant additional permissions without changing the profile. Sharing Rules extend access horizontally to peers. Manual Sharing lets record owners share individual records. The exam tests layered security scenarios: know that OWD + Role Hierarchy + Sharing Rules all combine additively — the most permissive rule wins for access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation: Flows, Approval Processes & Email Alerts</p>
+                <p>Record-Triggered Flows are the primary automation tool for administrators — they replace Workflow Rules (retiring) and Process Builder (retiring). Before/After Save triggers fire at different points in the transaction; only After Save can create related records. Scheduled Flows process batches on a time basis. Approval Processes route records through one or more human approvers with entry criteria, approver selection, and final approval/rejection actions. Email Alerts are reusable actions that send templated emails. The exam tests which tool handles a given scenario — Flows for complex logic, Approval Processes for structured human sign-off.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports, Dashboards & List Views</p>
+                <p>Report Types determine which objects and fields are available. Tabular: flat row lists. Summary: grouped with subtotals. Matrix: two-dimensional grouping. Joined: up to 5 report blocks side by side. Dashboards display visual components (charts, gauges, metrics, tables) driven by reports; each component points to a single source report. The Running User determines whose data is shown. Dynamic Dashboards let each viewer see their own data (up to 5 per org in Enterprise). List Views are quick filtered record sets — shareable with groups or all users. Schedule Reports to deliver via email automatically.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sales & Service Cloud Fundamentals</p>
+                <p>The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in one action. Opportunity Stages and Probability drive forecasting. Cases are the unit of customer support — they can be created via Web-to-Case, Email-to-Case, or manually. Queues hold Cases or Leads for team assignment. Escalation Rules auto-escalate cases based on age or criteria. Auto-Assignment Rules route incoming Cases or Leads to the right owner. Service Level Agreements (SLAs) are enforced via Entitlements and Milestones. The exam frequently asks about the correct feature for a given support or sales scenario.</p>
+              </div>
+            </div>
+          </div>
+          <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
               introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
               questions={sampleQuestions}
@@ -586,6 +612,7 @@ export default function AdministratorPage() {
                 { id: 'is-adm-201-hard', title: 'Is ADM-201 Hard?' },
                 { id: 'exam-format', title: 'Exam Format Explained' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
+                { id: 'key-concepts', title: 'Key Concepts' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
                 { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },

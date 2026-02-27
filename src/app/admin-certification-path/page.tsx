@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce Admin Certification Path (${RELEASE_CURRENT}): Which Cert First?`
+const pageTitle = `Salesforce Admin Cert Path (${RELEASE_CURRENT}): Which Cert First?`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce admin certification path for ${RELEASE_CURRENT}: the right order for ADM-201, Advanced Admin, App Builder, and Consultant certs. Career-mapped sequence for admin and ops roles.`
+  `Salesforce admin cert path (${RELEASE_CURRENT}): right order for ADM-201, Advanced Admin, App Builder, and beyond. Start free practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -35,6 +35,25 @@ export const metadata: Metadata = {
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Salesforce Admin Certification Path', url: '/admin-certification-path' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce admin certification path?',
+    answer: 'The admin path starts with ADM-201 (Salesforce Administrator), then progresses to Advanced Administrator and Platform App Builder, followed by specialist credentials like Service Cloud, Sales Cloud, or Field Service depending on your career focus.',
+  },
+  {
+    question: 'Do you need any prerequisites for the ADM-201 exam?',
+    answer: 'No official prerequisites exist for ADM-201. However, Salesforce recommends 6+ months of hands-on experience. Completing the Salesforce Administrator Trailmix on Trailhead before the exam is strongly advised.',
+  },
+  {
+    question: 'How long does the Salesforce admin certification path take?',
+    answer: 'ADM-201 takes 1–3 months of study. The full path to multiple specialist certifications typically takes 2–3 years, depending on your pace and access to hands-on project experience.',
+  },
+  {
+    question: 'What jobs does Salesforce admin certification lead to?',
+    answer: 'ADM-201 opens roles such as Salesforce Admin ($70–100k), Senior Admin ($90–130k), Business Analyst, Functional Consultant, and Platform Manager. Each additional certification strengthens your position for senior and specialist roles.',
+  },
 ]
 
 const pathSteps = [
@@ -105,12 +124,14 @@ export default function AdminCertificationPathPage() {
     description: pageDescription,
     path: '/admin-certification-path',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

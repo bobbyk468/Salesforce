@@ -253,6 +253,33 @@ export default function Developer1Page() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Developer I: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governor Limits: The Non-Negotiables</p>
+                <p>Governor limits prevent any one transaction from monopolising shared platform resources. Key synchronous limits to know: <strong>100 SOQL queries</strong>, <strong>150 DML statements</strong>, <strong>50,000 records returned from queries</strong>, <strong>6 MB heap size</strong>, <strong>10 seconds CPU time</strong>. Asynchronous limits are generally 2× the synchronous limits (e.g., 200 SOQL). Batch Apex can process up to 50 million records by splitting work into chunks. The exam tests which limit applies to a given code scenario and what to change.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Bulkification: Never Put SOQL or DML Inside a Loop</p>
+                <p>The core Apex pattern: query records <em>before</em> loops, collect changes in a <strong>List</strong> or <strong>Map</strong> <em>inside</em> loops, then perform DML <em>after</em> loops. Map&lt;Id, SObject&gt; is the workhorse — used to relate trigger records to queried related records by Id. Use <strong>Database.insert(records, false)</strong> for partial success (returns SaveResult array). The exam presents code with SOQL/DML in a loop and asks you to identify the issue or fix it.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SOQL: Relationships, Aggregates, and SOSL</p>
+                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child query: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG(), MIN(), MAX() — require GROUP BY. SOSL searches across multiple objects simultaneously using <code className="bg-gray-100 px-1 rounded">FIND &apos;term&apos; IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL when you need to search across object types; use SOQL when you know the object.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Triggers: Before vs After, Context Variables</p>
+                <p><strong>Before triggers</strong> fire before the record is saved — use them to validate or modify values before save (changes persist without an extra DML call). <strong>After triggers</strong> fire after the record is committed — use them when you need the record Id or to update related records. Key context variables: <code className="bg-gray-100 px-1 rounded">Trigger.new</code> (new values), <code className="bg-gray-100 px-1 rounded">Trigger.old</code> (old values, not available on insert), <code className="bg-gray-100 px-1 rounded">Trigger.isInsert</code>, <code className="bg-gray-100 px-1 rounded">Trigger.isUpdate</code>. Best practice: one trigger per object, logic in handler class.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing: Coverage, Isolation, and Mock Callouts</p>
+                <p>Minimum <strong>75% code coverage</strong> required across all Apex (not per class) to deploy to production. Test classes use <code className="bg-gray-100 px-1 rounded">@isTest</code> annotation. Test data is isolated by default (<code className="bg-gray-100 px-1 rounded">SeeAllData=false</code>) — create all data explicitly. <code className="bg-gray-100 px-1 rounded">Test.startTest()</code> resets governor limits; <code className="bg-gray-100 px-1 rounded">Test.stopTest()</code> forces async operations to complete. Mock callouts using <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>. <code className="bg-gray-100 px-1 rounded">Test.runAs(user)</code> changes the running user context. <code className="bg-gray-100 px-1 rounded">@TestVisible</code> exposes private members to test classes.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -299,6 +326,12 @@ export default function Developer1Page() {
                 </Link>
                 <span className="text-gray-600 ml-2">Advanced Apex, integrations, and design patterns. Requires PD1 certification.</span>
               </li>
+              <li>
+                <Link href="/developer-certification-path" className="text-salesforce-blue font-medium hover:underline">
+                  Full Salesforce Developer Certification Path →
+                </Link>
+                <span className="text-gray-600 ml-2">Step-by-step guide: PD1 → JavaScript Developer I → PD2 → Integration Architect.</span>
+              </li>
             </ul>
             <p className="text-xs text-gray-500 mt-3">
               Coming from the admin track?{' '}
@@ -320,6 +353,7 @@ export default function Developer1Page() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

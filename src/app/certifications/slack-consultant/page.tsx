@@ -193,6 +193,33 @@ export default function SlackConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Slack Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce-Slack Integration Architecture</p>
+                <p>The Salesforce for Slack integration (native Salesforce app) enables bidirectional workflow between Slack and Salesforce. Key capabilities: Record alerts (configured in Salesforce Flow — send Salesforce record updates to Slack channels), Record creation from Slack (create Leads, Cases, Opportunities directly from a Slack message), Record search (/salesforce search command). The consultant designs which Salesforce objects and records trigger Slack alerts and how to configure the integration for specific sales or service workflows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Slack-First Customer Service Design</p>
+                <p>Service Cloud + Slack enables agent collaboration. Case notifications route new or escalated cases to Slack channels. Swarming workflows bring subject-matter experts into a Slack channel to resolve complex cases together. Einstein Case Classification surfaces AI-suggested fields to agents before case routing. The consultant designs the service workflow — when to alert in Slack vs email, how to escalate from Slack back to Service Cloud, and how to measure the impact on CSAT and resolution time.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automations: Flow + Workflow Builder</p>
+                <p>Salesforce Flow can send Slack messages using the Send Slack Message flow action — available in Record-Triggered Flows, Screen Flows, and Scheduled Flows. Slack Workflow Builder steps can call external webhooks (including Salesforce APIs). Combined patterns: Salesforce record triggers a Flow → Flow sends a Slack message → Team responds in Slack → Webhook updates the Salesforce record. The consultant designs the end-to-end automation, identifying which tool handles which step.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Governance and Compliance</p>
+                <p>Data residency: sensitive Salesforce data shared in Slack must comply with data governance policies. DLP (Data Loss Prevention) integrations scan messages for sensitive data (credit card numbers, SSNs) and can block, alert, or redact. eDiscovery integration with Slack Enterprise Grid allows legal holds and exports for compliance. The consultant advises on which Salesforce record types can be shared in Slack, what retention policies apply to Slack channels containing Salesforce data, and how to configure compliance controls.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Adoption Strategy and Change Management</p>
+                <p>Slack adoption requires change management. Success metrics: daily active users, channels created, external channel usage, Workflow Builder adoption rate. Executive sponsorship: visible executive use of Slack signals cultural approval. Use case library: document and share success stories of effective Slack-Salesforce workflows. Training: role-based Slack training (sales reps vs service agents vs managers). The consultant designs the adoption roadmap — phased rollout, pilot team selection, feedback collection, and measurement against adoption KPIs.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function SlackConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

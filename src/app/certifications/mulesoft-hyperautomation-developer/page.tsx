@@ -193,6 +193,33 @@ export default function MuleSoftHyperautomationDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Hyperautomation Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Hyperautomation Architecture</p>
+                <p>Hyperautomation combines multiple automation technologies to automate complex, end-to-end business processes. Key components: MuleSoft (API integration), MuleSoft RPA (robotic process automation for UI-based tasks), MuleSoft Composer (no-code point-click integration), and Salesforce Flow (business process automation). The Hyperautomation Developer designs orchestrated workflows that span these tools — using APIs where possible (preferred) and RPA for legacy UI-only systems where APIs are unavailable.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">MuleSoft RPA: Builder and Manager</p>
+                <p>RPA Builder creates automation bots by recording and editing UI interactions — it captures mouse clicks, keystrokes, and screen regions from Windows desktop applications or web browsers. Bots run as attended (requires user presence) or unattended (runs autonomously on a schedule or trigger). RPA Manager orchestrates bot deployment — managing which bots run where, monitoring execution, handling errors, and managing credentials (secure storage). The exam tests bot design principles and when RPA is appropriate vs API integration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">MuleSoft Composer</p>
+                <p>Composer provides no-code, point-and-click integration between cloud applications — Salesforce, Slack, NetSuite, Stripe, Google Sheets. Composer Flows are triggered by events (record created, webhook, schedule) and execute actions (create/update records, send messages). Composer is designed for business users, not developers — it requires no Anypoint Studio. The developer exam tests when to recommend Composer vs Anypoint Studio for a given integration scenario (Composer for simple cloud-to-cloud; Studio for complex transformations or on-premise systems).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Orchestrating Automation with Salesforce Flow</p>
+                <p>Salesforce Flow orchestrates the human-facing process steps — approvals, guided data entry, notifications. MuleSoft handles the system integration behind the Flow. In Hyperautomation scenarios: a Flow captures user input, triggers a MuleSoft API via an Apex callout or Platform Event, MuleSoft calls external systems, and returns results to update Salesforce records. RPA handles legacy system interaction that cannot be API-ified. The developer designs the orchestration layer — deciding which tool owns each step of the process.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance and Security for Bots</p>
+                <p>Bot credentials must be stored securely — RPA Manager&apos;s credential vault stores usernames, passwords, and API keys encrypted. Bot activity is audited in RPA Manager — execution logs, error reports, and performance metrics. Access control: which users can trigger attended bots, which processes can run unattended. In regulated industries, bot activity must be auditable for compliance. The exam tests credential management best practices and how to design bots that maintain auditability and security without storing credentials in the automation script.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function MuleSoftHyperautomationDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

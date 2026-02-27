@@ -234,10 +234,37 @@ export default function MarketingCloudEngagementAdminPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Engagement Admin: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account Architecture and Business Units</p>
+                <p>Marketing Cloud Engagement supports multi-Business Unit (BU) architectures. Business Units enable separate sending domains, user management, subscriber data, and reporting per BU — useful for regional or brand separation. The parent BU manages shared assets and enforces enterprise-level settings. User roles hierarchy: Administrator, Marketing Cloud Administrator, Marketing, Content Editor/Publisher, Viewer. Sender Authentication Package (SAP) provides the private IP, custom FROM domain, and branded link tracking for each BU. The admin exam tests BU design decisions and how permissions cascade.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Subscriber Management at the Account Level</p>
+                <p>The All Subscribers list is the master subscriber list — global unsubscribes are recorded here and override all other settings. Publication Lists enable opt-in preferences per content type. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends globally. Data Extensions store relational subscriber and event data. The Subscriber Key strategy (email address vs CRM ID) affects deduplication and cross-channel identity. The admin configures the subscriber data model and retention policies.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">IP Warming and Sender Reputation</p>
+                <p>New dedicated IPs require IP warming — gradually increasing send volume over 4-8 weeks to establish sender reputation with ISPs. Send to the most engaged subscribers first. Monitor bounce rates, spam complaints, and inbox placement. SPF, DKIM, and DMARC configuration is required via the Sender Authentication Package. Reply Mail Management (RMM) handles inbound replies — route auto-replies, out-of-office, and unsubscribes automatically. The admin exam tests the warming schedule design and what metrics indicate reputation health.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Roles, Permissions, and Security</p>
+                <p>Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive — a user can have roles in multiple BUs. Marketing Cloud SSO connects to corporate identity systems (SAML/OAuth). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce CRM Integration (MC Connect)</p>
+                <p>Marketing Cloud Connect integrates Engagement with Sales/Service Cloud. Synchronized Data Extensions pull CRM object records (Leads, Contacts, Campaigns) into Marketing Cloud for targeting. Triggered Sends fire in response to Salesforce record changes (e.g., Opportunity Closed Won). Journey Builder entry sources can use CRM reports or data extensions synced from Salesforce. Email send results sync back to the Contact/Lead record as individual send activities. The admin configures the integration settings, sync schedules, and troubleshoots sync errors.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
-            
+
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}
@@ -267,6 +294,7 @@ export default function MarketingCloudEngagementAdminPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

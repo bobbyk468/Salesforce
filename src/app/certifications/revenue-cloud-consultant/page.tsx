@@ -193,6 +193,33 @@ export default function RevenueCloudConsultantPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Revenue Cloud Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CPQ Configuration & Product Rules</p>
+                <p>Salesforce Revenue Cloud (CPQ + Billing) starts with product configuration. Product Features group options within a bundle. Configuration Attributes set product-level settings. Product Rules enforce valid configurations: Validation Rules (block invalid combos), Selection Rules (auto-add/remove products), Alert Rules (warn users), Filter Rules (hide irrelevant options). Option Constraints define which options are mutually exclusive or required together. Price Rules execute pricing logic at specific stages of the quote calculation. The consultant exam tests how to design a product bundle for a complex SaaS offering, which rule type handles a given scenario, and how to troubleshoot a rule that isn&apos;t firing as expected.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing, Discounting & Approvals</p>
+                <p>CPQ pricing layers: List Price (Price Book) → Cost + Markup → Contracted Price → Block Pricing (volume tiers) → Percent of Total → Subscription Pricing. Discount Schedules define tier-based discounts. Price Waterfalls show how the final price is calculated step by step. Discount approval thresholds trigger Approval Processes when reps exceed authorized discount limits. Special Pricing Requests allow reps to request non-standard pricing from management. Quote-Level Discounts apply a single percentage across all lines. The consultant exam tests how to configure a tiered discount schedule, how price rules interact with manual discounts, and how approval thresholds are configured to route high-discount quotes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Subscription Billing & Contract Management</p>
+                <p>CPQ Billing manages the billing lifecycle for subscription products. Products with a Subscription Type (Renewable, Evergreen) generate subscription records on order. Billing Frequency and Billing Timing settings determine when invoices are generated (in advance/in arrears). Contract Start/End Dates govern the subscription period. Contract Amendments handle upgrades, downgrades, and add-ons to in-force subscriptions — generating proration credit for the remaining contract period. Renewal Quotes are automatically generated before contract expiry. The consultant exam tests how to configure a subscription product for monthly billing, how proration is calculated on a mid-term amendment, and how renewal automation is configured.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Recognition & ASC 606</p>
+                <p>Revenue Cloud Revenue Recognition aligns with ASC 606 (IFRS 15) — revenue is recognized as performance obligations are satisfied. Revenue Schedules distribute invoice revenue across the service period. Recognition Methods: Ratable (even distribution over term), Event-Based (milestone-triggered), and one-time. Revenue Recognition Rules define the method for each product type. Finance Periods control accounting period boundaries. The Revenue Waterfall report shows deferred vs. recognized revenue by period. Adjustments and Credit Memos create correcting Revenue Recognition Transactions. The consultant exam tests how to configure revenue recognition for a scenario involving a mix of one-time professional services and recurring SaaS subscription revenue.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Quote-to-Cash Integration & CPQ Object Model</p>
+                <p>The CPQ data model: Quote → Quote Lines → Orders → Order Products → Contracts → Subscriptions → Assets. The Generate Order action converts a contracted quote into an Order. The Order Products generate Subscriptions (if configured). Billing picks up Order Products to generate Invoices. Contracts store the term, auto-renew settings, and list of subscription records. The Asset object tracks active products on an account for amendment and renewal. Integration with ERP: invoices and payment data flow to finance systems via API or MuleSoft. The consultant exam tests the full Quote-to-Cash flow, how to troubleshoot a quote that isn&apos;t generating the correct order, and how assets feed back into renewal quotes.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function RevenueCloudConsultantPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

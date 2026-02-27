@@ -193,6 +193,33 @@ export default function IdentityAccessManagementArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Identity and Access Management Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Identity Fundamentals: Authentication vs Authorisation</p>
+                <p>Authentication verifies who you are (login). Authorisation determines what you can access (permissions). An Identity Provider (IdP) authenticates users and issues assertions. A Service Provider (SP) relies on the IdP&apos;s assertion to grant access. Salesforce can act as both &mdash; as an IdP for connected apps and external systems, and as an SP when receiving SSO from corporate identity systems like Okta or Azure AD. Understanding this distinction is the foundation for all IAM exam questions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SAML 2.0 SSO: SP-Initiated vs IdP-Initiated</p>
+                <p>SAML 2.0 is the standard for web SSO. SP-Initiated SSO: the user accesses Salesforce, gets redirected to the IdP for login, the IdP sends a SAML assertion back to Salesforce. IdP-Initiated SSO: the user logs in at the IdP portal first, then accesses Salesforce from there &mdash; no redirect needed. My Domain is required for SSO &mdash; it provides the Salesforce login URL that the IdP redirects to. The exam tests the SSO flow direction, how to configure the SAML settings, and certificate management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OAuth 2.0 Flows: Server, JWT, and Client Credentials</p>
+                <p>Web Server Flow (Authorization Code): user-facing, browser redirect, best for interactive login. JWT Bearer Flow: server-to-server, no user interaction &mdash; client signs a JWT with a private key registered as a certificate on the Connected App. Client Credentials Flow: machine-to-machine authentication using client ID &amp; secret. Device Flow: for devices without browsers (smart TV, IoT). PKCE (Proof Key for Code Exchange): protects mobile apps against authorization code interception. The exam presents an integration scenario and asks which OAuth flow is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connected Apps: Scopes, Policies, and Sessions</p>
+                <p>Connected Apps define the OAuth configuration &mdash; scopes (which Salesforce data the app can access), IP ranges, session duration, and refresh token policy. OAuth scopes include api, full, refresh_token, web, chatter_api, and others. The Manage Connected Apps permission is required to modify policies. IP allowlists on Connected Apps can restrict which IPs can obtain tokens. Certificate-based authentication (mutual TLS) eliminates shared secrets by using client certificates for authentication.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">MFA, My Domain, and Identity Connect</p>
+                <p>Multi-Factor Authentication (MFA) is now required for all Salesforce users &mdash; admins cannot disable it org-wide. MFA methods: Salesforce Authenticator (push notification), TOTP apps (Google Authenticator), security keys (WebAuthn). My Domain customises the Salesforce login URL and is required for SSO, custom components, and some lightning features. Identity Connect (Salesforce Identity for AD) syncs Active Directory users to Salesforce &mdash; supports LDAP directory integration for provisioning and deprovisioning.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function IdentityAccessManagementArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

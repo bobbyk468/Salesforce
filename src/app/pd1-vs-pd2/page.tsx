@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce PD1 vs PD2 (${RELEASE_CURRENT}): Which Developer Cert to Take First?`
+const pageTitle = `Salesforce PD1 vs PD2 (${RELEASE_CURRENT}): Which to Take First?`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce Platform Developer I (PD1) and Platform Developer II (PD2) by difficulty, exam content, prerequisites, and career outcomes to plan your developer certification path.'
+  `PD1 vs PD2 (${RELEASE_CURRENT}): Compare difficulty, exam content, and career impact to choose the right developer cert. Start free practice today.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'PD1 vs PD2', url: '/pd1-vs-pd2' },
 ]
 
+const faqItems = [
+  {
+    question: 'Can you take PD2 without PD1?',
+    answer: 'No — Salesforce Platform Developer II (PD2) officially requires PD1 certification as a prerequisite. You cannot register for PD2 without holding an active PD1 credential.',
+  },
+  {
+    question: 'Which is harder, PD1 or PD2?',
+    answer: 'PD2 is significantly harder. While PD1 tests Apex fundamentals and governor limits, PD2 tests advanced design patterns, complex REST and SOAP integrations, and performance optimisation. Most PD2 candidates need 6–12 months of real project experience after PD1.',
+  },
+  {
+    question: 'How long after PD1 should you wait before taking PD2?',
+    answer: 'Most candidates wait 12–18 months after PD1 to gain sufficient project experience. PD2 is not an exam you can pass on study alone — it requires applied knowledge of trigger frameworks, selector/domain/service layers, and enterprise integration patterns.',
+  },
+  {
+    question: 'Are PD1 and PD2 both needed for the architect track?',
+    answer: 'Yes — PD1 and PD2 are both typically required on the path to Certified Technical Architect (CTA). PD2 is also a recommended (though not always required) precursor to Integration Architect and Application Architect.',
+  },
+]
+
 export default function Pd1VsPd2Page() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function Pd1VsPd2Page() {
     description: pageDescription,
     path: '/pd1-vs-pd2',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
@@ -227,6 +248,12 @@ export default function Pd1VsPd2Page() {
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             PD1 Exam Tips {RELEASE_CURRENT}
+          </Link>
+          <Link
+            href="/developer-certification-path"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Full Developer Cert Path
           </Link>
         </div>
       </section>

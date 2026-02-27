@@ -62,6 +62,33 @@ export default function ConsumerGoodsTPMAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Consumer Goods TPM AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Trade Promotion Planning & Fund Management</p>
+                <p>Trade Promotion Management (TPM) in Consumer Goods Cloud helps CPG companies plan, execute, and settle promotional spend with retail partners. Trade Funds define the budget available for promotions — split by account, territory, or brand. Fund Commitments allocate budget to planned promotions. Promotion Templates define the type of promotional activity (off-invoice discount, lump sum, scan data deal). Volume Planning forecasts the expected sales lift from a promotion. Baseline Volume represents the expected sales without promotion. The AP exam tests how to configure trade funds, allocate fund commitments to promotions, and calculate expected ROI from volume lift vs. promotional spend.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Promotion Execution & Tactics</p>
+                <p>A Trade Promotion consists of a header (account, time period, objectives) and one or more Tactics (specific activities: feature, display, temporary price reduction). Each Tactic has its own funding, targets, and conditions. Conditional Deal Logic applies different payout rates based on achieved performance tiers. Calendar views show overlapping promotions for a customer to prevent conflicts. Promotion Approval workflows route high-value or unusual promotions to managers. The exam tests how to configure a multi-tactic promotion, how conditional deals work, and how the calendar tool prevents promotional cannibalization.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Settlement & Claims Processing</p>
+                <p>Trade Promotion settlements reconcile the planned spend against actual retailer claims. Proof of Performance (POP) — scan data, invoices, photos — is required to validate claims. Deductions are amounts the retailer takes off payment; they must be matched to a promotion or flagged as unauthorized. Claim Management workflows route deductions for approval or dispute. Auto-settlement rules can automatically approve claims that match within a tolerance of the plan. Overpayment recovery processes handle situations where the retailer claims more than the agreed amount. The exam tests the settlement lifecycle, how to configure auto-settlement rules, and the deduction-to-promotion matching process.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Forecasting & Baseline Analytics</p>
+                <p>Accurate baselines are critical for measuring promotion ROI. Baseline models use historical scan data to project what sales would have been without the promotion. Lift measurement compares actual sell-out to baseline during the promotional period. Post-promotion dip analysis identifies forward-buying behavior that depresses post-promo sales. CRM Analytics TPM dashboards provide pre-built analysis for fund utilization, promotional effectiveness, and customer P&L. The exam tests how to configure baseline generation, how to interpret lift analysis, and how to use analytics insights to optimize future promotional spend allocation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration with ERP & Retailer Data</p>
+                <p>TPM data flows to and from external systems: ERP (SAP, Oracle) for financial settlement and accrual accounting, retailer portals for scan data feeds, and demand planning systems for volume forecasts. Integration patterns: scheduled batch (daily scan data imports via SFTP), near-real-time (API-based deduction feeds), and event-driven (settlement approval triggers ERP accrual). Data quality is critical — duplicate promotions or mismatched scan data lead to over/under-accruals. The exam tests how to design data integration for a TPM scenario, what data must flow in vs. out of Salesforce TPM, and how to handle data validation errors in incoming scan data feeds.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function ConsumerGoodsTPMAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

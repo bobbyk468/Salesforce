@@ -270,6 +270,33 @@ export default function AppBuilderPage() {
             </div>
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform App Builder: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Modeling: Objects, Fields, and Relationships</p>
+                <p>Custom Objects extend Salesforce to store your business-specific data. Master-Detail relationships create tight parent-child bonds (child inherits sharing, supports roll-up summaries). Lookup relationships are looser &mdash; the child can exist without the parent. Junction Objects implement many-to-many relationships using two master-detail relationships. Schema Builder provides a visual data model canvas. The exam presents a business requirement and asks which relationship type and object design is appropriate &mdash; know when to choose M-D vs Lookup based on cascade delete, sharing, and roll-up needs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Business Logic and Process Automation</p>
+                <p>Flows are the primary automation tool for App Builders. Record-Triggered Flows replace Workflow Rules (retiring) and Process Builder (retiring). Screen Flows provide guided multi-step experiences for users. Scheduled Flows run on a time-based schedule. Approval Processes handle multi-step human sign-off with defined approvers and entry criteria. The exam tests which automation tool handles a given scenario &mdash; know that Flow replaces Workflow Rules for field updates and email alerts, and Approval Processes are for structured multi-person sign-off.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Interface: Lightning App Builder and Page Layouts</p>
+                <p>Lightning App Builder lets admins compose pages by dragging standard and custom components onto a canvas &mdash; for Record Pages, Home Pages, and App Pages. Dynamic Forms move fields from traditional page layouts into the page itself, enabling conditional field visibility based on record values. Path provides stage guidance. Dynamic Actions control button visibility. List Views filter and display records without reports. The exam tests the difference between page layouts (profile/record type-based) and Dynamic Forms (component-level conditions).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mobile Design: Compact Layouts and Navigation</p>
+                <p>Salesforce Mobile App uses Compact Layouts to determine which fields appear in record highlights, related list previews, and push notifications &mdash; the top fields in the layout appear first. Mobile Navigation defines which items appear in the mobile sidebar. Quick Actions appear in the action bar on mobile. The exam tests how to configure the mobile experience and which settings affect which mobile surfaces.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics: Reports, Dashboards, and AppExchange</p>
+                <p>Report Types determine which objects and relationships are available in a report. Tabular reports list records in rows; Summary adds grouping and subtotals; Matrix adds two dimensions of grouping; Joined combines up to 5 report blocks. Dashboards display visual components (charts, gauges, tables) from report data. AppExchange provides pre-built apps, components, and flows &mdash; always install in a sandbox first, review required permissions, and check for governor limit implications.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -324,6 +351,7 @@ export default function AppBuilderPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'scenario-tips', title: 'How to Pass DEV-402' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

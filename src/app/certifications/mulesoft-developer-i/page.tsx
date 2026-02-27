@@ -193,6 +193,33 @@ export default function MuleSoftDeveloperIPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Developer I: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Anypoint Platform and Development Lifecycle</p>
+                <p>Anypoint Platform is MuleSoft&apos;s integration platform — Design, Develop, Deploy, Manage. Anypoint Studio is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. CloudHub is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mule Events, Flows, and Core Concepts</p>
+                <p>A Mule Event carries the message through the flow: Payload (the message data), Attributes (metadata about the source, like HTTP headers), Variables (flow-level storage), Error (in error handling context). A Flow has a Source (event trigger — HTTP listener, file listener, scheduler), Processors (transform, route, call), and Target (destination system). Sub-flows are reusable flow fragments without a source. Private flows can be called but not directly triggered. The developer exam tests Mule event structure and when to use each flow type.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataWeave 2.0 Transformations</p>
+                <p>DataWeave is MuleSoft&apos;s transformation language — used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Design with RAML and API-First</p>
+                <p>RAML 1.0 (RESTful API Modeling Language) defines API contracts. Structure: baseUri, version, mediaType, types (data types), traits (reusable method fragments), resourceTypes (reusable resource patterns). API Fragment types in Exchange: data types, traits, resource types, security schemes, examples. API-first development: design and mock the API spec, share with consumers for feedback, then implement. Mocking Service in Exchange lets consumers test against the spec before implementation is complete. The exam tests RAML syntax and API-first methodology.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Error Handling: On Error Continue vs Propagate</p>
+                <p>Error handling in Mule uses Try scope, On Error Continue, and On Error Propagate. On Error Continue: catches the error, executes the handler, and resumes the flow after the error scope — the client receives the handler&apos;s response. On Error Propagate: catches the error, executes the handler, and re-throws the error — the client receives an error response. Error types follow a hierarchy: ANY (catch all), CONNECTIVITY, EXPRESSION, ROUTING, SECURITY. The exam tests which handler type is appropriate and how error types are matched.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function MuleSoftDeveloperIPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

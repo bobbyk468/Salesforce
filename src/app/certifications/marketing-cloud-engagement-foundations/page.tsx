@@ -193,6 +193,33 @@ export default function MarketingCloudEngagementFoundationsPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Engagement Foundations: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Email Studio: Content Builder and Templates</p>
+                <p>Content Builder is the unified content management interface for emails, templates, blocks, and images. Email Templates use drag-and-drop layout blocks or HTML/AMPscript. Saved content blocks are reusable components — update once, updated everywhere. Guided Send walks through sending options step by step. The Foundations exam focuses on navigating Marketing Cloud and understanding the core feature set — it is the entry-level certification. Know how to create, preview, and test-send an email from start to finish.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Subscriber and List Management Basics</p>
+                <p>All Subscribers list is the global subscriber table. Publication Lists let subscribers opt in or out of specific content types. Suppression Lists prevent sends to specific addresses. The Foundations exam tests the difference between these list types and when to use each. Subscriber statuses: Active, Unsubscribed, Bounced, Held. Unsubscribes process globally and cannot be reversed without subscriber consent. Import Wizard loads subscribers from CSV files — field mapping and import type (Add/Update, Overwrite) are tested.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Studio Basics</p>
+                <p>Automation Studio orchestrates multi-step marketing processes. Scheduled automations run on a time-based trigger. File Drop automations trigger when a file is uploaded to an FTP location. Automation activities: Import File (load data), SQL Query (segment data), Data Extract (export data), Send Email, Filter (create filtered DEs). Activities run sequentially within a step; multiple activities in the same step run in parallel. The Foundations exam tests basic automation workflow design and what each activity type does.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Journey Builder Basics</p>
+                <p>Journey Builder creates event-triggered, multi-step customer journeys. Entry Sources: Data Extension entry (scheduled or real-time), Salesforce Entry (CRM record trigger), API Event, CloudPage Submit, Audience entry. Activities: Send Email, Send SMS, Wait (fixed time), Decision Split (audience split by criteria), Random Split (percentage-based A/B). Exit Criteria can remove contacts mid-journey. The Foundations exam tests how to design a simple linear journey — entry source, email activity, wait, exit.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tracking and Reporting Basics</p>
+                <p>The Tracking workspace shows aggregated send performance across campaigns. Key metrics: Delivered (sent - bounced), Unique Opens (tracked via 1x1 pixel), Unique Clicks (tracked via link rewrite), Bounce Rate (hard = permanent, soft = temporary), Unsubscribe Rate. Reports in the Reports section provide date-range summaries across accounts and BUs. Email Send Reports show per-send performance. The Foundations exam tests which metric answers a given business question and how to locate reports in the Marketing Cloud UI.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function MarketingCloudEngagementFoundationsPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

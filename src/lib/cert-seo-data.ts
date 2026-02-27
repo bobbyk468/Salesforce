@@ -14,7 +14,8 @@ function withCurrentReleaseLabel(text: string): string {
 
 function finalizeMetaDescription(text: string): string {
   const normalized = withCurrentReleaseLabel(text).replace(/\s+/g, ' ').trim()
-  const hasCta = /(start|get|try)\b[\s\S]{0,30}\b(now|today)\b/i.test(normalized)
+  // Recognise any explicit CTA phrase so we don't append a duplicate.
+  const hasCta = /\bstart free\b|\bstart now\b|\bget started\b|\btry free\b|start practici|(start|get|try)\b[\s\S]{0,30}\b(now|today)\b/i.test(normalized)
   const withCta = hasCta
     ? normalized
     : `${normalized.replace(/[.\s]*$/, '')}. Start free practice now.`
@@ -384,37 +385,38 @@ function buildWinterTitle(base: string): string {
 function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
-    'app-builder': `Salesforce Platform App Builder: ${TITLE_YEAR} Exam Prep`,
-    administrator: `Master ADM-201: Salesforce Certified Platform Administrator | ${TITLE_YEAR} Study`,
-    'advanced-administrator': `Ace ADM-211: Salesforce Certified Advanced Administrator Prep (${TITLE_YEAR})`,
-    'email-specialist': `Master Salesforce Certified Marketing Cloud Email Specialist (${TITLE_YEAR})`,
+    'app-builder': `Platform App Builder: DEV-402 Free Practice (${TITLE_YEAR})`,
+    administrator: `ADM-201 Certification: Free Practice Exam (${TITLE_YEAR})`,
+    'advanced-administrator': `ADM-211 Advanced Admin: Free Practice Exam (${TITLE_YEAR})`,
+    'email-specialist': `Email Specialist Cert: Free Practice (${TITLE_YEAR})`,
     'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
     'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
     'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
-    'marketing-cloud-consultant': `Pass Marketing Cloud Consultant: Free Exam Prep | ${TITLE_YEAR}`,
-    'business-analyst': `Salesforce Business Analyst Exam: Free Practice ${TITLE_YEAR}`,
-    'sales-cloud': `Pass Sales Cloud Consultant: Free Practice Exam (60 Q)`,
-    'developer-2': `Ace PD2: Salesforce Certified Platform Developer II Prep (${TITLE_YEAR})`,
-    'cpq-administrator': `Salesforce CPQ Administrator: ${TITLE_YEAR} Exam Prep`,
-    'pardot-consultant': `Master Account Engagement (Pardot) Consultant Exam (${TITLE_YEAR})`,
-    'pardot-specialist': `Pass Account Engagement (Pardot) Specialist Practice (${TITLE_YEAR})`,
-    'experience-cloud': `Free Experience Cloud Consultant Practice (${TITLE_YEAR})`,
+    'marketing-cloud-consultant': `Marketing Cloud Consultant: Free Practice (${TITLE_YEAR})`,
+    'business-analyst': `Business Analyst Certification: Free Practice (${TITLE_YEAR})`,
+    'sales-cloud': `Sales Cloud Consultant: Free Practice & Study (${TITLE_YEAR})`,
+    'developer-2': `Platform Developer II (PD2): Free Practice (${TITLE_YEAR})`,
+    'cpq-administrator': `CPQ Admin Certification: Free Practice (${TITLE_YEAR})`,
+    'pardot-consultant': `Pardot Consultant: Account Engagement Practice (${TITLE_YEAR})`,
+    'pardot-specialist': `Pardot Certification: Free Specialist Practice ${TITLE_YEAR}`,
+    'experience-cloud': `Experience Cloud Certification: Free Practice (${TITLE_YEAR})`,
     'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
     'developer-1': `Salesforce Platform Developer I (PD1): ${TITLE_YEAR} Prep`,
     'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
-    'technical-architect': `Salesforce Technical Architect (CTA) Guide (${TITLE_YEAR})`,
-    'system-architect': `System Architect Exam: Study Guide & Domain Weights`,
-    'integration-architect': `Integration Architect Exam: Study Guide & Practice`,
-    'data-architect': `Salesforce Data Architect: ${TITLE_YEAR} Study Guide`,
+    'technical-architect': `Salesforce Architect Certification: CTA Guide ${TITLE_YEAR}`,
+    'system-architect': `System Architect Certification: Free Practice (${TITLE_YEAR})`,
+    'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
+    'data-architect': `Data Architect Certification: Free Practice (${TITLE_YEAR})`,
     // Extended coverage: All remaining certs for complete CTR optimization
     'administrator-practice-test': `ADM-201 Practice Test: Real Exam Questions (${TITLE_YEAR})`,
-    'agentforce-specialist': `Become Agentforce Specialist: Study Guide & Practice (${TITLE_YEAR})`,
-    'ai-associate': `Salesforce AI Associate: ${TITLE_YEAR} Exam Study Guide`,
-    'application-architect': `Ace Application Architect: Design Patterns & Practice (${TITLE_YEAR})`,
-    'b2b-commerce-admin-ap': `Pass B2B Commerce Admin AP: Study Guide & Practice (${TITLE_YEAR})`,
-    'b2b-commerce-developer-ap': `Earn B2B Commerce Developer AP: Free Study Guide (${TITLE_YEAR})`,
+    'advanced-field-service-ap': `Advanced Field Service AP: Free Practice Guide (${TITLE_YEAR})`,
+    'agentforce-specialist': `Agentforce Specialist: Study Guide & Practice (${TITLE_YEAR})`,
+    'ai-associate': `Salesforce AI Associate: Free Practice Guide (${TITLE_YEAR})`,
+    'application-architect': `Application Architect Cert: Free Practice (${TITLE_YEAR})`,
+    'b2b-commerce-admin-ap': `B2B Commerce Admin AP: Free Practice (${TITLE_YEAR})`,
+    'b2b-commerce-developer-ap': `B2B Commerce Developer AP: Free Practice (${TITLE_YEAR})`,
     'b2b-solution-architect': `Master B2B Solution Architecture: Design Guide (${TITLE_YEAR})`,
     'b2c-commerce-architect': `Ace B2C Commerce Architect: Study & Practice (${TITLE_YEAR})`,
     'b2c-commerce-developer': `Pass B2C Commerce Developer: Free Study Guide (${TITLE_YEAR})`,
@@ -425,10 +427,10 @@ function getCertMetaTitle(slug: string): string {
     'contact-center-ap': `Pass Contact Center AP: Free Practice Guide (${TITLE_YEAR})`,
     'cpq-billing-ap': `Earn CPQ & Billing AP: Study Guide (${TITLE_YEAR})`,
     'crm-analytics-einstein-discovery-consultant': `Master CRM Analytics & Einstein Discovery (${TITLE_YEAR})`,
-    'data-cloud-consultant': `Salesforce Data Cloud Consultant: ${TITLE_YEAR} Prep`,
+    'data-cloud-consultant': `Data Cloud Consultant Exam: Free Practice ${TITLE_YEAR}`,
     'dev-lifecycle-deployment-architect': `Ace Dev Lifecycle & Deployment Architect (${TITLE_YEAR})`,
     'education-cloud-consultant': `Master Education Cloud: Consultant Study Guide (${TITLE_YEAR})`,
-    'email-specialist-practice-test': `Email Specialist Practice Test: Real Questions (${TITLE_YEAR})`,
+    'email-specialist-practice-test': `Email Specialist Practice Test: Start Free ${TITLE_YEAR}`,
     'energy-utilities-ap': `Earn Energy & Utilities AP: Study Guide (${TITLE_YEAR})`,
     'field-service': `Master Field Service Consultant: Study Guide (${TITLE_YEAR})`,
     'financial-services-cloud-ap': `Get Certified: Financial Services Cloud AP (${TITLE_YEAR})`,
@@ -436,27 +438,27 @@ function getCertMetaTitle(slug: string): string {
     'heroku-architect': `Master Heroku Architect: Design Study Guide (${TITLE_YEAR})`,
     'heroku-developer-ap': `Earn Heroku Developer AP: Study Guide (${TITLE_YEAR})`,
     'industries-cpq-developer': `Pass Industries CPQ Developer: Study Guide (${TITLE_YEAR})`,
-    'javascript-developer-i': `Pass JavaScript Developer I: Coding Interview Prep (${TITLE_YEAR})`,
+    'javascript-developer-i': `JavaScript Developer I: Exam Prep (${TITLE_YEAR})`,
     'lightning-web-components-specialist': `Master Lightning Web Components: Study Guide (${TITLE_YEAR})`,
     'loyalty-management-ap': `Earn Loyalty Management AP: Study Guide (${TITLE_YEAR})`,
     'manufacturing-cloud-ap': `Get Certified: Manufacturing Cloud AP (${TITLE_YEAR})`,
     'marketing-cloud-advanced-cross-channel-ap': `Earn Marketing Cloud Advanced AP (${TITLE_YEAR})`,
     'marketing-cloud-engagement-admin': `Master Marketing Cloud Engagement Admin (${TITLE_YEAR})`,
     'marketing-cloud-engagement-developer': `Pass Marketing Cloud Engagement Developer (${TITLE_YEAR})`,
-    'marketing-cloud-engagement-foundations': `Start Marketing Cloud Engagement: Foundation Guide (${TITLE_YEAR})`,
+    'marketing-cloud-engagement-foundations': `Marketing Cloud Engagement Foundations (${TITLE_YEAR})`,
     'marketing-cloud-intelligence-ap': `Earn Marketing Cloud Intelligence AP (${TITLE_YEAR})`,
     'marketing-cloud-personalization-ap': `Get Certified: Marketing Cloud Personalization (${TITLE_YEAR})`,
     'media-cloud-ap': `Earn Media Cloud AP: Study Guide (${TITLE_YEAR})`,
-    'mulesoft-catalyst-consultant': `Master MuleSoft Catalyst Consultant: Study Guide (${TITLE_YEAR})`,
-    'mulesoft-developer-i': `Pass MuleSoft Developer I: Integration Study Guide (${TITLE_YEAR})`,
-    'mulesoft-developer-ii': `Pass MuleSoft Developer II: Advanced Integration (${TITLE_YEAR})`,
-    'mulesoft-integration-architect': `Master MuleSoft Integration Architect: Study Guide (${TITLE_YEAR})`,
+    'mulesoft-catalyst-consultant': `MuleSoft Catalyst Consultant: Study Guide (${TITLE_YEAR})`,
+    'mulesoft-developer-i': `MuleSoft Developer I: Integration Study Guide (${TITLE_YEAR})`,
+    'mulesoft-developer-ii': `MuleSoft Developer II: Advanced Integration (${TITLE_YEAR})`,
+    'mulesoft-integration-architect': `MuleSoft Integration Architect Study Guide (${TITLE_YEAR})`,
     'mulesoft-platform-architect': `Ace MuleSoft Platform Architect: Design Guide (${TITLE_YEAR})`,
     'net-zero-cloud-ap': `Earn Net Zero Cloud AP: Sustainability Study (${TITLE_YEAR})`,
     'nonprofit-cloud': `Master Nonprofit Cloud: Consultant Study Guide (${TITLE_YEAR})`,
     'nonprofit-success-pack-consultant': `Pass Nonprofit Success Pack (NPSP): Study Guide (${TITLE_YEAR})`,
     'omnistudio-consultant': `Master OmniStudio Consultant: Study & Practice (${TITLE_YEAR})`,
-    'omnistudio-developer': `Pass OmniStudio Developer: Integration Study Guide (${TITLE_YEAR})`,
+    'omnistudio-developer': `OmniStudio Developer: Integration Study Guide (${TITLE_YEAR})`,
     'order-management-admin-ap': `Earn Order Management Admin AP: Study Guide (${TITLE_YEAR})`,
     'order-management-developer-ap': `Get Certified: Order Management Developer AP (${TITLE_YEAR})`,
     'platform-foundations': `Start Your Journey: Platform Foundations Guide (${TITLE_YEAR})`,
@@ -465,7 +467,7 @@ function getCertMetaTitle(slug: string): string {
     'revenue-cloud-consultant': `Master Revenue Cloud Consultant: Study Guide (${TITLE_YEAR})`,
     'sales-foundations': `Start Sales Foundation: Free Study Guide (${TITLE_YEAR})`,
     'service-cloud': `Master Service Cloud Consultant: Study Guide (${TITLE_YEAR})`,
-    'slack-administrator': `Master Slack Administrator: Study & Practice Guide (${TITLE_YEAR})`,
+    'slack-administrator': `Slack Administrator: Study & Practice Guide (${TITLE_YEAR})`,
     'slack-consultant': `Become Slack Consultant: Solution Design Study (${TITLE_YEAR})`,
     'strategy-designer': `Master Platform Strategy Designer: Study Guide (${TITLE_YEAR})`,
     'tableau-architect': `Ace Tableau Architect: Design Study Guide (${TITLE_YEAR})`,
@@ -473,7 +475,7 @@ function getCertMetaTitle(slug: string): string {
     'tableau-desktop-foundations': `Start Tableau Desktop: Foundation Study Guide (${TITLE_YEAR})`,
     'tableau-server-administrator': `Master Tableau Server Admin: Study Guide (${TITLE_YEAR})`,
     'technical-architect-evaluation': `Pass CTA Evaluation: Scenario-Based Study Guide (${TITLE_YEAR})`,
-    'ux-designer': `Master Salesforce UX Designer: Study Guide (${TITLE_YEAR})`,
+    'ux-designer': `UX Designer Certification: Free Practice (${TITLE_YEAR})`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -606,73 +608,77 @@ export function getCertMetaDescription(slug: string): string {
   const examCost = getExamCost(slug)
   const ctrDescriptionOverrides: Record<string, string> = {
     'app-builder':
-      `Master DEV-402 without coding. Free practice questions (60 questions, 105 min, 65% passing score). Build custom Salesforce apps using clicks, not code. ${TITLE_YEAR} complete study guide + explanations.`,
+      `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `Pass ADM-201 on your first attempt. Free practice questions, section weightage breakdown, exam tips & study guide. 60 questions, 65% passing score, 105 min. Start ${TITLE_YEAR} prep today.`,
+      `ADM-201 certification: Free practice exam with 15 sample questions. Start free — 60 questions, 65% passing, 105 min. ${TITLE_YEAR} study guide & exam tips.`,
     'marketing-cloud-consultant':
-      `Master Marketing Cloud in ${TITLE_YEAR}. Free practice exam (60 questions, 67% passing), exam tips, and proven study method. Pass the consultant certification guaranteed.`,
+      `Salesforce Marketing Cloud Consultant: Free practice exam (60 questions, 67% passing). Start free — sample questions, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':
-      `Free Business Analyst exam practice (60 questions, ~65% passing score, 105 min). $200 fee. ${TITLE_YEAR} study guide with practice questions & exam tips included.`,
+      `Salesforce Business Analyst certification: Free practice (60 questions, ~65% passing, 105 min). Start free — sample questions & ${TITLE_YEAR} study guide.`,
     'sales-cloud':
-      `Pass Sales Cloud Consultant on first try. Free practice exam (60 questions, 68% passing score). Get solution design strategies, exam tips, and ${TITLE_YEAR} study guide now.`,
+      `Salesforce Sales Cloud Consultant & Sales Cloud certification: Free practice exam (60 questions, 68% passing). Start free — sample questions & study guide.`,
     'advanced-administrator':
-      `Pass ADM-211 faster. Use our ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan.`,
+      `Pass ADM-211 faster. ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan. Start free.`,
     'email-specialist':
-      `Pass the Salesforce Certified Marketing Cloud Email Specialist exam (formerly Email Specialist). ${TITLE_YEAR} practice questions, topic breakdowns, and exam-focused study tips. Start free today.`,
+      `Salesforce Email Specialist certification: Free practice questions & exam tips. Start free — 15 sample questions, topic breakdowns. ${TITLE_YEAR} study guide.`,
     'mulesoft-hyperautomation-developer':
       `Tackle MuleSoft Hyperautomation with confidence. Get ${TITLE_YEAR} exam topics, free practice questions, and practical prep guidance. Start now.`,
     'sharing-visibility-architect':
-      `Master sharing model scenarios for ${TITLE_YEAR}. Practice architect-level questions and prepare with focused guidance on visibility design decisions.`,
+      `Sharing & Visibility Architect: architect-level questions and focused guidance on visibility design decisions. Start free ${TITLE_YEAR}.`,
     'identity-access-management-architect':
       `Prepare for IAM Architect with ${TITLE_YEAR} scenarios on SSO, OAuth, and access design. Use practice questions and focused exam tips. Start now.`,
     'developer-2':
-      `Level up your dev skills. Get the latest ${TITLE_YEAR} exam topics, practice questions, and expert tips for the Platform Developer II certification.`,
+      `Developer II (PD2): Free practice (60 Qs, ~65% passing, 120 min). Start free — 15 sample Qs & ${TITLE_YEAR} study guide. $200 fee.`,
     'cpq-administrator':
-      `Free CPQ Administrator practice (60 questions, ~65% passing score, 105 min). $200 exam fee. Get ${TITLE_YEAR} study guide with practice questions & exam tips now.`,
+      `CPQ certification: Free Salesforce CPQ Administrator practice. Start free — 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
     'pardot-consultant':
-      `Pass the Salesforce Certified Account Engagement (Pardot) Consultant exam (formerly Pardot Consultant). 60 questions, 68% passing score. Free ${TITLE_YEAR} study guide + strategic tips.`,
+      `Pardot certification & Account Engagement Consultant: Free practice (60 questions, 68% passing). Start free — sample questions & ${TITLE_YEAR} study guide.`,
     'pardot-specialist':
-      `Pass the Salesforce Certified Account Engagement (Pardot) Specialist exam (formerly Pardot Specialist). Free ${TITLE_YEAR} practice tests and a complete marketing automation study guide.`,
+      `Pardot certification: Free Account Engagement Specialist practice (60 questions, 72% passing). Start free — 15 sample questions & ${TITLE_YEAR} study guide.`,
     'experience-cloud':
-      `Free Experience Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 exam fee. ${TITLE_YEAR} study guide with practice questions included.`,
+      `Salesforce Experience Cloud certification: Free practice (60 questions, ~65% passing, 105 min). Start free — sample questions & ${TITLE_YEAR} study guide.`,
     'slack-developer':
-      `Looking for affordable Slack Developer prep? Get our free ${TITLE_YEAR} study guide, exam breakdowns, and practice tips to pass your certification.`,
+      `Salesforce Slack Developer certification: Free ${TITLE_YEAR} study guide, exam breakdowns, and practice tips to pass. Start free.`,
     'tableau-data-analyst':
       `Master the Tableau Data Analyst exam with updated ${TITLE_YEAR} practice questions, detailed explanations, and exam weightage. Start practicing free today.`,
     'mulesoft-integration-foundations':
-      `Find MuleSoft Integration Foundations ${TITLE_YEAR} exam fees and code, plus free practice questions and study tips to pass on your first try.`,
+      `MuleSoft Integration Foundations ${TITLE_YEAR}: exam fees, exam code, free practice questions and study tips to pass. Start free.`,
+    'technical-architect':
+      `Salesforce Architect certification (CTA): CTA Evaluation & Review Board guide. Start free — format details, prep path, ${TITLE_YEAR} success tips.`,
     'technical-architect-review-board':
-      `Prepare for the Salesforce CTA Review Board with format details, prep path, and ${TITLE_YEAR} success tips. Get focused guidance before your board date.`,
+      `Salesforce CTA Review Board: format details, prep path, and ${TITLE_YEAR} success tips. Get focused guidance before your board date. Start free.`,
     'integration-architect':
-      `Free Integration Architect practice: 60 questions, ~68% passing score, 120 min. $400 exam fee, ${TITLE_YEAR} study guide. Prerequisites: App & System Architect.`,
+      `Integration Architect: Free practice (60 Qs, ~68% passing). Start free — sample questions. $400 fee. ${TITLE_YEAR} guide.`,
     'data-architect':
-      `Free Data Architect practice: 60 questions, ~68% passing score, 120 min. $400 fee. ${TITLE_YEAR} study guide. Prerequisites: Application & System Architect certs.`,
+      `Salesforce Data Architect certification: Free practice (60 questions, ~68% passing, 120 min). Start free — sample questions. $400 fee. ${TITLE_YEAR} guide.`,
     'system-architect':
-      `Free System Architect practice: 60 questions, ~68% passing score, 120 min. $400 exam fee. ${TITLE_YEAR} study guide with domain weights breakdown & prep tips.`,
+      `Salesforce System Architect certification: Free practice (60 questions, ~68% passing, 120 min). Start free — sample questions. $400 fee. ${TITLE_YEAR} guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
-    'administrator-practice-test': `ADM-201 practice test with real exam-style questions. Section weightage, passing scores, and detailed explanations. Free test, no signup. ${TITLE_YEAR} updated.`,
-    'agentforce-specialist': `Master Agentforce Specialist certification. Free practice questions, exam overview, and study strategy. Agentforce fundamentals explained simply. Start free ${TITLE_YEAR}.`,
-    'ai-associate': `Earn AI Associate certification. Free practice questions, Einstein AI setup, and responsible AI principles. Complete beginner-friendly study guide ${TITLE_YEAR}.`,
-    'application-architect': `Pass Application Architect certification. Architecture patterns, design decisions, and solution design. Practice questions + exam strategy included ${TITLE_YEAR}.`,
-    'b2b-commerce-admin-ap': `Become B2B Commerce Admin AP certified. Free study guide with platform features, admin tasks, and exam tips. ${TITLE_YEAR} practice questions included.`,
-    'b2b-commerce-developer-ap': `Get B2B Commerce Developer AP certification. Integration patterns, API usage, and customization guide. Free practice + exam prep ${TITLE_YEAR}.`,
-    'b2b-solution-architect': `Master B2B Solution Architecture. Design patterns, solution approach, and best practices. Comprehensive study guide with architecture examples ${TITLE_YEAR}.`,
-    'b2c-commerce-architect': `Ace B2C Commerce Architect certification. E-commerce design, storefront architecture, and scaling patterns. Complete study guide ${TITLE_YEAR}.`,
-    'b2c-commerce-developer': `Pass B2C Commerce Developer. Front-end development, cart logic, and customization. Free practice questions and study tips ${TITLE_YEAR}.`,
-    'b2c-solution-architect': `Master B2C Solution Architecture. Digital commerce design, customer experience, and technical strategy. Study guide + tips ${TITLE_YEAR}.`,
+    'advanced-field-service-ap': `Advanced Field Service AP: Free practice (60 questions, ~65% passing, 90 min). Start free — sample questions & ${TITLE_YEAR} study guide. $100 fee.`,
+    'administrator-practice-test': `ADM-201 practice test: real exam-style questions, section weightage, passing scores, detailed explanations. Free, no signup. Start free ${TITLE_YEAR}.`,
+    'agentforce-specialist': `Agentforce Specialist certification: Free practice questions, exam overview, and study strategy. Fundamentals explained simply. Start free ${TITLE_YEAR}.`,
+    'ai-associate': `Salesforce Associate certification: AI Associate free practice. Start free — 15 sample questions, Einstein AI topics. ${TITLE_YEAR} study guide.`,
+    'application-architect': `Salesforce Application Architect certification: Free practice (60 questions, ~65% passing). Start free — sample questions & ${TITLE_YEAR} study guide.`,
+    'b2b-commerce-admin-ap': `B2B Commerce Admin AP: Free practice (60 Qs, ~65% passing). Start free — sample Qs & ${TITLE_YEAR} study guide. $100 fee.`,
+    'b2b-commerce-developer-ap': `Salesforce B2B Commerce certification (Developer AP): Free practice (60 questions, ~65% passing). Start free — sample questions & ${TITLE_YEAR} study guide.`,
+    'b2b-solution-architect': `B2B Solution Architecture: design patterns, solution approach, and best practices. Free study guide with architecture examples. Start free ${TITLE_YEAR}.`,
+    'b2c-commerce-architect': `B2C Commerce Architect: e-commerce design, storefront architecture, and scaling patterns. Free study guide. Start free ${TITLE_YEAR}.`,
+    'b2c-commerce-developer': `B2C Commerce Developer: Front-end development, cart logic, and customization. Free practice questions ${TITLE_YEAR}. Start free now.`,
+    'b2c-solution-architect': `B2C Solution Architect: Digital commerce design, customer experience & strategy. Study guide ${TITLE_YEAR}. Start free practice now.`,
     'communications-cloud-ap': `Earn Communications Cloud AP. Messaging platform, SMS integration, and customer communication setup. Free study guide ${TITLE_YEAR}.`,
-    'consumer-goods-cloud-ap': `Get Consumer Goods Cloud AP certified. Industry-specific features, commerce, and planning. Study guide with industry use cases ${TITLE_YEAR}.`,
+    'consumer-goods-cloud-ap': `Consumer Goods Cloud AP: industry-specific features, commerce, and planning. Study guide with industry use cases. Start free ${TITLE_YEAR}.`,
     'consumer-goods-tpm-ap': `Earn TPM AP certification for consumer goods. Trade promotion management, spending, and analytics. ${TITLE_YEAR} study guide.`,
-    'contact-center-ap': `Pass Contact Center AP. Call center features, routing, and customer service setup. Free practice questions and exam guide ${TITLE_YEAR}.`,
+    'contact-center-ap': `Contact Center AP: Call center features, routing, and service setup. Free practice questions and exam guide ${TITLE_YEAR}. Start free.`,
     'cpq-billing-ap': `Earn CPQ & Billing AP. Configure-Price-Quote, billing cycles, and revenue management. Study guide with real examples ${TITLE_YEAR}.`,
     'crm-analytics-einstein-discovery-consultant': `Master CRM Analytics & Einstein Discovery. Dashboards, analytics, predictive AI, and insights. Complete study guide ${TITLE_YEAR}.`,
-    'data-cloud-consultant': `Become Data Cloud Consultant. Customer 360, data unification, and activation. Free practice + architecture guide ${TITLE_YEAR}.`,
+    'data-cloud-consultant': `Data Cloud Consultant exam: Free practice (60 questions, ~65% passing, 105 min). Start free — 15 sample questions & ${TITLE_YEAR} study guide.`,
+    'developer-1': `Platform Developer I (PD1): Free practice (60 Qs, ~65% passing, 105 min). Start free — 15 sample Qs & ${TITLE_YEAR} study guide. $200 fee.`,
     'dev-lifecycle-deployment-architect': `Ace Dev Lifecycle & Deployment Architect. GitHub, deployment, testing, and CI/CD. Architecture patterns guide ${TITLE_YEAR}.`,
     'education-cloud-consultant': `Master Education Cloud Consultant. Student lifecycle, admissions, courses, and engagement. Industry guide with exam tips ${TITLE_YEAR}.`,
-    'email-specialist-practice-test': `Email Specialist practice test. Marketing Cloud, email automation, and campaign management. Real exam-style questions, free test ${TITLE_YEAR}.`,
-    'energy-utilities-ap': `Earn Energy & Utilities AP. Utility-specific features, billing, and customer management. Study guide with industry context ${TITLE_YEAR}.`,
-    'field-service': `Master Field Service Consultant. Mobile scheduling, work orders, and field operations. Complete study guide with examples ${TITLE_YEAR}.`,
-    'financial-services-cloud-ap': `Get Financial Services Cloud AP certified. Banking, insurance, and wealth solutions. Free study guide with industry scenarios ${TITLE_YEAR}.`,
+    'email-specialist-practice-test': `Email Specialist practice test: Start free. Real exam-style questions, Marketing Cloud topics, section weightage. Free — no signup. ${TITLE_YEAR}.`,
+    'energy-utilities-ap': `Energy & Utilities AP: Utility features, billing, and customer management. Study guide ${TITLE_YEAR}. Start free practice now.`,
+    'field-service': `Field Service Consultant: Mobile scheduling, work orders, and field operations. Study guide ${TITLE_YEAR}. Start free practice now.`,
+    'financial-services-cloud-ap': `Financial Services Cloud AP: banking, insurance, and wealth solutions. Free study guide with industry scenarios. Start free ${TITLE_YEAR}.`,
     'health-cloud-ap': `Earn Health Cloud AP. Healthcare delivery, patient management, and clinical info. Medical industry study guide ${TITLE_YEAR}.`,
     'heroku-architect': `Master Heroku Architect. Container orchestration, scaling patterns, and deployment strategy. Architecture design guide ${TITLE_YEAR}.`,
     'heroku-developer-ap': `Earn Heroku Developer AP. Platform management, environment setup, and best practices. Free study guide ${TITLE_YEAR}.`,
@@ -686,7 +692,7 @@ export function getCertMetaDescription(slug: string): string {
     'marketing-cloud-engagement-developer': `Pass Marketing Cloud Engagement Developer. Automation scripting, journeys, and API integration. Developer study guide ${TITLE_YEAR}.`,
     'marketing-cloud-engagement-foundations': `Start Marketing Cloud Engagement foundation knowledge. Email setup, lists, and basic automation. Beginner study guide ${TITLE_YEAR}.`,
     'marketing-cloud-intelligence-ap': `Earn Marketing Cloud Intelligence AP. Data warehouse, reporting, and analytics. Free study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-personalization-ap': `Get Marketing Cloud Personalization AP certified. Web personalization, content targeting, and recommendations. Study guide ${TITLE_YEAR}.`,
+    'marketing-cloud-personalization-ap': `Marketing Cloud Personalization AP: Web personalization, targeting, and recommendations. Study guide ${TITLE_YEAR}. Start free.`,
     'media-cloud-ap': `Earn Media Cloud AP. Content publishing, digital asset mgmt, and media orchestration. Study guide ${TITLE_YEAR}.`,
     'mulesoft-catalyst-consultant': `Master MuleSoft Catalyst Consultant. Customer success, adoption, and strategic guidance. Consultant study guide ${TITLE_YEAR}.`,
     'mulesoft-developer-i': `Pass MuleSoft Developer I. Integration patterns, connectors, and API design. Free practice questions and study tips ${TITLE_YEAR}.`,
@@ -694,12 +700,13 @@ export function getCertMetaDescription(slug: string): string {
     'mulesoft-integration-architect': `Master MuleSoft Integration Architect. Architecture patterns, governance, and enterprise integration. Design study guide ${TITLE_YEAR}.`,
     'mulesoft-platform-architect': `Ace MuleSoft Platform Architect. Infrastructure, deployments, and platform strategy. Architecture patterns guide ${TITLE_YEAR}.`,
     'net-zero-cloud-ap': `Earn Net Zero Cloud AP. Sustainability tracking, emissions management, and carbon accounting. Green tech study guide ${TITLE_YEAR}.`,
-    'nonprofit-cloud': `Master Nonprofit Cloud Consultant. Grant management, constituent engagement, and fundraising. Nonprofit-specific study guide ${TITLE_YEAR}.`,
+    'nonprofit-cloud': `Nonprofit Cloud Consultant: grant management, constituent engagement, and fundraising. Nonprofit-specific study guide. Start free ${TITLE_YEAR}.`,
     'nonprofit-success-pack-consultant': `Pass NPSP (Nonprofit Success Pack) Consultant. Donations, relationships, and nonprofit configuration. Free study guide ${TITLE_YEAR}.`,
     'omnistudio-consultant': `Master OmniStudio Consultant. Omni-channel design, integration, and customer experience. Solution design study guide ${TITLE_YEAR}.`,
     'omnistudio-developer': `Pass OmniStudio Developer. Component development, data handling, and OmniScript. Developer study guide ${TITLE_YEAR}.`,
     'order-management-admin-ap': `Earn Order Management Admin AP. Order operations, fulfillment, and supply chain. Admin study guide ${TITLE_YEAR}.`,
     'order-management-developer-ap': `Get Order Management Developer AP certified. API customization, integrations, and extensions. Developer guide ${TITLE_YEAR}.`,
+    'platform-foundations': `Salesforce Platform Foundations: Free practice (40 questions, ~65% passing, 75 min). Start free — sample questions & ${TITLE_YEAR} study guide. $75 fee.`,
     'process-automation-ap': `Earn Process Automation AP. Business processes, automation design, and optimization. Free study guide ${TITLE_YEAR}.`,
     'public-sector-solutions-ap': `Get Public Sector Solutions AP certified. Government features, compliance, and citizen engagement. Sector study guide ${TITLE_YEAR}.`,
     'revenue-cloud-consultant': `Master Revenue Cloud Consultant. Billing cycles, revenue recognition, and order mgmt. Enterprise billing study guide ${TITLE_YEAR}.`,
@@ -713,7 +720,7 @@ export function getCertMetaDescription(slug: string): string {
     'tableau-desktop-foundations': `Start Tableau Desktop foundation knowledge. Dashboard basics, data visualization, and setup. Beginner guide ${TITLE_YEAR}.`,
     'tableau-server-administrator': `Master Tableau Server Admin. Server setup, user management, and governance. Complete admin guide ${TITLE_YEAR}.`,
     'technical-architect-evaluation': `Pass CTA Evaluation. Scenario-based exam, architectural decisions, and design justification. Exam strategy guide ${TITLE_YEAR}.`,
-    'ux-designer': `Master Salesforce UX Designer. Design thinking, user experience, and interface design. Complete design study guide ${TITLE_YEAR}.`,
+    'ux-designer': `Salesforce UX Designer certification: Free practice (60 questions, ~65% passing). Start free — 15 sample questions. ${TITLE_YEAR} study guide.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
@@ -947,7 +954,10 @@ export function getCertMetadata(slug: string): Metadata {
   // Updated 2026 for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'
   const modifiedTime = '2026-02-12T00:00:00Z'
-  
+
+  // Per-cert dynamic OG image — shows cert name, "Free Practice" badge, release year
+  const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(primaryName)}`
+
   return {
     title: { absolute: titleForMeta },
     description: descForMeta,
@@ -962,10 +972,10 @@ export function getCertMetadata(slug: string): Metadata {
       modifiedTime,
       images: [
         {
-          url: `${baseUrl}/og-image`,
+          url: ogImageUrl,
           width: 1200,
           height: 630,
-          alt: `${primaryName} - Practice Questions & Study Guide`,
+          alt: `${primaryName} - Free Practice Questions & Study Guide`,
         },
       ],
     },
@@ -973,7 +983,7 @@ export function getCertMetadata(slug: string): Metadata {
       card: 'summary_large_image',
       title: titleForMeta,
       description: descForMeta,
-      images: [`${baseUrl}/og-image`],
+      images: [ogImageUrl],
     },
     other: {
       'article:published_time': publishedTime,

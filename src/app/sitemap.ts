@@ -4,10 +4,8 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const excludedCertPaths = new Set([
-    '/certifications/administrator-practice-test',
-    '/certifications/email-specialist-practice-test',
-  ])
+  // No cert pages excluded — practice-test pages have 200+ impressions and should be sitemapped
+  const excludedCertPaths = new Set<string>([])
 
   const certUrls = CERTIFICATION_CATEGORIES.flatMap((cat) =>
     cat.items

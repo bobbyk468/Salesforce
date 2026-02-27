@@ -165,6 +165,33 @@ export default function TableauDesktopFoundationsPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tableau Desktop Foundations: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connecting to Data and Data Source Basics</p>
+                <p>Tableau Desktop connects to hundreds of data sources: files (Excel, CSV, JSON), databases (SQL Server, PostgreSQL, BigQuery), and cloud services. Data Source page: connect, join or union tables, preview data, rename fields, hide unused fields, change data types. Live connection queries the database each time; Extract (.hyper) snapshots the data for performance. Field types: Dimensions (qualitative, blue), Measures (quantitative, green). Discrete fields create headers; Continuous fields create axes. Understanding pills (fields), shelves (rows, columns, marks card) and how they map to the view is the foundation of the Foundations exam.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Building Basic Visualisations</p>
+                <p>Tableau&apos;s Show Me panel suggests chart types based on selected fields. Common charts: Bar (compare categories), Line (trend over time), Scatter (correlation between two measures), Map (geographic data), Pie (part-to-whole — use sparingly). Shelves: Columns shelf = X axis, Rows shelf = Y axis, Marks card controls colour, size, shape, label, detail, tooltip. Sorting: by field value (ascending/descending), by manual drag, or by nested sort. The Foundations exam tests how to build each chart type and which is most appropriate for a given question.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Filtering, Sorting, and Groups</p>
+                <p>Filter types: Dimension filters (categorical), Measure filters (range/conditional), Date filters (relative, range, discrete). Filter order of operations: Extract &rarr; Data Source &rarr; Context &rarr; Dimension &rarr; Measure. Context filters improve performance by reducing the data set before other filters apply. Sets are named subsets of dimension members — In/Out members can be used in calculations. Groups combine dimension members into named categories directly on the field (e.g., combining East and West into &apos;Combined&apos;). Quick filters show filter controls in the view for user interactivity.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Calculated Fields: Basic Formulas</p>
+                <p>Calculated fields create new data from existing fields. Basic functions: String (LEFT, RIGHT, MID, CONTAINS, LEN), Date (DATEPART, DATEDIFF, DATEADD, TODAY), Logical (IF/ELSEIF/END, IIF, CASE), Aggregate (SUM, AVG, MAX, MIN, COUNTD). Table calculations reference values relative to other rows in the view (RUNNING_SUM, WINDOW_SUM, RANK, PREVIOUS_VALUE). The Foundations exam tests writing basic calculated fields to answer common business questions — e.g., profit margin (SUM([Profit])/SUM([Sales])), year-over-year growth, conditional categorisation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboards and Stories</p>
+                <p>Dashboards combine multiple sheets into a single view. Layout: Tiled vs Floating objects. Containers (Horizontal, Vertical) control how objects resize together. Device preview shows how the dashboard looks on desktop, tablet, and phone. Dashboard Actions enable interactivity — Filter Action (click to filter), Highlight Action (click to highlight), URL Action (open a link). Stories are a presentation format — a sequence of Story Points, each showing a sheet or dashboard with a caption, for guided data narration. The Foundations exam tests how to create a dashboard, add interactivity, and build a basic story.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -197,6 +224,7 @@ export default function TableauDesktopFoundationsPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

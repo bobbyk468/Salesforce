@@ -31,7 +31,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const howToJsonLd = getCertHowToJsonLd(slug, certTitle)
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
   const pageUrl = `${siteBaseUrl}/certifications/${slug}`
-  const nowIso = new Date().toISOString()
+  // Use a stable publish date so Article schema doesn't re-signal "just published" on every deploy.
+  // Update dateModified when content is refreshed.
+  const datePublished = '2024-10-01T00:00:00Z'
+  const dateModified = '2026-02-27T00:00:00Z'
 
   const courseJsonLd = {
     '@context': 'https://schema.org',
@@ -68,8 +71,8 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       name: 'Trailblaze Prep',
       url: siteBaseUrl,
     },
-    datePublished: nowIso,
-    dateModified: nowIso,
+    datePublished,
+    dateModified,
     inLanguage: 'en',
   }
 

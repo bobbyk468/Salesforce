@@ -193,6 +193,33 @@ export default function MarketingCloudEngagementDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Engagement Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AMPscript Advanced Functions</p>
+                <p>Key AMPscript functions: Lookup() retrieves a single DE value; LookupRows() returns a full rowset; Row() and Field() navigate rowsets. FOR/NEXT loops iterate over rowsets. IIF() is the inline conditional; IF/ELSEIF/ENDIF for multi-branch logic. TreatAsContentArea() renders a content area by name. HTTPGet() and HTTPPost() call external APIs from AMPscript. DateAdd() and DateParse() handle date manipulation. The developer exam tests selecting the right function for a given personalisation or data retrieval scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Server-Side JavaScript (SSJS) in Marketing Cloud</p>
+                <p>SSJS runs on Marketing Cloud servers (not in the browser) using JavaScript 1.6 syntax. Platform functions (Marketing Cloud-specific) are available alongside standard JS. Common uses: HTTP POST to external systems, manipulating Data Extensions, complex data processing. SSJS runs in Email, Landing Pages, and Automation Studio Script activities. Key objects: Platform.Load(), HTTP.Post(), Retrieve(), DataExtension.Add(). The developer exam tests when to use SSJS vs AMPscript — SSJS for complex logic and API integration, AMPscript for personalisation within emails.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CloudPages and Dynamic Content</p>
+                <p>CloudPages host landing pages, microsites, and smart capture forms. AMPscript-powered CloudPages can capture form data to Data Extensions (SmartCapture). Personalised URLs (PURLs) embed subscriber tokens in CloudPage URLs for pre-filled forms. Dynamic content blocks in emails show different content to different audiences based on rules — configured in Content Builder. The developer builds reusable content blocks with AMPscript logic for personalisation across campaigns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Marketing Cloud REST and SOAP APIs</p>
+                <p>REST API: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). SOAP API: Subscriber, List, TriggeredSend objects — legacy but still tested. Authentication: obtain access token via OAuth 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Studio Script Activities</p>
+                <p>Script Activities run SSJS code within Automation Studio workflows. Common use cases: data manipulation between DE extracts, calling external APIs, complex data quality checks before sends. Script Activities run synchronously — keep them under 30 minutes to avoid timeout. Error handling: use try/catch in SSJS; log errors to a dedicated error DE. The developer designs automation sequences combining Script Activities, SQL Query Activities, Data Extract Activities, and File Transfer Activities for complex data processing pipelines.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function MarketingCloudEngagementDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

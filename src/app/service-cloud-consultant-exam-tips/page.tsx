@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
 const pageTitle = `Service Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Service Cloud Consultant exam tips for ${RELEASE_CURRENT}: exam weightage, case management, knowledge base, entitlements, omni-channel, and mock-test benchmarks to pass first attempt.`
+  `Service Cloud Consultant exam tips (${RELEASE_CURRENT}): omnichannel routing, case management, SLAs, and escalation rules. Start free practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'Service Cloud Consultant Exam Tips', url: '/service-cloud-consultant-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Service Cloud Consultant exam format?',
+    answer: 'The Salesforce Service Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 67% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What are the highest-weight Service Cloud Consultant topics?',
+    answer: 'Case Management (15%), Service Console Productivity (15%), and Omni-Channel Routing (13%) are the top-weighted sections. Together they account for over 40% of the exam.',
+  },
+  {
+    question: 'Do I need ADM-201 for the Service Cloud Consultant exam?',
+    answer: 'Salesforce recommends ADM-201 as a prerequisite but does not officially require it. However, strong Salesforce admin knowledge is essential — most exam scenarios require an understanding of platform-wide configuration.',
+  },
+  {
+    question: 'How long to study for Service Cloud Consultant?',
+    answer: '6–8 weeks with hands-on org practice. Focus on real-world case management scenarios, entitlements, milestones, Omni-Channel configuration, and Knowledge article lifecycle.',
+  },
+]
+
 export default function ServiceCloudConsultantExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function ServiceCloudConsultantExamTipsPage() {
     description: pageDescription,
     path: '/service-cloud-consultant-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

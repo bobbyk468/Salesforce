@@ -235,6 +235,33 @@ export default function Developer2Page() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Developer II: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Design Patterns for Enterprise Apex</p>
+                <p>The exam tests four core patterns. <strong>Singleton</strong> ensures one shared class instance per transaction — used for handler registries and settings caches. <strong>Factory</strong> creates objects dynamically based on runtime type. <strong>Strategy</strong> encapsulates interchangeable algorithms in separate classes — ideal for pricing or routing logic that varies by record type. <strong>Trigger Handler</strong> separates trigger logic from business logic, enabling testable, single-responsibility handler classes. Know which pattern a given code smell or requirement maps to.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Asynchronous Apex: Choosing the Right Context</p>
+                <p><strong>@future</strong> — simplest async, no complex parameters, no chaining, no job IDs. <strong>Queueable</strong> — supports complex sObject parameters, job chaining (enqueue from finish), and returns AsyncApexJob ID. <strong>Batch Apex</strong> — processes up to 50 million records in chunks; implement Database.Stateful to retain instance variables across iterations; chain in finish() via Database.executeBatch(). <strong>Schedulable</strong> — time-based entry point; use to kick off Batch or Queueable. The exam presents a scenario and asks which context is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration: Callouts, Named Credentials, and Platform Events</p>
+                <p>Callouts cannot be made from synchronous triggers — use @future(callout=true) or Queueable with Database.AllowsCallouts. <strong>Named Credentials</strong> store the endpoint URL and authentication credentials securely, referenced in Apex as callout:NamedCredName. <strong>Platform Events</strong> provide loosely coupled, fire-and-forget publish/subscribe messaging — publishers do not wait for subscribers. <strong>Change Data Capture</strong> streams record change events to external systems without polling. The exam tests when each mechanism is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing Strategy: Setup, Mocking, and Coverage</p>
+                <p><strong>@TestSetup</strong> creates test data once for all test methods in the class, preventing repeated DML and improving performance. <strong>Test.startTest() / Test.stopTest()</strong> resets governor limits for the code under test and forces async jobs to complete. Mock callouts using <strong>HttpCalloutMock</strong> (implement the interface) or <strong>StaticResourceCalloutMock</strong> (use a static resource JSON file). System.assert patterns: assertEquals(expected, actual), assertNotEquals, assertTrue — always provide a meaningful message. 75% code coverage is required for deployment.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security in Apex: Sharing, FLS, and AuraEnabled</p>
+                <p><strong>with sharing</strong> enforces the running user&apos;s sharing rules; <strong>without sharing</strong> bypasses them; <strong>inherited sharing</strong> inherits from caller context. Classes default to without sharing if unspecified — a PD2-level trap. <strong>FLS enforcement</strong>: use Schema.SObjectType.getDescribe().fields.getMap() to check field accessibility, or <strong>stripInaccessible()</strong> to filter query results. <strong>@AuraEnabled</strong> exposes methods to LWC and Aura components — always combine with FLS and sharing checks. CRUD checks require Schema.SObjectType.Account.isCreateable() style checks.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -289,6 +316,7 @@ export default function Developer2Page() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

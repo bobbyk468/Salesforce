@@ -193,6 +193,33 @@ export default function DataArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Data Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Modeling: Objects, Relationships, and Big Objects</p>
+                <p>Beyond standard objects, Data Architects design custom objects with appropriate relationship types. External Objects connect to data stored outside Salesforce via OData connectors. Big Objects store billions of records but have limited SOQL support (no GROUP BY, aggregate queries) &mdash; used for archival. Platform Events are schema-defined and support publish/subscribe. The exam tests when to use each object type and the implications for querying, sharing, and storage.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Master Data Management and Deduplication</p>
+                <p>MDM strategies define the golden record &mdash; the authoritative version of a data entity. Salesforce Matching Rules define how duplicates are identified (fuzzy vs exact matching on fields). Duplicate Rules control what happens when a match is found &mdash; alert, block, allow with warning, or report. External IDs support upsert operations &mdash; the system matches on external ID to update existing records or insert new ones. The exam tests MDM patterns and duplicate prevention configuration for large-scale data integrations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Migration: Bulk API and Integration Patterns</p>
+                <p>Bulk API 2.0 processes up to 100 million records per batch job &mdash; preferred for large-scale data loads. Data Loader uses Bulk API for loads over 200 records. For complex migrations, ETL (Extract, Transform, Load) tools (MuleSoft, Informatica) prepare data before loading. Heroku Connect provides bi-directional sync between Heroku Postgres and Salesforce. The exam tests which migration tool matches the data volume, transformation complexity, and latency requirements of each scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Quality and Governance</p>
+                <p>Validation Rules enforce data quality at the point of entry &mdash; they run on all DML paths (UI, API, Data Loader). Field History Tracking captures changes to up to 20 fields per object and retains data for 18 months. Setup Audit Trail tracks admin configuration changes for 180 days. Data Quality dashboards using CRM Analytics can surface completeness, accuracy, and consistency metrics. The exam tests which governance mechanism addresses a specific data quality requirement.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Large Data Volumes: Performance and Archiving</p>
+                <p>Large Data Volume (LDV) considerations: indexed fields in WHERE clauses improve SOQL performance (standard fields are indexed; custom fields can be requested). Avoid non-selective queries. Skinny Tables pre-join frequently queried field combinations for reporting performance. Async SOQL runs long-running queries asynchronously. Data archiving to Big Objects or external systems reduces active data volume. The exam tests LDV performance patterns and when to recommend archiving, skinny tables, or query optimisation.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function DataArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

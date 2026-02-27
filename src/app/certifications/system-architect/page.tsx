@@ -193,6 +193,33 @@ export default function SystemArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">System Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Patterns: Choosing the Right Approach</p>
+                <p>The exam presents an integration scenario and asks which pattern applies. <strong>Request-reply</strong> (REST/SOAP callout) — synchronous, caller waits for response; use for real-time data retrieval. <strong>Fire-and-forget</strong> (Platform Events, async queue) — caller publishes and moves on; use when immediate response is not needed. <strong>Batch ETL</strong> — high-volume data movement on a schedule. <strong>Change Data Capture</strong> — streams field-level record change events for near-real-time synchronisation. <strong>Point-to-point vs hub-and-spoke</strong>: as integration count grows, hub-and-spoke (middleware) reduces coupling.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Authentication Patterns: OAuth 2.0 Flows</p>
+                <p><strong>Web Server Flow</strong> — user-facing; redirects to Salesforce login, returns authorisation code exchanged for token. <strong>JWT Bearer Flow</strong> — server-to-server; no user interaction; client signs a JWT assertion with a certificate. <strong>Client Credentials Flow</strong> — machine-to-machine; client ID + secret exchanged for access token without a user. <strong>Device Flow</strong> — for devices without browsers. <strong>Named Credentials</strong> store the endpoint and auth details in Salesforce, keeping credentials out of Apex code. <strong>Connected Apps</strong> define OAuth scopes, IP restrictions, and session policies.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API-Led Connectivity and Middleware (MuleSoft)</p>
+                <p>API-led connectivity organises APIs in three layers: <strong>System APIs</strong> wrap individual backend systems (ERP, legacy), exposing a stable contract regardless of the system&apos;s protocol. <strong>Process APIs</strong> orchestrate business logic across multiple System APIs — composable, reusable. <strong>Experience APIs</strong> tailor data for specific consumers (mobile app, partner portal). MuleSoft Anypoint Platform implements this pattern. Understand when native Salesforce integration (REST, Platform Events) is sufficient vs when middleware is warranted (protocol mismatch, fan-out orchestration, message transformation).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sandbox Strategy and Release Management</p>
+                <p>Sandbox types by size and use: <strong>Developer</strong> (5 MB data, metadata only, for development), <strong>Developer Pro</strong> (1 GB, for larger teams), <strong>Partial Copy</strong> (5 GB, subset of production data, for testing), <strong>Full Copy</strong> (full production replica, for load testing and final UAT). Deployment tools: <strong>Change Sets</strong> (org-to-org, no version control), <strong>Salesforce CLI + Metadata API</strong> (source-driven, supports Git), <strong>Unlocked Packages</strong> (modular, versioned, dependency-aware). The exam tests which combination of sandbox type and deployment tool fits a given governance requirement.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Identity, SSO, and My Domain</p>
+                <p><strong>SAML 2.0</strong> enables SSO: Salesforce can act as <strong>Identity Provider</strong> (issues assertions to external apps) or <strong>Service Provider</strong> (receives assertions from an external IdP like Okta or Azure AD). <strong>My Domain</strong> is required for SSO — it provides the custom login URL and enables domain-based login policies. <strong>Delegated Authentication</strong> sends the user&apos;s credentials to an external web service for validation (legacy approach). <strong>OAuth</strong> handles API access delegation, not web SSO. Know the trust chain: IdP issues SAML assertion → SP validates the assertion&apos;s signature using the IdP&apos;s certificate → session created.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -200,7 +227,7 @@ export default function SystemArchitectPage() {
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}
           </div>
-          
+
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           <div id="related-certs">
@@ -218,6 +245,7 @@ export default function SystemArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

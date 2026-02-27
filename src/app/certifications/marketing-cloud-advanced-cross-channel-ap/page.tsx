@@ -62,6 +62,33 @@ export default function MarketingCloudAdvancedCrossChannelAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Marketing Cloud Advanced Cross-Channel: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Journey Builder Design</p>
+                <p>Advanced Cross-Channel builds on the Foundations cert. Advanced Journey features: Einstein Engagement Splits (AI-based routing by engagement score), Random Splits for A/B/n testing at scale, Engagement Frequency Splits (route by how often a contact has received messages), Wait Until Event (pause until a specific event occurs). Multi-journey coordination — managing contact entry into multiple journeys simultaneously. The exam tests how to design complex multi-branch journeys and when to use each split type.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mobile Messaging: MobileConnect and MobilePush</p>
+                <p>MobileConnect manages SMS/MMS marketing. Keywords and shortcodes for opt-in/opt-out. Triggered sends via API. MobilePush manages push notifications to iOS and Android apps registered with Marketing Cloud. In-app messaging within mobile apps. Both channels integrate with Journey Builder as activities. Compliance: SMS requires explicit opt-in (TCPA in US), double opt-in recommended. The exam tests channel-specific compliance requirements and how each mobile channel integrates into cross-channel journeys.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advertising Studio: Audience Sync</p>
+                <p>Advertising Studio syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences — sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match — same concept for Google Ads. Lead Ads — capture leads from Facebook/Google into Marketing Cloud Data Extensions. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Contact Builder and Data Architecture</p>
+                <p>Contact Builder is the unified data management layer. Attribute Groups link Data Extensions to Contact records using a key field (usually Subscriber Key). Data Designer creates the contact data schema — defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity — Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Features: Engagement Scoring and Recommendations</p>
+                <p>Einstein Engagement Scoring predicts how likely a contact is to open, click, convert, or unsubscribe. Scores are updated daily and available as Data Extension attributes for segmentation and personalisation. Send Time Optimisation (STO) sends each contact&apos;s email at the historically optimal time. Einstein Content Selection automatically personalises which content block a recipient sees based on predicted engagement. The exam tests which Einstein feature addresses a given personalisation requirement and what data is needed to enable it.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MarketingCloudAdvancedCrossChannelAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

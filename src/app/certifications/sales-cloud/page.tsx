@@ -229,6 +229,33 @@ export default function SalesCloudPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Sales Cloud Consultant: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lead Management: Assignment Rules and Lead Conversion</p>
+                <p><strong>Lead Assignment Rules</strong> automatically route leads to users or queues based on criteria — region, lead source, company size. <strong>Web-to-Lead</strong> captures leads directly from web forms. When a lead converts, Salesforce creates or merges an Account, Contact, and optionally an Opportunity — understanding what maps to what is a high-frequency exam topic. Duplicate rules should be configured to prevent duplicate leads entering the funnel.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Opportunity Management: Stages, Splits, and Teams</p>
+                <p><strong>Sales Processes</strong> define which opportunity stages are available for a given record type — enabling different methodologies for different deal types. <strong>Path</strong> provides stage-by-stage guidance with key fields and success tips. <strong>Opportunity Splits</strong> share revenue credit among team members (overlay splits vs revenue splits). <strong>Opportunity Teams</strong> let multiple reps collaborate on a single deal. The exam tests when each feature applies and how they interact.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Collaborative Forecasts: Categories and Adjustments</p>
+                <p><strong>Collaborative Forecasts</strong> roll up opportunity amounts through the role hierarchy. Each opportunity stage maps to a <strong>Forecast Category</strong>: Pipeline, Best Case, Commit, Closed, or Omitted. Managers can submit adjustments to subordinate forecasts. Custom Forecast Types let organisations forecast on non-amount fields (quantity, revenue). Understand how categories roll up and when manager adjustments override rep numbers.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Products, Price Books, and Quotes</p>
+                <p>Every org has a <strong>Standard Price Book</strong>. <strong>Custom Price Books</strong> define alternative pricing for specific markets, channels, or customer tiers. <strong>Opportunity Products</strong> link products to opportunities with quantity and price. Products must be added to a Price Book before they can appear on an opportunity. Salesforce CPQ (Revenue Cloud) extends native quoting with complex pricing rules, discount schedules, and subscription management — know when CPQ is needed vs native products.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Territory Management and Sales Analytics</p>
+                <p><strong>Enterprise Territory Management</strong> assigns accounts and opportunities to multiple territories simultaneously — enabling matrix-style coverage (by region and product line). Territory rules run automatically as account attributes change. For reporting, key report types are Opportunities by Owner (rep performance), Opportunities by Stage (pipeline health), and Activities by rep. <strong>Einstein Opportunity Scoring</strong> uses AI to predict close probability beyond the stage-based probability field.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -264,6 +291,7 @@ export default function SalesCloudPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

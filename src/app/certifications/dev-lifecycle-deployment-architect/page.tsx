@@ -193,6 +193,33 @@ export default function DevLifecycleDeploymentArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Development Lifecycle and Deployment Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Org Strategy: Sandboxes and Scratch Orgs</p>
+                <p>Sandbox types: Developer (5 MB data, for development), Developer Pro (1 GB), Partial Copy (5 GB sample data, for integration testing), Full Copy (full production replica, for load and UAT testing). Scratch Orgs are temporary, source-driven orgs created from a definition file &mdash; ideal for CI/CD. The exam tests which sandbox type to use for each phase of development and when scratch orgs are preferred over traditional sandboxes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Version Control and Source-Driven Development</p>
+                <p>Salesforce DX uses a source format for metadata &mdash; different from the API (MDAPI) format used by Change Sets. .forceignore excludes files from source tracking (similar to .gitignore). Project Scratch Def files define scratch org configuration (edition, features, settings). sfdx project.json defines the package directories and plugin configuration. The exam tests source-driven development concepts, the difference between metadata formats, and how source tracking works in scratch orgs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CI/CD Pipelines: Salesforce CLI and Packages</p>
+                <p>Salesforce CLI (sf commands) drives automated deployments. Unlocked Packages are the recommended packaging model &mdash; versioned, installable, supports dependency management. Managed Packages are for ISVs distributing on AppExchange &mdash; locked source. The exam tests the deployment tool hierarchy: Change Sets (org-based, no version control) &rarr; Salesforce CLI &amp; MDAPI (scriptable) &rarr; Unlocked Packages (modular, versioned). CI/CD tools (GitHub Actions, Jenkins, CircleCI) automate test runs and deployments on code push.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing in the Deployment Pipeline</p>
+                <p>A minimum of 75% code coverage and all passing tests are required for production deployments. Test suites group related test classes. Run Specified Tests skips unrelated tests for faster deployments. Full test run is required for production. The exam tests how to structure test strategies &mdash; unit tests for individual classes, integration tests across objects, UAT in Partial/Full sandboxes. Test.isRunningTest() should not be used to bypass logic; instead design for testability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Release Management and Deployment Order</p>
+                <p>Destructive Changes (destructiveChanges.xml) remove components during deployment &mdash; must be planned carefully as deleted components cannot be recovered. Dependency order matters: deploy custom objects before fields, custom fields before validation rules referencing them. Rollback strategy: Salesforce does not have built-in rollback &mdash; plan with sandbox parity, feature flags, and version-controlled deployment scripts. Post-deployment verification should include running smoke tests and checking critical business processes. The exam tests deployment sequencing and risk mitigation strategies.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function DevLifecycleDeploymentArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

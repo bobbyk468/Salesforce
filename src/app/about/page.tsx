@@ -4,7 +4,7 @@ import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og-image`
+const ogImageUrl = `${baseUrl}/og?t=About%20Trailblaze%20Prep%20%7C%20Salesforce%20Certification%20Prep`
 const aboutDescription =
   'Trailblaze Prep helps you pass Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, and more.'
 

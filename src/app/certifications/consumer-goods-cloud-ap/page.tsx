@@ -62,6 +62,33 @@ export default function ConsumerGoodsCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Consumer Goods Cloud AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Visit Planning & Route Optimization</p>
+                <p>Consumer Goods Cloud supports field sales and merchandising teams that visit retail stores. Visit Plans define which stores to visit, visit frequency, and visit activities. Route Optimization calculates the most efficient travel sequence for a sales rep&apos;s daily visits. Visit Templates specify which tasks (surveys, order taking, shelf audits) are required at each store type. Priority scoring ranks stores for visit scheduling based on sales volume or compliance risk. The AP exam tests how to configure visit plans, assign them to field teams, and set up route optimization rules — know the difference between manual route assignment and automated optimization.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">In-Store Execution & Retail Audits</p>
+                <p>During a store visit, the field rep uses the Salesforce mobile app to complete Activities: shelf audits (planogram compliance), order capture, promotions execution, and competitive data collection. Surveys capture structured data — product availability, shelf position, facing count. Photos attached to visit records document compliance issues. Einstein Vision can analyze shelf images for planogram compliance. Key Performance Indicators (KPIs) measure execution quality per store and rep. The exam tests how to configure survey questions, how photos are attached and surfaced in reports, and how to set up KPI targets for field team performance management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management & Direct Store Delivery</p>
+                <p>Van Sales (Direct Store Delivery) orders are captured in the field and fulfilled from a delivery vehicle. The order workflow: create cart → confirm order → generate invoice → collect payment → update inventory. Price Books and Price Rules support store-specific and account-specific pricing. Promotions and trade deals apply discounts at the line item level. Inventory management tracks on-hand stock in the delivery vehicle. Returns are processed on-site with inventory adjustments. The exam tests the end-to-end DSD order flow, how pricing rules stack, and how inventory is tracked at the vehicle location level.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account & Store Management</p>
+                <p>Retail accounts (stores, chains, distributors) are managed as Account records with consumer goods-specific fields (store type, chain affiliation, territory). Store Clusters group similar accounts for targeted promotional strategies. Assortment Plans define which products should be available at each store or cluster. Planogram compliance measures whether the right products are shelved in the right positions. Account plans and joint business plans track collaborative goals with key retail partners. The exam tests how to configure assortment plans, how to link planograms to store accounts, and how to set up account plan templates for key account management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics & Field Performance Reporting</p>
+                <p>Consumer Goods Cloud reports and dashboards measure field execution quality, sell-in vs. sell-out performance, and promotional effectiveness. Visit Completion Rate, OSA (On-Shelf Availability), and planogram compliance are key metrics. Einstein Analytics (CRM Analytics) apps for Consumer Goods provide pre-built dashboards for territory managers. Scorecards aggregate KPIs at the rep, territory, and national levels. Alerts notify managers when execution falls below threshold. The exam tests which standard reports are available, how to configure custom KPI scorecards, and how CRM Analytics datasets are populated from visit activity data.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function ConsumerGoodsCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

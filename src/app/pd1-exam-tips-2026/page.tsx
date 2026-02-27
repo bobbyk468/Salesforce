@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `PD1 Exam Tips (${RELEASE_CURRENT}): Salesforce Platform Developer I Study Guide`
+const pageTitle = `PD1 Exam Tips (${RELEASE_CURRENT}): Platform Developer I Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `PD1 exam tips for ${RELEASE_CURRENT}: Apex governor limits, bulkification, trigger best practices, 75% coverage rule, and mock-test benchmarks to pass Platform Developer I first attempt.`
+  `PD1 exam tips (${RELEASE_CURRENT}): Apex governor limits, bulkification, trigger best practices, and 75% coverage rule. Start free practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: `PD1 Exam Tips ${RELEASE_CURRENT}`, url: '/pd1-exam-tips-2026' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the PD1 exam format?',
+    answer: 'The Salesforce Platform Developer I exam (CRT-450) has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 exam fee.',
+  },
+  {
+    question: 'What are the highest-weight PD1 topics?',
+    answer: 'Logic and Process Automation (38%) is the largest section on PD1, followed by Data Management and Integration (11%). Focus on governor limits, trigger best practices, Apex patterns, and bulkification.',
+  },
+  {
+    question: 'How long does it take to prepare for PD1?',
+    answer: '6–8 weeks with daily coding practice. Writing Apex code hands-on is essential — candidates who only read Trailhead without practising tend to struggle with scenario questions.',
+  },
+  {
+    question: 'What is the hardest part of the PD1 exam?',
+    answer: 'Governor limits and bulkification. Every Apex scenario expects bulk-safe code — no SOQL or DML inside loops, use of Maps and Sets for batch operations, and correct trigger context variable usage.',
+  },
+]
+
 export default function Pd1ExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function Pd1ExamTipsPage() {
     description: pageDescription,
     path: '/pd1-exam-tips-2026',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
@@ -195,10 +216,10 @@ export default function Pd1ExamTipsPage() {
             <ArrowRight className="h-4 w-4" />
           </Link>
           <Link
-            href="/certifications/role/developer"
+            href="/developer-certification-path"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
-            Browse Developer Certification Path
+            Full Developer Certification Path
           </Link>
           <Link
             href="/certifications/developer-2"

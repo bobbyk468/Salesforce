@@ -193,6 +193,33 @@ export default function B2CCommerceDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2C Commerce Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SFRA Architecture: Cartridges & Override Pattern</p>
+                <p>SFRA is the Salesforce B2C Commerce reference architecture built on a cartridge system. Cartridges are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in Business Manager) defines override priority — the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Controllers, Scripts & Server-Side Logic</p>
+                <p>SFRA controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog` — the Digital SDK — provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Templates (ISML) & Client-Side Assets</p>
+                <p>ISML (Internet Store Markup Language) is the server-side templating language. `&lt;isinclude&gt;` embeds sub-templates. `&lt;isloop&gt;` iterates collections. `&lt;isset&gt;` assigns variables. `&lt;isif&gt;` handles conditionals. Resource bundles (properties files) provide localized strings. Static assets (JS, CSS, images) are organized in `cartridge/static/` and referenced via `URLUtils.staticURL()`. Webpack compiles and bundles client-side JS in SFRA. SASS is compiled to CSS. Client-side JavaScript uses jQuery and Bootstrap in SFRA. The exam tests ISML syntax, how to pass data from controller to template via `pdict`, and how to add a new client-side component.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Jobs, Feeds & Business Manager Configuration</p>
+                <p>Commerce Cloud Jobs run server-side scripts on a schedule or on-demand. Jobs process product feeds (import/export), order exports, and inventory updates. The Job Framework uses steps configured in Business Manager. IMPEX (Import/Export) handles large data loads via XML or CSV files placed in the IMPEX directory. Site Preferences store admin-configurable settings accessible in code via `dw.system.Site.current.preferences`. Custom Attributes extend standard objects (products, orders, customers) in Business Manager. The exam tests Job configuration, IMPEX file formats, and how to read custom site preferences in controller logic.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing, Debugging & Deployment</p>
+                <p>Commerce Cloud development uses the `sgmf-scripts` (SFRA build tools) and Salesforce Commerce Cloud CLI (`sfcc-ci`) for deployment. Code deployment uploads cartridges to a code version, which is then activated. The Request Log and Custom Log APIs (`dw.system.Logger`) support debugging. The Pipeline Profiler identifies slow controller routes. Functional tests use `mochawesome` reports. Unit testing is done with jest and `dw-api-types` mocks for Digital SDK. The exam tests the deployment sequence (cartridge upload → code version activation), how to write a testable controller with mocked dependencies, and how to diagnose errors using Business Manager logs.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function B2CCommerceDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

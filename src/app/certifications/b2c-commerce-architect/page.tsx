@@ -62,6 +62,33 @@ export default function B2CCommerceArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2C Commerce Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Patterns & Scalability</p>
+                <p>B2C Commerce (Salesforce Commerce Cloud) uses a multi-tenant SaaS architecture for high-volume retail. The SFRA (Storefront Reference Architecture) is the recommended development baseline — it provides a cartridge-based override pattern, MVC structure, and responsive templates. Architects must design for Black Friday-level traffic: CDN caching strategy, page cache TTLs, and product recommendation service integration. Instance types (PIG for production, SIG/ATIG for non-prod) differ in capacity and SLA. The exam tests architecture decisions for scalability, caching hierarchy (browser → CDN → application), and when to use headless vs. SFRA approaches.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Storefront Architecture & Headless Commerce</p>
+                <p>SFRA cartridges implement the Controller → Template → Model pattern. Custom cartridges extend base cartridges via the cartridge path (left-to-right override). Headless architecture decouples the front-end from Commerce Cloud, using the OCAPI (Open Commerce API) or SCAPI (Salesforce Commerce API) for data. PWA Kit provides a React-based headless starter with Managed Runtime hosting. The architect must decide between SFRA (monolithic, faster to stand up) and headless (more flexibility, higher development cost). The exam tests the trade-offs between these approaches and how the cartridge override pattern enables maintainable customization.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture: OCAPI, SCAPI & Connectors</p>
+                <p>OCAPI (Open Commerce API) is the REST API for Shop (storefront), Data (admin), and Meta endpoints — used by SFRA and third-party integrations. SCAPI (Salesforce Commerce API) is the newer, more secure API replacing OCAPI for front-end use. Connectors integrate Commerce Cloud with Service Cloud, Marketing Cloud, and Order Management. The Salesforce Connector for Order Management syncs orders to Salesforce OMS. Einstein Recommendations API surfaces personalized product recommendations. B2C Connect (now Commerce to Service Cloud Connector) links shopper profiles to Service Cloud cases. The exam tests the correct API for each use case and the security model (PKCE flow for SCAPI).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance, Caching & CDN Strategy</p>
+                <p>B2C Commerce uses a CDN (Akamai) for global delivery. Page cache rules define what can be cached, for how long, and with what cache key variations (country, currency, login state). Dynamic content (personalized recommendations, cart) bypasses the page cache. Pipeline profiler and Log Center are key tools for identifying performance bottlenecks. SFRA uses server-side rendering — minimize business logic in templates. Einstein Recommendations and A/B testing (content experiments) add external dependencies that affect page load time. The exam tests cache hierarchy decisions, how to diagnose slow pages using profiler data, and CDN configuration best practices.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security, Compliance & Site Operations</p>
+                <p>B2C Commerce security includes PCI DSS compliance for payment flows — use a certified payment integration (Stripe, Adyen, CyberSource) and never log card data. SLAs, disaster recovery, and business continuity are Salesforce-managed at the platform level but architects must design for graceful degradation when external services (tax, recommendations) are unavailable. Site Genesis and SFRA include CSRF tokens, input validation, and secure cookies. GDPR compliance requires cookie consent management and data deletion capabilities. The exam tests the architect&apos;s responsibility boundary: what Salesforce manages vs. what the customer and SI partner must configure and maintain.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function B2CCommerceArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

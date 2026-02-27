@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og-image`
+const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent('Contact Us | Trailblaze Prep')}`
 const contactDescription =
   'Contact Trailblaze Prep for questions about Salesforce certification prep, practice questions, and study guides for Admin, Developer, and Consultant exams.'
 

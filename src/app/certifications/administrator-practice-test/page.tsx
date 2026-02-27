@@ -166,6 +166,33 @@ export default function AdministratorPracticeTestPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">ADM-201 Practice Test: Key Concepts to Review</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Model & Object Relationships</p>
+                <p>The ADM-201 practice exam heavily tests data modeling. Know the difference between Master-Detail (cascade delete, roll-up summaries, child shares parent OWD) and Lookup (no cascade delete, independent sharing, no roll-up summaries). External IDs mark a text field for upsert operations and external system matching. Schema Builder provides a visual canvas to view and create objects and relationships. Junction Objects enable many-to-many. Compound fields (Address, Geolocation) store multiple components in one field. Expect 3–5 data model questions in every practice set.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security & Access Control</p>
+                <p>Object-level security: set via Profiles and Permission Sets (CRUD). Field-level security: set via Profiles and Permission Sets per field. Record-level security: OWDs, Role Hierarchy, Sharing Rules, Manual Sharing, Teams. The principle of least privilege applies — start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. Connected Apps and OAuth govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation & Process Logic</p>
+                <p>Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). Validation Rules fire before the record saves — use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. Roll-Up Summary fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for Master-Detail from child to parent in roll-up direction).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports & Dashboards for Practice Questions</p>
+                <p>Exam practice questions frequently test who can see what on a dashboard. The Running User setting on a standard dashboard means everyone sees data as that user. Dynamic Dashboards (up to 5) let viewers see their own data — requires "Run Reports" permission. Dashboard components (charts, gauges, tables, metrics, Visualforce) each point to a source report. Report Schedules can be set to run reports and email results on a schedule. Custom Report Types define the objects and join conditions available to report builders. Bucket fields in reports let you group values without a formula field.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AppExchange & Change Management</p>
+                <p>AppExchange packages come in Managed (ISV, upgradeable, code protected) and Unmanaged (source editable, no upgrades) varieties. Always install AppExchange packages in a sandbox first and review required permissions before production install. Change Sets move metadata between orgs in the same Salesforce environment (e.g., sandbox to production). Sandboxes: Developer (small data), Developer Pro (more storage), Partial Copy (subset of data), Full (full copy). The deployment cycle is: develop in sandbox → test → deploy via Change Set, Metadata API, or Salesforce CLI.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, 'aligned to the Administrator exam.')}</p>
@@ -198,6 +225,7 @@ export default function AdministratorPracticeTestPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

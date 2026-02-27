@@ -62,6 +62,33 @@ export default function HerokuArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Heroku Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Platform Architecture & Dynos</p>
+                <p>Heroku runs applications in lightweight Linux containers called Dynos. Dyno types: Web (handles HTTP traffic), Worker (background jobs, no HTTP), One-Off (manual or scheduled tasks). Dyno sizes range from Eco (shared, sleeps after 30 min) to Performance-XL (dedicated, high memory). The Dyno Manager restarts crashed dynos automatically. Horizontal scaling adds more dynos of the same type; vertical scaling changes the dyno size. The Procfile defines process types and start commands. The Router load-balances requests across web dynos (round-robin with session stickiness disabled by default). The architect exam tests how to size and scale a Heroku deployment for a given traffic and processing profile.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Services: Heroku Postgres & Redis</p>
+                <p>Heroku Postgres is the primary managed database — available in Essential (row limits), Standard, Premium, and Private tiers. Connection pooling via PgBouncer reduces database connection overhead. Follow databases provide read replicas for analytics queries. Continuous protection (WAL archiving) enables point-in-time recovery. Heroku Data for Redis handles caching, session storage, and pub/sub messaging. Redis plans: Mini (non-persistent) to Premium (persistent, HA). Heroku Key-Value Store (Redis) replaces legacy Heroku Redis. The exam tests data tier selection for a given durability, availability, and performance requirement, and how to configure read replicas for a high-read workload.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CI/CD, Review Apps & Release Management</p>
+                <p>Heroku Pipelines define promotion stages: Development → Staging → Production. Review Apps automatically deploy pull requests to ephemeral apps for testing — each PR gets its own URL. Heroku CI runs automated tests on each push and blocks promotion on failure. The `heroku pipelines:promote` command promotes a slug (compiled app image) from one stage to the next without rebuilding. Release Phase runs migration scripts or data seeding commands before each new release goes live. Rollbacks revert to a previous release slug instantly. Config Vars (environment variables) are separate per stage, preventing accidental production config in staging. The exam tests how to design a pipeline for a team with multiple parallel feature branches.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security, Compliance & Private Spaces</p>
+                <p>Heroku Private Spaces run Dynos and data services inside a dedicated, isolated network environment — required for compliance workloads (HIPAA, PCI, SOC 2). Private Spaces connect to Salesforce orgs via Salesforce Private Connect (AWS PrivateLink) for secure data exchange without traffic traversing the public internet. Internal Routing restricts apps in a Private Space to only receive traffic from within the space. Shield Private Spaces add encryption at rest and enhanced security controls. Log Drains export Heroku logs to external SIEM or logging systems. Heroku Enterprise provides SSO, audit logs, and team-based access controls. The exam tests Private Space configuration for compliance scenarios and the networking model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Patterns for Salesforce + Heroku</p>
+                <p>Heroku Connect syncs data bidirectionally between Heroku Postgres and Salesforce objects — enabling Heroku apps to read/write Salesforce data without direct API calls. Write acceleration pattern: high-volume writes go to Heroku Postgres first, then Heroku Connect syncs to Salesforce asynchronously, avoiding API rate limits. Event-driven pattern: Salesforce Platform Events trigger Heroku workers via Heroku Connect CDC. Compute-offload pattern: complex calculations (ML inference, image processing) run on Heroku and results are written back to Salesforce. The architect exam tests which pattern to apply for a given scalability, latency, and Salesforce API limit scenario — especially for IoT, mobile, or high-volume data scenarios.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function HerokuArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

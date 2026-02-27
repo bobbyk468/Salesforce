@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce Developer Certification Path (${RELEASE_CURRENT}): Which Cert First?`
+const pageTitle = `Salesforce Developer Cert Path (${RELEASE_CURRENT}): Which First?`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce developer certification path for ${RELEASE_CURRENT}: the right order for PD1, PD2, JavaScript Developer, and Integration Architecture Designer. Career-mapped sequence with time estimates.`
+  `Salesforce developer cert path (${RELEASE_CURRENT}): right order for PD1, PD2, JavaScript Dev, and beyond. Start free practice now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'Salesforce Developer Certification Path', url: '/developer-certification-path' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Salesforce developer certification path?',
+    answer: 'The developer path starts with Platform Developer I (PD1), optionally includes JavaScript Developer I, then advances to Platform Developer II (PD2), and finally Integration Architect for candidates pursuing the architect track.',
+  },
+  {
+    question: 'What is the first Salesforce developer certification to get?',
+    answer: 'Platform Developer I (PD1, exam code CRT-450) is the entry point for all Salesforce developer certifications. It validates Apex fundamentals, SOQL, DML, governor limits, and LWC basics.',
+  },
+  {
+    question: 'How long does it take to become a certified Salesforce developer?',
+    answer: 'PD1 takes 2–3 months of study. Progressing to PD2 typically requires 12–18 months of real Apex project experience after PD1. The full developer-to-architect path usually takes 3–5 years.',
+  },
+  {
+    question: 'Is PD2 required for the Salesforce architect track?',
+    answer: 'PD2 is strongly recommended and often expected for the architect track, though it is not always a hard prerequisite for every architect cert. The CTA panel review effectively requires it as part of a broader cert portfolio.',
+  },
+]
+
 const pathSteps = [
   {
     step: 1,
@@ -54,7 +73,7 @@ const pathSteps = [
   {
     step: 2,
     title: 'Salesforce JavaScript Developer I',
-    slug: 'javascript-developer-1',
+    slug: 'javascript-developer-i',
     badge: 'Optional',
     badgeColor: 'bg-purple-100 text-purple-800',
     fee: '$200',
@@ -79,8 +98,8 @@ const pathSteps = [
   },
   {
     step: 4,
-    title: 'Integration Architecture Designer',
-    slug: 'integration-architecture-designer',
+    title: 'Integration Architect',
+    slug: 'integration-architect',
     badge: 'Advanced',
     badgeColor: 'bg-orange-100 text-orange-800',
     fee: '$400',
@@ -105,12 +124,14 @@ export default function DeveloperCertificationPathPage() {
     description: pageDescription,
     path: '/developer-certification-path',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

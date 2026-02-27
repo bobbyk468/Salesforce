@@ -5,24 +5,26 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
-const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice Questions`
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const indexTitle = `All Salesforce Certifications (${RELEASE_CURRENT}) | Free Practice`
 const indexDescription =
   `Browse Salesforce certifications by role with ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Pick your path and start practicing now.`
+const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(indexTitle)}`
 
 export const metadata: Metadata = {
   title: { absolute: indexTitle },
   description: indexDescription,
   alternates: {
-    canonical: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
+    canonical: `${baseUrl}/certifications`,
   },
   openGraph: {
     title: indexTitle,
     description: indexDescription,
     type: 'website',
-    url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/certifications`,
+    url: `${baseUrl}/certifications`,
     images: [
       {
-        url: `${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image`,
+        url: ogImageUrl,
         width: 1200,
         height: 630,
         alt: 'All Salesforce Certifications - Practice Questions & Study Guides',
@@ -33,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: indexTitle,
     description: indexDescription,
-    images: [`${process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'}/og-image`],
+    images: [ogImageUrl],
   },
 }
 

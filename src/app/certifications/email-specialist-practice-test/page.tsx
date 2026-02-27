@@ -165,6 +165,33 @@ export default function EmailSpecialistPracticeTestPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Email Specialist Practice Test: Key Concepts to Review</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Email Delivery, Compliance & Subscriber Management</p>
+                <p>CAN-SPAM requires a physical mailing address, an unsubscribe mechanism honored within 10 days, and honest subject lines. GDPR requires explicit opt-in consent for EU subscribers and the right to erasure. CASL applies to Canadian recipients. Suppression Lists (global unsubscribes, bounces, complaints) prevent sending to opted-out addresses. Data Extensions store subscriber data with custom attributes for segmentation. Subscriber keys uniquely identify a contact across channels. Double opt-in sends a confirmation email before adding a subscriber to a sendable list. The practice exam frequently tests which compliance rule applies to a given scenario and how suppression lists interact with send classification.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Journey Builder & Triggered Sends</p>
+                <p>Journey Builder orchestrates multi-step, multi-channel customer journeys. Entry Sources include Data Extensions (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation — good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Content Builder & Personalization</p>
+                <p>Content Builder is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with AMPscript or SSJS for dynamic content. AMPscript is the scripting language for personalization — `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Send Classifications & Deliverability</p>
+                <p>Send Classifications define the unsubscribe behavior for a send: Commercial (subscriber can unsubscribe), Transactional (not subject to commercial opt-out rules). Sender Profiles, Delivery Profiles, and Send Classifications combine to control From address, reply-to, and unsubscribe handling. IP Warming is required when using a new dedicated IP — gradually increase send volume to build sender reputation. SPF, DKIM, and DMARC records authenticate sending domains and improve deliverability. Bounce handling: Soft Bounces (temporary, retry) vs. Hard Bounces (permanent, suppress). Spam complaints trigger suppression and affect sender reputation. The exam tests how to configure send classifications for a mixed transactional/commercial sender.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics & Reporting</p>
+                <p>Marketing Cloud Email reporting tracks: Sent, Delivered, Opens (unique + total), Clicks (unique + total), Bounces (hard + soft), Unsubscribes, and Spam Complaints. Click Rate = Clicks / Delivered. Open Rate = Opens / Delivered. The Tracking workspace in Email Studio shows send-level metrics. Data Views (hidden data extensions: _Sent, _Open, _Click, _Bounce, _Unsubscribe) allow SQL queries in Automation Studio for custom reporting. Einstein Engagement Scoring predicts which subscribers are likely to engage. Send Throttling limits the number of emails sent per hour to protect deliverability. The exam tests how to calculate email KPIs from raw numbers and which reporting tool to use for a given analysis need.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, 'aligned to the Email Specialist exam.')}</p>
@@ -197,6 +224,7 @@ export default function EmailSpecialistPracticeTestPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

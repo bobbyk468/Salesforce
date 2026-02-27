@@ -62,6 +62,33 @@ export default function MuleSoftPlatformArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">MuleSoft Platform Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Anypoint Platform Architecture: Control Plane and Runtime Plane</p>
+                <p>Control Plane manages all platform operations: Runtime Manager, API Manager, Exchange, Access Management. Runtime Plane executes Mule applications: CloudHub (MuleSoft-managed cloud), Customer-Hosted Mule Runtime (on-premise or customer&apos;s cloud), Runtime Fabric (containerised deployment on Kubernetes). CloudHub 1.0 uses proprietary workers; CloudHub 2.0 uses Kubernetes pods. The Platform Architect selects the deployment model based on: data residency requirements, security policies, operational capability, and cost model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Runtime Fabric: Container-Based Deployment</p>
+                <p>Anypoint Runtime Fabric (RTF) runs Mule apps in containers on customer-managed Kubernetes clusters. RTF components: Agent (connects cluster to Control Plane), Ingress controller (routes traffic), Monitoring (Titanium). RTF enables: bring-your-own-cloud deployment, air-gapped deployments, co-location with existing Kubernetes workloads. Namespace isolation provides security between applications. Resource allocation defines CPU and memory limits per Mule app. The exam tests RTF vs CloudHub trade-offs and RTF architecture components.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API-Led Governance at Scale</p>
+                <p>At enterprise scale, governance is critical. API Rating in Exchange evaluates quality (documentation completeness, test coverage, security). Certified assets signal reuse approval. API Catalog provides dependency lineage — shows which APIs depend on which. Conformance checks validate that API specs follow organisational standards (naming conventions, required security schemes, documentation). The Platform Architect designs the governance framework — tooling, process, and incentives to drive reuse and prevent shadow IT integration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture: VPC, VPN, and Encryption</p>
+                <p>CloudHub VPC (Virtual Private Cloud) isolates the CloudHub network from the public internet. VPC Peering connects the CloudHub VPC to the customer&apos;s cloud VPC. VPN (site-to-site) connects CloudHub to on-premise data centres. Dedicated Load Balancer provides static IPs for inbound CloudHub traffic. TLS termination at the load balancer. At-rest encryption is handled by CloudHub&apos;s underlying infrastructure (AWS KMS). Anypoint Security Tokenization replaces sensitive data with tokens — PCI DSS compliant.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Operational Excellence: Monitoring and SLAs</p>
+                <p>Anypoint Monitoring provides: metrics (CPU, heap, response time, throughput), dashboards (pre-built and custom), alerts (threshold-based, anomaly detection). Log Management aggregates application logs with search and filtering. Visualizer shows the API dependency graph — which apps call which APIs, in real-time. SLA enforcement: rate limiting policies in API Manager enforce per-client SLAs. The Platform Architect defines the monitoring strategy — KPIs, alert thresholds, escalation runbooks, and capacity planning processes.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function MuleSoftPlatformArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

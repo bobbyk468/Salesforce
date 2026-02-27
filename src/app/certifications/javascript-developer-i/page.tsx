@@ -193,6 +193,33 @@ export default function JavaScriptDeveloperIPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">JavaScript Developer I: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">JavaScript ES6+ Fundamentals</p>
+                <p>The exam tests modern JavaScript syntax. let and const for block-scoped variables (never var). Arrow functions and lexical this binding. Destructuring for arrays and objects. Template literals (backtick strings). Spread/rest operators. Promises for async operations. async/await for readable async code. The exam presents code snippets and asks about scoping, closures, prototype chain, or async behaviour &mdash; understanding ES6+ is the foundation for LWC development.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Web Component Standards (W3C)</p>
+                <p>Lightning Web Components are built on Web Component standards: Custom Elements (define new HTML elements), Shadow DOM (encapsulated styles and markup), HTML Templates (declarative rendering). Understanding these standards is tested because LWC implements them directly. Shadow DOM encapsulation means CSS from outside cannot affect component internals by default. The exam tests how the Shadow DOM affects event propagation (events do not cross shadow boundaries unless composed:true is set).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lightning Web Components: Lifecycle and Reactivity</p>
+                <p>LWC lifecycle hooks: connectedCallback (component added to DOM), disconnectedCallback (removed from DOM), renderedCallback (after every render). @track (now redundant &mdash; all properties are reactive by default), @api (public property, set by parent), @wire (reactive data binding to Apex or platform adapters). The exam tests which lifecycle hook to use for a given scenario &mdash; connectedCallback for initial data fetch, renderedCallback for post-render DOM manipulation (with caution).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Apex Integration: @wire and Imperative Calls</p>
+                <p>@wire automatically calls Apex and re-calls when parameters change &mdash; use for read-only data that should refresh reactively. Imperative calls (calling Apex directly like a JS function) are used when you need explicit control &mdash; on button click, or when combining results. @wire uses the getRecord and getFieldValue adapters from lightning/uiRecordApi for record access. The @AuraEnabled(cacheable=true) annotation is required on Apex methods called via @wire. The exam tests which approach to use for a given data-fetching scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security in LWC and LockerService</p>
+                <p>Locker Service is Salesforce&apos;s security architecture for Lightning components &mdash; it isolates components from each other and restricts access to the DOM. LWC uses Lightning Web Security (LWS) &mdash; similar isolation but more permissive for standard APIs. The exam tests what Locker/LWS prevents (direct DOM manipulation of other components, eval(), dangerous APIs). Permission checks should be done server-side in Apex, not in the component (UI checks can be bypassed). CRUD and FLS enforcement belongs in the @AuraEnabled Apex method, not the component.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function JavaScriptDeveloperIPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -62,6 +62,33 @@ export default function B2BCommerceDeveloperAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">B2B Commerce Developer AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">LWC Commerce Components & Override Pattern</p>
+                <p>B2B Commerce storefronts use Lightning Web Components. The Component Override pattern allows developers to replace default checkout or product detail components with custom implementations — registered in the Community Builder component map. Custom LWCs use the `@salesforce/commerce` scoped modules to access cart, product, and checkout data. The `NavigationMixin` handles in-store navigation. Wire adapters for commerce provide reactive data binding to store context. The AP exam tests how to implement component overrides, wire data into custom components, and handle error states without breaking the checkout flow.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Commerce APIs & Storefront REST APIs</p>
+                <p>The Commerce Connect API (Connect in Apex) provides programmatic access to storefront operations. REST APIs power all storefront interactions — search, product detail, cart, checkout, and order history. The Product Search API supports faceted search with category and attribute filters. Custom price calculators can be implemented via the Commerce Extension framework. The B2C and B2B APIs share similar patterns but differ in auth context (buyer session vs. guest). The exam tests which API to use for a given scenario, how to authenticate as a buyer, and how to extend standard behavior using the extension framework.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Checkout Integrations & Tax/Payment</p>
+                <p>Custom checkout integrations implement the `CartExtension` or `CheckoutExtension` Apex interfaces. Tax calculation extensions receive a cart and return line-item tax amounts. Shipping calculation extensions provide shipping options and costs. Payment integrations use the Payment Gateway framework — implement `commercepayments.PaymentGatewayAdapter`. Test classes for commerce extensions must mock the cart and checkout context. The exam tests how to implement and register each extension type, how to handle exceptions gracefully, and how to write unit tests for commerce Apex extensions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Search Configuration & Merchandising</p>
+                <p>B2B Commerce search uses the Salesforce Search Index — products are indexed when published. Search configuration allows field boosts, synonym groups, and exclusion rules. Facets are configured from product attributes and category fields. Sorting options are configurable. Merchandising Rules let admins pin, boost, or bury specific products in search results. CMS-managed banners can appear in search result pages. The developer exam tests how to configure search tuning, how to add custom product attributes to the search index, and how to implement custom search result handling in LWC.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing, Deployment & Performance</p>
+                <p>B2B Commerce deployments use standard Salesforce metadata tooling — Salesforce CLI, change sets, or CI/CD pipelines. Commerce metadata types include StoreIntegratedService, CommerceSettings, and custom LWC components. Integration tests for commerce extensions use Apex test utilities to simulate cart operations. Page performance is governed by LWC best practices: avoid unnecessary re-renders, use lazy loading for images, minimize wire adapter calls. CDN configuration for Experience Cloud handles static asset caching. The exam tests the correct deployment sequence for a store update and how to diagnose checkout performance issues.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function B2BCommerceDeveloperAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -39,6 +39,16 @@ const nextConfig = {
         destination: '/certifications/tableau-desktop-foundations',
         permanent: true,
       },
+      {
+        source: '/certifications/integration-architecture-designer',
+        destination: '/certifications/integration-architect',
+        permanent: true,
+      },
+      {
+        source: '/certifications/javascript-developer-1',
+        destination: '/certifications/javascript-developer-i',
+        permanent: true,
+      },
     ]
   },
   async headers() {

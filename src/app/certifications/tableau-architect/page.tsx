@@ -165,6 +165,33 @@ export default function TableauArchitectPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Tableau Architect: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tableau Platform Architecture and Deployment</p>
+                <p>Tableau Server is the on-premise or customer-managed cloud deployment. Tableau Cloud is the fully managed SaaS offering. Server architecture: primary node runs all processes; worker nodes scale individual processes (VizQL Server, Data Server, Backgrounder, Application Server). Process distribution: VizQL renders visualisations; Backgrounder runs extract refreshes and subscriptions; Data Server manages data connections and caching. The architect selects the deployment model (Server vs Cloud) based on data residency, security, and operational capability requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Architecture: Published Data Sources and Extracts</p>
+                <p>Published Data Sources are centrally managed connections shared across workbooks — changes to the data source propagate to all workbooks using it. Embedded data sources are local to the workbook — simpler but harder to govern. Live connections query the database in real time; Extracts (.hyper files) snapshot data for fast performance. Tableau Prep Builder creates ETL pipelines that output clean, reshaped data. The architect designs the data source strategy — which sources to publish, what extract schedules to run, and when live connections are appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture: Users, Groups, and Row-Level Security</p>
+                <p>Tableau Server security layers: Site Roles define what a user can do on the server. Content permissions control who can view, edit, or publish each workbook or data source. Row-Level Security (RLS) filters data based on the logged-in user — implemented via user filters in the data source, calculated fields using USERNAME() and ISMEMBEROF(), or entitlement tables joined to the data. The architect designs the RLS implementation based on the complexity of the access model (single-attribute vs multi-attribute vs role-based entitlement table).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Optimisation and Scalability</p>
+                <p>Workbook performance factors: number of marks in the view, query complexity, extract size, and use of context filters. Performance Recorder in Tableau Desktop identifies slow queries and rendering. Extract optimisation: aggregating extracts, filtering to only needed rows, hiding unused fields. Server-level: worker node sizing for Backgrounder (concurrent extract refreshes) and VizQL (concurrent view renders). Tableau Workbook Advisor (Tableau Cloud) flags performance anti-patterns. The architect balances user experience performance with infrastructure cost.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance and Content Management at Scale</p>
+                <p>Projects organise content with inherited permissions — nested projects allow hierarchical governance. Content certification marks high-quality, approved data sources and workbooks. Data Catalog (Tableau Catalog — part of Data Management Add-on) provides data lineage, field-level metadata, quality warnings, and impact analysis. Usage analytics in the Admin area show which workbooks are accessed and which are stale (candidates for archival). The architect designs the governance framework — project hierarchy, certification process, naming conventions, and content lifecycle management.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -197,6 +224,7 @@ export default function TableauArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

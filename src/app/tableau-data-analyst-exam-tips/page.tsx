@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce Certified Tableau Data Analyst Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = `Tableau Data Analyst Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Tableau Data Analyst exam tips for ${RELEASE_CURRENT}: 4-week study plan, LOD expressions explained, context filter strategy, and mock-test benchmarks to pass on your first attempt.`
+  `Tableau Data Analyst exam tips (${RELEASE_CURRENT}): 4-week study plan, LOD expressions, context filters, and exam strategies. Start free now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'Tableau Data Analyst Exam Tips', url: '/tableau-data-analyst-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Tableau Data Analyst exam format?',
+    answer: 'The Salesforce Certified Tableau Data Analyst exam has 45 questions, a 75-minute time limit, a 62% passing score, and a $250 fee.',
+  },
+  {
+    question: 'What are the highest-weight Tableau Data Analyst exam topics?',
+    answer: 'Connect to and transform data (27%) and Create calculated fields and LOD expressions (15%) are the top sections. Hands-on Tableau Desktop skills are tested throughout.',
+  },
+  {
+    question: 'How hard is the Tableau Data Analyst exam?',
+    answer: 'Moderately difficult. The exam tests practical Tableau Desktop skills, not just theory. Candidates who build dashboards with real datasets consistently outperform those who study only documentation.',
+  },
+  {
+    question: 'What is the best way to prepare for the Tableau Data Analyst exam?',
+    answer: "Practice with real datasets, master LOD expressions and context filters, and take timed practice tests. The free Tableau Public app and Tableau's sample superstore dataset are useful for hands-on prep.",
+  },
+]
+
 export default function TableauDataAnalystExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function TableauDataAnalystExamTipsPage() {
     description: pageDescription,
     path: '/tableau-data-analyst-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

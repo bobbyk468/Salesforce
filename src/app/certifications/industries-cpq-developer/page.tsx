@@ -193,6 +193,33 @@ export default function IndustriesCPQDeveloperPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Industries CPQ Developer: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Product Catalog & Configuration</p>
+                <p>Industries CPQ (formerly Vlocity CPQ) uses a TM Forum-aligned product catalog. Product Specifications define the attributes and structure of a product. Product Offerings are the sellable versions with pricing. Product Bundles group related offerings (e.g., a broadband + voice + TV bundle). Attributes define configurable options — data cap, contract term, device color. Configuration Rules enforce valid attribute combinations and auto-set dependent attributes. Context Rules make product availability conditional on account type, geography, or existing products. The developer exam tests how to configure attribute rules, implement context rules in declarative logic, and extend configuration behavior with custom Apex when rules are insufficient.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing Rules & Calculation Framework</p>
+                <p>Pricing in Industries CPQ uses a layered calculation framework. Price Lists define base prices for products and attributes. Pricing Procedures define the sequence of pricing steps — list price → adjustments → promotions → taxes → total. Pricing Elements are individual steps in the procedure (e.g., apply 10% loyalty discount). Pricing Variables store intermediate calculation results. Custom Pricing Apex classes implement complex pricing logic not achievable declaratively. Price Waterfall shows the full breakdown of how the final price was calculated. The developer exam tests how to implement a custom pricing step, how to debug a price calculation using the price waterfall, and how pricing procedures interact with multi-product bundles.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Quote & Order Lifecycle</p>
+                <p>The Industries CPQ quote lifecycle: Product Selection → Configuration → Pricing → Quote → Order → Fulfillment. Decomposition breaks complex bundled products into fulfillable line items for downstream provisioning systems. Order Items map to fulfillment line items with action codes (Add, Change, Remove, Suspend). Contract integration manages subscription amendments — when a customer changes an in-force service, a Change Order is created with the correct action codes. Quote versioning supports multiple concurrent scenarios. The developer exam tests the decomposition logic, how to configure action codes for amendments, and how to implement custom validation before order submission.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration & API Patterns</p>
+                <p>Industries CPQ exposes REST APIs for catalog queries, configuration, pricing, and order submission. The CPQ API is used by external systems (self-service portals, partner tools) to perform quoting and ordering programmatically. Asset-Based Ordering (ABO) APIs query existing customer assets to determine available change operations. Integration with OSS/BSS systems (provisioning, billing) uses the fulfillment API to push decomposed order items. The developer exam tests the correct API endpoint for a given operation, how to authenticate and call the CPQ API from an external system, and how to handle API error responses for failed configuration or pricing requests.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customization: Apex, LWC & OmniStudio</p>
+                <p>Industries CPQ customization uses: Custom Apex for complex business logic (configuration rules, pricing steps, order validation), LWC components for custom UI within the CPQ cart or checkout, and OmniStudio (FlexCards, OmniScripts) for guided selling experiences. Integration Procedures (OmniStudio) handle multi-step API orchestration. DataRaptors transform data between Salesforce and external systems within CPQ flows. The developer exam tests which customization tool to use for a given requirement — declarative rules first, Apex for complex logic, LWC for custom UI, and OmniStudio for guided workflows. Know the OmniStudio activation sequence: DataRaptor → Integration Procedure → OmniScript.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -218,6 +245,7 @@ export default function IndustriesCPQDeveloperPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

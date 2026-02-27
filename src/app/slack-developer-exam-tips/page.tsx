@@ -1,15 +1,15 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
-const pageTitle = `Salesforce Certified Slack Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = `Slack Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Slack Developer exam tips for ${RELEASE_CURRENT}: 4-week study plan, Slack API decision tree, Block Kit and Bolt Framework strategy, and mock-test benchmark to pass on your first attempt.`
+  `Slack Developer exam tips (${RELEASE_CURRENT}): 4-week study plan, Slack API, Block Kit, and automation patterns. Start free practice now.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'Slack Developer Exam Tips', url: '/slack-developer-exam-tips' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the Slack Developer exam format?',
+    answer: 'The Salesforce Certified Slack Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 fee.',
+  },
+  {
+    question: 'What are the most important Slack Developer exam topics?',
+    answer: 'Building Slack Apps (30%) and Workflow Automation (25%) are the highest-weight sections. The Bolt framework, Block Kit UI components, and Slack API surface are consistently tested.',
+  },
+  {
+    question: 'Do I need Slack app development experience to pass?',
+    answer: 'Yes — the exam tests hands-on Bolt framework, Block Kit, and Workflow Builder knowledge. Candidates without prior Slack app development experience typically need extra time to build practical skills.',
+  },
+  {
+    question: 'How long should I study for the Slack Developer exam?',
+    answer: '4–6 weeks with hands-on app building. Build at least one complete Slack app with interactive components (buttons, modals) and event subscriptions before attempting the exam.',
+  },
+]
+
 export default function SlackDeveloperExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function SlackDeveloperExamTipsPage() {
     description: pageDescription,
     path: '/slack-developer-exam-tips',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

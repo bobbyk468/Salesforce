@@ -62,6 +62,33 @@ export default function CommunicationsCloudAPPage() {
             <ExamPrepContent slug={slug} />
           </div>
 
+
+          {/* Key Concepts */}
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Communications Cloud AP: Key Concepts for the Exam</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Product Catalog & Offer Management</p>
+                <p>Communications Cloud uses TM Forum-aligned data models. The Product Catalog manages the hierarchy: Product Specification → Product Offering → Bundled Offering. Product Attributes define configurable options (plan type, data cap, contract term). Qualification Rules control which offerings are available to a customer based on account type, location, or existing subscriptions. Pricing Tiers apply usage-based or tiered pricing to product offerings. The AP exam tests how to configure a product offering for a telecommunications use case, including bundling mobile, broadband, and TV services into a single offer.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Industries CPQ for Telco</p>
+                <p>Industries CPQ (Configure, Price, Quote) in Communications Cloud handles complex telco quoting. Configuration Rules enforce product compatibility (e.g., a 5G plan requires a compatible device). Pricing Procedures calculate the total price including promotions, discounts, and one-time vs. recurring charges. Promotions apply time-limited discounts at the order or line level. Decomposition breaks complex product bundles into fulfillable line items for downstream systems. The exam tests how to configure CPQ for a scenario with bundled products, promotional pricing, and device+plan combinations — know the difference between attribute-based configuration and separate product selection.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management & Orchestration</p>
+                <p>Orders in Communications Cloud follow the TM Forum order lifecycle: Order Received → Feasibility → Order Accepted → Provisioning → Order Completed. Order Orchestration uses Flow Orchestration or a BPM tool to coordinate provisioning steps across fulfillment systems. Fallout Management handles failed provisioning steps — the exam tests retry logic and manual intervention workflows. Change Orders handle service modifications (upgrades, downgrades, add-ons). Cancellation management flows handle both pre-provisioning and post-provisioning cancellations. The exam tests the complete order lifecycle and how to design an orchestration that handles common telco provisioning failure scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Contract & Subscription Lifecycle</p>
+                <p>Contracts in Communications Cloud manage the term commitment for services — start date, end date, and early termination fees. Auto-Renewal rules trigger renewal or renegotiation workflows before contract expiry. Contract amendments modify in-force services and generate change orders. Asset-Based Ordering (ABO) tracks each active service as an asset on the customer account. The Asset Object in Communications Cloud records the current state of a provisioned service. The exam tests how contract terms flow into billing, how ABO manages the lifecycle of a service from provisioning through cancellation, and how to design amendment workflows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner Ecosystem & Channel Management</p>
+                <p>Communications Cloud supports indirect sales through a partner channel — resellers and agents sell services on behalf of the operator. Partner Community provides the sales and ordering interface for channel partners. Partner Accounts and Partner Users manage access and visibility. Revenue sharing and commission tracking are handled through channel management capabilities. The exam tests how to configure a partner order flow, what data the partner can see vs. what is hidden (margin, cost), and how to design the security model so that partners can only access their own customers and orders.</p>
+              </div>
+            </div>
+          </div>
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -85,6 +112,7 @@ export default function CommunicationsCloudAPPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

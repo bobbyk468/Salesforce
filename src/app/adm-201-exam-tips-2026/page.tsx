@@ -1,13 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${siteUrl}/og-image`
 
 const pageTitle = `ADM-201 Exam Tips (${RELEASE_CURRENT}): Salesforce Admin Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `ADM-201 exam tips for ${RELEASE_CURRENT}: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.`
 
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: `ADM-201 Exam Tips ${RELEASE_CURRENT}`, url: '/adm-201-exam-tips-2026' },
 ]
 
+const faqItems = [
+  {
+    question: 'What is the ADM-201 exam format?',
+    answer: 'The ADM-201 exam has 65 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It is administered online or at a Pearson VUE test centre.',
+  },
+  {
+    question: 'What are the highest-weight ADM-201 exam sections?',
+    answer: 'Configuration and Setup (20%) and Object Manager and Lightning App Builder (20%) together account for 40% of the exam. Sales and Marketing Applications (14%) is the next highest.',
+  },
+  {
+    question: 'How long should I study for ADM-201?',
+    answer: 'Most candidates with some Salesforce experience need 4–6 weeks of dedicated study. Build hands-on skills in a free Developer Edition org — ADM-201 is scenario-based and rewards practical experience over memorisation.',
+  },
+  {
+    question: 'Is ADM-201 hard to pass on the first attempt?',
+    answer: 'ADM-201 has roughly a 70% first-attempt pass rate. It is scenario-heavy, so practising with mock exams at 75%+ consistently is the best predictor of readiness. Focus on use-case style questions, not just feature lists.',
+  },
+]
+
 export default function Adm201ExamTipsPage() {
   const webPageJsonLd = getWebPageJsonLd({
     name: pageTitle,
@@ -50,12 +69,14 @@ export default function Adm201ExamTipsPage() {
     description: pageDescription,
     path: '/adm-201-exam-tips-2026',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
