@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key activity for a Communications Cloud Professional?", options: ["Only coding", "Discovering, designing, planning, and delivering business value", "Only reporting", "Only email"], correctAnswer: 1, explanation: "They discover, design, plan, and deliver business value." },
   { question: "Which role typically pursues Communications Cloud AP?", options: ["Marketers", "Partners and implementers in telecom/media", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Partners and implementers in telecom/media pursue this credential." },
   { question: "What does Communications Cloud often integrate with?", options: ["Only Marketing Cloud", "Industries CPQ, Billing, and telecom systems", "Only Service Cloud", "Only Slack"], correctAnswer: 1, explanation: "It integrates with Industries CPQ, Billing, and telecom systems." },
+  { question: "What is Industries CPQ in telecom context?", options: ["Standard CPQ only", "CPQ tailored for telecom (products, bundles, pricing for telecom)", "Marketing Cloud", "Slack"], correctAnswer: 1, explanation: "Industries CPQ extends CPQ for telecom product catalogs." },
+  { question: "Which activity is part of 'discover' for Communications Cloud?", options: ["Only deployment", "Gathering requirements and understanding telecom workflows", "Only coding", "Only reporting"], correctAnswer: 1, explanation: "Discover = requirements gathering and workflow analysis." },
+  { question: "What does 'deliver business value' mean for Communications Cloud?", options: ["Only shipping", "Implementing solutions that drive outcomes for telecom customers", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Deliver = implement solutions that achieve customer outcomes." },
+  { question: "Which Salesforce product supports telecom billing?", options: ["Marketing Cloud only", "Salesforce Billing and Industries Billing", "Service Cloud only", "Slack only"], correctAnswer: 1, explanation: "Industries Billing supports telecom billing workflows." },
+  { question: "What is a key consideration when designing Communications Cloud solutions?", options: ["Colors only", "Product catalog complexity, rating, and billing integration", "Only UI", "Only reports"], correctAnswer: 1, explanation: "Catalog, rating, and billing are core telecom design considerations." },
+  { question: "Why is the telecom industry unique for CRM?", options: ["It isn't", "Complex products, subscriptions, and regulatory requirements", "Only standard objects", "Only simple pricing"], correctAnswer: 1, explanation: "Telecom has complex products, subscriptions, and regulations." },
+  { question: "What does 'plan' mean in Communications Cloud context?", options: ["Only schedules", "Planning the implementation approach and solution roadmap", "Only coding", "Only deployment"], correctAnswer: 1, explanation: "Plan = implementation approach and roadmap." },
+  { question: "What does charging mean in telecom billing?", options: ["Only invoicing", "Calculating and applying charges for usage and products based on rating", "Only payment collection", "Only refunds"], correctAnswer: 1, explanation: "Charging applies rated amounts to customer accounts; rating calculates the charge." },
+  { question: "What is rating in telecom?", options: ["A report", "Calculating charges for usage and products", "A workflow only", "An object only"], correctAnswer: 1, explanation: "Rating calculates charges for telecom products and usage." },
+  { question: "Which industries does Communications Cloud serve beyond telecom?", options: ["None", "Media and other communication-intensive industries", "Retail only", "Manufacturing only"], correctAnswer: 1, explanation: "Communications Cloud also serves media and similar industries." },
 ]
 
 export default function CommunicationsCloudAPPage() {
@@ -53,7 +63,7 @@ export default function CommunicationsCloudAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

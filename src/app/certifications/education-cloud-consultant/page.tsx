@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Student recruitment, enrollment, and alumni engagement are core Education Cloud use cases.",
   },
+  {
+    question: "What does the Admissions lifecycle typically include?",
+    options: [
+      "Only billing",
+      "Inquiry, application, acceptance, and enrollment",
+      "Only marketing",
+      "Only reporting"
+    ],
+    correctAnswer: 1,
+    explanation: "Admissions covers inquiry through application to enrollment."
+  },
+  {
+    question: "Which Education Cloud object supports program management?",
+    options: [
+      "Standard Account only",
+      "Program, Term, and Course objects",
+      "Opportunity only",
+      "Lead only"
+    ],
+    correctAnswer: 1,
+    explanation: "Program, Term, and Course support academic program management."
+  },
+  {
+    question: "What is Advancement in the education context?",
+    options: [
+      "Only admissions",
+      "Alumni relations, fundraising, and donor engagement",
+      "Only enrollment",
+      "Only courses"
+    ],
+    correctAnswer: 1,
+    explanation: "Advancement covers alumni relations and fundraising."
+  },
+  {
+    question: "Which Experience Cloud use case applies to Education Cloud?",
+    options: [
+      "B2B storefront only",
+      "Student and alumni portals for self-service",
+      "Partner portal only",
+      "Support portal only"
+    ],
+    correctAnswer: 1,
+    explanation: "Student and alumni portals are common Experience Cloud use cases."
+  },
+  {
+    question: "What does the student lifecycle encompass?",
+    options: [
+      "Only graduation",
+      "Prospect, applicant, enrolled student, alumni",
+      "Only enrollment",
+      "Only courses"
+    ],
+    correctAnswer: 1,
+    explanation: "Student lifecycle spans prospect through alumni."
+  },
+  {
+    question: "Which reporting need is common for Education Cloud?",
+    options: [
+      "Only sales pipeline",
+      "Enrollment, retention, and advancement metrics",
+      "Only support cases",
+      "Only product sales"
+    ],
+    correctAnswer: 1,
+    explanation: "Enrollment, retention, and advancement reporting are key."
+  },
+  {
+    question: "What is the purpose of Term in Education Cloud?",
+    options: [
+      "To replace Program",
+      "To represent academic periods (e.g., semesters, quarters)",
+      "To track donations only",
+      "To manage campaigns"
+    ],
+    correctAnswer: 1,
+    explanation: "Term represents academic periods for enrollment and scheduling."
+  },
+  {
+    question: "Which integration is common for Education Cloud?",
+    options: [
+      "CPQ only",
+      "Student information systems (SIS), learning management, and payment",
+      "Marketing Cloud only",
+      "Slack only"
+    ],
+    correctAnswer: 1,
+    explanation: "Education Cloud integrates with SIS and LMS systems."
+  },
+  {
+    question: "What does an Education Cloud Consultant need to understand?",
+    options: [
+      "Only UI",
+      "Student lifecycle, institutional processes, and industry data model",
+      "Only CRM",
+      "Only Marketing Cloud"
+    ],
+    correctAnswer: 1,
+    explanation: "Consultants need student lifecycle and institutional process knowledge."
+  },
+  {
+    question: "Which best practice applies to Education Cloud implementation?",
+    options: [
+      "Ignore stakeholders",
+      "Engage admissions, advancement, and IT; align with institutional workflows",
+      "No training",
+      "Single department only"
+    ],
+    correctAnswer: 1,
+    explanation: "Engage stakeholders and align with institutional workflows."
+  },
 ]
 
 export default function EducationCloudConsultantPage() {
@@ -84,7 +194,7 @@ export default function EducationCloudConsultantPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

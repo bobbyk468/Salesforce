@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -148,6 +148,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Standard Salesforce Reports and Dashboards can be made accessible in Experience Cloud sites by adding the Reports tab and configuring sharing so external users see only their own data. For more advanced analytics, CRM Analytics can be embedded within site pages.",
   },
+  {
+    question: "What is the purpose of Sharing Sets in Experience Cloud?",
+    options: ["To share dashboards only", "To grant external users access to records based on their associated Account or Contact", "To share files with internal users", "To configure site branding"],
+    correctAnswer: 1,
+    explanation: "Sharing Sets grant record access to external users based on the Account or Contact linked to their community user record."
+  },
 ]
 
 export default function ExperienceCloudPage() {
@@ -226,9 +232,7 @@ export default function ExperienceCloudPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

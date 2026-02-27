@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -128,6 +128,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "DACI (Driver, Approver, Contributor, Informed) clarifies who is responsible for driving a decision to closure, who has final approval authority, who contributes expertise, and who only needs to be informed of the outcome.",
   },
+  {
+    question: "What format do user stories typically follow in Salesforce projects?",
+    options: ["As a [system], I want [data] so that [report]", "As a [role], I want [goal] so that [benefit]", "As a [admin], I need [field] for [object]", "As a [user], I need [permission] to [action]"],
+    correctAnswer: 1,
+    explanation: "User stories follow the format: As a [role], I want [goal] so that [benefit]. This connects the user, the capability, and the business value."
+  },
 ]
 
 export default function BusinessAnalystPage() {
@@ -206,9 +212,7 @@ export default function BusinessAnalystPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

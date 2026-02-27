@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key activity for a Marketing Cloud Intelligence Professional?", options: ["Only coding", "Technical implementation of Marketing Cloud Intelligence solutions", "Only reporting", "Only lists"], correctAnswer: 1, explanation: "They implement Marketing Cloud Intelligence solutions technically." },
   { question: "Which role typically pursues Marketing Cloud Intelligence AP?", options: ["Sales only", "Partners and implementers working with Marketing Cloud Intelligence", "Designers only", "Marketers only"], correctAnswer: 1, explanation: "Partners and implementers working with Marketing Cloud Intelligence pursue this credential." },
   { question: "What does 'deliver projects' mean in this context?", options: ["Only shipping", "Implementing and delivering Marketing Cloud Intelligence solutions for customers", "Only reporting", "Only dashboards"], correctAnswer: 1, explanation: "It means implementing and delivering solutions for customers." },
+  { question: "What does CDP (Customer Data Platform) provide for Marketing Cloud?", options: ["Only email", "Unified customer data for activation and analytics", "Only journeys", "Only SMS"], correctAnswer: 1, explanation: "CDP unifies customer data for activation and analytics." },
+  { question: "Which Marketing Cloud Intelligence capability supports analytics?", options: ["Slack only", "Datorama, analytics studios, and reporting", "Email only", "Journey Builder only"], correctAnswer: 1, explanation: "Datorama and analytics studios support analytics." },
+  { question: "What does technical implementation of Marketing Cloud Intelligence include?", options: ["Only design", "Data connections, transformations, and activation setup", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Implementation includes connections, transformations, and activation." },
+  { question: "Which data source can feed Marketing Cloud Intelligence?", options: ["Slack only", "CRM, advertising, and engagement data", "Email only", "No data"], correctAnswer: 1, explanation: "CRM, advertising, and engagement data feed intelligence." },
+  { question: "What is the purpose of Marketing Cloud Intelligence?", options: ["Only reporting", "Unified analytics and intelligence across marketing touchpoints", "Only email", "Only journeys"], correctAnswer: 1, explanation: "Intelligence unifies analytics across touchpoints." },
+  { question: "Which integration supports Marketing Cloud Intelligence?", options: ["Manual only", "Salesforce, advertising platforms, and data warehouses", "Slack only", "Service Cloud only"], correctAnswer: 1, explanation: "Intelligence integrates with Salesforce and ad platforms." },
+  { question: "What does delivering Marketing Cloud Intelligence projects require?", options: ["Only design", "Technical setup, data modeling, and activation", "Only coding", "Only reports"], correctAnswer: 1, explanation: "Delivery requires technical setup and activation." },
+  { question: "Which best practice applies to Marketing Cloud Intelligence?", options: ["Ignore data", "Data quality, governance, and attribution modeling", "No governance", "Static only"], correctAnswer: 1, explanation: "Data quality and governance support intelligence." },
+  { question: "What is the benefit of Marketing Cloud Intelligence?", options: ["No benefit", "Unified view and actionable insights across marketing", "Siloed only", "Manual only"], correctAnswer: 1, explanation: "Intelligence provides unified insights." },
+  { question: "What is attribution modeling in Marketing Cloud Intelligence?", options: ["A report type only", "Assigning credit for conversions to marketing touchpoints (first-touch, last-touch, multi-touch)", "An email metric", "A journey type"], correctAnswer: 1, explanation: "Attribution modeling assigns conversion credit across touchpoints for optimization." },
 ]
 
 export default function MarketingCloudIntelligenceAPPage() {
@@ -53,7 +63,7 @@ export default function MarketingCloudIntelligenceAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

@@ -16,7 +16,7 @@ interface StickyMobileCtaProps {
  */
 export default function StickyMobileCta({
   href = '#practice-questions',
-  label = 'Start 5 Free Questions',
+  label = 'Start Free Practice',
 }: StickyMobileCtaProps) {
   const [visible, setVisible] = useState(false)
   const rafRef = useRef<number | null>(null)

@@ -8,7 +8,7 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -51,6 +51,84 @@ const sampleQuestions = [
     ],
     correctAnswer: 1,
     explanation: "The evaluation requires designing a solution that addresses the scenario's requirements, constraints, and trade-offs.",
+  },
+  {
+    question: "When designing a multi-org integration, which pattern supports data consistency?",
+    options: ["Point-to-point only", "Event-driven architecture with a centralized event bus", "Synchronous REST only", "Batch file transfer only"],
+    correctAnswer: 1,
+    explanation: "Event-driven architecture with a central bus (e.g., Platform Events, MuleSoft) supports loose coupling and consistency."
+  },
+  {
+    question: "What is the primary benefit of using a canonical data model in integration?",
+    options: ["Faster coding", "Reducing point-to-point mappings and simplifying maintenance across systems", "Lower cost only", "Fewer APIs"],
+    correctAnswer: 1,
+    explanation: "Canonical models reduce coupling and simplify transformations between multiple source and target systems."
+  },
+  {
+    question: "Which security consideration is critical when designing a customer-facing Community?",
+    options: ["Colors only", "Guest user access, sharing rules, and data visibility per experience", "License count only", "Theme selection only"],
+    correctAnswer: 1,
+    explanation: "Guest access, sharing, and profile-based visibility must be designed to protect data while enabling the right access."
+  },
+  {
+    question: "When should you recommend Heroku vs Salesforce Platform for an application?",
+    options: ["Always Heroku", "Heroku for polyglot, high-throughput, or non-Salesforce-centric workloads; Platform for CRM-centric, declarative-first", "Always Platform", "No difference"],
+    correctAnswer: 1,
+    explanation: "Heroku suits polyglot and high-scale; Platform suits CRM-centric, declarative, and Salesforce-native apps."
+  },
+  {
+    question: "What role does the Role Hierarchy play in record-level security?",
+    options: ["No role", "Users can inherit access to records owned by users below them in the hierarchy", "Only for reports", "Only for dashboards"],
+    correctAnswer: 1,
+    explanation: "Role hierarchy grants upward visibility: users see records owned by roles below them."
+  },
+  {
+    question: "Which pattern supports high-volume, asynchronous integration with external systems?",
+    options: ["Synchronous callouts only", "Change Data Capture, Platform Events, or message queues", "Workflow rules only", "Process Builder only"],
+    correctAnswer: 1,
+    explanation: "CDC, Platform Events, and queues support asynchronous, scalable integration without blocking transactions."
+  },
+  {
+    question: "What is a key trade-off when using a large data volume (LDV) strategy with Big Objects?",
+    options: ["No trade-offs", "Query flexibility vs. storage and retention; Big Objects are append-only, optimized for analytics", "Cost only", "Performance only"],
+    correctAnswer: 1,
+    explanation: "Big Objects are append-only and optimized for analytics; they trade flexible querying for scale and retention."
+  },
+  {
+    question: "When designing for multi-currency, what must an architect consider?",
+    options: ["Only display", "Advanced Currency Management, conversion dates, and reporting currency", "Only manual entry", "Only one currency"],
+    correctAnswer: 1,
+    explanation: "ACM, conversion dates, and reporting currency affect accuracy and compliance in multi-currency orgs."
+  },
+  {
+    question: "Which governance practice reduces technical debt in a Salesforce org?",
+    options: ["No governance", "Release management, code review, and org-level standards (naming, limits)", "Only documentation", "Only training"],
+    correctAnswer: 1,
+    explanation: "Release management, code review, and org standards help maintain quality and reduce debt over time."
+  },
+  {
+    question: "What does the Sharing Calculator help an architect with?",
+    options: ["License costs", "Estimating share row counts and identifying sharing rule complexity", "User count only", "Storage only"],
+    correctAnswer: 1,
+    explanation: "The Sharing Calculator estimates row-level security load and helps optimize sharing design."
+  },
+  {
+    question: "When should an architect recommend a custom LWC over a Flow screen?",
+    options: ["Never", "When complex UI, heavy logic, or reusable components are required", "Always LWC", "Always Flow"],
+    correctAnswer: 1,
+    explanation: "LWC suits complex, reusable UI; Flow suits simpler, declarative screens and guided processes."
+  },
+  {
+    question: "Which integration pattern supports real-time, transactional sync between Salesforce and an ERP?",
+    options: ["Batch only", "Synchronous API (REST/SOAP) or event-driven with immediate processing", "File-based only", "No real-time option"],
+    correctAnswer: 1,
+    explanation: "Synchronous APIs or event-driven flows with immediate handlers support real-time transactional sync."
+  },
+  {
+    question: "What is the purpose of a Solution Architecture Document (SAD)?",
+    options: ["Marketing only", "Documenting requirements, design decisions, trade-offs, and implementation approach for stakeholders", "Only for developers", "Only for admins"],
+    correctAnswer: 1,
+    explanation: "A SAD captures architecture decisions, rationale, and implementation approach for alignment and handoff."
   },
 ]
 
@@ -99,7 +177,7 @@ export default function TechnicalArchitectEvaluationPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.")}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}

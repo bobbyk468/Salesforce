@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Connectors are pre-built modules that provide connectivity to systems like Salesforce, SAP, HTTP, etc.",
   },
+  {
+    question: "What is DataWeave used for in Mule applications?",
+    options: [
+      "Database queries only",
+      "Transforming and querying data in Mule flows",
+      "Sending emails only",
+      "CPQ configuration"
+    ],
+    correctAnswer: 1,
+    explanation: "DataWeave is MuleSoft's transformation language for data mapping and querying."
+  },
+  {
+    question: "Which Mule component handles errors in a flow?",
+    options: [
+      "Logger only",
+      "Error Handler with try, on-error-continue, or on-error-propagate",
+      "Transform Message only",
+      "Set Variable"
+    ],
+    correctAnswer: 1,
+    explanation: "Error Handlers manage exceptions using try, on-error-continue, or on-error-propagate."
+  },
+  {
+    question: "What is the purpose of an API specification (RAML/OAS)?",
+    options: [
+      "To run Apex",
+      "To design, document, and define the contract for an API before implementation",
+      "To send emails",
+      "To configure CPQ"
+    ],
+    correctAnswer: 1,
+    explanation: "API specs define the contract and enable design-first development."
+  },
+  {
+    question: "Which deployment target is used for cloud-hosted Mule applications?",
+    options: [
+      "On-premises only",
+      "CloudHub",
+      "Salesforce only",
+      "Slack only"
+    ],
+    correctAnswer: 1,
+    explanation: "CloudHub is MuleSoft's cloud runtime for deploying Mule applications."
+  },
+  {
+    question: "What does the HTTP Listener connector do?",
+    options: [
+      "Sends outbound HTTP requests only",
+      "Receives incoming HTTP requests and triggers a flow",
+      "Transforms data only",
+      "Queries databases"
+    ],
+    correctAnswer: 1,
+    explanation: "The HTTP Listener receives incoming requests and triggers Mule flows."
+  },
+  {
+    question: "Which layer in API-led connectivity exposes system-of-record data?",
+    options: [
+      "Experience API only",
+      "System API",
+      "Process API only",
+      "No layers"
+    ],
+    correctAnswer: 1,
+    explanation: "System APIs abstract and expose data from underlying systems."
+  },
+  {
+    question: "What is the purpose of Mocking in Anypoint Platform?",
+    options: [
+      "To delete APIs",
+      "To simulate API behavior for testing before implementation",
+      "To send emails",
+      "To configure CPQ"
+    ],
+    correctAnswer: 1,
+    explanation: "Mocking allows frontend and consumer development before backend is ready."
+  },
+  {
+    question: "Which Mule variable scope is available across the entire flow?",
+    options: [
+      "Target only",
+      "Flow variables (flowVars)",
+      "Session only",
+      "No variables"
+    ],
+    correctAnswer: 1,
+    explanation: "Flow variables persist for the lifetime of the flow execution."
+  },
+  {
+    question: "What does client credentials grant provide in OAuth?",
+    options: [
+      "User password",
+      "Application-level authentication without user context",
+      "Slack token only",
+      "Email credentials"
+    ],
+    correctAnswer: 1,
+    explanation: "Client credentials grant is for machine-to-machine, app-level authentication."
+  },
+  {
+    question: "Which Anypoint component manages API policies?",
+    options: [
+      "Studio only",
+      "API Manager",
+      "Design Center only",
+      "Runtime Manager only"
+    ],
+    correctAnswer: 1,
+    explanation: "API Manager handles policies, client management, and analytics."
+  },
 ]
 
 export default function MuleSoftDeveloperIPage() {
@@ -84,7 +194,7 @@ export default function MuleSoftDeveloperIPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

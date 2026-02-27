@@ -2385,6 +2385,12 @@ export function getCertPracticeQuestionsHeading(slug: string): string {
   return `${primaryName} Practice Questions (With Explanations)`
 }
 
+/** Practice intro text with dynamic question count. Use for consistent, accurate messaging. */
+export function getPracticeQuestionsIntro(count: number, suffix = ''): string {
+  const base = `Test your knowledge with these ${count} sample questions`
+  return suffix ? `${base} ${suffix}` : `${base}.`
+}
+
 /** H2 for FAQ section: [Cert Name] ([Exam Code]) Exam FAQs */
 export function getCertFaqHeading(slug: string): string {
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))

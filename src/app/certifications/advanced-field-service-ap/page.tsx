@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key capability of Advanced Field Service?", options: ["Email only", "Scheduling, optimization, and mobile workforce management", "CPQ only", "Reporting only"], correctAnswer: 1, explanation: "Scheduling, optimization, and mobile workforce management are key capabilities." },
   { question: "Which role typically pursues Advanced Field Service AP?", options: ["Marketers", "Partners and implementers working with Field Service", "Sales only", "Developers only"], correctAnswer: 1, explanation: "Partners and implementers working with Field Service pursue this credential." },
   { question: "What does AP stand for in Accredited Professional?", options: ["Application", "Accredited Professional", "Advanced Platform", "Automation Process"], correctAnswer: 1, explanation: "AP stands for Accredited Professional—product/industry credentials for partners." },
+  { question: "What is scheduling optimization in Field Service?", options: ["Manual assignment only", "Automated assignment of work orders to technicians based on skills, location, and availability", "Email scheduling only", "Report scheduling only"], correctAnswer: 1, explanation: "Optimization assigns work to the right technician based on criteria." },
+  { question: "Which object represents a work order in Field Service?", options: ["Case only", "Service Appointment and Work Order", "Task only", "Event only"], correctAnswer: 1, explanation: "Work Order and Service Appointment track field service work." },
+  { question: "What is mobile workforce management?", options: ["Desktop only", "Enabling technicians to view schedules, update work, and capture data on mobile devices", "Email only", "Reporting only"], correctAnswer: 1, explanation: "Mobile tools let technicians access schedules and update work in the field." },
+  { question: "Which capability helps optimize technician routes?", options: ["Manual routing only", "Scheduling policies and optimization consider travel time and location", "Email only", "Chat only"], correctAnswer: 1, explanation: "Optimization considers travel time and location for efficient routing." },
+  { question: "What does 'build and implement' mean for Advanced Field Service?", options: ["Only coding", "Configuring the solution and deploying it for the customer", "Only reporting", "Only training"], correctAnswer: 1, explanation: "Build = configure; implement = deploy and go-live." },
+  { question: "What is a work type in Field Service?", options: ["A report", "A template defining the skills, duration, and parts needed for a job type", "A case type", "An email template"], correctAnswer: 1, explanation: "Work types standardize job definitions for scheduling and resource planning." },
+  { question: "What is a Service Territory in Field Service?", options: ["A report", "A geographic or logical area for assigning and optimizing work", "A case type", "An email template"], correctAnswer: 1, explanation: "Service Territories define areas for work assignment." },
+  { question: "Why is capacity planning important for Field Service?", options: ["Not important", "Ensuring enough technician capacity for forecasted work volume", "Only for sales", "Only for marketing"], correctAnswer: 1, explanation: "Capacity planning aligns technician availability with demand." },
+  { question: "What does resource optimization consider?", options: ["Only skills", "Skills, location, availability, and business rules", "Only location", "Only time"], correctAnswer: 1, explanation: "Optimization uses multiple factors for optimal assignment." },
+  { question: "Which mobile feature helps technicians complete work?", options: ["Email only", "Field Service Mobile app for schedules, check-in, and work completion", "Chat only", "Reports only"], correctAnswer: 1, explanation: "Field Service Mobile provides the technician's field interface." },
 ]
 
 export default function AdvancedFieldServiceAPPage() {
@@ -53,7 +63,7 @@ export default function AdvancedFieldServiceAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

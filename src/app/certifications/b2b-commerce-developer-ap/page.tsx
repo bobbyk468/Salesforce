@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key activity for a B2B Commerce Developer?", options: ["Only reporting", "Configuring and customizing B2B Commerce storefronts and integrations", "Only dashboards", "Only lists"], correctAnswer: 1, explanation: "They configure and customize B2B Commerce storefronts and integrations." },
   { question: "Which role typically pursues B2B Commerce Developer AP?", options: ["Marketers", "Partners and developers working with B2B Commerce", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Partners and developers working with B2B Commerce pursue this credential." },
   { question: "What does customization in B2B Commerce often involve?", options: ["Only UI", "Storefront themes, cart, checkout, and APIs", "Only reports", "Only emails"], correctAnswer: 1, explanation: "Customization involves storefront, cart, checkout, and APIs." },
+  { question: "Which B2B Commerce component can developers customize?", options: ["Slack only", "Storefront templates, cart, and checkout flow", "Marketing Cloud only", "Service Cloud only"], correctAnswer: 1, explanation: "Developers customize templates, cart, and checkout." },
+  { question: "What does B2B Commerce run on?", options: ["Heroku only", "Experience Cloud", "Marketing Cloud only", "Slack only"], correctAnswer: 1, explanation: "B2B Commerce runs on Experience Cloud." },
+  { question: "Which API supports B2B Commerce customization?", options: ["Apex only", "B2B Commerce APIs and Connector", "Slack API only", "No API"], correctAnswer: 1, explanation: "B2B Commerce APIs and Connector support customization." },
+  { question: "What is a B2B Commerce buyer group?", options: ["A report", "A group with shared catalog and pricing", "A lead", "A campaign"], correctAnswer: 1, explanation: "Buyer groups define shared catalog and pricing." },
+  { question: "Which integration does B2B Commerce Developer work with?", options: ["Slack only", "CPQ, Order Management, and CRM", "Marketing Cloud only", "Service Cloud only"], correctAnswer: 1, explanation: "B2B Commerce integrates with CPQ and Order Management." },
+  { question: "What does storefront customization include?", options: ["Only colors", "Themes, layouts, and components", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Customization includes themes, layouts, and components." },
+  { question: "Which best practice applies to B2B Commerce development?", options: ["Ignore cart", "Test cart, checkout, and integration flows", "No testing", "Single product only"], correctAnswer: 1, explanation: "Test cart, checkout, and integration flows." },
+  { question: "What is the purpose of B2B Commerce Connector?", options: ["To replace B2B Commerce", "To sync catalog and order data with Salesforce", "To send emails", "To create reports"], correctAnswer: 1, explanation: "Connector syncs catalog and order data." },
+  { question: "Which sample app helps B2B Commerce Developers?", options: ["No sample", "B2B Commerce sample store and codebase", "Slack only", "Marketing Cloud only"], correctAnswer: 1, explanation: "Sample store provides reference implementation." },
+  { question: "What is a price list in B2B Commerce?", options: ["A report", "A set of prices assigned to a buyer group or account for catalog products", "A workflow only", "An email template"], correctAnswer: 1, explanation: "Price lists define product pricing per buyer group or account." },
 ]
 
 export default function B2BCommerceDeveloperAPPage() {
@@ -53,7 +63,7 @@ export default function B2BCommerceDeveloperAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

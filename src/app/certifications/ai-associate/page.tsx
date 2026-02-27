@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -153,6 +153,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "The Einstein Trust Layer automatically masks PII in prompts sent to external LLMs and enforces a zero data retention agreement with model providers, ensuring customer data is not stored or used for training.",
   },
+  {
+    question: "Which Salesforce AI capability uses historical data to predict outcomes such as opportunity win likelihood?",
+    options: ["Einstein Copilot", "Einstein Opportunity Scoring (predictive AI)", "Prompt Builder", "Data Cloud only"],
+    correctAnswer: 1,
+    explanation: "Einstein Opportunity Scoring is predictive AI — it uses historical data to forecast outcomes like win probability."
+  },
 ]
 
 export default function AIAssociatePage() {
@@ -215,7 +221,7 @@ export default function AIAssociatePage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -162,6 +162,18 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "Subscription records are created from CPQ Quote Lines when a Contract is activated — tracking each subscribed product, quantity, pricing, and term dates for ongoing lifecycle management and renewal generation.",
   },
+  {
+    question: "What is an Option Constraint in Salesforce CPQ?",
+    options: ["A validation rule on the Quote object", "A rule that defines dependencies between product options — e.g., Option A required when Option B is selected", "A discount approval threshold", "A Quote Template section"],
+    correctAnswer: 1,
+    explanation: "Option Constraints control the relationship between product options in a bundle — requiring, excluding, or enabling options based on configuration."
+  },
+  {
+    question: "Which CPQ feature allows different pricing for the same product based on customer segment?",
+    options: ["Quote Templates only", "Price Rules with condition-based actions, or Contracted Pricing", "Product Rules only", "Discount Schedules only"],
+    correctAnswer: 1,
+    explanation: "Price Rules and Contracted Pricing allow segment-specific pricing based on account attributes, contract terms, or other criteria."
+  },
 ]
 
 export default function CPQAdministratorPage() {
@@ -240,9 +252,7 @@ export default function CPQAdministratorPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

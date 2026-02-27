@@ -9,7 +9,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -152,6 +152,24 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "The Agentforce Specialist exam tests the ability to declaratively configure agents: defining topics and actions, crafting prompt templates, applying guardrails, deploying to channels, and grounding agents with Data Cloud.",
   },
+  {
+    question: "What is the purpose of Agentforce guardrails?",
+    options: ["To improve response creativity", "To define negative constraints — what the agent must never do", "To increase LLM temperature", "To add more data sources"],
+    correctAnswer: 1,
+    explanation: "Guardrails are negative constraints that prevent the agent from taking certain actions or making certain statements."
+  },
+  {
+    question: "Which action type can an Agentforce agent use to invoke a Flow?",
+    options: ["Only Apex", "Flow action — agents can invoke Flows as discrete actions", "Only external APIs", "Only prompt templates"],
+    correctAnswer: 1,
+    explanation: "Flow is one of the standard action types an agent can use to perform automated tasks."
+  },
+  {
+    question: "When should Data Cloud grounding be enabled for an Agentforce agent?",
+    options: ["Never", "When the agent needs access to unified customer profiles and real CRM data for grounded responses", "Only for external channels", "Only for testing"],
+    correctAnswer: 1,
+    explanation: "Data Cloud grounding provides the agent with unified customer data for accurate, data-backed responses."
+  },
 ]
 
 export default function AgentforceSpecialistPage() {
@@ -230,9 +248,7 @@ export default function AgentforceSpecialistPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

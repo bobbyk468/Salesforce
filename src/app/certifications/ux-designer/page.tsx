@@ -8,7 +8,7 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "It's for aspiring or experienced designers building human-centered experiences on the platform.",
   },
+  {
+    question: "What is the purpose of user research in UX design?",
+    options: [
+      "To skip design",
+      "To understand user needs, pain points, and behaviors before designing",
+      "Only to validate",
+      "Only to test"
+    ],
+    correctAnswer: 1,
+    explanation: "User research informs design by understanding needs and behaviors."
+  },
+  {
+    question: "Which deliverable communicates structure and layout before visual design?",
+    options: [
+      "Final UI only",
+      "Wireframes",
+      "Code only",
+      "Reports only"
+    ],
+    correctAnswer: 1,
+    explanation: "Wireframes communicate structure and layout before visual design."
+  },
+  {
+    question: "What does prototyping support in the design process?",
+    options: [
+      "Only documentation",
+      "Testing and validating design concepts with users before development",
+      "Only coding",
+      "Only deployment"
+    ],
+    correctAnswer: 1,
+    explanation: "Prototypes enable early testing and validation of design concepts."
+  },
+  {
+    question: "Which WCAG principle ensures content is perceivable?",
+    options: [
+      "Only operable",
+      "Perceivable (e.g., text alternatives, color contrast)",
+      "Only understandable",
+      "Only robust"
+    ],
+    correctAnswer: 1,
+    explanation: "Perceivable covers alternatives and contrast for accessibility."
+  },
+  {
+    question: "What is a design system?",
+    options: [
+      "A single component",
+      "Reusable components, patterns, and guidelines for consistent UI",
+      "Only colors",
+      "Only typography"
+    ],
+    correctAnswer: 1,
+    explanation: "Design systems provide reusable components and guidelines."
+  },
+  {
+    question: "Which Experience Cloud capability supports UX Designers?",
+    options: [
+      "Only Apex",
+      "Templates, themes, and declarative site building",
+      "Only APIs",
+      "Only batch"
+    ],
+    correctAnswer: 1,
+    explanation: "Templates, themes, and declarative building support UX design."
+  },
+  {
+    question: "What does usability testing measure?",
+    options: [
+      "Only speed",
+      "How effectively users can complete tasks and identify issues",
+      "Only aesthetics",
+      "Only cost"
+    ],
+    correctAnswer: 1,
+    explanation: "Usability testing measures task completion and identifies issues."
+  },
+  {
+    question: "Which principle supports inclusive design?",
+    options: [
+      "Design for one user only",
+      "Design for diverse abilities and contexts",
+      "Design for desktop only",
+      "Design for developers only"
+    ],
+    correctAnswer: 1,
+    explanation: "Inclusive design considers diverse abilities and contexts."
+  },
+  {
+    question: "What is the purpose of a user journey map?",
+    options: [
+      "To replace wireframes",
+      "To visualize user steps, touchpoints, and emotions across an experience",
+      "To write code",
+      "To deploy"
+    ],
+    correctAnswer: 1,
+    explanation: "Journey maps visualize user steps and touchpoints."
+  },
+  {
+    question: "Which best practice applies to Lightning Experience design?",
+    options: [
+      "Ignore mobile",
+      "Design for responsive layouts and Lightning Design System",
+      "Desktop only",
+      "No accessibility"
+    ],
+    correctAnswer: 1,
+    explanation: "Responsive design and LDS align with Lightning best practices."
+  },
 ]
 
 export default function UXDesignerPage() {
@@ -84,7 +194,7 @@ export default function UXDesignerPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

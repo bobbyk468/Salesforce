@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Connected Apps provide OAuth-based access with configurable policies.",
   },
+  {
+    question: "What is an Identity Provider (IdP) in SSO?",
+    options: [
+      "Salesforce only",
+      "The system that authenticates users and asserts identity to Salesforce",
+      "A permission set",
+      "A profile"
+    ],
+    correctAnswer: 1,
+    explanation: "IdP authenticates users and asserts identity to Salesforce."
+  },
+  {
+    question: "Which OAuth flow is used for server-to-server integration?",
+    options: [
+      "Authorization code only",
+      "Client credentials or JWT bearer",
+      "Implicit only",
+      "Device only"
+    ],
+    correctAnswer: 1,
+    explanation: "Client credentials and JWT bearer are for server-to-server."
+  },
+  {
+    question: "What does Session Security Level control?",
+    options: [
+      "Only timeout",
+      "Session requirements (e.g., high assurance, require re-auth)",
+      "Only IP",
+      "Only OWD"
+    ],
+    correctAnswer: 1,
+    explanation: "Session Security Level enforces session assurance requirements."
+  },
+  {
+    question: "Which SAML attribute is used for user provisioning?",
+    options: [
+      "Only name",
+      "Federation ID and other attributes for matching/provisioning",
+      "Only email",
+      "Only role"
+    ],
+    correctAnswer: 1,
+    explanation: "Federation ID and attributes support user matching and provisioning."
+  },
+  {
+    question: "What is the purpose of Auth. Provider?",
+    options: [
+      "To replace SSO",
+      "To configure external IdP connection (e.g., SAML, OAuth)",
+      "To create users only",
+      "To assign permission sets"
+    ],
+    correctAnswer: 1,
+    explanation: "Auth. Provider configures external IdP (SAML/OAuth) connection."
+  },
+  {
+    question: "Which feature supports multi-factor authentication?",
+    options: [
+      "SSO only",
+      "Two-Factor Authentication (2FA) and verified modes",
+      "OAuth only",
+      "SAML only"
+    ],
+    correctAnswer: 1,
+    explanation: "2FA and verified modes support multi-factor authentication."
+  },
+  {
+    question: "What does Federation ID enable?",
+    options: [
+      "Only SSO",
+      "Linking Salesforce user to external identity for SSO and provisioning",
+      "Only OAuth",
+      "Only permission sets"
+    ],
+    correctAnswer: 1,
+    explanation: "Federation ID links Salesforce user to external identity."
+  },
+  {
+    question: "Which consideration applies when designing for multiple IdPs?",
+    options: [
+      "Single IdP only",
+      "Domain-based routing and IdP selection logic",
+      "No routing",
+      "Manual only"
+    ],
+    correctAnswer: 1,
+    explanation: "Domain-based routing supports multiple IdPs."
+  },
+  {
+    question: "What is the purpose of Certificate and Key Management?",
+    options: [
+      "To create users",
+      "To manage SAML certificates and signing keys for trust",
+      "To assign profiles",
+      "To create permission sets"
+    ],
+    correctAnswer: 1,
+    explanation: "Certificate management ensures SAML and signing key trust."
+  },
+  {
+    question: "Which best practice supports identity governance?",
+    options: [
+      "No review",
+      "Regular access reviews, least privilege, and audit logging",
+      "All access",
+      "No logging"
+    ],
+    correctAnswer: 1,
+    explanation: "Access reviews, least privilege, and audit support governance."
+  },
 ]
 
 export default function IdentityAccessManagementArchitectPage() {
@@ -84,7 +194,7 @@ export default function IdentityAccessManagementArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "Which stakeholders do MuleSoft Integration Architects work with?", options: ["Only technical", "Technical and non-technical stakeholders", "Only non-technical", "Only developers"], correctAnswer: 1, explanation: "They work with technical and non-technical stakeholders." },
   { question: "Which role typically pursues MuleSoft Integration Architect?", options: ["Marketers", "Architects and senior consultants designing integration solutions", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Architects and senior consultants designing integration solutions pursue this credential." },
   { question: "What does 'integration interfaces' mean?", options: ["Only UI", "APIs, contracts, and data flows between systems", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Integration interfaces are APIs, contracts, and data flows between systems." },
+  { question: "Which design approach supports integration architecture?", options: ["Ad-hoc only", "Contract-first and API-led design", "Code-first only", "No design"], correctAnswer: 1, explanation: "Contract-first and API-led support sound architecture." },
+  { question: "What does non-functional requirements include?", options: ["Only features", "Performance, security, scalability, and reliability", "Only UI", "Only data"], correctAnswer: 1, explanation: "Non-functional requirements cover performance, security, etc." },
+  { question: "Which MuleSoft tool supports API design?", options: ["Mule runtime only", "Design Center and RAML/OAS", "CloudHub only", "No design"], correctAnswer: 1, explanation: "Design Center and RAML/OAS support API design." },
+  { question: "What is the purpose of integration patterns?", options: ["To replace APIs", "To address common integration scenarios (sync, async, batch)", "To delete only", "To create only"], correctAnswer: 1, explanation: "Patterns address common integration scenarios." },
+  { question: "Which stakeholder provides functional requirements?", options: ["Developers only", "Business analysts and domain experts", "Only architects", "Only operations"], correctAnswer: 1, explanation: "Business and domain experts provide functional requirements." },
+  { question: "What does implementation encompass?", options: ["Only design", "Mule flows, connectors, and deployment", "Only documentation", "Only testing"], correctAnswer: 1, explanation: "Implementation includes flows, connectors, and deployment." },
+  { question: "Which consideration applies to integration security?", options: ["Ignore security", "Authentication, encryption, and authorization", "Only HTTPS", "No auth"], correctAnswer: 1, explanation: "Integration security covers auth, encryption, and authorization." },
+  { question: "What is the benefit of translating requirements to interfaces?", options: ["No benefit", "Clear contracts and reduced integration errors", "More errors", "Slower delivery"], correctAnswer: 1, explanation: "Clear interfaces reduce integration errors." },
+  { question: "What does RAML define in MuleSoft?", options: ["Only runtime config", "API contract: resources, methods, data types, and examples", "Only deployment", "Only security"], correctAnswer: 1, explanation: "RAML (RESTful API Modeling Language) defines the API contract and structure." },
+  { question: "What does an Integration Architect ensure?", options: ["Only code", "Requirements are translated into sound, maintainable interfaces", "Only deployment", "Only testing"], correctAnswer: 1, explanation: "Architects ensure requirements become maintainable interfaces." },
 ]
 
 export default function MuleSoftIntegrationArchitectPage() {
@@ -53,7 +63,7 @@ export default function MuleSoftIntegrationArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

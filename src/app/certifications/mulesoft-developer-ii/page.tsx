@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Reusable assets are APIs and integrations designed for reuse across the organization.",
   },
+  {
+    question: "Which on-error strategy continues flow execution after an error?",
+    options: [
+      "on-error-propagate only",
+      "on-error-continue",
+      "No strategy",
+      "on-error-delete"
+    ],
+    correctAnswer: 1,
+    explanation: "on-error-continue allows flow to continue after handling the error."
+  },
+  {
+    question: "What is the purpose of batch processing in Mule?",
+    options: [
+      "To replace flows",
+      "To process large datasets in chunks",
+      "To send emails only",
+      "To create APIs only"
+    ],
+    correctAnswer: 1,
+    explanation: "Batch processing handles large datasets in manageable chunks."
+  },
+  {
+    question: "Which DataWeave function transforms an array?",
+    options: [
+      "map only",
+      "map, filter, pluck, and reduce",
+      "get only",
+      "set only"
+    ],
+    correctAnswer: 1,
+    explanation: "map, filter, pluck, and reduce transform arrays in DataWeave."
+  },
+  {
+    question: "What does API versioning support in MuleSoft?",
+    options: [
+      "No support",
+      "Backward compatibility and gradual client migration",
+      "Breaking changes only",
+      "Deprecation only"
+    ],
+    correctAnswer: 1,
+    explanation: "Versioning supports backward compatibility and migration."
+  },
+  {
+    question: "Which Mule component supports scheduled execution?",
+    options: [
+      "HTTP Listener only",
+      "Scheduler",
+      "On Error only",
+      "Logger only"
+    ],
+    correctAnswer: 1,
+    explanation: "Scheduler triggers flows on a schedule."
+  },
+  {
+    question: "What is the purpose of a custom policy in API Manager?",
+    options: [
+      "To replace APIs",
+      "To enforce custom logic (e.g., rate limiting, validation)",
+      "To delete only",
+      "To create only"
+    ],
+    correctAnswer: 1,
+    explanation: "Custom policies enforce custom logic on API requests."
+  },
+  {
+    question: "Which Mule scope supports transactions?",
+    options: [
+      "Try only",
+      "Transactional scope",
+      "Flow only",
+      "No scope"
+    ],
+    correctAnswer: 1,
+    explanation: "Transactional scope ensures atomic processing."
+  },
+  {
+    question: "What does idempotency support in integration?",
+    options: [
+      "No support",
+      "Preventing duplicate processing from retries",
+      "Faster only",
+      "Slower only"
+    ],
+    correctAnswer: 1,
+    explanation: "Idempotency prevents duplicate processing on retries."
+  },
+  {
+    question: "Which deployment strategy supports zero-downtime on CloudHub?",
+    options: [
+      "No strategy",
+      "Blue-green or rolling deployment",
+      "Full restart only",
+      "Manual only"
+    ],
+    correctAnswer: 1,
+    explanation: "Blue-green and rolling deployments support zero-downtime."
+  },
+  {
+    question: "What is the purpose of MUnit?",
+    options: [
+      "To replace Mule",
+      "To unit test Mule flows and applications",
+      "To deploy only",
+      "To monitor only"
+    ],
+    correctAnswer: 1,
+    explanation: "MUnit is the testing framework for Mule applications."
+  },
 ]
 
 export default function MuleSoftDeveloperIIPage() {
@@ -84,7 +194,7 @@ export default function MuleSoftDeveloperIIPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

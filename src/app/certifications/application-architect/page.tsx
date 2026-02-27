@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Modeling data includes object design, relationships, and data volume strategy.",
   },
+  {
+    question: "What does Organization-Wide Defaults (OWD) control?",
+    options: [
+      "Only profiles",
+      "The baseline record access for each object (Private, Public Read Only, etc.)",
+      "Only permission sets",
+      "Only roles"
+    ],
+    correctAnswer: 1,
+    explanation: "OWD defines the default sharing model for each object."
+  },
+  {
+    question: "Which mechanism extends access when OWD is Private?",
+    options: [
+      "OWD only",
+      "Sharing rules, role hierarchy, and manual sharing",
+      "Permission sets only",
+      "Profiles only"
+    ],
+    correctAnswer: 1,
+    explanation: "Sharing rules, role hierarchy, and manual sharing extend access beyond OWD."
+  },
+  {
+    question: "What is the purpose of a criteria-based sharing rule?",
+    options: [
+      "To restrict access",
+      "To grant access to records that match specified criteria",
+      "To create reports",
+      "To assign users"
+    ],
+    correctAnswer: 1,
+    explanation: "Criteria-based sharing rules grant access based on field values."
+  },
+  {
+    question: "Which Salesforce feature supports multi-tenant data isolation?",
+    options: [
+      "Only profiles",
+      "Sharing model, org ID, and platform architecture",
+      "Permission sets only",
+      "Roles only"
+    ],
+    correctAnswer: 1,
+    explanation: "Sharing model and org-level isolation provide multi-tenant security."
+  },
+  {
+    question: "What does the development lifecycle for an Application Architect include?",
+    options: [
+      "Only coding",
+      "Design, development, testing, deployment, and governance",
+      "Only deployment",
+      "Only documentation"
+    ],
+    correctAnswer: 1,
+    explanation: "Lifecycle spans design through deployment with governance."
+  },
+  {
+    question: "Which relationship affects record-level security and roll-up?",
+    options: [
+      "Lookup only",
+      "Master-Detail (sharing inherits from parent)",
+      "Junction object only",
+      "External lookup only"
+    ],
+    correctAnswer: 1,
+    explanation: "Master-Detail affects sharing; child inherits parent's access."
+  },
+  {
+    question: "What is the purpose of a delegated admin group?",
+    options: [
+      "To replace sys admin",
+      "To grant limited admin capabilities to specific users",
+      "To create profiles",
+      "To assign permission sets only"
+    ],
+    correctAnswer: 1,
+    explanation: "Delegated admin groups provide scoped admin access."
+  },
+  {
+    question: "Which integration consideration applies to Application Architects?",
+    options: [
+      "Ignore security",
+      "Authentication, data ownership, and sharing for integrated data",
+      "Only REST",
+      "Only batch"
+    ],
+    correctAnswer: 1,
+    explanation: "Integration must consider auth, ownership, and sharing."
+  },
+  {
+    question: "What does visibility mean in the sharing context?",
+    options: [
+      "Only UI",
+      "Which records a user can see based on sharing rules and permissions",
+      "Only reports",
+      "Only dashboards"
+    ],
+    correctAnswer: 1,
+    explanation: "Visibility determines which records are visible to users."
+  },
+  {
+    question: "Which best practice supports scalable role hierarchy design?",
+    options: [
+      "Unlimited depth",
+      "Keep hierarchy flat where possible; avoid deep nesting",
+      "One role only",
+      "No hierarchy"
+    ],
+    correctAnswer: 1,
+    explanation: "Flatter hierarchies simplify sharing and maintenance."
+  },
 ]
 
 export default function ApplicationArchitectPage() {
@@ -84,7 +194,7 @@ export default function ApplicationArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

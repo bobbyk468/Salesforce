@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -74,6 +74,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Admins recommend workflow automation, logical channel structure, and settings that enhance team productivity."
   },
+  {
+    question: "What is the purpose of Slack Enterprise Grid?",
+    options: [
+      "A single workspace only",
+      "Connect multiple workspaces under one organization with centralized admin controls",
+      "Email integration only",
+      "A reporting tool"
+    ],
+    correctAnswer: 1,
+    explanation: "Enterprise Grid allows large organizations to connect multiple workspaces under centralized governance."
+  },
+  {
+    question: "Which Slack feature allows users to create automated workflows without code?",
+    options: [
+      "Slack Connect only",
+      "Workflow Builder",
+      "Channel management only",
+      "Search"
+    ],
+    correctAnswer: 1,
+    explanation: "Workflow Builder enables users to create automated workflows for common tasks without coding."
+  },
+  {
+    question: "What does channel retention control?",
+    options: [
+      "Who can join a channel",
+      "How long messages are kept before automatic deletion",
+      "Channel names only",
+      "Integrations"
+    ],
+    correctAnswer: 1,
+    explanation: "Retention policies determine how long messages and files are retained in channels for compliance."
+  },
+  {
+    question: "Which Slack setting helps prevent data loss when members leave?",
+    options: [
+      "Emoji settings",
+      "Data retention and eDiscovery export policies",
+      "Theme settings only",
+      "Notification preferences"
+    ],
+    correctAnswer: 1,
+    explanation: "Retention and eDiscovery policies ensure organizational data is preserved and recoverable."
+  },
+  {
+    question: "What is a Slack shared channel?",
+    options: [
+      "A channel with many members",
+      "A channel shared between two or more Slack workspaces for cross-org collaboration",
+      "A public channel only",
+      "A channel with integrations"
+    ],
+    correctAnswer: 1,
+    explanation: "Shared channels enable secure collaboration between different organizations' Slack workspaces."
+  },
+  {
+    question: "Which Slack admin capability helps control app installations?",
+    options: [
+      "Channel creation only",
+      "App management policies and approved app directories",
+      "User invitations only",
+      "Message search"
+    ],
+    correctAnswer: 1,
+    explanation: "App management policies let admins control which apps can be installed and used."
+  },
+  {
+    question: "What does Slack Analytics provide to administrators?",
+    options: [
+      "Only message count",
+      "Usage metrics, adoption trends, and engagement data",
+      "Email statistics only",
+      "Sales data"
+    ],
+    correctAnswer: 1,
+    explanation: "Slack Analytics helps admins understand adoption, usage patterns, and engagement."
+  },
+  {
+    question: "Which feature allows Slack admins to manage users at scale?",
+    options: [
+      "Manual addition only",
+      "SCIM provisioning and directory sync",
+      "Email invitations only",
+      "Channel invites"
+    ],
+    correctAnswer: 1,
+    explanation: "SCIM and directory sync enable bulk user provisioning and lifecycle management."
+  },
+  {
+    question: "What is the purpose of Slack compliance exports?",
+    options: [
+      "To backup files only",
+      "To export message and file data for legal, regulatory, or compliance requirements",
+      "To create reports",
+      "To share channels"
+    ],
+    correctAnswer: 1,
+    explanation: "Compliance exports support eDiscovery and regulatory compliance requirements."
+  },
+  {
+    question: "Which Slack Connect feature requires approval from both orgs?",
+    options: [
+      "Joining a channel",
+      "Creating a shared channel between workspaces",
+      "Sending a message",
+      "Adding an emoji"
+    ],
+    correctAnswer: 1,
+    explanation: "Shared channel creation requires approval from admins of both connected organizations."
+  },
 ]
 
 export default function SlackAdministratorPage() {
@@ -125,9 +235,7 @@ export default function SlackAdministratorPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

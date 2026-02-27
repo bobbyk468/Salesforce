@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -146,6 +146,24 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Data Cloud is a customer data platform (CDP) — built for real-time profile unification, segmentation, and activation. Traditional data warehouses store and query data but lack native identity resolution, activation, and Salesforce CRM integration.",
   },
+  {
+    question: "Which Data Cloud object represents a unified person record across all sources?",
+    options: ["Account", "Individual", "Contact Point Email only", "Segment"],
+    correctAnswer: 1,
+    explanation: "The Individual DMO is the unified person record that Identity Resolution creates by stitching together data from multiple sources."
+  },
+  {
+    question: "What is the purpose of a Data Cloud Data Stream?",
+    options: ["To export segments", "To connect a data source and map incoming records to DMOs for ingestion", "To create activation destinations", "To run Calculated Insights"],
+    correctAnswer: 1,
+    explanation: "Data Streams define the connection to a source (e.g., Salesforce, external API) and the mapping to Data Cloud objects."
+  },
+  {
+    question: "How does Data Cloud support Einstein and Agentforce?",
+    options: ["It does not", "By providing unified profiles for grounding — enabling AI to access real customer data", "Only for batch exports", "Only for Marketing Cloud"],
+    correctAnswer: 1,
+    explanation: "Data Cloud grounding lets Einstein and Agentforce access unified customer profiles for accurate, data-backed AI responses."
+  },
 ]
 
 export default function DataCloudConsultantPage() {
@@ -208,7 +226,7 @@ export default function DataCloudConsultantPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

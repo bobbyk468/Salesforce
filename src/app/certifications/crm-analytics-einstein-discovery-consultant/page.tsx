@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Einstein Ask allows users to query data using natural language.",
   },
+  {
+    question: "What is a Dataflow in CRM Analytics?",
+    options: [
+      "A report type",
+      "The ETL pipeline that ingests, transforms, and loads data into datasets",
+      "An email",
+      "A dashboard"
+    ],
+    correctAnswer: 1,
+    explanation: "Dataflows define the ETL process for building datasets in CRM Analytics."
+  },
+  {
+    question: "Which language is used to query data in CRM Analytics?",
+    options: [
+      "SOQL only",
+      "SAQL (Salesforce Analytics Query Language)",
+      "Apex",
+      "AMPscript"
+    ],
+    correctAnswer: 1,
+    explanation: "SAQL is used for querying and transforming data in CRM Analytics."
+  },
+  {
+    question: "What does Einstein Discovery Story provide?",
+    options: [
+      "Static reports only",
+      "Narrative insights and recommended actions based on predictive analysis",
+      "Dataflows only",
+      "Lenses only"
+    ],
+    correctAnswer: 1,
+    explanation: "Stories deliver narrative insights and recommended actions from predictions."
+  },
+  {
+    question: "Which CRM Analytics component displays data in rows and columns?",
+    options: [
+      "Chart only",
+      "Table or grouped table",
+      "Lens only",
+      "Dataflow only"
+    ],
+    correctAnswer: 1,
+    explanation: "Tables and grouped tables display tabular data on dashboards."
+  },
+  {
+    question: "What is the purpose of bindings in CRM Analytics dashboards?",
+    options: [
+      "To send emails",
+      "To pass filter values between widgets and control interactions",
+      "To run dataflows",
+      "To create lenses"
+    ],
+    correctAnswer: 1,
+    explanation: "Bindings link widgets so filters and selections flow between components."
+  },
+  {
+    question: "Which CRM Analytics object stores data for dashboard consumption?",
+    options: [
+      "Lens only",
+      "Dataset",
+      "Report",
+      "Dataflow only"
+    ],
+    correctAnswer: 1,
+    explanation: "Datasets store the data that lenses and dashboards query."
+  },
+  {
+    question: "What does Einstein Discovery predict?",
+    options: [
+      "Only charts",
+      "Outcomes (e.g., churn, conversion) and recommends actions",
+      "Only data structure",
+      "Only SAQL"
+    ],
+    correctAnswer: 1,
+    explanation: "Einstein Discovery predicts outcomes and recommends actions to improve them."
+  },
+  {
+    question: "Which governance consideration applies to CRM Analytics?",
+    options: [
+      "None",
+      "Row-level security, dataset permissions, and data refresh policies",
+      "Only email",
+      "Only dashboards"
+    ],
+    correctAnswer: 1,
+    explanation: "Governance includes RLS, permissions, and refresh policies."
+  },
+  {
+    question: "What is a CRM Analytics App?",
+    options: [
+      "A mobile app only",
+      "A container that organizes dashboards, lenses, and datasets for a use case",
+      "A dataflow only",
+      "A lens only"
+    ],
+    correctAnswer: 1,
+    explanation: "Apps organize dashboards, lenses, and datasets for specific use cases."
+  },
+  {
+    question: "Which integration allows CRM Analytics to use Salesforce data?",
+    options: [
+      "Manual export only",
+      "Salesforce connector and Data Sync",
+      "Email only",
+      "Slack only"
+    ],
+    correctAnswer: 1,
+    explanation: "The Salesforce connector and Data Sync enable CRM Analytics to consume Salesforce data."
+  },
 ]
 
 export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
@@ -84,7 +194,7 @@ export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

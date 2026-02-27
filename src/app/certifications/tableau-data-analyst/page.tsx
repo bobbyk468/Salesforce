@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import Link from 'next/link'
@@ -174,6 +174,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Certification is applied by Data Stewards or admins to published data sources, signalling to consumers that the data is authoritative and maintained."
   },
+  {
+    question: "What does a FIXED LOD expression compute?",
+    options: ["Only table calculations", "An aggregate at a specified dimension level, independent of the view", "Only running totals", "Only percentages"],
+    correctAnswer: 1,
+    explanation: "FIXED LOD computes at the dimension level you specify, ignoring filters and dimensions in the view (except context filters)."
+  },
 ]
 
 export default function TableauDataAnalystPage() {
@@ -252,7 +258,7 @@ export default function TableauDataAnalystPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}

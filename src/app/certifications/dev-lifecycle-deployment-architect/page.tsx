@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "CI/CD automates build, test, and release for Salesforce metadata.",
   },
+  {
+    question: "What is a scratch org used for?",
+    options: [
+      "Production deployment",
+      "Temporary, configurable orgs for development and testing",
+      "Full copy sandbox only",
+      "Data load only"
+    ],
+    correctAnswer: 1,
+    explanation: "Scratch orgs are temporary, configurable orgs for dev and testing."
+  },
+  {
+    question: "Which source control system integrates with Salesforce DX?",
+    options: [
+      "None",
+      "Git (and GitHub, GitLab, etc.)",
+      "Only SVN",
+      "Only TFVC"
+    ],
+    correctAnswer: 1,
+    explanation: "Salesforce DX is designed to work with Git and related tools."
+  },
+  {
+    question: "What does destructive change handling require?",
+    options: [
+      "No handling",
+      "destructiveChanges.xml or equivalent for metadata removal",
+      "Only add",
+      "Only update"
+    ],
+    correctAnswer: 1,
+    explanation: "destructiveChanges.xml specifies metadata to be removed."
+  },
+  {
+    question: "Which sandbox type best supports integration testing?",
+    options: [
+      "Developer only",
+      "Partial Copy or Full Copy for data and integration testing",
+      "Scratch org only",
+      "Production only"
+    ],
+    correctAnswer: 1,
+    explanation: "Partial/Full Copy sandboxes provide data for integration testing."
+  },
+  {
+    question: "What is the purpose of a release branch in CI/CD?",
+    options: [
+      "To replace main",
+      "To isolate release-specific changes and promote to production",
+      "Only for development",
+      "Only for testing"
+    ],
+    correctAnswer: 1,
+    explanation: "Release branches isolate and promote release-specific changes."
+  },
+  {
+    question: "Which governance practice supports deployment quality?",
+    options: [
+      "No governance",
+      "Peer review, automated tests, and approval gates",
+      "Manual only",
+      "No approval"
+    ],
+    correctAnswer: 1,
+    explanation: "Peer review, tests, and approval gates ensure quality."
+  },
+  {
+    question: "What does sf project deploy start do?",
+    options: [
+      "Nothing",
+      "Deploys source from project to target org",
+      "Only retrieves",
+      "Only creates scratch org"
+    ],
+    correctAnswer: 1,
+    explanation: "sf project deploy start deploys source to target org."
+  },
+  {
+    question: "Which deployment tool supports unlocked packages?",
+    options: [
+      "Change Sets only",
+      "Salesforce CLI and unlocked packages",
+      "Data Loader only",
+      "Workbench only"
+    ],
+    correctAnswer: 1,
+    explanation: "Salesforce CLI supports unlocked package development."
+  },
+  {
+    question: "What is the benefit of metadata API for deployment?",
+    options: [
+      "No benefit",
+      "Programmatic, scriptable deployment and retrieval",
+      "Manual only",
+      "UI only"
+    ],
+    correctAnswer: 1,
+    explanation: "Metadata API enables programmatic deployment and retrieval."
+  },
+  {
+    question: "Which best practice applies to release management?",
+    options: [
+      "Deploy directly to production",
+      "Use sandbox promotion path and validate before production",
+      "No testing",
+      "Single environment only"
+    ],
+    correctAnswer: 1,
+    explanation: "Promote through sandboxes and validate before production."
+  },
 ]
 
 export default function DevLifecycleDeploymentArchitectPage() {
@@ -84,7 +194,7 @@ export default function DevLifecycleDeploymentArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -74,6 +74,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "NPSP uses Recurring Donation objects that automatically create installment Opportunities based on the donation schedule."
   },
+  {
+    question: "What is a Soft Credit in NPSP?",
+    options: [
+      "A refund",
+      "Attributing a gift to a contact who influenced the donation (e.g., peer-to-peer)",
+      "A pledge only",
+      "An in-kind gift"
+    ],
+    correctAnswer: 1,
+    explanation: "Soft credits attribute influence to contacts who helped secure the gift."
+  },
+  {
+    question: "Which NPSP feature supports tribute and memorial giving?",
+    options: [
+      "Standard Opportunity only",
+      "Tribute and memorial fields and related processing",
+      "Campaign only",
+      "Household only"
+    ],
+    correctAnswer: 1,
+    explanation: "NPSP supports tribute and memorial giving with dedicated fields."
+  },
+  {
+    question: "What does the Affiliations object track?",
+    options: [
+      "Only donations",
+      "Relationships between contacts and accounts (e.g., employment, education)",
+      "Only households",
+      "Only campaigns"
+    ],
+    correctAnswer: 1,
+    explanation: "Affiliations track contact-to-account relationships."
+  },
+  {
+    question: "Which NPSP feature helps manage volunteer hours?",
+    options: [
+      "Opportunity only",
+      "Volunteer Jobs and Volunteer Hours",
+      "Campaign only",
+      "Household only"
+    ],
+    correctAnswer: 1,
+    explanation: "Volunteer Jobs and Volunteer Hours track volunteer engagement."
+  },
+  {
+    question: "What is the purpose of Payment records in NPSP?",
+    options: [
+      "To replace Opportunities",
+      "To track individual payments against an Opportunity (e.g., pledge installments)",
+      "To create campaigns",
+      "To manage households"
+    ],
+    correctAnswer: 1,
+    explanation: "Payment records track individual payments against Opportunities."
+  },
+  {
+    question: "Which feature supports grant management in Nonprofit Cloud?",
+    options: [
+      "Standard Opportunity only",
+      "Grant applications, requirements, and reporting",
+      "Campaign only",
+      "Household only"
+    ],
+    correctAnswer: 1,
+    explanation: "Grant management features support applications and reporting."
+  },
+  {
+    question: "What does the Forecast object support in NPSP?",
+    options: [
+      "Sales forecasting only",
+      "Budget and revenue forecasting for fundraising",
+      "Inventory only",
+      "Campaign only"
+    ],
+    correctAnswer: 1,
+    explanation: "Forecast supports budget and revenue planning for nonprofits."
+  },
+  {
+    question: "Which reporting need is common for nonprofits?",
+    options: [
+      "Only sales pipeline",
+      "Donor retention, campaign ROI, and gift summary",
+      "Only product sales",
+      "Only support cases"
+    ],
+    correctAnswer: 1,
+    explanation: "Nonprofits need donor retention, campaign ROI, and gift reports."
+  },
+  {
+    question: "What is the purpose of the Primary Affiliation in NPSP?",
+    options: [
+      "To replace Household",
+      "To designate the primary account (e.g., employer) for a contact",
+      "To track donations only",
+      "To manage campaigns"
+    ],
+    correctAnswer: 1,
+    explanation: "Primary Affiliation designates the main account for a contact."
+  },
+  {
+    question: "Which integration is common for Nonprofit Cloud?",
+    options: [
+      "CPQ only",
+      "Payment processors, fundraising platforms, and accounting",
+      "Marketing Cloud only",
+      "Slack only"
+    ],
+    correctAnswer: 1,
+    explanation: "Nonprofits integrate with payment processors and fundraising tools."
+  },
 ]
 
 export default function NonprofitCloudPage() {
@@ -125,9 +235,7 @@ export default function NonprofitCloudPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

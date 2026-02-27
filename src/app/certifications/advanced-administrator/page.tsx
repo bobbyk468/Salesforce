@@ -8,7 +8,7 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import dynamic from 'next/dynamic'
 import { Metadata } from 'next'
 
@@ -147,6 +147,12 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "External ID fields store a unique identifier from an external system. Data Loader and the API can use External IDs to upsert records — matching on the external ID to update existing records or insert new ones without knowing the Salesforce record ID.",
   },
+  {
+    question: "Which feature allows an admin to grant additional permissions without modifying a user's profile?",
+    options: ["Profile only", "Permission Set", "Role", "Sharing Rule"],
+    correctAnswer: 1,
+    explanation: "Permission Sets grant additional access without changing the profile. Users can have one profile and multiple permission sets."
+  },
 ]
 
 export default function AdvancedAdministratorPage() {
@@ -232,7 +238,7 @@ export default function AdvancedAdministratorPage() {
 
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
-            introText="Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct."
+            introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             questions={sampleQuestions}
           />
 

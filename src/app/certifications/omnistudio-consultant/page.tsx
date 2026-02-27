@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "FlexCards display compact, card-based views of data with declarative layout.",
   },
+  {
+    question: "What is a DataRaptor used for in OmniStudio?",
+    options: [
+      "To send emails only",
+      "To extract, load, or transform data (DEXT, DMLT, etc.)",
+      "To create reports only",
+      "To manage users"
+    ],
+    correctAnswer: 1,
+    explanation: "DataRaptors handle data extract, load, and transform operations."
+  },
+  {
+    question: "Which OmniStudio component invokes Apex or external services?",
+    options: [
+      "FlexCard only",
+      "Integration Procedure",
+      "OmniScript only",
+      "DataRaptor only"
+    ],
+    correctAnswer: 1,
+    explanation: "Integration Procedures call Apex and external systems."
+  },
+  {
+    question: "What does OmniScript validation support?",
+    options: [
+      "No validation",
+      "Required fields, custom validation, and conditional rules",
+      "Only required",
+      "Only custom"
+    ],
+    correctAnswer: 1,
+    explanation: "OmniScript supports required, custom, and conditional validation."
+  },
+  {
+    question: "Which deployment method is used for OmniStudio artifacts?",
+    options: [
+      "Change sets only",
+      "OmniStudio FlexDeploy or source-driven deployment",
+      "Manual copy only",
+      "No deployment"
+    ],
+    correctAnswer: 1,
+    explanation: "FlexDeploy and source-driven deployment manage OmniStudio artifacts."
+  },
+  {
+    question: "What is the purpose of OmniScript elements?",
+    options: [
+      "To replace DataRaptors",
+      "To define steps, fields, and actions in the OmniScript flow",
+      "To create FlexCards only",
+      "To send emails"
+    ],
+    correctAnswer: 1,
+    explanation: "Elements define the structure and behavior of OmniScript steps."
+  },
+  {
+    question: "Which OmniStudio feature supports conditional display?",
+    options: [
+      "No conditional logic",
+      "Conditional visibility and branching based on data or user input",
+      "Only branching",
+      "Only visibility"
+    ],
+    correctAnswer: 1,
+    explanation: "OmniScript supports conditional visibility and branching."
+  },
+  {
+    question: "What does an OmniStudio Consultant ensure for scalability?",
+    options: [
+      "Ignore performance",
+      "Reusable elements, efficient DataRaptors, and governance",
+      "Single use only",
+      "No reuse"
+    ],
+    correctAnswer: 1,
+    explanation: "Reusable design and efficient DataRaptors support scalability."
+  },
+  {
+    question: "Which OmniStudio artifact can be embedded in Lightning pages?",
+    options: [
+      "DataRaptor only",
+      "OmniScript and FlexCards",
+      "Integration Procedure only",
+      "None"
+    ],
+    correctAnswer: 1,
+    explanation: "OmniScript and FlexCards can be embedded in Lightning pages."
+  },
+  {
+    question: "What is the benefit of OmniScript over custom Apex UI?",
+    options: [
+      "No benefit",
+      "Declarative, faster to build, and easier to maintain for guided flows",
+      "More complex",
+      "Less flexible"
+    ],
+    correctAnswer: 1,
+    explanation: "OmniScript is declarative and faster to build for guided flows."
+  },
+  {
+    question: "Which industry use case is common for OmniStudio?",
+    options: [
+      "Retail only",
+      "Quote-to-cash, onboarding, and service workflows in Financial Services",
+      "Manufacturing only",
+      "Education only"
+    ],
+    correctAnswer: 1,
+    explanation: "Financial Services uses OmniStudio for quote-to-cash and onboarding."
+  },
 ]
 
 export default function OmniStudioConsultantPage() {
@@ -84,7 +194,7 @@ export default function OmniStudioConsultantPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

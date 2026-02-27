@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Business Manager is the admin console for managing B2C Commerce sites, catalogs, and operations.",
   },
+  {
+    question: "What is a pipeline in B2C Commerce?",
+    options: [
+      "A database",
+      "A server-side script that processes a request through sequential steps",
+      "An email",
+      "A report"
+    ],
+    correctAnswer: 1,
+    explanation: "Pipelines process requests through sequential script steps."
+  },
+  {
+    question: "Which B2C Commerce template language renders HTML?",
+    options: [
+      "AMPscript",
+      "ISML (Internet Store Markup Language)",
+      "Visualforce",
+      "LWC"
+    ],
+    correctAnswer: 1,
+    explanation: "ISML is the template language for B2C Commerce storefronts."
+  },
+  {
+    question: "What does OCAPI support?",
+    options: [
+      "Only reads",
+      "Headless commerce, custom storefronts, and mobile apps",
+      "Only writes",
+      "Only admin"
+    ],
+    correctAnswer: 1,
+    explanation: "OCAPI enables headless and custom storefront development."
+  },
+  {
+    question: "Which B2C Commerce object represents a product?",
+    options: [
+      "Account",
+      "Product and Product Variant",
+      "Opportunity",
+      "Lead"
+    ],
+    correctAnswer: 1,
+    explanation: "Product and Product Variant represent catalog items."
+  },
+  {
+    question: "What is the purpose of a custom cartridge?",
+    options: [
+      "To replace SFRA",
+      "To extend or override storefront functionality",
+      "To create reports only",
+      "To send emails only"
+    ],
+    correctAnswer: 1,
+    explanation: "Custom cartridges extend or override storefront behavior."
+  },
+  {
+    question: "Which B2C Commerce feature supports A/B testing?",
+    options: [
+      "No support",
+      "Business Manager experiments and activities",
+      "Code only",
+      "Manual only"
+    ],
+    correctAnswer: 1,
+    explanation: "Business Manager supports experiments for A/B testing."
+  },
+  {
+    question: "What does the Script Debugger support?",
+    options: [
+      "Only logs",
+      "Breakpoints, step-through, and variable inspection",
+      "Only deployment",
+      "Only builds"
+    ],
+    correctAnswer: 1,
+    explanation: "Script Debugger supports breakpoints and variable inspection."
+  },
+  {
+    question: "Which deployment method is used for B2C Commerce code?",
+    options: [
+      "Change Sets only",
+      "Code deployment via Business Manager or CI/CD",
+      "Data Loader only",
+      "Workbench only"
+    ],
+    correctAnswer: 1,
+    explanation: "Code deploys via Business Manager or CI/CD pipelines."
+  },
+  {
+    question: "What is the purpose of the hook mechanism in B2C Commerce?",
+    options: [
+      "To replace pipelines",
+      "To extend or override pipeline behavior without modifying base code",
+      "To delete only",
+      "To create only"
+    ],
+    correctAnswer: 1,
+    explanation: "Hooks allow extension without modifying base cartridges."
+  },
+  {
+    question: "Which best practice applies to B2C Commerce performance?",
+    options: [
+      "Ignore caching",
+      "Use caching, optimize ISML, and minimize API calls",
+      "No caching",
+      "No optimization"
+    ],
+    correctAnswer: 1,
+    explanation: "Caching and optimization support storefront performance."
+  },
 ]
 
 export default function B2CCommerceDeveloperPage() {
@@ -84,7 +194,7 @@ export default function B2CCommerceDeveloperPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

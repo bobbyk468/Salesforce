@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "They drive business outcomes through human-centered experience strategies.",
   },
+  {
+    question: "What does design thinking emphasize?",
+    options: [
+      "Only coding",
+      "Empathize, define, ideate, prototype, and test",
+      "Only documentation",
+      "Only deployment"
+    ],
+    correctAnswer: 1,
+    explanation: "Design thinking uses empathize, define, ideate, prototype, and test."
+  },
+  {
+    question: "Which deliverable communicates experience strategy to stakeholders?",
+    options: [
+      "Code only",
+      "Strategy document, journey maps, and vision artifacts",
+      "Only wireframes",
+      "Only prototypes"
+    ],
+    correctAnswer: 1,
+    explanation: "Strategy documents and journey maps communicate experience direction."
+  },
+  {
+    question: "What does stakeholder alignment achieve?",
+    options: [
+      "No alignment",
+      "Shared understanding of goals, priorities, and success criteria",
+      "Only technical alignment",
+      "Only design alignment"
+    ],
+    correctAnswer: 1,
+    explanation: "Stakeholder alignment ensures shared goals and success criteria."
+  },
+  {
+    question: "Which research method helps Strategy Designers understand user needs?",
+    options: [
+      "Only surveys",
+      "Interviews, observation, and empathy mapping",
+      "Only analytics",
+      "Only code review"
+    ],
+    correctAnswer: 1,
+    explanation: "Interviews, observation, and empathy mapping reveal user needs."
+  },
+  {
+    question: "What is the purpose of an experience vision?",
+    options: [
+      "To replace strategy",
+      "To articulate the target future state for users and the business",
+      "To write code",
+      "To deploy"
+    ],
+    correctAnswer: 1,
+    explanation: "Experience vision articulates the target future state."
+  },
+  {
+    question: "Which platform capability should Strategy Designers understand?",
+    options: [
+      "Only Apex",
+      "Experience Cloud, Sales, Service, and automation capabilities",
+      "Only Heroku",
+      "Only MuleSoft"
+    ],
+    correctAnswer: 1,
+    explanation: "Strategy Designers align with platform capabilities."
+  },
+  {
+    question: "What does opportunity framing support?",
+    options: [
+      "Only coding",
+      "Defining the problem space and opportunity for design",
+      "Only testing",
+      "Only deployment"
+    ],
+    correctAnswer: 1,
+    explanation: "Opportunity framing defines the problem and opportunity."
+  },
+  {
+    question: "Which outcome should an experience strategy prioritize?",
+    options: [
+      "Only technology",
+      "User value and business outcomes",
+      "Only cost",
+      "Only speed"
+    ],
+    correctAnswer: 1,
+    explanation: "Strategy should balance user value and business outcomes."
+  },
+  {
+    question: "What is the benefit of involving users early in strategy?",
+    options: [
+      "No benefit",
+      "Validation of assumptions and alignment with real needs",
+      "Slower only",
+      "Higher cost only"
+    ],
+    correctAnswer: 1,
+    explanation: "Early user involvement validates assumptions and needs."
+  },
+  {
+    question: "Which best practice applies to Strategy Designer deliverables?",
+    options: [
+      "Technical only",
+      "Clear, actionable, and aligned with business and user goals",
+      "Vague only",
+      "No alignment"
+    ],
+    correctAnswer: 1,
+    explanation: "Deliverables should be clear, actionable, and aligned."
+  },
 ]
 
 export default function StrategyDesignerPage() {
@@ -84,7 +194,7 @@ export default function StrategyDesignerPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

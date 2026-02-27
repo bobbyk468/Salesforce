@@ -7,7 +7,7 @@ import ExamFeesSection from '@/components/ExamFeesSection'
 import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import type { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -15,23 +15,11 @@ import Link from 'next/link'
 
 const slug = 'app-builder'
 
-const descriptionText =
-  'Free DEV-402 practice questions and Winter \'26 guide: $200 fee, 60 questions, declarative app building, and section-wise practice. Start now.'
-
 export async function generateMetadata(): Promise<Metadata> {
   const baseMetadata = getCertMetadata(slug)
 
   return {
     ...baseMetadata,
-    description: descriptionText,
-    openGraph: {
-      ...baseMetadata.openGraph,
-      description: descriptionText,
-    },
-    twitter: {
-      ...baseMetadata.twitter,
-      description: descriptionText,
-    },
   }
 }
 
@@ -190,6 +178,12 @@ const sampleQuestions = [
     correctAnswer: 3,
     explanation: "Duplicate Rules work with Matching Rules to prevent or alert users about duplicate records. Matching Rules define what constitutes a duplicate, and Duplicate Rules define what action to take."
   },
+  {
+    question: "Which Lightning App Builder component allows filtering records displayed on a record page?",
+    options: ["Related List", "Related Record", "Filter", "List View"],
+    correctAnswer: 2,
+    explanation: "The Filter component lets users filter records on a record page using predefined criteria."
+  },
 ]
 
 export default function AppBuilderPage() {
@@ -279,7 +273,7 @@ export default function AppBuilderPage() {
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
+              {getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             </p>
             
             {sampleQuestions.map((q, index) => (

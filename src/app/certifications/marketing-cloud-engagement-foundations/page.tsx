@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Journey Builder creates multi-step, automated customer journeys.",
   },
+  {
+    question: "What is a Data Extension in Marketing Cloud?",
+    options: [
+      "A report only",
+      "A table that stores contact and marketing data",
+      "An email template",
+      "A journey"
+    ],
+    correctAnswer: 1,
+    explanation: "Data Extensions store contact and marketing data for sends and journeys."
+  },
+  {
+    question: "Which Marketing Cloud product sends scheduled emails?",
+    options: [
+      "Journey Builder only",
+      "Email Studio or Automation Studio",
+      "Slack",
+      "Heroku"
+    ],
+    correctAnswer: 1,
+    explanation: "Email Studio and Automation Studio send scheduled emails."
+  },
+  {
+    question: "What does a Send Definition define?",
+    options: [
+      "Only subject",
+      "Audience, content, and send timing",
+      "Only content",
+      "Only audience"
+    ],
+    correctAnswer: 1,
+    explanation: "Send Definition defines audience, content, and timing."
+  },
+  {
+    question: "Which concept tracks email engagement?",
+    options: [
+      "Only sends",
+      "Opens, clicks, bounces, and unsubscribes",
+      "Only opens",
+      "Only clicks"
+    ],
+    correctAnswer: 1,
+    explanation: "Tracking measures opens, clicks, bounces, and unsubscribes."
+  },
+  {
+    question: "What is the purpose of a List in Marketing Cloud?",
+    options: [
+      "To replace Data Extensions",
+      "To group subscribers for sends (legacy or simple use cases)",
+      "To create journeys only",
+      "To create reports only"
+    ],
+    correctAnswer: 1,
+    explanation: "Lists group subscribers for sends in simple use cases."
+  },
+  {
+    question: "Which entry source can start a Journey Builder journey?",
+    options: [
+      "Email only",
+      "Data extension, API, form, or campaign",
+      "SMS only",
+      "Push only"
+    ],
+    correctAnswer: 1,
+    explanation: "Entry sources include data extension, API, form, or campaign."
+  },
+  {
+    question: "What does Marketing Cloud Engagement encompass?",
+    options: [
+      "Only email",
+      "Email, mobile, and digital engagement capabilities",
+      "Only SMS",
+      "Only social"
+    ],
+    correctAnswer: 1,
+    explanation: "Engagement encompasses email, mobile, and digital."
+  },
+  {
+    question: "Which report type shows email performance?",
+    options: [
+      "Only sends",
+      "Tracking (opens, clicks, etc.) and send summary",
+      "Only opens",
+      "Only bounces"
+    ],
+    correctAnswer: 1,
+    explanation: "Tracking and send summary reports show email performance."
+  },
+  {
+    question: "What is a Subscriber Key?",
+    options: [
+      "A password",
+      "The unique identifier for a subscriber in Marketing Cloud",
+      "An email address only",
+      "A list name"
+    ],
+    correctAnswer: 1,
+    explanation: "Subscriber Key uniquely identifies a subscriber."
+  },
+  {
+    question: "Which best practice applies to Marketing Cloud Engagement?",
+    options: [
+      "Send to all",
+      "List hygiene, segmentation, and deliverability practices",
+      "No hygiene",
+      "No segmentation"
+    ],
+    correctAnswer: 1,
+    explanation: "List hygiene, segmentation, and deliverability support success."
+  },
 ]
 
 export default function MarketingCloudEngagementFoundationsPage() {
@@ -84,7 +194,7 @@ export default function MarketingCloudEngagementFoundationsPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

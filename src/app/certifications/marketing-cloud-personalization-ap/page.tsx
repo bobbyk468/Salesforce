@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key activity for a Marketing Cloud Personalization Professional?", options: ["Only coding", "Designing, configuring, building, and implementing personalization solutions", "Only reporting", "Only lists"], correctAnswer: 1, explanation: "They design, configure, build, and implement personalization solutions." },
   { question: "Which role typically pursues Marketing Cloud Personalization AP?", options: ["Sales only", "Partners and implementers working with Marketing Cloud Personalization", "Designers only", "Developers only"], correctAnswer: 1, explanation: "Partners and implementers working with personalization pursue this credential." },
   { question: "What does personalization often rely on?", options: ["Only static content", "Data, segments, and real-time decisioning", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Personalization relies on data, segments, and real-time decisioning." },
+  { question: "What is real-time decisioning in personalization?", options: ["Batch only", "Instant content and offer selection based on user context", "Manual only", "Static only"], correctAnswer: 1, explanation: "Real-time decisioning selects content/offers instantly." },
+  { question: "Which data source feeds Marketing Cloud Personalization?", options: ["Slack only", "CDP, Data Extensions, and event data", "Salesforce only", "No data"], correctAnswer: 1, explanation: "CDP and event data feed personalization." },
+  { question: "What does web personalization target?", options: ["Email only", "Web pages, banners, and recommendations", "SMS only", "Social only"], correctAnswer: 1, explanation: "Web personalization targets pages and recommendations." },
+  { question: "Which touchpoint does Marketing Cloud Personalization support?", options: ["Email only", "Web, mobile, email, and in-app", "SMS only", "Social only"], correctAnswer: 1, explanation: "Personalization supports web, mobile, email, and in-app." },
+  { question: "What is the purpose of segments in personalization?", options: ["To replace data", "To target and tailor experiences by audience", "To send only", "To report only"], correctAnswer: 1, explanation: "Segments target and tailor experiences by audience." },
+  { question: "Which integration connects personalization to Marketing Cloud?", options: ["Manual only", "CDP, Journey Builder, and Email Studio", "Slack only", "Service Cloud only"], correctAnswer: 1, explanation: "CDP and Journey Builder connect to personalization." },
+  { question: "What does building personalization solutions involve?", options: ["Only design", "Configuring decision rules, segments, and experiences", "Only coding", "Only reports"], correctAnswer: 1, explanation: "Building involves rules, segments, and experiences." },
+  { question: "Which best practice applies to personalization?", options: ["Ignore data", "Privacy-first, test experiences, and measure lift", "No testing", "Static only"], correctAnswer: 1, explanation: "Privacy-first, testing, and measurement support success." },
+  { question: "What is the benefit of Marketing Cloud Personalization?", options: ["No benefit", "Relevant experiences that drive engagement and conversion", "Generic only", "Manual only"], correctAnswer: 1, explanation: "Personalization drives relevant engagement and conversion." },
+  { question: "What is an offer in Marketing Cloud Personalization?", options: ["A report", "A content asset (banner, message) presented based on rules or segments", "An email only", "A workflow only"], correctAnswer: 1, explanation: "Offers are content assets presented conditionally based on rules and audience." },
 ]
 
 export default function MarketingCloudPersonalizationAPPage() {
@@ -53,7 +63,7 @@ export default function MarketingCloudPersonalizationAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -173,6 +173,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Territory Management allows you to organize sales teams by geographic regions, account types, or other criteria, and automatically assign accounts and opportunities to territories."
   },
+  {
+    question: "Which Sales Cloud feature helps forecast revenue based on opportunities?",
+    options: ["Reports only", "Sales Forecasting with Collaborative Forecasts or Custom Forecast Types", "Territory Management", "Lead Assignment Rules"],
+    correctAnswer: 1,
+    explanation: "Sales Forecasting lets managers predict revenue using opportunity data; Collaborative Forecasts support quota and custom forecast types."
+  },
 ]
 
 export default function SalesCloudPage() {
@@ -225,7 +231,7 @@ export default function SalesCloudPage() {
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
+              {getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             </p>
             
             {sampleQuestions.map((q, index) => (

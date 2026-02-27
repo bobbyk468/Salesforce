@@ -9,7 +9,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -174,6 +174,12 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "Service Console provides a unified interface where agents can see all their work items, cases, knowledge articles, and customer information in one place."
   },
+  {
+    question: "Which feature defines support entitlements and service level agreements (SLAs) for cases?",
+    options: ["Case Assignment Rules", "Entitlements and Milestones", "Omni-Channel", "Knowledge Base"],
+    correctAnswer: 1,
+    explanation: "Entitlements define what support a customer receives; Milestones track SLA timers (e.g., first response, resolution) against those entitlements."
+  },
 ]
 
 export default function ServiceCloudPage() {
@@ -226,7 +232,7 @@ export default function ServiceCloudPage() {
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
+              {getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             </p>
             
             {sampleQuestions.map((q, index) => (

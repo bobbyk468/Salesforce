@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Archiving involves moving historical data while preserving access and compliance.",
   },
+  {
+    question: "What is a Big Object in Salesforce?",
+    options: [
+      "A standard object",
+      "A custom object optimized for high-volume, append-only historical data",
+      "A report type",
+      "A dashboard"
+    ],
+    correctAnswer: 1,
+    explanation: "Big Objects store high-volume historical data with optimized query patterns."
+  },
+  {
+    question: "Which indexing strategy improves SOQL performance?",
+    options: [
+      "No indexing",
+      "Custom indexes on frequently filtered fields and standard indexed fields",
+      "Index all fields",
+      "Only on formula fields"
+    ],
+    correctAnswer: 1,
+    explanation: "Custom indexes on filtered fields improve query performance."
+  },
+  {
+    question: "What does data migration planning include?",
+    options: [
+      "Only export",
+      "Extract, transform, load (ETL), validation, and rollback strategy",
+      "Only import",
+      "Only backup"
+    ],
+    correctAnswer: 1,
+    explanation: "Migration includes ETL, validation, and rollback planning."
+  },
+  {
+    question: "Which relationship type allows a child to exist without a parent?",
+    options: [
+      "Master-Detail",
+      "Lookup",
+      "Junction (many-to-many)",
+      "External Lookup"
+    ],
+    correctAnswer: 1,
+    explanation: "Lookup allows optional parent; child can exist independently."
+  },
+  {
+    question: "What is the purpose of a soft delete strategy?",
+    options: [
+      "To permanently remove data",
+      "To mark records as deleted while retaining for compliance or recovery",
+      "To export data only",
+      "To archive only"
+    ],
+    correctAnswer: 1,
+    explanation: "Soft delete preserves data with a deleted flag for compliance."
+  },
+  {
+    question: "Which governor limit affects bulk SOQL in triggers?",
+    options: [
+      "No limit",
+      "100 SOQL queries per transaction (sync)",
+      "Unlimited",
+      "50 queries"
+    ],
+    correctAnswer: 1,
+    explanation: "Synchronous limit is 100 SOQL queries per transaction."
+  },
+  {
+    question: "What does master data management (MDM) address?",
+    options: [
+      "Only reporting",
+      "Single source of truth, deduplication, and data quality",
+      "Only archiving",
+      "Only migration"
+    ],
+    correctAnswer: 1,
+    explanation: "MDM ensures consistent, clean master data across systems."
+  },
+  {
+    question: "Which data type supports high-volume, append-only use cases?",
+    options: [
+      "Standard object only",
+      "Big Object",
+      "Custom object with triggers",
+      "External object"
+    ],
+    correctAnswer: 1,
+    explanation: "Big Objects are designed for append-only, high-volume data."
+  },
+  {
+    question: "What is the benefit of using External Objects?",
+    options: [
+      "To replace custom objects",
+      "To query external data without replicating it into Salesforce",
+      "To archive data",
+      "To create reports only"
+    ],
+    correctAnswer: 1,
+    explanation: "External Objects enable querying external systems in real time."
+  },
+  {
+    question: "Which consideration applies when designing for data volume growth?",
+    options: [
+      "Ignore limits",
+      "Archiving strategy, indexing, and query selectivity",
+      "Only backup",
+      "Only export"
+    ],
+    correctAnswer: 1,
+    explanation: "Data growth requires archiving, indexing, and selective queries."
+  },
 ]
 
 export default function DataArchitectPage() {
@@ -84,7 +194,7 @@ export default function DataArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

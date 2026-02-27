@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key use case for Consumer Goods Cloud?", options: ["Only email", "Retail execution, trade promotion, and outlet management", "Only CPQ", "Only Slack"], correctAnswer: 1, explanation: "Retail execution, trade promotion, and outlet management are key use cases." },
   { question: "Which role typically pursues Consumer Goods Cloud AP?", options: ["Marketers", "Partners and implementers in consumer goods", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Partners and implementers in consumer goods pursue this credential." },
   { question: "What does 'outlet' refer to in Consumer Goods Cloud?", options: ["Email only", "Retail or distribution points (stores, distributors)", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Outlet refers to retail or distribution points." },
+  { question: "What is retail execution?", options: ["Email campaigns only", "Field reps visiting outlets to execute promotions, audits, and merchandising", "Online sales only", "Warehouse only"], correctAnswer: 1, explanation: "Retail execution involves field activities at retail outlets." },
+  { question: "What is trade promotion management?", options: ["Only discounts", "Planning, executing, and tracking promotional activities and spend", "Only pricing", "Only reports"], correctAnswer: 1, explanation: "Trade promotion covers planning, execution, and spend tracking." },
+  { question: "Which role visits outlets in Consumer Goods Cloud?", options: ["Sales reps only", "Retail execution reps (e.g., merchandisers, field reps)", "Marketers only", "Developers only"], correctAnswer: 1, explanation: "Retail execution reps visit outlets for audits and merchandising." },
+  { question: "What does 'design and build' mean for Consumer Goods Cloud?", options: ["Only coding", "Designing the solution architecture and configuring the platform", "Only reporting", "Only deployment"], correctAnswer: 1, explanation: "Design = architecture; build = configuration." },
+  { question: "Which data is often tracked at the outlet level?", options: ["Only sales", "Inventory, compliance, promotions, and outlet attributes", "Only marketing", "Only finance"], correctAnswer: 1, explanation: "Outlet-level data includes inventory, compliance, and promotions." },
+  { question: "What is outlet management in Consumer Goods Cloud?", options: ["Email only", "Managing outlet records, hierarchies, and visit planning", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Outlet management covers outlet data and visit planning." },
+  { question: "Which industry segment uses Consumer Goods Cloud?", options: ["Healthcare only", "CPG manufacturers and distributors (e.g., beverages, packaged goods)", "Financial services only", "Education only"], correctAnswer: 1, explanation: "CPG (Consumer Packaged Goods) is the primary segment." },
+  { question: "What does deploy mean for Consumer Goods Cloud?", options: ["Only coding", "Implementing the solution and going live with the customer", "Only design", "Only training"], correctAnswer: 1, explanation: "Deploy = implement and go-live." },
+  { question: "Why is visit planning important for retail execution?", options: ["Not important", "Optimizing field rep routes and outlet visit schedules", "Only for HQ", "Only for marketing"], correctAnswer: 1, explanation: "Visit planning optimizes field rep coverage of outlets." },
+  { question: "Which Salesforce product does Consumer Goods Cloud extend?", options: ["Marketing Cloud only", "Sales Cloud and Service Cloud for retail execution workflows", "Commerce Cloud only", "Slack only"], correctAnswer: 1, explanation: "Consumer Goods Cloud extends Sales Cloud and Service Cloud." },
 ]
 
 export default function ConsumerGoodsCloudAPPage() {
@@ -53,7 +63,7 @@ export default function ConsumerGoodsCloudAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

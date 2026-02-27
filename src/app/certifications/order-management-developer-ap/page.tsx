@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "Which role typically pursues Order Management Developer AP?", options: ["Marketers", "Partners and developers working with Order Management", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Partners and developers working with Order Management pursue this credential." },
   { question: "What does customization in Order Management often involve?", options: ["Only UI", "Fulfillment flows, integrations, and extensions", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Customization involves fulfillment flows, integrations, and extensions." },
   { question: "Which product does Order Management often integrate with?", options: ["Only Marketing Cloud", "CPQ, Commerce, and fulfillment systems", "Only Service Cloud", "Only Slack"], correctAnswer: 1, explanation: "Order Management integrates with CPQ, Commerce, and fulfillment systems." },
+  { question: "What does fulfillment flow customization involve?", options: ["Only UI", "Defining steps, actions, and routing for order fulfillment", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Fulfillment flows define steps, actions, and routing logic." },
+  { question: "Which technology is used to extend Order Management?", options: ["Only clicks", "Apex, Platform Events, and APIs", "Only reports", "Only lists"], correctAnswer: 1, explanation: "Developers use Apex, Platform Events, and APIs for customization." },
+  { question: "What is an Order Summary in Order Management?", options: ["A report", "The consolidated order record that drives orchestration and fulfillment", "A lead", "An email"], correctAnswer: 1, explanation: "Order Summary is the central record for order lifecycle." },
+  { question: "Which integration pattern supports real-time order updates?", options: ["Batch only", "Platform Events, callouts, or APIs", "Manual only", "Email only"], correctAnswer: 1, explanation: "Platform Events, callouts, and APIs enable real-time integration." },
+  { question: "What does Fulfillment Order represent?", options: ["A quote", "A unit of work for fulfillment (e.g., ship-to location)", "A lead", "A campaign"], correctAnswer: 1, explanation: "Fulfillment Orders represent work units for fulfillment execution." },
+  { question: "Which best practice applies to Order Management development?", options: ["Ignore error handling", "Implement error handling, logging, and idempotency for integrations", "No testing", "Single system only"], correctAnswer: 1, explanation: "Error handling, logging, and idempotency are critical for reliability." },
+  { question: "What does custom allocation logic enable?", options: ["Only reporting", "Custom rules for inventory or fulfillment allocation", "Only UI", "Only dashboards"], correctAnswer: 1, explanation: "Custom allocation logic extends default fulfillment behavior." },
+  { question: "Which Order Management API supports order creation?", options: ["REST only", "Order Management APIs for order and fulfillment lifecycle", "SOAP only", "Bulk API only"], correctAnswer: 1, explanation: "Order Management exposes APIs for order and fulfillment operations." },
+  { question: "What is the purpose of fulfillment group configuration?", options: ["Only reports", "Defining how orders split and route to fulfillment locations", "Only UI", "Only dashboards"], correctAnswer: 1, explanation: "Fulfillment groups define order splitting and routing logic." },
+  { question: "Which testing approach is important for Order Management customizations?", options: ["No testing", "Unit tests, integration tests, and end-to-end fulfillment tests", "Manual only", "UAT only"], correctAnswer: 1, explanation: "Testing should cover unit, integration, and E2E scenarios." },
 ]
 
 export default function OrderManagementDeveloperAPPage() {
@@ -53,7 +63,7 @@ export default function OrderManagementDeveloperAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

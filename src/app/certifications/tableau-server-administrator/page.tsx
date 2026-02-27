@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -90,6 +90,60 @@ const sampleQuestions = [
     correctAnswer: 2,
     explanation: "Proactive monitoring of jobs, storage, and backup/restore workflows helps prevent outages and data freshness issues."
   },
+  {
+    question: "What does the Tableau Services Manager (TSM) do?",
+    options: ["Creates dashboards", "Manages Tableau Server installation, configuration, and lifecycle", "Manages data sources only", "Handles licensing only"],
+    correctAnswer: 1,
+    explanation: "TSM is the command-line and web interface for managing Tableau Server deployment and configuration."
+  },
+  {
+    question: "Which Tableau Server process handles interactive view requests?",
+    options: ["Backgrounder only", "VizQL Server", "Data Server only", "Gateway only"],
+    correctAnswer: 1,
+    explanation: "VizQL Server processes interactive view requests and queries. Sizing it affects responsiveness."
+  },
+  {
+    question: "What is a Tableau Server site used for?",
+    options: ["Single workbook only", "Isolating content and users; each site has its own projects, users, and permissions", "Only for testing", "Only for development"],
+    correctAnswer: 1,
+    explanation: "Sites provide logical separation for multi-tenant or departmental deployments."
+  },
+  {
+    question: "How do you add users to Tableau Server?",
+    options: ["Only manually", "Through TSM, Server UI, or integrated identity (SAML/LDAP) sync", "Only via API", "Only via CSV"],
+    correctAnswer: 1,
+    explanation: "Users can be added via TSM, the Server UI, or through identity provider sync."
+  },
+  {
+    question: "What is the purpose of Tableau Server's gateway?",
+    options: ["Renders views only", "Acts as a reverse proxy and load balancer for incoming requests", "Stores data only", "Manages extracts only"],
+    correctAnswer: 1,
+    explanation: "The gateway receives requests and routes them to the appropriate services."
+  },
+  {
+    question: "Which log should you check first for failed extract refreshes?",
+    options: ["VizQL logs only", "Backgrounder logs", "Gateway logs only", "Repository logs only"],
+    correctAnswer: 1,
+    explanation: "Backgrounder runs extract refreshes; its logs show failures and errors."
+  },
+  {
+    question: "What does Tableau Cloud's managed infrastructure mean for admins?",
+    options: ["No admin needed", "Tableau manages servers; admins focus on sites, users, and content governance", "Admins manage everything", "No difference from on-prem"],
+    correctAnswer: 1,
+    explanation: "Tableau Cloud is fully managed; admins focus on sites, users, permissions, and content."
+  },
+  {
+    question: "Which Tableau Server feature helps prevent workbook overwrites?",
+    options: ["No such feature", "Project-level Lock Permissions", "Only manual backup", "Only version history"],
+    correctAnswer: 1,
+    explanation: "Lock Permissions prevent users from changing project settings; combined with ownership for content control."
+  },
+  {
+    question: "What should an administrator do before upgrading Tableau Server?",
+    options: ["Upgrade immediately", "Backup the repository, test in a non-production environment, and review release notes", "Nothing", "Only backup workbooks"],
+    correctAnswer: 1,
+    explanation: "Repository backup, staging tests, and release notes review are essential before upgrades."
+  },
 ]
 
 export default function TableauServerAdministratorPage() {
@@ -152,7 +206,7 @@ export default function TableauServerAdministratorPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}

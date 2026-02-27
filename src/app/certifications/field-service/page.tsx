@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -74,6 +74,116 @@ const sampleQuestions = [
     correctAnswer: 0,
     explanation: "The Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources."
   },
+  {
+    question: "What is the purpose of Work Type in Field Service?",
+    options: [
+      "To track inventory only",
+      "To define the template for work orders including duration, skills, and parts",
+      "To assign territories",
+      "To create reports"
+    ],
+    correctAnswer: 1,
+    explanation: "Work Type defines the template for work orders including duration and skill requirements."
+  },
+  {
+    question: "Which object links a Service Appointment to a Work Order?",
+    options: [
+      "Service Resource",
+      "Service Appointment (child of Work Order)",
+      "Operating Hours",
+      "Service Territory"
+    ],
+    correctAnswer: 1,
+    explanation: "Service Appointments are child records of Work Orders."
+  },
+  {
+    question: "What does the scheduling optimizer consider when assigning appointments?",
+    options: [
+      "Only territory",
+      "Skills, availability, travel time, and scheduling policies",
+      "Only skills",
+      "Only travel time"
+    ],
+    correctAnswer: 1,
+    explanation: "The optimizer considers skills, availability, travel, and policies."
+  },
+  {
+    question: "Which feature allows dispatchers to manually drag and drop appointments?",
+    options: [
+      "List View only",
+      "Dispatcher Console Gantt",
+      "Map View only",
+      "Reports"
+    ],
+    correctAnswer: 1,
+    explanation: "The Gantt allows manual drag-and-drop scheduling."
+  },
+  {
+    question: "What is the purpose of Operating Hours in Field Service?",
+    options: [
+      "To define skills only",
+      "To define when resources and locations are available",
+      "To track parts only",
+      "To create work orders"
+    ],
+    correctAnswer: 1,
+    explanation: "Operating Hours define availability windows for resources and locations."
+  },
+  {
+    question: "Which object is used to track consumable or returnable parts for work orders?",
+    options: [
+      "Service Resource",
+      "Product Required or Product Consumed",
+      "Work Type",
+      "Service Territory"
+    ],
+    correctAnswer: 1,
+    explanation: "Product Required and Product Consumed track parts on work orders."
+  },
+  {
+    question: "What does the Field Service Mobile app support for technicians?",
+    options: [
+      "Online only",
+      "Offline access, capture signatures, and photo attachments",
+      "Reports only",
+      "Dashboards only"
+    ],
+    correctAnswer: 1,
+    explanation: "The mobile app supports offline work, signatures, and photos."
+  },
+  {
+    question: "Which feature enables automatic scheduling based on optimization rules?",
+    options: [
+      "Manual assignment only",
+      "Optimization service with scheduling policies",
+      "Gantt only",
+      "Map only"
+    ],
+    correctAnswer: 1,
+    explanation: "The optimization service runs with scheduling policies for automatic assignment."
+  },
+  {
+    question: "What is a Service Territory used for?",
+    options: [
+      "To track parts only",
+      "To define geographic or logical areas for resource assignment",
+      "To create work types only",
+      "To manage contracts only"
+    ],
+    correctAnswer: 1,
+    explanation: "Service Territories define areas for resource assignment and routing."
+  },
+  {
+    question: "Which Field Service feature supports contract-based entitlements and SLAs?",
+    options: [
+      "Work Type only",
+      "Service Contracts and Entitlements",
+      "Operating Hours only",
+      "Service Resource only"
+    ],
+    correctAnswer: 1,
+    explanation: "Service Contracts and Entitlements define SLAs and covered services."
+  },
 ]
 
 export default function FieldServicePage() {
@@ -125,9 +235,7 @@ export default function FieldServicePage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

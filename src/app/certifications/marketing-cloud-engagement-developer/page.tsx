@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Cloud Pages (formerly Landing Pages) host web pages with AMPscript and dynamic content.",
   },
+  {
+    question: "Which AMPscript block retrieves multiple rows from a Data Extension?",
+    options: [
+      "LOOKUP only",
+      "LOOKUPROWS or LOOKUPORDEREDROWS",
+      "GET only",
+      "RETRIEVE only"
+    ],
+    correctAnswer: 1,
+    explanation: "LOOKUPROWS and LOOKUPORDEREDROWS retrieve multiple rows."
+  },
+  {
+    question: "What is the purpose of a Script Activity in Automation Studio?",
+    options: [
+      "To send emails only",
+      "To run SSJS for data manipulation, imports, or custom logic",
+      "To create journeys only",
+      "To design templates only"
+    ],
+    correctAnswer: 1,
+    explanation: "Script Activities run SSJS for data and custom logic."
+  },
+  {
+    question: "Which API is used for programmatic access to Marketing Cloud?",
+    options: [
+      "Apex",
+      "REST API and SOAP API",
+      "Visualforce only",
+      "LWC only"
+    ],
+    correctAnswer: 1,
+    explanation: "Marketing Cloud exposes REST and SOAP APIs."
+  },
+  {
+    question: "What does the Treat As Content option do in AMPscript?",
+    options: [
+      "Nothing",
+      "Prevents AMPscript from being executed (treats as literal)",
+      "To encrypt",
+      "To delete"
+    ],
+    correctAnswer: 1,
+    explanation: "Treat As Content displays AMPscript as literal text."
+  },
+  {
+    question: "Which Data Extension type supports sendable sends?",
+    options: [
+      "Standard only",
+      "Sendable Data Extension (subscriber-key based)",
+      "Random only",
+      "No extension"
+    ],
+    correctAnswer: 1,
+    explanation: "Sendable Data Extensions link to subscriber key for sends."
+  },
+  {
+    question: "What is the purpose of Microsites in Marketing Cloud?",
+    options: [
+      "To replace Cloud Pages",
+      "To host landing pages with tracking and forms",
+      "To send emails only",
+      "To create journeys only"
+    ],
+    correctAnswer: 1,
+    explanation: "Microsites host landing pages with tracking and forms."
+  },
+  {
+    question: "Which SSJS object provides access to platform features?",
+    options: [
+      "Platform only",
+      "Platform.Function and Platform.Variable",
+      "No object",
+      "Only Variable"
+    ],
+    correctAnswer: 1,
+    explanation: "Platform.Function and Platform.Variable provide platform access."
+  },
+  {
+    question: "What does Personalization String syntax use?",
+    options: [
+      "Only AMPscript",
+      "%%Attribute_Name%% or similar",
+      "Only SSJS",
+      "Only HTML"
+    ],
+    correctAnswer: 1,
+    explanation: "Personalization strings use %%Attribute_Name%% syntax."
+  },
+  {
+    question: "Which testing approach applies to Marketing Cloud development?",
+    options: [
+      "No testing",
+      "Preview and test sends with sample data",
+      "Production only",
+      "Manual only"
+    ],
+    correctAnswer: 1,
+    explanation: "Preview and test sends validate development."
+  },
+  {
+    question: "What is the purpose of Journey Builder Entry Sources?",
+    options: [
+      "To replace Data Extensions",
+      "To define how contacts enter a journey (e.g., API, data extension, form)",
+      "To send only",
+      "To track only"
+    ],
+    correctAnswer: 1,
+    explanation: "Entry sources define how contacts enter journeys."
+  },
 ]
 
 export default function MarketingCloudEngagementDeveloperPage() {
@@ -84,7 +194,7 @@ export default function MarketingCloudEngagementDeveloperPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

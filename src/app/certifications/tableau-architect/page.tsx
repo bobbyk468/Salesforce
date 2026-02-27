@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -40,6 +40,84 @@ const sampleQuestions = [
     ],
     correctAnswer: 1,
     explanation: "Architects must consider server topology, scalability, high availability, and security for enterprise Tableau deployments."
+  },
+  {
+    question: "What role does Tableau's VizQL engine play in architecture decisions?",
+    options: ["Renders only static images", "Translates drag-and-drop actions into database queries and optimizes performance", "Handles user authentication only", "Manages licensing"],
+    correctAnswer: 1,
+    explanation: "VizQL translates visual design into database queries. Architects must understand its impact on data source design and query performance."
+  },
+  {
+    question: "Which authentication method supports single sign-on (SSO) for Tableau Server?",
+    options: ["Local authentication only", "SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing", "LDAP only", "OAuth 1.0 only"],
+    correctAnswer: 1,
+    explanation: "Tableau Server supports SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing for SSO and enterprise identity integration."
+  },
+  {
+    question: "What is the purpose of Tableau's repository database?",
+    options: ["Stores user data", "Stores metadata, user info, permissions, and extract info for Tableau Server", "Stores only workbooks", "Manages extracts only"],
+    correctAnswer: 1,
+    explanation: "The repository stores metadata, permissions, schedules, and extract information. Architects plan for its backup and scalability."
+  },
+  {
+    question: "Which factor affects Tableau Server scalability the most?",
+    options: ["Dashboard color themes", "Concurrent user load, background job load, and data source performance", "Number of workbooks only", "Font sizes"],
+    correctAnswer: 1,
+    explanation: "Scalability depends on concurrent users, background jobs (extracts, subscriptions), and underlying data source performance."
+  },
+  {
+    question: "What is a Tableau data server used for?",
+    options: ["Serving web content only", "Centralizing published data sources for reuse and governance across workbooks", "Hosting Tableau Server only", "Managing licenses"],
+    correctAnswer: 1,
+    explanation: "Data servers let you publish and reuse data sources across workbooks, improving consistency and governance."
+  },
+  {
+    question: "Which governance practice helps control Tableau content proliferation?",
+    options: ["Disabling all sharing", "Promoting certified data sources, using projects for organization, and setting ownership policies", "Removing all extracts", "Limiting users to one workbook"],
+    correctAnswer: 1,
+    explanation: "Certified data sources, project structure, and ownership policies help govern content at scale."
+  },
+  {
+    question: "What does Tableau's backgrounder process handle?",
+    options: ["User sessions only", "Extract refreshes, subscriptions, and other scheduled jobs", "VizQL rendering only", "License validation only"],
+    correctAnswer: 1,
+    explanation: "The backgrounder process runs extract refreshes, subscriptions, and other scheduled tasks. Architects size it for job load."
+  },
+  {
+    question: "Which high-availability configuration uses multiple Tableau Server nodes?",
+    options: ["Single-node deployment only", "Distributed deployment with multiple application servers and a gateway", "Development server only", "Cloud-only deployment"],
+    correctAnswer: 1,
+    explanation: "Distributed deployment spreads services across nodes for high availability and load distribution."
+  },
+  {
+    question: "What is the benefit of Tableau extracts (.tde/.hyper) for performance?",
+    options: ["They reduce colors", "They pre-aggregate and compress data, reducing load on source systems and improving query speed", "They only store images", "They manage licensing"],
+    correctAnswer: 1,
+    explanation: "Extracts pre-aggregate and compress data, offloading work from source systems and speeding up queries."
+  },
+  {
+    question: "Which security layer controls who can view or edit Tableau content?",
+    options: ["Data source only", "Project permissions, workbook permissions, and row-level security", "VizQL only", "Repository only"],
+    correctAnswer: 1,
+    explanation: "Project and workbook permissions plus row-level security control access to Tableau content."
+  },
+  {
+    question: "What is a best practice for Tableau Server disaster recovery?",
+    options: ["No backups needed", "Regular repository backups, documented restore procedures, and testing recovery", "Backing up only workbooks", "Single-node only"],
+    correctAnswer: 1,
+    explanation: "Regular repository backups and tested restore procedures are essential for disaster recovery."
+  },
+  {
+    question: "Which Tableau Cloud consideration differs from on-premises Server?",
+    options: ["No difference", "Managed infrastructure, built-in high availability, and connectivity to cloud data sources", "No authentication", "No governance"],
+    correctAnswer: 1,
+    explanation: "Tableau Cloud is fully managed with built-in HA; architects focus on connectivity and data source design."
+  },
+  {
+    question: "What does incremental refresh do for Tableau extracts?",
+    options: ["Refreshes all data every time", "Refreshes only new or changed rows based on a key, reducing refresh time", "Deletes old data only", "Changes colors only"],
+    correctAnswer: 1,
+    explanation: "Incremental refresh updates only new or changed rows, improving refresh performance for large datasets."
   },
 ]
 
@@ -88,7 +166,7 @@ export default function TableauArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard
                 key={index}

@@ -9,7 +9,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -75,6 +75,116 @@ const sampleQuestions = [
     correctAnswer: 3,
     explanation: "To chain batch jobs, you call Database.executeBatch in the finish method of the current batch job to start the next batch."
   },
+  {
+    question: "What is the purpose of the Database.Stateful interface in batch Apex?",
+    options: [
+      "To run faster",
+      "To retain instance variable values between batch executions",
+      "To make callouts",
+      "To bypass governor limits"
+    ],
+    correctAnswer: 1,
+    explanation: "Database.Stateful preserves instance variable values across batch iterations."
+  },
+  {
+    question: "Which design pattern helps decouple trigger logic from business logic?",
+    options: [
+      "Singleton only",
+      "Trigger Handler pattern with service classes",
+      "Factory only",
+      "Decorator only"
+    ],
+    correctAnswer: 1,
+    explanation: "Trigger Handler pattern separates trigger logic from business logic for maintainability."
+  },
+  {
+    question: "What is the benefit of using Queueable Apex over @future?",
+    options: [
+      "Lower limits",
+      "Chaining jobs, passing complex types, and getting job IDs",
+      "Faster execution",
+      "Synchronous execution"
+    ],
+    correctAnswer: 1,
+    explanation: "Queueable supports chaining, complex parameters, and job ID tracking."
+  },
+  {
+    question: "Which security consideration applies when exposing Apex to LWC?",
+    options: [
+      "No security needed",
+      "Use @AuraEnabled with proper FLS and sharing checks",
+      "Only FLS",
+      "Only sharing"
+    ],
+    correctAnswer: 1,
+    explanation: "Apex exposed to LWC must enforce FLS and sharing rules."
+  },
+  {
+    question: "What does the Strategy pattern enable?",
+    options: [
+      "Single instance",
+      "Interchangeable algorithms encapsulated in separate classes",
+      "Object creation only",
+      "Event handling only"
+    ],
+    correctAnswer: 1,
+    explanation: "Strategy pattern allows swapping algorithms at runtime."
+  },
+  {
+    question: "Which governor limit applies to heap size in Apex?",
+    options: [
+      "6 MB for sync",
+      "6 MB for synchronous, 12 MB for asynchronous",
+      "Unlimited",
+      "1 MB"
+    ],
+    correctAnswer: 1,
+    explanation: "Heap: 6 MB sync, 12 MB async (approximate)."
+  },
+  {
+    question: "What is the purpose of Test.isRunningTest()?",
+    options: [
+      "To skip tests",
+      "To conditionally alter logic when code runs in test context",
+      "To run faster",
+      "To bypass limits"
+    ],
+    correctAnswer: 1,
+    explanation: "Test.isRunningTest() detects test context for mock responses or conditional logic."
+  },
+  {
+    question: "Which interface allows Apex to be invoked by Process Builder or Flow?",
+    options: [
+      "@AuraEnabled",
+      "InvocableMethod",
+      "@RestResource",
+      "Trigger"
+    ],
+    correctAnswer: 1,
+    explanation: "InvocableMethod exposes Apex to Flow and Process Builder."
+  },
+  {
+    question: "What is a common use case for Platform Events?",
+    options: [
+      "Synchronous triggers only",
+      "Decoupling integrations, logging, and cross-org messaging",
+      "Batch processing only",
+      "Scheduled jobs only"
+    ],
+    correctAnswer: 1,
+    explanation: "Platform Events enable loosely coupled, event-driven architectures."
+  },
+  {
+    question: "Which approach improves Apex test performance?",
+    options: [
+      "Create data in every test method",
+      "Use @TestSetup for shared data",
+      "Use SeeAllData=true",
+      "Create minimal assertions"
+    ],
+    correctAnswer: 1,
+    explanation: "@TestSetup creates data once for all test methods, improving performance."
+  },
 ]
 
 export default function Developer2Page() {
@@ -127,7 +237,7 @@ export default function Developer2Page() {
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct.
+              {getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
             </p>
             
             {sampleQuestions.map((q, index) => (

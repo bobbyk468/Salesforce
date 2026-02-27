@@ -28,7 +28,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
-import { getCertMetadata, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import type { Metadata } from 'next'
@@ -143,6 +143,116 @@ const sampleQuestions = [
     ],
     correctAnswer: 1,
     explanation: "Time-dependent actions are removed from the queue if the record no longer meets the workflow rule criteria when the action is scheduled to execute."
+  },
+  {
+    question: "Which record-triggered flow trigger is used when you need to perform actions before the record is saved?",
+    options: [
+      "After Save",
+      "Before Save",
+      "After Delete",
+      "Platform Event"
+    ],
+    correctAnswer: 1,
+    explanation: "Before Save flows run before the record is committed to the database, allowing you to modify field values or perform validation."
+  },
+  {
+    question: "What is the purpose of a Permission Set in Salesforce?",
+    options: [
+      "To replace profiles entirely",
+      "To grant additional access to users without changing their profile",
+      "To define page layouts",
+      "To create validation rules"
+    ],
+    correctAnswer: 1,
+    explanation: "Permission Sets extend user access by granting additional permissions, object access, and app access without modifying the user's profile."
+  },
+  {
+    question: "Which feature allows users to customize their Home page layout with different components?",
+    options: [
+      "Record types",
+      "Lightning App Builder for Home",
+      "Profiles only",
+      "Validation rules"
+    ],
+    correctAnswer: 1,
+    explanation: "Lightning App Builder can be used to customize the Home page, allowing users to add and arrange components."
+  },
+  {
+    question: "What does a Campaign Influence report help sales managers track?",
+    options: [
+      "Only campaign spend",
+      "Which marketing campaigns influenced opportunities and closed revenue",
+      "Email open rates only",
+      "Lead source counts only"
+    ],
+    correctAnswer: 1,
+    explanation: "Campaign Influence reporting shows how marketing campaigns contributed to opportunity creation and closed revenue."
+  },
+  {
+    question: "Which Case assignment rule criteria type allows assigning cases based on multiple conditions?",
+    options: [
+      "Rule criteria only",
+      "Rule criteria and formula",
+      "Formula only",
+      "Manual assignment only"
+    ],
+    correctAnswer: 1,
+    explanation: "Case assignment rules support both rule criteria (field-based conditions) and formula criteria for complex logic."
+  },
+  {
+    question: "What is the primary purpose of Queue-based case routing?",
+    options: [
+      "To delete cases automatically",
+      "To group cases for teams to work from a shared list based on skills or workload",
+      "To send email notifications only",
+      "To create reports"
+    ],
+    correctAnswer: 1,
+    explanation: "Queues allow cases to be routed to teams rather than individuals, enabling workload balancing and skill-based routing."
+  },
+  {
+    question: "Which object is required to enable Products, Price Books, and Opportunities in Salesforce?",
+    options: [
+      "Campaign",
+      "Opportunity",
+      "Product and Price Book",
+      "Lead"
+    ],
+    correctAnswer: 2,
+    explanation: "Products and Price Books must be configured to enable the full opportunity-to-quote-to-order sales process."
+  },
+  {
+    question: "What does the 'View All' permission on an object allow?",
+    options: [
+      "Edit all records",
+      "View all records in the org regardless of sharing rules",
+      "Delete all records",
+      "Transfer all records"
+    ],
+    correctAnswer: 1,
+    explanation: "View All bypasses sharing rules and allows the user to see all records of that object in the organization."
+  },
+  {
+    question: "Which report format displays data in rows and columns with subtotals at the intersection?",
+    options: [
+      "Tabular",
+      "Summary",
+      "Matrix",
+      "Joined"
+    ],
+    correctAnswer: 2,
+    explanation: "Matrix reports use both row and column grouping, with subtotals at the intersection of rows and columns."
+  },
+  {
+    question: "What is the purpose of Chatter Groups in Salesforce?",
+    options: [
+      "To replace email",
+      "To enable collaboration and discussions around projects, topics, or teams",
+      "To create reports",
+      "To assign cases"
+    ],
+    correctAnswer: 1,
+    explanation: "Chatter Groups allow teams to collaborate, share files, and discuss work in a centralized feed."
   },
 ]
 
@@ -420,7 +530,7 @@ export default function AdministratorPage() {
 
             <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
-              introText="Test your knowledge with these sample questions. Click on an answer to select it, then check your answer to see if you're correct."
+              introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
               questions={sampleQuestions}
               extraQuestionsKey="administrator"
             />

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Revenue recognition allocates revenue to periods according to accounting standards (e.g., ASC 606).",
   },
+  {
+    question: "What does CPQ (Configure, Price, Quote) handle?",
+    options: [
+      "Only billing",
+      "Product configuration, pricing, discounting, and quote generation",
+      "Only orders",
+      "Only contracts"
+    ],
+    correctAnswer: 1,
+    explanation: "CPQ handles configuration, pricing, and quote generation."
+  },
+  {
+    question: "Which Revenue Cloud object represents a signed agreement?",
+    options: [
+      "Quote only",
+      "Contract",
+      "Opportunity only",
+      "Order only"
+    ],
+    correctAnswer: 1,
+    explanation: "Contract represents the signed agreement and drives billing/revenue."
+  },
+  {
+    question: "What is usage-based billing?",
+    options: [
+      "Fixed fee only",
+      "Billing based on consumption or usage metrics",
+      "One-time only",
+      "Quote only"
+    ],
+    correctAnswer: 1,
+    explanation: "Usage-based billing charges based on consumption metrics."
+  },
+  {
+    question: "Which standard governs revenue recognition for subscriptions?",
+    options: [
+      "SOX only",
+      "ASC 606 / IFRS 15",
+      "GDPR only",
+      "No standard"
+    ],
+    correctAnswer: 1,
+    explanation: "ASC 606 and IFRS 15 govern revenue recognition."
+  },
+  {
+    question: "What does the P2C lifecycle begin with?",
+    options: [
+      "Billing",
+      "Configuration and quote",
+      "Revenue recognition only",
+      "Contract only"
+    ],
+    correctAnswer: 1,
+    explanation: "P2C begins with configuration and quote, then contract, order, billing, and revenue."
+  },
+  {
+    question: "Which Revenue Cloud feature supports amendment handling?",
+    options: [
+      "Quote only",
+      "Contract amendments (add, change, renew)",
+      "Order only",
+      "Invoice only"
+    ],
+    correctAnswer: 1,
+    explanation: "Contract amendments support add, change, and renew scenarios."
+  },
+  {
+    question: "What is the purpose of a Price Book in CPQ?",
+    options: [
+      "To store contacts",
+      "To define products and prices for quoting",
+      "To create orders only",
+      "To send invoices"
+    ],
+    correctAnswer: 1,
+    explanation: "Price Books define products and list prices for CPQ quotes."
+  },
+  {
+    question: "Which integration is common for Revenue Cloud?",
+    options: [
+      "Marketing Cloud only",
+      "ERP, billing systems, and accounting (e.g., NetSuite)",
+      "Slack only",
+      "Tableau only"
+    ],
+    correctAnswer: 1,
+    explanation: "Revenue Cloud integrates with ERP and accounting systems."
+  },
+  {
+    question: "What does a Revenue Cloud Consultant need to understand?",
+    options: [
+      "Only UI",
+      "P2C business processes, accounting implications, and product capabilities",
+      "Only CPQ",
+      "Only Billing"
+    ],
+    correctAnswer: 1,
+    explanation: "Consultants need P2C process, accounting, and product knowledge."
+  },
+  {
+    question: "Which best practice applies to Revenue Cloud implementation?",
+    options: [
+      "Ignore accounting",
+      "Align with accounting policies, test revenue scenarios, and validate reporting",
+      "No testing",
+      "Single product only"
+    ],
+    correctAnswer: 1,
+    explanation: "Align with accounting, test revenue scenarios, and validate reporting."
+  },
 ]
 
 export default function RevenueCloudConsultantPage() {
@@ -84,7 +194,7 @@ export default function RevenueCloudConsultantPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -153,6 +153,12 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "The Pipeline Report (also known as the Lifecycle Report) connects Pardot prospect activity to Salesforce opportunity data — showing which campaigns and activities are driving pipeline creation and closed-won revenue. This bridges marketing and sales attribution.",
   },
+  {
+    question: "What is the difference between Pardot scoring and grading?",
+    options: ["No difference", "Scoring is activity-based (interest); grading is attribute-based (fit)", "Grading is activity-based; scoring is attribute-based", "Only scoring exists"],
+    correctAnswer: 1,
+    explanation: "Scoring measures engagement (opens, clicks, form submits). Grading measures fit to ideal customer profile (title, company size, industry)."
+  },
 ]
 
 export default function PardotSpecialistPage() {
@@ -231,9 +237,7 @@ export default function PardotSpecialistPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">
-              Test your knowledge with these sample questions.
-            </p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             
             {sampleQuestions.map((q, index) => (
               <QuestionCard

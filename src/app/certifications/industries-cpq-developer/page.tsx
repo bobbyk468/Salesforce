@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Energy & Utilities often require usage-based, tiered, and time-of-use pricing models.",
   },
+  {
+    question: "Which Industries CPQ product model supports subscriptions?",
+    options: [
+      "One-time only",
+      "Subscription and usage-based product modeling",
+      "Fixed only",
+      "No modeling"
+    ],
+    correctAnswer: 1,
+    explanation: "Industries CPQ supports subscription and usage-based models."
+  },
+  {
+    question: "What does Industries CPQ scripting extend?",
+    options: [
+      "Only UI",
+      "Product configuration, pricing, and quote logic",
+      "Only reports",
+      "Only dashboards"
+    ],
+    correctAnswer: 1,
+    explanation: "Scripting extends configuration, pricing, and quote logic."
+  },
+  {
+    question: "Which Communications Cloud object supports CPQ?",
+    options: [
+      "Lead only",
+      "Product, offer, and service catalog",
+      "Opportunity only",
+      "Campaign only"
+    ],
+    correctAnswer: 1,
+    explanation: "Product, offer, and catalog support Communications CPQ."
+  },
+  {
+    question: "What does Media Cloud CPQ support?",
+    options: [
+      "Only print",
+      "Ad inventory, rights, and campaign pricing",
+      "Only email",
+      "Only social"
+    ],
+    correctAnswer: 1,
+    explanation: "Media Cloud CPQ supports ad inventory and rights pricing."
+  },
+  {
+    question: "Which integration is common for Industries CPQ?",
+    options: [
+      "Slack only",
+      "Billing, ERP, and industry-specific systems",
+      "Marketing Cloud only",
+      "Service Cloud only"
+    ],
+    correctAnswer: 1,
+    explanation: "Industries CPQ integrates with billing and ERP."
+  },
+  {
+    question: "What does Industries CPQ customization involve?",
+    options: [
+      "Only UI",
+      "Product model, pricing rules, and configuration attributes",
+      "Only reports",
+      "Only dashboards"
+    ],
+    correctAnswer: 1,
+    explanation: "Customization involves product model and pricing rules."
+  },
+  {
+    question: "Which pricing type does Energy & Utilities CPQ support?",
+    options: [
+      "Fixed only",
+      "Time-of-use, demand charges, and tiered rates",
+      "One-time only",
+      "No pricing"
+    ],
+    correctAnswer: 1,
+    explanation: "Energy & Utilities supports time-of-use and tiered pricing."
+  },
+  {
+    question: "What is the purpose of Industries CPQ product modeling?",
+    options: [
+      "To replace CPQ",
+      "To represent industry-specific products and bundles",
+      "To send emails",
+      "To create reports"
+    ],
+    correctAnswer: 1,
+    explanation: "Product modeling represents industry-specific products."
+  },
+  {
+    question: "Which best practice applies to Industries CPQ development?",
+    options: [
+      "Ignore industry",
+      "Align with industry processes and test configuration flows",
+      "No testing",
+      "Single product only"
+    ],
+    correctAnswer: 1,
+    explanation: "Align with industry processes and test flows."
+  },
+  {
+    question: "What does Industries CPQ Developer need to understand?",
+    options: [
+      "Only Apex",
+      "Industry CPQ data model, pricing, and scripting",
+      "Only UI",
+      "Only reports"
+    ],
+    correctAnswer: 1,
+    explanation: "Developers need industry CPQ data model and scripting knowledge."
+  },
 ]
 
 export default function IndustriesCPQDeveloperPage() {
@@ -84,7 +194,7 @@ export default function IndustriesCPQDeveloperPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

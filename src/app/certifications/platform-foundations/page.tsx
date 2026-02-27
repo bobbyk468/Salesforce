@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "The Home page and Activity components show tasks and calendar.",
   },
+  {
+    question: "What is a Dashboard in Salesforce?",
+    options: [
+      "A single report",
+      "A collection of report components displayed together for at-a-glance visibility",
+      "A list view only",
+      "An email template"
+    ],
+    correctAnswer: 1,
+    explanation: "Dashboards display multiple report charts and metrics in a single view."
+  },
+  {
+    question: "Which Salesforce feature enables real-time collaboration on records?",
+    options: [
+      "Reports only",
+      "Chatter and Activity",
+      "Validation rules only",
+      "Workflow rules"
+    ],
+    correctAnswer: 1,
+    explanation: "Chatter and Activity enable comments, mentions, and collaboration on records."
+  },
+  {
+    question: "What does the Lightning Experience refer to?",
+    options: [
+      "A mobile app only",
+      "The modern Salesforce user interface with responsive design and enhanced features",
+      "Classic only",
+      "An API"
+    ],
+    correctAnswer: 1,
+    explanation: "Lightning Experience is the modern, responsive Salesforce UI."
+  },
+  {
+    question: "Which object typically represents a person or company you do business with?",
+    options: [
+      "Opportunity",
+      "Account",
+      "Task",
+      "Report"
+    ],
+    correctAnswer: 1,
+    explanation: "Account represents companies or people you do business with."
+  },
+  {
+    question: "What is a List View in Salesforce?",
+    options: [
+      "A report type",
+      "A filtered list of records from an object displayed in a table format",
+      "A dashboard only",
+      "A permission set"
+    ],
+    correctAnswer: 1,
+    explanation: "List views show filtered records in a tabular layout for quick access."
+  },
+  {
+    question: "Which navigation element helps users find records and apps in Salesforce?",
+    options: [
+      "Report Builder only",
+      "App Launcher and global search",
+      "Validation rules only",
+      "Workflow"
+    ],
+    correctAnswer: 1,
+    explanation: "App Launcher and global search help users navigate and find content."
+  },
+  {
+    question: "What does the Customer 360 Platform aim to achieve?",
+    options: [
+      "Only sales automation",
+      "A single, unified view of the customer across all touchpoints and systems",
+      "Only service cloud",
+      "Only marketing"
+    ],
+    correctAnswer: 1,
+    explanation: "Customer 360 unifies customer data across sales, service, marketing, and more."
+  },
+  {
+    question: "Which feature allows users to access Salesforce on mobile devices?",
+    options: [
+      "Desktop only",
+      "Salesforce Mobile App",
+      "Email only",
+      "Reports only"
+    ],
+    correctAnswer: 1,
+    explanation: "The Salesforce Mobile App provides full CRM access on phones and tablets."
+  },
+  {
+    question: "What is the purpose of Reports in Salesforce?",
+    options: [
+      "To send emails only",
+      "To organize, filter, and display data from your Salesforce records",
+      "To create dashboards only",
+      "To assign tasks"
+    ],
+    correctAnswer: 1,
+    explanation: "Reports query and display data from your org's objects and records."
+  },
+  {
+    question: "Which Salesforce concept represents a potential sale?",
+    options: [
+      "Account",
+      "Opportunity",
+      "Contact",
+      "Lead"
+    ],
+    correctAnswer: 1,
+    explanation: "Opportunity represents a potential sale or deal being pursued."
+  },
 ]
 
 export default function PlatformFoundationsPage() {
@@ -84,7 +194,7 @@ export default function PlatformFoundationsPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}

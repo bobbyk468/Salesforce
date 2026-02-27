@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -24,6 +24,16 @@ const sampleQuestions = [
   { question: "What is a key activity for a Public Sector Solutions Professional?", options: ["Only coding", "Implementing Public Sector solutions with best practices and alignment to business value", "Only reporting", "Only lists"], correctAnswer: 1, explanation: "They implement Public Sector solutions with best practices and alignment to business value." },
   { question: "Which role typically pursues Public Sector Solutions AP?", options: ["Marketers", "Partners and implementers working with public sector", "Sales only", "Designers only"], correctAnswer: 1, explanation: "Partners and implementers working with public sector pursue this credential." },
   { question: "What does 'business value goals' mean in Public Sector context?", options: ["Only revenue", "Outcomes that align with agency mission and citizen/customer value", "Only cost", "Only speed"], correctAnswer: 1, explanation: "It means outcomes that align with agency mission and citizen/customer value." },
+  { question: "Which Public Sector consideration is critical?", options: ["Only UI", "Compliance, security, and citizen experience", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Compliance, security, and citizen experience are critical." },
+  { question: "What does Public Sector Solutions implementation include?", options: ["Only coding", "Industry-specific data models, workflows, and best practices", "Only reports", "Only emails"], correctAnswer: 1, explanation: "Implementation includes industry data models and workflows." },
+  { question: "Which Salesforce product supports Public Sector?", options: ["Slack only", "Public Sector Solutions, Experience Cloud, and CRM", "Marketing Cloud only", "Commerce Cloud only"], correctAnswer: 1, explanation: "Public Sector Solutions and Experience Cloud support government." },
+  { question: "What is the purpose of Public Sector best practices?", options: ["Only deployment", "Align with government processes, compliance, and citizen value", "Only design", "Only testing"], correctAnswer: 1, explanation: "Best practices align with government processes and compliance." },
+  { question: "Which use case is common for Public Sector?", options: ["Retail only", "Case management, licensing, and citizen services", "Manufacturing only", "CPQ only"], correctAnswer: 1, explanation: "Case management, licensing, and citizen services are common." },
+  { question: "What does agency mission alignment mean?", options: ["Only revenue", "Solutions that support government goals and citizen outcomes", "Only cost", "Only speed"], correctAnswer: 1, explanation: "Alignment means supporting government goals and citizen outcomes." },
+  { question: "Which integration is common for Public Sector?", options: ["Slack only", "Legacy systems, payment, and identity providers", "Marketing Cloud only", "Commerce Cloud only"], correctAnswer: 1, explanation: "Public Sector integrates with legacy and payment systems." },
+  { question: "What does Public Sector Solutions Professional need?", options: ["Only coding", "Public sector domain knowledge and implementation best practices", "Only reports", "Only dashboards"], correctAnswer: 1, explanation: "Professionals need domain knowledge and best practices." },
+  { question: "Which best practice applies to Public Sector implementation?", options: ["Ignore compliance", "Compliance, accessibility, and citizen-centric design", "No accessibility", "Single channel only"], correctAnswer: 1, explanation: "Compliance, accessibility, and citizen-centric design are key." },
+  { question: "What is Section 508 in Public Sector context?", options: ["A Salesforce feature", "US federal accessibility law requiring digital content to be accessible", "A report type", "A workflow only"], correctAnswer: 1, explanation: "Section 508 mandates accessibility for federal digital systems—critical for Public Sector." },
 ]
 
 export default function PublicSectorSolutionsAPPage() {
@@ -53,7 +63,7 @@ export default function PublicSectorSolutionsAPPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, i) => (<QuestionCard key={i} questionNumber={i + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />))}
           </div>
           

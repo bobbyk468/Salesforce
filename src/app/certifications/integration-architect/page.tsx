@@ -8,7 +8,7 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, slugToDisplayName } from '@/lib/cert-seo-data'
+import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
@@ -49,6 +49,116 @@ const sampleQuestions = [
     correctAnswer: 1,
     explanation: "Loosely coupled systems reduce dependency and improve maintainability.",
   },
+  {
+    question: "When should asynchronous integration be chosen over synchronous?",
+    options: [
+      "Never",
+      "When real-time response is not required and decoupling or scalability is needed",
+      "Always",
+      "Only for batch"
+    ],
+    correctAnswer: 1,
+    explanation: "Asynchronous is preferred when real-time response isn't required and decoupling matters."
+  },
+  {
+    question: "What does API versioning support?",
+    options: [
+      "No changes",
+      "Backward compatibility and gradual client migration",
+      "Breaking changes only",
+      "Deprecation only"
+    ],
+    correctAnswer: 1,
+    explanation: "Versioning allows evolution while maintaining backward compatibility."
+  },
+  {
+    question: "Which error handling strategy supports resilience in integrations?",
+    options: [
+      "Fail immediately",
+      "Retries with exponential backoff, dead letter queues, and graceful degradation",
+      "No retries",
+      "Only logging"
+    ],
+    correctAnswer: 1,
+    explanation: "Retries, DLQs, and graceful degradation improve integration resilience."
+  },
+  {
+    question: "What is the purpose of an integration bus or event-driven architecture?",
+    options: [
+      "To replace APIs",
+      "To decouple producers and consumers via events or messages",
+      "To sync only",
+      "To batch only"
+    ],
+    correctAnswer: 1,
+    explanation: "Event-driven architecture decouples systems through events/messages."
+  },
+  {
+    question: "Which security standard is used for delegated user authorization?",
+    options: [
+      "Basic auth only",
+      "OAuth 2.0 authorization code flow",
+      "API key only",
+      "No standard"
+    ],
+    correctAnswer: 1,
+    explanation: "OAuth 2.0 authorization code flow supports user-delegated access."
+  },
+  {
+    question: "What does idempotency ensure in integration?",
+    options: [
+      "Faster execution",
+      "Duplicate requests produce the same result without side effects",
+      "No retries",
+      "Only logging"
+    ],
+    correctAnswer: 1,
+    explanation: "Idempotency prevents duplicate processing from retries."
+  },
+  {
+    question: "Which consideration applies when designing for high-volume integration?",
+    options: [
+      "Ignore limits",
+      "Batching, rate limiting, and scalability (queues, async)",
+      "Synchronous only",
+      "No batching"
+    ],
+    correctAnswer: 1,
+    explanation: "High volume requires batching, rate limiting, and async scaling."
+  },
+  {
+    question: "What is the benefit of contract-first API design?",
+    options: [
+      "No benefit",
+      "Clear contract, parallel development, and reduced integration errors",
+      "Slower development",
+      "Tight coupling"
+    ],
+    correctAnswer: 1,
+    explanation: "Contract-first enables parallel development and fewer integration bugs."
+  },
+  {
+    question: "Which pattern is used when multiple systems need the same data?",
+    options: [
+      "Point-to-point only",
+      "Publish-subscribe or fan-out",
+      "Request-response only",
+      "Batch only"
+    ],
+    correctAnswer: 1,
+    explanation: "Publish-subscribe allows one producer to serve multiple consumers."
+  },
+  {
+    question: "What does integration governance include?",
+    options: [
+      "Only documentation",
+      "Standards, security, monitoring, and change control",
+      "Only coding",
+      "Only deployment"
+    ],
+    correctAnswer: 1,
+    explanation: "Governance covers standards, security, monitoring, and change control."
+  },
 ]
 
 export default function IntegrationArchitectPage() {
@@ -84,7 +194,7 @@ export default function IntegrationArchitectPage() {
 
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">Test your knowledge with these sample questions.</p>
+            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
             {sampleQuestions.map((q, index) => (
               <QuestionCard key={index} questionNumber={index + 1} question={q.question} options={q.options} correctAnswer={q.correctAnswer} explanation={q.explanation} />
             ))}
