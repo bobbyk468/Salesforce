@@ -125,6 +125,20 @@ export default function Pd2ExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach PD2 Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          PD2 questions describe a technical requirement or architectural problem and ask which pattern, mechanism,
+          or configuration is the right solution. The correct answer always follows enterprise design principles —
+          separation of concerns, testability, and scalability.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For async questions: choose the mechanism based on volume and latency. Queueable = chaining + object context; Batch = millions of records; Schedulable = time-based; Platform Events = decoupled integration.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For integration questions: REST callouts use Named Credentials and HttpCalloutMock in tests; SOAP uses WebServiceMock. Always pick the mock that matches the callout type.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For design pattern questions: if the scenario describes multiple objects or cross-object logic, the answer involves a Service layer or Selector layer — not a trigger directly.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Advanced Apex Patterns You Must Know</h2>
         <p className="text-sm text-gray-700 mb-3">
           PD2 questions test whether you understand <em>why</em> patterns exist, not just that they exist.

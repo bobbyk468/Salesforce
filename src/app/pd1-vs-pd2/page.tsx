@@ -250,6 +250,12 @@ export default function Pd1VsPd2Page() {
             PD1 Exam Tips {RELEASE_CURRENT}
           </Link>
           <Link
+            href="/pd2-exam-tips-2026"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            PD2 Exam Tips {RELEASE_CURRENT}
+          </Link>
+          <Link
             href="/developer-certification-path"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >

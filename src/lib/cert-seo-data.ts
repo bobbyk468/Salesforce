@@ -77,6 +77,12 @@ export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
   'slack-developer': '/slack-developer-exam-tips',
   'system-architect': '/system-architect-exam-tips',
   'tableau-data-analyst': '/tableau-data-analyst-exam-tips',
+  'sales-cloud': '/sales-cloud-exam-tips',
+  'marketing-cloud-engagement-admin': '/marketing-cloud-consultant-exam-tips',
+  'business-analyst': '/business-analyst-exam-tips',
+  'pardot-consultant': '/pardot-specialist-exam-tips',
+  'ux-designer': '/ux-designer-exam-tips',
+  'experience-cloud': '/experience-cloud-exam-tips',
 }
 
 /** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $100 for AP, $400 for Architect, $250 for Tableau, $75 for Foundations, $6000 for CTA. */

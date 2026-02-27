@@ -102,6 +102,29 @@ export default function AppBuilderExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Process Automation and Logic</span>
+            <span className="font-bold text-salesforce-blue ml-4">27%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Data Modelling and Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">24%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Security and Access</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">App Design and User Interface</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Process Automation + Data Modelling = 51%. Master flows, record types, and object relationships first.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">4-Week DEV-402 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p><strong>Week 1:</strong> Data Modelling &amp; Management — object relationships (lookup vs master-detail, junction objects), roll-up summary fields, formula fields, validation rules, and schema design patterns.</p>
