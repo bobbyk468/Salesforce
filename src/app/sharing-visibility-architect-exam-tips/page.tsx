@@ -1,0 +1,161 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Sharing & Visibility Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Sharing & Visibility Architect exam tips for ${RELEASE_CURRENT}: OWD design, sharing rules, role hierarchy, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/sharing-visibility-architect-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/sharing-visibility-architect-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Sharing Visibility Architect exam tips ${RELEASE_CURRENT}, how to pass Sharing Visibility Architect, Salesforce sharing model certification, Sharing Visibility Architect first attempt`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Sharing & Visibility Architect Exam Tips', url: '/sharing-visibility-architect-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Sharing & Visibility Architect exam format?',
+    answer: 'The Salesforce Sharing & Visibility Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for the Application Architect role-based credential and tests the full Salesforce sharing and security model.',
+  },
+  {
+    question: 'What are the highest-weight Sharing & Visibility Architect exam sections?',
+    answer: 'Designing the Sharing Model (35%) is the single highest-weight section, making it by far the most important study area. Record-Level Access (20%) and Field and Object Security (18%) round out the top three, accounting for 73% of the exam together.',
+  },
+  {
+    question: 'What prerequisites do I need for Sharing & Visibility Architect?',
+    answer: 'There are no hard prerequisites, but Salesforce recommends Salesforce Administrator (ADM-201) before Sharing & Visibility Architect since the exam builds directly on the sharing model topics in ADM-201 but at a deeper, architectural level. Real experience designing OWDs and sharing rules for complex multi-team organisations is essential.',
+  },
+  {
+    question: 'What is the hardest part of the Sharing & Visibility Architect exam?',
+    answer: 'The performance implications of sharing configurations are the hardest area — candidates must understand when complex sharing rules cause query performance degradation at large data volumes, and when to recommend implicit sharing vs. explicit sharing vs. manual sharing. These architectural trade-offs require real project experience.',
+  },
+]
+
+export default function SharingVisibilityArchitectExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/sharing-visibility-architect-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/sharing-visibility-architect-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Sharing &amp; Visibility Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Sharing &amp; Visibility Architect exam tests your ability to design and optimise Salesforce record-level
+          security architectures. These tips focus on OWD strategy, sharing model design, and the performance
+          implications that the exam tests at an architectural depth.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Sharing & Visibility Architect Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Sharing model design</strong> — OWD strategy, role hierarchy depth trade-offs, implicit vs. explicit sharing, and when each sharing mechanism is the right architectural choice.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Performance implications</strong> — How sharing rule complexity affects query performance at large data volumes, and when to favour restrictive OWDs over permissive ones to maintain performance.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special sharing scenarios</strong> — Community/portal user access, territory management sharing, Apex managed sharing, and sharing for external users.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Designing the Sharing Model</span>
+            <span className="font-bold text-salesforce-blue ml-4">35%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Record-Level Access</span>
+            <span className="font-bold text-salesforce-blue ml-4">20%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Field and Object Security</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Large Data Volumes and Performance</span>
+            <span className="font-bold text-salesforce-blue ml-4">12%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Designing the Sharing Model is 35% alone — this is your single most important study topic.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Sharing Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Sharing &amp; Visibility questions describe an organisation&apos;s access requirements and ask which configuration
+          satisfies them. Always start from the most restrictive baseline and open access incrementally.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />The OWD baseline principle: set OWDs to the most restrictive setting required by any subset of users. Never set OWD to Public Read/Write if any user group needs restricted access.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Sharing rule order: role hierarchy grants access UP the hierarchy (not sideways). Criteria-based sharing rules open access across the hierarchy. Manual sharing is for ad-hoc exceptions — it is not an architectural solution.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For performance questions: sharing recalculation at large data volumes is expensive. Overly complex sharing rules (many criteria-based rules + large record counts) cause performance degradation. Simpler role-hierarchy-based sharing is always more performant.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Apex managed sharing: only use it when standard sharing mechanisms cannot meet the requirement. It requires a sharing reason and bypasses normal recalculation — know the implications.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Sharing &amp; Visibility Architect has one of the highest retry rates of any Salesforce exam.
+          The performance implications and Apex managed sharing scenarios are not learnable from
+          documentation alone — design real sharing models in a sandbox before sitting the exam.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Sharing & Visibility Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/sharing-visibility-architect" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Sharing & Visibility Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/application-architect-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Application Architect Tips
+          </Link>
+          <Link href="/architect-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Architect Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

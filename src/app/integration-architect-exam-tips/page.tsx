@@ -1,0 +1,161 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Integration Architect Exam Tips (${RELEASE_CURRENT}): Salesforce Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Integration Architect exam tips for ${RELEASE_CURRENT}: integration patterns, API strategy, middleware, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/integration-architect-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/integration-architect-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Salesforce Integration Architect exam tips ${RELEASE_CURRENT}, how to pass Integration Architect, Salesforce integration certification study guide, Integration Architect first attempt`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Integration Architect Exam Tips', url: '/integration-architect-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Integration Architect exam format?',
+    answer: 'The Salesforce Integration Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for the System Architect role-based credential and tests integration strategy, API patterns, and middleware architecture.',
+  },
+  {
+    question: 'What are the highest-weight Integration Architect exam sections?',
+    answer: 'Integration Architecture (27%) and Salesforce Platform Architecture (23%) together account for 50% of the exam. API design patterns, middleware selection (MuleSoft vs. point-to-point vs. custom), and Platform Events are the most heavily tested topics.',
+  },
+  {
+    question: 'What prerequisites do I need for the Integration Architect exam?',
+    answer: 'There are no hard prerequisites, but Salesforce recommends Platform Developer I (PD1) and experience with REST/SOAP APIs before attempting Integration Architect. Real integration project experience — connecting Salesforce to ERP, marketing, or billing systems — is essential for the scenario-based questions.',
+  },
+  {
+    question: 'What is the difference between Integration Architect and Platform Developer II for integrations?',
+    answer: 'Platform Developer II tests how to write integration code (REST callouts, SOAP, Named Credentials, HttpCalloutMock). Integration Architect tests when and how to choose the right integration pattern at an architectural level — REST vs. SOAP vs. bulk API vs. streaming, middleware vs. point-to-point vs. ESB, and security architecture for integrations.',
+  },
+]
+
+export default function IntegrationArchitectExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/integration-architect-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/integration-architect-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Integration Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Salesforce Integration Architect exam tests your ability to design enterprise integration architectures
+          connecting Salesforce to external systems. These tips focus on integration pattern selection,
+          API strategy, and the architectural trade-offs the exam tests.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Integration Architect Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration pattern selection</strong> — When to use REST vs. SOAP vs. Bulk API vs. Streaming API vs. Platform Events, and the trade-offs of each for specific integration scenarios.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Middleware architecture</strong> — When to recommend point-to-point integration vs. middleware (MuleSoft, Dell Boomi) vs. a custom ESB, and the governance implications of each choice.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Security for integrations</strong> — OAuth flows (User-Agent, Username-Password, JWT Bearer, Web Server), Named Credentials, and certificate management for secure system-to-system communication.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Integration Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">27%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Salesforce Platform Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">23%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Security Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Data Integration</span>
+            <span className="font-bold text-salesforce-blue ml-4">16%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Integration Architecture + Platform Architecture = 50%. Integration pattern selection is your single most important study topic.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Integration Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Every Integration Architect question describes an integration requirement and asks which pattern or technology fits.
+          Answer by identifying three constraints: volume, latency requirement, and system ownership.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />High volume + batch = Bulk API. Real-time + low latency = REST API. Event-driven = Platform Events. Message queue = MuleSoft or custom middleware. Learn this decision matrix cold.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For middleware questions: point-to-point is fast but creates spaghetti as systems multiply. Recommend middleware whenever the scenario involves 3+ integrated systems or complex transformation requirements.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: know all four OAuth flows and when to use each. JWT Bearer = server-to-server without user interaction. Web Server = user-initiated. Username-Password = legacy/not recommended. User-Agent = deprecated.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Change Data Capture questions: CDC is for near-real-time sync of Salesforce changes to external systems. Platform Events is for publishing custom events. Know the difference and when each applies.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Integration Architect has a lower first-attempt pass rate than most architect component exams.
+          The questions require genuine integration project experience — candidates who have only studied
+          theory consistently fail middleware and OAuth flow questions.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Integration Architect Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/identity-access-management-architect" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Integration Architect Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/system-architect-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            System Architect Exam Tips
+          </Link>
+          <Link href="/architect-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Architect Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

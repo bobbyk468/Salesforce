@@ -1,0 +1,160 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Field Service Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Field Service Consultant exam tips for ${RELEASE_CURRENT}: work orders, scheduling, mobile workforce, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/field-service-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/field-service-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Field Service Consultant exam tips ${RELEASE_CURRENT}, how to pass Field Service Consultant, Salesforce Field Service certification study guide, FSL exam tips`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Field Service Consultant Exam Tips', url: '/field-service-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Field Service Consultant exam format?',
+    answer: 'The Salesforce Field Service Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee. It tests configuration and implementation of Salesforce Field Service (formerly Field Service Lightning), including work orders, scheduling, mobile, and inventory management.',
+  },
+  {
+    question: 'What are the highest-weight Field Service Consultant exam sections?',
+    answer: 'Managing Service Resources and Territories (25%) and Configuring Service Appointments and Work Orders (22%) together account for 47% of the exam. Scheduling and optimisation policies, resource capacity planning, and the FSL data model are the most heavily tested topics.',
+  },
+  {
+    question: 'What prerequisites do I need for the Field Service Consultant exam?',
+    answer: 'Salesforce recommends Salesforce Administrator (ADM-201) and Service Cloud Consultant before Field Service Consultant. The exam builds heavily on Service Cloud concepts (cases, entitlements, service contracts) and extends them into field operations. Real FSL implementation experience is strongly recommended.',
+  },
+  {
+    question: 'What is the hardest part of the Field Service Consultant exam?',
+    answer: 'Scheduling and optimisation is the most nuanced section — candidates must understand the difference between auto-scheduling, optimisation policies, scheduling rules, and work type rules, and when each is appropriate. The FSL data model (service territories, resources, service appointments) is unique and unlike other Salesforce modules.',
+  },
+]
+
+export default function FieldServiceExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/field-service-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/field-service-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Field Service Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Field Service Consultant exam tests your ability to configure and implement Salesforce Field Service
+          for mobile workforces. These tips focus on the data model, scheduling architecture, and territory
+          management questions that define the exam.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Field Service Consultant Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>FSL data model</strong> — Service territories, service resources, service appointments, work orders, work types, and how these objects relate to Cases and Assets in Service Cloud.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Scheduling and optimisation</strong> — Scheduling policies, work rules, service objectives, and the difference between manual scheduling, drip-feed scheduling, and global optimisation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mobile workforce management</strong> — Field Service mobile app configuration, inventory and parts management, and how technicians interact with work orders in the field.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Managing Service Resources and Territories</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Configuring Service Appointments and Work Orders</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Scheduling and Optimisation</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Inventory and Parts Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Resources/Territories + Work Orders + Scheduling = 65%. The FSL data model and scheduling policies are your core study focus.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Field Service Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Field Service questions describe a mobile workforce scenario and ask which configuration or feature satisfies it.
+          The correct answer always uses the most native FSL feature — not custom development or Service Cloud workarounds.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For territory questions: service territories define where resources work. A resource must be assigned to a territory to receive appointments there. Operating hours on territories and resources control availability — know which takes precedence.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scheduling questions: work rules define constraints (skills required, travel time, availability). Service objectives define preferences (minimise travel, prioritise urgent work). Policy = combination of rules and objectives. Know this hierarchy.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For mobile questions: the Field Service mobile app uses connected content to show related objects offline. Configurations made in the FSL managed package settings control what technicians see on mobile.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          The FSL data model is unique and unlike any other Salesforce module — candidates who have not
+          implemented FSL in a real environment consistently struggle with scheduling and territory questions.
+          Build a FSL trial org and configure a full scenario before booking.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Field Service Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/field-service" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Field Service Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/service-cloud-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Service Cloud Consultant Tips
+          </Link>
+          <Link href="/consultant-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Consultant Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
