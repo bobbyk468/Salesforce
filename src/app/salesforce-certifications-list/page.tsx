@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getExamCost } from '@/lib/cert-seo-data'
@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `all Salesforce certifications ${RELEASE_CURRENT}, Salesforce certification list, Salesforce certifications complete list, how many Salesforce certifications are there, Salesforce cert catalog`,
@@ -37,6 +37,25 @@ export const metadata: Metadata = {
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'All Salesforce Certifications', url: '/salesforce-certifications-list' },
+]
+
+const faqItems = [
+  {
+    question: 'How many Salesforce certifications are there in 2026?',
+    answer: 'Salesforce offers over 40 certifications across role tracks including Administrator, Developer, Architect, Consultant, Marketer, and Specialist. The catalog includes foundational credentials, role-based certifications, and Accredited Professional (AP) product-specific credentials.',
+  },
+  {
+    question: 'Which Salesforce certification should I get first?',
+    answer: 'Most people start with the Salesforce Administrator (ADM-201) certification. It covers core platform concepts used in all other certifications and is the most widely recognised entry-level credential. Developers typically start with Platform Developer I (PD1) instead.',
+  },
+  {
+    question: 'Are Salesforce certifications worth it in 2026?',
+    answer: 'Yes. Salesforce certifications remain highly valued in the job market. Certified professionals typically command higher salaries, and certifications are commonly listed in job postings as requirements or preferred qualifications.',
+  },
+  {
+    question: 'Do Salesforce certifications expire?',
+    answer: 'Salesforce certifications require periodic maintenance. When a new Salesforce release introduces exam-relevant changes, certified professionals must pass a maintenance module on Trailhead to keep their certification active. Most certifications require maintenance twice a year.',
+  },
 ]
 
 /** Role badge colours */
@@ -70,6 +89,12 @@ export default function SalesforceListPage() {
     breadcrumbItems,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({
+    headline: pageTitle,
+    description: pageDescription,
+    path: '/salesforce-certifications-list',
+  })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   const totalCerts = CERTIFICATION_CATEGORIES.reduce((acc, cat) => acc + cat.items.length, 0)
 
@@ -77,6 +102,8 @@ export default function SalesforceListPage() {
     <div className="max-w-5xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

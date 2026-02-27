@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { MapPin, Layers, ChevronRight } from 'lucide-react'
 import { CERTIFICATION_PATHS } from '@/lib/certification-path-data'
 import type { PathStage } from '@/lib/certification-path-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import CertificationPathContent from '@/components/CertificationPathContent'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
@@ -36,13 +36,32 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pathTitle,
     description: pathDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pathTitle }],
   },
   keywords:
     'Salesforce certification path, certification roadmap, CTA path, admin path, developer path, Salesforce career path',
 }
 
 const pathBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Certification Paths', url: '/certification-path' }]
+
+const faqItems = [
+  {
+    question: 'What is the recommended Salesforce certification order?',
+    answer: 'Start with Salesforce Administrator (ADM-201) to learn core platform concepts. Developers should pursue Platform Developer I (PD1) next. From there, branch into Consultant, Architect, or Specialist tracks based on your career goal. The Certified Technical Architect (CTA) path requires multiple domain architect certifications.',
+  },
+  {
+    question: 'How long does the full Salesforce certification path take?',
+    answer: 'The entry-level Administrator or Developer certification takes 2–3 months of dedicated study. Reaching senior credentials like PD2 or Service Cloud Consultant typically takes 1–2 years. The full CTA path requires 4–6 years of broad experience and a substantial certification portfolio.',
+  },
+  {
+    question: 'Do I need prerequisites to start Salesforce certifications?',
+    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended — many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
+  },
+  {
+    question: 'What is the Salesforce CTA certification path?',
+    answer: 'The Certified Technical Architect (CTA) path requires passing multiple domain architect exams including Application Architect and System Architect (and their component certifications). After completing these, candidates present a solution architecture to a review board of existing CTAs.',
+  },
+]
 
 export default function CertificationPathPage() {
   const webPageJsonLd = getWebPageJsonLd({
@@ -52,10 +71,12 @@ export default function CertificationPathPage() {
     breadcrumbItems: pathBreadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(pathBreadcrumb)
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* Hero */}
       <div className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-sm font-medium mb-6">

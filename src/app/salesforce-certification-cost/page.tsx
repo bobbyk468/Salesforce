@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { DollarSign, RefreshCw, Info, CheckCircle2, ArrowRight } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Salesforce certification cost ${RELEASE_CURRENT}, Salesforce exam fee, Salesforce certification price, Salesforce retake fee, how much does Salesforce certification cost`,
@@ -35,6 +35,25 @@ export const metadata: Metadata = {
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
   { name: 'Salesforce Certification Cost', url: '/salesforce-certification-cost' },
+]
+
+const faqItems = [
+  {
+    question: 'How much does a Salesforce certification cost?',
+    answer: 'Most Salesforce certifications cost $200 for the exam and $100 for a retake. Foundations certs (Platform Foundations, MuleSoft Integration Foundations) cost $75. AP certs cost $100. Domain Architect exams cost $400, and the Certified Technical Architect (CTA) review board costs $6,000.',
+  },
+  {
+    question: 'What is the Salesforce certification retake fee?',
+    answer: 'Retake fees are approximately 50% of the exam fee. Most $200 certs have a $100 retake fee. Foundations certs ($75 exam) have a $37.50 retake fee. AP certs ($100 exam) have a $50 retake. There is a 1-day wait for the first retake and a 14-day wait for subsequent attempts.',
+  },
+  {
+    question: 'How many times can you retake a Salesforce certification?',
+    answer: 'Salesforce allows up to 6 exam attempts per year for the same credential. After the first failed attempt, you must wait 1 day before retaking. Subsequent retakes require a 14-day waiting period each.',
+  },
+  {
+    question: 'Is there a free Salesforce certification option?',
+    answer: 'Salesforce does not offer free certifications, but some employers, partner programmes, and Trailhead GO subscriptions cover exam vouchers. Foundations certs start at $75 and are the lowest-cost entry point on the certification path.',
+  },
 ]
 
 const priceTiers = [
@@ -129,11 +148,19 @@ export default function SalesforceCertificationCostPage() {
     breadcrumbItems,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({
+    headline: pageTitle,
+    description: pageDescription,
+    path: '/salesforce-certification-cost',
+  })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
