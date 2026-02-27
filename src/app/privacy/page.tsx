@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Privacy Policy | Trailblaze Prep',
     description:
       'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: 'Privacy Policy | Trailblaze Prep' }],
   },
 }
 

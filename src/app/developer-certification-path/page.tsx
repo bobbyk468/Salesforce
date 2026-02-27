@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Salesforce developer certification path ${RELEASE_CURRENT}, how to become Salesforce developer, Salesforce developer career path, PD1 PD2 path, Salesforce JavaScript Developer cert order`,

@@ -983,7 +983,7 @@ export function getCertMetadata(slug: string): Metadata {
       card: 'summary_large_image',
       title: titleForMeta,
       description: descForMeta,
-      images: [ogImageUrl],
+      images: [{ url: ogImageUrl, alt: titleForMeta }],
     },
     other: {
       'article:published_time': publishedTime,

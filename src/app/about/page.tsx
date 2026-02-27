@@ -23,7 +23,7 @@ export const metadata = {
     card: 'summary_large_image',
     title: 'About Trailblaze Prep | Salesforce Certification Prep',
     description: aboutDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: 'About Trailblaze Prep | Salesforce Certification Prep' }],
   },
 }
 

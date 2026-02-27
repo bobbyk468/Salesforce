@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: 'Terms of Use | Trailblaze Prep',
     description:
       'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: 'Terms of Use | Trailblaze Prep' }],
   },
   robots: {
     index: true,

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `ADM-201 exam tips ${RELEASE_CURRENT}, how to pass ADM-201 first attempt, Salesforce Administrator exam tips, ADM-201 study plan, ADM-201 mock test strategy`,

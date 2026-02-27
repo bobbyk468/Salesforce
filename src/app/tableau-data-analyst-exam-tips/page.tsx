@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Tableau Data Analyst exam tips ${RELEASE_CURRENT}, how to pass Salesforce Tableau certification, Tableau Data Analyst study guide, Salesforce certified Tableau Data Analyst tips, Tableau LOD exam`,

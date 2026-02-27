@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Salesforce admin certification path ${RELEASE_CURRENT}, how to become Salesforce administrator, Salesforce admin career path, ADM-201 path, Salesforce Advanced Admin cert order`,

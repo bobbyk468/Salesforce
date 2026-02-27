@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Contact Us | Trailblaze Prep',
     description: contactDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: 'Contact Us | Trailblaze Prep' }],
   },
 }
 

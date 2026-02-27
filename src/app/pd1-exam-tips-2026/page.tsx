@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `PD1 exam tips ${RELEASE_CURRENT}, how to pass Salesforce Platform Developer I, PD1 study guide, Apex governor limits, PD1 practice exam, Salesforce developer certification tips`,

@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `MuleSoft Integration Foundations exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Integration Foundations, MuleSoft foundations study guide, MuleSoft API-led connectivity exam, Anypoint Platform certification tips`,

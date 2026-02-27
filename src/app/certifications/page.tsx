@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: indexTitle,
     description: indexDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: indexTitle }],
   },
 }
 

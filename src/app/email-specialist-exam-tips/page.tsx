@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Marketing Cloud Email Specialist exam tips ${RELEASE_CURRENT}, how to pass SFMC Email Specialist, email specialist certification tips, SFMC study guide, Marketing Cloud Email Specialist study plan`,

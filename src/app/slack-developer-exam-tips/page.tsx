@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     `Slack Developer exam tips ${RELEASE_CURRENT}, how to pass Slack Developer certification, Salesforce Slack Developer study guide, Slack app developer certification tips, Bolt Framework exam`,

@@ -25,7 +25,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: ctaTitle,
     description: ctaDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: ctaTitle }],
   },
   keywords:
     'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',

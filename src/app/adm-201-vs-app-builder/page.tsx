@@ -26,7 +26,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: pageTitle,
     description: pageDescription,
-    images: [ogImageUrl],
+    images: [{ url: ogImageUrl, alt: pageTitle }],
   },
   keywords:
     'ADM-201 vs App Builder, DEV-402 vs ADM-201, which Salesforce certification first, Salesforce admin vs app builder, ADM-201 difficulty comparison',
