@@ -50,6 +50,8 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/tableau-data-analyst-exam-tips`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/mulesoft-integration-foundations-exam-tips`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/slack-developer-exam-tips`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/pd2-exam-tips-2026`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/system-architect-exam-tips`, lastModified: new Date(), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/developer-certification-path`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/admin-certification-path`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/salesforce-certifications-list`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.85 },

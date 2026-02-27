@@ -68,12 +68,14 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
 export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
   administrator: '/adm-201-exam-tips-2026',
   'developer-1': '/pd1-exam-tips-2026',
+  'developer-2': '/pd2-exam-tips-2026',
   'app-builder': '/app-builder-exam-tips',
   'email-specialist': '/email-specialist-exam-tips',
   'mulesoft-integration-foundations': '/mulesoft-integration-foundations-exam-tips',
   'agentforce-specialist': '/agentforce-specialist-exam-tips',
   'service-cloud': '/service-cloud-consultant-exam-tips',
   'slack-developer': '/slack-developer-exam-tips',
+  'system-architect': '/system-architect-exam-tips',
   'tableau-data-analyst': '/tableau-data-analyst-exam-tips',
 }
 

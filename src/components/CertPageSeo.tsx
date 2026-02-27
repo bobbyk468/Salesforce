@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import StickyMobileCta from '@/components/StickyMobileCta'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 import {
   getCertBreadcrumb,
   getCertBreadcrumbJsonLd,
@@ -139,6 +140,11 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
           ))}
         </ol>
       </nav>
+
+      {/* Freshness + E-E-A-T badge — visible to users and crawlers */}
+      <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-blue mb-4">
+        Updated for {RELEASE_CURRENT}
+      </p>
 
       {/* Global mobile CTA for certification pages */}
       <StickyMobileCta />
