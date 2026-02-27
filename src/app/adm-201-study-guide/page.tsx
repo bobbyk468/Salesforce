@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -37,6 +37,25 @@ const breadcrumbItems = [
   { name: 'ADM-201 Study Guide', url: '/adm-201-study-guide' },
 ]
 
+const faqItems = [
+  {
+    question: 'How many sections does the ADM-201 exam have?',
+    answer: 'The ADM-201 exam covers 7 sections: Configuration and Setup (20%), Object Manager and Lightning App Builder (20%), Workflow and Process Automation (16%), Data and Analytics Management (14%), Sales and Marketing Applications (12%), Service and Support Applications (11%), and Productivity and Collaboration (7%).',
+  },
+  {
+    question: 'What is the passing score for ADM-201?',
+    answer: 'The ADM-201 passing score is 65%. The exam has 65 multiple-choice questions with a 105-minute time limit. The exam fee is $200 and a retake costs $100.',
+  },
+  {
+    question: 'How long should I study for the ADM-201 exam?',
+    answer: 'Most candidates with some Salesforce experience need 4–6 weeks of dedicated study. Candidates with no prior Salesforce exposure should allow 8–10 weeks. Daily hands-on practice in a free Developer Edition org significantly reduces study time.',
+  },
+  {
+    question: 'What are the highest-weight ADM-201 exam topics?',
+    answer: 'Configuration and Setup and Object Manager/Lightning App Builder each account for 20% of the ADM-201 exam — together that is 40%. Workflow and Process Automation is next at 16%. Focus your study time on these three sections first.',
+  },
+]
+
 const examSections = [
   { name: 'Configuration and Setup', weight: 20, note: 'Company settings, user management, profiles, permission sets, org security, field-level security' },
   { name: 'Object Manager and Lightning App Builder', weight: 20, note: 'Standard and custom objects, fields, page layouts, compact layouts, Lightning apps, record types' },
@@ -60,12 +79,14 @@ export default function Adm201StudyGuidePage() {
     description: pageDescription,
     path: '/adm-201-study-guide',
   })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
       <header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

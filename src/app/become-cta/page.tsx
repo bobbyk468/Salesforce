@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Award, Target, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react'
 import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount } from '@/lib/cta-journey-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
@@ -32,6 +32,25 @@ export const metadata: Metadata = {
 }
 
 const becomeCtaBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Become a CTA', url: '/become-cta' }]
+
+const faqItems = [
+  {
+    question: 'What certifications do you need to become a Salesforce CTA?',
+    answer: 'The CTA path requires completing the Application Architect credential (which includes Sharing and Visibility Architect, Data Architect, Development Lifecycle and Deployment Architect, and Integration Architect) and the System Architect credential (which includes Identity and Access Management Architect, Heroku Architect, and others). Together these are the domain architect prerequisites before the CTA review board.',
+  },
+  {
+    question: 'How long does it take to become a Salesforce CTA?',
+    answer: 'Most CTAs have 8–15 years of Salesforce experience before attempting the review board. The minimum realistic timeline with intensive focus is 4–6 years: 1–2 years building Admin/Developer credentials, then 2–4 years earning the domain architect certifications and accumulating the breadth of enterprise project experience the review board evaluates.',
+  },
+  {
+    question: 'What is the Salesforce CTA review board?',
+    answer: 'The CTA review board is a 2-hour panel evaluation where candidates present a solution architecture to a panel of existing Certified Technical Architects. Candidates receive a hypothetical business scenario and must defend architectural decisions covering integration, security, data architecture, and scalability. Passing requires broad expertise across the entire Salesforce platform.',
+  },
+  {
+    question: 'Where do you start on the path to becoming a Salesforce CTA?',
+    answer: 'Start with the Salesforce Administrator (ADM-201) certification to build platform fundamentals, then progress to Platform Developer I (PD1) for Apex and automation depth. From there, pursue the domain architect credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, etc.) in order of your project experience.',
+  },
+]
 
 /** Left-to-right arrow between boxes (first → second) */
 function FlowArrowRight() {
@@ -63,11 +82,19 @@ export default function BecomeCtaPage() {
     breadcrumbItems: becomeCtaBreadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(becomeCtaBreadcrumb)
+  const articleJsonLd = getArticleJsonLd({
+    headline: ctaTitle,
+    description: ctaDescription,
+    path: '/become-cta',
+  })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* Hero */}
       <div className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-6">

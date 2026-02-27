@@ -25,6 +25,19 @@ const ROLE_TITLES: Record<string, string> = {
   designer:               `Salesforce Designer Certifications (${RELEASE_CURRENT})`,
 }
 
+const ROLE_KEYWORDS: Record<string, string> = {
+  architect:              `Salesforce Architect certification ${RELEASE_CURRENT}, Application Architect, System Architect, Integration Architect, CTA path`,
+  consultant:             `Salesforce Consultant certification ${RELEASE_CURRENT}, Sales Cloud Consultant, Service Cloud Consultant, Experience Cloud Consultant`,
+  marketing:              `Salesforce Marketing certification ${RELEASE_CURRENT}, Email Specialist, Marketing Cloud Consultant, Pardot Specialist`,
+  associate:              `Salesforce Associate certification ${RELEASE_CURRENT}, Platform Foundations, AI Associate, entry level Salesforce cert`,
+  'accredited-professional': `Salesforce Accredited Professional ${RELEASE_CURRENT}, Field Service AP, B2B Commerce AP, Health Cloud AP`,
+  administrator:          `Salesforce Administrator certification ${RELEASE_CURRENT}, ADM-201, Advanced Administrator, App Builder DEV-402`,
+  developer:              `Salesforce Developer certification ${RELEASE_CURRENT}, Platform Developer I, PD1, Platform Developer II, PD2, JavaScript Developer`,
+  tableau:                `Salesforce Tableau certification ${RELEASE_CURRENT}, Tableau Architect, Tableau Consultant, Tableau Data Analyst`,
+  sales:                  `Salesforce Sales certification ${RELEASE_CURRENT}, Sales Cloud Consultant, Sales Foundations`,
+  designer:               `Salesforce Designer certification ${RELEASE_CURRENT}, UX Designer, Strategy Designer`,
+}
+
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   architect:
     'Salesforce Architect certification: Application, System, Integration, Data, Technical Architect (CTA). Free practice & study guides. Start free.',
@@ -82,8 +95,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [`${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`],
+      images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`, alt: title }],
     },
+    keywords: ROLE_KEYWORDS[slug] || `Salesforce ${category.name} certification ${RELEASE_CURRENT}, ${category.name} certification path`,
   }
 }
 
