@@ -63,6 +63,19 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect-review-board': 'CTA Review Board',
 }
 
+/** Slug -> exam tips page path. Used in CertIntroParagraph for internal linking. */
+export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
+  administrator: '/adm-201-exam-tips-2026',
+  'developer-1': '/pd1-exam-tips-2026',
+  'app-builder': '/app-builder-exam-tips',
+  'email-specialist': '/email-specialist-exam-tips',
+  'mulesoft-integration-foundations': '/mulesoft-integration-foundations-exam-tips',
+  'agentforce-specialist': '/agentforce-specialist-exam-tips',
+  'service-cloud': '/service-cloud-consultant-exam-tips',
+  'slack-developer': '/slack-developer-exam-tips',
+  'tableau-data-analyst': '/tableau-data-analyst-exam-tips',
+}
+
 /** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $100 for AP, $400 for Architect, $250 for Tableau, $75 for Foundations, $6000 for CTA. */
 export const SLUG_TO_EXAM_COST: Record<string, string> = {
   // $200 (most certs - default)
@@ -2272,13 +2285,17 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   // Get cert-specific FAQs if available
   const certSpecificFaqs = CERT_SPECIFIC_FAQS[slug] || []
   
-  // Base FAQs (always included)
+  // Base FAQs (always included) — also used for FAQPage schema
   const baseFaqs: FaqItem[] = [
     {
       question: `What is covered on the ${faqName} exam?`,
       answer: formerName
         ? `The ${faqName} exam${formerlyPhrase} covers section-wise weightage as shown above. Use the exam topics and practice questions on this page to align your study with the official outline.`
         : `This page shows the section-wise exam weightage so you know exactly which topics carry the most weight. Use the exam topics and practice questions above to align your study with the official outline.`,
+    },
+    {
+      question: `Are there free practice questions for the ${faqName} exam?`,
+      answer: `Yes. This page includes 15 free sample practice questions with explanations. Use them to test your knowledge before booking the exam.`,
     },
     {
       question: `How do I prepare for the ${faqName} certification?`,
@@ -2299,6 +2316,7 @@ export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
     ...certSpecificFaqs,
     baseFaqs[1],
     baseFaqs[2],
+    baseFaqs[3],
   ]
 }
 
