@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -166,6 +167,10 @@ export default function IntegrationArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <p className="text-sm text-gray-600 mb-6">
+          The Integration Architect certification is part of the Application Architect path. It is recommended to also review the{' '}
+          <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link> certification guide.
+        </p>
         
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -190,6 +195,32 @@ export default function IntegrationArchitectPage() {
 
           <div id="exam-prep">
             <ExamPrepContent slug={slug} />
+          </div>
+
+          <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">Integration Architect: Key Concepts</h2>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Patterns</p>
+                <p>Understand the common integration patterns like Fire-and-Forget, Request-Reply, and Batch Data Synchronization. Know when to use each based on business requirements for real-time or asynchronous processing.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Security</p>
+                <p>Be comfortable with security concepts like OAuth 2.0 flows, Connected Apps, Named Credentials, and when to use different authentication mechanisms to secure data in transit.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Error Handling and Recovery</p>
+                <p>Design for failures. Understand how to implement retry mechanisms with exponential backoff, how to use a dead-letter queue for failed messages, and how to build resilient integrations that can recover from outages.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Platform Events and Event-Driven Architecture</p>
+                <p>Know how to use Platform Events to build a scalable, event-driven architecture. Understand the publish-subscribe model and how it helps in decoupling systems.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Management</p>
+                <p>Understand the importance of API versioning, rate limiting, and monitoring. Know how to use API gateways to manage and secure your APIs.</p>
+              </div>
+            </div>
           </div>
 
           <div id="practice-questions" className="mt-12">
@@ -217,6 +248,7 @@ export default function IntegrationArchitectPage() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

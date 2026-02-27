@@ -1,5 +1,6 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
+import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
@@ -166,7 +167,7 @@ export default function IdentityAccessManagementArchitectPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-        
+        <CertIntroParagraph slug={slug} />
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         

@@ -2,6 +2,7 @@ import { Fragment } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import CertificationCard from '@/components/CertificationCard'
+import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 
 const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), {
@@ -270,7 +271,7 @@ export default function AdministratorPage() {
       
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-
+        <CertIntroParagraph slug={slug} />
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
         <section data-lcp-hero className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">
           <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">

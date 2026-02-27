@@ -1,5 +1,6 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
+import Link from 'next/link'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
@@ -141,7 +142,17 @@ export default function BusinessAnalystPage() {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
-        
+        <p className="text-sm text-gray-600 mb-6">
+          New to Salesforce? Our{' '}
+          <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">
+            Salesforce Administrator
+          </Link>{' '}
+          exam prep is the recommended first step—it builds the platform knowledge BAs need. See our{' '}
+          <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
+            certification path
+          </Link>{' '}
+          to understand where Business Analyst fits in your career. Below you&apos;ll find exam weightage, key concepts, and practice questions.
+        </p>
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         
