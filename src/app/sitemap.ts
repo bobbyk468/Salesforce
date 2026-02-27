@@ -4,8 +4,12 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // No cert pages excluded — practice-test pages have 200+ impressions and should be sitemapped
-  const excludedCertPaths = new Set<string>([])
+  // Exclude non-canonical pages from sitemap — these pages have canonical URLs pointing to their
+  // parent cert pages, so including them in the sitemap creates a contradiction (Ahref flags this).
+  const excludedCertPaths = new Set<string>([
+    '/certifications/administrator-practice-test',
+    '/certifications/email-specialist-practice-test',
+  ])
 
   const certUrls = CERTIFICATION_CATEGORIES.flatMap((cat) =>
     cat.items
