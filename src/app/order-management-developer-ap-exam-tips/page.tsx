@@ -1,0 +1,163 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Order Management Developer AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Order Management Developer AP exam tips for ${RELEASE_CURRENT}: OMS APIs, Flow customisation, headless integration, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/order-management-developer-ap-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/order-management-developer-ap-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Order Management Developer AP exam tips ${RELEASE_CURRENT}, how to pass Order Management Developer AP, Salesforce OMS developer certification, OMS API integration`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Order Management Developer AP Exam Tips', url: '/order-management-developer-ap-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Order Management Developer AP exam format?',
+    answer: 'The Order Management Developer AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates developer-level knowledge of Salesforce Order Management: customising OMS using Flow, Apex, and ConnectApi, integrating external systems via OMS APIs, and extending the order lifecycle with custom business logic.',
+  },
+  {
+    question: 'What are the highest-weight Order Management Developer AP exam sections?',
+    answer: 'OMS API Integration (35%) and Flow and Apex Customisation (25%) together account for 60% of the exam. Using the OMS Connect API for programmatic order operations, building custom Flow actions for order processing, and writing Apex to extend OMS behaviour are the most tested areas.',
+  },
+  {
+    question: 'What OMS APIs does the Developer AP exam test?',
+    answer: 'The exam tests the Salesforce Order Management Connect APIs: ConnectApi.OrderSummary for order retrieval and status updates, ConnectApi.FulfillmentOrder for fulfilment management, and REST APIs for headless commerce integration (submitting orders from external storefronts, updating order status from WMS systems). The exam tests when to use each API and how to handle authentication for external system integration.',
+  },
+  {
+    question: 'How does OMS use Flow for customisation?',
+    answer: 'Salesforce Order Management uses an invocable action pattern — OMS processes call Flows via Flow Actions at key points in the order lifecycle. Developers create custom Flows that are invoked by OMS during order processing (for custom routing logic, custom tax calculation, custom notification triggers). The exam tests how to build and register custom Flow actions in the OMS processing pipeline.',
+  },
+]
+
+export default function OrderManagementDeveloperApExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/order-management-developer-ap-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/order-management-developer-ap-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Order Management Developer AP Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Order Management Developer AP validates developer expertise in customising and
+          integrating Salesforce OMS. These tips focus on OMS APIs, Flow customisation,
+          and headless commerce integration that define this accreditation.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Order Management Developer AP Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>OMS API integration</strong> — Using ConnectApi for programmatic order operations (create, update, cancel, return), REST API integration for headless commerce (submitting orders from external storefronts, WMS order fulfilment callbacks), authentication patterns for external system API access, and error handling for failed API operations.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Flow and Apex customisation</strong> — Building invocable Flows for custom OMS processing logic, registering Flow actions in OMS orchestration steps, writing Apex to extend order lifecycle events, implementing the OMS platform event model for asynchronous processing, and customising OMS-generated emails and notifications.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Headless commerce integration</strong> — Integrating OMS with external commerce platforms (Shopify, Magento, custom) via REST APIs, implementing the headless order submission pattern (external cart → OMS order via API), configuring webhook endpoints for order status updates, and handling order data transformation between commerce platform schemas and OMS data model.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">OMS API Integration</span>
+            <span className="font-bold text-salesforce-blue ml-4">35%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Flow and Apex Customisation</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Headless Commerce Integration</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Testing and Deployment</span>
+            <span className="font-bold text-salesforce-blue ml-4">13%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. OMS API knowledge + Flow customisation = 60% — the developer-specific skills that distinguish this from the Admin AP.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach OMS Developer AP Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe an OMS customisation or integration requirement and ask which developer
+          approach achieves it. Use OMS-designed extension points — never use trigger-based approaches
+          for OMS order lifecycle events.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API integration questions: external systems submit orders to OMS using the REST API (POST to the Order Summary endpoint). Order status updates flow back from OMS to the commerce platform via webhooks (Platform Events that external systems subscribe to). Authentication uses Connected App OAuth. When a scenario says &apos;orders from Shopify should appear in OMS in real time&apos;, configure a Shopify webhook to call the OMS REST API — not a nightly batch sync.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Flow customisation questions: OMS uses the Invocable Method pattern for Flow extensions. Custom logic is packaged as an Apex @InvocableMethod and exposed as a Flow Action. The custom Flow is then registered as a step in the OMS orchestration (e.g., &apos;after order is received, run Custom Tax Calculation flow action&apos;). When a scenario says &apos;calculate taxes using our external tax service during order processing&apos;, build an Invocable Apex method that calls the tax API and register it in the OMS routing flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ConnectApi questions: ConnectApi.OrderSummary.cancelOrderSummary() programmatically cancels an order. ConnectApi.FulfillmentOrder.submitFulfillmentOrderToFulfillmentLocation() routes a fulfilment order. Using ConnectApi in Apex tests requires Test.startTest()/Test.stopTest() blocks and mock responses for HTTP callouts. When a scenario says &apos;build an Apex class to cancel orders older than 30 days that haven&apos;t been fulfilled&apos;, use ConnectApi.OrderSummary.cancelOrderSummary() — not a direct DML update on Order Summary records.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          OMS Developer AP is for developers building OMS integrations and customisations. Understanding
+          the OMS data model (from the Admin AP) is a prerequisite — the Developer AP tests how to
+          interact with that model programmatically. Build a test integration using the OMS REST API
+          before booking. The OMS Developer documentation on the Salesforce Developer site is the
+          primary reference.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Order Management Developer AP Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/order-management-developer-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            OMS Developer AP Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/order-management-admin-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            OMS Admin AP Questions
+          </Link>
+          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Developer Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

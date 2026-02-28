@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `MuleSoft Integration Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `MuleSoft Integration Architect exam tips for ${RELEASE_CURRENT}: enterprise integration design, Anypoint architecture patterns, API-led connectivity, and scenario strategy to pass.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/mulesoft-integration-architect-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/mulesoft-integration-architect-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `MuleSoft Integration Architect exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Integration Architect, Anypoint integration architecture, MuleSoft architect certification`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'MuleSoft Integration Architect Exam Tips', url: '/mulesoft-integration-architect-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the MuleSoft Integration Architect exam format?',
+    answer: 'The MuleSoft Integration Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests the ability to architect enterprise integration solutions on Anypoint Platform: API-led connectivity design, integration patterns, error handling strategy, and platform deployment decisions.',
+  },
+  {
+    question: 'What are the highest-weight MuleSoft Integration Architect exam sections?',
+    answer: 'Integration Solution Design (32%) and Anypoint Platform Architecture (25%) together account for 57% of the exam. Designing API-led connectivity layers (system, process, experience APIs), selecting appropriate integration patterns (event-driven, request-reply, batch), and architecting error handling and retry strategies are the most heavily tested areas.',
+  },
+  {
+    question: 'What is the difference between MuleSoft Integration Architect and Platform Architect?',
+    answer: 'MuleSoft Integration Architect focuses on technical integration solution design — API-led connectivity patterns, Mule application architecture, error handling, and performance optimisation. MuleSoft Platform Architect focuses on enterprise platform strategy — governance, Centre for Enablement, deployment model selection, and platform-wide API strategy. Integration Architect is more technical and implementation-focused; Platform Architect is more strategic.',
+  },
+  {
+    question: 'What Anypoint Platform concepts are most tested in the Integration Architect exam?',
+    answer: 'The exam heavily tests API-led connectivity (system, process, and experience APIs), Anypoint Exchange for asset publishing, API Manager for policy enforcement, CloudHub deployment configuration, error handling strategies (global error handlers, on-error continue vs. propagate), and transaction management (distributed transactions, idempotency patterns). Knowing when to use which integration pattern is essential.',
+  },
+]
+
+export default function MuleSoftIntegrationArchitectExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/mulesoft-integration-architect-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/mulesoft-integration-architect-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          MuleSoft Integration Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The MuleSoft Integration Architect exam tests your ability to design enterprise integration
+          solutions on Anypoint Platform. These tips focus on API-led connectivity design, integration
+          patterns, error handling architecture, and deployment decisions that define this certification.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What MuleSoft Integration Architect Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration solution design</strong> — Designing three-tier API-led connectivity (system APIs for backend access, process APIs for orchestration, experience APIs for consumers), selecting synchronous vs. asynchronous patterns, and designing for scalability, reuse, and maintainability.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform architecture</strong> — Configuring CloudHub workers and vCores, Anypoint MQ for asynchronous messaging, API Manager policy chains, Object Store for state persistence, and Anypoint Monitoring for observability. Selecting the right Anypoint component for each integration requirement.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Error handling and resilience</strong> — Global error handlers vs. local error handlers, on-error-continue vs. on-error-propagate, designing retry policies (fixed, exponential backoff), circuit breaker patterns, dead-letter queues for failed message recovery, and idempotency design for duplicate message handling.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Integration Solution Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">32%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Anypoint Platform Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Error Handling and Resilience</span>
+            <span className="font-bold text-salesforce-blue ml-4">23%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Security and Compliance Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Solution Design + Platform + Error Handling = 80%. API-led connectivity design and error handling patterns are the most heavily tested areas.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Integration Architect Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe an enterprise integration challenge and ask which Anypoint architecture,
+          pattern, or component best addresses it. Think in terms of reusability and decoupling —
+          API-led connectivity exists to prevent point-to-point spaghetti integrations.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API-led questions: System APIs expose backend systems (ERP, databases) — they should not contain business logic. Process APIs orchestrate and transform data from system APIs. Experience APIs tailor data for specific consumer needs (mobile app, web, partner). When a scenario asks where to put business transformation logic, the answer is always the Process API layer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For error handling questions: on-error-continue catches the error, executes the error scope, and continues with the next message in the flow. on-error-propagate catches the error, executes the error scope, and propagates the error to the caller. When a scenario says &apos;log the error but continue processing other records in a batch&apos;, use on-error-continue. When a scenario says &apos;return an error response to the client&apos;, use on-error-propagate.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pattern selection: synchronous (request-reply) when the caller needs an immediate response. Asynchronous (Anypoint MQ, event-driven) when the caller can proceed without waiting. Batch processing for large volume data migration. When a scenario describes &apos;fire and forget&apos; or &apos;processing 1 million records overnight&apos;, the answer is asynchronous messaging or batch processing.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks before booking (70% passing score)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          MuleSoft Integration Architect requires both deep MuleSoft technical knowledge and enterprise
+          architecture thinking. Candidates typically have MuleSoft Developer I/II certification and
+          2+ years of Anypoint Platform project experience. The exam tests architectural decision-making
+          under constraint — not just knowing what features exist.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start MuleSoft Integration Architect Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/mulesoft-integration-architect" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Integration Architect Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/mulesoft-platform-architect-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Platform Architect Tips
+          </Link>
+          <Link href="/architect-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Architect Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

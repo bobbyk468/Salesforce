@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `MuleSoft Catalyst Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `MuleSoft Catalyst Consultant exam tips for ${RELEASE_CURRENT}: Catalyst methodology, IT operating model, API programme design, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/mulesoft-catalyst-consultant-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/mulesoft-catalyst-consultant-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `MuleSoft Catalyst Consultant exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Catalyst, Catalyst methodology certification, MuleSoft operating model exam`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'MuleSoft Catalyst Consultant Exam Tips', url: '/mulesoft-catalyst-consultant-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the MuleSoft Catalyst Consultant exam format?',
+    answer: 'The MuleSoft Catalyst Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests knowledge of the MuleSoft Catalyst methodology — a structured approach to designing and delivering MuleSoft integration programmes including IT operating model design, API programme management, and organisational transformation.',
+  },
+  {
+    question: 'What is the MuleSoft Catalyst methodology?',
+    answer: 'MuleSoft Catalyst is MuleSoft&apos;s prescriptive methodology for implementing API-led integration programmes. It provides playbooks, templates, and best practices for establishing an IT operating model, building a Centre for Enablement (C4E), scaling API adoption, and measuring the business value of integration. The exam tests how to apply Catalyst methodology in enterprise scenarios.',
+  },
+  {
+    question: 'What are the highest-weight MuleSoft Catalyst Consultant exam sections?',
+    answer: 'IT Operating Model Design (30%) and API Programme Management (25%) together account for 55% of the exam. Designing the right organisational structure for integration delivery, defining roles and responsibilities, establishing a C4E, and creating an API product strategy are the most heavily tested areas.',
+  },
+  {
+    question: 'How is MuleSoft Catalyst Consultant different from MuleSoft Platform Architect?',
+    answer: 'MuleSoft Catalyst Consultant focuses on the organisational and methodology aspects of MuleSoft programmes — how to structure teams, establish governance processes, and deliver integration transformations using the Catalyst playbooks. MuleSoft Platform Architect focuses on technical platform strategy — API governance, deployment models, and enterprise-wide Anypoint Platform architecture. Catalyst is more about programme management; Platform Architect is more about technical strategy.',
+  },
+]
+
+export default function MuleSoftCatalystConsultantExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/mulesoft-catalyst-consultant-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/mulesoft-catalyst-consultant-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          MuleSoft Catalyst Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The MuleSoft Catalyst Consultant exam tests your knowledge of the MuleSoft Catalyst methodology
+          for delivering enterprise integration programmes. These tips focus on IT operating model design,
+          Centre for Enablement setup, and API programme management that define this certification.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What MuleSoft Catalyst Consultant Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>IT operating model design</strong> — Designing the organisational structure for integration delivery: centralised vs. federated models, defining the Centre for Enablement (C4E) team structure, establishing roles (Integration Architect, API Developer, C4E Lead), and creating the governance model for API lifecycle management across the enterprise.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API programme management</strong> — Building an API product strategy, creating an API roadmap, establishing API reuse metrics, managing the API lifecycle from design to retirement, and using Anypoint Exchange as the asset repository for the organisation&apos;s integration portfolio.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Catalyst methodology and playbooks</strong> — The Catalyst programme phases (Discover, Design, Deliver, Measure), using Catalyst playbooks for common scenarios (establishing a C4E, onboarding a new line of business), measuring integration ROI, and driving API adoption across the enterprise using the Catalyst framework.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">IT Operating Model Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">API Programme Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Catalyst Methodology and Playbooks</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Measuring and Communicating Value</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Operating Model + API Programme + Catalyst Methodology = 80%. The C4E model and Catalyst playbooks are the defining topics of this exam.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Catalyst Consultant Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe an enterprise MuleSoft programme challenge and ask which Catalyst approach,
+          organisational structure, or methodology phase addresses it. Think at the programme level —
+          not the individual API or Mule application level.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: the C4E is an enablement team — it creates templates, best practices, and reusable APIs that other teams use. It is not a centralised delivery team that builds all integrations. When a scenario asks &apos;how do you scale MuleSoft adoption without IT becoming a bottleneck&apos;, the C4E model (provide tools and standards; let business units build) is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For operating model questions: centralised models give control and consistency but create bottlenecks. Federated models give speed and autonomy but risk inconsistency. A hybrid model with a C4E providing standards and oversight, while business units deliver their own integrations, is the Catalyst-recommended approach for large enterprises.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For programme phase questions: Discover = understand the current state, assess pain points, define the vision. Design = design the target operating model and API strategy. Deliver = implement the foundational APIs and C4E. Measure = track adoption metrics, API reuse, and business value delivered. When a question asks what happens in each phase, map it to these four stages.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          MuleSoft Catalyst Consultant is unusual because it primarily tests organisational methodology
+          rather than technical skills. Candidates with experience delivering MuleSoft programmes at
+          the programme management level (not just development) are the target audience. Study the
+          official MuleSoft Catalyst playbooks available on MuleSoft&apos;s website before the exam.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start MuleSoft Catalyst Consultant Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/mulesoft-catalyst-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Catalyst Consultant Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/mulesoft-platform-architect-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Platform Architect Tips
+          </Link>
+          <Link href="/architect-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Architect Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

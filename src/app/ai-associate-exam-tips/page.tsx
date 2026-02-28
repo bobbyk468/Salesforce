@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `AI Associate Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce AI Associate exam tips for ${RELEASE_CURRENT}: AI fundamentals, Einstein AI, responsible AI, data ethics, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/ai-associate-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/ai-associate-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `AI Associate exam tips ${RELEASE_CURRENT}, how to pass Salesforce AI Associate, Salesforce AI certification, Einstein AI exam study guide 2026`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'AI Associate Exam Tips', url: '/ai-associate-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce AI Associate exam format?',
+    answer: 'The Salesforce AI Associate exam has 40 multiple-choice questions, a 70-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It is an entry-level certification testing foundational knowledge of AI concepts, Salesforce Einstein AI features, responsible AI principles, and data ethics — no coding or deep technical knowledge required.',
+  },
+  {
+    question: 'What are the highest-weight AI Associate exam sections?',
+    answer: 'AI Fundamentals (30%) and Salesforce Einstein AI Features (28%) together account for 58% of the exam. Understanding machine learning concepts (supervised vs. unsupervised learning, model training, bias), Salesforce AI features (Einstein Prediction Builder, Einstein Discovery, Einstein GPT/Copilot), and responsible AI principles are the most tested areas.',
+  },
+  {
+    question: 'Do I need programming knowledge to pass the AI Associate exam?',
+    answer: 'No — the AI Associate is a foundational, non-technical certification. It tests conceptual understanding of AI rather than coding or implementation. You need to know what different AI features do and when to use them, but not how to build them technically. This makes it accessible to administrators, business analysts, and non-technical Salesforce professionals.',
+  },
+  {
+    question: 'What responsible AI concepts does the AI Associate exam test?',
+    answer: 'The exam tests Salesforce&apos;s Trusted AI principles: accuracy, safety, honesty, empowerment, sustainability, and inclusivity. It also tests common AI risks: bias in training data, hallucination in generative AI, privacy concerns with personal data, and the importance of human oversight. Understanding these principles at a conceptual level is required.',
+  },
+]
+
+export default function AIAssociateExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/ai-associate-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/ai-associate-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce AI Associate Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The AI Associate exam is Salesforce&apos;s entry-level AI certification. It tests foundational knowledge
+          of AI concepts, Salesforce Einstein features, and responsible AI — no coding required. These tips
+          focus on the AI fundamentals and Salesforce-specific AI features that dominate the exam.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What AI Associate Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AI fundamentals</strong> — Machine learning types (supervised, unsupervised, reinforcement), key concepts (training data, model, prediction, classification, regression), generative AI basics (LLMs, prompts, tokens, hallucination), and how AI models are trained and evaluated.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Salesforce Einstein AI features</strong> — Einstein Prediction Builder, Einstein Discovery, Einstein Copilot, Einstein GPT, Einstein Next Best Action, and which use cases each feature addresses. Understanding the difference between predictive AI (Einstein Discovery) and generative AI (Einstein GPT/Copilot) is key.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Responsible AI and data ethics</strong> — Salesforce Trusted AI principles, bias and fairness in AI models, privacy considerations for personal data in AI, the importance of transparency and explainability, and human oversight in automated AI decisions.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">AI Fundamentals</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Salesforce Einstein AI Features</span>
+            <span className="font-bold text-salesforce-blue ml-4">28%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Responsible AI and Data Ethics</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">AI Use Cases and Business Value</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">AI Fundamentals + Einstein Features + Responsible AI = 80%. This is primarily a knowledge-based exam — study all three areas equally.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach AI Associate Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a business AI scenario and ask which Salesforce Einstein feature is most appropriate,
+          or present an AI concept and ask for the correct definition or use case. Read each answer carefully —
+          distractors often describe real AI concepts but applied to the wrong scenario.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Einstein feature questions: Einstein Prediction Builder = create custom predictions for any Salesforce object without code. Einstein Discovery = find patterns in large datasets and explain key influencers. Einstein Copilot = conversational AI assistant in Salesforce. Einstein GPT = generative AI for content (email, case summaries). Match the feature to the use case.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For ML concept questions: supervised learning uses labelled training data (input + correct output). Unsupervised learning finds patterns in unlabelled data (clustering). Classification predicts a category (will customer churn: yes/no). Regression predicts a numeric value (predicted deal size). Reinforcement learning uses reward signals — not commonly used in Salesforce Einstein.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For responsible AI questions: bias occurs when training data is not representative of the population. Hallucination is when generative AI produces confident but incorrect content. Transparency means users should know when AI is involved in a decision. When a scenario describes an AI problem, identify which principle (fairness, transparency, accountability) it violates.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          The AI Associate is one of Salesforce&apos;s most accessible certifications — most candidates with
+          2–3 weeks of focused study can pass. Complete the Trailhead AI Associate trail and the official
+          Salesforce AI Fundamentals module. The exam is particularly suitable as a first certification
+          for those new to Salesforce or AI.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start AI Associate Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/ai-associate" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            AI Associate Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/agentforce-specialist-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Agentforce Specialist Tips
+          </Link>
+          <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            All Certification Paths
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

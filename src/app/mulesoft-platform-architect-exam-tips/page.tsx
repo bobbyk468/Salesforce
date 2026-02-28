@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `MuleSoft Platform Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `MuleSoft Platform Architect exam tips for ${RELEASE_CURRENT}: Anypoint Platform governance, API management, enterprise integration strategy, and scenario strategy to pass.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/mulesoft-platform-architect-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/mulesoft-platform-architect-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `MuleSoft Platform Architect exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Platform Architect, Anypoint Platform architecture, MuleSoft enterprise architect exam`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'MuleSoft Platform Architect Exam Tips', url: '/mulesoft-platform-architect-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the MuleSoft Platform Architect exam format?',
+    answer: 'The MuleSoft Platform Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests the ability to architect enterprise integration solutions on Anypoint Platform: API strategy, platform governance, deployment models, and centre for enablement design.',
+  },
+  {
+    question: 'What are the highest-weight MuleSoft Platform Architect exam sections?',
+    answer: 'API Strategy and Architecture (32%) and Anypoint Platform Governance (25%) together account for 57% of the exam. Designing enterprise API strategies, governing API lifecycle, managing Anypoint Exchange, and deploying Anypoint Platform in different environments (CloudHub, Runtime Fabric, on-premises) are the most heavily tested areas.',
+  },
+  {
+    question: 'What is a Centre for Enablement (C4E) and why does the exam test it?',
+    answer: 'A Centre for Enablement (C4E) is MuleSoft&apos;s recommended organisational model for scaling API-led integration across an enterprise. The C4E provides reusable assets, templates, and governance standards so that development teams can build integrations without starting from scratch. The exam tests how to design, establish, and grow a C4E.',
+  },
+  {
+    question: 'What deployment models does MuleSoft Platform Architect test?',
+    answer: 'The exam tests all Anypoint Platform deployment options: CloudHub 1.0 (shared managed cloud), CloudHub 2.0 (containerised cloud with private spaces), Runtime Fabric (self-managed Kubernetes), and standalone Mule Runtime (on-premises). Knowing the trade-offs between control, cost, and maintenance overhead for each deployment model is essential for architect-level decisions.',
+  },
+]
+
+export default function MuleSoftPlatformArchitectExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/mulesoft-platform-architect-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/mulesoft-platform-architect-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          MuleSoft Platform Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The MuleSoft Platform Architect exam tests enterprise-level Anypoint Platform strategy and governance.
+          These tips focus on API strategy design, Centre for Enablement, deployment model selection,
+          and platform governance that define this advanced certification.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What MuleSoft Platform Architect Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API strategy and architecture</strong> — Designing enterprise API portfolios using API-led connectivity, defining API standards (RAML, versioning strategy, error handling), managing the API lifecycle (design, publish, manage, retire), and building reusable API assets in Anypoint Exchange.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Anypoint Platform governance</strong> — Designing governance frameworks for API lifecycle, setting up environments and business groups, configuring API Manager policies at scale, and using Anypoint Governance (API Governance) for automated compliance checking.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Deployment architecture</strong> — Selecting between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premises deployment based on requirement constraints (compliance, latency, control, cost). Designing high-availability Mule runtime clusters and understanding VPC peering for private connectivity.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">API Strategy and Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">32%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Anypoint Platform Governance</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Deployment Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Centre for Enablement Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">API Strategy + Governance + Deployment = 79%. Enterprise API strategy design is the highest-value study area for this exam.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Platform Architect Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe enterprise integration challenges and ask which platform architecture, governance
+          approach, or deployment decision is most appropriate. Think at the enterprise level — not just
+          the individual API level. The correct answer balances developer productivity with governance.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For deployment questions: CloudHub 1.0 = fully managed, least control, fastest setup. CloudHub 2.0 = managed with private spaces for compliance, better isolation. Runtime Fabric = self-managed Kubernetes, maximum control, highest overhead. On-premises = for data sovereignty requirements where cloud is not permitted. Match the deployment to the stated compliance/control/cost requirements.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: a C4E provides templates, best practices, and reusable APIs to accelerate development. It is a team of enablers — not a bottleneck team that builds all integrations. The C4E creates the tools and standards; other teams use them autonomously. When a scenario says &apos;how to scale MuleSoft adoption without creating a central IT bottleneck&apos;, C4E is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API governance questions: Anypoint Governance checks APIs against rulesets automatically (RAML linting, security standards). API Manager policies enforce security at runtime. Business groups and environments control who can manage which APIs. When a question asks how to enforce API security standards across all teams, Anypoint Governance rulesets + API Manager policies is the answer.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          76%+ on 3 timed full mocks before booking (70% passing score)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          MuleSoft Platform Architect requires enterprise integration strategy experience — not just
+          development skills. Candidates with MuleSoft Developer I/II and real-world Anypoint Platform
+          management experience are the target audience. Understanding C4E at a conceptual level
+          and the trade-offs between deployment models requires project exposure, not just study.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start MuleSoft Platform Architect Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/mulesoft-platform-architect" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            MuleSoft Platform Architect Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/mulesoft-developer-ii-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            MuleSoft Developer II Tips
+          </Link>
+          <Link href="/architect-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Architect Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

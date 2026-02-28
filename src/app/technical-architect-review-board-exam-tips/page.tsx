@@ -1,0 +1,171 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `CTA Review Board Exam Tips (${RELEASE_CURRENT}): Presentation Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce CTA Review Board tips for ${RELEASE_CURRENT}: scenario presentation structure, whiteboarding strategy, panel Q&A technique, and how to pass the live architecture defence.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/technical-architect-review-board-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/technical-architect-review-board-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `CTA Review Board tips ${RELEASE_CURRENT}, how to pass CTA Review Board, Salesforce Technical Architect presentation, CTA whiteboard exam strategy`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'CTA Review Board Exam Tips', url: '/technical-architect-review-board-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the CTA Review Board and how does it work?',
+    answer: 'The CTA Review Board is the live presentation component of the Salesforce Certified Technical Architect credential. It costs $3,000 and takes place in a half-day session. You receive a complex scenario in advance (typically a few days before), prepare a solution architecture, then present your design to a panel of 3 sitting CTAs. The panel asks probing questions for 30–45 minutes. You must defend your architectural decisions under pressure and demonstrate breadth across all Salesforce domains simultaneously.',
+  },
+  {
+    question: 'What scenario topics does the CTA Review Board typically cover?',
+    answer: 'CTA Review Board scenarios are deliberately broad and ambiguous. They typically involve a large enterprise with multiple Salesforce clouds, integration requirements, identity and access management challenges, large data volumes, complex security and sharing requirements, and a release management question. You are expected to address all architectural domains — not just your strongest area. Scenarios often include deliberate constraints that force trade-off decisions.',
+  },
+  {
+    question: 'How should I structure my CTA Review Board presentation?',
+    answer: 'A strong Review Board presentation typically follows: (1) Restate the scenario requirements and constraints in your own words to confirm understanding; (2) Present your solution architecture with a whiteboard diagram covering all domains; (3) Justify each key decision with explicit trade-offs (why this approach vs the alternative); (4) Call out risks and mitigation strategies proactively; (5) Summarise governance and deployment approach. The panel rewards candidates who demonstrate architectural thinking — the &quot;why&quot; behind decisions — not just correct answers.',
+  },
+  {
+    question: 'What are the most common reasons candidates fail the CTA Review Board?',
+    answer: 'Common failure reasons: (1) Insufficient breadth — solving only the primary requirement and missing data architecture, identity, or deployment concerns; (2) Inability to defend decisions under panel questioning — changing the answer when challenged rather than holding a justified position; (3) Overlooking scalability — designing for current state without considering large data volumes or future growth; (4) Not addressing trade-offs — presenting one solution as if there are no alternatives or downsides; (5) Weak security architecture — not addressing field-level security, sharing rules, or external identity at scale.',
+  },
+]
+
+export default function TechnicalArchitectReviewBoardExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/technical-architect-review-board-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/technical-architect-review-board-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          CTA Review Board Exam Tips ({RELEASE_CURRENT}): How to Pass the Live Architecture Presentation
+        </h1>
+        <p className="text-lg text-gray-600">
+          The CTA Review Board is the live presentation component of the Salesforce Certified Technical
+          Architect credential — a half-day session where you present your solution to a panel of sitting
+          CTAs. These tips focus on presentation structure, whiteboarding technique, and Q&amp;A defence
+          strategy for this expert-level assessment.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What the CTA Review Board Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Architectural breadth under pressure</strong> — The Review Board tests whether you can design a complete enterprise Salesforce architecture covering all domains simultaneously: data architecture (LDV, Big Objects), integration (API-led, CDC, MuleSoft), identity (SAML SSO, OAuth, Experience Cloud), security (OWD, sharing rules, FLS at scale), and deployment (release management, scratch orgs, CI/CD) — all in response to a single complex scenario.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Decision justification and trade-off reasoning</strong> — The panel of CTAs deliberately challenges your decisions. They want to see you justify choices with explicit trade-offs (single-org vs multi-org: simpler governance but harder to achieve separate release cycles), hold your position under pressure when your reasoning is sound, and pivot gracefully when challenged with a valid constraint you had not considered.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Risk identification and mitigation</strong> — Strong candidates proactively identify architectural risks in their own solution (large data volumes triggering sharing recalculation, Apex governor limits in complex automation, integration failure cascades) and describe mitigation strategies. Candidates who only present the &apos;happy path&apos; without acknowledging risks are seen as less architecturally mature.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Presentation Structure: The Architecture Domains to Cover</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Data Architecture and Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">Always address</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Integration Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">Always address</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Security and Identity Architecture</span>
+            <span className="font-bold text-salesforce-blue ml-4">Always address</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Development Lifecycle and Deployment</span>
+            <span className="font-bold text-salesforce-blue ml-4">Always address</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Solution Architecture (Org Strategy, Clouds)</span>
+            <span className="font-bold text-salesforce-blue ml-4">Always address</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">All domains must be addressed in your presentation — not just the primary scenario focus. Missing a domain entirely (e.g., not discussing deployment strategy) is a common failure pattern.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach the Review Board</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          The Review Board scenario is deliberately ambiguous — it will have constraints that conflict and
+          requirements that could be solved multiple ways. The panel does not want the &apos;right answer&apos;;
+          they want to see architectural thinking, trade-off analysis, and the ability to defend a justified
+          position under interrogation.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For whiteboarding: draw a high-level architecture diagram first (org structure, system landscape, integration flows, identity boundaries). Use swim lanes or zones to separate concerns (internal users vs external users vs systems). Label every arrow with the integration pattern (REST, CDC, MuleSoft, Platform Events). The panel evaluates your diagram independently — it must stand alone as a clear architectural artefact, not just a prop for your verbal explanation.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For panel Q&amp;A: when the panel challenges a decision (&apos;why not multi-org?&apos;, &apos;what if the integration fails?&apos;), respond with &apos;That&apos;s a valid consideration — in this scenario I chose [approach] because [specific constraint from the scenario] makes [alternative] less suitable, though if [different constraint] were present, I would reconsider.&apos; This structure shows you understand alternatives without abandoning your justified position. Do not simply agree with every challenge.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV scenarios (very common in Review Board): if the scenario mentions millions of records or high-volume data, explicitly address skinny tables for reporting performance, custom indexes for selective queries, data archiving strategy with Big Objects, and the impact of sharing recalculation on large data volumes. If you wait for the panel to ask about LDV rather than addressing it proactively, it signals insufficient architectural foresight.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Preparation Approach for the CTA Review Board</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          Mock Review Board sessions with a CTA mentor are essential — written study alone is insufficient
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          The most effective preparation is live mock Review Board sessions with a sitting CTA acting as
+          a panel member. Trailblazer Community CTA groups run peer mock sessions. Key preparation
+          activities: practice whiteboarding all five architectural domains from a single scenario in
+          under 30 minutes; practise holding positions under challenge without becoming defensive or
+          capitulating; study the Salesforce Architecture Patterns Trailmix and all architect-level
+          credential study materials; review published CTA Review Board scenario reports and community
+          post-mortems from candidates who have attempted the board.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start CTA Review Board Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/technical-architect-review-board" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            CTA Review Board Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/technical-architect-evaluation-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            CTA Evaluation Exam Tips
+          </Link>
+          <Link href="/become-cta" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            How to Become a CTA
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

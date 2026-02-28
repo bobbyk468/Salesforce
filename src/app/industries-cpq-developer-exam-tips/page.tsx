@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Industries CPQ Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Industries CPQ Developer exam tips for ${RELEASE_CURRENT}: product catalogue, pricing, guided selling, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/industries-cpq-developer-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/industries-cpq-developer-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Industries CPQ Developer exam tips ${RELEASE_CURRENT}, how to pass Industries CPQ Developer, Salesforce Industries CPQ certification, Vlocity CPQ exam tips`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Industries CPQ Developer Exam Tips', url: '/industries-cpq-developer-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Industries CPQ Developer exam format?',
+    answer: 'The Salesforce Industries CPQ Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests configuration and development of Industries CPQ (formerly Vlocity CPQ) for telecommunications, media, and energy industries.',
+  },
+  {
+    question: 'What are the highest-weight Industries CPQ Developer exam sections?',
+    answer: 'Product Catalogue Management (30%) and Pricing and Promotions (25%) together account for 55% of the exam. Understanding product hierarchies, offering types, price lists, promotions, and how Industries CPQ differs from standard Salesforce CPQ is the core of this certification.',
+  },
+  {
+    question: 'How is Industries CPQ different from standard Salesforce CPQ?',
+    answer: 'Industries CPQ (formerly Vlocity CPQ) is built specifically for telecommunications, media, utilities, and other industries with complex product hierarchies and subscription-based offerings. It uses its own data model (Product Catalogue, Price List, Promotions) and integrates with OmniStudio for guided selling. Standard Salesforce CPQ (Steelbrick) is a more general-purpose configure-price-quote tool.',
+  },
+  {
+    question: 'What prerequisites help with the Industries CPQ Developer exam?',
+    answer: 'OmniStudio Developer certification or experience is strongly recommended as Industries CPQ uses OmniStudio for its guided selling interfaces. Industries CPQ experience in a communications, media, or energy implementation context is essential. The exam is niche — most candidates work for system integrators specialising in Vlocity/Industries implementations.',
+  },
+]
+
+export default function IndustriesCPQDeveloperExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/industries-cpq-developer-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/industries-cpq-developer-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Industries CPQ Developer Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Industries CPQ Developer exam tests your ability to build and configure Industries CPQ (formerly
+          Vlocity CPQ) for complex telecommunications, media, and energy product offerings. These tips
+          focus on the product catalogue, pricing model, and guided selling patterns the exam tests.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Industries CPQ Developer Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue management</strong> — Industries CPQ product hierarchy (Offerings, Products, Product Components), attribute-based configuration, product specifications, and how the catalogue differs from standard Salesforce CPQ&apos;s bundle model.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing and promotions</strong> — Price lists, price list entries, promotion types, eligibility rules, and how promotions override standard pricing. Understanding the Industries CPQ pricing engine sequence is critical.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Guided selling and OmniStudio integration</strong> — How Industries CPQ uses OmniScripts and FlexCards for the guided selling experience, Integration Procedures for catalogue data retrieval, and DataRaptors for order submission.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Product Catalogue Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Pricing and Promotions</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Guided Selling and OmniStudio</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Order Management and Fulfilment</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Product Catalogue + Pricing + Guided Selling = 77%. These three areas define your preparation focus.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Industries CPQ Developer Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a telecommunications or media product scenario and ask which Industries CPQ
+          configuration achieves it. Answers involving standard Salesforce CPQ features are distractors —
+          always prefer the Industries CPQ native approach.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product hierarchy questions: Industries CPQ uses Offerings (top-level products like &apos;Broadband 100Mbps&apos;), Products (components of offerings), and Product Specifications (attribute definitions). An Offering can contain multiple Products with variable quantities and attribute values.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion questions: promotions have Eligibility Rules that define who qualifies (existing customer, new customer, account type). Promotion Offers define what the customer gets (discount, free add-on). Promotions override Price List Entries — know the sequence.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio integration questions: the guided selling flow is built in OmniScript. Product catalogue data is fetched via Integration Procedures calling Industries CPQ APIs. When a requirement involves displaying product options dynamically based on customer eligibility, the answer involves an Integration Procedure with eligibility filtering — not a direct SOQL DataRaptor.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Industries CPQ Developer is a specialist certification primarily taken by consultants working on
+          telecommunications, media, or energy implementations. Without real Industries CPQ project experience,
+          this exam is significantly more challenging. Complete the Trailhead Industries CPQ trails
+          and work through a full product catalogue configuration before booking.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Industries CPQ Developer Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/industries-cpq-developer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Industries CPQ Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/omnistudio-developer-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            OmniStudio Developer Tips
+          </Link>
+          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Developer Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

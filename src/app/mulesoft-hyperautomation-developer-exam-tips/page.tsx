@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `MuleSoft Hyperautomation Developer Exam Tips (${RELEASE_CURRENT})`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `MuleSoft Hyperautomation Developer exam tips for ${RELEASE_CURRENT}: RPA, AI-powered automation, process orchestration, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/mulesoft-hyperautomation-developer-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/mulesoft-hyperautomation-developer-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `MuleSoft Hyperautomation Developer exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Hyperautomation Developer, MuleSoft RPA certification, hyperautomation study guide`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'MuleSoft Hyperautomation Developer Exam Tips', url: '/mulesoft-hyperautomation-developer-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the MuleSoft Hyperautomation Developer exam format?',
+    answer: 'The MuleSoft Hyperautomation Developer exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). It tests automation solutions combining MuleSoft with RPA (Robotic Process Automation), AI Document understanding, and process orchestration.',
+  },
+  {
+    question: 'What are the highest-weight MuleSoft Hyperautomation Developer exam sections?',
+    answer: 'Process Automation Design (30%) and MuleSoft RPA Configuration (25%) together account for 55% of the exam. Understanding how to select between automation approaches (API integration vs. RPA vs. AI automation), configuring RPA bots, and orchestrating multi-tool automation flows are the core skills tested.',
+  },
+  {
+    question: 'What is MuleSoft RPA and how is it different from standard MuleSoft integration?',
+    answer: 'MuleSoft RPA automates repetitive UI-based tasks where APIs are not available — clicking buttons, filling forms, scraping screen data. Standard MuleSoft integration uses APIs to connect systems directly. The exam tests when to use RPA (no API available, legacy system with UI only) vs. API integration (API available) — choosing correctly is a key exam skill.',
+  },
+  {
+    question: 'What prerequisites help with the MuleSoft Hyperautomation Developer exam?',
+    answer: 'MuleSoft Developer I or Integration Foundations is the recommended prerequisite. Familiarity with MuleSoft Anypoint Platform for deploying and monitoring automation processes is expected. Experience with RPA tools or process automation platforms is beneficial. The exam is newer and relatively specialist.',
+  },
+]
+
+export default function MuleSoftHyperautomationDeveloperExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/mulesoft-hyperautomation-developer-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/mulesoft-hyperautomation-developer-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          MuleSoft Hyperautomation Developer Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The MuleSoft Hyperautomation Developer exam tests your ability to design and implement end-to-end
+          automation solutions using MuleSoft, RPA, and AI tools. These tips focus on automation tool
+          selection, RPA configuration, and process orchestration that define this exam.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What MuleSoft Hyperautomation Developer Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Process automation design</strong> — Selecting the right automation approach: API-led integration for connected systems, RPA for legacy UI-based tasks, AI Document Understanding for unstructured data extraction, and how to combine these in a single automation flow.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>MuleSoft RPA</strong> — Building and configuring RPA processes using MuleSoft RPA Manager and RPA Recorder. Understanding bot deployment, process execution triggers, and how RPA integrates with Mule flows as an action within a larger automation.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>AI and document automation</strong> — MuleSoft AI Chain for LLM integration, Document Understanding for structured data extraction from PDFs and images, and Intelligent Document Processing (IDP) patterns for high-volume document automation.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Process Automation Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">MuleSoft RPA Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">AI and Document Understanding</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Monitoring and Governance</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Process Design + RPA + AI = 77%. Automation tool selection is the most frequently tested decision skill.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Hyperautomation Developer Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a business process automation requirement and ask which tool or combination of tools
+          is most appropriate. The key decision is always: is there an API? If yes, use Mule integration.
+          If no, use RPA. If unstructured data is involved, use Document Understanding.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tool selection questions: use RPA only when no API exists and the task requires UI interaction with a legacy system. If an API is available, Mule integration is always preferred over RPA — RPA is slower, less reliable, and harder to maintain than API calls.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For RPA configuration questions: RPA processes are built in RPA Builder, published to RPA Manager, and deployed to RPA Bots. A Mule flow triggers the bot via the RPA Connector. The RPA process runs locally on the bot machine — it is not a cloud-native component. Know this architecture.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Document Understanding questions: AI-powered extraction works on PDFs, images, and emails. Models are trained on document templates in Document Understanding. Extracted data flows into a Mule flow for further processing. When accuracy thresholds are not met, a human review step is triggered — know how to configure this fallback.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Hyperautomation Developer is a newer certification with evolving content. Hands-on experience with
+          MuleSoft RPA Builder and at least one Document Understanding model configuration is strongly
+          recommended before booking. Focus on the official Trailhead Hyperautomation trails
+          as they directly reflect current exam content.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start MuleSoft Hyperautomation Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/mulesoft-hyperautomation-developer" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Hyperautomation Developer Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/mulesoft-developer-i-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            MuleSoft Developer I Tips
+          </Link>
+          <Link href="/developer-certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Developer Certification Path
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Health Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Health Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: patient management, care plans, provider network, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/health-cloud-ap-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/health-cloud-ap-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Health Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Health Cloud Accredited Professional, Salesforce Health Cloud certification, healthcare Salesforce exam`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Health Cloud AP Exam Tips', url: '/health-cloud-ap-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Health Cloud Accredited Professional exam format?',
+    answer: 'The Health Cloud Accredited Professional (AP) exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Health Cloud configuration: patient and member management, care plans, provider network management, and healthcare-specific data model concepts.',
+  },
+  {
+    question: 'What are the highest-weight Health Cloud AP exam sections?',
+    answer: 'Patient and Member Management (30%) and Care Plan Configuration (25%) together account for 55% of the exam. Understanding Health Cloud&apos;s person account model, care team setup, care plan templates, and how to configure clinical data management for healthcare organisations are the most tested areas.',
+  },
+  {
+    question: 'What is a care plan in Health Cloud and how does the exam test it?',
+    answer: 'A care plan in Health Cloud is a structured set of goals and tasks assigned to a patient or member to manage their health outcomes. Care plan templates provide reusable frameworks for common conditions. The exam tests how to configure care plan templates, assign care teams, set goals with target dates, and track care plan progress — critical for care coordination use cases.',
+  },
+  {
+    question: 'What healthcare industry knowledge helps with the Health Cloud AP exam?',
+    answer: 'Understanding how healthcare organisations operate — patient intake, care coordination, provider networks, member management for payers, and clinical data — helps map business scenarios to Health Cloud features. Knowledge of HIPAA compliance concepts (PHI protection, access controls) and how Health Cloud addresses them through its security model is also tested.',
+  },
+]
+
+export default function HealthCloudApExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/health-cloud-ap-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/health-cloud-ap-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Health Cloud Accredited Professional Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Health Cloud AP exam validates your ability to implement Salesforce Health Cloud for
+          healthcare and life sciences organisations. These tips focus on patient management, care plans,
+          and provider network configuration that define this accreditation.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Health Cloud AP Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Patient and member management</strong> — Health Cloud&apos;s person account model for patients and members, household accounts for family units, care team setup (primary care provider, care coordinator, specialist roles), and how to manage clinical relationships and referrals within Health Cloud.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Care plan configuration</strong> — Creating and using care plan templates for common conditions, setting goals with target values and dates, assigning tasks to care team members, tracking care plan progress and goal achievement, and using care gaps to identify patients who need outreach.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Provider network and data model</strong> — Configuring provider networks and provider specialties, managing provider-patient relationships, Health Cloud&apos;s clinical data model for social determinants of health, and HIPAA-compliant access controls for protected health information (PHI).</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Patient and Member Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Care Plan Configuration</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Provider Network Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Data Model and Compliance</span>
+            <span className="font-bold text-salesforce-blue ml-4">15%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Patient Management + Care Plans + Provider = 80% of tested content.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Health Cloud AP Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a healthcare or life sciences scenario and ask which Health Cloud feature,
+          object, or configuration addresses it. Always use native Health Cloud features — not generic
+          Salesforce objects like custom cases or custom relationship objects.
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care coordination questions: a care team is the group of clinical and non-clinical staff coordinating a patient&apos;s care. Each care team member has a role (Primary Care Physician, Care Coordinator, Specialist). When a scenario says &apos;who is responsible for coordinating this patient&apos;s care&apos;, find the Care Coordinator role on the care team — not just any team member.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care plan questions: care gaps identify patients who have not received a recommended clinical service (e.g., annual wellness visit). Care plan tasks are assigned to care team members with due dates. Goals have target values (e.g., blood pressure below 120/80). When a scenario says &apos;automatically identify patients who haven&apos;t had their screening&apos;, the answer is care gaps.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Health Cloud uses person accounts (individual patients) and household accounts (family groups). Clinical data (diagnoses, medications, allergies) is stored in health-specific objects linked to the person account. When a question asks about storing a patient&apos;s medication list, the answer is the Health Cloud Medication object — not a custom field on Contact.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Health Cloud AP is a practitioner-level accreditation for implementation partners and
+          Salesforce employees working on Health Cloud projects. Candidates typically have hands-on
+          Health Cloud configuration experience from real healthcare implementations. The official
+          Salesforce Health Cloud Trailmix on Trailhead is the primary study resource.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Health Cloud AP Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/health-cloud-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Health Cloud AP Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/certifications/financial-services-cloud-ap" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Financial Services Cloud AP
+          </Link>
+          <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            All Certification Paths
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}

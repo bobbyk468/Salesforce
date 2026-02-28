@@ -1,0 +1,162 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
+const pageTitle = `Marketing Cloud Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const pageDescription =
+  `Salesforce Marketing Cloud Engagement Foundations exam tips for ${RELEASE_CURRENT}: platform navigation, email sends, subscriber management, and scenario strategy to pass first attempt.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/marketing-cloud-engagement-foundations-exam-tips` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/marketing-cloud-engagement-foundations-exam-tips`,
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: ogImageUrl, alt: pageTitle }],
+  },
+  keywords:
+    `Marketing Cloud Foundations exam tips ${RELEASE_CURRENT}, how to pass Marketing Cloud Engagement Foundations, Salesforce SFMC foundations certification, Marketing Cloud basics exam study guide`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Marketing Cloud Foundations Exam Tips', url: '/marketing-cloud-engagement-foundations-exam-tips' },
+]
+
+const faqItems = [
+  {
+    question: 'What is the Salesforce Marketing Cloud Engagement Foundations exam format?',
+    answer: 'The Marketing Cloud Engagement Foundations exam has 40 multiple-choice questions, a 65-minute time limit, a 65% passing score, and a $150 fee. It is an entry-level certification testing basic Marketing Cloud navigation, email creation, subscriber management, and sending fundamentals.',
+  },
+  {
+    question: 'What are the highest-weight Marketing Cloud Foundations exam sections?',
+    answer: 'Email Studio Basics (30%) and Subscriber and Data Management (25%) together account for 55% of the exam. Creating and sending basic emails, understanding subscriber data extensions, send classifications, and how Marketing Cloud organises and manages contacts are the most tested areas.',
+  },
+  {
+    question: 'What is the difference between Marketing Cloud Foundations and Email Specialist?',
+    answer: 'Marketing Cloud Foundations is the entry-level certification testing basic Marketing Cloud literacy. Email Specialist is the practitioner-level certification testing deeper email marketing skills including deliverability, A/B testing, send classifications, and advanced subscriber management. Foundations is the stepping stone before Email Specialist.',
+  },
+  {
+    question: 'What is a data extension in Marketing Cloud and why does it matter?',
+    answer: 'A data extension is Marketing Cloud&apos;s primary data storage object — essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
+  },
+]
+
+export default function MarketingCloudEngagementFoundationsExamTipsPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/marketing-cloud-engagement-foundations-exam-tips', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/marketing-cloud-engagement-foundations-exam-tips' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <header className="mb-10">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+          Updated for {RELEASE_CURRENT}
+        </p>
+        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          Salesforce Marketing Cloud Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
+        </h1>
+        <p className="text-lg text-gray-600">
+          The Marketing Cloud Engagement Foundations exam is Salesforce&apos;s entry-level Marketing Cloud
+          certification. It tests basic Email Studio skills, subscriber management, and how Marketing
+          Cloud organises and sends email campaigns.
+        </p>
+      </header>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Marketing Cloud Foundations Tests</h2>
+        <ul className="space-y-2 text-gray-700 text-sm">
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Email Studio basics</strong> — Creating emails with the drag-and-drop Content Builder, using basic AMPscript for personalisation (%%FirstName%% syntax), setting up send classifications (from name, from address, reply-to), and the send flow (define audience, select content, schedule, review, send).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and data management</strong> — All Subscribers vs. data extensions, subscriber statuses (Active, Held, Unsubscribed, Bounced), managing unsubscribes and opt-outs, creating lists and data extensions for targeting, and CAN-SPAM compliance basics.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Marketing Cloud platform</strong> — Business unit structure, user roles and permissions, Email Studio vs. Content Builder, basic Automation Studio for scheduling, and Marketing Cloud connect (integration with Salesforce CRM).</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Email Studio Basics</span>
+            <span className="font-bold text-salesforce-blue ml-4">30%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Subscriber and Data Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+          </div>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Marketing Cloud Platform Basics</span>
+            <span className="font-bold text-salesforce-blue ml-4">22%</span>
+          </div>
+          <div className="flex justify-between items-start">
+            <span className="font-medium text-gray-900">Compliance and Deliverability Basics</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+          </div>
+          <p className="text-xs text-gray-500 pt-1">Email Studio + Subscriber Management + Platform = 77%. CAN-SPAM compliance and subscriber statuses are frequently tested in compliance questions.</p>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Marketing Cloud Foundations Questions</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Questions describe a basic email marketing scenario and ask which Marketing Cloud feature, tool,
+          or setting achieves it. Focus on the native Marketing Cloud approach — not custom code
+          (AMPscript at scale is for Email Specialist, not Foundations).
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700">
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber status questions: Active = can receive emails. Held = had a bounce, temporarily suppressed. Unsubscribed = opted out of all emails from this business unit. Bounced = permanent hard bounce, removed from sends. When a subscriber clicks &apos;unsubscribe&apos;, their status becomes Unsubscribed — not Bounced.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For content questions: Content Builder is the modern content creation tool. Classic Email Studio templates are the legacy approach. Content Builder reusable blocks allow a single piece of content to be used in multiple emails — changes to the block update all emails. When a question says &apos;manage content centrally&apos;, Content Builder reusable blocks is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For compliance questions: CAN-SPAM requires a physical postal address in every commercial email, a clear unsubscribe mechanism, and honouring opt-outs within 10 business days. Marketing Cloud handles compliance through Send Classifications — every email send must have a Send Classification that defines the from address and unsubscribe profile.</li>
+        </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
+          <Clock className="h-4 w-4" />
+          75%+ on 3 timed full mocks before booking
+        </p>
+        <p className="text-sm text-gray-700 mt-3">
+          Marketing Cloud Foundations is an accessible entry-level certification. Most candidates with
+          2–4 weeks of Marketing Cloud hands-on experience can pass. Request a free Marketing Cloud
+          trial from Salesforce or use a sandbox org to practice creating and sending a basic email
+          campaign before booking.
+        </p>
+      </section>
+
+      <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Marketing Cloud Foundations Prep</h2>
+        <div className="flex flex-col sm:flex-row gap-3">
+          <Link href="/certifications/marketing-cloud-engagement-foundations" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+            Marketing Cloud Foundations Practice Questions <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link href="/email-specialist-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Email Specialist Tips
+          </Link>
+          <Link href="/certification-path" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            All Certification Paths
+          </Link>
+        </div>
+      </section>
+    </div>
+  )
+}
