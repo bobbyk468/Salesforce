@@ -179,6 +179,29 @@ export default function StrategyDesignerExamTipsPage() {
         </dl>
       </section>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
+          <Link href="/ux-designer-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">UX Designer Exam Tips</span>
+          </Link>
+          <Link href="/business-analyst-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Business Analyst Exam Tips</span>
+          </Link>
+          <Link href="/business-analyst-vs-strategy-designer" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Business Analyst vs Strategy Designer</span>
+          </Link>
+          <Link href="/certification-path" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+            <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
+            <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">Certification Path</span>
+          </Link>
+        </div>
+      </section>
+
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Strategy Designer Prep</h2>
         <div className="flex flex-col sm:flex-row gap-3">

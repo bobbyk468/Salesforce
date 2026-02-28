@@ -98,13 +98,23 @@ export default function Footer() {
             <h3 className="text-lg font-semibold mb-4">Popular Certifications</h3>
             <ul className="space-y-2">
               <li>
-                <Link href="/certifications/administrator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link href="/adm-201-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Admin (ADM-201) study guide
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/app-builder" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  App Builder practice questions
+                <Link href="/pd1-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  PD1 study guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/app-builder-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  App Builder study guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/service-cloud-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Service Cloud study guide
                 </Link>
               </li>
               <li>
@@ -123,18 +133,8 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/service-cloud" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Service Cloud Consultant study guide
-                </Link>
-              </li>
-              <li>
                 <Link href="/certifications/data-cloud-consultant" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Data Cloud Consultant practice questions
-                </Link>
-              </li>
-              <li>
-                <Link href="/certifications/developer-1" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Platform Developer I (PD1) study guide
                 </Link>
               </li>
             </ul>
@@ -144,6 +144,11 @@ export default function Footer() {
           <div className="md:col-start-3">
             <h3 className="text-lg font-semibold mb-4">Cert Paths &amp; Resources</h3>
             <ul className="space-y-2">
+              <li>
+                <Link href="/how-to-become-salesforce-administrator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  How to become a Salesforce Admin
+                </Link>
+              </li>
               <li>
                 <Link href="/admin-certification-path" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Admin certification path
@@ -177,11 +182,6 @@ export default function Footer() {
               <li>
                 <Link href="/adm-201-exam-tips-2026" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   ADM-201 exam tips
-                </Link>
-              </li>
-              <li>
-                <Link href="/agentforce-specialist-exam-tips" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
-                  Agentforce exam tips
                 </Link>
               </li>
             </ul>

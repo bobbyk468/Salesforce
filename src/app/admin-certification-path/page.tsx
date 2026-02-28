@@ -271,11 +271,17 @@ export default function AdminCertificationPathPage() {
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link
-            href="/certifications/administrator"
+            href="/adm-201-study-guide"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
-            Start ADM-201 Study Guide
+            ADM-201 Study Guide
             <ArrowRight className="h-4 w-4" />
+          </Link>
+          <Link
+            href="/how-to-become-salesforce-administrator"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            How to Become an Admin
           </Link>
           <Link
             href="/certifications/role/administrator"

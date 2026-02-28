@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -36,6 +36,46 @@ const ROLE_KEYWORDS: Record<string, string> = {
   tableau:                `Salesforce Tableau certification ${RELEASE_CURRENT}, Tableau Architect, Tableau Consultant, Tableau Data Analyst`,
   sales:                  `Salesforce Sales certification ${RELEASE_CURRENT}, Sales Cloud Consultant, Sales Foundations`,
   designer:               `Salesforce Designer certification ${RELEASE_CURRENT}, UX Designer, Strategy Designer`,
+}
+
+type FaqItem = { question: string; answer: string }
+const ROLE_FAQS: Record<string, FaqItem[]> = {
+  administrator: [
+    { question: 'What is the first Salesforce certification for an administrator?', answer: 'The Salesforce Administrator (ADM-201) is the recommended first certification for anyone on the admin track. It covers the full platform — security model, automation, data management, reports, and dashboards. All other admin certifications (Advanced Administrator, App Builder) build on ADM-201 knowledge.' },
+    { question: 'How long does it take to get the Salesforce Administrator certification?', answer: 'Most candidates with no prior Salesforce experience pass ADM-201 in 8–12 weeks of part-time study. Candidates with existing CRM or Salesforce user experience often pass in 4–6 weeks. The exam is 60 questions, 105 minutes, and requires a 65% score.' },
+    { question: 'What admin certifications come after ADM-201?', answer: 'After ADM-201, the most common next certifications are Platform App Builder (declarative customisation), Advanced Administrator (advanced security and automation), and Salesforce Business Analyst. Admins who want to move into consulting typically take Sales Cloud Consultant or Service Cloud Consultant.' },
+  ],
+  developer: [
+    { question: 'What is the first Salesforce developer certification?', answer: 'Platform Developer I (PD1) is the recommended first developer certification. It tests Apex, Apex triggers, Lightning Web Components (LWC), governor limits, testing, and REST integration. No prior Salesforce certification is required, but ADM-201 knowledge is strongly recommended.' },
+    { question: 'What is the difference between PD1 and PD2?', answer: 'PD1 (Platform Developer I) tests foundational Apex, LWC, and deployment — the building blocks of Salesforce development. PD2 (Platform Developer II) tests advanced Apex patterns, integration architecture, performance optimisation, and complex data models. PD1 is required before PD2.' },
+    { question: 'Do Salesforce developers need ADM-201 before PD1?', answer: 'ADM-201 is not a formal prerequisite for PD1, but it is strongly recommended. PD1 assumes knowledge of the Salesforce data model, sharing model, and deployment process — all ADM-201 topics. Candidates who skip ADM-201 typically struggle with the Salesforce Fundamentals section of PD1.' },
+  ],
+  consultant: [
+    { question: 'What Salesforce certification do consultants need first?', answer: 'Salesforce recommends ADM-201 before any consultant certification. After ADM-201, the most common first consultant cert is Sales Cloud Consultant or Service Cloud Consultant, depending on your specialisation. Both have the same exam format: 60 questions, 105 minutes, 65% passing score, $200 fee.' },
+    { question: 'Is the Sales Cloud or Service Cloud Consultant exam harder?', answer: 'Both are similarly difficult and test scenario-based application of Salesforce features to business requirements. Sales Cloud Consultant is slightly broader (territory management, forecasting, CPQ basics); Service Cloud Consultant is more technical in places (Omni-Channel routing, entitlements, CTI integration). Your background determines which feels harder.' },
+    { question: 'How many consultant certifications should I aim for?', answer: 'Most Salesforce consultants hold 2–4 certifications. A common combination is ADM-201 + Sales Cloud Consultant + Service Cloud Consultant, which covers most CRM implementations. Adding Experience Cloud Consultant or Field Service Consultant expands your scope for specialist projects.' },
+  ],
+  architect: [
+    { question: 'What is the path to Salesforce Certified Technical Architect (CTA)?', answer: 'The CTA path requires: Application Architect (4 certs: Data Architect, Sharing and Visibility Architect, Integration Architect, Dev Lifecycle Architect) + System Architect (4 certs: Identity and Access Management, Heroku Architect, Integration Architect, Dev Lifecycle Architect). After completing both, you sit a two-part CTA evaluation — a written exam and a live board review.' },
+    { question: 'Which Salesforce architect certification should I take first?', answer: 'Most candidates start with Integration Architect or Data Architect — both test skills that complement consultant or developer experience. Integration Architect covers API design, middleware, and data synchronisation patterns. Data Architect covers MDM, data modelling, and ETL strategies. Both require strong ADM-201 and PD1 knowledge.' },
+    { question: 'How long does the Salesforce architect path take?', answer: 'Completing all 8 architect credentials and the CTA evaluation typically takes 3–6 years of dedicated study alongside active project experience. Most successful CTA candidates have 8–10 years of Salesforce experience. The written CTA exam and board review are considered among the most difficult credentialling processes in the enterprise software industry.' },
+  ],
+  marketing: [
+    { question: 'Which Marketing Cloud certification should I take first?', answer: 'For Marketing Cloud Engagement (formerly ExactTarget), start with the Marketing Cloud Email Specialist — it tests core Journey Builder, Email Studio, Content Builder, and Automation Studio knowledge. For Marketing Cloud Account Engagement (formerly Pardot), the Pardot Specialist is the entry point.' },
+    { question: 'Is the Marketing Cloud Email Specialist hard?', answer: 'The Email Specialist exam (60 questions, 105 minutes, 65% passing) is considered moderately difficult. The highest-weight sections are Email Sending and Delivery (24%) and Journey Building (20%). Candidates without hands-on Marketing Cloud Engagement experience find it significantly harder — lab practice in a sandbox is essential.' },
+  ],
+  associate: [
+    { question: 'Which Salesforce associate certification should I take first?', answer: 'The AI Associate ($75, 40 questions, 65%) is the easiest Salesforce certification available — no Salesforce experience required. For those who want a broader platform foundation, the Salesforce Platform Foundations associate cert covers core CRM, flow, and app-building concepts at an introductory level.' },
+    { question: 'Is the AI Associate a good first Salesforce certification?', answer: 'Yes — the AI Associate is Salesforce\'s most accessible entry-level certification. It tests conceptual knowledge of AI (machine learning types, Einstein features, responsible AI principles) with no coding required. It is an ideal first certification for business analysts, marketers, and non-technical users who want to validate Salesforce AI knowledge.' },
+  ],
+  tableau: [
+    { question: 'Which Tableau certification should I take first?', answer: 'Tableau Desktop Specialist (now Desktop Foundations) is the entry-level Tableau certification. It tests core Tableau Desktop skills: connecting to data, building charts (bar, line, scatter, maps), calculated fields, and basic dashboard design. The Tableau Certified Data Analyst is the next step, testing more advanced analysis and Prep Builder.' },
+    { question: 'Is the Tableau Data Analyst exam difficult?', answer: 'The Tableau Certified Data Analyst exam (60 questions, 120 minutes, 75% passing score) is considered moderately difficult. The higher passing score (75% vs 65% for most Salesforce certs) makes it more demanding. Hands-on practice building dashboards in Tableau Desktop is essential — theoretical knowledge alone is insufficient.' },
+  ],
+  'accredited-professional': [
+    { question: 'What is a Salesforce Accredited Professional (AP) certification?', answer: 'Salesforce Accredited Professional certifications validate implementation expertise in specific Salesforce industry clouds or add-on products. Examples include Field Service AP, Health Cloud AP, Financial Services Cloud AP, and B2B Commerce AP. APs are typically add-on credentials for consultants who already hold a relevant core certification.' },
+    { question: 'Do I need ADM-201 before an Accredited Professional cert?', answer: 'Most Accredited Professional certifications do not formally require ADM-201, but they assume advanced Salesforce configuration knowledge. Field Service AP, for example, assumes deep familiarity with Service Cloud. Health Cloud AP requires Service Cloud or Sales Cloud knowledge. In practice, most AP candidates have 2+ years of hands-on Salesforce experience.' },
+  ],
 }
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
@@ -123,11 +163,14 @@ export default async function RoleCertificationsPage({ params }: Props) {
     breadcrumbItems: breadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumb)
+  const roleFaqs = ROLE_FAQS[slug] ?? []
+  const faqJsonLd = roleFaqs.length > 0 ? getFaqPageJsonLd(roleFaqs) : null
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
       <Link
         href="/certifications"
         className="inline-flex items-center text-salesforce-blue hover:text-salesforce-dark font-medium mb-8"
@@ -165,6 +208,20 @@ export default async function RoleCertificationsPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      {roleFaqs.length > 0 && (
+        <section className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+          <dl className="space-y-4">
+            {roleFaqs.map((item, i) => (
+              <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+                <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+                <dd className="text-sm text-gray-700">{item.answer}</dd>
+              </div>
+            ))}
+          </dl>
+        </section>
+      )}
 
       <div className="mt-12 text-center flex flex-wrap justify-center gap-3">
         <Link
