@@ -179,6 +179,8 @@ export default function RootLayout({
   return (
     <html lang="en">
       <head>
+        <link rel="preconnect" href="https://www.googletagmanager.com" />
+        <link rel="dns-prefetch" href="https://www.google-analytics.com" />
         <style dangerouslySetInnerHTML={{ __html: criticalLayoutCSS }} />
       </head>
       <body className={inter.className}>

@@ -3,10 +3,11 @@
 import { useEffect } from 'react'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-/** Desktop: load soon after load event. Mobile: wait longer so GA long tasks don't delay LCP (4s+). */
-const MOBILE_DELAY_AFTER_LOAD_MS = 5000
-const FALLBACK_DESKTOP_MS = 6000
-const FALLBACK_MOBILE_MS = 10000
+/** Desktop: delay to allow React hydration to complete first. Mobile: longer delay so GA tasks don't affect LCP. */
+const DESKTOP_DELAY_AFTER_LOAD_MS = 3000
+const MOBILE_DELAY_AFTER_LOAD_MS = 8000
+const FALLBACK_DESKTOP_MS = 8000
+const FALLBACK_MOBILE_MS = 12000
 
 /**
  * Loads gtag.js after window load. On mobile, adds an extra delay so GTM long tasks
@@ -52,7 +53,7 @@ export default function GoogleAnalytics() {
       if (isMobile()) {
         timeoutId = setTimeout(load, MOBILE_DELAY_AFTER_LOAD_MS)
       } else {
-        load()
+        timeoutId = setTimeout(load, DESKTOP_DELAY_AFTER_LOAD_MS)
       }
     }
 
