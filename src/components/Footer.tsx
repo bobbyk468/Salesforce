@@ -2,6 +2,8 @@ import Link from 'next/link'
 import { Award, Mail, ExternalLink, MessageCircle } from 'lucide-react'
 import { CONTACT_EMAIL, SITE_NAME, WHATSAPP_LINK } from '@/lib/constants'
 
+const X_HANDLE = 'https://x.com/trailblazeprep'
+
 export default function Footer() {
   return (
     <footer className="bg-salesforce-dark text-white">
@@ -208,6 +210,19 @@ export default function Footer() {
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
+            <a
+              href={X_HANDLE}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-400 hover:text-salesforce-light flex items-center space-x-1"
+              aria-label="Follow Trailblaze Prep on X (Twitter)"
+            >
+              {/* X (Twitter) logo */}
+              <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.736-8.835L1.254 2.25H8.08l4.259 5.631L18.244 2.25Zm-1.161 17.52h1.833L7.084 4.126H5.117L17.083 19.77Z" />
+              </svg>
+              <span>@trailblazeprep</span>
+            </a>
             <a
               href="https://trailhead.salesforce.com"
               target="_blank"

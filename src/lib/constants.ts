@@ -14,9 +14,9 @@ export const CONTENT_LAST_UPDATED = RELEASE_CURRENT
  * Add your Facebook, Twitter/X, LinkedIn, YouTube, Instagram when created.
  */
 export const SOCIAL_LINKS: string[] = [
-  // 'https://www.facebook.com/yourpage',
-  // 'https://twitter.com/yourhandle',
+  'https://x.com/trailblazeprep',
   // 'https://www.linkedin.com/company/yourpage',
+  // 'https://www.facebook.com/yourpage',
   // 'https://www.youtube.com/@yourchannel',
   // 'https://www.instagram.com/yourhandle',
 ]
