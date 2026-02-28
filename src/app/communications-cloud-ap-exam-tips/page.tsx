@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Communications Cloud Accredited Professional exam format?',
-    answer: 'The Communications Cloud AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Communications Cloud (formerly Vlocity): the TMF (TeleManagement Forum) data model, product catalogue management, order management, contract lifecycle, and OmniStudio-powered digital commerce for telecoms and media companies.',
+    question: 'How hard is the Communications Cloud ap exam?',
+    answer: 'The Communications Cloud ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Communications Cloud ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What is the TMF data model and why does the exam test it?',

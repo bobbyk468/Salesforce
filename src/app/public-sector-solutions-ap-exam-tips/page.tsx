@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Public Sector Solutions Accredited Professional exam format?',
-    answer: 'The Public Sector Solutions AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Public Sector Solutions (PSS): the PSS data model, licences and permits management, grants management, inspections, and how OmniStudio powers citizen-facing digital services.',
+    question: 'How hard is the Public Sector Solutions ap exam?',
+    answer: 'The Public Sector Solutions ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Public Sector Solutions ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What is Salesforce Public Sector Solutions?',

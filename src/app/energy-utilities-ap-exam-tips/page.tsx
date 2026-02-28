@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Energy & Utilities Cloud Accredited Professional exam format?',
-    answer: 'The Energy &amp; Utilities Cloud AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Energy &amp; Utilities Cloud (EUC): customer engagement, service management, outage management, billing inquiries, and OmniStudio-powered digital service experiences for utility companies.',
+    question: 'How hard is the Energy Utilities ap exam?',
+    answer: 'The Energy Utilities ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Energy Utilities ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Energy & Utilities Cloud AP exam sections?',

@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the MuleSoft Integration Architect exam format?',
-    answer: 'The MuleSoft Integration Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests the ability to architect enterprise integration solutions on Anypoint Platform: API-led connectivity design, integration patterns, error handling strategy, and platform deployment decisions.',
+    question: 'How hard is the Mulesoft Integration Architect exam?',
+    answer: 'The Mulesoft Integration Architect requires 70% to pass — higher than most Salesforce certifications — making it among the more demanding exams in the ecosystem. It tests MuleSoft Anypoint Platform capabilities, API design patterns, and integration architecture at a depth that requires hands-on MuleSoft Studio and Runtime experience. Most candidates need 8–12 weeks of dedicated preparation and access to a MuleSoft trial environment. Dataweave transformation logic and error handling patterns are typically the hardest sections.',
   },
   {
     question: 'What are the highest-weight MuleSoft Integration Architect exam sections?',

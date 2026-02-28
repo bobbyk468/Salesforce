@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the CTA Review Board and how does it work?',
-    answer: 'The CTA Review Board is the live presentation component of the Salesforce Certified Technical Architect credential. It costs $3,000 and takes place in a half-day session. You receive a complex scenario in advance (typically a few days before), prepare a solution architecture, then present your design to a panel of 3 sitting CTAs. The panel asks probing questions for 30–45 minutes. You must defend your architectural decisions under pressure and demonstrate breadth across all Salesforce domains simultaneously.',
+    question: 'Is the Technical Architect Review Board worth pursuing?',
+    answer: 'The Technical Architect Review Board is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What scenario topics does the CTA Review Board typically cover?',

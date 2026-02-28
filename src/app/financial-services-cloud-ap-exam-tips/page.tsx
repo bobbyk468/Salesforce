@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Financial Services Cloud Accredited Professional exam format?',
-    answer: 'The Financial Services Cloud AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Financial Services Cloud (FSC): the FSC data model, client and household management, financial account configuration, and wealth management or insurance use cases.',
+    question: 'How hard is the Financial Services Cloud Accredited Professional exam?',
+    answer: 'Financial Services Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on FSC implementation experience. It tests FSC&apos;s specialised data model: household and individual accounts, financial accounts, financial goals, action plans, and referrals. Candidates with real FSC project experience typically pass in 3–4 weeks of focused study. Those without FSC hands-on experience find the financial services data model and referral management workflows the hardest sections.',
   },
   {
     question: 'What are the highest-weight FSC AP exam sections?',

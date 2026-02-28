@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Loyalty Management Accredited Professional exam format?',
-    answer: 'The Loyalty Management AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Loyalty Management: loyalty programme configuration, tier management, points and rewards, member management, and partner ecosystem integration for retail, hospitality, and airline loyalty programmes.',
+    question: 'How hard is the Loyalty Management ap exam?',
+    answer: 'The Loyalty Management ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Loyalty Management ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Loyalty Management AP exam sections?',

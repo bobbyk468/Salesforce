@@ -40,14 +40,14 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the CTA Evaluation Exam and how does it differ from the Review Board?',
-    answer: 'The CTA Evaluation Exam is the written multiple-choice component of the Salesforce Certified Technical Architect credential. It costs $400 and tests advanced architecture knowledge across all Salesforce domains. Passing the Evaluation Exam qualifies you to sit the CTA Review Board ($3,000) — the live presentation component. The Evaluation Exam is a prerequisite gate; passing it alone does not grant the CTA credential.',
+    answer: 'The Technical Architect Evaluation is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What topics are covered in the CTA Evaluation Exam?',
     answer: 'The CTA Evaluation Exam covers advanced topics across all Salesforce architectural domains: large data volumes and query optimisation, enterprise integration architecture patterns, identity and access management at scale, security architecture and field-level security at large data volumes, deployment strategy for complex multi-org environments, multi-cloud solution architecture, and Salesforce governance and release management.',
   },
   {
-    question: 'What is the CTA Evaluation Exam format and passing score?',
+    question: 'Is the Technical Architect Evaluation worth pursuing?',
     answer: 'The CTA Evaluation Exam has approximately 60 multiple-choice questions and a 120-minute time limit. The exact passing score is not publicly disclosed by Salesforce. The exam is notably more difficult than any other Salesforce written exam — it tests breadth across all architecture domains at an expert level, requiring you to hold and apply knowledge from the Application Architect and System Architect credential tracks simultaneously.',
   },
   {

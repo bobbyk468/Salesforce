@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Manufacturing Cloud Accredited Professional exam format?',
-    answer: 'The Manufacturing Cloud AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Manufacturing Cloud: sales agreements, account-based forecasting, rebate management, and partner ecosystem management for discrete and process manufacturing companies.',
+    question: 'How hard is the Manufacturing Cloud Accredited Professional exam?',
+    answer: 'Manufacturing Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150). It tests Manufacturing Cloud&apos;s specialised capabilities: account-based forecasting, sales agreements, rebate management, and the Manufacturing Cloud data model for complex B2B relationships. Practitioners with hands-on Manufacturing Cloud experience typically pass in 3–4 weeks. Sales agreements — including agreement terms, actuals calculation, and renewal workflows — are the most tested and most commonly missed topic.',
   },
   {
     question: 'What are the highest-weight Manufacturing Cloud AP exam sections?',

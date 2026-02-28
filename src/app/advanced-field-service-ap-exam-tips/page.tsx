@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Advanced Field Service Accredited Professional exam format?',
-    answer: 'The Advanced Field Service AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It tests advanced Field Service Lightning (FSL) configuration beyond the standard Field Service Consultant exam: advanced Optimization Engine scheduling, complex scheduling policies, asset management, and Einstein Vision for Visual Remote Assistant.',
+    question: 'How hard is the Advanced Field Service ap exam?',
+    answer: 'The Advanced Field Service ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Advanced Field Service ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Advanced Field Service AP exam sections?',

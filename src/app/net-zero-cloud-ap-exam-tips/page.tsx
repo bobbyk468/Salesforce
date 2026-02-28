@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Net Zero Cloud Accredited Professional exam format?',
-    answer: 'The Net Zero Cloud AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates practitioner-level knowledge of Salesforce Net Zero Cloud: carbon accounting, Scope 1/2/3 emissions data management, sustainability target setting, and regulatory reporting for environmental, social, and governance (ESG) programmes.',
+    question: 'How hard is the Net Zero Cloud ap exam?',
+    answer: 'The Net Zero Cloud ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Net Zero Cloud ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are Scope 1, 2, and 3 emissions and why does the exam test them?',

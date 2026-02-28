@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Salesforce Certified Technical Architect (CTA) exam format?',
-    answer: 'The Salesforce CTA is Salesforce&apos;s most prestigious certification. Candidates must first pass a written Evaluation Exam (multiple choice) and then present a scenario-based architecture solution to a Review Board of CTA-level examiners. The Review Board is a 2-hour live presentation and Q&A session. There is no single exam fee — the Evaluation Exam costs $400 and the Review Board costs $3,000 per attempt.',
+    question: 'Is the Technical Architect worth pursuing?',
+    answer: 'The Technical Architect is the most prestigious credential in the Salesforce ecosystem — held by fewer than 1% of certified professionals. It validates the ability to design enterprise-scale Salesforce architectures across all domains simultaneously. CTAs command the highest salaries in the Salesforce job market and are sought by top SIs and consulting firms. The investment is significant (time, study, and fees), but for architects targeting the top of the Salesforce career ladder, it is widely considered the most valuable credential available.',
   },
   {
     question: 'What prerequisites are needed before attempting the CTA?',

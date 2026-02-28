@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Tableau Desktop Foundations exam format?',
-    answer: 'The Tableau Desktop Foundations exam has 45 multiple-choice questions, a 60-minute time limit, a 70% passing score, and a $250 fee. It is an entry-level Tableau certification testing basic Tableau Desktop skills: connecting to data, building standard charts, using filters and groups, and creating basic dashboards.',
+    question: 'How hard is the Tableau Desktop Foundations exam?',
+    answer: 'The Tableau Desktop Foundations requires a 70%+ passing score and tests hands-on Tableau platform skills that cannot be mastered through reading alone. Daily practice in Tableau Desktop or Tableau Cloud is essential — this is a skills-based exam. Most candidates need 6–8 weeks of consistent hands-on practice. Calculated fields, LOD expressions, and dashboard interactivity actions are the most commonly missed topics.',
   },
   {
     question: 'What are the highest-weight Tableau Desktop Foundations exam sections?',

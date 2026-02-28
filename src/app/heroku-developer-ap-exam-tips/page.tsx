@@ -39,8 +39,8 @@ const breadcrumbItems = [
 
 const faqItems = [
   {
-    question: 'What is the Heroku Developer Accredited Professional exam format?',
-    answer: 'The Heroku Developer AP exam has 40 multiple-choice questions, a 60-minute time limit, a Pass/Fail result, and a $150 fee. It validates developer-level knowledge of the Heroku platform: deploying and managing Heroku applications, dyno types and scaling, the Heroku add-on ecosystem, Heroku Connect for Salesforce data sync, and Heroku buildpacks and pipelines.',
+    question: 'How hard is the Heroku Developer ap exam?',
+    answer: 'The Heroku Developer ap is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on implementation experience. It is considered moderately challenging for those who have configured Heroku Developer ap on real customer projects. Candidates without hands-on experience often find the specialised data model and feature configuration scenarios harder than expected. Most experienced practitioners pass with 3–4 weeks of focused review using the official Salesforce Trailmix for this accreditation.',
   },
   {
     question: 'What are the highest-weight Heroku Developer AP exam sections?',
