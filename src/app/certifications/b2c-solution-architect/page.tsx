@@ -89,6 +89,37 @@ export default function B2CSolutionArchitectPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce B2C Solution Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The B2C Solution Architect exam tests multi-cloud architecture for B2C customer experiences. Focus on designing solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and CDP/Data Cloud for seamless customer journeys.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Cloud B2C Journeys</p>
+                <p>Know how to design customer journeys that span SFCC (shopping), Marketing Cloud (engagement), Service Cloud (support), and Data Cloud (unified profile). Understand the data flows and integration touchpoints between each cloud.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Identity &amp; Profile Unification</p>
+                <p>Know how Customer 360 identity unification works across B2C channels: matching on email, mobile, cookie, and loyalty ID. Understand how Data Cloud resolves identity across SFCC, Marketing Cloud, and Service Cloud.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Commerce-to-Marketing Integration</p>
+                <p>Know the integration between SFCC and Marketing Cloud: abandoned cart triggers, post-purchase confirmation emails, and how SFCC transaction data flows to Marketing Cloud for segmentation and retargeting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management Integration</p>
+                <p>Know how SFCC orders integrate with Salesforce Order Management: the Order On Behalf Of (OBO) pattern, order status sync, return/refund flows, and how Service Cloud agents access order data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Trade-off Decisions</p>
+                <p>Solution Architect questions test trade-off reasoning: when to use a shared Salesforce org vs. separate, when to use Data Cloud vs. Marketing Cloud audiences for segmentation, and how to balance performance vs. data freshness.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function B2CSolutionArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

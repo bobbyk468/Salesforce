@@ -221,6 +221,37 @@ export default function SlackDeveloperPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Slack Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Slack Developer exam tests technical development skills for building Slack apps. Focus on the Slack API, Bolt framework, event handling, and building interactive workflows using Block Kit.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Bolt Framework Architecture</p>
+                <p>Know how to build Slack apps using the Bolt framework (Node.js, Python, Java): app initialization, event handling, action handling, shortcut handling, and how OAuth 2.0 app installation works.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Block Kit UI Framework</p>
+                <p>Know how to build rich interactive messages using Block Kit: block types (section, actions, input, context), element types (button, select, date picker, text input), and how to use Block Kit Builder for prototyping.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Event API &amp; Interactivity</p>
+                <p>Know how Slack&apos;s Event API delivers events to your app (message events, reaction events, app_mention), how to configure event subscriptions, and how to respond to interactive components (modals, actions).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Workflow Steps</p>
+                <p>Know how to build custom Workflow Steps using the workflow_step_edit and workflow_step_execute events. Understand how to create the configuration modal and process step execution callbacks.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">App Distribution &amp; Security</p>
+                <p>Know how to distribute Slack apps through the Slack App Directory, implement scoped OAuth for multi-workspace apps, and security best practices: token storage, request signature verification, and HTTPS requirements.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -247,6 +278,7 @@ export default function SlackDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

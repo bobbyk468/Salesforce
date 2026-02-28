@@ -220,6 +220,37 @@ export default function SlackConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Slack Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Slack Consultant exam tests solution design and implementation planning for Slack deployments. Focus on use case design, workflow automation, Salesforce integration, and driving organizational adoption.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Use Case Design</p>
+                <p>Know how to map business processes to Slack use cases: executive communication, project collaboration, customer support channels, incident response, and approval workflows. Match each use case to the right Slack features.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Workflow Builder</p>
+                <p>Know how to build Workflow Builder automations: trigger types (message shortcut, schedule, emoji reaction, channel join), step types (send message, form, add to channel, webhook), and use cases for each.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce for Slack Integration</p>
+                <p>Know how Salesforce for Slack features work: Salesforce record previews, deal rooms, Salesforce Flows triggered from Slack, and Slack alerts from Salesforce record changes. Understand configuration requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Adoption Strategy</p>
+                <p>Know how to drive Slack adoption: executive sponsorship, champions program, use case-driven rollout (start with high-value use cases), and how to measure adoption with Slack analytics.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance Framework</p>
+                <p>Know how to design a Slack governance framework: channel naming conventions, workspace vs. channel structure, acceptable use policies, and how to handle the transition from email to Slack.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function SlackConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

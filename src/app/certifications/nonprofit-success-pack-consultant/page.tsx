@@ -220,6 +220,37 @@ export default function NonprofitSuccessPackConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Nonprofit Success Pack Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The NPSP Consultant exam focuses specifically on configuring NPSP features for fundraising, constituent management, and reporting. The exam emphasizes practical configuration knowledge over architectural design.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Recurring Donations Configuration</p>
+                <p>Know how to configure open-ended vs. fixed-length recurring donations, pause rules, and how recurring donation schedules generate Opportunities. Understand how Elevate (payment processor) integrates with recurring donations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Soft Credits &amp; Household Rollups</p>
+                <p>Soft Credits track secondary donor credit (spouse, board member influence). Household Rollups aggregate giving totals at the household level. Know the rollup fields, their definitions, and how to customize them.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Import Wizard for NPSP</p>
+                <p>Understand how to use the NPSP Data Import Wizard vs. standard Data Import Wizard for migrating constituent and gift data. Know field mappings and how to handle duplicate matching.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Engagement Plans</p>
+                <p>Engagement Plans automate constituent stewardship tasks (thank-you calls, acknowledgment letters) triggered by donation milestones. Know how to configure Engagement Plan Templates and the task assignment rules.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports &amp; Dashboards for Nonprofits</p>
+                <p>Know key NPSP report types (NPSP Households, NPSP Soft Credits) and how to build fundraising dashboards tracking year-to-date giving, LYBUNT/SYBUNT donors, and retention rates.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function NonprofitSuccessPackConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

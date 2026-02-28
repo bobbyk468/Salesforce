@@ -220,6 +220,37 @@ export default function DataArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Data Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Data Architect exam tests expertise in designing Salesforce data models, managing data quality, and planning data migration. Focus on relationship types, storage limits, archiving strategies, and master data management.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Data Modeling</p>
+                <p>Know when to use lookup, master-detail, hierarchical (self-referential), and external relationships. Understand junction objects, indirect lookup fields, and how relationship type affects roll-up summaries, cascade delete, and record access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Large Data Volume (LDV) Strategies</p>
+                <p>Know how to handle LDV: skinny tables, custom indexes, selective queries, division archiving, and big objects. Understand what causes a full table scan and how to prevent query timeouts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Quality &amp; Duplicate Management</p>
+                <p>Know Duplicate Rules, Matching Rules, and how they interact. Understand how to use Data.com clean rules (legacy knowledge), field validation, and data stewardship processes for ongoing data quality.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Migration Architecture</p>
+                <p>Plan migration using external IDs (upsert strategy), parent-before-child load order, and the appropriate API (Bulk API for volume, REST for real-time). Understand data validation and rollback strategies.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Master Data Management</p>
+                <p>Know MDM patterns: Registry, Consolidation, and Coexistence. Understand how to implement a golden record strategy, handle conflicting records, and synchronize master data across systems.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function DataArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

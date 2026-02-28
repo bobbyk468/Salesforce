@@ -223,6 +223,37 @@ export default function IntegrationArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Integration Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Integration Architect exam tests your ability to design and implement integration solutions between Salesforce and external systems. Focus on selecting the right integration pattern, API type, and middleware approach for complex scenarios.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Pattern Selection</p>
+                <p>Know Remote Process Invocation (sync &amp; async), Batch Data Synchronization, Data Virtualization, UI Update, and Event-Driven patterns. Match each to the business scenario presented in the question.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">REST vs. SOAP vs. Bulk API</p>
+                <p>REST API for CRUD operations and real-time integrations; SOAP API for older enterprise systems requiring WSDL; Bulk API for high-volume data loads; Streaming API for real-time push notifications. Know when each is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Platform Events &amp; Change Data Capture</p>
+                <p>Platform Events decouple publisher/subscriber and support event-driven integration. CDC pushes field-level change records to subscribers. Know how to configure each and handle event replay for reliability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Middleware &amp; MuleSoft</p>
+                <p>Understand API-led connectivity (System, Process, Experience layers), how MuleSoft Anypoint Platform fits in the integration architecture, and when to use middleware vs. point-to-point integrations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security in Integrations</p>
+                <p>Know how to use Named Credentials for secure outbound connections, OAuth flows for external system authentication, and how to implement IP restrictions and mutual TLS for sensitive integrations.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -249,6 +280,7 @@ export default function IntegrationArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

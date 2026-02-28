@@ -89,6 +89,37 @@ export default function MuleSoftPlatformArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Platform Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Platform Architect exam tests expertise in designing the Anypoint Platform deployment infrastructure. Focus on Runtime Fabric, CloudHub, on-premise deployment, HA/DR architecture, and platform security.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deployment Model Selection</p>
+                <p>Know when to use CloudHub 1.0 (managed, simple), CloudHub 2.0 (container-based, more control), Runtime Fabric (self-managed, on-prem or private cloud), and standalone Mule runtimes. Match deployment model to requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">High Availability Design</p>
+                <p>Understand how to design HA: multiple workers in CloudHub, Runtime Fabric cluster configuration, persistent queues for message durability, and load balancer configuration for zero-downtime deployments.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Disaster Recovery Strategy</p>
+                <p>Know how to plan DR for Anypoint Platform: multi-region CloudHub deployments, VPC peering, database backup strategies, and RTO/RPO targets for different integration tiers.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Platform Security Architecture</p>
+                <p>Know how to configure VPCs, VPNs, and Dedicated Load Balancers in CloudHub. Understand how Runtime Fabric handles network isolation, TLS termination, and credential management via Anypoint Secrets Manager.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Capacity Planning</p>
+                <p>Understand worker sizing (0.1 vCore to 8 vCore), how to calculate required capacity based on throughput, concurrency, and payload size, and how auto-scaling works in CloudHub 2.0 and Runtime Fabric.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MuleSoftPlatformArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

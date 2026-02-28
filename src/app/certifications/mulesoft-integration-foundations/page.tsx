@@ -183,6 +183,37 @@ export default function MuleSoftIntegrationFoundationsPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Integration Foundations Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Integration Foundations exam is an entry-level certification testing basic integration concepts and Anypoint Platform familiarity. Focus on understanding what integration is, why it matters, and what MuleSoft does.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Styles &amp; Patterns</p>
+                <p>Know the four integration styles: Point-to-Point, Hub-and-Spoke, ESB, and API-Led Connectivity. Understand the trade-offs of each and why API-led connectivity is MuleSoft&apos;s recommended approach.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Anypoint Platform Overview</p>
+                <p>Know the key platform components at a high level: Anypoint Studio, Exchange, Runtime Manager, API Manager, CloudHub, and MQ. Understand the role each plays in the integration lifecycle.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Concepts</p>
+                <p>Understand what an API is, the difference between REST and SOAP APIs, how API contracts (RAML/OAS) define interface expectations, and how API versioning works.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataWeave Basics</p>
+                <p>Know basic DataWeave syntax for simple JSON-to-JSON and JSON-to-XML transformations. Understand the %dw 2.0 header, output directive, and simple map/filter operations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connector Ecosystem</p>
+                <p>Know the Anypoint Exchange connector library concept: core connectors (HTTP, Database, File), premium connectors (Salesforce, SAP, Oracle), and how to search and install connectors in Studio.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -209,6 +240,7 @@ export default function MuleSoftIntegrationFoundationsPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function HerokuDeveloperAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Heroku Developer Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Heroku Developer AP exam tests hands-on Heroku development: deploying applications, configuring dynos, working with add-ons, and integrating with Salesforce via Heroku Connect.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Deployment Workflow</p>
+                <p>Know the Heroku deployment flow: git push heroku main, Procfile configuration (web/worker dyno types), buildpack selection (auto-detected or explicit), and how release commands run post-deploy tasks.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dyno Configuration &amp; Scaling</p>
+                <p>Know dyno types (eco, basic, standard, performance), how to scale horizontally (heroku ps:scale web=3) and vertically (dyno size), and how the Heroku Router distributes requests across web dynos.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Postgres</p>
+                <p>Know Heroku Postgres tiers, how to provision a database (heroku addons:create heroku-postgresql), run psql console sessions, create and restore backups, and promote a follower database during failover.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Connect Setup</p>
+                <p>Know how to configure Heroku Connect: creating the connection, mapping Salesforce objects to Postgres tables, configuring sync direction (bidirectional, Salesforce to Heroku, Heroku to Salesforce), and troubleshooting sync errors.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Config Vars &amp; Add-ons</p>
+                <p>Know how to manage Heroku config vars (environment variables) for storing credentials, how to provision common add-ons (Redis, SendGrid, Papertrail), and how to use the Heroku CLI to manage your application.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function HerokuDeveloperAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

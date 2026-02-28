@@ -220,6 +220,37 @@ export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the CRM Analytics and Einstein Discovery Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CRM Analytics exam tests end-to-end analytics implementation: data preparation, story building, dashboard design, and deployment. Focus on the SAQL query language, recipe transformations, and how to embed analytics in Salesforce.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dataflow vs. Recipe Architecture</p>
+                <p>Dataflows use nodes (digest, augment, flatten, edgemart) for batch data preparation. Recipes use visual, step-by-step transformations with live preview. Know when to use each and how they interact.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SAQL Query Language</p>
+                <p>SAQL is used in Dashboard JSON and lens queries. Know the key clauses: foreach, group, order, limit, filter, and how to write basic aggregation queries. SAQL knowledge is directly tested.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Discovery Stories</p>
+                <p>Know how to build a Story (outcome field, included variables, excluded variables), interpret Story insights (top factors, improvements), and deploy predictions as Prediction Fields back to Salesforce records.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboard Design &amp; Embedding</p>
+                <p>Understand how to configure widgets (chart, number, table, filter), link steps for drill-through navigation, and embed CRM Analytics dashboards in Lightning pages and the mobile app.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security &amp; Data Access</p>
+                <p>Know how to configure row-level security using security predicates, user attributes, and dataset sharing inheritance. Understand how Analytics shares (App sharing) control dashboard access.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function CRMAnalyticsEinsteinDiscoveryConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

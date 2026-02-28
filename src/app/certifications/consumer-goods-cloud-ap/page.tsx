@@ -89,6 +89,37 @@ export default function ConsumerGoodsCloudAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Consumer Goods Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Consumer Goods Cloud AP exam tests configuration of field execution solutions for CPG companies. Focus on visit planning, in-store execution, retail audits, and the Consumer Goods data model.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Consumer Goods Data Model</p>
+                <p>Know the CG Cloud objects: Retail Store, Account (retailer), Product, Planogram, Assessment, and Visit. Understand how these objects relate and how the data model supports field rep execution.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Visit Planning &amp; Scheduling</p>
+                <p>Know how to configure visit plans: route planning, call cycle rules, visit frequency by store tier, and how the route management optimization engine assigns visits to reps efficiently.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">In-Store Execution &amp; Audits</p>
+                <p>Know how to configure Assessment Tasks (shelf audits, compliance checks) within visits. Understand how tasks are assigned, how survey responses are captured, and how photos are attached via the mobile app.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Vision for Shelf Recognition</p>
+                <p>Know how Einstein Vision (image recognition) is used in Consumer Goods Cloud for shelf compliance: training the model with planogram data, capturing shelf photos, and how compliance scores are calculated.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics &amp; Reporting</p>
+                <p>Know the standard CG Cloud reports and dashboards: visit compliance rates, distribution KPIs, survey response trends, and how CRM Analytics is used for advanced territory and account performance analysis.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function ConsumerGoodsCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

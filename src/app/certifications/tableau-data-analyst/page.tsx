@@ -256,6 +256,37 @@ export default function TableauDataAnalystPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Tableau Data Analyst Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Tableau Data Analyst exam tests hands-on skills in building visualizations and analyzing data in Tableau Desktop. Focus on calculated fields, LOD expressions, chart selection, and dashboard interactivity.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Chart Selection Logic</p>
+                <p>Know which chart type communicates each data story: bar (comparison), line (trend), scatter (correlation), heat map (density/pattern), map (geographic), and when to use combined or dual-axis charts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Calculated Fields &amp; LOD Expressions</p>
+                <p>Know how to write basic calculated fields and the three LOD expression types: FIXED (independent of view), INCLUDE (adds granularity), and EXCLUDE (removes granularity). LOD expressions are heavily tested.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Filters &amp; Filter Order</p>
+                <p>Understand the filter order of operations: Extract → Data Source → Context → Dimension → Measure → Table Calculation. Know how context filters change which data other filters act on.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboard Interactivity</p>
+                <p>Know how to configure actions: Filter Actions (clicking to filter), Highlight Actions, and URL Actions. Understand how to design dashboards for mobile using device-specific layouts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Preparation in Tableau Prep</p>
+                <p>Know basic Tableau Prep operations: cleaning steps (data type changes, null handling, rename), aggregation steps, join/union steps, and how to output flows to extracts or published data sources.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -289,6 +320,7 @@ export default function TableauDataAnalystPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

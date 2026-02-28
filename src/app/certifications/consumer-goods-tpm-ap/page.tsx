@@ -89,6 +89,37 @@ export default function ConsumerGoodsTPMAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Consumer Goods Trade Promotion Management Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Consumer Goods TPM AP exam tests trade promotion management for CPG companies. Focus on promotion planning, fund management, account planning, and promotion settlement workflows.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Trade Promotion Planning</p>
+                <p>Know how to create and manage promotions: promotion types (display, price reduction, bonus case), promotion calendar management, and how promotions link to customer (retailer) accounts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Fund Management</p>
+                <p>Know how trade promotion funds are structured: Fixed Amount vs. Percentage of Net Sales (PONS), fund allocation across accounts, and how to track fund consumption vs. budget throughout the promotion cycle.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account Planning</p>
+                <p>Know how Account Plans define annual volume and spend targets by account. Understand how promotions are created against account plans and how planned spending rolls up to the account plan.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Promotion Settlement &amp; Claims</p>
+                <p>Know the settlement process: deduction matching (linking retailer deductions to promotions), claim approval workflows, and how to handle disputes and short payments in the settlement process.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Analytics for TPM</p>
+                <p>Know the key TPM reports: ROI by promotion type, fund utilization rates, compliance rates (actual vs. planned), and post-event analysis. Understand how CRM Analytics dashboards visualize trade spend effectiveness.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function ConsumerGoodsTPMAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

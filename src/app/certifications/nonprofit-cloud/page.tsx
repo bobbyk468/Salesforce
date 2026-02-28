@@ -261,6 +261,37 @@ export default function NonprofitCloudPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Nonprofit Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Nonprofit Cloud exam tests implementation of NPSP (Nonprofit Success Pack) and Nonprofit Cloud features for mission-driven organizations. Focus on the data model differences from commercial Salesforce and the fundraising/program management features.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">NPSP Household Account Model</p>
+                <p>NPSP uses Household Accounts (one per family/household) with Contacts as household members. Understand how this differs from the standard B2B account model and implications for duplicate management and household giving.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Gift Entry &amp; Payment Processing</p>
+                <p>Know Nonprofit Cloud Gift Entry with its batch entry templates, gift commitments, and partial soft credits. Understand how payment processors integrate and how gift records relate to Opportunities.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Relationships &amp; Affiliations</p>
+                <p>NPSP Relationships track personal connections between Contacts (e.g., spouse, board member). Affiliations track organizational connections between Contacts and Accounts. Know when to use each and how reciprocal relationships work.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Program Management</p>
+                <p>Program Management Module (PMM) tracks services, programs, service schedules, and service deliveries. Know the PMM object model and how service delivery data rolls up to program reporting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">TDTM (Table-Driven Trigger Management)</p>
+                <p>NPSP uses TDTM to manage its trigger logic through configuration records rather than code. Understand how TDTM Handler records control trigger behavior and how to troubleshoot TDTM-related issues.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -295,6 +326,7 @@ export default function NonprofitCloudPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

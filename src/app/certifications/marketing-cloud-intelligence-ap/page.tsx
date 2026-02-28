@@ -89,6 +89,37 @@ export default function MarketingCloudIntelligenceAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Intelligence Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Marketing Cloud Intelligence (Datorama) AP exam tests data ingestion, model building, and dashboard creation in the Intelligence platform. Focus on the harmonization framework and how to connect and unify multi-source marketing data.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Streams &amp; Connectors</p>
+                <p>Know how to connect data sources using native connectors (Google Analytics, Facebook Ads, Marketing Cloud), API connectors, and file-based imports (CSV). Understand scheduled refresh and incremental load options.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Model &amp; Harmonization</p>
+                <p>Understand the Intelligence data model: Streams, Total Metrics, Dimensions, and how to harmonize disparate data by mapping vendor-specific fields to a unified dimension (e.g., mapping &apos;Campaign&apos; across platforms).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Model Builder</p>
+                <p>Know how to use the Model Builder to create calculated metrics (formulas), cross-stream joins, and custom dimensions. Understand the difference between Stream metrics and Total metrics.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dashboard Design</p>
+                <p>Know how to create boards, widgets (bar charts, line charts, scorecards, pivot tables), and how to configure filters and date controls. Understand how to share dashboards with internal and external stakeholders.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Integration</p>
+                <p>Know how Einstein features in Intelligence (Einstein Insights, Anomaly Detection) analyze marketing performance data and how to configure alerts for KPI deviations.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MarketingCloudIntelligenceAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

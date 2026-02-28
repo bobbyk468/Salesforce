@@ -220,6 +220,37 @@ export default function MuleSoftDeveloperIIPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Developer II Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Developer II exam tests advanced development skills: complex DataWeave transformations, async patterns, API security implementation, and advanced deployment strategies. Expect deep technical questions on Anypoint Platform internals.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced DataWeave</p>
+                <p>Go beyond basic mappings: know how to use modules (Arrays, Strings, Math), pattern matching, recursive functions, and how to write reusable DataWeave modules. Know how to handle complex nested JSON and XML transformations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Async &amp; Batch Processing</p>
+                <p>Know Batch Jobs in Mule 4: Batch Job scope, Batch Step, Batch Aggregator, and On Complete phases. Understand when to use batch processing vs. scatter-gather for parallel processing of large data sets.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Security Policies</p>
+                <p>Know how to apply policies in API Manager: Rate Limiting, JWT Validation, OAuth 2.0 (client credentials, authorization code), CORS, and IP whitelist. Understand policy ordering and how custom policies are built.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Deployment Strategies</p>
+                <p>Know the difference between CloudHub 1.0, CloudHub 2.0, and Runtime Fabric deployment models. Understand zero-downtime deployments, persistent queues, and how to configure multiple workers for HA.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Tuning</p>
+                <p>Know how to tune thread pools (Grizzly, CPU intensive, CPU lite, I/O), configure watermark-based polling, and use caching (Object Store) to reduce redundant API calls in Mule applications.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function MuleSoftDeveloperIIPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -220,6 +220,37 @@ export default function DevLifecycleDeploymentArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Development Lifecycle and Deployment Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Dev Lifecycle Architect exam tests expertise in ALM, CI/CD, sandbox strategy, and package development. Focus on choosing the right deployment approach for complex org configurations and release management.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sandbox Strategy</p>
+                <p>Know the four sandbox types and when to use each: Developer (unit testing), Developer Pro (data load testing), Partial Copy (realistic data subset), Full (UAT with production data volume). Know refresh intervals.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Change Set Limitations</p>
+                <p>Change sets have significant limitations: no delete capability, no metadata dependency resolution, no version control. Know when to move beyond change sets to source-driven development.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Source-Driven Development</p>
+                <p>Understand SFDX / SF CLI source format, scratch orgs for isolated development, how to push/pull metadata, and how Salesforce DX integrates with Git version control systems.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Package Development (2GP)</p>
+                <p>Know the difference between Unlocked Packages and Managed Packages. Understand how to define package boundaries, handle dependencies between packages, and version package releases.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CI/CD Pipeline Design</p>
+                <p>Know how to design a CI/CD pipeline: source → scratch org → unit tests → package version → sandbox UAT → production. Understand how tools like GitHub Actions, Copado, or Gearset automate the pipeline.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function DevLifecycleDeploymentArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

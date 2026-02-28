@@ -192,6 +192,37 @@ export default function TableauArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Tableau Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Tableau Architect exam tests enterprise-scale Tableau deployment design. Focus on server architecture, performance optimization, security configuration, and designing scalable self-service analytics environments.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tableau Server Architecture</p>
+                <p>Know the Tableau Server component topology: Gateway, Application Server, VizQL Server, Data Server, Backgrounder, and Repository. Understand how each component scales and where bottlenecks occur in high-usage environments.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Optimization</p>
+                <p>Know how to optimize extract refreshes (incremental vs. full), optimize workbook performance (data source optimization, context filters, reducing marks), and configure Backgrounder for large extract loads.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture</p>
+                <p>Understand Tableau&apos;s multi-layer security: server-level (authentication), site-level (content permissions), data-level (row-level security via user filters or VPD). Know how to implement data-level security at scale.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">High Availability &amp; Disaster Recovery</p>
+                <p>Know how to configure Tableau Server for HA: multi-node cluster, repository failover (PostgreSQL clustering), and backup strategies. Understand TSM backup/restore and the Tableau Cloud migration options.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance Framework</p>
+                <p>Know how to design a data governance framework in Tableau: certified data sources, data quality warnings, column-level descriptions, and Tableau Catalog for data lineage and impact analysis.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -225,6 +256,7 @@ export default function TableauArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function MuleSoftCatalystConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Catalyst Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Catalyst Consultant exam tests expertise in using the MuleSoft Catalyst methodology to drive integration program success. Focus on the four pillars: Organization, Technology, Delivery, and Engagement.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Catalyst Methodology Framework</p>
+                <p>Know the four Catalyst pillars: Organization (C4E setup, governance), Technology (platform architecture, reuse), Delivery (project delivery, agile), and Engagement (stakeholder alignment, value communication).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">C4E Establishment</p>
+                <p>Know how to establish a Center for Enablement: define the operating model, set up Anypoint Exchange for asset sharing, measure reuse metrics (reuse rate, time-to-market improvement), and grow C4E maturity over time.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Value Realization</p>
+                <p>Understand how to measure integration ROI: time saved through reuse, reduced integration costs, faster time-to-market, and how to present these metrics to executive stakeholders.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Delivery Best Practices</p>
+                <p>Know how Catalyst recommends delivering integration projects: discovery workshops, platform health assessment, phased rollout, and how to prioritize use cases using a value/complexity matrix.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Stakeholder Engagement</p>
+                <p>Catalyst programs succeed through executive sponsorship and business unit engagement. Know how to identify champions, run enablement sessions, and build the internal community of API practitioners.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MuleSoftCatalystConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

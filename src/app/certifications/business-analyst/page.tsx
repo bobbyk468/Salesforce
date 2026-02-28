@@ -221,6 +221,37 @@ export default function BusinessAnalystPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Business Analyst Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Business Analyst exam focuses on requirements elicitation, analysis, and translation into Salesforce solutions. Unlike technical exams, success depends on process methodology: user stories, stakeholder management, and UAT practices.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Stories &amp; Acceptance Criteria</p>
+                <p>Know how to write user stories (As a [persona], I want [goal], so that [reason]) and define acceptance criteria that are testable, specific, and verifiable. Questions test whether criteria are complete and unambiguous.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Requirements Elicitation Techniques</p>
+                <p>Know the trade-offs of interviews, workshops, surveys, observation, and prototyping. Questions ask which technique is most appropriate for a given scenario — workshops work well for cross-functional alignment, interviews for individual expertise.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Process Mapping &amp; UPN</p>
+                <p>Understand Universal Process Notation (UPN) and how to map current-state vs. future-state processes. Know how swimlane diagrams document cross-functional workflows and identify handoffs and pain points.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">UAT Strategy</p>
+                <p>User Acceptance Testing involves real end users, realistic data, and verification that business requirements (not just technical specs) are satisfied. Know how to plan, execute, and sign off on UAT.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Stakeholder Management</p>
+                <p>Identify stakeholder types (decision-makers, influencers, end users), know when to escalate vs. resolve scope conflicts, and understand how to manage competing priorities and scope creep.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -255,6 +286,7 @@ export default function BusinessAnalystPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

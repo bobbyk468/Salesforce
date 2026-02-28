@@ -220,6 +220,37 @@ export default function OmniStudioConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce OmniStudio Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The OmniStudio Consultant exam tests solution design and business requirements analysis for OmniStudio implementations. Focus on choosing the right OmniStudio tool for each business scenario and designing scalable configurations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Tool Selection Framework</p>
+                <p>Know when to use each OmniStudio tool: FlexCards for contextual data display, OmniScripts for guided user processes, DataRaptors for Salesforce data integration, and Integration Procedures for complex orchestration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Business Process to OmniScript Mapping</p>
+                <p>Know how to decompose a business process into OmniScript steps, identify reusable components, and design the data flow between steps. Understand when sub-OmniScripts improve reusability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Integration Architecture</p>
+                <p>Know when to use DataRaptor Extract vs. Integration Procedure for data retrieval, how to handle complex data transformations, and when to call external APIs from Integration Procedures.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FlexCard Use Cases</p>
+                <p>Know common FlexCard use cases: account/contact dashboards, case summaries, 360-degree customer views. Understand how FlexCard states manage different data scenarios (loading, empty, error, data).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance &amp; Scalability</p>
+                <p>Know best practices for OmniStudio performance: minimizing DataRaptor steps, using Turbo Extract for simple reads, caching Integration Procedure results, and structuring OmniScripts to minimize server calls.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function OmniStudioConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

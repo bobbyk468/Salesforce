@@ -555,6 +555,37 @@ export default function AdministratorPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Administrator Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The ADM-201 exam is entirely scenario-based: each question describes a business problem and asks you to pick the correct native Salesforce feature. Mastering the mental map of which tool solves which problem is the single most important skill.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Know Your Automation Toolkit</p>
+                <p>Understand when to use Record-Triggered Flows (replacing Workflow Rules and Process Builder), Approval Processes for multi-step human approvals, and Scheduled Flows for time-based logic. The exam always tests the right tool for a given requirement.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sharing &amp; Security Is the Highest-Weighted Topic</p>
+                <p>Org-Wide Defaults, Role Hierarchies, Sharing Rules, Profiles, and Permission Sets — know how each layer grants or restricts access and the order in which they are evaluated. Most security questions hinge on knowing the minimum-access principle.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports vs. Dashboards</p>
+                <p>Know the four report types (Tabular, Summary, Matrix, Joined) and when each applies. Dashboards refresh from source reports and require a running user whose access determines which data appears.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Management Fundamentals</p>
+                <p>Understand import/export tools (Data Import Wizard vs. Data Loader), field-level security, validation rules, and duplicate management. The exam regularly tests which import tool is appropriate for a given scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Read Every Question for the Key Constraint</p>
+                <p>Watch for qualifiers like &apos;declarative only,&apos; &apos;minimum configuration,&apos; or &apos;without code.&apos; These constraints eliminate most distractors and point to the correct answer.</p>
+              </div>
+            </div>
+          </div>
+
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
               introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -613,6 +644,7 @@ export default function AdministratorPage() {
                 { id: 'exam-format', title: 'Exam Format Explained' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
+                { id: 'scenario-tips', title: 'How to Pass' },
                 { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
                 { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },

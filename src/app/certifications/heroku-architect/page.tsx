@@ -89,6 +89,37 @@ export default function HerokuArchitectPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Heroku Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Heroku Architect exam tests enterprise-scale Heroku deployment design. Focus on Heroku infrastructure components, Heroku Connect for Salesforce data sync, high-availability patterns, and security architecture.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Infrastructure Components</p>
+                <p>Know dynos (web, worker, one-off), formations, add-ons, buildpacks, and config vars. Understand how these components combine to run a scalable application on Heroku.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Heroku Connect Architecture</p>
+                <p>Know how Heroku Connect syncs data between Heroku Postgres and Salesforce using polled sync (Salesforce → Postgres) and a Salesforce trigger (Postgres → Salesforce). Understand conflict resolution and sync frequency.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">High Availability &amp; Scaling</p>
+                <p>Understand horizontal scaling (multiple dynos), how the Heroku Router load-balances requests, database connection pooling (PgBouncer), and how to design for zero-downtime deployments.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture</p>
+                <p>Know how to use Private Spaces for network isolation, Heroku Shield for HIPAA/PCI compliance, and how to secure data in transit (TLS) and at rest with encrypted Heroku Postgres.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Optimization</p>
+                <p>Know how to use Heroku caching (Redis add-on), async job processing (worker dynos with Sidekiq/Celery), and database query optimization to design performant Heroku applications.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function HerokuArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

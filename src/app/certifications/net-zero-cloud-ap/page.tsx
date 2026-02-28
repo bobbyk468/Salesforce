@@ -89,6 +89,37 @@ export default function NetZeroCloudAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Net Zero Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Net Zero Cloud AP exam tests implementation of Salesforce&apos;s sustainability platform. Focus on carbon accounting, emissions tracking, supply chain data collection, and sustainability reporting.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Emissions Data Model</p>
+                <p>Know the Net Zero Cloud data model: Stationary Assets (facilities), Mobile Assets (fleet), Purchased Electricity, Business Travel, and how each emission source category maps to Scope 1, 2, and 3 emissions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Carbon Calculation Methodology</p>
+                <p>Know how Net Zero Cloud calculates emissions: emission factors (IPCC, EPA, IEA), activity data (kWh, fuel gallons, miles traveled), and how the calculation engine applies factors to produce CO2e metrics.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Supply Chain Reporting</p>
+                <p>Know how Net Zero Cloud collects Scope 3 supply chain emissions: supplier surveys, supplier data entry portal configuration, and how supplier emissions roll up into the customer&apos;s total Scope 3 footprint.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sustainability Goals &amp; Targets</p>
+                <p>Know how to configure sustainability goals (net zero by year X, renewable energy percentage), track progress against targets using Progress Records, and how SBTi (Science Based Targets initiative) targets are represented.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Regulatory Reporting</p>
+                <p>Know which reporting frameworks Net Zero Cloud supports: GRI, CDP, TCFD, and how to generate reports aligned to these standards. Understand how audit trails and data lineage support third-party verification.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function NetZeroCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function HealthCloudAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Health Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Health Cloud AP exam tests Salesforce implementation for healthcare and life sciences. Focus on the Health Cloud data model, patient/member journey design, care plan configuration, and interoperability standards.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Health Cloud Data Model</p>
+                <p>Know the key Health Cloud objects: Patient/Member (Contact extension), Care Plan, Care Plan Problem, Care Plan Goal, Care Plan Task, and how they relate to Cases and standard objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Patient 360 View</p>
+                <p>Know how to configure the Patient 360: Timeline (chronological health events), Care Team (multi-disciplinary team members), Social Determinants of Health, and how providers use the console to manage patient interactions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Care Plan Configuration</p>
+                <p>Know how to create care plan templates (problems, goals, tasks), how care coordinators assign care plans to patients, and how task completion tracking and progress notes work in the care plan workflow.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Interoperability: FHIR &amp; HL7</p>
+                <p>Know the basics of Health Cloud&apos;s interoperability capabilities: FHIR R4 API for EHR integration, HL7 message handling, and how Health Cloud maps clinical data to Salesforce objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Utilization Management &amp; Prior Auth</p>
+                <p>Know how Health Cloud supports payer use cases: prior authorization workflows, utilization management case types, and how Care Gaps drive proactive outreach for quality program management.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function HealthCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

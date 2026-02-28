@@ -89,6 +89,37 @@ export default function FinancialServicesCloudAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Financial Services Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Financial Services Cloud AP exam tests FSC implementation for banking, insurance, and wealth management. Focus on the FSC data model, financial account tracking, advisor experience, and compliance requirements.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FSC Data Model Extensions</p>
+                <p>Know FSC-specific objects: Financial Account (checking, savings, investment), Financial Account Transaction, Financial Goal, Life Event, and how they extend the standard Account/Contact model for financial services.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Client 360 &amp; Relationship Manager</p>
+                <p>Know how to configure the FSC client view: Relationship Map (household members, referral networks), Financial Accounts, Goals, and Life Events. Understand how advisors use this 360-degree view to serve clients.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Household &amp; Relationship Management</p>
+                <p>Know how FSC models households: primary household member, financial account roles (owner, beneficiary), and how household-level rollup fields aggregate assets under management (AUM) across the household.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Insurance-Specific Features</p>
+                <p>Know FSC features for insurance: Policy objects, Claim Management, Producer Management, and how Independent Agents differ from Employees in the FSC data model.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Compliance &amp; Audit Trail</p>
+                <p>Know how FSC addresses compliance requirements: audit logging, consent management, and how Salesforce Shield (Field Audit Trail, Event Monitoring) helps meet regulatory obligations for financial data.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function FinancialServicesCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

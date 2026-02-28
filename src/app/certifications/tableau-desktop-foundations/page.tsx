@@ -192,6 +192,37 @@ export default function TableauDesktopFoundationsPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Tableau Desktop Specialist Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Tableau Desktop Specialist exam tests foundational Tableau Desktop skills. Focus on connecting to data, building basic visualizations, and using core features. This is a practical knowledge exam — understand the UI and feature capabilities.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connecting to Data</p>
+                <p>Know how to connect to file-based sources (Excel, CSV, JSON), database sources, and how to configure joins and unions in the Data Source pane. Understand the difference between live and extract connections.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Building Basic Visualizations</p>
+                <p>Know the Show Me panel chart types and when Tableau recommends each. Understand how to use Rows/Columns shelf, Marks card (color, size, label, detail, tooltip), and filters pane.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sorting &amp; Grouping</p>
+                <p>Know how to sort data (field sort, manual sort, nested sort) and how to create groups (custom groups from dimension members) and sets (dynamic or fixed subsets of dimension members).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Basic Calculations</p>
+                <p>Know how to create simple calculated fields: string functions (LEFT, MID, CONTAINS), date functions (DATEDIFF, DATEPART), and aggregate functions (SUM, AVG, COUNT, COUNTD) applied to measures.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sharing &amp; Publishing</p>
+                <p>Know how to publish workbooks and data sources to Tableau Server or Cloud, export views to images/PDFs/PowerPoint, and use Tableau Reader for offline sharing.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -225,6 +256,7 @@ export default function TableauDesktopFoundationsPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

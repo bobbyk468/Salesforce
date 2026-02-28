@@ -89,6 +89,37 @@ export default function EnergyUtilitiesAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Energy &amp; Utilities Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Energy &amp; Utilities AP exam tests Salesforce implementation for utility companies. Focus on the Energy &amp; Utilities data model, service point management, and how the Industries platform addresses utility-specific business processes.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Energy &amp; Utilities Data Model</p>
+                <p>Know the key objects: Service Point (physical connection), Service Account (billing relationship), Premise (physical address), Meter, and how they relate to standard Account and Contact records.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customer Service for Utilities</p>
+                <p>Know how to configure utility-specific service requests: start/stop service, high bill inquiries, outage reporting, and how these map to Case types in Service Cloud with utility-specific case processes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Asset Management</p>
+                <p>Know how Salesforce Assets track utility infrastructure: meters, transformers, poles, and how the asset maintenance schedule integrates with Field Service for preventive maintenance work orders.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Billing &amp; Revenue</p>
+                <p>Know how utility billing integrates with Salesforce: smart meter data ingestion, usage-based billing calculations, time-of-use rate plans, and how Salesforce Revenue Cloud handles utility billing scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Industry-Specific Analytics</p>
+                <p>Know the utility KPIs tracked in CRM Analytics: customer satisfaction, outage metrics, service request volumes, energy efficiency program adoption, and how predictive analytics identifies at-risk customers.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function EnergyUtilitiesAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -236,6 +236,37 @@ export default function PardotSpecialistPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Account Engagement Specialist Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Account Engagement Specialist exam tests hands-on configuration knowledge. Focus on the execution side — automation rules, dynamic lists, email sends, and form configuration — rather than high-level solution design.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Rules vs. Segmentation Rules</p>
+                <p>Automation Rules run continuously and apply actions retroactively to matching prospects. Segmentation Rules run once. Dynamic Lists update membership continuously based on criteria. Know which to use for each requirement.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Email Configuration &amp; Deliverability</p>
+                <p>Know the difference between List Emails, Engagement Studio emails, and Operational emails (bypass opt-out). Understand SPF, DKIM, and how sender score affects deliverability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dynamic Content</p>
+                <p>Know how to configure dynamic content variations based on prospect fields (industry, score, etc.) for email personalization. Understand the default variation requirement and how dynamic content is inserted via HML or custom redirects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Forms &amp; Progressive Profiling</p>
+                <p>Configure forms with dependent fields, progressive profiling (showing new fields on repeat visits), and Kiosk mode for events. Know how completion actions trigger follow-up automations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pardot API &amp; Integrations</p>
+                <p>Know the key Pardot API capabilities, how Pardot integrates with third-party tools via Zapier or direct API, and how the Salesforce-Pardot connector user&apos;s permission set controls data sync.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -270,6 +301,7 @@ export default function PardotSpecialistPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

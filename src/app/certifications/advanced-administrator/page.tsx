@@ -236,6 +236,36 @@ export default function AdvancedAdministratorPage() {
             </div>
           </div>
 
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Advanced Administrator Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Advanced Administrator exam builds on ADM-201 with deeper feature knowledge and architectural judgment. You are expected to know not just what a feature does, but when and why to choose it over alternatives in complex, multi-requirement scenarios.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Automation: Flows with Custom Metadata</p>
+                <p>Know how to use Custom Metadata Types and Custom Settings to drive business logic in Flows without hardcoding values. Understand Flow collection variables, loops, and decision elements for complex multi-step automation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Change Sets &amp; Deployment</p>
+                <p>Know change set limitations (what cannot be deployed, dependent components), the difference between outbound and inbound change sets, and how sandboxes relate to production. Understand the full deployment lifecycle.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Reporting: Joined Reports &amp; Buckets</p>
+                <p>Know when to use Joined Reports to combine data from multiple objects, how bucketing fields replaces formula fields for grouping, and how cross-filter reports restrict records based on related data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Complex Security: Delegated Administration</p>
+                <p>Understand how Delegated Administrators work and their limitations. Know how Field-Level Security interacts with page layouts and record access, and how to diagnose access issues using the Access Checker.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Territory Management</p>
+                <p>Enterprise Territory Management questions test assignment rules, territory hierarchies, and how territories interact with opportunity and account ownership. Know how to configure and troubleshoot territory-based forecasting.</p>
+              </div>
+            </div>
+          </div>
+
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -260,6 +290,7 @@ export default function AdvancedAdministratorPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

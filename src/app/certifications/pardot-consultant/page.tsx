@@ -261,6 +261,37 @@ export default function PardotConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Account Engagement Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Account Engagement (Pardot) Consultant exam tests solution design for B2B marketing automation. Scenarios ask you to design nurture programs, lead scoring models, and Salesforce sync configurations for specific business requirements.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lead Scoring &amp; Grading Design</p>
+                <p>Scoring measures prospect engagement (activity-based); Grading measures fit (demographic-based). Know how to configure scoring categories, custom scoring rules, and grading profiles to align sales and marketing on lead quality.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Engagement Studio (Nurture Programs)</p>
+                <p>Know all Engagement Studio trigger, rule, and action types. Understand how to design multi-branch programs, set wait times, and use rules to route prospects based on behavior or CRM data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce Sync Architecture</p>
+                <p>Understand the sync between Pardot (Prospects) and Salesforce (Leads/Contacts), sync triggers (Salesforce Connector user, assignment rules), and how to troubleshoot sync errors. Know the connector user&apos;s required permissions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Forms, Landing Pages &amp; Tracking</p>
+                <p>Know how to configure Pardot forms vs. form handlers (for external forms), landing page redirects, custom redirects for tracking links, and how the Pardot tracking pixel works across sites.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Campaign Reporting &amp; Attribution</p>
+                <p>Understand Pardot campaign metrics, the Engagement History component, and how B2B Marketing Analytics extends reporting. Know the difference between first-touch and multi-touch attribution models.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -295,6 +326,7 @@ export default function PardotConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

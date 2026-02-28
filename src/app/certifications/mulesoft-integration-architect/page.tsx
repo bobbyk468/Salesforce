@@ -89,6 +89,37 @@ export default function MuleSoftIntegrationArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Integration Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Integration Architect exam tests expertise in designing integration solutions using API-led connectivity and the Anypoint Platform. Focus on architecture patterns, Center for Enablement (C4E), and governance frameworks.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API-Led Connectivity Layers</p>
+                <p>Master the three-layer model: Experience APIs (channel-specific), Process APIs (orchestration), and System APIs (backend connectivity). Know how to identify which layer each integration belongs to and why.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Center for Enablement (C4E)</p>
+                <p>The C4E promotes reuse by publishing discoverable assets (connectors, APIs, templates) to Anypoint Exchange. Know how to establish a C4E, measure reuse metrics, and govern API lifecycle through the C4E.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">API Governance Framework</p>
+                <p>Know how to use API Manager for API governance: applying policies, defining SLAs, monitoring API usage, and how API Autodiscovery links deployed applications to API Manager.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Decision Trade-offs</p>
+                <p>Architect questions test trade-off reasoning: synchronous vs. asynchronous, REST vs. SOAP, on-premise vs. cloud deployment. Always justify recommendations based on requirements (latency, volume, security).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Anypoint Platform Architecture</p>
+                <p>Know the major platform components: Anypoint Studio (IDE), Anypoint Exchange (asset library), Runtime Manager (deployment), API Manager (governance), and MQ (async messaging). Understand how they integrate.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MuleSoftIntegrationArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -90,6 +90,37 @@ export default function MediaCloudAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Media Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Media Cloud AP exam tests Salesforce implementation for media and advertising companies. Focus on deal management, campaign execution, revenue management, and the media-specific data model.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Media Cloud Data Model</p>
+                <p>Know media-specific objects: Advertising Deals (linear and digital), Ad Products (ad slots, digital placements), Campaign Budgets, and how they relate to standard Opportunity and Order objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deal Management</p>
+                <p>Know how to configure the deal lifecycle in Media Cloud: proposal generation, rate card pricing for media inventory, deal approval workflows, and how deals activate into campaign execution.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Campaign Execution</p>
+                <p>Know how campaigns are activated: trafficking (sending orders to ad servers), pacing management, and how delivery data flows back from ad servers to update actuals against booked inventory.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Management &amp; Billing</p>
+                <p>Know how Media Cloud integrates with Revenue Cloud for billing: invoice generation from delivered campaign data, makegoods for underdelivery, and how revenue recognition handles media-specific scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Programmatic &amp; Digital Integration</p>
+                <p>Know how Media Cloud handles programmatic advertising: integration with DSPs/SSPs, private marketplace deals, and how digital campaign data from Google Ad Manager or FreeWheel integrates with Media Cloud.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -114,6 +145,7 @@ export default function MediaCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

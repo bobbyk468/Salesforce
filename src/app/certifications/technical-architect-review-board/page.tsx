@@ -204,6 +204,37 @@ export default function TechnicalArchitectReviewBoardPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Technical Architect Review Board Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CTA Review Board is a live, oral examination where candidates present architecture solutions to a panel of senior Salesforce architects. Preparation requires practicing under realistic conditions — not just studying content.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">The Review Board Format</p>
+                <p>The Review Board presents a complex business scenario. You have time to review it, then present your architecture to the panel and answer questions. Know the format deeply so logistics don&apos;t distract you on the day.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Presentation Structure</p>
+                <p>Open with a brief summary of your understanding of the requirements, present your high-level architecture diagram, walk through each component and key decisions, address risks, and close with a recommendation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Handling Panel Questions</p>
+                <p>Panel questions probe your assumptions and test alternative approaches. If challenged, consider the question carefully, acknowledge valid points, and either defend your position with evidence or update your recommendation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deep Dive Readiness</p>
+                <p>Be prepared to go deep on any component of your solution: data model, integration pattern, security configuration, deployment approach. If you propose something, know the details.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mock Board Practice Is Essential</p>
+                <p>The only way to prepare for the Review Board is to do it. Practice with mock panels, record yourself, and review your performance. Focus on confidence, clarity, and structured thinking under pressure.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice thinking like a CTA and defending architecture decisions for the Review Board.")}</p>
@@ -237,6 +268,7 @@ export default function TechnicalArchitectReviewBoardPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Previous Step' },
               { id: 'related-certs', title: 'Related Certifications' },

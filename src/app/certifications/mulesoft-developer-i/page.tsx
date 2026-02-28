@@ -220,6 +220,37 @@ export default function MuleSoftDeveloperIPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Developer I Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Developer I exam tests foundational Anypoint Platform skills: building integrations in Anypoint Studio, using connectors, transforming data with DataWeave, and deploying to CloudHub. Focus on practical flow design and DataWeave syntax.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mule 4 Flow Design</p>
+                <p>Know the three flow types: Flow (with message source), Sub-Flow (no source, called by reference), and Private Flow. Understand the flow lifecycle and how the Mule Message (payload, attributes, variables) changes through processors.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataWeave 2.0 Fundamentals</p>
+                <p>DataWeave is the transformation language at the core of Mule 4. Know how to map, filter, transform, and coerce data types. Key functions: map, filter, mapObject, reduce, pluck, flatten, and type coercion operators.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Core Connectors</p>
+                <p>Know the key connectors: HTTP Listener/Request, Database, File/FTP, JMS/AMQP, Salesforce, and how to configure each. Understand connection pooling, reconnection strategies, and connection testing.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Error Handling</p>
+                <p>Know the error handling mechanisms: Try/Catch scope, On Error Continue vs. On Error Propagate, and Global Error Handlers. Understand error type hierarchy (MULE:CONNECTIVITY, HTTP:UNAUTHORIZED, etc.) and how to handle them.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deployment to CloudHub</p>
+                <p>Know how to deploy a Mule application to CloudHub 1.0: environment selection, worker configuration (size and count), deployment properties, and how to monitor deployed applications.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function MuleSoftDeveloperIPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

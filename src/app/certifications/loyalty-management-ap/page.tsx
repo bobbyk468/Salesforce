@@ -89,6 +89,37 @@ export default function LoyaltyManagementAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Loyalty Management Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Loyalty Management AP exam tests configuration of Salesforce Loyalty Management for customer loyalty programs. Focus on program setup, tier management, points accrual, and partner integration.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Loyalty Program Setup</p>
+                <p>Know how to configure a loyalty program: Program Currency (points, miles), Tier Groups with qualifying criteria (points threshold, transaction count), and Member Portal configuration for self-service member management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Accrual &amp; Redemption Rules</p>
+                <p>Know how to configure Transaction Journal rules: earning rules (fixed points, multipliers, bonus events) and redemption rules (points-to-currency conversion, minimum redemption threshold). Understand how rule conditions restrict eligibility.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Member Enrollment &amp; Lifecycle</p>
+                <p>Know how members enroll (self-service, agent-assisted, bulk import), how tier assignment is calculated at the program period end, and how expiry rules manage points and tier status requalification.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner Management</p>
+                <p>Know how to configure partner programs in Loyalty Management: Partner Accounts, Partner Promotions (earn miles at partner merchants), and how partner transaction data is imported and processed.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Loyalty Analytics</p>
+                <p>Know key loyalty KPIs: member acquisition rate, tier distribution, redemption rate, points liability, and how to use CRM Analytics dashboards to track program health and identify at-risk members.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function LoyaltyManagementAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

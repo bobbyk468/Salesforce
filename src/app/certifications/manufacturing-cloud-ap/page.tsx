@@ -89,6 +89,37 @@ export default function ManufacturingCloudAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Manufacturing Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Manufacturing Cloud AP exam tests Salesforce implementation for manufacturers. Focus on Sales Agreements, Account-Based Forecasting, and how Manufacturing Cloud bridges sales planning with operations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sales Agreements</p>
+                <p>Know the Sales Agreement data model: Agreement Header, Agreement Terms (product-level commitments), and how actual order data flows from opportunities or orders to populate agreement actuals vs. planned quantities.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account-Based Forecasting</p>
+                <p>Know how Account-Based Forecasting works: forecast periods, forecast metrics (planned revenue, actual revenue, adjustments), and how forecasts roll up from account to regional and global levels.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Rebate Management</p>
+                <p>Know how Rebate Management tracks manufacturer incentive programs: Rebate Types (volume rebate, tiered discount), Payout definitions, and how the rebate calculation engine processes eligible transactions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Partner &amp; Channel Management</p>
+                <p>Know how Manufacturing Cloud supports channel partner management: partner onboarding, partner sales agreements, PRM (Partner Relationship Management) portal configuration for dealers and distributors.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Manufacturing Analytics</p>
+                <p>Know the standard Manufacturing Cloud CRM Analytics dashboards: sales agreement compliance, forecast accuracy, rebate program performance, and how these dashboards help operations teams identify supply/demand mismatches.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function ManufacturingCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

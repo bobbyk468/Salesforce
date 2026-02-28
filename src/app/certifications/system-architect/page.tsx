@@ -220,6 +220,37 @@ export default function SystemArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce System Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The System Architect credential validates expertise in multi-system integration and enterprise-scale Salesforce deployments. Focus on integration architecture patterns, data migration strategy, and managing complex org configurations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Enterprise Integration Patterns</p>
+                <p>Know the full Enterprise Integration Patterns catalog applied to Salesforce: synchronous vs. asynchronous, point-to-point vs. hub-and-spoke, ESB, and event-driven architecture. Match each pattern to its ideal use case.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Migration Strategy</p>
+                <p>Understand how to plan data migration: data mapping, cleansing, load sequence (parent records before child records), external IDs for upsert, and how to validate data post-migration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Org Architecture</p>
+                <p>Know the scenarios that require multiple orgs (geographies, business units, regulatory) vs. a single org with shared infrastructure. Understand org replication, data sharing between orgs, and Connected Orgs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governor Limits at Scale</p>
+                <p>Understand how governor limits affect architectural decisions: bulkification requirements, async patterns to bypass synchronous limits, and how to architect for high-volume data ingestion scenarios.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce Connect &amp; External Objects</p>
+                <p>Know how External Objects (via Salesforce Connect / OData) provide real-time data virtualization. Understand when to use virtual data vs. replicating data into Salesforce, and the performance trade-offs.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function SystemArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

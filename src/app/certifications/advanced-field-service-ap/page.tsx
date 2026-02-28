@@ -89,6 +89,37 @@ export default function AdvancedFieldServiceAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Advanced Field Service Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Advanced Field Service AP exam tests deep expertise in complex Field Service configurations: optimization engine, advanced scheduling policies, and resource management at scale.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Optimization Engine Architecture</p>
+                <p>Know how the Field Service Optimization engine works: the relationship between Scheduling Policies, Work Rules (Service Objectives and Constraints), and how the optimizer balances competing objectives.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Complex Scheduling Scenarios</p>
+                <p>Know how to configure scheduling for complex scenarios: multi-day work orders, crew management (multi-resource), preferred technician logic, and skills-based routing with proficiency levels.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Resource Capacity Planning</p>
+                <p>Understand how to use the Optimization engine&apos;s global optimization to plan capacity, manage overtime, and handle emergency work insertion. Know how service territories and operating hours define scheduling windows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Field Service Analytics</p>
+                <p>Know how to build Field Service analytics: first-time fix rate, travel time efficiency, SLA compliance, technician utilization, and how to use CRM Analytics for advanced field service reporting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mobile App Advanced Configuration</p>
+                <p>Know how to configure advanced mobile features: offline data synchronization, custom mobile flows, barcode scanning for parts lookup, and how to configure the mobile app for different technician roles.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function AdvancedFieldServiceAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

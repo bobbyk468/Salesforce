@@ -257,6 +257,37 @@ export default function ServiceCloudPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Service Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Service Cloud Consultant exam tests your ability to design and configure a complete service operation. Questions are scenario-based and focus on case routing decisions, Knowledge management, entitlements, and channel strategy.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Case Routing: Which Tool When</p>
+                <p>Know all routing options: Assignment Rules (criteria-based), Queues (manual or rules-based), Omni-Channel (capacity-based, real-time), and Einstein Case Routing (AI-driven). Match each to the right complexity level.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Knowledge Management</p>
+                <p>Understand the Knowledge data model (articles, data categories, channels), how to link articles to cases, approval processes for publishing, and how Lightning Knowledge differs from Classic Knowledge.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Entitlements &amp; SLAs</p>
+                <p>Know how Entitlement Processes define SLA milestones, how Entitlements link to accounts and contacts, and how warning/violation actions trigger when milestones are at risk. Milestone Actions are heavily tested.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Omni-Channel Configuration</p>
+                <p>Know the difference between Queue-Based and Skills-Based routing, how to configure service channels and routing configurations, and how to monitor agent capacity with the Omni Supervisor.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Self-Service &amp; Deflection</p>
+                <p>Experience Cloud portals, Einstein Bots, and Knowledge self-service reduce case volume. Know how to measure deflection rate and which configuration choices increase self-service success.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -312,6 +343,7 @@ export default function ServiceCloudPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

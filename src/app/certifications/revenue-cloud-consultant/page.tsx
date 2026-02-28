@@ -220,6 +220,37 @@ export default function RevenueCloudConsultantPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Revenue Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Revenue Cloud Consultant exam tests your ability to design end-to-end quote-to-revenue solutions spanning CPQ and Billing. Focus on the contract lifecycle, amendment logic, revenue recognition triggers, and the interaction between CPQ and Billing objects.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CPQ-to-Billing Object Flow</p>
+                <p>Know how a closed Opportunity activates a CPQ Contract, how the Contract generates Subscriptions and Assets, and how Billing Orders are created from Contracts. Understand the object relationship chain thoroughly.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Amendment &amp; Renewal Scenarios</p>
+                <p>Amendments add, remove, or change products mid-term and create co-terminated subscriptions. Renewals auto-generate from contracts at term end. Know how proration is calculated for each scenario.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Recognition Options</p>
+                <p>Understand Salesforce Billing revenue recognition rules: Revenue Schedules, how rev-rec triggers (billing date, order product date), and the accounting period configuration. Know how to handle ramp deals.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Invoice Generation &amp; Payment Processing</p>
+                <p>Know how Invoice Runs generate invoices, how payment methods and terms are configured, and how the dunning process handles failed payments. Understand partial payments and credit notes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting &amp; Forecasting for Revenue</p>
+                <p>Know how Revenue Cloud extends Sales Cloud forecasting with subscription revenue, ARR/MRR metrics, and churn reporting. Understand how CRM Analytics (Tableau CRM) is used for revenue analytics.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function RevenueCloudConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function ContactCenterAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Contact Center Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Contact Center AP exam tests implementation of contact center solutions using Salesforce. Focus on voice channel configuration, routing strategies, IVR design, and agent experience optimization.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Service Cloud Voice Architecture</p>
+                <p>Know how Service Cloud Voice integrates telephony: Amazon Connect or partner CTI, how voice calls create cases automatically, and how real-time transcription and Einstein Conversation Insights work.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Omni-Channel Routing for Contact Center</p>
+                <p>Know how to configure Omni-Channel for contact center: Queue-Based vs. Skills-Based routing, capacity rules, and how voice, chat, and case channels share agent capacity through a single routing engine.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">IVR Design &amp; Self-Service</p>
+                <p>Know how to design IVR flows for contact center deflection: menu options, DTMF input, speech recognition, and how Einstein Bots handle chat/voice self-service before transferring to an agent.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Agent Experience Configuration</p>
+                <p>Know how to configure the agent console for contact center: Service Console with voice controls, CTI Softphone in the utility bar, screen pop configuration based on ANI/DNIS, and wrap-up codes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting &amp; Analytics</p>
+                <p>Know the key contact center KPIs: Average Handle Time (AHT), First Contact Resolution (FCR), CSAT, and how to build reports using Omni-Channel Supervisor and CRM Analytics for supervisor dashboards.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function ContactCenterAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -220,6 +220,37 @@ export default function StrategyDesignerPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Strategy Designer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Strategy Designer exam tests design thinking and human-centered design applied to Salesforce projects. Focus on research methods, journey mapping, problem framing, and how to facilitate design workshops.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Design Thinking Process</p>
+                <p>Know the five-stage design thinking process: Empathize, Define, Ideate, Prototype, Test. Understand when to apply each stage and how to move between stages iteratively based on research findings.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Research Methods</p>
+                <p>Know quantitative vs. qualitative research methods: surveys, interviews, contextual inquiry, diary studies, and usability testing. Know how to select the right method based on the research question.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Journey Mapping</p>
+                <p>Know how to create current-state and future-state journey maps: identifying touchpoints, emotions, pain points, and opportunities. Understand the difference between journey maps, service blueprints, and experience maps.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Problem Framing &amp; HMW Statements</p>
+                <p>Know how to write &apos;How Might We&apos; (HMW) statements that reframe problems as opportunities. Understand how to use the POV (Point of View) statement to align on the design challenge.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Facilitation Techniques</p>
+                <p>Know how to facilitate design workshops: affinity mapping, dot voting, crazy 8s ideation, and how to use the Lightning Decision Jam framework to move from problem to solution efficiently.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function StrategyDesignerPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

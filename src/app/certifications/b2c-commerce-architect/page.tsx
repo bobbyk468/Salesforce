@@ -89,6 +89,37 @@ export default function B2CCommerceArchitectPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce B2C Commerce Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The B2C Commerce (SFCC) Architect exam tests enterprise-scale Salesforce Commerce Cloud architecture. Focus on multi-site design, performance optimization, integration patterns, and the cartridge development model.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SFCC Architecture &amp; Multi-Site</p>
+                <p>Know how SFCC organizes deployments: Business Manager, Organizations, Sites, and how to share catalogs and price books across sites. Understand the multi-site configuration for different brands, regions, and locales.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Cartridge Architecture</p>
+                <p>Know the cartridge layering model: base cartridges (Commerce Cloud Storefront Reference Architecture — SFRA), site cartridges, and custom cartridges. Understand cartridge path override and module resolution.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Optimization</p>
+                <p>Know SFCC performance levers: page caching (full-page, partial), lazy loading for product tiles, CDN configuration for static assets, and how to use the Business Manager performance reports.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Patterns</p>
+                <p>Know SFCC integration approaches: REST/SOAP web services from cartridges, Job Frameworks for batch data exchange, and how SFCC integrates with Salesforce CRM via Marketing Cloud Connector and Order Management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture</p>
+                <p>Know SFCC security: PCI compliance requirements, tokenization for payment data, account locking policies, and how to configure access control lists (ACLs) for Business Manager roles.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function B2CCommerceArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

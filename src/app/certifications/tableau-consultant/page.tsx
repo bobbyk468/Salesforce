@@ -192,6 +192,37 @@ export default function TableauConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Tableau Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Tableau Consultant exam tests implementation and solution design skills for Tableau projects. Focus on discovery, solution architecture, performance best practices, and advising clients on Tableau deployment strategies.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Discovery &amp; Requirements</p>
+                <p>Know how to run a Tableau discovery: understanding existing data sources, report inventory, user personas, and governance requirements. Map business requirements to Tableau features and identify migration complexity.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Solution Architecture Decisions</p>
+                <p>Know when to use Tableau Server vs. Tableau Cloud, Desktop vs. Prep, live vs. extract connections, and published data sources vs. embedded data. Justify each decision based on security, performance, and governance needs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Preparation Strategy</p>
+                <p>Know when to use Tableau Prep vs. database-side transformations vs. Tableau Desktop calculated fields. Understand the performance implications of each approach for large data volumes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Adoption Strategy</p>
+                <p>Know how to drive Tableau adoption: training plans for different user personas, Tableau Champions programs, usage analytics, and how to measure ROI through Tableau&apos;s usage data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Best Practices</p>
+                <p>Know how to advise clients on workbook performance: minimizing marks, using context filters effectively, optimizing data source queries, and using extracts to improve dashboard responsiveness.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -225,6 +256,7 @@ export default function TableauConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

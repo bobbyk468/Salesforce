@@ -256,6 +256,37 @@ export default function SalesCloudPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Sales Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Sales Cloud Consultant exam is scenario-based, presenting real business situations and asking you to identify the best Salesforce configuration. Deep knowledge of the full sales lifecycle — from lead to closed-won — and feature trade-offs is essential.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lead-to-Cash Process Mastery</p>
+                <p>Understand the full lifecycle: Lead capture → Lead Assignment Rules → Conversion → Opportunity stages → Quotes → Close. Know what data transfers during lead conversion and what must be manually re-entered.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Forecasting &amp; Territory Management</p>
+                <p>Know the difference between Collaborative Forecasts, Territory Forecasts, and customizable forecasting. Understand how Opportunity Splits share revenue credit and how territory assignment rules work.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Sales Features</p>
+                <p>Know Einstein Lead Scoring (predictive scoring), Einstein Opportunity Insights (AI recommendations), and Einstein Activity Capture (email/calendar sync). Questions ask when to recommend each to solve a specific business problem.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Sales Process Configuration</p>
+                <p>Understand Opportunity stages and sales processes, how to configure multiple sales processes for different record types, and how Path guides reps through stages with key fields and coaching tips.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CPQ Integration Basics</p>
+                <p>Know how Salesforce CPQ integrates with Sales Cloud, the difference between Products/Pricebooks (native) and CPQ (add-on), and when to recommend CPQ over native product functionality.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -292,6 +323,7 @@ export default function SalesCloudPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

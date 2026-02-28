@@ -220,6 +220,37 @@ export default function ApplicationArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Application Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Application Architect credential validates expertise in designing robust Salesforce applications. Questions test your ability to apply the right pattern — declarative vs. programmatic, which relationship type, which security model — for complex multi-requirement scenarios.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Modeling for Scale</p>
+                <p>Know when to use lookup vs. master-detail, external objects (Salesforce Connect), big objects, and custom metadata types. Understand the impact of each relationship type on reporting, rollups, and data access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Security Architecture Layers</p>
+                <p>Understand how object-level, field-level, and record-level security interact. Know the order of evaluation and how to use the Access Checker to diagnose access issues in complex orgs.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Apex Design Patterns</p>
+                <p>Know common design patterns: Singleton, Strategy, and Decorator for Apex. Understand trigger frameworks (one trigger per object pattern), virtual/abstract classes, and interface-based design for testability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Patterns</p>
+                <p>Know the canonical integration patterns: Remote Process Invocation (request/reply and fire-and-forget), Data Virtualization, Batch Data Sync, and UI Update via Remote Process. Match each to REST/SOAP/Platform Events.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Declarative vs. Programmatic Decision</p>
+                <p>Always justify when code is needed vs. when declarative tools suffice. Exam questions reward candidates who choose the simplest, most maintainable solution and understand the trade-offs.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function ApplicationArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

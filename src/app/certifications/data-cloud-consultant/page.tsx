@@ -225,6 +225,37 @@ export default function DataCloudConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Data Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Data Cloud Consultant exam tests your ability to design and implement a unified customer data platform. Focus on data ingestion architecture, identity resolution, segmentation, and activation — the full data lifecycle in Data Cloud.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Ingestion &amp; Data Streams</p>
+                <p>Know the difference between ingestion-based (real-time) and query-based data sources. Understand how Data Streams map source data to Data Cloud objects using the data model (Individual, Engagement, etc.).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Identity Resolution</p>
+                <p>Identity resolution matches and merges records from multiple sources into a single Unified Individual profile. Know how to configure matching rules, reconciliation rules, and how to handle merge conflicts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Segmentation &amp; Activation</p>
+                <p>Understand how to build segments using AND/OR logic across related data objects. Know activation targets (Marketing Cloud, Advertising Studio, CRM) and how segment membership flows to each target.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Calculated Insights &amp; Einstein</p>
+                <p>Know how to create Calculated Insights for metric computation (e.g., LTV, engagement score) using SOQL-like query language. Understand how Einstein features in Data Cloud use unified profiles for predictions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Cloud Permissions &amp; Governance</p>
+                <p>Understand Data Cloud permission sets, data spaces for data segregation, consent management, and the Data Cloud governance framework for handling PII and regulatory compliance.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -251,6 +282,7 @@ export default function DataCloudConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

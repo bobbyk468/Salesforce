@@ -220,6 +220,37 @@ export default function OmniStudioDeveloperPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce OmniStudio Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The OmniStudio Developer exam tests technical development of OmniStudio components: FlexCards, OmniScripts, DataRaptors, and Integration Procedures. Focus on configuration logic and custom development extensions.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniScript Design</p>
+                <p>Know how to configure OmniScript elements: Text/Number/Date inputs, Select (picklist/multi-select), File Upload, Validation, Set Values, and Navigate. Understand Step navigation, conditional visibility, and error handling patterns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">DataRaptor Transforms</p>
+                <p>Know the four DataRaptor types: Extract (reads Salesforce data), Load (writes to Salesforce), Transform (reformats data without CRM access), and Turbo Extract (simplified read). Know input/output JSON mapping configuration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Procedures</p>
+                <p>Know how to build Integration Procedures for server-side data orchestration: HTTP Action (external API calls), DataRaptor Turbo Action, Loop Action, Conditional Action, and Set Values. Understand how they differ from DataRaptors.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">FlexCard Development</p>
+                <p>Know how to configure FlexCard elements (field blocks, action blocks, state management) and how to embed FlexCards in Lightning pages and OmniScripts. Understand datasource configuration and card state transitions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom LWC in OmniStudio</p>
+                <p>Know how to create custom LWC components that extend OmniStudio: OmniscriptBaseMixin for accessing OmniScript context, custom components in FlexCards, and how to register custom components as OmniStudio elements.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function OmniStudioDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

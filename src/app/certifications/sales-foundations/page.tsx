@@ -220,6 +220,37 @@ export default function SalesFoundationsPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Sales Foundations Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Sales Foundations exam tests foundational knowledge of Sales Cloud features for new Salesforce users and sales professionals. Focus on the core sales process, account and opportunity management, and daily rep workflows.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Leads &amp; Lead Management</p>
+                <p>Know the Lead lifecycle: capture, qualify, assign (assignment rules), and convert. Understand what data transfers to Account, Contact, and Opportunity during conversion and what does not.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Account &amp; Contact Management</p>
+                <p>Know how to create and manage accounts (company) and contacts (individuals). Understand account hierarchy for parent/child relationships and how to track relationships between contacts across accounts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Opportunity Management</p>
+                <p>Know the Opportunity stages, sales process configuration, and how Stage-to-Stage movement drives pipeline reporting. Understand key opportunity fields: Amount, Close Date, Probability, and Forecast Category.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Activity Management</p>
+                <p>Know how to log calls, create tasks, and schedule events from Salesforce. Understand how Activity Timeline shows the history of interactions and how Einstein Activity Capture syncs emails and calendar events.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports &amp; Dashboards for Sales</p>
+                <p>Know the standard Sales Cloud reports: Pipeline report, Activities report, and Forecast summary. Understand how managers use dashboards to monitor team performance and how reps track their individual pipeline.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function SalesFoundationsPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

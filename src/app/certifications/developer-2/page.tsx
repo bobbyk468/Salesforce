@@ -262,6 +262,37 @@ export default function Developer2Page() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Platform Developer II Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The PD2 exam requires deep technical expertise — questions assume you can read and reason about code, not just identify syntax. Focus on complex governor limit scenarios, asynchronous patterns, integration architecture, and enterprise design principles.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Asynchronous Apex Mastery</p>
+                <p>Know all four async patterns: Queueable (chainable, stateful), Batch (large data sets), Scheduled (time-based), and Future (simple async). Understand governor limits in async contexts (higher SOQL/DML limits) and when each pattern is appropriate.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture Decisions</p>
+                <p>REST vs. SOAP vs. Platform Events vs. Change Data Capture — know the use cases for each. Understand outbound messaging, callout limits, Named Credentials, and how to handle integration errors gracefully.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Platform Events &amp; Event-Driven Architecture</p>
+                <p>Know how Platform Events enable event-driven, decoupled architectures. Understand the difference between Platform Events and CDC, how to publish events from Apex and Flows, and how subscribers process events reliably.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">LWC Advanced Patterns</p>
+                <p>Understand component communication patterns: parent-to-child via properties, child-to-parent via custom events, and sibling communication via a shared service. Know when to use @wire vs. imperative Apex calls.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing Architecture</p>
+                <p>PD2 emphasizes test design: mock callouts with Test.setMock, test data isolation (SeeAllData=false), testing async Apex with Test.startTest/stopTest, and achieving meaningful code coverage vs. superficial coverage.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -317,6 +348,7 @@ export default function Developer2Page() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function CPQBillingAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce CPQ and Billing Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CPQ &amp; Billing AP exam tests the full quote-to-cash process. Focus on CPQ configuration, Billing order generation, invoice processing, and revenue recognition — the complete lifecycle from quoting to recognizing revenue.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CPQ-to-Billing Object Chain</p>
+                <p>Master the object chain: Quote → Quote Line → Order → Order Product → Asset/Subscription → Contract → Invoice Line → Invoice. Know what triggers each object&apos;s creation and the key fields at each step.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Billing Order Generation</p>
+                <p>Know how to configure Order generation: Order Start Date, billing frequency, and how Billing handles co-termination for amendments. Understand how Net New vs. Upgrade vs. Downgrade orders generate different billing actions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Invoice Processing</p>
+                <p>Know the Invoice Run process: how to configure run schedules, what constitutes an invoice (grouping by account, billing day), and how the Legal Entity and Invoice Status workflow controls invoice approval.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Subscription Management</p>
+                <p>Know how to handle subscription changes mid-term: Cancel (immediate/end-of-term), Reduce Quantity, Add Products, and how proration is calculated for each type of change.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Revenue Recognition</p>
+                <p>Know how Revenue Schedules distribute revenue across periods, how the Accounting Period configuration controls recognition timing, and how to handle ramp deals with non-linear revenue schedules.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function CPQBillingAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

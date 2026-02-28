@@ -231,6 +231,37 @@ export default function ExperienceCloudPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Experience Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Experience Cloud Consultant exam tests implementation of portals, communities, and sites for external audiences. Focus on the sharing model for external users, template and component configuration, and authentication options.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">External User Sharing Model</p>
+                <p>External users have their own sharing rules separate from internal users. Know how to configure Sharing Sets (for portal users), External Account Hierarchy, and how Super User Access works for partner users.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Template &amp; Page Configuration</p>
+                <p>Know the available templates (Customer Service, Partner Central, Build Your Own), how to configure Lightning pages in Experience Builder, and how to control visibility of components with audience targeting.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Authentication Options</p>
+                <p>Know the difference between username/password login, SSO (SAML, OAuth), social login, and self-registration flows. Understand how to configure login pages, login flows, and identity verification.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CMS &amp; Content Management</p>
+                <p>Understand Salesforce CMS for managing content published to Experience Cloud sites. Know the difference between enhanced LWR sites and Aura-based sites and the migration path between them.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance &amp; Moderation</p>
+                <p>Know how CDN caching improves Experience Cloud performance, how moderation rules and criteria flag inappropriate content, and how to configure contributor roles for community-generated content.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -265,6 +296,7 @@ export default function ExperienceCloudPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

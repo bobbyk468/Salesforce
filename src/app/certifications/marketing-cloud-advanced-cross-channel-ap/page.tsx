@@ -89,6 +89,37 @@ export default function MarketingCloudAdvancedCrossChannelAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Advanced Cross-Channel Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Advanced Cross-Channel AP exam tests deep expertise in coordinating marketing across channels in Marketing Cloud. Focus on Journey Builder&apos;s advanced capabilities, cross-channel orchestration, and personalization at scale.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advanced Journey Builder</p>
+                <p>Know all Journey Builder entry sources (data extension, Salesforce data, inbound chat, API event), activity types, and decision splits. Understand how to use Einstein STO, Einstein Engagement Scoring, and random split for testing.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Cross-Channel Coordination</p>
+                <p>Know how to design journeys that span Email, SMS, Push, and Advertising channels. Understand how frequency capping, channel preference, and suppression work across channels in a single journey.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Transactional Messaging</p>
+                <p>Understand the difference between marketing messages (opt-in required) and transactional messages (service-based, bypass opt-out). Know how to configure Transactional Send Definitions via the API.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Personalization at Scale</p>
+                <p>Know how to use Dynamic Content blocks driven by data extension lookups, AMPscript conditional content, and Einstein Content Selection for AI-driven personalization across large audiences.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Journey Measurement &amp; Optimization</p>
+                <p>Know how to use Journey Analytics to measure path performance, configure control groups for holdout testing, and use Einstein Engagement Frequency to optimize send cadence.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MarketingCloudAdvancedCrossChannelAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

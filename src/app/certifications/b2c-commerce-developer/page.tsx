@@ -220,6 +220,37 @@ export default function B2CCommerceDeveloperPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce B2C Commerce Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The B2C Commerce Developer exam tests hands-on SFCC development: ISML templates, controller development (SFRA), and script development. Focus on the SFRA architecture and how to implement common storefront customizations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SFRA Architecture</p>
+                <p>Know the Storefront Reference Architecture (SFRA) MVC pattern: Routes (controllers), Models (data layer), Templates (ISML views), and how cartridges layer on top of SFRA using the cartridge path.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Controller Development</p>
+                <p>Know how to create custom routes (server.get/post/append/prepend/replace), use middleware for authentication/CSRF protection, and how to return JSON responses or render ISML templates from controllers.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">ISML Templates</p>
+                <p>Know ISML syntax: <isset>, <isif>, <isloop>, <isinclude>, <isreplace>, and how to use locale, currency, and content asset tags. Understand how template caching affects dynamic content rendering.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Script Development</p>
+                <p>Know how to write CommonJS-style scripts in SFCC, use the dw.* API (dw.catalog, dw.order, dw.customer), and how to call web services from scripts using the dw.net.HTTPClient.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Business Manager Configuration</p>
+                <p>Know key Business Manager configurations: catalog setup, pricebook management, promotion configuration, storefront configuration (site preferences), and how to use the UX Studio for cartridge management.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function B2CCommerceDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -261,6 +261,37 @@ export default function FieldServicePage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Field Service Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Field Service exam tests implementation of field service operations: scheduling, dispatch, mobile workers, and inventory. Focus on the Work Order data model, scheduling policy configuration, and the Field Service mobile app.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Work Order Data Model</p>
+                <p>Know the hierarchy: Work Order → Work Order Line Items → Service Appointments. Understand how Service Resources, Service Territories, and Operating Hours define scheduling availability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Scheduling Policies &amp; Optimization</p>
+                <p>Scheduling Policies define how Salesforce Scheduler and the Optimization engine assign appointments. Know the rule types (Work Rule, Service Objective), how they interact, and how to configure Scheduling Policy goals.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Dispatcher Console</p>
+                <p>Know how dispatchers use the Gantt view, map view, and appointment list to manage appointments. Understand how to manually schedule, unschedule, and reassign appointments, and how to use absence management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Mobile App Configuration</p>
+                <p>Know how to configure the Field Service mobile app: which records are accessible offline, how to configure the mobile flow, Required Skills, and how mobile workers complete Work Order Line Items and capture signatures.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Inventory Management</p>
+                <p>Understand how Product Items (serialized/non-serialized), Product Requests, and Product Consumed track parts consumption. Know how Return Orders handle reverse logistics and how inventory levels roll up by location.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -295,6 +326,7 @@ export default function FieldServicePage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -203,6 +203,37 @@ export default function TechnicalArchitectEvaluationPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Technical Architect Evaluation Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CTA Evaluation program assesses your readiness for the Review Board through a structured evaluation process. Focus on demonstrating architectural breadth, clear communication, and the ability to handle ambiguous requirements.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Demonstrating Architecture Breadth</p>
+                <p>Evaluators look for evidence of experience across all CTA domains: data architecture, integration, security, UX, environment management, and data migration. Build a portfolio of real-world architectural decisions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Handling Ambiguity</p>
+                <p>CTA evaluations present deliberately ambiguous scenarios. Practice asking clarifying questions, stating your assumptions clearly, and designing solutions that are flexible enough to accommodate multiple interpretations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Whiteboard Communication</p>
+                <p>Practice whiteboarding architecture diagrams quickly and clearly. Your diagram should show system boundaries, integration points, data flows, and key design decisions — without being cluttered.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Justification Framework</p>
+                <p>Use a consistent framework: state the requirement, present options, identify trade-offs for each, and recommend with clear rationale. This structured approach demonstrates CTA-level thinking.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Prepare with Mock Sessions</p>
+                <p>The CTA community regularly runs mock Review Board sessions. Participating in these is the single most effective preparation strategy — treat each mock as the real thing and seek detailed feedback.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.")}</p>
@@ -236,6 +267,7 @@ export default function TechnicalArchitectEvaluationPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Next Steps' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -220,6 +220,37 @@ export default function IndustriesCPQDeveloperPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Industries CPQ Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Industries CPQ Developer exam tests technical development of Vlocity/Industries CPQ solutions. Focus on product catalog configuration, pricing logic, custom development, and integration with order management.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Industries CPQ Product Catalog</p>
+                <p>Know how to configure Products, Product Characteristics, Attribute Categories, and how attribute values drive product configuration. Understand the Industries CPQ product hierarchy and how bundles are built.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing Architecture</p>
+                <p>Know how Pricing Plans, Price Lists, Price List Entries, and Promotion Sets work together. Understand how the pricing engine applies promotions, discounts, and charge definitions to calculate the final price.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Transaction Items &amp; Decomposition</p>
+                <p>Know the transaction item data model: how products decompose into order items, how asset-based ordering (ABO) tracks existing subscriber assets, and how amendments and disconnections update asset records.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom Development Patterns</p>
+                <p>Know how to extend Industries CPQ with Apex: custom pricing engine hooks, custom product validation rules, and how to integrate custom calculation logic without overriding managed package logic.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management Integration</p>
+                <p>Know how Industries CPQ integrates with Order Management for order fulfillment: decomposition rules, order templates, and how CPQ orders trigger downstream fulfillment processes.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function IndustriesCPQDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

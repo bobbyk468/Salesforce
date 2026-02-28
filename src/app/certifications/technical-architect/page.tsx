@@ -220,6 +220,37 @@ export default function TechnicalArchitectPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Certified Technical Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CTA credential is the most prestigious Salesforce certification. The written exam and Review Board test your ability to architect enterprise solutions, justify technical decisions, and communicate trade-offs at an executive level.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Architecture Decision Justification</p>
+                <p>Every technical decision must be backed by clear reasoning tied to the client&apos;s requirements, constraints, and principles. Practice articulating why you chose one approach over alternatives — this is what the Review Board evaluates.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Trade-off Analysis</p>
+                <p>CTAs must identify trade-offs: performance vs. simplicity, customization vs. upgradability, cost vs. scalability. Practice presenting these trade-offs clearly and recommending the best option with justification.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Risk Identification &amp; Mitigation</p>
+                <p>CTA scenarios include risks (data migration risks, integration failure points, security gaps). Know how to identify risks proactively and propose mitigation strategies for each.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Stakeholder Communication</p>
+                <p>The Review Board assesses how well you communicate complex technical concepts to diverse audiences: executives, project managers, developers. Practice explaining architecture decisions in plain language.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration &amp; Data Architecture Depth</p>
+                <p>CTAs must have deep knowledge of integration patterns, data modeling, large data volumes, and security. Review all architect-level topics (Integration Architect, Data Architect, IAM Architect) as they are all in scope.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function TechnicalArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

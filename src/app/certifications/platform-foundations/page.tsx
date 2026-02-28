@@ -220,6 +220,37 @@ export default function PlatformFoundationsPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Platform App Builder Foundations Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              This associate-level exam tests foundational knowledge of the Salesforce platform. Questions focus on what Salesforce can do, how core features work together, and basic configuration — ideal for those new to the ecosystem.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Understand the Core Data Model</p>
+                <p>Know standard vs. custom objects, field types, and relationship types (lookup vs. master-detail). Understand how the App Builder uses these building blocks to create business applications.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Core Automation Features</p>
+                <p>Know Flow Builder for automation, validation rules for data quality, formula fields for calculated values, and approval processes for multi-step reviews. No deep configuration details required — focus on use cases.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Management Basics</p>
+                <p>Profiles control what users can do; Roles control what data they can see via the role hierarchy. Permission Sets add access beyond a profile. These three work together to govern user access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reports &amp; Dashboards Overview</p>
+                <p>Know that reports query Salesforce data and dashboards visualize report data. Understand the four report types at a high level and that dashboards require a running user for data access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">The Salesforce Ecosystem</p>
+                <p>Understand AppExchange for third-party apps, Trailhead for learning, and the main Salesforce clouds (Sales, Service, Marketing, Experience, Platform) at a high level — what each cloud solves and when it&apos;s appropriate.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function PlatformFoundationsPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

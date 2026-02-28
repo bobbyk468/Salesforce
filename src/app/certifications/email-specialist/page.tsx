@@ -265,6 +265,37 @@ export default function EmailSpecialistPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Email Specialist Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Email Specialist exam tests deep knowledge of Marketing Cloud email features, from subscriber management to advanced personalization. Questions are scenario-based and focus on solving deliverability, segmentation, and automation problems.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Email Studio Data Model</p>
+                <p>Know All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and Filtered Data Extensions. Understand how subscriber status (Active, Bounced, Unsubscribed, Held) affects send eligibility.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AMPscript for Personalization</p>
+                <p>Know core AMPscript functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Questions often present AMPscript snippets and ask what they output.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Journey Builder vs. Automation Studio</p>
+                <p>Journey Builder is customer-driven (triggered by individual behavior). Automation Studio is time/event-driven (runs on a schedule or file drop). Know when to use each and what activities are exclusive to each tool.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Deliverability Best Practices</p>
+                <p>Understand SPF, DKIM, DMARC, and how IP warming works. Know what causes spam complaints and bounces (hard vs. soft), and how Marketing Cloud handles deliverability automatically vs. what requires configuration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">A/B Testing &amp; Reporting</p>
+                <p>Know how to configure A/B tests (subject line, from name, content, send time), how to set the winner criteria, and which send-level metrics (Delivery Rate, Open Rate, Click Rate, Bounce Rate) measure what.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -301,6 +332,7 @@ export default function EmailSpecialistPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

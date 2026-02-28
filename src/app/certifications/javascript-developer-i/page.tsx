@@ -220,6 +220,37 @@ export default function JavaScriptDeveloperIPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce JavaScript Developer I Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The JavaScript Developer I exam tests core JavaScript and modern web concepts applied in the Salesforce context. Treat it as a JavaScript fundamentals exam first — LWC knowledge is important, but strong ES6+ and async programming foundations are what carry candidates through.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Master ES6+ Syntax</p>
+                <p>Arrow functions, destructuring, spread/rest operators, template literals, modules (import/export), and classes are heavily tested. Know how each differs from ES5 equivalents and common pitfalls.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Promises &amp; Async/Await</p>
+                <p>Understand the Promise lifecycle (pending, fulfilled, rejected), chaining with .then()/.catch()/.finally(), and how async/await is syntactic sugar over promises. Know how errors propagate and how Promise.all() works.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Closures, Scope &amp; &apos;this&apos;</p>
+                <p>These classic JavaScript topics appear frequently. Understand lexical scope, how closures capture variables from outer functions, and the four rules that determine what &apos;this&apos; refers to (default, implicit, explicit, new binding).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">LWC Lifecycle &amp; Reactivity</p>
+                <p>Know the LWC component lifecycle hooks: constructor, connectedCallback, renderedCallback, disconnectedCallback. Understand reactive properties, how @track (legacy) and @api work, and how the wire service fetches data reactively.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">The Event Loop &amp; Web APIs</p>
+                <p>Understand call stack, event loop, microtask queue (promises), and macrotask queue (setTimeout). Know the fetch API, async patterns for HTTP calls, and how LWC&apos;s shadow DOM restricts direct DOM manipulation.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function JavaScriptDeveloperIPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

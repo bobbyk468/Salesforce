@@ -220,6 +220,37 @@ export default function MarketingCloudEngagementFoundationsPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Engagement Foundations Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Marketing Cloud Engagement Foundations exam tests foundational knowledge of the platform for new users. Focus on understanding the core studios, the subscriber data model, and basic email campaign execution.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Core Studios Overview</p>
+                <p>Know what each studio does: Email Studio (email campaigns), Mobile Studio (SMS/push), Advertising Studio (digital ads), Social Studio (social media), and Journey Builder (cross-channel orchestration).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Subscriber Data Model</p>
+                <p>Understand All Subscribers, Lists, and Data Extensions. Know when lists are appropriate (simple, volume-based segments) vs. data extensions (relational data, complex attributes).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Basic Email Send Process</p>
+                <p>Know the steps to send an email: select an audience (list or data extension), choose a send classification, configure tracking, and initiate a send. Understand how to use guided sends vs. the send wizard.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Contact Builder Overview</p>
+                <p>Understand Contact Builder&apos;s role in unifying subscriber data: Attribute Groups, Relationships, and how data extension data links to the Contact record via Contact Key.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting Fundamentals</p>
+                <p>Know the core email metrics: Sent, Delivered, Bounced (hard/soft), Opened, Clicked, Unsubscribed, and Spam Complaints. Understand how to access Tracking reports and what each metric measures.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function MarketingCloudEngagementFoundationsPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

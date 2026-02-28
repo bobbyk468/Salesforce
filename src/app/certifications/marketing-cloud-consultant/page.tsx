@@ -258,6 +258,37 @@ export default function MarketingCloudConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Marketing Cloud Consultant exam tests solution design and implementation planning for Marketing Cloud. Focus on discovering requirements, designing scalable data architectures, and integrating Marketing Cloud with Salesforce CRM.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Discovery &amp; Requirements</p>
+                <p>Know how to elicit marketing requirements: campaign types, audience segmentation needs, personalization requirements, and reporting needs. Map business requirements to Marketing Cloud features and identify gaps.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Data Architecture Design</p>
+                <p>Design data extensions, relationship tables, and how to structure data for efficient segmentation. Know when to use Contact Builder data model vs. standalone data extensions for complex subscriber data.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Marketing Cloud Connect</p>
+                <p>Know how Marketing Cloud Connect integrates with Salesforce CRM: synced data extensions, triggered sends from Salesforce records, Journey Builder Salesforce activities, and how the connected app is configured.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Cross-Channel Strategy</p>
+                <p>Understand how to design coordinated campaigns across Email, SMS (MobileConnect), Push (MobilePush), and Advertising. Know how Journey Builder orchestrates cross-channel experiences.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governance &amp; Compliance</p>
+                <p>Know GDPR, CAN-SPAM, and CASL requirements and how to implement compliance in Marketing Cloud: consent management, preference centers, unsubscribe handling, and data retention policies.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -292,6 +323,7 @@ export default function MarketingCloudConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -89,6 +89,37 @@ export default function PublicSectorSolutionsAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Public Sector Solutions Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Public Sector Solutions AP exam tests Salesforce implementation for government agencies. Focus on grants management, licensing and permitting, case management, and constituent service.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Public Sector Data Model</p>
+                <p>Know PSS-specific objects: Application (grants, licenses, permits), Inspection, Visit, and how they extend standard Cases and Accounts for government constituent management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Grants Management</p>
+                <p>Know how to configure grants programs: grant application lifecycle (intake → review → award), scoring and review workflows, disbursement tracking, and grantee reporting requirements.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Licensing &amp; Permitting</p>
+                <p>Know how to configure the licensing lifecycle: application submission (portal or in-person), automated eligibility checks, inspection scheduling (FSL integration), and license issuance with expiry and renewal management.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Constituent 360 &amp; Self-Service</p>
+                <p>Know how to configure the constituent portal (Experience Cloud) for government: identity verification, application submission, case status tracking, and how constituents manage their permits and licenses online.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniStudio for Government</p>
+                <p>Know how PSS uses OmniStudio: OmniScripts for guided application intake, FlexCards for agent desktop views, and Integration Procedures for backend system lookups. Understand the standard PSS OmniStudio components.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function PublicSectorSolutionsAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

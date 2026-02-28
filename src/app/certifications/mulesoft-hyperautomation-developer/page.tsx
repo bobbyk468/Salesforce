@@ -220,6 +220,37 @@ export default function MuleSoftHyperautomationDeveloperPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the MuleSoft Hyperautomation Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The MuleSoft Hyperautomation Developer exam tests integration of MuleSoft with RPA (Robotic Process Automation) and IDP (Intelligent Document Processing) capabilities. Focus on designing end-to-end automation solutions.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Hyperautomation Concepts</p>
+                <p>Know what hyperautomation means: combining API-led integration (MuleSoft), RPA (MuleSoft RPA), IDP (Intelligent Document Processing), and AI/ML to automate complex end-to-end business processes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">MuleSoft RPA Architecture</p>
+                <p>Understand how MuleSoft RPA uses bots to automate UI-based tasks that lack APIs. Know how to trigger RPA bots from Mule flows via the RPA API and how to handle bot execution results.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Intelligent Document Processing</p>
+                <p>Know how IDP extracts structured data from unstructured documents (invoices, contracts, forms) using OCR and ML models. Understand how to integrate IDP results back into Mule flows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Process Orchestration</p>
+                <p>Know how to orchestrate multi-step automations combining API calls, RPA bots, and IDP processes within a single Mule flow. Understand how to handle errors and exceptions in orchestrated automation flows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Automation Selection Framework</p>
+                <p>Know when to use each automation approach: APIs for systems with integration interfaces, RPA for legacy UI-only systems, IDP for document-heavy processes, and AI/ML for pattern recognition tasks.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function MuleSoftHyperautomationDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

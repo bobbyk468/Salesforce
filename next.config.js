@@ -5,6 +5,10 @@ const nextConfig = {
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },
+  images: {
+    formats: ['image/avif', 'image/webp'],
+    minimumCacheTTL: 31536000,
+  },
   // gzip responses for ALL routes (fixes Uncompressed Page audit when using next start)
   // Production builds minify JS/CSS (SWC/Terser). "Unminified" audit may be from dev build or tool false positive.
   productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller

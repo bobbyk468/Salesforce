@@ -89,6 +89,37 @@ export default function OrderManagementAdminAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Order Management Administrator Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Order Management Admin AP exam tests administration of Salesforce Order Management for omnichannel fulfillment. Focus on order lifecycle configuration, fulfillment routing, and inventory allocation.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management Data Model</p>
+                <p>Know the OM data model: Order Summary (master order record), Fulfillment Order (fulfillment unit), Fulfillment Order Line Item, Order Delivery Group (ship-to address), and how these relate to standard Order objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Routing &amp; Allocation</p>
+                <p>Know how to configure routing rules: Order Routing Rule Sets, Inventory allocation logic (allocate from nearest location), and how the routing engine selects fulfillment locations based on inventory availability.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Lifecycle Configuration</p>
+                <p>Know the standard OM order statuses and the actions that transition between them: Activated → Fulfillment → Shipped → Delivered → Return/Refund. Know how Process Builders or Flows automate status transitions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Return &amp; Refund Processing</p>
+                <p>Know how to configure return orders: Return Merchandise Authorizations (RMA), return reason codes, refund payment processing, and how restocking updates inventory counts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OM Integration with Commerce</p>
+                <p>Know how Salesforce Order Management integrates with B2B Commerce and B2C Commerce (SFCC): order creation via API, order status sync back to the storefront, and how the customer order history portal works.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function OrderManagementAdminAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

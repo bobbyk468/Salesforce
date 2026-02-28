@@ -89,6 +89,37 @@ export default function ProcessAutomationAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Process Automation Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Process Automation AP exam focuses entirely on Flow Builder and automation best practices. Expect detailed scenario questions about flow types, trigger configurations, error handling, and choosing the right automation approach.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Know All Flow Types &amp; Triggers</p>
+                <p>Record-Triggered (before/after save, before/after delete), Screen, Scheduled, Auto-Launched, Platform Event-Triggered, and Orchestration flows — know when each is appropriate and what triggers each type.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Before-Save vs. After-Save Trade-offs</p>
+                <p>Before-save flows are faster (no DML operation) and best for updating the triggering record&apos;s fields. After-save flows allow related record operations and sending emails but consume DML statements and governor limits.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Error Handling with Fault Paths</p>
+                <p>Every flow element that can fail should have a fault connector configured. Use Fault paths to display user-friendly error messages in Screen Flows and to log errors in auto-launched flows.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Collections &amp; Governor Limits</p>
+                <p>Flows count against DML and SOQL limits. Use collections and loops efficiently — get all records first in one Get element, loop through them, and store results in a collection before a single DML operation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Flow Testing &amp; Deployment</p>
+                <p>Use debug mode to trace flow execution. Understand how to write flow test automation in the Flow test suite and how to migrate flows between sandboxes as active or inactive versions.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function ProcessAutomationAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

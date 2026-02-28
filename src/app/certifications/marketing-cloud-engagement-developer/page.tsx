@@ -220,6 +220,37 @@ export default function MarketingCloudEngagementDeveloperPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Engagement Developer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Marketing Cloud Engagement Developer exam tests technical development skills: AMPscript, SSJS, REST/SOAP APIs, and custom activities. Questions require you to write or interpret code snippets and design custom solutions.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AMPscript Proficiency</p>
+                <p>Master AMPscript data functions: Lookup, LookupRows, LookupOrderedRows, UpdateData, InsertData. Know conditional logic (IIF, CASE), date/string functions, and how to use AMPscript in subject lines, preheaders, and email body.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Server-Side JavaScript (SSJS)</p>
+                <p>Know SSJS for CloudPages and landing page logic: using Platform.Load to import functions, Core.JavaScript library for data extensions (Rows, Row objects), and how SSJS differs from client-side JavaScript.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">REST &amp; SOAP API Usage</p>
+                <p>Know the key Marketing Cloud REST API endpoints: /contacts/v1/contacts, /messaging/v1/messageDefinitionSends, /data/v1/async, and how to authenticate using OAuth 2.0 client credentials.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom Activities in Journey Builder</p>
+                <p>Know how to build custom Journey Builder activities using the Custom Activity API: the config.json structure, execute/save/publish/validate endpoints, and how activities interact with Journey Builder&apos;s UI.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Query Activities &amp; Data Extensions</p>
+                <p>Know how to write SQL in Automation Studio Query Activities to transform and aggregate data extension data. Understand overwrite vs. append destination actions and how to join data extensions in queries.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function MarketingCloudEngagementDeveloperPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

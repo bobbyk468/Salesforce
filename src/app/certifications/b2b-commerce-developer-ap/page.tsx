@@ -89,6 +89,37 @@ export default function B2BCommerceDeveloperAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce B2B Commerce Developer Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The B2B Commerce Developer AP exam tests custom development for B2B Commerce stores. Focus on the B2B Commerce extensibility framework, LWC development, and integration patterns.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">B2B Commerce Extensibility Framework</p>
+                <p>Know the key extension points: Custom LWC components in the storefront, Cart Extension Apex classes for custom cart logic, Integration APIs for external catalog and pricing, and checkout step overrides.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Storefront LWC Development</p>
+                <p>Know how to create custom LWC components for the B2B storefront: using the ConnectApi in JavaScript, styling with the B2B CSS framework, and deploying components to the Experience Cloud site.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Apex Extension Points</p>
+                <p>Know how to implement CartExtension.CartCalculate for custom pricing/promotions, CartExtension.CartOrchestrator for cart validation, and how to register extensions in the Cart Lifecycle class.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">External Catalog Integration</p>
+                <p>Know how to integrate an external PIM or catalog system: using the Integration APIs to sync product data, configuring data feeds, and how real-time pricing calls from external systems work.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Fulfillment Integration</p>
+                <p>Know how to integrate B2B Commerce orders with external ERP systems: order creation events, custom order processing logic, and how to implement order status updates from external systems.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function B2BCommerceDeveloperAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

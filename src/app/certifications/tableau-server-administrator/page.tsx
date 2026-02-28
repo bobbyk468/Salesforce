@@ -232,6 +232,37 @@ export default function TableauServerAdministratorPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Tableau Server Certified Administrator Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Tableau Server Administrator exam tests server administration skills: installation, configuration, performance monitoring, and troubleshooting. Focus on TSM commands, backup/restore, and user management at scale.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">TSM Command-Line Interface</p>
+                <p>Know key TSM commands: tsm status, tsm configuration set/get, tsm restart, tsm maintenance backup/restore, and tsm sites export/import. Administrators need command-line fluency for the exam.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User &amp; Content Management</p>
+                <p>Know how to manage users (local vs. Active Directory), site roles and their capabilities, groups, and how to bulk-import users with CSV. Understand how to configure site limits (storage, user counts).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Monitoring</p>
+                <p>Know how to use Tableau Server&apos;s built-in monitoring: the Admin views (Background Tasks, Stats for Space Used, Traffic to Views), Resource Monitoring Tool (RMT), and PostgreSQL repository queries.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Backup &amp; Recovery</p>
+                <p>Know how to configure backup schedules using TSM, what is included in a TSM backup (content, configuration, PostgreSQL), and how to restore from backup including the recovery process for failed nodes.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Authentication Configuration</p>
+                <p>Know how to configure local authentication, Active Directory/LDAP, SAML SSO, OpenID Connect, and Kerberos. Understand how authentication method affects user provisioning and session management.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -266,6 +297,7 @@ export default function TableauServerAdministratorPage() {
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'server-admin-scenarios', title: 'Admin Scenarios' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

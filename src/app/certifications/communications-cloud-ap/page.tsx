@@ -89,6 +89,37 @@ export default function CommunicationsCloudAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Communications Cloud Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Communications Cloud AP exam tests configuration of Vlocity/Industries solutions for communications service providers (CSPs). Focus on product catalog, CPQ, order management, and the CSP-specific data model.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Communications Cloud Data Model</p>
+                <p>Know the CSP-specific objects: Account (residential/business), Service Account, Service Point, Subscription, Product (service plans), and how they map to standard Salesforce objects.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Industries CPQ for Telecom</p>
+                <p>Know how Industries CPQ manages telecom product configuration: voice, data, and value-added services as products with attributes (data allowance, speeds). Understand bundled plan configuration.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Order Management for CSPs</p>
+                <p>Know the telecom order lifecycle: order capture, decomposition (splitting into work items), fallout management, and order tracking. Understand how service activation triggers downstream provisioning.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customer 360 for Telecom</p>
+                <p>Know how to configure the Communications Cloud customer view: account hierarchy for business customers, service account billing, usage data display, and churn prediction with Einstein.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OmniStudio in Communications Cloud</p>
+                <p>Know how Communications Cloud uses OmniStudio (FlexCards, OmniScripts) for agent desktop and self-service portal experiences. Understand standard Communication Cloud OmniScripts like &apos;Add a Line.&apos;</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function CommunicationsCloudAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

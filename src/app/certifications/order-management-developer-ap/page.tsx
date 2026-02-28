@@ -89,6 +89,37 @@ export default function OrderManagementDeveloperAPPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Order Management Developer Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Order Management Developer AP exam tests custom development for Salesforce Order Management. Focus on API integration, custom routing logic, and extending the OM platform with Apex and Flow.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OM Connect REST API</p>
+                <p>Know the key Order Management REST API endpoints: create orders, cancel order items, create return orders, and query order summaries. Understand the authentication model and how to structure API requests.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom Routing Logic</p>
+                <p>Know how to extend Order Management routing: custom Apex routing rules for complex allocation scenarios, custom Flow actions for routing decisions, and how to integrate with external WMS systems for inventory queries.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Event-Driven Order Processing</p>
+                <p>Know how to use Platform Events and Change Data Capture to trigger external systems when OM order status changes. Understand how to build event subscribers that react to fulfillment milestones.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Custom Order Lifecycle Actions</p>
+                <p>Know how to build custom Apex actions that transition order status, custom quick actions on the Order Summary page, and how to use Invocable Methods to call Apex from Flow within the OM context.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration with External Systems</p>
+                <p>Know integration patterns for OM: ERP integration (outbound order confirmation, inbound ship confirmation), WMS integration (inventory queries, fulfillment instructions), and how to handle integration failures gracefully.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function OrderManagementDeveloperAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

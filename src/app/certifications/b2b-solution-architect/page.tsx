@@ -89,6 +89,37 @@ export default function B2BSolutionArchitectPage() {
               </div>
             </div>
           </div>
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce B2B Solution Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The B2B Solution Architect exam tests multi-cloud architecture design for B2B scenarios. Focus on designing solutions that span Sales Cloud, Service Cloud, B2B Commerce, and CPQ for complex B2B customer experiences.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Cloud B2B Architecture</p>
+                <p>Know how to design end-to-end B2B solutions spanning Sales Cloud (opportunity management), Service Cloud (support), B2B Commerce (self-service purchasing), and CPQ (complex configuration). Understand data flow between clouds.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">B2B Data Model Design</p>
+                <p>Know how to model complex B2B relationships: Account hierarchies (parent/subsidiary), multiple contacts per account, multiple ship-to addresses, and how the B2B Commerce buyer/account model maps to Sales Cloud.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Integration Architecture for B2B</p>
+                <p>Know common B2B integration scenarios: ERP integration for order fulfillment (SAP, Oracle), PIM integration for product data, and how Platform Events or MuleSoft orchestrate these integrations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">CPQ for B2B Commerce</p>
+                <p>Know how CPQ and B2B Commerce complement each other: CPQ for complex configured products (bundles, rules) vs. B2B Commerce for catalog-driven self-service purchasing. Know when to recommend each.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Customer 360 for B2B</p>
+                <p>Know how to design a unified customer view for B2B: Account 360 dashboards, Relationship Maps, Account hierarchies, and how Data Cloud unifies B2B customer data from multiple systems.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function B2BSolutionArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

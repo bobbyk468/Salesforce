@@ -220,6 +220,37 @@ export default function EducationCloudConsultantPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Education Cloud Consultant Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Education Cloud Consultant exam tests implementation of Salesforce for higher education institutions. Focus on the Education Data Architecture (EDA), student lifecycle management, and how Education Cloud extends standard Salesforce.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Education Data Architecture (EDA)</p>
+                <p>EDA replaces the standard Account/Contact model with an education-specific model: Accounts as educational institutions, Contacts as students/faculty, and Affiliations linking them. Know how EDA&apos;s Household and Administrative account types differ.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Student Lifecycle Management</p>
+                <p>Understand how Admissions Connect, Student Success Hub, and Recruitment and Admissions features map to the student journey from prospect through alumni. Know which features are in Education Cloud vs. standard Salesforce.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Program Enrollment &amp; Course Management</p>
+                <p>Know the EDA objects: Programs, Courses, Course Offerings, and Course Enrollments. Understand how students enroll in course offerings and how academic records are maintained.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Advisor &amp; Success Hub Configuration</p>
+                <p>Know how to configure the Success Hub for advisors with student alerts, appointments, and care plans. Understand how Advisor Link enables student-initiated advising appointments.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting for Education</p>
+                <p>Understand common education reporting needs: enrollment funnels, retention rates, advising caseloads, and alumni engagement. Know how to build reports using EDA-specific report types.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function EducationCloudConsultantPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

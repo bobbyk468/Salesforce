@@ -89,6 +89,37 @@ export default function MarketingCloudPersonalizationAPPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Marketing Cloud Personalization Accredited Professional Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Marketing Cloud Personalization (Interaction Studio) AP exam tests real-time personalization capabilities. Focus on web SDK implementation, campaign configuration, and how to use behavioral data for personalized experiences.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Web SDK Implementation</p>
+                <p>Know how to implement the Personalization web SDK (Evergage beacon), configure sitemap mappings for page types and item catalog, and how event data is sent to the Personalization platform.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Catalog &amp; User Profile</p>
+                <p>Understand the Personalization catalog (Products, Articles, Blog Posts) and how item attributes drive recommendations. Know how User Profile attributes are built from behavioral events and how they power segmentation.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Campaign Types</p>
+                <p>Know the four campaign types: Web (in-page personalization), Triggered Email, Open-Time Email, and Server-Side (API-based). Understand when to use each and how they integrate with Marketing Cloud.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Recipes &amp; Recommendations</p>
+                <p>Know how to configure Einstein Recipe types (Trending, Recently Viewed, Similar Items, Collab Filtering) and how Boosters and Exclusions customize recommendation logic for specific use cases.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Reporting &amp; A/B Testing</p>
+                <p>Know how to interpret campaign performance reports (impressions, CTR, revenue per impression) and configure A/B tests against a control group to measure the lift from personalization.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -113,6 +144,7 @@ export default function MarketingCloudPersonalizationAPPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

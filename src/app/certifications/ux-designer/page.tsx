@@ -220,6 +220,37 @@ export default function UXDesignerPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce UX Designer Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The UX Designer exam tests user experience principles applied to Salesforce implementations. Focus on the Lightning Design System, accessibility standards, user research methods, and how to design usable Salesforce configurations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Lightning Design System (SLDS)</p>
+                <p>Know the SLDS component library, design tokens, utility classes, and how SLDS ensures visual consistency across Salesforce. Understand when to use standard components vs. custom-styled components.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Accessibility Standards</p>
+                <p>Know WCAG 2.1 AA requirements: keyboard navigation, screen reader support (ARIA labels), color contrast ratios (4.5:1 for normal text), and how to use Salesforce Accessibility Checker to audit Lightning components.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Research in Salesforce Projects</p>
+                <p>Know how to conduct user interviews, usability tests, and card sorting exercises for Salesforce page layout and navigation design. Understand how to translate findings into actionable design recommendations.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Page Layout &amp; App Design</p>
+                <p>Know how to design Lightning page layouts: component placement, progressive disclosure, and how to use visibility rules to reduce cognitive load. Understand how the Lightning App Builder enables no-code page customization.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Prototyping &amp; Testing</p>
+                <p>Know how to create wireframes and clickable prototypes for Salesforce configurations using tools like Figma or SLDS prototyping kits. Understand how to run usability tests with real Salesforce users.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function UXDesignerPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

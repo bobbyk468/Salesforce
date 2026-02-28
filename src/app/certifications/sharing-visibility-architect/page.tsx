@@ -220,6 +220,37 @@ export default function SharingVisibilityArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Sharing and Visibility Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Sharing &amp; Visibility Architect exam focuses entirely on Salesforce&apos;s record access model. Every question tests your ability to design and troubleshoot complex sharing configurations — from OWDs to Apex Managed Sharing.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Access Evaluation Order</p>
+                <p>Understand the exact order in which access is evaluated: OWD → Role Hierarchy → Sharing Rules → Manual Sharing → Teams → Apex Managed Sharing → Profile/PermSet object permissions. Know which layers are additive.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Criteria-Based Sharing Rules</p>
+                <p>Know the difference between Owner-Based and Criteria-Based Sharing Rules. Understand when criteria-based rules fire, their limits (300 per object), and how they interact with other sharing mechanisms.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">External Sharing Model</p>
+                <p>The external sharing model (OWD for portal users) is separate from the internal model. Know how to configure Sharing Sets for portal users and how Account Teams extend access to Experience Cloud contacts.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Performance Considerations</p>
+                <p>Complex sharing configurations (large sharing rule counts, deep role hierarchies) cause sharing recalculation performance issues. Know how to use defer sharing calculation and design for recalculation efficiency.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Apex Managed Sharing</p>
+                <p>Apex Managed Sharing uses Share objects (AccountShare, etc.) with a specific Cause value. Know how to grant, revoke, and maintain programmatic shares and how they persist through OWD changes.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function SharingVisibilityArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

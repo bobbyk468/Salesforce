@@ -220,6 +220,37 @@ export default function IdentityAccessManagementArchitectPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Identity and Access Management Architect Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The IAM Architect exam tests deep knowledge of authentication, authorization, and identity federation. Focus on OAuth flows, SAML configuration, Connected Apps, and how to secure both Salesforce and external applications.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">OAuth 2.0 Flows</p>
+                <p>Know all OAuth flows: Web Server (authorization code), User-Agent (implicit), Username-Password, JWT Bearer, Device, and Refresh Token flows. Match each flow to its use case and security characteristics.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">SAML &amp; SSO Configuration</p>
+                <p>Understand how SAML 2.0 enables SSO: SP-Initiated vs. IdP-Initiated flows, assertion attributes, Federation IDs, and how to configure Salesforce as a SP or IdP. Know common troubleshooting steps.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Connected Apps &amp; Scopes</p>
+                <p>Know how Connected Apps control external system access to Salesforce APIs. Understand OAuth scopes, IP restrictions, user provisioning (SCIM), and how policies control access.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Multi-Factor Authentication</p>
+                <p>Know MFA enforcement methods: Salesforce Authenticator, TOTP apps, security keys. Understand how MFA interacts with SSO (IdP-provided MFA vs. Salesforce MFA), and the MFA enforcement timeline implications.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce Identity Features</p>
+                <p>Know User Provisioning for Connected Apps, Identity Connect (AD sync), Login Flows for custom authentication logic, and how External Identity licenses differ from internal user licenses.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function IdentityAccessManagementArchitectPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

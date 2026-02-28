@@ -261,6 +261,37 @@ export default function SlackAdministratorPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce Slack Administrator Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Slack Administrator exam tests workspace administration skills: user management, channel governance, app management, and security configuration. Focus on enterprise-grade Slack management for large organizations.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Workspace &amp; Org Administration</p>
+                <p>Know the difference between single-workspace organizations and Enterprise Grid (multi-workspace). Understand how to manage users, channels, and settings at both the workspace and org level.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Channel Governance</p>
+                <p>Know how to configure channel naming conventions, default channels, required channels, and channel management policies. Understand how to use channel manager settings to control who can create channels.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">App Management &amp; Security</p>
+                <p>Know how to manage the Slack App Directory: approving apps, restricting app installation, and configuring app permissions. Understand how to use App Approval workflows for enterprise compliance.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Compliance &amp; DLP</p>
+                <p>Know Slack&apos;s Enterprise Mobility Management (EMM), message retention policies, eDiscovery/export capabilities, and how to configure Data Loss Prevention (DLP) integrations for regulated industries.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">User Provisioning &amp; SSO</p>
+                <p>Know how to configure SAML SSO for Slack, SCIM provisioning for automated user lifecycle management, and how to use Slack&apos;s Directory to manage user profiles and deactivations.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -295,6 +326,7 @@ export default function SlackAdministratorPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

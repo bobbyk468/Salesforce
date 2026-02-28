@@ -220,6 +220,37 @@ export default function AIAssociatePage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce AI Associate Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The AI Associate exam tests foundational AI literacy — it is a conceptual understanding exam, not a coding exam. Focus on AI ethics, Salesforce&apos;s Trusted AI principles, and recognizing Einstein features and their use cases.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Salesforce&apos;s Trusted AI Principles</p>
+                <p>Know the five principles: Responsible, Accountable, Transparent, Empowering, and Inclusive. Questions about AI ethics and governance will reference these principles — understand what each means in practice.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">AI Terminology at a Glance</p>
+                <p>Distinguish between AI, Machine Learning, Deep Learning, and Generative AI. Know what training data, a model, inference, and a prompt mean without needing mathematical depth.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Features &amp; Use Cases</p>
+                <p>Know Einstein Lead Scoring, Opportunity Insights, Einstein Bots, Einstein Search, Einstein Next Best Action, and Einstein Copilot at a feature level — what each does and when to recommend it to a business.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Bias, Fairness &amp; Model Drift</p>
+                <p>Understand how training data bias affects model outputs, what model drift means over time, and why human oversight and regular model retraining matter for responsible AI deployment.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Generative AI &amp; Grounding</p>
+                <p>Know what large language models (LLMs) do, what hallucination means and why it is a risk, and how Salesforce Einstein Copilot uses grounding with CRM data to produce more accurate, contextual responses.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -246,6 +277,7 @@ export default function AIAssociatePage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

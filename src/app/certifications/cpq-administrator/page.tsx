@@ -251,6 +251,37 @@ export default function CPQAdministratorPage() {
             </div>
           </div>
 
+
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Salesforce CPQ Administrator Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The CPQ Administrator exam tests configuration of the full quote-to-cash process using Salesforce CPQ. Scenarios describe complex pricing or quoting requirements — know the CPQ data model and configuration options deeply.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Product &amp; Bundle Configuration</p>
+                <p>Know how to configure product options, bundle components, and feature groups. Understand Option Constraints (dependency/exclusion), Nested Bundles, and how Dynamic Bundles adjust products based on field values.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Pricing Waterfall</p>
+                <p>Understand the CPQ pricing waterfall sequence: List Price → Special Price → Regular Price → Customer Price → Net Price. Know how Discount Schedules, Block Pricing, and Price Rules modify prices at each stage.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Approval Processes in CPQ</p>
+                <p>CPQ approval processes can trigger based on quote line fields (e.g., discount thresholds). Know how Approval Rules work, how to chain approvals, and how the Approvals object integrates with Salesforce native approvals.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Quote Document Generation</p>
+                <p>Know how to configure Quote Templates using template content, template sections, and column objects. Understand how DocuSign integration enables e-signature and how quote documents relate to quote lines.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Contract Amendments &amp; Renewals</p>
+                <p>Understand how CPQ manages contract amendments (adding/removing products mid-term), renewal opportunities (auto-created from contracts), and how co-termination works for multi-asset contracts.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -285,6 +316,7 @@ export default function CPQAdministratorPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },
