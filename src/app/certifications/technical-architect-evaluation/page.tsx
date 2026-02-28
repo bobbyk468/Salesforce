@@ -10,9 +10,19 @@ import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import { getCertMetadata, getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
-import QuestionCard from '@/components/QuestionCard'
 import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
+
+import dynamic from 'next/dynamic'
+const PracticeQuestionsSection = dynamic(
+  () => import('@/components/PracticeQuestionsSection'),
+  {
+    ssr: false,
+    loading: () => (
+      <div id="practice-questions" className="mt-12 min-h-[440px] w-full" aria-hidden="true" />
+    ),
+  }
+)
 
 const slug = 'technical-architect-evaluation'
 export async function generateMetadata() {
@@ -234,20 +244,12 @@ export default function TechnicalArchitectEvaluationPage() {
             </div>
           </div>
 
-          <div id="practice-questions" className="mt-12">
-            <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
-            <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length, "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.")}</p>
-            {sampleQuestions.map((q, index) => (
-              <QuestionCard
-                key={index}
-                questionNumber={index + 1}
-                question={q.question}
-                options={q.options}
-                correctAnswer={q.correctAnswer}
-                explanation={q.explanation}
-              />
-            ))}
-          </div>
+          <PracticeQuestionsSection
+            heading={getCertPracticeQuestionsHeading(slug)}
+            introText={getPracticeQuestionsIntro(sampleQuestions.length, "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.")}
+            questions={sampleQuestions}
+          />
+
 
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
