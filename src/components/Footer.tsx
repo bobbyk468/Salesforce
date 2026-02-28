@@ -6,7 +6,7 @@ export default function Footer() {
   return (
     <footer className="bg-salesforce-dark text-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-8">
           {/* Brand + inbound link to home (fixes "Too Few Inbound Internal Links") */}
           <div className="col-span-1 md:col-span-2">
             <Link href="/" className="flex items-center space-x-2 mb-4 group inline-flex">
@@ -108,6 +108,16 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/certifications/agentforce-specialist" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Agentforce Specialist practice questions
+                </Link>
+              </li>
+              <li>
+                <Link href="/certifications/ai-associate" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  AI Associate practice questions
+                </Link>
+              </li>
+              <li>
                 <Link href="/certifications/sales-cloud" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Sales Cloud Consultant practice questions
                 </Link>
@@ -115,6 +125,63 @@ export default function Footer() {
               <li>
                 <Link href="/certifications/service-cloud" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Service Cloud Consultant study guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/certifications/data-cloud-consultant" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Data Cloud Consultant practice questions
+                </Link>
+              </li>
+              <li>
+                <Link href="/certifications/developer-1" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Platform Developer I (PD1) study guide
+                </Link>
+              </li>
+            </ul>
+          </div>
+
+          {/* Certification Paths */}
+          <div className="md:col-start-3">
+            <h3 className="text-lg font-semibold mb-4">Cert Paths &amp; Resources</h3>
+            <ul className="space-y-2">
+              <li>
+                <Link href="/admin-certification-path" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Admin certification path
+                </Link>
+              </li>
+              <li>
+                <Link href="/developer-certification-path" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Developer certification path
+                </Link>
+              </li>
+              <li>
+                <Link href="/architect-certification-path" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Architect certification path
+                </Link>
+              </li>
+              <li>
+                <Link href="/salesforce-certification-cost" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Exam fees &amp; costs
+                </Link>
+              </li>
+              <li>
+                <Link href="/salesforce-certification-salary" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Certification salary guide
+                </Link>
+              </li>
+              <li>
+                <Link href="/become-cta" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  How to become a CTA
+                </Link>
+              </li>
+              <li>
+                <Link href="/adm-201-exam-tips-2026" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  ADM-201 exam tips
+                </Link>
+              </li>
+              <li>
+                <Link href="/agentforce-specialist-exam-tips" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Agentforce exam tips
                 </Link>
               </li>
             </ul>

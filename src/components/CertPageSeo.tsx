@@ -90,6 +90,25 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
     },
   }
 
+  const learningResourceJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name: `${certTitle} Practice Questions and Study Guide`,
+    description: `Free ${certTitle} practice questions with ${RELEASE_CURRENT} exam weightage, study plan, and key concepts to help you pass.`,
+    url: pageUrl,
+    learningResourceType: ['practice problem', 'study guide'],
+    educationalLevel: 'professional',
+    teaches: certTitle,
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    provider: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep',
+      url: siteBaseUrl,
+    },
+    dateModified,
+  }
+
   return (
     <>
       <script
@@ -119,6 +138,10 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
       />
 
       {/* Visible breadcrumb */}
