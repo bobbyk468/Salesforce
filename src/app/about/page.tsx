@@ -131,10 +131,14 @@ export default function AboutPage() {
           Author and credentials
         </h2>
         <p className="text-gray-700">
-          Content is created by practitioners with experience in Salesforce implementations and certification prep. We focus on exam weightage, practice questions with explanations, and study strategies aligned with official outlines.
+          Content is written and reviewed by{' '}
+          <Link href="/team" className="text-salesforce-blue font-medium hover:underline">
+            Krishna Mohan
+          </Link>
+          , a multi-certified Salesforce professional holding the Administrator (ADM-201), Platform Developer I &amp; II, App Builder, and Consultant certifications. Krishna has hands-on experience delivering Salesforce implementations across Admin, Developer, and Consultant tracks.
         </p>
         <p className="text-gray-700">
-          For editorial standards and review workflow, see our{' '}
+          For editorial standards, review workflow, and full credentials, see our{' '}
           <Link href="/team" className="text-salesforce-blue font-medium hover:underline">
             Editorial Team page
           </Link>

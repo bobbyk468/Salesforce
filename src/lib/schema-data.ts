@@ -48,7 +48,15 @@ export function getArticleJsonLd({
     url,
     datePublished: datePublished ?? now,
     dateModified: dateModified ?? now,
-    author: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+    author: [
+      { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+      {
+        '@type': 'Person',
+        name: 'Krishna Mohan',
+        url: `${baseUrl}/team`,
+        sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+      },
+    ],
     publisher: {
       '@type': 'Organization',
       name: 'Trailblaze Prep',
