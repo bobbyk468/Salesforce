@@ -247,6 +247,36 @@ export default function AgentforceSpecialistPage() {
             </div>
           </div>
 
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Agentforce Specialist Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The Agentforce Specialist exam is scenario-based — questions describe a business requirement or a deployed agent configuration and ask which setting, action type, or architectural decision is correct. Understanding the <em>why</em> behind each Agentforce design choice is more important than memorising feature lists.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Topics and Actions Scenarios</p>
+                <p>When a question asks &ldquo;how does the agent know which topic to use?&rdquo; — the answer is the Topic&apos;s natural language description. The LLM reads the description to route incoming requests. When a question asks &ldquo;what does the agent do within a topic?&rdquo; — the answer is an Action (Flow, Apex, Prompt Template, external service, or standard action). If a scenario requires the agent to retrieve real-time customer data, the answer is typically a Flow action or an Integration Procedure — not a Prompt Template.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Einstein Trust Layer Questions</p>
+                <p>The Trust Layer question pattern: a scenario says &ldquo;the company must ensure customer PII is never sent to external AI models.&rdquo; The answer is always the Einstein Trust Layer — specifically its data masking capability. What the Trust Layer does: masks PII before sending prompts to the LLM, enforces zero data retention by LLM providers, and provides full audit logs. What it does NOT do: prevent hallucinations, guarantee factual accuracy, or act as a human reviewer. Questions that say &ldquo;ensure the AI response is always accurate&rdquo; are not answered by the Trust Layer.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Prompt Templates and Grounding</p>
+                <p>Prompt templates let you standardise LLM instructions with merge fields from Salesforce records. When a question asks &ldquo;how do you ensure the agent references the specific account record when responding?&rdquo; — the answer involves grounding the prompt with merge fields from the account. When a question mentions needing unified customer history across multiple data sources, Data Cloud grounding is the answer. Know the difference: merge field grounding (from standard Salesforce objects) vs Data Cloud grounding (unified profile across data sources).</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Human Escalation and Channel Scenarios</p>
+                <p>When a scenario says &ldquo;the agent should transfer the conversation to a human agent when it cannot resolve the issue&rdquo; — the answer is the &ldquo;Escalate to Human Agent&rdquo; standard action with Omni-Channel routing. The agent passes the full transcript to the human agent. When a scenario asks which channels Agentforce supports — know that it supports Experience Cloud, web chat, Slack, SMS, and WhatsApp. Each channel has specific configuration requirements tested in scenario questions.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Exam Strategy</p>
+                <p>The Agentforce Specialist exam is relatively new and evolves with each Salesforce release. Prioritise the official Trailhead Agentforce Specialist Trailmix as your primary study resource — it is the most current and aligned to the actual exam outline. Passing score is approximately 65% (39/60 questions). Aim for 75%+ on full mock exams before booking. Candidates with hands-on Agentforce sandbox experience (building and testing actual agents with Topics and Actions) consistently report higher first-attempt pass rates.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">{getPracticeQuestionsIntro(sampleQuestions.length)}</p>
@@ -300,10 +330,12 @@ export default function AgentforceSpecialistPage() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },
-              { id: 'faq', title: 'Exam FAQs' }]}
+              { id: 'faq', title: 'Exam FAQs' },
+            ]}
           />
         </aside>
       </div>

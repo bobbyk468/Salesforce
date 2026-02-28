@@ -280,6 +280,36 @@ export default function Developer1Page() {
             </div>
           </div>
 
+          {/* How to Pass Scenario Strategy */}
+          <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-4">How to Pass the Platform Developer I (PD1) Exam</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              PD1 is a code-heavy exam where most questions present Apex code or describe a development scenario and ask you to identify the issue, fix, or best practice. Understanding governor limits, bulkification patterns, and test methodology at a deep practical level is what separates passing candidates from failing ones.
+            </p>
+            <div className="space-y-4 text-sm text-gray-700">
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Governor Limit Questions — the Pattern to Recognise</p>
+                <p>The exam will show you Apex code and ask &ldquo;what is wrong with this code?&rdquo; The answer is almost always SOQL or DML inside a for loop. Look for <code className="bg-gray-100 px-1 rounded">for (Account a : accounts) &#123; insert contact; &#125;</code> — that&apos;s DML in a loop, and it will hit the 150 DML statement limit. The fix: collect records in a List inside the loop, then call <code className="bg-gray-100 px-1 rounded">insert contactList;</code> after the loop. For SOQL: use Maps populated with a single query before the loop, not a query inside the loop.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Testing Questions — the Three Rules to Memorise</p>
+                <p>(1) Minimum 75% code coverage across the entire org (not per class) to deploy. (2) Test data must be created in the test method — do not rely on org data (<code className="bg-gray-100 px-1 rounded">@isTest(SeeAllData=false)</code> is the default). (3) HTTP callout tests require a mock implementation — use <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. Questions often say &ldquo;a developer&apos;s test class fails when calling an external API&rdquo; — the answer is always to implement <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Async Apex Selection — Which Method for Which Scenario</p>
+                <p>Use <strong>Future methods</strong> for simple one-off async operations (HTTP callouts from triggers, mixed DML). Use <strong>Batch Apex</strong> when processing more than 10,000 records (up to 50 million). Use <strong>Queueable Apex</strong> when you need chaining (one job triggers another) or need to pass complex objects between async contexts. Use <strong>Scheduled Apex</strong> for time-based execution. Exam tip: if the question says &ldquo;millions of records&rdquo; or &ldquo;process in chunks&rdquo; — the answer is Batch Apex. If it says &ldquo;chain jobs&rdquo; — Queueable.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Trigger Scenarios — Before vs After</p>
+                <p>When the question says &ldquo;set a field value before the record is saved&rdquo; — use a before trigger (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without a DML call). When the question says &ldquo;create a related record after an account is created&rdquo; — use an after trigger (the account Id exists after save). When the question says &ldquo;prevent a record from being saved if a condition is not met&rdquo; — use <code className="bg-gray-100 px-1 rounded">addError()</code> in a before trigger. Never call a SOQL query in a trigger without first checking bulkification patterns.</p>
+              </div>
+              <div>
+                <p className="font-semibold text-gray-900 mb-1">Exam Strategy</p>
+                <p>PD1 questions often include realistic-looking Apex code snippets. Read code carefully — the &ldquo;wrong answer&rdquo; in the options often uses the right method name but in the wrong context (e.g., using a future method where a queueable is needed, or using DML before a callout). Passing score is 68% (41/60 questions). Aim for 78%+ on full mock exams — the additional buffer accounts for exam-day stress and unfamiliar question phrasing. Complete the official Trailhead PD1 Trailmix before booking.</p>
+              </div>
+            </div>
+          </div>
+
           <div id="practice-questions" className="mt-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">{getCertPracticeQuestionsHeading(slug)}</h2>
             <p className="text-gray-600 mb-8">
@@ -354,6 +384,7 @@ export default function Developer1Page() {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'scenario-tips', title: 'How to Pass PD1' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

@@ -1248,6 +1248,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'How is Sales Cloud Consultant different from Platform Administrator?',
       answer: 'Platform Administrator (ADM-201) tests broad admin operations — security, automation, and org setup. Sales Cloud Consultant focuses on designing and implementing sales process solutions for clients: lead management, pipeline, forecasting, territory hierarchies, and marketing campaign integration. The Consultant exam is more scenario-heavy and solution-design oriented.',
     },
+    {
+      question: 'What is Sales Cloud territory management and how is it tested?',
+      answer: 'Enterprise Territory Management (ETM) allows companies to assign accounts and opportunities to territories based on rules (geography, industry, revenue). Territories form a hierarchy, and users assigned to a territory can access its accounts. The Sales Cloud Consultant exam tests territory rule configuration (account assignment rules), territory-based forecast models vs role-based models, and when to use ETM versus account teams or sharing rules. Key exam differentiator: ETM is for account-centric territory models; opportunity teams and account teams are for collaborative selling within a territory.',
+    },
+    {
+      question: 'How does Sales Cloud forecasting work and what does the exam test?',
+      answer: 'Collaborative Forecasting in Sales Cloud aggregates opportunity amounts up the role hierarchy to predict future revenue. The exam tests: (1) forecast types (Opportunities, Product Families, Opportunity Splits), (2) forecast categories (Pipeline, Best Case, Commit, Closed Won, Omitted), (3) cumulative forecast rollup vs stage-based, (4) custom forecast categories, and (5) manager adjustments. Key concept: a user\'s forecast includes their own pipeline PLUS all subordinates\' pipelines in the role hierarchy. The most common exam question: "What happens to the forecast when a manager adjusts a subordinate\'s forecast amount?"',
+    },
+    {
+      question: 'What is Lead Conversion in Sales Cloud and what objects are created?',
+      answer: 'When a Lead is converted, Salesforce creates: (1) an Account (new or merged with existing), (2) a Contact linked to the Account, and (3) optionally an Opportunity. Lead fields are mapped to Account, Contact, and Opportunity fields via Lead Mapping settings. The original Lead record is marked as "Converted" and is no longer visible in standard Lead views. The Sales Cloud Consultant exam tests when to convert vs merge leads, how duplicate rules interact with lead conversion, and the Lead source vs Lead status distinction.',
+    },
+    {
+      question: 'What is the role of Campaign Influence in Sales Cloud?',
+      answer: 'Campaign Influence connects marketing campaigns to won opportunities to show marketing\'s impact on revenue. Primary Campaign Source (on the opportunity) tracks the most influential campaign. Campaign Influence models (Salesforce, Primary Source, or custom AI-driven Einstein Attribution) distribute revenue credit across multiple campaigns. The Sales Cloud Consultant exam tests which model to recommend for a given scenario and how Campaign Influence differs from Campaign ROI reporting. Common scenario: "Marketing wants to see which campaigns contributed to opportunities in the pipeline" — the answer is Campaign Influence, not Campaign ROI.',
+    },
+    {
+      question: 'What are the most common failure points for Sales Cloud Consultant candidates?',
+      answer: 'Common failure points: (1) Forecasting — confusing forecast categories, not understanding cumulative rollup, or not knowing the impact of opportunity stage on forecast category mapping; (2) Territory Management — confusing ETM with sharing rules or role hierarchy for record access; (3) Solution Design questions — choosing a feature that solves the problem technically but is not the recommended Salesforce best-practice approach; (4) Integration with Marketing Cloud — not knowing Campaign Influence and Pardot/Account Engagement sync behaviour. Aim for 75%+ on timed mocks consistently before booking.',
+    },
   ],
   'service-cloud': [
     {
@@ -1270,6 +1290,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       question: 'What is the difference between Service Cloud Consultant and Platform Administrator?',
       answer: 'Platform Administrator covers general Salesforce admin skills. Service Cloud Consultant is focused on designing customer service solutions: cases, entitlements, SLAs, knowledge articles, Omni-Channel, live chat, and reporting for contact centers. The Consultant exam is more architecture and best-practice oriented.',
     },
+    {
+      question: 'What is Omni-Channel routing in Service Cloud and how is it tested?',
+      answer: 'Omni-Channel automatically routes work items (cases, chats, messaging sessions) to the most appropriate available agent based on routing logic. Two routing models: Queue-based routing (routes to queues, agents pull work) and Skills-based routing (routes directly to agents with the right skills and capacity). Key concepts the exam tests: routing configurations (push vs pull), presence statuses, capacity models (concurrent vs effort-based), and service channels. Most common exam scenario: "route live chat sessions to agents with the Spanish language skill and available capacity" — answer is Skills-based routing with a skill requirement.',
+    },
+    {
+      question: 'What are Entitlements and Service Contracts in Service Cloud?',
+      answer: 'Entitlements define what support a customer is entitled to — the support terms attached to an account or asset (e.g., "Phone Support 24/7", "Web Support 9-5 M-F"). Service Contracts are the commercial agreements with customers that contain the entitlement terms. Entitlement Process defines the SLA timelines and escalation milestones. The exam tests: when to use Entitlements vs Service Contracts, how Milestone Actions trigger when SLAs are at risk, and how Entitlements are linked to Cases to track SLA compliance. Common failure point: confusing Entitlements with Case Assignment Rules or Escalation Rules.',
+    },
+    {
+      question: 'What is Salesforce Knowledge and how does the exam test its configuration?',
+      answer: 'Salesforce Knowledge is a knowledge base for creating, managing, and publishing articles that agents and customers can search. Key concepts: Article Types (categories of articles — FAQ, How-To, Product), Data Categories (hierarchical classification for visibility and search), and Publication Channels (Internal, Salesforce Sites, Customer Community). The exam tests: how to configure Knowledge to show relevant articles during case creation, how Data Categories control article visibility for different user groups, and how to set up suggested articles in Case Feed. Common scenario: "agents should see relevant articles automatically when working on a case" — answer involves Knowledge Sidebar and article suggestions configuration.',
+    },
+    {
+      question: 'What are the most common reasons Service Cloud Consultant candidates fail?',
+      answer: 'Common failure points: (1) Omni-Channel configuration — confusing queue-based vs skills-based routing, or not knowing how presence statuses affect agent availability; (2) Entitlements — confusing Entitlement Processes with Case Escalation Rules; (3) Solution Design questions — choosing a feature that works technically but is not Salesforce\'s recommended best-practice approach (e.g., choosing a custom solution when Einstein Case Routing exists); (4) Contact Center analytics — not knowing which standard report types cover case volume, CSAT, or SLA compliance. Aim for 77%+ on timed mocks (67% real threshold, 10% buffer) before booking.',
+    },
+    {
+      question: 'What is CTI integration in Service Cloud and when does the exam test it?',
+      answer: 'CTI (Computer Telephony Integration) connects phone systems to Salesforce, enabling agents to handle calls directly in the browser via Open CTI or Service Cloud Voice. Open CTI is an API that connects third-party phone systems to Salesforce without browser plugins. Service Cloud Voice is Salesforce\'s native telephony integration with Amazon Connect, including real-time transcription and AI-powered agent guidance. The exam tests when to recommend CTI vs standard phone workflows and the capabilities of Service Cloud Voice. Key differentiator: if real-time call transcription or voice AI is required, recommend Service Cloud Voice — not generic Open CTI.',
+    },
   ],
   'developer-1': [
     {
@@ -1291,6 +1331,26 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'How long should I study for PD1 and what mock score means I am ready?',
       answer: 'Most candidates with some object-oriented programming background need 4–6 weeks. Target benchmark: score 78%+ on three timed full mocks (60 Q / 110 min), taken one week apart. The actual passing threshold is 68%, but the extra buffer accounts for exam nerves and unfamiliar phrasing on the day.',
+    },
+    {
+      question: 'What is the bulkification pattern in Apex and why does PD1 test it heavily?',
+      answer: 'Bulkification is the practice of writing Apex that processes records in collections (Lists and Maps) rather than one record at a time. The pattern: query all needed records BEFORE loops using a Map keyed by Id, collect changes INSIDE loops into a List, then perform a single DML call AFTER the loop. PD1 tests this heavily because SOQL or DML inside a for loop is the most common governor limit violation in real Salesforce orgs. The exam typically shows code with a loop containing a query or insert and asks candidates to identify the problem or rewrite the code correctly.',
+    },
+    {
+      question: 'What is the difference between a Future method and a Queueable class in Salesforce?',
+      answer: '@Future methods are the simplest form of async Apex — they run in a separate transaction, support HTTP callouts (when callout=true), and resolve mixed DML errors. Limitations: cannot be chained, cannot pass sObjects directly, limited monitoring. Queueable Apex (implements Queueable) is more powerful: it can be chained (job enqueues another job), can pass complex objects, and provides a Job ID for monitoring via AsyncApexJob. PD1 exam rule: if the question involves chaining async jobs or monitoring job completion, the answer is Queueable. If it\'s a simple callout from a trigger, Future method is often acceptable.',
+    },
+    {
+      question: 'What are the most important Apex annotations PD1 candidates must know?',
+      answer: '@isTest — marks a class or method as a test class (does not count toward code coverage). @TestVisible — exposes private methods/variables to test classes without changing access modifiers. @AuraEnabled — exposes an Apex method to Lightning components (LWC and Aura). @InvocableMethod — exposes an Apex method as an action in Flow. @RemoteAction — exposes methods to Visualforce pages via JavaScript remoting. @RestResource / @HttpGet / @HttpPost — creates REST API endpoints in Apex. The PD1 exam frequently presents a scenario and asks which annotation to add.',
+    },
+    {
+      question: 'What is the difference between SOQL and SOSL and when should each be used?',
+      answer: 'SOQL (Salesforce Object Query Language) queries a specific object and its related objects: SELECT Id, Name FROM Account WHERE CreatedDate = TODAY. Use SOQL when you know the object and want records matching specific criteria. SOSL (Salesforce Object Search Language) searches across multiple objects simultaneously using text search: FIND \'Smith\' IN ALL FIELDS RETURNING Account, Contact, Lead. Use SOSL when you need to search across multiple objects for a text string — for example, building a search feature that returns results from any object. PD1 tip: if a scenario says "search across multiple objects for a keyword," the answer is SOSL, not SOQL.',
+    },
+    {
+      question: 'How does Salesforce\'s security model relate to PD1 Apex development?',
+      answer: 'PD1 tests "with sharing" vs "without sharing" class declarations: "with sharing" enforces the running user\'s sharing rules and OWD (recommended for most cases); "without sharing" bypasses sharing and runs with system-level access. If a class doesn\'t specify sharing, it inherits from the calling class. PD1 also tests CRUD/FLS enforcement — Apex does not automatically enforce field-level security or CRUD permissions (unlike Visualforce or LWC). Developers must explicitly check Schema.DescribeFieldResult or use Security.stripInaccessible() to enforce FLS. This is a common exam differentiator.',
     },
   ],
   'data-architect': [
@@ -1918,6 +1978,30 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     {
       question: 'What is the Einstein Trust Layer and why is it important for Agentforce?',
       answer: 'The Einstein Trust Layer is Salesforce\'s built-in security framework for AI. It masks PII before data reaches external LLMs, audits prompts and responses, and ensures no Salesforce customer data is used to train third-party AI models. The Agentforce Specialist exam tests how Trust Layer protects data during AI interactions and why it matters for enterprise AI governance.',
+    },
+    {
+      question: 'What is the difference between an Agentforce Topic and an Agentforce Action?',
+      answer: 'A Topic defines an area of expertise — it tells the agent when a request falls within its scope (via a natural language description) and provides the context, instructions, and available Actions for that domain. An Action is the discrete task the agent executes within a Topic: this could be a Flow, an Apex method, an external API call, a Prompt Template, or a standard action like escalating to a human agent. Think of Topics as "departments" and Actions as "tasks within that department." The exam frequently presents a requirement and asks whether to configure a Topic, an Action, or both.',
+    },
+    {
+      question: 'What are Guardrails in Agentforce and how do they differ from Agent Instructions?',
+      answer: 'Guardrails are negative constraints — explicit rules for what the agent must never do or say (e.g., "never make pricing commitments", "never discuss competitor products"). Agent Instructions are positive directives — they define the agent\'s persona, tone, response style, and scope. Guardrails prevent harmful or off-brand behaviour; Instructions guide on-brand, effective responses. The exam tests knowledge of both and asks candidates to identify which configuration element prevents a specific unwanted agent behaviour.',
+    },
+    {
+      question: 'How does Data Cloud grounding work with Agentforce?',
+      answer: 'Data Cloud grounding provides Agentforce agents with access to unified customer profiles across all data sources, not just standard Salesforce CRM data. When Data Cloud grounding is enabled, the agent can retrieve real-time, consolidated customer context (purchase history, service interactions, marketing engagement) to produce more accurate, personalised responses. Without Data Cloud, the agent can only access data through explicit Flow or API actions triggered by the agent. The exam distinguishes between merge field grounding (from CRM records) and Data Cloud grounding (unified profiles across multiple data sources).',
+    },
+    {
+      question: 'What channels can Agentforce agents be deployed on?',
+      answer: 'Agentforce agents can be deployed across Experience Cloud sites, Salesforce-embedded web chat, Slack, and messaging channels including SMS and WhatsApp. Each channel has specific configuration requirements: Experience Cloud channels require the agent to be activated on an Experience Cloud site; Slack channels require the Slack integration. The exam tests which channel configuration steps are required and how the human escalation (handoff) works differently across channels.',
+    },
+    {
+      question: 'What is the recommended study approach for Agentforce Specialist?',
+      answer: 'The most effective preparation combines: (1) completing the official Agentforce Specialist Trailmix on Trailhead (this is directly aligned to the exam outline), (2) hands-on practice in an Agentforce sandbox — actually build an agent with Topics and Actions, test it in Agent Builder, and observe how the Trust Layer behaves, (3) review the Einstein Trust Layer documentation specifically, and (4) practice with scenario-based mock questions. Candidates with hands-on Agentforce implementation experience consistently report higher first-attempt pass rates. The exam evolves with each Salesforce release, so ensure you are studying Winter \'26 materials.',
+    },
+    {
+      question: 'How is Agentforce Specialist different from the AI Associate certification?',
+      answer: 'AI Associate is a foundational, conceptual exam (40 questions, $75, 70 min) that tests AI literacy: AI terminology, Salesforce Einstein product categories, and responsible AI principles. It does not require any hands-on configuration experience. Agentforce Specialist is a practitioner-level exam (60 questions, $200, 105 min) that tests the ability to configure, deploy, and optimise actual Agentforce agents — Topics, Actions, Guardrails, Prompt Templates, and Trust Layer. AI Associate is a recommended foundation before Agentforce Specialist, though not a formal prerequisite.',
     },
   ],
   'application-architect': [
