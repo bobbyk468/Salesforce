@@ -83,6 +83,29 @@ export default function BusinessAnalystExamTipsPage() {
         </p>
       </header>
 
+      <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
+        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Exam At a Glance</p>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
+          <div>
+            <p className="text-2xl font-bold text-salesforce-blue">60</p>
+            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
+            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-salesforce-blue">72%</p>
+            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+          </div>
+          <div>
+            <p className="text-2xl font-bold text-salesforce-blue">$200</p>
+            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+          </div>
+        </div>
+      </section>
+
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What the BA Exam Actually Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
@@ -134,6 +157,19 @@ export default function BusinessAnalystExamTipsPage() {
           <Clock className="h-4 w-4" />
           80%+ on 3 timed full mocks — the 72% threshold demands higher prep
         </p>
+      </section>
+
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item, i) => (
+            <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+            </div>
+          ))}
+        </dl>
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
