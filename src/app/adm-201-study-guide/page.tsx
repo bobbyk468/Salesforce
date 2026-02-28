@@ -303,6 +303,10 @@ export default function Adm201StudyGuidePage() {
           <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue hover:underline">
             Compare ADM-201 vs App Builder →
           </Link>
+          {' | '}
+          <Link href="/how-to-become-salesforce-administrator" className="text-salesforce-blue hover:underline">
+            How to become a Salesforce Administrator →
+          </Link>
         </p>
       </section>
     </div>
