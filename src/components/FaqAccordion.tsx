@@ -37,7 +37,6 @@ export default function FaqAccordion({ items }: { items: FaqItem[] }) {
           </dt>
           <dd
             id={`faq-answer-${index}`}
-            role="region"
             aria-labelledby={`faq-question-${index}`}
             className={`border-t border-gray-100 transition-all ${
               openIndex === index ? 'block' : 'hidden'
