@@ -238,7 +238,7 @@ export default function B2CCommerceDeveloperPage() {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">ISML Templates</p>
-                <p>Know ISML syntax: <isset>, <isif>, <isloop>, <isinclude>, <isreplace>, and how to use locale, currency, and content asset tags. Understand how template caching affects dynamic content rendering.</p>
+                <p>Know ISML syntax: &lt;isset&gt;, &lt;isif&gt;, &lt;isloop&gt;, &lt;isinclude&gt;, &lt;isreplace&gt;, and how to use locale, currency, and content asset tags. Understand how template caching affects dynamic content rendering.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Script Development</p>
