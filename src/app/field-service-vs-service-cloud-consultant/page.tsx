@@ -1,0 +1,194 @@
+import type { Metadata } from 'next'
+import Link from 'next/link'
+import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const pageTitle = `Field Service vs Service Cloud Consultant (${RELEASE_CURRENT})`
+const pageDescription = `Field Service Consultant vs Service Cloud Consultant: compare exam difficulty, skills tested, prerequisites, career value, and which to take first in 2026.`
+
+export const metadata: Metadata = {
+  title: { absolute: pageTitle },
+  description: pageDescription,
+  alternates: { canonical: `${siteUrl}/field-service-vs-service-cloud-consultant` },
+  openGraph: {
+    title: pageTitle,
+    description: pageDescription,
+    type: 'article',
+    url: `${siteUrl}/field-service-vs-service-cloud-consultant`,
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+  },
+  keywords: `field service consultant vs service cloud consultant, field service vs service cloud certification, which salesforce consultant cert first`,
+}
+
+const breadcrumbItems = [
+  { name: 'Home', url: '/' },
+  { name: 'Field Service vs Service Cloud Consultant', url: '/field-service-vs-service-cloud-consultant' },
+]
+
+const faqItems = [
+  {
+    question: 'Should I take Service Cloud Consultant before Field Service Consultant?',
+    answer: 'Yes — Service Cloud Consultant is strongly recommended before Field Service Consultant. Field Service is built on top of Service Cloud. Work Orders, Entitlements, the Service Console, Omni-Channel, and Case management are all Service Cloud concepts that Field Service Consultant assumes you already understand. Most successful Field Service candidates hold Service Cloud Consultant (and ADM-201) before attempting the Field Service exam.',
+  },
+  {
+    question: 'Is Field Service Consultant harder than Service Cloud Consultant?',
+    answer: 'Most candidates find Field Service Consultant harder than Service Cloud Consultant. Field Service requires knowledge of the FSL managed package, scheduling policies and rules, the Gantt dispatcher console, optimization types, and mobile app configuration — all on top of Service Cloud knowledge. Service Cloud Consultant is more broadly applicable and has more study resources available.',
+  },
+  {
+    question: 'Which certification is more in demand — Field Service or Service Cloud Consultant?',
+    answer: 'Service Cloud Consultant has significantly more job market demand. It covers contact centres, case management, knowledge management, and omni-channel routing — relevant to almost every service-focused Salesforce implementation. Field Service Consultant is a specialist credential for industries with field technician operations (utilities, telecom, manufacturing, medical devices). Both are valuable; Service Cloud should come first.',
+  },
+  {
+    question: 'Can I hold both Field Service Consultant and Service Cloud Consultant?',
+    answer: 'Yes, and this is a common and valuable combination. Holding both certifications makes you highly competitive for service-focused Salesforce projects, especially in industries that run both a contact centre and field operations. Many implementation consultants at Salesforce partners hold ADM-201 + Service Cloud Consultant + Field Service Consultant as their core service stack.',
+  },
+  {
+    question: 'What is the difference in what each exam covers?',
+    answer: 'Service Cloud Consultant covers: Case management, Omni-Channel routing (queue-based, skills-based), Lightning Knowledge, entitlement processes and milestones, service console configuration, CTI integration, and contact centre metrics. Field Service Consultant covers: Work Orders (not Cases), service territories, resource skills and scheduling, the FSL managed package, Gantt/dispatcher console, inventory management, and FSL mobile app. The two exams have limited overlap.',
+  },
+]
+
+export default function FieldServiceVsServiceCloudConsultantPage() {
+  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/field-service-vs-service-cloud-consultant', breadcrumbItems })
+  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
+  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/field-service-vs-service-cloud-consultant' })
+  const faqJsonLd = getFaqPageJsonLd(faqItems)
+
+  return (
+    <div className="max-w-4xl mx-auto px-4 py-12">
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
+      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+
+      <div className="mb-10">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+          <span>Comparison</span>
+        </div>
+        <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
+          Field Service Consultant vs Service Cloud Consultant ({RELEASE_CURRENT})
+        </h1>
+        <p className="text-lg text-gray-600">
+          Both are service-focused Salesforce certifications, but they cover very different ground. Here&apos;s how to decide which to take and in what order.
+        </p>
+      </div>
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
+        {[
+          {
+            name: 'Service Cloud Consultant',
+            href: '/certifications/service-cloud',
+            badge: 'Take First',
+            badgeColor: 'bg-green-100 text-green-800',
+            fee: '$200', questions: '60', passing: '~65%',
+            focus: 'Contact centre, case management, knowledge, Omni-Channel',
+            demand: 'Very High',
+            skills: ['Case management & escalation', 'Omni-Channel routing', 'Lightning Knowledge', 'Entitlement processes & SLAs', 'Service console & CTI'],
+          },
+          {
+            name: 'Field Service Consultant',
+            href: '/certifications/field-service',
+            badge: 'Take Second',
+            badgeColor: 'bg-blue-100 text-blue-800',
+            fee: '$200', questions: '60', passing: '~65%',
+            focus: 'Work orders, scheduling, FSL managed package, mobile',
+            demand: 'High (specialist)',
+            skills: ['Work Orders & Service Appointments', 'Scheduling policies & rules', 'FSL managed package & Gantt', 'Resource & territory management', 'Inventory & mobile app'],
+          },
+        ].map((cert) => (
+          <div key={cert.name} className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
+            <div className="flex items-center gap-2 mb-3">
+              <h2 className="text-lg font-bold text-gray-900">{cert.name}</h2>
+              <span className={`text-xs font-semibold px-2 py-0.5 rounded-full ${cert.badgeColor}`}>{cert.badge}</span>
+            </div>
+            <div className="grid grid-cols-3 gap-2 mb-4">
+              {[{ l: 'Fee', v: cert.fee }, { l: 'Questions', v: cert.questions }, { l: 'Passing', v: cert.passing }].map((s) => (
+                <div key={s.l} className="text-center bg-gray-50 rounded-lg p-2">
+                  <div className="font-bold text-salesforce-blue text-sm">{s.v}</div>
+                  <div className="text-xs text-gray-500">{s.l}</div>
+                </div>
+              ))}
+            </div>
+            <p className="text-sm text-gray-600 mb-1"><strong>Focus:</strong> {cert.focus}</p>
+            <p className="text-sm text-gray-600 mb-3"><strong>Job demand:</strong> {cert.demand}</p>
+            <ul className="space-y-1 mb-4">
+              {cert.skills.map((s) => (
+                <li key={s} className="text-sm text-gray-700 flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-salesforce-blue flex-shrink-0" />
+                  {s}
+                </li>
+              ))}
+            </ul>
+            <Link href={cert.href} className="inline-flex items-center text-salesforce-blue font-medium text-sm hover:underline">
+              Free Practice Questions →
+            </Link>
+          </div>
+        ))}
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm">
+            <thead>
+              <tr className="border-b border-gray-100">
+                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th className="text-left py-2 pr-4 text-salesforce-blue font-medium">Service Cloud Consultant</th>
+                <th className="text-left py-2 text-salesforce-blue font-medium">Field Service Consultant</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-gray-50">
+              {[
+                { aspect: 'Recommended order', scc: 'Take first', fsc: 'Take after Service Cloud' },
+                { aspect: 'Core object', scc: 'Case', fsc: 'Work Order' },
+                { aspect: 'Routing', scc: 'Omni-Channel (cases)', fsc: 'Scheduling policies (appointments)' },
+                { aspect: 'Managed package', scc: 'No', fsc: 'Yes — FSL managed package required' },
+                { aspect: 'Typical industries', scc: 'All industries', fsc: 'Utilities, telecom, manufacturing, medical' },
+                { aspect: 'Prerequisite for', scc: 'Field Service Consultant (recommended)', fsc: 'Nothing formally' },
+                { aspect: 'Difficulty (relative)', scc: 'Moderate', fsc: 'Harder (requires Service Cloud knowledge)' },
+              ].map((row) => (
+                <tr key={row.aspect}>
+                  <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>
+                  <td className="py-2 pr-4 text-gray-900">{row.scc}</td>
+                  <td className="py-2 text-gray-900">{row.fsc}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <dl className="space-y-4">
+          {faqItems.map((item) => (
+            <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
+              <dd className="text-sm text-gray-700">{item.answer}</dd>
+            </div>
+          ))}
+        </dl>
+      </div>
+
+      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
+        <h2 className="text-2xl font-bold mb-2">Start with Service Cloud</h2>
+        <p className="text-blue-100 mb-6">Free practice questions for both certifications.</p>
+        <div className="flex flex-wrap justify-center gap-3">
+          <Link href="/certifications/service-cloud" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
+            Service Cloud Practice
+          </Link>
+          <Link href="/certifications/field-service" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+            Field Service Practice
+          </Link>
+        </div>
+      </div>
+    </div>
+  )
+}
