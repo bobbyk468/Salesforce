@@ -38,7 +38,7 @@ export default function CertificationCard({
   headingLevel = 'h1',
 }: CertificationCardProps) {
   return (
-    <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm">
+    <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
       {/* Header: heading with exam name and primary keyword for SEO */}
       <div className="gradient-bg p-5 sm:p-6 lg:p-8 text-white">
         <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">

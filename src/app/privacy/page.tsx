@@ -42,7 +42,9 @@ export default function PrivacyPage() {
     <div className="max-w-3xl mx-auto px-4 py-12">
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+      <div data-lcp-header>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">Privacy Policy</h1>
+      </div>
       <p className="text-gray-600 mb-6">
         Last updated: {new Date().toLocaleDateString('en-US')}
       </p>

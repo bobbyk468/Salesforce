@@ -63,7 +63,9 @@ export default function AboutPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-6">About {SITE_NAME}</h1>
+      <div data-lcp-header>
+        <h1 className="text-3xl font-bold text-gray-900 mb-6">About {SITE_NAME}</h1>
+      </div>
 
       <section className="prose prose-gray max-w-none space-y-4 mb-10" aria-labelledby="who-heading">
         <h2 id="who-heading" className="text-xl font-semibold text-gray-900">

@@ -300,7 +300,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* Hero Section */}
-      <section className="gradient-bg text-white py-20 px-4" aria-label="Primary content">
+      <section data-lcp-hero className="gradient-bg text-white py-20 px-4" aria-label="Primary content">
         <div className="max-w-7xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Salesforce Certification Resources, Practice Questions & Study Guides

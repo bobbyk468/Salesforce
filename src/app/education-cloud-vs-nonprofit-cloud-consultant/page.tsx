@@ -68,7 +68,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <div className="mb-10">
+      <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Industry Cloud Comparison</span>
         </div>

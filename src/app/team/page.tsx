@@ -78,7 +78,9 @@ export default function TeamPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(personJsonLd) }} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-2">Trailblaze Prep Editorial Team</h1>
+      <div data-lcp-header>
+        <h1 className="text-3xl font-bold text-gray-900 mb-2">Trailblaze Prep Editorial Team</h1>
+      </div>
       <p className="text-gray-600 mb-8">
         Content is written and reviewed by Salesforce-certified practitioners with real implementation and exam experience.
       </p>

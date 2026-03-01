@@ -96,7 +96,7 @@ export default function BecomeCtaPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* Hero */}
-      <div className="text-center mb-12">
+      <div data-lcp-header className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-6">
           <Target className="h-4 w-4" />
           From beginner to CTA

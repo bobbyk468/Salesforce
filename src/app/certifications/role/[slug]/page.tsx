@@ -179,7 +179,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
         All certifications
       </Link>
 
-      <div className="mb-10">
+      <div data-lcp-header className="mb-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">{category.name} Certifications</h1>
         <p className="text-xl text-gray-600 mb-2">
           {category.items.length} certification{category.items.length !== 1 ? 's' : ''} in this role. Pick one for practice questions and study materials.

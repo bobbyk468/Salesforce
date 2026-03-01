@@ -78,7 +78,7 @@ export default function CertificationPathPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
       {/* Hero */}
-      <div className="text-center mb-16">
+      <div data-lcp-header className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-sm font-medium mb-6">
           <MapPin className="h-4 w-4" />
           Plan your journey

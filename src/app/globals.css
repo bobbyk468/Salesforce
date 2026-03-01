@@ -134,6 +134,13 @@ body::before {
     position: relative;
     z-index: 10;
   }
+
+  /* Respect prefers-reduced-motion for better performance and accessibility */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-pulse {
+      animation: none;
+    }
+  }
 }
 
 /* Safe area for iOS home indicator (sticky bottom bars) */

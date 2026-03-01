@@ -18,7 +18,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   if (linksToRender.length === 0) return null
 
   return (
-    <section className="mt-12 sm:mt-16 rounded-xl sm:rounded-2xl border border-purple-100/50 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="related-certs-heading">
+    <section className="mt-12 sm:mt-16 rounded-xl sm:rounded-2xl border border-purple-100/50 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm [content-visibility:auto] [contain-intrinsic-size:auto_200px]" aria-labelledby="related-certs-heading">
       <h2 id="related-certs-heading" className="text-xl font-bold text-gray-900 mb-4">
         People also studied
       </h2>

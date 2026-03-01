@@ -241,7 +241,9 @@ export default function HtmlSitemapPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
-      <h1 className="text-3xl font-bold text-gray-900 mb-4">HTML Sitemap</h1>
+      <div data-lcp-header>
+        <h1 className="text-3xl font-bold text-gray-900 mb-4">HTML Sitemap</h1>
+      </div>
       <p className="text-gray-600 mb-8">
         Use this page to navigate all key site URLs and certification guides.
       </p>

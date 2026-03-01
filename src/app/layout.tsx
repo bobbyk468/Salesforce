@@ -174,6 +174,13 @@ export default function RootLayout({
   [data-lcp-hero] h1 { font-size: 1.5rem; }
   [data-lcp-hero] p { font-size: 1rem; }
   .cert-page-intro > p:first-of-type { font-size: 1rem; }
+  /* LCP header for article/study guide pages (light background) */
+  [data-lcp-header] { margin-bottom: 2.5rem; }
+  [data-lcp-header] h1 { font-size: 1.875rem; font-weight: 700; line-height: 1.3; color: #111; }
+  [data-lcp-header] p { color: #4b5563; line-height: 1.625; }
+}
+@media (min-width: 640px) and (max-width: 1023px) {
+  [data-lcp-header] h1 { font-size: 2.25rem; }
 }
 `
 

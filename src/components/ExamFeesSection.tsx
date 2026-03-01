@@ -16,7 +16,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
   const retakeCost = getRetakeCost(slug)
   
   return (
-    <section className="mt-8 sm:mt-10 mb-8 sm:mb-10 bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8">
+    <section className="mt-8 sm:mt-10 mb-8 sm:mb-10 bg-white rounded-xl sm:rounded-2xl border border-gray-200 shadow-sm p-6 sm:p-8 [content-visibility:auto] [contain-intrinsic-size:auto_300px]">
       <h2 className="text-xl sm:text-2xl font-bold text-gray-900 mb-6 sm:mb-8 flex items-center gap-2">
         <DollarSign className="h-6 w-6 sm:h-7 sm:w-7 text-salesforce-blue" aria-hidden="true" />
         Exam Fees & Registration
