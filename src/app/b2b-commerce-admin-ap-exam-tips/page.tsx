@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `B2B Commerce Admin AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2B Commerce Administrator AP exam tips for ${RELEASE_CURRENT}: storefront setup, product catalogue, pricing, buyer management, and scenario strategy to pass first attempt.`
+  `Salesforce B2B Commerce Administrator AP exam tips for ${RELEASE_CURRENT}: storefront setup, product catalogue, pricing, buyer management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Experience Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Experience Cloud Consultant exam tips for ${RELEASE_CURRENT}: portal design, member management, security, and scenario strategy to pass first attempt.`
+  `Experience Cloud Consultant exam tips for ${RELEASE_CURRENT}: portal design, member management, security.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

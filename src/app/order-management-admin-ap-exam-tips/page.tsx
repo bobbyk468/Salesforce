@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Order Management Admin AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Order Management Administrator AP exam tips for ${RELEASE_CURRENT}: order lifecycle, fulfilment, returns, inventory management, and scenario strategy to pass first attempt.`
+  `Salesforce Order Management Administrator AP exam tips for ${RELEASE_CURRENT}: order lifecycle, fulfilment, returns, inventory management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

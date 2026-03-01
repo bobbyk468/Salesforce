@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'CPQ Administrator vs CPQ & Billing AP: Which Certification to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce CPQ Administrator and CPQ &amp; Billing Accredited Professional certifications: what each tests, exam format differences, and which to target for your Revenue Cloud role.'
+  'Compare Salesforce CPQ Administrator and CPQ & Billing AP: what each tests, exam format differences, which to target for Revenue Cloud.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

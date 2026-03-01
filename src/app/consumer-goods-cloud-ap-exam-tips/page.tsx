@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Consumer Goods Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Consumer Goods Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: retail execution, visit management, KPI tracking, and scenario strategy to pass first attempt.`
+  `Salesforce Consumer Goods Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: retail execution, visit management, KPI tracking.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

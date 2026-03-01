@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Strategy Designer Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Strategy Designer exam tips for ${RELEASE_CURRENT}: design thinking, business strategy, value maps, journey design, and scenario strategy to pass first attempt.`
+  `Salesforce Strategy Designer exam tips for ${RELEASE_CURRENT}: design thinking, business strategy, value maps, journey design.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Slack Administrator Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Slack Administrator exam tips for ${RELEASE_CURRENT}: workspace management, channels, security, Slack Connect, and scenario strategy to pass first attempt.`
+  `Salesforce Slack Administrator exam tips for ${RELEASE_CURRENT}: workspace management, channels, security, Slack Connect.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

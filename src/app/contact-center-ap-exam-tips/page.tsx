@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Contact Center AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Contact Center Accredited Professional exam tips for ${RELEASE_CURRENT}: omni-channel routing, Service Cloud Voice, Einstein bots, and scenario strategy to pass first attempt.`
+  `Salesforce Contact Center Accredited Professional exam tips for ${RELEASE_CURRENT}: omni-channel routing, Service Cloud Voice, Einstein bots.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

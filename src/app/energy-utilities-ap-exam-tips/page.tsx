@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Energy &amp; Utilities Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Energy &amp; Utilities Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: customer engagement, service management, OmniStudio, and scenario strategy to pass.`
+  `Salesforce Energy &amp; Utilities Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: customer engagement, service management, OmniStudio.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

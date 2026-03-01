@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `JavaScript Developer I Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce JavaScript Developer I exam tips for ${RELEASE_CURRENT}: JavaScript fundamentals, LWC, Apex integration, and scenario strategy to pass first attempt.`
+  `Salesforce JavaScript Developer I exam tips for ${RELEASE_CURRENT}: JavaScript fundamentals, LWC, Apex integration.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

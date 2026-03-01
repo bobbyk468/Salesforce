@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Process Automation AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Process Automation Accredited Professional exam tips for ${RELEASE_CURRENT}: Flow Builder, automation strategy, governor limits, and scenario strategy to pass first attempt.`
+  `Salesforce Process Automation Accredited Professional exam tips for ${RELEASE_CURRENT}: Flow Builder, automation strategy, governor limits.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

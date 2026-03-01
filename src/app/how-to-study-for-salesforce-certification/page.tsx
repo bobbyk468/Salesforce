@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Study for a Salesforce Certification (${RELEASE_CURRENT})`
-const pageDescription = `How to study for Salesforce certification exams in 2026: the most effective study methods, Trailhead strategy, hands-on practice, mock exam approach, and study schedule templates.`
+const pageDescription = `How to study for Salesforce certification exams in 2026: effective study methods, Trailhead strategy, hands-on practice, and mock exam approach.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -141,6 +141,17 @@ export default function HowToStudyForSalesforceCertificationPage() {
             </div>
           ))}
         </dl>
+      </div>
+
+      <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-100">
+        <h2 className="text-lg font-bold text-gray-900 mb-3">Related guides</h2>
+        <ul className="flex flex-wrap gap-2 text-sm">
+          <li><Link href="/which-salesforce-certification-first" className="text-salesforce-blue hover:underline font-medium">Which cert first?</Link></li>
+          <li><Link href="/how-to-register-salesforce-exam" className="text-salesforce-blue hover:underline font-medium">How to register</Link></li>
+          <li><Link href="/salesforce-certification-maintenance" className="text-salesforce-blue hover:underline font-medium">Cert maintenance</Link></li>
+          <li><Link href="/salesforce-certification-exam-day-tips" className="text-salesforce-blue hover:underline font-medium">Exam day tips</Link></li>
+          <li><Link href="/salesforce-certification-voucher" className="text-salesforce-blue hover:underline font-medium">Vouchers & discounts</Link></li>
+        </ul>
       </div>
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

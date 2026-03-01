@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Financial Services Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Financial Services Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: FSC data model, financial accounts, client management, and scenario strategy to pass.`
+  `Salesforce Financial Services Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: FSC data model, financial accounts, client management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

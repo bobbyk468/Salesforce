@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `OmniStudio Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce OmniStudio Developer exam tips for ${RELEASE_CURRENT}: FlexCards, OmniScripts, DataRaptors, Integration Procedures, and scenario strategy to pass first attempt.`
+  `Salesforce OmniStudio Developer exam tips for ${RELEASE_CURRENT}: FlexCards, OmniScripts, DataRaptors, Integration Procedures.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

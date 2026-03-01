@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Heroku Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Heroku Architect exam tips for ${RELEASE_CURRENT}: Heroku architecture, Salesforce integration, security, scalability, and scenario strategy to pass first attempt.`
+  `Salesforce Heroku Architect exam tips for ${RELEASE_CURRENT}: Heroku architecture, Salesforce integration, security, scalability.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

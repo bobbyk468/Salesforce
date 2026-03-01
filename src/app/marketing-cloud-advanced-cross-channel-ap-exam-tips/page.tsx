@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `MC Advanced Cross-Channel AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Advanced Cross-Channel AP exam tips for ${RELEASE_CURRENT}: Journey Builder, mobile push, advertising audiences, and scenario strategy to pass first attempt.`
+  `Salesforce Marketing Cloud Advanced Cross-Channel AP exam tips for ${RELEASE_CURRENT}: Journey Builder, mobile push, advertising audiences.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

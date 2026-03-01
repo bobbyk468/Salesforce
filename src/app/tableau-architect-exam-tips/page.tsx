@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Tableau Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Tableau Architect exam tips for ${RELEASE_CURRENT}: enterprise deployment, security, performance, Tableau Server governance, and scenario strategy to pass first attempt.`
+  `Salesforce Tableau Architect exam tips for ${RELEASE_CURRENT}: enterprise deployment, security, performance, Tableau Server governance.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

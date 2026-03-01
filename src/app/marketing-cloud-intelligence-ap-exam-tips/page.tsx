@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Marketing Cloud Intelligence AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Intelligence (Datorama) AP exam tips for ${RELEASE_CURRENT}: data streams, harmonisation, dashboards, KPIs, and scenario strategy to pass first attempt.`
+  `Salesforce Marketing Cloud Intelligence (Datorama) AP exam tips for ${RELEASE_CURRENT}: data streams, harmonisation, dashboards, KPIs.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

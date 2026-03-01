@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Health Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Health Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: patient management, care plans, provider network, and scenario strategy to pass first attempt.`
+  `Salesforce Health Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: patient management, care plans, provider network.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

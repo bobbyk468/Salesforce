@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Public Sector Solutions AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Public Sector Solutions Accredited Professional exam tips for ${RELEASE_CURRENT}: licences and permits, grants management, OmniStudio, and scenario strategy to pass.`
+  `Salesforce Public Sector Solutions Accredited Professional exam tips for ${RELEASE_CURRENT}: licences and permits, grants management, OmniStudio.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

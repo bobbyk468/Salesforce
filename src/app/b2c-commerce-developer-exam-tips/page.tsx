@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `B2C Commerce Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2C Commerce Developer exam tips for ${RELEASE_CURRENT}: SFRA, cartridges, controllers, ISML templates, and scenario strategy to pass first attempt.`
+  `Salesforce B2C Commerce Developer exam tips for ${RELEASE_CURRENT}: SFRA, cartridges, controllers, ISML templates.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

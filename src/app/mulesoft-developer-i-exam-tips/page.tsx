@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `MuleSoft Developer I Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Developer I exam tips for ${RELEASE_CURRENT}: Mule 4 flows, connectors, DataWeave, error handling, and scenario strategy to pass first attempt.`
+  `MuleSoft Developer I exam tips for ${RELEASE_CURRENT}: Mule 4 flows, connectors, DataWeave, error handling.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

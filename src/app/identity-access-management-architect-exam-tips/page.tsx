@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Identity & Access Management Architect Exam Tips (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce IAM Architect exam tips for ${RELEASE_CURRENT}: SSO, OAuth, connected apps, identity providers, and scenario strategy to pass first attempt.`
+  `Salesforce IAM Architect exam tips for ${RELEASE_CURRENT}: SSO, OAuth, connected apps, identity providers.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

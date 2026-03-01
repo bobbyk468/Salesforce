@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Data Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Data Cloud Consultant exam tips for ${RELEASE_CURRENT}: data ingestion, identity resolution, segmentation, activation, and scenario strategy to pass first attempt.`
+  `Salesforce Data Cloud Consultant exam tips for ${RELEASE_CURRENT}: data ingestion, identity resolution, segmentation, activation.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

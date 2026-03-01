@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Administrator vs Advanced Administrator: Which Next?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare the Salesforce Administrator (ADM-201) and Advanced Administrator certifications by difficulty, topics, career value, and recommended study time. Find out when to upgrade.'
+  'Compare Salesforce Administrator (ADM-201) and Advanced Administrator: difficulty, topics, career value, study time. When to upgrade.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

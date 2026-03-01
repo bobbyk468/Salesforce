@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Advanced Field Service AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Advanced Field Service Accredited Professional exam tips for ${RELEASE_CURRENT}: advanced scheduling, resource optimisation, asset management, and scenario strategy to pass.`
+  `Salesforce Advanced Field Service Accredited Professional exam tips for ${RELEASE_CURRENT}: advanced scheduling, resource optimisation, asset management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

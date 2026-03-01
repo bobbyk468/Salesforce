@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Platform Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Platform Foundations exam tips for ${RELEASE_CURRENT}: core platform concepts, data model, security, automation, and scenario strategy to pass first attempt.`
+  `Salesforce Platform Foundations exam tips for ${RELEASE_CURRENT}: core platform concepts, data model, security, automation.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

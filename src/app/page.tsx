@@ -337,14 +337,21 @@ export default function Home() {
           </div>
           <p className="text-sm text-blue-100/85 mt-4">
             Popular reads:{' '}
-            <Link href="/adm-201-exam-tips-2026" className="underline hover:text-white font-medium">
-              ADM-201 exam tips {RELEASE_CURRENT}
-            </Link>
-            {' '}and{' '}
-            <Link href="/adm-201-vs-app-builder" className="underline hover:text-white font-medium">
-              ADM-201 vs App Builder
-            </Link>
-            .
+            <Link href="/adm-201-exam-tips-2026" className="underline hover:text-white font-medium">ADM-201 exam tips</Link>
+            {' · '}
+            <Link href="/adm-201-vs-app-builder" className="underline hover:text-white font-medium">ADM-201 vs App Builder</Link>
+            {' · '}
+            <Link href="/which-salesforce-certification-first" className="underline hover:text-white font-medium">Which cert first?</Link>
+            {' · '}
+            <Link href="/how-to-study-for-salesforce-certification" className="underline hover:text-white font-medium">How to study</Link>
+            {' · '}
+            <Link href="/how-to-become-salesforce-consultant" className="underline hover:text-white font-medium">Become a Consultant</Link>
+            {' · '}
+            <Link href="/how-to-become-salesforce-developer" className="underline hover:text-white font-medium">Become a Developer</Link>
+            {' · '}
+            <Link href="/salesforce-admin-vs-developer-career" className="underline hover:text-white font-medium">Admin vs Developer</Link>
+            {' · '}
+            <Link href="/salesforce-certification-difficulty" className="underline hover:text-white font-medium">Difficulty ranking</Link>
           </p>
         </div>
       </section>

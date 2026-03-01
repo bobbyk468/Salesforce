@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `JavaScript Developer I vs Platform Developer I (${RELEASE_CURRENT})`
-const pageDescription = `JavaScript Developer I vs Platform Developer I (PD1): which Salesforce developer cert to take first? Compare exam format, skills tested, career value, and who should take each.`
+const pageDescription = `JavaScript Developer I vs Platform Developer I (PD1): which Salesforce developer cert first? Compare exam format, skills, career value.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

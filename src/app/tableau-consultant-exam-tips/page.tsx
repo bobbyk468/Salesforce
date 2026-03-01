@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Tableau Business Intelligence Analyst Exam Tips (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Tableau Business Intelligence Analyst exam tips for ${RELEASE_CURRENT}: Tableau Desktop, data connections, calculations, dashboards, and scenario strategy to pass first attempt.`
+  `Tableau Business Intelligence Analyst exam tips for ${RELEASE_CURRENT}: Tableau Desktop, data connections, calculations, dashboards.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

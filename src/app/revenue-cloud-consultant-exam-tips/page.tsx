@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Revenue Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Revenue Cloud Consultant exam tips for ${RELEASE_CURRENT}: CPQ, billing, subscription management, revenue recognition, and scenario strategy to pass first attempt.`
+  `Salesforce Revenue Cloud Consultant exam tips for ${RELEASE_CURRENT}: CPQ, billing, subscription management, revenue recognition.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

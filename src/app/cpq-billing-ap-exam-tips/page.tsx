@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `CPQ &amp; Billing AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CPQ &amp; Billing Accredited Professional exam tips for ${RELEASE_CURRENT}: product configuration, pricing, contracts, invoicing, and scenario strategy to pass first attempt.`
+  `Salesforce CPQ &amp; Billing Accredited Professional exam tips for ${RELEASE_CURRENT}: product configuration, pricing, contracts, invoicing.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

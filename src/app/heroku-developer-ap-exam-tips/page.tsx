@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Heroku Developer AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Heroku Developer Accredited Professional exam tips for ${RELEASE_CURRENT}: Heroku deployments, dynos, add-ons, Salesforce integration, and scenario strategy to pass.`
+  `Salesforce Heroku Developer Accredited Professional exam tips for ${RELEASE_CURRENT}: Heroku deployments, dynos, add-ons, Salesforce integration.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

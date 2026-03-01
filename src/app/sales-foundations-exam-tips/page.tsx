@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Sales Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Sales Foundations exam tips for ${RELEASE_CURRENT}: Sales Cloud basics, leads and opportunities, forecasting, and scenario strategy to pass first attempt.`
+  `Salesforce Sales Foundations exam tips for ${RELEASE_CURRENT}: Sales Cloud basics, leads and opportunities, forecasting.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

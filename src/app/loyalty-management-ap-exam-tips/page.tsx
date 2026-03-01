@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Loyalty Management AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Loyalty Management Accredited Professional exam tips for ${RELEASE_CURRENT}: loyalty programmes, tiers, points management, partner integration, and scenario strategy to pass.`
+  `Salesforce Loyalty Management Accredited Professional exam tips for ${RELEASE_CURRENT}: loyalty programmes, tiers, points management, partner integration.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

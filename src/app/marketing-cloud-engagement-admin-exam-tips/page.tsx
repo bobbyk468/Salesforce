@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Marketing Cloud Engagement Admin Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Engagement Administrator exam tips for ${RELEASE_CURRENT}: email studio, automation studio, data extensions, deliverability, and scenario strategy to pass first attempt.`
+  `Salesforce Marketing Cloud Engagement Administrator exam tips for ${RELEASE_CURRENT}: email studio, automation studio, data extensions, deliverability.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

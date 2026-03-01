@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `MuleSoft Catalyst Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Catalyst Consultant exam tips for ${RELEASE_CURRENT}: Catalyst methodology, IT operating model, API programme design, and scenario strategy to pass first attempt.`
+  `MuleSoft Catalyst Consultant exam tips for ${RELEASE_CURRENT}: Catalyst methodology, IT operating model, API programme design.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Manufacturing Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Manufacturing Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: sales agreements, account-based forecasting, partner management, and scenario strategy to pass.`
+  `Salesforce Manufacturing Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: sales agreements, account-based forecasting, partner management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

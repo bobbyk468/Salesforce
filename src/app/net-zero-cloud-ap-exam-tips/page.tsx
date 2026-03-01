@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Net Zero Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Net Zero Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: carbon accounting, emissions tracking, sustainability reporting, and scenario strategy to pass.`
+  `Salesforce Net Zero Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: carbon accounting, emissions tracking, sustainability reporting.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

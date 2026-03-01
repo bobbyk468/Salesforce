@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `NPSP Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce NPSP Consultant exam tips for ${RELEASE_CURRENT}: household model, gift entry, engagement plans, and scenario strategy to pass first attempt.`
+  `Salesforce NPSP Consultant exam tips for ${RELEASE_CURRENT}: household model, gift entry, engagement plans.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

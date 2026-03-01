@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `B2C Solution Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2C Solution Architect exam tips for ${RELEASE_CURRENT}: multi-cloud B2C architecture, Commerce Cloud, Marketing Cloud, Service Cloud, and scenario strategy to pass.`
+  `Salesforce B2C Solution Architect exam tips for ${RELEASE_CURRENT}: multi-cloud B2C architecture, Commerce Cloud, Marketing Cloud, Service Cloud.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

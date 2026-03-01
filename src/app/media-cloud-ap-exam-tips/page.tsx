@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Media Cloud AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Media Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: media sales, order management, subscriber management, and scenario strategy to pass first attempt.`
+  `Salesforce Media Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: media sales, order management, subscriber management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

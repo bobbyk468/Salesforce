@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Platform Developer II Study Guide (${RELEASE_CURRENT}): Pass the PD2 Exam`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Platform Developer II (PD2) study guide (${RELEASE_CURRENT}): design patterns, async Apex, integration, performance, testing, and scenario strategies to pass one of Salesforce's hardest exams.`
+  `Platform Developer II (PD2) study guide (${RELEASE_CURRENT}): design patterns, async Apex, integration, performance, testing. Pass one of Salesforce's hardest exams.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

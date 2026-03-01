@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Salesforce Technical Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Technical Architect exam tips for ${RELEASE_CURRENT}: CTA pathway, system architecture, integration, security, and Review Board strategy to achieve the highest Salesforce credential.`
+  `Salesforce Technical Architect exam tips for ${RELEASE_CURRENT}: CTA pathway, system architecture, integration, security, Review Board strategy.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

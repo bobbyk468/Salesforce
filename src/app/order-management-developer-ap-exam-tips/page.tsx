@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Order Management Developer AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Order Management Developer AP exam tips for ${RELEASE_CURRENT}: OMS APIs, Flow customisation, headless integration, and scenario strategy to pass first attempt.`
+  `Salesforce Order Management Developer AP exam tips for ${RELEASE_CURRENT}: OMS APIs, Flow customisation, headless integration.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

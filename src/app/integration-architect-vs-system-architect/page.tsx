@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Integration vs System Architect: Salesforce Cert Comparison'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce Integration Architect and System Architect certifications: exam focus, prerequisites, career paths, and which to take on your journey to the CTA credential.'
+  'Compare Salesforce Integration Architect and System Architect certifications: exam focus, prerequisites, career paths, which to take for CTA.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

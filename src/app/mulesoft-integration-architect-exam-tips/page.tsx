@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `MuleSoft Integration Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Integration Architect exam tips for ${RELEASE_CURRENT}: enterprise integration design, Anypoint architecture patterns, API-led connectivity, and scenario strategy to pass.`
+  `MuleSoft Integration Architect exam tips for ${RELEASE_CURRENT}: enterprise integration design, Anypoint architecture patterns, API-led connectivity.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

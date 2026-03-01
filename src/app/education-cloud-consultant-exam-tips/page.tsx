@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Education Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Education Cloud Consultant exam tips for ${RELEASE_CURRENT}: EDA data model, student lifecycle, adviser console, and scenario strategy to pass first attempt.`
+  `Salesforce Education Cloud Consultant exam tips for ${RELEASE_CURRENT}: EDA data model, student lifecycle, adviser console.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

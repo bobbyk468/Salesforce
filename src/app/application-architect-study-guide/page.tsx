@@ -199,7 +199,7 @@ export default function ApplicationArchitectStudyGuidePage() {
           <Link href="/certifications/advanced-administrator" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Advanced Admin Practice
           </Link>
-          <Link href="/certifications/platform-developer-i" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+          <Link href="/certifications/developer-1" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             Platform Developer I Practice
           </Link>
         </div>

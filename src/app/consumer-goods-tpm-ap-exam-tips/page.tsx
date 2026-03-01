@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Consumer Goods TPM AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Consumer Goods Trade Promotion Management AP exam tips for ${RELEASE_CURRENT}: trade promotions, fund management, settlements, and scenario strategy to pass first attempt.`
+  `Salesforce Consumer Goods Trade Promotion Management AP exam tips for ${RELEASE_CURRENT}: trade promotions, fund management, settlements.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

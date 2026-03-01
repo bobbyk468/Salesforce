@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Tableau Desktop Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: data connections, basic charts, filters, and scenario strategy to pass this entry-level Tableau certification.`
+  `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: data connections, basic charts, filters,.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

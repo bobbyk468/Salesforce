@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `AI Associate Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce AI Associate exam tips for ${RELEASE_CURRENT}: AI fundamentals, Einstein AI, responsible AI, data ethics, and scenario strategy to pass first attempt.`
+  `Salesforce AI Associate exam tips for ${RELEASE_CURRENT}: AI fundamentals, Einstein AI, responsible AI, data ethics.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

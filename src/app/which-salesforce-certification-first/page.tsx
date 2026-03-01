@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Which Salesforce Certification Should I Get First? (${RELEASE_CURRENT})`
-const pageDescription = `Which Salesforce certification to take first in 2026: recommendations by background (admin, developer, consultant, marketing) and career goal — with study time and cost for each path.`
+const pageDescription = `Which Salesforce certification to take first in 2026: recommendations by background and career goal, with study time and cost for each path.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
