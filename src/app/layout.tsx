@@ -4,6 +4,7 @@ import './globals.css'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import DesktopSidebarSlot from '@/components/DesktopSidebarSlot'
+import StickyContentCta from '@/components/StickyContentCta'
 import GoogleAnalytics from '@/components/GoogleAnalytics'
 import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
@@ -199,8 +200,9 @@ export default function RootLayout({
           <main className="flex-grow grid grid-cols-1 lg:grid-cols-[1fr_320px]" data-main-layout>
             <div className="min-w-0">
               {children}
+              <StickyContentCta />
             </div>
-            <aside className="hidden lg:block w-[320px] min-h-[600px] border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white" aria-label="Contact sidebar">
+            <aside className="no-print hidden lg:block w-[320px] min-h-[600px] border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white" aria-label="Contact sidebar">
               <div className="p-6 pl-4 sticky top-24 w-[320px] min-w-0">
                 <DesktopSidebarSlot />
               </div>

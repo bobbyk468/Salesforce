@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import PrintChecklistButton from '@/components/PrintChecklistButton'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Exam Day Tips (${RELEASE_CURRENT})`
@@ -68,7 +69,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
 
-      <div className="mb-10">
+      <div className="mb-10 no-print">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Exam Guide</span>
         </div>
@@ -80,7 +81,11 @@ export default function SalesforceCertificationExamDayTipsPage() {
         </p>
       </div>
 
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+      <div id="exam-day-checklist" className="print-checklist-section grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
+        <div className="no-print flex items-center justify-between sm:col-span-2 mb-2">
+          <h2 className="text-lg font-bold text-gray-900">Exam Day Checklists</h2>
+          <PrintChecklistButton aria-label="Print or save exam day checklists" />
+        </div>
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-4">Online Proctored Exam Checklist</h2>
           <ul className="space-y-3 text-sm text-gray-700">
@@ -124,7 +129,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
         </div>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+      <div className="no-print bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Time Management During the Exam</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <div className="bg-gray-50 rounded-xl p-4">
@@ -148,7 +153,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
         </div>
       </div>
 
-      <div className="bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
+      <div className="no-print bg-amber-50 border border-amber-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-amber-900 mb-3">What to Do If Something Goes Wrong</h2>
         <ul className="space-y-2 text-sm text-amber-800">
           <li>⚠ <strong>Internet disconnects (online):</strong> Reconnect immediately. Contact Kryterion support if it persists.</li>
@@ -159,7 +164,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
         </ul>
       </div>
 
-      <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
+      <div className="no-print bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
@@ -171,7 +176,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
         </dl>
       </div>
 
-      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
+      <div className="no-print bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Get Exam-Ready with Practice Questions</h2>
         <p className="text-blue-100 mb-6">Build exam confidence with free practice questions before your exam day.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">

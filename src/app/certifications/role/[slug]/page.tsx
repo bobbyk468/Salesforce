@@ -80,25 +80,25 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   architect:
-    'Salesforce Architect certification path to CTA: Application, System, Integration, Data Architect. Free practice questions & study guides. Start free.',
+    'Salesforce Architect certification path to CTA: Application, System, Integration, Data Architect. Free practice questions & study guides. Start free now.',
   consultant:
-    'All Salesforce Certified Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Field Service + more. Free practice exams. Start free.',
+    'Salesforce Certified Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Field Service + more. Free practice exams. Start free now.',
   marketing:
-    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist + more. Free practice & study guides. Start free.',
+    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist + more. Free practice & study guides. Start free now.',
   associate:
-    'Salesforce Associate certification: Platform Foundations ($75) and AI Associate ($200). Free practice & study guides. Start free.',
+    'Salesforce Associate certification: Platform Foundations ($75) and AI Associate ($200). Free practice & study guides. Start free now.',
   'accredited-professional':
-    'Salesforce Accredited Professional certs: Field Service, B2B Commerce, Health Cloud + more. Free practice & study guides. Start free.',
+    'Salesforce Accredited Professional certs: Field Service, B2B Commerce, Health Cloud + more. Free practice & study guides. Start free now.',
   administrator:
-    'Salesforce Administrator certification: ADM-201, Advanced Admin (ADM-211), App Builder (DEV-402) + more. Free practice & study guides. Start free.',
+    'Salesforce Administrator certification: ADM-201, Advanced Admin (ADM-211), App Builder (DEV-402) + more. Free practice & study guides. Start free now.',
   developer:
-    'Salesforce Developer certification: PD1, PD2, JavaScript Developer, MuleSoft, OmniStudio + more. Free practice & study guides. Start free.',
+    'Salesforce Developer certification: PD1, PD2, JavaScript Developer, MuleSoft, OmniStudio + more. Free practice & study guides. Start free now.',
   tableau:
-    'Salesforce Tableau certification: Tableau Architect, Consultant, Data Analyst, Desktop Foundations + more. Free practice & study guides. Start free.',
+    'Salesforce Tableau certification: Tableau Architect, Consultant, Data Analyst, Desktop Foundations + more. Free practice & study guides. Start free now.',
   sales:
-    'Salesforce Sales certification: Sales Cloud Consultant and Certified Sales Foundations. Free practice & study guides. Start free.',
+    'Salesforce Sales certification: Sales Cloud Consultant and Certified Sales Foundations. Free practice & study guides. Start free now.',
   designer:
-    'Salesforce Designer certifications: Platform Strategy Designer and UX Designer. Free practice & study guides. Start free.',
+    'Salesforce Designer certifications: Platform Strategy Designer and UX Designer. Free practice & study guides. Start free now.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

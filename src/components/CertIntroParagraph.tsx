@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import { getRequiredPrerequisite, getRecommendedPrerequisite } from '@/lib/cert-prerequisites'
-import { slugToDisplayName, SLUG_TO_EXAM_TIPS } from '@/lib/cert-seo-data'
+import { slugToDisplayName, SLUG_TO_EXAM_TIPS, SLUG_TO_STUDY_GUIDE } from '@/lib/cert-seo-data'
 
 interface CertIntroParagraphProps {
   slug: string
@@ -11,13 +11,23 @@ interface CertIntroParagraphProps {
 /**
  * Introductory paragraph with internal links for certification pages.
  * Uses prerequisite data to link to the recommended/required prior cert and certification path.
- * Adds exam-tips link when a dedicated page exists. Improves visibility, CTR, and internal linking.
+ * Adds exam-tips and study-guide links when dedicated pages exist. Improves visibility, CTR, and internal linking.
  */
 export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
   const requiredPrereq = getRequiredPrerequisite(slug)
   const recommendedPrereq = getRecommendedPrerequisite(slug)
   const prereq = requiredPrereq ?? recommendedPrereq
   const examTipsPath = SLUG_TO_EXAM_TIPS[slug]
+  const studyGuidePath = SLUG_TO_STUDY_GUIDE[slug]
+
+  const studyGuideLink = studyGuidePath ? (
+    <>
+      {' '}
+      <Link href={studyGuidePath} className="text-salesforce-blue font-medium hover:underline">
+        full study guide
+      </Link>
+    </>
+  ) : null
 
   const examTipsLink = examTipsPath ? (
     <>
@@ -25,6 +35,13 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
       <Link href={examTipsPath} className="text-salesforce-blue font-medium hover:underline">
         exam tips and study plan
       </Link>.
+    </>
+  ) : null
+
+  const extraLinks = (studyGuideLink || examTipsLink) ? (
+    <>
+      {studyGuideLink && <> for deep section coverage.{examTipsLink}</>}
+      {!studyGuideLink && examTipsLink}
     </>
   ) : null
 
@@ -41,7 +58,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
         <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
           certification path
         </Link>{' '}
-        to understand where this certification fits. Below you&apos;ll find exam weightage, study tips, and practice questions.{examTipsLink}
+        to understand where this certification fits. Below you&apos;ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
       </p>
     )
   }
@@ -52,7 +69,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
       <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
         certification path
       </Link>{' '}
-      to understand where this certification fits in your career. Below you&apos;ll find exam weightage, study tips, and practice questions.{examTipsLink}
+      to understand where this certification fits in your career. Below you&apos;ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
     </p>
   )
 }

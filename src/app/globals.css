@@ -152,4 +152,15 @@ body::before {
   .print-checklist-only summary {
     display: none !important;
   }
+  /* Exam day checklist: ensure clean print layout */
+  .print-checklist-section {
+    break-inside: avoid;
+  }
+  .print-checklist-section h2 {
+    margin-top: 0;
+  }
+  /* Hide main layout sidebar in print (handled by no-print on aside) */
+  [data-main-layout] {
+    display: block !important;
+  }
 }
