@@ -484,7 +484,8 @@ function getCertMetaTitle(slug: string): string {
     'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
     'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
     'technical-architect': `Salesforce Architect Certification: CTA Guide ${TITLE_YEAR}`,
-    'system-architect': `System Architect Certification: Free Practice (${TITLE_YEAR})`,
+    'system-architect': `Salesforce System Architect: Free Practice (${TITLE_YEAR})`,
+    'application-architect': `Salesforce Application Architect Certification (${TITLE_YEAR})`,
     'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
     'data-architect': `Data Architect Certification: Free Practice (${TITLE_YEAR})`,
     // Extended coverage: All remaining certs for complete CTR optimization
@@ -492,7 +493,6 @@ function getCertMetaTitle(slug: string): string {
     'advanced-field-service-ap': `Advanced Field Service AP: Free Practice Guide (${TITLE_YEAR})`,
     'agentforce-specialist': `Agentforce Specialist: Study Guide & Practice (${TITLE_YEAR})`,
     'ai-associate': `Salesforce AI Associate: Free Practice Guide (${TITLE_YEAR})`,
-    'application-architect': `Application Architect Cert: Free Practice (${TITLE_YEAR})`,
     'b2b-commerce-admin-ap': `B2B Commerce Admin AP: Free Practice (${TITLE_YEAR})`,
     'b2b-commerce-developer-ap': `B2B Commerce Developer AP: Free Practice (${TITLE_YEAR})`,
     'b2b-solution-architect': `Master B2B Solution Architecture: Design Guide (${TITLE_YEAR})`,

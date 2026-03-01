@@ -13,9 +13,9 @@ export async function generateStaticParams() {
 }
 
 const ROLE_TITLES: Record<string, string> = {
-  architect:              `Salesforce Architect Certification Guide (${RELEASE_CURRENT})`,
-  consultant:             `Salesforce Consultant Certification Guide (${RELEASE_CURRENT})`,
-  marketing:              `Salesforce Marketing Certification (${RELEASE_CURRENT})`,
+  architect:              `Salesforce Architect Certification Path (${RELEASE_CURRENT})`,
+  consultant:             `Salesforce Certified Consultant Certifications (${RELEASE_CURRENT})`,
+  marketing:              `Salesforce Marketing Cloud Certification (${RELEASE_CURRENT})`,
   associate:              `Salesforce Associate Certification (${RELEASE_CURRENT})`,
   administrator:          `Salesforce Admin Certification: ADM-201 + More (${RELEASE_CURRENT})`,
   developer:              `Salesforce Developer Certification (${RELEASE_CURRENT})`,
@@ -80,11 +80,11 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   architect:
-    'Salesforce Architect certification: Application, System, Integration, Data, Technical Architect (CTA). Free practice & study guides. Start free.',
+    'Salesforce Architect certification path to CTA: Application, System, Integration, Data Architect. Free practice questions & study guides. Start free.',
   consultant:
-    'Salesforce Consultant certification: Sales Cloud, Service Cloud, Experience Cloud, Data Cloud + more. Free practice & study guides. Start free.',
+    'All Salesforce Certified Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Field Service + more. Free practice exams. Start free.',
   marketing:
-    'Salesforce Marketing certification: Email Specialist, Marketing Cloud Consultant, Pardot + more. Free practice & study guides. Start free.',
+    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist + more. Free practice & study guides. Start free.',
   associate:
     'Salesforce Associate certification: Platform Foundations ($75) and AI Associate ($200). Free practice & study guides. Start free.',
   'accredited-professional':
