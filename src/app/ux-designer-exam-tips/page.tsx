@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `UX Designer Exam Tips (${RELEASE_CURRENT}): Salesforce UX Certification Study Guide`
+const pageTitle = `UX Designer Exam Tips (${RELEASE_CURRENT}) | Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}: human-centred design, discovery, prototyping, and scenario strategy to pass first attempt.`

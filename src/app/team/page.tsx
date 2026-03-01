@@ -7,7 +7,7 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Editorial Team | ${SITE_NAME}`
 const pageDescription =
-  'Trailblaze Prep content is written and reviewed by Krishna Mohan, a multi-certified Salesforce professional with hands-on implementation experience across Admin, Developer, and Consultant tracks.'
+  'Trailblaze Prep content by Krishna Mohan, multi-certified Salesforce professional with hands-on Admin, Developer, and Consultant experience.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

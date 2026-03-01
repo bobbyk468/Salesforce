@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'Salesforce Business Analyst vs Strategy Designer: Which Cert Fits Your Role?'
+const pageTitle = 'Business Analyst vs Strategy Designer: Which Cert?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Compare Salesforce Business Analyst and Strategy Designer certifications: what each tests, the types of roles they target, difficulty, and which to prioritise for your career.'

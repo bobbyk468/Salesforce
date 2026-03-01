@@ -4,7 +4,7 @@ import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPage
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Platform Foundations vs AI Associate: Which $75 Cert First (${RELEASE_CURRENT})`
+const pageTitle = `Platform Foundations vs AI Associate (${RELEASE_CURRENT})`
 const pageDescription = `Platform Foundations vs AI Associate comparison: both $75 Salesforce entry-level certifications — content differences, difficulty, career value, and which to take first in 2026.`
 
 export const metadata: Metadata = {

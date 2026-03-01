@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `App Builder vs Platform Developer I (${RELEASE_CURRENT}): Which Salesforce Cert to Take?`
+const pageTitle = `App Builder vs Platform Developer I (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `App Builder vs Platform Developer I (${RELEASE_CURRENT}): exam scope, coding requirements, difficulty, career paths, and which cert to take first for your Salesforce career.`

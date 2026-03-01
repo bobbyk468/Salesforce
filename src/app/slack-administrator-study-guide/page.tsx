@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Slack Administrator Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete Slack Administrator certification study guide: exam sections, workspace configuration, security, integrations, compliance, and tips to pass the Salesforce Slack Admin exam in 2026.`
+const pageDescription = `Slack Administrator study guide: exam sections, workspace config, security, integrations, and tips to pass the Salesforce Slack Admin exam.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

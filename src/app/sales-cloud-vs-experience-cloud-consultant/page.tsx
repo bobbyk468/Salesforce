@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Sales Cloud vs Experience Cloud Consultant (${RELEASE_CURRENT}): Which to Take?`
+const pageTitle = `Sales Cloud vs Experience Cloud Consultant (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Sales Cloud vs Experience Cloud Consultant (${RELEASE_CURRENT}): exam scope, difficulty, career paths, and which Salesforce consultant cert to take first. Side-by-side comparison.`
@@ -205,7 +205,7 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
           <Link href="/certifications/sales-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Sales Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/certifications/experience-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/certifications/experience-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Experience Cloud Practice Questions
           </Link>
           <Link href="/sales-cloud-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Pardot Specialist Exam Tips (${RELEASE_CURRENT}): Marketing Automation Study Guide`
+const pageTitle = `Pardot Specialist Exam Tips (${RELEASE_CURRENT}) | Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Pardot Specialist exam tips for ${RELEASE_CURRENT}: lead scoring, engagement programs, forms, and scenario strategy to pass first attempt.`

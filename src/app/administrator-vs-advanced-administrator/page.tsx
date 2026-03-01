@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'Salesforce Administrator vs Advanced Administrator: Which to Take Next?'
+const pageTitle = 'Administrator vs Advanced Administrator: Which Next?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Compare the Salesforce Administrator (ADM-201) and Advanced Administrator certifications by difficulty, topics, career value, and recommended study time. Find out when to upgrade.'

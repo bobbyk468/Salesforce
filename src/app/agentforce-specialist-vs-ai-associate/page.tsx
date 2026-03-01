@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Agentforce Specialist vs AI Associate (${RELEASE_CURRENT}): Which Salesforce AI Cert First?`
+const pageTitle = `Agentforce vs AI Associate (${RELEASE_CURRENT}) | Which First?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Agentforce Specialist vs AI Associate (${RELEASE_CURRENT}): exam difficulty, AI scope, career impact, and which Salesforce AI certification to take first. Compare side by side.`

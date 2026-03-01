@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Architect Certification Path (${RELEASE_CURRENT}): Application & System Architect Roadmap`
+const pageTitle = `Salesforce Architect Path (${RELEASE_CURRENT}) | App & System Architect`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce architect certification path (${RELEASE_CURRENT}): right order for Application Architect, System Architect, and CTA components. Start free practice now.`

@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Certification Salary (${RELEASE_CURRENT}): How Much Do Certified Professionals Earn?`
+const pageTitle = `Salesforce Certification Salary (${RELEASE_CURRENT}) | Pay by Cert`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce certification salary data for ${RELEASE_CURRENT}: ADM-201, PD1, Sales Cloud, Service Cloud, architect tracks. See which certs pay the most.`

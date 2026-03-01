@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce CTA Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete guide to the Salesforce Certified Technical Architect (CTA) credential: prerequisites, board review format, solution presentation tips, and how to prepare for the highest Salesforce certification.`
+const pageDescription = `Salesforce CTA study guide: prerequisites, board review format, and solution presentation tips for the highest Salesforce certification.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

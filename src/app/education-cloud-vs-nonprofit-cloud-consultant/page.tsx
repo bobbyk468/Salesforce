@@ -162,7 +162,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
           <Link href="/certifications/education-cloud-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Education Cloud Practice
           </Link>
-          <Link href="/certifications/nonprofit-cloud-consultant" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+          <Link href="/certifications/nonprofit-cloud" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             Nonprofit Cloud Practice
           </Link>
         </div>

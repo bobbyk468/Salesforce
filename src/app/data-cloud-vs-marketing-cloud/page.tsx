@@ -6,7 +6,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Data Cloud vs Marketing Cloud (${RELEASE_CURRENT}): Which Cert to Pursue?`
+const pageTitle = `Data Cloud vs Marketing Cloud (${RELEASE_CURRENT}) | Which Cert?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Data Cloud Consultant vs Marketing Cloud certifications (${RELEASE_CURRENT}): what each platform does, how the certs compare, and which certification path to choose for your role.`
