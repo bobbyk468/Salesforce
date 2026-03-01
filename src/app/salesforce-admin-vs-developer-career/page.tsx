@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Admin vs Developer Career Paths (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Administrator vs Developer career paths compared: day-to-day work, salary ranges, progression, certifications, and which path suits different backgrounds.`
+const pageDescription = `Salesforce Admin vs Developer career paths: day-to-day work, salary, progression, certs, and which path suits different backgrounds.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

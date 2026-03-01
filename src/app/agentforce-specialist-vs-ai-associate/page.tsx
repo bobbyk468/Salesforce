@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Agentforce vs AI Associate (${RELEASE_CURRENT}) | Which First?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist vs AI Associate (${RELEASE_CURRENT}): exam difficulty, AI scope, career impact, and which Salesforce AI certification to take first. Compare side by side.`
+  `Agentforce vs AI Associate: exam difficulty, AI scope, career impact. Which Salesforce AI cert to take first Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `System Architect vs Application Architect: Differences (${RELEASE_CURRENT})`
-const pageDescription = `System Architect vs Application Architect Salesforce comparison: required exams, domain differences, costs, career value, and which to pursue first on the CTA path in 2026.`
+const pageDescription = `System vs Application Architect: required exams, domain differences, costs, career value. Which to pursue first on CTA path.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -168,6 +170,8 @@ export default function SystemArchitectVsApplicationArchitectPage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('system-architect-vs-application-architect')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start the Architect Path</h2>

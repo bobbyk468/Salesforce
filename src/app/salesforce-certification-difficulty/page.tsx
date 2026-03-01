@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Difficulty Ranking (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce certification difficulty ranked from easiest to hardest in 2026. Includes passing score, questions, fee, and tips for every tier — from AI Associate to CTA Board.`
+const pageDescription = `Salesforce cert difficulty ranked: easiest to hardest. Passing score, questions, fee, tips for every tier from AI Associate to CTA.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

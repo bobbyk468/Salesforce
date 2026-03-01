@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -9,7 +11,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `App Builder vs Platform Developer I (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `App Builder vs Platform Developer I (${RELEASE_CURRENT}): exam scope, coding requirements, difficulty, career paths, and which cert to take first for your Salesforce career.`
+  `App Builder vs Platform Developer I: exam scope, coding needs, difficulty, career paths. Which cert first for your Salesforce career.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -196,6 +198,8 @@ export default function AppBuilderVsDeveloperIPage() {
           </div>
         </div>
       </section>
+
+      <RelatedGuides links={getRelatedGuides('app-builder-vs-developer-i')} />
 
       {/* CTA */}
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

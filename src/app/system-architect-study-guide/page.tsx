@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce System Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete study guide for the Salesforce Certified System Architect credential: the 5 required domain exams, key topics, recommended study order, and preparation strategy.`
+const pageDescription = `System Architect study guide: 5 required domain exams, key topics, recommended study order, preparation strategy Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

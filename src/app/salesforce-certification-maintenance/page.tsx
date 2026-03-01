@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Maintenance Guide (${RELEASE_CURRENT})`
-const pageDescription = `How to maintain your Salesforce certification in 2026: when maintenance is due, how to find modules on Trailhead, what happens if you miss a deadline, and renewal tips.`
+const pageDescription = `How to maintain Salesforce certification: when maintenance is due, Trailhead modules, deadline tips, renewal guide Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

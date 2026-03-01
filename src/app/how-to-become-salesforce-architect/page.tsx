@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, ArrowRight, BookOpen } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Architect (${RELEASE_CURRENT} Guide)`
-const pageDescription = `How to become a Salesforce Architect in 2026: the full path from ADM-201 to Certified Technical Architect (CTA). Timeline, certifications, salary, and study resources.`
+const pageDescription = `How to become a Salesforce Architect: path from ADM-201 to CTA. Timeline, certs, salary, study resources Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -198,6 +200,8 @@ export default function HowToBecomeSalesforceArchitectPage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('how-to-become-salesforce-architect')} />
 
       {/* CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Advanced Administrator Exam Tips (${RELEASE_CURRENT}): ADM-211 Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Advanced Administrator (ADM-211) exam tips for ${RELEASE_CURRENT}: security, automation, data management.`
+  `Salesforce Advanced Administrator (ADM-211) exam tips for ${RELEASE_CURRENT}: security, automation, data management Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Revenue Cloud Consultant Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Revenue Cloud Consultant study guide (${RELEASE_CURRENT}): 5 exam sections, billing schedules, pricing waterfall, 8-week plan, and free practice questions. $200 fee.`
+const pageDescription = `Revenue Cloud Consultant study guide: 5 sections, billing schedules, pricing waterfall, 8-week plan. $200. Free practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Data Cloud Consultant Study Guide (${RELEASE_CURRENT}): Pass the CDP Exam`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Data Cloud Consultant study guide (${RELEASE_CURRENT}): data ingestion, identity resolution, calculated insights, segmentation, activation, and scenario strategies to pass first attempt.`
+  `Data Cloud Consultant study guide: data ingestion, identity resolution, segmentation, activation. Pass first attempt Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

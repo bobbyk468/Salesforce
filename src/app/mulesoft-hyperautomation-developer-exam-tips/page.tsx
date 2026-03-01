@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `MuleSoft Hyperautomation Developer Exam Tips (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Hyperautomation Developer exam tips for ${RELEASE_CURRENT}: RPA, AI-powered automation, process orchestration.`
+  `MuleSoft Hyperautomation Developer exam tips for ${RELEASE_CURRENT}: RPA, AI-powered automation, process orchestration Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Sharing & Visibility Architect Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Sharing & Visibility Architect exam tips for ${RELEASE_CURRENT}: OWD design, sharing rules, role hierarchy.`
+  `Salesforce Sharing & Visibility Architect exam tips for ${RELEASE_CURRENT}: OWD design, sharing rules, role hierarchy Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `CTA Review Board Exam Tips (${RELEASE_CURRENT}): Presentation Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CTA Review Board tips for ${RELEASE_CURRENT}: scenario presentation structure, whiteboarding strategy, panel Q&A technique, and how to pass the live architecture defence.`
+  `CTA Review Board tips: scenario presentation, whiteboarding, panel Q&A. How to pass the live architecture defence Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

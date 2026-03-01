@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `CRM Analytics Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CRM Analytics Consultant exam tips for ${RELEASE_CURRENT}: dashboards, SAQL, dataflows, Einstein Discovery.`
+  `Salesforce CRM Analytics Consultant exam tips for ${RELEASE_CURRENT}: dashboards, SAQL, dataflows, Einstein Discovery Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

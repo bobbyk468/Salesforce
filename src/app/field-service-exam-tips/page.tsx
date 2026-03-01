@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Field Service Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Field Service Consultant exam tips for ${RELEASE_CURRENT}: work orders, scheduling, mobile workforce.`
+  `Salesforce Field Service Consultant exam tips for ${RELEASE_CURRENT}: work orders, scheduling, mobile workforce Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

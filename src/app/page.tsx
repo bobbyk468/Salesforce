@@ -352,6 +352,10 @@ export default function Home() {
             <Link href="/salesforce-admin-vs-developer-career" className="underline hover:text-white font-medium">Admin vs Developer</Link>
             {' · '}
             <Link href="/salesforce-certification-difficulty" className="underline hover:text-white font-medium">Difficulty ranking</Link>
+            {' · '}
+            <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-white font-medium">UX vs Strategy Designer</Link>
+            {' · '}
+            <Link href="/app-builder-vs-developer-i" className="underline hover:text-white font-medium">App Builder vs PD1</Link>
           </p>
         </div>
       </section>

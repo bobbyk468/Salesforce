@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Advanced Administrator Study Guide (${RELEASE_CURRENT}): Pass the Exam`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Advanced Administrator study guide (${RELEASE_CURRENT}): all 7 exam sections, complex automation, advanced security, data management, and scenario strategies to pass first attempt.`
+  `Advanced Administrator study guide: 7 exam sections, automation, security, data management, scenario strategies to pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

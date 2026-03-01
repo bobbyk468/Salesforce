@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Dev Lifecycle & Deployment Architect Exam Tips (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Dev Lifecycle & Deployment Architect exam tips for ${RELEASE_CURRENT}: release management, CI/CD, environment strategy, and scenario tips to pass first attempt.`
+  `Dev Lifecycle & Deployment Architect exam tips: release management, CI/CD, environment strategy. Pass first attempt Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

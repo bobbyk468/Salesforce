@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Platform Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete MuleSoft Platform Architect certification study guide: exam sections, Anypoint Platform architecture, connectivity, operations, governance, and tips to pass the exam in 2026.`
+const pageDescription = `MuleSoft Platform Architect study guide: Anypoint Platform, connectivity, operations, governance. Pass in 2026 Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

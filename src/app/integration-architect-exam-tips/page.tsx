@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Integration Architect Exam Tips (${RELEASE_CURRENT}): Salesforce Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Integration Architect exam tips for ${RELEASE_CURRENT}: integration patterns, API strategy, middleware.`
+  `Salesforce Integration Architect exam tips for ${RELEASE_CURRENT}: integration patterns, API strategy, middleware Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

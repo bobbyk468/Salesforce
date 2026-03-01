@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Data Architect Exam Tips (${RELEASE_CURRENT}): Salesforce Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Data Architect exam tips for ${RELEASE_CURRENT}: data modelling, large data volumes, master data management.`
+  `Salesforce Data Architect exam tips for ${RELEASE_CURRENT}: data modelling, large data volumes, master data management Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

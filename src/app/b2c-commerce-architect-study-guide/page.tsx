@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce B2C Commerce Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete B2C Commerce Architect certification study guide: exam sections, solution architecture, integrations, performance, security, and tips to pass the Salesforce exam in 2026.`
+const pageDescription = `B2C Commerce Architect study guide: exam sections, solution architecture, integrations, performance, security. Pass in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

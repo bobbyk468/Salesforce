@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `How to Become a Salesforce Administrator (${RELEASE_CURRENT} Guide)`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `How to become a Salesforce Administrator in ${new Date().getFullYear()}: from zero experience to ADM-201 certified in 8–12 weeks. Step-by-step guide with free resources.`
+  `How to become a Salesforce Administrator in ${new Date().getFullYear()}: from zero experience to ADM-201 certified in 8–12 weeks. Step-by-step guide...`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

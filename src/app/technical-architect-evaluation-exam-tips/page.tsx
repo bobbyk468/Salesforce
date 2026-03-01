@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `CTA Evaluation Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CTA Evaluation Exam tips for ${RELEASE_CURRENT}: advanced architecture, large data volumes, integration patterns, and written exam strategy to qualify for the Review Board.`
+  `CTA Evaluation Exam tips: advanced architecture, large data, integration patterns. Written exam strategy for Review Board.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

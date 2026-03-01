@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Application Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete study guide for the Salesforce Certified Application Architect credential: the 4 required domain exams, key topics, recommended study order, and preparation strategy.`
+const pageDescription = `Application Architect study guide: 4 required domain exams, key topics, study order, preparation strategy Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

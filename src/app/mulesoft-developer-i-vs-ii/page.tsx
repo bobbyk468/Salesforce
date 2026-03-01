@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'MuleSoft Developer I vs II: Which Exam Should You Take Next?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare MuleSoft Certified Developer Level 1 and Level 2: exam difficulty, topics covered, prerequisites, and which certification to target next on your MuleSoft path.'
+  'MuleSoft Developer I vs II: exam difficulty, topics, prerequisites. Which cert to target next on your MuleSoft path. Free practice.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

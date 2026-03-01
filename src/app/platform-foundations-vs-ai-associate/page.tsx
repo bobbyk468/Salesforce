@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Platform Foundations vs AI Associate (${RELEASE_CURRENT})`
-const pageDescription = `Platform Foundations vs AI Associate comparison: both $75 Salesforce entry-level certifications — content differences, difficulty, career value, and which to take first in 2026.`
+const pageDescription = `Platform Foundations vs AI Associate: both $75 entry-level. Content, difficulty, career value. Which first in 2026 Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -154,6 +156,8 @@ export default function PlatformFoundationsVsAiAssociatePage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('platform-foundations-vs-ai-associate')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with AI Associate — $75</h2>

@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Dev Lifecycle & Deployment Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Dev Lifecycle & Deployment Architect study guide (${RELEASE_CURRENT}): org strategy, CI/CD, packaging, release management. $400 fee, 60 questions, ~68% passing score.`
+const pageDescription = `Dev Lifecycle & Deployment Architect study guide: org strategy, CI/CD, packaging, release management. $400, 60 questions, ~68% passing.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

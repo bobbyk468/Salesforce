@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Nonprofit Cloud Consultant Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Nonprofit Cloud Consultant exam tips for ${RELEASE_CURRENT}: NPC data model, fundraising, programme management.`
+  `Salesforce Nonprofit Cloud Consultant exam tips for ${RELEASE_CURRENT}: NPC data model, fundraising, programme management Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

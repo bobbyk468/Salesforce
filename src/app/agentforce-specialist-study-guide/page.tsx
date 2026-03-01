@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Agentforce Specialist Study Guide (${RELEASE_CURRENT}): Pass the AI Agent Exam`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist study guide (${RELEASE_CURRENT}): all 5 exam sections, Agent Builder configuration, topics and actions, testing strategies, and scenario tips to pass first attempt.`
+  `Agentforce Specialist study guide: 5 sections, Agent Builder, topics, testing strategies. Pass first attempt Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

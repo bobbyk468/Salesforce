@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Sharing & Visibility Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Sharing & Visibility Architect study guide (${RELEASE_CURRENT}): OWD, role hierarchy, sharing rules, Apex sharing, territory management. $400 fee, 60 questions, ~68% passing score.`
+const pageDescription = `Sharing & Visibility Architect study guide: OWD, role hierarchy, sharing rules, Apex sharing. $400, ~68% pass Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

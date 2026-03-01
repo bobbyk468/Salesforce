@@ -6,7 +6,7 @@ import PrintChecklistButton from '@/components/PrintChecklistButton'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Exam Day Tips (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce certification exam day tips for 2026: what to bring, online vs testing centre checklist, managing time on exam day, and what to do if something goes wrong.`
+const pageDescription = `Salesforce exam day tips: what to bring, online vs centre checklist, time management, what to do if something goes wrong.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Integration Foundations Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `MuleSoft Integration Foundations (MCIA Associate) study guide (${RELEASE_CURRENT}): API-led connectivity, Anypoint Platform, integration concepts. $75 fee, 40 questions, 70% passing score.`
+const pageDescription = `MuleSoft Integration Foundations study guide: API-led connectivity, Anypoint Platform. $75, 40 questions, 70% pass Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -198,6 +200,8 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('mulesoft-integration-foundations-study-guide')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>

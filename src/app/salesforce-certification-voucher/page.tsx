@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Voucher & Discount Guide (${RELEASE_CURRENT})`
-const pageDescription = `How to get Salesforce certification exam discounts and vouchers in 2026: Dreamforce offers, Trailhead promotions, partner discounts, and 50% off retake vouchers.`
+const pageDescription = `Salesforce cert discounts and vouchers: Dreamforce, Trailhead, partner discounts, 50% retake vouchers Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

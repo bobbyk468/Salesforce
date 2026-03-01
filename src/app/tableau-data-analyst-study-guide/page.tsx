@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Tableau Data Analyst Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Tableau Certified Data Analyst study guide (${RELEASE_CURRENT}): 5 exam sections, LOD expressions, dashboard tips, 8-week plan, and free practice questions. 75% passing, $250.`
+const pageDescription = `Tableau Data Analyst study guide: 5 sections, LOD, dashboard tips, 8-week plan. 75% passing, $250. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -203,6 +205,8 @@ export default function TableauDataAnalystStudyGuidePage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('tableau-data-analyst-study-guide')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>

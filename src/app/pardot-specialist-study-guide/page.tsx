@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Specialist Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Pardot (Marketing Cloud Account Engagement) Specialist study guide (${RELEASE_CURRENT}): 5 exam sections, 8-week plan, scoring & grading, Engagement Studio. $200 fee, 60 questions.`
+const pageDescription = `Pardot Specialist study guide: 5 sections, 8-week plan, scoring, Engagement Studio. $200, 60 questions. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

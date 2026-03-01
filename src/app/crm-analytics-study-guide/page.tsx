@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `CRM Analytics Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce CRM Analytics (Tableau CRM / Einstein Analytics) study guide (${RELEASE_CURRENT}): dataflows, recipes, SAQL, dashboards. $200 fee, 60 questions, ~67% passing score.`
+const pageDescription = `CRM Analytics study guide: dataflows, recipes, SAQL, dashboards. $200, 60 questions, ~67% pass. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

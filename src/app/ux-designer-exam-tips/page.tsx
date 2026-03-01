@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `UX Designer Exam Tips (${RELEASE_CURRENT}) | Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}: human-centred design, discovery, prototyping.`
+  `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}: human-centred design, discovery, prototyping. Scenario tips to pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

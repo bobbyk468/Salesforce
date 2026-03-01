@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `JavaScript Developer I Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce JavaScript Developer I study guide (${RELEASE_CURRENT}): 6 exam sections, async programming, ES6+, LWC context, and free practice questions. $200 fee, 60 questions.`
+const pageDescription = `JavaScript Developer I study guide: 6 exam sections, async, ES6+, LWC. $200, 60 questions. Free practice questions. Pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

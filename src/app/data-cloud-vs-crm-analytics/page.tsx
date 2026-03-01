@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Data Cloud vs CRM Analytics Consultant: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce Data Cloud Consultant and CRM Analytics &amp; Einstein Discovery Consultant certifications: what each tests, career use cases, and which to prioritise.'
+  'Data Cloud vs CRM Analytics Consultant: what each tests, career use cases. Which to prioritise. Free practice questions.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

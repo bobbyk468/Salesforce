@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Integration Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete MuleSoft Integration Architect certification study guide: exam sections, API-led connectivity, integration patterns, security, governance, and tips to pass the exam in 2026.`
+const pageDescription = `MuleSoft Integration Architect study guide: API-led connectivity, integration patterns, security, governance. Pass in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

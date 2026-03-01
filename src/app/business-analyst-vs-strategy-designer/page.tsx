@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Business Analyst vs Strategy Designer: Which Cert?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce Business Analyst and Strategy Designer certifications: what each tests, the types of roles they target, difficulty, and which to prioritise for your career.'
+  'Business Analyst vs Strategy Designer: what each tests, roles they target, difficulty. Which to prioritise for your career.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

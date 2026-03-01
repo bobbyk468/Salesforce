@@ -2,6 +2,8 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -9,7 +11,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Marketing Cloud Engagement Admin vs Developer: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Marketing Cloud Engagement Administrator and Marketing Cloud Engagement Developer certifications: what each tests, who each is designed for, and which to take first.'
+  'Marketing Cloud Admin vs Developer: what each tests, who each is for. Which cert to take first. Free practice questions.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -143,6 +145,8 @@ export default function MarketingCloudAdminVsDeveloperPage() {
           ))}
         </dl>
       </section>
+
+      <RelatedGuides links={getRelatedGuides('marketing-cloud-admin-vs-developer')} />
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>

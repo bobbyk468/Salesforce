@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Strategy Designer Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete Strategy Designer certification study guide: exam sections, key topics, human-centred design frameworks, study plan, and tips to pass the Salesforce exam in 2026.`
+const pageDescription = `Strategy Designer study guide: exam sections, human-centred design, study plan. Pass the Salesforce exam in 2026 Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

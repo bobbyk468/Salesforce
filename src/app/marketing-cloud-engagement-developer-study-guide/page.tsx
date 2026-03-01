@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Marketing Cloud Engagement Developer Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete Marketing Cloud Engagement Developer certification study guide: exam sections, AMPscript, SSJS, REST API, data management, and tips to pass the exam in 2026.`
+const pageDescription = `Marketing Cloud Engagement Developer study guide: AMPscript, SSJS, REST API, data management. Pass in 2026 Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

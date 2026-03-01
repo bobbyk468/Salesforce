@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Integration Architect Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Integration Architect study guide (${RELEASE_CURRENT}): 5 exam sections, 10-week plan, API patterns, async vs sync design tips. $400 fee, 60 questions, ~68% passing score.`
+const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, ~68% pass Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

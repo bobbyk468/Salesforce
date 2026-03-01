@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Industries CPQ Developer Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Industries CPQ Developer exam tips for ${RELEASE_CURRENT}: product catalogue, pricing, guided selling.`
+  `Salesforce Industries CPQ Developer exam tips for ${RELEASE_CURRENT}: product catalogue, pricing, guided selling Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

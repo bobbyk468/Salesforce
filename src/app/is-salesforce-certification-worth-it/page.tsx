@@ -2,11 +2,13 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, ArrowRight } from 'lucide-react'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Is Salesforce Certification Worth It? (${RELEASE_CURRENT})`
-const pageDescription = `Is Salesforce certification worth it in 2026? Honest breakdown of ROI, salary increases, job market demand, time investment, and who should (and shouldn&apos;t) get certified.`
+const pageDescription = `Is Salesforce certification worth it? ROI, salary, job demand, time investment. Who should (and shouldn't) get certified.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -201,6 +203,8 @@ export default function IsSalesforceCertificationWorthItPage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('is-salesforce-certification-worth-it')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Certification Journey</h2>

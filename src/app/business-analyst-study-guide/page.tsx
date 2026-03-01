@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Business Analyst Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Business Analyst study guide (${RELEASE_CURRENT}): 7 exam sections, 8-week plan, scenario tips, and free practice questions. $200 fee, 60 questions. Start free.`
+const pageDescription = `Business Analyst study guide: 7 exam sections, 8-week plan, scenario tips, free practice. $200, 60 questions. Pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -210,6 +212,8 @@ export default function BusinessAnalystStudyGuidePage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('business-analyst-study-guide')} />
 
       {/* CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

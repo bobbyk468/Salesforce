@@ -1,11 +1,13 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import RelatedGuides from '@/components/RelatedGuides'
+import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Consultant vs Marketing Cloud Consultant (${RELEASE_CURRENT})`
-const pageDescription = `Pardot Consultant vs Marketing Cloud Consultant comparison: B2B vs B2C marketing, exam differences, career paths, and which Salesforce marketing certification to take in 2026.`
+const pageDescription = `Pardot vs Marketing Cloud Consultant: B2B vs B2C, exam differences, career paths. Which Salesforce marketing cert in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -151,6 +153,8 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
           ))}
         </dl>
       </div>
+
+      <RelatedGuides links={getRelatedGuides('pardot-consultant-vs-marketing-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice Marketing Certification Questions</h2>

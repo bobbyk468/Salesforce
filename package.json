@@ -12,7 +12,10 @@
     "validate:seo:local": "npm run build && node scripts/validate-technical-seo.mjs --base=http://localhost:3000",
     "validate:readability": "node scripts/validate-readability.mjs",
     "validate:perf": "node scripts/validate-performance.mjs",
-    "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs"
+    "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs",
+    "indexnow": "node scripts/submit-indexnow.mjs",
+    "bing:submit": "node scripts/submit-bing-urls.mjs",
+    "verify:ahref": "node scripts/verify-ahref-fixes.mjs"
   },
   "dependencies": {
     "next": "^14.2.0",

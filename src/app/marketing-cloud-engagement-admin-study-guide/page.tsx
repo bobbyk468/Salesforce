@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Marketing Cloud Engagement Admin Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Marketing Cloud Engagement Administrator study guide (${RELEASE_CURRENT}): account setup, business units, data management, compliance. $200 fee, 60 questions, ~67% passing score.`
+const pageDescription = `Marketing Cloud Engagement Admin study guide: account setup, business units, data, compliance. $200, ~67% pass. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

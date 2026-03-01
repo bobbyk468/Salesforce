@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Developer I Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `MuleSoft Developer I study guide (${RELEASE_CURRENT}): exam sections, DataWeave, connectors, error handling, 8-week plan, and free practice questions. $200 fee, 60 questions.`
+const pageDescription = `MuleSoft Developer I study guide: exam sections, DataWeave, connectors, error handling, 8-week plan. $200, 60 questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

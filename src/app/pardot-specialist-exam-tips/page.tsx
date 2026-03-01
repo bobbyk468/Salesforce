@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Pardot Specialist Exam Tips (${RELEASE_CURRENT}) | Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Pardot Specialist exam tips for ${RELEASE_CURRENT}: lead scoring, engagement programs, forms.`
+  `Pardot Specialist exam tips for ${RELEASE_CURRENT}: lead scoring, engagement programs, forms. Scenario tips to pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

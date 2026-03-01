@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `OmniStudio Consultant Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce OmniStudio Consultant study guide (${RELEASE_CURRENT}): 4 exam sections, solution design, discovery, implementation tips, and free practice questions. $200 fee.`
+const pageDescription = `OmniStudio Consultant study guide: 4 sections, solution design, discovery, implementation. $200. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

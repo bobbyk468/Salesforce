@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Nonprofit Cloud Consultant Study Guide (${RELEASE_CURRENT})`
-const pageDescription = `Complete Nonprofit Cloud Consultant study guide: exam sections, NPSP data model, fundraising, volunteer management, outcomes, and tips to pass the Salesforce exam in 2026.`
+const pageDescription = `Nonprofit Cloud Consultant study guide: exam sections, NPSP data model, fundraising, volunteer management. Pass in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

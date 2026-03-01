@@ -9,7 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Business Analyst Exam Tips (${RELEASE_CURRENT}): Salesforce BA Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Business Analyst exam tips for ${RELEASE_CURRENT}: user stories, process mapping, collaboration.`
+  `Salesforce Business Analyst exam tips for ${RELEASE_CURRENT}: user stories, process mapping, collaboration. Scenario tips to pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
