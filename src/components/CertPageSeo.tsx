@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { ChevronRight } from 'lucide-react'
 import StickyMobileCta from '@/components/StickyMobileCta'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_CURRENT, RELEASE_DATE } from '@/lib/release-data'
 import {
   getCertBreadcrumb,
   getCertBreadcrumbJsonLd,
@@ -33,10 +33,11 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const howToJsonLd = getCertHowToJsonLd(slug, certTitle)
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
   const pageUrl = `${siteBaseUrl}/certifications/${slug}`
-  // Use a stable publish date so Article schema doesn't re-signal "just published" on every deploy.
-  // Update dateModified when content is refreshed.
+  const articleHeadline = `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''} Study Guide and Practice Questions`
+  const ogImageUrl = `${siteBaseUrl}/og?t=${encodeURIComponent(articleHeadline)}`
+  // Use RELEASE_DATE for dateModified — signals freshness when content is refreshed for a new release.
   const datePublished = '2024-10-01T00:00:00Z'
-  const dateModified = '2026-02-27T00:00:00Z'
+  const dateModified = `${RELEASE_DATE}T00:00:00Z`
 
   const courseJsonLd = {
     '@context': 'https://schema.org',
@@ -57,21 +58,22 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const articleJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Article',
-    headline: `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''} Study Guide and Practice Questions`,
+    headline: articleHeadline,
     description: `Prepare for ${certTitle} with section-wise exam weightage, study plan, and sample practice questions.`,
-    mainEntityOfPage: {
-      '@type': 'WebPage',
-      '@id': pageUrl,
-    },
-    author: {
-      '@type': 'Organization',
-      name: 'Trailblaze Prep Editorial Team',
-      url: `${siteBaseUrl}/about`,
-    },
+    mainEntityOfPage: { '@type': 'WebPage', '@id': pageUrl },
+    image: [
+      { '@type': 'ImageObject', url: ogImageUrl, width: 1200, height: 630 },
+      ogImageUrl,
+    ],
+    author: [
+      { '@type': 'Organization', name: 'Trailblaze Prep', url: siteBaseUrl },
+      { '@type': 'Person', name: 'Krishna Mohan', url: `${siteBaseUrl}/team`, sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/' },
+    ],
     publisher: {
       '@type': 'Organization',
       name: 'Trailblaze Prep',
       url: siteBaseUrl,
+      logo: { '@type': 'ImageObject', url: `${siteBaseUrl}/og?t=Trailblaze%20Prep`, width: 600, height: 315 },
     },
     datePublished,
     dateModified,
