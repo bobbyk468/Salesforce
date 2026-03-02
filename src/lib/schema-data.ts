@@ -119,3 +119,86 @@ export function getWebPageJsonLd({
   }
   return page
 }
+
+/** Course JSON-LD for study guides and exam prep pages. Targets rich results. */
+export function getCourseJsonLd({
+  name,
+  description,
+  path,
+}: {
+  name: string
+  description: string
+  path: string
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Course',
+    name,
+    description,
+    url,
+    provider: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+    copyrightHolder: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+    copyrightYear: new Date().getFullYear(),
+    hasCourseInstance: {
+      '@type': 'CourseInstance',
+      name: `${name} — Exam Prep`,
+      courseMode: 'online',
+    },
+  }
+}
+
+/** LearningResource JSON-LD for study guides and exam tips. Targets rich results. */
+export function getLearningResourceJsonLd({
+  name,
+  description,
+  path,
+}: {
+  name: string
+  description: string
+  path: string
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'LearningResource',
+    name,
+    description,
+    url,
+    learningResourceType: ['study guide', 'practice problem', 'exam preparation'],
+    educationalLevel: 'professional',
+    inLanguage: 'en',
+    isAccessibleForFree: true,
+    provider: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep',
+      url: baseUrl,
+    },
+  }
+}
+
+/** HowTo JSON-LD for study guides and exam tips. Targets rich results. */
+export function getHowToJsonLd({
+  name,
+  description,
+  path,
+}: {
+  name: string
+  description: string
+  path: string
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'HowTo',
+    name,
+    description,
+    url,
+    step: [
+      { '@type': 'HowToStep', name: 'Review the exam outline and section weightage', text: 'Check the official exam guide and use the section-wise weightage to prioritize topics.' },
+      { '@type': 'HowToStep', name: 'Study by section', text: 'Use the study plan and exam prep content to cover each section. Focus on high-weight areas first.' },
+      { '@type': 'HowToStep', name: 'Practice with sample questions', text: 'Answer the free practice questions and read the explanations to reinforce your understanding.' },
+      { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, schedule your certification exam on Trailhead or the Salesforce Certification portal.' },
+    ],
+  }
+}

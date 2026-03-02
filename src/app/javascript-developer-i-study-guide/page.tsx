@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -65,17 +65,9 @@ const faqItems = [
 ]
 
 export default function JavascriptDeveloperIStudyGuidePage() {
-  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/javascript-developer-i-study-guide', breadcrumbItems })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
-  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/javascript-developer-i-study-guide' })
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
-
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/javascript-developer-i-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       {/* Header */}
       <div data-lcp-header className="mb-10">

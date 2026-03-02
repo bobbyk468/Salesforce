@@ -1,6 +1,6 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -58,17 +58,9 @@ const faqItems = [
 ]
 
 export default function PlatformFoundationsVsAiAssociatePage() {
-  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/platform-foundations-vs-ai-associate', breadcrumbItems })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
-  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/platform-foundations-vs-ai-associate' })
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
-
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/platform-foundations-vs-ai-associate" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-green-100 text-green-800 text-sm font-semibold px-3 py-1 rounded-full mb-4">

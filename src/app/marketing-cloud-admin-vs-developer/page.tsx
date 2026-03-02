@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -59,17 +59,9 @@ const faqItems = [
 ]
 
 export default function MarketingCloudAdminVsDeveloperPage() {
-  const webPageJsonLd = getWebPageJsonLd({ name: pageTitle, description: pageDescription, path: '/marketing-cloud-admin-vs-developer', breadcrumbItems })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
-  const articleJsonLd = getArticleJsonLd({ headline: pageTitle, description: pageDescription, path: '/marketing-cloud-admin-vs-developer' })
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
-
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/marketing-cloud-admin-vs-developer" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">

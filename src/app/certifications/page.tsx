@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Award, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -79,20 +79,6 @@ const topCerts = [
 ]
 
 export default function CertificationsIndexPage() {
-  const webPageJsonLd = getWebPageJsonLd({
-    name: indexTitle,
-    description: indexDescription,
-    path: '/certifications',
-    breadcrumbItems: certsBreadcrumb,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(certsBreadcrumb)
-  const articleJsonLd = getArticleJsonLd({
-    headline: indexTitle,
-    description: indexDescription,
-    path: '/certifications',
-  })
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
-
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
@@ -109,10 +95,13 @@ export default function CertificationsIndexPage() {
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas
+        headline={indexTitle}
+        description={indexDescription}
+        path="/certifications"
+        breadcrumbItems={certsBreadcrumb}
+        faqItems={faqItems}
+      />
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
 
       <header data-lcp-header className="text-center mb-10">

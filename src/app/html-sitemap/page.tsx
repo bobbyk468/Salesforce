@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = 'HTML Sitemap | Trailblaze Prep'
@@ -228,18 +228,14 @@ const corePages = [
 ]
 
 export default function HtmlSitemapPage() {
-  const webPageJsonLd = getWebPageJsonLd({
-    name: pageTitle,
-    description: pageDescription,
-    path: '/html-sitemap',
-    breadcrumbItems,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
-
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <ContentPageSchemas
+        headline={pageTitle}
+        description={pageDescription}
+        path="/html-sitemap"
+        breadcrumbItems={breadcrumbItems}
+      />
 
       <div data-lcp-header>
         <h1 className="text-3xl font-bold text-gray-900 mb-4">HTML Sitemap</h1>

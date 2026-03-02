@@ -3,7 +3,7 @@ import { Metadata } from 'next'
 import { MapPin, Layers, ChevronRight } from 'lucide-react'
 import { CERTIFICATION_PATHS } from '@/lib/certification-path-data'
 import type { PathStage } from '@/lib/certification-path-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CertificationPathContent from '@/components/CertificationPathContent'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
@@ -64,19 +64,15 @@ const faqItems = [
 ]
 
 export default function CertificationPathPage() {
-  const webPageJsonLd = getWebPageJsonLd({
-    name: pathTitle,
-    description: pathDescription,
-    path: '/certification-path',
-    breadcrumbItems: pathBreadcrumb,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(pathBreadcrumb)
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas
+        headline={pathTitle}
+        description={pathDescription}
+        path="/certification-path"
+        breadcrumbItems={pathBreadcrumb}
+        faqItems={faqItems}
+      />
       {/* Hero */}
       <div data-lcp-header className="text-center mb-16">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-sm font-medium mb-6">

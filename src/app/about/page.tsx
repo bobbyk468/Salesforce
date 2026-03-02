@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { Award, Mail, ExternalLink } from 'lucide-react'
 import { CONTACT_EMAIL, CONTENT_LAST_UPDATED, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${baseUrl}/og?t=About%20Trailblaze%20Prep%20%7C%20Salesforce%20Certification%20Prep`
@@ -46,22 +46,18 @@ export default function AboutPage() {
     },
     ...(SOCIAL_LINKS.length > 0 ? { sameAs: SOCIAL_LINKS.filter(Boolean) } : {}),
   }
-  const webPageJsonLd = getWebPageJsonLd({
-    name: `About Us | ${SITE_NAME}`,
-    description: aboutDescription,
-    path: '/about',
-    breadcrumbItems: aboutBreadcrumb,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(aboutBreadcrumb)
-
   return (
     <div className="max-w-3xl mx-auto px-4 py-12">
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
       />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
+      <ContentPageSchemas
+        headline={`About Us | ${SITE_NAME}`}
+        description={aboutDescription}
+        path="/about"
+        breadcrumbItems={aboutBreadcrumb}
+      />
 
       <div data-lcp-header>
         <h1 className="text-3xl font-bold text-gray-900 mb-6">About {SITE_NAME}</h1>

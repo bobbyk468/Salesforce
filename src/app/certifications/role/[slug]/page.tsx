@@ -3,7 +3,7 @@ import { notFound } from 'next/navigation'
 import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -156,21 +156,17 @@ export default async function RoleCertificationsPage({ params }: Props) {
     { name: 'All Certifications', url: '/certifications' },
     { name: `${category.name} Certifications`, url: `/certifications/role/${slug}` },
   ]
-  const webPageJsonLd = getWebPageJsonLd({
-    name: title,
-    description,
-    path: `/certifications/role/${slug}`,
-    breadcrumbItems: breadcrumb,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumb)
   const roleFaqs = ROLE_FAQS[slug] ?? []
-  const faqJsonLd = roleFaqs.length > 0 ? getFaqPageJsonLd(roleFaqs) : null
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      {faqJsonLd && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />}
+      <ContentPageSchemas
+        headline={title}
+        description={description}
+        path={`/certifications/role/${slug}`}
+        breadcrumbItems={breadcrumb}
+        faqItems={roleFaqs}
+      />
       <Link
         href="/certifications"
         className="inline-flex items-center text-salesforce-blue hover:text-salesforce-dark font-medium mb-8"

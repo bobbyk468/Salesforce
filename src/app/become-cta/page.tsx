@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { Metadata } from 'next'
 import { Award, Target, CheckCircle2, Sparkles, ArrowRight } from 'lucide-react'
 import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount } from '@/lib/cta-journey-data'
-import { getWebPageJsonLd, getBreadcrumbListJsonLd, getArticleJsonLd, getFaqPageJsonLd } from '@/lib/schema-data'
+import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ctaTitle = 'Salesforce CTA Path | Trailblaze Prep'
@@ -75,26 +75,10 @@ function FlowArrowDown() {
 export default function BecomeCtaPage() {
   const totalCerts = getCtaJourneyCertCount()
   const requiredCerts = getCtaJourneyRequiredCount()
-  const webPageJsonLd = getWebPageJsonLd({
-    name: ctaTitle,
-    description: ctaDescription,
-    path: '/become-cta',
-    breadcrumbItems: becomeCtaBreadcrumb,
-  })
-  const breadcrumbJsonLd = getBreadcrumbListJsonLd(becomeCtaBreadcrumb)
-  const articleJsonLd = getArticleJsonLd({
-    headline: ctaTitle,
-    description: ctaDescription,
-    path: '/become-cta',
-  })
-  const faqJsonLd = getFaqPageJsonLd(faqItems)
 
   return (
     <div className="max-w-6xl mx-auto px-4 py-12">
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }} />
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }} />
+      <ContentPageSchemas headline={ctaTitle} description={ctaDescription} path="/become-cta" breadcrumbItems={becomeCtaBreadcrumb} faqItems={faqItems} />
       {/* Hero */}
       <div data-lcp-header className="text-center mb-12">
         <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-indigo-100 text-indigo-700 text-sm font-medium mb-6">
