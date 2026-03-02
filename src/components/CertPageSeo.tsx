@@ -10,6 +10,7 @@ import {
   getCertFaqJsonLd,
   getCertHowToJsonLd,
   getCertWebPageJsonLd,
+  getExamWeightageTableJsonLd,
   SLUG_TO_EXAM_CODE,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
@@ -109,6 +110,8 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
     dateModified,
   }
 
+  const tableJsonLd = getExamWeightageTableJsonLd(slug, certTitle)
+
   return (
     <>
       <script
@@ -143,6 +146,12 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
       />
+      {tableJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(tableJsonLd) }}
+        />
+      )}
 
       {/* Visible breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-6">

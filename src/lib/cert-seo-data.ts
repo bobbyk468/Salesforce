@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
 import { RELEASE_CURRENT } from './release-data'
+import { getExamWeightage } from './exam-weightage-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -2600,6 +2601,33 @@ export function getCertHowToJsonLd(slug: string, certTitle: string) {
       { '@type': 'HowToStep', name: 'Practice with sample questions', text: 'Answer the free practice questions and read the explanations to reinforce your understanding.' },
       { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, schedule your certification exam on Trailhead or the Salesforce Certification portal.' },
     ],
+  }
+}
+
+/** JSON-LD Table for exam section weightage — targets Featured Snippets for "X exam weightage" queries. */
+export function getExamWeightageTableJsonLd(
+  slug: string,
+  certTitle: string
+): { '@context': string; '@type': string; about: { '@type': string; name: string }; mainEntity: object } | null {
+  const sections = getExamWeightage(slug)
+  if (!sections || sections.length === 0) return null
+  const examCode = SLUG_TO_EXAM_CODE[slug]
+  const tableName = examCode
+    ? `${certTitle} (${examCode}) Exam Section Weightage`
+    : `${certTitle} Exam Section Weightage`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Table',
+    about: { '@type': 'Thing', name: tableName },
+    mainEntity: {
+      '@type': 'ItemList',
+      itemListElement: sections.map((section, i) => ({
+        '@type': 'ListItem' as const,
+        position: i + 1,
+        name: section.name,
+        description: `${section.percentage}%`,
+      })),
+    },
   }
 }
 
