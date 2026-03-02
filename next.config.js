@@ -2,6 +2,8 @@
 const nextConfig = {
   reactStrictMode: true,
   compress: true,
+  // Prevent /path vs /path/ duplication — Google indexes both without this, causing "chose different canonical"
+  trailingSlash: false,
   experimental: {
     optimizePackageImports: ['lucide-react'],
   },

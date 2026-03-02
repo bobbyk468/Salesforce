@@ -15,7 +15,9 @@
     "validate:all": "node scripts/validate-technical-seo.mjs && node scripts/validate-readability.mjs",
     "indexnow": "node scripts/submit-indexnow.mjs",
     "bing:submit": "node scripts/submit-bing-urls.mjs",
-    "verify:ahref": "node scripts/verify-ahref-fixes.mjs"
+    "verify:ahref": "node scripts/verify-ahref-fixes.mjs",
+    "verify:gsc": "node scripts/verify-gsc-canonicals.mjs",
+    "fix:exam-tips-canonicals": "node scripts/fix-exam-tips-canonicals.mjs"
   },
   "dependencies": {
     "next": "^14.2.0",

@@ -128,7 +128,22 @@ function main() {
   }
   walkDir(SRC)
 
-  // 2. Check RelatedGuides on underlinked pages
+  // 2. Check exam-tips pages canonical to cert page (prevents GSC "chose different canonical")
+  const examTipsDirs = fs.readdirSync(SRC).filter(
+    (d) => d.endsWith('-exam-tips') || d === 'adm-201-exam-tips-2026' || d === 'pd1-exam-tips-2026' || d === 'pd2-exam-tips-2026'
+  )
+  const canonicalIssues = []
+  for (const dir of examTipsDirs) {
+    const filePath = path.join(SRC, dir, 'page.tsx')
+    if (!fs.existsSync(filePath)) continue
+    const content = fs.readFileSync(filePath, 'utf8')
+    const canonicalMatch = content.match(/canonical:\s*`\$\{siteUrl\}\/certifications\/([^`]+)`/)
+    if (!canonicalMatch) {
+      canonicalIssues.push({ path: `/${dir}`, issue: 'missing canonical to cert page' })
+    }
+  }
+
+  // 3. Check RelatedGuides on underlinked pages
   for (const slug of UNDERLINKED_SLUGS) {
     const file = findPage(slug)
     if (!file) {
@@ -171,7 +186,15 @@ function main() {
     console.log('RelatedGuides: OK (present on all 21 underlinked pages)\n')
   }
 
-  const failed = metaIssues.length + linkIssues.length
+  if (canonicalIssues.length > 0) {
+    console.log('CANONICAL ISSUES (exam-tips should canonical to cert page):')
+    canonicalIssues.forEach(({ path: p, issue }) => console.log(`  ${p}: ${issue}`))
+    console.log('')
+  } else {
+    console.log('Exam-tips canonicals: OK (all point to cert page)\n')
+  }
+
+  const failed = metaIssues.length + linkIssues.length + canonicalIssues.length
   if (failed > 0) {
     console.log(`FAILED: ${failed} issue(s) need rework`)
     process.exit(1)
