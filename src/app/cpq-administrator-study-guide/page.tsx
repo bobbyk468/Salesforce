@@ -219,6 +219,9 @@ export default function CpqAdministratorStudyGuidePage() {
         >
           Start Free Practice Questions
         </Link>
+        <p className="mt-4 text-sm text-blue-100">
+          Compare paths: <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-white font-medium">CPQ Admin vs Revenue Cloud Consultant</Link>
+        </p>
       </div>
     </div>
   )

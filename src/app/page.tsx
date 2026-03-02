@@ -356,6 +356,19 @@ export default function Home() {
             <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-white font-medium">UX vs Strategy Designer</Link>
             {' · '}
             <Link href="/app-builder-vs-developer-i" className="underline hover:text-white font-medium">App Builder vs PD1</Link>
+            {' · '}
+            <Link href="/business-analyst-study-guide" className="underline hover:text-white font-medium">Business Analyst guide</Link>
+            {' · '}
+            <Link href="/tableau-data-analyst-study-guide" className="underline hover:text-white font-medium">Tableau Data Analyst</Link>
+            {' · '}
+            <Link href="/salesforce-certification-validity" className="underline hover:text-white font-medium">Cert validity</Link>
+          </p>
+          <p className="text-sm text-blue-100/85 mt-1">
+            <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-white font-medium">Field vs Service Cloud</Link>
+            {' · '}
+            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-white font-medium">Education vs Nonprofit Cloud</Link>
+            {' · '}
+            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-white font-medium">CPQ vs Revenue Cloud</Link>
           </p>
         </div>
       </section>

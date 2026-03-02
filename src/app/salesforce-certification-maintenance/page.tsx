@@ -76,7 +76,7 @@ export default function SalesforceCertificationMaintenancePage() {
           Salesforce Certification Maintenance Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to know about keeping your Salesforce certifications active — maintenance schedule, where to find modules, and what happens if you miss a deadline.
+          Everything you need to know about keeping your Salesforce certifications active — maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-blue hover:underline font-medium">certification validity and expiry</Link>.
         </p>
       </div>
 

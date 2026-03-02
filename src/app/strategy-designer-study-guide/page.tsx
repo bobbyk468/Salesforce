@@ -179,6 +179,11 @@ export default function StrategyDesignerStudyGuidePage() {
         <Link href="/certifications/strategy-designer" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>
+        <p className="mt-4 text-sm text-blue-100">
+          Related: <Link href="/business-analyst-study-guide" className="underline hover:text-white font-medium">Business Analyst study guide</Link>
+          {' · '}
+          <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-white font-medium">UX vs Strategy Designer</Link>
+        </p>
       </div>
     </div>
   )

@@ -251,6 +251,9 @@ export default function ServiceCloudConsultantStudyGuidePage() {
           <Link href="/sales-cloud-vs-service-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Sales Cloud vs Service Cloud
           </Link>
+          <Link href="/field-service-vs-service-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+            Field Service vs Service Cloud
+          </Link>
         </div>
       </section>
     </div>

@@ -210,6 +210,9 @@ export default function CrmAnalyticsStudyGuidePage() {
         >
           Start Free Practice Questions
         </Link>
+        <p className="mt-4 text-sm text-blue-100">
+          Related: <Link href="/tableau-data-analyst-study-guide" className="underline hover:text-white font-medium">Tableau Data Analyst study guide</Link>
+        </p>
       </div>
     </div>
   )

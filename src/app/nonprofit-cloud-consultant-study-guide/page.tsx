@@ -162,6 +162,9 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
         <Link href="/certifications/nonprofit-cloud" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>
+        <p className="mt-4 text-sm text-blue-100">
+          Compare: <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-white font-medium">Education Cloud vs Nonprofit Cloud Consultant</Link>
+        </p>
       </div>
     </div>
   )
