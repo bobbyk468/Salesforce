@@ -40,12 +40,17 @@ export function getArticleJsonLd({
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
   const now = new Date().toISOString()
+  const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
   return {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
     description,
     url,
+    image: [
+      { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
+      imageUrl,
+    ],
     datePublished: datePublished ?? now,
     dateModified: dateModified ?? now,
     author: [

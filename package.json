@@ -17,6 +17,7 @@
     "bing:submit": "node scripts/submit-bing-urls.mjs",
     "verify:ahref": "node scripts/verify-ahref-fixes.mjs",
     "verify:gsc": "node scripts/verify-gsc-canonicals.mjs",
+    "verify:article-schema": "node scripts/verify-article-schema.mjs",
     "fix:exam-tips-canonicals": "node scripts/fix-exam-tips-canonicals.mjs"
   },
   "dependencies": {
