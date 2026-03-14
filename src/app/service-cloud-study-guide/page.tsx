@@ -6,10 +6,10 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Service Cloud Consultant Study Guide (${RELEASE_CURRENT}): Pass First Time`
+const pageTitle = `Service Cloud Consultant Exam Notes (${RELEASE_CURRENT}): Deep-Dive Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Service Cloud Consultant study guide (${RELEASE_CURRENT}): case management, Omni-Channel, Knowledge, entitlements. Free practice questions included.`
+  `In-depth Service Cloud Consultant exam notes (${RELEASE_CURRENT}): detailed Omni-Channel routing, entitlement milestones, Lightning Knowledge configuration, and case management scenarios — with free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -277,6 +277,14 @@ export default function ServiceCloudStudyGuidePage() {
           </Link>
         </div>
       </section>
+
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">More Service Cloud Resources</h2>
+        <ul className="space-y-2">
+          <li><Link href="/service-cloud-consultant-study-guide" className="text-sm text-salesforce-blue hover:underline font-medium">→ Service Cloud Consultant Study Guide — overview and exam strategy</Link></li>
+          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-blue hover:underline font-medium">→ Field Service vs Service Cloud Consultant — which cert to take?</Link></li>
+        </ul>
+      </div>
 
       {/* CTA */}
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
