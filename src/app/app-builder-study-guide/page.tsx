@@ -281,6 +281,13 @@ export default function AppBuilderStudyGuidePage() {
           </Link>
         </div>
       </section>
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <ul className="space-y-2">
+          <li><Link href="/app-builder-vs-developer-i" className="text-sm text-salesforce-blue hover:underline font-medium">→ App Builder vs Platform Developer I — full comparison</Link></li>
+        </ul>
+      </div>
+
 
       {/* CTA */}
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

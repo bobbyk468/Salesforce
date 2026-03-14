@@ -227,6 +227,13 @@ export default function ServiceCloudConsultantStudyGuidePage() {
           <li>Data Categories: control which Knowledge articles are visible to which Experience Cloud audiences</li>
         </ol>
       </section>
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <ul className="space-y-2">
+          <li><Link href="/field-service-vs-service-cloud-consultant" className="text-sm text-salesforce-blue hover:underline font-medium">→ Field Service vs Service Cloud Consultant — which cert to take?</Link></li>
+        </ul>
+      </div>
+
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Practice With Real Exam-Style Questions</h2>

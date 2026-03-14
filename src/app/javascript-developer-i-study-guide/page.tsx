@@ -201,6 +201,13 @@ export default function JavascriptDeveloperIStudyGuidePage() {
       </div>
 
       {/* CTA */}
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <ul className="space-y-2">
+          <li><Link href="/javascript-developer-i-vs-pd1" className="text-sm text-salesforce-blue hover:underline font-medium">→ JavaScript Developer I vs Platform Developer I — comparison</Link></li>
+        </ul>
+      </div>
+
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
         <p className="text-blue-100 mb-6">Test yourself with free JavaScript Developer I practice questions covering all 6 exam sections.</p>

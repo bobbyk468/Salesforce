@@ -196,6 +196,14 @@ export default function ArchitectCertificationPathPage() {
           </div>
         </div>
       </section>
+      <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <ul className="space-y-2">
+          <li><Link href="/how-to-become-salesforce-architect" className="text-sm text-salesforce-blue hover:underline font-medium">→ How to become a Salesforce Architect — step-by-step guide</Link></li>
+          <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-blue hover:underline font-medium">→ System Architect vs Application Architect comparison</Link></li>
+        </ul>
+      </div>
+
 
       {/* CTA */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
