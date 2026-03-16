@@ -7,7 +7,7 @@ Usage:
 
 Saves results to scripts/psi_results_trailblaze.json
 """
-import argparse, json, time, sys, threading
+import argparse, json, time, sys, threading, os
 from urllib.request import urlopen
 from urllib.parse import urlencode
 from urllib.error import URLError
@@ -154,8 +154,10 @@ STATIC_URLS = [
     '/certifications/role/developer',
     '/certifications/role/consultant',
     '/certifications/role/architect',
-    '/certifications/role/marketer',
-    '/certifications/role/analyst',
+    '/certifications/role/marketing',
+    '/certifications/role/designer',
+    '/certifications/role/tableau',
+    '/certifications/role/accredited-professional',
 ]
 
 print_lock = threading.Lock()

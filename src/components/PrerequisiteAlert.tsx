@@ -61,7 +61,7 @@ export default function PrerequisiteAlert({
           aria-hidden="true"
         />
         <div className="flex-1">
-          <h3
+          <p
             className={`font-semibold text-sm md:text-base mb-2 ${
               isRequired ? 'text-amber-900' : 'text-blue-900'
             }`}
@@ -69,7 +69,7 @@ export default function PrerequisiteAlert({
             {isRequired
               ? 'Required Prerequisite'
               : 'Recommended Prerequisites'}
-          </h3>
+          </p>
           <p
             className={`text-xs md:text-sm mb-3 ${
               isRequired ? 'text-amber-700' : 'text-blue-700'
@@ -92,7 +92,7 @@ export default function PrerequisiteAlert({
               >
                 <span>{requiredCert.title}</span>
                 {requiredCert.code && (
-                  <span className="text-xs opacity-75">({requiredCert.code})</span>
+                  <span className="text-xs">({requiredCert.code})</span>
                 )}
               </Link>
             )}
@@ -107,7 +107,7 @@ export default function PrerequisiteAlert({
               >
                 <span>{recommendedCert.title}</span>
                 {recommendedCert.code && (
-                  <span className="text-xs opacity-75">({recommendedCert.code})</span>
+                  <span className="text-xs">({recommendedCert.code})</span>
                 )}
               </Link>
             )}
