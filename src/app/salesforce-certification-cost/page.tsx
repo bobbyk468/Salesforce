@@ -165,9 +165,9 @@ export default function SalesforceCertificationCostPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="text-left py-2 pr-6 font-semibold text-gray-700">Cert Tier</th>
-                <th className="text-left py-2 pr-6 font-semibold text-gray-700">Exam Fee</th>
-                <th className="text-left py-2 font-semibold text-gray-700">Retake Fee</th>
+                <th scope="col" className="text-left py-2 pr-6 font-semibold text-gray-700">Cert Tier</th>
+                <th scope="col" className="text-left py-2 pr-6 font-semibold text-gray-700">Exam Fee</th>
+                <th scope="col" className="text-left py-2 font-semibold text-gray-700">Retake Fee</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100">

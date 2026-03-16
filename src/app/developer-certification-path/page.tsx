@@ -199,9 +199,9 @@ export default function DeveloperCertificationPathPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-200">
-                <th className="text-left py-2 pr-4 font-semibold text-gray-700">Goal</th>
-                <th className="text-left py-2 pr-4 font-semibold text-gray-700">Certs Needed</th>
-                <th className="text-left py-2 font-semibold text-gray-700">Realistic Timeline</th>
+                <th scope="col" className="text-left py-2 pr-4 font-semibold text-gray-700">Goal</th>
+                <th scope="col" className="text-left py-2 pr-4 font-semibold text-gray-700">Certs Needed</th>
+                <th scope="col" className="text-left py-2 font-semibold text-gray-700">Realistic Timeline</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-100 text-gray-600">

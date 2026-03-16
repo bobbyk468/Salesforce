@@ -128,9 +128,9 @@ export default function JavascriptDeveloperIVsPd1Page() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
-                <th className="text-left py-2 pr-4 text-salesforce-blue font-medium">JS Developer I</th>
-                <th className="text-left py-2 text-salesforce-blue font-medium">Platform Developer I</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">JS Developer I</th>
+                <th scope="col" className="text-left py-2 text-salesforce-blue font-medium">Platform Developer I</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

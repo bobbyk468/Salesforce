@@ -80,9 +80,9 @@ export default function DataCloudVsCrmAnalyticsPage() {
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
-                <th className="py-2.5 pr-4 font-semibold text-salesforce-blue">Data Cloud Consultant</th>
-                <th className="py-2.5 font-semibold text-purple-700">CRM Analytics Consultant</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Factor</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">Data Cloud Consultant</th>
+                <th scope="col" className="py-2.5 font-semibold text-purple-700">CRM Analytics Consultant</th>
               </tr>
             </thead>
             <tbody className="text-gray-700">

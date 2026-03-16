@@ -377,8 +377,8 @@ export default function AdministratorPage() {
                     <table className="w-full text-sm text-left border-collapse">
                       <thead>
                         <tr className="border-b border-gray-200">
-                          <th className="py-2 pr-4 font-semibold text-gray-900">Section</th>
-                          <th className="py-2 w-20 font-semibold text-gray-900 text-right">Weight</th>
+                          <th scope="col" className="py-2 pr-4 font-semibold text-gray-900">Section</th>
+                          <th scope="col" className="py-2 w-20 font-semibold text-gray-900 text-right">Weight</th>
                         </tr>
                       </thead>
                       <tbody>

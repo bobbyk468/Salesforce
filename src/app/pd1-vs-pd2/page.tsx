@@ -81,9 +81,9 @@ export default function Pd1VsPd2Page() {
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
-                <th className="py-2.5 pr-4 font-semibold text-salesforce-blue">PD1 — Platform Developer I</th>
-                <th className="py-2.5 font-semibold text-purple-700">PD2 — Platform Developer II</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">PD1 — Platform Developer I</th>
+                <th scope="col" className="py-2.5 font-semibold text-purple-700">PD2 — Platform Developer II</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">

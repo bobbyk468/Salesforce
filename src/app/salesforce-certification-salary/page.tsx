@@ -82,10 +82,10 @@ export default function SalesforceCertificationSalaryPage() {
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="py-2.5 pr-4 font-semibold text-gray-900">Role / Certification</th>
-                <th className="py-2.5 pr-4 font-semibold text-gray-900">Entry Level</th>
-                <th className="py-2.5 pr-4 font-semibold text-gray-900">Mid Level</th>
-                <th className="py-2.5 font-semibold text-gray-900">Senior / Multiple Certs</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Role / Certification</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Entry Level</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Mid Level</th>
+                <th scope="col" className="py-2.5 font-semibold text-gray-900">Senior / Multiple Certs</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
@@ -164,28 +164,28 @@ export default function SalesforceCertificationSalaryPage() {
               <span className="font-medium text-gray-900">Platform Developer II (PD2)</span>
               <p className="text-xs text-gray-500">Best uplift from admin/developer level to senior developer</p>
             </div>
-            <span className="font-bold text-emerald-600 ml-4 whitespace-nowrap">+$20–35k</span>
+            <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$20–35k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Application Architect (role credential)</span>
               <p className="text-xs text-gray-500">Biggest single jump for developer-to-architect transition</p>
             </div>
-            <span className="font-bold text-emerald-600 ml-4 whitespace-nowrap">+$30–50k</span>
+            <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$30–50k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Marketing Cloud Consultant</span>
               <p className="text-xs text-gray-500">High demand, relatively low supply of certified specialists</p>
             </div>
-            <span className="font-bold text-emerald-600 ml-4 whitespace-nowrap">+$15–30k</span>
+            <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–30k</span>
           </div>
           <div className="flex justify-between items-start">
             <div>
               <span className="font-medium text-gray-900">Advanced Administrator (ADM-211)</span>
               <p className="text-xs text-gray-500">Best uplift from admin level without switching to developer track</p>
             </div>
-            <span className="font-bold text-emerald-600 ml-4 whitespace-nowrap">+$15–25k</span>
+            <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–25k</span>
           </div>
         </div>
         <p className="text-xs text-gray-500 pt-3">Salary uplift estimates are approximate and market/experience-dependent. Your mileage will vary based on employer, location, and existing experience.</p>

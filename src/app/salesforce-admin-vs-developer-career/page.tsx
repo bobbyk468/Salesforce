@@ -107,9 +107,9 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Administrator</th>
-                <th className="text-left py-2 text-gray-500 font-medium">Developer</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Administrator</th>
+                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Developer</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

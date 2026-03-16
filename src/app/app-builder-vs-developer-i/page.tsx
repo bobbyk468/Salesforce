@@ -84,9 +84,9 @@ export default function AppBuilderVsDeveloperIPage() {
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
-                <th className="py-2.5 pr-4 font-semibold text-salesforce-blue">App Builder</th>
-                <th className="py-2.5 font-semibold text-emerald-700">Platform Developer I</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-salesforce-blue">App Builder</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Platform Developer I</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">

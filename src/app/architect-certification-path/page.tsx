@@ -82,9 +82,9 @@ export default function ArchitectCertificationPathPage() {
           <table className="w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
-                <th className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Credential</th>
-                <th className="py-2.5 pr-4 font-semibold text-gray-900">Component Exams Required</th>
-                <th className="py-2.5 font-semibold text-gray-900 text-right">Level</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Credential</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Component Exams Required</th>
+                <th scope="col" className="py-2.5 font-semibold text-gray-900 text-right">Level</th>
               </tr>
             </thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">

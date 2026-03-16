@@ -133,9 +133,9 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
-                <th className="text-left py-2 pr-4 text-salesforce-blue font-medium">Integration Foundations</th>
-                <th className="text-left py-2 text-salesforce-blue font-medium">Developer I</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">Integration Foundations</th>
+                <th scope="col" className="text-left py-2 text-salesforce-blue font-medium">Developer I</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

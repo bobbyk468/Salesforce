@@ -140,9 +140,9 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
                 <table className="w-full text-sm">
                   <thead>
                     <tr className="border-b border-gray-100 bg-gray-50">
-                      <th className="text-left py-2.5 px-4 font-semibold text-gray-600 w-full">Certification</th>
-                      <th className="text-right py-2.5 px-4 font-semibold text-gray-600 whitespace-nowrap">Exam Fee</th>
-                      <th className="py-2.5 px-4 w-8" />
+                      <th scope="col" className="text-left py-2.5 px-4 font-semibold text-gray-600 w-full">Certification</th>
+                      <th scope="col" className="text-right py-2.5 px-4 font-semibold text-gray-600 whitespace-nowrap">Exam Fee</th>
+                      <th scope="col" className="py-2.5 px-4 w-8" />
                     </tr>
                   </thead>
                   <tbody className="divide-y divide-gray-50">

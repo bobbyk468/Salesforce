@@ -145,9 +145,9 @@ export default function ApplicationArchitectStudyGuidePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Exam</th>
-                <th className="text-center py-2 pr-4 text-gray-500 font-medium">App Architect</th>
-                <th className="text-center py-2 text-gray-500 font-medium">System Architect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Exam</th>
+                <th scope="col" className="text-center py-2 pr-4 text-gray-500 font-medium">App Architect</th>
+                <th scope="col" className="text-center py-2 text-gray-500 font-medium">System Architect</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

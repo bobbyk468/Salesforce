@@ -133,9 +133,9 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
-                <th className="text-left py-2 pr-4 text-salesforce-blue font-medium">Service Cloud Consultant</th>
-                <th className="text-left py-2 text-salesforce-blue font-medium">Field Service Consultant</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">Service Cloud Consultant</th>
+                <th scope="col" className="text-left py-2 text-salesforce-blue font-medium">Field Service Consultant</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

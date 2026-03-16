@@ -118,8 +118,8 @@ export default function EducationCloudConsultantStudyGuidePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th className="text-left py-2 pr-4 text-gray-500 font-medium">Object</th>
-                <th className="text-left py-2 text-gray-500 font-medium">Purpose</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Object</th>
+                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Purpose</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
