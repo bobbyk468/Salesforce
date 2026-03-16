@@ -5,6 +5,7 @@ import { CERTIFICATION_PATHS } from '@/lib/certification-path-data'
 import type { PathStage } from '@/lib/certification-path-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CertificationPathContent from '@/components/CertificationPathContent'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
   foundational: { bg: 'bg-emerald-50', border: 'border-emerald-200', label: 'Foundational' },
@@ -86,6 +87,8 @@ export default function CertificationPathPage() {
           From foundational to advanced—see all possible paths and scenarios for every role. Choose a track and follow the steps. Use this page to plan your next exam.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Legend */}
       <div className="mb-12 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">

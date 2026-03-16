@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Developer I vs Integration Foundations (${RELEASE_CURRENT})`
@@ -73,6 +74,8 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
           Two MuleSoft certifications at very different levels. One is conceptual and entry-level, the other is hands-on and professional. Here&apos;s which to choose.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

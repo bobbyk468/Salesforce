@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Consultant vs Marketing Cloud Consultant (${RELEASE_CURRENT})`
@@ -73,6 +74,8 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
           Both are Salesforce marketing certifications — but they serve completely different marketing contexts. Here is how to decide which one to pursue based on your role and clients.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">

@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `B2B vs B2C Solution Architect Certification (${RELEASE_CURRENT})`
@@ -73,6 +74,8 @@ export default function B2bVsB2cSolutionArchitectPage() {
           Two Salesforce architect-level credentials covering fundamentally different commerce ecosystems. Here&apos;s how to choose the right one for your career.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

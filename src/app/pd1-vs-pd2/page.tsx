@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -73,6 +74,8 @@ export default function Pd1VsPd2Page() {
           PD1 is required before PD2, and the jump in difficulty is significant. Here is what separates them.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -189,20 +192,62 @@ export default function Pd1VsPd2Page() {
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
             <p className="text-sm font-semibold text-salesforce-dark mb-2">With PD1</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>Salesforce Developer (junior–mid)</li>
-              <li>Admin with development skills</li>
-              <li>Trailhead/Flows developer roles</li>
+              <li>Salesforce Developer (junior–mid): $85–110k</li>
+              <li>Admin + developer hybrid roles</li>
+              <li>LWC and Flow-heavy development positions</li>
+              <li>Most common Apex developer entry credential</li>
             </ul>
           </div>
           <div className="rounded-lg border border-purple-200 bg-purple-50/50 p-4">
             <p className="text-sm font-semibold text-purple-700 mb-2">With PD1 + PD2</p>
             <ul className="text-sm text-gray-700 space-y-1">
-              <li>Senior Salesforce Developer</li>
+              <li>Senior Salesforce Developer: $110–145k</li>
               <li>Technical Lead / Solution Architect path</li>
-              <li>Integration Developer roles</li>
-              <li>Prerequisite satisfied for CTA track</li>
+              <li>Integration Developer (REST/SOAP/MuleSoft) roles</li>
+              <li>Required for CTA (Certified Technical Architect) track</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Decision Matrix */}
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: PD1 or PD2?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">New to Salesforce development or coming from an admin background</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">PD1 — start here</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Have 1–2 years of Apex experience and real project delivery</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD2 — you are likely ready</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Java, Python, or backend developer switching to Salesforce</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">PD1 — Apex fundamentals first, then PD2 in 6–12 months</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Targeting the CTA (Certified Technical Architect) track</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD1 + PD2 both required</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want a senior developer or tech lead role</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD2 — separates mid from senior on CVs</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Score below 75% on PD1 practice exams regularly</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">PD1 — strengthen PD1 fundamentals before attempting PD2</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

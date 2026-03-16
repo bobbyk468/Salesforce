@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -75,6 +76,8 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
           and how to choose the right path for your career in 2026.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -193,6 +196,47 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
               <li>You have already passed AI Associate</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Decision Matrix */}
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: AI Associate or Agentforce Specialist?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">New to Salesforce AI — want foundational knowledge first</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">AI Associate — entry-level, no hands-on AI required</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Working with Agentforce, Copilot, or Einstein features daily</td>
+                <td className="py-2.5 font-semibold text-purple-700">Agentforce Specialist — tests applied AI configuration</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Preparing for a client-facing AI consulting role</td>
+                <td className="py-2.5 font-semibold text-purple-700">Agentforce Specialist — more credible for AI projects</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Admin wanting to show AI awareness without deep implementation</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">AI Associate — fast win, 40 questions, no Apex needed</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Building custom AI actions or prompt templates in Agentforce</td>
+                <td className="py-2.5 font-semibold text-purple-700">Agentforce Specialist</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want both — what order?</td>
+                <td className="py-2.5 font-semibold text-gray-700">AI Associate first (1–2 weeks), then Agentforce Specialist</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Specialist vs Pardot Consultant (${RELEASE_CURRENT})`
@@ -73,6 +74,8 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           Both Pardot certifications test the same platform — but at very different levels. Here&apos;s which to take first and when to go for the Consultant credential.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

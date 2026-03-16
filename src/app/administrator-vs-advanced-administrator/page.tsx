@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +75,8 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         </p>
       </header>
 
+      <ContentPageAuthor />
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>
         <div className="overflow-x-auto">
@@ -141,6 +144,46 @@ export default function AdministratorVsAdvancedAdministratorPage() {
             </div>
           ))}
         </dl>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Admin or Advanced Admin?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">New to Salesforce or admin role &lt; 6 months</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 — required first</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Certified ADM-201 with 2+ years of admin experience</td>
+                <td className="py-2.5 font-semibold text-purple-700">Advanced Admin — natural next step</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Manage complex security models, Territory Management, or sharing rules</td>
+                <td className="py-2.5 font-semibold text-purple-700">Advanced Admin — these are core topics</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want to target Senior Admin or Lead Admin roles</td>
+                <td className="py-2.5 font-semibold text-purple-700">Advanced Admin — the credential employers look for at senior level</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Pursuing Consultant or Architect certification tracks</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first — prerequisite for most Consultant exams</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Work regularly with automation (Record-Triggered Flows, Scheduled Flows)</td>
+                <td className="py-2.5 font-semibold text-purple-700">Advanced Admin — automation is heavily tested at this level</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

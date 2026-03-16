@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +75,8 @@ export default function Adm201VsAppBuilderPage() {
         </p>
       </header>
 
+      <ContentPageAuthor />
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>
         <div className="overflow-x-auto">
@@ -125,15 +128,75 @@ export default function Adm201VsAppBuilderPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Career Outcome Differences</h2>
-        <p className="text-sm text-gray-700 mb-3">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Career Outcome &amp; Salary Differences</h2>
+        <p className="text-sm text-gray-700 mb-4">
           ADM-201 signals readiness for day-to-day Salesforce administration: user setup, access controls, standard automation, data integrity, and reporting.
           App Builder validates that you can design and build custom apps with stronger declarative architecture skills.
         </p>
+        <div className="grid sm:grid-cols-2 gap-4 mb-4">
+          <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
+            <p className="text-sm font-semibold text-salesforce-dark mb-2">ADM-201 (Administrator)</p>
+            <ul className="text-sm text-gray-700 space-y-1">
+              <li>Salesforce Admin: $70–95k</li>
+              <li>Senior Admin: $90–125k</li>
+              <li>Most job postings require this cert first</li>
+              <li>Faster path to employment</li>
+            </ul>
+          </div>
+          <div className="rounded-lg border border-purple-200 bg-purple-50/50 p-4">
+            <p className="text-sm font-semibold text-purple-700 mb-2">DEV-402 (App Builder) — added to ADM-201</p>
+            <ul className="text-sm text-gray-700 space-y-1">
+              <li>Solution Designer / Functional Consultant: $95–130k</li>
+              <li>Opens Consultant &amp; Architect certification paths</li>
+              <li>Valued for custom app delivery roles</li>
+              <li>App Builder alone (without Admin) is less common</li>
+            </ul>
+          </div>
+        </div>
         <p className="text-sm text-gray-700">
-          If your immediate goal is to get into Salesforce operations roles quickly, ADM-201 usually gives faster job-market relevance.
-          If your goal is solution design and custom implementations, adding DEV-402 shortly after ADM-201 creates a stronger profile.
+          If your immediate goal is to get into Salesforce operations roles quickly, ADM-201 gives faster job-market relevance.
+          Adding DEV-402 after ADM-201 typically adds $15–25k to salary range and unlocks Consultant-track opportunities.
         </p>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Which Certification Fits You?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">New to Salesforce, no prior admin experience</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Already working as a Salesforce Admin (6+ months)</td>
+                <td className="py-2.5 font-semibold text-purple-700">DEV-402 (App Builder)</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want to build custom apps without writing code</td>
+                <td className="py-2.5 font-semibold text-purple-700">DEV-402 (App Builder)</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Targeting Salesforce Admin or Business Analyst roles</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Pursuing the Architect certification path later</td>
+                <td className="py-2.5 font-semibold text-purple-700">DEV-402 — it is an Architect path prerequisite</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Career switcher with no Salesforce background</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">ADM-201 first — broadest job-market entry point</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

@@ -4,6 +4,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Platform Foundations vs AI Associate (${RELEASE_CURRENT})`
@@ -73,6 +74,8 @@ export default function PlatformFoundationsVsAiAssociatePage() {
           Both cost $75, both target beginners, both require no prior experience — but they test completely different knowledge. Here is which one to take first and why.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

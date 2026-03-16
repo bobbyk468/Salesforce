@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -76,6 +77,8 @@ export default function AppBuilderVsDeveloperIPage() {
           The right choice depends on your current role, coding ability, and career direction.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -188,6 +191,46 @@ export default function AppBuilderVsDeveloperIPage() {
               <li>You already have a coding background (Java, Python, JavaScript)</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: App Builder or PD1?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">No coding experience, declarative-only background</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder — no Apex required</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Java, Python, or any OOP programming experience</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD1 — your coding skills transfer directly to Apex</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want to stay in declarative/no-code Salesforce roles</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want to write Apex triggers, classes, or LWC components</td>
+                <td className="py-2.5 font-semibold text-purple-700">PD1</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Pursuing the Architect certification track</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">App Builder — required prerequisite for Architect path</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Admin background, now adding development skills</td>
+                <td className="py-2.5 font-semibold text-gray-700">App Builder first, then PD1 — builds naturally</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

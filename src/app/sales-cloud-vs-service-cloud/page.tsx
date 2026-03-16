@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +75,8 @@ export default function SalesCloudVsServiceCloudPage() {
           and how to choose the right one for your career.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -185,6 +188,47 @@ export default function SalesCloudVsServiceCloudPage() {
               <li>Omnichannel and entitlement configuration are in your experience</li>
             </ul>
           </div>
+        </div>
+      </section>
+
+      {/* Decision Matrix */}
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Sales Cloud or Service Cloud?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Working on CRM implementations for sales teams (leads, opportunities, forecasting)</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Sales Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Implementing Cases, Knowledge, Entitlements, or Contact Centers</td>
+                <td className="py-2.5 font-semibold text-purple-700">Service Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Client is primarily a B2B sales-driven company</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Sales Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Client runs a support desk or omni-channel customer service operation</td>
+                <td className="py-2.5 font-semibold text-purple-700">Service Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Already have ADM-201, targeting Consultant track</td>
+                <td className="py-2.5 font-semibold text-gray-700">Either — choose by your project experience; Service Cloud is more in demand</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want both to maximise consulting marketability</td>
+                <td className="py-2.5 font-semibold text-gray-700">Sales Cloud first (broader base), then Service Cloud</td>
+              </tr>
+            </tbody>
+          </table>
         </div>
       </section>
 

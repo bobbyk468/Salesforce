@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Admin vs Developer Career Paths (${RELEASE_CURRENT})`
@@ -71,6 +72,8 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
           Admin and Developer are two of the most common Salesforce career paths. Here is how they differ in day-to-day work, salary, progression, and who each path suits.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
