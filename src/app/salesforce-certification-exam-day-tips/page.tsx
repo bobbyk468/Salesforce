@@ -76,7 +76,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
       <div id="exam-day-checklist" className="print-checklist-section grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <div className="no-print flex items-center justify-between sm:col-span-2 mb-2">
           <h2 className="text-lg font-bold text-gray-900">Exam Day Checklists</h2>
-          <PrintChecklistButton aria-label="Print or save exam day checklists" />
+          <PrintChecklistButton />
         </div>
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <h2 className="text-lg font-bold text-gray-900 mb-4">Online Proctored Exam Checklist</h2>
