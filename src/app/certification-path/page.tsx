@@ -133,8 +133,8 @@ export default function CertificationPathPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8 mt-10">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-blue hover:underline font-medium">→ Is Salesforce certification worth it? — honest analysis</Link></li>
-          <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-blue hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
+          <li><Link href="/is-salesforce-certification-worth-it" className="text-sm text-salesforce-dark hover:underline font-medium">→ Is Salesforce certification worth it? — honest analysis</Link></li>
+          <li><Link href="/salesforce-free-certification" className="text-sm text-salesforce-dark hover:underline font-medium">→ How to get a free Salesforce certification</Link></li>
         </ul>
       </div>
 
