@@ -3,7 +3,7 @@
 **Site:** https://www.trailblazeprep.com
 **Stack:** Next.js 14 App Router, Static Site Generation, deployed on Vercel
 **Branch:** `Winter'26`
-**Last updated:** 2026-03-16 (session 2)
+**Last updated:** 2026-03-16 (session 3)
 
 ---
 
@@ -156,6 +156,16 @@ Commit: `c898368`
 
 ---
 
+### Phase 9 — Mobile + CTA (Session 3)
+
+| Item | Scope | Commit |
+|------|-------|--------|
+| `min-w-[500px]` added to all multi-column tables | 27 VS pages, cert-cost, cert-salary, DifficultyHeatmap.tsx | `f8a010c` |
+| Remove competing "Download Study Plan" secondary button from `CertPageCta` | 88 cert pages | `f8a010c` |
+| Fix social proof text: `text-gray-600` → `text-white/80` on blue gradient | CertPageCta (sitewide) | `f8a010c` |
+
+---
+
 ## ❌ PENDING
 
 ### High Priority
@@ -171,26 +181,10 @@ Commit: `c898368`
 
 ### Medium Priority
 
-#### 2. Mobile Responsiveness Audit — New Tables and Matrices
-**What:** Check INP (Interaction to Next Paint) on mobile for the new Decision Matrix tables (27 VS pages), Difficulty Heatmaps (9 cert pages), and Regional Pricing tables. All use `overflow-x-auto` which should handle horizontal scroll, but verify no pinch-zoom required.
-**Why:** Gemini: "If a user has to pinch and zoom on mobile to read your comparison table, Google will penalize your Mobile Usability score."
-**Effort:** Small (PSI audit on 3–5 representative pages)
-
----
-
-#### 3. Interactive SVG Roadmaps — Download/Share Option
+#### 2. Interactive SVG Roadmaps — Download/Share Option
 **What:** Add a "Download as PNG" or "View full size" button below each SVG roadmap on the 5 path pages.
 **Why:** Gemini: "Encourage social sharing and backlinking from study groups."
 **Effort:** Small-Medium (client component with canvas export or link to a static PNG)
-
----
-
-#### 4. "Transactional CTA" Prominence — Practice Exam Pages
-**What:** On all ~65 cert pages with "Free Practice Exam" in the title, ensure the "Start Test" / "Start Practice" button is the most visually prominent element above the fold.
-**Why:** Gemini: "Ensure the 'Start Test' button is the most prominent element."
-**Effort:** Small (CSS/layout audit)
-
----
 
 ---
 
