@@ -215,7 +215,7 @@ export default function Footer() {
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-400 hover:text-salesforce-light flex items-center space-x-1"
-              aria-label="Follow Trailblaze Prep on X (Twitter)"
+              aria-label="@trailblazeprep on X (Twitter)"
             >
               {/* X (Twitter) logo */}
               <svg className="h-4 w-4" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
