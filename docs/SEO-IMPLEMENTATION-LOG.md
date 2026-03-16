@@ -3,7 +3,7 @@
 **Site:** https://www.trailblazeprep.com
 **Stack:** Next.js 14 App Router, Static Site Generation, deployed on Vercel
 **Branch:** `Winter'26`
-**Last updated:** 2026-03-16
+**Last updated:** 2026-03-16 (session 2)
 
 ---
 
@@ -142,26 +142,25 @@ Commit: `c898368`
 
 ---
 
-## ❌ PENDING
+---
 
-### High Priority (Gemini P0/P1)
+### Phase 8 — E-E-A-T Closing the Loop (Session 2)
 
-#### 1. FAQSchema for "3 Concepts" Sections — All 87 Exam Tips Pages
-**What:** Add 1–3 FAQ items per exam tips page based on the "3 Concepts" content, so Google indexes them as People Also Ask (PAA) answers.
-**Why:** Gemini: "If you ask 'Why do students fail the PD1?' and answer it in the schema, you'll dominate the PAA boxes."
-**How:** Add to each page's `faqItems` array:
-```js
-{
-  question: 'What concepts do most [Cert] candidates get wrong?',
-  answer: 'The most commonly misunderstood topics are: [concept 1 brief], [concept 2 brief], [concept 3 brief].'
-}
-```
-**Scope:** 87 pages — needs a Python script
-**Effort:** Medium (bulk script + content summarisation)
+| Item | Scope | Commit |
+|------|-------|--------|
+| `/team page` CERTIFICATIONS expanded to 14 certs | 1 page | `20a1b47` |
+| `/team page` Trailblazer.me link added to author card + Person schema `sameAs` array | 1 page | `20a1b47` |
+| Article schema `author.sameAs` → includes Trailblazer.me | Sitewide (all content pages via `schema-data.ts`) | `20a1b47` |
+| FAQSchema for "3 Concepts" — `What concepts do most [Cert] candidates get wrong?` | All 87 exam tips pages | `20a1b47` |
+| Hub CTA ("Free Practice Exam →") added to study guide pages | 18 study guide pages previously missing it | `20a1b47` |
 
 ---
 
-#### 2. Difficulty Heatmap Data — Remaining ~78 Cert Pages
+## ❌ PENDING
+
+### High Priority
+
+#### 1. Difficulty Heatmap Data — Remaining ~78 Cert Pages
 **What:** Add `DIFFICULTY_DATA` entries in `src/lib/difficulty-data.ts` for the 78 certs that currently have no heatmap data. The `DifficultyHeatmap` component is already on all cert pages but returns `null` for certs without data.
 **Why:** The heatmap is a strong featured snippet magnet for "how hard is [cert] exam?" queries.
 **Certs with data (9):** administrator, advanced-administrator, app-builder, developer-1, agentforce-specialist, sales-cloud, service-cloud, ai-associate, mulesoft-integration-foundations
@@ -170,63 +169,42 @@ Commit: `c898368`
 
 ---
 
-#### 3. Hub-and-Spoke Internal Link Audit — Study Guide Pages
-**What:** Verify every study guide page (`/adm-201-study-guide` etc.) has a prominent CTA at the bottom: "Ready to test your knowledge? Try the [Cert Name] Free Practice Exam →" linking to the cert hub page.
-**Why:** Gemini: "Spoke pages (tips, study-guide) are leaking authority. Every tips and study-guide page must funnel traffic back to the Hub."
-**Scope:** All study guide pages
-**Effort:** Small (audit + targeted edits)
+### Medium Priority
 
----
-
-### Medium Priority (Gemini P2)
-
-#### 4. /team Page — Trailblazer.me Profile Verification
-**What:** The `/team` page should prominently display Krishna Mohan's Trailblazer.me profile URL and list all 14 certifications with badge links. This "closes the loop" on the Verified-by badge — Google validates trust by following the link chain.
-**Why:** Gemini: "If the badge links to a verified Salesforce credential transcript, it's a 10/10."
-**Effort:** Small (update /team page)
-
----
-
-#### 5. Mobile Responsiveness Audit — New Tables and Matrices
+#### 2. Mobile Responsiveness Audit — New Tables and Matrices
 **What:** Check INP (Interaction to Next Paint) on mobile for the new Decision Matrix tables (27 VS pages), Difficulty Heatmaps (9 cert pages), and Regional Pricing tables. All use `overflow-x-auto` which should handle horizontal scroll, but verify no pinch-zoom required.
 **Why:** Gemini: "If a user has to pinch and zoom on mobile to read your comparison table, Google will penalize your Mobile Usability score."
 **Effort:** Small (PSI audit on 3–5 representative pages)
 
 ---
 
-#### 6. Interactive SVG Roadmaps — Download/Share Option
+#### 3. Interactive SVG Roadmaps — Download/Share Option
 **What:** Add a "Download as PNG" or "View full size" button below each SVG roadmap on the 5 path pages.
 **Why:** Gemini: "Encourage social sharing and backlinking from study groups."
 **Effort:** Small-Medium (client component with canvas export or link to a static PNG)
 
 ---
 
-#### 7. "Transactional CTA" Prominence — Practice Exam Pages
+#### 4. "Transactional CTA" Prominence — Practice Exam Pages
 **What:** On all ~65 cert pages with "Free Practice Exam" in the title, ensure the "Start Test" / "Start Practice" button is the most visually prominent element above the fold.
 **Why:** Gemini: "Ensure the 'Start Test' button is the most prominent element."
 **Effort:** Small (CSS/layout audit)
 
 ---
 
-#### 8. Schema Audit — Person Schema Author Breadcrumb
-**What:** Ensure the Person schema on cert pages connects to the Article schema's `author` field — creating a verifiable chain: Article → author → Person → sameAs → Trailblazer.me.
-**Current state:** Person schema is added separately in CertPageIntro. The Article schema in `ContentPageSchemas` may have a generic author field.
-**Why:** Gemini: "Add Person schema to Krishna Mohan's profile and link every 'Verified by' badge to it."
-**Effort:** Small (check and update Article schema `author` field in ContentPageSchemas)
-
 ---
 
 ### Low Priority / Future
 
-#### 9. Difficulty Heatmap — Study Guide Pages
+#### 5. Difficulty Heatmap — Study Guide Pages
 **What:** Consider adding a simplified version of the Difficulty Heatmap to the study guide pages (not just cert hub pages).
 **Effort:** Small once data exists
 
-#### 10. Salary Data on VS Pages
+#### 6. Salary Data on VS Pages
 **What:** The two VS pages that already have salary data (`pd1-vs-pd2`, `adm-201-vs-app-builder`) serve as a template. Consider adding salary comparison rows to the remaining 25 VS pages.
 **Effort:** Medium (content + scripted insertion)
 
-#### 11. "3 Concepts" — Additional FAQ Items (3 Per Page)
+#### 7. "3 Concepts" — Additional FAQ Items (3 Per Page)
 **What:** Beyond a single summary FAQ item (item #1 above), each "3 Concepts" could have one dedicated FAQ per concept for maximum PAA coverage.
 **Effort:** Large (87 pages × 3 items each = 261 FAQ items)
 
