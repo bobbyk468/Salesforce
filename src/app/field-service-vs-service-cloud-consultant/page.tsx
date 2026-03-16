@@ -105,7 +105,7 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
             <div className="grid grid-cols-3 gap-2 mb-4">
               {[{ l: 'Fee', v: cert.fee }, { l: 'Questions', v: cert.questions }, { l: 'Passing', v: cert.passing }].map((s) => (
                 <div key={s.l} className="text-center bg-gray-50 rounded-lg p-2">
-                  <div className="font-bold text-salesforce-blue text-sm">{s.v}</div>
+                  <div className="font-bold text-salesforce-dark text-sm">{s.v}</div>
                   <div className="text-xs text-gray-500">{s.l}</div>
                 </div>
               ))}
