@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is a trade promotion deduction and how is it managed in Salesforce?',
     answer: 'A deduction is when a retailer withholds payment from an invoice to cover agreed promotion costs. For example, if a retailer ran a price reduction promotion and expects the CPG company to fund the margin difference, they deduct it from their invoice payment. Salesforce TPM tracks these deductions, matches them to approved promotions, validates the amounts, and processes the settlement (approve, dispute, or write off).',
   },
+  {
+    question: 'What concepts do most Consumer Goods TPM candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Consumer Goods TPM exam are: (1) Trade Promotion vs Fund vs Tactic — Three Levels, One Plan; (2) Settlement vs Deduction vs Claim — Post-Promotion Financial Flow; (3) Account Planning Integration — Trade Plans Are Linked to Account Plans. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ConsumerGoodsTpmApExamTipsPage() {

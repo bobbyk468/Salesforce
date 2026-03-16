@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does bulkification apply to Flow Builder for the exam?',
     answer: 'Flow bulkification means designing flows to process records in bulk without hitting governor limits. Best practices include: using Get Records with Filter conditions to retrieve multiple records in one query (not inside a loop), making DML operations outside of loops (using collection variables), and understanding how record-triggered flows process in bulk vs. how to avoid SOQL/DML in loops. The exam tests how to identify and fix bulkification anti-patterns.',
   },
+  {
+    question: 'What concepts do most Process Automation candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Process Automation exam are: (1) Record-Triggered Flow — Before Save vs After Save: When Records Can Be Created; (2) Invocable Apex vs Flow — Declarative-First Unless Code Is Required; (3) Scheduled Flows vs Time-Based Workflows vs Scheduled Paths. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ProcessAutomationApExamTipsPage() {

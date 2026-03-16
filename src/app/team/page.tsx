@@ -30,10 +30,19 @@ const breadcrumbItems = [
 
 const CERTIFICATIONS = [
   { label: 'Salesforce Certified Administrator (ADM-201)', abbr: 'ADM-201' },
+  { label: 'Salesforce Certified Advanced Administrator', abbr: 'Advanced Admin' },
   { label: 'Salesforce Certified Platform Developer I', abbr: 'PD1' },
   { label: 'Salesforce Certified Platform Developer II', abbr: 'PD2' },
   { label: 'Salesforce Certified Platform App Builder', abbr: 'App Builder' },
-  { label: 'Salesforce Certified Consultant', abbr: 'Consultant' },
+  { label: 'Salesforce Certified Sales Cloud Consultant', abbr: 'Sales Cloud' },
+  { label: 'Salesforce Certified Service Cloud Consultant', abbr: 'Service Cloud' },
+  { label: 'Salesforce Certified Experience Cloud Consultant', abbr: 'Experience Cloud' },
+  { label: 'Salesforce Certified Marketing Cloud Email Specialist', abbr: 'MC Email' },
+  { label: 'Salesforce Certified Business Analyst', abbr: 'Business Analyst' },
+  { label: 'Salesforce Certified JavaScript Developer I', abbr: 'JS Dev I' },
+  { label: 'Salesforce Certified Data Cloud Consultant', abbr: 'Data Cloud' },
+  { label: 'Salesforce Certified Agentforce Specialist', abbr: 'Agentforce' },
+  { label: 'Salesforce Certified MuleSoft Integration Foundations', abbr: 'MuleSoft' },
 ]
 
 export default function TeamPage() {
@@ -50,7 +59,10 @@ export default function TeamPage() {
     '@type': 'Person',
     name: 'Krishna Mohan',
     url: `${baseUrl}/team`,
-    sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+    sameAs: [
+      'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+      'https://www.salesforce.com/trailblazer/krishnamohan',
+    ],
     jobTitle: 'Lead Content Reviewer & Salesforce Certified Professional',
     worksFor: {
       '@type': 'Organization',
@@ -104,6 +116,15 @@ export default function TeamPage() {
                 aria-label="Krishna Mohan LinkedIn profile"
               >
                 LinkedIn <ExternalLink className="h-3.5 w-3.5" />
+              </a>
+              <a
+                href="https://www.salesforce.com/trailblazer/krishnamohan"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-1 text-sm text-salesforce-blue font-medium hover:underline"
+                aria-label="Krishna Mohan Trailblazer profile — verified Salesforce credentials"
+              >
+                Trailblazer.me <ExternalLink className="h-3.5 w-3.5" />
               </a>
             </div>
             <p className="text-sm font-medium text-salesforce-blue mb-3">

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does CPQ Billing work and what does the exam test?',
     answer: 'Salesforce Billing generates invoices from contracted orders. After a CPQ quote becomes a contract and orders are activated, Billing creates invoice lines based on the billing frequency (monthly, annual, one-time), generates invoices on the billing date, tracks payments against invoices, and handles amendments to subscription billing. The exam tests the invoice generation process and how billing interacts with CPQ contracts.',
   },
+  {
+    question: 'What concepts do most CPQ Billing candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the CPQ Billing exam are: (1) Billing Schedule vs Invoice Schedule — When Each Is Created; (2) Proration — It Applies to Activations and Cancellations, Not Renewals; (3) Payment Gateway vs Payment Method — Architecture vs Data. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function CpqBillingApExamTipsPage() {

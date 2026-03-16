@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is Slack Connect and why is it tested heavily?',
     answer: 'Slack Connect allows communication between separate Slack workspaces — used for external collaboration with clients or partners. The exam tests Slack Connect governance: who can send invitations, how admins control external channel creation, DLP policies for Connect channels, and the difference between Connect DMs and Connect channels.',
   },
+  {
+    question: 'What concepts do most Slack Administrator candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Slack Administrator exam are: (1) Workspace vs Organisation vs Enterprise Grid — Three Admin Scopes; (2) Public vs Private vs Shared Channels — Visibility and External Access; (3) User Groups vs Channels — @mention Broadcast vs Conversation Space. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SlackAdministratorExamTipsPage() {

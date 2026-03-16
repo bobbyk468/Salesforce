@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What Salesforce integration knowledge is needed for Slack Consultant?',
     answer: 'The exam tests Slack for Salesforce integration: Salesforce record notifications in Slack channels, creating and updating Salesforce records from Slack, using Salesforce flow to trigger Slack messages, and Einstein Conversation Mining. Understanding how Slack connects to Salesforce CRM data for sales and service workflows is a key exam area.',
   },
+  {
+    question: 'What concepts do most Slack Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Slack Consultant exam are: (1) Workflow Builder vs Slack API — No-Code vs Pro-Code; (2) Canvas vs Posts vs Bookmarks — Persistent Content Types; (3) Salesforce for Slack Integration — Connected App vs Custom Integration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SlackConsultantExamTipsPage() {

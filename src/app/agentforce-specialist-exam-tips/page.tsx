@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What study resources are available for Agentforce Specialist?',
     answer: 'Salesforce Trailhead, the official exam guide, and Agentforce documentation are the primary resources. Because the cert is new, third-party study materials are limited — focus on hands-on practice in a Salesforce org with Agentforce enabled.',
   },
+  {
+    question: 'What concepts do most Agentforce Specialist candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Agentforce Specialist exam are: (1) Topics vs Actions vs Instructions — What Goes Where; (2) Apex Actions vs Flow Actions — When to Use Each; (3) Data Cloud Grounding vs Standard Object Data Access. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function AgentforceSpecialistExamTipsPage() {

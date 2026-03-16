@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is Advertising Studio and how does the exam test it?',
     answer: 'Advertising Studio connects Marketing Cloud subscriber data to advertising platforms (Facebook, Google, LinkedIn, Twitter) for audience targeting. You can create lookalike audiences from your best customers, suppress current customers from acquisition campaigns, and retarget website visitors. The exam tests how to configure audience segments, sync contact data to advertising platforms, and measure advertising campaign performance alongside email metrics.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Advanced Cross-Channel candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Advanced Cross-Channel exam are: (1) Journey Builder vs Automation Studio — Interactive vs Batch; (2) Contact Builder Relationships — Data Extensions Must Be Related Correctly; (3) Einstein Engagement Scoring vs Send Time Optimization — Two Different AI Features. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudAdvancedCrossChannelApExamTipsPage() {

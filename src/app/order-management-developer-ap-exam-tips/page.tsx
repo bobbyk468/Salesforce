@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does OMS use Flow for customisation?',
     answer: 'Salesforce Order Management uses an invocable action pattern — OMS processes call Flows via Flow Actions at key points in the order lifecycle. Developers create custom Flows that are invoked by OMS during order processing (for custom routing logic, custom tax calculation, custom notification triggers). The exam tests how to build and register custom Flow actions in the OMS processing pipeline.',
   },
+  {
+    question: 'What concepts do most Order Management Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Order Management Developer exam are: (1) Order Management APIs — REST vs Connect API vs APEX; (2) Inventory Availability Check — Not a Default Order Creation Step; (3) Payment Integration — Capture vs Authorisation vs Void. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function OrderManagementDeveloperApExamTipsPage() {

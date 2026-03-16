@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does Manufacturing Cloud differ from standard Sales Cloud for the exam?',
     answer: 'Manufacturing Cloud adds industry-specific capabilities on top of Sales Cloud: Sales Agreements for contract revenue tracking, Account-Based Forecasting for bottom-up demand planning, Rebate Management for tracking customer incentive programmes, and Partner Visit Management for field rep activities. The exam tests these manufacturing-specific features rather than standard Sales Cloud configuration.',
   },
+  {
+    question: 'What concepts do most Manufacturing Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Manufacturing Cloud exam are: (1) Sales Agreements vs Opportunities — Recurring Revenue vs One-Time Sales; (2) Account Forecasting vs Opportunity Forecasting — Two Different Forecast Models; (3) Run Rate vs Planned Volume — Baseline vs Committed. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ManufacturingCloudApExamTipsPage() {

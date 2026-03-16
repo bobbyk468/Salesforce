@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How long to study for Service Cloud Consultant?',
     answer: '6–8 weeks with hands-on org practice. Focus on real-world case management scenarios, entitlements, milestones, Omni-Channel configuration, and Knowledge article lifecycle.',
   },
+  {
+    question: 'What concepts do most Service Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Service Cloud Consultant exam are: (1) Entitlement Processes vs Service Contracts vs Warranties; (2) Omni-Channel Routing Models — Least Active vs Most Available; (3) Knowledge Visibility — Data Categories vs Topics vs Article Types. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ServiceCloudConsultantExamTipsPage() {

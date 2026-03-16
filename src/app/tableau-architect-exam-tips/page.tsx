@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the Tableau Architect exam?',
     answer: 'Performance optimisation and high-availability architecture are the most challenging areas. Candidates must understand VizQL Server, Backgrounder, Data Engine, and Cache Server processes and how to tune them for workload. Designing multi-node Tableau Server deployments with load balancing, failover, and optimal process distribution requires deep hands-on experience.',
   },
+  {
+    question: 'What concepts do most Tableau Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Tableau Architect exam are: (1) Extracts vs Live Connections — Performance vs Currency Trade-Off; (2) Row-Level Security — Data Source Filters vs User Attribute Functions; (3) Tableau Server Roles — Creator vs Explorer vs Viewer. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TableauArchitectExamTipsPage() {

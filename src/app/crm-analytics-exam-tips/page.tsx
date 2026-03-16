@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is Einstein Discovery and what does the exam test about it?',
     answer: 'Einstein Discovery is CRM Analytics&apos; automated machine learning feature that finds patterns in data and generates predictions and recommendations. The exam tests how to set up a story (now called a model), interpret key influencers, understand prediction scores, and embed Einstein Discovery predictions back into Salesforce records using writeback.',
   },
+  {
+    question: 'What concepts do most CRM Analytics candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the CRM Analytics exam are: (1) Dataflows vs Recipes — Two Different Data Preparation Tools; (2) XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset; (3) SAQL vs Equals Filters — When to Use Each in Step Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function CRMAnalyticsExamTipsPage() {

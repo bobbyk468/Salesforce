@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does OmniStudio integrate with Energy & Utilities Cloud?',
     answer: 'OmniStudio is the technology layer for EUC digital services. OmniScripts power customer self-service flows (start/stop service, report an outage, request a bill extension). FlexCards display customer account summaries and service status. DataRaptors read and write EUC-specific data objects. Integration Procedures orchestrate complex utility transactions like service transfers or payment arrangements.',
   },
+  {
+    question: 'What concepts do most Energy & Utilities candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Energy & Utilities exam are: (1) Service Points vs Premises vs Assets — Three Separate Objects; (2) Meter Reading vs Meter Data Management — Operational vs Analytical; (3) Billing Account vs Service Account — Revenue vs Service Delivery. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function EnergyUtilitiesApExamTipsPage() {

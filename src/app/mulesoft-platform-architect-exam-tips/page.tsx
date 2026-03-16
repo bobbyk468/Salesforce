@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What deployment models does MuleSoft Platform Architect test?',
     answer: 'The exam tests all Anypoint Platform deployment options: CloudHub 1.0 (shared managed cloud), CloudHub 2.0 (containerised cloud with private spaces), Runtime Fabric (self-managed Kubernetes), and standalone Mule Runtime (on-premises). Knowing the trade-offs between control, cost, and maintenance overhead for each deployment model is essential for architect-level decisions.',
   },
+  {
+    question: 'What concepts do most MuleSoft Platform Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Platform Architect exam are: (1) CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric — Deployment Options; (2) Shared vs Dedicated Load Balancer — Public vs Private Endpoint Exposure; (3) Object Store v2 — Scoped to Deployment, Not Shared Across Workers by Default. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftPlatformArchitectExamTipsPage() {

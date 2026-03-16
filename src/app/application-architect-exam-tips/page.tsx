@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What are the highest-weight topics in the Application Architect component exams?',
     answer: 'Across the four components, the most tested topics are: data modelling and relationships (Data Architect), sharing rules and OWD design (Sharing & Visibility Architect), declarative automation vs. code decisions (App Builder), and Apex design patterns including governor limits (PD1). These cross-cutting topics appear across multiple exams.',
   },
+  {
+    question: 'What concepts do most Application Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Application Architect exam are: (1) Application Architect Is a Role Credential — Not a Single Exam; (2) Multi-Org vs Single-Org — Recognising the Decisive Scenario Signals; (3) Large Data Volumes and Query Performance — Skinny Tables Are Not Indexes. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ApplicationArchitectExamTipsPage() {

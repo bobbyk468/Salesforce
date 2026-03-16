@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the MuleSoft Hyperautomation Developer exam?',
     answer: 'MuleSoft Developer I or Integration Foundations is the recommended prerequisite. Familiarity with MuleSoft Anypoint Platform for deploying and monitoring automation processes is expected. Experience with RPA tools or process automation platforms is beneficial. The exam is newer and relatively specialist.',
   },
+  {
+    question: 'What concepts do most MuleSoft Hyperautomation Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Hyperautomation Developer exam are: (1) RPA vs API Integration — When Each Is the Right Tool; (2) Composer vs Anypoint Studio — Low-Code vs Pro-Code; (3) Process Automation vs RPA — Orchestration vs Execution. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftHyperautomationDeveloperExamTipsPage() {

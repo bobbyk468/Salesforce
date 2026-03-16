@@ -55,6 +55,10 @@ const faqItems = [
     question: 'Who should take the Salesforce Sales Foundations exam?',
     answer: 'Sales Foundations is designed for sales representatives, account managers, sales operations professionals, and anyone who uses Salesforce for selling. It validates that you understand how to use Salesforce effectively as a sales tool — managing your pipeline, logging activities, tracking opportunities, and using reports and dashboards to manage your performance.',
   },
+  {
+    question: 'What concepts do most Sales Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Sales Foundations exam are: (1) Opportunity Stages vs Forecast Categories — Two Different Picklists; (2) Products vs Price Books — You Need Both; (3) Activity Timeline vs Activity Reports — Different Views of the Same Data. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SalesFoundationsExamTipsPage() {

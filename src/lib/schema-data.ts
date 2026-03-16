@@ -59,7 +59,10 @@ export function getArticleJsonLd({
         '@type': 'Person',
         name: 'Krishna Mohan',
         url: `${baseUrl}/team`,
-        sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+        sameAs: [
+          'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+          'https://www.salesforce.com/trailblazer/krishnamohan',
+        ],
       },
     ],
     publisher: {

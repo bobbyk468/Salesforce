@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between Integration Architect and Platform Developer II for integrations?',
     answer: 'Platform Developer II tests how to write integration code (REST callouts, SOAP, Named Credentials, HttpCalloutMock). Integration Architect tests when and how to choose the right integration pattern at an architectural level — REST vs. SOAP vs. bulk API vs. streaming, middleware vs. point-to-point vs. ESB, and security architecture for integrations.',
   },
+  {
+    question: 'What concepts do most Integration Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Integration Architect exam are: (1) Real-Time vs Near-Real-Time vs Batch — Choosing the Right Integration Pattern; (2) Idempotency — Why Retry Logic Requires Idempotent Operations; (3) Salesforce Connect vs Heroku Connect vs MuleSoft — Three Different Integration Approaches. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function IntegrationArchitectExamTipsPage() {

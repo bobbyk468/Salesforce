@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the Sharing & Visibility Architect exam?',
     answer: 'The performance implications of sharing configurations are the hardest area — candidates must understand when complex sharing rules cause query performance degradation at large data volumes, and when to recommend implicit sharing vs. explicit sharing vs. manual sharing. These architectural trade-offs require real project experience.',
   },
+  {
+    question: 'What concepts do most Sharing & Visibility Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Sharing & Visibility Architect exam are: (1) OWD + Role Hierarchy + Sharing Rules — The Correct Evaluation Order; (2) With Sharing vs Without Sharing vs Inherited Sharing in Apex; (3) Territory Management vs Role Hierarchy — Two Separate Sharing Mechanisms. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SharingVisibilityArchitectExamTipsPage() {

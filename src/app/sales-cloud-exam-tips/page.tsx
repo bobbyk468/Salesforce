@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the best way to study for Sales Cloud Consultant?',
     answer: 'Focus on understanding sales process design, not just feature configuration. Study opportunity stages, forecasting categories, territory management, and CPQ integration at a conceptual level. Practice scenario-based questions — the exam tests what you would recommend in a given business context, not just what a feature does.',
   },
+  {
+    question: 'What concepts do most Sales Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Sales Cloud Consultant exam are: (1) Forecasting Categories — Not the Same as Opportunity Stage; (2) Collaborative Forecasting vs Territory Forecasting — Role Hierarchy vs Territory Model; (3) Lead Conversion Field Mapping — Not All Fields Map Automatically. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SalesCloudExamTipsPage() {

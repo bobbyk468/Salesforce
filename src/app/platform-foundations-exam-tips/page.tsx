@@ -55,6 +55,10 @@ const faqItems = [
     question: 'Who should take Platform Foundations instead of going straight to ADM-201?',
     answer: 'Platform Foundations is recommended for professionals new to Salesforce who need to quickly demonstrate platform competency — business users, project managers, sales reps, or people starting in a Salesforce admin role. Those with 3+ months of Salesforce exposure may be better served by targeting ADM-201 directly to avoid unnecessary exam fees.',
   },
+  {
+    question: 'What concepts do most Platform Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Platform Foundations exam are: (1) Standard Objects vs Custom Objects — What You Can and Cannot Modify; (2) Profiles vs Permission Sets — Baseline vs Extension; (3) App Launcher vs Navigation Bar vs Home Page — Three Separate Customisation Areas. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function PlatformFoundationsExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between Pardot Specialist and Pardot Consultant?',
     answer: 'The Pardot Specialist certification tests execution-level knowledge — configuring forms, automations, email templates, and Engagement Studio programs. The Pardot Consultant exam tests architectural and strategy-level decisions — how to design a full Pardot implementation for a client. Specialist should be completed before Consultant.',
   },
+  {
+    question: 'What concepts do most Pardot (Account Engagement) Specialist candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Pardot (Account Engagement) Specialist exam are: (1) Engagement Studio vs Automation Rules — Nurture vs Batch Processing; (2) Email Preference Centre vs Unsubscribe — Opt-Down vs Opt-Out; (3) Visitor vs Prospect — Anonymous vs Known. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function PardotSpecialistExamTipsPage() {

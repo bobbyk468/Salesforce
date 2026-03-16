@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the best way to study for the Advanced Administrator exam?',
     answer: 'Focus on complex security scenarios involving combinations of OWD, role hierarchy, sharing rules, permission sets, and field-level security applied simultaneously. Study advanced automation (complex Flow logic, Approval Processes with dynamic routing) and advanced reporting (joined reports, matrix reports, report formulas). Practice scenario questions — the exam describes a complex requirement and asks which combination of features solves it.',
   },
+  {
+    question: 'What concepts do most Advanced Administrator candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Advanced Administrator exam are: (1) Record-Triggered Flow — Before-Save vs After-Save vs Scheduled Paths; (2) Territory Management 2.0 — Assignment Rules vs Sharing Rules; (3) Change Data Capture vs Platform Events — Choosing the Right Tool. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function AdvancedAdministratorExamTipsPage() {

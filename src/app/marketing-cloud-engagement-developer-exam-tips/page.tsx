@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What SQL knowledge is needed for Marketing Cloud Developer?',
     answer: 'Marketing Cloud uses SQL for Query Activities in Automation Studio — queries run against data extensions (not a traditional database). You need standard SELECT, WHERE, JOIN, and GROUP BY. Specific Marketing Cloud SQL nuances: you cannot use subqueries in some contexts, data extensions are referenced by name as tables, and results write to a target data extension. The SQL tested is relatively straightforward ANSI SQL.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Engagement Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Developer exam are: (1) Server-Side JavaScript (SSJS) vs AMPscript — When to Use Each; (2) REST API vs SOAP API — Modern vs Legacy in Marketing Cloud; (3) Transactional Messaging API — Not the Same as Journey API. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudEngagementDeveloperExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites are needed for B2B Solution Architect?',
     answer: 'Salesforce recommends Sales Cloud Consultant + CPQ Specialist + Pardot Consultant (or equivalent experience) as the foundation. This is an expert-level exam — most candidates have 5+ years of Salesforce implementation experience across multiple clouds. Architect-level thinking (trade-offs, cross-cloud integration, long-term maintainability) is required.',
   },
+  {
+    question: 'What concepts do most B2B Solution Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2B Solution Architect exam are: (1) Account-Based vs Contact-Based Data Models — B2B vs B2C Architecture Decision; (2) Revenue Lifecycle Management vs CPQ — Knowing When Each Fits; (3) Integration Architecture — Point-to-Point vs ESB vs API-Led Connectivity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function B2BSolutionArchitectExamTipsPage() {

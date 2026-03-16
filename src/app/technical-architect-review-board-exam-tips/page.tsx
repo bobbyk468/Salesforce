@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What are the most common reasons candidates fail the CTA Review Board?',
     answer: 'Common failure reasons: (1) Insufficient breadth — solving only the primary requirement and missing data architecture, identity, or deployment concerns; (2) Inability to defend decisions under panel questioning — changing the answer when challenged rather than holding a justified position; (3) Overlooking scalability — designing for current state without considering large data volumes or future growth; (4) Not addressing trade-offs — presenting one solution as if there are no alternatives or downsides; (5) Weak security architecture — not addressing field-level security, sharing rules, or external identity at scale.',
   },
+  {
+    question: 'What concepts do most Technical Architect Review Board candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Technical Architect Review Board exam are: (1) The Scenario Is Deliberately Ambiguous — You Must Ask Clarifying Questions; (2) Defence Matters as Much as the Solution; (3) End-to-End Solution — Security, Deployment, and Governance Are Scored. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TechnicalArchitectReviewBoardExamTipsPage() {

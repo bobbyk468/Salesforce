@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the Industries CPQ Developer exam?',
     answer: 'OmniStudio Developer certification or experience is strongly recommended as Industries CPQ uses OmniStudio for its guided selling interfaces. Industries CPQ experience in a communications, media, or energy implementation context is essential. The exam is niche — most candidates work for system integrators specialising in Vlocity/Industries implementations.',
   },
+  {
+    question: 'What concepts do most Industries CPQ Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Industries CPQ Developer exam are: (1) Product Configuration vs Pricing Engine — Two Separate Subsystems; (2) OmniScript vs DataRaptor vs Integration Procedure — Three Tools, One Platform; (3) Cart-Based vs Non-Cart-Based Flows — When Each Is Used. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function IndustriesCPQDeveloperExamTipsPage() {

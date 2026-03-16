@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the Education Cloud Consultant exam?',
     answer: 'Salesforce Administrator (ADM-201) is the recommended foundation. Real experience implementing Salesforce for a higher education institution — managing student lifecycle, enrollment processes, and adviser workflows — is strongly recommended. Familiarity with the EDA managed package and Education Cloud setup is essential.',
   },
+  {
+    question: 'What concepts do most Education Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Education Cloud Consultant exam are: (1) Education Data Architecture (EDA) — Household vs Individual Account Model; (2) Admissions Connect — Application vs Inquiry vs Prospect Record; (3) Success Plans vs Alerts — Proactive vs Reactive Advising. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function EducationCloudConsultantExamTipsPage() {

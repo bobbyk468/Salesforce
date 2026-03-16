@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does Advanced Field Service AP differ from the Field Service Consultant exam?',
     answer: 'The Field Service Consultant exam covers foundational FSL configuration: work orders, service territories, resources, basic scheduling, and mobile app. The Advanced Field Service AP goes deeper into the Optimization Engine configuration, complex multi-resource scheduling, asset and parts management, predictive maintenance triggers, and Visual Remote Assistant (video-based remote support). It assumes you already hold or understand the Field Service Consultant material.',
   },
+  {
+    question: 'What concepts do most Advanced Field Service candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Advanced Field Service exam are: (1) Work Order Line Items vs Service Appointments — Not the Same Object; (2) Operating Hours vs Scheduling Policy — Why the Right Technician Is Not Getting Assigned; (3) Permission Sets for Field Service Mobile — Profiles Are Not Enough. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function AdvancedFieldServiceApExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is Service Cloud Voice and what does the exam test about it?',
     answer: 'Service Cloud Voice integrates telephony directly into the Salesforce agent console, creating a unified desktop for voice, digital, and CRM data. The exam tests how to set up Voice with Amazon Connect (the primary partner), configure IVR flows, enable real-time transcription and Einstein call summaries, and manage the agent experience during live calls within Salesforce.',
   },
+  {
+    question: 'What concepts do most Contact Center candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Contact Center exam are: (1) Omni-Channel Flow vs Legacy Routing Configuration — New vs Old; (2) Enhanced Omni-Channel vs Standard Omni-Channel — Capacity Model Difference; (3) Service Channel vs Routing Configuration — Not the Same Thing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ContactCenterApExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What Business Manager knowledge is needed for the B2C Commerce Developer exam?',
     answer: 'Business Manager is the administration UI for B2C Commerce. You need to understand site configuration, catalog management, pricing rules, promotions, content slots, A/B testing setup, and how Business Manager configurations affect storefront behaviour. Configuration decisions in Business Manager often have direct development implications tested in the exam.',
   },
+  {
+    question: 'What concepts do most B2C Commerce Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2C Commerce Developer exam are: (1) Controllers vs Pipelines — SFRA Uses Controllers, Not Pipelines; (2) Hooks vs Cartridge Overrides — Extension Without Modification; (3) Business Manager Site Preferences vs Custom Objects — Where to Store Config. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function B2CCommerceDeveloperExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What are Einstein Recipes in Marketing Cloud Personalization?',
     answer: 'Einstein Recipes are the recommendation algorithm configurations in MCP. They define how to select and rank items (products, content, offers) for display to a user. Ingredients are the rules that determine which items are eligible (e.g., viewed categories, purchased products). Boosters increase the score of certain items. Exclusions remove items already purchased. The exam tests how to configure Recipes for common recommendation scenarios.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Personalization candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Personalization exam are: (1) Identity Resolution — Web SDK Tracks Anonymous Until Identity Is Asserted; (2) Campaigns vs Experiences vs Templates — Three-Level Content Hierarchy; (3) Einstein Decisions vs Rules-Based Personalisation — ML vs Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudPersonalizationApExamTipsPage() {

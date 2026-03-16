@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the OmniStudio Developer exam?',
     answer: 'Salesforce Administrator (ADM-201) is the recommended foundation. Experience with Industries Cloud products (Financial Services Cloud, Health Cloud, etc.) that use OmniStudio is strongly recommended. Complete the Trailhead OmniStudio Developer Superbadge before sitting the exam.',
   },
+  {
+    question: 'What concepts do most OmniStudio Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the OmniStudio Developer exam are: (1) Custom LWC in OmniScript — Override vs Embed; (2) Activation — OmniScripts and FlexCards Must Be Activated Before Use; (3) Type vs Sub-Type — OmniScript Identity Keys. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function OmniStudioDeveloperExamTipsPage() {

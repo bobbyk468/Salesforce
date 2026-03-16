@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between a join and a blend in Tableau?',
     answer: 'A join combines tables at the row level before any aggregation — like SQL joins. A blend combines data from different data sources at the aggregate level. Joins are preferred when possible because they are more reliable. Blends are used when joining at the row level is not possible (different databases, different connection types). The exam tests when each approach is appropriate.',
   },
+  {
+    question: 'What concepts do most Tableau Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Tableau Consultant exam are: (1) Blending vs Joining — Same Tool, Different Data Architecture; (2) Calculated Fields vs Table Calculations — Where Computation Happens; (3) Context Filters vs Regular Filters — Execution Order Matters. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TableauConsultantExamTipsPage() {

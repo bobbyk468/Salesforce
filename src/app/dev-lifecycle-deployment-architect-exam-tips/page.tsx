@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What makes the Dev Lifecycle & Deployment Architect exam hard?',
     answer: 'The exam requires architectural thinking about DevOps — not just knowledge of tools. Candidates must recommend sandbox strategies for organisations with multiple parallel development streams, design CI/CD pipelines, and understand the trade-offs between scratch orgs vs. sandboxes vs. packaging models. Real release management experience is essential.',
   },
+  {
+    question: 'What concepts do most Dev Lifecycle & Deployment Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Dev Lifecycle & Deployment Architect exam are: (1) Unlocked Packages vs Change Sets vs Metadata API — Choosing the Right Deployment Tool; (2) Scratch Orgs vs Sandboxes — Source-Driven vs Org-Driven Development; (3) CI/CD Pipeline Stages — What Runs in Each Environment. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function DevLifecycleDeploymentArchitectExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the PD1 exam?',
     answer: 'Governor limits and bulkification. Every Apex scenario expects bulk-safe code — no SOQL or DML inside loops, use of Maps and Sets for batch operations, and correct trigger context variable usage.',
   },
+  {
+    question: 'What concepts do most PD1 candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the PD1 exam are: (1) SOQL Inside For-Loops: The Governor Limit That Kills Your Score; (2) @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer; (3) Test Classes: Coverage Is Not Enough — Assertions Are Required. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function Pd1ExamTipsPage() {

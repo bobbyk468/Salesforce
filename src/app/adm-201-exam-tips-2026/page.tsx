@@ -55,6 +55,10 @@ const faqItems = [
     question: 'Is ADM-201 hard to pass on the first attempt?',
     answer: 'ADM-201 has roughly a 70% first-attempt pass rate. It is scenario-heavy, so practising with mock exams at 75%+ consistently is the best predictor of readiness. Focus on use-case style questions, not just feature lists.',
   },
+  {
+    question: 'What concepts do most ADM-201 candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the ADM-201 exam are: (1) OWD vs Profiles vs Roles — Three Layers, One Wrong Answer; (2) Flow vs Process Builder — Know the Exam\'s Recommended Tool; (3) Reports vs Dashboards — Joined Reports and Filter Limits. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function Adm201ExamTipsPage() {

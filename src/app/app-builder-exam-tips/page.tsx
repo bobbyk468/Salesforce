@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between ADM-201 and App Builder?',
     answer: 'ADM-201 tests administration and configuration; App Builder tests building custom applications declaratively using objects, flows, Lightning pages, and the AppExchange. There is about 30% content overlap in automation and data topics.',
   },
+  {
+    question: 'What concepts do most App Builder candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the App Builder exam are: (1) Declarative-First: The Exam Always Prefers Flow Over Apex; (2) Master-Detail vs Lookup: The Sharing and Roll-Up Difference; (3) Lightning App Builder Visibility Rules vs Profile-Based Assignment. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function AppBuilderExamTipsPage() {

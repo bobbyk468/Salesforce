@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What financial industry knowledge helps with the FSC AP exam?',
     answer: 'Understanding financial services business processes — wealth management, retail banking, insurance, or mortgage lending — helps map scenarios to FSC features. Knowledge of financial concepts like AUM (assets under management), financial goals, life events (marriage, retirement, college funding), and how financial advisors manage client relationships is as important as knowing the FSC configuration.',
   },
+  {
+    question: 'What concepts do most Financial Services Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Financial Services Cloud exam are: (1) Household vs Individual vs Group — Three Account Models in FSC; (2) Financial Accounts vs Salesforce Accounts — Different Objects; (3) Actionable Relationship Centre (ARC) — Relationship Visibility Tool. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function FinancialServicesCloudApExamTipsPage() {

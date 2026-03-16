@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What Heroku add-ons are commonly tested in the Developer AP exam?',
     answer: 'The exam commonly tests Heroku Postgres (managed PostgreSQL database), Heroku Redis (managed Redis cache), Heroku Data for Redis (additional cache and queue support), SendGrid (transactional email), Papertrail (log management), and New Relic (performance monitoring). Understanding how to provision add-ons, access credentials via config vars, and scale add-on plans is tested.',
   },
+  {
+    question: 'What concepts do most Heroku Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Heroku Developer exam are: (1) Ephemeral Filesystem — Files Written to Dyno Are Lost on Restart; (2) Config Vars vs .env — Environment Variables Are Not in Code; (3) Release Phase — Run Migrations Before New Code Goes Live. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function HerokuDeveloperApExamTipsPage() {

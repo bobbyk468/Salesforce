@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between MuleSoft Developer I and Developer II?',
     answer: 'Developer I covers foundational Mule 4 application development — flows, connectors, DataWeave, and basic error handling. Developer II tests advanced topics: Anypoint MQ, batch processing, API-led connectivity design patterns, custom policy implementation, and advanced DataWeave. Developer I is the prerequisite foundation for Developer II.',
   },
+  {
+    question: 'What concepts do most MuleSoft Developer I candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Developer I exam are: (1) DataWeave Type System — Coercion, Null Safety, and Default Operator; (2) Error Handling Scope — Try, On Error Continue vs On Error Propagate; (3) CloudHub vs Runtime Fabric — Worker Size vs Container Config. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftDeveloperIExamTipsPage() {

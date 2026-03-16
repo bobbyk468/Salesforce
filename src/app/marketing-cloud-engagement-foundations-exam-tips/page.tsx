@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is a data extension in Marketing Cloud and why does it matter?',
     answer: 'A data extension is Marketing Cloud&apos;s primary data storage object — essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Engagement Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Foundations exam are: (1) Contact vs Subscriber — Two Different Identity Concepts; (2) All Subscribers List vs Publication Lists vs Data Extensions for Sending; (3) Email Studio vs Journey Builder — One-Time vs Ongoing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudEngagementFoundationsExamTipsPage() {

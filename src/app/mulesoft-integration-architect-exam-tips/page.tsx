@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What Anypoint Platform concepts are most tested in the Integration Architect exam?',
     answer: 'The exam heavily tests API-led connectivity (system, process, and experience APIs), Anypoint Exchange for asset publishing, API Manager for policy enforcement, CloudHub deployment configuration, error handling strategies (global error handlers, on-error continue vs. propagate), and transaction management (distributed transactions, idempotency patterns). Knowing when to use which integration pattern is essential.',
   },
+  {
+    question: 'What concepts do most MuleSoft Integration Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Architect exam are: (1) API Policies — Rate Limiting vs Throttling vs SLA Tiers; (2) Anypoint VPC and VPN — Private Network Architecture; (3) API Autodiscovery — Linking a Mule App to API Manager. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftIntegrationArchitectExamTipsPage() {

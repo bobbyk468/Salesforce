@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What subscriber management features does Media Cloud include?',
     answer: 'Media Cloud manages subscription lifecycle for streaming, publishing, and broadcast companies: subscriber acquisition (sign-up flows), entitlement management (which content the subscriber can access based on their plan), billing and payment management, retention offers for at-risk subscribers, win-back campaigns for churned subscribers, and audience segmentation for targeted content recommendations.',
   },
+  {
+    question: 'What concepts do most Media Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Media Cloud exam are: (1) Media Cloud Data Model — Media Order vs Standard Salesforce Order; (2) Programmatic vs Direct Sales Workflows — Different Insertion Order Types; (3) Rights Management — Content Rights Are Time-Boxed and Territory-Specific. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MediaCloudApExamTipsPage() {

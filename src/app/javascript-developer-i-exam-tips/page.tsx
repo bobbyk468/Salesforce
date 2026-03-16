@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the JavaScript Developer I exam?',
     answer: 'Asynchronous JavaScript (Promises, async/await, event loop execution order) and LWC lifecycle hooks are the most frequently cited challenges. Candidates who only know JavaScript superficially — without understanding closures, prototype chain, and the event loop — struggle with the trick questions in these areas.',
   },
+  {
+    question: 'What concepts do most JavaScript Developer I candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the JavaScript Developer I exam are: (1) Promises vs Async/Await — Same Mechanism, Different Syntax; (2) var vs let vs const — Scope and Reassignment Rules; (3) Event Bubbling vs Capturing — Two Phases of DOM Event Propagation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function JavaScriptDeveloperIExamTipsPage() {

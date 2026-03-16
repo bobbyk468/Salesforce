@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How hard is the Salesforce System Architect exam?',
     answer: 'The System Architect exam is very challenging. It tests cross-domain knowledge spanning Salesforce security model, OAuth flows, CI/CD pipelines, and multi-cloud architecture. Most successful candidates have 5+ years of Salesforce experience and multiple domain certifications before attempting it.',
   },
+  {
+    question: 'What concepts do most System Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the System Architect exam are: (1) System Architect Role Credential — Requires Four Domain Exams; (2) API Rate Limits vs Concurrency Limits — Volume vs Parallelism; (3) Event-Driven Architecture — When to Use Platform Events Over Direct Integration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SystemArchitectExamTipsPage() {

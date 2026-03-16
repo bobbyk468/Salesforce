@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What topics are covered in the CTA Evaluation Exam?',
     answer: 'The CTA Evaluation Exam covers advanced Salesforce architecture topics: enterprise data modelling, large data volumes, integration architecture patterns, identity and access management, security architecture, deployment strategy for large orgs, and multi-cloud solution design. It tests breadth across all Salesforce architectural domains at an expert level.',
   },
+  {
+    question: 'What concepts do most Technical Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Technical Architect exam are: (1) CTA Is a Review Board — Not a Written Exam; (2) Holistic Architecture — Every Decision Involves Trade-Offs; (3) Governance and Delivery — Architecture Without Delivery Plan Is Incomplete. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TechnicalArchitectExamTipsPage() {

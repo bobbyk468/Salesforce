@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What are dimensions and measures in Tableau and why do they matter?',
     answer: 'Dimensions are categorical fields (text, dates) that define the granularity of a view — they go on Rows and Columns shelves. Measures are numeric fields that are aggregated — they appear as pills in the view. Understanding the dimension vs. measure distinction is fundamental to Tableau and is tested across multiple questions on every Tableau exam.',
   },
+  {
+    question: 'What concepts do most Tableau Desktop Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Tableau Desktop Foundations exam are: (1) Connecting to Data — Live vs Extract in Desktop; (2) Show Me vs Drag-and-Drop — When Tableau Automatically Selects Chart Types; (3) Groups vs Sets — Static vs Dynamic Membership. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TableauDesktopFoundationsExamTipsPage() {

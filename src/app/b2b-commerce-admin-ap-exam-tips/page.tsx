@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does pricing work in Salesforce B2B Commerce?',
     answer: 'B2B Commerce uses Salesforce Price Books for pricing. A buyer&apos;s account is assigned a price book through their Buyer Group entitlement. Volume pricing (tiered pricing by quantity) is configured using price book entries with quantity ranges. Negotiated pricing for specific accounts uses account-specific price books. The exam tests how to configure the pricing hierarchy: standard list price → volume price → account-negotiated price.',
   },
+  {
+    question: 'What concepts do most B2B Commerce Administrator candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2B Commerce Administrator exam are: (1) Price Lists vs Price Books — B2B Commerce Has Its Own Pricing Layer; (2) Buyer Groups vs Accounts — Access Is Granted Through the Group; (3) Quick Order vs Order Templates — Different Use Cases, Same Confusion. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function B2bCommerceAdminApExamTipsPage() {

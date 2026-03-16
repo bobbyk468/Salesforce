@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the Field Service Consultant exam?',
     answer: 'Scheduling and optimisation is the most nuanced section — candidates must understand the difference between auto-scheduling, optimisation policies, scheduling rules, and work type rules, and when each is appropriate. The FSL data model (service territories, resources, service appointments) is unique and unlike other Salesforce modules.',
   },
+  {
+    question: 'What concepts do most Field Service candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Field Service exam are: (1) Dispatcher Console vs Gantt vs Service Appointment List — Three Different Views; (2) Auto-Scheduling vs Optimization — Immediate vs Batch Processing; (3) Work Types vs Skill Requirements — Templates vs Qualifications. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function FieldServiceExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What responsible AI concepts does the AI Associate exam test?',
     answer: 'The exam tests Salesforce&apos;s Trusted AI principles: accuracy, safety, honesty, empowerment, sustainability, and inclusivity. It also tests common AI risks: bias in training data, hallucination in generative AI, privacy concerns with personal data, and the importance of human oversight. Understanding these principles at a conceptual level is required.',
   },
+  {
+    question: 'What concepts do most AI Associate candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the AI Associate exam are: (1) Types of Bias in AI — Not All Bias Is the Same; (2) Salesforce Einstein Features — Which Product Does What; (3) Salesforce\'s Five Ethical AI Principles. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function AIAssociateExamTipsPage() {

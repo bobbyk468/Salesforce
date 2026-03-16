@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites do I need for Marketing Cloud Consultant?',
     answer: 'Salesforce recommends the Marketing Cloud Email Specialist certification before Marketing Cloud Consultant. While not a hard prerequisite, it establishes the product knowledge that Consultant builds on. Real implementation experience with Marketing Cloud Studio and Journey Builder is also strongly recommended.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Consultant exam are: (1) Business Units — Data Isolation vs Sharing; (2) Sender Authentication Package (SAP) vs Default Branding Domain; (3) Suppression Lists vs Publication Lists vs Exclusion Lists. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudConsultantExamTipsPage() {

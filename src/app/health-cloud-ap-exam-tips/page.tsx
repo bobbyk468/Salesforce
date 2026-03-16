@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What healthcare industry knowledge helps with the Health Cloud AP exam?',
     answer: 'Understanding how healthcare organisations operate — patient intake, care coordination, provider networks, member management for payers, and clinical data — helps map business scenarios to Health Cloud features. Knowledge of HIPAA compliance concepts (PHI protection, access controls) and how Health Cloud addresses them through its security model is also tested.',
   },
+  {
+    question: 'What concepts do most Health Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Health Cloud exam are: (1) Patient vs Member vs Person Account — Health Cloud Data Model; (2) Care Plans vs Care Programs — Individual vs Population Health; (3) Utilisation Management vs Prior Authorisation — Two Different Processes. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function HealthCloudApExamTipsPage() {

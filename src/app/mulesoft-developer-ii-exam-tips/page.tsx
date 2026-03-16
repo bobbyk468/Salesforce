@@ -55,6 +55,10 @@ const faqItems = [
     question: 'Do I need MuleSoft Developer I before Developer II?',
     answer: 'MuleSoft Developer I is the recommended (and effectively required) prerequisite for Developer II. Developer II assumes complete knowledge of Developer I content — flows, connectors, DataWeave, error handling — and builds advanced patterns on top. Candidates without Developer I knowledge will struggle significantly with Developer II material.',
   },
+  {
+    question: 'What concepts do most MuleSoft Developer II candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Developer II exam are: (1) Batch Processing — Batch Job Phases and Error Handling; (2) Async vs Sync Flow Execution — When Flow Runs Are Detached; (3) Watermark in Polling — Tracking Processed Records Across Runs. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftDeveloperIIExamTipsPage() {

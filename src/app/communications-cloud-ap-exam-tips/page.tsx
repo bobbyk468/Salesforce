@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does OmniStudio power Communications Cloud?',
     answer: 'Like other Industry Clouds, Communications Cloud uses OmniStudio for its guided processes and UI components. OmniScripts power the guided selling experience (selecting services, configuring bundles). FlexCards display customer account and subscription summaries. DataRaptors read/write TMF data objects. Integration Procedures orchestrate complex order fulfilment workflows across BSS/OSS systems. OmniStudio knowledge is a prerequisite for this exam.',
   },
+  {
+    question: 'What concepts do most Communications Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Communications Cloud exam are: (1) Enterprise Product Catalog vs Standard Salesforce Products — Different Objects; (2) Order Decomposition — Fulfilment Orders Are Automatically Created; (3) CPQ in Communications Context — VlocityProduct vs Standard CPQ. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function CommunicationsCloudApExamTipsPage() {

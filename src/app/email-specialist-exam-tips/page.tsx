@@ -55,6 +55,10 @@ const faqItems = [
     question: 'Is the Email Specialist a good first Marketing Cloud certification?',
     answer: 'Yes — it is the most popular Marketing Cloud entry point and validates core SFMC skills. It is widely recognised and provides a strong foundation before taking Marketing Cloud Admin or Developer exams.',
   },
+  {
+    question: 'What concepts do most Email Specialist (Marketing Cloud) candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Email Specialist (Marketing Cloud) exam are: (1) Send Classification — Transactional vs Commercial and Suppression Bypasses; (2) AMPscript — Block Syntax vs Inline Syntax and Lookup Functions; (3) Data Extensions vs Subscriber Lists — When to Use Each. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function EmailSpecialistExamTipsPage() {

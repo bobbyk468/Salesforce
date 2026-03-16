@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is data harmonisation in Marketing Cloud Intelligence?',
     answer: 'Data harmonisation maps incoming data fields from different sources to a unified MCI data model. For example, Facebook calls it "Impressions" and Google calls it "Impr." — harmonisation maps both to a single "Impressions" metric in MCI. The exam tests how to configure field mappings, create custom dimensions and metrics, set up cross-channel calculated metrics, and handle data conflicts when sources use different definitions.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Intelligence candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Intelligence exam are: (1) Streams vs Workspaces — Data Ingestion vs Analysis; (2) Harmonised vs Raw Data — Why Metrics Don\'t Match Source Platforms; (3) Calculated Metrics vs Standard Metrics — Custom Formulas for Cross-Channel KPIs. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudIntelligenceApExamTipsPage() {

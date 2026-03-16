@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the Salesforce Data Architect exam?',
     answer: 'Large Data Volume (LDV) strategy is consistently the hardest section — skinny tables, custom indexes, query optimisation, and division management require hands-on experience that is difficult to learn from study materials alone. Master data management and data governance concepts are also highly scenario-based.',
   },
+  {
+    question: 'What concepts do most Data Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Data Architect exam are: (1) Skinny Tables vs Custom Indexes — Different Performance Tools, Different Use Cases; (2) External Objects vs Big Objects — Real-Time vs Archive; (3) Data Masking vs Field Encryption vs Classic Encryption — Three Security Layers. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function DataArchitectExamTipsPage() {

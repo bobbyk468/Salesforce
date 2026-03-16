@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What sustainability reporting standards does Net Zero Cloud support?',
     answer: 'Net Zero Cloud supports major sustainability reporting frameworks: GHG Protocol (the global standard for greenhouse gas accounting), CDP (Carbon Disclosure Project), TCFD (Task Force on Climate-related Financial Disclosures), and SEC climate disclosure requirements. The exam tests which reporting standard applies to which compliance scenario and how Net Zero Cloud&apos;s reports map to each framework.',
   },
+  {
+    question: 'What concepts do most Net Zero Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Net Zero Cloud exam are: (1) Scope 1 vs Scope 2 vs Scope 3 Emissions — Different Tracking Responsibilities; (2) Carbon Credits vs Carbon Offsets — Purchased vs Generated; (3) Emission Factors — Why Records Don\'t Match Industry Benchmarks. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function NetZeroCloudApExamTipsPage() {

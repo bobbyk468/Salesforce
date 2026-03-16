@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How is MuleSoft Catalyst Consultant different from MuleSoft Platform Architect?',
     answer: 'MuleSoft Catalyst Consultant focuses on the organisational and methodology aspects of MuleSoft programmes — how to structure teams, establish governance processes, and deliver integration transformations using the Catalyst playbooks. MuleSoft Platform Architect focuses on technical platform strategy — API governance, deployment models, and enterprise-wide Anypoint Platform architecture. Catalyst is more about programme management; Platform Architect is more about technical strategy.',
   },
+  {
+    question: 'What concepts do most MuleSoft Catalyst Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Catalyst Consultant exam are: (1) Catalyst Methodology Phases — Discover, Design, Build, Deliver; (2) C4E (Center for Enablement) — Not Just a Governance Committee; (3) API Lifecycle Stages — Design → Build → Publish → Manage → Retire. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftCatalystConsultantExamTipsPage() {

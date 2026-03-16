@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does Order Management handle returns and exchanges?',
     answer: 'Salesforce Order Management uses Change Orders to process returns. A Return Merchandise Authorization (RMA) is created and linked to the original order. Items are returned to a fulfilment location, inventory is updated, and a refund is issued. Exchanges create a new order for the replacement product. The exam tests the configuration of the return workflow, refund automation, and how to handle partial returns and damaged goods.',
   },
+  {
+    question: 'What concepts do most Order Management Admin candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Order Management Admin exam are: (1) Fulfillment Orders vs Order Summaries — Operational vs Commercial; (2) Order Routing Rules — Not Configured in Flow by Default; (3) Return Merchandise Authorisation (RMA) — Separate Process from Cancellation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function OrderManagementAdminApExamTipsPage() {

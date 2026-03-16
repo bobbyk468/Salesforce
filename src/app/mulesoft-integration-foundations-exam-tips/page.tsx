@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How hard is the MuleSoft Integration Foundations exam?',
     answer: 'It is the easiest MuleSoft certification. 3–4 weeks of study combined with hands-on practice in Anypoint Studio (available as a free trial) is sufficient for most candidates.',
   },
+  {
+    question: 'What concepts do most MuleSoft Integration Foundations candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the MuleSoft Integration Foundations exam are: (1) API-Led Connectivity Layers — Which Layer Handles Which Scenario; (2) Anypoint Platform Components — Which Tool Does What; (3) DataWeave — Output Directives and Basic Transformation Syntax. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MuleSoftIntegrationFoundationsExamTipsPage() {

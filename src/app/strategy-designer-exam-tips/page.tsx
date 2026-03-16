@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What design thinking frameworks does the Strategy Designer exam test?',
     answer: 'The exam tests the full design thinking process: Empathise (research, user interviews, personas), Define (problem framing, How Might We statements), Ideate (brainstorming, co-creation), Prototype (low-fidelity models), and Test (validation). Additionally, value proposition design, business model canvas, and journey mapping are tested as strategic frameworks.',
   },
+  {
+    question: 'What concepts do most Strategy Designer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Strategy Designer exam are: (1) Futures Thinking vs Current-State Analysis — Speculative vs Descriptive; (2) Jobs To Be Done vs User Stories — Motivation vs Task; (3) Hypothesis vs Assumption vs Insight — Research Rigour Distinctions. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function StrategyDesignerExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How does OmniStudio relate to Public Sector Solutions?',
     answer: 'OmniStudio is the technology foundation for PSS digital services. OmniScripts power citizen-facing application and intake forms. FlexCards display case information and status to government workers. DataRaptors read and write data during application processes. The PSS AP exam tests how OmniStudio components are configured and customised for government use cases — knowing OmniStudio fundamentals is a prerequisite.',
   },
+  {
+    question: 'What concepts do most Public Sector Solutions candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Public Sector Solutions exam are: (1) Licences vs Permits vs Inspections — The PSS Object Hierarchy; (2) OmniStudio in PSS — Portal Interactions Use OmniScripts; (3) Business Rules Engine (BRE) — Eligibility and Decision Automation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function PublicSectorSolutionsApExamTipsPage() {

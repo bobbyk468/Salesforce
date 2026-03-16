@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the best way to prepare for the Salesforce Business Analyst exam?',
     answer: 'Focus on the BA methodology: how to run discovery workshops, write user stories with acceptance criteria, facilitate UAT, and manage scope. Study the full BA lifecycle from discovery through deployment. Practice writing user stories in the As a / I want / So that format and understand how to translate stakeholder needs into Salesforce solutions.',
   },
+  {
+    question: 'What concepts do most Business Analyst candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Business Analyst exam are: (1) Process Mapping vs User Stories — Different Artefacts for Different Purposes; (2) Acceptance Criteria vs Definition of Done — Two Different Quality Gates; (3) Stakeholder Communication — RACI Matrix vs Communication Plan. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function BusinessAnalystExamTipsPage() {

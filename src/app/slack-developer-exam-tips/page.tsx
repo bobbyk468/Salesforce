@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How long should I study for the Slack Developer exam?',
     answer: '4–6 weeks with hands-on app building. Build at least one complete Slack app with interactive components (buttons, modals) and event subscriptions before attempting the exam.',
   },
+  {
+    question: 'What concepts do most Slack Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Slack Developer exam are: (1) Block Kit vs Legacy Message Attachments — Legacy Is Deprecated; (2) OAuth 2.0 Scopes — Principle of Least Privilege; (3) Events API vs Webhooks vs Slash Commands — One-Way vs Two-Way. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function SlackDeveloperExamTipsPage() {

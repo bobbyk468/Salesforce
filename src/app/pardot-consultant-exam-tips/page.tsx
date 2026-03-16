@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between automation rules and completion actions in Pardot?',
     answer: 'Automation rules run retroactively against the entire prospect database and continuously — they fire whenever criteria are met, even for existing prospects. Completion actions run only at the moment a specific action is completed (e.g., form submit, email click) and only for new interactions. Segmentation rules are one-time static snapshots. For scenarios where you need to retroactively apply changes to existing prospects, automation rules are the answer; for real-time responses to new activity, completion actions are correct.',
   },
+  {
+    question: 'What concepts do most Pardot (Account Engagement) Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Pardot (Account Engagement) Consultant exam are: (1) Completion Actions vs Automation Rules vs Dynamic Lists — Three Trigger Mechanisms; (2) Prospect Grades vs Scores — Profile Fit vs Engagement; (3) Pardot Business Units — Separate Instances Under One Salesforce Org. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function PardotConsultantExamTipsPage() {

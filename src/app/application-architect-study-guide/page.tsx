@@ -206,6 +206,18 @@ export default function ApplicationArchitectStudyGuidePage() {
           </Link>
         </div>
       </div>
+
+      {/* Hub CTA */}
+      <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
+        <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
+        <p className="text-white/90 mb-6">Try the Application Architect free practice exam — scored with full explanations.</p>
+        <Link
+          href="/certifications/application-architect"
+          className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
+        >
+          Application Architect Free Practice Exam &rarr;
+        </Link>
+      </div>
     </div>
   )
 }

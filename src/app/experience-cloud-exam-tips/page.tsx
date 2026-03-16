@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the hardest part of the Experience Cloud Consultant exam?',
     answer: 'The Sharing, Visibility, and Licensing section is consistently the hardest for most candidates. You need to understand the different Experience Cloud licence types (Customer Community, Customer Community Plus, Partner Community, Channel Account), what each licence permits, and how external user access interacts with Salesforce sharing rules.',
   },
+  {
+    question: 'What concepts do most Experience Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Experience Cloud Consultant exam are: (1) Experience Cloud Licence Types — Community vs Partner vs Customer Plus; (2) Data Categories vs Topics — Visibility Control vs Navigation; (3) Sharing Rules in Experience Cloud — External User OWD Is Separate from Internal. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ExperienceCloudExamTipsPage() {

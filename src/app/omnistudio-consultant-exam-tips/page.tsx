@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What industry knowledge helps with OmniStudio Consultant?',
     answer: 'OmniStudio is primarily used in industries like Financial Services Cloud, Health Cloud, Energy and Utilities, and Communications Cloud. Understanding common use cases in these industries — guided onboarding, case intake flows, financial product configuration — helps contextualise the scenario questions on this exam.',
   },
+  {
+    question: 'What concepts do most OmniStudio Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the OmniStudio Consultant exam are: (1) OmniScript vs FlexCard — Process vs Display; (2) DataRaptor Load vs DataRaptor Transform vs DataRaptor Turbo Extract; (3) Integration Procedures — Server-Side, Invocable by OmniScript or API. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function OmniStudioConsultantExamTipsPage() {

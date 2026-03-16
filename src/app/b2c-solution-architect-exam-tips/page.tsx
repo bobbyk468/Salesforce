@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is customer identity management and why is it important for B2C Solution Architect?',
     answer: 'In B2C, customers interact across multiple channels (web, mobile, email, social, in-store). Customer identity management unifies these interactions under a single customer profile. Salesforce Identity (OIDC, OAuth) for Commerce Cloud login, Customer Data Platform (CDP) for unified profiles, and Marketing Cloud subscriber management must all work together — the exam tests how to architect this identity layer.',
   },
+  {
+    question: 'What concepts do most B2C Solution Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2C Solution Architect exam are: (1) Single vs Multi-Cloud Order Management — When OMS Is Needed; (2) Identity Resolution — Matching Contacts Across Channels Without Duplication; (3) Headless Commerce Architecture — When to Recommend It. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function B2CSolutionArchitectExamTipsPage() {

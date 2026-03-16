@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What nonprofit industry knowledge helps with this exam?',
     answer: 'Understanding how nonprofits operate — donation processing, grant management, volunteer coordination, beneficiary tracking, and impact measurement — is as important as knowing Salesforce configuration. Candidates with nonprofit sector experience perform better because the exam tests whether you can map nonprofit business processes to the NPC data model correctly.',
   },
+  {
+    question: 'What concepts do most Nonprofit Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Nonprofit Cloud exam are: (1) NPSP Household Account Model — Contacts Are Primary, Accounts Are Secondary; (2) Soft Credits vs Hard Credits — Recognition vs Liability; (3) NPSP Recurring Donations — Open-Ended vs Fixed-Length. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function NonprofitCloudExamTipsPage() {

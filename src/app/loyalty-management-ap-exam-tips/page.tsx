@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is a Loyalty Partner in Salesforce Loyalty Management?',
     answer: 'Loyalty Partners are external companies that participate in the programme — allowing members to earn or redeem points outside the primary brand (e.g., airline miles earned at a hotel partner). The exam tests how to configure partner earning rules, set up partner API integration for real-time point accrual, and manage the financial settlement between the loyalty programme operator and the partner.',
   },
+  {
+    question: 'What concepts do most Loyalty Management candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Loyalty Management exam are: (1) Loyalty Program vs Loyalty Programme Member vs Member Tier — Three Separate Records; (2) Accrual vs Redemption Transactions — Points In vs Points Out; (3) Promotion vs Voucher vs Reward — Three Offer Mechanics. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function LoyaltyManagementApExamTipsPage() {

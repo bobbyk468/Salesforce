@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the Consumer Goods Cloud mobile experience and how is it tested?',
     answer: 'Consumer Goods Cloud has a mobile-first design for field reps who work in stores. The mobile app enables reps to view their visit schedule, see account history, execute in-store assessments (photos, counts, compliance checks), place orders, and report KPIs from their phone. The exam tests how to configure the mobile app components, activity types, and data sync settings for field rep productivity.',
   },
+  {
+    question: 'What concepts do most Consumer Goods Cloud candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Consumer Goods Cloud exam are: (1) Retail Execution Visits vs Service Appointments — Different Objects in CGC; (2) Assessments vs Surveys — Purpose-Built Retail Audit Tool; (3) My Route Planning — Optimisation Is Not Automatic. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function ConsumerGoodsCloudApExamTipsPage() {

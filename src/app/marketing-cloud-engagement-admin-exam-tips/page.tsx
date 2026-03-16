@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How important is email deliverability for this exam?',
     answer: 'Deliverability accounts for approximately 12% of the exam. Key topics include: IP warming strategy, CAN-SPAM and GDPR compliance within Marketing Cloud, bounce management (soft vs hard bounces), unsubscribe and opt-out processes, sender authentication (SPF, DKIM, DMARC), and how to use the Deliverability dashboard. Understanding how Salesforce handles subscriber status changes (active, unsubscribed, bounced) is frequently tested.',
   },
+  {
+    question: 'What concepts do most Marketing Cloud Engagement Admin candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Admin exam are: (1) Role-Based Access in Marketing Cloud — Roles vs Permissions; (2) IP Warming — New Sending IPs Need Gradual Volume Ramp; (3) Sender Authentication — SPF, DKIM, and DMARC Are All Required. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function MarketingCloudEngagementAdminExamTipsPage() {

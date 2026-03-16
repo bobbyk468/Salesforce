@@ -55,6 +55,10 @@ const faqItems = [
     question: 'When should an architect choose Heroku over Salesforce Platform?',
     answer: 'Heroku is preferred when you need: open-source language flexibility (Node.js, Python, Ruby, Java), high-volume public-facing web applications, complex compute workloads that exceed Salesforce governor limits, or when mixing Salesforce and non-Salesforce data sources. Salesforce Platform is preferred for CRM-centric applications, declarative automation, and when staying within the Salesforce ecosystem is a priority.',
   },
+  {
+    question: 'What concepts do most Heroku Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Heroku Architect exam are: (1) Heroku Connect — Bidirectional Sync Has Write Conflict Rules; (2) Dyno Types — Web vs Worker vs One-Off; (3) Add-ons vs Buildpacks — Services vs Build Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function HerokuArchitectExamTipsPage() {

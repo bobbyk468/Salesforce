@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the Data Cloud Consultant exam?',
     answer: 'Salesforce Administrator (ADM-201) is the recommended foundation. Marketing Cloud or Salesforce CRM experience is beneficial as Data Cloud connects to these systems. Understanding basic data concepts (data modelling, ETL, customer profiles) is important. The exam is evolving rapidly — focus on the latest Trailhead Data Cloud trails and the official exam guide.',
   },
+  {
+    question: 'What concepts do most Data Cloud Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Data Cloud Consultant exam are: (1) Data Streams vs Data Model Objects vs Calculated Insights; (2) Identity Resolution — Matching Rules and Reconciliation Rules; (3) Segments vs Activation Targets vs Data Actions. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function DataCloudConsultantExamTipsPage() {

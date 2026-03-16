@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the best way to prepare for the Salesforce UX Designer exam?',
     answer: 'Focus on the double-diamond design process: discover, define, develop, deliver. Study user research methods (interviews, surveys, usability testing, card sorting), how to create user personas and journey maps, and the principles of the Salesforce Lightning Design System. Practice scenario questions about when to use each research method.',
   },
+  {
+    question: 'What concepts do most UX Designer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the UX Designer exam are: (1) User Research vs Usability Testing — Discovery vs Validation; (2) Wireframes vs Prototypes vs Mockups — Fidelity Levels; (3) Accessibility — WCAG AA Is the Standard Minimum. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function UxDesignerExamTipsPage() {

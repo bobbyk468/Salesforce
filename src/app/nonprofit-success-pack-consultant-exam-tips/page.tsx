@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What is the difference between NPSP Consultant and Nonprofit Cloud Consultant?',
     answer: 'NPSP Consultant tests the legacy Nonprofit Success Pack managed package. Nonprofit Cloud Consultant tests the newer NPC (Nonprofit Cloud) platform. For organisations still on NPSP, this certification is relevant. Salesforce is migrating nonprofits to NPC over time — check which platform your clients use before deciding which exam to pursue.',
   },
+  {
+    question: 'What concepts do most NPSP Consultant candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the NPSP Consultant exam are: (1) Affiliation vs Relationship — Organisation Connection vs Person Connection; (2) Gift Entry — Templates Are Required for Batch Processing; (3) Engagement Plans — Not the Same as Campaigns. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function NPSPConsultantExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What are the different Tableau Server permission levels and how do they work?',
     answer: 'Tableau Server has permissions at multiple levels: Site (site-level roles: Server Admin, Site Admin, Creator, Explorer, Viewer), Project (content permissions: Can Edit, Can Publish, View), and Workbook/View (individual content permissions). More permissive settings at higher levels can be overridden at lower levels. Understanding the permission hierarchy is essential for this exam.',
   },
+  {
+    question: 'What concepts do most Tableau Server Administrator candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Tableau Server Administrator exam are: (1) Sites vs Projects vs Workbooks — The Permission Hierarchy; (2) TSM vs tabcmd vs REST API — Three Admin Interfaces; (3) Extract Refresh — Scheduled vs Manual vs Incremental. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function TableauServerAdministratorExamTipsPage() {

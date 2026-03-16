@@ -55,6 +55,10 @@ const faqItems = [
     question: 'How should I prepare for the PD2 exam?',
     answer: 'Build real Apex projects using enterprise design patterns (Separation of Concerns, trigger frameworks). Practice REST and SOAP callouts with Named Credentials and HttpCalloutMock. Study Platform Events and the Streaming API. Take timed mocks — aim for 75%+ consistently before booking.',
   },
+  {
+    question: 'What concepts do most Platform Developer II (PD2) candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Platform Developer II (PD2) exam are: (1) Apex Design Patterns — Separation of Concerns in Trigger Architecture; (2) Asynchronous Apex: Future vs Queueable vs Batch vs Scheduled; (3) Platform Cache — Partitioned Storage That Does Not Persist Across Deployments. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function Pd2ExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the CPQ Specialist exam?',
     answer: 'Salesforce Administrator (ADM-201) provides the foundation. Real hands-on experience configuring Salesforce CPQ (formerly Steelbrick) is strongly recommended — the exam tests practical configuration knowledge that cannot be learned theoretically. Trailhead CPQ Specialist modules are essential study material.',
   },
+  {
+    question: 'What concepts do most CPQ Administrator candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the CPQ Administrator exam are: (1) Price Rules vs Discount Schedules — Two Ways to Affect Price; (2) Product Rules: Validation vs Alert vs Selection vs Filter; (3) Quote Line Editor vs Product Catalog — Two Different Entry Points. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function CPQAdministratorExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What B2B Commerce APIs does the Developer AP exam test?',
     answer: 'The exam tests the ConnectApi namespace for B2B Commerce operations: ConnectApi.CommerceCartApi for cart operations (add/update/remove items), ConnectApi.CommerceOrderApi for order placement and management, and the REST Connect API for headless commerce scenarios. The exam also tests how to extend the checkout flow using custom Apex classes that implement the CheckoutExtension interface.',
   },
+  {
+    question: 'What concepts do most B2B Commerce Developer candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the B2B Commerce Developer exam are: (1) LWC Commerce Components vs Base Components — Extension vs Replacement; (2) Integration Framework: Commerce APIs vs Apex vs Platform Events; (3) Guest Browsing vs Authenticated Checkout — Session Context Matters. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function B2bCommerceDeveloperApExamTipsPage() {

@@ -55,6 +55,10 @@ const faqItems = [
     question: 'What prerequisites help with the IAM Architect exam?',
     answer: 'Salesforce Administrator (ADM-201) knowledge of profiles, permission sets, and the Salesforce security model is the best foundation. Real experience configuring SSO with an identity provider (Okta, Azure AD, Ping), setting up Connected Apps, and troubleshooting OAuth flows is essential.',
   },
+  {
+    question: 'What concepts do most Identity & Access Management Architect candidates get wrong?',
+    answer: 'The most commonly misunderstood topics for the Identity & Access Management Architect exam are: (1) OAuth 2.0 Flows — Authorization Code vs JWT Bearer vs Client Credentials; (2) Named Credentials vs Auth. Providers — Outbound vs Inbound Identity; (3) Delegated Authentication vs SSO — Custom Login vs Federated Identity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+  },
 ]
 
 export default function IamArchitectExamTipsPage() {
