@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Application Architect Study Guide (${RELEASE_CURRENT})`
@@ -78,6 +79,8 @@ export default function ApplicationArchitectStudyGuidePage() {
           The Application Architect credential is earned by passing four domain exams — not a single test. Here is what each exam covers, the recommended study order, and how to efficiently prepare for all four.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-blue-900 mb-1">Multi-exam credential</h2>

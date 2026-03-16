@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -76,6 +77,8 @@ export default function FinancialServicesCloudApExamTipsPage() {
           client management, and financial account configuration that define this accreditation.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
         <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">Exam At a Glance</p>

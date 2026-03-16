@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce NPSP Consultant Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function NonprofitSuccessPackConsultantStudyGuidePage() {
           A complete study guide for the Salesforce Certified Nonprofit Success Pack Consultant exam — NPSP household model, fundraising configuration, gift management, and data import.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

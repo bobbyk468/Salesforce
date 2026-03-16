@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `CRM Analytics Study Guide (${RELEASE_CURRENT})`
@@ -80,6 +81,8 @@ export default function CrmAnalyticsStudyGuidePage() {
           Your complete guide to passing the CRM Analytics exam — dataflows, recipes, SAQL, dashboard design, row-level security, and analytics apps.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

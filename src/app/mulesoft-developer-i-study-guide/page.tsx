@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Developer I Study Guide (${RELEASE_CURRENT})`
@@ -81,6 +82,8 @@ export default function MulesoftDeveloperIStudyGuidePage() {
           Your complete guide to passing the MuleSoft Certified Integration Associate (MCIA-Level-1) exam — API design, DataWeave, connectors, and error handling.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

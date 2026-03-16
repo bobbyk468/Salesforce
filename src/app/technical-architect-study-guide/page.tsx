@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce CTA Study Guide (${RELEASE_CURRENT})`
@@ -81,6 +82,8 @@ export default function TechnicalArchitectStudyGuidePage() {
           The Salesforce Certified Technical Architect (CTA) is earned through a live Board Review — not a multiple-choice exam. This guide covers prerequisites, the board review process, what the panel evaluates, and how to prepare.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-purple-900 mb-1">No multiple-choice exam</h2>

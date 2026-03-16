@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `B2C Solution Architect Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function B2cSolutionArchitectStudyGuidePage() {
           Your complete guide to passing the B2C Solution Architect exam — Commerce Cloud, Marketing Cloud, personalisation, loyalty, and omnichannel consumer experience design.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

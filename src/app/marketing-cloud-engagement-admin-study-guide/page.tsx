@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Marketing Cloud Engagement Admin Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
           Your complete guide to passing the Marketing Cloud Engagement Admin exam — account configuration, business units, subscriber management, compliance, and deliverability.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

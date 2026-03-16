@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Marketing Cloud Engagement Foundations Study Guide (${RELEASE_CURRENT})`
@@ -78,6 +79,8 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
           A complete study guide for the Marketing Cloud Engagement Foundations exam — the $75 entry-level certification covering email marketing concepts, subscriber management, and Marketing Cloud platform basics.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-8">
         <p className="text-sm text-green-800"><strong>Entry-level certification:</strong> No prior Marketing Cloud experience required. 40 questions, 70-minute limit, 70% passing score. Most candidates pass with 3–4 weeks of study combining Trailhead modules and email marketing fundamentals reading.</p>

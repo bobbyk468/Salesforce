@@ -4,6 +4,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Business Analyst Study Guide (${RELEASE_CURRENT})`
@@ -84,6 +85,8 @@ export default function BusinessAnalystStudyGuidePage() {
           Everything you need to pass the Salesforce Certified Business Analyst exam — exam sections, study plan, scenario tips, and free practice questions.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

@@ -1,6 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -79,6 +80,8 @@ export default function EducationCloudConsultantStudyGuidePage() {
           A complete study guide for the Salesforce Certified Education Cloud Consultant exam — EDA data model, student success management, admissions, and implementation best practices.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

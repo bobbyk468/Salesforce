@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Integration Architect Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function IntegrationArchitectStudyGuidePage() {
           Your complete guide to passing the Salesforce Integration Architect exam — integration patterns, API design, async strategies, error handling, and governance.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

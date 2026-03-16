@@ -3,6 +3,7 @@ import Link from 'next/link'
 import { Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -83,6 +84,8 @@ export default function DataCloudConsultantStudyGuidePage() {
           covers every exam section at the depth needed to pass one of Salesforce&apos;s most technically demanding certifications.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Data Cloud Consultant Exam at a Glance</h2>

@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce UX Designer Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function UxDesignerStudyGuidePage() {
           A complete study guide for the Salesforce Certified UX Designer exam — exam sections, what each topic tests, a focused study plan, and scenario tips to pass with confidence.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

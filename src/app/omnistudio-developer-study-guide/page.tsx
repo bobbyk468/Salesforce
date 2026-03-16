@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `OmniStudio Developer Study Guide (${RELEASE_CURRENT})`
@@ -79,6 +80,8 @@ export default function OmnistudioDeveloperStudyGuidePage() {
           Your complete guide to passing the OmniStudio Developer exam — OmniScript, DataRaptors, FlexCards, Integration Procedures, and scenario-based practice.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
