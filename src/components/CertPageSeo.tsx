@@ -160,7 +160,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         <ol className="flex flex-wrap items-center gap-1 text-sm text-gray-600">
           {breadcrumb.map((item, i) => (
             <li key={item.url} className="flex items-center gap-1">
-              {i > 0 && <ChevronRight className="h-4 w-4 text-gray-400" />}
+              {i > 0 && <ChevronRight className="h-4 w-4 text-gray-400" aria-hidden="true" />}
               {i === breadcrumb.length - 1 ? (
                 <span className="font-medium text-gray-900" aria-current="page">
                   {item.name}

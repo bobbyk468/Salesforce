@@ -144,10 +144,10 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
             item.cert ? (
               <div key={i} className="text-center">
                 <div className={`px-3 py-1.5 rounded-lg font-medium ${item.color}`}>{item.label}</div>
-                <div className="text-xs text-gray-400 mt-1">{item.cert}</div>
+                <div className="text-xs text-gray-500 mt-1">{item.cert}</div>
               </div>
             ) : (
-              <span key={i} className="text-gray-400 font-bold">{item.label}</span>
+              <span key={i} className="text-gray-500 font-bold">{item.label}</span>
             )
           ))}
         </div>

@@ -123,7 +123,7 @@ export default function TechnicalArchitectStudyGuidePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-400 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both Application Architect and System Architect credentials.</p>
+        <p className="text-xs text-gray-500 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both Application Architect and System Architect credentials.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
