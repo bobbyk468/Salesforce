@@ -91,7 +91,7 @@ export default function CertificationCard({
         {/* Exam weightage by section */}
         {examSections && examSections.length > 0 && (
           <div id="exam-weightage" className="mb-6 sm:mb-8">
-            <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">{examWeightageHeading ?? 'Exam Weightage by Section'}</h3>
+            <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">{examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
             <div className="space-y-3 sm:space-y-4">
               {examSections.map((section, i) => (
                 <div key={i} className="flex items-center gap-3 sm:gap-4">
@@ -117,7 +117,7 @@ export default function CertificationCard({
 
         {/* Topics */}
         <div>
-          <h3 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Exam Topics</h3>
+          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Exam Topics</h2>
           <div className="flex flex-wrap gap-2 sm:gap-3">
             {topics.map((topic) => (
               <span
