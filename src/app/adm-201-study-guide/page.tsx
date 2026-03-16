@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -296,6 +297,8 @@ export default function Adm201StudyGuidePage() {
         </p>
       </section>
 
+      
+      <DifficultyHeatmap slug="administrator" />
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>

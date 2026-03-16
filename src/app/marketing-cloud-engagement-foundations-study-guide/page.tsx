@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Marketing Cloud Engagement Foundations Study Guide (${RELEASE_CURRENT})`
@@ -150,6 +151,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
         </dl>
       </div>
 
+      <DifficultyHeatmap slug="marketing-cloud-engagement-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice MC Engagement Questions</h2>
         <p className="text-white mb-6">Free practice questions for Marketing Cloud Engagement certifications.</p>

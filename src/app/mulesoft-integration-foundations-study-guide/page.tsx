@@ -5,6 +5,7 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Integration Foundations Study Guide (${RELEASE_CURRENT})`
@@ -205,6 +206,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
 
+      <DifficultyHeatmap slug="mulesoft-integration-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
         <p className="text-white mb-6">Free MuleSoft Integration Foundations practice questions covering all 4 exam sections.</p>

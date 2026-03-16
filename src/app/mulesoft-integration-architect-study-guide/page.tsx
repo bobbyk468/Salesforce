@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Integration Architect Study Guide (${RELEASE_CURRENT})`
@@ -143,6 +144,7 @@ export default function MulesoftIntegrationArchitectStudyGuidePage() {
         </dl>
       </div>
 
+      <DifficultyHeatmap slug="mulesoft-integration-architect" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice MuleSoft Integration Architect Questions</h2>
         <p className="text-white mb-6">Free practice questions for the MuleSoft Integration Architect exam.</p>
