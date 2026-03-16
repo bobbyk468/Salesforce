@@ -18,6 +18,8 @@ export function AdminCertRoadmap() {
         aria-label="Salesforce Admin Certification Path: ADM-201, then App Builder or Advanced Admin, leading to Sales Cloud, Service Cloud, or Field Service consultant roles"
         className="w-full max-w-[760px] h-auto"
       >
+        <title>Salesforce Admin Certification Path Roadmap</title>
+        <desc>Step-by-step roadmap: Start with ADM-201 Administrator, then branch to Platform App Builder or Advanced Administrator, leading to specialist certifications in Sales Cloud, Service Cloud, Experience Cloud, or Field Service.</desc>
         {/* Defs */}
         <defs>
           <marker id="arrowA" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
@@ -95,6 +97,8 @@ export function DeveloperCertRoadmap() {
         aria-label="Salesforce Developer Certification Path: PD1, optional JavaScript Developer I, then PD2, leading to Integration Architect"
         className="w-full max-w-[700px] h-auto"
       >
+        <title>Salesforce Developer Certification Path Roadmap</title>
+        <desc>Developer path: Begin with Platform Developer I (PD1), optionally add JavaScript Developer I, advance to Platform Developer II (PD2), then Integration Architect, with a route toward Application Architect and CTA.</desc>
         <defs>
           <marker id="arrowD" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#1589EE" />
@@ -162,6 +166,8 @@ export function ConsultantCertRoadmap() {
         aria-label="Salesforce Consultant Certification Path: ADM-201 prerequisite, then choose Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, or Revenue Cloud consultant track"
         className="w-full max-w-[780px] h-auto"
       >
+        <title>Salesforce Consultant Certification Path Roadmap</title>
+        <desc>Consultant path: ADM-201 Administrator is the prerequisite, then specialise in Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, or Revenue Cloud Consultant, eventually leading to Application or System Architect.</desc>
         <defs>
           <marker id="arrowC" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#1589EE" />
@@ -230,6 +236,8 @@ export function ArchitectCertRoadmap() {
         aria-label="Salesforce Architect Certification Path: Domain Architect certs (Data, Integration, Sharing/Visibility, Dev Lifecycle), then System Architect, Application Architect, leading to Certified Technical Architect (CTA)"
         className="w-full max-w-[700px] h-auto"
       >
+        <title>Salesforce Architect Certification Path Roadmap</title>
+        <desc>Architect path: Domain credentials (Data Architect, Integration Architect, Sharing and Visibility Architect, Dev Lifecycle Architect) converge to System Architect, then Application Architect, culminating in Certified Technical Architect (CTA).</desc>
         <defs>
           <marker id="arrowAR" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#7C3AED" />
@@ -310,6 +318,8 @@ export function OverviewCertRoadmap() {
         aria-label="Salesforce certification overview: ADM-201 is the foundation. Admin track leads to Advanced Admin, App Builder, and Specialist certs. Developer track starts with PD1 and advances to PD2 and Architect credentials. Consultant track covers Sales, Service, Marketing, and Experience clouds. Architect track culminates in CTA."
         className="w-full max-w-[780px] h-auto"
       >
+        <title>Salesforce Certification Paths Overview Roadmap</title>
+        <desc>All Salesforce certification tracks starting from ADM-201: Admin Track (Advanced Admin, App Builder, Specialist certs), Developer Track (PD1, PD2, Integration Architect), Consultant Track (Sales, Service, Marketing, Experience Cloud), and Architect Track leading to Certified Technical Architect.</desc>
         <defs>
           <marker id="arrowOV" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto">
             <path d="M0,0 L0,6 L8,3 z" fill="#1589EE" />

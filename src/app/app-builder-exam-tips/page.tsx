@@ -178,16 +178,16 @@ export default function AppBuilderExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Declarative-First Principle — When Flow Beats Apex Even If Both Work</p>
-            <p className="text-sm text-gray-700">The exam expects Flow as the answer whenever a scenario is solvable declaratively — even if Apex would also work. Candidates with development backgrounds lose marks by defaulting to Apex. The rule: if the scenario can be solved without code, choose the no-code option. Apex is only the right answer when something is provably impossible in Flow (e.g., complex aggregation, callouts, platform-event publishing).</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Declarative-First: The Exam Always Prefers Flow Over Apex</p>
+            <p className="text-sm text-gray-700">When a scenario can be solved by either a Record-Triggered Flow or an Apex trigger, the correct exam answer is always Flow. This is the &ldquo;declarative-first&rdquo; principle. The trap is candidates who have real-world Apex experience choosing the code solution — the exam penalises this. Only choose Apex when the scenario explicitly states something Flow cannot do, such as complex callouts or cross-object DML that Flow does not support.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Master-Detail vs Lookup — Cascade Rules and OWD Inheritance</p>
-            <p className="text-sm text-gray-700">Master-Detail relationships enforce a cascade delete (child deleted with parent) and the child always inherits the parent&apos;s OWD — you cannot set a more restrictive OWD on a child MD object. Lookup relationships do not cascade delete by default and do not inherit OWD. Candidates frequently answer OWD questions wrong because they forget this inheritance rule.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Master-Detail vs Lookup: The Sharing and Roll-Up Difference</p>
+            <p className="text-sm text-gray-700">Master-Detail relationships roll up summary fields (Count, Sum, Min, Max) from child to parent automatically — Lookup relationships cannot. More critically, Master-Detail OWD is inherited: if a Master record is Private, child records follow that access level regardless of the child object&apos;s own OWD. Lookup child records do NOT inherit OWD. Exam scenarios ask you to choose between them — if the scenario mentions roll-up summaries or shared security, choose Master-Detail.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Lightning App vs Salesforce Mobile App — Different Navigation Models</p>
-            <p className="text-sm text-gray-700">Lightning Apps (desktop) and the Salesforce Mobile App use separate navigation models. An item added to a Lightning App navigation bar does not automatically appear in the mobile app. Mobile navigation is configured separately in the Salesforce App navigation settings. This distinction appears in exam scenarios about deployment and user experience design.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Lightning App Builder Visibility Rules vs Profile-Based Assignment</p>
+            <p className="text-sm text-gray-700">Component Visibility Rules in Lightning App Builder control whether a component is rendered on the page based on record field values, user permissions, or device type — they do NOT prevent the page from loading. Profile-based Page Layout Assignment controls which layout a profile sees. Candidates confuse these: if a scenario says &ldquo;only show this component to managers,&rdquo; the answer is Visibility Rules (using a custom permission or profile check), not a separate page layout.</p>
           </div>
         </div>
       </section>

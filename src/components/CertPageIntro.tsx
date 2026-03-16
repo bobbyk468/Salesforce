@@ -41,7 +41,25 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
   const audience = getAudienceLabel(category)
 
   return (
-    <section className="cert-page-intro mb-8 sm:mb-10 rounded-xl sm:rounded-2xl border border-blue-100/50 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="cert-intro-heading">
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Person",
+            "name": "Krishna Mohan",
+            "url": "https://www.trailblazeprep.com/team",
+            "sameAs": [
+              "https://www.salesforce.com/trailblazer/krishnamohan"
+            ],
+            "jobTitle": "Salesforce Certified Professional",
+            "description": "14× Salesforce certified professional — ADM-201, PD1, PD2, Platform App Builder, Sales Cloud Consultant, and more.",
+            "knowsAbout": ["Salesforce", "Salesforce Administrator", "Salesforce Platform Developer", "Salesforce Consultant", "Salesforce Architect"]
+          })
+        }}
+      />
+      <section className="cert-page-intro mb-8 sm:mb-10 rounded-xl sm:rounded-2xl border border-blue-100/50 bg-gradient-to-br from-blue-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm" aria-labelledby="cert-intro-heading">
       <h2 id="cert-intro-heading" className="sr-only">
         {getCertAboutExamHeading(slug)}
       </h2>
@@ -125,6 +143,10 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
                 About the author
               </Link>
               {' '}&middot;{' '}
+              <a href="https://www.salesforce.com/trailblazer/krishnamohan" target="_blank" rel="noopener noreferrer" className="underline hover:no-underline">
+                Trailblazer profile
+              </a>
+              {' '}&middot;{' '}
               <Link href="/about" className="underline hover:no-underline">
                 Methodology
               </Link>
@@ -133,5 +155,6 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         </div>
       </div>
     </section>
+    </>
   )
 }

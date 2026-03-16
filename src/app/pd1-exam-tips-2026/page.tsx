@@ -217,16 +217,16 @@ export default function Pd1ExamTipsPage() {
         <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Governor Limits and Bulkification — Every Loop Is a Trap</p>
-            <p className="text-sm text-gray-700">SOQL and DML statements inside loops are the most tested PD1 anti-pattern. The governor limit is 100 SOQL queries and 150 DML statements per transaction — not per record. A trigger that fires on 200 records will fail if it runs even one SOQL query per record. Every exam scenario that shows code with a loop should immediately make you check: is there a query or DML inside it?</p>
+            <p className="font-semibold text-gray-900 mb-1">1. SOQL Inside For-Loops: The Governor Limit That Kills Your Score</p>
+            <p className="text-sm text-gray-700">The 101-query governor limit means any SOQL statement inside a loop will fail at runtime when processing more than 100 records. Exam scenarios show code snippets and ask you to identify the bug. The wrong-answer trap is selecting &ldquo;reduce batch size&rdquo; — the correct fix is always &ldquo;move the SOQL outside the loop and use a Map or List.&rdquo; Train yourself to scan every for-loop in a code snippet and ask: is there a SOQL or DML statement inside?</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Trigger Order of Execution and Before vs After Triggers</p>
-            <p className="text-sm text-gray-700">Before-trigger: record exists in memory, not yet saved to the database — use this for validation and modifying field values without extra DML. After-trigger: record is saved, has an ID, is visible to SOQL — use this for downstream actions on related records. Many candidates lose marks by choosing &ldquo;before&rdquo; for scenarios that need the record ID (only available after save).</p>
+            <p className="font-semibold text-gray-900 mb-1">2. @wire vs @api vs @track: One Wrong Decorator, One Wrong Answer</p>
+            <p className="text-sm text-gray-700">LWC decorator questions are a guaranteed exam topic. <code className="bg-amber-100 px-1 rounded text-xs">@wire</code> connects a property to a Salesforce data service (Apex or UI API) reactively. <code className="bg-amber-100 px-1 rounded text-xs">@api</code> exposes a property or method to a parent component — it is public. <code className="bg-amber-100 px-1 rounded text-xs">@track</code> is largely deprecated in modern LWC; plain properties are now reactive by default. The trap: candidates use @track thinking it makes a property &ldquo;reactive&rdquo; when @wire is what actually connects to the server.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Test Class Requirements Beyond 75% Code Coverage</p>
-            <p className="text-sm text-gray-700">75% coverage is the floor, not the standard. Tests must use System.assert() / System.assertEquals() — coverage without assertions has no value and will not demonstrate understanding. @isTest(SeeAllData=false) is the default — test data must be created within the test. HTTP callouts require HttpCalloutMock. Forgetting any of these in a scenario question scores zero.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough — Assertions Are Required</p>
+            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong — the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation — calling a real endpoint in a test will throw an exception, not just fail silently.</p>
           </div>
         </div>
       </section>
