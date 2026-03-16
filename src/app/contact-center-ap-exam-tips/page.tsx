@@ -15,9 +15,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: {  // Canonical to cert page — prevents GSC "chose different canonical"
-  canonical: `${siteUrl}/certifications/contact-center-ap`,
-  },
+  alternates: { canonical: `${siteUrl}/contact-center-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
