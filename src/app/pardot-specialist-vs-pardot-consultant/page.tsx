@@ -174,6 +174,25 @@ export default function PardotSpecialistVsPardotConsultantPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Pardot Specialist or Pardot Consultant?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Day-to-day Pardot user — running campaigns, managing prospects, using Engagement Studio</td><td className="py-2.5 font-semibold text-salesforce-blue">Pardot Specialist</td></tr>
+              <tr><td className="py-2.5 pr-4">Implementing Pardot for clients or designing the full marketing automation architecture</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">New to Pardot/MCAE — no prior certification</td><td className="py-2.5 font-semibold text-salesforce-blue">Specialist first — Consultant builds on Specialist knowledge</td></tr>
+              <tr><td className="py-2.5 pr-4">Consultant or agency delivering Pardot implementations</td><td className="py-2.5 font-semibold text-purple-700">Pardot Consultant — required for partner-level credibility</td></tr>
+              <tr><td className="py-2.5 pr-4">Both — what order?</td><td className="py-2.5 font-semibold text-gray-700">Specialist first, then Consultant after 6+ months of hands-on use</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('pardot-specialist-vs-pardot-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

@@ -16,6 +16,7 @@ const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQues
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const slug = 'advanced-administrator'
 export async function generateMetadata() {
@@ -266,6 +267,10 @@ export default function AdvancedAdministratorPage() {
             </div>
           </div>
 
+          
+
+          <DifficultyHeatmap slug={slug} />
+
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -291,6 +296,7 @@ export default function AdvancedAdministratorPage() {
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'scenario-tips', title: 'How to Pass' },
+              { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

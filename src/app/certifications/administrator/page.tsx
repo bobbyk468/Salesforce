@@ -33,6 +33,7 @@ import { getCertMetadata, getCertExamWeightageHeading, getCertPracticeQuestionsH
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import type { Metadata } from 'next'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 
 const slug = 'administrator'
 
@@ -586,6 +587,10 @@ export default function AdministratorPage() {
             </div>
           </div>
 
+          
+
+          <DifficultyHeatmap slug={slug} />
+
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
               introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -645,7 +650,8 @@ export default function AdministratorPage() {
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
                 { id: 'scenario-tips', title: 'How to Pass' },
-                { id: 'practice-questions', title: 'Practice Questions' },
+                { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
+              { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
                 { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },
                 { id: 'platform-admin-vs-other', title: 'Cert Comparisons' },

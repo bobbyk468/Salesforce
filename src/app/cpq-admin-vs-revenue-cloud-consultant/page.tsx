@@ -200,6 +200,26 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: CPQ Admin or Revenue Cloud Consultant?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Configuring CPQ product rules, price books, and quote templates</td><td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin</td></tr>
+              <tr><td className="py-2.5 pr-4">Implementing subscription billing, contracts, and renewals end-to-end</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">New to CPQ — want the narrower, more achievable entry credential</td><td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin — start here</td></tr>
+              <tr><td className="py-2.5 pr-4">Working with Salesforce Billing (invoices, payments, revenue recognition)</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Consulting on full quote-to-cash transformation projects</td><td className="py-2.5 font-semibold text-purple-700">Revenue Cloud Consultant — broader scope</td></tr>
+              <tr><td className="py-2.5 pr-4">Want both — what order?</td><td className="py-2.5 font-semibold text-gray-700">CPQ Admin first, then Revenue Cloud Consultant</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('cpq-admin-vs-revenue-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

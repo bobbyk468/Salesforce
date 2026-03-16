@@ -212,6 +212,25 @@ export default function Pd1ExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most PD1 Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Governor Limits and Bulkification — Every Loop Is a Trap</p>
+            <p className="text-sm text-gray-700">SOQL and DML statements inside loops are the most tested PD1 anti-pattern. The governor limit is 100 SOQL queries and 150 DML statements per transaction — not per record. A trigger that fires on 200 records will fail if it runs even one SOQL query per record. Every exam scenario that shows code with a loop should immediately make you check: is there a query or DML inside it?</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Trigger Order of Execution and Before vs After Triggers</p>
+            <p className="text-sm text-gray-700">Before-trigger: record exists in memory, not yet saved to the database — use this for validation and modifying field values without extra DML. After-trigger: record is saved, has an ID, is visible to SOQL — use this for downstream actions on related records. Many candidates lose marks by choosing &ldquo;before&rdquo; for scenarios that need the record ID (only available after save).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Test Class Requirements Beyond 75% Code Coverage</p>
+            <p className="text-sm text-gray-700">75% coverage is the floor, not the standard. Tests must use System.assert() / System.assertEquals() — coverage without assertions has no value and will not demonstrate understanding. @isTest(SeeAllData=false) is the default — test data must be created within the test. HTTP callouts require HttpCalloutMock. Forgetting any of these in a scenario question scores zero.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

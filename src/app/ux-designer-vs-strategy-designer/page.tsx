@@ -153,6 +153,25 @@ export default function UxDesignerVsStrategyDesignerPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: UX Designer or Strategy Designer?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Designing wireframes, prototypes, and Lightning UI components</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">Facilitating service design, customer journey mapping, or CX strategy workshops</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">UI/UX designer with Figma, wireframing, or accessibility background</td><td className="py-2.5 font-semibold text-salesforce-blue">UX Designer — direct skill transfer</td></tr>
+              <tr><td className="py-2.5 pr-4">Business analyst or consultant focused on outcomes and process redesign</td><td className="py-2.5 font-semibold text-purple-700">Strategy Designer</td></tr>
+              <tr><td className="py-2.5 pr-4">Both — which first?</td><td className="py-2.5 font-semibold text-gray-700">UX Designer — more practical for Salesforce orgs; Strategy Designer is more senior/consultative</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('ux-designer-vs-strategy-designer')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

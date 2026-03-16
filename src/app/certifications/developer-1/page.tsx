@@ -16,6 +16,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 import dynamic from 'next/dynamic'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -493,6 +494,10 @@ private class CalloutServiceTest {
             </div>
           </div>
 
+          
+
+          <DifficultyHeatmap slug={slug} />
+
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -559,6 +564,7 @@ private class CalloutServiceTest {
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'apex-code-patterns', title: 'Apex Code Patterns' },
               { id: 'scenario-tips', title: 'How to Pass PD1' },
+              { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

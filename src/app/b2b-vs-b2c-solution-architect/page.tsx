@@ -168,6 +168,26 @@ export default function B2bVsB2cSolutionArchitectPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: B2B or B2C Solution Architect?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Delivering CPQ, Account hierarchies, or complex B2B sales processes</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Working with Commerce Cloud storefronts or high-volume consumer transactions</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Enterprise clients with complex quoting, contracts, and partner channels</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Retail or DTC brands needing personalised commerce experiences</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Background in Sales Cloud, Service Cloud, or CPQ implementations</td><td className="py-2.5 font-semibold text-salesforce-blue">B2B Solution Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Background in B2C Commerce, Marketing Cloud, or storefront development</td><td className="py-2.5 font-semibold text-purple-700">B2C Solution Architect</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('b2b-vs-b2c-solution-architect')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

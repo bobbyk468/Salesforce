@@ -14,6 +14,7 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 import dynamic from 'next/dynamic'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -265,6 +266,10 @@ export default function DataCloudConsultantPage() {
               </div>
             </div>
           </div>
+
+          
+
+          <DifficultyHeatmap slug={slug} />
 
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}

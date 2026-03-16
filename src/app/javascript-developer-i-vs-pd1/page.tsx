@@ -192,6 +192,26 @@ export default function JavascriptDeveloperIVsPd1Page() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: JavaScript Developer I or PD1?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Building LWC components and front-end Lightning experience</td><td className="py-2.5 font-semibold text-salesforce-blue">JavaScript Developer I</td></tr>
+              <tr><td className="py-2.5 pr-4">Writing Apex triggers, SOQL, DML, or backend business logic</td><td className="py-2.5 font-semibold text-purple-700">PD1 — the core Salesforce developer credential</td></tr>
+              <tr><td className="py-2.5 pr-4">Front-end or web developer transitioning into Salesforce</td><td className="py-2.5 font-semibold text-salesforce-blue">JSD1 — your JavaScript skills transfer directly</td></tr>
+              <tr><td className="py-2.5 pr-4">Java, C#, or backend developer entering Salesforce</td><td className="py-2.5 font-semibold text-purple-700">PD1 — Apex is closer to Java than JavaScript</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting senior developer or architect track roles</td><td className="py-2.5 font-semibold text-purple-700">PD1 — more widely required for architect pathway</td></tr>
+              <tr><td className="py-2.5 pr-4">Both — which first?</td><td className="py-2.5 font-semibold text-gray-700">PD1 first, then JSD1 to round out the developer profile</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('javascript-developer-i-vs-pd1')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

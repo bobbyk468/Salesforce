@@ -152,6 +152,26 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Admin Career or Developer Career?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Background &amp; Goals</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Path</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">No programming experience — comfortable with configuration tools</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin path — ADM-201 → Advanced Admin or Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Have Java, Python, or any programming background</td><td className="py-2.5 font-semibold text-purple-700">Developer path — PD1 → PD2 → Architect track</td></tr>
+              <tr><td className="py-2.5 pr-4">Want to get employed in Salesforce within 3–6 months</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin — faster to cert, more entry-level openings</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting $120k+ senior roles long-term</td><td className="py-2.5 font-semibold text-purple-700">Developer — higher salary ceiling ($130–160k at senior level)</td></tr>
+              <tr><td className="py-2.5 pr-4">Prefer business analysis, process design, and user training</td><td className="py-2.5 font-semibold text-salesforce-blue">Admin — BA and Consultant tracks suit this well</td></tr>
+              <tr><td className="py-2.5 pr-4">Enjoy debugging, building custom solutions, and integration work</td><td className="py-2.5 font-semibold text-purple-700">Developer — Apex, LWC, and Integration Architect tracks</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Practice for Your Path</h2>
         <p className="text-white mb-6">Free practice questions for Administrator and Platform Developer certifications.</p>

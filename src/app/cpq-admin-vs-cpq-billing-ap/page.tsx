@@ -147,6 +147,42 @@ export default function CpqAdminVsCpqBillingApPage() {
         </dl>
       </section>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: CPQ Admin or CPQ Billing AP?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Configuring product rules, pricing rules, and quote line editors</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin (standard certification)</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Setting up billing schedules, payment processing, and invoice automation</td>
+                <td className="py-2.5 font-semibold text-purple-700">CPQ Billing AP (Accredited Professional)</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Implementing quote-to-cash but not yet touching Billing</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin first — Billing builds on CPQ fundamentals</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Project requires subscription billing, usage-based pricing, or revenue recognition</td>
+                <td className="py-2.5 font-semibold text-purple-700">CPQ Billing AP</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Want the Salesforce-certified credential (vs AP only)</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">CPQ Admin — full Salesforce certification; AP is an add-on</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">

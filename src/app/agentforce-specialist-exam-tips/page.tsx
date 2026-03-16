@@ -218,6 +218,25 @@ export default function AgentforceSpecialistExamTipsPage() {
 
       {/* CTA */}
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Agentforce Specialist Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions — What Goes Where</p>
+            <p className="text-sm text-gray-700">Topics define the scope and subject area an agent handles (e.g., Order Status, Returns). Instructions go inside a topic to tell the agent how to behave within that scope. Actions are the specific tasks the agent can perform (call an Apex method, run a Flow, query a Data Cloud segment). Candidates confuse instructions (behaviour guidance) with actions (executable capabilities) — these are distinct and the exam tests the distinction explicitly.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions — When to Use Each</p>
+            <p className="text-sm text-gray-700">Apex @InvocableMethod actions are used when the agent needs complex data processing, callouts, or operations not possible in Flow. Auto-Launched Flows are used for standard business logic, data manipulation, and multi-step orchestration. The exam tests which to recommend given a scenario: if it requires external API calls or complex Apex logic, use Apex; if it is achievable declaratively, use a Flow action.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</p>
+            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup — it is not automatic. Candidates assume agents automatically access all Salesforce data. Know that Data Cloud connection, permission sets, and segment configuration are required before an agent can ground on unified customer profiles.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

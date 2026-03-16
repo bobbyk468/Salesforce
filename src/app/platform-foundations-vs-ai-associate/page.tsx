@@ -152,6 +152,25 @@ export default function PlatformFoundationsVsAiAssociatePage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Platform Foundations or AI Associate?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Complete beginner to Salesforce — want the broadest foundation</td><td className="py-2.5 font-semibold text-salesforce-blue">Platform Foundations — covers the full platform overview</td></tr>
+              <tr><td className="py-2.5 pr-4">Salesforce user already — want to validate AI/Einstein knowledge</td><td className="py-2.5 font-semibold text-purple-700">AI Associate — more focused and career-relevant</td></tr>
+              <tr><td className="py-2.5 pr-4">Non-technical stakeholder needing Salesforce literacy for a project</td><td className="py-2.5 font-semibold text-salesforce-blue">Platform Foundations</td></tr>
+              <tr><td className="py-2.5 pr-4">Anyone in a Salesforce role wanting to demonstrate AI awareness</td><td className="py-2.5 font-semibold text-purple-700">AI Associate — better ROI for most roles in 2025+</td></tr>
+              <tr><td className="py-2.5 pr-4">Quick win before tackling ADM-201 or Agentforce Specialist</td><td className="py-2.5 font-semibold text-purple-700">AI Associate — 40 questions, $75, fastest to complete</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('platform-foundations-vs-ai-associate')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

@@ -147,6 +147,42 @@ export default function MulesoftDeveloperIVsIIPage() {
         </dl>
       </section>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: MuleSoft Developer I or II?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">New to MuleSoft — building first Mule apps or DataWeave transformations</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">MuleSoft Developer I — required starting point</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Experienced MuleSoft developer with 2+ years building production integrations</td>
+                <td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer II — validates advanced expertise</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Working on error handling, batch processing, and performance optimisation</td>
+                <td className="py-2.5 font-semibold text-purple-700">Developer II — these topics are core to the advanced exam</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Targeting MuleSoft Integration Architect certification next</td>
+                <td className="py-2.5 font-semibold text-purple-700">Developer II — strongly recommended before Architect exams</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Both — what is the right gap between them?</td>
+                <td className="py-2.5 font-semibold text-gray-700">Dev I first, then Dev II after 12–18 months of real project experience</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">

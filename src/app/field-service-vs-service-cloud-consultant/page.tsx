@@ -174,6 +174,25 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Field Service or Service Cloud Consultant?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Implementing Cases, Knowledge, Entitlements, or Omni-Channel routing</td><td className="py-2.5 font-semibold text-salesforce-blue">Service Cloud Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Configuring work orders, scheduling, dispatching, or mobile field workers</td><td className="py-2.5 font-semibold text-purple-700">Field Service Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Client runs a contact centre or customer support operation</td><td className="py-2.5 font-semibold text-salesforce-blue">Service Cloud Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">Client has technicians dispatched to job sites (utilities, telecoms, facilities)</td><td className="py-2.5 font-semibold text-purple-700">Field Service Consultant</td></tr>
+              <tr><td className="py-2.5 pr-4">New to service implementations — which to take first?</td><td className="py-2.5 font-semibold text-salesforce-blue">Service Cloud first — Field Service builds on top of it</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('field-service-vs-service-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

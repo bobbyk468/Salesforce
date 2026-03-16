@@ -152,6 +152,25 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Education Cloud or Nonprofit Cloud?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Working with universities, colleges, or K-12 institutions</td><td className="py-2.5 font-semibold text-salesforce-blue">Education Cloud (EDA)</td></tr>
+              <tr><td className="py-2.5 pr-4">Implementing for charities, NGOs, or mission-driven nonprofits</td><td className="py-2.5 font-semibold text-purple-700">Nonprofit Cloud (NPSP)</td></tr>
+              <tr><td className="py-2.5 pr-4">Managing student recruitment, admissions, and academic records</td><td className="py-2.5 font-semibold text-salesforce-blue">Education Cloud</td></tr>
+              <tr><td className="py-2.5 pr-4">Managing donor relationships, fundraising, or grant tracking</td><td className="py-2.5 font-semibold text-purple-700">Nonprofit Cloud</td></tr>
+              <tr><td className="py-2.5 pr-4">Client serves both higher ed and nonprofit missions</td><td className="py-2.5 font-semibold text-gray-700">Assess primary use case — lead with that cert first</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('education-cloud-vs-nonprofit-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

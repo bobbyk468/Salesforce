@@ -162,6 +162,25 @@ export default function AIAssociateExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most AI Associate Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Types of Bias in AI — Not All Bias Is the Same</p>
+            <p className="text-sm text-gray-700">The exam tests three bias types candidates routinely confuse: Historical bias (training data reflects past inequalities); Representation bias (certain groups under-represented in training data); Measurement bias (how data is collected or labelled introduces skew). A dataset can be large and still contain bias. The correct answer to &ldquo;how do you reduce AI bias&rdquo; is not simply &ldquo;use more data&rdquo; — it depends on which type of bias exists.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Salesforce Einstein Features — Which Product Does What</p>
+            <p className="text-sm text-gray-700">Candidates confuse Einstein Prediction Builder (custom prediction models on Salesforce data), Einstein Discovery (statistical insights and recommendations), Einstein Copilot (conversational AI assistant), and Agentforce (autonomous AI agents). Each sits in a different product context. Exam scenarios describe a use case and expect you to identify the correct Einstein feature — memorise which feature belongs to which cloud.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce&apos;s Five Ethical AI Principles</p>
+            <p className="text-sm text-gray-700">The five Salesforce Trusted AI principles are: Responsible (prevent harm), Accountable (humans stay in control), Transparent (explainability), Empowering (augments humans, not replaces), and Inclusive (fair, unbiased outcomes). Exam scenarios describe an AI behaviour and ask which principle is violated. Map the behaviour to the correct principle — &ldquo;black box decision&rdquo; = Transparent; &ldquo;automated without override&rdquo; = Accountable.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

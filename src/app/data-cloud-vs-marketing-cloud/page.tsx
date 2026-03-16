@@ -190,6 +190,42 @@ export default function DataCloudVsMarketingCloudPage() {
       </section>
 
       {/* CTA */}
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Data Cloud or Marketing Cloud?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Unifying first-party customer data, identity resolution, and real-time segmentation</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Running B2C email campaigns, Journey Builder automations, or push notifications</td>
+                <td className="py-2.5 font-semibold text-purple-700">Marketing Cloud Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Client needs a CDP to centralise data from web, app, CRM, and offline sources</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — designed for cross-channel data unification</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Client needs to send personalised marketing communications at scale</td>
+                <td className="py-2.5 font-semibold text-purple-700">Marketing Cloud — campaign execution is its primary function</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Fastest-growing Salesforce skill to develop in 2025+</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Data Cloud — enormous demand, limited supply of certified professionals</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Practice for Your Path</h2>
         <div className="flex flex-col sm:flex-row gap-3">

@@ -153,6 +153,25 @@ export default function SlackDeveloperExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Block Kit vs Legacy Message Attachments — Legacy Is Deprecated</p>
+            <p className="text-sm text-gray-700">Slack deprecated legacy message attachments (the attachment array with color, text, fields) in favour of Block Kit layouts. Exam scenarios involving UI design expect Block Kit components: Section, Actions, Context, Input, and Divider blocks. Candidates who learned the old Slack API will answer deprecated attachment-based solutions — which are wrong. Know the key Block Kit block types and when to use modals vs messages vs Home tabs.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. OAuth 2.0 Scopes — Principle of Least Privilege</p>
+            <p className="text-sm text-gray-700">Slack permissions operate on granular OAuth scopes. chat:write posts messages as your app; channels:read lists channels; users:read reads user profiles; im:write opens DMs. A common exam failure: recommending a broad scope when a narrow one is sufficient — the exam expects least-privilege scope selection. Also know when to use Socket Mode (no public URL required, for internal apps) vs Events API (requires a public endpoint, for distributed apps).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Events API vs Webhooks vs Slash Commands — One-Way vs Two-Way</p>
+            <p className="text-sm text-gray-700">Incoming Webhooks are one-way: your app posts messages to Slack. Events API is two-way: Slack sends events to your app (message sent, reaction added, user joined). Slash commands trigger app actions initiated by users. The exam tests which mechanism to use for each pattern: receiving real-time Slack activity = Events API; posting automated updates = Webhooks; user-initiated actions = Slash Commands.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

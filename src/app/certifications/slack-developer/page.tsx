@@ -14,6 +14,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -261,6 +262,10 @@ export default function SlackDeveloperPage() {
               </div>
             </div>
           </div>
+
+          
+
+          <DifficultyHeatmap slug={slug} />
 
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}

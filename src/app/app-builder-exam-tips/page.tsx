@@ -173,6 +173,25 @@ export default function AppBuilderExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most App Builder Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Declarative-First Principle — When Flow Beats Apex Even If Both Work</p>
+            <p className="text-sm text-gray-700">The exam expects Flow as the answer whenever a scenario is solvable declaratively — even if Apex would also work. Candidates with development backgrounds lose marks by defaulting to Apex. The rule: if the scenario can be solved without code, choose the no-code option. Apex is only the right answer when something is provably impossible in Flow (e.g., complex aggregation, callouts, platform-event publishing).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Master-Detail vs Lookup — Cascade Rules and OWD Inheritance</p>
+            <p className="text-sm text-gray-700">Master-Detail relationships enforce a cascade delete (child deleted with parent) and the child always inherits the parent&apos;s OWD — you cannot set a more restrictive OWD on a child MD object. Lookup relationships do not cascade delete by default and do not inherit OWD. Candidates frequently answer OWD questions wrong because they forget this inheritance rule.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Lightning App vs Salesforce Mobile App — Different Navigation Models</p>
+            <p className="text-sm text-gray-700">Lightning Apps (desktop) and the Salesforce Mobile App use separate navigation models. An item added to a Lightning App navigation bar does not automatically appear in the mobile app. Mobile navigation is configured separately in the Salesforce App navigation settings. This distinction appears in exam scenarios about deployment and user experience design.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

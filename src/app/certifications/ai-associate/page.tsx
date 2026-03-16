@@ -14,6 +14,7 @@ import { Metadata } from 'next'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 import dynamic from 'next/dynamic'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -261,6 +262,10 @@ export default function AIAssociatePage() {
             </div>
           </div>
 
+          
+
+          <DifficultyHeatmap slug={slug} />
+
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length)}
@@ -287,6 +292,7 @@ export default function AIAssociatePage() {
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'scenario-tips', title: 'How to Pass' },
+              { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

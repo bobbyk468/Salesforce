@@ -145,6 +145,42 @@ export default function OmnistudioDeveloperVsConsultantPage() {
         </dl>
       </section>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: OmniStudio Developer or Consultant?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Building FlexCards, OmniScripts, and Integration Procedures in Anypoint Studio</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">OmniStudio Developer — technical build credential</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Advising on when and how to use OmniStudio for industry cloud implementations</td>
+                <td className="py-2.5 font-semibold text-purple-700">OmniStudio Consultant — use-case and solution design focus</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Vlocity/OmniStudio developer coming from a Salesforce Industries background</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Developer — directly maps to your hands-on skills</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Functional consultant scoping OmniStudio solutions for telco, insurance, or health</td>
+                <td className="py-2.5 font-semibold text-purple-700">Consultant</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Both — which first?</td>
+                <td className="py-2.5 font-semibold text-gray-700">Developer first — hands-on knowledge underpins the Consultant exam content too</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">

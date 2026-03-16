@@ -143,6 +143,42 @@ export default function MarketingCloudAdminVsDeveloperPage() {
 
       <RelatedGuides links={getRelatedGuides('marketing-cloud-admin-vs-developer')} />
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: MC Admin or MC Developer?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Business user managing journeys, data extensions, and automations in Marketing Cloud</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">MC Admin — platform configuration focus</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Writing AMPscript, SSJS, or building custom API integrations for Marketing Cloud</td>
+                <td className="py-2.5 font-semibold text-purple-700">MC Developer — technical implementation credential</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Managing users, roles, security, and account configuration</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">MC Admin</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Building dynamic content, custom preference centres, or API-triggered sends</td>
+                <td className="py-2.5 font-semibold text-purple-700">MC Developer</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Both — which is more in demand in the job market?</td>
+                <td className="py-2.5 font-semibold text-gray-700">MC Developer — higher salary premium for technical MC skills</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">

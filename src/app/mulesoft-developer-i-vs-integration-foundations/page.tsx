@@ -175,6 +175,25 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: MuleSoft Dev I or Integration Foundations?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Non-technical stakeholder or project manager on a MuleSoft project</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations — awareness level, no coding</td></tr>
+              <tr><td className="py-2.5 pr-4">Building Mule flows, DataWeave transformations, or connector configs</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I — hands-on technical credential</td></tr>
+              <tr><td className="py-2.5 pr-4">Want to validate integration knowledge without Anypoint Studio experience</td><td className="py-2.5 font-semibold text-salesforce-blue">Integration Foundations ($75, 40 questions, 70 min)</td></tr>
+              <tr><td className="py-2.5 pr-4">Integration developer or API developer role</td><td className="py-2.5 font-semibold text-purple-700">MuleSoft Developer I — the industry-recognised dev cert</td></tr>
+              <tr><td className="py-2.5 pr-4">Starting MuleSoft with zero integration background</td><td className="py-2.5 font-semibold text-gray-700">Foundations first to grasp API-led concepts, then Dev I</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('mulesoft-developer-i-vs-integration-foundations')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

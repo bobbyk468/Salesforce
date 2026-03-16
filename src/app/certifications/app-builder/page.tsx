@@ -13,6 +13,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import Link from 'next/link'
 
 import dynamic from 'next/dynamic'
+import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -307,6 +308,10 @@ export default function AppBuilderPage() {
             </div>
           </div>
 
+          
+
+          <DifficultyHeatmap slug={slug} />
+
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
@@ -351,6 +356,7 @@ export default function AppBuilderPage() {
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'scenario-tips', title: 'How to Pass DEV-402' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },

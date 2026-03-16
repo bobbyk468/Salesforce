@@ -220,6 +220,25 @@ export default function ServiceCloudConsultantExamTipsPage() {
 
       {/* CTA */}
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Service Cloud Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Entitlement Processes vs Service Contracts vs Warranties</p>
+            <p className="text-sm text-gray-700">Entitlement Processes are SLA templates with milestones and time-based actions (e.g., auto-escalate if not resolved within 4 hours). Service Contracts are agreements with customers that entitlements are linked to. Warranties are product-based coverage records. Candidates mix these three up on scenario questions — an entitlement process is the workflow; a service contract is the commercial agreement; a warranty is the product coverage.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Omni-Channel Routing Models — Least Active vs Most Available</p>
+            <p className="text-sm text-gray-700">Least Active routing assigns work to the agent with the fewest open work items (good for complex cases requiring focus). Most Available routing assigns to the agent with the most remaining capacity relative to their max (good for high-volume queues). Getting these backwards in routing design scenarios is a common failure point. Also know skills-based routing vs queue-based routing and when each applies.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Knowledge Visibility — Data Categories vs Topics vs Article Types</p>
+            <p className="text-sm text-gray-700">Data Categories control which articles are visible to which customer profiles and in which channels (public site, partner community, internal). Topics are a simpler tagging system for search and navigation but do not control visibility. Article Types define the structure/layout of articles. Candidates answer data category questions using topic logic and lose marks.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

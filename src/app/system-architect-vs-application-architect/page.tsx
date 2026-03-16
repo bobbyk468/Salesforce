@@ -166,6 +166,25 @@ export default function SystemArchitectVsApplicationArchitectPage() {
         </dl>
       </div>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Application Architect or System Architect?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead><tr className="border-b-2 border-gray-200">
+              <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This First</th>
+            </tr></thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr><td className="py-2.5 pr-4">Strong in declarative development (Flows, App Builder, data modelling)</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Strong in integrations, identity, deployment, and multi-org architecture</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Targeting CTA (Certified Technical Architect) — need both</td><td className="py-2.5 font-semibold text-gray-700">Application Architect first (shared exams reduce total effort)</td></tr>
+              <tr><td className="py-2.5 pr-4">Solution architect role focused on org design and data architecture</td><td className="py-2.5 font-semibold text-salesforce-blue">Application Architect</td></tr>
+              <tr><td className="py-2.5 pr-4">Technical architect role focused on SSO, APIs, and deployment pipelines</td><td className="py-2.5 font-semibold text-purple-700">System Architect</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <RelatedGuides links={getRelatedGuides('system-architect-vs-application-architect')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">

@@ -162,6 +162,25 @@ export default function MuleSoftDeveloperIExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Developer I Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. DataWeave Type System — Coercion, Null Safety, and Default Operator</p>
+            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — candidates expect an error and miss null-safety logic. The default operator (??) provides a fallback value when an expression is null. payload.field default &apos;N/A&apos; prevents null propagation. Forgetting null safety in transformation scenarios is the most common DataWeave mistake on the exam.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Error Handling Scope — Try, On Error Continue vs On Error Propagate</p>
+            <p className="text-sm text-gray-700">On Error Continue catches the error, executes the error handler, and continues the flow as if the error did not occur — the original message proceeds. On Error Propagate catches the error, executes the error handler, and then re-throws the error — the calling flow receives the error. Candidates choose Propagate when they want to log and continue (should use Continue) or vice versa. Know which error scopes nest inside which.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. CloudHub vs Runtime Fabric — Worker Size vs Container Config</p>
+            <p className="text-sm text-gray-700">CloudHub 1.0 uses workers (vCores, memory sizes) on Salesforce-managed infrastructure. CloudHub 2.0 and Runtime Fabric use containers with explicit memory/vCPU allocation on Kubernetes. Exam questions about deployment options test which platform applies to which scenario: customer-managed Kubernetes clusters = RTF; fully managed Salesforce cloud = CloudHub. Candidates confuse worker sizes (CloudHub 1.0 concept) with container resource limits (CloudHub 2.0/RTF concept).</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">

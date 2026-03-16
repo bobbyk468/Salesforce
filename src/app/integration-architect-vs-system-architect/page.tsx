@@ -140,6 +140,42 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         </dl>
       </section>
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: Integration Architect or System Architect?</h2>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
+                <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Designing API strategies, middleware patterns, and system-to-system data flows</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Designing org strategy, identity, sharing models, and deployment architecture</td>
+                <td className="py-2.5 font-semibold text-purple-700">System Architect (part of the SA credential bundle)</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">MuleSoft, REST/SOAP, or enterprise integration background</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect — your background aligns directly</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Targeting the full CTA (Certified Technical Architect) path</td>
+                <td className="py-2.5 font-semibold text-purple-700">System Architect bundle covers Integration Architect as a domain</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Standalone specialist credential needed for an integration-focused role</td>
+                <td className="py-2.5 font-semibold text-salesforce-blue">Integration Architect — faster, targeted credential</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">

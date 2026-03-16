@@ -147,6 +147,25 @@ export default function Adm201ExamTipsPage() {
       </section>
 
 
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most ADM-201 Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. OWD vs Profiles vs Roles — Three Layers, One Wrong Answer</p>
+            <p className="text-sm text-gray-700">Organisation-Wide Defaults (OWD) sets the baseline access floor for all records. Profiles control object and field permissions — what objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from candidates applying the right rule to the wrong layer: using roles to restrict access (you can&apos;t — roles only open access upward) or forgetting that profiles cannot override OWD to restrict access.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Flow vs Process Builder — Know the Exam&apos;s Recommended Tool</p>
+            <p className="text-sm text-gray-700">Salesforce has deprecated Process Builder and Workflow Rules in favour of Record-Triggered Flows. Exam scenarios now expect Flow as the answer when the question describes record-based automation. Candidates who still default to &ldquo;use Process Builder&rdquo; lose those marks. Know the four Flow types: Record-Triggered, Scheduled, Screen, and Auto-Launched, and when each is appropriate.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Reports vs Dashboards — Joined Reports and Filter Limits</p>
+            <p className="text-sm text-gray-700">Joined Reports allow cross-object reporting across multiple report types in a single view — a feature candidates frequently forget exists. Dashboard filter limitations trip up candidates: dashboard filters only support field equality (exact match), not contains or starts-with. Also know that dashboard refresh frequency is limited by Salesforce edition.</p>
+          </div>
+        </div>
+      </section>
+
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
