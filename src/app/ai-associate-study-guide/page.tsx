@@ -239,7 +239,7 @@ export default function AiAssociateStudyGuidePage() {
           </Link>
         </div>
         <p className="text-xs text-gray-500 mt-4">
-          <Link href="/agentforce-specialist-vs-ai-associate" className="text-salesforce-blue hover:underline">
+          <Link href="/agentforce-specialist-vs-ai-associate" className="text-salesforce-blue underline">
             Agentforce Specialist vs AI Associate — which to take first? →
           </Link>
         </p>

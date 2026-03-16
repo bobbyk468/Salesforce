@@ -292,7 +292,7 @@ function ContactPageContent() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue hover:underline">
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue underline">
                       {CONTACT_EMAIL}
                     </a>
                   </div>

@@ -147,7 +147,7 @@ export default function SalesforceCertificationMaintenancePage() {
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-400 mt-3">Exact dates vary. Check release.salesforce.com for confirmed dates.</p>
+        <p className="text-xs text-gray-500 mt-3">Exact dates vary. Check release.salesforce.com for confirmed dates.</p>
       </div>
 
       {/* FAQ */}

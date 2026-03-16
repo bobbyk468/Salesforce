@@ -43,7 +43,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
       </div>
       <p className="text-xs text-gray-500 mb-4">
         Comparing certs?{' '}
-        <Link href="/salesforce-certification-cost" className="text-salesforce-blue hover:underline">
+        <Link href="/salesforce-certification-cost" className="text-salesforce-blue underline">
           View all Salesforce exam fees in one place →
         </Link>
       </p>

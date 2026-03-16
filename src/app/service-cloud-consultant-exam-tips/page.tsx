@@ -78,7 +78,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
       </header>
 
       <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">Exam At a Glance</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">Exam At a Glance</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>

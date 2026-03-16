@@ -251,7 +251,7 @@ export default function Pd2StudyGuidePage() {
           </Link>
         </div>
         <p className="text-xs text-gray-500 mt-4">
-          <Link href="/pd1-vs-pd2" className="text-salesforce-blue hover:underline">
+          <Link href="/pd1-vs-pd2" className="text-salesforce-blue underline">
             PD1 vs PD2 — how they differ and which to take next →
           </Link>
         </p>

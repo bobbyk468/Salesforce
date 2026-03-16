@@ -249,7 +249,7 @@ export default function HtmlSitemapPage() {
         <ul className="space-y-2">
           {corePages.map((page) => (
             <li key={page.href}>
-              <Link href={page.href} className="text-salesforce-blue hover:underline">
+              <Link href={page.href} className="text-salesforce-blue underline">
                 {page.name}
               </Link>
             </li>
@@ -263,7 +263,7 @@ export default function HtmlSitemapPage() {
           {CERTIFICATION_CATEGORIES.map((category) => (
             <div key={category.slug}>
               <h3 className="text-lg font-semibold text-gray-900 mb-2">
-                <Link href={`/certifications/role/${category.slug}`} className="text-salesforce-blue hover:underline">
+                <Link href={`/certifications/role/${category.slug}`} className="text-salesforce-blue underline">
                   {category.name} Hub
                 </Link>
               </h3>

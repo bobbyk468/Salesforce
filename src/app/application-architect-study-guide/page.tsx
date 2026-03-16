@@ -169,7 +169,7 @@ export default function ApplicationArchitectStudyGuidePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-400 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials — passing them once fulfils requirements for both.</p>
+        <p className="text-xs text-gray-500 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials — passing them once fulfils requirements for both.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

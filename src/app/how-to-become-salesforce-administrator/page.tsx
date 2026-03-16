@@ -81,7 +81,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
 
       {/* Quick overview */}
       <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-400 mb-3">The Path at a Glance</p>
+        <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">The Path at a Glance</p>
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">8–12</p>
@@ -124,14 +124,14 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">3</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Study the 7 ADM-201 Exam Sections by Weight</p>
-              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%) — together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/adm-201-study-guide" className="text-salesforce-blue hover:underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
+              <p>The ADM-201 exam has 7 sections. Study them in order of weight, not in the order Salesforce lists them. Start with Configuration &amp; Setup (20%) and Object Manager/App Builder (20%) — together they are 40% of the exam. Then Workflow &amp; Process Automation (16%), Data Management (14%), and Sales/Service/Productivity (30% combined). Use our <Link href="/adm-201-study-guide" className="text-salesforce-blue underline">ADM-201 study guide</Link> for deep coverage of each section.</p>
             </div>
           </div>
           <div className="flex gap-4">
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">4</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Practice With Scenario-Based Mock Questions</p>
-              <p>ADM-201 is a scenario-based exam — it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough — you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue hover:underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
+              <p>ADM-201 is a scenario-based exam — it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough — you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -212,7 +212,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <BookOpen className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
             <div>
               <p className="font-semibold text-gray-900">Free Practice Questions</p>
-              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator" className="text-salesforce-blue hover:underline">Salesforce Administrator practice questions</Link> — aligned to {RELEASE_CURRENT} exam weightage.</p>
+              <p>Scenario-based practice tests expose your weak areas before the real exam. Use our free <Link href="/certifications/administrator" className="text-salesforce-blue underline">Salesforce Administrator practice questions</Link> — aligned to {RELEASE_CURRENT} exam weightage.</p>
             </div>
           </div>
           <div className="flex gap-3">
@@ -232,7 +232,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
           <p>ADM-201 is the starting point, not the destination. Most Salesforce admins pursue one of these tracks:</p>
           <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 mt-2">
             <div className="rounded-lg bg-gray-50 border border-gray-100 p-4">
-              <p className="font-semibold text-gray-900 mb-2 text-salesforce-blue">Admin Track</p>
+              <p className="font-semibold text-salesforce-dark mb-2">Admin Track</p>
               <ul className="space-y-1 text-xs">
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />ADM-201 ✓</li>
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Platform App Builder</li>
@@ -241,7 +241,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
               </ul>
             </div>
             <div className="rounded-lg bg-gray-50 border border-gray-100 p-4">
-              <p className="font-semibold text-gray-900 mb-2 text-salesforce-blue">Consultant Track</p>
+              <p className="font-semibold text-salesforce-dark mb-2">Consultant Track</p>
               <ul className="space-y-1 text-xs">
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />ADM-201 ✓</li>
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Sales Cloud Consultant</li>
@@ -250,7 +250,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
               </ul>
             </div>
             <div className="rounded-lg bg-gray-50 border border-gray-100 p-4">
-              <p className="font-semibold text-gray-900 mb-2 text-salesforce-blue">Developer Track</p>
+              <p className="font-semibold text-salesforce-dark mb-2">Developer Track</p>
               <ul className="space-y-1 text-xs">
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />ADM-201 ✓</li>
                 <li className="flex gap-1.5"><ArrowRight className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Platform App Builder</li>

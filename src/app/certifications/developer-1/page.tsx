@@ -364,7 +364,7 @@ export default function Developer1Page() {
             </ul>
             <p className="text-xs text-gray-500 mt-3">
               Coming from the admin track?{' '}
-              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue hover:underline">
+              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue underline">
                 ADM-201 exam tips ({RELEASE_CURRENT})
               </Link>
               {' '}covers the Salesforce fundamentals that overlap with PD1.

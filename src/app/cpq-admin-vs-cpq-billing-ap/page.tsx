@@ -128,8 +128,8 @@ export default function CpqAdminVsCpqBillingApPage() {
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Customer / Partner Price</strong> → customer-specific or channel partner pricing</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Regular Price</strong> → after Discount Schedules (volume-based automatic discounts)</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Special / Net Price</strong> → after manual rep discount and additional discount; final price paid</li>
-          <p className="text-xs text-gray-500 mt-2">CPQ Administrator tests advanced scenarios where multiple discount types interact. CPQ &amp; Billing AP tests the waterfall at a conceptual level alongside billing invoice generation.</p>
         </ul>
+        <p className="text-xs text-gray-500 mt-2">CPQ Administrator tests advanced scenarios where multiple discount types interact. CPQ &amp; Billing AP tests the waterfall at a conceptual level alongside billing invoice generation.</p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

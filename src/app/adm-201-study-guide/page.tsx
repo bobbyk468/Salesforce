@@ -283,11 +283,11 @@ export default function Adm201StudyGuidePage() {
         </div>
         <p className="text-xs text-gray-500 mt-4">
           Planning to take App Builder after ADM-201?{' '}
-          <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue hover:underline">
+          <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue underline">
             Compare ADM-201 vs App Builder →
           </Link>
           {' | '}
-          <Link href="/how-to-become-salesforce-administrator" className="text-salesforce-blue hover:underline">
+          <Link href="/how-to-become-salesforce-administrator" className="text-salesforce-blue underline">
             How to become a Salesforce Administrator →
           </Link>
         </p>

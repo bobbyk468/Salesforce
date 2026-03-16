@@ -244,7 +244,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           </Link>
         </div>
         <p className="text-xs text-gray-500 mt-4">
-          <Link href="/data-cloud-vs-marketing-cloud" className="text-salesforce-blue hover:underline">
+          <Link href="/data-cloud-vs-marketing-cloud" className="text-salesforce-blue underline">
             Data Cloud vs Marketing Cloud — which certification to pursue? →
           </Link>
         </p>

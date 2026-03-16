@@ -246,7 +246,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
           </Link>
         </div>
         <p className="text-xs text-gray-500 mt-4">
-          <Link href="/administrator-vs-advanced-administrator" className="text-salesforce-blue hover:underline">
+          <Link href="/administrator-vs-advanced-administrator" className="text-salesforce-blue underline">
             ADM-201 vs Advanced Administrator — what&apos;s different? →
           </Link>
         </p>
