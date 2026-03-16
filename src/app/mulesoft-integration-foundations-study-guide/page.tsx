@@ -197,7 +197,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-blue hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations — which to pursue?</Link></li>
+          <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations — which to pursue?</Link></li>
         </ul>
       </div>
 

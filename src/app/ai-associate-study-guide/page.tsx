@@ -217,7 +217,7 @@ export default function AiAssociateStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/platform-foundations-vs-ai-associate" className="text-sm text-salesforce-blue hover:underline font-medium">→ Platform Foundations vs AI Associate — which cert is right for you?</Link></li>
+          <li><Link href="/platform-foundations-vs-ai-associate" className="text-sm text-salesforce-dark hover:underline font-medium">→ Platform Foundations vs AI Associate — which cert is right for you?</Link></li>
         </ul>
       </div>
 

@@ -144,9 +144,9 @@ export default function HowToRegisterSalesforceExamPage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/salesforce-certification-passing-score" className="text-sm text-salesforce-blue hover:underline font-medium">→ Salesforce certification passing scores by tier</Link></li>
-          <li><Link href="/salesforce-certification-validity" className="text-sm text-salesforce-blue hover:underline font-medium">→ How long is a Salesforce certification valid?</Link></li>
-          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-blue hover:underline font-medium">→ Salesforce exam retake policy</Link></li>
+          <li><Link href="/salesforce-certification-passing-score" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce certification passing scores by tier</Link></li>
+          <li><Link href="/salesforce-certification-validity" className="text-sm text-salesforce-dark hover:underline font-medium">→ How long is a Salesforce certification valid?</Link></li>
+          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce exam retake policy</Link></li>
         </ul>
       </div>
 

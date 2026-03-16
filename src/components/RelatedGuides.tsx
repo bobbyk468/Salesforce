@@ -21,7 +21,7 @@ export default function RelatedGuides({ links }: RelatedGuidesProps) {
       <ul className="flex flex-wrap gap-2 text-sm">
         {links.map((link) => (
           <li key={link.href}>
-            <Link href={link.href} className="text-salesforce-blue hover:underline font-medium">
+            <Link href={link.href} className="text-salesforce-dark hover:underline font-medium">
               {link.anchorText}
             </Link>
           </li>

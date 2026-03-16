@@ -138,18 +138,18 @@ export default function HowToStudyForSalesforceCertificationPage() {
       <div className="bg-gray-50 rounded-xl p-6 mb-8 border border-gray-100">
         <h2 className="text-lg font-bold text-gray-900 mb-3">Related guides</h2>
         <ul className="flex flex-wrap gap-2 text-sm">
-          <li><Link href="/which-salesforce-certification-first" className="text-salesforce-blue hover:underline font-medium">Which cert first?</Link></li>
-          <li><Link href="/how-to-register-salesforce-exam" className="text-salesforce-blue hover:underline font-medium">How to register</Link></li>
-          <li><Link href="/salesforce-certification-maintenance" className="text-salesforce-blue hover:underline font-medium">Cert maintenance</Link></li>
-          <li><Link href="/salesforce-certification-exam-day-tips" className="text-salesforce-blue hover:underline font-medium">Exam day tips</Link></li>
-          <li><Link href="/salesforce-certification-voucher" className="text-salesforce-blue hover:underline font-medium">Vouchers & discounts</Link></li>
+          <li><Link href="/which-salesforce-certification-first" className="text-salesforce-dark hover:underline font-medium">Which cert first?</Link></li>
+          <li><Link href="/how-to-register-salesforce-exam" className="text-salesforce-dark hover:underline font-medium">How to register</Link></li>
+          <li><Link href="/salesforce-certification-maintenance" className="text-salesforce-dark hover:underline font-medium">Cert maintenance</Link></li>
+          <li><Link href="/salesforce-certification-exam-day-tips" className="text-salesforce-dark hover:underline font-medium">Exam day tips</Link></li>
+          <li><Link href="/salesforce-certification-voucher" className="text-salesforce-dark hover:underline font-medium">Vouchers & discounts</Link></li>
         </ul>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/salesforce-certification-passing-score" className="text-sm text-salesforce-blue hover:underline font-medium">→ Salesforce certification passing scores by tier</Link></li>
-          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-blue hover:underline font-medium">→ Salesforce exam retake policy — what happens if you fail?</Link></li>
+          <li><Link href="/salesforce-certification-passing-score" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce certification passing scores by tier</Link></li>
+          <li><Link href="/salesforce-exam-retake-policy" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce exam retake policy — what happens if you fail?</Link></li>
         </ul>
       </div>
 

@@ -194,7 +194,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-blue hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — which cert is right?</Link></li>
+          <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — which cert is right?</Link></li>
         </ul>
       </div>
 

@@ -68,7 +68,7 @@ export default function SalesforceCertificationMaintenancePage() {
           Salesforce Certification Maintenance Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Everything you need to know about keeping your Salesforce certifications active — maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-blue hover:underline font-medium">certification validity and expiry</Link>.
+          Everything you need to know about keeping your Salesforce certifications active — maintenance schedule, where to find modules, and what happens if you miss a deadline. See also <Link href="/salesforce-certification-validity" className="text-salesforce-dark hover:underline font-medium">certification validity and expiry</Link>.
         </p>
       </div>
 
@@ -165,7 +165,7 @@ export default function SalesforceCertificationMaintenancePage() {
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
         <ul className="space-y-2">
-          <li><Link href="/salesforce-certification-validity" className="text-sm text-salesforce-blue hover:underline font-medium">→ Salesforce certification validity & expiry guide</Link></li>
+          <li><Link href="/salesforce-certification-validity" className="text-sm text-salesforce-dark hover:underline font-medium">→ Salesforce certification validity & expiry guide</Link></li>
         </ul>
       </div>
 
