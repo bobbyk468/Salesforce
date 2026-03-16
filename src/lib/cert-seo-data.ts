@@ -2637,6 +2637,10 @@ export function getCertH1Text(slug: string): string {
   if (slug === 'administrator') {
     return `Salesforce Certified Platform Administrator (ADM-201) Study Guide & Free Practice Questions (${TITLE_YEAR})`
   }
+  // PD1: align H1 with title tag intent — "Free Practice Exam" is the highest-CTR signal
+  if (slug === 'developer-1') {
+    return `Salesforce PD1 Certification: Free Practice Exam & Study Guide (${TITLE_YEAR})`
+  }
   const primaryName = getCertPrimaryName(slug, slugToDisplayName(slug))
   return `${primaryName} – Complete ${TITLE_YEAR} Guide`
 }

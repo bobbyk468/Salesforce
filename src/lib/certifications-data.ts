@@ -309,6 +309,20 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
     )
   }
 
+  // App Builder, Agentforce, and Process Automation all require Apex/LWC knowledge
+  // that PD1 certifies — cross-link to establish developer-1 as the definitive Apex resource
+  const usesApexOrLwc =
+    certSlug === 'app-builder' ||
+    certSlug === 'agentforce-specialist' ||
+    certSlug === 'process-automation-ap'
+  if (usesApexOrLwc) {
+    links.push({
+      name: 'Salesforce Certified Platform Developer I',
+      href: '/certifications/developer-1',
+      anchorText: 'Salesforce Certified Platform Developer I (PD1) — the Apex & LWC certification',
+    })
+  }
+
   if (isArchitectRelated) {
     links.push(
       {

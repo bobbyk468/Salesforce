@@ -222,6 +222,21 @@ export default function Developer1Page() {
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
         <CertIntroParagraph slug={slug} />
+        {/* Quick Knowledge Check — above fold to signal interactive content to Google */}
+        <div className="mt-4 mb-2 rounded-xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">
+          <p className="text-xs font-semibold uppercase tracking-widest text-salesforce-blue mb-2">Quick Knowledge Check</p>
+          <p className="text-sm font-medium text-gray-900 mb-3">A developer writes a trigger that runs a SOQL query inside a <code className="bg-white px-1 rounded border border-gray-200">for</code> loop. What governor limit risk does this create?</p>
+          <details className="group">
+            <summary className="cursor-pointer text-sm text-salesforce-blue font-medium hover:underline list-none">
+              ▶ Reveal answer
+            </summary>
+            <p className="mt-2 text-sm text-gray-700">
+              <strong>SOQL inside a loop</strong> will hit the <strong>100 SOQL query limit</strong> if the loop iterates over more than 100 records. Fix: run one SOQL query before the loop using <code className="bg-white px-1 rounded border border-gray-200">WHERE Id IN :idSet</code>, store results in a <code className="bg-white px-1 rounded border border-gray-200">Map&lt;Id, SObject&gt;</code>, and look up records inside the loop with no additional queries.
+            </p>
+          </details>
+          <p className="text-xs text-gray-500 mt-3">15 full practice questions with explanations are below ↓</p>
+        </div>
+
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         
@@ -318,26 +333,132 @@ export default function Developer1Page() {
           {/* Key Concepts */}
           <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Developer I: Key Concepts for the Exam</h2>
-            <div className="space-y-4 text-sm text-gray-700">
+            <div className="space-y-6 text-sm text-gray-700">
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Governor Limits: The Non-Negotiables</p>
-                <p>Governor limits prevent any one transaction from monopolising shared platform resources. Key synchronous limits to know: <strong>100 SOQL queries</strong>, <strong>150 DML statements</strong>, <strong>50,000 records returned from queries</strong>, <strong>6 MB heap size</strong>, <strong>10 seconds CPU time</strong>. Asynchronous limits are generally 2× the synchronous limits (e.g., 200 SOQL). Batch Apex can process up to 50 million records by splitting work into chunks. The exam tests which limit applies to a given code scenario and what to change.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Apex Governor Limits &amp; the Limits Class</h3>
+                <p>Governor limits prevent any one transaction from monopolising shared platform resources. Key synchronous limits: <strong>100 SOQL queries</strong>, <strong>150 DML statements</strong>, <strong>50,000 records returned from queries</strong>, <strong>6 MB heap size</strong>, <strong>10 seconds CPU time</strong>. Asynchronous limits are generally 2× the synchronous limits. Use <code className="bg-gray-100 px-1 rounded">Limits.getQueries()</code> and <code className="bg-gray-100 px-1 rounded">Limits.getLimitQueries()</code> from the <strong>Apex Common Classes</strong> (the <code className="bg-gray-100 px-1 rounded">Limits</code> class) to check usage at runtime. The exam tests which limit applies to a given code scenario and what to change.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Bulkification: Never Put SOQL or DML Inside a Loop</p>
-                <p>The core Apex pattern: query records <em>before</em> loops, collect changes in a <strong>List</strong> or <strong>Map</strong> <em>inside</em> loops, then perform DML <em>after</em> loops. Map&lt;Id, SObject&gt; is the workhorse — used to relate trigger records to queried related records by Id. Use <strong>Database.insert(records, false)</strong> for partial success (returns SaveResult array). The exam presents code with SOQL/DML in a loop and asks you to identify the issue or fix it.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Bulkification: Never Put SOQL or DML Inside a Loop</h3>
+                <p>The core Apex pattern: query records <em>before</em> loops using a single SOQL with <code className="bg-gray-100 px-1 rounded">IN :triggerIdSet</code>, collect changes in a <strong>List</strong> or <strong>Map</strong> <em>inside</em> loops, then perform DML <em>after</em> loops. Map&lt;Id, SObject&gt; is the workhorse — used to relate trigger records to queried related records by Id. Use <code className="bg-gray-100 px-1 rounded">Database.insert(records, false)</code> for partial success (returns SaveResult array). The exam presents code with SOQL/DML in a loop and asks you to identify the issue or fix it.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">SOQL: Relationships, Aggregates, and SOSL</p>
-                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child query: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG(), MIN(), MAX() — require GROUP BY. SOSL searches across multiple objects simultaneously using <code className="bg-gray-100 px-1 rounded">FIND &apos;term&apos; IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL when you need to search across object types; use SOQL when you know the object.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Apex Triggers: Order of Execution &amp; Handler Pattern</h3>
+                <p><strong>Before triggers</strong> fire before the record is saved — use them to validate or modify field values before save (changes to <code className="bg-gray-100 px-1 rounded">Trigger.new</code> persist without extra DML). <strong>After triggers</strong> fire after the record is committed — use them when you need the record Id or to update related records. Key context variables: <code className="bg-gray-100 px-1 rounded">Trigger.new</code>, <code className="bg-gray-100 px-1 rounded">Trigger.old</code> (not available on insert), <code className="bg-gray-100 px-1 rounded">Trigger.isInsert</code>, <code className="bg-gray-100 px-1 rounded">Trigger.isUpdate</code>. Best practice: one trigger per object, all logic delegated to a handler class. The <strong>Order of Execution</strong> for a save: validation rules → before triggers → system validation → after triggers → workflow rules → DML commit → flows (record-triggered).</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Triggers: Before vs After, Context Variables</p>
-                <p><strong>Before triggers</strong> fire before the record is saved — use them to validate or modify values before save (changes persist without an extra DML call). <strong>After triggers</strong> fire after the record is committed — use them when you need the record Id or to update related records. Key context variables: <code className="bg-gray-100 px-1 rounded">Trigger.new</code> (new values), <code className="bg-gray-100 px-1 rounded">Trigger.old</code> (old values, not available on insert), <code className="bg-gray-100 px-1 rounded">Trigger.isInsert</code>, <code className="bg-gray-100 px-1 rounded">Trigger.isUpdate</code>. Best practice: one trigger per object, logic in handler class.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">SOQL: Relationships, Aggregates &amp; SOSL</h3>
+                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG() — require GROUP BY. SOSL searches multiple objects simultaneously: <code className="bg-gray-100 px-1 rounded">FIND &apos;term&apos; IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL for cross-object searches; use SOQL when you know the object.</p>
               </div>
               <div>
-                <p className="font-semibold text-gray-900 mb-1">Testing: Coverage, Isolation, and Mock Callouts</p>
-                <p>Minimum <strong>75% code coverage</strong> required across all Apex (not per class) to deploy to production. Test classes use <code className="bg-gray-100 px-1 rounded">@isTest</code> annotation. Test data is isolated by default (<code className="bg-gray-100 px-1 rounded">SeeAllData=false</code>) — create all data explicitly. <code className="bg-gray-100 px-1 rounded">Test.startTest()</code> resets governor limits; <code className="bg-gray-100 px-1 rounded">Test.stopTest()</code> forces async operations to complete. Mock callouts using <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>. <code className="bg-gray-100 px-1 rounded">Test.runAs(user)</code> changes the running user context. <code className="bg-gray-100 px-1 rounded">@TestVisible</code> exposes private members to test classes.</p>
+                <h3 className="font-semibold text-gray-900 mb-1">Process Automation: Flow vs. Apex Triggers</h3>
+                <p>The exam tests when to use declarative automation (Flow) vs. programmatic automation (Apex Triggers). Use <strong>Flow</strong> for standard CRUD operations, approval automation, and complex UI flows without code. Use <strong>Apex Triggers</strong> when you need cross-object logic beyond Flow&apos;s capabilities, governor limit control, or callout scheduling. Both can fire on the same record — the Order of Execution determines which runs first (Flow runs before After Triggers in record-triggered contexts). Key PD1 topic: if Flow can do it declaratively, prefer Flow; if it needs Apex Classes, Limits, or Database class methods, use Apex.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">Testing Framework: SeeAllData, Test.startTest &amp; HttpCalloutMock</h3>
+                <p>Minimum <strong>75% code coverage</strong> required across all Apex to deploy to production. Test classes use <code className="bg-gray-100 px-1 rounded">@isTest</code>. Test data is isolated by default (<code className="bg-gray-100 px-1 rounded">SeeAllData=false</code>) — create all test data explicitly using <code className="bg-gray-100 px-1 rounded">@TestSetup</code> or within each test method. <code className="bg-gray-100 px-1 rounded">Test.startTest()</code> resets governor limits and marks the start of the tested code; <code className="bg-gray-100 px-1 rounded">Test.stopTest()</code> forces async operations (future methods, batch jobs) to complete synchronously. Mock HTTP callouts with <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. <code className="bg-gray-100 px-1 rounded">@TestVisible</code> exposes private members to test classes without making them public.</p>
+              </div>
+              <div>
+                <h3 className="font-semibold text-gray-900 mb-1">Lightning Web Components (LWC): Wire Service &amp; @AuraEnabled</h3>
+                <p>LWC is the modern Salesforce UI framework. Key decorators: <code className="bg-gray-100 px-1 rounded">@track</code> (reactive private properties), <code className="bg-gray-100 px-1 rounded">@api</code> (public properties exposed to parent), <code className="bg-gray-100 px-1 rounded">@wire</code> (reactive Apex method calls). The <code className="bg-gray-100 px-1 rounded">@wire</code> decorator connects an LWC to an Apex method marked <code className="bg-gray-100 px-1 rounded">@AuraEnabled(cacheable=true)</code> — the <code className="bg-gray-100 px-1 rounded">cacheable</code> flag is required for @wire. Use <code className="bg-gray-100 px-1 rounded">lightning-record-form</code> for standard record CRUD without writing Apex. Communication between components uses <code className="bg-gray-100 px-1 rounded">CustomEvent</code> (child to parent) and <code className="bg-gray-100 px-1 rounded">LightningMessageService</code> (unrelated components).</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Core Apex Code Patterns */}
+          <div id="apex-code-patterns" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
+            <h2 className="text-2xl font-bold text-gray-900 mb-2">Core Apex Code Patterns for PD1</h2>
+            <p className="text-sm text-gray-600 mb-5">
+              The PD1 exam presents real Apex code in 30–40% of questions. These three patterns appear most frequently — understand them at a read-and-reason level, not just from a definition.
+            </p>
+            <div className="space-y-6">
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">1. Bulk-Safe Trigger with Handler Class</h3>
+                <p className="text-sm text-gray-600 mb-2">One trigger per object, all logic in a handler class. SOQL runs once outside the loop; DML runs once after the loop.</p>
+                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`// AccountTrigger.trigger
+trigger AccountTrigger on Account (before insert, after insert) {
+    AccountTriggerHandler handler = new AccountTriggerHandler();
+    if (Trigger.isBefore && Trigger.isInsert) {
+        handler.onBeforeInsert(Trigger.new);
+    }
+    if (Trigger.isAfter && Trigger.isInsert) {
+        handler.onAfterInsert(Trigger.new);
+    }
+}
+
+// AccountTriggerHandler.cls
+public class AccountTriggerHandler {
+    public void onBeforeInsert(List<Account> newAccounts) {
+        // Validate or set field values — no DML needed, changes persist
+        for (Account acc : newAccounts) {
+            if (acc.Industry == null) {
+                acc.Industry = 'Technology';
+            }
+        }
+    }
+
+    public void onAfterInsert(List<Account> newAccounts) {
+        // Collect Ids, run one SOQL, perform one DML outside loop
+        Set<Id> accountIds = new Map<Id, Account>(newAccounts).keySet();
+        List<Contact> contacts = [SELECT Id, AccountId FROM Contact
+                                   WHERE AccountId IN :accountIds];
+        List<Contact> toUpdate = new List<Contact>();
+        for (Contact c : contacts) {
+            c.Description = 'Processed';
+            toUpdate.add(c);
+        }
+        update toUpdate; // Single DML — not inside loop
+    }
+}`}</code></pre>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">2. Database Class with Partial Success &amp; Error Handling</h3>
+                <p className="text-sm text-gray-600 mb-2">Use <code className="bg-gray-100 px-1 rounded text-xs">Database.insert(records, false)</code> to allow partial success; inspect the SaveResult array for errors.</p>
+                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`List<Account> accountsToInsert = new List<Account>();
+accountsToInsert.add(new Account(Name = 'Valid Account'));
+accountsToInsert.add(new Account()); // Missing required field — will fail
+
+// allOrNone = false → partial success allowed
+Database.SaveResult[] results = Database.insert(accountsToInsert, false);
+
+for (Database.SaveResult sr : results) {
+    if (sr.isSuccess()) {
+        System.debug('Inserted: ' + sr.getId());
+    } else {
+        for (Database.Error err : sr.getErrors()) {
+            System.debug('Error: ' + err.getMessage()
+                       + ' Fields: ' + err.getFields());
+        }
+    }
+}`}</code></pre>
+              </div>
+              <div>
+                <h3 className="text-sm font-semibold text-gray-900 mb-2">3. Test Class with HttpCalloutMock</h3>
+                <p className="text-sm text-gray-600 mb-2">HTTP callouts cannot run in tests — implement <code className="bg-gray-100 px-1 rounded text-xs">HttpCalloutMock</code> and register it with <code className="bg-gray-100 px-1 rounded text-xs">Test.setMock()</code>.</p>
+                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`// Mock implementation
+@isTest
+global class MockHttpCallout implements HttpCalloutMock {
+    global HTTPResponse respond(HTTPRequest req) {
+        HttpResponse res = new HttpResponse();
+        res.setHeader('Content-Type', 'application/json');
+        res.setBody('{"status":"success"}');
+        res.setStatusCode(200);
+        return res;
+    }
+}
+
+// Test class
+@isTest
+private class CalloutServiceTest {
+    @isTest
+    static void testCalloutSuccess() {
+        Test.setMock(HttpCalloutMock.class, new MockHttpCallout());
+        Test.startTest();
+        String result = CalloutService.makeCallout('https://api.example.com');
+        Test.stopTest(); // Forces async to complete
+        System.assertEquals('success', result, 'Expected success status');
+    }
+}`}</code></pre>
               </div>
             </div>
           </div>
@@ -436,6 +557,7 @@ export default function Developer1Page() {
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'is-pd1-hard', title: 'Is PD1 Hard?' },
               { id: 'key-concepts', title: 'Key Concepts' },
+              { id: 'apex-code-patterns', title: 'Apex Code Patterns' },
               { id: 'scenario-tips', title: 'How to Pass PD1' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
