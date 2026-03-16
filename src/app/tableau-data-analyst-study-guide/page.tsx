@@ -202,7 +202,7 @@ export default function TableauDataAnalystStudyGuidePage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
-        <p className="text-blue-100 mb-6">Test yourself with free Tableau Data Analyst practice questions covering all 5 exam sections.</p>
+        <p className="text-white mb-6">Test yourself with free Tableau Data Analyst practice questions covering all 5 exam sections.</p>
         <Link href="/certifications/tableau-data-analyst" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

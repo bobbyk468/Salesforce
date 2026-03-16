@@ -195,7 +195,7 @@ export default function EmailSpecialistStudyGuidePage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
-        <p className="text-blue-100 mb-6">Test yourself with free Email Specialist practice questions covering all 6 exam sections.</p>
+        <p className="text-white mb-6">Test yourself with free Email Specialist practice questions covering all 6 exam sections.</p>
         <Link href="/certifications/email-specialist" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

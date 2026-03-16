@@ -269,7 +269,7 @@ function ContactPageContent() {
       <section className="gradient-bg text-white py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-blue-100">
+          <p className="text-xl text-white">
             Have questions about our study materials? We'd love to hear from you.
           </p>
         </div>

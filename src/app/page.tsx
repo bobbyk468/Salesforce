@@ -305,13 +305,13 @@ export default function Home() {
           <h1 className="text-4xl md:text-6xl font-bold mb-6">
             Salesforce Certification Resources, Practice Questions & Study Guides
           </h1>
-          <p className="text-xl md:text-2xl text-blue-100 mb-4 max-w-3xl mx-auto">
+          <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto">
             Prepare for every Salesforce certification with practice questions, exam weightage, and study guides in one place.
           </p>
-          <p className="text-lg text-blue-100/90 mb-2 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-2 max-w-2xl mx-auto">
             Studying for Admin (ADM-201), Developer I, Sales Cloud Consultant, or 80+ other credentials? We give you exam tips, prerequisites, and sample questions.
           </p>
-          <p className="text-base text-blue-100/80 mb-8 max-w-2xl mx-auto">
+          <p className="text-base text-white/80 mb-8 max-w-2xl mx-auto">
             Clear outlines. Actionable study plans. Practice under exam-like conditions.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -335,7 +335,7 @@ export default function Home() {
               Contact Us
             </Link>
           </div>
-          <p className="text-sm text-blue-100/85 mt-4">
+          <p className="text-sm text-white/85 mt-4">
             Popular reads:{' '}
             <Link href="/adm-201-exam-tips-2026" className="underline hover:text-white font-medium">ADM-201 exam tips</Link>
             {' · '}
@@ -363,7 +363,7 @@ export default function Home() {
             {' · '}
             <Link href="/salesforce-certification-validity" className="underline hover:text-white font-medium">Cert validity</Link>
           </p>
-          <p className="text-sm text-blue-100/85 mt-1">
+          <p className="text-sm text-white/85 mt-1">
             <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-white font-medium">Field vs Service Cloud</Link>
             {' · '}
             <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-white font-medium">Education vs Nonprofit Cloud</Link>

@@ -193,7 +193,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Practising Today</h2>
-        <p className="text-blue-100 mb-6">Free practice questions for both developer certifications.</p>
+        <p className="text-white mb-6">Free practice questions for both developer certifications.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/developer-1" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             PD1 Practice Questions

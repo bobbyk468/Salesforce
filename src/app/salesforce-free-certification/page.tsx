@@ -163,7 +163,7 @@ export default function SalesforceFreeCertificationPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start with AI Associate — $75</h2>
-        <p className="text-blue-100 mb-6">The most accessible entry point: no experience required, lowest fee, free practice questions available now.</p>
+        <p className="text-white mb-6">The most accessible entry point: no experience required, lowest fee, free practice questions available now.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/ai-associate" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             AI Associate Practice Questions

@@ -200,7 +200,7 @@ export default function IsSalesforceCertificationWorthItPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Start Your Certification Journey</h2>
-        <p className="text-blue-100 mb-6">Free practice questions for every Salesforce certification — no account required.</p>
+        <p className="text-white mb-6">Free practice questions for every Salesforce certification — no account required.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/administrator" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             ADM-201 Practice <ArrowRight className="ml-2 h-4 w-4" />

@@ -169,7 +169,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Explore Both Architect Paths</h2>
-        <p className="text-blue-100 mb-6">Free practice questions for both Solution Architect certifications.</p>
+        <p className="text-white mb-6">Free practice questions for both Solution Architect certifications.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/b2b-solution-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             B2B Architect Practice

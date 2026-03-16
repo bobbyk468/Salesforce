@@ -153,7 +153,7 @@ export default function HowToRegisterSalesforceExamPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Get Ready to Book</h2>
-        <p className="text-blue-100 mb-6">Practice until you score 75%+ on mock exams — then book your exam with confidence.</p>
+        <p className="text-white mb-6">Practice until you score 75%+ on mock exams — then book your exam with confidence.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions
         </Link>

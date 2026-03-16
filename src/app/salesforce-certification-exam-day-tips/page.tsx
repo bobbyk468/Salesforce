@@ -170,7 +170,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
 
       <div className="no-print bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Get Exam-Ready with Practice Questions</h2>
-        <p className="text-blue-100 mb-6">Build exam confidence with free practice questions before your exam day.</p>
+        <p className="text-white mb-6">Build exam confidence with free practice questions before your exam day.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse Free Practice Questions
         </Link>

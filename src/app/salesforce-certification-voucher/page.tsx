@@ -166,7 +166,7 @@ export default function SalesforceCertificationVoucherPage() {
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Prepare Before You Pay</h2>
-        <p className="text-blue-100 mb-6">Use free practice questions to get exam-ready — minimise retake fees by passing first time.</p>
+        <p className="text-white mb-6">Use free practice questions to get exam-ready — minimise retake fees by passing first time.</p>
         <Link href="/certifications" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Browse Free Practice Questions
         </Link>
