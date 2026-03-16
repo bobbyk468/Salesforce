@@ -194,7 +194,7 @@ export default function SalesforceCertificationCostPage() {
           Pearson VUE pricing in India is typically lower than the USD list price. The table below shows approximate INR equivalents at current exchange rates. Always confirm the final price in your Salesforce certification account before booking — regional pricing can change.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
+          <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Cert Tier</th>

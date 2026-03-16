@@ -22,7 +22,7 @@ export default function DifficultyHeatmap({ slug }: DifficultyHeatmapProps) {
         Which sections are a gimme vs which ones trap confident candidates. Use this to prioritise your final-week revision.
       </p>
       <div className="overflow-x-auto">
-        <table className="w-full text-sm text-left border-collapse">
+        <table className="min-w-[500px] w-full text-sm text-left border-collapse">
           <thead>
             <tr className="border-b-2 border-gray-200">
               <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Exam Section</th>

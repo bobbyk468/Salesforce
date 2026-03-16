@@ -83,7 +83,7 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
+          <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900 w-1/3">Factor</th>
@@ -203,7 +203,7 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Decision Matrix: AI Associate or Agentforce Specialist?</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
+          <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>

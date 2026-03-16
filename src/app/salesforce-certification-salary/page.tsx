@@ -79,7 +79,7 @@ export default function SalesforceCertificationSalaryPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Salary by Certification Track (United States)</h2>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
+          <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Role / Certification</th>
@@ -148,7 +148,7 @@ export default function SalesforceCertificationSalaryPage() {
           Salary ranges vary significantly by geography. The table below shows typical mid-level certified professional salaries for the same role across key markets.
         </p>
         <div className="overflow-x-auto">
-          <table className="w-full text-sm text-left border-collapse">
+          <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead>
               <tr className="border-b-2 border-gray-200">
                 <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Role (Mid-Level)</th>

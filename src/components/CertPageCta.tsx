@@ -1,4 +1,4 @@
-import { PlayCircle, Download } from 'lucide-react'
+import { PlayCircle } from 'lucide-react'
 import Link from 'next/link'
 import { SLUG_TO_EXAM_CODE, getExamLogistics, getSocialProofNumber } from '@/lib/cert-seo-data'
 
@@ -44,17 +44,8 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
           <PlayCircle className="h-6 w-6 sm:h-7 sm:w-7" aria-hidden="true" />
           <span>{primaryLabel}</span>
         </Link>
-        {!singleDominantCta && (
-          <Link
-            href="/contact"
-            className="flex items-center gap-2 sm:gap-3 mt-4 px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base w-full sm:w-auto justify-center"
-          >
-            <Download className="h-5 w-5 sm:h-6 sm:w-6" aria-hidden="true" />
-            <span>Download Study Plan</span>
-          </Link>
-        )}
       </div>
-      <p className="text-center text-gray-600 text-xs sm:text-sm mt-4">
+      <p className="text-center text-white/80 text-xs sm:text-sm mt-4">
         {socialProofText} • Updated for {new Date().getFullYear()} • No sign-up required
       </p>
       {singleDominantCta && examDetails && (
