@@ -63,15 +63,9 @@
 
 ## 🟢 Low Priority / Future
 
-### 3. Difficulty Heatmap — Study Guide Pages
+### 3. ~~Difficulty Heatmap — Study Guide Pages~~ ✅ DONE
 
-**What:** Once difficulty heatmap data exists for all certs, consider adding a simplified version to study guide pages (not just cert hub pages). The component already accepts a `slug` prop.
-
-**Why:** Additional "how hard is X?" content on study guide pages would help those pages rank for the same queries.
-
-**Dependency:** Requires item #1 (heatmap data) to be complete first.
-
-**Effort:** Small (one-line component addition per study guide page) — but blocked by item #1.
+`DifficultyHeatmap` added to all 52 study guide pages (commit `3461ccd`). Already renders for 9 certs with data; auto-activates for any cert as data is added to `difficulty-data.ts`.
 
 ---
 
@@ -118,6 +112,6 @@
 |---|------|----------|--------|----------|
 | 1 | Difficulty Heatmap data for ~78 certs | 🔴 High | Large | No |
 | 2 | SVG Roadmap download/share option | 🟡 Medium | Small-Med | No |
-| 3 | Heatmap on study guide pages | 🟢 Low | Small | Yes — needs #1 |
+| ~~3~~ | ~~Heatmap on study guide pages~~ | ~~🟢 Low~~ | ~~Small~~ | ✅ Done |
 | 4 | Salary data on 25 VS pages | 🟢 Low | Medium | No |
 | 5 | 3 dedicated FAQ items per concept | 🟢 Low | Large | No |

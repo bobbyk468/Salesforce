@@ -3,7 +3,7 @@
 **Site:** https://www.trailblazeprep.com
 **Stack:** Next.js 14 App Router, Static Site Generation, deployed on Vercel
 **Branch:** `Winter'26`
-**Last updated:** 2026-03-16 (session 3)
+**Last updated:** 2026-03-16 (session 4)
 
 ---
 
@@ -156,13 +156,14 @@ Commit: `c898368`
 
 ---
 
-### Phase 9 — Mobile + CTA (Session 3)
+### Phase 9 — Mobile + CTA + Study Guide Heatmaps (Sessions 3–4)
 
 | Item | Scope | Commit |
 |------|-------|--------|
 | `min-w-[500px]` added to all multi-column tables | 27 VS pages, cert-cost, cert-salary, DifficultyHeatmap.tsx | `f8a010c` |
 | Remove competing "Download Study Plan" secondary button from `CertPageCta` | 88 cert pages | `f8a010c` |
 | Fix social proof text: `text-gray-600` → `text-white/80` on blue gradient | CertPageCta (sitewide) | `f8a010c` |
+| `DifficultyHeatmap` added to all 52 study guide pages (renders for 9 certs with data, null for others) | 52 study guide pages | `3461ccd` |
 
 ---
 
