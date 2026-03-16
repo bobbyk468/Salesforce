@@ -63,7 +63,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-admin-vs-revenue-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -90,7 +90,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
             name: 'Revenue Cloud Consultant',
             href: '/certifications/revenue-cloud-consultant',
             badge: 'Take Second',
-            badgeColor: 'bg-salesforce-blue/10 text-salesforce-blue',
+            badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '105 min', passing: '~65%',
             scope: 'Quote-to-Cash (full lifecycle)',
             focus: 'CPQ + billing, invoicing, revenue recognition, payment management, ASC 606',

@@ -71,7 +71,7 @@ export default function PardotConsultantStudyGuidePage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pardot-consultant-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Marketing Cloud Track</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">

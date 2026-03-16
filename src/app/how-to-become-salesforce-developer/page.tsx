@@ -101,7 +101,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
 
       {/* Header */}
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Career Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -172,7 +172,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
             { cert: 'Architect Track', note: 'After PD1+PD2: Integration Architect, Data Architect → Application Architect → CTA' },
           ].map((item, i) => (
             <div key={item.cert} className="flex items-start gap-3">
-              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
+              <span className="flex-shrink-0 w-6 h-6 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
               <div>
                 <span className="font-semibold text-gray-900">{item.cert}</span>
                 <span className="text-gray-500"> — {item.note}</span>

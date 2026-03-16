@@ -63,7 +63,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/system-architect-vs-application-architect" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Certification Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -78,7 +78,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">
           <div className="flex items-center justify-between mb-3">
             <h2 className="text-lg font-bold text-gray-900">Application Architect</h2>
-            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-blue px-2 py-0.5 rounded-full">Start Here</span>
+            <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Start Here</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
             <div className="flex justify-between"><span className="text-gray-500">Required exams</span><span className="font-semibold">4</span></div>

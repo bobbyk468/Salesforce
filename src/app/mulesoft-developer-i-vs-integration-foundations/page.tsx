@@ -63,7 +63,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/mulesoft-developer-i-vs-integration-foundations" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -90,7 +90,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
             name: 'MuleSoft Developer I',
             href: '/certifications/mulesoft-developer-i',
             badge: 'Professional',
-            badgeColor: 'bg-salesforce-blue/10 text-salesforce-blue',
+            badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '120 min', passing: '70%',
             level: 'Hands-on — Anypoint Studio required',
             best: 'Integration developers, Salesforce architects, API developers',

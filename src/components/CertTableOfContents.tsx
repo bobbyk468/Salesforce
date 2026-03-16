@@ -87,7 +87,7 @@ export default function CertTableOfContents({ sections }: CertTableOfContentsPro
                     onClick={() => scrollToSection(section.id)}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === section.id
-                        ? 'bg-salesforce-blue/10 text-salesforce-blue font-medium border-l-2 border-salesforce-blue'
+                        ? 'bg-salesforce-blue/10 text-salesforce-dark font-medium border-l-2 border-salesforce-blue'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-salesforce-blue'
                     }`}
                   >

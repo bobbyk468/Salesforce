@@ -75,7 +75,7 @@ export default function CertificationPathPage() {
       />
       {/* Hero */}
       <div data-lcp-header className="text-center mb-16">
-        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-sm font-medium mb-6">
+        <div className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-sm font-medium mb-6">
           <MapPin className="h-4 w-4" />
           Plan your journey
         </div>
@@ -105,8 +105,7 @@ export default function CertificationPathPage() {
         </div>
       </div>
 
-      {/* Paths: loaded client-side to keep initial HTML small (fixes Large HTML Page Size) */}
-      <CertificationPathContent />
+      <CertificationPathContent paths={CERTIFICATION_PATHS} />
 
       {/* Quick nav */}
       <nav className="mt-16 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">

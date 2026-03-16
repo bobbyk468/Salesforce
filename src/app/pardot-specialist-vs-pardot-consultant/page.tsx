@@ -63,7 +63,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pardot-specialist-vs-pardot-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -90,7 +90,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
             name: 'Pardot Consultant',
             href: '/certifications/pardot-consultant',
             badge: 'Take Second',
-            badgeColor: 'bg-salesforce-blue/10 text-salesforce-blue',
+            badgeColor: 'bg-salesforce-blue/10 text-salesforce-dark',
             fee: '$200', questions: '60', time: '105 min', passing: '~65%',
             level: 'Strategic — architecture and consulting',
             best: 'Salesforce consulting partners, senior marketing ops architects, solution architects',

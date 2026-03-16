@@ -69,7 +69,7 @@ export default function PardotSpecialistStudyGuidePage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pardot-specialist-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <div data-lcp-header className="mb-10">
-        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-blue text-sm font-semibold px-3 py-1 rounded-full mb-4">
+        <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
           <span>Study Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
@@ -117,7 +117,7 @@ export default function PardotSpecialistStudyGuidePage() {
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
               <div className="flex items-start gap-3">
-                <span className="flex-shrink-0 mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-salesforce-blue/10 text-salesforce-blue text-xs font-bold">{section.weight}%</span>
+                <span className="flex-shrink-0 mt-0.5 inline-flex items-center justify-center w-7 h-7 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold">{section.weight}%</span>
                 <div>
                   <h3 className="font-semibold text-gray-900 mb-1">{section.name}</h3>
                   <p className="text-sm text-gray-600">{section.note}</p>

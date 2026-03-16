@@ -134,7 +134,7 @@ const priceTiers = [
 const colorMap: Record<string, { border: string; bg: string; badge: string; text: string }> = {
   emerald: { border: 'border-emerald-200', bg: 'bg-emerald-50/50', badge: 'bg-emerald-100 text-emerald-800', text: 'text-emerald-700' },
   blue: { border: 'border-blue-200', bg: 'bg-blue-50/50', badge: 'bg-blue-100 text-blue-800', text: 'text-blue-700' },
-  salesforce: { border: 'border-salesforce-blue/30', bg: 'bg-salesforce-blue/5', badge: 'bg-salesforce-blue/10 text-salesforce-blue', text: 'text-salesforce-blue' },
+  salesforce: { border: 'border-salesforce-blue/30', bg: 'bg-salesforce-blue/5', badge: 'bg-salesforce-blue/10 text-salesforce-dark', text: 'text-salesforce-blue' },
   purple: { border: 'border-purple-200', bg: 'bg-purple-50/50', badge: 'bg-purple-100 text-purple-800', text: 'text-purple-700' },
   orange: { border: 'border-orange-200', bg: 'bg-orange-50/50', badge: 'bg-orange-100 text-orange-800', text: 'text-orange-700' },
   red: { border: 'border-red-200', bg: 'bg-red-50/50', badge: 'bg-red-100 text-red-800', text: 'text-red-700' },
