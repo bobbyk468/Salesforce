@@ -83,7 +83,7 @@ export default function HowToStudyForSalesforceCertificationPage() {
             <div key={item.pillar} className="bg-gray-50 rounded-xl p-4">
               <div className="text-2xl mb-2">{item.icon}</div>
               <p className="font-semibold text-gray-900 text-sm mb-1">{item.pillar}</p>
-              <p className="text-xs font-bold text-salesforce-blue mb-2">{item.pct} of study time</p>
+              <p className="text-xs font-bold text-salesforce-dark mb-2">{item.pct} of study time</p>
               <p className="text-xs text-gray-600">{item.desc}</p>
             </div>
           ))}

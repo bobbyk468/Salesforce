@@ -81,7 +81,7 @@ export default function DataCloudVsMarketingCloudPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Platform Difference: What Each Tool Does</h2>
         <div className="grid sm:grid-cols-2 gap-6 text-sm">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
-            <p className="font-semibold text-salesforce-blue mb-2">Salesforce Data Cloud</p>
+            <p className="font-semibold text-salesforce-dark mb-2">Salesforce Data Cloud</p>
             <p className="text-gray-700 mb-2">A customer data platform (CDP) that ingests data from multiple sources, resolves customer identities across touchpoints, and creates unified customer profiles for real-time activation.</p>
             <ul className="space-y-1 text-gray-700">
               <li className="flex gap-1.5"><CheckCircle2 className="h-3.5 w-3.5 mt-0.5 text-salesforce-blue flex-shrink-0" />Data ingestion from CRM, web, mobile, data warehouses</li>
@@ -166,7 +166,7 @@ export default function DataCloudVsMarketingCloudPage() {
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
-            <p className="text-sm font-semibold text-salesforce-blue mb-2">Pursue Data Cloud Consultant If:</p>
+            <p className="text-sm font-semibold text-salesforce-dark mb-2">Pursue Data Cloud Consultant If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>You implement CDP or data unification solutions</li>
               <li>You work on data architecture or marketing data pipelines</li>

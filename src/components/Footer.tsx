@@ -45,7 +45,7 @@ export default function Footer() {
 
           {/* Quick Links */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+            <p className="text-lg font-semibold mb-4">Quick Links</p>
             <ul className="space-y-2">
               <li>
                 <Link href="/" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
@@ -97,7 +97,7 @@ export default function Footer() {
 
           {/* Popular Certifications */}
           <div>
-            <h3 className="text-lg font-semibold mb-4">Popular Certifications</h3>
+            <p className="text-lg font-semibold mb-4">Popular Certifications</p>
             <ul className="space-y-2">
               <li>
                 <Link href="/adm-201-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
@@ -144,7 +144,7 @@ export default function Footer() {
 
           {/* Certification Paths */}
           <div className="md:col-start-3">
-            <h3 className="text-lg font-semibold mb-4">Cert Paths &amp; Resources</h3>
+            <p className="text-lg font-semibold mb-4">Cert Paths &amp; Resources</p>
             <ul className="space-y-2">
               <li>
                 <Link href="/how-to-become-salesforce-administrator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">

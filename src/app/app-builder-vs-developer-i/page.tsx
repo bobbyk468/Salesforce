@@ -171,7 +171,7 @@ export default function AppBuilderVsDeveloperIPage() {
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
-            <p className="text-sm font-semibold text-salesforce-blue mb-2">Take App Builder First If:</p>
+            <p className="text-sm font-semibold text-salesforce-dark mb-2">Take App Builder First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>You are a Salesforce Admin looking to expand platform skills</li>
               <li>You work with flows, Lightning pages, and custom objects daily</li>

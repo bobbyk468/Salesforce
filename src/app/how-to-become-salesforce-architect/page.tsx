@@ -142,7 +142,7 @@ export default function HowToBecomeSalesforceArchitectPage() {
                 <div className="flex-1">
                   <div className="flex flex-wrap items-center gap-3 mb-2">
                     <h3 className="text-lg font-semibold text-gray-900">{item.title}</h3>
-                    <span className="inline-flex items-center gap-1 text-xs text-gray-500 bg-gray-100 px-2 py-1 rounded-full">
+                    <span className="inline-flex items-center gap-1 text-xs text-gray-700 bg-gray-100 px-2 py-1 rounded-full">
                       <Clock className="h-3 w-3" /> {item.time}
                     </span>
                   </div>

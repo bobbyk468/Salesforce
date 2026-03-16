@@ -170,7 +170,7 @@ export default function ConsultantCertificationPathPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Common Consultant Certification Pairings</h2>
         <div className="grid sm:grid-cols-3 gap-4 text-sm">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-3">
-            <p className="font-semibold text-salesforce-blue mb-1">Full CRM Consultant</p>
+            <p className="font-semibold text-salesforce-dark mb-1">Full CRM Consultant</p>
             <p className="text-gray-700">ADM-201 + Sales Cloud + Service Cloud</p>
           </div>
           <div className="rounded-lg border border-emerald-200 bg-emerald-50/50 p-3">

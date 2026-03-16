@@ -158,7 +158,7 @@ export default function IsSalesforceCertificationWorthItPage() {
             </ul>
           </div>
           <div>
-            <h3 className="font-semibold text-gray-900 mb-3 text-green-600">Benefits</h3>
+            <h3 className="font-semibold text-gray-900 mb-3 text-green-700">Benefits</h3>
             <ul className="space-y-2 text-gray-700">
               <li>Salary increase: $15,000–$30,000 for first cert</li>
               <li>New job opportunities opened immediately</li>

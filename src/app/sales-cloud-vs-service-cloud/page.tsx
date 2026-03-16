@@ -168,7 +168,7 @@ export default function SalesCloudVsServiceCloudPage() {
         </p>
         <div className="grid sm:grid-cols-2 gap-4">
           <div className="rounded-lg border border-salesforce-blue/20 bg-salesforce-blue/5 p-4">
-            <p className="text-sm font-semibold text-salesforce-blue mb-2">Take Sales Cloud Consultant First If:</p>
+            <p className="text-sm font-semibold text-salesforce-dark mb-2">Take Sales Cloud Consultant First If:</p>
             <ul className="text-sm text-gray-700 space-y-1">
               <li>Your clients are primarily in sales/revenue operations</li>
               <li>You work in B2B SaaS, financial services, or manufacturing</li>

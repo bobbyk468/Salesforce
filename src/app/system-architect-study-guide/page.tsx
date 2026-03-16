@@ -114,7 +114,7 @@ export default function SystemArchitectStudyGuidePage() {
                   </div>
                 </div>
                 <p className="text-sm text-gray-600 mb-2">{exam.summary}</p>
-                <Link href={exam.href} className="text-xs font-semibold text-salesforce-blue hover:underline">
+                <Link href={exam.href} className="text-xs font-semibold text-salesforce-dark hover:underline">
                   View {exam.name} Study Guide →
                 </Link>
               </div>
