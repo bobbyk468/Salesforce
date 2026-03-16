@@ -4,6 +4,7 @@ import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -39,6 +40,155 @@ const ROLE_KEYWORDS: Record<string, string> = {
 }
 
 type FaqItem = { question: string; answer: string }
+interface RoleCareerData {
+  salaryRange: string
+  seniorSalaryRange: string
+  yearsToFirst: string
+  dailyResponsibilities: string[]
+  careerPath: string
+  topSkills: string[]
+}
+
+const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
+  administrator: {
+    salaryRange: '$65,000–$95,000',
+    seniorSalaryRange: '$90,000–$130,000',
+    yearsToFirst: '3–6 months',
+    dailyResponsibilities: [
+      'Managing user accounts, profiles, permission sets, and login access',
+      'Building and maintaining automation (Record-Triggered Flows, approval processes)',
+      'Creating reports and dashboards for business stakeholders',
+      'Data quality management: imports, deduplication, and validation rules',
+      'Troubleshooting user issues and managing change requests',
+    ],
+    careerPath: 'ADM-201 → Advanced Administrator or App Builder → Sales/Service Cloud Consultant → Senior Admin or Functional Consultant',
+    topSkills: ['Flow Builder', 'Security model (OWD/profiles/roles)', 'Reports & Dashboards', 'Data management', 'Stakeholder communication'],
+  },
+  developer: {
+    salaryRange: '$85,000–$115,000',
+    seniorSalaryRange: '$115,000–$155,000',
+    yearsToFirst: '6–12 months',
+    dailyResponsibilities: [
+      'Writing Apex triggers, classes, and batch jobs following bulkification principles',
+      'Building Lightning Web Components (LWC) for custom UI requirements',
+      'Integrating Salesforce with external systems via REST/SOAP APIs',
+      'Writing unit tests with System.assert() and maintaining 75%+ code coverage',
+      'Deploying code via Change Sets, Salesforce CLI, or CI/CD pipelines',
+    ],
+    careerPath: 'PD1 → PD2 → JavaScript Developer I (optional) → Integration Architect or Application Architect → CTA',
+    topSkills: ['Apex', 'LWC', 'SOQL/SOSL', 'Governor limits', 'REST integration', 'Test-driven development'],
+  },
+  consultant: {
+    salaryRange: '$80,000–$110,000',
+    seniorSalaryRange: '$110,000–$145,000',
+    yearsToFirst: '1–2 years',
+    dailyResponsibilities: [
+      'Gathering requirements from business stakeholders and translating to Salesforce solutions',
+      'Configuring Sales Cloud, Service Cloud, or Experience Cloud features declaratively',
+      'Running workshops, demos, and user acceptance testing sessions',
+      'Writing solution design documents and technical specifications',
+      'Managing project scope, risks, and client expectations',
+    ],
+    careerPath: 'ADM-201 → Sales Cloud or Service Cloud Consultant → Experience Cloud Consultant → Business Analyst → System Architect',
+    topSkills: ['Requirements gathering', 'Solution design', 'Stakeholder management', 'Flow Builder', 'Data migration', 'Presentation skills'],
+  },
+  architect: {
+    salaryRange: '$130,000–$160,000',
+    seniorSalaryRange: '$155,000–$200,000+',
+    yearsToFirst: '5–8 years',
+    dailyResponsibilities: [
+      'Designing multi-cloud Salesforce architectures for enterprise clients',
+      'Defining integration patterns, API strategies, and data flows',
+      'Reviewing and approving technical solutions for scalability and security',
+      'Leading technical discovery, whiteboarding sessions, and architecture decisions',
+      'Mentoring developer and consultant teams on best practices',
+    ],
+    careerPath: 'ADM-201 + PD1 → Integration/Data Architect → Application Architect → System Architect → CTA (Certified Technical Architect)',
+    topSkills: ['System design', 'Integration architecture', 'Security model', 'Multi-org strategy', 'Performance optimisation', 'Stakeholder leadership'],
+  },
+  marketing: {
+    salaryRange: '$65,000–$95,000',
+    seniorSalaryRange: '$90,000–$125,000',
+    yearsToFirst: '3–6 months',
+    dailyResponsibilities: [
+      'Building and managing email campaigns, journeys, and automations in Marketing Cloud',
+      'Configuring data extensions, subscriber lists, and segmentation rules',
+      'Writing AMPscript or SSJS for dynamic personalised content',
+      'Setting up lead scoring, grading, and nurture programmes in Pardot/MCAE',
+      'Reporting on campaign performance and optimising send schedules',
+    ],
+    careerPath: 'Email Specialist → Marketing Cloud Consultant → Pardot Specialist → Marketing Cloud Account Engagement Consultant',
+    topSkills: ['Journey Builder', 'Automation Studio', 'AMPscript', 'Data Extensions', 'Segmentation', 'Email deliverability'],
+  },
+  designer: {
+    salaryRange: '$75,000–$105,000',
+    seniorSalaryRange: '$100,000–$135,000',
+    yearsToFirst: '6–12 months',
+    dailyResponsibilities: [
+      'Conducting user research, creating wireframes and prototypes for Salesforce solutions',
+      'Applying Lightning Design System (SLDS) principles to custom components',
+      'Facilitating design thinking workshops and customer journey mapping sessions',
+      'Collaborating with developers to implement accessible, responsive interfaces',
+      'Running usability testing and iterating based on stakeholder feedback',
+    ],
+    careerPath: 'UX Designer → Strategy Designer → Senior Experience Designer → Design Lead or Service Design Principal',
+    topSkills: ['Figma', 'Lightning Design System', 'Journey mapping', 'Usability testing', 'Accessibility (WCAG)', 'Design thinking'],
+  },
+  tableau: {
+    salaryRange: '$75,000–$105,000',
+    seniorSalaryRange: '$100,000–$135,000',
+    yearsToFirst: '3–6 months',
+    dailyResponsibilities: [
+      'Building interactive dashboards and visualisations in Tableau Desktop or Tableau Cloud',
+      'Connecting to Salesforce, databases, and cloud data sources for reporting',
+      'Writing calculated fields, LOD expressions, and table calculations',
+      'Publishing and managing workbooks on Tableau Server or Tableau Cloud',
+      'Training end users and building self-service analytics capabilities',
+    ],
+    careerPath: 'Desktop Specialist/Foundations → Certified Data Analyst → Tableau Consultant → Tableau Architect',
+    topSkills: ['Tableau Desktop', 'LOD expressions', 'Data blending', 'Dashboard design', 'Calculated fields', 'Performance optimisation'],
+  },
+  associate: {
+    salaryRange: '$50,000–$70,000',
+    seniorSalaryRange: '$65,000–$90,000',
+    yearsToFirst: '1–3 months',
+    dailyResponsibilities: [
+      'Using Salesforce CRM for day-to-day business operations',
+      'Understanding AI features like Einstein Copilot and Agentforce capabilities',
+      'Collaborating with admin and developer teams on Salesforce projects',
+      'Documenting processes and supporting end-user adoption',
+    ],
+    careerPath: 'AI Associate or Platform Foundations → ADM-201 → App Builder → Specialist track of choice',
+    topSkills: ['Salesforce CRM navigation', 'AI literacy', 'Process documentation', 'Business analysis basics'],
+  },
+  'accredited-professional': {
+    salaryRange: '$95,000–$125,000',
+    seniorSalaryRange: '$120,000–$155,000',
+    yearsToFirst: '2–4 years',
+    dailyResponsibilities: [
+      'Implementing specialist Salesforce clouds (Health, Financial Services, Field Service, etc.)',
+      'Configuring industry-specific data models and business processes',
+      'Advising clients on platform capabilities for regulated or complex industries',
+      'Leading domain-specific discovery workshops and solution design',
+    ],
+    careerPath: 'ADM-201 + relevant Consultant cert → Industry AP credential → Senior Consultant or Solution Architect',
+    topSkills: ['Industry cloud expertise', 'Solution design', 'Domain knowledge (health/finance/field)', 'Regulatory compliance', 'Client advisory'],
+  },
+  sales: {
+    salaryRange: '$75,000–$105,000',
+    seniorSalaryRange: '$100,000–$135,000',
+    yearsToFirst: '6–12 months',
+    dailyResponsibilities: [
+      'Configuring Sales Cloud for sales teams: lead routing, opportunity management, forecasting',
+      'Building automation for sales processes (approval processes, email alerts, Flow)',
+      'Designing reports and dashboards for pipeline visibility and quota tracking',
+      'Integrating Salesforce with marketing and ERP systems',
+    ],
+    careerPath: 'ADM-201 → Sales Cloud Consultant → Sales Foundations (optional) → Service Cloud Consultant or CPQ Admin',
+    topSkills: ['Sales Cloud configuration', 'Territory management', 'Forecasting', 'Pipeline reporting', 'Sales process automation'],
+  },
+}
+
 const ROLE_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     { question: 'What is the first Salesforce certification for an administrator?', answer: 'The Salesforce Administrator (ADM-201) is the recommended first certification for anyone on the admin track. It covers the full platform — security model, automation, data management, reports, and dashboards. All other admin certifications (Advanced Administrator, App Builder) build on ADM-201 knowledge.' },
@@ -157,6 +307,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
     { name: `${category.name} Certifications`, url: `/certifications/role/${slug}` },
   ]
   const roleFaqs = ROLE_FAQS[slug] ?? []
+  const careerData = ROLE_CAREER_DATA[slug] ?? null
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -174,6 +325,8 @@ export default async function RoleCertificationsPage({ params }: Props) {
         <ChevronLeft className="h-5 w-5 mr-1" />
         All certifications
       </Link>
+
+      <ContentPageAuthor />
 
       <div data-lcp-header className="mb-10">
         <h1 className="text-4xl font-bold text-gray-900 mb-2">{category.name} Certifications</h1>
@@ -204,6 +357,56 @@ export default async function RoleCertificationsPage({ params }: Props) {
           </Link>
         ))}
       </div>
+
+      {careerData && (
+        <>
+          {/* Salary & Career Overview */}
+          <section className="mt-12 rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce {category.name} Career Overview</h2>
+            <div className="grid sm:grid-cols-3 gap-4 mb-6">
+              <div className="rounded-lg bg-salesforce-blue/5 border border-salesforce-blue/20 p-4 text-center">
+                <p className="text-xs font-semibold text-salesforce-blue uppercase tracking-wide mb-1">Entry Salary</p>
+                <p className="text-lg font-bold text-gray-900">{careerData.salaryRange}</p>
+              </div>
+              <div className="rounded-lg bg-emerald-50 border border-emerald-200 p-4 text-center">
+                <p className="text-xs font-semibold text-emerald-700 uppercase tracking-wide mb-1">Senior Salary</p>
+                <p className="text-lg font-bold text-gray-900">{careerData.seniorSalaryRange}</p>
+              </div>
+              <div className="rounded-lg bg-amber-50 border border-amber-200 p-4 text-center">
+                <p className="text-xs font-semibold text-amber-700 uppercase tracking-wide mb-1">Time to First Cert</p>
+                <p className="text-lg font-bold text-gray-900">{careerData.yearsToFirst}</p>
+              </div>
+            </div>
+            <div className="mb-4">
+              <p className="text-sm font-semibold text-gray-900 mb-2">Typical Career Path</p>
+              <p className="text-sm text-gray-700 bg-gray-50 rounded-lg px-4 py-3">{careerData.careerPath}</p>
+            </div>
+            <div>
+              <p className="text-sm font-semibold text-gray-900 mb-2">Top Skills Required</p>
+              <div className="flex flex-wrap gap-2">
+                {careerData.topSkills.map((skill) => (
+                  <span key={skill} className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-blue">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </section>
+
+          {/* Daily Responsibilities */}
+          <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <h2 className="text-xl font-bold text-gray-900 mb-4">What Does a Salesforce {category.name} Do Day-to-Day?</h2>
+            <ul className="space-y-2.5">
+              {careerData.dailyResponsibilities.map((resp, i) => (
+                <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
+                  <span className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-salesforce-blue/10 flex items-center justify-center text-xs font-bold text-salesforce-blue">{i + 1}</span>
+                  {resp}
+                </li>
+              ))}
+            </ul>
+          </section>
+        </>
+      )}
 
       {roleFaqs.length > 0 && (
         <section className="mt-12 rounded-xl border border-gray-100 bg-white p-6">

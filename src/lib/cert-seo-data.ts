@@ -506,10 +506,11 @@ function compressTitleWords(raw: string): string {
 
 function buildWinterTitle(base: string): string {
   const candidates = [
+    `${base}: Free Practice Exam (${TITLE_YEAR})`,
+    `${base}: Free Practice (${TITLE_YEAR})`,
     `${base} (${TITLE_YEAR})`,
-    `${base} Prep (${TITLE_YEAR})`,
+    `${compressTitleWords(base)}: Free Practice (${TITLE_YEAR})`,
     `${compressTitleWords(base)} (${TITLE_YEAR})`,
-    `${compressTitleWords(base)} Prep (${TITLE_YEAR})`,
   ]
   for (const candidate of candidates) {
     if (candidate.length <= 60) return candidate
