@@ -107,26 +107,30 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         </div>
       </div>
 
+      {/* Verified-by trust badge */}
       <div className="border-t border-gray-200 pt-4 mt-4">
-        <h3 className="text-sm font-semibold text-gray-900 mb-2">About this content</h3>
-        <p className="text-xs sm:text-sm text-gray-700">
-          Written and reviewed by{' '}
-          <Link href="/team" className="text-salesforce-blue font-medium hover:underline">
-            Krishna Mohan
-          </Link>
-          {' '}(ADM-201, PD1, PD2, App Builder, Consultant — Salesforce certified). Content is aligned to official exam objectives and updated for {RELEASE_CURRENT}. No braindumps or leaked exam content.
-        </p>
-        <p className="text-xs sm:text-sm text-gray-700 mt-2">
-          See our{' '}
-          <Link href="/about" className="text-salesforce-blue font-medium hover:underline">
-            methodology and trust policy
-          </Link>
-          {' '}or{' '}
-          <Link href="/contact" className="text-salesforce-blue font-medium hover:underline">
-            contact the team
-          </Link>
-          .
-        </p>
+        <div className="flex items-start gap-3 rounded-lg border border-green-200 bg-green-50 px-3 py-3">
+          <div className="flex-shrink-0 mt-0.5">
+            <div className="h-8 w-8 rounded-full bg-green-600 flex items-center justify-center" aria-hidden="true">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 text-white">
+                <path fillRule="evenodd" d="M16.403 12.652a3 3 0 0 0 0-5.304 3 3 0 0 0-3.75-3.751 3 3 0 0 0-5.305 0 3 3 0 0 0-3.751 3.75 3 3 0 0 0 0 5.305 3 3 0 0 0 3.75 3.751 3 3 0 0 0 5.305 0 3 3 0 0 0 3.751-3.75Zm-2.546-4.46a.75.75 0 0 0-1.214-.883l-3.483 4.79-1.88-1.88a.75.75 0 1 0-1.06 1.061l2.5 2.5a.75.75 0 0 0 1.137-.089l4-5.5Z" clipRule="evenodd" />
+              </svg>
+            </div>
+          </div>
+          <div className="min-w-0">
+            <p className="text-xs font-semibold text-green-800 mb-0.5">Verified by Krishna Mohan &mdash; 14&times; Salesforce Certified</p>
+            <p className="text-xs text-green-700">
+              ADM-201 &bull; PD1 &bull; PD2 &bull; App Builder &bull; Consultant &amp; more. Content aligned to the official {RELEASE_CURRENT} exam guide. No braindumps or leaked content.{' '}
+              <Link href="/team" className="underline hover:no-underline font-medium">
+                About the author
+              </Link>
+              {' '}&middot;{' '}
+              <Link href="/about" className="underline hover:no-underline">
+                Methodology
+              </Link>
+            </p>
+          </div>
+        </div>
       </div>
     </section>
   )

@@ -141,6 +141,74 @@ export default function SalesforceCertificationSalaryPage() {
         <p className="text-xs text-gray-500 mt-3">Salary ranges reflect United States market data. UK, Australia, and European markets typically run 20–35% lower in absolute terms. Consultant/contractor day rates can be significantly higher than employment salaries.</p>
       </section>
 
+      {/* Regional salary comparison */}
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-1">Salesforce Salary by Region</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Salary ranges vary significantly by geography. The table below shows typical mid-level certified professional salaries for the same role across key markets.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Role (Mid-Level)</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">United States</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">United Kingdom</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Australia</th>
+                <th scope="col" className="py-2.5 font-semibold text-gray-900">India</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Salesforce Administrator</td>
+                <td className="py-2.5 pr-4">$80k–$100k</td>
+                <td className="py-2.5 pr-4">£45k–£65k</td>
+                <td className="py-2.5 pr-4">A$85k–A$110k</td>
+                <td className="py-2.5">₹8L–₹18L</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Platform Developer I</td>
+                <td className="py-2.5 pr-4">$105k–$130k</td>
+                <td className="py-2.5 pr-4">£55k–£80k</td>
+                <td className="py-2.5 pr-4">A$100k–A$135k</td>
+                <td className="py-2.5">₹12L–₹25L</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Consultant (Sales/Service)</td>
+                <td className="py-2.5 pr-4">$110k–$135k</td>
+                <td className="py-2.5 pr-4">£60k–£85k</td>
+                <td className="py-2.5 pr-4">A$110k–A$145k</td>
+                <td className="py-2.5">₹15L–₹30L</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Marketing Cloud Consultant</td>
+                <td className="py-2.5 pr-4">$115k–$145k</td>
+                <td className="py-2.5 pr-4">£65k–£90k</td>
+                <td className="py-2.5 pr-4">A$120k–A$155k</td>
+                <td className="py-2.5">₹18L–₹35L</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Application / System Architect</td>
+                <td className="py-2.5 pr-4">$150k–$175k</td>
+                <td className="py-2.5 pr-4">£80k–£110k</td>
+                <td className="py-2.5 pr-4">A$150k–A$195k</td>
+                <td className="py-2.5">₹30L–₹60L</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Technical Architect (CTA)</td>
+                <td className="py-2.5 pr-4">$180k–$250k+</td>
+                <td className="py-2.5 pr-4">£120k–£180k</td>
+                <td className="py-2.5 pr-4">A$200k–A$280k</td>
+                <td className="py-2.5">₹60L–₹1.5Cr</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-3">
+          Figures are annual base salary (excluding bonus and equity). UK and Australian salaries are lower in absolute terms but comparable in purchasing power. India figures reflect demand from global SIs and captive centres. L = Lakhs, Cr = Crores.
+        </p>
+      </section>
+
       {/* What drives salary */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Actually Drives Salesforce Salary?</h2>

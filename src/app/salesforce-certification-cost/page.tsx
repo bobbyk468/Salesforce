@@ -187,6 +187,68 @@ export default function SalesforceCertificationCostPage() {
         </p>
       </section>
 
+      {/* Regional pricing table */}
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-10">
+        <h2 className="text-xl font-bold text-gray-900 mb-1">Regional Pricing: USD vs INR</h2>
+        <p className="text-sm text-gray-600 mb-4">
+          Pearson VUE pricing in India is typically lower than the USD list price. The table below shows approximate INR equivalents at current exchange rates. Always confirm the final price in your Salesforce certification account before booking — regional pricing can change.
+        </p>
+        <div className="overflow-x-auto">
+          <table className="w-full text-sm text-left border-collapse">
+            <thead>
+              <tr className="border-b-2 border-gray-200">
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Cert Tier</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">USD (Global)</th>
+                <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">INR (India, approx.)</th>
+                <th scope="col" className="py-2.5 font-semibold text-gray-900">USD Retake</th>
+              </tr>
+            </thead>
+            <tbody className="text-gray-700 divide-y divide-gray-100">
+              <tr>
+                <td className="py-2.5 pr-4">Foundations</td>
+                <td className="py-2.5 pr-4 font-semibold">$75</td>
+                <td className="py-2.5 pr-4">~₹6,200</td>
+                <td className="py-2.5">$37.50</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Accredited Professional (AP)</td>
+                <td className="py-2.5 pr-4 font-semibold">$100</td>
+                <td className="py-2.5 pr-4">~₹8,300</td>
+                <td className="py-2.5">$50</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Core Certifications</td>
+                <td className="py-2.5 pr-4 font-semibold">$200</td>
+                <td className="py-2.5 pr-4">~₹16,600</td>
+                <td className="py-2.5">$100</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Tableau</td>
+                <td className="py-2.5 pr-4 font-semibold">$250</td>
+                <td className="py-2.5 pr-4">~₹20,800</td>
+                <td className="py-2.5">$125</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Architect Credentials</td>
+                <td className="py-2.5 pr-4 font-semibold">$400</td>
+                <td className="py-2.5 pr-4">~₹33,200</td>
+                <td className="py-2.5">$200</td>
+              </tr>
+              <tr>
+                <td className="py-2.5 pr-4">Certified Technical Architect (CTA)</td>
+                <td className="py-2.5 pr-4 font-semibold">$6,000</td>
+                <td className="py-2.5 pr-4">~₹4,98,000</td>
+                <td className="py-2.5">$3,000</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p className="text-xs text-gray-500 mt-3 flex gap-1.5">
+          <Info className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
+          INR prices are indicative (USD &times; ~83 exchange rate). Pearson VUE may apply regional discounts; verify exact pricing on the official Salesforce certification registration page before purchase.
+        </p>
+      </section>
+
       {/* Per-tier detail cards */}
       <section className="space-y-6 mb-10">
         <h2 className="text-2xl font-bold text-gray-900">Fees by Certification Tier</h2>

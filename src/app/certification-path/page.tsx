@@ -6,6 +6,7 @@ import type { PathStage } from '@/lib/certification-path-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import CertificationPathContent from '@/components/CertificationPathContent'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { OverviewCertRoadmap } from '@/components/CertRoadmapSvg'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
   foundational: { bg: 'bg-emerald-50', border: 'border-emerald-200', label: 'Foundational' },
@@ -89,6 +90,8 @@ export default function CertificationPathPage() {
       </div>
 
       <ContentPageAuthor />
+
+      <OverviewCertRoadmap />
 
       {/* Legend */}
       <div className="mb-12 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">

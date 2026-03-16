@@ -4,6 +4,7 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { ConsultantCertRoadmap } from '@/components/CertRoadmapSvg'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -77,6 +78,8 @@ export default function ConsultantCertificationPathPage() {
       </header>
 
       <ContentPageAuthor />
+
+      <ConsultantCertRoadmap />
 
       {/* Foundation */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
