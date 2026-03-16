@@ -14,7 +14,7 @@ export async function generateStaticParams() {
 
 const ROLE_TITLES: Record<string, string> = {
   architect:              `Salesforce Architect Certification Path (${RELEASE_CURRENT})`,
-  consultant:             `Salesforce Certified Consultant Certifications (${RELEASE_CURRENT})`,
+  consultant:             `Salesforce Consultant Cert Path: Free Practice (${RELEASE_CURRENT})`,
   marketing:              `Salesforce Marketing Cloud Certification (${RELEASE_CURRENT})`,
   associate:              `Salesforce Associate Certification (${RELEASE_CURRENT})`,
   administrator:          `Salesforce Admin Certification: ADM-201 + More (${RELEASE_CURRENT})`,
@@ -80,9 +80,9 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   architect:
-    'Salesforce Architect certification path to CTA: Application, System, Integration, Data Architect. Free practice questions & study guides. Start free now.',
+    'Salesforce Architect cert path to CTA: Application, System, Integration, Data Architect. Free practice — no sign-up. Start now.',
   consultant:
-    'Salesforce Certified Consultant certifications: Sales Cloud, Service Cloud, Experience Cloud, Field Service + more. Free practice exams. Start free now.',
+    'Certified Salesforce Consultant: all exams — Sales Cloud, Service Cloud, Experience Cloud + more. Free practice, no sign-up. Start now.',
   marketing:
     'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist + more. Free practice & study guides. Start free now.',
   associate:

@@ -263,6 +263,58 @@ export default function Developer1Page() {
             <ExamPrepContent slug={slug} />
           </div>
 
+          {/* Study Timeline */}
+          <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_380px]">
+            <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
+              Suggested study timeline for PD1 (6–10 weeks)
+            </summary>
+            <div className="hidden group-open:block lg:block">
+              <h2 className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
+                Suggested study timeline for PD1 (6–10 weeks)
+              </h2>
+              <p className="text-sm text-gray-600 mb-3">
+                PD1 requires hands-on coding practice — not just reading. Budget time for Apex exercises in a Developer Edition org alongside study.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li><strong>Weeks 1–2:</strong> Salesforce Fundamentals &amp; Data Modelling (20%) — objects, relationships, schema design, SOQL basics</li>
+                <li><strong>Weeks 2–3:</strong> Logic &amp; Process Automation (23%) — Apex basics, governor limits, bulkification patterns</li>
+                <li><strong>Weeks 3–5:</strong> Apex Triggers &amp; Classes (24%) — before/after triggers, handler pattern, async Apex (future, batch, queueable)</li>
+                <li><strong>Weeks 5–6:</strong> Testing &amp; Debugging (22%) — test class structure, mock callouts, code coverage, debug logs</li>
+                <li><strong>Weeks 6–7:</strong> UI &amp; Deployment (11%) — LWC basics, Aura, Visualforce, change sets, sandboxes</li>
+                <li><strong>Weeks 7–8:</strong> Full mock exams and targeted weak-area review</li>
+              </ul>
+              <p className="text-xs text-gray-500 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days — you already know the data model and platform fundamentals.</p>
+            </div>
+          </details>
+
+          {/* Is PD1 Hard? */}
+          <details id="is-pd1-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_460px]">
+            <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
+              Is the PD1 Exam Hard?
+            </summary>
+            <div className="hidden group-open:block lg:block">
+              <h2 id="pd1-difficulty-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
+                Is the PD1 Exam Hard?
+              </h2>
+              <p className="text-sm text-gray-700 mb-3">
+                The Salesforce Platform Developer I exam is considered <strong className="text-gray-900">moderately difficult</strong> — harder than ADM-201, but accessible to candidates with 3–6 months of real Apex development experience. The challenge is that most questions present actual code and require you to reason about governor limits, async patterns, and trigger behaviour under realistic conditions.
+              </p>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
+                <li><strong>60 scored questions</strong> in 110 minutes — roughly 1.8 minutes per question.</li>
+                <li><strong>68% passing score</strong> — you can miss up to 19 questions and still pass.</li>
+                <li><strong>Code-heavy</strong> — expect 30–40% of questions to include Apex code snippets.</li>
+                <li><strong>Scenario-based</strong> — most questions describe a business or technical requirement and ask for the right approach.</li>
+                <li><strong>No multiple-select trick</strong> — PD1 uses single-best-answer format (unlike ADM-201 which has some multiple-select).</li>
+              </ul>
+              <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
+                <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
+                <p className="text-sm text-emerald-700">
+                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you&apos;re scoring below 70% on mocks, focus on governor limits and bulkification — those two topics cover over 30% of the exam combined.
+                </p>
+              </div>
+            </div>
+          </details>
+
           {/* Key Concepts */}
           <div id="key-concepts" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">
             <h2 className="text-2xl font-bold text-gray-900 mb-4">Platform Developer I: Key Concepts for the Exam</h2>
@@ -382,6 +434,7 @@ export default function Developer1Page() {
           <CertTableOfContents
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
+              { id: 'is-pd1-hard', title: 'Is PD1 Hard?' },
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'scenario-tips', title: 'How to Pass PD1' },
               { id: 'practice-questions', title: 'Practice Questions' },

@@ -317,6 +317,11 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
         anchorText: 'Salesforce Certified Application Architect study guide',
       },
       {
+        name: 'Salesforce Certified System Architect',
+        href: '/certifications/system-architect',
+        anchorText: 'Salesforce Certified System Architect study guide',
+      },
+      {
         name: 'Architect role certifications',
         href: '/certifications/role/architect',
         anchorText: 'Architect role certification roadmap and guides',
