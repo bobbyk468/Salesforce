@@ -5,7 +5,7 @@ import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount 
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ctaTitle = 'How to Become a Salesforce Certified Technical Architect (CTA) | Trailblaze Prep'
+const ctaTitle = 'Become a Salesforce CTA | Trailblaze Prep'
 const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(ctaTitle)}`
 const ctaDescription =
   'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'

@@ -6,10 +6,10 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Service Cloud Consultant Exam Notes (${RELEASE_CURRENT}): Deep-Dive Study Guide`
+const pageTitle = `Service Cloud Consultant Exam Notes (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `In-depth Service Cloud Consultant exam notes (${RELEASE_CURRENT}): detailed Omni-Channel routing, entitlement milestones, Lightning Knowledge configuration, and case management scenarios — with free practice questions.`
+  `Service Cloud Consultant exam notes (${RELEASE_CURRENT}): Omni-Channel routing, entitlements, Lightning Knowledge, and case management — with free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
