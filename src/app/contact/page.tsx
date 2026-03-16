@@ -292,15 +292,15 @@ function ContactPageContent() {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue underline">
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-800 underline hover:no-underline">
                       {CONTACT_EMAIL}
                     </a>
                   </div>
                 </div>
 
                 <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-[#25D366]/10 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="h-6 w-6 text-[#25D366]" />
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="h-6 w-6 text-green-700" />
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-semibold text-gray-900">WhatsApp</h3>
@@ -308,7 +308,7 @@ function ContactPageContent() {
                       href={WHATSAPP_LINK}
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="text-[#25D366] hover:underline font-medium"
+                      className="text-green-700 underline hover:no-underline font-medium"
                     >
                       Chat with us directly
                     </a>

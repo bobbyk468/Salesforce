@@ -136,7 +136,7 @@ export default function MuleSoftIntegrationFoundationsPage() {
           examCodeNote={
             <>
               Book via the official{' '}
-              <a href="https://trailhead.salesforce.com/credentials/verification" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:underline">Salesforce credential verification</a>
+              <a href="https://trailhead.salesforce.com/credentials/verification" target="_blank" rel="noopener noreferrer" className="text-blue-800 underline hover:no-underline">Salesforce credential verification</a>
               {' '}and Webassessor. No separate alpha-numeric exam code; the exam is listed as MuleSoft Integration Foundations.
             </>
           }
