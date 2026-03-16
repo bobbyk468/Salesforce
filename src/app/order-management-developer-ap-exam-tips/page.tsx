@@ -163,7 +163,26 @@ export default function OrderManagementDeveloperApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Order Management Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Order Management APIs — REST vs Connect API vs APEX</p>
+            <p className="text-sm text-gray-700">Salesforce OMS exposes Connect API endpoints for storefront integrations (cart-to-order, checkout). REST API is for general programmatic access. Apex classes (OrderManagement namespace) are available for server-side custom logic. Candidates use general REST endpoints for checkout integrations — the exam expects Connect API (specifically the OMS Connect endpoints) for storefront-to-order creation workflows.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Inventory Availability Check — Not a Default Order Creation Step</p>
+            <p className="text-sm text-gray-700">Inventory availability checks are NOT automatically performed when an Order is created in Salesforce OMS unless explicitly configured. Developers must implement the check via the Inventory Integration or a custom callout. Candidates assume OMS validates inventory automatically — the exam expects explicit inventory availability check configuration as part of the order capture workflow.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Payment Integration — Capture vs Authorisation vs Void</p>
+            <p className="text-sm text-gray-700">Authorisation reserves funds on a payment method without charging. Capture charges the authorised amount (typically after shipment). Void cancels an authorisation before capture. In OMS, these correspond to separate Payment Gateway API calls. Candidates design a single payment operation — the exam expects separate Auth and Capture calls in the correct fulfilment sequence.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -162,7 +162,26 @@ export default function SlackConsultantExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Workflow Builder vs Slack API — No-Code vs Pro-Code</p>
+            <p className="text-sm text-gray-700">Workflow Builder is a no-code tool for automating Slack-native actions: sending messages, collecting form responses, posting to channels on a trigger. The Slack API is for complex integrations requiring custom logic, external data, or dynamic responses. Candidates recommend Workflow Builder for all automation — the exam expects Workflow Builder for simple, Slack-native automations and API/Bolt for complex custom integrations.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Canvas vs Posts vs Bookmarks — Persistent Content Types</p>
+            <p className="text-sm text-gray-700">Canvas is the collaborative document surface in a channel for shared notes, meeting agendas, and project details. Posts are formatted messages — they appear in the channel timeline. Bookmarks are pinned links/resources in a channel header. Candidates use Posts for all persistent reference content — the exam expects Canvas for collaborative, editable documents and Bookmarks for quick-access links.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce for Slack Integration — Connected App vs Custom Integration</p>
+            <p className="text-sm text-gray-700">The Salesforce for Slack app is a pre-built integration (Salesforce Records app) that lets users view, create, and update Salesforce records from Slack using the official AppExchange app. Custom Slack-Salesforce integrations use the Slack API + Salesforce REST API. Candidates design custom integrations for standard CRM lookups — the exam expects the AppExchange-native Salesforce for Slack app for standard record operations.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

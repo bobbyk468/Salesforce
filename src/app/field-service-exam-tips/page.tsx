@@ -160,7 +160,26 @@ export default function FieldServiceExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Field Service Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Dispatcher Console vs Gantt vs Service Appointment List — Three Different Views</p>
+            <p className="text-sm text-gray-700">The Dispatcher Console is the full scheduling interface with Gantt, map, and list views. The Gantt shows time-based schedule visualisation per resource. The Service Appointment List View is a standard list for bulk management. Candidates describe the Gantt when they mean the Dispatcher Console — the exam distinguishes these views and expects accurate terminology when describing which interface a dispatcher uses for a given task.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Auto-Scheduling vs Optimization — Immediate vs Batch Processing</p>
+            <p className="text-sm text-gray-700">Auto-Scheduling assigns the next available qualified resource immediately when a Service Appointment is created or activated (one-at-a-time, real-time). Optimization runs a batch process to re-optimise the entire schedule for a set of appointments using travel minimisation and priority (scheduled in off-peak hours). Candidates recommend Optimization for real-time scheduling — the exam expects Auto-Scheduling for immediate single-appointment assignment.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Work Types vs Skill Requirements — Templates vs Qualifications</p>
+            <p className="text-sm text-gray-700">Work Types are templates that define estimated duration, required skills, and default service territory for a category of work (e.g., "Annual HVAC Maintenance"). Skill Requirements are defined on the Work Type and matched against Resource Skills when scheduling. Candidates configure skills directly on Service Appointments — the exam expects skills to be defined on Work Types so they propagate to all Service Appointments of that type.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

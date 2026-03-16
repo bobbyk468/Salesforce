@@ -162,7 +162,26 @@ export default function CommunicationsCloudApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Communications Cloud Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Enterprise Product Catalog vs Standard Salesforce Products — Different Objects</p>
+            <p className="text-sm text-gray-700">Communications Cloud uses the Vlocity (OmniStudio) Enterprise Product Catalog (EPC) for complex telecommunications product modelling — bundles, components, pricing, and eligibility rules. Standard Salesforce Products and Price Books do not handle the hierarchical, configurable nature of telco offers. Candidates answer product questions using standard Salesforce product logic — the exam expects EPC-specific concepts.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Order Decomposition — Fulfilment Orders Are Automatically Created</p>
+            <p className="text-sm text-gray-700">When an order is submitted in Communications Cloud, Order Management decomposes it into Fulfilment Orders and Fulfilment Order Line Items based on routing rules. This decomposition is automatic — developers do not manually create Fulfilment Orders. Candidates design manual Fulfilment Order creation logic — the exam expects configuration of the decomposition rules, not custom code.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. CPQ in Communications Context — VlocityProduct vs Standard CPQ</p>
+            <p className="text-sm text-gray-700">Communications Cloud CPQ uses Vlocity/OmniStudio product modelling (not standard Salesforce CPQ). The pricing and configuration rules use Custom Price Methods and Product Actions within the EPC. Candidates apply standard Salesforce CPQ concepts (Price Rules, Product Rules) to Communications Cloud scenarios — these are different systems with different configuration paradigms.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

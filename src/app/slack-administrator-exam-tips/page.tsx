@@ -162,7 +162,26 @@ export default function SlackAdministratorExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Slack Administrator Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Workspace vs Organisation vs Enterprise Grid — Three Admin Scopes</p>
+            <p className="text-sm text-gray-700">A Workspace is a single Slack instance (company.slack.com). An Organisation groups multiple Workspaces under shared admin controls. Enterprise Grid connects many Organisations under one enterprise umbrella with centralised security. Candidates apply Workspace-level settings to Enterprise Grid problems — the exam distinguishes admin scope: Workspace Admin (one workspace), Org Admin (multiple workspaces), Enterprise Grid Admin (enterprise-wide).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Public vs Private vs Shared Channels — Visibility and External Access</p>
+            <p className="text-sm text-gray-700">Public channels are visible and joinable by all workspace members. Private channels require an invitation — members cannot search or join uninvited. Shared channels (Slack Connect) connect internal channels with external organisations. Candidates recommend Private channels for External Partner collaboration — the exam expects Shared Channels (Slack Connect) for cross-organisation communication.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. User Groups vs Channels — @mention Broadcast vs Conversation Space</p>
+            <p className="text-sm text-gray-700">User Groups are @mentionable sets of users (e.g., @engineering-team) — mentioning the group notifies all members but does not create a conversation space. Channels are conversation spaces where messages are posted and archived. Candidates create new channels when a scenario just needs a way to notify a team — the exam expects User Groups for broadcast notifications without needing a new channel.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

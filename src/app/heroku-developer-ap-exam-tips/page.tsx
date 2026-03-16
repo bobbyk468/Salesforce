@@ -162,7 +162,26 @@ export default function HerokuDeveloperApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Heroku Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Ephemeral Filesystem — Files Written to Dyno Are Lost on Restart</p>
+            <p className="text-sm text-gray-700">Heroku dynos have an ephemeral filesystem: any file written during a dyno session is lost when the dyno restarts (which happens at least daily). Candidates design apps that write user uploads or generated files to the local filesystem — the exam expects external storage (AWS S3, Heroku Postgres) for persistent files.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env — Environment Variables Are Not in Code</p>
+            <p className="text-sm text-gray-700">Config Vars are Heroku&apos;s secure environment variable store — set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git — the exam expects Config Vars for all secrets and environment-specific settings.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Release Phase — Run Migrations Before New Code Goes Live</p>
+            <p className="text-sm text-gray-700">The Release Phase is a Heroku feature that runs a command (e.g., a database migration script) after a new slug is built but before it is deployed to dynos. If the release phase command fails, the deployment is rolled back automatically. Candidates run migrations manually after deployment — the exam expects Release Phase configuration for zero-downtime database migrations.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

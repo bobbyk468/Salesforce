@@ -162,7 +162,26 @@ export default function NPSPConsultantExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most NPSP Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Affiliation vs Relationship — Organisation Connection vs Person Connection</p>
+            <p className="text-sm text-gray-700">Affiliations link a Contact to a non-Household Account (their employer, a board membership, a programme affiliation). Relationships link two Contacts to each other (spouse, sibling, colleague). Candidates use Relationships for all connection types — the exam expects Affiliations for Contact-to-Organisation connections and Relationships for Contact-to-Contact.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Gift Entry — Templates Are Required for Batch Processing</p>
+            <p className="text-sm text-gray-700">NPSP Gift Entry requires a Gift Entry Template to be configured before batch gifts can be entered. Templates define which fields appear, default values, and matching rules for donors. Candidates try to enter gifts without configuring a template first — the exam expects Gift Entry Template setup as the prerequisite for efficient batch gift processing.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Engagement Plans — Not the Same as Campaigns</p>
+            <p className="text-sm text-gray-700">Engagement Plans are NPSP-specific task templates that define a sequence of outreach tasks (call, email, letter) assigned to a constituent over time. Salesforce Campaigns track marketing lists and ROI. Candidates use Campaigns for stewardship outreach sequences — the exam expects Engagement Plans for personalised, task-driven constituent outreach.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

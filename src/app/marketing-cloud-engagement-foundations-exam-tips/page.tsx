@@ -162,7 +162,26 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Engagement Foundations Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Contact vs Subscriber — Two Different Identity Concepts</p>
+            <p className="text-sm text-gray-700">A Contact in Marketing Cloud is a person record in Contact Builder identified by a Contact Key (often Salesforce CRM ID). A Subscriber is an email-specific opt-in record with a Subscriber Key. The same person can be both a Contact and a Subscriber, but they are stored differently. Candidates use the terms interchangeably — the exam distinguishes them: Contacts are cross-channel; Subscribers are email-channel specific.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. All Subscribers List vs Publication Lists vs Data Extensions for Sending</p>
+            <p className="text-sm text-gray-700">The All Subscribers list is the master opt-out tracking list — it cannot be used for targeting sends. Publication Lists are opt-in subscription lists for specific content. Data Extensions (filtered or full) are the recommended targeting method for all complex sends. Candidates target sends using the All Subscribers list — the exam expects Data Extensions or Publication Lists for targeting.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Email Studio vs Journey Builder — One-Time vs Ongoing</p>
+            <p className="text-sm text-gray-700">Email Studio is used for one-time or ad-hoc batch sends (campaigns, announcements). Journey Builder is used for ongoing automated programs triggered by events (welcome series, re-engagement journeys). Candidates build welcome emails in Email Studio — the exam expects Journey Builder for any automated, triggered, multi-step sequence.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

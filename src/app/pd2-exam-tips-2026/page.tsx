@@ -183,7 +183,26 @@ export default function Pd2ExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Platform Developer II (PD2) Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Apex Design Patterns — Separation of Concerns in Trigger Architecture</p>
+            <p className="text-sm text-gray-700">PD2 tests Apex design patterns: Trigger Handler pattern separates trigger logic from the trigger file. Service Layer pattern contains reusable business logic. Selector pattern centralises SOQL queries. Domain Layer validates and processes records. Candidates write all logic directly in Apex triggers — the exam expects Trigger Handler pattern at minimum, and asks which layer a specific piece of logic belongs in.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Asynchronous Apex: Future vs Queueable vs Batch vs Scheduled</p>
+            <p className="text-sm text-gray-700">@future: runs one asynchronous method, no chaining, no state. Queueable: like @future but supports chaining, object parameters, and monitoring. Batch: processes large data volumes in chunks (up to 50M records). Scheduled: executes on a cron-like schedule. Candidates use @future for all async operations — the exam expects Queueable when chaining is needed, Batch for large data sets, and Scheduled for recurring jobs.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Platform Cache — Partitioned Storage That Does Not Persist Across Deployments</p>
+            <p className="text-sm text-gray-700">Platform Cache stores computed values (formula results, complex SOQL outputs) in an in-memory cache with a defined TTL, reducing repeated computation. Org Cache is shared across all users; Session Cache is user-session-specific. Cache is NOT persistent — values are lost on deployment, maintenance, or TTL expiry. Candidates design Platform Cache as a permanent data store — the exam expects fallback logic to regenerate values on cache miss.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

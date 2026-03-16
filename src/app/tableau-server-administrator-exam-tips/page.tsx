@@ -162,7 +162,26 @@ export default function TableauServerAdministratorExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Server Administrator Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Sites vs Projects vs Workbooks — The Permission Hierarchy</p>
+            <p className="text-sm text-gray-700">Sites are the top-level tenant isolation unit (similar to Salesforce Business Units). Projects are folders within a site for organising content. Workbooks contain views and dashboards. Permissions can be set at Site → Project → Workbook level — more specific permissions override broader ones. Candidates set permissions at the Workbook level for all users — the exam expects Project-level permissions for efficient group-based access management.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. TSM vs tabcmd vs REST API — Three Admin Interfaces</p>
+            <p className="text-sm text-gray-700">TSM (Tableau Services Manager) is the server administration CLI for server configuration, backups, and restart. tabcmd is the command-line tool for automating content tasks (publish, download, refresh). REST API enables programmatic server management from applications. Candidates use tabcmd for server restarts — the exam expects TSM for infrastructure operations and tabcmd for content automation.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Extract Refresh — Scheduled vs Manual vs Incremental</p>
+            <p className="text-sm text-gray-700">Full Refresh replaces all data in the extract. Incremental Refresh appends only new rows (requires a date/ID field to identify new records). Scheduled refreshes run automatically on a defined schedule. Candidates use Full Refresh for all scheduled refreshes — the exam expects Incremental Refresh for large data sources where only new records change, to reduce refresh time and database load.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

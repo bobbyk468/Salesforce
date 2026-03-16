@@ -162,7 +162,26 @@ export default function CpqBillingApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CPQ Billing Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Billing Schedule vs Invoice Schedule — When Each Is Created</p>
+            <p className="text-sm text-gray-700">A Billing Schedule is created when a Salesforce CPQ Subscription order is activated — it defines the future billing dates and amounts for recurring revenue. Invoice Schedules are the individual line-item billing events within that schedule. Candidates conflate these: the Billing Schedule is the container; Invoice Schedules are the individual charge events. Knowing this hierarchy is essential for troubleshooting why a customer was billed incorrectly.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Proration — It Applies to Activations and Cancellations, Not Renewals</p>
+            <p className="text-sm text-gray-700">Proration calculates the partial-period charge when a subscription starts or ends mid-period. It does NOT apply to renewals (which start on a clean period boundary). Candidates answer "the customer was charged a prorated amount on renewal" scenarios by checking proration settings — the exam expects them to check the renewal date alignment instead.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Payment Gateway vs Payment Method — Architecture vs Data</p>
+            <p className="text-sm text-gray-700">A Payment Gateway is the Salesforce Billing integration with an external payment processor (Stripe, Adyen). A Payment Method is a specific payment instrument on file for a customer (credit card, ACH). Candidates conflate these: configuring a gateway is a one-time org setup; adding a Payment Method is a per-customer action. Exam scenarios about why a customer&apos;s payment failed expect Payment Method troubleshooting, not gateway reconfiguration.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -152,7 +152,26 @@ export default function TableauDataAnalystExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Data Analyst Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Dimensions vs Measures — Blue vs Green Pills Affect How Data Is Aggregated</p>
+            <p className="text-sm text-gray-700">Dimensions are categorical fields (name, region, date — shown as blue pills) that slice data. Measures are numerical fields (sales, count, profit — shown as green pills) that are aggregated. Dragging a dimension to the Rows shelf creates headers. Dragging a measure creates an axis. Candidates put Measures on Rows without understanding that Tableau will aggregate them — know that converting a measure to a Discrete dimension creates header rows, not an axis.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. LOD Expressions — FIXED vs INCLUDE vs EXCLUDE</p>
+            <p className="text-sm text-gray-700">FIXED calculates a value at a specified dimension level regardless of what is in the view. INCLUDE adds dimensions to the calculation beyond what is in the view. EXCLUDE removes dimensions from the calculation. Candidates use FIXED for all LOD calculations — the exam tests which LOD expression to use: computing revenue per customer independent of view filters = FIXED; computing average per sub-category when only category is in the view = INCLUDE.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Filters Order of Operations — Data Source Filters Run First, Table Calculations Last</p>
+            <p className="text-sm text-gray-700">Tableau applies filters in this order: Extract → Data Source → Context → Sets → Dimension Filters → Measure Filters → Table Calculations. A Measure Filter applied before aggregation behaves differently than one applied after. Candidates apply Measure Filters expecting them to remove rows before aggregation — Measure Filters run after aggregation by default and filter out aggregated results, not individual rows.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

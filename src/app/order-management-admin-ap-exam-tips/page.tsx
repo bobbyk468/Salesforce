@@ -162,7 +162,26 @@ export default function OrderManagementAdminApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Order Management Admin Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Fulfillment Orders vs Order Summaries — Operational vs Commercial</p>
+            <p className="text-sm text-gray-700">Order Summaries represent the customer-facing order (what was ordered, total price, status). Fulfillment Orders represent the operational fulfilment split (sent from warehouse A vs warehouse B). One Order Summary can generate multiple Fulfillment Orders based on routing rules. Candidates update Order Summaries for operational status changes — the exam expects Fulfillment Order updates for warehouse and shipping status.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Order Routing Rules — Not Configured in Flow by Default</p>
+            <p className="text-sm text-gray-700">Order routing assigns line items to fulfilment locations based on inventory availability, location proximity, or business rules. In Salesforce OMS, routing rules are configured in the Routing Engine (not via standard Flow). Candidates build custom Flow routing logic — the exam expects Routing Rule configuration within Order Management&apos;s built-in routing framework.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Return Merchandise Authorisation (RMA) — Separate Process from Cancellation</p>
+            <p className="text-sm text-gray-700">A Cancellation stops an order before it ships (no physical return required). An RMA processes a post-shipment return: the customer ships back the goods, inventory is restocked, and a refund is issued. These are separate workflows in Salesforce OMS. Candidates use Cancellation logic for post-shipment returns — the exam expects the RMA workflow with return order, return line items, and refund processing.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -162,7 +162,26 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Consumer Goods Cloud Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Retail Execution Visits vs Service Appointments — Different Objects in CGC</p>
+            <p className="text-sm text-gray-700">Consumer Goods Cloud uses the Visit object (not Service Appointments) for retail execution. Visits are linked to Accounts (retail stores), have planned and actual dates, and are assigned to field representatives. Service Appointments are a Field Service Lightning concept. Candidates conflate these because both involve scheduling field staff — the exam expects Visit-based logic for retail execution scenarios.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Assessments vs Surveys — Purpose-Built Retail Audit Tool</p>
+            <p className="text-sm text-gray-700">Consumer Goods Cloud includes purpose-built Assessment Tasks for retail audits (shelf compliance, planogram adherence, product availability). These are not the same as Salesforce Surveys (customer feedback tool). Exam scenarios about store audits and compliance checks expect Assessment Task configuration — not Surveys or custom LWC components.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. My Route Planning — Optimisation Is Not Automatic</p>
+            <p className="text-sm text-gray-700">My Route feature in Consumer Goods Cloud helps field reps plan their store visits for the day. Route optimisation (shortest path, priority-based sequencing) requires configuration of visit priority rules and territory setup. Candidates assume optimisation is on by default — the exam tests configuration of the underlying Visit Plan and Priority Score fields that drive the route.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

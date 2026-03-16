@@ -166,7 +166,26 @@ export default function PardotConsultantExamTipsPage() {
         </p>
       </section>
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Pardot (Account Engagement) Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Completion Actions vs Automation Rules vs Dynamic Lists — Three Trigger Mechanisms</p>
+            <p className="text-sm text-gray-700">Completion Actions fire once when a specific form/email/link action occurs (form submit triggers email send). Automation Rules run continuously, checking all prospects against criteria at intervals — they can fire multiple times. Dynamic Lists update list membership in real time based on criteria but do not trigger actions. Candidates use Completion Actions for ongoing nurture logic — the exam expects Automation Rules for criteria-based continuous processing.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Prospect Grades vs Scores — Profile Fit vs Engagement</p>
+            <p className="text-sm text-gray-700">Score measures engagement: points added for email opens, clicks, form fills. Grade measures profile fit: how well a prospect matches the ideal customer profile (industry, company size, title). Candidates use Score to prioritise all leads — the exam expects both to be used together: high score + high grade = prioritise; high score + low grade = nurture; low score + high grade = re-engage.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Pardot Business Units — Separate Instances Under One Salesforce Org</p>
+            <p className="text-sm text-gray-700">Pardot Business Units (BUs) allow multiple separate Pardot environments under one Salesforce org — each BU has its own prospects, lists, campaigns, and sending domains. Prospects are NOT shared between BUs by default. Candidates assume all Pardot BUs share one prospect database — the exam expects BU-specific prospect isolation and the Connected Campaigns feature for aligning Pardot and Salesforce campaign reporting.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

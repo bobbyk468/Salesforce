@@ -162,7 +162,26 @@ export default function DataArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Data Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes — Different Performance Tools, Different Use Cases</p>
+            <p className="text-sm text-gray-700">Skinny tables are Salesforce-managed read-only copies of frequently queried subsets of large objects — they speed full-table reads. Custom indexes speed lookups on specific fields in WHERE clauses. Candidates request custom indexes when they need skinny tables and vice versa. Use skinny tables when reports and queries need to scan millions of records; use custom indexes when queries filter on specific non-standard fields.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects — Real-Time vs Archive</p>
+            <p className="text-sm text-gray-700">External Objects surface data from external systems via Salesforce Connect without importing it — data stays in the source system and is queried in real time. Big Objects store massive historical volumes inside Salesforce for archival — they are write-once and have limited query capabilities (only indexed fields). Candidates recommend External Objects for large historical data — the exam expects Big Objects for archive data already in Salesforce.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption — Three Security Layers</p>
+            <p className="text-sm text-gray-700">Classic Encryption (legacy) encrypts individual text fields using AES 128 — it is visible to users with "View Encrypted Data" permission. Shield Platform Encryption encrypts data at rest at the database level using AES 256 — transparent to users with access. Data Masking replaces sensitive values with synthetic data in sandbox environments. The exam tests which to apply for a given security scenario — database-level encryption = Shield; field-level hiding = Classic; sandbox data protection = Data Masking.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

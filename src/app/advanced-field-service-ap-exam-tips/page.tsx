@@ -162,7 +162,26 @@ export default function AdvancedFieldServiceApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Advanced Field Service Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Work Order Line Items vs Service Appointments — Not the Same Object</p>
+            <p className="text-sm text-gray-700">Work Order Line Items define the scope of work (what tasks must be done). Service Appointments are scheduled visits linked to those tasks. One Work Order can have multiple Service Appointments. Candidates answer scheduling and capacity questions using Work Order logic — the exam expects Service Appointment logic. Scheduling rules, territories, and capacity caps are all properties of Service Appointments.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Operating Hours vs Scheduling Policy — Why the Right Technician Is Not Getting Assigned</p>
+            <p className="text-sm text-gray-700">Operating Hours define when a resource or territory is available to work. Scheduling Policies determine how the optimizer prioritises work (by skill, travel time, or SLA). When a qualified technician is not being scheduled, the most common exam answer is a missing or incorrect Operating Hours record — not a missing skill. Candidates default to checking skills first and miss the Operating Hours issue.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Permission Sets for Field Service Mobile — Profiles Are Not Enough</p>
+            <p className="text-sm text-gray-700">Field Service Lightning Mobile requires specific permission sets (Field Service Mobile License plus Field Service Standard or Dispatcher) in addition to a base profile. A standard Service Cloud profile alone does not grant mobile app access. Exam scenarios about why a field technician cannot see their schedule in the mobile app expect the answer "missing permission set," not "missing profile."</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

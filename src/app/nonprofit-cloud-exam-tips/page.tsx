@@ -162,7 +162,26 @@ export default function NonprofitCloudExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Nonprofit Cloud Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. NPSP Household Account Model — Contacts Are Primary, Accounts Are Secondary</p>
+            <p className="text-sm text-gray-700">Salesforce Nonprofit Success Pack (NPSP) inverts the standard B2B model: the Contact (donor/constituent) is the primary record, and the Household Account is auto-created to hold household-level relationships and giving. Candidates answer relationship questions using standard B2B Account-Contact logic — the exam expects NPSP&apos;s Household model where Contacts drive the relationship.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Soft Credits vs Hard Credits — Recognition vs Liability</p>
+            <p className="text-sm text-gray-700">Hard Credits are the actual donation amounts attributed to the donor who gave the money. Soft Credits recognise people who influenced the donation (a board member who introduced the donor) without financial liability. NPSP tracks both — candidates use a single Opportunity for all recognition. The exam expects Partial Soft Credits and Soft Credit Roles for recognising solicitors and influencers.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. NPSP Recurring Donations — Open-Ended vs Fixed-Length</p>
+            <p className="text-sm text-gray-700">NPSP Recurring Donations can be Open-Ended (run indefinitely until cancelled) or Fixed-Length (a set number of installments). Each Recurring Donation creates Opportunity installments on a schedule. Candidates model monthly pledges as individual Opportunities — the exam expects Recurring Donation records with the correct recurrence type and the auto-generated installment Opportunity schedule.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

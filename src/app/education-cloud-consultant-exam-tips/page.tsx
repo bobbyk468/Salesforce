@@ -161,7 +161,26 @@ export default function EducationCloudConsultantExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Education Cloud Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA) — Household vs Individual Account Model</p>
+            <p className="text-sm text-gray-700">Education Cloud uses the Salesforce.org Education Data Architecture (EDA) which models students as Contacts linked to multiple Accounts (Household, Academic Program, University). This is different from the standard B2C Account-Contact model. Candidates answer relationship questions using standard Account-Contact logic — the exam expects EDA relationship types and the Affiliation object for representing student membership in programs.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Admissions Connect — Application vs Inquiry vs Prospect Record</p>
+            <p className="text-sm text-gray-700">Admissions Connect tracks the prospective student lifecycle: Inquiry (initial interest) → Application (formal submission) → Decision (acceptance/rejection) → Enrollment. Each stage has distinct record types and status fields. Candidates use a single Contact record for all stages — the exam expects Application-level record management and understands that Applications are separate objects from Contact/Lead.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Success Plans vs Alerts — Proactive vs Reactive Advising</p>
+            <p className="text-sm text-gray-700">Success Plans in Education Cloud are proactive templates for student advising milestones (register for courses, meet with advisor, complete FAFSA). Alerts are reactive notifications triggered by at-risk signals (missed class, low GPA). Candidates design alerts for all advising scenarios — the exam expects Success Plans for structured, proactive outreach and Alerts only for reactive intervention.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

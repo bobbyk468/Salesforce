@@ -162,7 +162,26 @@ export default function MuleSoftIntegrationArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Integration Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. API Policies — Rate Limiting vs Throttling vs SLA Tiers</p>
+            <p className="text-sm text-gray-700">Rate Limiting blocks API calls that exceed the defined limit (hard stop, returns 429). Throttling queues excess calls and processes them when capacity is available (soft limit, adds latency). SLA Tiers grant different rate limits to different API consumers (Gold = 1000 req/min, Silver = 100 req/min). Candidates use rate limiting when throttling is appropriate — know the difference: rate limiting = reject; throttling = delay.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Anypoint VPC and VPN — Private Network Architecture</p>
+            <p className="text-sm text-gray-700">An Anypoint VPC (Virtual Private Cloud) creates a private network for CloudHub-deployed Mule apps, isolating them from the public internet. A VPN extends the VPC to an on-premises network. Candidates design Anypoint VPC for all network security — the exam also expects knowledge of Transit Gateway (connecting multiple VPCs) and Dedicated Load Balancers (exposing internal APIs on custom domains).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. API Autodiscovery — Linking a Mule App to API Manager</p>
+            <p className="text-sm text-gray-700">API Autodiscovery connects a deployed Mule application to its API Manager instance using an API ID and Environment Credentials. Without this, API Manager policies are not applied to the running Mule app. Candidates configure policies in API Manager and expect them to apply automatically — the exam expects Autodiscovery configuration in the Mule app to link the two systems.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

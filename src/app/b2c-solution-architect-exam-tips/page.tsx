@@ -162,7 +162,26 @@ export default function B2CSolutionArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Solution Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Single vs Multi-Cloud Order Management — When OMS Is Needed</p>
+            <p className="text-sm text-gray-700">Salesforce Order Management (OMS) handles post-purchase order lifecycle: fulfilment, inventory, returns, and shipping. It is a separate product from B2C Commerce. Candidates design order processing inside B2C Commerce — the exam expects OMS for complex multi-location fulfilment, returns, and order orchestration scenarios that exceed what the commerce platform handles natively.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Identity Resolution — Matching Contacts Across Channels Without Duplication</p>
+            <p className="text-sm text-gray-700">B2C Solution Architecture often involves customers existing in both Commerce Cloud and Service Cloud. Without identity resolution (matching on email or loyalty ID), the same person creates duplicate records. Exam scenarios about unified customer view expect Data Cloud or a matching/merging strategy — not just standard duplicate rules, which only prevent creation, not cross-system matching.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Headless Commerce Architecture — When to Recommend It</p>
+            <p className="text-sm text-gray-700">Headless commerce separates the front-end (custom React/Next.js PWA) from the back-end (B2C Commerce APIs). It is recommended when: brand requires full UI control, performance demands exceed Storefront Reference Architecture limits, or content is managed in an external CMS. Candidates recommend headless for all scenarios — the exam expects SFRA (Storefront Reference Architecture) first unless the scenario explicitly requires custom front-end control.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

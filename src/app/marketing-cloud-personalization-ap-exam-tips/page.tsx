@@ -162,7 +162,26 @@ export default function MarketingCloudPersonalizationApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Personalization Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Identity Resolution — Web SDK Tracks Anonymous Until Identity Is Asserted</p>
+            <p className="text-sm text-gray-700">The MCP Web SDK tracks visitors anonymously by default (anonymous profile). When a user logs in or fills out a form, the system merges the anonymous session with a known profile using the Identity attribute (email, CRM ID). Candidates expect immediate identity resolution — anonymous tracking must be explicitly merged via setIdentity() or an identity event. Without this, web behaviour is attributed to an anonymous profile.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Campaigns vs Experiences vs Templates — Three-Level Content Hierarchy</p>
+            <p className="text-sm text-gray-700">A Campaign is the top-level container for a personalisation initiative. An Experience is a specific content variant within a campaign (shown to a defined audience segment). A Template is the layout/format definition for how content is rendered (banner, popup, infobar). Candidates create new campaigns for every A/B test variant — the exam expects multiple Experiences within one Campaign for variant testing.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Einstein Decisions vs Rules-Based Personalisation — ML vs Configuration</p>
+            <p className="text-sm text-gray-700">Einstein Decisions uses machine learning to select the best content/offer for each visitor based on their behaviour and attributes. Rules-based personalisation uses explicit audience segment conditions to show specific content. Candidates use Einstein Decisions for all personalisation — the exam expects rules-based for deterministic scenarios ("show this offer to all Gold members") and Einstein Decisions for "best next action" recommendations.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

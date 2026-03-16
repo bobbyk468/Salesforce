@@ -162,7 +162,26 @@ export default function ContactCenterApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Contact Center Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Omni-Channel Flow vs Legacy Routing Configuration — New vs Old</p>
+            <p className="text-sm text-gray-700">Omni-Channel Flow uses Flow Builder to route work items dynamically using any record field, agent capacity, or skill. Legacy routing uses static Queue → Routing Configuration → Routing Rule setup. New implementations should use Omni-Channel Flow. Candidates design routing using the legacy Queue/Routing Configuration approach for scenarios that describe dynamic, condition-based routing — the exam expects Omni-Channel Flow for those cases.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Enhanced Omni-Channel vs Standard Omni-Channel — Capacity Model Difference</p>
+            <p className="text-sm text-gray-700">Standard Omni-Channel uses numeric capacity (each work item costs a set number of capacity units). Enhanced Omni-Channel uses a Percent-of-Capacity model, where each work item type consumes a percentage of total capacity. Candidates answer capacity planning questions using Standard model logic when the scenario describes percentage-based capacity — know which model applies to which scenario.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Service Channel vs Routing Configuration — Not the Same Thing</p>
+            <p className="text-sm text-gray-700">A Service Channel defines the source of work items (Live Chat, Case, Voice, Messaging). A Routing Configuration defines the rules for how work from a channel is assigned to agents (queue priority, routing model). Candidates configure the Service Channel when asked to set routing priority — the exam expects Routing Configuration changes for priority adjustments.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

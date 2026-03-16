@@ -163,7 +163,26 @@ export default function SalesCloudExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Sales Cloud Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Forecasting Categories — Not the Same as Opportunity Stage</p>
+            <p className="text-sm text-gray-700">Salesforce Forecast Categories are rollup buckets: Pipeline, Best Case, Commit, Closed Won, Omitted. They map from Opportunity Stage but can be overridden. Candidates answer "what determines the forecast category?" with Stage — but the exam tests the distinction: Stage drives the default category, but sales reps can override the category independently of Stage. Forecast visibility is driven by the Forecast Category, not the Stage directly.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Collaborative Forecasting vs Territory Forecasting — Role Hierarchy vs Territory Model</p>
+            <p className="text-sm text-gray-700">Collaborative Forecasting rolls up quota and pipeline through the standard Role Hierarchy. Territory Forecasting rolls up through the Territory Model (which may differ from the role structure). They are separate systems — enabling one does not enable the other. Candidates assume one forecast setup covers both — the exam expects explicit configuration of each independently.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Lead Conversion Field Mapping — Not All Fields Map Automatically</p>
+            <p className="text-sm text-gray-700">When converting a Lead, Salesforce maps standard Lead fields to standard Account, Contact, and Opportunity fields automatically. Custom Lead fields do NOT map to converted object fields unless explicitly configured in Lead Field Mapping. Candidates expect all custom Lead data to appear on the converted Contact — the exam expects Lead Field Mapping configuration for every custom field that should survive conversion.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

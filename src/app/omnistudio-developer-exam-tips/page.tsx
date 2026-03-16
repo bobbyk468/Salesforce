@@ -162,7 +162,26 @@ export default function OmniStudioDeveloperExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most OmniStudio Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Custom LWC in OmniScript — Override vs Embed</p>
+            <p className="text-sm text-gray-700">You can embed a custom LWC inside an OmniScript as a custom component (extends LightningElement, uses omniscript-mixin). You can also override a built-in OmniScript element with a custom LWC. These are different extension patterns. Candidates write standalone LWCs and try to integrate them — the exam expects the correct mixin-based pattern for embedding custom components in OmniScript context.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Activation — OmniScripts and FlexCards Must Be Activated Before Use</p>
+            <p className="text-sm text-gray-700">After creating or editing an OmniScript or FlexCard in OmniStudio, the component must be Activated (compiled and deployed) before end users can interact with it. Changes made after activation require re-activation. Candidates edit components and expect changes to appear immediately — the exam expects Activation as a required step after any modification.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Type vs Sub-Type — OmniScript Identity Keys</p>
+            <p className="text-sm text-gray-700">Every OmniScript is identified by a Type and Sub-Type (e.g., Type: "Order", SubType: "NewOrder"). The combination must be unique. Versioning creates new versions under the same Type/Sub-Type. FlexCards use a similar naming convention. Candidates name OmniScripts without understanding the Type/Sub-Type identity model — the exam tests how to locate, version, and call specific OmniScripts using their Type/Sub-Type.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

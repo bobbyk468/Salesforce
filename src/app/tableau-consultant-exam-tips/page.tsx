@@ -162,7 +162,26 @@ export default function TableauConsultantExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Blending vs Joining — Same Tool, Different Data Architecture</p>
+            <p className="text-sm text-gray-700">Joins combine data from multiple tables before querying (done at the data source level, creating a single combined row set). Data Blending queries each data source separately and combines results in the view using a linking field — used when data sources cannot be joined (different databases, granularity mismatch). Candidates use Joins for all multi-source scenarios — the exam expects Blending when joining is not possible or appropriate.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Calculated Fields vs Table Calculations — Where Computation Happens</p>
+            <p className="text-sm text-gray-700">Calculated Fields are computed at the data source level (pre-aggregation) or during aggregation — they are persistent and can be reused across views. Table Calculations run after aggregation, on the data already displayed in the view (e.g., Running Total, Percent of Total, Rank). Candidates build Running Total using a Calculated Field — that is a Table Calculation, not a row-level formula.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Context Filters vs Regular Filters — Execution Order Matters</p>
+            <p className="text-sm text-gray-700">Regular Filters each query the entire data source independently, which can be slow for complex views. Context Filters create a temporary table of filtered data that all other filters then apply to — they improve performance when multiple filters are applied to a large data source. Candidates add more Regular Filters to improve performance — the exam expects the highest-selectivity filter to be promoted to Context Filter.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

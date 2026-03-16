@@ -171,7 +171,26 @@ export default function TechnicalArchitectReviewBoardExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Technical Architect Review Board Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. The Scenario Is Deliberately Ambiguous — You Must Ask Clarifying Questions</p>
+            <p className="text-sm text-gray-700">The Review Board scenario intentionally omits details to see if candidates proactively identify and resolve ambiguity. Candidates who proceed on assumptions without questioning constraints will design solutions that do not fit the actual requirements. The first 10 minutes of the board should include explicit clarifying questions: "What is the data volume?" "Is multi-org on the table?" "What are the timeline constraints?"</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Defence Matters as Much as the Solution</p>
+            <p className="text-sm text-gray-700">Board members will challenge your design choices. A technically correct architecture that you cannot defend is scored lower than a pragmatic architecture you can explain under pressure. Candidates over-engineer their architecture to impress — the board expects a defensible, constraint-aware design with clear rationale for every major decision.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. End-to-End Solution — Security, Deployment, and Governance Are Scored</p>
+            <p className="text-sm text-gray-700">The Review Board scores the full solution, not just the technical architecture. Missing sections include: data security and sharing model, deployment and release strategy, integration governance, and post-launch support model. Candidates present only the data model and integration diagrams — the board expects a complete solution narrative covering all scored dimensions.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

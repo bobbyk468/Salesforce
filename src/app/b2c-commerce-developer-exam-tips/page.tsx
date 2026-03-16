@@ -162,7 +162,26 @@ export default function B2CCommerceDeveloperExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Commerce Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Controllers vs Pipelines — SFRA Uses Controllers, Not Pipelines</p>
+            <p className="text-sm text-gray-700">Salesforce Reference Architecture (SFRA) uses MVC-style Controllers (JavaScript/Node.js). Pipelines are the legacy SiteGenesis architecture. Exam scenarios about new development expect Controller-based answers. Candidates who studied older materials still default to Pipeline answers. Never recommend Pipelines for new SFRA features — use Controllers and middleware.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Hooks vs Cartridge Overrides — Extension Without Modification</p>
+            <p className="text-sm text-gray-700">SFRA extension points include Hooks (event-driven, registered in hooks.json) and Cartridge Overrides (placing a custom cartridge higher in the cartridge path). Hooks allow extending behaviour at defined integration points without modifying base cartridge code. Overrides replace entire files. The exam prefers Hooks for targeted customisation and overrides only when the entire file needs replacement.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Business Manager Site Preferences vs Custom Objects — Where to Store Config</p>
+            <p className="text-sm text-gray-700">Site Preferences store merchant-configurable settings (feature toggles, API keys, display rules) that non-developers can update via Business Manager. Custom Objects store structured data with specific schemas. Candidates use Custom Objects to store configuration data — the exam expects Site Preferences for settings that merchants need to manage without code deployments.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

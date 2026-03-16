@@ -162,7 +162,26 @@ export default function B2BSolutionArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2B Solution Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Account-Based vs Contact-Based Data Models — B2B vs B2C Architecture Decision</p>
+            <p className="text-sm text-gray-700">B2B Salesforce implementations are account-centric: Contacts belong to Accounts, and Opportunities, Cases, and revenue are tracked at the Account level. B2C implementations are contact/person-account centric. When a B2B scenario adds consumer-facing channels, candidates default to Person Accounts — but the exam expects a clear rationale tied to the client&apos;s business model before recommending that change.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Revenue Lifecycle Management vs CPQ — Knowing When Each Fits</p>
+            <p className="text-sm text-gray-700">CPQ (Salesforce Configure, Price, Quote) handles product configuration, pricing rules, and quote generation. Revenue Lifecycle Management (RLM) extends this to subscription management, usage-based billing, and contract amendments. Candidates recommend CPQ for scenarios that describe subscription renewals, amendments, and billing — the exam expects RLM for those patterns.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Integration Architecture — Point-to-Point vs ESB vs API-Led Connectivity</p>
+            <p className="text-sm text-gray-700">Point-to-point integrations create direct connections between systems and become unmaintainable at scale. ESB (Enterprise Service Bus) centralises integration logic but creates a single point of failure. API-led connectivity (MuleSoft) layers APIs into System, Process, and Experience tiers for reusability and resilience. Exam scenarios describe scale and reuse requirements — candidates over-recommend ESB when API-led is the correct answer.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

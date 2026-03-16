@@ -161,7 +161,26 @@ export default function IntegrationArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Integration Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Real-Time vs Near-Real-Time vs Batch — Choosing the Right Integration Pattern</p>
+            <p className="text-sm text-gray-700">Real-time integration executes synchronously during a transaction (callout mid-save) — adds latency and risk of timeout. Near-real-time uses Platform Events or Change Data Capture to trigger async processing within seconds. Batch syncs data on a schedule (hourly, nightly). Candidates recommend real-time callouts for data that needs to be "current" — the exam expects near-real-time (Platform Events) for that pattern and real-time only for blocking decisions (credit checks, inventory holds).</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Idempotency — Why Retry Logic Requires Idempotent Operations</p>
+            <p className="text-sm text-gray-700">An idempotent operation produces the same result whether executed once or multiple times. Integration retries can cause duplicate records or double-charges if operations are not idempotent. Exam scenarios about retry handling expect idempotency design: use upsert (not insert) on retry, include a correlation ID, check if a record already exists before creating. Candidates design retry without idempotency safeguards.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce Connect vs Heroku Connect vs MuleSoft — Three Different Integration Approaches</p>
+            <p className="text-sm text-gray-700">Salesforce Connect exposes external data as External Objects in real time without importing it (best for small record sets queried infrequently). Heroku Connect maintains a Postgres replica of Salesforce data for high-performance querying. MuleSoft API-led connectivity builds reusable integration APIs across systems. Candidates recommend MuleSoft for all integration scenarios — the exam tests which tool fits the specific requirement.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

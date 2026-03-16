@@ -161,7 +161,26 @@ export default function CPQAdministratorExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CPQ Administrator Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Price Rules vs Discount Schedules — Two Ways to Affect Price</p>
+            <p className="text-sm text-gray-700">Discount Schedules automatically apply tiered discounts based on quantity or term — they are table-driven and apply before Price Rules. Price Rules are condition-based (if field X = Y, then set price field Z to value) and apply in a defined sequence. Candidates apply Price Rules for volume discount scenarios — the exam expects Discount Schedules for table-driven volume pricing.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Product Rules: Validation vs Alert vs Selection vs Filter</p>
+            <p className="text-sm text-gray-700">Validation rules block a quote from being saved if a product combination is invalid. Alert rules warn the user but allow saving. Selection rules automatically add, remove, or hide products based on configuration choices. Filter rules narrow down products shown in the Product Catalog based on criteria. Candidates use Validation when they should use Alert (blocking vs warning distinction) or use Selection when Filter is appropriate.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Quote Line Editor vs Product Catalog — Two Different Entry Points</p>
+            <p className="text-sm text-gray-700">The Product Catalog is the source where sales reps search and add products to a quote. The Quote Line Editor (QLE) is where they review, adjust quantities, apply discounts, and configure selected products. Proration, bundling, and block pricing logic all operate within the QLE. Candidates design product search and filtering in the QLE when it belongs in the Product Catalog search configuration.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

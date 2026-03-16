@@ -162,7 +162,26 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Platform Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric — Deployment Options</p>
+            <p className="text-sm text-gray-700">CloudHub 1.0 is the shared managed runtime (workers). CloudHub 2.0 is the containerised replacement with improved scalability and clustering. Runtime Fabric (RTF) is a self-managed Kubernetes-based runtime for deploying Mule apps in customer-owned infrastructure. Candidates recommend CloudHub for all deployments — the exam expects RTF for data sovereignty requirements or cloud-control mandates.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Shared vs Dedicated Load Balancer — Public vs Private Endpoint Exposure</p>
+            <p className="text-sm text-gray-700">A Shared Load Balancer exposes Mule apps on a Salesforce-managed domain (tenant.us-e1.cloudhub.io) — suitable for non-production or public APIs. A Dedicated Load Balancer (DLB) exposes apps on a custom domain with SSL termination and network ACLs — required for production APIs that need branded domains or IP whitelisting. Candidates use Shared Load Balancers for production — the exam expects DLB for production, custom-domain requirements.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Object Store v2 — Scoped to Deployment, Not Shared Across Workers by Default</p>
+            <p className="text-sm text-gray-700">Object Store v2 persists key-value data across Mule runtime restarts. By default, Object Store is scoped to a single CloudHub worker — in a multi-worker deployment, workers do not share Object Store data unless explicitly configured. Candidates design session state management assuming Object Store is shared — the exam expects Persistent Object Store (shared across workers) or sticky sessions for stateful applications.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

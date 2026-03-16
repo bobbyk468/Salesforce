@@ -162,7 +162,26 @@ export default function B2bCommerceAdminApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2B Commerce Administrator Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Price Lists vs Price Books — B2B Commerce Has Its Own Pricing Layer</p>
+            <p className="text-sm text-gray-700">B2B Commerce uses Price Lists (not standard Salesforce Price Books) to manage account-specific or segment-specific pricing. Price Books apply to standard Salesforce Opportunities. Candidates confuse these when answering scenarios about why a buyer account sees the wrong price. In B2B Commerce, the Price List is resolved through the Buyer Group &rarr; Price List assignment — not through the standard Price Book hierarchy.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Buyer Groups vs Accounts — Access Is Granted Through the Group</p>
+            <p className="text-sm text-gray-700">Buyer Groups are the mechanism that assigns buyer accounts to a specific storefront, price list, and entitlement policy. You do not grant storefront access directly to an Account. Candidates answer "assign the account to the storefront" — the correct answer is "add the account to a Buyer Group that has the storefront assignment." Missing this layer is the most common B2B Commerce admin exam mistake.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Quick Order vs Order Templates — Different Use Cases, Same Confusion</p>
+            <p className="text-sm text-gray-700">Quick Order lets a buyer enter SKUs or upload a CSV to add multiple products to cart in one step — it is designed for buyers who know exactly what they want. Order Templates (Order Guides) are curated product lists merchants set up for accounts to reorder from. The exam tests which to recommend: buyer-driven fast reorder = Quick Order; merchant-curated repeat purchase list = Order Template.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -162,7 +162,26 @@ export default function ManufacturingCloudApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Manufacturing Cloud Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Sales Agreements vs Opportunities — Recurring Revenue vs One-Time Sales</p>
+            <p className="text-sm text-gray-700">Sales Agreements are long-term contracts between manufacturers and distributors/dealers with committed volumes and pricing over a period. Opportunities are one-time sales pipeline records. Candidates use Opportunities for tracking annual volume commitments — the exam expects Sales Agreements for recurring contract-based revenue with planned vs actual volume tracking.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Account Forecasting vs Opportunity Forecasting — Two Different Forecast Models</p>
+            <p className="text-sm text-gray-700">Account Forecasting in Manufacturing Cloud generates period-based forecasts for accounts based on historical actuals and planned volumes from Sales Agreements. Standard Opportunity Forecasting rolls up pipeline-stage-weighted opportunities. These are separate systems. Candidates combine them — the exam expects Account Forecasting for manufacturing account-level volume predictions.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Run Rate vs Planned Volume — Baseline vs Committed</p>
+            <p className="text-sm text-gray-700">Run Rate is the annualised volume based on recent actual sales (baseline projection). Planned Volume is the committed amount in a Sales Agreement. Candidates use Run Rate as the authoritative forecast — the exam expects Planned Volume from Sales Agreements as the primary committed forecast, with Run Rate as a comparison/validation signal.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

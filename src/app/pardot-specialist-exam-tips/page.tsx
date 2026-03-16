@@ -160,7 +160,26 @@ export default function PardotSpecialistExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Pardot (Account Engagement) Specialist Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Engagement Studio vs Automation Rules — Nurture vs Batch Processing</p>
+            <p className="text-sm text-gray-700">Engagement Studio (Engagement Programs) orchestrates time-based, multi-step nurture sequences triggered by prospect actions or timing. Automation Rules run batch evaluations of all prospects against a criteria set and apply actions — they are not time-based sequences. Candidates use Automation Rules to build multi-step nurture — the exam expects Engagement Studio for time-sequenced, event-triggered nurture paths.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Email Preference Centre vs Unsubscribe — Opt-Down vs Opt-Out</p>
+            <p className="text-sm text-gray-700">Unsubscribing removes a prospect from ALL email communication. The Email Preference Centre lets prospects choose which specific email types they receive (product updates, events, newsletters) — they opt out of some but not all. Candidates treat all unsubscribes as permanent global opt-outs — the exam expects the Preference Centre for selective opt-down scenarios to reduce list attrition.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Visitor vs Prospect — Anonymous vs Known</p>
+            <p className="text-sm text-gray-700">A Visitor is an anonymous person who has visited a Pardot-tracked page but has not yet identified themselves (no form fill, no email click). A Prospect is an identified person with an email address in Pardot. Visitors are tracked by cookie but cannot be emailed or nurtured. Candidates design nurture sequences for Visitors — the exam expects Prospects only for email and engagement activities.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

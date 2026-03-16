@@ -162,7 +162,26 @@ export default function DevLifecycleDeploymentArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Dev Lifecycle &amp; Deployment Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Unlocked Packages vs Change Sets vs Metadata API — Choosing the Right Deployment Tool</p>
+            <p className="text-sm text-gray-700">Change Sets are UI-based, work only between related orgs, and have no version control. Metadata API is scriptable but stateless (no package versioning). Unlocked Packages are modular, versioned, and installable across unrelated orgs — they are the modern recommended approach for complex org development. Candidates recommend Change Sets for all deployments — the exam expects Unlocked Packages for independent module deployment and CI/CD pipelines.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Scratch Orgs vs Sandboxes — Source-Driven vs Org-Driven Development</p>
+            <p className="text-sm text-gray-700">Scratch Orgs are temporary, configuration-driven development environments spun up from source code — they enforce source-driven development. Sandboxes are copies of production (or another sandbox) and are better for QA and UAT. Candidates use sandboxes for development — the exam expects scratch orgs for feature development in a DX-based CI/CD pipeline.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. CI/CD Pipeline Stages — What Runs in Each Environment</p>
+            <p className="text-sm text-gray-700">A typical Salesforce CI/CD pipeline: develop in scratch orgs → run unit tests in CI org → deploy to SIT sandbox → UAT sandbox → staging sandbox → production. Candidates skip stages or run unit tests only in production deployment — the exam expects unit tests to run at every stage, with integration tests in SIT and user acceptance in UAT.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

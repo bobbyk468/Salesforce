@@ -162,7 +162,26 @@ export default function EnergyUtilitiesApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Energy &amp; Utilities Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Service Points vs Premises vs Assets — Three Separate Objects</p>
+            <p className="text-sm text-gray-700">A Premise is a physical location (123 Main St). A Service Point is the specific utility connection at a premise (electric meter, gas meter). An Asset is the physical equipment (the meter device itself). Candidates conflate Premise and Service Point — a single Premise can have multiple Service Points (one for electricity, one for gas). The exam tests which object to update for each utility operation.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Meter Reading vs Meter Data Management — Operational vs Analytical</p>
+            <p className="text-sm text-gray-700">Meter Reading records capture individual consumption readings at a point in time. Meter Data Management (MDM) systems aggregate, validate, and process high-frequency smart meter data (AMI). Candidates design detailed MDM logic inside Salesforce — the exam expects MDM integration (external system) with Salesforce receiving processed billing data, not raw smart meter streams.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Billing Account vs Service Account — Revenue vs Service Delivery</p>
+            <p className="text-sm text-gray-700">Billing Accounts hold the financial relationship (invoice address, payment terms, balance). Service Accounts represent the utility service delivery relationship at a location. One Billing Account can have multiple Service Accounts. Candidates update the Billing Account for service address changes — the exam expects Service Account updates for delivery-location changes.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

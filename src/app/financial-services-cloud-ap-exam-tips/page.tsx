@@ -162,7 +162,26 @@ export default function FinancialServicesCloudApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Financial Services Cloud Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Household vs Individual vs Group — Three Account Models in FSC</p>
+            <p className="text-sm text-gray-700">Financial Services Cloud uses a multi-Account model: Individual (a person), Household (family unit of related Individuals), and Group (business entity or association). A Contact can have Primary and non-primary Account relationships. Candidates use a single Account-Contact relationship — the exam expects the FSC multi-Account model with Household as the primary financial planning unit.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Financial Accounts vs Salesforce Accounts — Different Objects</p>
+            <p className="text-sm text-gray-700">In FSC, Financial Account is a custom object representing a bank account, investment portfolio, insurance policy, or loan — it is NOT the standard Salesforce Account object. The standard Account represents the client entity (person, household, business). Candidates use standard Salesforce Account fields to store balance and portfolio data — the exam expects Financial Account records.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Actionable Relationship Centre (ARC) — Relationship Visibility Tool</p>
+            <p className="text-sm text-gray-700">ARC is the FSC visual relationship map showing how clients, households, financial accounts, and referral relationships connect. It is a read-only visualisation tool — not an editing interface. Candidates design relationship editing workflows using ARC — the exam expects ARC for viewing relationship networks and standard record edit pages for updating relationships.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -162,7 +162,26 @@ export default function MarketingCloudAdvancedCrossChannelApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Advanced Cross-Channel Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Journey Builder vs Automation Studio — Interactive vs Batch</p>
+            <p className="text-sm text-gray-700">Journey Builder orchestrates real-time, event-driven, multi-step customer journeys (triggered by data events, API events, or channel interactions). Automation Studio runs scheduled or triggered batch operations (SQL queries, data imports, file transfers, sends to static segments). Candidates use Automation Studio to build triggered customer journeys — the exam expects Journey Builder for event-driven multi-step sequences.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Contact Builder Relationships — Data Extensions Must Be Related Correctly</p>
+            <p className="text-sm text-gray-700">Contact Builder links Data Extensions to the subscriber model using relationship keys. If a Data Extension is not correctly related to the Contact model (via Contact Key or Subscriber Key), Journey Builder cannot use it to personalise messages. Candidates troubleshoot journey personalisation failures in Journey Builder settings — the exam expects Contact Builder relationship configuration as the root cause.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Einstein Engagement Scoring vs Send Time Optimization — Two Different AI Features</p>
+            <p className="text-sm text-gray-700">Einstein Engagement Scoring predicts the likelihood of a contact opening, clicking, or converting — it produces a score per contact. Send Time Optimization predicts the best time to send to each contact to maximise engagement. They address different questions: "who is likely to engage?" vs "when should I send?" Candidates recommend Send Time Optimization when the scenario asks about identifying low-engagement contacts — that requires Engagement Scoring.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

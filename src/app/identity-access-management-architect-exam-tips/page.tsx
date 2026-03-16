@@ -161,7 +161,26 @@ export default function IamArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Identity &amp; Access Management Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. OAuth 2.0 Flows — Authorization Code vs JWT Bearer vs Client Credentials</p>
+            <p className="text-sm text-gray-700">Authorization Code flow is for user-facing apps where a human logs in (most common). JWT Bearer flow is for server-to-server integration where a trusted server asserts a user identity without a login prompt. Client Credentials flow is for machine-to-machine with no user context. Candidates use Authorization Code for server integrations — the exam expects JWT Bearer for server-to-server with user context assertion and Client Credentials for pure system calls.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Named Credentials vs Auth. Providers — Outbound vs Inbound Identity</p>
+            <p className="text-sm text-gray-700">Named Credentials store the endpoint URL, authentication method, and credentials for Salesforce making outbound callouts to external systems. Auth. Providers configure Salesforce as a service provider (SP) for inbound Single Sign-On — external users log in via an external Identity Provider (IdP). Candidates configure Named Credentials for SSO — the exam expects Auth. Provider + SAML or OIDC for SSO and Named Credentials for outbound callouts.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Delegated Authentication vs SSO — Custom Login vs Federated Identity</p>
+            <p className="text-sm text-gray-700">Delegated Authentication calls a custom web service endpoint to validate Salesforce login credentials against an external system (legacy LDAP integration). SAML/OIDC SSO federates identity by trusting an external IdP&apos;s assertion without re-validating credentials. Delegated Auth is legacy and should not be recommended for new implementations — the exam expects SAML or OIDC SSO for modern identity federation.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

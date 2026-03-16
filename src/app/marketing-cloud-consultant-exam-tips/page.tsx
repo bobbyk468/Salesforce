@@ -158,7 +158,26 @@ export default function MarketingCloudConsultantExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Consultant Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Business Units — Data Isolation vs Sharing</p>
+            <p className="text-sm text-gray-700">Business Units (BUs) in Marketing Cloud partition data, assets, and sending permissions between teams or brands. A subscriber in one BU is separate from the same email address in another BU by default. Sharing across BUs requires deliberate configuration (shared Data Extensions, cross-BU sending). Candidates assume shared subscriber lists across BUs — the exam expects BU-specific subscriber isolation unless cross-BU sharing is explicitly configured.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Sender Authentication Package (SAP) vs Default Branding Domain</p>
+            <p className="text-sm text-gray-700">A Sender Authentication Package authenticates a specific sending domain (From address) for email deliverability — it aligns the envelope sender, header From, and link domains. Without SAP, Marketing Cloud uses Salesforce&apos;s shared authentication domain, which reduces deliverability. Candidates configure SAP as optional — the exam treats SAP configuration as essential for enterprise email deliverability.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Suppression Lists vs Publication Lists vs Exclusion Lists</p>
+            <p className="text-sm text-gray-700">Suppression Lists prevent sending to specific addresses globally regardless of subscription status (legal complaints, internal addresses). Publication Lists are subscriber opt-in lists for specific publications (newsletter, promotions). Exclusion Lists are Data Extensions used in send flows to explicitly exclude matching records from a specific send. Candidates use Suppression for send-specific exclusions — the exam expects Exclusion Lists for those and Suppression for global permanent blocks.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

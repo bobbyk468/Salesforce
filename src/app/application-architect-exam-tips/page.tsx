@@ -173,7 +173,26 @@ export default function ApplicationArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Application Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Application Architect Is a Role Credential — Not a Single Exam</p>
+            <p className="text-sm text-gray-700">The Salesforce Application Architect credential is awarded when you hold both the System Architect credential and the four domain architect exams (Data, Integration, Sharing &amp; Visibility, Dev Lifecycle). There is no single "Application Architect exam." Candidates often study for it as if it were one test. Focus on the four domain exams first, then earn System Architect — the Application Architect credential follows automatically.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Multi-Org vs Single-Org — Recognising the Decisive Scenario Signals</p>
+            <p className="text-sm text-gray-700">Single-org consolidates all business units into one instance (better data sharing, more governance complexity). Multi-org separates by business unit (more autonomy, harder cross-BU data access). Exam scenarios signal multi-org with: strict regulatory data isolation requirements, completely separate business processes with no cross-BU data sharing, or post-merger organisations with incompatible tech stacks.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Large Data Volumes and Query Performance — Skinny Tables Are Not Indexes</p>
+            <p className="text-sm text-gray-700">Skinny tables are read-only Salesforce-managed tables that cache frequently queried field subsets to speed SOQL queries on high-volume objects. They are NOT the same as custom indexes. Custom indexes speed lookups on specific fields. Candidates use these terms interchangeably. Know when to request each from Salesforce Support and why standard indexes (on Lookup/Master-Detail fields and formula fields) are automatically maintained.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

@@ -162,7 +162,26 @@ export default function B2CCommerceArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most B2C Commerce Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Site Architecture — One Site vs Multiple Sites for Multi-Region</p>
+            <p className="text-sm text-gray-700">B2C Commerce supports multiple storefronts within one realm. A single site can serve multiple locales using site preferences and localisation. Candidates recommend one site per region — the exam expects multi-locale configuration on a single site unless business processes are completely separate (separate catalogs, pricing, and fulfilment), in which case separate sites are justified.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. OCAPI vs SCAPI — Legacy vs Modern API Layer</p>
+            <p className="text-sm text-gray-700">Open Commerce API (OCAPI) is the legacy REST API for B2C Commerce. Salesforce Commerce API (SCAPI) is the modern replacement, built on headless architecture. Exam scenarios about new integrations expect SCAPI recommendations. Candidates default to OCAPI because it is more familiar from study materials — know that Headless Reference Architecture (SFRA) uses SCAPI for new implementations.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Quota Limits — Why Performance Degrades Under Load</p>
+            <p className="text-sm text-gray-700">B2C Commerce enforces pipeline/controller quota limits (CPU time, memory, custom objects per request). Exceeding these causes degraded performance or errors. Candidates diagnose performance issues by looking at code logic — the exam expects checking quota consumption first. Know the key quotas: custom object record limit per session, pipeline dictionary size, and API call rate limits.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

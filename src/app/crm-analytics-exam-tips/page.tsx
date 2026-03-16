@@ -161,7 +161,26 @@ export default function CRMAnalyticsExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most CRM Analytics Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Dataflows vs Recipes — Two Different Data Preparation Tools</p>
+            <p className="text-sm text-gray-700">Dataflows are the legacy CRM Analytics data preparation tool that runs on a schedule and outputs datasets. Recipes are the newer drag-and-drop interface for transforming data into datasets. New implementations should use Recipes. Candidates use Dataflow JSON syntax for Recipes or vice versa. Know that Recipes replaced Dataflows for most use cases — Dataflows are still used for specific advanced transformations.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset</p>
+            <p className="text-sm text-gray-700">XMD controls display properties: field labels, formatting (currency, percent), colours, and display order in lenses and dashboards. It is separate from the dataset schema. Candidates modify dataset schemas to change display formatting — the exam expects XMD modifications for presentation changes. Changing a field&apos;s label in XMD does not change the underlying field name in SAQL.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. SAQL vs Equals Filters — When to Use Each in Step Configuration</p>
+            <p className="text-sm text-gray-700">Equals Filters (the UI configuration) handle simple value comparisons in dashboard steps. SAQL (Salesforce Analytics Query Language) is needed for complex logic: date arithmetic, string manipulation, conditional aggregation. Candidates write SAQL for simple equality filters — the exam expects Equals Filters for those and SAQL only when the logic cannot be expressed in the UI filter interface.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

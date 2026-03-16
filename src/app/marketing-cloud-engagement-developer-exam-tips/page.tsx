@@ -162,7 +162,26 @@ export default function MarketingCloudEngagementDeveloperExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Marketing Cloud Engagement Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Server-Side JavaScript (SSJS) vs AMPscript — When to Use Each</p>
+            <p className="text-sm text-gray-700">AMPscript is a lightweight scripting language evaluated at send time for per-record personalisation (lookups, string functions, conditional content). SSJS runs before rendering for complex logic: API callouts, loops over multiple records, creating Core objects. Candidates use AMPscript for API callouts — AMPscript cannot make HTTP requests; SSJS is required for outbound callouts from Cloud Pages or email sends.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. REST API vs SOAP API — Modern vs Legacy in Marketing Cloud</p>
+            <p className="text-sm text-gray-700">The Marketing Cloud REST API is the modern interface: faster, JSON-based, supports Journey Builder, Contact Builder, and most new features. The SOAP API is legacy: XML-based, supports email sends, subscriber management, and list operations. New integrations should use REST. Candidates use SOAP for new subscriber-creation integrations — the exam expects REST for new implementations.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Transactional Messaging API — Not the Same as Journey API</p>
+            <p className="text-sm text-gray-700">The Transactional Messaging API sends a single triggered email or SMS immediately to one recipient (order confirmation, password reset). The Journey API injects a contact into a Journey for multi-step orchestration. Candidates use the Journey API for all triggered single messages — the exam expects Transactional Messaging API for immediate one-off sends and Journey API for multi-step nurture.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

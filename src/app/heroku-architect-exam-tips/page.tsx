@@ -162,7 +162,26 @@ export default function HerokuArchitectExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Heroku Architect Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Heroku Connect — Bidirectional Sync Has Write Conflict Rules</p>
+            <p className="text-sm text-gray-700">Heroku Connect synchronises data between a Heroku Postgres database and Salesforce objects. By default it is unidirectional (Salesforce to Postgres). Enabling bidirectional sync introduces write conflicts when both sides update the same record. Candidates assume bidirectional sync just works — the exam expects knowledge of the "Salesforce wins" vs "database wins" conflict resolution setting and when each applies.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Dyno Types — Web vs Worker vs One-Off</p>
+            <p className="text-sm text-gray-700">Web dynos handle HTTP requests and must respond within 30 seconds (otherwise Heroku returns a timeout). Worker dynos run background jobs with no time limit (used for long-running processes, queue processing). One-off dynos are for ad-hoc tasks (database migrations, scripts). Candidates run long-running jobs on Web dynos — the exam expects Worker dynos for async processing.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Add-ons vs Buildpacks — Services vs Build Configuration</p>
+            <p className="text-sm text-gray-700">Add-ons are third-party services attached to a Heroku app (Postgres database, Redis cache, monitoring tools) — they are provisioned and billed separately. Buildpacks are scripts that transform your code into a runnable slug at build time (Node.js buildpack installs npm packages, Python buildpack installs pip packages). Candidates confuse add-ons (runtime services) with buildpacks (build-time configuration).</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

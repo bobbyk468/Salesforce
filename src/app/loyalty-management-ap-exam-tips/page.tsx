@@ -162,7 +162,26 @@ export default function LoyaltyManagementApExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Loyalty Management Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Loyalty Program vs Loyalty Programme Member vs Member Tier — Three Separate Records</p>
+            <p className="text-sm text-gray-700">A Loyalty Program is the top-level programme definition (name, currency, tiers). A Loyalty Programme Member is the individual customer enrolled in the programme with their points balance and tier status. A Member Tier is the classification record (Bronze, Silver, Gold) linked to the programme. Candidates store tier information on the Loyalty Program record — the exam expects Member Tier records and the Tier field on the Programme Member.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Accrual vs Redemption Transactions — Points In vs Points Out</p>
+            <p className="text-sm text-gray-700">Accrual transactions add points to a member&apos;s balance (purchase, bonus promotion). Redemption transactions deduct points (reward claim, discount). These are separate Transaction Journal record types. Candidates use a single transaction type for both — the exam expects separate Transaction Journal entries with the correct Type field (Accrual vs Redemption) and expects the ledger balance to reflect both.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Promotion vs Voucher vs Reward — Three Offer Mechanics</p>
+            <p className="text-sm text-gray-700">Promotions offer bonus points or discounts for a limited time. Vouchers are single-use codes that grant a specific benefit. Rewards are items members redeem accumulated points for. Candidates use Promotion records for voucher distribution — the exam expects Voucher Definition and Voucher records for code-based offers and Reward records for the points redemption catalogue.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

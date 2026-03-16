@@ -162,7 +162,26 @@ export default function IndustriesCPQDeveloperExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Industries CPQ Developer Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Product Configuration vs Pricing Engine — Two Separate Subsystems</p>
+            <p className="text-sm text-gray-700">Industries CPQ (Vlocity CPQ) has a Product Configurator that drives eligibility, compatibility, and bundle selection, and a separate Pricing Engine that calculates prices using Price Lists, Price Adjustments, and custom pricing methods. Candidates design pricing logic inside product configuration rules — the exam expects pricing logic in the Pricing Engine (Custom Price Methods) and product logic in the Configurator.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. OmniScript vs DataRaptor vs Integration Procedure — Three Tools, One Platform</p>
+            <p className="text-sm text-gray-700">OmniScript orchestrates the user-facing interaction flow (wizard UI). DataRaptors extract, transform, and load data between Salesforce objects and OmniScript. Integration Procedures call external APIs and apply data transformations server-side without a UI. Candidates use DataRaptors for external API calls — the exam expects Integration Procedures for external callouts and DataRaptors for Salesforce data operations.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Cart-Based vs Non-Cart-Based Flows — When Each Is Used</p>
+            <p className="text-sm text-gray-700">Cart-based CPQ flows show a cart UI where users add products, configure them, and proceed to checkout. Non-cart-based (API-driven) flows are used when pricing and configuration are computed programmatically without user interaction (order management, bulk repricing). Candidates design cart UI for all CPQ scenarios — the exam expects non-cart API flows for system-driven pricing and automated order processing.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (

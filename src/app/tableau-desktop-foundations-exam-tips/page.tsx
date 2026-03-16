@@ -162,7 +162,26 @@ export default function TableauDesktopFoundationsExamTipsPage() {
       </section>
 
 
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+            <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Tableau Desktop Foundations Candidates</h2>
+        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <div className="space-y-5">
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">1. Connecting to Data — Live vs Extract in Desktop</p>
+            <p className="text-sm text-gray-700">In Tableau Desktop, connecting Live keeps data in the original source and queries it each time the view is opened. Creating an Extract saves data to a local .hyper file for faster performance. Candidates use Live for all connections assuming it is always "better" — the exam expects Extracts for offline use, performance improvement, and reducing database load.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">2. Show Me vs Drag-and-Drop — When Tableau Automatically Selects Chart Types</p>
+            <p className="text-sm text-gray-700">"Show Me" recommends chart types based on the current fields on the canvas. Drag-and-drop lets you manually control marks and shelves for custom visualisations. Candidates use Show Me for all visualisations then struggle to modify the result — the exam expects you to understand which shelves (Rows, Columns, Marks card) drive which visual encoding so you can manually build views Show Me cannot create.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1">3. Groups vs Sets — Static vs Dynamic Membership</p>
+            <p className="text-sm text-gray-700">Groups manually combine members of a dimension into named categories (North + South = "Southern Region") — static, created by the user. Sets are saved subsets of dimension members based on conditions or manual selection — they can be dynamic (update when data changes) or fixed. Candidates use Groups when they need a condition-based dynamic category — the exam expects Dynamic Sets for criteria-driven grouping.</p>
+          </div>
+        </div>
+      </section>
+
+<section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
