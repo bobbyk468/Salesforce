@@ -248,14 +248,14 @@ export default function AgentforceSpecialistExamTipsPage() {
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-        <dl className="space-y-4">
+        <div className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
-              <dt className="font-semibold text-gray-900 mb-1">{item.question}</dt>
-              <dd className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
+              <p className="font-semibold text-gray-900 mb-1">{item.question}</p>
+              <div className="text-sm text-gray-700" dangerouslySetInnerHTML={{ __html: item.answer }} />
             </div>
           ))}
-        </dl>
+        </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -307,7 +307,15 @@ export default function AgentforceSpecialistExamTipsPage() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">Advanced Administrator</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+          After this exam, consider{' '}
+          <Link href="/certifications/advanced-administrator" className="text-salesforce-dark underline">
+            Advanced Administrator
+          </Link>{' '}
+          or{' '}
+          <Link href="/certifications/app-builder" className="text-salesforce-dark underline">
+            Platform App Builder
+          </Link>{' '}
+          next.
         </p>
       </section>
     </div>
