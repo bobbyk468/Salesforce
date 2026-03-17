@@ -26,7 +26,13 @@ export default function FullQuestionBankCta({ slug, certTitle }: FullQuestionBan
       </p>
       <p className="text-gray-600 text-xs max-w-md mx-auto mb-6">
         Candidates who complete full mock exams report strong first-time pass rates. For pricing and access, use the contact form below or kindly reach out to{' '}
-        <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>.
+        <a
+          href="mailto:km.krishnamohan25@gmail.com"
+          className="text-salesforce-dark font-medium underline underline-offset-2 hover:text-salesforce-blue"
+        >
+          km.krishnamohan25@gmail.com
+        </a>
+        .
       </p>
       <Link
         href={`/contact#exam=${encodeURIComponent(contactExamParam)}`}
