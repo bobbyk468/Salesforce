@@ -65,7 +65,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/marketing-cloud-admin-vs-developer" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <header data-lcp-header className="mb-10">
-        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
           Certification Comparison
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

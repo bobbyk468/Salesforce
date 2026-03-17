@@ -176,7 +176,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       </nav>
 
       {/* Freshness + E-E-A-T badge — visible to users and crawlers */}
-      <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-blue mb-4">
+      <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-dark mb-4">
         Updated for {RELEASE_CURRENT}
       </p>
 

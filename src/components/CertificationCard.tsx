@@ -98,7 +98,7 @@ export default function CertificationCard({
                   <div className="flex-1 min-w-0">
                     <div className="flex justify-between items-center text-xs sm:text-sm mb-1.5 sm:mb-2">
                       <span className="text-gray-700 font-medium truncate pr-2">{section.name}</span>
-                      <span className="text-salesforce-blue font-bold flex-shrink-0 bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
+                      <span className="text-salesforce-dark font-bold flex-shrink-0 bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
                         {section.percentage}%
                       </span>
                     </div>

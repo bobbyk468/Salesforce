@@ -105,7 +105,7 @@ export default function CertificationsIndexPage() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListJsonLd) }} />
 
       <header data-lcp-header className="text-center mb-10">
-        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
           Updated for {RELEASE_CURRENT}
         </p>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">All Salesforce Certifications ({RELEASE_CURRENT})</h1>

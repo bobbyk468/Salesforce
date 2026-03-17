@@ -127,7 +127,7 @@ export default function CertSearch() {
                 <span className="truncate">{cert.name}</span>
               </Link>
               {cert.examCode && (
-                <span className="flex-shrink-0 text-xs font-medium text-salesforce-blue bg-salesforce-blue/10 px-2 py-0.5 rounded">
+                <span className="flex-shrink-0 text-xs font-medium text-salesforce-dark bg-salesforce-blue/10 px-2 py-0.5 rounded">
                   {cert.examCode}
                 </span>
               )}

@@ -385,7 +385,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
               <p className="text-sm font-semibold text-gray-900 mb-2">Top Skills Required</p>
               <div className="flex flex-wrap gap-2">
                 {careerData.topSkills.map((skill) => (
-                  <span key={skill} className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-blue">
+                  <span key={skill} className="inline-flex rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-dark">
                     {skill}
                   </span>
                 ))}
@@ -399,7 +399,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
             <ul className="space-y-2.5">
               {careerData.dailyResponsibilities.map((resp, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
-                  <span className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-salesforce-blue/10 flex items-center justify-center text-xs font-bold text-salesforce-blue">{i + 1}</span>
+                  <span className="flex-shrink-0 mt-0.5 h-5 w-5 rounded-full bg-salesforce-blue/10 flex items-center justify-center text-xs font-bold text-salesforce-dark">{i + 1}</span>
                   {resp}
                 </li>
               ))}

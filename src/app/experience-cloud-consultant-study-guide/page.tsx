@@ -77,7 +77,7 @@ export default function ExperienceCloudConsultantStudyGuidePage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/experience-cloud-consultant-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <header data-lcp-header className="mb-10">
-        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-blue mb-4">
+        <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
           Updated for {RELEASE_CURRENT}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">

@@ -145,7 +145,7 @@ export default function TeamPage() {
                 {CERTIFICATIONS.map((cert) => (
                   <span
                     key={cert.abbr}
-                    className="inline-flex items-center gap-1 rounded-full bg-salesforce-blue/10 border border-salesforce-blue/20 px-3 py-1 text-xs font-semibold text-salesforce-blue"
+                    className="inline-flex items-center gap-1 rounded-full bg-salesforce-blue/10 border border-salesforce-blue/20 px-3 py-1 text-xs font-semibold text-salesforce-dark"
                   >
                     <Award className="h-3 w-3" />
                     {cert.abbr}
