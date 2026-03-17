@@ -3,21 +3,26 @@
 import { useEffect } from 'react'
 
 const GA_MEASUREMENT_ID = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID
-/** Desktop: delay to allow React hydration to complete first. Mobile: longer delay so GA tasks don't affect LCP. */
-const DESKTOP_DELAY_AFTER_LOAD_MS = 3000
-const MOBILE_DELAY_AFTER_LOAD_MS = 8000
-const FALLBACK_DESKTOP_MS = 8000
-const FALLBACK_MOBILE_MS = 12000
+/**
+ * To protect Core Web Vitals, load GA only after:
+ * - first user interaction (preferred), OR
+ * - a long idle fallback (in case user never interacts).
+ *
+ * Lighthouse can wait long enough to “see” GA; the interaction gate helps keep GA
+ * out of the critical path for real users and lab runs.
+ */
+const DESKTOP_IDLE_FALLBACK_MS = 20000
+const MOBILE_IDLE_FALLBACK_MS = 30000
 
 /**
- * Loads gtag.js after window load. On mobile, adds an extra delay so GTM long tasks
- * run well after LCP and don't regress mobile performance. Desktop loads on load.
+ * Loads gtag.js well after LCP/hydration to avoid main-thread contention.
  */
 export default function GoogleAnalytics() {
   useEffect(() => {
     if (!GA_MEASUREMENT_ID || typeof window === 'undefined') return
 
     let timeoutId: ReturnType<typeof setTimeout> | null = null
+    let idleId: number | null = null
     let done = false
     const isMobile = () => window.matchMedia('(max-width: 1023px)').matches
 
@@ -28,7 +33,7 @@ export default function GoogleAnalytics() {
         clearTimeout(timeoutId)
         timeoutId = null
       }
-      window.removeEventListener('load', onLoad)
+      cleanupListeners()
       const s1 = document.createElement('script')
       s1.async = true
       s1.src = `https://www.googletagmanager.com/gtag/js?id=${GA_MEASUREMENT_ID}`
@@ -40,32 +45,42 @@ export default function GoogleAnalytics() {
         window.dataLayer = window.dataLayer || [];
         function gtag(){dataLayer.push(arguments);}
         gtag('js', new Date());
-        gtag('config', '${GA_MEASUREMENT_ID}');
+        gtag('config', '${GA_MEASUREMENT_ID}', { send_page_view: true });
       `
       document.head.appendChild(s2)
     }
 
-    const onLoad = () => {
-      if (timeoutId !== null) {
-        clearTimeout(timeoutId)
-        timeoutId = null
-      }
-      if (isMobile()) {
-        timeoutId = setTimeout(load, MOBILE_DELAY_AFTER_LOAD_MS)
-      } else {
-        timeoutId = setTimeout(load, DESKTOP_DELAY_AFTER_LOAD_MS)
+    const onFirstInteraction = () => {
+      // Give the browser a beat after interaction before downloading/exec.
+      if (timeoutId !== null) clearTimeout(timeoutId)
+      timeoutId = setTimeout(load, 1000)
+    }
+
+    const cleanupListeners = () => {
+      window.removeEventListener('pointerdown', onFirstInteraction, { capture: true } as any)
+      window.removeEventListener('keydown', onFirstInteraction, { capture: true } as any)
+      window.removeEventListener('scroll', onFirstInteraction, { capture: true } as any)
+      if (idleId !== null && 'cancelIdleCallback' in window) {
+        ;(window as any).cancelIdleCallback(idleId)
+        idleId = null
       }
     }
 
-    if (document.readyState === 'complete') {
-      onLoad()
+    // Prefer: after real interaction
+    window.addEventListener('pointerdown', onFirstInteraction, { capture: true, passive: true })
+    window.addEventListener('keydown', onFirstInteraction, { capture: true, passive: true })
+    window.addEventListener('scroll', onFirstInteraction, { capture: true, passive: true })
+
+    // Fallback: after long idle
+    const fallbackMs = isMobile() ? MOBILE_IDLE_FALLBACK_MS : DESKTOP_IDLE_FALLBACK_MS
+    if ('requestIdleCallback' in window) {
+      idleId = (window as any).requestIdleCallback(load, { timeout: fallbackMs })
     } else {
-      window.addEventListener('load', onLoad)
-      timeoutId = setTimeout(load, isMobile() ? FALLBACK_MOBILE_MS : FALLBACK_DESKTOP_MS)
+      timeoutId = setTimeout(load, fallbackMs)
     }
 
     return () => {
-      window.removeEventListener('load', onLoad)
+      cleanupListeners()
       if (timeoutId !== null) clearTimeout(timeoutId)
     }
   }, [])
