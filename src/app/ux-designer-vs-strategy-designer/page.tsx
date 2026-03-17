@@ -84,11 +84,11 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Take First (Designers)</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">~65%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Focus</span><span className="font-semibold">Execution</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Execution</span></div>
           </div>
           <Link href="/ux-designer-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -99,11 +99,11 @@ export default function UxDesignerVsStrategyDesignerPage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Take First (Consultants)</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">~62%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Focus</span><span className="font-semibold">Strategy</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~62%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Strategy</span></div>
           </div>
           <Link href="/strategy-designer-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -115,9 +115,9 @@ export default function UxDesignerVsStrategyDesignerPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Area</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">UX Designer</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Strategy Designer</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Area</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">UX Designer</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Strategy Designer</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 text-sm">

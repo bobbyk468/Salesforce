@@ -130,9 +130,9 @@ export default function CertificationsIndexPage() {
               <div className="flex items-start justify-between gap-2">
                 <div>
                   <p className="font-semibold text-gray-900 group-hover:text-salesforce-blue transition-colors">{cert.name}</p>
-                  <p className="text-sm text-gray-500 mt-1">{cert.desc}</p>
+                  <p className="text-sm text-gray-600 mt-1">{cert.desc}</p>
                 </div>
-                <ArrowRight className="h-4 w-4 text-gray-400 group-hover:text-salesforce-blue flex-shrink-0 mt-1 transition-colors" />
+                <ArrowRight className="h-4 w-4 text-gray-600 group-hover:text-salesforce-blue flex-shrink-0 mt-1 transition-colors" />
               </div>
             </Link>
           ))}
@@ -161,7 +161,7 @@ export default function CertificationsIndexPage() {
                   </p>
                 </div>
               </div>
-              <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-salesforce-blue group-hover:translate-x-1 transition-all" />
+              <ArrowRight className="h-5 w-5 text-gray-600 group-hover:text-salesforce-blue group-hover:translate-x-1 transition-all" />
             </Link>
           ))}
         </div>

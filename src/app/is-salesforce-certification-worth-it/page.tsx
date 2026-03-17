@@ -94,14 +94,14 @@ export default function IsSalesforceCertificationWorthItPage() {
             <div key={row.role} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0">
               <span className="font-medium text-gray-900 text-sm">{row.role}</span>
               <div className="flex gap-4 text-sm">
-                <span className="text-gray-500">Without: <span className="text-gray-700">{row.without}</span></span>
-                <span className="text-gray-500">With cert: <span className="text-gray-900 font-medium">{row.with}</span></span>
+                <span className="text-gray-600">Without: <span className="text-gray-700">{row.without}</span></span>
+                <span className="text-gray-600">With cert: <span className="text-gray-900 font-medium">{row.with}</span></span>
                 <span className="text-green-700 font-bold">{row.increase}</span>
               </div>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-3">Salary ranges are US national averages ({RELEASE_CURRENT}). Varies by location, company size, and experience.</p>
+        <p className="text-xs text-gray-600 mt-3">Salary ranges are US national averages ({RELEASE_CURRENT}). Varies by location, company size, and experience.</p>
       </div>
 
       {/* Who should get certified */}

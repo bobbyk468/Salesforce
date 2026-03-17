@@ -84,10 +84,10 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Start Here</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Required exams</span><span className="font-semibold">4</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Min cost</span><span className="font-semibold">~$1,200</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Est. timeline</span><span className="font-semibold">6–12 months</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Entry cost</span><span className="font-semibold">$200 (ADV Admin)</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Required exams</span><span className="font-semibold">4</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Min cost</span><span className="font-semibold">~$1,200</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Est. timeline</span><span className="font-semibold">6–12 months</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Entry cost</span><span className="font-semibold">$200 (ADV Admin)</span></div>
           </div>
           <div className="text-xs text-gray-600 space-y-1 mb-3">
             <p className="font-semibold text-gray-900">Required exams:</p>
@@ -105,10 +105,10 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Take Second</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Required exams</span><span className="font-semibold">5</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Min cost</span><span className="font-semibold">~$2,000</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Est. timeline</span><span className="font-semibold">6–18 months</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Entry cost</span><span className="font-semibold">$400 (each exam)</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Required exams</span><span className="font-semibold">5</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Min cost</span><span className="font-semibold">~$2,000</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Est. timeline</span><span className="font-semibold">6–18 months</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Entry cost</span><span className="font-semibold">$400 (each exam)</span></div>
           </div>
           <div className="text-xs text-gray-600 space-y-1 mb-3">
             <p className="font-semibold text-gray-900">Required exams:</p>
@@ -128,9 +128,9 @@ export default function SystemArchitectVsApplicationArchitectPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Area</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Application Architect</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">System Architect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Area</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Application Architect</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">System Architect</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 text-sm">

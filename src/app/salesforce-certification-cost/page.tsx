@@ -181,7 +181,7 @@ export default function SalesforceCertificationCostPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3 flex gap-1.5">
+        <p className="text-xs text-gray-600 mt-3 flex gap-1.5">
           <Info className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
           Fees are in USD. Regional taxes may apply. Always confirm the final amount in your Salesforce certification account before booking.
         </p>
@@ -243,7 +243,7 @@ export default function SalesforceCertificationCostPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3 flex gap-1.5">
+        <p className="text-xs text-gray-600 mt-3 flex gap-1.5">
           <Info className="h-3.5 w-3.5 mt-0.5 flex-shrink-0" />
           INR prices are indicative (USD &times; ~83 exchange rate). Pearson VUE may apply regional discounts; verify exact pricing on the official Salesforce certification registration page before purchase.
         </p>
@@ -267,7 +267,7 @@ export default function SalesforceCertificationCostPage() {
                     <span className={`inline-block px-3 py-1 rounded-full text-sm font-bold ${c.badge}`}>{fee}</span>
                   </div>
                   <div className="text-center">
-                    <p className="text-xs font-medium text-gray-500 mb-0.5">Retake</p>
+                    <p className="text-xs font-medium text-gray-600 mb-0.5">Retake</p>
                     <span className="inline-block px-3 py-1 rounded-full text-sm font-semibold bg-gray-100 text-gray-700">{retake}</span>
                   </div>
                 </div>
@@ -292,7 +292,7 @@ export default function SalesforceCertificationCostPage() {
       {/* Retake policy */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <RefreshCw className="h-5 w-5 text-gray-500" />
+          <RefreshCw className="h-5 w-5 text-gray-600" />
           Retake Policy
         </h2>
         <ul className="space-y-2.5 text-sm text-gray-700">
@@ -306,7 +306,7 @@ export default function SalesforceCertificationCostPage() {
       {/* Savings tips */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4 flex items-center gap-2">
-          <DollarSign className="h-5 w-5 text-gray-500" />
+          <DollarSign className="h-5 w-5 text-gray-600" />
           How to Reduce Certification Costs
         </h2>
         <ul className="space-y-3 text-sm text-gray-700">

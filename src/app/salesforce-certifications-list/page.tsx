@@ -110,7 +110,7 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
         ].map(({ label, value }) => (
           <div key={label} className="rounded-xl border border-gray-100 bg-white p-4 text-center">
             <p className="text-2xl font-bold text-salesforce-blue">{value}</p>
-            <p className="text-xs text-gray-500 mt-1">{label}</p>
+            <p className="text-xs text-gray-600 mt-1">{label}</p>
           </div>
         ))}
       </section>
@@ -166,7 +166,7 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
                           </td>
                           <td className="py-2.5 px-4">
                             <Link href={item.href} aria-label={`Study guide for ${item.name}`}>
-                              <ArrowRight className="h-4 w-4 text-gray-400 hover:text-salesforce-blue transition-colors" />
+                              <ArrowRight className="h-4 w-4 text-gray-600 hover:text-salesforce-blue transition-colors" />
                             </Link>
                           </td>
                         </tr>

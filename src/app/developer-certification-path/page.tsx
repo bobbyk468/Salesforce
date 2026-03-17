@@ -169,7 +169,7 @@ export default function DeveloperCertificationPathPage() {
                     {item.badge}
                   </span>
                 </div>
-                <div className="flex flex-wrap gap-4 text-xs text-gray-500">
+                <div className="flex flex-wrap gap-4 text-xs text-gray-600">
                   <span>Fee: <strong className="text-gray-700">{item.fee}</strong></span>
                   <span>Pass: <strong className="text-gray-700">{item.passingScore}</strong></span>
                   <span>Prereq: <strong className="text-gray-700">{item.prereq}</strong></span>

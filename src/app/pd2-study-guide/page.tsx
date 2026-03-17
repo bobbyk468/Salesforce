@@ -108,11 +108,11 @@ export default function Pd2StudyGuidePage() {
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
               <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+              <p className="text-xs text-gray-600 mt-1">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           PD1 certification required. 120-minute time limit (longer than most Salesforce exams — code-reading questions take more time). Retake fee: $100.
         </p>
       </section>
@@ -132,7 +132,7 @@ export default function Pd2StudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>
@@ -257,7 +257,7 @@ export default function Pd2StudyGuidePage() {
             PD1 Study Guide
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           <Link href="/pd1-vs-pd2" className="text-salesforce-blue underline">
             PD1 vs PD2 — how they differ and which to take next →
           </Link>

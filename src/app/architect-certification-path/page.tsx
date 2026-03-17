@@ -101,12 +101,12 @@ export default function ArchitectCertificationPathPage() {
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-salesforce-blue">Application Architect</td>
                 <td className="py-2.5 pr-4">App Builder + PD1 + Data Architect + Sharing &amp; Visibility Architect</td>
-                <td className="py-2.5 text-right text-xs font-medium text-gray-500">Advanced</td>
+                <td className="py-2.5 text-right text-xs font-medium text-gray-600">Advanced</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-purple-700">System Architect</td>
                 <td className="py-2.5 pr-4">Integration Architect + IAM Architect + Dev Lifecycle Architect + System Architect exam</td>
-                <td className="py-2.5 text-right text-xs font-medium text-gray-500">Advanced</td>
+                <td className="py-2.5 text-right text-xs font-medium text-gray-600">Advanced</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-amber-700">Certified Technical Architect (CTA)</td>

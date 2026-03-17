@@ -96,7 +96,7 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -113,7 +113,7 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 3.6}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{section.note}</p>
+              <p className="text-xs text-gray-600">{section.note}</p>
             </div>
           ))}
         </div>

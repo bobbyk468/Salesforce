@@ -82,7 +82,7 @@ export default function SalesforceCertificationMaintenancePage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -141,13 +141,13 @@ export default function SalesforceCertificationMaintenancePage() {
           ].map((row) => (
             <div key={row.release} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0 text-sm">
               <span className="font-semibold text-gray-900">{row.release}</span>
-              <span className="text-gray-500">Release: {row.period}</span>
-              <span className="text-gray-500">Maintenance due: {row.maintenance}</span>
+              <span className="text-gray-600">Release: {row.period}</span>
+              <span className="text-gray-600">Maintenance due: {row.maintenance}</span>
               <span className="text-xs bg-blue-100 text-blue-700 px-2 py-0.5 rounded-full">{row.status}</span>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-3">Exact dates vary. Check release.salesforce.com for confirmed dates.</p>
+        <p className="text-xs text-gray-600 mt-3">Exact dates vary. Check release.salesforce.com for confirmed dates.</p>
       </div>
 
       {/* FAQ */}

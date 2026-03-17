@@ -192,21 +192,21 @@ export default function Footer() {
 
         {/* Disclaimer */}
         <div className="border-t border-gray-700 mt-8 pt-6">
-          <p className="text-gray-400 text-sm mb-4">
+          <p className="text-gray-600 text-sm mb-4">
             <strong className="text-gray-300">Disclaimer:</strong> This site is an independent preparation resource and is not affiliated with, endorsed by, or sponsored by Salesforce, Inc. Salesforce, Trailblazer, Trailhead, and all other Salesforce marks are trademarks of salesforce.com, inc. "Trailblaze Prep" is not affiliated with or endorsed by Salesforce's Trailblazer program. We provide exam-style practice questions and study materials aligned with official exam outlines to help you prepare; we do not offer braindumps or real exam questions.
           </p>
           <div className="flex flex-wrap items-center gap-x-4 gap-y-2 text-sm">
-            <Link href="/terms" className="text-gray-400 hover:text-salesforce-light transition-colors">
+            <Link href="/terms" className="text-gray-600 hover:text-salesforce-light transition-colors">
               Terms of Use
             </Link>
-            <Link href="/privacy" className="text-gray-400 hover:text-salesforce-light transition-colors">
+            <Link href="/privacy" className="text-gray-600 hover:text-salesforce-light transition-colors">
               Privacy Policy
             </Link>
           </div>
         </div>
 
         <div className="border-t border-gray-700 mt-6 pt-6 flex flex-col md:flex-row justify-between items-center">
-          <p className="text-gray-400 text-sm">
+          <p className="text-gray-600 text-sm">
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
           <div className="flex items-center space-x-4 mt-4 md:mt-0">
@@ -214,7 +214,7 @@ export default function Footer() {
               href={X_HANDLE}
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-salesforce-light flex items-center space-x-1"
+              className="text-gray-600 hover:text-salesforce-light flex items-center space-x-1"
               aria-label="@trailblazeprep on X (Twitter)"
             >
               {/* X (Twitter) logo */}
@@ -227,7 +227,7 @@ export default function Footer() {
               href="https://trailhead.salesforce.com"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-salesforce-light flex items-center space-x-1"
+              className="text-gray-600 hover:text-salesforce-light flex items-center space-x-1"
             >
               <span>Trailhead</span>
               <ExternalLink className="h-4 w-4" />
@@ -236,7 +236,7 @@ export default function Footer() {
               href="https://www.salesforce.com/trailblazer/certification"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-400 hover:text-salesforce-light flex items-center space-x-1"
+              className="text-gray-600 hover:text-salesforce-light flex items-center space-x-1"
             >
               <span>Official Certs</span>
               <ExternalLink className="h-4 w-4" />

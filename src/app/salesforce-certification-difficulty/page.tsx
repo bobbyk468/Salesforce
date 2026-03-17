@@ -148,9 +148,9 @@ export default function SalesforceCertificationDifficultyPage() {
               {tier.certs.map((cert) => (
                 <div key={cert.name} className="flex flex-wrap items-start gap-x-4 gap-y-1 py-2 border-t border-gray-50 first:border-0 text-sm">
                   <span className="font-semibold text-gray-900 w-52 flex-shrink-0">{cert.name}</span>
-                  <span className="text-gray-500 text-xs">Fee: {cert.fee}</span>
-                  {cert.questions !== 'N/A' && <span className="text-gray-500 text-xs">Q: {cert.questions}</span>}
-                  {cert.passing !== 'N/A' && <span className="text-gray-500 text-xs">Pass: {cert.passing}</span>}
+                  <span className="text-gray-600 text-xs">Fee: {cert.fee}</span>
+                  {cert.questions !== 'N/A' && <span className="text-gray-600 text-xs">Q: {cert.questions}</span>}
+                  {cert.passing !== 'N/A' && <span className="text-gray-600 text-xs">Pass: {cert.passing}</span>}
                   <span className="text-gray-600 flex-1 text-xs">{cert.note}</span>
                 </div>
               ))}

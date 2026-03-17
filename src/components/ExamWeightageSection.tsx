@@ -32,7 +32,7 @@ export default function ExamWeightageSection({ sections, title = 'Exam Weightage
           </div>
         ))}
         {total !== 100 && (
-          <p className="text-xs text-gray-500 pt-1">Total weight: {total}% (sections may vary by exam version)</p>
+          <p className="text-xs text-gray-600 pt-1">Total weight: {total}% (sections may vary by exam version)</p>
         )}
       </div>
     </div>

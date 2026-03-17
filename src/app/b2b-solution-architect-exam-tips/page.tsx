@@ -92,19 +92,19 @@ export default function B2BSolutionArchitectExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">65%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function B2BSolutionArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">Understand B2B Business Processes</span>
             <span className="font-bold text-salesforce-blue ml-4">17%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Multi-Cloud Architecture = 35% — the single largest section. Know every cloud&apos;s role in the B2B sales lifecycle.</p>
+          <p className="text-xs text-gray-600 pt-1">Multi-Cloud Architecture = 35% — the single largest section. Know every cloud&apos;s role in the B2B sales lifecycle.</p>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ export default function B2BSolutionArchitectExamTipsPage() {
             Architect Certification Path
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/application-architect" className="text-salesforce-blue underline">Application Architect</Link> or <Link href="/certifications/system-architect" className="text-salesforce-blue underline">System Architect</Link> next.
         </p>
       </section>

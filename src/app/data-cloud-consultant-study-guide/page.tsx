@@ -102,11 +102,11 @@ export default function DataCloudConsultantStudyGuidePage() {
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
               <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+              <p className="text-xs text-gray-600 mt-1">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           62% passing score — lower than most Salesforce exams, reflecting the exam&apos;s technical depth. Retake fee: $100. SQL and data modelling experience strongly recommended.
         </p>
       </section>
@@ -126,7 +126,7 @@ export default function DataCloudConsultantStudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>

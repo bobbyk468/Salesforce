@@ -101,11 +101,11 @@ export default function AiAssociateStudyGuidePage() {
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
               <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+              <p className="text-xs text-gray-600 mt-1">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           Retake fee: $75. No prerequisites. Shorter and cheaper than most Salesforce exams — an accessible first AI credential for any Salesforce professional.
         </p>
       </section>
@@ -125,7 +125,7 @@ export default function AiAssociateStudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>
@@ -245,7 +245,7 @@ export default function AiAssociateStudyGuidePage() {
             Agentforce Specialist Study Guide
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           <Link href="/agentforce-specialist-vs-ai-associate" className="text-salesforce-blue underline">
             Agentforce Specialist vs AI Associate — which to take first? →
           </Link>

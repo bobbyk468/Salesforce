@@ -84,11 +84,11 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">B2B Marketing</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">~65%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Platform</span><span className="font-semibold">Account Engagement</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~65%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">Account Engagement</span></div>
           </div>
           <Link href="/pardot-consultant-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -99,11 +99,11 @@ export default function PardotConsultantVsMarketingCloudConsultantPage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">B2C Marketing</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">~67%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Platform</span><span className="font-semibold">MC Engagement</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~67%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Platform</span><span className="font-semibold">MC Engagement</span></div>
           </div>
           <Link href="/marketing-cloud-consultant-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>

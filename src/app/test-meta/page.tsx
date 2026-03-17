@@ -14,7 +14,7 @@ export default function TestMetaPage() {
         <p className="text-gray-600">
           View page source (Ctrl+U / Cmd+U) and search for &quot;name=&quot;description&quot;&quot;
         </p>
-        <p className="text-sm text-gray-500 mt-2">
+        <p className="text-sm text-gray-600 mt-2">
           If you see the meta description tag, the issue is in getCertMetadata helper.
           <br />
           If you don&apos;t see it, the issue is in layout.tsx.

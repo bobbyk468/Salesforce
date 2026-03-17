@@ -90,19 +90,19 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">90 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">67%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -139,7 +139,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
             <span className="font-medium text-gray-900">Mobile Studio &amp; Account Administration</span>
             <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Email Studio + Automation Studio = 48%. Configure real automations and triggered sends in a sandbox account before booking.</p>
+          <p className="text-xs text-gray-600 pt-1">Email Studio + Automation Studio = 48%. Configure real automations and triggered sends in a sandbox account before booking.</p>
         </div>
       </section>
 

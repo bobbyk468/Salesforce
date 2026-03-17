@@ -91,19 +91,19 @@ export default function AppBuilderExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">63%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function AppBuilderExamTipsPage() {
             <span className="font-medium text-gray-900">App Design and User Interface</span>
             <span className="font-bold text-salesforce-blue ml-4">15%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Process Automation + Data Modelling = 51%. Master flows, record types, and object relationships first.</p>
+          <p className="text-xs text-gray-600 pt-1">Process Automation + Data Modelling = 51%. Master flows, record types, and object relationships first.</p>
         </div>
       </section>
 
@@ -255,7 +255,7 @@ export default function AppBuilderExamTipsPage() {
             Compare ADM-201 vs App Builder
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After you&apos;re consistently scoring 75%+ on App Builder mocks, the most common next steps are{' '}
           <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">
             Advanced Administrator
@@ -270,7 +270,7 @@ export default function AppBuilderExamTipsPage() {
           </Link>
           {' '}if you want to move into implementations.
         </p>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
         </p>
       </section>

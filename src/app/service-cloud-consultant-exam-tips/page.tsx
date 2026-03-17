@@ -92,19 +92,19 @@ export default function ServiceCloudConsultantExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">67%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -143,7 +143,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>
@@ -308,7 +308,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
             Start with ADM-201 First
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After Service Cloud, many consultants either specialise further with{' '}
           <Link href="/field-service-vs-service-cloud-consultant" className="text-salesforce-blue underline">
             Field Service Consultant
@@ -319,7 +319,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
           </Link>
           . Choose based on whether your day-to-day is closer to dispatch and work orders or to pipeline and forecasting.
         </p>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
         </p>
       </section>

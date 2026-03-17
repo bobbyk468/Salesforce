@@ -92,19 +92,19 @@ export default function SystemArchitectExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">65%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -134,7 +134,7 @@ export default function SystemArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">Platform and Heroku Architecture</span>
             <span className="font-bold text-salesforce-blue ml-4">38%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Governance and Integrations/Identity together account for 62% — prioritise these first.</p>
+          <p className="text-xs text-gray-600 pt-1">Governance and Integrations/Identity together account for 62% — prioritise these first.</p>
         </div>
       </section>
 
@@ -247,7 +247,7 @@ export default function SystemArchitectExamTipsPage() {
             All Architect Certifications
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/application-architect" className="text-salesforce-blue underline">Application Architect</Link> or <Link href="/certifications/system-architect" className="text-salesforce-blue underline">System Architect</Link> next.
         </p>
       </section>

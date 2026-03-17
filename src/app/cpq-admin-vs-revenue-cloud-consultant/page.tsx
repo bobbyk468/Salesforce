@@ -109,7 +109,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
               {[{ l: 'Fee', v: cert.fee }, { l: 'Questions', v: cert.questions }, { l: 'Time', v: cert.time }, { l: 'Pass', v: cert.passing }].map((s) => (
                 <div key={s.l} className="text-center bg-gray-50 rounded-lg p-2">
                   <div className="font-bold text-salesforce-dark text-xs">{s.v}</div>
-                  <div className="text-xs text-gray-500">{s.l}</div>
+                  <div className="text-xs text-gray-600">{s.l}</div>
                 </div>
               ))}
             </div>
@@ -147,10 +147,10 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
             item.cert ? (
               <div key={i} className="text-center">
                 <div className={`px-3 py-1.5 rounded-lg font-medium ${item.color}`}>{item.label}</div>
-                <div className="text-xs text-gray-500 mt-1">{item.cert}</div>
+                <div className="text-xs text-gray-600 mt-1">{item.cert}</div>
               </div>
             ) : (
-              <span key={i} className="text-gray-500 font-bold">{item.label}</span>
+              <span key={i} className="text-gray-600 font-bold">{item.label}</span>
             )
           ))}
         </div>
@@ -162,7 +162,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Aspect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Aspect</th>
                 <th scope="col" className="text-left py-2 pr-4 text-salesforce-blue font-medium">CPQ Admin</th>
                 <th scope="col" className="text-left py-2 text-salesforce-blue font-medium">Revenue Cloud Consultant</th>
               </tr>
@@ -179,7 +179,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
                 { aspect: 'Avg Salary', a: '$95–130k (US)', b: '$100–140k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
-                  <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>
+                  <td className="py-2 pr-4 text-gray-600">{row.aspect}</td>
                   <td className="py-2 pr-4 text-gray-900">{row.a}</td>
                   <td className="py-2 text-gray-900">{row.b}</td>
                 </tr>

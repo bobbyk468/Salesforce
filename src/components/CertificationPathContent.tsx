@@ -40,7 +40,7 @@ export default function CertificationPathContent({ paths }: { paths: Certificati
                         className={`inline-flex items-center gap-2 px-4 py-2 rounded-lg border font-semibold text-sm ${style.bg} ${style.border} text-gray-800`}
                       >
                         <span className="text-gray-600 font-normal">Step {stageIndex + 1}</span>
-                        <ChevronRight className="h-4 w-4 text-gray-400" aria-hidden="true" />
+                        <ChevronRight className="h-4 w-4 text-gray-600" aria-hidden="true" />
                         {stageGroup.label}
                       </div>
                       {stageGroup.description && (

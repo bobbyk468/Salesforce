@@ -88,7 +88,7 @@ export default function SalesforceCertificationValidityPage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -135,9 +135,9 @@ export default function SalesforceCertificationValidityPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Certification</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Expiry</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Renewal requirement</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Certification</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Expiry</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Renewal requirement</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -157,7 +157,7 @@ export default function SalesforceCertificationValidityPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">Salesforce&apos;s maintenance model is one of the most candidate-friendly in enterprise technology certification.</p>
+        <p className="text-xs text-gray-600 mt-3">Salesforce&apos;s maintenance model is one of the most candidate-friendly in enterprise technology certification.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

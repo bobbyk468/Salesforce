@@ -122,7 +122,7 @@ export default function HowToBecomeSalesforceConsultantPage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -188,9 +188,9 @@ export default function HowToBecomeSalesforceConsultantPage() {
             { level: 'Senior / Architect', range: '$130k–$180k', desc: '4+ certs, solution architect scope' },
           ].map((tier) => (
             <div key={tier.level} className="rounded-lg bg-gray-50 border border-gray-100 p-4 text-center">
-              <div className="text-sm text-gray-500 mb-1">{tier.level}</div>
+              <div className="text-sm text-gray-600 mb-1">{tier.level}</div>
               <div className="text-xl font-bold text-salesforce-blue mb-1">{tier.range}</div>
-              <div className="text-xs text-gray-500">{tier.desc}</div>
+              <div className="text-xs text-gray-600">{tier.desc}</div>
             </div>
           ))}
         </div>

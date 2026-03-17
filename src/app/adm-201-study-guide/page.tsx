@@ -102,11 +102,11 @@ export default function Adm201StudyGuidePage() {
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
               <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+              <p className="text-xs text-gray-600 mt-1">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           Retake fee: $100. No prerequisites required. Delivered through Webassessor (online proctored or test centre).
         </p>
       </section>
@@ -127,7 +127,7 @@ export default function Adm201StudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>
@@ -321,7 +321,7 @@ export default function Adm201StudyGuidePage() {
             Admin Certification Path
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           Planning to take App Builder after ADM-201?{' '}
           <Link href="/adm-201-vs-app-builder" className="text-salesforce-blue underline">
             Compare ADM-201 vs App Builder →

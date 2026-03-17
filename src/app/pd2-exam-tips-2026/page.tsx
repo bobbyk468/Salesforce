@@ -98,19 +98,19 @@ export default function Pd2ExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">65%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -144,7 +144,7 @@ export default function Pd2ExamTipsPage() {
             <span className="font-medium text-gray-900">Integration and Data Management</span>
             <span className="font-bold text-salesforce-blue ml-4">24%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">The top three sections account for 76% of the exam. Focus your first four weeks here.</p>
+          <p className="text-xs text-gray-600 pt-1">The top three sections account for 76% of the exam. Focus your first four weeks here.</p>
         </div>
       </section>
 
@@ -272,7 +272,7 @@ export default function Pd2ExamTipsPage() {
             Developer Certification Path
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
         </p>
       </section>

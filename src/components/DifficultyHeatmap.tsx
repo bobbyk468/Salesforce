@@ -51,7 +51,7 @@ export default function DifficultyHeatmap({ slug }: DifficultyHeatmapProps) {
           </tbody>
         </table>
       </div>
-      <p className="text-xs text-gray-400 mt-4">
+      <p className="text-xs text-gray-600 mt-4">
         Difficulty based on analysis of common candidate errors across each exam section.
       </p>
     </div>

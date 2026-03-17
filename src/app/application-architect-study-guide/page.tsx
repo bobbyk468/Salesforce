@@ -100,7 +100,7 @@ export default function ApplicationArchitectStudyGuidePage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -114,7 +114,7 @@ export default function ApplicationArchitectStudyGuidePage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-3 mb-1">
                   <h3 className="font-semibold text-gray-900">{exam.name}</h3>
-                  <div className="flex gap-3 text-xs text-gray-500 flex-shrink-0">
+                  <div className="flex gap-3 text-xs text-gray-600 flex-shrink-0">
                     <span>{exam.fee}</span>
                     <span>{exam.time}</span>
                   </div>
@@ -152,9 +152,9 @@ export default function ApplicationArchitectStudyGuidePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Exam</th>
-                <th scope="col" className="text-center py-2 pr-4 text-gray-500 font-medium">App Architect</th>
-                <th scope="col" className="text-center py-2 text-gray-500 font-medium">System Architect</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Exam</th>
+                <th scope="col" className="text-center py-2 pr-4 text-gray-600 font-medium">App Architect</th>
+                <th scope="col" className="text-center py-2 text-gray-600 font-medium">System Architect</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -176,7 +176,7 @@ export default function ApplicationArchitectStudyGuidePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials — passing them once fulfils requirements for both.</p>
+        <p className="text-xs text-gray-600 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both credentials — passing them once fulfils requirements for both.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

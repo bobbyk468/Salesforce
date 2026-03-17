@@ -138,7 +138,7 @@ export default function SalesforceCertificationSalaryPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">Salary ranges reflect United States market data. UK, Australia, and European markets typically run 20–35% lower in absolute terms. Consultant/contractor day rates can be significantly higher than employment salaries.</p>
+        <p className="text-xs text-gray-600 mt-3">Salary ranges reflect United States market data. UK, Australia, and European markets typically run 20–35% lower in absolute terms. Consultant/contractor day rates can be significantly higher than employment salaries.</p>
       </section>
 
       {/* Regional salary comparison */}
@@ -204,7 +204,7 @@ export default function SalesforceCertificationSalaryPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">
+        <p className="text-xs text-gray-600 mt-3">
           Figures are annual base salary (excluding bonus and equity). UK and Australian salaries are lower in absolute terms but comparable in purchasing power. India figures reflect demand from global SIs and captive centres. L = Lakhs, Cr = Crores.
         </p>
       </section>
@@ -230,33 +230,33 @@ export default function SalesforceCertificationSalaryPage() {
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Platform Developer II (PD2)</span>
-              <p className="text-xs text-gray-500">Best uplift from admin/developer level to senior developer</p>
+              <p className="text-xs text-gray-600">Best uplift from admin/developer level to senior developer</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$20–35k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Application Architect (role credential)</span>
-              <p className="text-xs text-gray-500">Biggest single jump for developer-to-architect transition</p>
+              <p className="text-xs text-gray-600">Biggest single jump for developer-to-architect transition</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$30–50k</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <div>
               <span className="font-medium text-gray-900">Marketing Cloud Consultant</span>
-              <p className="text-xs text-gray-500">High demand, relatively low supply of certified specialists</p>
+              <p className="text-xs text-gray-600">High demand, relatively low supply of certified specialists</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–30k</span>
           </div>
           <div className="flex justify-between items-start">
             <div>
               <span className="font-medium text-gray-900">Advanced Administrator (ADM-211)</span>
-              <p className="text-xs text-gray-500">Best uplift from admin level without switching to developer track</p>
+              <p className="text-xs text-gray-600">Best uplift from admin level without switching to developer track</p>
             </div>
             <span className="font-bold text-emerald-700 ml-4 whitespace-nowrap">+$15–25k</span>
           </div>
         </div>
-        <p className="text-xs text-gray-500 pt-3">Salary uplift estimates are approximate and market/experience-dependent. Your mileage will vary based on employer, location, and existing experience.</p>
+        <p className="text-xs text-gray-600 pt-3">Salary uplift estimates are approximate and market/experience-dependent. Your mileage will vary based on employer, location, and existing experience.</p>
       </section>
 
       {/* Start */}

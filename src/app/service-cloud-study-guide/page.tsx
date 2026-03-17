@@ -103,11 +103,11 @@ export default function ServiceCloudStudyGuidePage() {
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
               <p className="text-xl font-bold text-salesforce-blue">{value}</p>
-              <p className="text-xs text-gray-500 mt-1">{label}</p>
+              <p className="text-xs text-gray-600 mt-1">{label}</p>
             </div>
           ))}
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           Retake fee: $100. Salesforce recommends ADM-201 before attempting. 2+ years of Service Cloud implementation experience strongly recommended.
         </p>
       </section>
@@ -128,7 +128,7 @@ export default function ServiceCloudStudyGuidePage() {
               <div className="w-full bg-gray-100 rounded-full h-2 mb-1">
                 <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${weight}%` }} />
               </div>
-              <p className="text-xs text-gray-500">{note}</p>
+              <p className="text-xs text-gray-600">{note}</p>
             </div>
           ))}
         </div>
@@ -180,7 +180,7 @@ export default function ServiceCloudStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Case Routing Decision Framework</h2>
         <div className="space-y-3 text-sm text-gray-700">
-          <p className="text-xs text-gray-500 font-semibold uppercase tracking-wider">Use this when a scenario describes a case routing requirement:</p>
+          <p className="text-xs text-gray-600 font-semibold uppercase tracking-wider">Use this when a scenario describes a case routing requirement:</p>
           <ul className="space-y-2">
             <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Route to a team, agents pull cases manually</strong> → Queue-based Omni-Channel or standard assignment rules to queues</span></li>
             <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><span><strong>Route automatically to the right individual agent based on skills</strong> → Skills-based Omni-Channel routing</span></li>

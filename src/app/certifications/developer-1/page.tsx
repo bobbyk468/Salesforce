@@ -235,7 +235,7 @@ export default function Developer1Page() {
               <strong>SOQL inside a loop</strong> will hit the <strong>100 SOQL query limit</strong> if the loop iterates over more than 100 records. Fix: run one SOQL query before the loop using <code className="bg-white px-1 rounded border border-gray-200">WHERE Id IN :idSet</code>, store results in a <code className="bg-white px-1 rounded border border-gray-200">Map&lt;Id, SObject&gt;</code>, and look up records inside the loop with no additional queries.
             </p>
           </details>
-          <p className="text-xs text-gray-500 mt-3">15 full practice questions with explanations are below ↓</p>
+          <p className="text-xs text-gray-600 mt-3">15 full practice questions with explanations are below ↓</p>
         </div>
 
         {/* Prominent CTA above fold */}
@@ -299,7 +299,7 @@ export default function Developer1Page() {
                 <li><strong>Weeks 6–7:</strong> UI &amp; Deployment (11%) — LWC basics, Aura, Visualforce, change sets, sandboxes</li>
                 <li><strong>Weeks 7–8:</strong> Full mock exams and targeted weak-area review</li>
               </ul>
-              <p className="text-xs text-gray-500 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days — you already know the data model and platform fundamentals.</p>
+              <p className="text-xs text-gray-600 mt-3">Already an admin? Reduce Weeks 1–2 to 3–4 days — you already know the data model and platform fundamentals.</p>
             </div>
           </details>
 
@@ -551,7 +551,7 @@ private class CalloutServiceTest {
                 <span className="text-gray-600 ml-2">Step-by-step guide: PD1 → JavaScript Developer I → PD2 → Integration Architect.</span>
               </li>
             </ul>
-            <p className="text-xs text-gray-500 mt-3">
+            <p className="text-xs text-gray-600 mt-3">
               Coming from the admin track?{' '}
               <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue underline">
                 ADM-201 exam tips ({RELEASE_CURRENT})

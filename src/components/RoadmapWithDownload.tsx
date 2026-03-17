@@ -41,7 +41,7 @@ export default function RoadmapWithDownload({ children, downloadFilename }: Road
           <Download className="h-4 w-4" aria-hidden />
           Download as PNG
         </button>
-        <span className="text-gray-400">Save or share this roadmap.</span>
+        <span className="text-gray-600">Save or share this roadmap.</span>
       </p>
     </div>
   )

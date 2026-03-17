@@ -91,19 +91,19 @@ export default function MarketingCloudConsultantExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">67%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -137,7 +137,7 @@ export default function MarketingCloudConsultantExamTipsPage() {
             <span className="font-medium text-gray-900">Data Design and Management</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Discovery and Architecture + Account Configuration = 50%. These are your highest-ROI study areas.</p>
+          <p className="text-xs text-gray-600 pt-1">Discovery and Architecture + Account Configuration = 50%. These are your highest-ROI study areas.</p>
         </div>
       </section>
 
@@ -234,7 +234,7 @@ export default function MarketingCloudConsultantExamTipsPage() {
             Email Specialist Exam Tips
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Account Engagement (Pardot) Consultant</Link> next.
         </p>
       </section>

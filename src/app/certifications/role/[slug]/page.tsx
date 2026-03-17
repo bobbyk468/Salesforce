@@ -353,7 +353,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
                 {item.name}
               </span>
             </div>
-            <ArrowRight className="h-5 w-5 text-gray-400 group-hover:text-salesforce-blue group-hover:translate-x-1 flex-shrink-0 ml-2 transition-all duration-200" />
+            <ArrowRight className="h-5 w-5 text-gray-600 group-hover:text-salesforce-blue group-hover:translate-x-1 flex-shrink-0 ml-2 transition-all duration-200" />
           </Link>
         ))}
       </div>

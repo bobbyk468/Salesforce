@@ -114,7 +114,7 @@ export default function BecomeCtaPage() {
               </span>
               <div>
                 <h2 className="text-base font-bold text-gray-900">{phase.title}</h2>
-                <p className="text-sm text-gray-500">{phase.description}</p>
+                <p className="text-sm text-gray-600">{phase.description}</p>
               </div>
             </div>
 
@@ -141,10 +141,10 @@ export default function BecomeCtaPage() {
                       </span>
                     )}
                     {cert.note && !cert.required && (
-                      <span className="mt-1 text-xs text-gray-500 line-clamp-2">{cert.note}</span>
+                      <span className="mt-1 text-xs text-gray-600 line-clamp-2">{cert.note}</span>
                     )}
                     {cert.prerequisites && cert.prerequisites.length > 0 && (
-                      <span className="mt-2 text-xs text-gray-500" title={cert.prerequisites.map((p) => p.name).join(', ')}>
+                      <span className="mt-2 text-xs text-gray-600" title={cert.prerequisites.map((p) => p.name).join(', ')}>
                         ← {cert.prerequisites.map((p) => p.name).join(', ')}
                       </span>
                     )}

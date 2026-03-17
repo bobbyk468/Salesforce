@@ -103,7 +103,7 @@ export default function TechnicalArchitectStudyGuidePage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -114,9 +114,9 @@ export default function TechnicalArchitectStudyGuidePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Exam</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Fee</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Counts Toward</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Exam</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Fee</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Counts Toward</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">
@@ -130,7 +130,7 @@ export default function TechnicalArchitectStudyGuidePage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-500 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both Application Architect and System Architect credentials.</p>
+        <p className="text-xs text-gray-600 mt-3">Data Architect and Sharing &amp; Visibility Architect count toward both Application Architect and System Architect credentials.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

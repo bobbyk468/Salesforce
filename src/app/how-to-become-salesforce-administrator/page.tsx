@@ -85,19 +85,19 @@ export default function HowToBecomeSalesforceAdministratorPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">8–12</p>
-            <p className="text-xs text-gray-500 mt-0.5">Weeks to Certified</p>
+            <p className="text-xs text-gray-600 mt-0.5">Weeks to Certified</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee (only cost)</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee (only cost)</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$70k+</p>
-            <p className="text-xs text-gray-500 mt-0.5">Avg Entry Salary (US)</p>
+            <p className="text-xs text-gray-600 mt-0.5">Avg Entry Salary (US)</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">0</p>
-            <p className="text-xs text-gray-500 mt-0.5">Prerequisites Required</p>
+            <p className="text-xs text-gray-600 mt-0.5">Prerequisites Required</p>
           </div>
         </div>
       </section>

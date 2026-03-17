@@ -400,7 +400,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
               <MessageCircle className="h-4 w-4" />
               Chat on WhatsApp
             </a>
-            <p className="text-xs text-gray-500 text-center">
+            <p className="text-xs text-gray-600 text-center">
               Or email directly:{' '}
               <a href={`mailto:${CONTACT_EMAIL}`} className="text-salesforce-blue font-medium hover:underline">
                 {CONTACT_EMAIL}

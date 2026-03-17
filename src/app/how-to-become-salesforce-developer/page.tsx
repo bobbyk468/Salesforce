@@ -122,7 +122,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -175,7 +175,7 @@ export default function HowToBecomeSalesforceDeveloperPage() {
               <span className="flex-shrink-0 w-6 h-6 rounded-full bg-salesforce-blue/10 text-salesforce-dark text-xs font-bold flex items-center justify-center mt-0.5">{i + 1}</span>
               <div>
                 <span className="font-semibold text-gray-900">{item.cert}</span>
-                <span className="text-gray-500"> — {item.note}</span>
+                <span className="text-gray-600"> — {item.note}</span>
               </div>
             </div>
           ))}
@@ -192,9 +192,9 @@ export default function HowToBecomeSalesforceDeveloperPage() {
             { level: 'Senior/Architect', range: '$140k–$180k+', desc: 'Multiple certs, 5+ years experience' },
           ].map((tier) => (
             <div key={tier.level} className="rounded-lg bg-gray-50 border border-gray-100 p-4 text-center">
-              <div className="text-sm text-gray-500 mb-1">{tier.level}</div>
+              <div className="text-sm text-gray-600 mb-1">{tier.level}</div>
               <div className="text-xl font-bold text-salesforce-blue mb-1">{tier.range}</div>
-              <div className="text-xs text-gray-500">{tier.desc}</div>
+              <div className="text-xs text-gray-600">{tier.desc}</div>
             </div>
           ))}
         </div>

@@ -82,7 +82,7 @@ export default function CertSearch() {
         Search certifications (e.g. ADM-201, Platform Developer I)
       </label>
       <div className="relative">
-        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-400 pointer-events-none" />
+        <Search className="absolute left-3 top-1/2 -translate-y-1/2 h-4 w-4 text-gray-600 pointer-events-none" />
         <input
           id="cert-search"
           ref={inputRef}
@@ -144,7 +144,7 @@ export default function CertSearch() {
           aria-label="Search suggestions"
         >
           <div>
-            <p className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+            <p className="flex items-center gap-1.5 text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
               <TrendingUp className="h-3.5 w-3.5" aria-hidden />
               Popular searches
             </p>
@@ -167,7 +167,7 @@ export default function CertSearch() {
             </ul>
           </div>
           <div>
-            <p className="flex items-center gap-1.5 text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">
+            <p className="flex items-center gap-1.5 text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">
               <Hash className="h-3.5 w-3.5" aria-hidden />
               Exam codes
             </p>

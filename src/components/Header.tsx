@@ -88,7 +88,7 @@ export default function Header() {
       {!hideRoleBar && (
       <div className="bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
-          <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2 hidden lg:block">
+          <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2 hidden lg:block">
             Choose your role
           </p>
           <div className="flex flex-wrap items-center gap-2">
@@ -142,7 +142,7 @@ export default function Header() {
       {mobileMenuOpen && (
         <div className="lg:hidden border-t border-gray-100 bg-white px-4 py-4 space-y-2 max-h-[70vh] overflow-y-auto">
           <div className="pb-3 border-b border-gray-100">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Search</p>
+            <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Search</p>
             <CertSearch />
           </div>
           <Link
@@ -175,7 +175,7 @@ export default function Header() {
           </Link>
           {!hideRoleBar && (
           <div className="pt-2 border-t border-gray-100">
-            <p className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-2">Choose your role</p>
+            <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Choose your role</p>
             {CERTIFICATION_CATEGORIES.map((category) => (
               <div key={category.slug} className="py-1">
                 <button

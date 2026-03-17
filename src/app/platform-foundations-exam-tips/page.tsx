@@ -92,19 +92,19 @@ export default function PlatformFoundationsExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">40</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">70 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">65%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$75</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function PlatformFoundationsExamTipsPage() {
             <span className="font-medium text-gray-900">Reports and Dashboards</span>
             <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Platform Concepts + Security + Automation = 77%. These three areas cover the vast majority of what every Salesforce user needs to know.</p>
+          <p className="text-xs text-gray-600 pt-1">Platform Concepts + Security + Automation = 77%. These three areas cover the vast majority of what every Salesforce user needs to know.</p>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ export default function PlatformFoundationsExamTipsPage() {
             Admin Certification Path
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/administrator" className="text-salesforce-blue underline">Platform Administrator (ADM-201)</Link> or <Link href="/certifications/developer-1" className="text-salesforce-blue underline">Platform Developer I</Link> next.
         </p>
       </section>

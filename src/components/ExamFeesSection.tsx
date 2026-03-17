@@ -41,7 +41,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <p className="text-xs sm:text-sm text-gray-600 mt-1">If you need to retake the exam</p>
         </div>
       </div>
-      <p className="text-xs text-gray-500 mb-4">
+      <p className="text-xs text-gray-600 mb-4">
         Comparing certs?{' '}
         <Link href="/salesforce-certification-cost" className="text-salesforce-blue underline">
           View all Salesforce exam fees in one place →
@@ -50,7 +50,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
       
       <div className="space-y-4 sm:space-y-5">
         <div className="flex items-start gap-3">
-          <Calendar className="h-5 w-5 text-gray-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <Calendar className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <div>
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Certification Validity</h3>
             <p className="text-gray-600 text-sm sm:text-base">
@@ -60,7 +60,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
         </div>
         
         <div className="flex items-start gap-3">
-          <ExternalLink className="h-5 w-5 text-gray-400 mt-0.5 flex-shrink-0" aria-hidden="true" />
+          <ExternalLink className="h-5 w-5 text-gray-600 mt-0.5 flex-shrink-0" aria-hidden="true" />
           <div>
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">How to Register</h3>
             <p className="text-gray-600 text-sm sm:text-base mb-3">

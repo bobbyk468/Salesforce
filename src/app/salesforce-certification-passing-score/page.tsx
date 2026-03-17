@@ -92,10 +92,10 @@ export default function SalesforceCertificationPassingScorePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Tier</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Exam Fee</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Typical Passing Score</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Examples</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Tier</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Exam Fee</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Typical Passing Score</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Examples</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

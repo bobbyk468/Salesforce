@@ -92,19 +92,19 @@ export default function ApplicationArchitectExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">67%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -125,32 +125,32 @@ export default function ApplicationArchitectExamTipsPage() {
           <div className="flex justify-between items-start border-b border-gray-100 pb-3">
             <div>
               <span className="font-medium text-gray-900">Platform App Builder (DEV-402)</span>
-              <p className="text-xs text-gray-500 mt-0.5">Data modelling, Flow automation, Lightning App Builder, security model</p>
+              <p className="text-xs text-gray-600 mt-0.5">Data modelling, Flow automation, Lightning App Builder, security model</p>
             </div>
             <span className="font-bold text-salesforce-blue ml-4 whitespace-nowrap">68% pass</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-3">
             <div>
               <span className="font-medium text-gray-900">Platform Developer I (PD1)</span>
-              <p className="text-xs text-gray-500 mt-0.5">Apex basics, SOQL/DML, governor limits, triggers, LWC, testing</p>
+              <p className="text-xs text-gray-600 mt-0.5">Apex basics, SOQL/DML, governor limits, triggers, LWC, testing</p>
             </div>
             <span className="font-bold text-salesforce-blue ml-4 whitespace-nowrap">68% pass</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-3">
             <div>
               <span className="font-medium text-gray-900">Data Architect</span>
-              <p className="text-xs text-gray-500 mt-0.5">Data modelling strategy, large data volumes, master data management, migration</p>
+              <p className="text-xs text-gray-600 mt-0.5">Data modelling strategy, large data volumes, master data management, migration</p>
             </div>
             <span className="font-bold text-salesforce-blue ml-4 whitespace-nowrap">63% pass</span>
           </div>
           <div className="flex justify-between items-start">
             <div>
               <span className="font-medium text-gray-900">Sharing &amp; Visibility Architect</span>
-              <p className="text-xs text-gray-500 mt-0.5">OWD design, sharing rules, role hierarchy, manual sharing, performance implications</p>
+              <p className="text-xs text-gray-600 mt-0.5">OWD design, sharing rules, role hierarchy, manual sharing, performance implications</p>
             </div>
             <span className="font-bold text-salesforce-blue ml-4 whitespace-nowrap">63% pass</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">All four exams: 60 questions · 105–120 minutes · $200 fee each</p>
+          <p className="text-xs text-gray-600 pt-1">All four exams: 60 questions · 105–120 minutes · $200 fee each</p>
         </div>
       </section>
 
@@ -252,7 +252,7 @@ export default function ApplicationArchitectExamTipsPage() {
             Full Architect Certification Path
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/application-architect" className="text-salesforce-blue underline">Application Architect</Link> or <Link href="/certifications/system-architect" className="text-salesforce-blue underline">System Architect</Link> next.
         </p>
       </section>

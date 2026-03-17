@@ -84,11 +84,11 @@ export default function PlatformFoundationsVsAiAssociatePage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Most Recommended</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$75</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">40</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">70 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">70%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Focus</span><span className="font-semibold">AI &amp; Einstein</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$75</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">40</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">70 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">70%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">AI &amp; Einstein</span></div>
           </div>
           <Link href="/ai-associate-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -99,11 +99,11 @@ export default function PlatformFoundationsVsAiAssociatePage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Admin Path Starter</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-500">Fee</span><span className="font-semibold">$75</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Questions</span><span className="font-semibold">40</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Time</span><span className="font-semibold">70 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Passing score</span><span className="font-semibold">70%</span></div>
-            <div className="flex justify-between"><span className="text-gray-500">Focus</span><span className="font-semibold">Platform basics</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$75</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">40</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">70 min</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">70%</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Focus</span><span className="font-semibold">Platform basics</span></div>
           </div>
           <Link href="/platform-foundations-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -115,9 +115,9 @@ export default function PlatformFoundationsVsAiAssociatePage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Area</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">AI Associate</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Platform Foundations</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Area</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">AI Associate</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Platform Foundations</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50 text-sm">

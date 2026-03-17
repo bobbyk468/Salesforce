@@ -92,19 +92,19 @@ export default function TableauConsultantExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">45</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">120 min</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">70%</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$250</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function TableauConsultantExamTipsPage() {
             <span className="font-medium text-gray-900">Understand Tableau Concepts</span>
             <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Analyse + Connect + Share = 77%. LOD expressions and dashboard actions are tested on every Tableau exam.</p>
+          <p className="text-xs text-gray-600 pt-1">Analyse + Connect + Share = 77%. LOD expressions and dashboard actions are tested on every Tableau exam.</p>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ export default function TableauConsultantExamTipsPage() {
             All Certification Paths
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/tableau-consultant" className="text-salesforce-blue underline">Tableau Consultant</Link> or <Link href="/certifications/tableau-data-analyst" className="text-salesforce-blue underline">Tableau Data Analyst</Link> next.
         </p>
       </section>

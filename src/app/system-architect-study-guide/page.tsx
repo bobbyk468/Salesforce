@@ -101,7 +101,7 @@ export default function SystemArchitectStudyGuidePage() {
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
-            <div className="text-sm text-gray-500 mt-1">{stat.label}</div>
+            <div className="text-sm text-gray-600 mt-1">{stat.label}</div>
           </div>
         ))}
       </div>
@@ -115,7 +115,7 @@ export default function SystemArchitectStudyGuidePage() {
               <div className="flex-1 min-w-0">
                 <div className="flex items-center justify-between gap-3 mb-1">
                   <h3 className="font-semibold text-gray-900">{exam.name}</h3>
-                  <div className="flex gap-3 text-xs text-gray-500 flex-shrink-0">
+                  <div className="flex gap-3 text-xs text-gray-600 flex-shrink-0">
                     <span>{exam.fee}</span>
                     <span>{exam.time}</span>
                   </div>

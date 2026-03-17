@@ -137,11 +137,11 @@ export default function WhichSalesforceCertificationFirstPage() {
             </div>
             <div className="mb-3">
               <p className="text-sm font-semibold text-salesforce-blue mb-1">Start with: {path.first}</p>
-              <p className="text-xs text-gray-500 mb-2">Study time: {path.time}</p>
+              <p className="text-xs text-gray-600 mb-2">Study time: {path.time}</p>
               <p className="text-sm text-gray-700">{path.why}</p>
             </div>
             <div className="flex items-center justify-between gap-3">
-              <p className="text-xs text-gray-500"><strong>Then:</strong> {path.next}</p>
+              <p className="text-xs text-gray-600"><strong>Then:</strong> {path.next}</p>
               <Link href={path.href} className="text-xs font-semibold text-salesforce-blue hover:underline flex-shrink-0">Study Guide →</Link>
             </div>
           </div>
@@ -154,9 +154,9 @@ export default function WhichSalesforceCertificationFirstPage() {
           <table className="w-full text-sm">
             <thead>
               <tr className="border-b border-gray-100">
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Certification</th>
-                <th scope="col" className="text-left py-2 pr-4 text-gray-500 font-medium">Fee</th>
-                <th scope="col" className="text-left py-2 text-gray-500 font-medium">Best for</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Certification</th>
+                <th scope="col" className="text-left py-2 pr-4 text-gray-600 font-medium">Fee</th>
+                <th scope="col" className="text-left py-2 text-gray-600 font-medium">Best for</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-50">

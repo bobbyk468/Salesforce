@@ -92,19 +92,19 @@ export default function TechnicalArchitectExamTipsPage() {
         <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">2 stages</p>
-            <p className="text-xs text-gray-500 mt-0.5">Questions</p>
+            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">~4.5 hr total</p>
-            <p className="text-xs text-gray-500 mt-0.5">Time Limit</p>
+            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">Pass / Fail</p>
-            <p className="text-xs text-gray-500 mt-0.5">Passing Score</p>
+            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
           </div>
           <div>
             <p className="text-2xl font-bold text-salesforce-blue">$3,400</p>
-            <p className="text-xs text-gray-500 mt-0.5">Exam Fee</p>
+            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
           </div>
         </div>
       </section>
@@ -138,7 +138,7 @@ export default function TechnicalArchitectExamTipsPage() {
             <span className="font-medium text-gray-900">CTA Review Board (live presentation)</span>
             <span className="font-bold text-salesforce-blue ml-4">$3,000</span>
           </div>
-          <p className="text-xs text-gray-500 pt-1">Most candidates spend 1–3 years preparing for the CTA after earning the Application and System Architect credentials. The Review Board pass rate is approximately 30–40% per attempt.</p>
+          <p className="text-xs text-gray-600 pt-1">Most candidates spend 1–3 years preparing for the CTA after earning the Application and System Architect credentials. The Review Board pass rate is approximately 30–40% per attempt.</p>
         </div>
       </section>
 
@@ -238,7 +238,7 @@ export default function TechnicalArchitectExamTipsPage() {
             How to Become a CTA
           </Link>
         </div>
-        <p className="text-xs text-gray-500 mt-4">
+        <p className="text-xs text-gray-600 mt-4">
           After this exam, consider <Link href="/certifications/application-architect" className="text-salesforce-blue underline">Application Architect</Link> or <Link href="/certifications/system-architect" className="text-salesforce-blue underline">System Architect</Link> next.
         </p>
       </section>

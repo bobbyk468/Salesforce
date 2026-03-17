@@ -140,7 +140,7 @@ export default function TeamPage() {
 
             {/* Certifications */}
             <div>
-              <p className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-2">Certifications held</p>
+              <p className="text-xs font-semibold text-gray-600 uppercase tracking-wide mb-2">Certifications held</p>
               <div className="flex flex-wrap gap-2">
                 {CERTIFICATIONS.map((cert) => (
                   <span
