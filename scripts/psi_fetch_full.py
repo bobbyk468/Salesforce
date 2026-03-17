@@ -1,6 +1,6 @@
 """
 Fetch full PageSpeed Insights (Lighthouse) JSON for a URL and print details
-for specific audits (especially accessibility color contrast).
+for specific audits, including the exact failing DOM nodes.
 
 Usage:
   PSI_API_KEY=... python3 scripts/psi_fetch_full.py --url /
@@ -99,11 +99,58 @@ def print_contrast_details(data: dict, limit: int = 20):
                 print(f"   {k}:", item.get(k))
 
 
+def _print_audit_items(audit: dict, limit: int = 20):
+    details = audit.get("details", {})
+    items = details.get("items", []) if isinstance(details, dict) else []
+    print("  score:", audit.get("score"))
+    print("  failing-items:", len(items))
+    for i, item in enumerate(items[:limit], start=1):
+        node = item.get("node", {}) if isinstance(item, dict) else {}
+        print(f"\n  #{i}")
+        # Print non-node scalar fields (helps for errors-in-console, perf diagnostics, etc.)
+        if isinstance(item, dict):
+            for k, v in item.items():
+                if k == "node":
+                    continue
+                if isinstance(v, (str, int, float, bool)) or v is None:
+                    if v is None:
+                        continue
+                    s = str(v)
+                    if len(s) > 240:
+                        s = s[:240] + "…"
+                    print(f"   {k}: {s}")
+        if "selector" in node:
+            print("   selector:", node.get("selector"))
+        if "snippet" in node:
+            print("   snippet:", node.get("snippet"))
+        if "explanation" in item:
+            print("   explanation:", item.get("explanation"))
+
+
+def print_selected_audits(data: dict, audit_ids: list[str]):
+    audits = data.get("lighthouseResult", {}).get("audits", {})
+    for audit_id in audit_ids:
+        a = audits.get(audit_id)
+        if not a:
+            continue
+        # Only print when not perfect
+        if a.get("score") == 1:
+            continue
+        print(f"\nAudit: {audit_id}")
+        print("  title:", a.get("title"))
+        _print_audit_items(a)
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--url", required=True, help="Full URL or path (e.g. /privacy)")
     ap.add_argument("--strategy", choices=["desktop", "mobile"], default="desktop")
     ap.add_argument("--out", default=None, help="Optional path to save full JSON")
+    ap.add_argument(
+        "--audits",
+        default="color-contrast,heading-order,label-content-name-mismatch,errors-in-console",
+        help="Comma-separated Lighthouse audit IDs to print when failing",
+    )
     args = ap.parse_args()
 
     url = args.url
@@ -118,6 +165,10 @@ def main():
     print("URL:", url)
     print_scores(data)
     print_contrast_details(data)
+    print_selected_audits(
+        data,
+        [a.strip() for a in args.audits.split(",") if a.strip() and a.strip() != "color-contrast"],
+    )
 
     if args.out:
         with open(args.out, "w") as f:

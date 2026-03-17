@@ -236,7 +236,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
         <div className="bg-gradient-to-br from-salesforce-dark via-salesforce-blue to-salesforce-light p-4 text-white">
           <div className="flex items-center gap-2">
             <Mail className="h-6 w-6" />
-            <h3 className="font-bold text-lg">Contact Us</h3>
+            <h2 className="font-bold text-lg">Contact Us</h2>
           </div>
           <p className="text-white text-sm mt-1">
             Questions? We&apos;ll reply to <span className="font-medium">{CONTACT_EMAIL}</span>
