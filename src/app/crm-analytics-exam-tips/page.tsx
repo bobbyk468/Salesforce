@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most CRM Analytics candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the CRM Analytics exam are: (1) Dataflows vs Recipes — Two Different Data Preparation Tools; (2) XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset; (3) SAQL vs Equals Filters — When to Use Each in Step Configuration. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('crm-analytics-exam-tips'),
 ]
 
 export default function CRMAnalyticsExamTipsPage() {

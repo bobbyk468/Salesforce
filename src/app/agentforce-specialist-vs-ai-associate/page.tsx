@@ -133,6 +133,11 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
                 <td className="py-2.5">Admins and developers actively building Agentforce solutions</td>
               </tr>
               <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$70–95k (US)</td>
+                <td className="py-2.5">$95–130k (US)</td>
+              </tr>
+              <tr>
                 <td className="py-2.5 pr-4 font-medium">Market Demand 2026</td>
                 <td className="py-2.5 pr-4">High — baseline AI literacy credential</td>
                 <td className="py-2.5">Very High — most in-demand new Salesforce cert of 2026</td>

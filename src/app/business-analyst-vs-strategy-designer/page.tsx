@@ -114,6 +114,11 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
                 <td className="py-2.5 pr-4">Business analysts, functional consultants, Agile practitioners</td>
                 <td className="py-2.5">UX/CX strategists, design leads, transformation consultants</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$75–110k (US)</td>
+                <td className="py-2.5">$80–115k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

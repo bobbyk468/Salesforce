@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most UX Designer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the UX Designer exam are: (1) User Research vs Usability Testing — Discovery vs Validation; (2) Wireframes vs Prototypes vs Mockups — Fidelity Levels; (3) Accessibility — WCAG AA Is the Standard Minimum. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('ux-designer-exam-tips'),
 ]
 
 export default function UxDesignerExamTipsPage() {

@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Identity & Access Management Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Identity & Access Management Architect exam are: (1) OAuth 2.0 Flows — Authorization Code vs JWT Bearer vs Client Credentials; (2) Named Credentials vs Auth. Providers — Outbound vs Inbound Identity; (3) Delegated Authentication vs SSO — Custom Login vs Federated Identity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('identity-access-management-architect-exam-tips'),
 ]
 
 export default function IamArchitectExamTipsPage() {

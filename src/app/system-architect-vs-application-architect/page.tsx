@@ -141,6 +141,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
                 { area: 'Study material availability', app: 'Abundant (ADV Admin & PD1 are popular)', sys: 'Less abundant for architect-level exams' },
                 { area: 'Recommended first', app: 'Yes — lower entry cost', sys: 'After Application Architect' },
                 { area: 'Best background', app: 'Admin/developer professionals', sys: 'Senior architects, integration specialists' },
+                { area: 'Avg Salary', app: '$130–160k (US)', sys: '$140–170k (US)' },
                 { area: 'CTA requirement', app: 'Required (with System Arch)', sys: 'Required (with Application Arch)' },
               ].map((row) => (
                 <tr key={row.area}>

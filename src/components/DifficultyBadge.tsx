@@ -30,7 +30,10 @@ export default function DifficultyBadge({ slug, size = 'md' }: DifficultyBadgePr
   }
 
   return (
-    <span className={`inline-flex items-center rounded-full font-semibold ${config.bgColor} ${config.color} ${sizeClasses[size]} border border-current/10`}>
+    <span
+      className={`inline-flex items-center rounded-full font-semibold ${config.bgColor} ${config.color} ${sizeClasses[size]} border border-current/10`}
+      aria-label={`Certification difficulty: ${config.label}`}
+    >
       <Brain className={iconSize[size]} aria-hidden="true" />
       <span>{config.label}</span>
     </span>

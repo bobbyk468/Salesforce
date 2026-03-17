@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Business Analyst candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Business Analyst exam are: (1) Process Mapping vs User Stories — Different Artefacts for Different Purposes; (2) Acceptance Criteria vs Definition of Done — Two Different Quality Gates; (3) Stakeholder Communication — RACI Matrix vs Communication Plan. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('business-analyst-exam-tips'),
 ]
 
 export default function BusinessAnalystExamTipsPage() {

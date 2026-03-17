@@ -150,6 +150,11 @@ export default function DataCloudVsMarketingCloudPage() {
                 <td className="py-2.5">Marketing ops teams, email marketers, campaign managers</td>
               </tr>
               <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$95–130k (US)</td>
+                <td className="py-2.5">$80–115k (US)</td>
+              </tr>
+              <tr>
                 <td className="py-2.5 pr-4 font-medium">Market Demand 2026</td>
                 <td className="py-2.5 pr-4">Very High — enterprise CDP adoption accelerating</td>
                 <td className="py-2.5">High — SFMC remains the dominant marketing automation platform</td>

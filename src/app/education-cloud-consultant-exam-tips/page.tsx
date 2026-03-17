@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Education Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Education Cloud Consultant exam are: (1) Education Data Architecture (EDA) — Household vs Individual Account Model; (2) Admissions Connect — Application vs Inquiry vs Prospect Record; (3) Success Plans vs Alerts — Proactive vs Reactive Advising. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('education-cloud-consultant-exam-tips'),
 ]
 
 export default function EducationCloudConsultantExamTipsPage() {

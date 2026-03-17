@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Marketing Cloud Engagement Foundations candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Marketing Cloud Engagement Foundations exam are: (1) Contact vs Subscriber — Two Different Identity Concepts; (2) All Subscribers List vs Publication Lists vs Data Extensions for Sending; (3) Email Studio vs Journey Builder — One-Time vs Ongoing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('marketing-cloud-engagement-foundations-exam-tips'),
 ]
 
 export default function MarketingCloudEngagementFoundationsExamTipsPage() {

@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Slack Administrator candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Slack Administrator exam are: (1) Workspace vs Organisation vs Enterprise Grid — Three Admin Scopes; (2) Public vs Private vs Shared Channels — Visibility and External Access; (3) User Groups vs Channels — @mention Broadcast vs Conversation Space. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('slack-administrator-exam-tips'),
 ]
 
 export default function SlackAdministratorExamTipsPage() {

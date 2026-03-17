@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Sales Foundations candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Sales Foundations exam are: (1) Opportunity Stages vs Forecast Categories — Two Different Picklists; (2) Products vs Price Books — You Need Both; (3) Activity Timeline vs Activity Reports — Different Views of the Same Data. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('sales-foundations-exam-tips'),
 ]
 
 export default function SalesFoundationsExamTipsPage() {

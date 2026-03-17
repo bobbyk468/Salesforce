@@ -135,6 +135,11 @@ export default function Pd1VsPd2Page() {
                 <td className="py-2.5 pr-4">Developers starting on Salesforce, career switchers, admins adding code skills</td>
                 <td className="py-2.5">Experienced Apex devs moving toward senior or architect tracks</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$90–125k (US)</td>
+                <td className="py-2.5">$120–155k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

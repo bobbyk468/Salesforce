@@ -114,6 +114,11 @@ export default function DataCloudVsCrmAnalyticsPage() {
                 <td className="py-2.5 pr-4">Data architects, Marketing Cloud strategists, AI implementation roles</td>
                 <td className="py-2.5">BI consultants, analytics leads, reporting-heavy industries</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$95–130k (US)</td>
+                <td className="py-2.5">$100–140k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

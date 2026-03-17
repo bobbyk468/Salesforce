@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Marketing Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Marketing Cloud Consultant exam are: (1) Business Units — Data Isolation vs Sharing; (2) Sender Authentication Package (SAP) vs Default Branding Domain; (3) Suppression Lists vs Publication Lists vs Exclusion Lists. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('marketing-cloud-consultant-exam-tips'),
 ]
 
 export default function MarketingCloudConsultantExamTipsPage() {

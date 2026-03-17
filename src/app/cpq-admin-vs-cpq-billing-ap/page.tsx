@@ -119,6 +119,11 @@ export default function CpqAdminVsCpqBillingApPage() {
                 <td className="py-2.5 pr-4">CPQ specialists, Revenue Cloud architects</td>
                 <td className="py-2.5">Quote-to-cash generalists, billing/CPQ combo roles</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$95–130k (US)</td>
+                <td className="py-2.5">$90–125k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

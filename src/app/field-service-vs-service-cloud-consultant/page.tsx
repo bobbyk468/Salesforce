@@ -150,6 +150,7 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
                 { aspect: 'Typical industries', scc: 'All industries', fsc: 'Utilities, telecom, manufacturing, medical' },
                 { aspect: 'Prerequisite for', scc: 'Field Service Consultant (recommended)', fsc: 'Nothing formally' },
                 { aspect: 'Difficulty (relative)', scc: 'Moderate', fsc: 'Harder (requires Service Cloud knowledge)' },
+                { aspect: 'Avg Salary', scc: '$85–120k (US)', fsc: '$85–120k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>

@@ -128,6 +128,7 @@ export default function PlatformFoundationsVsAiAssociatePage() {
                 { area: 'Best next cert', ai: 'Administrator (ADM-201)', pf: 'Administrator (ADM-201)' },
                 { area: 'Ease of study', ai: 'Slightly easier (conceptual)', pf: 'Slightly harder (applied platform knowledge)' },
                 { area: 'Employer recognition', ai: 'Higher — AI is high-interest topic', pf: 'Lower than Administrator; moderate alone' },
+                { area: 'Avg Salary', ai: '$70–95k (US)', pf: '$55–75k (US)' },
               ].map((row) => (
                 <tr key={row.area}>
                   <td className="py-2 pr-4 font-medium text-gray-900">{row.area}</td>

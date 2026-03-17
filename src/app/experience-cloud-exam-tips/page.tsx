@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Experience Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Experience Cloud Consultant exam are: (1) Experience Cloud Licence Types — Community vs Partner vs Customer Plus; (2) Data Categories vs Topics — Visibility Control vs Navigation; (3) Sharing Rules in Experience Cloud — External User OWD Is Separate from Internal. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('experience-cloud-exam-tips'),
 ]
 
 export default function ExperienceCloudExamTipsPage() {

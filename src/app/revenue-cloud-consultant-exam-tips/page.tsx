@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Revenue Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Revenue Cloud Consultant exam are: (1) CPQ Product Rules vs Revenue Cloud Contract Amendments — Different Lifecycles; (2) Asset-Based Ordering — Assets Drive Renewal and Amendment Logic; (3) Order vs Contract vs Subscription — Sequence Matters. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('revenue-cloud-consultant-exam-tips'),
 ]
 
 export default function RevenueCloudConsultantExamTipsPage() {

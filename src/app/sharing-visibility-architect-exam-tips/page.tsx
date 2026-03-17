@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Sharing & Visibility Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Sharing & Visibility Architect exam are: (1) OWD + Role Hierarchy + Sharing Rules — The Correct Evaluation Order; (2) With Sharing vs Without Sharing vs Inherited Sharing in Apex; (3) Territory Management vs Role Hierarchy — Two Separate Sharing Mechanisms. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('sharing-visibility-architect-exam-tips'),
 ]
 
 export default function SharingVisibilityArchitectExamTipsPage() {

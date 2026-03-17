@@ -129,6 +129,7 @@ export default function UxDesignerVsStrategyDesignerPage() {
                 { area: 'Salesforce knowledge needed', ux: 'Lightning App Builder basics', str: 'Minimal platform-specific knowledge' },
                 { area: 'Difficulty', ux: 'Moderate', str: 'Moderate-hard (abstract frameworks)' },
                 { area: 'Career value', ux: 'Design-track roles, adoption work', str: 'Strategic consulting, transformation roles' },
+                { area: 'Avg Salary', ux: '$80–115k (US)', str: '$80–115k (US)' },
               ].map((row) => (
                 <tr key={row.area}>
                   <td className="py-2 pr-4 font-medium text-gray-900">{row.area}</td>

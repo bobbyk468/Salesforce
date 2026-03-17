@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most MuleSoft Integration Foundations candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the MuleSoft Integration Foundations exam are: (1) API-Led Connectivity Layers — Which Layer Handles Which Scenario; (2) Anypoint Platform Components — Which Tool Does What; (3) DataWeave — Output Directives and Basic Transformation Syntax. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('mulesoft-integration-foundations-exam-tips'),
 ]
 
 export default function MuleSoftIntegrationFoundationsExamTipsPage() {

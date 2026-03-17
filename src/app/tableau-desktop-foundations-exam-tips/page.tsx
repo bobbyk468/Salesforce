@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Tableau Desktop Foundations candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Tableau Desktop Foundations exam are: (1) Connecting to Data — Live vs Extract in Desktop; (2) Show Me vs Drag-and-Drop — When Tableau Automatically Selects Chart Types; (3) Groups vs Sets — Static vs Dynamic Membership. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('tableau-desktop-foundations-exam-tips'),
 ]
 
 export default function TableauDesktopFoundationsExamTipsPage() {

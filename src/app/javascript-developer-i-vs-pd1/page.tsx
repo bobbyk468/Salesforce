@@ -143,6 +143,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
                 { aspect: 'Main skills', js: 'ES6+, async, OOP, DOM, testing', pd1: 'Apex, SOQL, LWC, governor limits' },
                 { aspect: 'Prerequisite for?', js: 'Nothing formally', pd1: 'PD2, Architect track' },
                 { aspect: 'Job market demand', js: 'Moderate (secondary cert)', pd1: 'Very high (primary cert)' },
+                { aspect: 'Avg Salary', js: '$85–115k (US)', pd1: '$90–125k (US)' },
                 { aspect: 'Recommended order', js: 'Take after PD1', pd1: 'Take first' },
                 { aspect: 'Coding required?', js: 'Conceptual + code reading', pd1: 'Conceptual + code reading' },
               ].map((row) => (

@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most B2C Commerce Developer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the B2C Commerce Developer exam are: (1) Controllers vs Pipelines — SFRA Uses Controllers, Not Pipelines; (2) Hooks vs Cartridge Overrides — Extension Without Modification; (3) Business Manager Site Preferences vs Custom Objects — Where to Store Config. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('b2c-commerce-developer-exam-tips'),
 ]
 
 export default function B2CCommerceDeveloperExamTipsPage() {

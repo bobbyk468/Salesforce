@@ -132,6 +132,11 @@ export default function SalesCloudVsExperienceCloudConsultantPage() {
                 <td className="py-2.5 pr-4">Consultants implementing CRM for sales teams and revenue operations</td>
                 <td className="py-2.5">Developers or admins building partner portals, customer communities, or intranets</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$85–120k (US)</td>
+                <td className="py-2.5">$85–120k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

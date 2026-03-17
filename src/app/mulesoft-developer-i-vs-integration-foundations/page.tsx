@@ -151,6 +151,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
                 { aspect: 'DataWeave tested?', f: 'Conceptually only', d: 'Yes — reading & writing' },
                 { aspect: 'Coding required?', f: 'No', d: 'Yes (Mule 4 flows)' },
                 { aspect: 'Job market demand', f: 'Low (entry credential)', d: 'High (primary credential)' },
+                { aspect: 'Avg Salary', f: '$55–80k (US)', d: '$95–130k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>

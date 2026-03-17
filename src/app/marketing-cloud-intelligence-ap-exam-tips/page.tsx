@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Marketing Cloud Intelligence candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Marketing Cloud Intelligence exam are: (1) Streams vs Workspaces — Data Ingestion vs Analysis; (2) Harmonised vs Raw Data — Why Metrics Don\'t Match Source Platforms; (3) Calculated Metrics vs Standard Metrics — Custom Formulas for Cross-Channel KPIs. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('marketing-cloud-intelligence-ap-exam-tips'),
 ]
 
 export default function MarketingCloudIntelligenceApExamTipsPage() {

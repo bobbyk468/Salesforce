@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most MuleSoft Integration Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the MuleSoft Integration Architect exam are: (1) API Policies — Rate Limiting vs Throttling vs SLA Tiers; (2) Anypoint VPC and VPN — Private Network Architecture; (3) API Autodiscovery — Linking a Mule App to API Manager. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('mulesoft-integration-architect-exam-tips'),
 ]
 
 export default function MuleSoftIntegrationArchitectExamTipsPage() {

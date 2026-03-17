@@ -128,6 +128,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
                 { area: 'Key objects', edu: 'Academic Program, Course, Enrollment, Term', npo: 'Opportunity (Gift), Household, Relationship' },
                 { area: 'Typical client', edu: 'Universities, colleges, school districts', npo: 'Charities, NGOs, social enterprises' },
                 { area: 'Recommended background', edu: 'Salesforce admin + education sector exp', npo: 'Salesforce admin + nonprofit sector exp' },
+                { area: 'Avg Salary', edu: '$85–115k (US)', npo: '$80–110k (US)' },
               ].map((row) => (
                 <tr key={row.area}>
                   <td className="py-2 pr-4 font-medium text-gray-900">{row.area}</td>

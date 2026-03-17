@@ -62,6 +62,7 @@ export default function TeamPage() {
     sameAs: [
       'https://www.linkedin.com/in/krishna-mohan-879b94100/',
       'https://www.salesforce.com/trailblazer/krishnamohan',
+      'https://trailblazer.me/id/krishnamohan',
     ],
     jobTitle: 'Lead Content Reviewer & Salesforce Certified Professional',
     worksFor: {

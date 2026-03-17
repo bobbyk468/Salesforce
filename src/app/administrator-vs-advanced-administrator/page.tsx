@@ -110,6 +110,11 @@ export default function AdministratorVsAdvancedAdministratorPage() {
                 <td className="py-2.5">Hard — deep practical knowledge required</td>
               </tr>
               <tr className="border-b border-gray-100">
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$70–100k (US)</td>
+                <td className="py-2.5">$90–130k (US)</td>
+              </tr>
+              <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Experience Needed</td>
                 <td className="py-2.5 pr-4">6–12 months study/hands-on</td>
                 <td className="py-2.5">1–2 years hands-on admin experience</td>

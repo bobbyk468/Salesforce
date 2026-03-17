@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most MuleSoft Platform Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the MuleSoft Platform Architect exam are: (1) CloudHub 2.0 vs CloudHub 1.0 vs Runtime Fabric — Deployment Options; (2) Shared vs Dedicated Load Balancer — Public vs Private Endpoint Exposure; (3) Object Store v2 — Scoped to Deployment, Not Shared Across Workers by Default. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('mulesoft-platform-architect-exam-tips'),
 ]
 
 export default function MuleSoftPlatformArchitectExamTipsPage() {

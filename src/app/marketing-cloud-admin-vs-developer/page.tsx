@@ -115,6 +115,11 @@ export default function MarketingCloudAdminVsDeveloperPage() {
                 <td className="py-2.5 pr-4">Marketing ops teams, email campaign managers, SFMC admins</td>
                 <td className="py-2.5">Front-end/MarTech developers building custom SFMC solutions</td>
               </tr>
+              <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$75–105k (US)</td>
+                <td className="py-2.5">$85–120k (US)</td>
+              </tr>
             </tbody>
           </table>
         </div>

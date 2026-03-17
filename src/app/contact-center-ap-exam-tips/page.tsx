@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Contact Center candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Contact Center exam are: (1) Omni-Channel Flow vs Legacy Routing Configuration — New vs Old; (2) Enhanced Omni-Channel vs Standard Omni-Channel — Capacity Model Difference; (3) Service Channel vs Routing Configuration — Not the Same Thing. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('contact-center-ap-exam-tips'),
 ]
 
 export default function ContactCenterApExamTipsPage() {

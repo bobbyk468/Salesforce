@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Platform Developer II (PD2) candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Platform Developer II (PD2) exam are: (1) Apex Design Patterns — Separation of Concerns in Trigger Architecture; (2) Asynchronous Apex: Future vs Queueable vs Batch vs Scheduled; (3) Platform Cache — Partitioned Storage That Does Not Persist Across Deployments. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('pd2-exam-tips-2026'),
 ]
 
 export default function Pd2ExamTipsPage() {

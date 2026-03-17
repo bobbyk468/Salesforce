@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Integration Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Integration Architect exam are: (1) Real-Time vs Near-Real-Time vs Batch — Choosing the Right Integration Pattern; (2) Idempotency — Why Retry Logic Requires Idempotent Operations; (3) Salesforce Connect vs Heroku Connect vs MuleSoft — Three Different Integration Approaches. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('integration-architect-exam-tips'),
 ]
 
 export default function IntegrationArchitectExamTipsPage() {

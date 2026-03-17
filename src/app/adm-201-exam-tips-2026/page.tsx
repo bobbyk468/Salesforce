@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most ADM-201 candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the ADM-201 exam are: (1) OWD vs Profiles vs Roles — Three Layers, One Wrong Answer; (2) Flow vs Process Builder — Know the Exam\'s Recommended Tool; (3) Reports vs Dashboards — Joined Reports and Filter Limits. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('adm-201-exam-tips-2026'),
 ]
 
 export default function Adm201ExamTipsPage() {

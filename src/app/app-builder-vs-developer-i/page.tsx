@@ -129,6 +129,11 @@ export default function AppBuilderVsDeveloperIPage() {
                 <td className="py-2.5">Moderate-Hard — requires active coding practice</td>
               </tr>
               <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$75–105k (US)</td>
+                <td className="py-2.5">$90–125k (US)</td>
+              </tr>
+              <tr>
                 <td className="py-2.5 pr-4 font-medium">Career Path</td>
                 <td className="py-2.5 pr-4">Admin → Technical Admin → Business Analyst → Consultant</td>
                 <td className="py-2.5">Developer → Senior Developer → Technical Architect</td>

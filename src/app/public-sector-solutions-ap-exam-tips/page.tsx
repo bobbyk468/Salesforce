@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Public Sector Solutions candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Public Sector Solutions exam are: (1) Licences vs Permits vs Inspections — The PSS Object Hierarchy; (2) OmniStudio in PSS — Portal Interactions Use OmniScripts; (3) Business Rules Engine (BRE) — Eligibility and Decision Automation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('public-sector-solutions-ap-exam-tips'),
 ]
 
 export default function PublicSectorSolutionsApExamTipsPage() {

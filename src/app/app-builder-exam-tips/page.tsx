@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most App Builder candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the App Builder exam are: (1) Declarative-First: The Exam Always Prefers Flow Over Apex; (2) Master-Detail vs Lookup: The Sharing and Roll-Up Difference; (3) Lightning App Builder Visibility Rules vs Profile-Based Assignment. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('app-builder-exam-tips'),
 ]
 
 export default function AppBuilderExamTipsPage() {

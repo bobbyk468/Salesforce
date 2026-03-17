@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Industries CPQ Developer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Industries CPQ Developer exam are: (1) Product Configuration vs Pricing Engine — Two Separate Subsystems; (2) OmniScript vs DataRaptor vs Integration Procedure — Three Tools, One Platform; (3) Cart-Based vs Non-Cart-Based Flows — When Each Is Used. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('industries-cpq-developer-exam-tips'),
 ]
 
 export default function IndustriesCPQDeveloperExamTipsPage() {

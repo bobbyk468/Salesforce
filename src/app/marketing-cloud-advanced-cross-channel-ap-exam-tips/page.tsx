@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Marketing Cloud Advanced Cross-Channel candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Marketing Cloud Advanced Cross-Channel exam are: (1) Journey Builder vs Automation Studio — Interactive vs Batch; (2) Contact Builder Relationships — Data Extensions Must Be Related Correctly; (3) Einstein Engagement Scoring vs Send Time Optimization — Two Different AI Features. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('marketing-cloud-advanced-cross-channel-ap-exam-tips'),
 ]
 
 export default function MarketingCloudAdvancedCrossChannelApExamTipsPage() {

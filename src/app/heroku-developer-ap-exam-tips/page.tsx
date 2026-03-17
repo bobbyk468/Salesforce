@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Heroku Developer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Heroku Developer exam are: (1) Ephemeral Filesystem — Files Written to Dyno Are Lost on Restart; (2) Config Vars vs .env — Environment Variables Are Not in Code; (3) Release Phase — Run Migrations Before New Code Goes Live. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('heroku-developer-ap-exam-tips'),
 ]
 
 export default function HerokuDeveloperApExamTipsPage() {

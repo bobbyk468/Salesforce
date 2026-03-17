@@ -144,6 +144,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
                 { aspect: 'Typical project', b2b: 'Partner portal + CPQ + Revenue Cloud', b2c: 'Storefront + Marketing Cloud + Loyalty' },
                 { aspect: 'Fee', b2b: '$400', b2c: '$400' },
                 { aspect: 'Format', b2b: '60 Q, 120 min, ~68%', b2c: '60 Q, 120 min, ~68%' },
+                { aspect: 'Avg Salary', b2b: '$130–165k (US)', b2c: '$125–160k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>

@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Email Specialist (Marketing Cloud) candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Email Specialist (Marketing Cloud) exam are: (1) Send Classification — Transactional vs Commercial and Suppression Bypasses; (2) AMPscript — Block Syntax vs Inline Syntax and Lookup Functions; (3) Data Extensions vs Subscriber Lists — When to Use Each. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('email-specialist-exam-tips'),
 ]
 
 export default function EmailSpecialistExamTipsPage() {

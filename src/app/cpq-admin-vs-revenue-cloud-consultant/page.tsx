@@ -176,6 +176,7 @@ export default function CpqAdminVsRevenueCloudConsultantPage() {
                 { aspect: 'Recommended prior cert', a: 'ADM-201 helpful', b: 'CPQ Admin required' },
                 { aspect: 'Time limit', a: '105 minutes', b: '105 minutes' },
                 { aspect: 'Fee', a: '$200', b: '$200' },
+                { aspect: 'Avg Salary', a: '$95–130k (US)', b: '$100–140k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>

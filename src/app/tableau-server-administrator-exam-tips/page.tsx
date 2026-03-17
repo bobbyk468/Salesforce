@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Tableau Server Administrator candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Tableau Server Administrator exam are: (1) Sites vs Projects vs Workbooks — The Permission Hierarchy; (2) TSM vs tabcmd vs REST API — Three Admin Interfaces; (3) Extract Refresh — Scheduled vs Manual vs Incremental. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('tableau-server-administrator-exam-tips'),
 ]
 
 export default function TableauServerAdministratorExamTipsPage() {

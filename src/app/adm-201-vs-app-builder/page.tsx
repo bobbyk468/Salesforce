@@ -109,6 +109,11 @@ export default function Adm201VsAppBuilderPage() {
                 <td className="py-2.5 pr-4">Operational scenarios across many topics</td>
                 <td className="py-2.5">Design/build scenarios with object and app patterns</td>
               </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$70–100k (US)</td>
+                <td className="py-2.5">$75–105k (US)</td>
+              </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Recommended Order</td>
                 <td className="py-2.5 pr-4" colSpan={2}>Start with ADM-201, then move to DEV-402 for a stronger progression.</td>

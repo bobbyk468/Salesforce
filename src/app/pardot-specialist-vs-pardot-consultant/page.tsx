@@ -150,6 +150,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
                 { aspect: 'Connector depth', s: 'Standard sync knowledge', c: 'Complex troubleshooting' },
                 { aspect: 'Fee', s: '$200', c: '$200' },
                 { aspect: 'Recommended prior cert', s: 'None required', c: 'Pardot Specialist + ADM-201' },
+                { aspect: 'Avg Salary', s: '$70–95k (US)', c: '$85–115k (US)' },
               ].map((row) => (
                 <tr key={row.aspect}>
                   <td className="py-2 pr-4 text-gray-500">{row.aspect}</td>

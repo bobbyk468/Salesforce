@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most JavaScript Developer I candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the JavaScript Developer I exam are: (1) Promises vs Async/Await — Same Mechanism, Different Syntax; (2) var vs let vs const — Scope and Reassignment Rules; (3) Event Bubbling vs Capturing — Two Phases of DOM Event Propagation. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('javascript-developer-i-exam-tips'),
 ]
 
 export default function JavaScriptDeveloperIExamTipsPage() {

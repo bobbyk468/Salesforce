@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Net Zero Cloud candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Net Zero Cloud exam are: (1) Scope 1 vs Scope 2 vs Scope 3 Emissions — Different Tracking Responsibilities; (2) Carbon Credits vs Carbon Offsets — Purchased vs Generated; (3) Emission Factors — Why Records Don\'t Match Industry Benchmarks. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('net-zero-cloud-ap-exam-tips'),
 ]
 
 export default function NetZeroCloudApExamTipsPage() {

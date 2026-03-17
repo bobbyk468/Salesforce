@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Technical Architect Evaluation candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Technical Architect Evaluation exam are: (1) Evaluation Format — Two Proctored Exams Before the Review Board; (2) Covering All Salesforce Architecture Domains in Evaluation; (3) Scenario-Based Reasoning Over Feature Recall. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('technical-architect-evaluation-exam-tips'),
 ]
 
 export default function TechnicalArchitectEvaluationExamTipsPage() {

@@ -122,6 +122,11 @@ export default function SalesCloudVsServiceCloudPage() {
                 <td className="py-2.5">Moderate-Hard — omnichannel routing and entitlements trip up many candidates</td>
               </tr>
               <tr>
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$85–120k (US)</td>
+                <td className="py-2.5">$85–120k (US)</td>
+              </tr>
+              <tr>
                 <td className="py-2.5 pr-4 font-medium">Prerequisite Recommended</td>
                 <td className="py-2.5 pr-4">ADM-201 + 2 yrs Sales Cloud experience</td>
                 <td className="py-2.5">ADM-201 + 2 yrs Service Cloud experience</td>

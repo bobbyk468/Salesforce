@@ -114,6 +114,11 @@ export default function OmnistudioDeveloperVsConsultantPage() {
                 <td className="py-2.5 pr-4">Moderate — learn all 4 core components deeply</td>
                 <td className="py-2.5">Hard — requires coding depth plus full Consultant knowledge</td>
               </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$85–115k (US)</td>
+                <td className="py-2.5">$90–120k (US)</td>
+              </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">Recommended Order</td>
                 <td className="py-2.5 pr-4" colSpan={2}>Take Consultant first, then Developer if your role requires code-level customisation.</td>

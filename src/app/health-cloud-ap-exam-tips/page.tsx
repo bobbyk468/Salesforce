@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Health Cloud candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Health Cloud exam are: (1) Patient vs Member vs Person Account — Health Cloud Data Model; (2) Care Plans vs Care Programs — Individual vs Population Health; (3) Utilisation Management vs Prior Authorisation — Two Different Processes. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('health-cloud-ap-exam-tips'),
 ]
 
 export default function HealthCloudApExamTipsPage() {

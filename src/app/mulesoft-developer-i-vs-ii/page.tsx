@@ -111,6 +111,11 @@ export default function MulesoftDeveloperIVsIIPage() {
                 <td className="py-2.5">Hard — production-grade architecture decisions</td>
               </tr>
               <tr className="border-b border-gray-100">
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$95–130k (US)</td>
+                <td className="py-2.5">$110–145k (US)</td>
+              </tr>
+              <tr className="border-b border-gray-100">
                 <td className="py-2.5 pr-4 font-medium">Study Time</td>
                 <td className="py-2.5 pr-4">6–12 weeks with hands-on labs</td>
                 <td className="py-2.5">3–6 months with real project experience</td>

@@ -109,6 +109,11 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
                 <td className="py-2.5 pr-4">Integration patterns, API management, MuleSoft, middleware, data migration</td>
                 <td className="py-2.5">Broad system architecture review across all three track topics</td>
               </tr>
+              <tr className="border-b border-gray-100">
+                <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
+                <td className="py-2.5 pr-4">$130–165k (US)</td>
+                <td className="py-2.5">$140–170k (US)</td>
+              </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium">CTA Path Role</td>
                 <td className="py-2.5 pr-4">Component of System Architect track</td>

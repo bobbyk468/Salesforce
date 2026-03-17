@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most OmniStudio Developer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the OmniStudio Developer exam are: (1) Custom LWC in OmniScript — Override vs Embed; (2) Activation — OmniScripts and FlexCards Must Be Activated Before Use; (3) Type vs Sub-Type — OmniScript Identity Keys. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('omnistudio-developer-exam-tips'),
 ]
 
 export default function OmniStudioDeveloperExamTipsPage() {

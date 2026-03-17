@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most B2B Solution Architect candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the B2B Solution Architect exam are: (1) Account-Based vs Contact-Based Data Models — B2B vs B2C Architecture Decision; (2) Revenue Lifecycle Management vs CPQ — Knowing When Each Fits; (3) Integration Architecture — Point-to-Point vs ESB vs API-Led Connectivity. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('b2b-solution-architect-exam-tips'),
 ]
 
 export default function B2BSolutionArchitectExamTipsPage() {

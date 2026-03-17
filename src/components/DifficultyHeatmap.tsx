@@ -37,7 +37,10 @@ export default function DifficultyHeatmap({ slug }: DifficultyHeatmapProps) {
                 <tr key={section.sectionName}>
                   <td className="py-2.5 pr-4 font-medium text-gray-800">{section.sectionName}</td>
                   <td className="py-2.5 pr-4 text-center">
-                    <span className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${style.bg} ${style.text}`}>
+                    <span
+                      className={`inline-flex items-center rounded-full px-2.5 py-0.5 text-xs font-semibold ${style.bg} ${style.text}`}
+                      aria-label={`Difficulty: ${style.label}`}
+                    >
                       {style.label}
                     </span>
                   </td>

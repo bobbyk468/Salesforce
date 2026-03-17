@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Strategy Designer candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Strategy Designer exam are: (1) Futures Thinking vs Current-State Analysis — Speculative vs Descriptive; (2) Jobs To Be Done vs User Stories — Motivation vs Task; (3) Hypothesis vs Assumption vs Insight — Research Rigour Distinctions. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('strategy-designer-exam-tips'),
 ]
 
 export default function StrategyDesignerExamTipsPage() {

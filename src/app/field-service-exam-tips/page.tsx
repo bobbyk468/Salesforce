@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -59,6 +60,7 @@ const faqItems = [
     question: 'What concepts do most Field Service candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Field Service exam are: (1) Dispatcher Console vs Gantt vs Service Appointment List — Three Different Views; (2) Auto-Scheduling vs Optimization — Immediate vs Batch Processing; (3) Work Types vs Skill Requirements — Templates vs Qualifications. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
+  ...getConceptFaqs('field-service-exam-tips'),
 ]
 
 export default function FieldServiceExamTipsPage() {
