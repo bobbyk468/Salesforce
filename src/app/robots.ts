@@ -1,6 +1,13 @@
 import { MetadataRoute } from 'next'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const host = (() => {
+  try {
+    return new URL(baseUrl).host
+  } catch {
+    return 'www.trailblazeprep.com'
+  }
+})()
 
 export default function robots(): MetadataRoute.Robots {
   return {
@@ -36,6 +43,6 @@ export default function robots(): MetadataRoute.Robots {
       { userAgent: 'YouBot', allow: '/' },
     ],
     sitemap: `${baseUrl}/sitemap.xml`,
-    host: baseUrl,
+    host,
   }
 }
