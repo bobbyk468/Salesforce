@@ -9,12 +9,17 @@ import GoogleAnalytics from '@/components/GoogleAnalytics'
 import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import dynamic from 'next/dynamic'
 
 const inter = Inter({
   subsets: ['latin'],
   display: 'swap',
   adjustFontFallback: true,
 })
+
+const DeferredStickyContentCta = dynamic(() => import('@/components/StickyContentCta'), { ssr: false })
+const DeferredDesktopSidebarSlot = dynamic(() => import('@/components/DesktopSidebarSlot'), { ssr: false })
+const DeferredGoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false })
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -193,7 +198,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <HreflangLinks />
-        <GoogleAnalytics />
+        <DeferredGoogleAnalytics />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}
@@ -207,11 +212,11 @@ export default function RootLayout({
           <main className="flex-grow grid grid-cols-1 lg:grid-cols-[1fr_320px]" data-main-layout>
             <div className="min-w-0">
               {children}
-              <StickyContentCta />
+              <DeferredStickyContentCta />
             </div>
             <aside className="no-print hidden lg:block w-[320px] min-h-[600px] border-l border-gray-100 bg-gradient-to-b from-gray-50/80 to-white" aria-label="Contact sidebar">
               <div className="p-6 pl-4 sticky top-24 w-[320px] min-w-0">
-                <DesktopSidebarSlot />
+                <DeferredDesktopSidebarSlot />
               </div>
             </aside>
           </main>
