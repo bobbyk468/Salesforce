@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `JavaScript Developer I Study Guide (${RELEASE_CURRENT})`
+const slug = 'javascript-developer-i'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `JavaScript Developer I study guide: 6 exam sections, async, ES6+, LWC. $200, 60 questions. Free practice questions. Pass first attempt.`
 
 export const metadata: Metadata = {

@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Marketing Cloud Email Specialist Study Guide (${RELEASE_CURRENT})`
+const slug = 'email-specialist'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Salesforce Email Specialist study guide (${RELEASE_CURRENT}): 6 exam sections, Journey Builder, deliverability tips, 8-week plan, and free practice questions. $200 fee.`
 
 export const metadata: Metadata = {

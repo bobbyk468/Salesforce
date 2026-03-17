@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce UX Designer Study Guide (${RELEASE_CURRENT})`
+const slug = 'ux-designer'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Complete UX Designer certification study guide: exam sections, key topics, study plan, and tips to pass the Salesforce Certified UX Designer exam in 2026.`
 
 export const metadata: Metadata = {

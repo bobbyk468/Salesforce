@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'data-cloud-consultant'
 
-const pageTitle = `Data Cloud Consultant Study Guide (${RELEASE_CURRENT}): Pass the CDP Exam`
+const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Data Cloud Consultant study guide: data ingestion, identity resolution, segmentation, activation. Pass first attempt Free practice questions.`

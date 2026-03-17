@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'tableau-desktop-foundations'
 
-const pageTitle = `Tableau Desktop Foundations Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: data connections, basic charts, filters. Scenario tips to pass first attempt.`

@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `OmniStudio Consultant Study Guide (${RELEASE_CURRENT})`
+const slug = 'omnistudio-consultant'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `OmniStudio Consultant study guide: 4 sections, solution design, discovery, implementation. $200. Free practice questions.`
 
 export const metadata: Metadata = {

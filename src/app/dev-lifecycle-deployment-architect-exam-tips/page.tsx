@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'dev-lifecycle-deployment-architect'
 
-const pageTitle = `Dev Lifecycle & Deployment Architect Exam Tips (${RELEASE_CURRENT})`
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Dev Lifecycle & Deployment Architect exam tips: release management, CI/CD, environment strategy. Pass first attempt Free practice questions.`

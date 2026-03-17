@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'mulesoft-hyperautomation-developer'
 
-const pageTitle = `MuleSoft Hyperautomation Developer Exam Tips (${RELEASE_CURRENT})`
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `MuleSoft Hyperautomation Developer exam tips for ${RELEASE_CURRENT}: RPA, AI-powered automation, process orchestration Free practice questions.`

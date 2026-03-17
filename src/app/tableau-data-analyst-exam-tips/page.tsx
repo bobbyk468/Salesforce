@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'tableau-data-analyst'
 
-const pageTitle = `Tableau Data Analyst Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Tableau Data Analyst exam tips (${RELEASE_CURRENT}): 4-week study plan, LOD expressions, context filters, and exam strategies. Start free now.`

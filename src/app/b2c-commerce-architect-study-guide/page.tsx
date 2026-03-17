@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce B2C Commerce Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'b2c-commerce-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `B2C Commerce Architect study guide: exam sections, solution architecture, integrations, performance, security. Pass in 2026.`
 
 export const metadata: Metadata = {

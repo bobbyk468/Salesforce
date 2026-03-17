@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Revenue Cloud Consultant Study Guide (${RELEASE_CURRENT})`
+const slug = 'revenue-cloud-consultant'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Revenue Cloud Consultant study guide: 5 sections, billing schedules, pricing waterfall, 8-week plan. $200. Free practice.`
 
 export const metadata: Metadata = {

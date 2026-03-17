@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `B2C Solution Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'b2c-solution-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `B2C Solution Architect study guide: Commerce Cloud, Marketing Cloud, personalisation, omnichannel. $400, ~68% pass Free practice questions.`
 
 export const metadata: Metadata = {

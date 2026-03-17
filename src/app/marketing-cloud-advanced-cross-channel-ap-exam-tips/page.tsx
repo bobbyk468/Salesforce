@@ -5,10 +5,13 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'marketing-cloud-advanced-cross-channel-ap'
 
-const pageTitle = `MC Advanced Cross-Channel AP Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce Marketing Cloud Advanced Cross-Channel AP exam tips for ${RELEASE_CURRENT}: Journey Builder, mobile push, advertising audiences.`

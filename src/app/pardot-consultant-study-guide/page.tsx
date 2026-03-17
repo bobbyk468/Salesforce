@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Pardot Consultant Study Guide (${RELEASE_CURRENT})`
+const slug = 'pardot-consultant'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Pardot Consultant study guide: exam sections, key topics, B2B marketing study plan. Pass in 2026 Free practice questions.`
 
 export const metadata: Metadata = {

@@ -1,14 +1,15 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import type { Metadata } from 'next'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-
-const pageTitle = `ADM-201 Study Guide (${RELEASE_CURRENT}): Pass Salesforce Admin`
+const slug = 'administrator'
+const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `ADM-201 study guide (${RELEASE_CURRENT}): all 7 exam sections, key topics, and exam scenario strategies. Start free practice today.`

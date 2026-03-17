@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Education Cloud Consultant Study Guide (${RELEASE_CURRENT})`
+const slug = 'education-cloud-consultant'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Education Cloud Consultant study guide: exam sections, EDA data model, student success, advising. Pass in 2026 Free practice questions.`
 
 export const metadata: Metadata = {

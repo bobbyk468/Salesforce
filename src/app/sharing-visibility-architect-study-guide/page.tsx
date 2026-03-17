@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Sharing & Visibility Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'sharing-visibility-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Sharing & Visibility Architect study guide: OWD, role hierarchy, sharing rules, Apex sharing. $400, ~68% pass Free practice questions.`
 
 export const metadata: Metadata = {

@@ -6,9 +6,12 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `MuleSoft Integration Foundations Study Guide (${RELEASE_CURRENT})`
+const slug = 'mulesoft-integration-foundations'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `MuleSoft Integration Foundations study guide: API-led connectivity, Anypoint Platform. $75, 40 questions, 70% pass Free practice questions.`
 
 export const metadata: Metadata = {

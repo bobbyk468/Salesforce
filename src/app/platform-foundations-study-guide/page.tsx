@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Platform Foundations Study Guide (${RELEASE_CURRENT})`
+const slug = 'platform-foundations'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Platform Foundations study guide: exam sections, key topics, study plan. Pass this $75 associate cert in 2026 Free practice questions.`
 
 export const metadata: Metadata = {

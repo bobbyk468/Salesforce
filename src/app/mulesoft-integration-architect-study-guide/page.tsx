@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `MuleSoft Integration Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'mulesoft-integration-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `MuleSoft Integration Architect study guide: API-led connectivity, integration patterns, security, governance. Pass in 2026.`
 
 export const metadata: Metadata = {

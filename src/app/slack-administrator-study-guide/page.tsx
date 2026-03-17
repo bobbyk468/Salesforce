@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Slack Administrator Study Guide (${RELEASE_CURRENT})`
+const slug = 'slack-administrator'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Slack Administrator study guide: exam sections, workspace config, security, integrations, and tips to pass the Salesforce Slack Admin exam.`
 
 export const metadata: Metadata = {

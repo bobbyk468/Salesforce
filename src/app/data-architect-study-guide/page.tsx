@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Data Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'data-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Salesforce Data Architect study guide (${RELEASE_CURRENT}): 5 exam sections, 10-week plan, LDV strategies, MDM patterns. $400 fee, 60 questions, ~68% passing score.`
 
 export const metadata: Metadata = {

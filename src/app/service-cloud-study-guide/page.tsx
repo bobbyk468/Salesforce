@@ -1,14 +1,15 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import type { Metadata } from 'next'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-
-const pageTitle = `Service Cloud Consultant Exam Notes (${RELEASE_CURRENT})`
+const slug = 'service-cloud'
+const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Service Cloud Consultant exam notes (${RELEASE_CURRENT}): Omni-Channel routing, entitlements, Lightning Knowledge, and case management — with free practice questions.`

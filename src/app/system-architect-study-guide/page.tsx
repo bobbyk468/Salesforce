@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce System Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'system-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `System Architect study guide: 5 required domain exams, key topics, recommended study order, preparation strategy Free practice questions.`
 
 export const metadata: Metadata = {

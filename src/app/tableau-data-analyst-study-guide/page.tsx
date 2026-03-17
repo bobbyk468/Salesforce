@@ -6,9 +6,12 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Tableau Data Analyst Study Guide (${RELEASE_CURRENT})`
+const slug = 'tableau-data-analyst'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Tableau Data Analyst study guide: 5 sections, LOD, dashboard tips, 8-week plan. 75% passing, $250. Free practice questions.`
 
 export const metadata: Metadata = {

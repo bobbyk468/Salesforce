@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Pardot Specialist Study Guide (${RELEASE_CURRENT})`
+const slug = 'pardot-specialist'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Pardot Specialist study guide: 5 sections, 8-week plan, scoring, Engagement Studio. $200, 60 questions. Free practice questions.`
 
 export const metadata: Metadata = {

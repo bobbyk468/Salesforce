@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Integration Architect Study Guide (${RELEASE_CURRENT})`
+const slug = 'integration-architect'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, ~68% pass Free practice questions.`
 
 export const metadata: Metadata = {

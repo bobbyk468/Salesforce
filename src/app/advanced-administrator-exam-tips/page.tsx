@@ -5,10 +5,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-
-const pageTitle = `Advanced Administrator Exam Tips (${RELEASE_CURRENT}): ADM-211 Study Guide`
+const slug = 'advanced-administrator'
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce Advanced Administrator (ADM-211) exam tips for ${RELEASE_CURRENT}: security, automation, data management Free practice questions.`

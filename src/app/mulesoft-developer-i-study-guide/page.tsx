@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `MuleSoft Developer I Study Guide (${RELEASE_CURRENT})`
+const slug = 'mulesoft-developer-i'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `MuleSoft Developer I study guide: exam sections, DataWeave, connectors, error handling, 8-week plan. $200, 60 questions.`
 
 export const metadata: Metadata = {

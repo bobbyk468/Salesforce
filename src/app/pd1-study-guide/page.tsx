@@ -8,8 +8,8 @@ import type { Metadata } from 'next'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-
 const slug = 'developer-1'
+
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =

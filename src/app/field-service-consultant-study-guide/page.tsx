@@ -4,9 +4,12 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Field Service Consultant Study Guide (${RELEASE_CURRENT})`
+const slug = 'field-service'
+const pageTitle = buildStudyGuideTitle(slug)
 const pageDescription = `Salesforce Field Service Consultant study guide (${RELEASE_CURRENT}): 8 exam sections, study plan, scheduling tips, and free practice questions. $200 fee, 60 questions.`
 
 export const metadata: Metadata = {
