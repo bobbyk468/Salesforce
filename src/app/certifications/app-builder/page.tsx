@@ -343,6 +343,39 @@ export default function AppBuilderPage() {
             <RelatedCertifications currentSlug={slug} />
           </div>
 
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="app-builder-next-steps-heading">
+            <h2 id="app-builder-next-steps-heading" className="text-base font-semibold text-gray-900 mb-3">
+              After App Builder: Where to Go Next
+            </h2>
+            <p className="text-sm text-gray-700 mb-2">
+              Most admins take App Builder after ADM-201, then move into cloud-specific consultant roles. If you enjoy
+              designing data models and automation, consider specialising as a consultant on the clouds your org uses most.
+            </p>
+            <ul className="space-y-2 text-sm">
+              <li>
+                For sales-heavy orgs, the natural next step is{' '}
+                <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Sales Cloud Consultant
+                </Link>
+                .
+              </li>
+              <li>
+                If you spend most of your time on support queues and case workflows, look at{' '}
+                <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Service Cloud Consultant
+                </Link>
+                .
+              </li>
+              <li>
+                Working with Experience Cloud sites or portals? The{' '}
+                <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Experience Cloud Consultant
+                </Link>
+                {' '}certification is a strong follow-on once you&apos;re comfortable with App Builder page design.
+              </li>
+            </ul>
+          </section>
+
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">
             <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />

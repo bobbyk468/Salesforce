@@ -234,6 +234,24 @@ export default function Adm201ExamTipsPage() {
             Compare ADM-201 vs App Builder
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          When you&apos;re consistently scoring 75%+ on ADM-201 mocks, your next move is to either deepen admin skills with{' '}
+          <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">
+            Advanced Administrator
+          </Link>
+          {' '}or branch into implementation with{' '}
+          <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">
+            Sales Cloud Consultant
+          </Link>
+          {' '}or{' '}
+          <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">
+            Service Cloud Consultant
+          </Link>
+          .
+        </p>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">Advanced Administrator</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+        </p>
       </section>
     </div>
   )

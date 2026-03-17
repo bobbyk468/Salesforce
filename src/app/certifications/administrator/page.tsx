@@ -600,7 +600,7 @@ export default function AdministratorPage() {
 
             <AdministratorCtaSections />
 
-            <div id="related-certs">
+          <div id="related-certs">
               <RelatedCertifications currentSlug={slug} />
             </div>
 
@@ -631,6 +631,27 @@ export default function AdministratorPage() {
                     ADM-201 vs App Builder: Which to Take First? →
                   </Link>
                   <span className="text-gray-600 ml-2">Side-by-side comparison of difficulty, overlap, and career value to help you choose the right order.</span>
+                </li>
+                <li>
+                  <p className="text-gray-700">
+                    After you pass ADM-201, the most common next steps are{' '}
+                    <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+                      Sales Cloud Consultant
+                    </Link>
+                    ,{' '}
+                    <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+                      Service Cloud Consultant
+                    </Link>
+                    , and{' '}
+                    <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+                      Experience Cloud Consultant
+                    </Link>
+                    {' '}depending on whether your org is sales-, service-, or portal-focused. If you work in marketing operations, consider the{' '}
+                    <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">
+                      Marketing Cloud Consultant
+                    </Link>
+                    {' '}path next.
+                  </p>
                 </li>
               </ul>
             </section>

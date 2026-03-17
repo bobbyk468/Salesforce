@@ -1,4 +1,5 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
+import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -274,6 +275,17 @@ export default function SharingVisibilityArchitectPage() {
 
           
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
+
+                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Architect Certifications</h2>
+            <p className="text-sm text-gray-700 mb-2">After this architect certification, progress toward CTA or other architect domains:</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link></li>
+              <li><Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link></li>
+              <li><Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link></li>
+              <li><Link href="/architect-certification-path" className="text-salesforce-blue font-medium hover:underline">Architect certification path</Link></li>
+            </ul>
+          </section>
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />

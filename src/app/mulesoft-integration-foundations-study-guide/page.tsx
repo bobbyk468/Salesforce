@@ -209,6 +209,13 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
 
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <p className="text-sm text-gray-700">
+          After this certification, consider: <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator (ADM-201)</Link>, <Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link>, or <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">AI Associate</Link>.
+        </p>
+      </section>
+
       <DifficultyHeatmap slug="mulesoft-integration-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
         <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>

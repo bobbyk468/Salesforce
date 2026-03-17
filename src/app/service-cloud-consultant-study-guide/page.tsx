@@ -263,6 +263,36 @@ export default function ServiceCloudConsultantStudyGuidePage() {
         </div>
       </section>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After Service Cloud Consultant?</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          After you&apos;ve passed Service Cloud, you can either deepen your service specialism or round out a broader consultant profile:
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <li>
+            Go deeper into field operations with{' '}
+            <Link href="/field-service-vs-service-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">
+              Field Service Consultant
+            </Link>
+            {' '}if your org runs onsite work orders or dispatches technicians.
+          </li>
+          <li>
+            Pair Service Cloud with{' '}
+            <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Sales Cloud Consultant
+            </Link>
+            {' '}to design full customer journeys from lead to ticket resolution.
+          </li>
+          <li>
+            If you own customer/partner communities, add{' '}
+            <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Experience Cloud Consultant
+            </Link>
+            {' '}to cover self-service and portal experiences on top of your service processes.
+          </li>
+        </ul>
+      </section>
+
       
       <DifficultyHeatmap slug="service-cloud" />
       {/* Hub CTA */}

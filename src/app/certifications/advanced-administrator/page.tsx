@@ -279,6 +279,17 @@ export default function AdvancedAdministratorPage() {
 
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
+                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Certifications to Consider</h2>
+            <p className="text-sm text-gray-700 mb-2">After this certification, common next steps in the admin track or consultant track:</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">Advanced Administrator</Link></li>
+              <li><Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link></li>
+              <li><Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link></li>
+              <li><Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link></li>
+            </ul>
+          </section>
+
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>

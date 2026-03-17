@@ -1,4 +1,5 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
+import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -246,6 +247,16 @@ export default function TableauConsultantPage() {
 
 
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
+
+                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Tableau Certifications</h2>
+            <p className="text-sm text-gray-700 mb-2">After this Tableau certification, consider other Tableau credentials or CRM Analytics:</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/certifications/tableau-consultant" className="text-salesforce-blue font-medium hover:underline">Tableau Consultant</Link></li>
+              <li><Link href="/certifications/tableau-data-analyst" className="text-salesforce-blue font-medium hover:underline">Tableau Data Analyst</Link></li>
+              <li><Link href="/certifications/tableau-desktop-foundations" className="text-salesforce-blue font-medium hover:underline">Tableau Desktop Foundations</Link></li>
+            </ul>
+          </section>
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />

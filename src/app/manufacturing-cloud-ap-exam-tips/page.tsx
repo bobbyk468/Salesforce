@@ -238,6 +238,9 @@ export default function ManufacturingCloudApExamTipsPage() {
             All Certification Paths
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+        </p>
       </section>
     </div>
   )

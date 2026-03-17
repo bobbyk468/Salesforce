@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
@@ -308,12 +309,44 @@ export default function SalesCloudPage() {
             questions={sampleQuestions}
           />
 
-
-                    <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
-
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="sales-cloud-next-steps-heading">
+            <h2 id="sales-cloud-next-steps-heading" className="text-base font-semibold text-gray-900 mb-3">
+              Next Consultant Certifications After Sales Cloud
+            </h2>
+            <p className="text-sm text-gray-700 mb-3">
+              Sales Cloud is usually the first consultant cert for admins who work closely with revenue teams. After you pass,
+              you can round out your consultant profile with adjacent clouds:
+            </p>
+            <ul className="space-y-2 text-sm">
+              <li>
+                Pair Sales Cloud with{' '}
+                <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Service Cloud Consultant
+                </Link>
+                {' '}if your org has a combined sales + support centre.
+              </li>
+              <li>
+                If you&apos;re responsible for partner channels or self-service portals, add{' '}
+                <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Experience Cloud Consultant
+                </Link>
+                {' '}to design partner and customer communities.
+              </li>
+              <li>
+                For teams using CPQ or subscription billing, consider{' '}
+                <Link href="/certifications/cpq-specialist" className="text-salesforce-blue font-medium hover:underline">
+                  CPQ Specialist
+                </Link>
+                {' '}after Sales Cloud so you can own the full quote-to-cash flow.
+              </li>
+            </ul>
+          </section>
+
+          <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">

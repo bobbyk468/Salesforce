@@ -237,6 +237,9 @@ export default function CPQAdministratorExamTipsPage() {
             Consultant Certification Path
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">Advanced Administrator</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+        </p>
       </section>
     </div>
   )

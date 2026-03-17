@@ -234,6 +234,9 @@ export default function MarketingCloudConsultantExamTipsPage() {
             Email Specialist Exam Tips
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Account Engagement (Pardot) Consultant</Link> next.
+        </p>
       </section>
     </div>
   )

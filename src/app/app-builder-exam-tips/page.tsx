@@ -255,6 +255,24 @@ export default function AppBuilderExamTipsPage() {
             Compare ADM-201 vs App Builder
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After you&apos;re consistently scoring 75%+ on App Builder mocks, the most common next steps are{' '}
+          <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">
+            Advanced Administrator
+          </Link>
+          {' '}on the admin track, or cloud-specific roles like{' '}
+          <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">
+            Sales Cloud Consultant
+          </Link>
+          {' '}and{' '}
+          <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">
+            Service Cloud Consultant
+          </Link>
+          {' '}if you want to move into implementations.
+        </p>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+        </p>
       </section>
     </div>
   )

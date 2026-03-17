@@ -252,6 +252,36 @@ export default function SalesCloudConsultantStudyGuidePage() {
         </div>
       </section>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go After Sales Cloud Consultant</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Once you&apos;ve passed Sales Cloud Consultant, you&apos;re well-positioned for other high-value consultant credentials:
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <li>
+            Add{' '}
+            <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Service Cloud Consultant
+            </Link>
+            {' '}if you work with support teams or combined sales + service centres.
+          </li>
+          <li>
+            If you design partner or customer portals,{' '}
+            <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Experience Cloud Consultant
+            </Link>
+            {' '}is a natural follow-on once you understand core CRM objects.
+          </li>
+          <li>
+            For mid-term career growth, combine Sales Cloud with{' '}
+            <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+              Advanced Administrator
+            </Link>
+            {' '}to demonstrate both solution design and deep platform governance.
+          </li>
+        </ul>
+      </section>
+
       
       <DifficultyHeatmap slug="sales-cloud" />
       {/* Hub CTA */}

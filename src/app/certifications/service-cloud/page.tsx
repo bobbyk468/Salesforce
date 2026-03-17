@@ -309,12 +309,44 @@ export default function ServiceCloudPage() {
             questions={sampleQuestions}
           />
 
-
-                    <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
-
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
           </div>
+
+          <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="service-cloud-next-steps-heading">
+            <h2 id="service-cloud-next-steps-heading" className="text-base font-semibold text-gray-900 mb-3">
+              Next Consultant Certifications After Service Cloud
+            </h2>
+            <p className="text-sm text-gray-700 mb-3">
+              Service Cloud is the core consultant cert for support and contact centre teams. After you pass, you can either
+              deepen your service specialisation or branch into adjacent clouds:
+            </p>
+            <ul className="space-y-2 text-sm">
+              <li>
+                If you work with field technicians or onsite work orders, pair this with{' '}
+                <Link href="/field-service-vs-service-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">
+                  Field Service Consultant
+                </Link>
+                {' '}to cover both contact centre and field service.
+              </li>
+              <li>
+                For orgs that blend sales and service teams, add{' '}
+                <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Sales Cloud Consultant
+                </Link>
+                {' '}so you can design end-to-end revenue and support flows.
+              </li>
+              <li>
+                If you own customer/partner portals,{' '}
+                <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+                  Experience Cloud Consultant
+                </Link>
+                {' '}helps you design self-service and community experiences on top of your service processes.
+              </li>
+            </ul>
+          </section>
+
+          <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
 
           {/* Service Cloud study resources */}
           <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="svc-guides-heading">

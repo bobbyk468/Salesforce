@@ -238,6 +238,9 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
             All Certification Paths
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/administrator" className="text-salesforce-blue underline">Platform Administrator (ADM-201)</Link> or <Link href="/certifications/developer-1" className="text-salesforce-blue underline">Platform Developer I</Link> next.
+        </p>
       </section>
     </div>
   )

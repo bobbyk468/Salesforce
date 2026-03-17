@@ -308,6 +308,20 @@ export default function ServiceCloudConsultantExamTipsPage() {
             Start with ADM-201 First
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After Service Cloud, many consultants either specialise further with{' '}
+          <Link href="/field-service-vs-service-cloud-consultant" className="text-salesforce-blue underline">
+            Field Service Consultant
+          </Link>
+          {' '}or broaden into revenue work with{' '}
+          <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">
+            Sales Cloud Consultant
+          </Link>
+          . Choose based on whether your day-to-day is closer to dispatch and work orders or to pipeline and forecasting.
+        </p>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+        </p>
       </section>
     </div>
   )

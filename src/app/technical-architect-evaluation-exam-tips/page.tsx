@@ -243,6 +243,9 @@ export default function TechnicalArchitectEvaluationExamTipsPage() {
             How to Become a CTA
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/application-architect" className="text-salesforce-blue underline">Application Architect</Link> or <Link href="/certifications/system-architect" className="text-salesforce-blue underline">System Architect</Link> next.
+        </p>
       </section>
     </div>
   )

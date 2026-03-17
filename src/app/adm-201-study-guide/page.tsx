@@ -202,6 +202,41 @@ export default function Adm201StudyGuidePage() {
         </div>
       </section>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After ADM-201?</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Once you&apos;ve passed ADM-201, most admins either deepen platform skills or specialise by cloud:
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <li>
+            Strengthen your admin foundation with{' '}
+            <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+              Advanced Administrator
+            </Link>
+            {' '}and{' '}
+            <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
+              Platform App Builder
+            </Link>
+            {' '}if you want to stay on the core admin track.
+          </li>
+          <li>
+            Move into implementation work with{' '}
+            <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Sales Cloud Consultant
+            </Link>
+            ,{' '}
+            <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Service Cloud Consultant
+            </Link>
+            , or{' '}
+            <Link href="/certifications/nonprofit-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Nonprofit Cloud Consultant
+            </Link>
+            {' '}depending on your current org and target role.
+          </li>
+        </ul>
+      </section>
+
       {/* Scenario tips */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Approach ADM-201 Scenario Questions</h2>

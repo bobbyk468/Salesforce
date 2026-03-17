@@ -1,4 +1,5 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
+import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -274,6 +275,16 @@ export default function MarketingCloudEngagementFoundationsPage() {
 
           
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
+
+                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Certifications After Associate</h2>
+            <p className="text-sm text-gray-700 mb-2">After earning an associate credential, many candidates move to role-based certifications:</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator (ADM-201)</Link></li>
+              <li><Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link></li>
+              <li><Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">AI Associate</Link></li>
+            </ul>
+          </section>
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />

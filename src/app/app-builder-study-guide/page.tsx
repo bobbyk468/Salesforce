@@ -266,6 +266,37 @@ export default function AppBuilderStudyGuidePage() {
         </ol>
       </section>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What to Take After App Builder</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          Once you&apos;ve passed App Builder, you can either deepen your admin track or specialise by cloud:
+        </p>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          <li>
+            Stay on the core admin path with{' '}
+            <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+              Advanced Administrator
+            </Link>
+            {' '}if you enjoy complex security, governance, and auditing scenarios.
+          </li>
+          <li>
+            Move into implementations with{' '}
+            <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Sales Cloud Consultant
+            </Link>
+            ,{' '}
+            <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Service Cloud Consultant
+            </Link>
+            , or{' '}
+            <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
+              Experience Cloud Consultant
+            </Link>
+            {' '}depending on whether your org is sales, service, or portal focused.
+          </li>
+        </ul>
+      </section>
+
       {/* Related links */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Related Guides</h2>
@@ -326,6 +357,13 @@ export default function AppBuilderStudyGuidePage() {
       </section>
 
       
+            <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <p className="text-sm text-gray-700">
+          After this certification, consider: <Link href="/certifications/developer-2" className="text-salesforce-blue font-medium hover:underline">Platform Developer II</Link>, <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link>, or <Link href="/certifications/javascript-developer-i" className="text-salesforce-blue font-medium hover:underline">JavaScript Developer I</Link>.
+        </p>
+      </section>
+
       <DifficultyHeatmap slug="app-builder" />
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">

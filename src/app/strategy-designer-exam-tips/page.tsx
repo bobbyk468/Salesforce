@@ -238,6 +238,9 @@ export default function StrategyDesignerExamTipsPage() {
             All Certification Paths
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/strategy-designer" className="text-salesforce-blue underline">Platform Strategy Designer</Link> or <Link href="/certifications/ux-designer" className="text-salesforce-blue underline">User Experience Designer</Link> next.
+        </p>
       </section>
     </div>
   )

@@ -238,6 +238,9 @@ export default function TableauConsultantExamTipsPage() {
             All Certification Paths
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/tableau-consultant" className="text-salesforce-blue underline">Tableau Consultant</Link> or <Link href="/certifications/tableau-data-analyst" className="text-salesforce-blue underline">Tableau Data Analyst</Link> next.
+        </p>
       </section>
     </div>
   )

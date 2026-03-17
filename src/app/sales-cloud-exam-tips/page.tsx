@@ -224,7 +224,6 @@ export default function SalesCloudExamTipsPage() {
           </Link>
         </div>
       </section>
-
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Sales Cloud Prep</h2>
         <div className="flex flex-col sm:flex-row gap-3">
@@ -238,6 +237,20 @@ export default function SalesCloudExamTipsPage() {
             Plan Your Cert Path
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          Many candidates follow Sales Cloud with{' '}
+          <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">
+            Service Cloud Consultant
+          </Link>
+          {' '}to cover both sides of the revenue funnel, or with{' '}
+          <Link href="/certifications/experience-cloud" className="text-salesforce-blue underline">
+            Experience Cloud Consultant
+          </Link>
+          {' '}if they design partner and customer portals.
+        </p>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+        </p>
       </section>
     </div>
   )

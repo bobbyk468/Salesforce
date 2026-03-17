@@ -1,4 +1,5 @@
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
+import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
@@ -274,6 +275,17 @@ export default function SlackConsultantPage() {
 
           
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
+
+                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Consultant Certifications</h2>
+            <p className="text-sm text-gray-700 mb-2">After this consultant certification, you can add adjacent clouds or deepen your specialisation:</p>
+            <ul className="space-y-2 text-sm">
+              <li><Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link></li>
+              <li><Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link></li>
+              <li><Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link></li>
+              <li><Link href="/certifications/role/consultant" className="text-salesforce-blue font-medium hover:underline">Consultant certification path</Link></li>
+            </ul>
+          </section>
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />

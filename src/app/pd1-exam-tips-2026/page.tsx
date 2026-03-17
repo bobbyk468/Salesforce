@@ -299,6 +299,9 @@ export default function Pd1ExamTipsPage() {
             What Comes After PD1? PD2 →
           </Link>
         </div>
+        <p className="text-xs text-gray-500 mt-4">
+          After this exam, consider <Link href="/certifications/developer-2" className="text-salesforce-blue underline">Platform Developer II</Link> or <Link href="/certifications/app-builder" className="text-salesforce-blue underline">Platform App Builder</Link> next.
+        </p>
       </section>
     </div>
   )
