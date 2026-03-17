@@ -5,6 +5,7 @@ const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX = 5
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
 const CONTACT_FALLBACK_MESSAGE = 'Contact form is temporarily unavailable. Please email us directly.'
+const AUTH_RETRY_MESSAGE = 'If you are logged in, try logging out and back in.'
 
 function getClientIp(request: Request) {
   const forwardedFor = request.headers.get('x-forwarded-for')
@@ -96,7 +97,7 @@ export async function POST(request: Request) {
       return NextResponse.json(
         {
           error: authProviderError
-            ? CONTACT_FALLBACK_MESSAGE
+            ? `${AUTH_RETRY_MESSAGE} If the issue continues, please email us directly.`
             : 'Failed to send message. Please try again or email us directly.',
         },
         { status: authProviderError ? 503 : 502 }
