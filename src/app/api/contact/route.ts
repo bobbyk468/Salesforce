@@ -4,6 +4,7 @@ import { CONTACT_EMAIL } from '@/lib/constants'
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX = 5
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
+const CONTACT_FALLBACK_MESSAGE = 'Contact form is temporarily unavailable. Please email us directly.'
 
 function getClientIp(request: Request) {
   const forwardedFor = request.headers.get('x-forwarded-for')
@@ -21,6 +22,21 @@ function isRateLimited(ip: string) {
   if (entry.count >= RATE_LIMIT_MAX) return true
   entry.count += 1
   return false
+}
+
+async function getUpstreamErrorMessage(response: Response) {
+  try {
+    const json = await response.json()
+    if (typeof json?.message === 'string' && json.message.trim()) return json.message
+    if (typeof json?.error === 'string' && json.error.trim()) return json.error
+    return `HTTP ${response.status}`
+  } catch {
+    return `HTTP ${response.status}`
+  }
+}
+
+function isAuthProviderError(status: number, message: string) {
+  return status === 401 || status === 403 || /\bunauthenticated\b|\bunauthorized\b/i.test(message)
 }
 
 export async function POST(request: Request) {
@@ -48,7 +64,7 @@ export async function POST(request: Request) {
       // Log for debugging (won't expose the key, just confirms it's missing)
       console.error('[Contact API] RESEND_API_KEY is missing. Available env vars:', Object.keys(process.env).filter(k => k.includes('RESEND')))
       return NextResponse.json(
-        { error: 'Contact form is temporarily unavailable. Please email us directly.' },
+        { error: CONTACT_FALLBACK_MESSAGE },
         { status: 503 }
       )
     }
@@ -69,15 +85,29 @@ export async function POST(request: Request) {
     })
 
     if (!res.ok) {
-      const err = await res.json()
-      throw new Error(err.message || 'Failed to send email')
+      const upstreamMessage = await getUpstreamErrorMessage(res)
+      const authProviderError = isAuthProviderError(res.status, upstreamMessage)
+
+      console.error('[Contact API] Resend request failed', {
+        status: res.status,
+        message: upstreamMessage,
+      })
+
+      return NextResponse.json(
+        {
+          error: authProviderError
+            ? CONTACT_FALLBACK_MESSAGE
+            : 'Failed to send message. Please try again or email us directly.',
+        },
+        { status: authProviderError ? 503 : 502 }
+      )
     }
 
     return NextResponse.json({ success: true })
   } catch (err) {
     console.error('Contact API error:', err)
     return NextResponse.json(
-      { error: err instanceof Error ? err.message : 'Failed to send message.' },
+      { error: 'Failed to send message. Please try again or email us directly.' },
       { status: 500 }
     )
   }
