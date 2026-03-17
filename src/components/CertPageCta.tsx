@@ -60,7 +60,7 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
       )}
       {singleDominantCta && (
         <p className="text-center mt-2">
-          <Link href={contactHref} className="text-white/90 hover:text-white text-sm font-medium underline underline-offset-2">
+          <Link href={contactHref} className="text-white hover:text-white text-sm font-medium underline underline-offset-2">
             {effectiveExamCode ? `Get full ${effectiveExamCode} question bank` : 'Get full question bank'}
           </Link>
         </p>

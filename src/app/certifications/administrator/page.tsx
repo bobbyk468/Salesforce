@@ -281,7 +281,7 @@ export default function AdministratorPage() {
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
           </h1>
-          <p className="text-white/90 text-sm sm:text-base max-w-2xl mb-6">
+          <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
             Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
           </p>
           <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">

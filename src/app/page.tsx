@@ -308,7 +308,7 @@ export default function Home() {
           <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto">
             Prepare for every Salesforce certification with practice questions, exam weightage, and study guides in one place.
           </p>
-          <p className="text-lg text-white/90 mb-2 max-w-2xl mx-auto">
+          <p className="text-lg text-white mb-2 max-w-2xl mx-auto">
             Studying for Admin (ADM-201), Developer I, Sales Cloud Consultant, or 80+ other credentials? We give you exam tips, prerequisites, and sample questions.
           </p>
           <p className="text-base text-white/80 mb-8 max-w-2xl mx-auto">

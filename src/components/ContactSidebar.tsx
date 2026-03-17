@@ -238,7 +238,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
             <Mail className="h-6 w-6" />
             <h3 className="font-bold text-lg">Contact Us</h3>
           </div>
-          <p className="text-white/90 text-sm mt-1">
+          <p className="text-white text-sm mt-1">
             Questions? We&apos;ll reply to <span className="font-medium">{CONTACT_EMAIL}</span>
           </p>
         </div>
