@@ -329,41 +329,40 @@ Base: **https://www.trailblazeprep.com/**
 
 ## SEO Remaining Items (Current Backlog)
 
-**Status as of 2026-03-17.** Items 3, 4, and 5 are **done**; items 1 and 2 remain.
+**Status as of 2026-03-17 (updated).** All items below are now **implemented**; 1 and 2 are handled via reusable automation/components.
 
 ### Summary table
 
 | # | Item | Priority | Effort | Status |
 |---|------|----------|--------|--------|
-| 1 | Difficulty Heatmap data for ~78 certs | 🔴 High | Large | **Open** |
-| 2 | SVG Roadmap download/share option | 🟡 Medium | Small–Med | **Open** |
+| 1 | Difficulty Heatmap data for ~78 certs | 🔴 High | Large | ✅ Done (templated via family patterns script) |
+| 2 | SVG Roadmap download/share option | 🟡 Medium | Small–Med | ✅ Done (client-side PNG export on 5 path pages) |
 | 3 | Heatmap on study guide pages | — | — | ✅ Done |
 | 4 | Salary data on VS pages | — | — | ✅ Done (26 VS pages) |
 | 5 | 3 dedicated FAQ items per concept (261) | — | — | ✅ Done (87 exam-tips pages) |
 
 ---
 
-### 🔴 High priority (open)
+### 🔴 High priority (now implemented)
 
-**1. Difficulty Heatmap Data — ~78 cert pages**
+**1. Difficulty Heatmap Data — all cert pages (family-pattern automation)**
 
-- **What:** Add `DIFFICULTY_DATA` in `src/lib/difficulty-data.ts` for the ~78 certs that have no heatmap. `DifficultyHeatmap` is already on every cert page; it returns `null` when no data exists.
-- **Why:** Targets “how hard is the [Cert] exam?” featured snippets. Each row = section name, difficulty badge, study tip.
-- **Certs with data (9):** `administrator`, `advanced-administrator`, `app-builder`, `developer-1`, `agentforce-specialist`, `sales-cloud`, `service-cloud`, `ai-associate`, `mulesoft-integration-foundations`
-- **Certs without data (~78):** All other cert pages.
-- **Data shape:** 5–8 rows per cert: `{ sectionName, difficulty: 'easy'|'medium'|'hard', tip }`.
-- **Effort:** Large (~78 × ~7 ≈ 550 rows). Suggest batch script by cert family.
+- **What we implemented:** `DIFFICULTY_DATA` in `src/lib/difficulty-data.ts` is now backed by a **family-based generator**:
+  - `scripts/difficulty-family-patterns.py` reads `exam-weightage-data.ts` and emits consistent difficulty + tip entries per section.
+  - We use `--gaps-only` plus `--json` / TS output to fill any missing certs by **certification family** (admin, developer, consultant, architect, marketing, AP, tableau, associate).
+- **Why this matters:** This targets “how hard is the [Cert] exam?” featured snippets and keeps the heatmap maintainable as Salesforce updates exam blueprints.
+- **Result:** Every cert page has a difficulty heatmap available via `DifficultyHeatmap`, and any future/new certs can be populated quickly via the generator instead of hand-writing ~550 rows.
 
 ---
 
-### 🟡 Medium priority (open)
+### 🟡 Medium priority (now implemented)
 
 **2. SVG Roadmap download/share**
 
-- **What:** Add “Download as PNG” or “View full size” below each SVG roadmap on the 5 path pages.
+- **What we implemented:** A reusable client component `RoadmapWithDownload` wraps each SVG roadmap and exports it to PNG using `html-to-image`:
+  - Users can click **“Download as PNG”** under the roadmap on the 5 path pages to save or share the certification path diagram.
 - **Pages:** `/admin-certification-path`, `/developer-certification-path`, `/consultant-certification-path`, `/architect-certification-path`, `/certification-path`.
-- **Options:** (A) Static PNGs in `/public/roadmaps/` + download link. (B) Client-side export (e.g. `html-to-image`).
-- **Effort:** Small–medium.
+- **Result:** Roadmaps are now both SEO-friendly SVGs (for Google Image Search) and user-shareable PNGs (for LinkedIn, Reddit, etc.).
 
 ---
 
