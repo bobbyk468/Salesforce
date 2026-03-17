@@ -69,49 +69,24 @@
 
 ---
 
-### 4. Salary Data on VS Comparison Pages
+### 4. ~~Salary Data on VS Comparison Pages~~ ✅ DONE (2026-03-17)
 
-**What:** Add salary comparison data to the remaining 25 VS pages. Two pages already have this (`pd1-vs-pd2`, `adm-201-vs-app-builder`) and serve as a template — a row with "Avg Salary with Cert A vs Cert B" information.
-
-**Why:** Salary data is high-intent content — it answers "which cert pays more?" which is a common comparison query. Adds a concrete differentiator to thin VS pages.
-
-**Template (from `pd1-vs-pd2`):**
-```tsx
-<tr>
-  <td className="py-2.5 pr-4 font-medium">Avg Salary</td>
-  <td className="py-2.5 pr-4">$X–$Y (US)</td>
-  <td className="py-2.5">$A–$B (US)</td>
-</tr>
-```
-
-**Effort:** Medium — requires salary research for each cert pair (25 pages). Could be scripted insertion once content is prepared.
+Avg Salary row added to all 26 VS pages that have a cert comparison table. Data in `src/lib`; template: one row per table with US salary ranges per cert.
 
 ---
 
-### 5. "3 Concepts" — One Dedicated FAQ Per Concept (261 Items)
+### 5. ~~"3 Concepts" — One Dedicated FAQ Per Concept (261 Items)~~ ✅ DONE (2026-03-17)
 
-**What:** Each exam tips page currently has 1 summary FAQ item covering all 3 concepts. Adding one dedicated FAQ item per concept would give 4 FAQ items total per page (1 summary + 3 individual) for maximum PAA box coverage.
-
-**Example for ADM-201:**
-```js
-{ question: 'Why do most ADM-201 candidates fail questions about OWD vs Profiles vs Roles?',
-  answer: 'Candidates treat OWD, Profiles, and Roles as independent settings, but they combine additively — OWD sets the baseline, Role Hierarchy opens upward, and Sharing Rules extend horizontally. The most permissive rule wins for access.' }
-```
-
-**Scope:** 87 pages × 3 additional items = 261 FAQ items.
-
-**Effort:** Large. Requires writing specific Q&A from each concept's body text. Could be partially automated from the amber section content.
-
-**Note:** The 1-summary FAQ item (added in Session 2) already gives PAA eligibility. This is additive, not a baseline requirement.
+87 exam-tips pages now have 3 dedicated concept FAQs each (261 items total), sourced from the amber "3 Concepts" section. Implemented via `src/lib/exam-tips-concept-faqs.ts` and `getConceptFaqs(pageSlug)`; scripts: `extract-concept-faqs.py`, `wire-concept-faqs.py`.
 
 ---
 
 ## Summary
 
-| # | Item | Priority | Effort | Blocked? |
-|---|------|----------|--------|----------|
-| 1 | Difficulty Heatmap data for ~78 certs | 🔴 High | Large | No |
-| 2 | SVG Roadmap download/share option | 🟡 Medium | Small-Med | No |
-| ~~3~~ | ~~Heatmap on study guide pages~~ | ~~🟢 Low~~ | ~~Small~~ | ✅ Done |
-| 4 | Salary data on 25 VS pages | 🟢 Low | Medium | No |
-| 5 | 3 dedicated FAQ items per concept | 🟢 Low | Large | No |
+| # | Item | Priority | Effort | Status |
+|---|------|----------|--------|--------|
+| 1 | Difficulty Heatmap data for ~78 certs | 🔴 High | Large | Open |
+| 2 | SVG Roadmap download/share option | 🟡 Medium | Small-Med | Open |
+| ~~3~~ | ~~Heatmap on study guide pages~~ | — | — | ✅ Done |
+| ~~4~~ | ~~Salary data on VS pages~~ | — | — | ✅ Done (26 pages) |
+| ~~5~~ | ~~3 dedicated FAQ items per concept~~ | — | — | ✅ Done (261 items) |

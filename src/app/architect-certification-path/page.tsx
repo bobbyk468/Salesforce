@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
@@ -6,10 +5,12 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { ArchitectCertRoadmap } from '@/components/CertRoadmapSvg'
 import RoadmapWithDownload from '@/components/RoadmapWithDownload'
+import type { Metadata } from 'next'
+import { buildPathTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Architect Path (${RELEASE_CURRENT}) | App & System Architect`
+const pageTitle = buildPathTitle('Architect')
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce architect certification path (${RELEASE_CURRENT}): right order for Application Architect, System Architect, and CTA components. Start free practice now.`

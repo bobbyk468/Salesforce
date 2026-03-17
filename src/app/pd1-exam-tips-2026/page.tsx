@@ -1,14 +1,16 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
+import type { Metadata } from 'next'
+import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `PD1 Exam Tips (${RELEASE_CURRENT}): Platform Developer I Guide`
+const slug = 'developer-1'
+const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `PD1 exam tips (${RELEASE_CURRENT}): Apex governor limits, bulkification, trigger best practices, and 75% coverage rule. Start free practice.`

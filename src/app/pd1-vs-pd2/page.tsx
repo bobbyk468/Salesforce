@@ -1,13 +1,14 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import type { Metadata } from 'next'
+import { buildVsTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce PD1 vs PD2 (${RELEASE_CURRENT}): Which to Take First?`
+const pageTitle = buildVsTitle('developer-1', 'developer-2')
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `PD1 vs PD2 (${RELEASE_CURRENT}): Compare difficulty, exam content, and career impact to choose the right developer cert. Start free practice today.`

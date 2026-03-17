@@ -1,4 +1,3 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
@@ -6,10 +5,12 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { AdminCertRoadmap } from '@/components/CertRoadmapSvg'
 import RoadmapWithDownload from '@/components/RoadmapWithDownload'
+import type { Metadata } from 'next'
+import { buildPathTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Admin Cert Path (${RELEASE_CURRENT}): Which Cert First?`
+const pageTitle = buildPathTitle('Admin')
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce admin cert path (${RELEASE_CURRENT}): right order for ADM-201, Advanced Admin, App Builder, and beyond. Start free practice.`

@@ -1,14 +1,16 @@
-import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import type { Metadata } from 'next'
+import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `PD1 Study Guide (${RELEASE_CURRENT}): Pass Platform Developer I`
+const slug = 'developer-1'
+const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `PD1 study guide (${RELEASE_CURRENT}): all 5 exam sections, Apex governor limits, testing rules, async patterns, and exam scenario strategy. Start free practice today.`

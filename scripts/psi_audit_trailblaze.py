@@ -3,9 +3,10 @@ PageSpeed Insights audit for trailblazeprep.com
 Usage:
   python3 scripts/psi_audit_trailblaze.py
   python3 scripts/psi_audit_trailblaze.py --url https://www.trailblazeprep.com/certifications/administrator
-  python3 scripts/psi_audit_trailblaze.py --top 20 --workers 5 --mobile
+  python3 scripts/psi_audit_trailblaze.py --urls-file scripts/psi_audit_urls.txt --workers 9 --mobile
 
-Saves results to scripts/psi_results_trailblaze.json
+API keys: pass one key via PSI_API_KEY, or multiple via PSI_API_KEYS=key1,key2,key3 (round-robin).
+Never commit API keys; use env only. Saves results to scripts/psi_results_trailblaze.json
 """
 import argparse, json, time, sys, threading, os
 from urllib.request import urlopen
@@ -13,7 +14,28 @@ from urllib.parse import urlencode
 from urllib.error import URLError
 from concurrent.futures import ThreadPoolExecutor, as_completed
 
-API_KEY   = os.environ.get('PSI_API_KEY', '')
+def _get_api_keys():
+    keys_env = os.environ.get('PSI_API_KEYS', '').strip()
+    if keys_env:
+        keys = [k.strip() for k in keys_env.split(',') if k.strip()]
+        if keys:
+            return keys
+    single = os.environ.get('PSI_API_KEY', '').strip()
+    return [single] if single else []
+
+_API_KEYS = _get_api_keys()
+_KEY_INDEX = 0
+_KEY_LOCK = threading.Lock()
+
+def _next_key():
+    global _KEY_INDEX
+    if not _API_KEYS:
+        return ''
+    with _KEY_LOCK:
+        key = _API_KEYS[_KEY_INDEX % len(_API_KEYS)]
+        _KEY_INDEX += 1
+        return key
+
 PSI_BASE  = 'https://www.googleapis.com/pagespeedonline/v5/runPagespeed'
 BASE_URL  = 'https://www.trailblazeprep.com'
 
@@ -164,6 +186,9 @@ print_lock = threading.Lock()
 
 
 def run_psi(url, strategy='desktop', retries=2):
+    key = _next_key()
+    if not key:
+        return {'error': 'No API key. Set PSI_API_KEY or PSI_API_KEYS (comma-separated) in env.'}
     params = [
         ('url', url),
         ('strategy', strategy),
@@ -171,7 +196,7 @@ def run_psi(url, strategy='desktop', retries=2):
         ('category', 'accessibility'),
         ('category', 'best-practices'),
         ('category', 'seo'),
-        ('key', API_KEY),
+        ('key', key),
     ]
     query = urlencode(params)
     for attempt in range(retries + 1):
@@ -243,12 +268,26 @@ def audit_url(args):
     return {'url': url, 'scores': scores, 'metrics': metrics, 'failing': failing}
 
 
+def load_urls_from_file(path):
+    with open(path) as f:
+        lines = [ln.strip() for ln in f if ln.strip() and not ln.strip().startswith('#')]
+    urls = []
+    for line in lines:
+        if line.startswith('http://') or line.startswith('https://'):
+            urls.append(line)
+        else:
+            path_str = line if line.startswith('/') else '/' + line
+            urls.append(f'{BASE_URL}{path_str}')
+    return urls
+
+
 def main():
     parser = argparse.ArgumentParser()
-    parser.add_argument('--url',     default=None,  help='Test a single URL (full URL or path)')
-    parser.add_argument('--workers', type=int, default=4, help='Parallel workers (default 4)')
-    parser.add_argument('--top',     type=int, default=15, help='Show top N worst pages')
-    parser.add_argument('--mobile',  action='store_true', help='Use mobile strategy (default: desktop)')
+    parser.add_argument('--url',       default=None, help='Test a single URL (full URL or path)')
+    parser.add_argument('--urls-file', default=None,  help='Text file with one URL or path per line')
+    parser.add_argument('--workers',   type=int, default=4, help='Parallel workers (default 4)')
+    parser.add_argument('--top',       type=int, default=15, help='Show top N worst pages')
+    parser.add_argument('--mobile',    action='store_true', help='Use mobile strategy (default: desktop)')
     args = parser.parse_args()
 
     strategy = 'mobile' if args.mobile else 'desktop'
@@ -256,6 +295,11 @@ def main():
     if args.url:
         url = args.url if args.url.startswith('http') else f'{BASE_URL}{args.url}'
         urls = [url]
+    elif args.urls_file:
+        urls = load_urls_from_file(args.urls_file)
+        if not urls:
+            print('No URLs found in', args.urls_file)
+            sys.exit(1)
     else:
         urls = [f'{BASE_URL}{path}' for path in STATIC_URLS]
 
