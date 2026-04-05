@@ -16,7 +16,8 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['/api/'],
+        // Block API routes and parameterized search URLs (?q= from CertSearch sitelinks box)
+        disallow: ['/api/', '/*?q=*'],
       },
       // Explicitly allow major AI/LLM crawlers so they index all content
       // OpenAI (ChatGPT, SearchGPT)

@@ -3,17 +3,17 @@
  * Update when a new release is generally available and exam outlines align.
  */
 
-export const RELEASE_CURRENT = "Winter '26"
-export const RELEASE_PREVIOUS = "Summer '25"
+export const RELEASE_CURRENT = "Spring '26"
+export const RELEASE_PREVIOUS = "Winter '26"
 
 /** ISO date when content was last refreshed for current release — used for Article dateModified, freshness signals. */
-export const RELEASE_DATE = '2026-02-27'
+export const RELEASE_DATE = '2026-04-05'
 
 /** What's new in the current release vs previous — relevant to certification exams and study. */
 export const WHATS_NEW_CURRENT_RELEASE: string[] = [
-  'Agentforce and AI: New Agentforce for Service (IT Service), Agentic Commerce, and Agentforce Grid for low-code AI workflows—expect more AI-related objectives on Admin and Consultant exams.',
-  'Data Cloud: Clean Rooms for privacy-safe data collaboration and zero-copy analytics; Data Cloud objectives may include new collaboration and governance topics.',
-  'Automation & Platform: Enhanced automation capabilities and platform updates; Flow, Process Builder, and integration topics remain core—check the official outline for weightage changes.',
-  'Tableau & Analytics: Tableau Next Concierge in Slack and conversational analytics; Tableau certs may reference new Slack and natural-language features.',
-  'Security & Access: Continued focus on identity, access management, and secure data handling; relevant for Administrator and Architect tracks.',
+  'Agentforce and AI: Expanded Agentforce capabilities including multi-agent orchestration and enhanced Agent Builder tools—expect updated AI and automation objectives on Admin and Developer exams.',
+  'Data Cloud: Expanded real-time data activation and identity resolution features; Data Cloud objectives now include deeper unification and segmentation topics.',
+  'Automation & Platform: Enhanced Flow debugging, new Flow orchestration features, and platform performance improvements; Flow remains core to Admin and App Builder exams.',
+  'Tableau & Analytics: New Tableau Pulse features for proactive analytics and AI-assisted insights; Tableau certs may reference updated data storytelling objectives.',
+  'Security & Access: Updates to identity verification and access management policies; relevant for Administrator, Platform Developer, and Architect tracks.',
 ]
