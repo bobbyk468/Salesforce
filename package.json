@@ -18,7 +18,19 @@
     "verify:ahref": "node scripts/verify-ahref-fixes.mjs",
     "verify:gsc": "node scripts/verify-gsc-canonicals.mjs",
     "verify:article-schema": "node scripts/verify-article-schema.mjs",
-    "fix:exam-tips-canonicals": "node scripts/fix-exam-tips-canonicals.mjs"
+    "fix:exam-tips-canonicals": "node scripts/fix-exam-tips-canonicals.mjs",
+    "x:list": "node scripts/post-to-x.mjs list",
+    "x:post": "node scripts/post-to-x.mjs post",
+    "x:schedule": "node scripts/post-to-x.mjs schedule",
+    "x:tip": "node scripts/post-to-x.mjs tip",
+    "x:tip:standalone": "node scripts/post-to-x.mjs tip --standalone",
+    "x:engage": "node scripts/post-to-x.mjs engage",
+    "x:images": "node scripts/generate-tweet-images.mjs",
+    "x:images:tips": "node scripts/generate-tweet-images.mjs --tips-only",
+    "x:images:tips:missing": "node scripts/generate-tweet-images.mjs --tips-only --missing-only",
+    "x:humanize": "node scripts/refresh-x-upcoming.mjs --all-threads --all-tips",
+    "x:refresh-pending": "node scripts/refresh-x-upcoming.mjs",
+    "x:analyze": "node scripts/analyze-x-queue.mjs"
   },
   "dependencies": {
     "critters": "0.0.23",
@@ -34,7 +46,9 @@
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.0",
     "postcss": "^8.4.0",
+    "puppeteer": "^24.40.0",
     "tailwindcss": "^3.4.0",
+    "twitter-api-v2": "^1.29.0",
     "typescript": "^5.4.0"
   }
 }

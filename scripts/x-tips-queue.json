@@ -1,0 +1,352 @@
+[
+  {
+    "id": "tip-001",
+    "tweet": "ADM-201 tip: Flow is declarative automation. Apex is code. The exam always prefers Flow over Apex unless Flow literally can't do it.\n\nWhen in doubt → choose Flow.\n\n#SalesforceAdmin #ADM201",
+    "status": "posted",
+    "postedAt": "2026-03-22T06:30:02.888Z",
+    "imageFile": "tweet-images/tip-001-tip-sf.png"
+  },
+  {
+    "id": "tip-002",
+    "tweet": "the Salesforce security model:\n\nOWD = the floor\nRoles = open it up\nProfiles = the ceiling\nPermission Sets = exceptions\n\nget that order right and you've already answered 5+ exam questions\n\n#SalesforceAdmin",
+    "status": "posted",
+    "postedAt": "2026-03-22T16:22:29.837Z",
+    "imageFile": "tweet-images/tip-002-tip-sf.png"
+  },
+  {
+    "id": "tip-003",
+    "tweet": "salesforce has like 40+ different certs now.\n\nhonestly? 80% of job postings only care about three: Admin, PD1, and App Builder.\n\nstart there. don't get distracted by the niche ones until your employer pays for them.",
+    "status": "posted",
+    "postedAt": "2026-03-23T02:30:01.748Z",
+    "imageFile": "tweet-images/tip-003-tip-sf.png"
+  },
+  {
+    "id": "tip-004",
+    "tweet": "if you're studying for the Admin exam, stop treating every topic equally.\n\nProfiles/Permission Sets, Flow, OWD/Sharing, and Reports/Dashboards make up almost half your score.\n\nknow those cold. skim the rest.\n\ncc: @salesforceben",
+    "status": "posted",
+    "postedAt": "2026-03-23T04:30:01.726Z",
+    "imageFile": "tweet-images/tip-004-tip-sf.png"
+  },
+  {
+    "id": "tip-005",
+    "tweet": "the biggest mistake people make studying for ADM-201 is spending 2 weeks on 'Company Setup' (which is barely tested) and rushing through Flow (which is 20%+ of the exam).\n\nlook at the exam guide weights. study proportionally.",
+    "status": "posted",
+    "postedAt": "2026-03-23T06:30:02.064Z",
+    "imageFile": "tweet-images/tip-005-tip-sf.png"
+  },
+  {
+    "id": "tip-006",
+    "tweet": "the salesforce admin exam costs $200.\n\nthe average salary bump for getting certified is $15k-$25k.\n\nyou are literally not going to find a better ROI in tech. just take the test.",
+    "status": "posted",
+    "postedAt": "2026-03-23T08:30:02.934Z",
+    "imageFile": "tweet-images/tip-006-tip-sf.png"
+  },
+  {
+    "id": "tip-007",
+    "tweet": "taking the PD1 exam? if you see a question about slow Apex or performance issues, the answer is almost always 'bulkify your code'.\n\nquery outside loops. DML outside loops. use Maps. that's it.\n\ncc: @dvdkliu",
+    "status": "posted",
+    "postedAt": "2026-03-23T10:30:01.780Z",
+    "imageFile": "tweet-images/tip-007-tip-sf.png"
+  },
+  {
+    "id": "tip-008",
+    "tweet": "admin vs dev salaries:\n\nentry admin: $65-80k | entry dev: $80-100k\nsenior admin: $100-130k | senior dev: $120-160k\n\ndevs start higher, but the gap shrinks a lot once you hit senior/architect levels.",
+    "status": "posted",
+    "postedAt": "2026-03-23T12:30:02.259Z",
+    "imageFile": "tweet-images/tip-008-tip-sf.png"
+  },
+  {
+    "id": "tip-009",
+    "tweet": "studying for App Builder?\n\n28% of the exam is just Process Automation (basically Flow). \n\nif you don't know the difference between a Screen Flow, Record-Triggered Flow, and Autolaunched Flow, don't take the test yet.",
+    "status": "posted",
+    "postedAt": "2026-03-23T14:30:02.182Z",
+    "imageFile": "tweet-images/tip-009-tip-sf.png"
+  },
+  {
+    "id": "tip-010",
+    "tweet": "the best way to learn salesforce isn't reading trailhead modules. it's spinning up a free dev org and trying to build an app for a fake business.\n\nbreak things. fix them. that's how you actually learn.\n\ncc: @salesforceben",
+    "status": "posted",
+    "postedAt": "2026-03-24T02:30:01.540Z",
+    "imageFile": "tweet-images/tip-010-tip-sf.png"
+  },
+  {
+    "id": "tip-011",
+    "tweet": "every company i talk to right now is asking the same question: can you build ai agents in salesforce?\n\nthe agentforce specialist cert is how you prove you can\n\nearly movers are getting 20-30% salary premiums. that window won't stay open forever.",
+    "status": "posted",
+    "postedAt": "2026-03-24T04:30:03.112Z",
+    "imageFile": "tweet-images/tip-011-tip-sf.png"
+  },
+  {
+    "id": "tip-012",
+    "tweet": "salesforce governor limits — the ones that actually show up on pd1:\n\n100 soql queries per transaction\n150 dml statements max\n6mb heap size\n10 second cpu limit\n\nhit any of these = runtime exception. most pd1 failures trace back to not knowing this.",
+    "status": "posted",
+    "postedAt": "2026-03-24T06:30:01.387Z",
+    "imageFile": "tweet-images/tip-012-tip-sf.png"
+  },
+  {
+    "id": "tip-013",
+    "tweet": "you don't need an expensive paid course to pass a salesforce cert. trailhead + the official exam guide + one good practice bank got me there. paid stuff helps some people. not required.\n\n@salesforceben\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "postedAt": "2026-03-25T02:30:03.666Z",
+    "imageFile": "tweet-images/tip-013-tip-sf.png"
+  },
+  {
+    "id": "tip-014",
+    "tweet": "pattern i see a lot: admin cert → more scope → app builder → pd1 if they like code. not a rule just a shape.\n\n#Salesforce #AppBuilder #SalesforceCareer",
+    "status": "posted",
+    "postedAt": "2026-03-25T04:30:02.125Z",
+    "imageFile": "tweet-images/tip-014-tip-sf.png"
+  },
+  {
+    "id": "tip-015",
+    "tweet": "adm-201 save order still wrecks people. draw the path once on paper — before-save vs validation vs after — you stop mixing it up.\n\n@SteveMoForce\n\n#SalesforceAdmin #ADM201",
+    "status": "posted",
+    "postedAt": "2026-03-25T06:30:02.640Z",
+    "imageFile": "tweet-images/tip-015-tip-sf.png"
+  },
+  {
+    "id": "tip-016",
+    "tweet": "lots of jobs still hang off this ecosystem. if you're on the fence about certifying the demand isn't made up.\n\n@BradleyRice1\n\n#Salesforce #Trailblazer",
+    "status": "posted",
+    "postedAt": "2026-03-25T08:30:02.352Z",
+    "imageFile": "tweet-images/tip-016-tip-sf.png"
+  },
+  {
+    "id": "tip-017",
+    "tweet": "profiles = baseline. permission sets = stack on top. exam loves \"give only these people X without cloning five profiles.\"\n\n@MikeWheelerMedia\n\n#SalesforceAdmin #Salesforce",
+    "status": "posted",
+    "postedAt": "2026-03-25T10:30:02.440Z",
+    "imageFile": "tweet-images/tip-017-tip-sf.png"
+  },
+  {
+    "id": "tip-018",
+    "tweet": "pd1: no asserts in a test = you didn't finish. reviewers notice. so does the exam.\n\n@dvdkliu\n\n#PD1 #Apex",
+    "status": "posted",
+    "postedAt": "2026-03-25T12:30:02.149Z",
+    "imageFile": "tweet-images/tip-018-tip-sf.png"
+  },
+  {
+    "id": "tip-019",
+    "tweet": "how long admin prep takes = how much you touch a real org. nights-only takes longer. that's scheduling not iq.\n\n@MikeWheelerMedia\n\n#SalesforceAdmin #ADM201",
+    "status": "posted",
+    "postedAt": "2026-03-25T14:30:02.098Z",
+    "imageFile": "tweet-images/tip-019-tip-sf.png"
+  },
+  {
+    "id": "tip-020",
+    "tweet": "owd is the floor. sharing opens from there. public read/write is not the same vibe as private + rules. read twice when tired.\n\n#SalesforceAdmin #Salesforce",
+    "status": "posted",
+    "postedAt": "2026-03-26T02:30:02.950Z",
+    "imageFile": "tweet-images/tip-020-tip-sf.png"
+  },
+  {
+    "id": "tip-021",
+    "tweet": "exam fee vs potential raise is funny IF you actually switch jobs — cert gets interviews. offers still take work.\n\n@BradleyRice1\n\n#SalesforceCareer #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-021-tip-sf.png",
+    "postedAt": "2026-03-26T03:28:17.260Z"
+  },
+  {
+    "id": "tip-022",
+    "tweet": "fault paths on flow dml. 2 minutes now. saves you at 9pm later.\n\n@SteveMoForce\n\n#SalesforceFlow #AppBuilder",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-022-tip-sf.png",
+    "postedAt": "2026-03-26T04:30:03.657Z"
+  },
+  {
+    "id": "tip-023",
+    "tweet": "first cert is usually still 201 unless your job is weirdly specific. platform literacy first.\n\n@salesforceben\n\n#ADM201 #Trailblazer",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-023-tip-sf.png",
+    "postedAt": "2026-03-26T06:30:03.964Z"
+  },
+  {
+    "id": "tip-024",
+    "tweet": "validation vs flow vs approval — exam wants the right tool not the clever one. declarative first is usually the safe brain.\n\n#SalesforceFlow #SalesforceAdmin",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-024-tip-sf.png",
+    "postedAt": "2026-03-26T10:30:05.635Z"
+  },
+  {
+    "id": "tip-025",
+    "tweet": "sandbox types = pure memorization. dev vs partial vs full — know data + limits.\n\n@salesforceben\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-025-tip-sf.png",
+    "postedAt": "2026-03-26T12:30:03.962Z"
+  },
+  {
+    "id": "tip-026",
+    "tweet": "one trigger per object keeps order sane. pd1 and real jobs both care.\n\n@walters954\n\n#PD1 #Apex",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-026-tip-sf.png",
+    "postedAt": "2026-03-26T14:30:04.978Z"
+  },
+  {
+    "id": "tip-027",
+    "tweet": "cta is brutal. anyone selling easy architect is lying. still a real ceiling if that's your thing.\n\n#SalesforceCareer #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-027-tip-sf.png",
+    "postedAt": "2026-03-27T02:30:04.733Z"
+  },
+  {
+    "id": "tip-028",
+    "tweet": "service cloud consultant: queues routing entitlements — if you've only read about them go build one in a dev org before the exam.\n\n@salesforceben\n\n#Salesforce #SalesforceCareer",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-028-tip-sf.png",
+    "postedAt": "2026-03-27T04:30:04.314Z"
+  },
+  {
+    "id": "tip-029",
+    "tweet": "exam guide first. practice test early. learn why wrong answers are wrong. boring and it works.\n\n#SalesforceCertified #Trailhead",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-029-tip-sf.png",
+    "postedAt": "2026-03-27T08:30:04.569Z"
+  },
+  {
+    "id": "tip-030",
+    "tweet": "dashboards sit on reports. no secret data lake under the hood. obvious until hour two of studying.\n\n#Trailblazer #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-030-tip-sf.png",
+    "postedAt": "2026-03-27T10:30:04.246Z"
+  },
+  {
+    "id": "tip-031",
+    "tweet": "211 before pd1 isn't universal but i like it for admin career arcs. you learn pain pd1 won't spell out.\n\n@dvdkliu\n\n#ADM211 #SalesforceAdmin",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-031-tip-sf.png",
+    "postedAt": "2026-03-27T14:30:04.048Z"
+  },
+  {
+    "id": "tip-032",
+    "tweet": "lwc is the focus now. don't live in aura unless your org still does.\n\n#PD1 #SalesforceDeveloper",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-032-tip-sf.png",
+    "postedAt": "2026-03-28T06:30:04.431Z"
+  },
+  {
+    "id": "tip-033",
+    "tweet": "$200 exam + free trailhead can be enough. courses are optional comfort not oxygen.\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-033-tip-sf.png",
+    "postedAt": "2026-03-28T08:30:04.685Z"
+  },
+  {
+    "id": "tip-034",
+    "tweet": "soql: one main object; child subqueries in parens. nesting trips people under exam stress.\n\n@dvdkliu\n\n#PD1 #Apex",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-034-tip-sf.png",
+    "postedAt": "2026-03-28T10:30:03.993Z"
+  },
+  {
+    "id": "tip-035",
+    "tweet": "agent = topics + actions + instructions. prototype fast — still govern it like anything else.\n\n@walters954\n\n#Agentforce #SalesforceAI",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-035-tip-sf.png",
+    "postedAt": "2026-03-28T14:30:04.012Z"
+  },
+  {
+    "id": "tip-036",
+    "tweet": "maintenance modules: set a calendar reminder. lapsed cert = paperwork tax + maybe full retake.\n\n#SalesforceCertified #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-036-tip-sf.png",
+    "postedAt": "2026-03-29T06:30:03.468Z"
+  },
+  {
+    "id": "tip-037",
+    "tweet": "profiles don't hide records. owd roles sharing do. classic trick q.\n\n@MikeWheelerMedia\n\n#SalesforceAdmin #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-037-tip-sf.png",
+    "postedAt": "2026-03-29T10:30:03.474Z"
+  },
+  {
+    "id": "tip-038",
+    "tweet": "trailblazer community — corny name, actually useful. use it while studying.\n\n#Trailblazer #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-038-tip-sf.png",
+    "postedAt": "2026-03-29T14:30:04.966Z"
+  },
+  {
+    "id": "tip-039",
+    "tweet": "data cloud on exams: streams identity resolution calculated insights — high level unless you're specializing.\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-039-tip-sf.png",
+    "postedAt": "2026-03-30T04:30:04.708Z"
+  },
+  {
+    "id": "tip-040",
+    "tweet": "dev org + break things beat passive video for me. worth trying once.\n\n@salesforceben\n\n#Trailblazer #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-040-tip-sf.png",
+    "postedAt": "2026-03-30T06:30:03.525Z"
+  },
+  {
+    "id": "tip-041",
+    "tweet": "outbound change set = send. deploy inbound on target. metadata is not data. they love that distinction.\n\n#AppBuilder #SalesforceFlow",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-041-tip-sf.png",
+    "postedAt": "2026-03-30T08:30:03.791Z"
+  },
+  {
+    "id": "tip-042",
+    "tweet": "study week that worked for me: one heavy topic day, one practice exam, one review. sleep isn't optional.\n\n#SalesforceAdmin #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-042-tip-sf.png",
+    "postedAt": "2026-03-30T10:30:10.680Z"
+  },
+  {
+    "id": "tip-043",
+    "tweet": "soql = structured query one path. sosl = search text across objects. mixing them up = free missed points.\n\n@salesforceben\n\n#PD1 #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-043-tip-sf.png",
+    "postedAt": "2026-03-30T12:30:06.430Z"
+  },
+  {
+    "id": "tip-044",
+    "tweet": "interview \"trigger vs workflow\" — they want declarative first, code when you must.\n\n#PD1 #SalesforceFlow",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-044-tip-sf.png",
+    "postedAt": "2026-03-30T14:30:10.984Z"
+  },
+  {
+    "id": "tip-045",
+    "tweet": "sales cloud consultant slept on if you live in pipelines. not for everyone.\n\n#Salesforce #SalesforceCareer",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-045-tip-sf.png",
+    "postedAt": "2026-03-31T02:30:04.441Z"
+  },
+  {
+    "id": "tip-046",
+    "tweet": "good senior admins answer \"why not X\" not only \"how.\" tests love that energy.\n\n@MikeWheelerMedia\n\n#SalesforceAdmin #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-046-tip-sf.png",
+    "postedAt": "2026-03-31T04:30:05.281Z"
+  },
+  {
+    "id": "tip-047",
+    "tweet": "releases shift exams. check maintenance deadlines.\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-047-tip-sf.png",
+    "postedAt": "2026-03-31T06:30:04.350Z"
+  },
+  {
+    "id": "tip-048",
+    "tweet": "mulesoft foundations: layers transforms errors. different muscle than apex.\n\n#MuleSoft #Salesforce",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-048-tip-sf.png",
+    "postedAt": "2026-03-31T08:30:04.818Z"
+  },
+  {
+    "id": "tip-049",
+    "tweet": "night before: sleep beats new chapters.\n\n@salesforceben\n\n#SalesforceCertified #ADM201",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-049-tip-sf.png",
+    "postedAt": "2026-03-31T10:30:03.727Z"
+  },
+  {
+    "id": "tip-050",
+    "tweet": "certs stay active with maintenance. letting them lapse is future you problem.\n\n#Salesforce #SalesforceCertified",
+    "status": "posted",
+    "imageFile": "tweet-images/tip-050-tip-sf.png",
+    "postedAt": "2026-04-01T04:30:03.725Z"
+  }
+]

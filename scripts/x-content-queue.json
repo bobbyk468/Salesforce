@@ -1,0 +1,538 @@
+[
+  {
+    "id": "w1-thread-1-exam-secrets",
+    "title": "Week 1 — Exam Secrets Nobody Tells You (ADM-201)",
+    "scheduledFor": "2026-03-24T09:30:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "I scored 92% on the Salesforce Admin exam (ADM-201) on my second attempt.\n\nNobody told me I was studying the WRONG way first.\n\nHere's what changed everything 🧵\n\n#Salesforce #ADM201",
+      "I spent 8 weeks following Trailhead modules in order (like everyone tells you to).\n\nFailed with 58%.\n\nThen I realized: The exam doesn't test chronologically.\nIt tests specific topics 80% of the time.\nMost courses bury those in later modules.",
+      "The exam obsesses over:\n• Permission Set groups\n• Flow vs Process Builder edge cases\n• SharingRule vs OrgWideSharingDefault\n• LoginFlow vs Validation Rule timing\n\nThese 4 topics? 30-40% of the exam.\n\nBut modules hide them everywhere.\n\n#SalesforceAdmin",
+      "What changed (2nd attempt):\n1. Took practice exam FIRST (didn't study, just tested)\n2. Found my weak spots\n3. Studied ONLY those weak spots using docs\n4. Retook practice exam (targeted those areas again)\n\nTotal study time: 3 weeks instead of 8.",
+      "Attempt 1: Failed (58%)\nAttempt 2: Passed (92%)\n\nThe difference wasn't working harder.\nIt was having a study METHOD.\n\nI used TrailblazePrep practice questions mapped to topics.\nChanged everything.",
+      "What's been YOUR biggest frustration with studying for certs?\n\nA) Don't know which topics matter most\nB) Studying too much irrelevant material\nC) Can't find good practice questions\nD) Running out of time\n\nDrop it below. I know the struggle. 👇",
+      "If your struggle is finding quality practice questions:\n\nTrailblazePrep has 60+ original questions mapped directly to exam topics.\n\nNo signup. Free. Made by people who've passed.\n\nhttps://trailblazeprep.com/certifications/administrator\n\n#SalesforceAdmin #SalesforceOhana #AdminCoach"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w1-thread-1-exam-secrets-cover.png",
+      "2": "tweet-images/w1-thread-1-exam-secrets-stats.png",
+      "6": "tweet-images/w1-thread-1-exam-secrets-cta.png"
+    },
+    "postedAt": "2026-03-22T06:13:15.656Z",
+    "engagementTweets": [
+      {
+        "text": "tbh most people fail adm-201 not because it's hard, but because they study the wrong things. the official exam guide tells you exactly what's tested. almost nobody reads it. 🤦",
+        "imageFile": "tweet-images/w1-thread-1-exam-secrets-engage-1.png"
+      },
+      {
+        "text": "what score did you get on your first practice exam before studying? drop it below — no judgment. knowing your baseline is step 1. 👇",
+        "imageFile": "tweet-images/w1-thread-1-exam-secrets-engage-2.png"
+      }
+    ],
+    "firstTweetId": "2035600596800352707",
+    "_updatedEngagement": [
+      {
+        "text": "Hot take: Most people fail ADM-201 not because it's hard, but because they study the wrong things. The official exam guide tells you EXACTLY what's tested. Almost nobody reads it. 🤦",
+        "imageFile": "tweet-images/w1-thread-1-exam-secrets-engage-1.png"
+      },
+      {
+        "text": "What score did you get on your first practice exam before studying? Drop it below — no judgment. Knowing your baseline is step 1. 👇",
+        "imageFile": "tweet-images/w1-thread-1-exam-secrets-engage-2.png"
+      }
+    ],
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-22T08:45:01.290Z"
+  },
+  {
+    "id": "w1-thread-2-career-story",
+    "title": "Week 1 — Career Transformation Story (ADM-201)",
+    "scheduledFor": "2026-03-22T14:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "spent 3 years in support. too good at it. they kept promoting me within the same team.\n\nmore responsibility. same ceiling. going nowhere.\n\nthen I got the Salesforce Admin cert. six months later I had a different job, a different title, and $28k more salary.\n\nthis is that story 🧵",
+      "support was fine until it wasn't.\n\ntoo tired after shifts to study anything real. not confident I could learn tech from scratch. and honestly terrified of failing.\n\nthat last one kept me stuck longer than anything else.",
+      "someone told me Salesforce certification makes you hireable. I was skeptical.\n\nbought a prep course for $200. started studying at 5am before shifts.\n\nfirst attempt: 62%. failed.\n\ndidn't quit. studied differently the second time. passed with 78%.\n\nthat cert changed everything.",
+      "got certified in March. updated LinkedIn — just added the cert, didn't change anything else.\n\nby May I had 3 inbound calls from companies I never applied to.\n\ntook the one offering a proper admin role, full remote, and $28k more than I was making.\n\nbecause of one certification.",
+      "what I didn't realize going in:\n\ncertified Salesforce admins earn 40%+ more than uncertified ones on average.\n\nthat's not a rounding error. that's a real number that changes what you can do in your life.",
+      "if you're in support or operations right now and thinking about making this move:\n\nwhat's actually stopping you?\n\ndon't know where to start? scared of failing? not sure it's worth it? something else?\n\nI was exactly where you are. reply and I'll be straight with you.",
+      "if you're serious about making the jump:\n\nTrailblazePrep helped me study without burning out. real questions, no filler, mapped to the actual exam.\n\nfree to try.\n\nhttps://trailblazeprep.com/certifications/administrator\n\n#SalesforceAdmin #SalesforceCareer"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w1-thread-2-career-story-cover.png",
+      "2": "tweet-images/w1-thread-2-career-story-stats.png",
+      "6": "tweet-images/w1-thread-2-career-story-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "tbh the weirdest thing about salesforce is how much the community actively helps you get jobs. mvps, admins, developers — people just share openings. if you haven't joined the trailblazer community yet, that's the first thing to fix.",
+        "imageFile": "tweet-images/w1-thread-2-career-story-engage-1.png"
+      },
+      {
+        "text": "if you're in support or helpdesk right now, reply with ✋ — you're closer to an admin role than you probably think",
+        "imageFile": "tweet-images/w1-thread-2-career-story-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "tbh the weirdest thing about Salesforce is how much the community actively helps you get jobs. MVPs, admins, developers — people just share openings. if you haven't joined the Trailblazer Community yet, that's the first thing to fix.",
+        "imageFile": "tweet-images/w1-thread-2-career-story-engage-1.png"
+      },
+      {
+        "text": "if you're in support or helpdesk right now, reply with ✋ — you're closer to an admin role than you probably think",
+        "imageFile": "tweet-images/w1-thread-2-career-story-engage-2.png"
+      }
+    ],
+    "postedAt": "2026-03-22T16:20:07.920Z",
+    "firstTweetId": "2035753309353689515",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-22T18:45:01.262Z"
+  },
+  {
+    "id": "w1-thread-3-study-method",
+    "title": "Week 1 — Study Method That Actually Works (ADM-201)",
+    "scheduledFor": "2026-03-23T10:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "dropped $300 on a salesforce course when i first started. completely useless. ended up passing using a free method instead.\n\nhere's exactly what i did so you don't waste your money 🧵\n\n#Salesforce #ADM201",
+      "courses love breadth. 201 wants you deep on a few themes. i burned time on random setup trivia and was still shaky on flow + security bc i never measured what i actually missed.\n\n#SalesforceFlow #SalesforceAdmin",
+      "took a practice test with basically zero prep. ate it. fine. the score breakdown told me what to study instead of me guessing.\n\n#ADM201 #SalesforceCertified",
+      "after that = trailhead + help on gaps only. no reading the whole catalog out of guilt. felt less scary → another practice test → repeat.\n\ntons of free admin stuff. @MikeWheelerMedia is a good second voice.\n\n#Trailhead #Trailblazer",
+      "re-reading feels productive. quizzes feel annoying. on exam day the stuff that stuck was almost always questions i got wrong, not yellow highlights in a pdf.\n\n#SalesforceAdmin #SalesforceCertified",
+      "i didn't chase a magic score. more like \"can i explain why the wrong answers are wrong.\" two different practice runs felt ok → booked the real thing.\n\n#ADM201 #Salesforce",
+      "free admin qs by section live on trailblazeprep. link in reply. no signup.\n\nsaves someone a month? rt the opener. idc either way.\n\n#SalesforceAdmin #Trailblazer"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w1-thread-3-study-method-cover.png",
+      "2": "tweet-images/w1-thread-3-study-method-stats.png",
+      "6": "tweet-images/w1-thread-3-study-method-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "sf has that official practice assessment. run it twice. first time you're guessing. second time you actually see what they're asking.\n\n#ADM201 #SalesforceCertified",
+        "imageFile": "tweet-images/w1-thread-3-study-method-engage-1.png"
+      },
+      {
+        "text": "anyone else \"study\" by rereading notes forever and nothing sticks? switching to wrong-answers-only is what actually moved my score.\n\n#SalesforceAdmin #Trailblazer",
+        "imageFile": "tweet-images/w1-thread-3-study-method-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "the Salesforce official practice exam (free on their site) is the single best predictor of your real exam score. take it twice. the second time you'll actually understand what you're looking at.",
+        "imageFile": "tweet-images/w1-thread-3-study-method-engage-1.png"
+      },
+      {
+        "text": "the test-first method works because testing yourself is active recall. re-reading notes is passive. active recall is 3x more effective — and that's not an opinion, it's what the memory research shows.",
+        "imageFile": "tweet-images/w1-thread-3-study-method-engage-2.png"
+      }
+    ],
+    "immediateReply": "free admin practice (mapped by section): https://trailblazeprep.com/certifications/administrator\n\n@salesforceben @MikeWheelerMedia\n\n#SalesforceAdmin #ADM201",
+    "postedAt": "2026-03-24T16:30:25.449Z",
+    "firstTweetId": "2036480676825014633",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+  },
+  {
+    "id": "w2-thread-1-pd1-roadmap",
+    "title": "Week 2 — PD1 Developer Roadmap",
+    "scheduledFor": "2026-03-23T09:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "pd1 freaked me out at first. if you haven't actually shipped apex in a real org it's a jump from admin. not impossible just... more ways to fail.\n\nquick map of what showed up for me 🧵\n\n#Salesforce #PD1",
+      "big buckets: apex (triggers, classes, soql), some UI (lwc showed up more than i expected), plus data + security overlap if you already did admin.\n\n#Apex #SalesforceDeveloper",
+      "governor limits are the thing people sleep on. if your brain says \"java in the cloud\" you'll get wrecked on bulkification qs.\n\n#PD1 #Apex",
+      "timing from admin if you can kinda code: few weeks apex + triggers, ~week lwc basics, then practice tests until you're not panicking. brand new to code = longer. normal.\n\n#SalesforceDeveloper #SalesforceCertified",
+      "dumb stuff i did: wrote code without thinking in batches, ignored asserts til the end, never broke stuff in a dev org on purpose.\n\n#PD1 #Apex",
+      "can you skip admin entirely. technically yes. would i. no. pd1 still assumes you get profiles, owd, when flow is enough, etc.\n\n#SalesforceAdmin #PD1",
+      "wrote up pd1 + free qs on our site if you want it in one place. link next tweet.\n\nrt if you know someone cramming.\n\n#SalesforceDeveloper #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w2-thread-1-pd1-roadmap-cover.png",
+      "2": "tweet-images/w2-thread-1-pd1-roadmap-stats.png",
+      "6": "tweet-images/w2-thread-1-pd1-roadmap-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "pd1 got easier after i shipped ugly apex and fixed prod fires. test cares more about \"i've seen this explode\" than pretty syntax.\n\n#PD1 #Apex",
+        "imageFile": "tweet-images/w2-thread-1-pd1-roadmap-engage-1.png"
+      },
+      {
+        "text": "coming from java/python/js — what part of pd1 scares you most. reply and i'll tell you if it's overrated (usually fixable).\n\n#SalesforceDeveloper #PD1",
+        "imageFile": "tweet-images/w2-thread-1-pd1-roadmap-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "unpopular opinion: PD1 is easier than most people expect if you've actually written Apex in a real org. hands-on experience beats any course. the exam rewards people who've broken things and fixed them.",
+        "imageFile": "tweet-images/w2-thread-1-pd1-roadmap-engage-1.png"
+      },
+      {
+        "text": "coming from Java, Python, or JS and worried about PD1? drop your biggest concern below — I'll give you a straight answer on whether it's actually a problem",
+        "imageFile": "tweet-images/w2-thread-1-pd1-roadmap-engage-2.png"
+      }
+    ],
+    "immediateReply": "pd1 guide + practice qs: https://trailblazeprep.com/certifications/platform-developer-i\n\n@dvdkliu @walters954\n\n#Apex #SalesforceDeveloper",
+    "postedAt": "2026-03-24T16:30:48.003Z",
+    "firstTweetId": "2036480773554053256",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+  },
+  {
+    "id": "w2-thread-2-pd1-apex",
+    "title": "Week 2 — Apex Tips for PD1",
+    "scheduledFor": "2026-03-23T13:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "five apex patterns that kept popping up when i studied pd1. actually type these in a dev org. reading alone did nothing for me 🧵\n\n#Salesforce #PD1",
+      "1) bulk trigger — this dies in prod:\ntrigger AccountTrigger on Account (before insert) {\n  Account a = Trigger.new[0];\n}\nfix:\nfor (Account a : Trigger.new) {\n}\n\n#Apex #PD1",
+      "2) soql inside loops — query limit death:\nfor (Account a : accounts) {\n  List<Contact> c = [SELECT Id FROM Contact WHERE AccountId = :a.Id];\n}\nquery once, map it, look up in the loop.\n\n#Apex #PD1",
+      "3) tests: IsTest annotation, Test.startTest and Test.stopTest when it matters, System.assert actually there. no assert = you proved nothing.\n\n#PD1 #SalesforceDeveloper",
+      "4) exceptions — DmlException vs QueryException vs NPE. test loves \"what blew up.\"\ntry { insert accounts; } catch (DmlException e) { System.debug(e.getMessage()); }\n\n#Apex #PD1",
+      "5) collections — set = no dupes, map = lookup. sounds obvious until q55.\n\n#PD1 #SalesforceDeveloper",
+      "more pd1 qs + explanations on our site. link in reply.\n\n#SalesforceDeveloper #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w2-thread-2-pd1-apex-cover.png",
+      "2": "tweet-images/w2-thread-2-pd1-apex-stats.png",
+      "6": "tweet-images/w2-thread-2-pd1-apex-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "bonus: Database.insert(rows, false) for partial success. plain insert is all or nothing. bites in prod too.\n\n#Apex #PD1",
+        "imageFile": "tweet-images/w2-thread-2-pd1-apex-engage-1.png"
+      },
+      {
+        "text": "what messes you up most — soql in loops, tests, or collections. is it the same order for everyone or just me.\n\n#PD1 #SalesforceDeveloper",
+        "imageFile": "tweet-images/w2-thread-2-pd1-apex-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "pattern #6 that should have been in the thread: use Database.insert() instead of insert when you need partial success. plain insert rolls back everything if one record fails. Database.insert() with allOrNone=false lets the rest through.",
+        "imageFile": "tweet-images/w2-thread-2-pd1-apex-engage-1.png"
+      },
+      {
+        "text": "which of those 5 patterns gives you the most trouble? SOQL inside loops gets most people. curious what the actual breakdown is.",
+        "imageFile": "tweet-images/w2-thread-2-pd1-apex-engage-2.png"
+      }
+    ],
+    "immediateReply": "pd1 practice: https://trailblazeprep.com/certifications/platform-developer-i\n\n@dvdkliu @walters954\n\n#Apex #SalesforceDeveloper",
+    "postedAt": "2026-03-24T16:31:11.451Z",
+    "firstTweetId": "2036480869192573273",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+  },
+  {
+    "id": "w2-thread-3-pd1-vs-admin",
+    "title": "Week 2 — Which Cert First: Admin or PD1?",
+    "scheduledFor": "2026-03-23T18:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "people dm \"admin or pd1 first\" constantly. depends what job you want but there's a default order that saves headaches. short thread 🧵\n\n#Salesforce #SalesforceCertified",
+      "want admin work → admin track. \"dev\" track still needs admin-level platform stuff. coding doesn't make those qs disappear.\n\n#SalesforceAdmin #ADM201",
+      "even if you code: data model + security + when flow is enough shows up on pd1-style scenarios. skipping admin = learning that in panic mode later.\n\n#PD1 #SalesforceFlow",
+      "salary bands are messy (city, remote, etc) but more certs + more real scope usually compounds over time. not gonna fake one number.\n\n#SalesforceCareer #TechJobs",
+      "sequence i've seen work: 201 → app builder → pd1 if you want builder/dev hybrid. ymmv.\n\n#AppBuilder #PD1",
+      "what cert are you on now — 201, pd1, app builder, something else. i'll reply with one link not ten.\n\n#SalesforceCertified #Trailblazer",
+      "wrote a comparison + cert links. next tweet.\n\n#SalesforceAdmin #PD1"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w2-thread-3-pd1-vs-admin-cover.png",
+      "2": "tweet-images/w2-thread-3-pd1-vs-admin-stats.png",
+      "6": "tweet-images/w2-thread-3-pd1-vs-admin-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "years of real admin work. sometimes pd1 first is fine you already learned half the platform the hard way. brand new to sf. i'd still do admin.\n\n#SalesforceAdmin #PD1",
+        "imageFile": "tweet-images/w2-thread-3-pd1-vs-admin-engage-1.png"
+      },
+      {
+        "text": "admin then pd1 back to back — how long did you wait between. what actually worked vs what we tell ourselves.\n\n#SalesforceCertified #SalesforceCareer",
+        "imageFile": "tweet-images/w2-thread-3-pd1-vs-admin-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "real talk: if you've got 2+ years of hands-on Salesforce admin experience, you can probably skip straight to PD1. the admin knowledge is already there. the cert just makes it official.",
+        "imageFile": "tweet-images/w2-thread-3-pd1-vs-admin-engage-1.png"
+      },
+      {
+        "text": "for people who did Admin then PD1 — how long did you wait between the two? wondering what actually works vs what people just guess at",
+        "imageFile": "tweet-images/w2-thread-3-pd1-vs-admin-engage-2.png"
+      }
+    ],
+    "immediateReply": "admin vs dev career (non-hype): https://trailblazeprep.com/salesforce-admin-vs-developer-career\n\n@salesforceben @BradleyRice1\n\n#ADM201 #PD1",
+    "postedAt": "2026-03-24T16:31:34.593Z",
+    "firstTweetId": "2036480967167320099",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+  },
+  {
+    "id": "w3-thread-1-app-builder",
+    "title": "Week 3 — App Builder Cert Guide",
+    "scheduledFor": "2026-03-24T09:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "after admin everyone sprints to pd1. sometimes app builder is the smoother next step if you actually live in flow + lightning pages.\n\nwhy i bothered 🧵\n\n#Salesforce #AppBuilder",
+      "app builder = more admin depth. lightning pages, heavier automation, data model. still no apex requirement.\n\n#AppBuilder #SalesforceAdmin",
+      "good for admins growing into solution design, devs who need to know when not to code, people shipping stuff without living in a repo.\n\n#Trailblazer #SalesforceCertified",
+      "exam-wise flow is a fat slice. shaky on record-triggered vs screen vs autolaunched. fix that before you pay for the attempt.\n\n#SalesforceFlow #AppBuilder",
+      "my dumb cheat sheet: screen = human in the loop, record-triggered = save path, scheduled = clock, autolaunched = called from somewhere else.\n\n#SalesforceFlow #AppBuilder",
+      "extra 2-4 weeks after admin felt worth it in interviews. less \"i only admin\" more \"i can design the thing.\"\n\n#SalesforceAdmin #SalesforceCareer",
+      "free app builder section + qs on our site. link in reply.\n\n#AppBuilder #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w3-thread-1-app-builder-cover.png",
+      "2": "tweet-images/w3-thread-1-app-builder-stats.png",
+      "6": "tweet-images/w3-thread-1-app-builder-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "app builder felt more scenario-heavy than admin for me. less name the feature more pick the least bad option for this messy req.\n\n#AppBuilder #SalesforceCertified",
+        "imageFile": "tweet-images/w3-thread-1-app-builder-engage-1.png"
+      },
+      {
+        "text": "hiring folks — do you care about app builder on a resume or is it nice-to-have. actually curious.\n\n#SalesforceCareer #TechJobs",
+        "imageFile": "tweet-images/w3-thread-1-app-builder-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "App Builder thing to know going in: most of the exam is scenario-based. \"a company needs to...\" format. it's not testing whether you know a feature — it's testing whether you know when to use it. practice picking the BEST answer, not just a correct one.",
+        "imageFile": "tweet-images/w3-thread-1-app-builder-engage-1.png"
+      },
+      {
+        "text": "admins who have App Builder — did interviewers actually ask about it? curious how often it comes up vs just being a nice line on the resume",
+        "imageFile": "tweet-images/w3-thread-1-app-builder-engage-2.png"
+      }
+    ],
+    "immediateReply": "app builder prep: https://trailblazeprep.com/certifications/app-builder\n\n@SteveMoForce @salesforceben\n\n#SalesforceAdmin #AppBuilder",
+    "postedAt": "2026-03-24T16:31:58.227Z",
+    "firstTweetId": "2036481062801686967",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+  },
+  {
+    "id": "w3-thread-2-flow-tips",
+    "title": "Week 3 — Salesforce Flow Tips",
+    "scheduledFor": "2026-03-24T13:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "flow is a huge chunk of app builder and real admin work. six things i wish someone had yelled at me earlier 🧵\n\n#Salesforce #SalesforceFlow",
+      "process builder → flow migration still shows up. know what you'd rebuild as flow.\n\n#SalesforceFlow #AppBuilder",
+      "record-triggered: before vs after save actually matters. i got burned once on related updates. worth labbing.\n\n#SalesforceFlow #SalesforceAdmin",
+      "subflows beat one 80-node monster. easier debug, reuse, and it's the right answer when you duplicated logic everywhere.\n\n#SalesforceFlow #AppBuilder",
+      "fault paths: without them you're blind when flow dml fails. 2 min to add. hours saved at 9pm. @SteveMoForce yells about this too.\n\n#SalesforceFlow #Trailblazer",
+      "debug: step through. doesn't fire. check entry conditions first then actually read the debug output.\n\n#SalesforceFlow #SalesforceAdmin",
+      "one interview = one run. variables don't persist. free flow + app builder qs on our site. link next.\n\n#AppBuilder #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w3-thread-2-flow-tips-cover.png",
+      "2": "tweet-images/w3-thread-2-flow-tips-stats.png",
+      "6": "tweet-images/w3-thread-2-flow-tips-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "before-save vs after-save still trips people up. system vs user context shows up in weird sharing edge cases.\n\n#SalesforceFlow #SalesforceAdmin",
+        "imageFile": "tweet-images/w3-thread-2-flow-tips-engage-1.png"
+      },
+      {
+        "text": "biggest flow you've shipped. mine was embarrassing before subflows. still not proud of v1.\n\n#SalesforceFlow #Trailblazer",
+        "imageFile": "tweet-images/w3-thread-2-flow-tips-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "Flow thing nobody mentions: before-save flows run in system context so sharing rules don't apply. after-save flows run in user context. that difference affects which records they can see and update. it's subtle and it shows up.",
+        "imageFile": "tweet-images/w3-thread-2-flow-tips-engage-1.png"
+      },
+      {
+        "text": "what's the most complex Flow you've ever built? mine had 47 elements and 3 subflows. took 3 days to debug one edge case. genuinely curious what the upper end looks like for people.",
+        "imageFile": "tweet-images/w3-thread-2-flow-tips-engage-2.png"
+      }
+    ],
+    "immediateReply": "flow + app builder practice: https://trailblazeprep.com/certifications/app-builder\n\n@SteveMoForce @salesforceben\n\n#SalesforceFlow #AppBuilder",
+    "postedAt": "2026-03-24T17:00:25.002Z",
+    "firstTweetId": "2036488226702238185",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-24T19:45:00.952Z"
+  },
+  {
+    "id": "w3-thread-3-cert-roadmap",
+    "title": "Week 3 — Full Salesforce Certification Roadmap 2026",
+    "scheduledFor": "2026-03-24T18:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "cert catalog is overwhelming. this isn't the only path just a default if you're staring at the list frozen 🧵\n\n#Salesforce #Trailblazer",
+      "admin line: 201 → 211 if you want \"serious admin.\" cpq if you're in that world. skip if you're not.\n\n#SalesforceAdmin #ADM201",
+      "dev line: need admin-level literacy then pd1. pd2 or js certs if your job actually goes there.\n\n#PD1 #SalesforceDeveloper",
+      "architect line is a marathon. app builder, architect certs, cta for the tiny % who want the board.\n\n#SalesforceCertified #SalesforceCareer",
+      "consultant track: often admin + app builder + some cloud consultant cert (SI or customer side).\n\n#AppBuilder #SalesforceCertified",
+      "no experience → 201. in an org every day → you can compress time but still gotta find your weak spots.\n\n#ADM201 #Trailhead",
+      "mapped certs + free guides on one page. link in reply.\n\n#Salesforce #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w3-thread-3-cert-roadmap-cover.png",
+      "2": "tweet-images/w3-thread-3-cert-roadmap-stats.png",
+      "6": "tweet-images/w3-thread-3-cert-roadmap-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "agentforce + ai showing up on roadmaps whether we like it or not. worth skimming release notes even if you're not chasing certs.\n\n#Agentforce #SalesforceAI",
+        "imageFile": "tweet-images/w3-thread-3-cert-roadmap-engage-1.png"
+      },
+      {
+        "text": "which track — admin, dev, consulting, architect-curious. reply and i'll say the next cert i'd do from there.\n\n#Trailblazer #SalesforceCertified",
+        "imageFile": "tweet-images/w3-thread-3-cert-roadmap-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "2026 update: Agentforce Specialist belongs in every roadmap now. AI skills in Salesforce are no longer a differentiator — they're becoming a baseline expectation.",
+        "imageFile": "tweet-images/w3-thread-3-cert-roadmap-engage-1.png"
+      },
+      {
+        "text": "which track are you on right now — Admin, Developer, Architect, or Consultant? reply and I'll tell you the specific certs that move your career forward fastest from where you are",
+        "imageFile": "tweet-images/w3-thread-3-cert-roadmap-engage-2.png"
+      }
+    ],
+    "immediateReply": "full cert list + free guides: https://trailblazeprep.com/salesforce-certifications-list\n\n@MikeWheelerMedia @salesforceben\n\n#SalesforceCertified #Trailhead",
+    "postedAt": "2026-03-24T22:00:23.942Z",
+    "firstTweetId": "2036563719547998245",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-25T00:45:01.196Z"
+  },
+  {
+    "id": "w4-thread-1-agentforce",
+    "title": "Week 4 — Agentforce Specialist Cert",
+    "scheduledFor": "2026-03-25T09:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "agentforce cert is new-ish and customers keep asking on calls. plain english + what's actually on the guide 🧵\n\n#Salesforce #Agentforce",
+      "salesforce-native agents = topics, actions, guardrails. not \"paste chatgpt into a field\" energy.\n\n#Agentforce #SalesforceAI",
+      "study: builder UI, what actions can call, data cloud touchpoints, ethics + trust (boring but on the test).\n\n#Agentforce #SalesforceCertified",
+      "way less third-party prep than older certs. annoying if you love courses. fine if you learn by clicking in a trial org.\n\n#Salesforce #Trailblazer",
+      "useful if you don't wanna be the person who \"doesn't get AI\" or you're wiring workflows + demos for clients.\n\n#SalesforceCareer #Agentforce",
+      "einstein recs = assist humans. agent-style stuff = more autonomous actions. interviewers mix the terms constantly.\n\n#SalesforceAI #Agentforce",
+      "agentforce specialist notes + qs on our site. link below.\n\n#Agentforce #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w4-thread-1-agentforce-cover.png",
+      "2": "tweet-images/w4-thread-1-agentforce-stats.png",
+      "6": "tweet-images/w4-thread-1-agentforce-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "first toy agent in a scratch org was faster than i expected. still side-eyeing hype but it's not vapor.\n\n#Agentforce #SalesforceAI",
+        "imageFile": "tweet-images/w4-thread-1-agentforce-engage-1.png"
+      },
+      {
+        "text": "is your org actually on agentforce yet or still powerpoint mode. what was the first real use case.\n\n#Agentforce #Salesforce",
+        "imageFile": "tweet-images/w4-thread-1-agentforce-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "you can build a fully functional AI agent in Salesforce in under 30 minutes. no code. just Agent Builder, a few topics, and a couple of actions. I was skeptical until I did it.",
+        "imageFile": "tweet-images/w4-thread-1-agentforce-engage-1.png"
+      },
+      {
+        "text": "is your company already using Agentforce? curious what the first use case looks like in practice — sales follow-up, case deflection, something else?",
+        "imageFile": "tweet-images/w4-thread-1-agentforce-engage-2.png"
+      }
+    ],
+    "immediateReply": "agentforce specialist prep: https://trailblazeprep.com/certifications/agentforce-specialist\n\n@salesforceben @walters954\n\n#Agentforce #SalesforceAI",
+    "postedAt": "2026-03-25T14:09:49.197Z",
+    "firstTweetId": "2036807681093357976"
+  },
+  {
+    "id": "w4-thread-2-adm211",
+    "title": "Week 4 — Advanced Admin Cert",
+    "scheduledFor": "2026-03-25T13:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "passed 201 and everyone screams pd1 at you. sometimes 211 is the better next cert if you still actually live in admin world 🧵\n\n#Salesforce #ADM211",
+      "211 isn't \"201 but harder.\" territories, nastier reports, heavier automation scenarios, stuff you might not touch every day.\n\n#SalesforceAdmin #ADM211",
+      "automation is still a big chunk of the score. if you like flow you're not starting from zero.\n\n#SalesforceFlow #ADM211",
+      "territory mgmt is where people panic. it's on the test. don't ignore it. also don't spend your whole life on one subsection only.\n\n#ADM211 #SalesforceAdmin",
+      "money talk is regional but stacking certs usually helps comp over time. not overnight magic.\n\n#SalesforceCareer #SalesforceCertified",
+      "timeline: faster if you're in prod weekly. nights-and-weekends only = add time. both valid.\n\n#SalesforceAdmin #ADM211",
+      "free advanced admin stuff on our site. link in reply.\n\n#ADM211 #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w4-thread-2-adm211-cover.png",
+      "2": "tweet-images/w4-thread-2-adm211-stats.png",
+      "6": "tweet-images/w4-thread-2-adm211-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "territory looked scary on paper for me. flow + automation studying moved my score more. ymmv.\n\n#ADM211 #SalesforceFlow",
+        "imageFile": "tweet-images/w4-thread-2-adm211-engage-1.png"
+      },
+      {
+        "text": "211 holders — did it actually change title or pay or was it mostly learning. want honest answers not linkedin fantasy.\n\n#SalesforceCareer #SalesforceAdmin",
+        "imageFile": "tweet-images/w4-thread-2-adm211-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "ADM-211 study note: Territory Management feels like the scary section but it's only about 10% of the exam. don't over-prepare for it. Flow automation is 28% — that's where the exam is actually won or lost.",
+        "imageFile": "tweet-images/w4-thread-2-adm211-engage-1.png"
+      },
+      {
+        "text": "admins with ADM-211 — did it actually move the needle on salary or job title? genuinely want the real before/after, not the aspirational version",
+        "imageFile": "tweet-images/w4-thread-2-adm211-engage-2.png"
+      }
+    ],
+    "immediateReply": "free 211 prep (advanced admin): https://trailblazeprep.com/certifications/advanced-administrator\n\n@MikeWheelerMedia @salesforceben\n\n#SalesforceAdmin #ADM211",
+    "postedAt": "2026-03-25T23:22:04.396Z",
+    "firstTweetId": "2036941208757637438",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-26T02:45:01.100Z"
+  },
+  {
+    "id": "w4-thread-3-salary-stats",
+    "title": "Week 4 — Salesforce Certification Salary Stats",
+    "scheduledFor": "2026-03-25T18:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "salary threads are always messy. these are ballparks i've seen or scraped together. not your offer letter 🧵\n\n#Salesforce #SalesforceCareer",
+      "early career: uncertified → certified admin usually bumps the band. exact dollars = city + remote policy.\n\n#SalesforceAdmin #TechJobs",
+      "mid: cert stack + what you actually shipped starts beating \"years\" on paper sometimes.\n\n#SalesforceCertified #SalesforceCareer",
+      "senior + architect: cta is its own planet. tiny group. different band entirely.\n\n#SalesforceCertified #SalesforceCareer",
+      "$200 exam → more interviews is dumb ROI if it works. not the only lever but it's real.\n\n#Salesforce #SalesforceCertified",
+      "recruiter-friendly stacks aren't one size (SI vs product vs consulting). match what you want to hire for not every badge.\n\n#TechJobs #SalesforceCareer",
+      "cert pages + context on our site. link next. grain of salt. do your own market research.\n\n#Salesforce #SalesforceCertified"
+    ],
+    "tweetImages": {
+      "0": "tweet-images/w4-thread-3-salary-stats-cover.png",
+      "2": "tweet-images/w4-thread-3-salary-stats-stats.png",
+      "6": "tweet-images/w4-thread-3-salary-stats-cta.png"
+    },
+    "engagementTweets": [
+      {
+        "text": "add COLA brain for NYC SF etc. remote flattened some gaps but not all.\n\n#SalesforceCareer #TechJobs",
+        "imageFile": "tweet-images/w4-thread-3-salary-stats-engage-1.png"
+      },
+      {
+        "text": "drop certs + rough geo if you want. trying to sanity check ranges against real humans not just glassdoor.\n\n#SalesforceCareer #SalesforceCertified",
+        "imageFile": "tweet-images/w4-thread-3-salary-stats-engage-2.png"
+      }
+    ],
+    "_updatedEngagement": [
+      {
+        "text": "worth noting: these are conservative estimates. in major metros like NYC, SF, or Chicago add 20-30% to all of them. remote roles have also been pushing salaries toward the higher end nationwide.",
+        "imageFile": "tweet-images/w4-thread-3-salary-stats-engage-1.png"
+      },
+      {
+        "text": "what's your current cert stack and rough salary range? drop it below — doesn't have to be exact. trying to build a real picture from real people, not just job posting data",
+        "imageFile": "tweet-images/w4-thread-3-salary-stats-engage-2.png"
+      }
+    ],
+    "immediateReply": "all cert pages: https://trailblazeprep.com/salesforce-certifications-list\n\n@BradleyRice1 @salesforceben\n\n#SalesforceCertified #TechJobs",
+    "postedAt": "2026-03-25T23:22:28.313Z",
+    "firstTweetId": "2036946758836904434",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-03-26T02:45:01.100Z"
+  }
+]
