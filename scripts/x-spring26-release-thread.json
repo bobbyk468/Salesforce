@@ -1,55 +1,41 @@
 {
   "id": "spring26-release-thread",
-  "title": "Spring '26 Release — What Salesforce releases are and why they matter",
+  "title": "Spring '26 Release — Human voice rewrite",
   "status": "pending",
-  "notes": "Post as a thread. Lead tweet should have an image if possible — dark background with 'Spring 26' and the Salesforce logo style. Each tweet is self-contained but builds on the previous one.",
+  "notes": "Do NOT add headers or bullet points. Each tweet should feel like a separate thought, not a slide in a deck. Post as a thread.",
   "tweets": [
-    "Salesforce just released Spring '26.\n\nmost people click past the notification and move on.\n\nbut if you work in Salesforce — admin, dev, consultant, or cert holder — this affects you in ways most people don't fully understand.\n\nlet me explain what's actually happening 🧵\n\n#Spring26 #Salesforce #SalesforceOhana",
+    "Spring '26 is out.\n\nevery 4 months Salesforce updates every single org on the planet at the same time. no warning. no 'are you ready?' it just happens.\n\nif you work in Salesforce and you're not paying attention to releases, you're flying blind.\n\nhere's what you actually need to know about this one 🧵\n\n#Spring26 #Salesforce #SalesforceOhana",
 
-    "first: what is a Salesforce release?\n\nthree times a year — Winter, Spring, Summer — Salesforce pushes a major update to every single customer org on the planet simultaneously.\n\nnot a patch. not a bug fix. a full product release.\n\nnew features. changed behaviors. updated automation tools. sometimes deprecated functionality.\n\nall of it lands in your org whether you asked for it or not.",
+    "first — if you're new to Salesforce and confused about what a 'release' even is:\n\nmost software has versions. Salesforce doesn't. there's no v8.3 your company is stuck on while everyone else has v9.\n\nthere's just Salesforce. and three times a year — Winter, Spring, Summer — it updates. for everyone. everywhere. at the same time.\n\nno other major enterprise platform does it this way. it's genuinely unusual.",
 
-    "why three times a year?\n\nmost software ships once a year, or on rolling updates whenever the team is ready.\n\nSalesforce does three fixed releases because they made an unusual architectural bet early on: everyone runs on the same shared infrastructure.\n\nthere's no 'Salesforce version 8.2' your company is stuck on. there's just Salesforce. and it moves forward for everyone at once.",
+    "and yes, the naming makes no sense.\n\nWinter '26 dropped in October.\nSpring '26 dropped in February.\nSummer '26 will drop around June.\n\nWinter in October.\n\nI've been in this ecosystem for years and it still makes me do a double take every time. you get used to it.",
 
-    "the reason this is possible: Salesforce is genuinely multi-tenant.\n\nyour org and your competitor's org and a Fortune 500 company's org are all running on the same platform layer.\n\nwhen Salesforce ships Spring '26, it ships to all of them at the same time.\n\nno one gets left on an old version. no one has to upgrade. it just... happens.",
+    "the part that trips people up most: you do get a heads up.\n\nbefore a release hits your production org, it lands in your sandbox first — usually 3-4 weeks early.\n\nmost admins don't check. then something breaks in production after the release and they spend two days debugging a Flow that worked fine last month.\n\nthe sandbox preview exists. use it. 30 minutes of testing saves a lot of pain.",
 
-    "but here's the thing people miss: you get a preview window first.\n\nbefore Spring '26 hits your production org, it lands in your sandbox.\n\nyou have roughly 2-4 weeks to test how the new features affect YOUR specific setup. custom flows, triggers, integrations — you can break them in sandbox before they break in production.\n\nmost admins skip this. then wonder why something stopped working.",
+    "so what actually changed in Spring '26 that's worth your attention:\n\nAgentforce can now orchestrate multiple agents. meaning one agent can hand off to another mid-conversation based on context.\n\nif you haven't started paying attention to Agentforce yet — this is the release where it starts becoming something you have to know for both your job and your cert exams.",
 
-    "why each release matters for the people building on Salesforce:\n\nAdmins: new automation tools land. Flow gets new capabilities almost every release. things that required Apex last year sometimes go declarative this year.\n\nDevelopers: APIs change. deprecated methods get closer to end-of-life. new platform features open up.\n\nConsultants: client orgs just got new features. you need to know before they ask you about it.",
+    "Flow got new debugging tools.\n\nthis sounds boring. it's not.\n\nanyone who's spent 3 hours staring at a Flow that fails silently with zero useful error messages knows exactly why this matters.\n\nthe new debugging in Spring '26 is one of those updates that sounds like a minor QoL thing but will save you real time.",
 
-    "and here's the part that catches a lot of people off guard:\n\nSalesforce certification exams update with the releases.\n\nif you're studying right now from a course that hasn't been updated since Winter '25 or earlier, some of what you're learning is either wrong or irrelevant.\n\nthe official exam guide on Trailhead always reflects the current release. it's free. it's more accurate than any paid course. use it.",
+    "Data Cloud got heavier on identity resolution and real-time data activation.\n\nif you're on any project that touches Data Cloud, the way customer profiles are unified and activated changed. not broken — improved. but different enough that documentation from 6 months ago may not match what you're seeing now.",
 
-    "what actually changed in Spring '26:\n\nAgentforce: multi-agent orchestration is in. agents can now hand off to other agents. if you're studying Admin or Agentforce Specialist, expect scenario questions about how this works.\n\nFlow: new debugging tools and orchestration features. the 'how do you troubleshoot a failing flow' question just got more nuanced.",
+    "the certification angle — because I know why most of you are reading this:\n\nexam outlines update with releases. if you're studying from a course that hasn't been touched since last year, parts of it are wrong or irrelevant now.\n\nthe official Salesforce exam guide on Trailhead is always current. it's free. and it's more accurate than most paid courses. check that first.",
 
-    "Data Cloud: real-time data activation and identity resolution expanded significantly.\n\nif you're studying Data Cloud Consultant or working on any Data Cloud implementation, data governance and identity unification are heavier topics now.\n\nTableau: Pulse proactive analytics features. Tableau certs may reference AI-assisted insights in data storytelling objectives.",
+    "also: if you're already certified, Spring '26 opens your maintenance exam window.\n\nmaintenance exams are 30-40 questions on what changed in the release. most people dread them.\n\nhonestly they're the least painful thing about holding a Salesforce cert. 30 minutes, focused on the new stuff you should probably know anyway. just do them when the window opens.",
 
-    "what hasn't changed — and this is important:\n\nthe core Salesforce platform hasn't moved.\n\nOWD, Roles, Profiles, Permission Sets. Governor Limits. Flow fundamentals. Sharing and Visibility architecture.\n\nthose are still 40-60% of most exams and they barely shift between releases.\n\nif you're cramming: those first. always.",
+    "the things Spring '26 didn't change:\n\nOWD, roles, profiles, permission sets. governor limits. Flow fundamentals. the sharing model.\n\nthose have been the backbone of this platform for 15+ years and they're not going anywhere.\n\nif you're prepping for any Salesforce exam — those concepts are still 40-60% of your score. Spring '26 didn't touch them.",
 
-    "the Winter / Spring / Summer naming isn't random.\n\nWinter release = drops around October (yes, I know)\nSpring release = drops around February-March\nSummer release = drops around June\n\nthe names follow Northern Hemisphere seasons and they've been consistent since the early 2000s.\n\nit's one of those Salesforce quirks that confuses everyone at first.",
-
-    "Spring '26 is live.\n\nif you're holding a Salesforce certification, your maintenance exam window is now open — check your Trailhead for what's due and when.\n\nif you're studying for a cert: use the updated exam guides.\n\nif you're an admin or developer: spend 30 minutes in your sandbox before the production rollout.\n\nhttps://trailblazeprep.com/certifications\n\n#Spring26 #SalesforceCertification #SalesforceAdmin #SalesforceDev #SalesforceOhana"
+    "last thing:\n\nSalesforce releases 500+ pages of release notes every cycle. nobody reads them all. not even the people writing them probably.\n\nbut the highlights take about 20 minutes to get through. worth doing once per release just to know what landed.\n\neverything Spring '26 means for your cert prep:\nhttps://trailblazeprep.com/certifications\n\n#Spring26 #SalesforceCertification #SalesforceAdmin #SalesforceDev #Agentforce"
   ],
   "standaloneOption": {
-    "note": "If you want to post this as a single tweet instead of a thread, use this:",
-    "tweet": "Salesforce Spring '26 just dropped.\n\nwhat changed:\n→ Agentforce: multi-agent orchestration is now in\n→ Flow: new debugging + orchestration tools\n→ Data Cloud: expanded real-time activation\n→ Tableau: Pulse proactive analytics\n\nand if you're holding a cert: your maintenance exam window just opened.\n\nwhat to do now: open your sandbox, test your flows, check Trailhead for maintenance exams.\n\nhttps://trailblazeprep.com/certifications\n\n#Spring26 #Salesforce #SalesforceOhana #SalesforceAdmin"
+    "note": "Single tweet version if you don't want to post the full thread",
+    "tweet": "Spring '26 is out.\n\nthe big one: Agentforce can now hand off between multiple agents mid-conversation. that's a meaningful shift, not just a feature drop.\n\nalso: Flow debugging finally doesn't make you want to flip a table.\n\nif you're certified, your maintenance window just opened.\nif you're studying, update your exam guide source — Trailhead, not that Udemy course from 2024.\n\nhttps://trailblazeprep.com/certifications\n\n#Spring26 #Salesforce #SalesforceOhana"
   },
   "engagementTweets": [
     {
-      "text": "the thing about Salesforce releases that surprises people from other tech backgrounds: there's no 'are we ready to upgrade?' conversation. Spring '26 just happens. to everyone. at once. that's genuinely unusual in enterprise software."
+      "text": "genuinely curious: do you actually test in sandbox before a Salesforce release hits production?\n\nor do you find out something broke when a user emails you?"
     },
     {
-      "text": "quick poll: do you actually test in sandbox before a Salesforce major release hits production?\n\nA) yes, every release\nB) sometimes, when I remember\nC) no, I find out when something breaks\nD) what sandbox"
+      "text": "the 'Winter release drops in October' thing has confused every single person I've introduced to Salesforce.\n\nwhy they never fixed the naming I will never understand."
     }
-  ],
-  "hashtags": [
-    "#Spring26",
-    "#Salesforce",
-    "#SalesforceOhana",
-    "#SalesforceAdmin",
-    "#SalesforceDev",
-    "#SalesforceCertification",
-    "#SalesforceReleases",
-    "#Agentforce",
-    "#DataCloud",
-    "#SalesforceFlow"
   ]
 }
