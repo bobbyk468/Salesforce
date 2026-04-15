@@ -1,8 +1,21 @@
+'use client'
+
+import { useRef } from 'react'
 import Link from 'next/link'
 import { Award, ChevronDown, Menu } from 'lucide-react'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 export default function Header() {
+  const desktopDetailsRefs = useRef<(HTMLDetailsElement | null)[]>([])
+
+  const handleLinkClick = (index: number) => {
+    // Close the details element when a link is clicked
+    const detailsElement = desktopDetailsRefs.current[index]
+    if (detailsElement && detailsElement.open) {
+      detailsElement.open = false
+    }
+  }
+
   return (
     <header data-critical-header className="no-print bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm min-h-16">
       {/* Top bar: Logo + primary links */}
@@ -106,8 +119,14 @@ export default function Header() {
             Choose your role
           </p>
           <div className="flex flex-wrap items-center gap-2">
-            {CERTIFICATION_CATEGORIES.map((category) => (
-              <details key={category.slug} className="relative group">
+            {CERTIFICATION_CATEGORIES.map((category, index) => (
+              <details
+                key={category.slug}
+                className="relative group"
+                ref={(el) => {
+                  if (el) desktopDetailsRefs.current[index] = el
+                }}
+              >
                 <summary className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-salesforce-blue hover:text-salesforce-blue hover:bg-salesforce-blue/5 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer list-none">
                   <span>{category.name}</span>
                   <ChevronDown className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-200" aria-hidden="true" />
@@ -117,6 +136,7 @@ export default function Header() {
                     <Link
                       key={item.href}
                       href={item.href}
+                      onClick={() => handleLinkClick(index)}
                       className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-salesforce-blue/10 hover:text-salesforce-blue transition-colors duration-150 truncate"
                       aria-label={`View ${item.name} certification page`}
                     >
