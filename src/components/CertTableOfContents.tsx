@@ -84,7 +84,10 @@ export default function CertTableOfContents({ sections }: CertTableOfContentsPro
               {sections.map((section) => (
                 <li key={section.id}>
                   <button
-                    onClick={() => scrollToSection(section.id)}
+                    onClick={() => {
+                      scrollToSection(section.id)
+                      setIsOpen(false)
+                    }}
                     className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === section.id
                         ? 'bg-salesforce-blue/10 text-salesforce-dark font-medium border-l-2 border-salesforce-blue'
