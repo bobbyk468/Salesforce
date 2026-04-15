@@ -1172,11 +1172,11 @@ function getCertFaqName(slug: string, certTitle: string): string {
 const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     {
-      question: 'What is the Salesforce Administrator (ADM-201) passing score in Winter \'26?',
+      question: 'What is the Salesforce Administrator (ADM-201) passing score in Spring \'26?',
       answer: 'The ADM-201 passing score is 65%, which means you need at least 39 correct answers out of 60 scored questions. You get 105 minutes, and Salesforce may include 5 unscored pilot questions in the exam session.',
     },
     {
-      question: 'What is the ADM-201 exam fee in Winter \'26?',
+      question: 'What is the ADM-201 exam fee in Spring \'26?',
       answer: 'The Salesforce Certified Platform Administrator (ADM-201) exam fee is typically $200 USD, and the retake fee is usually $100 USD. Fees can vary by country taxes, so confirm the final amount in your Salesforce certification checkout page.',
     },
     {
@@ -1242,7 +1242,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Platform Administrator focuses on day-to-day administration, security, and user management. Platform App Builder focuses on declarative development—building custom applications using clicks, not code. App Builder is ideal for those who want to build custom apps without programming.',
     },
     {
-      question: 'What is the DEV-402 exam fee and passing score in Winter \'26?',
+      question: 'What is the DEV-402 exam fee and passing score in Spring \'26?',
       answer: 'The Platform App Builder (DEV-402) exam fee is generally $200 USD with a typical retake fee of $100 USD, and the passing score is 63%. Always verify the latest fee and policy details in your Salesforce certification account before booking.',
     },
     {
@@ -1296,7 +1296,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Salesforce recommends having the Platform Administrator certification and hands-on experience implementing Sales Cloud solutions. You should be comfortable with lead management, opportunity management, forecasting, and territory management.',
     },
     {
-      question: 'What is the Sales Cloud Consultant passing score and exam fee in Winter \'26?',
+      question: 'What is the Sales Cloud Consultant passing score and exam fee in Spring \'26?',
       answer: 'The Sales Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions in the session.',
     },
     {
@@ -1338,7 +1338,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Yes, Salesforce requires the Platform Administrator certification as a prerequisite for the Service Cloud Consultant exam. You should also have hands-on experience configuring Service Cloud features like cases, knowledge, and Omnichannel.',
     },
     {
-      question: 'What is the Service Cloud Consultant passing score and exam fee in Winter \'26?',
+      question: 'What is the Service Cloud Consultant passing score and exam fee in Spring \'26?',
       answer: 'The Service Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 67%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
     },
     {
@@ -1380,7 +1380,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'While some programming experience is helpful, you can learn Apex and Lightning Web Components through Trailhead. The exam focuses on understanding when to use code vs declarative tools, governor limits, testing, and basic Apex/LWC concepts rather than advanced programming.',
     },
     {
-      question: 'What is the PD1 passing score and exam format in Winter \'26?',
+      question: 'What is the PD1 passing score and exam format in Spring \'26?',
       answer: 'The Platform Developer I (PD1) exam has 60 multiple-choice questions, 110 minutes, and a passing score of 68% (41 correct). Salesforce may include 5 unscored pilot questions. The exam costs $200 USD (retake $100 USD) and is available online-proctored or at a test center.',
     },
     {
@@ -1442,7 +1442,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'The exam covers Einstein capabilities across Sales Cloud, Service Cloud, Marketing Cloud, and Commerce Cloud. You should understand what each Einstein product does, when to use it, and responsible AI principles.',
     },
     {
-      question: 'What is the AI Associate passing score and exam fee in Winter \'26?',
+      question: 'What is the AI Associate passing score and exam fee in Spring \'26?',
       answer: 'The Salesforce AI Associate exam has 40 multiple-choice questions, 70 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). It is an associate-level credential with no formal prerequisite.',
     },
     {
@@ -1517,7 +1517,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Platform Developer II is significantly more challenging. It requires deep understanding of design patterns, architecture decisions, advanced Apex concepts, and best practices. Most candidates need 2+ years of development experience.',
     },
     {
-      question: 'What is the PD2 passing score and exam fee in Winter \'26?',
+      question: 'What is the PD2 passing score and exam fee in Spring \'26?',
       answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite — you cannot sit PD2 without it.',
     },
     {
@@ -1549,7 +1549,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Yes, Platform Administrator is required. You should also have hands-on experience configuring Experience Cloud sites, sharing sets, audiences, and community features.',
     },
     {
-      question: 'What is the Experience Cloud Consultant passing score and exam fee in Winter \'26?',
+      question: 'What is the Experience Cloud Consultant passing score and exam fee in Spring \'26?',
       answer: 'The Experience Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
     },
     {
@@ -1581,7 +1581,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'You should have Salesforce CRM experience and understanding of data management, marketing, or analytics. Hands-on experience with Data Cloud setup, identity resolution, and activation is recommended.',
     },
     {
-      question: 'What is the Data Cloud Consultant passing score and exam fee in Winter \'26?',
+      question: 'What is the Data Cloud Consultant passing score and exam fee in Spring \'26?',
       answer: 'The Salesforce Data Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). Platform Administrator certification is required.',
     },
     {
@@ -1935,11 +1935,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'slack-developer': [
     {
-      question: 'Are there free Salesforce Slack Developer practice exams for Winter \'26?',
+      question: 'Are there free Salesforce Slack Developer practice exams for Spring \'26?',
       answer: 'Yes. This page includes free Slack Developer practice questions with explanations for the current Salesforce release so you can test your readiness before paying for the official exam. Use these with hands-on Slack app building practice for best results.',
     },
     {
-      question: 'How much does the Salesforce Slack Developer exam cost in Winter \'26?',
+      question: 'How much does the Salesforce Slack Developer exam cost in Spring \'26?',
       answer: 'The Salesforce Slack Developer certification exam fee is commonly listed as $200 USD, with retake pricing often around $100 USD. Check the official Salesforce registration page for your region-specific final price and taxes.',
     },
     {
@@ -1983,7 +1983,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Yes, Platform Administrator is required. You should have hands-on CPQ experience configuring products, price rules, and quote processes.',
     },
     {
-      question: 'What is the CPQ Administrator passing score and exam fee in Winter \'26?',
+      question: 'What is the CPQ Administrator passing score and exam fee in Spring \'26?',
       answer: 'The Salesforce CPQ Specialist exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). It is commonly called CPQ Administrator and Platform Administrator certification is required.',
     },
     {
@@ -2005,7 +2005,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'No, Business Analyst focuses on business analysis skills rather than technical implementation. However, understanding Salesforce capabilities is essential.',
     },
     {
-      question: 'What is the Business Analyst passing score and exam fee in Winter \'26?',
+      question: 'What is the Business Analyst passing score and exam fee in Spring \'26?',
       answer: 'The Salesforce Business Analyst exam has 60 multiple-choice questions, 105 minutes, and a passing score of 72%. The exam fee is $200 USD (retake $100 USD). There is no formal prerequisite, though Salesforce recommends admin experience.',
     },
     {
@@ -2027,7 +2027,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Yes, Platform Administrator knowledge is recommended. You should have hands-on experience configuring and optimizing AI agents in Salesforce.',
     },
     {
-      question: 'What is the Agentforce Specialist passing score and exam fee in Winter \'26?',
+      question: 'What is the Agentforce Specialist passing score and exam fee in Spring \'26?',
       answer: 'The Agentforce Specialist exam has 60 multiple-choice questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). It is a relatively new credential with content updated for the latest Agentforce capabilities.',
     },
     {
@@ -2056,7 +2056,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the recommended study approach for Agentforce Specialist?',
-      answer: 'The most effective preparation combines: (1) completing the official Agentforce Specialist Trailmix on Trailhead (this is directly aligned to the exam outline), (2) hands-on practice in an Agentforce sandbox — actually build an agent with Topics and Actions, test it in Agent Builder, and observe how the Trust Layer behaves, (3) review the Einstein Trust Layer documentation specifically, and (4) practice with scenario-based mock questions. Candidates with hands-on Agentforce implementation experience consistently report higher first-attempt pass rates. The exam evolves with each Salesforce release, so ensure you are studying Winter \'26 materials.',
+      answer: 'The most effective preparation combines: (1) completing the official Agentforce Specialist Trailmix on Trailhead (this is directly aligned to the exam outline), (2) hands-on practice in an Agentforce sandbox — actually build an agent with Topics and Actions, test it in Agent Builder, and observe how the Trust Layer behaves, (3) review the Einstein Trust Layer documentation specifically, and (4) practice with scenario-based mock questions. Candidates with hands-on Agentforce implementation experience consistently report higher first-attempt pass rates. The exam evolves with each Salesforce release, so ensure you are studying Spring \'26 materials.',
     },
     {
       question: 'How is Agentforce Specialist different from the AI Associate certification?',
