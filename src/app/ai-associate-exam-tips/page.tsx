@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/ai-associate-exam-tips` },
+  alternates: { canonical: `${siteUrl}/certifications/ai-associate` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,

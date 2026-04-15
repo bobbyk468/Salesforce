@@ -829,10 +829,12 @@
     "id": "month2-tip-4-action-vs-flow",
     "title": "Month2 Tip 4 — Agentforce Action vs Flow",
     "scheduledFor": "2026-04-15T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "agentforce tip: an action and a flow aren't the same thing.\n\na flow is a process you build. an action is how an agent calls it. agentforce calls flow — it doesn't replace it.\n\nthe exam will test if you know the difference.\nfollow — i say what they won't.\n#Agentforce"
-    ]
+    ],
+    "postedAt": "2026-04-15T14:30:02.876Z",
+    "firstTweetId": "2044423005443654029"
   },
   {
     "id": "month2-tip-5-admin-vs-cta",

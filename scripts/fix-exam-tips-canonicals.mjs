@@ -112,13 +112,13 @@ function fixFile(dirName) {
   const certSlug = EXAM_TIPS_TO_CERT_SLUG[dirName]
   if (!certSlug) return { updated: false, reason: 'no mapping' }
   const certCanonical = `${siteUrl}/certifications/${certSlug}`
-  const oldPattern = /alternates:\s*\{[^}]*canonical:[^}]+\}/s
   const existingComment = /\/\/ Canonical to cert page/
   if (existingComment.test(content) && content.includes(`/certifications/${certSlug}`)) {
     return { updated: false, reason: 'already fixed' }
   }
-  const newCanonical = `alternates: {${canonicalComment}\n  canonical: \`\${siteUrl}/certifications/${certSlug}\`,\n  }`
-  const newContent = content.replace(oldPattern, newCanonical)
+  // Match: alternates: { canonical: `${siteUrl}/some/path` }, and replace just the URL
+  const oldPattern = /alternates:\s*\{\s*canonical:\s*`\$\{siteUrl\}\/[^`]*`\s*\}/
+  const newContent = content.replace(oldPattern, `alternates: { canonical: \`\${siteUrl}/certifications/${certSlug}\` }`)
   if (newContent === content) return { updated: false, reason: 'no match' }
   fs.writeFileSync(filePath, newContent)
   return { updated: true }
