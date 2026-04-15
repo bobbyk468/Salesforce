@@ -56,7 +56,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
         <section data-lcp-hero className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">
           <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">
-            Updated for Winter &apos;26 &bull; Aligned with official Salesforce exam guide
+            Updated for {RELEASE_CURRENT} &bull; Aligned with official Salesforce exam guide
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
