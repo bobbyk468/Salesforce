@@ -62,8 +62,8 @@ const faqItems = [
     answer: 'Study time varies by cert and experience. Administrator (ADM-201): 4–6 weeks for candidates with some Salesforce exposure, 8–10 weeks from scratch. Platform Developer I: 6–8 weeks for developers with coding experience. Consultant-level certs (Sales Cloud, Service Cloud): 6–10 weeks with implementation experience. Architect-level certs: 10–16 weeks each. The fastest path is to work through the official Trailhead Trailmix for your target cert combined with timed practice tests.',
   },
   {
-    question: 'Are Salesforce certifications worth it in Winter\'s 26?',
-    answer: 'Yes. Salesforce certified professionals earn 20–35% higher salaries than their non-certified peers, according to Salesforce ecosystem salary surveys. Administrator certified professionals earn an average of $90,000–$110,000 in the US; architects earn $150,000–$200,000+. Beyond salary, certifications are often a hiring requirement at Salesforce consulting partners. With Agentforce and AI capabilities expanding the platform in Winter \'26, Data Cloud and Agentforce Specialist certifications are seeing particularly strong job market demand.',
+    question: 'Are Salesforce certifications worth it in Spring\'s 26?',
+    answer: 'Yes. Salesforce certified professionals earn 20–35% higher salaries than their non-certified peers, according to Salesforce ecosystem salary surveys. Administrator certified professionals earn an average of $90,000–$110,000 in the US; architects earn $150,000–$200,000+. Beyond salary, certifications are often a hiring requirement at Salesforce consulting partners. With Agentforce and AI capabilities expanding the platform in Spring \'26, Data Cloud and Agentforce Specialist certifications are seeing particularly strong job market demand.',
   },
 ]
 
