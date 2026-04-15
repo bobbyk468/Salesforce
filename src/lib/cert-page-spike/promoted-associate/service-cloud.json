@@ -1,0 +1,278 @@
+{
+  "template": "associate",
+  "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "certificationCard": {
+    "code": "SVC",
+    "description": "The Service Cloud Consultant certification validates your expertise in designing and implementing Service Cloud solutions for customer service operations.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "67%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Service Cloud Solution Design",
+      "Case Management",
+      "Knowledge Management",
+      "Omni-Channel",
+      "Service Console",
+      "Entitlements & SLAs",
+      "Service Analytics",
+      "Communities for Service",
+      "Field Service",
+      "Integration"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Service Cloud Consultant: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Case Management: Origins, Assignment, and Escalation",
+        "body": "Web-to-Case captures cases from website forms. Email-to-Case converts inbound emails into cases. Case Assignment Rules route cases to users or queues based on criteria. Escalation Rules automatically reassign or send alerts when cases breach time thresholds. The exam frequently presents a routing scenario and asks whether to use Assignment Rules, Omni-Channel, or Escalation Rules — know the trigger condition for each: rules are criteria-based, Omni-Channel is real-time workload-based."
+      },
+      {
+        "heading": "Entitlements, Milestones, and Service Contracts",
+        "body": "Entitlements define the support a customer is contractually entitled to (e.g., 24/7 phone support, 4-hour response). Entitlement Processes define milestone timelines within an entitlement period. Milestones track specific SLA events — First Response, Resolution — with configurable warning and violation actions. Service Contracts aggregate entitlements for a customer or account over a contract period. The exam tests the hierarchy: Contract → Entitlement → Entitlement Process → Milestones."
+      },
+      {
+        "heading": "Omni-Channel: Routing Models and Agent Capacity",
+        "body": "Queue-Based Routing sends work to a queue and the first available agent picks it up. Skills-Based Routing matches cases to agents with the required skill set. Capacity Models: Tab-based (each open record counts as one unit), Status-based (agents declare availability by status). Agent Presence Configurations define which channels an agent handles and their capacity per channel. The exam tests which routing model and capacity configuration match a given support scenario."
+      },
+      {
+        "heading": "Knowledge Management: Articles, Data Categories, and Case Deflection",
+        "body": "Knowledge Articles have a lifecycle: Draft → Review → Published → Archived. Data Category Groups control which articles different users and customer portal visitors can see — a common exam topic for multi-product or multi-region organisations. Case Deflection surfaces suggested articles before a customer submits a case (requires Knowledge enabled on the community/portal). Einstein Article Recommendations suggest relevant articles to agents in real-time based on case fields. Know the difference between Article Types (Lightning Knowledge uses one unified type)."
+      },
+      {
+        "heading": "Service Console: Macros, Quick Text, and Einstein Features",
+        "body": "The Service Console is a multi-panel app layout for agents — with split view, utility bar, and subtabs for related records. Macros execute a sequence of actions with a single click (update a field, send an email, add a note). Quick Text inserts pre-approved message snippets into emails or chats. Einstein for Service adds: Case Classification (auto-suggests field values), Reply Recommendations (suggests chat responses), and Next Best Action (recommendation strategies based on Einstein Recommendation Builder)."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Service Cloud Consultant Exam",
+    "intro": "The Service Cloud Consultant exam tests your ability to design and configure a complete service operation. Questions are scenario-based and focus on case routing decisions, Knowledge management, entitlements, and channel strategy.",
+    "blocks": [
+      {
+        "heading": "Case Routing: Which Tool When",
+        "body": "Know all routing options: Assignment Rules (criteria-based), Queues (manual or rules-based), Omni-Channel (capacity-based, real-time), and Einstein Case Routing (AI-driven). Match each to the right complexity level."
+      },
+      {
+        "heading": "Knowledge Management",
+        "body": "Understand the Knowledge data model (articles, data categories, channels), how to link articles to cases, approval processes for publishing, and how Lightning Knowledge differs from Classic Knowledge."
+      },
+      {
+        "heading": "Entitlements & SLAs",
+        "body": "Know how Entitlement Processes define SLA milestones, how Entitlements link to accounts and contacts, and how warning/violation actions trigger when milestones are at risk. Milestone Actions are heavily tested."
+      },
+      {
+        "heading": "Omni-Channel Configuration",
+        "body": "Know the difference between Queue-Based and Skills-Based routing, how to configure service channels and routing configurations, and how to monitor agent capacity with the Omni Supervisor."
+      },
+      {
+        "heading": "Self-Service & Deflection",
+        "body": "Experience Cloud portals, Einstein Bots, and Knowledge self-service reduce case volume. Know how to measure deflection rate and which configuration choices increase self-service success."
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "A company wants to automatically route cases to agents based on skills and availability. Which feature should be implemented?",
+      "options": [
+        "Case Assignment Rules",
+        "Omni-Channel",
+        "Workflow Rules",
+        "Process Builder"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Omni-Channel routes work items to agents in real-time based on their skills, availability, and current workload capacity."
+    },
+    {
+      "question": "What is the purpose of Service Level Agreements (SLAs) in Service Cloud?",
+      "options": [
+        "To track customer satisfaction",
+        "To define response and resolution time targets",
+        "To calculate agent productivity",
+        "To manage knowledge articles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Service Level Agreements (SLAs) define the response and resolution times that your support team commits to for different types of cases."
+    },
+    {
+      "question": "Which feature allows customers to find answers to common questions without contacting support?",
+      "options": [
+        "Case Comments",
+        "Knowledge Base",
+        "Chatter",
+        "Email-to-Case"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Knowledge Base allows you to create and publish articles that customers can search and read to find answers to common questions."
+    },
+    {
+      "question": "A company wants to capture customer cases from their website. Which Service Cloud feature should be used?",
+      "options": [
+        "Email-to-Case",
+        "Web-to-Case",
+        "Live Agent",
+        "Social Customer Service"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Web-to-Case allows you to capture cases from your company's website using a form that creates cases directly in Salesforce."
+    },
+    {
+      "question": "What is the benefit of using Macros in Service Cloud?",
+      "options": [
+        "Automated case creation",
+        "Batch processing of cases",
+        "One-click execution of repetitive tasks",
+        "Automated customer notifications"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Macros allow agents to complete repetitive tasks with a single click, such as sending an email, updating a field, and adding a comment."
+    },
+    {
+      "question": "What is the purpose of Entitlements in Service Cloud?",
+      "options": [
+        "To track customer satisfaction",
+        "To define service level agreements and track support coverage",
+        "To calculate agent productivity",
+        "To manage knowledge articles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Entitlements define the support coverage a customer receives, including service level agreements (SLAs) and support hours, and can be associated with cases."
+    },
+    {
+      "question": "A company wants to route cases to agents based on their expertise in specific products. Which feature should be configured?",
+      "options": [
+        "Case Assignment Rules",
+        "Omni-Channel with Skills-Based Routing",
+        "Workflow Rules",
+        "Process Builder"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Omni-Channel with Skills-Based Routing routes cases to agents based on their skills, ensuring cases are handled by the most qualified agents."
+    },
+    {
+      "question": "Which feature allows customers to submit cases through a community portal?",
+      "options": [
+        "Email-to-Case",
+        "Web-to-Case",
+        "Community Case Creation",
+        "Chatter"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Community Case Creation allows customers to submit cases directly through Experience Cloud (Community) portals, providing self-service support capabilities."
+    },
+    {
+      "question": "What is the benefit of using Case Feed in Service Cloud?",
+      "options": [
+        "Automatic case creation",
+        "Collaborative case management with comments, posts, and file attachments",
+        "Integration with external systems",
+        "Automated case assignment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Case Feed provides a collaborative interface where agents can add comments, posts, attach files, and collaborate on resolving cases."
+    },
+    {
+      "question": "A company wants to track the time agents spend on cases. Which feature should be used?",
+      "options": [
+        "Case Comments",
+        "Case Feed",
+        "Case Milestones",
+        "Time Tracking"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Case Milestones track key events in a case lifecycle and can be used with Entitlements to measure performance against SLAs."
+    },
+    {
+      "question": "Which feature allows agents to see suggested knowledge articles while working on a case?",
+      "options": [
+        "Knowledge Base",
+        "Einstein Article Recommendations",
+        "Case Feed",
+        "Macros"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Einstein Article Recommendations use AI to suggest relevant knowledge articles to agents based on the case details, helping them resolve cases faster."
+    },
+    {
+      "question": "What is the purpose of Service Contracts in Service Cloud?",
+      "options": [
+        "To track customer satisfaction",
+        "To define support coverage and entitlements for customers",
+        "To calculate agent productivity",
+        "To manage knowledge articles"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Service Contracts define the support coverage and entitlements for customers, including contract terms, start/end dates, and associated entitlements."
+    },
+    {
+      "question": "A company wants to allow customers to chat with support agents in real-time. Which feature should be implemented?",
+      "options": [
+        "Email-to-Case",
+        "Web-to-Case",
+        "Live Agent Chat",
+        "Social Customer Service"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Live Agent Chat allows customers to chat with support agents in real-time through a chat widget on your website or community portal."
+    },
+    {
+      "question": "Which feature allows agents to see all their work items (cases, chats, etc.) in a single interface?",
+      "options": [
+        "Case Feed",
+        "Omni-Channel",
+        "Service Console",
+        "Knowledge Base"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Service Console provides a unified interface where agents can see all their work items, cases, knowledge articles, and customer information in one place."
+    },
+    {
+      "question": "Which feature defines support entitlements and service level agreements (SLAs) for cases?",
+      "options": [
+        "Case Assignment Rules",
+        "Entitlements and Milestones",
+        "Omni-Channel",
+        "Knowledge Base"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Entitlements define what support a customer receives; Milestones track SLA timers (e.g., first response, resolution) against those entitlements."
+    }
+  ]
+}

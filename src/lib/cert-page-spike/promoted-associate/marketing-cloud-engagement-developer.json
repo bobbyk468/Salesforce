@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "MC Engagement Developer",
+    "description": "Certified Marketing Cloud Developers have experience developing across the full platform. They create personalized, dynamic messages and landing pages, and are fluent in Marketing Cloud scripting languages.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~67%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "AMPscript",
+      "SSJS",
+      "Data Extensions",
+      "Cloud Pages",
+      "Email Development",
+      "APIs",
+      "Automation",
+      "Personalization",
+      "Testing",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Marketing Cloud Engagement Developer: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "AMPscript Advanced Functions",
+        "body": "Key AMPscript functions: Lookup() retrieves a single DE value; LookupRows() returns a full rowset; Row() and Field() navigate rowsets. FOR/NEXT loops iterate over rowsets. IIF() is the inline conditional; IF/ELSEIF/ENDIF for multi-branch logic. TreatAsContentArea() renders a content area by name. HTTPGet() and HTTPPost() call external APIs from AMPscript. DateAdd() and DateParse() handle date manipulation. The developer exam tests selecting the right function for a given personalisation or data retrieval scenario."
+      },
+      {
+        "heading": "Server-Side JavaScript (SSJS) in Marketing Cloud",
+        "body": "SSJS runs on Marketing Cloud servers (not in the browser) using JavaScript 1.6 syntax. Platform functions (Marketing Cloud-specific) are available alongside standard JS. Common uses: HTTP POST to external systems, manipulating Data Extensions, complex data processing. SSJS runs in Email, Landing Pages, and Automation Studio Script activities. Key objects: Platform.Load(), HTTP.Post(), Retrieve(), DataExtension.Add(). The developer exam tests when to use SSJS vs AMPscript — SSJS for complex logic and API integration, AMPscript for personalisation within emails."
+      },
+      {
+        "heading": "CloudPages and Dynamic Content",
+        "body": "CloudPages host landing pages, microsites, and smart capture forms. AMPscript-powered CloudPages can capture form data to Data Extensions (SmartCapture). Personalised URLs (PURLs) embed subscriber tokens in CloudPage URLs for pre-filled forms. Dynamic content blocks in emails show different content to different audiences based on rules — configured in Content Builder. The developer builds reusable content blocks with AMPscript logic for personalisation across campaigns."
+      },
+      {
+        "heading": "Marketing Cloud REST and SOAP APIs",
+        "body": "REST API: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). SOAP API: Subscriber, List, TriggeredSend objects — legacy but still tested. Authentication: obtain access token via OAuth 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
+      },
+      {
+        "heading": "Automation Studio Script Activities",
+        "body": "Script Activities run SSJS code within Automation Studio workflows. Common use cases: data manipulation between DE extracts, calling external APIs, complex data quality checks before sends. Script Activities run synchronously — keep them under 30 minutes to avoid timeout. Error handling: use try/catch in SSJS; log errors to a dedicated error DE. The developer designs automation sequences combining Script Activities, SQL Query Activities, Data Extract Activities, and File Transfer Activities for complex data processing pipelines."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Marketing Cloud Engagement Developer Exam",
+    "intro": "The Marketing Cloud Engagement Developer exam tests technical development skills: AMPscript, SSJS, REST/SOAP APIs, and custom activities. Questions require you to write or interpret code snippets and design custom solutions.",
+    "blocks": [
+      {
+        "heading": "AMPscript Proficiency",
+        "body": "Master AMPscript data functions: Lookup, LookupRows, LookupOrderedRows, UpdateData, InsertData. Know conditional logic (IIF, CASE), date/string functions, and how to use AMPscript in subject lines, preheaders, and email body."
+      },
+      {
+        "heading": "Server-Side JavaScript (SSJS)",
+        "body": "Know SSJS for CloudPages and landing page logic: using Platform.Load to import functions, Core.JavaScript library for data extensions (Rows, Row objects), and how SSJS differs from client-side JavaScript."
+      },
+      {
+        "heading": "REST & SOAP API Usage",
+        "body": "Know the key Marketing Cloud REST API endpoints: /contacts/v1/contacts, /messaging/v1/messageDefinitionSends, /data/v1/async, and how to authenticate using OAuth 2.0 client credentials."
+      },
+      {
+        "heading": "Custom Activities in Journey Builder",
+        "body": "Know how to build custom Journey Builder activities using the Custom Activity API: the config.json structure, execute/save/publish/validate endpoints, and how activities interact with Journey Builder's UI."
+      },
+      {
+        "heading": "Query Activities & Data Extensions",
+        "body": "Know how to write SQL in Automation Studio Query Activities to transform and aggregate data extension data. Understand overwrite vs. append destination actions and how to join data extensions in queries."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Marketing Certifications",
+    "intro": "After this marketing certification, consider these related credentials:",
+    "links": [
+      {
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Engagement Consultant"
+      },
+      {
+        "href": "/certifications/pardot-consultant",
+        "label": "Account Engagement (Pardot) Consultant"
+      },
+      {
+        "href": "/certifications/email-specialist",
+        "label": "Marketing Cloud Email Specialist"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Which Marketing Cloud scripting language is used for server-side logic in emails and landing pages?",
+      "options": [
+        "Apex",
+        "AMPscript",
+        "Visualforce",
+        "LWC"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AMPscript is Marketing Cloud's scripting language for personalization and dynamic content in emails and landing pages."
+    },
+    {
+      "question": "What is Server-Side JavaScript (SSJS) used for in Marketing Cloud?",
+      "options": [
+        "Client-side only",
+        "Script Activities in Automation Studio and advanced scripting",
+        "CPQ configuration",
+        "Slack apps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SSJS is used in Script Activities and for advanced server-side logic in Marketing Cloud."
+    },
+    {
+      "question": "Which function retrieves a value from a Data Extension row in AMPscript?",
+      "options": [
+        "LOOKUP",
+        "VLOOKUP",
+        "GET",
+        "RETRIEVE"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The LOOKUP function retrieves a single value from a Data Extension based on matching criteria."
+    },
+    {
+      "question": "What is the purpose of personalization strings in Marketing Cloud emails?",
+      "options": [
+        "To encrypt data",
+        "To insert dynamic content from subscriber attributes",
+        "To schedule sends",
+        "To delete contacts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personalization strings (e.g., %%First_Name%%) insert subscriber or data extension values into content."
+    },
+    {
+      "question": "Which Marketing Cloud product is used to build and host landing pages with dynamic content?",
+      "options": [
+        "Sales Cloud",
+        "Cloud Pages",
+        "Slack",
+        "Heroku"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Cloud Pages (formerly Landing Pages) host web pages with AMPscript and dynamic content."
+    },
+    {
+      "question": "Which AMPscript block retrieves multiple rows from a Data Extension?",
+      "options": [
+        "LOOKUP only",
+        "LOOKUPROWS or LOOKUPORDEREDROWS",
+        "GET only",
+        "RETRIEVE only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LOOKUPROWS and LOOKUPORDEREDROWS retrieve multiple rows."
+    },
+    {
+      "question": "What is the purpose of a Script Activity in Automation Studio?",
+      "options": [
+        "To send emails only",
+        "To run SSJS for data manipulation, imports, or custom logic",
+        "To create journeys only",
+        "To design templates only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Script Activities run SSJS for data and custom logic."
+    },
+    {
+      "question": "Which API is used for programmatic access to Marketing Cloud?",
+      "options": [
+        "Apex",
+        "REST API and SOAP API",
+        "Visualforce only",
+        "LWC only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marketing Cloud exposes REST and SOAP APIs."
+    },
+    {
+      "question": "What does the Treat As Content option do in AMPscript?",
+      "options": [
+        "Nothing",
+        "Prevents AMPscript from being executed (treats as literal)",
+        "To encrypt",
+        "To delete"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Treat As Content displays AMPscript as literal text."
+    },
+    {
+      "question": "Which Data Extension type supports sendable sends?",
+      "options": [
+        "Standard only",
+        "Sendable Data Extension (subscriber-key based)",
+        "Random only",
+        "No extension"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sendable Data Extensions link to subscriber key for sends."
+    },
+    {
+      "question": "What is the purpose of Microsites in Marketing Cloud?",
+      "options": [
+        "To replace Cloud Pages",
+        "To host landing pages with tracking and forms",
+        "To send emails only",
+        "To create journeys only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Microsites host landing pages with tracking and forms."
+    },
+    {
+      "question": "Which SSJS object provides access to platform features?",
+      "options": [
+        "Platform only",
+        "Platform.Function and Platform.Variable",
+        "No object",
+        "Only Variable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Platform.Function and Platform.Variable provide platform access."
+    },
+    {
+      "question": "What does Personalization String syntax use?",
+      "options": [
+        "Only AMPscript",
+        "%%Attribute_Name%% or similar",
+        "Only SSJS",
+        "Only HTML"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personalization strings use %%Attribute_Name%% syntax."
+    },
+    {
+      "question": "Which testing approach applies to Marketing Cloud development?",
+      "options": [
+        "No testing",
+        "Preview and test sends with sample data",
+        "Production only",
+        "Manual only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Preview and test sends validate development."
+    },
+    {
+      "question": "What is the purpose of Journey Builder Entry Sources?",
+      "options": [
+        "To replace Data Extensions",
+        "To define how contacts enter a journey (e.g., API, data extension, form)",
+        "To send only",
+        "To track only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Entry sources define how contacts enter journeys."
+    }
+  ]
+}

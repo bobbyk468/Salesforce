@@ -1,0 +1,323 @@
+{
+  "template": "associate",
+  "introLead": [
+    {
+      "type": "text",
+      "text": "New to Salesforce? Our"
+    },
+    {
+      "type": "link",
+      "href": "/certifications/administrator",
+      "label": "Salesforce Administrator"
+    },
+    {
+      "type": "text",
+      "text": "exam prep is the recommended first step—it builds the platform knowledge BAs need. See our"
+    },
+    {
+      "type": "link",
+      "href": "/certification-path",
+      "label": "certification path"
+    },
+    {
+      "type": "text",
+      "text": "to understand where Business Analyst fits in your career. Below you'll find exam weightage, key concepts, and practice questions."
+    }
+  ],
+  "certificationCard": {
+    "code": "Business Analyst",
+    "description": "Certified Business Analysts understand business needs, capture requirements, and collaborate with stakeholders to develop Salesforce solutions that drive business improvements.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Requirements Discovery",
+      "Stakeholder Collaboration",
+      "Solution Design",
+      "User Stories",
+      "Process Modeling",
+      "Data Modeling Basics",
+      "Acceptance Criteria",
+      "Documentation",
+      "Change Management",
+      "Quality Assurance"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Business Analyst: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Requirements Lifecycle: Discovery → Analysis → Documentation → Validation",
+        "body": "The BA follows a defined requirements lifecycle: Discover requirements through interviews, workshops, and observation. Analyse them for conflicts, gaps, and feasibility. Document them as user stories with acceptance criteria. Validate them with stakeholders through review sessions and UAT. The exam frequently tests which phase a given activity belongs to and what output is expected."
+      },
+      {
+        "heading": "User Stories and Acceptance Criteria",
+        "body": "A user story follows the format \"As a [role], I want [goal] so that [benefit].\" Acceptance Criteria define the pass/fail conditions that confirm the story is done. Together, they are the primary deliverable connecting business requirements to development. The exam tests how to write effective user stories and how acceptance criteria differ from test cases."
+      },
+      {
+        "heading": "Stakeholder Management: Power/Interest Grid and DACI",
+        "body": "The Power/Interest Grid maps stakeholders by influence and interest — determining whether to manage closely, keep satisfied, keep informed, or monitor. The DACI framework clarifies decision-making: Driver (facilitates closure), Approver (final decision), Contributor (provides input), Informed (kept updated). The exam tests both — especially DACI as a governance tool for resolving conflicting requirements."
+      },
+      {
+        "heading": "Process Modeling: As-Is vs To-Be and Gap Analysis",
+        "body": "As-Is analysis documents the current state of a business process — capturing pain points, workarounds, and inefficiencies. To-Be analysis defines the desired future state. Gap Analysis identifies the delta between them and informs the solution scope. Process maps use swimlanes to show which role performs which step. The exam tests when each technique is appropriate and what artefact is produced."
+      },
+      {
+        "heading": "Functional vs Non-Functional Requirements",
+        "body": "Functional Requirements describe what the system does (e.g., \"Sales reps can create a quote from an opportunity\"). Non-Functional Requirements (NFRs) describe how the system performs — page load times, concurrent user capacity, security standards. NFRs are often missed during discovery but become critical during architecture decisions and testing. The exam tests the distinction and when each type surfaces in a project."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Business Analyst Exam",
+    "intro": "The Business Analyst exam focuses on requirements elicitation, analysis, and translation into Salesforce solutions. Unlike technical exams, success depends on process methodology: user stories, stakeholder management, and UAT practices.",
+    "blocks": [
+      {
+        "heading": "User Stories & Acceptance Criteria",
+        "body": "Know how to write user stories (As a [persona], I want [goal], so that [reason]) and define acceptance criteria that are testable, specific, and verifiable. Questions test whether criteria are complete and unambiguous."
+      },
+      {
+        "heading": "Requirements Elicitation Techniques",
+        "body": "Know the trade-offs of interviews, workshops, surveys, observation, and prototyping. Questions ask which technique is most appropriate for a given scenario — workshops work well for cross-functional alignment, interviews for individual expertise."
+      },
+      {
+        "heading": "Process Mapping & UPN",
+        "body": "Understand Universal Process Notation (UPN) and how to map current-state vs. future-state processes. Know how swimlane diagrams document cross-functional workflows and identify handoffs and pain points."
+      },
+      {
+        "heading": "UAT Strategy",
+        "body": "User Acceptance Testing involves real end users, realistic data, and verification that business requirements (not just technical specs) are satisfied. Know how to plan, execute, and sign off on UAT."
+      },
+      {
+        "heading": "Stakeholder Management",
+        "body": "Identify stakeholder types (decision-makers, influencers, end users), know when to escalate vs. resolve scope conflicts, and understand how to manage competing priorities and scope creep."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Consultant Certifications",
+    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
+      },
+      {
+        "href": "/certifications/role/consultant",
+        "label": "Consultant certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary focus of a Certified Business Analyst in Salesforce projects?",
+      "options": [
+        "Writing Apex code",
+        "Understanding business needs, capturing requirements, and collaborating with stakeholders",
+        "Designing email campaigns",
+        "Managing server infrastructure"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certified Business Analysts understand business needs, capture requirements, and collaborate with stakeholders to develop Salesforce solutions that drive business improvements."
+    },
+    {
+      "question": "Which technique is commonly used to discover and document business requirements?",
+      "options": [
+        "Unit testing",
+        "Stakeholder interviews and workshops",
+        "Deployment scripts",
+        "API development"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Stakeholder interviews and workshops are standard techniques for discovering and documenting business requirements."
+    },
+    {
+      "question": "What deliverable does a Business Analyst typically produce before development begins?",
+      "options": [
+        "Deployed package",
+        "Requirements document and user stories",
+        "Test classes",
+        "Integration code"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Business Analysts produce requirements documents and user stories to guide solution development."
+    },
+    {
+      "question": "How should a Business Analyst prioritize requirements when conflicts exist?",
+      "options": [
+        "Always choose the technical option",
+        "Align with business objectives and stakeholder agreement",
+        "Defer all decisions to IT",
+        "Choose the cheapest option"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Prioritization should align with business objectives and involve stakeholder agreement."
+    },
+    {
+      "question": "Which Salesforce artifact helps translate business requirements into implementable features?",
+      "options": [
+        "Debug log",
+        "Process Builder (legacy)",
+        "User stories and acceptance criteria",
+        "Deployment checklist"
+      ],
+      "correctAnswer": 2,
+      "explanation": "User stories and acceptance criteria translate business requirements into clear, implementable features for the team."
+    },
+    {
+      "question": "What is the standard format for writing a user story in Agile projects?",
+      "options": [
+        "\"The system shall [function] when [condition]\"",
+        "\"As a [role], I want [goal] so that [benefit]\"",
+        "\"Given [context] when [event] then [outcome]\"",
+        "\"[Actor] performs [action] to achieve [result]\""
+      ],
+      "correctAnswer": 1,
+      "explanation": "The standard user story format is \"As a [role], I want [goal] so that [benefit].\" This keeps focus on who needs the feature, what they need, and why — anchoring development decisions to real user outcomes."
+    },
+    {
+      "question": "What is the purpose of Acceptance Criteria in a user story?",
+      "options": [
+        "To describe the technical implementation approach for the development team",
+        "To define the specific conditions that must be met for the story to be considered done by the product owner",
+        "To document the performance benchmarks expected from the solution",
+        "To list the dependencies and risks associated with the user story"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Acceptance Criteria are the pass/fail conditions for a user story — they define exactly what the product owner will test to confirm the story is complete. Without clear acceptance criteria, teams risk rework due to ambiguous definitions of done."
+    },
+    {
+      "question": "A Business Analyst is documenting the current workflow of a business process before designing a new solution. What is this activity called?",
+      "options": [
+        "Requirements traceability",
+        "Stakeholder mapping",
+        "As-Is process analysis (current state analysis)",
+        "Solution validation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "As-Is process analysis captures the current state of a business process to identify inefficiencies, pain points, and gaps before designing a To-Be (future state) solution — preventing the team from automating broken processes."
+    },
+    {
+      "question": "Which technique helps a Business Analyst understand the relative importance of stakeholders and their influence on a project?",
+      "options": [
+        "User Story Mapping",
+        "Stakeholder Analysis using a Power/Interest Grid",
+        "Process Decomposition",
+        "Gap Analysis"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Power/Interest Grid plots stakeholders by their influence (power) and interest in the project — guiding the BA on how to engage each group: manage closely, keep satisfied, keep informed, or monitor."
+    },
+    {
+      "question": "What is the purpose of a Requirements Traceability Matrix on a Salesforce project?",
+      "options": [
+        "To map database tables to Salesforce objects",
+        "To link each business requirement to specific user stories, features, and test cases — ensuring all requirements are addressed and tested",
+        "To track the deployment history of changes across sandbox environments",
+        "To document the hierarchy of roles and permissions in the org"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A Traceability Matrix ensures end-to-end coverage: every business requirement maps to at least one user story, and every user story maps to test cases. It prevents requirements from being missed during development or testing."
+    },
+    {
+      "question": "A project team discovers the solution being built does not address several original business requirements. Which BA technique identifies this type of shortfall?",
+      "options": [
+        "Risk Register review",
+        "RACI Chart update",
+        "Gap Analysis",
+        "Process Flow Diagram"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Gap Analysis compares the current state (or planned solution) against the desired future state — identifying gaps where requirements are not addressed. It is typically performed during discovery and at key review points."
+    },
+    {
+      "question": "Which type of requirement describes system performance, security, usability, or scalability expectations rather than specific functionality?",
+      "options": [
+        "Functional Requirements",
+        "Non-Functional Requirements",
+        "Business Requirements",
+        "Technical Specifications"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Non-Functional Requirements (NFRs) define quality attributes — how the system performs rather than what it does. Examples: page load times, concurrent user capacity, data security standards. They are often overlooked but critical for solution success."
+    },
+    {
+      "question": "During a discovery workshop, stakeholders from two business units give conflicting requirements for the same field. What is the BA's best first action?",
+      "options": [
+        "Implement the version requested by the most senior stakeholder",
+        "Document both versions and facilitate a follow-up session to align stakeholders on a single agreed requirement",
+        "Escalate the conflict to the project manager for resolution",
+        "Choose the simpler option to reduce implementation complexity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Conflicting requirements should be documented and resolved through structured stakeholder facilitation — not unilaterally decided by the BA. A dedicated alignment session surfaces the business rationale behind each request and builds consensus."
+    },
+    {
+      "question": "What does the DACI framework define in Salesforce project governance?",
+      "options": [
+        "The data architecture layers for custom objects, fields, and relationships",
+        "Decision-making roles: Driver (owns the process), Approver (final decision), Contributor (provides input), and Informed (kept updated)",
+        "Deployment steps across sandbox, staging, and production environments",
+        "The automation logic sequence for approval processes and flows"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DACI (Driver, Approver, Contributor, Informed) clarifies who is responsible for driving a decision to closure, who has final approval authority, who contributes expertise, and who only needs to be informed of the outcome."
+    },
+    {
+      "question": "What format do user stories typically follow in Salesforce projects?",
+      "options": [
+        "As a [system], I want [data] so that [report]",
+        "As a [role], I want [goal] so that [benefit]",
+        "As a [admin], I need [field] for [object]",
+        "As a [user], I need [permission] to [action]"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User stories follow the format: As a [role], I want [goal] so that [benefit]. This connects the user, the capability, and the business value."
+    }
+  ]
+}

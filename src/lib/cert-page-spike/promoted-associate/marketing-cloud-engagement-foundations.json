@@ -1,0 +1,293 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "Marketing Associate",
+    "description": "The Salesforce Marketing Associate certification is designed for individuals with a foundational understanding of the Salesforce platform and up to six months of experience with Salesforce Marketing Cloud Engagement.",
+    "examDetails": {
+      "questions": 40,
+      "passingScore": "~65%",
+      "duration": "75 min",
+      "cost": "$75"
+    },
+    "topics": [
+      "Marketing Cloud Basics",
+      "Email Studio",
+      "Subscribers",
+      "Data Extensions",
+      "Journey Builder",
+      "Reporting",
+      "Best Practices",
+      "Platform"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Marketing Cloud Engagement Foundations: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Email Studio: Content Builder and Templates",
+        "body": "Content Builder is the unified content management interface for emails, templates, blocks, and images. Email Templates use drag-and-drop layout blocks or HTML/AMPscript. Saved content blocks are reusable components — update once, updated everywhere. Guided Send walks through sending options step by step. The Foundations exam focuses on navigating Marketing Cloud and understanding the core feature set — it is the entry-level certification. Know how to create, preview, and test-send an email from start to finish."
+      },
+      {
+        "heading": "Subscriber and List Management Basics",
+        "body": "All Subscribers list is the global subscriber table. Publication Lists let subscribers opt in or out of specific content types. Suppression Lists prevent sends to specific addresses. The Foundations exam tests the difference between these list types and when to use each. Subscriber statuses: Active, Unsubscribed, Bounced, Held. Unsubscribes process globally and cannot be reversed without subscriber consent. Import Wizard loads subscribers from CSV files — field mapping and import type (Add/Update, Overwrite) are tested."
+      },
+      {
+        "heading": "Automation Studio Basics",
+        "body": "Automation Studio orchestrates multi-step marketing processes. Scheduled automations run on a time-based trigger. File Drop automations trigger when a file is uploaded to an FTP location. Automation activities: Import File (load data), SQL Query (segment data), Data Extract (export data), Send Email, Filter (create filtered DEs). Activities run sequentially within a step; multiple activities in the same step run in parallel. The Foundations exam tests basic automation workflow design and what each activity type does."
+      },
+      {
+        "heading": "Journey Builder Basics",
+        "body": "Journey Builder creates event-triggered, multi-step customer journeys. Entry Sources: Data Extension entry (scheduled or real-time), Salesforce Entry (CRM record trigger), API Event, CloudPage Submit, Audience entry. Activities: Send Email, Send SMS, Wait (fixed time), Decision Split (audience split by criteria), Random Split (percentage-based A/B). Exit Criteria can remove contacts mid-journey. The Foundations exam tests how to design a simple linear journey — entry source, email activity, wait, exit."
+      },
+      {
+        "heading": "Tracking and Reporting Basics",
+        "body": "The Tracking workspace shows aggregated send performance across campaigns. Key metrics: Delivered (sent - bounced), Unique Opens (tracked via 1x1 pixel), Unique Clicks (tracked via link rewrite), Bounce Rate (hard = permanent, soft = temporary), Unsubscribe Rate. Reports in the Reports section provide date-range summaries across accounts and BUs. Email Send Reports show per-send performance. The Foundations exam tests which metric answers a given business question and how to locate reports in the Marketing Cloud UI."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Marketing Cloud Engagement Foundations Exam",
+    "intro": "The Marketing Cloud Engagement Foundations exam tests foundational knowledge of the platform for new users. Focus on understanding the core studios, the subscriber data model, and basic email campaign execution.",
+    "blocks": [
+      {
+        "heading": "Core Studios Overview",
+        "body": "Know what each studio does: Email Studio (email campaigns), Mobile Studio (SMS/push), Advertising Studio (digital ads), Social Studio (social media), and Journey Builder (cross-channel orchestration)."
+      },
+      {
+        "heading": "Subscriber Data Model",
+        "body": "Understand All Subscribers, Lists, and Data Extensions. Know when lists are appropriate (simple, volume-based segments) vs. data extensions (relational data, complex attributes)."
+      },
+      {
+        "heading": "Basic Email Send Process",
+        "body": "Know the steps to send an email: select an audience (list or data extension), choose a send classification, configure tracking, and initiate a send. Understand how to use guided sends vs. the send wizard."
+      },
+      {
+        "heading": "Contact Builder Overview",
+        "body": "Understand Contact Builder's role in unifying subscriber data: Attribute Groups, Relationships, and how data extension data links to the Contact record via Contact Key."
+      },
+      {
+        "heading": "Reporting Fundamentals",
+        "body": "Know the core email metrics: Sent, Delivered, Bounced (hard/soft), Opened, Clicked, Unsubscribed, and Spam Complaints. Understand how to access Tracking reports and what each metric measures."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After Associate",
+    "intro": "After earning an associate credential, many candidates move to role-based certifications:",
+    "links": [
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator (ADM-201)"
+      },
+      {
+        "href": "/certifications/developer-1",
+        "label": "Platform Developer I"
+      },
+      {
+        "href": "/certifications/ai-associate",
+        "label": "AI Associate"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Who is the Marketing Cloud Engagement Foundations certification designed for?",
+      "options": [
+        "Developers only",
+        "Individuals with foundational understanding of the platform and up to 6 months of Marketing Cloud experience",
+        "Architects only",
+        "Sales only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It is designed for individuals with foundational understanding and up to 6 months of Marketing Cloud Engagement experience."
+    },
+    {
+      "question": "Which Marketing Cloud product is used for email campaigns?",
+      "options": [
+        "Slack",
+        "Email Studio",
+        "Heroku",
+        "Commerce Cloud"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email Studio is used for building and sending email campaigns."
+    },
+    {
+      "question": "What is a Subscriber in Marketing Cloud?",
+      "options": [
+        "A report",
+        "A contact or recipient who can receive marketing communications",
+        "A dashboard",
+        "An admin"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A subscriber is a contact or recipient in Marketing Cloud."
+    },
+    {
+      "question": "Which concept is central to Marketing Cloud data?",
+      "options": [
+        "Only reports",
+        "Data Extensions and subscriber management",
+        "Only emails",
+        "Only journeys"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data Extensions and subscriber management are central to Marketing Cloud data."
+    },
+    {
+      "question": "What does Journey Builder allow marketers to do?",
+      "options": [
+        "Only send one email",
+        "Create multi-step, automated customer journeys",
+        "Only run reports",
+        "Only manage lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Journey Builder creates multi-step, automated customer journeys."
+    },
+    {
+      "question": "What is a Data Extension in Marketing Cloud?",
+      "options": [
+        "A report only",
+        "A table that stores contact and marketing data",
+        "An email template",
+        "A journey"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data Extensions store contact and marketing data for sends and journeys."
+    },
+    {
+      "question": "Which Marketing Cloud product sends scheduled emails?",
+      "options": [
+        "Journey Builder only",
+        "Email Studio or Automation Studio",
+        "Slack",
+        "Heroku"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email Studio and Automation Studio send scheduled emails."
+    },
+    {
+      "question": "What does a Send Definition define?",
+      "options": [
+        "Only subject",
+        "Audience, content, and send timing",
+        "Only content",
+        "Only audience"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Send Definition defines audience, content, and timing."
+    },
+    {
+      "question": "Which concept tracks email engagement?",
+      "options": [
+        "Only sends",
+        "Opens, clicks, bounces, and unsubscribes",
+        "Only opens",
+        "Only clicks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes."
+    },
+    {
+      "question": "What is the purpose of a List in Marketing Cloud?",
+      "options": [
+        "To replace Data Extensions",
+        "To group subscribers for sends (legacy or simple use cases)",
+        "To create journeys only",
+        "To create reports only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lists group subscribers for sends in simple use cases."
+    },
+    {
+      "question": "Which entry source can start a Journey Builder journey?",
+      "options": [
+        "Email only",
+        "Data extension, API, form, or campaign",
+        "SMS only",
+        "Push only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Entry sources include data extension, API, form, or campaign."
+    },
+    {
+      "question": "What does Marketing Cloud Engagement encompass?",
+      "options": [
+        "Only email",
+        "Email, mobile, and digital engagement capabilities",
+        "Only SMS",
+        "Only social"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Engagement encompasses email, mobile, and digital."
+    },
+    {
+      "question": "Which report type shows email performance?",
+      "options": [
+        "Only sends",
+        "Tracking (opens, clicks, etc.) and send summary",
+        "Only opens",
+        "Only bounces"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tracking and send summary reports show email performance."
+    },
+    {
+      "question": "What is a Subscriber Key?",
+      "options": [
+        "A password",
+        "The unique identifier for a subscriber in Marketing Cloud",
+        "An email address only",
+        "A list name"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Subscriber Key uniquely identifies a subscriber."
+    },
+    {
+      "question": "Which best practice applies to Marketing Cloud Engagement?",
+      "options": [
+        "Send to all",
+        "List hygiene, segmentation, and deliverability practices",
+        "No hygiene",
+        "No segmentation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "List hygiene, segmentation, and deliverability support success."
+    }
+  ]
+}

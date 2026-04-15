@@ -1,0 +1,488 @@
+================================================================================
+X CONTENT DRAFT — APRIL/MAY 2026 (FINAL VERSION)
+Voice: lowercase, conversational, no bullets, personal, direct opinions.
+All tweets ≤280 chars (newlines count as 1 char each).
+================================================================================
+
+POSTING CADENCE:
+- 1 thread per week (Monday)
+- 3 standalone tips per week (Tue, Thu, Sat)
+- 4 threads x ~8-9 tweets + 13 tips = ~46 posts
+
+================================================================================
+WEEK 1 THREAD — "The interview nobody prepares for"
+ID: month2-thread-admin-interview
+Post: Monday April 7
+================================================================================
+
+[Tweet 1 — hook]
+the technical interview is the easy part.
+
+the one that actually decides if you get hired is the behavioral ambush nobody prepares for. i've watched 8-figure orgs reject perfect coders because they bombed this.
+
+here's exactly how it goes 🧵
+
+#SalesforceAdmin #Salesforce
+
+---
+
+[Tweet 2]
+when a hiring manager asks "walk me through the sharing model" — they already know the answer.
+
+they're checking that you do too. that's the filter.
+
+pass it and you hit the real evaluation: can you think through ambiguous problems with stakeholders breathing down your neck?
+
+---
+
+[Tweet 3]
+the questions that decide things:
+
+"tell me about a time a stakeholder pushed back on your solution."
+"walk me through a project that didn't go as planned."
+
+no right answer. they're watching how you think, not what you know.
+
+---
+
+[Tweet 4]
+"declarative vs code" question trips people up because nobody teaches it.
+
+salesforce answer: flow if flow can. code only when it genuinely can't.
+the follow-up they'll ask: "give me an example where you had to use code anyway."
+have that story ready before you walk in.
+
+---
+
+[Tweet 5]
+i've watched phd-level admins get rejected because they argued with a vp instead of shipping the half-assed deadline version.
+
+'i explained best practice and they agreed' is a lie. they want to know you can compromise without breaking the org.
+
+---
+
+[Tweet 6]
+the gap between candidates who get offers and those who don't: specificity.
+
+"i've worked on automation" loses to "i built a flow that cut manual assignment time from 4 hours to 20 minutes."
+
+every time. numbers and before/after beat vague experience.
+
+---
+
+[Tweet 7]
+no real project experience?
+
+trailhead projects, nonprofits, personal dev orgs — all count.
+
+"i completed the superbadge" is not a story. "i built X that solved Y for Z" is.
+
+one good specific project beats a resume full of certifications.
+
+---
+
+[Tweet 8 — CTA]
+most people bomb the behavioral round and never even know why.
+
+if you're tired of the polished trailhead bullshit, follow — i drop these every monday.
+
+drop your worst interview horror story in the replies.
+
+#SalesforceCareer
+
+================================================================================
+WEEK 1 STANDALONE TIPS
+================================================================================
+
+[Tip 1 — Tuesday]
+most common mistake i see on salesforce admin resumes: certifications at the top, experience at the bottom.
+
+flip it. employers care what you've built, not what tests you've passed.
+
+certs go at the bottom. projects go first.
+follow — i say what they won't.
+#SalesforceCareer
+
+---
+
+[Tip 2 — Thursday]
+flow interview question: "when would you NOT use flow?"
+
+good answer: real-time external callouts, complex transaction control, or logic that makes the flow too fragile to maintain.
+
+the limits matter as much as the tool.
+follow — i say what they won't.
+#SalesforceAdmin
+
+---
+
+[Tip 3 — Saturday]
+choosing between admin and app builder for your first cert:
+
+admin first. always.
+
+app builder assumes you understand the platform. admin is where you learn it. skip that foundation and you'll feel the gaps constantly.
+follow — i say what they won't.
+#ADM201
+
+================================================================================
+WEEK 2 THREAD — "The Agentforce Reality Check"
+ID: month2-thread-agentforce-reality
+Post: Monday April 14
+================================================================================
+
+[Tweet 1 — hook]
+salesforce just rebranded sales and service cloud to 'agentforce sales/service' in spring '26.
+
+the quiet part out loud? pure platform admins are becoming expensive support tickets for hallucinating agents. 🧵
+
+#Agentforce #Salesforce
+
+---
+
+[Tweet 2]
+agentforce isn't replacing admins. it's turning them into the janitors who have to clean up after it.
+
+the new money isn't in configuring flows — it's in being the person who stops the agents from burning the org down.
+
+---
+
+[Tweet 3]
+if you're taking the exam, forget the keynote magic. it tests three things:
+
+topics — what the agent handles
+actions — what it can do within a topic
+instructions — how it decides when to act
+
+if your agent routes wrong, it's instructions every time. not actions.
+
+---
+
+[Tweet 4]
+agentforce will purposefully block itself.
+
+you'll spend half your poc explaining to the vp why their 'autonomous ai' just punted back to a human again.
+
+it can't bypass permissions and can't invent data. know these limits cold for the exam.
+
+---
+
+[Tweet 5]
+this is the exam question format you'll see over and over:
+
+"agent routes billing questions to sales instead of support. what's wrong?"
+
+the answer is always in the topic instructions. they're not specific enough about what belongs where. build that reflex.
+
+---
+
+[Tweet 6]
+the spring '26 release added multi-agent orchestration. first time one agent can formally hand off to another.
+
+agent A takes the first part. passes context. agent B picks it up.
+
+if you're studying from 2025 material, this won't be in it.
+
+---
+
+[Tweet 7]
+agentforce specialist isn't a quick win.
+
+60 questions. 105 minutes. brutal 73% passing score.
+
+flow logic doesn't transfer. permission set knowledge doesn't transfer. it's an entirely new mental model. treat it like one.
+
+---
+
+[Tweet 8 — CTA]
+if you want to actually pass this weird exam without drowning in the marketing hype, test your gaps first.
+
+full topic breakdown and practice scenarios:
+https://trailblazeprep.com/certifications/agentforce-specialist
+
+follow — i say the shit the keynote speakers won't.
+
+---
+
+[Tweet 9 — tribal closer]
+the admins getting promoted in 2026 aren't the ones who built the most agents.
+
+they're the ones who had the balls to kill the agents that were about to ship $400k of hallucinated pipeline straight to the cro's forecast.
+
+================================================================================
+WEEK 2 STANDALONE TIPS
+================================================================================
+
+[Tip 4 — Tuesday]
+agentforce tip: an action and a flow aren't the same thing.
+
+a flow is a process you build. an action is how an agent calls it. agentforce calls flow — it doesn't replace it.
+
+the exam will test if you know the difference.
+follow — i say what they won't.
+#Agentforce
+
+---
+
+[Tip 5 — Thursday]
+admin and CTA are both "salesforce certified." the day-to-day work is completely different.
+
+that's like saying an intern and a CTO both "work in tech."
+
+don't compare certifications without comparing actual skills.
+follow — i say what they won't.
+#SalesforceCareer
+
+---
+
+[Tip 6 — Saturday]
+data cloud exam: the three things tested most heavily are identity resolution, the difference between DLOs and DMOs, and activation targets.
+
+know those three cold and you're probably 50% ready.
+follow — i say what they won't.
+#DataCloud
+
+================================================================================
+WEEK 3 THREAD — "Certs in 2026"
+ID: month2-thread-cert-reality
+Post: Monday April 21
+================================================================================
+
+[Tweet 1 — hook]
+the admin cert is the new high school diploma. everyone has one and it gets you exactly nowhere.
+
+here's what actually moves the needle for real job offers in 2026 (and what is now totally worthless). 🧵
+
+#SalesforceCertification #SalesforceCareer
+
+---
+
+[Tweet 2]
+in 2020 a salesforce admin cert was rare. posting it on linkedin got you recruiter messages within days.
+
+now hundreds of thousands of people hold it.
+
+the cert didn't get easier. the market got crowded.
+
+---
+
+[Tweet 3]
+2020: everyone pivoted to tech. salesforce was the easiest on-ramp.
+
+6 months of youtube + trailhead + $200 = 'salesforce admin.'
+
+the credential got democratized. the job market adjusted.
+
+---
+
+[Tweet 4]
+the certs that still move the needle:
+
+agentforce specialist — orgs are buying it before they know what to do with it
+data cloud consultant — legitimately rare
+CTA — always been rare, always will be
+
+if you're collecting certs instead of these, reconsider.
+
+---
+
+[Tweet 5]
+i've been in enough hiring conversations to say this directly:
+
+'i built a case routing flow that cut handle time from 4 hours to 35 minutes' beats 5 certifications. every single time.
+
+the cert gets you the call. the story gets you the offer.
+
+---
+
+[Tweet 6]
+certs get you the recruiter dm.
+
+the offer goes to the guy who can tell the story of the flow that exploded in prod at 3am while the cro was on the earnings call.
+
+nobody hires paper tigers anymore.
+
+---
+
+[Tweet 7]
+if i were starting today:
+
+get the admin cert. then stop cert-stacking like a junkie and go build something real for a food bank before you touch another exam.
+
+then get one specialist cert matching the exact job you want. that's the whole playbook.
+
+---
+
+[Tweet 8 — CTA]
+stop stacking dead certs.
+
+i've watched hundreds of people cert-stack their way to unemployment. follow — every monday i post the shit the cert vendors won't tell you.
+
+#SalesforceCareer
+
+================================================================================
+WEEK 3 STANDALONE TIPS
+================================================================================
+
+[Tip 7 — Tuesday]
+spring '26 quietly killed the 'salesforce-only' career path.
+
+the admins getting hired aren't the ones with the most certs. they're the ones who know when to turn off agentforce before it costs the company 400k in bad data.
+follow — i say what they won't.
+#Agentforce
+
+---
+
+[Tip 8 — Thursday]
+sales cloud consultant tests more than salesforce knowledge.
+
+it tests whether you actually understand sales: pipeline management, territory models, forecast categories, quota tracking.
+
+no sales background? study those concepts first.
+follow — i say what they won't.
+#SalesCloud
+
+---
+
+[Tip 9 — Saturday]
+nobody tells you this about maintenance exams: you have a specific window. miss it and your cert goes inactive.
+
+it's free, open-book, and takes about 30 minutes. set a calendar reminder.
+https://trailhead.salesforce.com/credentials/administrator
+#SalesforceCertification
+
+================================================================================
+WEEK 4 THREAD — "The Study Method"
+ID: month2-thread-study-method
+Post: Monday April 28
+================================================================================
+
+[Tweet 1 — hook]
+i've taken 14 salesforce certification exams. failed two. changed my study method five times.
+
+the method that finally worked is embarrassingly simple.
+
+most people aren't using it. here's what it is. 🧵
+
+#SalesforceCertification #SalesforceAdmin
+
+---
+
+[Tweet 2]
+before you open a single course: download the official exam guide from trailhead.
+
+it lists every topic and the exact percentage each one is worth. if you study without this document you're just guessing.
+
+---
+
+[Tweet 3]
+before you've studied anything: take a practice exam.
+
+not to pass. to find out where you're actually weak.
+
+a 40% score with topic breakdown is worth more than 6 weeks of unfocused studying. it tells you exactly what to fix. most people save this for the end. backwards.
+
+---
+
+[Tweet 4]
+your entire study list comes from exactly two places.
+
+the exam guide tells you what's tested and the weight. your practice exam shows exactly where you're bleeding points.
+
+everything else is just noise.
+
+---
+
+[Tweet 5]
+study in blocks. one topic. 45 minutes. finish it before you stop.
+
+security model. automation. data management. one at a time.
+
+trying to learn sharing rules while reviewing flow limits means you'll fail questions on both. context switching destroys retention.
+
+---
+
+[Tweet 6]
+every time you read something, immediately go do it.
+
+read about sharing rules? go configure one. read about omnichannel? build a basic setup.
+
+the exam gives you a scenario. your brain needs to know what to do with it — not just what it is.
+
+---
+
+[Tweet 7]
+two weeks before the exam: stop learning new things.
+
+only review what you've already covered.
+
+new material at that stage creates doubt more than it creates readiness. your only job in the final stretch is to sharpen what you have.
+
+---
+
+[Tweet 8 — CTA]
+stop guessing what you don't know.
+take the free practice test that actually shows your gaps before you waste another $200:
+https://trailblazeprep.com/certifications
+
+follow — i drop these reality checks every monday.
+
+================================================================================
+WEEK 4 STANDALONE TIPS
+================================================================================
+
+[Tip 10 — Tuesday]
+app builder is not admin part 2.
+
+admin = managing the platform (users, security, data)
+app builder = building on it (pages, components, schema)
+
+people expect admin questions and get surprised. completely different subject.
+follow — i say what they won't.
+#AppBuilder
+
+---
+
+[Tip 11 — Thursday]
+service cloud: entitlement, entitlement process, milestone. all three get confused.
+
+entitlement = the SLA
+entitlement process = the SLA template
+milestone = checkpoints inside
+
+know how they nest.
+follow — i say what they won't.
+#ServiceCloud
+
+---
+
+[Tip 12 — Saturday]
+pattern in every salesforce exam:
+
+"without code" or "declarative only" — the answer is flow.
+
+not workflow rules. not process builder. both deprecated.
+
+if your study material still lists those as current, it's outdated.
+follow — i say what they won't.
+#SalesforceAdmin
+
+---
+
+[Tip 13 — Tuesday May 5]
+cert vendors are still pumping 2025 study material.
+
+your org is on spring '26. most people studying are prepping for an exam that no longer matches the platform.
+
+the ones getting hired noticed.
+follow — i say the shit the cert vendors won't.
+#Agentforce #SalesforceCertification
+
+================================================================================
+END OF DRAFT — 4 threads (33 tweets) + 13 standalone tips = 46 posts
+================================================================================
+
+IMAGE NOTES (add before scheduling):
+- Week 4, Tweet 2: screenshot of highlighted Exam Guide PDF
+- Week 3, Tweet 6: screenshot of messy Flow canvas in prod
+================================================================================

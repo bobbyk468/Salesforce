@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Order Management Developer Professionals have demonstrated skills and knowledge in configuring and customizing Salesforce Order Management.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Order Management",
+      "Development",
+      "Customization",
+      "Fulfillment",
+      "Integrations",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Order Management Developer AP: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "OMS APIs & Customization",
+        "body": "Salesforce Order Management exposes a rich set of REST and Apex APIs for order lifecycle management. The `ConnectApi.OrderSummary` class provides Apex access to create, modify, and fulfill orders programmatically. REST APIs support headless integration for external storefronts. Key API operations: Create Order Summary, Adjust Order Product Summaries (price changes, cancellations), Create Fulfillment Order, Create Return Order, Ensure Funds (payment capture). Invocable Apex methods expose OMS operations to Flow and external callers. The developer exam tests how to write Apex that calls OMS Connect APIs, how to handle API exceptions, and how to expose a custom OMS operation as an Invocable Action."
+      },
+      {
+        "heading": "Order Orchestration with Flow",
+        "body": "OMS uses Salesforce Flow for order orchestration — automating the sequence of fulfillment, payment, notification, and return steps. Flow Orchestration (multi-stage orchestration) coordinates parallel and sequential work across teams and systems. Record-Triggered Flows respond to order state changes (e.g., when a Fulfillment Order is marked Fulfilled, trigger invoicing). Subflows modularize complex orchestration logic. Platform Events integrate OMS with external systems asynchronously — publish an event when an order state changes, subscribe in MuleSoft or an external ESB. The developer exam tests how to design an order orchestration flow, how to implement a re-try mechanism for failed API calls in a flow, and how to use Platform Events for async integration."
+      },
+      {
+        "heading": "Custom Fulfillment & External Integration",
+        "body": "External Fulfillment Providers receive Fulfillment Orders via outbound REST calls or Platform Events. The External Fulfillment Provider framework allows developers to register custom adapters that translate Salesforce Fulfillment Orders into 3PL-specific formats. Order callbacks update Salesforce when the 3PL ships or cancels — implemented as inbound REST endpoints in Salesforce (Experience Cloud, Salesforce Sites, or Functions). Error handling: when an external call fails, the flow must log the error, alert ops, and optionally retry. Idempotency keys prevent duplicate fulfillment on retry. The developer exam tests how to implement a custom fulfillment adapter, how to expose an inbound callback endpoint, and how to handle idempotent retries."
+      },
+      {
+        "heading": "Testing OMS Customizations",
+        "body": "Testing Order Management Apex requires creating test data for the full order hierarchy: Order Summary → Order Product Summary → Fulfillment Order → Fulfillment Order Line Item. OMS test utilities (ConnectApi mock classes) simulate API responses in test context. Use `Test.setMock(HttpCalloutMock.class, ...)` for external HTTP callouts. Test coverage must cover both happy path and error scenarios (insufficient inventory, payment failure, external system timeout). Integration tests against a Developer Edition or scratch org with OMS enabled validate end-to-end flows. The exam tests how to write a complete unit test for an OMS Apex method, how to mock OMS Connect API calls, and how to achieve >75% coverage on OMS trigger logic."
+      },
+      {
+        "heading": "Performance & Scalability Considerations",
+        "body": "High-volume order management requires careful attention to governor limits. Bulk order processing uses Apex Batch jobs rather than synchronous Apex. SOQL queries on Order Summary and child objects must use selective filters — add custom indexes on frequently queried fields (external order ID, status, created date). Platform Event subscriptions use CometD for streaming — design for at-least-once delivery and idempotent consumers. Large Return Order batches should be processed asynchronously to avoid CPU time limits. The OCI inventory check API has rate limits — design a caching layer for high-frequency availability checks. The developer exam tests how to design an OMS customization that handles 10,000+ daily orders without hitting governor limits."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Order Management Developer Accredited Professional Exam",
+    "intro": "The Order Management Developer AP exam tests custom development for Salesforce Order Management. Focus on API integration, custom routing logic, and extending the OM platform with Apex and Flow.",
+    "blocks": [
+      {
+        "heading": "OM Connect REST API",
+        "body": "Know the key Order Management REST API endpoints: create orders, cancel order items, create return orders, and query order summaries. Understand the authentication model and how to structure API requests."
+      },
+      {
+        "heading": "Custom Routing Logic",
+        "body": "Know how to extend Order Management routing: custom Apex routing rules for complex allocation scenarios, custom Flow actions for routing decisions, and how to integrate with external WMS systems for inventory queries."
+      },
+      {
+        "heading": "Event-Driven Order Processing",
+        "body": "Know how to use Platform Events and Change Data Capture to trigger external systems when OM order status changes. Understand how to build event subscribers that react to fulfillment milestones."
+      },
+      {
+        "heading": "Custom Order Lifecycle Actions",
+        "body": "Know how to build custom Apex actions that transition order status, custom quick actions on the Order Summary page, and how to use Invocable Methods to call Apex from Flow within the OM context."
+      },
+      {
+        "heading": "Integration with External Systems",
+        "body": "Know integration patterns for OM: ERP integration (outbound order confirmation, inbound ship confirmation), WMS integration (inventory queries, fulfillment instructions), and how to handle integration failures gracefully."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Order Management Developer AP validate?",
+      "options": [
+        "Only basics",
+        "Skills and knowledge in configuring and customizing Salesforce Order Management",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Order Management Developer Professionals have demonstrated skills and knowledge in configuring and customizing Salesforce Order Management."
+    },
+    {
+      "question": "What is a key activity for an Order Management Developer?",
+      "options": [
+        "Only administration",
+        "Configuring and customizing Order Management",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They configure and customize Order Management."
+    },
+    {
+      "question": "Which role typically pursues Order Management Developer AP?",
+      "options": [
+        "Marketers",
+        "Partners and developers working with Order Management",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and developers working with Order Management pursue this credential."
+    },
+    {
+      "question": "What does customization in Order Management often involve?",
+      "options": [
+        "Only UI",
+        "Fulfillment flows, integrations, and extensions",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Customization involves fulfillment flows, integrations, and extensions."
+    },
+    {
+      "question": "Which product does Order Management often integrate with?",
+      "options": [
+        "Only Marketing Cloud",
+        "CPQ, Commerce, and fulfillment systems",
+        "Only Service Cloud",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Order Management integrates with CPQ, Commerce, and fulfillment systems."
+    },
+    {
+      "question": "What does fulfillment flow customization involve?",
+      "options": [
+        "Only UI",
+        "Defining steps, actions, and routing for order fulfillment",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fulfillment flows define steps, actions, and routing logic."
+    },
+    {
+      "question": "Which technology is used to extend Order Management?",
+      "options": [
+        "Only clicks",
+        "Apex, Platform Events, and APIs",
+        "Only reports",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Developers use Apex, Platform Events, and APIs for customization."
+    },
+    {
+      "question": "What is an Order Summary in Order Management?",
+      "options": [
+        "A report",
+        "The consolidated order record that drives orchestration and fulfillment",
+        "A lead",
+        "An email"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Order Summary is the central record for order lifecycle."
+    },
+    {
+      "question": "Which integration pattern supports real-time order updates?",
+      "options": [
+        "Batch only",
+        "Platform Events, callouts, or APIs",
+        "Manual only",
+        "Email only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Platform Events, callouts, and APIs enable real-time integration."
+    },
+    {
+      "question": "What does Fulfillment Order represent?",
+      "options": [
+        "A quote",
+        "A unit of work for fulfillment (e.g., ship-to location)",
+        "A lead",
+        "A campaign"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fulfillment Orders represent work units for fulfillment execution."
+    },
+    {
+      "question": "Which best practice applies to Order Management development?",
+      "options": [
+        "Ignore error handling",
+        "Implement error handling, logging, and idempotency for integrations",
+        "No testing",
+        "Single system only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Error handling, logging, and idempotency are critical for reliability."
+    },
+    {
+      "question": "What does custom allocation logic enable?",
+      "options": [
+        "Only reporting",
+        "Custom rules for inventory or fulfillment allocation",
+        "Only UI",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Custom allocation logic extends default fulfillment behavior."
+    },
+    {
+      "question": "Which Order Management API supports order creation?",
+      "options": [
+        "REST only",
+        "Order Management APIs for order and fulfillment lifecycle",
+        "SOAP only",
+        "Bulk API only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Order Management exposes APIs for order and fulfillment operations."
+    },
+    {
+      "question": "What is the purpose of fulfillment group configuration?",
+      "options": [
+        "Only reports",
+        "Defining how orders split and route to fulfillment locations",
+        "Only UI",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fulfillment groups define order splitting and routing logic."
+    },
+    {
+      "question": "Which testing approach is important for Order Management customizations?",
+      "options": [
+        "No testing",
+        "Unit tests, integration tests, and end-to-end fulfillment tests",
+        "Manual only",
+        "UAT only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Testing should cover unit, integration, and E2E scenarios."
+    }
+  ]
+}

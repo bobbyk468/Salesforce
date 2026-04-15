@@ -1,0 +1,299 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "Revenue Cloud",
+    "description": "Certified Revenue Cloud Consultants have hands-on experience designing and implementing the Revenue Cloud product on core, and have extensive knowledge of the Product-to-Cash lifecycle.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Revenue Cloud",
+      "CPQ",
+      "Billing",
+      "Revenue Recognition",
+      "Product-to-Cash",
+      "Contracts",
+      "Orders",
+      "Best Practices",
+      "Integration",
+      "Governance"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Revenue Cloud Consultant: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "CPQ Configuration & Product Rules",
+        "body": "Salesforce Revenue Cloud (CPQ + Billing) starts with product configuration. Product Features group options within a bundle. Configuration Attributes set product-level settings. Product Rules enforce valid configurations: Validation Rules (block invalid combos), Selection Rules (auto-add/remove products), Alert Rules (warn users), Filter Rules (hide irrelevant options). Option Constraints define which options are mutually exclusive or required together. Price Rules execute pricing logic at specific stages of the quote calculation. The consultant exam tests how to design a product bundle for a complex SaaS offering, which rule type handles a given scenario, and how to troubleshoot a rule that isn't firing as expected."
+      },
+      {
+        "heading": "Pricing, Discounting & Approvals",
+        "body": "CPQ pricing layers: List Price (Price Book) → Cost + Markup → Contracted Price → Block Pricing (volume tiers) → Percent of Total → Subscription Pricing. Discount Schedules define tier-based discounts. Price Waterfalls show how the final price is calculated step by step. Discount approval thresholds trigger Approval Processes when reps exceed authorized discount limits. Special Pricing Requests allow reps to request non-standard pricing from management. Quote-Level Discounts apply a single percentage across all lines. The consultant exam tests how to configure a tiered discount schedule, how price rules interact with manual discounts, and how approval thresholds are configured to route high-discount quotes."
+      },
+      {
+        "heading": "Subscription Billing & Contract Management",
+        "body": "CPQ Billing manages the billing lifecycle for subscription products. Products with a Subscription Type (Renewable, Evergreen) generate subscription records on order. Billing Frequency and Billing Timing settings determine when invoices are generated (in advance/in arrears). Contract Start/End Dates govern the subscription period. Contract Amendments handle upgrades, downgrades, and add-ons to in-force subscriptions — generating proration credit for the remaining contract period. Renewal Quotes are automatically generated before contract expiry. The consultant exam tests how to configure a subscription product for monthly billing, how proration is calculated on a mid-term amendment, and how renewal automation is configured."
+      },
+      {
+        "heading": "Revenue Recognition & ASC 606",
+        "body": "Revenue Cloud Revenue Recognition aligns with ASC 606 (IFRS 15) — revenue is recognized as performance obligations are satisfied. Revenue Schedules distribute invoice revenue across the service period. Recognition Methods: Ratable (even distribution over term), Event-Based (milestone-triggered), and one-time. Revenue Recognition Rules define the method for each product type. Finance Periods control accounting period boundaries. The Revenue Waterfall report shows deferred vs. recognized revenue by period. Adjustments and Credit Memos create correcting Revenue Recognition Transactions. The consultant exam tests how to configure revenue recognition for a scenario involving a mix of one-time professional services and recurring SaaS subscription revenue."
+      },
+      {
+        "heading": "Quote-to-Cash Integration & CPQ Object Model",
+        "body": "The CPQ data model: Quote → Quote Lines → Orders → Order Products → Contracts → Subscriptions → Assets. The Generate Order action converts a contracted quote into an Order. The Order Products generate Subscriptions (if configured). Billing picks up Order Products to generate Invoices. Contracts store the term, auto-renew settings, and list of subscription records. The Asset object tracks active products on an account for amendment and renewal. Integration with ERP: invoices and payment data flow to finance systems via API or MuleSoft. The consultant exam tests the full Quote-to-Cash flow, how to troubleshoot a quote that isn't generating the correct order, and how assets feed back into renewal quotes."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Revenue Cloud Consultant Exam",
+    "intro": "The Revenue Cloud Consultant exam tests your ability to design end-to-end quote-to-revenue solutions spanning CPQ and Billing. Focus on the contract lifecycle, amendment logic, revenue recognition triggers, and the interaction between CPQ and Billing objects.",
+    "blocks": [
+      {
+        "heading": "CPQ-to-Billing Object Flow",
+        "body": "Know how a closed Opportunity activates a CPQ Contract, how the Contract generates Subscriptions and Assets, and how Billing Orders are created from Contracts. Understand the object relationship chain thoroughly."
+      },
+      {
+        "heading": "Amendment & Renewal Scenarios",
+        "body": "Amendments add, remove, or change products mid-term and create co-terminated subscriptions. Renewals auto-generate from contracts at term end. Know how proration is calculated for each scenario."
+      },
+      {
+        "heading": "Revenue Recognition Options",
+        "body": "Understand Salesforce Billing revenue recognition rules: Revenue Schedules, how rev-rec triggers (billing date, order product date), and the accounting period configuration. Know how to handle ramp deals."
+      },
+      {
+        "heading": "Invoice Generation & Payment Processing",
+        "body": "Know how Invoice Runs generate invoices, how payment methods and terms are configured, and how the dunning process handles failed payments. Understand partial payments and credit notes."
+      },
+      {
+        "heading": "Reporting & Forecasting for Revenue",
+        "body": "Know how Revenue Cloud extends Sales Cloud forecasting with subscription revenue, ARR/MRR metrics, and churn reporting. Understand how CRM Analytics (Tableau CRM) is used for revenue analytics."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Consultant Certifications",
+    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
+      },
+      {
+        "href": "/certifications/role/consultant",
+        "label": "Consultant certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the Product-to-Cash lifecycle?",
+      "options": [
+        "Only marketing",
+        "Quote-to-cash: configure, price, quote, contract, order, billing, revenue recognition",
+        "Only sales",
+        "Only service"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product-to-Cash (P2C) covers the full cycle from quote through contract, order, billing, and revenue recognition."
+    },
+    {
+      "question": "Which role does a Revenue Cloud Consultant typically fulfill?",
+      "options": [
+        "Email marketing only",
+        "Designing and implementing Revenue Cloud on core with extensive knowledge of P2C",
+        "Slack configuration only",
+        "UI design only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They have hands-on experience designing and implementing Revenue Cloud and extensive P2C knowledge."
+    },
+    {
+      "question": "What does Revenue Cloud typically include?",
+      "options": [
+        "Only CPQ",
+        "CPQ, Billing, Revenue Recognition, and related products",
+        "Only Marketing Cloud",
+        "Only Service Cloud"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Revenue Cloud encompasses CPQ, Billing, Revenue Recognition, and the P2C lifecycle."
+    },
+    {
+      "question": "Which Salesforce product handles subscription billing?",
+      "options": [
+        "Only Sales Cloud",
+        "Revenue Cloud / Billing",
+        "Marketing Cloud only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Revenue Cloud Billing handles subscription and usage-based billing."
+    },
+    {
+      "question": "What is revenue recognition in the context of Revenue Cloud?",
+      "options": [
+        "Only invoicing",
+        "Allocating revenue to accounting periods per ASC 606 / IFRS 15",
+        "Only quotes",
+        "Only orders"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Revenue recognition allocates revenue to periods according to accounting standards (e.g., ASC 606)."
+    },
+    {
+      "question": "What does CPQ (Configure, Price, Quote) handle?",
+      "options": [
+        "Only billing",
+        "Product configuration, pricing, discounting, and quote generation",
+        "Only orders",
+        "Only contracts"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CPQ handles configuration, pricing, and quote generation."
+    },
+    {
+      "question": "Which Revenue Cloud object represents a signed agreement?",
+      "options": [
+        "Quote only",
+        "Contract",
+        "Opportunity only",
+        "Order only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contract represents the signed agreement and drives billing/revenue."
+    },
+    {
+      "question": "What is usage-based billing?",
+      "options": [
+        "Fixed fee only",
+        "Billing based on consumption or usage metrics",
+        "One-time only",
+        "Quote only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Usage-based billing charges based on consumption metrics."
+    },
+    {
+      "question": "Which standard governs revenue recognition for subscriptions?",
+      "options": [
+        "SOX only",
+        "ASC 606 / IFRS 15",
+        "GDPR only",
+        "No standard"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ASC 606 and IFRS 15 govern revenue recognition."
+    },
+    {
+      "question": "What does the P2C lifecycle begin with?",
+      "options": [
+        "Billing",
+        "Configuration and quote",
+        "Revenue recognition only",
+        "Contract only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "P2C begins with configuration and quote, then contract, order, billing, and revenue."
+    },
+    {
+      "question": "Which Revenue Cloud feature supports amendment handling?",
+      "options": [
+        "Quote only",
+        "Contract amendments (add, change, renew)",
+        "Order only",
+        "Invoice only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contract amendments support add, change, and renew scenarios."
+    },
+    {
+      "question": "What is the purpose of a Price Book in CPQ?",
+      "options": [
+        "To store contacts",
+        "To define products and prices for quoting",
+        "To create orders only",
+        "To send invoices"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Price Books define products and list prices for CPQ quotes."
+    },
+    {
+      "question": "Which integration is common for Revenue Cloud?",
+      "options": [
+        "Marketing Cloud only",
+        "ERP, billing systems, and accounting (e.g., NetSuite)",
+        "Slack only",
+        "Tableau only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Revenue Cloud integrates with ERP and accounting systems."
+    },
+    {
+      "question": "What does a Revenue Cloud Consultant need to understand?",
+      "options": [
+        "Only UI",
+        "P2C business processes, accounting implications, and product capabilities",
+        "Only CPQ",
+        "Only Billing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Consultants need P2C process, accounting, and product knowledge."
+    },
+    {
+      "question": "Which best practice applies to Revenue Cloud implementation?",
+      "options": [
+        "Ignore accounting",
+        "Align with accounting policies, test revenue scenarios, and validate reporting",
+        "No testing",
+        "Single product only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Align with accounting, test revenue scenarios, and validate reporting."
+    }
+  ]
+}

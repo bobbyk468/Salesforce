@@ -1,0 +1,294 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Marketing Cloud Intelligence Professional have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Marketing Cloud Intelligence",
+      "Analytics",
+      "CDP",
+      "Technical Implementation",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Marketing Cloud Intelligence: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Intelligence Platform Architecture",
+        "body": "Marketing Cloud Intelligence (formerly Datorama) is the marketing analytics and reporting platform. Core concepts: Workspaces contain all data, dashboards, and configuration. Data Streams are the connections bringing data in (API connectors, file uploads, Marketing Cloud connector). The Unified Data Model harmonises data from multiple sources into a common dimension hierarchy: Campaign &rarr; Ad Set &rarr; Ad. All data is mapped to this model for cross-channel reporting."
+      },
+      {
+        "heading": "Data Streams and Harmonisation",
+        "body": "Data Streams ingest data from: Marketing Cloud Connector (email, journeys, social), API connectors (Facebook Ads, Google Ads, Salesforce CRM), file-based streams (CSV, FTP), custom streams. Each stream maps source fields to Intelligence dimensions (Campaign, Ad, Date) and metrics (Impressions, Clicks, Spend, Conversions). Harmonisation rules standardise naming and categorisation across sources. The exam tests how to configure a new data stream and resolve mapping conflicts."
+      },
+      {
+        "heading": "Insights, KPIs, and Custom Metrics",
+        "body": "Intelligence uses pre-built KPIs (Cost Per Click, Click-Through Rate, ROAS) and supports custom calculated metrics. Fusion Widgets combine metrics from different streams in a single chart. Anomaly Detection flags unusual metric movements. Goals allow planned vs actual comparison for budgets and KPIs. The exam tests how to create custom metrics using formulas, how fusion widgets work, and how to configure goal tracking."
+      },
+      {
+        "heading": "Dashboards and Data Visualisation",
+        "body": "Dashboards display widgets (charts, tables, scorecards, media widgets) in configurable layouts. Global Date Controls apply a shared date range to all widgets. Audience and dimension filters narrow dashboard scope. Widget-level filters override global filters. Sharing dashboards with external users uses the Public URL or embedded iFrame. The exam tests how to build a dashboard, configure cross-widget filtering, and share reports with stakeholders."
+      },
+      {
+        "heading": "API Integration and Automation",
+        "body": "Intelligence REST API allows external systems to push data, retrieve insights, and manage streams programmatically. Scheduled exports can push Intelligence data to external data warehouses. Zapier integration enables no-code triggers from Intelligence events. The exam tests basic API concepts — authentication, stream management via API, and how to automate data flows between Intelligence and other marketing systems."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Marketing Cloud Intelligence Accredited Professional Exam",
+    "intro": "The Marketing Cloud Intelligence (Datorama) AP exam tests data ingestion, model building, and dashboard creation in the Intelligence platform. Focus on the harmonization framework and how to connect and unify multi-source marketing data.",
+    "blocks": [
+      {
+        "heading": "Data Streams & Connectors",
+        "body": "Know how to connect data sources using native connectors (Google Analytics, Facebook Ads, Marketing Cloud), API connectors, and file-based imports (CSV). Understand scheduled refresh and incremental load options."
+      },
+      {
+        "heading": "Data Model & Harmonization",
+        "body": "Understand the Intelligence data model: Streams, Total Metrics, Dimensions, and how to harmonize disparate data by mapping vendor-specific fields to a unified dimension (e.g., mapping 'Campaign' across platforms)."
+      },
+      {
+        "heading": "Model Builder",
+        "body": "Know how to use the Model Builder to create calculated metrics (formulas), cross-stream joins, and custom dimensions. Understand the difference between Stream metrics and Total metrics."
+      },
+      {
+        "heading": "Dashboard Design",
+        "body": "Know how to create boards, widgets (bar charts, line charts, scorecards, pivot tables), and how to configure filters and date controls. Understand how to share dashboards with internal and external stakeholders."
+      },
+      {
+        "heading": "Einstein Integration",
+        "body": "Know how Einstein features in Intelligence (Einstein Insights, Anomaly Detection) analyze marketing performance data and how to configure alerts for KPI deviations."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Marketing Cloud Intelligence AP validate?",
+      "options": [
+        "Only basics",
+        "Skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Marketing Cloud Intelligence Professionals have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers."
+    },
+    {
+      "question": "What is Marketing Cloud Intelligence?",
+      "options": [
+        "Only reports",
+        "Analytics and intelligence capabilities within Marketing Cloud (e.g., CDP, analytics)",
+        "Only email",
+        "Only journeys"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marketing Cloud Intelligence includes analytics and intelligence capabilities."
+    },
+    {
+      "question": "What is a key activity for a Marketing Cloud Intelligence Professional?",
+      "options": [
+        "Only coding",
+        "Technical implementation of Marketing Cloud Intelligence solutions",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They implement Marketing Cloud Intelligence solutions technically."
+    },
+    {
+      "question": "Which role typically pursues Marketing Cloud Intelligence AP?",
+      "options": [
+        "Sales only",
+        "Partners and implementers working with Marketing Cloud Intelligence",
+        "Designers only",
+        "Marketers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers working with Marketing Cloud Intelligence pursue this credential."
+    },
+    {
+      "question": "What does 'deliver projects' mean in this context?",
+      "options": [
+        "Only shipping",
+        "Implementing and delivering Marketing Cloud Intelligence solutions for customers",
+        "Only reporting",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It means implementing and delivering solutions for customers."
+    },
+    {
+      "question": "What does CDP (Customer Data Platform) provide for Marketing Cloud?",
+      "options": [
+        "Only email",
+        "Unified customer data for activation and analytics",
+        "Only journeys",
+        "Only SMS"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CDP unifies customer data for activation and analytics."
+    },
+    {
+      "question": "Which Marketing Cloud Intelligence capability supports analytics?",
+      "options": [
+        "Slack only",
+        "Datorama, analytics studios, and reporting",
+        "Email only",
+        "Journey Builder only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Datorama and analytics studios support analytics."
+    },
+    {
+      "question": "What does technical implementation of Marketing Cloud Intelligence include?",
+      "options": [
+        "Only design",
+        "Data connections, transformations, and activation setup",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implementation includes connections, transformations, and activation."
+    },
+    {
+      "question": "Which data source can feed Marketing Cloud Intelligence?",
+      "options": [
+        "Slack only",
+        "CRM, advertising, and engagement data",
+        "Email only",
+        "No data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CRM, advertising, and engagement data feed intelligence."
+    },
+    {
+      "question": "What is the purpose of Marketing Cloud Intelligence?",
+      "options": [
+        "Only reporting",
+        "Unified analytics and intelligence across marketing touchpoints",
+        "Only email",
+        "Only journeys"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Intelligence unifies analytics across touchpoints."
+    },
+    {
+      "question": "Which integration supports Marketing Cloud Intelligence?",
+      "options": [
+        "Manual only",
+        "Salesforce, advertising platforms, and data warehouses",
+        "Slack only",
+        "Service Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Intelligence integrates with Salesforce and ad platforms."
+    },
+    {
+      "question": "What does delivering Marketing Cloud Intelligence projects require?",
+      "options": [
+        "Only design",
+        "Technical setup, data modeling, and activation",
+        "Only coding",
+        "Only reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Delivery requires technical setup and activation."
+    },
+    {
+      "question": "Which best practice applies to Marketing Cloud Intelligence?",
+      "options": [
+        "Ignore data",
+        "Data quality, governance, and attribution modeling",
+        "No governance",
+        "Static only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data quality and governance support intelligence."
+    },
+    {
+      "question": "What is the benefit of Marketing Cloud Intelligence?",
+      "options": [
+        "No benefit",
+        "Unified view and actionable insights across marketing",
+        "Siloed only",
+        "Manual only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Intelligence provides unified insights."
+    },
+    {
+      "question": "What is attribution modeling in Marketing Cloud Intelligence?",
+      "options": [
+        "A report type only",
+        "Assigning credit for conversions to marketing touchpoints (first-touch, last-touch, multi-touch)",
+        "An email metric",
+        "A journey type"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Attribution modeling assigns conversion credit across touchpoints for optimization."
+    }
+  ]
+}

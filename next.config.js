@@ -17,7 +17,9 @@ const nextConfig = {
   productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller
   async redirects() {
     return [
-      // Canonical www redirect (non-www → www)
+      // Canonical www (apex → www). GSC may list http(s)://trailblazeprep.com/... as "Page with redirect"
+      // — that is expected; Google indexes https://www.trailblazeprep.com/... instead. Align
+      // NEXT_PUBLIC_SITE_URL in Vercel with www so sitemap.xml / robots host are not all redirects.
       {
         source: '/:path*',
         has: [{ type: 'host', value: 'trailblazeprep.com' }],

@@ -3,6 +3,18 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
+let host: string
+try {
+  host = new URL(baseUrl).hostname
+} catch {
+  host = ''
+}
+if (host === 'trailblazeprep.com') {
+  console.warn(
+    '[sitemap] NEXT_PUBLIC_SITE_URL uses apex host; next.config redirects to www. Set NEXT_PUBLIC_SITE_URL=https://www.trailblazeprep.com in Vercel so sitemap URLs are canonical.',
+  )
+}
+
 export default function sitemap(): MetadataRoute.Sitemap {
   // Exclude non-canonical pages from sitemap — these pages have canonical URLs pointing to their
   // parent cert pages, so including them in the sitemap creates a contradiction (Ahref flags this).

@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Financial Services Cloud",
+      "Wealth Management",
+      "Banking",
+      "Insurance",
+      "Data Model",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Financial Services Cloud: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "FSC Data Model: Households, Individuals, and Financial Accounts",
+        "body": "Financial Services Cloud extends Salesforce with an industry-specific data model. Key objects: Individual Account (a person account representing a client), Household Account (groups related individuals), Financial Account (a bank account, investment account, or policy), Financial Account Role (relationship between a person and a financial account — primary owner, joint owner, beneficiary). Assets & Liabilities track client net worth components. The consultant must understand the Household model — how contacts relate to household accounts and how rollups aggregate financial data at the household level."
+      },
+      {
+        "heading": "Relationship Management and Referrals",
+        "body": "Relationship Map visually displays a client's relationships — family members, business associates, advisors. Relationship Groups define formal groupings (household, trust, business entity). Referral Management tracks leads referred between advisors or from clients. The consultant configures the Relationship Map to reflect the organisation's coverage model. FSC uses RecordType-specific page layouts for each account type (Individual, Household, Business). The exam tests how to configure Relationship Groups and Referral workflows for a given financial services firm's client coverage model."
+      },
+      {
+        "heading": "Action Plans for Client Lifecycle Management",
+        "body": "Action Plans define repeatable task sequences — used for new account onboarding, annual reviews, loan processing, and compliance checks. Action Plan Templates define the task sequence, assigned roles, due date offsets, and dependencies between tasks. When an Action Plan is created from a template, tasks are generated automatically and assigned to the appropriate team members. The consultant designs Action Plan Templates for the firm's key client lifecycle processes, configuring task dependencies and SLA-based due dates."
+      },
+      {
+        "heading": "Rollup Summaries and Financial Aggregations",
+        "body": "FSC uses custom rollup logic to aggregate financial data at the Household level. Financial Account balances roll up to the Household to show total assets under management (AUM). Customisable Rollups (part of NPSP, also used in FSC) allow administrators to configure rollup calculations without code — defining which field, which object, and which criteria trigger the rollup. The consultant configures rollups to match the firm's reporting requirements — ensuring Household-level financial summaries are accurate and up-to-date."
+      },
+      {
+        "heading": "Compliance, KYC, and Document Management",
+        "body": "Financial services firms have strict regulatory requirements. Know Your Customer (KYC) processes verify client identity — typically capturing ID documents, verifying addresses, and screening against watchlists. FSC supports compliance workflows with custom objects for KYC documentation. Document checklist items track which required documents have been collected. Integration with e-signature tools (DocuSign, Adobe Sign) enables digital document execution. The consultant designs the compliance workflow to satisfy regulatory requirements while maintaining a positive client experience."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Financial Services Cloud Accredited Professional Exam",
+    "intro": "The Financial Services Cloud AP exam tests FSC implementation for banking, insurance, and wealth management. Focus on the FSC data model, financial account tracking, advisor experience, and compliance requirements.",
+    "blocks": [
+      {
+        "heading": "FSC Data Model Extensions",
+        "body": "Know FSC-specific objects: Financial Account (checking, savings, investment), Financial Account Transaction, Financial Goal, Life Event, and how they extend the standard Account/Contact model for financial services."
+      },
+      {
+        "heading": "Client 360 & Relationship Manager",
+        "body": "Know how to configure the FSC client view: Relationship Map (household members, referral networks), Financial Accounts, Goals, and Life Events. Understand how advisors use this 360-degree view to serve clients."
+      },
+      {
+        "heading": "Household & Relationship Management",
+        "body": "Know how FSC models households: primary household member, financial account roles (owner, beneficiary), and how household-level rollup fields aggregate assets under management (AUM) across the household."
+      },
+      {
+        "heading": "Insurance-Specific Features",
+        "body": "Know FSC features for insurance: Policy objects, Claim Management, Producer Management, and how Independent Agents differ from Employees in the FSC data model."
+      },
+      {
+        "heading": "Compliance & Audit Trail",
+        "body": "Know how FSC addresses compliance requirements: audit logging, consent management, and how Salesforce Shield (Field Audit Trail, Event Monitoring) helps meet regulatory obligations for financial data."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Financial Services Cloud AP validate?",
+      "options": [
+        "Only basics",
+        "Skills and knowledge to implement Salesforce Financial Services Cloud",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud."
+    },
+    {
+      "question": "Which industry does Financial Services Cloud serve?",
+      "options": [
+        "Retail only",
+        "Financial services (e.g., banking, wealth management, insurance)",
+        "Manufacturing only",
+        "Education only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial Services Cloud serves financial services industries."
+    },
+    {
+      "question": "What is a key use case for Financial Services Cloud?",
+      "options": [
+        "Only email",
+        "Wealth management, banking, and insurance workflows",
+        "Only CPQ",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wealth management, banking, and insurance workflows are key use cases."
+    },
+    {
+      "question": "Which role typically pursues Financial Services Cloud AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers in financial services",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers in financial services pursue this credential."
+    },
+    {
+      "question": "What does implementation of Financial Services Cloud often involve?",
+      "options": [
+        "Only UI",
+        "Industry data model, workflows, and compliance considerations",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implementation involves industry data model, workflows, and compliance."
+    },
+    {
+      "question": "What is wealth management in Financial Services Cloud?",
+      "options": [
+        "Only banking",
+        "Managing client relationships, assets, and financial planning",
+        "Only insurance",
+        "Only marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wealth management covers client assets and financial planning."
+    },
+    {
+      "question": "Which data model objects are specific to Financial Services Cloud?",
+      "options": [
+        "Standard objects only",
+        "Financial Account, Goals, and industry-specific objects",
+        "Only Contact",
+        "Only Account"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial Account, Goals, and related objects support wealth management."
+    },
+    {
+      "question": "Why is compliance critical for Financial Services Cloud?",
+      "options": [
+        "Not critical",
+        "Financial services are regulated (e.g., KYC, suitability); data and processes must comply",
+        "Only for marketing",
+        "Only for sales"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Regulations like KYC and suitability require compliance."
+    },
+    {
+      "question": "What does household mean in Financial Services Cloud?",
+      "options": [
+        "Single account only",
+        "A group of related clients (e.g., family) sharing financial relationships",
+        "Only contact",
+        "Only opportunity"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Households group related clients for wealth management."
+    },
+    {
+      "question": "Which use case does Financial Services Cloud support for banking?",
+      "options": [
+        "Retail only",
+        "Consumer banking, commercial banking, and lending workflows",
+        "Manufacturing only",
+        "Education only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Banking use cases include consumer, commercial, and lending."
+    },
+    {
+      "question": "What is a Financial Goal in Financial Services Cloud?",
+      "options": [
+        "A report",
+        "A client's financial objective (e.g., retirement, education) to track progress",
+        "A case type",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial Goals track client objectives and progress."
+    },
+    {
+      "question": "Which industry segment uses Financial Services Cloud for insurance?",
+      "options": [
+        "Retail only",
+        "Insurance carriers for policy and claims workflows",
+        "Manufacturing only",
+        "Education only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Insurance carriers use FSC for policy and claims."
+    },
+    {
+      "question": "What does 'scope' mean for Financial Services Cloud implementation?",
+      "options": [
+        "Only coding",
+        "Gathering requirements and defining solution scope",
+        "Only deployment",
+        "Only training"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scope = requirements gathering and solution definition."
+    },
+    {
+      "question": "Which Salesforce product does Financial Services Cloud extend?",
+      "options": [
+        "Commerce Cloud",
+        "Sales Cloud and Service Cloud with financial services data model",
+        "Marketing Cloud only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "FSC extends Sales Cloud and Service Cloud."
+    },
+    {
+      "question": "What is KYC in financial services context?",
+      "options": [
+        "A report type",
+        "Know Your Customer—verifying client identity for compliance",
+        "A workflow only",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "KYC is the process of verifying client identity for regulatory compliance."
+    }
+  ]
+}

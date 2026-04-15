@@ -58,7 +58,7 @@ async function fetchAsDataUrl(imageUrl) {
 
 function extractUrlFromReply(text) {
   const m = text.match(/https?:\/\/[^\s]+/);
-  return m ? m[0].replace(/[),.;]+$/, '') : 'https://trailblazeprep.com';
+  return m ? m[0].replace(/[),.;]+$/, '') : 'https://www.trailblazeprep.com';
 }
 
 // ── HTML templates ────────────────────────────────────────────────────────────
@@ -801,7 +801,7 @@ function extractUrl(tweets) {
     const match = tweet.match(/https?:\/\/[^\s]+/);
     if (match) return match[0];
   }
-  return 'https://trailblazeprep.com';
+  return 'https://www.trailblazeprep.com';
 }
 
 function extractCertName(title) {

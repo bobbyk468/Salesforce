@@ -179,6 +179,17 @@ async function cmdPost(threadId, dryRun) {
   let replyToId = null;
   let firstTweetId = null;
 
+  // Quiz answer support: reply to the question tweet's firstTweetId
+  if (thread.replyToEntryId) {
+    const parentEntry = queue.find(t => t.id === thread.replyToEntryId);
+    if (parentEntry?.firstTweetId) {
+      replyToId = parentEntry.firstTweetId;
+    } else {
+      console.error(`\n❌ Parent entry "${thread.replyToEntryId}" not yet posted (no firstTweetId). Post the question tweet first.\n`);
+      process.exit(1);
+    }
+  }
+
   for (let i = 0; i < thread.tweets.length; i++) {
     const tweet = thread.tweets[i];
     const imagePath = threadTweetImagePath(thread, i);

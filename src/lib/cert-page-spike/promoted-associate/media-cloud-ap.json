@@ -1,0 +1,294 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Media Cloud Professionals have knowledge, skills, and experience to plan, design, and implement business value to customers through Media Cloud.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Media Cloud",
+      "Ad Sales",
+      "Rights",
+      "Campaign Management",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Media Cloud AP: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Advertising Sales & Order Management",
+        "body": "Media Cloud provides a purpose-built Advertising Sales Management solution for broadcasters, publishers, and digital media companies. Advertising Orders capture the commitment to deliver a campaign — specifying advertiser, agency, flight dates, placements, and rates. Rate Cards define standard pricing for ad inventory (CPM, flat rate, sponsorship). Avails Management shows available inventory for a given time period and placement. The AP exam tests how to configure an advertising order workflow, how rate cards interact with order line pricing, and how avails are checked during the proposal process."
+      },
+      {
+        "heading": "Rights & Entitlements Management",
+        "body": "Media companies manage complex rights hierarchies — who has licensed what content, for which territories, channels, and time windows. Rights Records capture the license terms: content asset, licensee, territory, channel type (linear, digital, streaming), exclusivity, and validity period. Rights Conflicts detection flags when proposed usage violates an existing exclusive license. Rights Availabilities show what rights are free for a given asset, territory, and window. The exam tests how to configure rights records, how conflict detection rules work, and how rights availability feeds into proposal and ordering workflows."
+      },
+      {
+        "heading": "Revenue Management & Billing",
+        "body": "Media Cloud integrates with Revenue Cloud (CPQ Billing) for subscription and ad revenue management. Recurring subscription billing handles streaming services and digital subscriptions — with proration for mid-period changes. Advertising revenue uses milestone billing tied to campaign delivery and performance. Revenue Recognition (ASC 606) distributes subscription revenue ratably over the service period. Credit and adjustment workflows handle make-goods (compensation for under-delivery of ad campaigns). The exam tests how media-specific billing scenarios map to Revenue Cloud configuration and how make-good credits are processed."
+      },
+      {
+        "heading": "Partner & Agency Management",
+        "body": "Media companies work through advertising agencies and content distribution partners. Partner portals (Experience Cloud) give agencies self-service access to propose, book, and track campaigns. Agency hierarchies model holding companies and their subsidiary agencies. Partner Accounts and Contact roles define the relationship between the media company, agency, and end advertiser. Commission structures track agency fees. The AP exam tests how to configure the agency portal for campaign proposal and booking, how agency commission is calculated and tracked, and how partner visibility into campaign performance data is controlled."
+      },
+      {
+        "heading": "Analytics & Campaign Performance",
+        "body": "Media Cloud reporting tracks advertising campaign delivery, pacing, and performance. Delivery Reports compare contracted impressions/spots against actual delivered figures. Pacing dashboards alert sales ops when a campaign is at risk of under-delivery. Post-Campaign Analysis reports provide the final performance summary for advertiser billing and make-good decisions. CRM Analytics Media Cloud apps provide pre-built revenue and inventory dashboards. Integration with ad servers (DFP, FreeWheel, Operative) pulls in actual delivery data. The exam tests how campaign performance data flows from ad servers into Media Cloud, which standard reports are available, and how under-delivery triggers a make-good workflow."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Media Cloud Accredited Professional Exam",
+    "intro": "The Media Cloud AP exam tests Salesforce implementation for media and advertising companies. Focus on deal management, campaign execution, revenue management, and the media-specific data model.",
+    "blocks": [
+      {
+        "heading": "Media Cloud Data Model",
+        "body": "Know media-specific objects: Advertising Deals (linear and digital), Ad Products (ad slots, digital placements), Campaign Budgets, and how they relate to standard Opportunity and Order objects."
+      },
+      {
+        "heading": "Deal Management",
+        "body": "Know how to configure the deal lifecycle in Media Cloud: proposal generation, rate card pricing for media inventory, deal approval workflows, and how deals activate into campaign execution."
+      },
+      {
+        "heading": "Campaign Execution",
+        "body": "Know how campaigns are activated: trafficking (sending orders to ad servers), pacing management, and how delivery data flows back from ad servers to update actuals against booked inventory."
+      },
+      {
+        "heading": "Revenue Management & Billing",
+        "body": "Know how Media Cloud integrates with Revenue Cloud for billing: invoice generation from delivered campaign data, makegoods for underdelivery, and how revenue recognition handles media-specific scenarios."
+      },
+      {
+        "heading": "Programmatic & Digital Integration",
+        "body": "Know how Media Cloud handles programmatic advertising: integration with DSPs/SSPs, private marketplace deals, and how digital campaign data from Google Ad Manager or FreeWheel integrates with Media Cloud."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Media Cloud AP validate?",
+      "options": [
+        "Only basics",
+        "Knowledge, skills, and experience to plan, design, and implement business value through Media Cloud",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Media Cloud Professionals have knowledge, skills, and experience to plan, design, and implement business value to customers through Media Cloud."
+    },
+    {
+      "question": "Which industry does Media Cloud serve?",
+      "options": [
+        "Retail only",
+        "Media and entertainment (e.g., ad sales, content, rights)",
+        "Healthcare only",
+        "Education only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Media Cloud serves media and entertainment industries."
+    },
+    {
+      "question": "What is a key use case for Media Cloud?",
+      "options": [
+        "Only email",
+        "Ad sales, rights management, and campaign management",
+        "Only CPQ",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ad sales, rights management, and campaign management are key use cases."
+    },
+    {
+      "question": "Which role typically pursues Media Cloud AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers in media and entertainment",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers in media pursue this credential."
+    },
+    {
+      "question": "What does 'implement business value' mean in Media Cloud context?",
+      "options": [
+        "Only shipping",
+        "Delivering solutions that drive outcomes for media customers",
+        "Only reporting",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It means delivering solutions that drive outcomes for media customers."
+    },
+    {
+      "question": "What is ad sales management in Media Cloud?",
+      "options": [
+        "Email only",
+        "Managing ad inventory, proposals, and sales workflows for media",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ad sales covers inventory, proposals, and sales processes."
+    },
+    {
+      "question": "What is rights management in media?",
+      "options": [
+        "Only legal",
+        "Managing content rights, licensing, and distribution terms",
+        "Only marketing",
+        "Only sales"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Rights management tracks content rights and licensing."
+    },
+    {
+      "question": "Which Salesforce products does Media Cloud often integrate with?",
+      "options": [
+        "Slack only",
+        "Industries CPQ, Billing, and CRM for media workflows",
+        "Marketing Cloud only",
+        "Commerce Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Media Cloud integrates with CPQ, Billing, and CRM."
+    },
+    {
+      "question": "What does campaign management mean in media context?",
+      "options": [
+        "Email campaigns only",
+        "Managing ad campaigns, flight dates, and delivery",
+        "Only social",
+        "Only SEO"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Campaign management covers ad campaigns and delivery."
+    },
+    {
+      "question": "Why is the media industry unique for CRM?",
+      "options": [
+        "It isn't",
+        "Complex rights, inventory, and multi-party workflows",
+        "Only standard objects",
+        "Only simple pricing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Media has complex rights, inventory, and workflows."
+    },
+    {
+      "question": "What does 'plan and design' mean for Media Cloud?",
+      "options": [
+        "Only coding",
+        "Planning the solution architecture and designing the implementation",
+        "Only reporting",
+        "Only deployment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Plan = roadmap; design = solution architecture."
+    },
+    {
+      "question": "What is a rate card in media ad sales?",
+      "options": [
+        "A report only",
+        "Pricing structure for ad inventory (CPM, CPC, packages)",
+        "A workflow only",
+        "An email list"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Rate cards define ad pricing and package structures for media sales."
+    },
+    {
+      "question": "What is ad inventory?",
+      "options": [
+        "A report",
+        "Available ad slots or units that can be sold",
+        "A workflow only",
+        "An email list"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Ad inventory is the sellable ad space or units."
+    },
+    {
+      "question": "Which use case does Media Cloud support for content?",
+      "options": [
+        "Only email",
+        "Content rights, licensing, and distribution tracking",
+        "Only CPQ",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content rights and distribution are key use cases."
+    },
+    {
+      "question": "What does implement mean for Media Cloud AP?",
+      "options": [
+        "Only coding",
+        "Configuring and deploying the solution for the customer",
+        "Only design",
+        "Only training"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implement = configure and deploy."
+    }
+  ]
+}

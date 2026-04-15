@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Marketing Cloud Personalization",
+      "Personalization",
+      "Web",
+      "Mobile",
+      "Decisioning",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Marketing Cloud Personalization: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Catalog and Unified Profile",
+        "body": "Marketing Cloud Personalization (formerly Interaction Studio) builds Unified Profiles by tracking individual behaviour across channels. The Catalog stores product, article, or content items with attributes — forming the basis for recommendation algorithms. Item types (Products, Articles, Blog Posts) can be configured with custom attributes. Catalog data can be ingested via sitemap, feeds, or API. The Unified Profile aggregates engagement history across web, email, mobile, and in-store touchpoints."
+      },
+      {
+        "heading": "Einstein Recipes and Recommendation Strategies",
+        "body": "Einstein Recipes define how the ML algorithm selects recommended items. Recipe types: Collaborative Filtering (users who viewed/bought X also liked Y), Content Affinity (attributes the individual user prefers), User Trending (popular among similar users). Strategies combine multiple Recipes with explicit rules (exclude viewed items, include only in-stock items, boost by margin). The exam tests how to configure a Strategy for a given personalisation scenario — e.g., homepage recommendations vs cart page cross-sell vs post-purchase email."
+      },
+      {
+        "heading": "Web Campaigns and Server-Side Personalisation",
+        "body": "Web Campaigns are the delivery mechanism for personalised experiences. Server-Side Campaigns run before the page renders — for personalising page content without DOM flicker. Client-Side Campaigns inject content after page load — for overlays, pop-ups, and callouts. A/B testing is built into campaigns — control group receives the default experience, treatment group receives the personalised version. The exam tests when to use server-side vs client-side delivery and how to configure campaign targeting rules."
+      },
+      {
+        "heading": "Segmentation and Triggered Campaigns",
+        "body": "Segment Builder creates real-time audience segments based on Unified Profile attributes — engagement score, category affinity, lifecycle stage. Segments update in real time as users engage. Triggered Campaigns fire when a user enters or exits a segment, or performs a specific action (abandons cart, views a product). Triggered messages can fire via email (via Marketing Cloud Journey Builder), mobile push, or real-time web experiences. The exam tests segment design and trigger condition configuration."
+      },
+      {
+        "heading": "Channel Integration: Email and Salesforce",
+        "body": "Email Integration connects Personalization with Marketing Cloud — Einstein Recipe recommendations appear in email templates via AMPscript or Open Time Email. Journey Builder integration enables triggered journeys based on Personalization segment entry. Salesforce CRM integration surfaces personalised recommendations in Sales and Service Cloud records. The exam tests how recommendation blocks are implemented in emails, how to pass user context between channels, and how to measure personalisation lift (revenue per recommendation shown)."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Marketing Cloud Personalization Accredited Professional Exam",
+    "intro": "The Marketing Cloud Personalization (Interaction Studio) AP exam tests real-time personalization capabilities. Focus on web SDK implementation, campaign configuration, and how to use behavioral data for personalized experiences.",
+    "blocks": [
+      {
+        "heading": "Web SDK Implementation",
+        "body": "Know how to implement the Personalization web SDK (Evergage beacon), configure sitemap mappings for page types and item catalog, and how event data is sent to the Personalization platform."
+      },
+      {
+        "heading": "Catalog & User Profile",
+        "body": "Understand the Personalization catalog (Products, Articles, Blog Posts) and how item attributes drive recommendations. Know how User Profile attributes are built from behavioral events and how they power segmentation."
+      },
+      {
+        "heading": "Campaign Types",
+        "body": "Know the four campaign types: Web (in-page personalization), Triggered Email, Open-Time Email, and Server-Side (API-based). Understand when to use each and how they integrate with Marketing Cloud."
+      },
+      {
+        "heading": "Einstein Recipes & Recommendations",
+        "body": "Know how to configure Einstein Recipe types (Trending, Recently Viewed, Similar Items, Collab Filtering) and how Boosters and Exclusions customize recommendation logic for specific use cases."
+      },
+      {
+        "heading": "Reporting & A/B Testing",
+        "body": "Know how to interpret campaign performance reports (impressions, CTR, revenue per impression) and configure A/B tests against a control group to measure the lift from personalization."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Marketing Cloud Personalization AP validate?",
+      "options": [
+        "Only basics",
+        "Skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization."
+    },
+    {
+      "question": "What is Marketing Cloud Personalization used for?",
+      "options": [
+        "Only email",
+        "Delivering personalized experiences across web, mobile, and other touchpoints",
+        "Only SMS",
+        "Only social"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It delivers personalized experiences across touchpoints."
+    },
+    {
+      "question": "What is a key activity for a Marketing Cloud Personalization Professional?",
+      "options": [
+        "Only coding",
+        "Designing, configuring, building, and implementing personalization solutions",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They design, configure, build, and implement personalization solutions."
+    },
+    {
+      "question": "Which role typically pursues Marketing Cloud Personalization AP?",
+      "options": [
+        "Sales only",
+        "Partners and implementers working with Marketing Cloud Personalization",
+        "Designers only",
+        "Developers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers working with personalization pursue this credential."
+    },
+    {
+      "question": "What does personalization often rely on?",
+      "options": [
+        "Only static content",
+        "Data, segments, and real-time decisioning",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personalization relies on data, segments, and real-time decisioning."
+    },
+    {
+      "question": "What is real-time decisioning in personalization?",
+      "options": [
+        "Batch only",
+        "Instant content and offer selection based on user context",
+        "Manual only",
+        "Static only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Real-time decisioning selects content/offers instantly."
+    },
+    {
+      "question": "Which data source feeds Marketing Cloud Personalization?",
+      "options": [
+        "Slack only",
+        "CDP, Data Extensions, and event data",
+        "Salesforce only",
+        "No data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CDP and event data feed personalization."
+    },
+    {
+      "question": "What does web personalization target?",
+      "options": [
+        "Email only",
+        "Web pages, banners, and recommendations",
+        "SMS only",
+        "Social only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Web personalization targets pages and recommendations."
+    },
+    {
+      "question": "Which touchpoint does Marketing Cloud Personalization support?",
+      "options": [
+        "Email only",
+        "Web, mobile, email, and in-app",
+        "SMS only",
+        "Social only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personalization supports web, mobile, email, and in-app."
+    },
+    {
+      "question": "What is the purpose of segments in personalization?",
+      "options": [
+        "To replace data",
+        "To target and tailor experiences by audience",
+        "To send only",
+        "To report only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Segments target and tailor experiences by audience."
+    },
+    {
+      "question": "Which integration connects personalization to Marketing Cloud?",
+      "options": [
+        "Manual only",
+        "CDP, Journey Builder, and Email Studio",
+        "Slack only",
+        "Service Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CDP and Journey Builder connect to personalization."
+    },
+    {
+      "question": "What does building personalization solutions involve?",
+      "options": [
+        "Only design",
+        "Configuring decision rules, segments, and experiences",
+        "Only coding",
+        "Only reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Building involves rules, segments, and experiences."
+    },
+    {
+      "question": "Which best practice applies to personalization?",
+      "options": [
+        "Ignore data",
+        "Privacy-first, test experiences, and measure lift",
+        "No testing",
+        "Static only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Privacy-first, testing, and measurement support success."
+    },
+    {
+      "question": "What is the benefit of Marketing Cloud Personalization?",
+      "options": [
+        "No benefit",
+        "Relevant experiences that drive engagement and conversion",
+        "Generic only",
+        "Manual only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personalization drives relevant engagement and conversion."
+    },
+    {
+      "question": "What is an offer in Marketing Cloud Personalization?",
+      "options": [
+        "A report",
+        "A content asset (banner, message) presented based on rules or segments",
+        "An email only",
+        "A workflow only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Offers are content assets presented conditionally based on rules and audience."
+    }
+  ]
+}

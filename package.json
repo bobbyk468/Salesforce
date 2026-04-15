@@ -30,9 +30,13 @@
     "x:images:tips:missing": "node scripts/generate-tweet-images.mjs --tips-only --missing-only",
     "x:humanize": "node scripts/refresh-x-upcoming.mjs --all-threads --all-tips",
     "x:refresh-pending": "node scripts/refresh-x-upcoming.mjs",
-    "x:analyze": "node scripts/analyze-x-queue.mjs"
+    "x:analyze": "node scripts/analyze-x-queue.mjs",
+    "cert:migration": "node scripts/cert-migration-status.mjs",
+    "cert:bulk-legacy": "node scripts/bulk-migrate-cert-legacy-bodies.mjs",
+    "cert:promote-associate": "node scripts/promote-all-certs-to-associate.mjs"
   },
   "dependencies": {
+    "@next/third-parties": "^16.2.3",
     "critters": "0.0.23",
     "html-to-image": "^1.11.13",
     "lucide-react": "^0.400.0",

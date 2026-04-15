@@ -1,0 +1,232 @@
+================================================================================
+X QUIZ CONTENT — REAL EXAM QUESTIONS
+Voice: lowercase, conversational, direct opinions.
+All tweets ≤280 chars (newlines count as 1 char each).
+================================================================================
+
+Format: 2-tweet pairs.
+Tweet 1 = question (post it, let replies roll in for a few hours).
+Tweet 2 = reply to tweet 1 with the answer + why it matters.
+Post on off-days: Wed / Fri to fill gaps between main calendar posts.
+================================================================================
+
+================================================================================
+ADMIN QUIZ 1 — Bucket Column
+ID: quiz-admin-bucket-column
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇
+
+an org wants a report that buckets accounts into small, medium, and large based on contract value.
+
+which feature?
+
+A. Group Rows
+B. Filter Logic
+C. Bucket Column
+D. Detail Column
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. Bucket Column
+
+bucket columns let you define custom ranges and group records into labels — directly in the report. no custom field needed.
+
+people pick Filter Logic. filters exclude records. they don't categorize them. completely different job.
+
+================================================================================
+ADMIN QUIZ 2 — Dashboard Running User
+ID: quiz-admin-dashboard-running-user
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇
+
+OWD = Private. reps are still seeing all cases on dashboards. sharing is fine everywhere else.
+
+what's causing it?
+
+A. Dashboard Filters
+B. Public Dashboards
+C. Dashboard's running user
+D. Dashboard Subscriptions
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. Dashboard's running user
+
+the running user is the person whose access the dashboard uses to pull data. if it's set to an admin, everyone sees everything — OWD be damned.
+
+this trips up people who think OWD alone controls dashboards. it doesn't.
+
+================================================================================
+ADMIN QUIZ 3 — Omni-Channel vs Assignment Rules
+ID: quiz-admin-omni-channel
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇
+
+cases need to route automatically, but the business wants to manage their own queue capacity without admin help.
+
+which tool?
+
+A. Case Assignment Rules
+B. Email-to-Case
+C. Omni-Channel
+D. Lead Assignment Rules
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. Omni-Channel
+
+omni-channel lets supervisors manage queue capacity in real time without touching setup. assignment rules require admin config every time the team changes.
+
+key word in the question: "control its own assignment." that's omni-channel.
+
+================================================================================
+ADMIN QUIZ 4 — Sharing Rules vs Permission Sets
+ID: quiz-admin-sharing-rules
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇
+
+OWD = Private. a VP needs to report on records owned by people across different parts of the role hierarchy.
+
+what do you configure?
+
+A. Field-Level Security
+B. Sharing Rules
+C. Permission Sets
+D. Restriction Rules
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: B. Sharing Rules
+
+role hierarchy gives visibility upward. sharing rules extend access sideways or across branches.
+
+common trap: people pick permission sets. permission sets control what you can do. sharing rules control what you can see. two different problems.
+
+================================================================================
+ADMIN QUIZ 5 — Flow Builder for Cross-Object Automation
+ID: quiz-admin-flow-cross-object
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇
+
+reps manually apply a discount to opportunity products after winning a deal. the manager wants it automated.
+
+what's the right tool?
+
+A. Approval Process
+B. Formula Field
+C. Flow Builder
+D. Prebuilt Macro
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. Flow Builder
+
+approval processes handle approvals. formula fields calculate but can't update related records. macros are for service reps clicking through tasks.
+
+flow triggers on close, loops through products, applies the discount. declarative and clean.
+
+================================================================================
+ADMIN QUIZ 6 — Approval Process Actions
+ID: quiz-admin-approval-actions
+================================================================================
+
+[Tweet 1 — question]
+#ADM201 exam question — drop your answer 👇 (select 2)
+
+an admin created an approval process for time-off requests.
+
+which two automated actions can be added?
+
+A. Field Update
+B. Email Alert
+C. Chatter Post
+D. Autolaunched Flow
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answers: A + B. Field Update and Email Alert.
+
+approval processes support field updates, email alerts, outbound messages, tasks. chatter posts and flows aren't on the list — the exam loves to trick you here.
+
+know what's on the list or you'll get burned on the real test.
+
+================================================================================
+AGENTFORCE QUIZ 1 — Agent Guardrails
+ID: quiz-agentforce-guardrails
+================================================================================
+
+[Tweet 1 — question]
+#Agentforce exam question — drop your answer 👇
+
+an employee agent keeps discussing the CEO's health plan. staff shouldn't see it.
+
+how do you fix it?
+
+A. Assignment rules
+B. Permissions + FLS
+C. Instructions and guardrails
+D. Retrain on employee plans
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. instructions and guardrails
+
+permissions and FLS control data access. guardrails control what the agent will even attempt to discuss.
+
+two different layers. permissions control the data. guardrails control what the agent will even attempt.
+
+#Agentforce
+
+================================================================================
+AGENTFORCE QUIZ 2 — AIAgentSession DLO
+ID: quiz-agentforce-aiagentsession
+================================================================================
+
+[Tweet 1 — question]
+#Agentforce exam question — drop your answer 👇
+
+which data lake object (DLO) captures all contiguous interactions with one or more AI agents?
+
+A. AIAgentInteractionMessage
+B. AIAgentInteraction
+C. AIAgentSession
+answer in 2 hours.
+
+---
+
+[Tweet 2 — answer]
+answer: C. AIAgentSession
+
+session = the full conversation across all agents
+interaction = one exchange within the session
+message = individual message within an interaction
+
+reporting on agent behavior in Data Cloud? these three nest. know them.
+
+================================================================================
+END OF QUIZ CONTENT — 8 quizzes (16 tweets)
+================================================================================

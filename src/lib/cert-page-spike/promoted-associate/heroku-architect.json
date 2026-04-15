@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "Heroku Architect",
+    "description": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~68%",
+      "duration": "120 min",
+      "cost": "$400"
+    },
+    "topics": [
+      "Heroku",
+      "Scalability",
+      "Deployment",
+      "Build Workflows",
+      "Teams",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Heroku Architect: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Heroku Platform Architecture & Dynos",
+        "body": "Heroku runs applications in lightweight Linux containers called Dynos. Dyno types: Web (handles HTTP traffic), Worker (background jobs, no HTTP), One-Off (manual or scheduled tasks). Dyno sizes range from Eco (shared, sleeps after 30 min) to Performance-XL (dedicated, high memory). The Dyno Manager restarts crashed dynos automatically. Horizontal scaling adds more dynos of the same type; vertical scaling changes the dyno size. The Procfile defines process types and start commands. The Router load-balances requests across web dynos (round-robin with session stickiness disabled by default). The architect exam tests how to size and scale a Heroku deployment for a given traffic and processing profile."
+      },
+      {
+        "heading": "Data Services: Heroku Postgres & Redis",
+        "body": "Heroku Postgres is the primary managed database — available in Essential (row limits), Standard, Premium, and Private tiers. Connection pooling via PgBouncer reduces database connection overhead. Follow databases provide read replicas for analytics queries. Continuous protection (WAL archiving) enables point-in-time recovery. Heroku Data for Redis handles caching, session storage, and pub/sub messaging. Redis plans: Mini (non-persistent) to Premium (persistent, HA). Heroku Key-Value Store (Redis) replaces legacy Heroku Redis. The exam tests data tier selection for a given durability, availability, and performance requirement, and how to configure read replicas for a high-read workload."
+      },
+      {
+        "heading": "CI/CD, Review Apps & Release Management",
+        "body": "Heroku Pipelines define promotion stages: Development → Staging → Production. Review Apps automatically deploy pull requests to ephemeral apps for testing — each PR gets its own URL. Heroku CI runs automated tests on each push and blocks promotion on failure. The `heroku pipelines:promote` command promotes a slug (compiled app image) from one stage to the next without rebuilding. Release Phase runs migration scripts or data seeding commands before each new release goes live. Rollbacks revert to a previous release slug instantly. Config Vars (environment variables) are separate per stage, preventing accidental production config in staging. The exam tests how to design a pipeline for a team with multiple parallel feature branches."
+      },
+      {
+        "heading": "Security, Compliance & Private Spaces",
+        "body": "Heroku Private Spaces run Dynos and data services inside a dedicated, isolated network environment — required for compliance workloads (HIPAA, PCI, SOC 2). Private Spaces connect to Salesforce orgs via Salesforce Private Connect (AWS PrivateLink) for secure data exchange without traffic traversing the public internet. Internal Routing restricts apps in a Private Space to only receive traffic from within the space. Shield Private Spaces add encryption at rest and enhanced security controls. Log Drains export Heroku logs to external SIEM or logging systems. Heroku Enterprise provides SSO, audit logs, and team-based access controls. The exam tests Private Space configuration for compliance scenarios and the networking model."
+      },
+      {
+        "heading": "Architecture Patterns for Salesforce + Heroku",
+        "body": "Heroku Connect syncs data bidirectionally between Heroku Postgres and Salesforce objects — enabling Heroku apps to read/write Salesforce data without direct API calls. Write acceleration pattern: high-volume writes go to Heroku Postgres first, then Heroku Connect syncs to Salesforce asynchronously, avoiding API rate limits. Event-driven pattern: Salesforce Platform Events trigger Heroku workers via Heroku Connect CDC. Compute-offload pattern: complex calculations (ML inference, image processing) run on Heroku and results are written back to Salesforce. The architect exam tests which pattern to apply for a given scalability, latency, and Salesforce API limit scenario — especially for IoT, mobile, or high-volume data scenarios."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Heroku Architect Exam",
+    "intro": "The Heroku Architect exam tests enterprise-scale Heroku deployment design. Focus on Heroku infrastructure components, Heroku Connect for Salesforce data sync, high-availability patterns, and security architecture.",
+    "blocks": [
+      {
+        "heading": "Heroku Infrastructure Components",
+        "body": "Know dynos (web, worker, one-off), formations, add-ons, buildpacks, and config vars. Understand how these components combine to run a scalable application on Heroku."
+      },
+      {
+        "heading": "Heroku Connect Architecture",
+        "body": "Know how Heroku Connect syncs data between Heroku Postgres and Salesforce using polled sync (Salesforce → Postgres) and a Salesforce trigger (Postgres → Salesforce). Understand conflict resolution and sync frequency."
+      },
+      {
+        "heading": "High Availability & Scaling",
+        "body": "Understand horizontal scaling (multiple dynos), how the Heroku Router load-balances requests, database connection pooling (PgBouncer), and how to design for zero-downtime deployments."
+      },
+      {
+        "heading": "Security Architecture",
+        "body": "Know how to use Private Spaces for network isolation, Heroku Shield for HIPAA/PCI compliance, and how to secure data in transit (TLS) and at rest with encrypted Heroku Postgres."
+      },
+      {
+        "heading": "Performance Optimization",
+        "body": "Know how to use Heroku caching (Redis add-on), async job processing (worker dynos with Sidekiq/Celery), and database query optimization to design performant Heroku applications."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Architect Certifications",
+    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "links": [
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
+      {
+        "href": "/architect-certification-path",
+        "label": "Architect certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does a Heroku Architect do?",
+      "options": [
+        "Only coding",
+        "Architect scalable solutions, deploy and manage apps, and manage teams and build-workflows on Heroku",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku."
+    },
+    {
+      "question": "What is Heroku?",
+      "options": [
+        "A CRM",
+        "A cloud platform (PaaS) for building, running, and managing apps",
+        "An email tool",
+        "A database only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Heroku is a cloud platform (PaaS) for building and running apps."
+    },
+    {
+      "question": "What is a key activity for a Heroku Architect?",
+      "options": [
+        "Only coding",
+        "Architecting scalable solutions and managing deployment workflows",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They architect scalable solutions and manage deployment workflows."
+    },
+    {
+      "question": "Which role typically pursues Heroku Architect?",
+      "options": [
+        "Marketers",
+        "Architects and senior developers working with Heroku",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Architects and senior developers working with Heroku pursue this credential."
+    },
+    {
+      "question": "What does 'build-workflows' mean in Heroku context?",
+      "options": [
+        "Only CI",
+        "CI/CD, pipelines, and release management on Heroku",
+        "Only CD",
+        "Only testing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Build-workflows include CI/CD, pipelines, and release management on Heroku."
+    },
+    {
+      "question": "What is a Heroku Dyno?",
+      "options": [
+        "A database only",
+        "A lightweight container that runs application code",
+        "An email service",
+        "A storage bucket"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dynos are containers that run app processes on Heroku."
+    },
+    {
+      "question": "Which Heroku feature supports horizontal scaling?",
+      "options": [
+        "Single dyno only",
+        "Dyno scaling (web and worker dynos)",
+        "No scaling",
+        "Vertical only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Heroku supports scaling web and worker dynos horizontally."
+    },
+    {
+      "question": "What does Heroku Postgres provide?",
+      "options": [
+        "Only backups",
+        "Managed relational database with add-ons",
+        "No database",
+        "External only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Heroku Postgres is a managed database add-on."
+    },
+    {
+      "question": "Which Heroku feature manages environment-specific configuration?",
+      "options": [
+        "Hardcoded values",
+        "Config Vars",
+        "Only buildpacks",
+        "Only releases"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Config Vars store environment-specific configuration."
+    },
+    {
+      "question": "What is a Heroku buildpack?",
+      "options": [
+        "A database",
+        "Scripts that compile and prepare an app for execution",
+        "An add-on only",
+        "A dyno type"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Buildpacks compile and prepare apps for the dyno environment."
+    },
+    {
+      "question": "Which Heroku feature supports zero-downtime deployments?",
+      "options": [
+        "No support",
+        "Preboot and release phase",
+        "Manual only",
+        "Single dyno only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Preboot and release phase enable zero-downtime deployments."
+    },
+    {
+      "question": "What does Heroku Pipelines support?",
+      "options": [
+        "Only staging",
+        "Multi-stage (dev, staging, production) deployment workflow",
+        "Production only",
+        "No staging"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pipelines support multi-stage deployment workflows."
+    },
+    {
+      "question": "Which Heroku add-on category supports background jobs?",
+      "options": [
+        "Database only",
+        "Worker dynos and queue add-ons (e.g., Redis)",
+        "Email only",
+        "Storage only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Worker dynos and queues support background job processing."
+    },
+    {
+      "question": "What is the purpose of Heroku Review Apps?",
+      "options": [
+        "Production only",
+        "Automatic ephemeral apps for pull request review",
+        "Staging only",
+        "No automation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Review Apps create ephemeral apps for PR review."
+    },
+    {
+      "question": "Which best practice applies to Heroku architecture?",
+      "options": [
+        "Ignore scaling",
+        "Design for stateless processes, use 12-factor app methodology",
+        "Single dyno only",
+        "No logging"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Stateless processes and 12-factor methodology support scalability."
+    }
+  ]
+}

@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import DesktopSidebarSlot from '@/components/DesktopSidebarSlot'
 import StickyContentCta from '@/components/StickyContentCta'
-import GoogleAnalytics from '@/components/GoogleAnalytics'
+
 import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -19,7 +19,7 @@ const inter = Inter({
 
 const DeferredStickyContentCta = dynamic(() => import('@/components/StickyContentCta'), { ssr: false })
 const DeferredDesktopSidebarSlot = dynamic(() => import('@/components/DesktopSidebarSlot'), { ssr: false })
-const DeferredGoogleAnalytics = dynamic(() => import('@/components/GoogleAnalytics'), { ssr: false })
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -198,7 +198,7 @@ export default function RootLayout({
       </head>
       <body className={inter.className}>
         <HreflangLinks />
-        <DeferredGoogleAnalytics />
+        {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />}
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationJsonLd) }}

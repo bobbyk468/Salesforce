@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Health Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Health Cloud solution with industry-specific data models.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Health Cloud",
+      "Patient Engagement",
+      "Care Coordination",
+      "Data Model",
+      "Healthcare",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Health Cloud: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Health Cloud Data Model: Patients, Providers, and Care Plans",
+        "body": "Health Cloud extends Salesforce for healthcare and life sciences. Key objects: Contact (Patient or Healthcare Provider), Account (Healthcare Provider Organisation), CarePlan (the patient's treatment plan), Care Plan Problem (a diagnosis or health condition), Care Plan Goal (measurable outcome), Care Plan Task (an action item). HealthcareFacility tracks provider locations. ClinicalEncounter records patient-provider interactions. The consultant designs the Health Cloud data model to match the organisation's care coordination model — whether focused on payer, provider, or life sciences workflows."
+      },
+      {
+        "heading": "Care Plan Management and Coordination",
+        "body": "Care Plans are the core of Health Cloud — they organise all the clinical and social determinant information for a patient. Care Plan Templates pre-define the standard problems, goals, and tasks for common conditions (diabetes management, post-surgical recovery). Care Team members are assigned roles (primary care manager, specialist, community worker) and have visibility into the plan. The consultant configures Care Plan Templates for the organisation's common care pathways and designs the Care Team structure to match the clinical care model."
+      },
+      {
+        "heading": "Intelligent Appointment Management (IAM)",
+        "body": "Intelligent Appointment Management (IAM) is Health Cloud's scheduling module for patient appointments. It enables patient self-scheduling via Experience Cloud portals, agent-assisted scheduling via the Health Console, and provider availability management. Slot management defines available appointment slots by provider, specialty, and location. The system matches patient needs (reason for visit, insurance, location preference) to available providers. The consultant configures IAM for the organisation's scheduling requirements — walk-in, scheduled, and telemedicine appointment types."
+      },
+      {
+        "heading": "FHIR Integration and EHR Connectivity",
+        "body": "Health Cloud supports HL7 FHIR R4 (Fast Healthcare Interoperability Resources) for exchanging clinical data with Electronic Health Record (EHR) systems. Salesforce Health Cloud includes a FHIR API connector for mapping FHIR resources (Patient, Encounter, Condition, Observation) to Salesforce Health Cloud objects. Bi-directional integration enables both reading from the EHR (importing patient records, encounters) and writing back (care plan updates, appointment status). The consultant assesses the integration pattern — what data to sync, at what frequency, and how to handle data conflicts between systems."
+      },
+      {
+        "heading": "Analytics and Population Health Management",
+        "body": "Health Cloud analytics use CRM Analytics (Einstein Analytics) with pre-built Health Cloud datasets and dashboards. Population Health dashboards segment patients by condition, risk score, engagement level, or care gap. Risk stratification identifies high-risk patients who need proactive outreach. Care gap analysis identifies patients overdue for preventive care (annual wellness visits, screenings). Patient lists (list views of patients meeting specific criteria) drive targeted outreach campaigns. The consultant designs the analytics strategy to support value-based care performance measurement."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Health Cloud Accredited Professional Exam",
+    "intro": "The Health Cloud AP exam tests Salesforce implementation for healthcare and life sciences. Focus on the Health Cloud data model, patient/member journey design, care plan configuration, and interoperability standards.",
+    "blocks": [
+      {
+        "heading": "Health Cloud Data Model",
+        "body": "Know the key Health Cloud objects: Patient/Member (Contact extension), Care Plan, Care Plan Problem, Care Plan Goal, Care Plan Task, and how they relate to Cases and standard objects."
+      },
+      {
+        "heading": "Patient 360 View",
+        "body": "Know how to configure the Patient 360: Timeline (chronological health events), Care Team (multi-disciplinary team members), Social Determinants of Health, and how providers use the console to manage patient interactions."
+      },
+      {
+        "heading": "Care Plan Configuration",
+        "body": "Know how to create care plan templates (problems, goals, tasks), how care coordinators assign care plans to patients, and how task completion tracking and progress notes work in the care plan workflow."
+      },
+      {
+        "heading": "Interoperability: FHIR & HL7",
+        "body": "Know the basics of Health Cloud's interoperability capabilities: FHIR R4 API for EHR integration, HL7 message handling, and how Health Cloud maps clinical data to Salesforce objects."
+      },
+      {
+        "heading": "Utilization Management & Prior Auth",
+        "body": "Know how Health Cloud supports payer use cases: prior authorization workflows, utilization management case types, and how Care Gaps drive proactive outreach for quality program management."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Health Cloud AP validate?",
+      "options": [
+        "Only basics",
+        "Skills and knowledge to implement Salesforce Health Cloud with industry-specific data models",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Health Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Health Cloud solution with industry-specific data models."
+    },
+    {
+      "question": "Which industry does Health Cloud serve?",
+      "options": [
+        "Retail only",
+        "Healthcare (e.g., providers, payers, life sciences)",
+        "Manufacturing only",
+        "Education only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Health Cloud serves healthcare organizations."
+    },
+    {
+      "question": "What is a key use case for Health Cloud?",
+      "options": [
+        "Only email",
+        "Patient engagement, care coordination, and healthcare workflows",
+        "Only CPQ",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Patient engagement, care coordination, and healthcare workflows are key use cases."
+    },
+    {
+      "question": "Which role typically pursues Health Cloud AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers in healthcare",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers in healthcare pursue this credential."
+    },
+    {
+      "question": "What does 'industry-specific data model' mean for Health Cloud?",
+      "options": [
+        "Only standard objects",
+        "Data model tailored for healthcare (e.g., patients, care plans, encounters)",
+        "Only custom objects",
+        "Only reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It refers to a data model tailored for healthcare."
+    },
+    {
+      "question": "Which Health Cloud object represents a patient?",
+      "options": [
+        "Account only",
+        "Account with Person record type or Health Cloud's Individual/Patient model",
+        "Contact only",
+        "Lead only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Health Cloud uses patient-centric data models (Account-based or Individual)."
+    },
+    {
+      "question": "What is a Care Plan in Health Cloud?",
+      "options": [
+        "A report",
+        "A structured plan for patient care with goals and interventions",
+        "A case type only",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Care Plans define care goals and interventions for patients."
+    },
+    {
+      "question": "What is an encounter in Health Cloud?",
+      "options": [
+        "A report",
+        "A documented interaction between a patient and provider (visit, call, etc.)",
+        "A case type only",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Encounters record patient-provider interactions for care history."
+    },
+    {
+      "question": "What does EHR integration refer to in Health Cloud?",
+      "options": [
+        "Slack only",
+        "Connecting to Electronic Health Record systems for patient data",
+        "Marketing Cloud only",
+        "Commerce Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "EHR integration brings patient data from health record systems into Salesforce."
+    },
+    {
+      "question": "Which industry segments use Health Cloud?",
+      "options": [
+        "Retail only",
+        "Providers, payers, life sciences, and healthcare technology",
+        "Manufacturing only",
+        "Government only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Providers, payers, and life sciences are primary segments."
+    },
+    {
+      "question": "What is patient engagement in Health Cloud context?",
+      "options": [
+        "Only email",
+        "Omnichannel interactions (portal, chat, outreach) to keep patients informed",
+        "Only voice",
+        "Only in-person"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Patient engagement includes portals, messaging, and outreach."
+    },
+    {
+      "question": "Why is compliance important for Health Cloud implementations?",
+      "options": [
+        "Not important",
+        "Healthcare is regulated (HIPAA, etc.); data handling must comply",
+        "Only for billing",
+        "Only for marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "HIPAA and healthcare regulations govern data and processes."
+    },
+    {
+      "question": "What does 'implement' mean for Health Cloud AP?",
+      "options": [
+        "Only coding",
+        "Configuring the solution, data model, and workflows for the customer",
+        "Only reporting",
+        "Only deployment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implementation includes configuration, data model, and workflow setup."
+    },
+    {
+      "question": "Which Salesforce product does Health Cloud extend?",
+      "options": [
+        "Commerce Cloud",
+        "Service Cloud and Sales Cloud with healthcare-specific features",
+        "Marketing Cloud only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Health Cloud extends Service Cloud and Sales Cloud for healthcare."
+    },
+    {
+      "question": "What is care coordination?",
+      "options": [
+        "Only scheduling",
+        "Coordinating care across providers, settings, and care team members",
+        "Only billing",
+        "Only marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Care coordination aligns providers and care plans for the patient."
+    }
+  ]
+}

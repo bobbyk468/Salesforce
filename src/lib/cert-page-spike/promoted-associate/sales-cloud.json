@@ -1,0 +1,278 @@
+{
+  "template": "associate",
+  "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "certificationCard": {
+    "code": "SCC",
+    "description": "The Sales Cloud Consultant certification validates your expertise in designing and implementing Sales Cloud solutions to meet business requirements.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "68%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Sales Cloud Solution Design",
+      "Implementation Strategies",
+      "Lead Management",
+      "Account & Contact Management",
+      "Opportunity Management",
+      "Sales Productivity",
+      "Sales Forecasting",
+      "Territory Management",
+      "Sales Analytics",
+      "Integration"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Sales Cloud Consultant: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Lead Management: Assignment Rules and Lead Conversion",
+        "body": "Lead Assignment Rules automatically route leads to users or queues based on criteria — region, lead source, company size. Web-to-Lead captures leads directly from web forms. When a lead converts, Salesforce creates or merges an Account, Contact, and optionally an Opportunity — understanding what maps to what is a high-frequency exam topic. Duplicate rules should be configured to prevent duplicate leads entering the funnel."
+      },
+      {
+        "heading": "Opportunity Management: Stages, Splits, and Teams",
+        "body": "Sales Processes define which opportunity stages are available for a given record type — enabling different methodologies for different deal types. Path provides stage-by-stage guidance with key fields and success tips. Opportunity Splits share revenue credit among team members (overlay splits vs revenue splits). Opportunity Teams let multiple reps collaborate on a single deal. The exam tests when each feature applies and how they interact."
+      },
+      {
+        "heading": "Collaborative Forecasts: Categories and Adjustments",
+        "body": "Collaborative Forecasts roll up opportunity amounts through the role hierarchy. Each opportunity stage maps to a Forecast Category: Pipeline, Best Case, Commit, Closed, or Omitted. Managers can submit adjustments to subordinate forecasts. Custom Forecast Types let organisations forecast on non-amount fields (quantity, revenue). Understand how categories roll up and when manager adjustments override rep numbers."
+      },
+      {
+        "heading": "Products, Price Books, and Quotes",
+        "body": "Every org has a Standard Price Book. Custom Price Books define alternative pricing for specific markets, channels, or customer tiers. Opportunity Products link products to opportunities with quantity and price. Products must be added to a Price Book before they can appear on an opportunity. Salesforce CPQ (Revenue Cloud) extends native quoting with complex pricing rules, discount schedules, and subscription management — know when CPQ is needed vs native products."
+      },
+      {
+        "heading": "Territory Management and Sales Analytics",
+        "body": "Enterprise Territory Management assigns accounts and opportunities to multiple territories simultaneously — enabling matrix-style coverage (by region and product line). Territory rules run automatically as account attributes change. For reporting, key report types are Opportunities by Owner (rep performance), Opportunities by Stage (pipeline health), and Activities by rep. Einstein Opportunity Scoring uses AI to predict close probability beyond the stage-based probability field."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Sales Cloud Consultant Exam",
+    "intro": "The Sales Cloud Consultant exam is scenario-based, presenting real business situations and asking you to identify the best Salesforce configuration. Deep knowledge of the full sales lifecycle — from lead to closed-won — and feature trade-offs is essential.",
+    "blocks": [
+      {
+        "heading": "Lead-to-Cash Process Mastery",
+        "body": "Understand the full lifecycle: Lead capture → Lead Assignment Rules → Conversion → Opportunity stages → Quotes → Close. Know what data transfers during lead conversion and what must be manually re-entered."
+      },
+      {
+        "heading": "Forecasting & Territory Management",
+        "body": "Know the difference between Collaborative Forecasts, Territory Forecasts, and customizable forecasting. Understand how Opportunity Splits share revenue credit and how territory assignment rules work."
+      },
+      {
+        "heading": "Einstein Sales Features",
+        "body": "Know Einstein Lead Scoring (predictive scoring), Einstein Opportunity Insights (AI recommendations), and Einstein Activity Capture (email/calendar sync). Questions ask when to recommend each to solve a specific business problem."
+      },
+      {
+        "heading": "Sales Process Configuration",
+        "body": "Understand Opportunity stages and sales processes, how to configure multiple sales processes for different record types, and how Path guides reps through stages with key fields and coaching tips."
+      },
+      {
+        "heading": "CPQ Integration Basics",
+        "body": "Know how Salesforce CPQ integrates with Sales Cloud, the difference between Products/Pricebooks (native) and CPQ (add-on), and when to recommend CPQ over native product functionality."
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "A company wants to automatically assign leads to sales reps based on geographic region. What feature should be implemented?",
+      "options": [
+        "Workflow Rules",
+        "Lead Assignment Rules",
+        "Process Builder",
+        "Apex Triggers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Lead Assignment Rules automatically assign leads to users or queues based on criteria you define, such as geographic region, industry, or lead source."
+    },
+    {
+      "question": "What is the purpose of Opportunity Splits?",
+      "options": [
+        "To divide an opportunity into multiple stages",
+        "To share revenue credit among multiple team members",
+        "To create child opportunities",
+        "To track competing opportunities"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Opportunity Splits allow you to share credit for an opportunity among multiple team members, with each member receiving a percentage of the revenue credit."
+    },
+    {
+      "question": "A sales manager wants to see a forecast that includes opportunities from their direct reports and all subordinates. Which forecast type provides this?",
+      "options": [
+        "Individual Forecast",
+        "Role Hierarchy Forecast",
+        "Territory Forecast",
+        "Collaborative Forecast"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, adjust amounts, and roll up forecasts through the hierarchy."
+    },
+    {
+      "question": "Which feature allows sales reps to track competitor information on an Opportunity?",
+      "options": [
+        "Competitors Related List",
+        "Custom Object",
+        "Path",
+        "Big Deal Alert"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The Competitors related list on Opportunities allows sales reps to track which competitors they are up against on each deal."
+    },
+    {
+      "question": "What is the benefit of using Path on the Opportunity object?",
+      "options": [
+        "Automatic stage progression",
+        "Visual guidance through sales stages with key fields and tips",
+        "Automated email notifications",
+        "Revenue forecasting"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Path provides visual guidance through each stage of a record, highlighting key fields to complete and offering tips for success at each stage."
+    },
+    {
+      "question": "A company wants to track products and their prices on Opportunities. Which feature should be configured?",
+      "options": [
+        "Products",
+        "Price Books",
+        "Opportunity Products",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Products define what you sell, Price Books define pricing, and Opportunity Products link products to opportunities with specific quantities and prices."
+    },
+    {
+      "question": "What is the purpose of Sales Processes in Sales Cloud?",
+      "options": [
+        "To automate opportunity creation",
+        "To define different sales stages and record types for different sales methodologies",
+        "To calculate revenue",
+        "To assign opportunities to sales reps"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sales Processes allow you to define different sales stages and associate them with record types, enabling different sales methodologies for different types of opportunities."
+    },
+    {
+      "question": "A sales manager wants to see which sales reps are performing best this quarter. Which report type should be used?",
+      "options": [
+        "Opportunities by Owner",
+        "Opportunities by Stage",
+        "Opportunities by Account",
+        "Opportunities by Product"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An Opportunities by Owner report shows opportunities grouped by the sales rep (owner), allowing managers to see performance metrics per rep."
+    },
+    {
+      "question": "Which feature allows sales reps to see recommended next steps based on opportunity stage?",
+      "options": [
+        "Path",
+        "Salesforce Inbox",
+        "Einstein Opportunity Insights",
+        "Opportunity Teams"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Path provides visual guidance and recommended actions at each opportunity stage, helping sales reps know what to do next."
+    },
+    {
+      "question": "A company wants to automatically assign leads to sales reps based on round-robin distribution. What should be configured?",
+      "options": [
+        "Lead Assignment Rules with Round-Robin",
+        "Workflow Rules",
+        "Process Builder",
+        "Apex Triggers"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Lead Assignment Rules support round-robin distribution, automatically distributing leads evenly among assigned users or queues."
+    },
+    {
+      "question": "What is the benefit of using Collaborative Forecasts?",
+      "options": [
+        "Automatic opportunity creation",
+        "Managers can adjust forecasts and see team roll-ups",
+        "Automatic email notifications",
+        "Integration with external systems"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, make adjustments, and roll up forecasts through the role hierarchy."
+    },
+    {
+      "question": "Which feature allows sales reps to track activities related to opportunities?",
+      "options": [
+        "Tasks",
+        "Events",
+        "Activities",
+        "All of the above"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Activities include both Tasks (to-dos) and Events (calendar items) that can be associated with opportunities, accounts, contacts, and leads."
+    },
+    {
+      "question": "A company wants to ensure sales reps follow a specific sales methodology. Which feature should be used?",
+      "options": [
+        "Sales Processes",
+        "Validation Rules",
+        "Workflow Rules",
+        "Sharing Rules"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Sales Processes define the stages and record types for different sales methodologies, ensuring consistency across the sales team."
+    },
+    {
+      "question": "What is the purpose of Territory Management in Sales Cloud?",
+      "options": [
+        "To assign leads to sales reps",
+        "To organize sales teams by geographic or account-based territories",
+        "To track competitor information",
+        "To calculate commissions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Territory Management allows you to organize sales teams by geographic regions, account types, or other criteria, and automatically assign accounts and opportunities to territories."
+    },
+    {
+      "question": "Which Sales Cloud feature helps forecast revenue based on opportunities?",
+      "options": [
+        "Reports only",
+        "Sales Forecasting with Collaborative Forecasts or Custom Forecast Types",
+        "Territory Management",
+        "Lead Assignment Rules"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sales Forecasting lets managers predict revenue using opportunity data; Collaborative Forecasts support quota and custom forecast types."
+    }
+  ]
+}

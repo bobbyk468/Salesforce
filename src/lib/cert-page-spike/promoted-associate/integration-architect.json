@@ -1,0 +1,314 @@
+{
+  "template": "associate",
+  "introLead": [
+    {
+      "type": "text",
+      "text": "The Integration Architect certification is part of the Application Architect path. It is recommended to also review the"
+    },
+    {
+      "type": "link",
+      "href": "/certifications/system-architect",
+      "label": "System Architect"
+    },
+    {
+      "type": "text",
+      "text": "certification guide."
+    }
+  ],
+  "certificationCard": {
+    "code": "Integration Architect",
+    "description": "Certified Platform Integration Architects are experts at assessing architecture environments and requirements in order to design sound and scalable technical solutions on the Salesforce Platform that meet end-to-end integration requirements.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~68%",
+      "duration": "120 min",
+      "cost": "$400"
+    },
+    "topics": [
+      "Integration Patterns",
+      "APIs",
+      "Middleware",
+      "Security",
+      "Performance",
+      "Error Handling",
+      "Governance",
+      "Best Practices",
+      "Async vs Sync",
+      "Data Flow"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Integration Architect: Key Concepts",
+    "blocks": [
+      {
+        "heading": "Integration Patterns",
+        "body": "Understand the common integration patterns like Fire-and-Forget, Request-Reply, and Batch Data Synchronization. Know when to use each based on business requirements for real-time or asynchronous processing."
+      },
+      {
+        "heading": "Integration Security",
+        "body": "Be comfortable with security concepts like OAuth 2.0 flows, Connected Apps, Named Credentials, and when to use different authentication mechanisms to secure data in transit."
+      },
+      {
+        "heading": "Error Handling and Recovery",
+        "body": "Design for failures. Understand how to implement retry mechanisms with exponential backoff, how to use a dead-letter queue for failed messages, and how to build resilient integrations that can recover from outages."
+      },
+      {
+        "heading": "Platform Events and Event-Driven Architecture",
+        "body": "Know how to use Platform Events to build a scalable, event-driven architecture. Understand the publish-subscribe model and how it helps in decoupling systems."
+      },
+      {
+        "heading": "API Management",
+        "body": "Understand the importance of API versioning, rate limiting, and monitoring. Know how to use API gateways to manage and secure your APIs."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Integration Architect Exam",
+    "intro": "The Integration Architect exam tests your ability to design and implement integration solutions between Salesforce and external systems. Focus on selecting the right integration pattern, API type, and middleware approach for complex scenarios.",
+    "blocks": [
+      {
+        "heading": "Integration Pattern Selection",
+        "body": "Know Remote Process Invocation (sync & async), Batch Data Synchronization, Data Virtualization, UI Update, and Event-Driven patterns. Match each to the business scenario presented in the question."
+      },
+      {
+        "heading": "REST vs. SOAP vs. Bulk API",
+        "body": "REST API for CRUD operations and real-time integrations; SOAP API for older enterprise systems requiring WSDL; Bulk API for high-volume data loads; Streaming API for real-time push notifications. Know when each is appropriate."
+      },
+      {
+        "heading": "Platform Events & Change Data Capture",
+        "body": "Platform Events decouple publisher/subscriber and support event-driven integration. CDC pushes field-level change records to subscribers. Know how to configure each and handle event replay for reliability."
+      },
+      {
+        "heading": "Middleware & MuleSoft",
+        "body": "Understand API-led connectivity (System, Process, Experience layers), how MuleSoft Anypoint Platform fits in the integration architecture, and when to use middleware vs. point-to-point integrations."
+      },
+      {
+        "heading": "Security in Integrations",
+        "body": "Know how to use Named Credentials for secure outbound connections, OAuth flows for external system authentication, and how to implement IP restrictions and mutual TLS for sensitive integrations."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Architect Certifications",
+    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "links": [
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
+      {
+        "href": "/architect-certification-path",
+        "label": "Architect certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary focus of a Platform Integration Architect?",
+      "options": [
+        "Only UI",
+        "Designing sound, scalable technical solutions that meet end-to-end integration requirements",
+        "Email only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Platform Integration Architects design solutions that meet end-to-end integration requirements."
+    },
+    {
+      "question": "Which integration pattern is used for real-time, request-response integration?",
+      "options": [
+        "Batch only",
+        "Synchronous API (REST/SOAP)",
+        "Only ETL",
+        "Only file transfer"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Synchronous REST/SOAP is used for real-time request-response integration."
+    },
+    {
+      "question": "What is the purpose of Middleware (e.g., MuleSoft) in integration architecture?",
+      "options": [
+        "To replace Salesforce",
+        "To orchestrate, transform, and connect systems",
+        "To send emails only",
+        "To configure CPQ only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Middleware orchestrates, transforms, and connects multiple systems."
+    },
+    {
+      "question": "Which consideration is critical for integration security?",
+      "options": [
+        "Only passwords",
+        "Authentication (OAuth, certificates), encryption, and least privilege",
+        "Only HTTPS",
+        "Only IP allowlist"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Authentication, encryption, and least privilege are key for integration security."
+    },
+    {
+      "question": "What does 'loosely coupled' integration mean?",
+      "options": [
+        "No integration",
+        "Systems communicate with minimal dependency so changes in one system don't break others",
+        "Tight dependency",
+        "Same database only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Loosely coupled systems reduce dependency and improve maintainability."
+    },
+    {
+      "question": "When should asynchronous integration be chosen over synchronous?",
+      "options": [
+        "Never",
+        "When real-time response is not required and decoupling or scalability is needed",
+        "Always",
+        "Only for batch"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Asynchronous is preferred when real-time response isn't required and decoupling matters."
+    },
+    {
+      "question": "What does API versioning support?",
+      "options": [
+        "No changes",
+        "Backward compatibility and gradual client migration",
+        "Breaking changes only",
+        "Deprecation only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Versioning allows evolution while maintaining backward compatibility."
+    },
+    {
+      "question": "Which error handling strategy supports resilience in integrations?",
+      "options": [
+        "Fail immediately",
+        "Retries with exponential backoff, dead letter queues, and graceful degradation",
+        "No retries",
+        "Only logging"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Retries, DLQs, and graceful degradation improve integration resilience."
+    },
+    {
+      "question": "What is the purpose of an integration bus or event-driven architecture?",
+      "options": [
+        "To replace APIs",
+        "To decouple producers and consumers via events or messages",
+        "To sync only",
+        "To batch only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Event-driven architecture decouples systems through events/messages."
+    },
+    {
+      "question": "Which security standard is used for delegated user authorization?",
+      "options": [
+        "Basic auth only",
+        "OAuth 2.0 authorization code flow",
+        "API key only",
+        "No standard"
+      ],
+      "correctAnswer": 1,
+      "explanation": "OAuth 2.0 authorization code flow supports user-delegated access."
+    },
+    {
+      "question": "What does idempotency ensure in integration?",
+      "options": [
+        "Faster execution",
+        "Duplicate requests produce the same result without side effects",
+        "No retries",
+        "Only logging"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Idempotency prevents duplicate processing from retries."
+    },
+    {
+      "question": "Which consideration applies when designing for high-volume integration?",
+      "options": [
+        "Ignore limits",
+        "Batching, rate limiting, and scalability (queues, async)",
+        "Synchronous only",
+        "No batching"
+      ],
+      "correctAnswer": 1,
+      "explanation": "High volume requires batching, rate limiting, and async scaling."
+    },
+    {
+      "question": "What is the benefit of contract-first API design?",
+      "options": [
+        "No benefit",
+        "Clear contract, parallel development, and reduced integration errors",
+        "Slower development",
+        "Tight coupling"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contract-first enables parallel development and fewer integration bugs."
+    },
+    {
+      "question": "Which pattern is used when multiple systems need the same data?",
+      "options": [
+        "Point-to-point only",
+        "Publish-subscribe or fan-out",
+        "Request-response only",
+        "Batch only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Publish-subscribe allows one producer to serve multiple consumers."
+    },
+    {
+      "question": "What does integration governance include?",
+      "options": [
+        "Only documentation",
+        "Standards, security, monitoring, and change control",
+        "Only coding",
+        "Only deployment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Governance covers standards, security, monitoring, and change control."
+    }
+  ]
+}

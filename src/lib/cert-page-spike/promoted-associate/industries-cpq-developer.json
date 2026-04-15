@@ -1,0 +1,299 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "Industries CPQ",
+    "description": "Certified Industries CPQ Developers understand how to develop Industries CPQ (Configure, Price, Quote) applications for the Salesforce Communications, Media, and Energy & Utilities Clouds.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Industries CPQ",
+      "Communications Cloud",
+      "Media Cloud",
+      "Energy & Utilities",
+      "Product Modeling",
+      "Pricing",
+      "Quoting",
+      "Integrations",
+      "Customization",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Industries CPQ Developer: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Product Catalog & Configuration",
+        "body": "Industries CPQ (formerly Vlocity CPQ) uses a TM Forum-aligned product catalog. Product Specifications define the attributes and structure of a product. Product Offerings are the sellable versions with pricing. Product Bundles group related offerings (e.g., a broadband + voice + TV bundle). Attributes define configurable options — data cap, contract term, device color. Configuration Rules enforce valid attribute combinations and auto-set dependent attributes. Context Rules make product availability conditional on account type, geography, or existing products. The developer exam tests how to configure attribute rules, implement context rules in declarative logic, and extend configuration behavior with custom Apex when rules are insufficient."
+      },
+      {
+        "heading": "Pricing Rules & Calculation Framework",
+        "body": "Pricing in Industries CPQ uses a layered calculation framework. Price Lists define base prices for products and attributes. Pricing Procedures define the sequence of pricing steps — list price → adjustments → promotions → taxes → total. Pricing Elements are individual steps in the procedure (e.g., apply 10% loyalty discount). Pricing Variables store intermediate calculation results. Custom Pricing Apex classes implement complex pricing logic not achievable declaratively. Price Waterfall shows the full breakdown of how the final price was calculated. The developer exam tests how to implement a custom pricing step, how to debug a price calculation using the price waterfall, and how pricing procedures interact with multi-product bundles."
+      },
+      {
+        "heading": "Quote & Order Lifecycle",
+        "body": "The Industries CPQ quote lifecycle: Product Selection → Configuration → Pricing → Quote → Order → Fulfillment. Decomposition breaks complex bundled products into fulfillable line items for downstream provisioning systems. Order Items map to fulfillment line items with action codes (Add, Change, Remove, Suspend). Contract integration manages subscription amendments — when a customer changes an in-force service, a Change Order is created with the correct action codes. Quote versioning supports multiple concurrent scenarios. The developer exam tests the decomposition logic, how to configure action codes for amendments, and how to implement custom validation before order submission."
+      },
+      {
+        "heading": "Integration & API Patterns",
+        "body": "Industries CPQ exposes REST APIs for catalog queries, configuration, pricing, and order submission. The CPQ API is used by external systems (self-service portals, partner tools) to perform quoting and ordering programmatically. Asset-Based Ordering (ABO) APIs query existing customer assets to determine available change operations. Integration with OSS/BSS systems (provisioning, billing) uses the fulfillment API to push decomposed order items. The developer exam tests the correct API endpoint for a given operation, how to authenticate and call the CPQ API from an external system, and how to handle API error responses for failed configuration or pricing requests."
+      },
+      {
+        "heading": "Customization: Apex, LWC & OmniStudio",
+        "body": "Industries CPQ customization uses: Custom Apex for complex business logic (configuration rules, pricing steps, order validation), LWC components for custom UI within the CPQ cart or checkout, and OmniStudio (FlexCards, OmniScripts) for guided selling experiences. Integration Procedures (OmniStudio) handle multi-step API orchestration. DataRaptors transform data between Salesforce and external systems within CPQ flows. The developer exam tests which customization tool to use for a given requirement — declarative rules first, Apex for complex logic, LWC for custom UI, and OmniStudio for guided workflows. Know the OmniStudio activation sequence: DataRaptor → Integration Procedure → OmniScript."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Industries CPQ Developer Exam",
+    "intro": "The Industries CPQ Developer exam tests technical development of Vlocity/Industries CPQ solutions. Focus on product catalog configuration, pricing logic, custom development, and integration with order management.",
+    "blocks": [
+      {
+        "heading": "Industries CPQ Product Catalog",
+        "body": "Know how to configure Products, Product Characteristics, Attribute Categories, and how attribute values drive product configuration. Understand the Industries CPQ product hierarchy and how bundles are built."
+      },
+      {
+        "heading": "Pricing Architecture",
+        "body": "Know how Pricing Plans, Price Lists, Price List Entries, and Promotion Sets work together. Understand how the pricing engine applies promotions, discounts, and charge definitions to calculate the final price."
+      },
+      {
+        "heading": "Transaction Items & Decomposition",
+        "body": "Know the transaction item data model: how products decompose into order items, how asset-based ordering (ABO) tracks existing subscriber assets, and how amendments and disconnections update asset records."
+      },
+      {
+        "heading": "Custom Development Patterns",
+        "body": "Know how to extend Industries CPQ with Apex: custom pricing engine hooks, custom product validation rules, and how to integrate custom calculation logic without overriding managed package logic."
+      },
+      {
+        "heading": "Order Management Integration",
+        "body": "Know how Industries CPQ integrates with Order Management for order fulfillment: decomposition rules, order templates, and how CPQ orders trigger downstream fulfillment processes."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After Developer",
+    "intro": "After this certification, common next steps in the developer track:",
+    "links": [
+      {
+        "href": "/certifications/developer-2",
+        "label": "Platform Developer II"
+      },
+      {
+        "href": "/certifications/app-builder",
+        "label": "Platform App Builder"
+      },
+      {
+        "href": "/certifications/javascript-developer-i",
+        "label": "JavaScript Developer I"
+      },
+      {
+        "href": "/certifications/role/developer",
+        "label": "Developer certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Which industries does the Industries CPQ certification focus on?",
+      "options": [
+        "Retail only",
+        "Communications, Media, and Energy & Utilities",
+        "Healthcare only",
+        "Financial Services only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries CPQ covers Configure, Price, Quote solutions for Communications, Media, and Energy & Utilities clouds."
+    },
+    {
+      "question": "What is a key difference between standard CPQ and Industries CPQ?",
+      "options": [
+        "No difference",
+        "Industry-specific product and pricing models (e.g., subscriptions, usage)",
+        "Industries CPQ is for B2C only",
+        "Industries CPQ does not support quotes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries CPQ extends CPQ with industry-specific models for subscriptions, usage-based pricing, and complex product structures."
+    },
+    {
+      "question": "Which Salesforce product is often used with Industries CPQ for telecom?",
+      "options": [
+        "Marketing Cloud only",
+        "Communications Cloud",
+        "Heroku only",
+        "Commerce Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Communications Cloud (part of Industries) works with CPQ for telecom use cases."
+    },
+    {
+      "question": "What role does a Industries CPQ Developer typically fulfill?",
+      "options": [
+        "Email marketing",
+        "Developing and customizing CPQ applications for industry verticals",
+        "Slack configuration",
+        "Data migration only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They develop Industries CPQ applications for Communications, Media, and Energy & Utilities."
+    },
+    {
+      "question": "Which type of pricing is commonly modeled in Energy & Utilities CPQ?",
+      "options": [
+        "One-time only",
+        "Usage-based, tiered, and time-of-use pricing",
+        "Fixed fee only",
+        "No pricing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Energy & Utilities often require usage-based, tiered, and time-of-use pricing models."
+    },
+    {
+      "question": "Which Industries CPQ product model supports subscriptions?",
+      "options": [
+        "One-time only",
+        "Subscription and usage-based product modeling",
+        "Fixed only",
+        "No modeling"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries CPQ supports subscription and usage-based models."
+    },
+    {
+      "question": "What does Industries CPQ scripting extend?",
+      "options": [
+        "Only UI",
+        "Product configuration, pricing, and quote logic",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scripting extends configuration, pricing, and quote logic."
+    },
+    {
+      "question": "Which Communications Cloud object supports CPQ?",
+      "options": [
+        "Lead only",
+        "Product, offer, and service catalog",
+        "Opportunity only",
+        "Campaign only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product, offer, and catalog support Communications CPQ."
+    },
+    {
+      "question": "What does Media Cloud CPQ support?",
+      "options": [
+        "Only print",
+        "Ad inventory, rights, and campaign pricing",
+        "Only email",
+        "Only social"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Media Cloud CPQ supports ad inventory and rights pricing."
+    },
+    {
+      "question": "Which integration is common for Industries CPQ?",
+      "options": [
+        "Slack only",
+        "Billing, ERP, and industry-specific systems",
+        "Marketing Cloud only",
+        "Service Cloud only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries CPQ integrates with billing and ERP."
+    },
+    {
+      "question": "What does Industries CPQ customization involve?",
+      "options": [
+        "Only UI",
+        "Product model, pricing rules, and configuration attributes",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Customization involves product model and pricing rules."
+    },
+    {
+      "question": "Which pricing type does Energy & Utilities CPQ support?",
+      "options": [
+        "Fixed only",
+        "Time-of-use, demand charges, and tiered rates",
+        "One-time only",
+        "No pricing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Energy & Utilities supports time-of-use and tiered pricing."
+    },
+    {
+      "question": "What is the purpose of Industries CPQ product modeling?",
+      "options": [
+        "To replace CPQ",
+        "To represent industry-specific products and bundles",
+        "To send emails",
+        "To create reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Product modeling represents industry-specific products."
+    },
+    {
+      "question": "Which best practice applies to Industries CPQ development?",
+      "options": [
+        "Ignore industry",
+        "Align with industry processes and test configuration flows",
+        "No testing",
+        "Single product only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Align with industry processes and test flows."
+    },
+    {
+      "question": "What does Industries CPQ Developer need to understand?",
+      "options": [
+        "Only Apex",
+        "Industry CPQ data model, pricing, and scripting",
+        "Only UI",
+        "Only reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Developers need industry CPQ data model and scripting knowledge."
+    }
+  ]
+}

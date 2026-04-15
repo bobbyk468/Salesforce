@@ -1,7 +1,7 @@
 [
   {
     "id": "tip-001",
-    "tweet": "ADM-201 tip: Flow is declarative automation. Apex is code. The exam always prefers Flow over Apex unless Flow literally can't do it.\n\nWhen in doubt \u2192 choose Flow.\n\n#SalesforceAdmin #ADM201",
+    "tweet": "ADM-201 tip: Flow is declarative automation. Apex is code. The exam always prefers Flow over Apex unless Flow literally can't do it.\n\nWhen in doubt → choose Flow.\n\n#SalesforceAdmin #ADM201",
     "status": "posted",
     "postedAt": "2026-03-22T06:30:02.888Z",
     "imageFile": "tweet-images/tip-001-tip-sf.png"
@@ -78,7 +78,7 @@
   },
   {
     "id": "tip-012",
-    "tweet": "salesforce governor limits \u2014 the ones that actually show up on pd1:\n\n100 soql queries per transaction\n150 dml statements max\n6mb heap size\n10 second cpu limit\n\nhit any of these = runtime exception. most pd1 failures trace back to not knowing this.",
+    "tweet": "salesforce governor limits — the ones that actually show up on pd1:\n\n100 soql queries per transaction\n150 dml statements max\n6mb heap size\n10 second cpu limit\n\nhit any of these = runtime exception. most pd1 failures trace back to not knowing this.",
     "status": "posted",
     "postedAt": "2026-03-24T06:30:01.387Z",
     "imageFile": "tweet-images/tip-012-tip-sf.png"
@@ -92,14 +92,14 @@
   },
   {
     "id": "tip-014",
-    "tweet": "pattern i see a lot: admin cert \u2192 more scope \u2192 app builder \u2192 pd1 if they like code. not a rule just a shape.\n\n#Salesforce #AppBuilder #SalesforceCareer",
+    "tweet": "pattern i see a lot: admin cert → more scope → app builder → pd1 if they like code. not a rule just a shape.\n\n#Salesforce #AppBuilder #SalesforceCareer",
     "status": "posted",
     "postedAt": "2026-03-25T04:30:02.125Z",
     "imageFile": "tweet-images/tip-014-tip-sf.png"
   },
   {
     "id": "tip-015",
-    "tweet": "adm-201 save order still wrecks people. draw the path once on paper \u2014 before-save vs validation vs after \u2014 you stop mixing it up.\n\n@SteveMoForce\n\n#SalesforceAdmin #ADM201",
+    "tweet": "adm-201 save order still wrecks people. draw the path once on paper — before-save vs validation vs after — you stop mixing it up.\n\n@SteveMoForce\n\n#SalesforceAdmin #ADM201",
     "status": "posted",
     "postedAt": "2026-03-25T06:30:02.640Z",
     "imageFile": "tweet-images/tip-015-tip-sf.png"
@@ -141,7 +141,7 @@
   },
   {
     "id": "tip-021",
-    "tweet": "exam fee vs potential raise is funny IF you actually switch jobs \u2014 cert gets interviews. offers still take work.\n\n@BradleyRice1\n\n#SalesforceCareer #SalesforceCertified",
+    "tweet": "exam fee vs potential raise is funny IF you actually switch jobs — cert gets interviews. offers still take work.\n\n@BradleyRice1\n\n#SalesforceCareer #SalesforceCertified",
     "status": "posted",
     "imageFile": "tweet-images/tip-021-tip-sf.png",
     "postedAt": "2026-03-26T03:28:17.260Z"
@@ -162,14 +162,14 @@
   },
   {
     "id": "tip-024",
-    "tweet": "validation vs flow vs approval \u2014 exam wants the right tool not the clever one. declarative first is usually the safe brain.\n\n#SalesforceFlow #SalesforceAdmin",
+    "tweet": "validation vs flow vs approval — exam wants the right tool not the clever one. declarative first is usually the safe brain.\n\n#SalesforceFlow #SalesforceAdmin",
     "status": "posted",
     "imageFile": "tweet-images/tip-024-tip-sf.png",
     "postedAt": "2026-03-26T10:30:05.635Z"
   },
   {
     "id": "tip-025",
-    "tweet": "sandbox types = pure memorization. dev vs partial vs full \u2014 know data + limits.\n\n@salesforceben\n\n#Salesforce #SalesforceCertified",
+    "tweet": "sandbox types = pure memorization. dev vs partial vs full — know data + limits.\n\n@salesforceben\n\n#Salesforce #SalesforceCertified",
     "status": "posted",
     "imageFile": "tweet-images/tip-025-tip-sf.png",
     "postedAt": "2026-03-26T12:30:03.962Z"
@@ -190,7 +190,7 @@
   },
   {
     "id": "tip-028",
-    "tweet": "service cloud consultant: queues routing entitlements \u2014 if you've only read about them go build one in a dev org before the exam.\n\n@salesforceben\n\n#Salesforce #SalesforceCareer",
+    "tweet": "service cloud consultant: queues routing entitlements — if you've only read about them go build one in a dev org before the exam.\n\n@salesforceben\n\n#Salesforce #SalesforceCareer",
     "status": "posted",
     "imageFile": "tweet-images/tip-028-tip-sf.png",
     "postedAt": "2026-03-27T04:30:04.314Z"
@@ -239,7 +239,7 @@
   },
   {
     "id": "tip-035",
-    "tweet": "agent = topics + actions + instructions. prototype fast \u2014 still govern it like anything else.\n\n@walters954\n\n#Agentforce #SalesforceAI",
+    "tweet": "agent = topics + actions + instructions. prototype fast — still govern it like anything else.\n\n@walters954\n\n#Agentforce #SalesforceAI",
     "status": "posted",
     "imageFile": "tweet-images/tip-035-tip-sf.png",
     "postedAt": "2026-03-28T14:30:04.012Z"
@@ -260,14 +260,14 @@
   },
   {
     "id": "tip-038",
-    "tweet": "trailblazer community \u2014 corny name, actually useful. use it while studying.\n\n#Trailblazer #Salesforce",
+    "tweet": "trailblazer community — corny name, actually useful. use it while studying.\n\n#Trailblazer #Salesforce",
     "status": "posted",
     "imageFile": "tweet-images/tip-038-tip-sf.png",
     "postedAt": "2026-03-29T14:30:04.966Z"
   },
   {
     "id": "tip-039",
-    "tweet": "data cloud on exams: streams identity resolution calculated insights \u2014 high level unless you're specializing.\n\n#Salesforce #SalesforceCertified",
+    "tweet": "data cloud on exams: streams identity resolution calculated insights — high level unless you're specializing.\n\n#Salesforce #SalesforceCertified",
     "status": "posted",
     "imageFile": "tweet-images/tip-039-tip-sf.png",
     "postedAt": "2026-03-30T04:30:04.708Z"
@@ -302,7 +302,7 @@
   },
   {
     "id": "tip-044",
-    "tweet": "interview \"trigger vs workflow\" \u2014 they want declarative first, code when you must.\n\n#PD1 #SalesforceFlow",
+    "tweet": "interview \"trigger vs workflow\" — they want declarative first, code when you must.\n\n#PD1 #SalesforceFlow",
     "status": "posted",
     "imageFile": "tweet-images/tip-044-tip-sf.png",
     "postedAt": "2026-03-30T14:30:10.984Z"
@@ -351,23 +351,27 @@
   },
   {
     "id": "tip-051",
-    "status": "pending",
-    "tweet": "Agentforce tip: if your agent keeps routing queries to the wrong Topic, the fix is almost never in the Action \u2014 it's in the Topic's Instructions. make them more specific about what the Topic handles and what it doesn't."
+    "status": "posted",
+    "tweet": "Agentforce tip: if your agent keeps routing queries to the wrong Topic, the fix is almost never in the Action — it's in the Topic's Instructions. make them more specific about what the Topic handles and what it doesn't.",
+    "postedAt": "2026-04-05T08:30:02.473Z"
   },
   {
     "id": "tip-052",
-    "status": "pending",
-    "tweet": "the Salesforce certification maintenance exam is not a full re-exam. it's 30-40 questions on what changed in the last release.\n\npeople treat it like a chore. it's actually the easiest 30 minutes you'll spend to keep a $200 cert active."
+    "status": "posted",
+    "tweet": "the Salesforce certification maintenance exam is not a full re-exam. it's 30-40 questions on what changed in the last release.\n\npeople treat it like a chore. it's actually the easiest 30 minutes you'll spend to keep a $200 cert active.",
+    "postedAt": "2026-04-05T10:30:02.097Z"
   },
   {
     "id": "tip-053",
-    "status": "pending",
-    "tweet": "App Builder exam: if a question asks whether to use a Flow or a Validation Rule \u2014 Flow wins when you need to DO something (create a record, send an email). Validation Rule wins when you need to BLOCK something.\n\ndifferent jobs. don't confuse them."
+    "status": "posted",
+    "tweet": "App Builder exam: if a question asks whether to use a Flow or a Validation Rule — Flow wins when you need to DO something (create a record, send an email). Validation Rule wins when you need to BLOCK something.\n\ndifferent jobs. don't confuse them.",
+    "postedAt": "2026-04-06T06:30:02.256Z"
   },
   {
     "id": "tip-054",
-    "status": "pending",
-    "tweet": "something I wish I'd known earlier: you can take Salesforce certification exams from home. no test center required.\n\nKryterion Webassessor + a webcam + a quiet room. that's it.\n\nno reason to delay."
+    "status": "posted",
+    "tweet": "something I wish I'd known earlier: you can take Salesforce certification exams from home. no test center required.\n\nKryterion Webassessor + a webcam + a quiet room. that's it.\n\nno reason to delay.",
+    "postedAt": "2026-04-06T08:30:02.102Z"
   },
   {
     "id": "tip-055",
@@ -382,7 +386,7 @@
   {
     "id": "tip-057",
     "status": "pending",
-    "tweet": "the AI Associate exam is the shortest path to a Salesforce cert \u2014 40 questions, 70% to pass, no prerequisites.\n\nif you're job hunting and need something to add to your resume fast, this one takes about 2-3 weeks to prepare for."
+    "tweet": "the AI Associate exam is the shortest path to a Salesforce cert — 40 questions, 70% to pass, no prerequisites.\n\nif you're job hunting and need something to add to your resume fast, this one takes about 2-3 weeks to prepare for."
   },
   {
     "id": "tip-058",
@@ -402,7 +406,7 @@
   {
     "id": "tip-061",
     "status": "pending",
-    "tweet": "Tableau Data Analyst tip: the exam tests whether you understand what chart type serves what purpose.\n\ntrend over time \u2192 line chart\npart to whole \u2192 pie or donut\ncomparison across categories \u2192 bar chart\ncorrelation between two measures \u2192 scatter plot\n\nexam questions are usually scenario-based. know the use case, not just the chart name."
+    "tweet": "Tableau Data Analyst tip: the exam tests whether you understand what chart type serves what purpose.\n\ntrend over time → line chart\npart to whole → pie or donut\ncomparison across categories → bar chart\ncorrelation between two measures → scatter plot\n\nexam questions are usually scenario-based. know the use case, not just the chart name."
   },
   {
     "id": "tip-062",
@@ -417,12 +421,12 @@
   {
     "id": "tip-064",
     "status": "pending",
-    "tweet": "experience Cloud Consultant tip: sharing rules and partner users trip everyone up.\n\npartner users use the portal license. they follow the sharing model like internal users \u2014 OWD, role hierarchy, sharing rules all apply.\n\nthe exam loves to ask edge cases about what a partner user can and can't see."
+    "tweet": "experience Cloud Consultant tip: sharing rules and partner users trip everyone up.\n\npartner users use the portal license. they follow the sharing model like internal users — OWD, role hierarchy, sharing rules all apply.\n\nthe exam loves to ask edge cases about what a partner user can and can't see."
   },
   {
     "id": "tip-065",
     "status": "pending",
-    "tweet": "Business Analyst cert tip: the exam cares less about Salesforce configuration and more about how you gather requirements and document processes.\n\nif you've been studying the platform features, step back.\n\nstakeholder interviews, user stories, process maps \u2014 that's what this exam is actually testing."
+    "tweet": "Business Analyst cert tip: the exam cares less about Salesforce configuration and more about how you gather requirements and document processes.\n\nif you've been studying the platform features, step back.\n\nstakeholder interviews, user stories, process maps — that's what this exam is actually testing."
   },
   {
     "id": "tip-066",
@@ -462,12 +466,12 @@
   {
     "id": "tip-073",
     "status": "pending",
-    "tweet": "if you're going for the Application Architect credential, you need 4 certs: Data Architect, Sharing Visibility Architect, Dev Lifecycle Architect, and Integration Architect.\n\nplan your sequence. Sharing Visibility and Data Architect first \u2014 they have the most foundational overlap."
+    "tweet": "if you're going for the Application Architect credential, you need 4 certs: Data Architect, Sharing Visibility Architect, Dev Lifecycle Architect, and Integration Architect.\n\nplan your sequence. Sharing Visibility and Data Architect first — they have the most foundational overlap."
   },
   {
     "id": "tip-074",
     "status": "pending",
-    "tweet": "CPQ Administrator tip: the Price Waterfall is probably the most tested concept.\n\nList Price \u2192 Contracted Price \u2192 Discount \u2192 Net Price \u2192 Partner Price \u2192 Customer Price.\n\nknow that order. know what affects each step. at least 10 questions will touch this."
+    "tweet": "CPQ Administrator tip: the Price Waterfall is probably the most tested concept.\n\nList Price → Contracted Price → Discount → Net Price → Partner Price → Customer Price.\n\nknow that order. know what affects each step. at least 10 questions will touch this."
   },
   {
     "id": "tip-075",
@@ -502,7 +506,7 @@
   {
     "id": "tip-081",
     "status": "pending",
-    "tweet": "the Platform App Builder exam has 23% on 'Salesforce Mobile' \u2014 which catches most people off guard.\n\nknow the difference between Salesforce mobile app customization and Lightning pages optimized for mobile.\n\nnot the same thing. exam will ask you to choose between them."
+    "tweet": "the Platform App Builder exam has 23% on 'Salesforce Mobile' — which catches most people off guard.\n\nknow the difference between Salesforce mobile app customization and Lightning pages optimized for mobile.\n\nnot the same thing. exam will ask you to choose between them."
   },
   {
     "id": "tip-082",
@@ -537,7 +541,7 @@
   {
     "id": "tip-088",
     "status": "pending",
-    "tweet": "Education Cloud Consultant tip: Program Enrollment is a central object in EDA (Education Data Architecture).\n\nknow how it connects Contact \u2192 Account \u2192 Program \u2192 Term.\n\nquestions about how EDA models students, courses, and institutions will be scenario-based."
+    "tweet": "Education Cloud Consultant tip: Program Enrollment is a central object in EDA (Education Data Architecture).\n\nknow how it connects Contact → Account → Program → Term.\n\nquestions about how EDA models students, courses, and institutions will be scenario-based."
   },
   {
     "id": "tip-089",
@@ -567,7 +571,7 @@
   {
     "id": "tip-094",
     "status": "pending",
-    "tweet": "the System Architect credential requires: Data Architect + Sharing Visibility Architect + Dev Lifecycle Architect + Integration Architect.\n\nApplication Architect requires different certs: Data + Sharing + Dev Lifecycle + Integration is technically the same 4.\n\nwait \u2014 they're actually the same 4 certs. the Application Architect = System Architect = same credential. just different names historically."
+    "tweet": "the System Architect credential requires: Data Architect + Sharing Visibility Architect + Dev Lifecycle Architect + Integration Architect.\n\nApplication Architect requires different certs: Data + Sharing + Dev Lifecycle + Integration is technically the same 4.\n\nwait — they're actually the same 4 certs. the Application Architect = System Architect = same credential. just different names historically."
   },
   {
     "id": "tip-095",
@@ -577,7 +581,7 @@
   {
     "id": "tip-096",
     "status": "pending",
-    "tweet": "UX Designer cert tip: the exam uses design thinking terminology specifically.\n\nempathize \u2192 define \u2192 ideate \u2192 prototype \u2192 test.\n\nknow this framework cold and know which activities belong to each phase.\n\nalso know the difference between usability testing and A/B testing. exam distinguishes them."
+    "tweet": "UX Designer cert tip: the exam uses design thinking terminology specifically.\n\nempathize → define → ideate → prototype → test.\n\nknow this framework cold and know which activities belong to each phase.\n\nalso know the difference between usability testing and A/B testing. exam distinguishes them."
   },
   {
     "id": "tip-097",

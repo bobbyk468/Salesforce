@@ -1,0 +1,299 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "MuleSoft Developer I",
+    "description": "Certified MuleSoft Developers have proven knowledge and skills to design, build, test and debug, deploy and manage basic APIs and integrations.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~70%",
+      "duration": "120 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Anypoint Platform",
+      "Mule Runtime",
+      "Flows",
+      "Connectors",
+      "DataWeave",
+      "API Design",
+      "RAML/OAS",
+      "Testing",
+      "Deployment",
+      "Security"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "MuleSoft Developer I: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Anypoint Platform and Development Lifecycle",
+        "body": "Anypoint Platform is MuleSoft's integration platform — Design, Develop, Deploy, Manage. Anypoint Studio is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. CloudHub is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
+      },
+      {
+        "heading": "Mule Events, Flows, and Core Concepts",
+        "body": "A Mule Event carries the message through the flow: Payload (the message data), Attributes (metadata about the source, like HTTP headers), Variables (flow-level storage), Error (in error handling context). A Flow has a Source (event trigger — HTTP listener, file listener, scheduler), Processors (transform, route, call), and Target (destination system). Sub-flows are reusable flow fragments without a source. Private flows can be called but not directly triggered. The developer exam tests Mule event structure and when to use each flow type."
+      },
+      {
+        "heading": "DataWeave 2.0 Transformations",
+        "body": "DataWeave is MuleSoft's transformation language — used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
+      },
+      {
+        "heading": "API Design with RAML and API-First",
+        "body": "RAML 1.0 (RESTful API Modeling Language) defines API contracts. Structure: baseUri, version, mediaType, types (data types), traits (reusable method fragments), resourceTypes (reusable resource patterns). API Fragment types in Exchange: data types, traits, resource types, security schemes, examples. API-first development: design and mock the API spec, share with consumers for feedback, then implement. Mocking Service in Exchange lets consumers test against the spec before implementation is complete. The exam tests RAML syntax and API-first methodology."
+      },
+      {
+        "heading": "Error Handling: On Error Continue vs Propagate",
+        "body": "Error handling in Mule uses Try scope, On Error Continue, and On Error Propagate. On Error Continue: catches the error, executes the handler, and resumes the flow after the error scope — the client receives the handler's response. On Error Propagate: catches the error, executes the handler, and re-throws the error — the client receives an error response. Error types follow a hierarchy: ANY (catch all), CONNECTIVITY, EXPRESSION, ROUTING, SECURITY. The exam tests which handler type is appropriate and how error types are matched."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the MuleSoft Developer I Exam",
+    "intro": "The MuleSoft Developer I exam tests foundational Anypoint Platform skills: building integrations in Anypoint Studio, using connectors, transforming data with DataWeave, and deploying to CloudHub. Focus on practical flow design and DataWeave syntax.",
+    "blocks": [
+      {
+        "heading": "Mule 4 Flow Design",
+        "body": "Know the three flow types: Flow (with message source), Sub-Flow (no source, called by reference), and Private Flow. Understand the flow lifecycle and how the Mule Message (payload, attributes, variables) changes through processors."
+      },
+      {
+        "heading": "DataWeave 2.0 Fundamentals",
+        "body": "DataWeave is the transformation language at the core of Mule 4. Know how to map, filter, transform, and coerce data types. Key functions: map, filter, mapObject, reduce, pluck, flatten, and type coercion operators."
+      },
+      {
+        "heading": "Core Connectors",
+        "body": "Know the key connectors: HTTP Listener/Request, Database, File/FTP, JMS/AMQP, Salesforce, and how to configure each. Understand connection pooling, reconnection strategies, and connection testing."
+      },
+      {
+        "heading": "Error Handling",
+        "body": "Know the error handling mechanisms: Try/Catch scope, On Error Continue vs. On Error Propagate, and Global Error Handlers. Understand error type hierarchy (MULE:CONNECTIVITY, HTTP:UNAUTHORIZED, etc.) and how to handle them."
+      },
+      {
+        "heading": "Deployment to CloudHub",
+        "body": "Know how to deploy a Mule application to CloudHub 1.0: environment selection, worker configuration (size and count), deployment properties, and how to monitor deployed applications."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After Developer",
+    "intro": "After this certification, common next steps in the developer track:",
+    "links": [
+      {
+        "href": "/certifications/developer-2",
+        "label": "Platform Developer II"
+      },
+      {
+        "href": "/certifications/app-builder",
+        "label": "Platform App Builder"
+      },
+      {
+        "href": "/certifications/javascript-developer-i",
+        "label": "JavaScript Developer I"
+      },
+      {
+        "href": "/certifications/role/developer",
+        "label": "Developer certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary purpose of Anypoint Platform?",
+      "options": [
+        "To run Apex",
+        "To design, build, and manage APIs and integrations",
+        "To send marketing emails",
+        "To configure CPQ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Anypoint Platform is MuleSoft's unified platform for designing, building, and managing APIs and integrations."
+    },
+    {
+      "question": "Which Mule runtime component processes messages in a flow?",
+      "options": [
+        "Apex Class",
+        "Flow",
+        "Trigger",
+        "Visualforce"
+      ],
+      "correctAnswer": 1,
+      "explanation": "In Mule, a Flow contains the sequence of components that process messages."
+    },
+    {
+      "question": "What does API-led connectivity emphasize?",
+      "options": [
+        "Only system APIs",
+        "Reusable APIs organized in layers: System, Process, Experience",
+        "No APIs",
+        "Only Experience APIs"
+      ],
+      "correctAnswer": 1,
+      "explanation": "API-led connectivity uses System, Process, and Experience API layers for reusable, composable integrations."
+    },
+    {
+      "question": "Which format is commonly used for API specifications in MuleSoft?",
+      "options": [
+        "Apex",
+        "RAML or OAS (OpenAPI)",
+        "AMPscript",
+        "Visualforce"
+      ],
+      "correctAnswer": 1,
+      "explanation": "RAML and OpenAPI (OAS) are used to design and document APIs in Anypoint."
+    },
+    {
+      "question": "What is a Connector in Mule?",
+      "options": [
+        "A database",
+        "A pre-built module that connects to an external system or protocol",
+        "A Slack channel",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Connectors are pre-built modules that provide connectivity to systems like Salesforce, SAP, HTTP, etc."
+    },
+    {
+      "question": "What is DataWeave used for in Mule applications?",
+      "options": [
+        "Database queries only",
+        "Transforming and querying data in Mule flows",
+        "Sending emails only",
+        "CPQ configuration"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DataWeave is MuleSoft's transformation language for data mapping and querying."
+    },
+    {
+      "question": "Which Mule component handles errors in a flow?",
+      "options": [
+        "Logger only",
+        "Error Handler with try, on-error-continue, or on-error-propagate",
+        "Transform Message only",
+        "Set Variable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Error Handlers manage exceptions using try, on-error-continue, or on-error-propagate."
+    },
+    {
+      "question": "What is the purpose of an API specification (RAML/OAS)?",
+      "options": [
+        "To run Apex",
+        "To design, document, and define the contract for an API before implementation",
+        "To send emails",
+        "To configure CPQ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "API specs define the contract and enable design-first development."
+    },
+    {
+      "question": "Which deployment target is used for cloud-hosted Mule applications?",
+      "options": [
+        "On-premises only",
+        "CloudHub",
+        "Salesforce only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CloudHub is MuleSoft's cloud runtime for deploying Mule applications."
+    },
+    {
+      "question": "What does the HTTP Listener connector do?",
+      "options": [
+        "Sends outbound HTTP requests only",
+        "Receives incoming HTTP requests and triggers a flow",
+        "Transforms data only",
+        "Queries databases"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The HTTP Listener receives incoming requests and triggers Mule flows."
+    },
+    {
+      "question": "Which layer in API-led connectivity exposes system-of-record data?",
+      "options": [
+        "Experience API only",
+        "System API",
+        "Process API only",
+        "No layers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "System APIs abstract and expose data from underlying systems."
+    },
+    {
+      "question": "What is the purpose of Mocking in Anypoint Platform?",
+      "options": [
+        "To delete APIs",
+        "To simulate API behavior for testing before implementation",
+        "To send emails",
+        "To configure CPQ"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Mocking allows frontend and consumer development before backend is ready."
+    },
+    {
+      "question": "Which Mule variable scope is available across the entire flow?",
+      "options": [
+        "Target only",
+        "Flow variables (flowVars)",
+        "Session only",
+        "No variables"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Flow variables persist for the lifetime of the flow execution."
+    },
+    {
+      "question": "What does client credentials grant provide in OAuth?",
+      "options": [
+        "User password",
+        "Application-level authentication without user context",
+        "Slack token only",
+        "Email credentials"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Client credentials grant is for machine-to-machine, app-level authentication."
+    },
+    {
+      "question": "Which Anypoint component manages API policies?",
+      "options": [
+        "Studio only",
+        "API Manager",
+        "Design Center only",
+        "Runtime Manager only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "API Manager handles policies, client management, and analytics."
+    }
+  ]
+}

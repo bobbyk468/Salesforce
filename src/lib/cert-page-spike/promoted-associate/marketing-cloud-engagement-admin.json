@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "MC Engagement Admin",
+    "description": "Certified Marketing Cloud Engagement Administrators have hands-on experience configuring Marketing Cloud products utilizing industry and product best practices. They understand data structure in subscriber data management and can thoroughly navigate Setup.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Marketing Cloud Setup",
+      "Subscriber Data Management",
+      "Email Studio",
+      "Journey Builder",
+      "Automation Studio",
+      "Content Builder",
+      "Contact Builder",
+      "Deliverability",
+      "Reporting",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Marketing Cloud Engagement Admin: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Account Architecture and Business Units",
+        "body": "Marketing Cloud Engagement supports multi-Business Unit (BU) architectures. Business Units enable separate sending domains, user management, subscriber data, and reporting per BU — useful for regional or brand separation. The parent BU manages shared assets and enforces enterprise-level settings. User roles hierarchy: Administrator, Marketing Cloud Administrator, Marketing, Content Editor/Publisher, Viewer. Sender Authentication Package (SAP) provides the private IP, custom FROM domain, and branded link tracking for each BU. The admin exam tests BU design decisions and how permissions cascade."
+      },
+      {
+        "heading": "Subscriber Management at the Account Level",
+        "body": "The All Subscribers list is the master subscriber list — global unsubscribes are recorded here and override all other settings. Publication Lists enable opt-in preferences per content type. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends globally. Data Extensions store relational subscriber and event data. The Subscriber Key strategy (email address vs CRM ID) affects deduplication and cross-channel identity. The admin configures the subscriber data model and retention policies."
+      },
+      {
+        "heading": "IP Warming and Sender Reputation",
+        "body": "New dedicated IPs require IP warming — gradually increasing send volume over 4-8 weeks to establish sender reputation with ISPs. Send to the most engaged subscribers first. Monitor bounce rates, spam complaints, and inbox placement. SPF, DKIM, and DMARC configuration is required via the Sender Authentication Package. Reply Mail Management (RMM) handles inbound replies — route auto-replies, out-of-office, and unsubscribes automatically. The admin exam tests the warming schedule design and what metrics indicate reputation health."
+      },
+      {
+        "heading": "Roles, Permissions, and Security",
+        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive — a user can have roles in multiple BUs. Marketing Cloud SSO connects to corporate identity systems (SAML/OAuth). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
+      },
+      {
+        "heading": "Salesforce CRM Integration (MC Connect)",
+        "body": "Marketing Cloud Connect integrates Engagement with Sales/Service Cloud. Synchronized Data Extensions pull CRM object records (Leads, Contacts, Campaigns) into Marketing Cloud for targeting. Triggered Sends fire in response to Salesforce record changes (e.g., Opportunity Closed Won). Journey Builder entry sources can use CRM reports or data extensions synced from Salesforce. Email send results sync back to the Contact/Lead record as individual send activities. The admin configures the integration settings, sync schedules, and troubleshoots sync errors."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Marketing Cloud Engagement Administrator Exam",
+    "intro": "The Marketing Cloud Engagement Administrator exam focuses on platform administration: user management, account setup, security, and data management. Questions test your ability to configure and maintain a Marketing Cloud instance.",
+    "blocks": [
+      {
+        "heading": "Account Setup & Business Units",
+        "body": "Know how to configure business units for multi-brand or multi-regional setups, how permissions are inherited, and how to manage shared content and data extensions across business units."
+      },
+      {
+        "heading": "User Roles & Permissions",
+        "body": "Know the standard Marketing Cloud roles (Administrator, Analyst, Content Creator, etc.) and how to create custom roles. Understand how role-based permissions control access to each studio and feature."
+      },
+      {
+        "heading": "Data Management & Retention",
+        "body": "Know how to configure data retention policies on data extensions, manage All Subscribers list hygiene, and use Contact Deletion to comply with data privacy regulations."
+      },
+      {
+        "heading": "Sender Authentication Package (SAP)",
+        "body": "Understand how SAP (Private Domain, SAP Subdomain, Reply Mail Management) improves email deliverability and brand reputation. Know the difference between a SAP and a standard shared IP configuration."
+      },
+      {
+        "heading": "API Integration & Security",
+        "body": "Know how to create and manage API integrations (installed packages with OAuth credentials), configure IP whitelisting for API access, and monitor API usage for security anomalies."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Marketing Certifications",
+    "intro": "After this marketing certification, consider these related credentials:",
+    "links": [
+      {
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Engagement Consultant"
+      },
+      {
+        "href": "/certifications/pardot-consultant",
+        "label": "Account Engagement (Pardot) Consultant"
+      },
+      {
+        "href": "/certifications/email-specialist",
+        "label": "Marketing Cloud Email Specialist"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary focus of a Marketing Cloud Engagement Administrator?",
+      "options": [
+        "Writing AMPscript",
+        "Configuring Marketing Cloud products using industry and product best practices",
+        "Designing Pardot campaigns",
+        "Managing Salesforce CRM only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certified Marketing Cloud Engagement Administrators have hands-on experience configuring Marketing Cloud products utilizing industry and product best practices."
+    },
+    {
+      "question": "Which area must an Engagement Administrator thoroughly navigate?",
+      "options": [
+        "Only Email Studio",
+        "Setup and subscriber data management",
+        "Slack workspace settings",
+        "CPQ product configuration"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They understand data structure in subscriber data management and can thoroughly navigate Setup."
+    },
+    {
+      "question": "What is Subscriber Data Management in Marketing Cloud?",
+      "options": [
+        "A reporting tool",
+        "The structure and management of contact/subscriber data across data extensions and lists",
+        "Email template storage",
+        "Journey Builder only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Subscriber data management refers to how contact and subscriber data is structured and managed in Data Extensions and lists."
+    },
+    {
+      "question": "Which Marketing Cloud product is typically configured by an Engagement Administrator?",
+      "options": [
+        "Sales Cloud",
+        "Email Studio, Journey Builder, Automation Studio",
+        "Heroku",
+        "Experience Cloud"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Engagement Administrators configure core Marketing Cloud engagement products including Email Studio, Journey Builder, and Automation Studio."
+    },
+    {
+      "question": "What best practice should an Engagement Administrator follow when configuring sends?",
+      "options": [
+        "Send to all contacts without segmentation",
+        "Use suppression lists, test sends, and follow deliverability best practices",
+        "Disable tracking",
+        "Use only one data extension"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Best practices include using suppression lists, conducting test sends, and following deliverability guidelines."
+    },
+    {
+      "question": "What is a Data Extension in Marketing Cloud?",
+      "options": [
+        "A report only",
+        "A table that stores subscriber/contact data for sends and journeys",
+        "An email template",
+        "A list only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data Extensions store subscriber data for sends and journeys."
+    },
+    {
+      "question": "Which Journey Builder activity sends an email?",
+      "options": [
+        "Wait only",
+        "Email send activity",
+        "Decision split only",
+        "Update contact only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email send activity sends messages in a journey."
+    },
+    {
+      "question": "What does Automation Studio support?",
+      "options": [
+        "Only manual sends",
+        "Scheduled automations, imports, and file drops",
+        "Journey Builder only",
+        "Email Studio only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Automation Studio runs scheduled automations and imports."
+    },
+    {
+      "question": "Which best practice supports email deliverability?",
+      "options": [
+        "Send to all",
+        "Authenticate domains (SPF, DKIM), maintain list hygiene, avoid spam triggers",
+        "No authentication",
+        "No list hygiene"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Domain auth and list hygiene support deliverability."
+    },
+    {
+      "question": "What is a suppression list used for?",
+      "options": [
+        "To add contacts",
+        "To exclude contacts who unsubscribed or should not receive emails",
+        "To send more",
+        "To track opens"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Suppression lists exclude unsubscribed or blocked contacts."
+    },
+    {
+      "question": "Which Marketing Cloud role controls access?",
+      "options": [
+        "Profile only",
+        "Business unit roles and permissions",
+        "No roles",
+        "Only admin"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Business unit roles and permissions control access."
+    },
+    {
+      "question": "What does tracking in Email Studio measure?",
+      "options": [
+        "Only sends",
+        "Opens, clicks, bounces, and unsubscribes",
+        "Only opens",
+        "Only clicks"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes."
+    },
+    {
+      "question": "Which feature allows personalized content in emails?",
+      "options": [
+        "Plain text only",
+        "AMPscript and personalization strings",
+        "No personalization",
+        "Only merge fields"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AMPscript and personalization strings enable dynamic content."
+    },
+    {
+      "question": "What is the purpose of a send classification?",
+      "options": [
+        "To replace lists",
+        "To define sender profile and deliverability settings for sends",
+        "To create templates only",
+        "To track only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Send classification defines sender and deliverability settings."
+    },
+    {
+      "question": "Which integration connects Marketing Cloud to Salesforce?",
+      "options": [
+        "Manual only",
+        "Marketing Cloud Connect (or equivalent connector)",
+        "No integration",
+        "Email only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Marketing Cloud Connect syncs data with Salesforce."
+    }
+  ]
+}

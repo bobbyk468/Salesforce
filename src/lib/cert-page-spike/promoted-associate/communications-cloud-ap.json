@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Communications Cloud Professionals have knowledge, skills, and experience to discover, design, plan, and deliver business value to customers through Communications Cloud.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Communications Cloud",
+      "Telecom",
+      "Discovery",
+      "Design",
+      "Delivery",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Communications Cloud AP: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Product Catalog & Offer Management",
+        "body": "Communications Cloud uses TM Forum-aligned data models. The Product Catalog manages the hierarchy: Product Specification → Product Offering → Bundled Offering. Product Attributes define configurable options (plan type, data cap, contract term). Qualification Rules control which offerings are available to a customer based on account type, location, or existing subscriptions. Pricing Tiers apply usage-based or tiered pricing to product offerings. The AP exam tests how to configure a product offering for a telecommunications use case, including bundling mobile, broadband, and TV services into a single offer."
+      },
+      {
+        "heading": "Industries CPQ for Telco",
+        "body": "Industries CPQ (Configure, Price, Quote) in Communications Cloud handles complex telco quoting. Configuration Rules enforce product compatibility (e.g., a 5G plan requires a compatible device). Pricing Procedures calculate the total price including promotions, discounts, and one-time vs. recurring charges. Promotions apply time-limited discounts at the order or line level. Decomposition breaks complex product bundles into fulfillable line items for downstream systems. The exam tests how to configure CPQ for a scenario with bundled products, promotional pricing, and device+plan combinations — know the difference between attribute-based configuration and separate product selection."
+      },
+      {
+        "heading": "Order Management & Orchestration",
+        "body": "Orders in Communications Cloud follow the TM Forum order lifecycle: Order Received → Feasibility → Order Accepted → Provisioning → Order Completed. Order Orchestration uses Flow Orchestration or a BPM tool to coordinate provisioning steps across fulfillment systems. Fallout Management handles failed provisioning steps — the exam tests retry logic and manual intervention workflows. Change Orders handle service modifications (upgrades, downgrades, add-ons). Cancellation management flows handle both pre-provisioning and post-provisioning cancellations. The exam tests the complete order lifecycle and how to design an orchestration that handles common telco provisioning failure scenarios."
+      },
+      {
+        "heading": "Contract & Subscription Lifecycle",
+        "body": "Contracts in Communications Cloud manage the term commitment for services — start date, end date, and early termination fees. Auto-Renewal rules trigger renewal or renegotiation workflows before contract expiry. Contract amendments modify in-force services and generate change orders. Asset-Based Ordering (ABO) tracks each active service as an asset on the customer account. The Asset Object in Communications Cloud records the current state of a provisioned service. The exam tests how contract terms flow into billing, how ABO manages the lifecycle of a service from provisioning through cancellation, and how to design amendment workflows."
+      },
+      {
+        "heading": "Partner Ecosystem & Channel Management",
+        "body": "Communications Cloud supports indirect sales through a partner channel — resellers and agents sell services on behalf of the operator. Partner Community provides the sales and ordering interface for channel partners. Partner Accounts and Partner Users manage access and visibility. Revenue sharing and commission tracking are handled through channel management capabilities. The exam tests how to configure a partner order flow, what data the partner can see vs. what is hidden (margin, cost), and how to design the security model so that partners can only access their own customers and orders."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Communications Cloud Accredited Professional Exam",
+    "intro": "The Communications Cloud AP exam tests configuration of Vlocity/Industries solutions for communications service providers (CSPs). Focus on product catalog, CPQ, order management, and the CSP-specific data model.",
+    "blocks": [
+      {
+        "heading": "Communications Cloud Data Model",
+        "body": "Know the CSP-specific objects: Account (residential/business), Service Account, Service Point, Subscription, Product (service plans), and how they map to standard Salesforce objects."
+      },
+      {
+        "heading": "Industries CPQ for Telecom",
+        "body": "Know how Industries CPQ manages telecom product configuration: voice, data, and value-added services as products with attributes (data allowance, speeds). Understand bundled plan configuration."
+      },
+      {
+        "heading": "Order Management for CSPs",
+        "body": "Know the telecom order lifecycle: order capture, decomposition (splitting into work items), fallout management, and order tracking. Understand how service activation triggers downstream provisioning."
+      },
+      {
+        "heading": "Customer 360 for Telecom",
+        "body": "Know how to configure the Communications Cloud customer view: account hierarchy for business customers, service account billing, usage data display, and churn prediction with Einstein."
+      },
+      {
+        "heading": "OmniStudio in Communications Cloud",
+        "body": "Know how Communications Cloud uses OmniStudio (FlexCards, OmniScripts) for agent desktop and self-service portal experiences. Understand standard Communication Cloud OmniScripts like 'Add a Line.'"
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Communications Cloud AP validate?",
+      "options": [
+        "Only basics",
+        "Knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Communications Cloud Professionals have knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud."
+    },
+    {
+      "question": "Which industry does Communications Cloud serve?",
+      "options": [
+        "Retail only",
+        "Telecommunications and media (e.g., telecom operators)",
+        "Manufacturing only",
+        "Healthcare only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Communications Cloud serves telecommunications and media industries."
+    },
+    {
+      "question": "What is a key activity for a Communications Cloud Professional?",
+      "options": [
+        "Only coding",
+        "Discovering, designing, planning, and delivering business value",
+        "Only reporting",
+        "Only email"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They discover, design, plan, and deliver business value."
+    },
+    {
+      "question": "Which role typically pursues Communications Cloud AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers in telecom/media",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers in telecom/media pursue this credential."
+    },
+    {
+      "question": "What does Communications Cloud often integrate with?",
+      "options": [
+        "Only Marketing Cloud",
+        "Industries CPQ, Billing, and telecom systems",
+        "Only Service Cloud",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It integrates with Industries CPQ, Billing, and telecom systems."
+    },
+    {
+      "question": "What is Industries CPQ in telecom context?",
+      "options": [
+        "Standard CPQ only",
+        "CPQ tailored for telecom (products, bundles, pricing for telecom)",
+        "Marketing Cloud",
+        "Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries CPQ extends CPQ for telecom product catalogs."
+    },
+    {
+      "question": "Which activity is part of 'discover' for Communications Cloud?",
+      "options": [
+        "Only deployment",
+        "Gathering requirements and understanding telecom workflows",
+        "Only coding",
+        "Only reporting"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Discover = requirements gathering and workflow analysis."
+    },
+    {
+      "question": "What does 'deliver business value' mean for Communications Cloud?",
+      "options": [
+        "Only shipping",
+        "Implementing solutions that drive outcomes for telecom customers",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Deliver = implement solutions that achieve customer outcomes."
+    },
+    {
+      "question": "Which Salesforce product supports telecom billing?",
+      "options": [
+        "Marketing Cloud only",
+        "Salesforce Billing and Industries Billing",
+        "Service Cloud only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Industries Billing supports telecom billing workflows."
+    },
+    {
+      "question": "What is a key consideration when designing Communications Cloud solutions?",
+      "options": [
+        "Colors only",
+        "Product catalog complexity, rating, and billing integration",
+        "Only UI",
+        "Only reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Catalog, rating, and billing are core telecom design considerations."
+    },
+    {
+      "question": "Why is the telecom industry unique for CRM?",
+      "options": [
+        "It isn't",
+        "Complex products, subscriptions, and regulatory requirements",
+        "Only standard objects",
+        "Only simple pricing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Telecom has complex products, subscriptions, and regulations."
+    },
+    {
+      "question": "What does 'plan' mean in Communications Cloud context?",
+      "options": [
+        "Only schedules",
+        "Planning the implementation approach and solution roadmap",
+        "Only coding",
+        "Only deployment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Plan = implementation approach and roadmap."
+    },
+    {
+      "question": "What does charging mean in telecom billing?",
+      "options": [
+        "Only invoicing",
+        "Calculating and applying charges for usage and products based on rating",
+        "Only payment collection",
+        "Only refunds"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Charging applies rated amounts to customer accounts; rating calculates the charge."
+    },
+    {
+      "question": "What is rating in telecom?",
+      "options": [
+        "A report",
+        "Calculating charges for usage and products",
+        "A workflow only",
+        "An object only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Rating calculates charges for telecom products and usage."
+    },
+    {
+      "question": "Which industries does Communications Cloud serve beyond telecom?",
+      "options": [
+        "None",
+        "Media and other communication-intensive industries",
+        "Retail only",
+        "Manufacturing only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Communications Cloud also serves media and similar industries."
+    }
+  ]
+}

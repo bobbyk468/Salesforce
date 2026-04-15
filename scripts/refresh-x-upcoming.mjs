@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url'
 const __dirname = dirname(fileURLToPath(import.meta.url))
 const QUEUE_FILE = resolve(__dirname, 'x-content-queue.json')
 const TIPS_FILE = resolve(__dirname, 'x-tips-queue.json')
-const SITE = 'https://trailblazeprep.com'
+const SITE = 'https://www.trailblazeprep.com'
 /** Portable paths for x-content-queue.json (same as generate-tweet-images.mjs). */
 const img = (name) => `tweet-images/${name}`
 

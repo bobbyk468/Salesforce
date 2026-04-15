@@ -1,0 +1,308 @@
+{
+  "template": "associate",
+  "practiceQuestionsIntroSuffix": "— practice thinking like a CTA and defending architecture decisions for the Review Board.",
+  "certificationCard": {
+    "code": "CTA Step 2",
+    "description": "The Architect Review Board is the final step to become a CTA. You receive a scenario, design a solution, and present and defend it before a board of Certified Technical Architects. Success here earns the Certified Technical Architect credential.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "Board decision",
+      "duration": "Board session",
+      "cost": "$6000"
+    },
+    "topics": [
+      "Scenario Analysis",
+      "Solution Design",
+      "Presentation & Communication",
+      "Trade-off Justification",
+      "Security & Compliance",
+      "Integration & Data",
+      "Handling Board Questions"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "CTA Review Board: Key Concepts for Preparation",
+    "blocks": [
+      {
+        "heading": "Review Board Format & Logistics",
+        "body": "The Salesforce CTA Review Board is a 2-hour oral examination conducted virtually (via Zoom) before a panel of 3–4 currently active Salesforce CTAs who serve as evaluators. Candidates receive the scenario document 30 minutes before the session starts — use this time to read carefully, identify all requirements (functional and non-functional), spot constraints, and outline a response structure. The session consists of a ~30-minute presentation (with shared screen for diagrams) followed by ~60–90 minutes of Q&A and probing challenges. A whiteboard tool (or pre-prepared diagrams) is expected. Candidates are scored Pass or Fail with detailed feedback provided regardless of outcome."
+      },
+      {
+        "heading": "Preparing Architecture Diagrams",
+        "body": "Effective CTA presentations use clear, well-labeled diagrams: Context Diagram (systems involved and their relationships), Integration Architecture Diagram (data flows, protocols, sync/async), Data Model Diagram (key objects, relationships, volumes), Security Architecture Diagram (identity, encryption, sharing), and Deployment Diagram (orgs, sandboxes, CI/CD). Diagrams must be legible when screen-shared — use color coding by system type (Salesforce = blue, external = gray, integration layer = orange). Each diagram should have a legend. Practice presenting each diagram in under 90 seconds with a clear narrative: \"This shows... The key decision here is... The trade-off is...\". Avoid cluttered diagrams that require extensive explanation."
+      },
+      {
+        "heading": "Common Failure Areas & How to Avoid Them",
+        "body": "Statistical analysis of failed Review Board attempts reveals recurring gaps: (1) Incomplete solution — not addressing all scenario requirements; use a checklist before presenting. (2) Lack of specificity — saying \"we will use Salesforce's security model\" without specifying OWD, role hierarchy, sharing rules, or Shield. (3) Ignoring non-functional requirements — scalability, performance, availability, compliance. (4) No integration error handling — every integration must address what happens when it fails. (5) Defensive responses to challenges — treat every challenge as a \"help me understand\" question, not an attack. (6) Time management — running over on presentation leaves no time for Q&A, which is where most probing happens. Practice with a timer religiously."
+      },
+      {
+        "heading": "Responding to Board Challenges",
+        "body": "When a Board member challenges your design, use the STAR-A framework: Situation (restate the challenge to show you understood), Think (pause visibly — evaluators want to see you think, not react), Answer (address the specific challenge with a specific answer), Rationale (explain the reasoning), Adapt (if the challenge reveals a genuine gap, update your design on the spot and explain the revision). Never say \"I don't know\" — say \"My initial design assumed X; given your challenge, I would revise it to Y because...\" The Board is not trying to trick you — they are stress-testing your design for production-level robustness. Candidates who engage thoughtfully with challenges often score higher than those whose initial designs were unchallenged."
+      },
+      {
+        "heading": "Success Strategies & Preparation Plan",
+        "body": "Successful CTA candidates typically follow a 3–6 month structured preparation plan: (1) CTA Bootcamp or coaching program with active CTAs. (2) Weekly mock Review Board sessions — at minimum 8–10 full mock sessions before attempting the real board. (3) Deep-dive study in weak areas: large data volumes, integration architecture, security, and multi-org strategy are the most commonly cited gaps. (4) Build a library of 5–10 practice scenarios (Salesforce provides some; community resources provide more) and practice presenting each. (5) Get comfortable diagramming under time pressure — set a timer for 20 minutes and draw a complete architecture diagram from a scenario. (6) Join the CTA Study Group in the Trailblazer Community for peer feedback and shared resources."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Technical Architect Review Board Exam",
+    "intro": "The CTA Review Board is a live, oral examination where candidates present architecture solutions to a panel of senior Salesforce architects. Preparation requires practicing under realistic conditions — not just studying content.",
+    "blocks": [
+      {
+        "heading": "The Review Board Format",
+        "body": "The Review Board presents a complex business scenario. You have time to review it, then present your architecture to the panel and answer questions. Know the format deeply so logistics don't distract you on the day."
+      },
+      {
+        "heading": "Architecture Presentation Structure",
+        "body": "Open with a brief summary of your understanding of the requirements, present your high-level architecture diagram, walk through each component and key decisions, address risks, and close with a recommendation."
+      },
+      {
+        "heading": "Handling Panel Questions",
+        "body": "Panel questions probe your assumptions and test alternative approaches. If challenged, consider the question carefully, acknowledge valid points, and either defend your position with evidence or update your recommendation."
+      },
+      {
+        "heading": "Deep Dive Readiness",
+        "body": "Be prepared to go deep on any component of your solution: data model, integration pattern, security configuration, deployment approach. If you propose something, know the details."
+      },
+      {
+        "heading": "Mock Board Practice Is Essential",
+        "body": "The only way to prepare for the Review Board is to do it. Practice with mock panels, record yourself, and review your performance. Focus on confidence, clarity, and structured thinking under pressure."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Architect Certifications",
+    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "links": [
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
+      {
+        "href": "/architect-certification-path",
+        "label": "Architect certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Previous Step"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does the CTA Architect Review Board exam primarily consist of?",
+      "options": [
+        "Only multiple-choice questions",
+        "A scenario-based design that you present and defend before a board of CTAs",
+        "Only a written document",
+        "Only a coding challenge"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The Review Board is a live scenario where you present and defend your architecture before a board of Certified Technical Architects."
+    },
+    {
+      "question": "What is typically required before attempting the Architect Review Board?",
+      "options": [
+        "Only Application Architect",
+        "Passing the Architect Evaluation (and meeting other CTA program requirements)",
+        "Only System Architect",
+        "No prerequisites"
+      ],
+      "correctAnswer": 1,
+      "explanation": "You must pass the Architect Evaluation and meet the CTA program requirements before scheduling the Review Board."
+    },
+    {
+      "question": "Which skills are most critical for the Review Board?",
+      "options": [
+        "Only coding speed",
+        "Clear communication, trade-off justification, and handling board questions under pressure",
+        "Only slide design",
+        "Only documentation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The board evaluates how you communicate your design, justify trade-offs, and respond to challenging questions."
+    },
+    {
+      "question": "How should you structure your solution presentation for the Review Board?",
+      "options": [
+        "Read slides verbatim",
+        "Lead with requirements, constraints, and design decisions; then walk through components and trade-offs",
+        "Focus only on diagrams",
+        "Skip the scenario"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Structure: requirements → constraints → design → components → trade-offs. Be clear and concise."
+    },
+    {
+      "question": "When the board challenges a design choice, what is the best approach?",
+      "options": [
+        "Defend aggressively",
+        "Acknowledge the concern, explain your reasoning, and discuss alternatives if applicable",
+        "Ignore the question",
+        "Change your design immediately"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Acknowledge, explain rationale, and discuss alternatives. Show you've considered trade-offs."
+    },
+    {
+      "question": "What should your architecture diagram include for the board?",
+      "options": [
+        "Only Salesforce logo",
+        "Systems, data flows, integration points, security boundaries, and key components",
+        "Only screenshots",
+        "Only text"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Diagrams should show systems, flows, integrations, and security boundaries for clarity."
+    },
+    {
+      "question": "Why is it important to state assumptions explicitly in your design?",
+      "options": [
+        "Not important",
+        "It sets context, avoids misunderstandings, and shows you've identified unknowns",
+        "Only for compliance",
+        "Only for documentation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Explicit assumptions help the board understand your constraints and show thorough analysis."
+    },
+    {
+      "question": "Which non-functional requirement is often overlooked in CTA scenarios?",
+      "options": [
+        "Colors",
+        "Scalability, security, and maintainability",
+        "Naming conventions",
+        "Font sizes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scalability, security, and maintainability are critical; candidates sometimes focus only on functionality."
+    },
+    {
+      "question": "How do you handle a question you don't know the answer to during the board?",
+      "options": [
+        "Guess",
+        "Acknowledge the gap, state what you would research, and connect to what you do know",
+        "Change the subject",
+        "Say nothing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Honesty and a structured response (gap + research plan + related knowledge) demonstrate professionalism."
+    },
+    {
+      "question": "What role do personas play in your solution design for the board?",
+      "options": [
+        "No role",
+        "They drive user experience, license choices, and security model",
+        "Only for UI",
+        "Only for reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Personas inform UX, licensing, and security—all areas the board evaluates."
+    },
+    {
+      "question": "When presenting integration architecture, what should you emphasize?",
+      "options": [
+        "Only APIs",
+        "Data consistency, error handling, security, and scalability",
+        "Only middleware",
+        "Only endpoints"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Integration design should address consistency, errors, security, and scale."
+    },
+    {
+      "question": "What is the purpose of the 'Ask Me Anything' (AMA) section in CTA prep?",
+      "options": [
+        "No purpose",
+        "Practicing answering broad architecture and Salesforce questions under pressure",
+        "Only for timing",
+        "Only for slides"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AMA simulates board questioning and builds confidence for unpredictable follow-ups."
+    },
+    {
+      "question": "Which deliverable is typically required before the Review Board presentation?",
+      "options": [
+        "None",
+        "A written solution document or architecture artifact",
+        "Only slides",
+        "Only a video"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A written artifact documents your design for the board to review before or during the session."
+    },
+    {
+      "question": "How should you justify choosing a declarative solution over code?",
+      "options": [
+        "Always choose code",
+        "Explain maintainability, speed to implement, and governance benefits when requirements fit",
+        "Never justify",
+        "Only for admins"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Declarative solutions offer maintainability and governance; justify when they meet requirements."
+    },
+    {
+      "question": "What does 'defending your architecture' mean in the Review Board context?",
+      "options": [
+        "Arguing",
+        "Explaining design decisions, trade-offs, and how your solution meets requirements under board scrutiny",
+        "Reading slides",
+        "Agreeing with everything"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Defending means clearly explaining your rationale and responding thoughtfully to challenges."
+    },
+    {
+      "question": "Which practice helps manage time during the Review Board presentation?",
+      "options": [
+        "Rushing",
+        "Rehearsing, timing each section, and leaving buffer for questions",
+        "Skipping sections",
+        "Going over time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Rehearsal and timeboxing help you stay on track and leave room for discussion."
+    }
+  ]
+}

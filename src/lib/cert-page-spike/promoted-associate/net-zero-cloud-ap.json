@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Net Zero Cloud",
+      "Sustainability",
+      "Carbon",
+      "Emissions",
+      "Data Collection",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Net Zero Cloud AP: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Carbon Footprint Data Model",
+        "body": "Net Zero Cloud (NZC) stores sustainability data in a specialized data model. Footprint records track greenhouse gas (GHG) emissions, energy consumption, water usage, and waste data. Energy Use records capture electricity, natural gas, and fuel consumption by facility and period. Stationary Combustion, Mobile Combustion, Fugitive Emissions, and Purchased Electricity represent Scope 1 and 2 emission sources. Scope 3 categories (business travel, employee commuting, supply chain) require integration with travel management systems and supplier data. The AP exam tests how NZC objects relate to each other, how to input energy data, and how scope classifications are assigned to emission sources."
+      },
+      {
+        "heading": "Emissions Calculations & Emission Factors",
+        "body": "Net Zero Cloud calculates GHG emissions by multiplying activity data by an Emission Factor — a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments — RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
+      },
+      {
+        "heading": "Sustainability Reporting & Disclosures",
+        "body": "Net Zero Cloud generates reports aligned with major sustainability frameworks: GRI (Global Reporting Initiative), TCFD (Task Force on Climate-related Financial Disclosures), CDP, and emerging SEC climate disclosure rules. Disclosure Reports aggregate footprint data by business unit, facility, or reporting period. Audit Trail captures every data submission and approval for assurance purposes. Supplier Scorecards rate suppliers on their emissions intensity and sustainability commitments. Targets & Milestones track progress toward net zero goals (e.g., 50% reduction by 2030, net zero by 2040). The exam tests how to configure a disclosure report, how targets are defined and monitored, and what data flows into supplier scorecards."
+      },
+      {
+        "heading": "Data Collection & Integration",
+        "body": "NZC data can be entered manually, uploaded via CSV template, or integrated automatically from utility billing systems, travel management platforms, and ERP systems. Utility Data Connections (partnered utility providers) automate energy data ingestion. Data Quality indicators flag anomalies and missing data for review. Approval Workflows route submitted data through a validation and sign-off process before it is included in reports. MuleSoft and Salesforce Connect are common integration patterns for automating data flows from meters, building management systems, and fleet telematics. The exam tests how to configure a utility data connection, set up an approval workflow, and identify data quality issues in submitted footprint data."
+      },
+      {
+        "heading": "Goals, Targets & Climate Action Plans",
+        "body": "Organizations set emissions reduction targets in NZC at the company, business unit, or asset level. Science-Based Targets (SBTs) require alignment with the 1.5°C or well-below-2°C pathway defined by the SBTi. Baseline Year establishes the reference point for reduction measurement. Reduction Lever tracking records the planned and actual contribution of each initiative (renewable energy procurement, fleet electrification, building efficiency). Progress dashboards show attainment against targets over time. Recalculation logic adjusts baselines for acquisitions, divestitures, and methodology changes. The exam tests how to configure a Science-Based Target, how to link reduction levers to the target, and how recalculation policies affect historical data."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Net Zero Cloud Accredited Professional Exam",
+    "intro": "The Net Zero Cloud AP exam tests implementation of Salesforce's sustainability platform. Focus on carbon accounting, emissions tracking, supply chain data collection, and sustainability reporting.",
+    "blocks": [
+      {
+        "heading": "Emissions Data Model",
+        "body": "Know the Net Zero Cloud data model: Stationary Assets (facilities), Mobile Assets (fleet), Purchased Electricity, Business Travel, and how each emission source category maps to Scope 1, 2, and 3 emissions."
+      },
+      {
+        "heading": "Carbon Calculation Methodology",
+        "body": "Know how Net Zero Cloud calculates emissions: emission factors (IPCC, EPA, IEA), activity data (kWh, fuel gallons, miles traveled), and how the calculation engine applies factors to produce CO2e metrics."
+      },
+      {
+        "heading": "Supply Chain Reporting",
+        "body": "Know how Net Zero Cloud collects Scope 3 supply chain emissions: supplier surveys, supplier data entry portal configuration, and how supplier emissions roll up into the customer's total Scope 3 footprint."
+      },
+      {
+        "heading": "Sustainability Goals & Targets",
+        "body": "Know how to configure sustainability goals (net zero by year X, renewable energy percentage), track progress against targets using Progress Records, and how SBTi (Science Based Targets initiative) targets are represented."
+      },
+      {
+        "heading": "Regulatory Reporting",
+        "body": "Know which reporting frameworks Net Zero Cloud supports: GRI, CDP, TCFD, and how to generate reports aligned to these standards. Understand how audit trails and data lineage support third-party verification."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Net Zero Cloud AP validate?",
+      "options": [
+        "Only basics",
+        "Knowledge, skills, and experience with managing and collecting key sustainability data",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data."
+    },
+    {
+      "question": "What is Net Zero Cloud used for?",
+      "options": [
+        "Only email",
+        "Sustainability and carbon footprint management",
+        "Only CPQ",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Net Zero Cloud is used for sustainability and carbon footprint management."
+    },
+    {
+      "question": "What is a key activity for a Net Zero Cloud Professional?",
+      "options": [
+        "Only coding",
+        "Managing and collecting sustainability data",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They manage and collect sustainability data."
+    },
+    {
+      "question": "Which role typically pursues Net Zero Cloud AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers working with sustainability and Net Zero Cloud",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers working with sustainability pursue this credential."
+    },
+    {
+      "question": "What does 'sustainability data' often include?",
+      "options": [
+        "Only sales data",
+        "Carbon emissions, energy usage, and environmental metrics",
+        "Only marketing data",
+        "Only financial data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sustainability data includes carbon emissions, energy usage, and environmental metrics."
+    },
+    {
+      "question": "What is carbon footprint tracking?",
+      "options": [
+        "Only sales",
+        "Measuring and reporting carbon emissions (Scope 1, 2, 3)",
+        "Only marketing",
+        "Only finance"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Carbon footprint tracks emissions across Scopes 1, 2, and 3."
+    },
+    {
+      "question": "What are Scope 1, 2, and 3 emissions?",
+      "options": [
+        "Report types",
+        "Scope 1 = direct, 2 = energy indirect, 3 = value chain indirect",
+        "Workflow stages",
+        "Dashboard filters"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scopes 1–3 categorize emissions by source."
+    },
+    {
+      "question": "Which activity does a Net Zero Cloud Professional perform?",
+      "options": [
+        "Only reporting",
+        "Configuring data collection, managing sustainability metrics, and supporting reporting",
+        "Only coding",
+        "Only marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Professionals configure data collection and manage metrics."
+    },
+    {
+      "question": "What does 'managing' sustainability data mean?",
+      "options": [
+        "Only viewing",
+        "Collecting, validating, and maintaining environmental data for reporting",
+        "Only deleting",
+        "Only exporting"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Managing includes collecting, validating, and maintaining data."
+    },
+    {
+      "question": "Why is sustainability reporting important?",
+      "options": [
+        "Not important",
+        "Regulatory compliance, stakeholder disclosure, and ESG commitments",
+        "Only for internal use",
+        "Only for marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Reporting supports compliance and ESG disclosure."
+    },
+    {
+      "question": "Which Salesforce product does Net Zero Cloud extend?",
+      "options": [
+        "Marketing Cloud",
+        "Sustainability Cloud (Net Zero Cloud) for environmental data",
+        "Commerce Cloud",
+        "Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Net Zero Cloud is the sustainability product."
+    },
+    {
+      "question": "What is ESG?",
+      "options": [
+        "A report type",
+        "Environmental, Social, and Governance—sustainability and responsibility metrics",
+        "A workflow",
+        "An object"
+      ],
+      "correctAnswer": 1,
+      "explanation": "ESG covers environmental, social, and governance metrics."
+    },
+    {
+      "question": "What does data collection involve for Net Zero Cloud?",
+      "options": [
+        "Only manual entry",
+        "Integrating sources (e.g., energy, travel) and mapping to sustainability metrics",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data collection integrates sources and maps to metrics."
+    },
+    {
+      "question": "What is Science Based Targets initiative (SBTi) in sustainability?",
+      "options": [
+        "A report type",
+        "A framework for setting emissions reduction targets aligned with climate science",
+        "A data source only",
+        "A dashboard only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SBTi provides standards for science-based emissions reduction targets."
+    },
+    {
+      "question": "What is a sustainability metric?",
+      "options": [
+        "Only revenue",
+        "A measured value such as tons CO2e, MWh energy, or water usage",
+        "Only sales",
+        "Only marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Sustainability metrics quantify environmental impact."
+    }
+  ]
+}

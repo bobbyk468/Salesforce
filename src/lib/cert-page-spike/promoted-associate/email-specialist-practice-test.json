@@ -1,0 +1,286 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "Practice Test",
+    "description": "Official-style practice test for the Marketing Cloud Email Specialist certification. Use this to gauge readiness and practice under exam-like conditions before taking the real exam.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "Practice only"
+    },
+    "topics": [
+      "Email Studio & Content",
+      "Data Extensions & Subscribers",
+      "Send Management",
+      "Tracking & Analytics",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Email Specialist Practice Test: Key Concepts to Review",
+    "blocks": [
+      {
+        "heading": "Email Delivery, Compliance & Subscriber Management",
+        "body": "CAN-SPAM requires a physical mailing address, an unsubscribe mechanism honored within 10 days, and honest subject lines. GDPR requires explicit opt-in consent for EU subscribers and the right to erasure. CASL applies to Canadian recipients. Suppression Lists (global unsubscribes, bounces, complaints) prevent sending to opted-out addresses. Data Extensions store subscriber data with custom attributes for segmentation. Subscriber keys uniquely identify a contact across channels. Double opt-in sends a confirmation email before adding a subscriber to a sendable list. The practice exam frequently tests which compliance rule applies to a given scenario and how suppression lists interact with send classification."
+      },
+      {
+        "heading": "Journey Builder & Triggered Sends",
+        "body": "Journey Builder orchestrates multi-step, multi-channel customer journeys. Entry Sources include Data Extensions (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation — good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
+      },
+      {
+        "heading": "Content Builder & Personalization",
+        "body": "Content Builder is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with AMPscript or SSJS for dynamic content. AMPscript is the scripting language for personalization — `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
+      },
+      {
+        "heading": "Send Classifications & Deliverability",
+        "body": "Send Classifications define the unsubscribe behavior for a send: Commercial (subscriber can unsubscribe), Transactional (not subject to commercial opt-out rules). Sender Profiles, Delivery Profiles, and Send Classifications combine to control From address, reply-to, and unsubscribe handling. IP Warming is required when using a new dedicated IP — gradually increase send volume to build sender reputation. SPF, DKIM, and DMARC records authenticate sending domains and improve deliverability. Bounce handling: Soft Bounces (temporary, retry) vs. Hard Bounces (permanent, suppress). Spam complaints trigger suppression and affect sender reputation. The exam tests how to configure send classifications for a mixed transactional/commercial sender."
+      },
+      {
+        "heading": "Analytics & Reporting",
+        "body": "Marketing Cloud Email reporting tracks: Sent, Delivered, Opens (unique + total), Clicks (unique + total), Bounces (hard + soft), Unsubscribes, and Spam Complaints. Click Rate = Clicks / Delivered. Open Rate = Opens / Delivered. The Tracking workspace in Email Studio shows send-level metrics. Data Views (hidden data extensions: _Sent, _Open, _Click, _Bounce, _Unsubscribe) allow SQL queries in Automation Studio for custom reporting. Einstein Engagement Scoring predicts which subscribers are likely to engage. Send Throttling limits the number of emails sent per hour to protect deliverability. The exam tests how to calculate email KPIs from raw numbers and which reporting tool to use for a given analysis need."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to pass this Email Specialist practice test",
+    "intro": "This certification is heavy on send architecture, compliance, Journey Builder vs triggered sends, AMPscript, and reporting. Use these questions to stress-test recall under time limits, then use the heatmap to see whether misses cluster on content, data extensions, deliverability, or analytics — and revisit only those key concept blocks before the next run.",
+    "blocks": [
+      {
+        "heading": "Simulate real exam pacing",
+        "body": "Work through a full set without opening Email Studio docs or saved AMPscript snippets. The exam expects you to pick the right feature or rule quickly (send classifications, suppression, entry sources), not to look up syntax."
+      },
+      {
+        "heading": "Review every explanation",
+        "body": "Wrong answers often differ by one compliance or architecture nuance — transactional vs commercial classification, REST vs SOAP for a given task, or when Journey Builder is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
+      },
+      {
+        "heading": "Turn heatmap reds into targeted study",
+        "body": "If Data Extensions and subscriber model questions dominate errors, re-read that key concept block and sketch a small DE schema on paper before the next practice round. Same for Journey activities or CAN-SPAM/GDPR scenarios."
+      },
+      {
+        "heading": "Cross-check with the full Email Specialist page",
+        "body": "Use the main Marketing Cloud Email Specialist certification page for official scope, weightage, and study sequencing when a whole topic feels weak — then return here to confirm the heatmap improves on that topic."
+      },
+      {
+        "heading": "Confirm readiness before scheduling",
+        "body": "Schedule the proctored exam only after several timed runs where you are clearly and repeatedly above the practice passing bar, including on mixed-topic sets that mimic the real blueprint mix."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Marketing Certifications",
+    "intro": "After this marketing certification, consider these related credentials:",
+    "links": [
+      {
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Engagement Consultant"
+      },
+      {
+        "href": "/certifications/pardot-consultant",
+        "label": "Account Engagement (Pardot) Consultant"
+      },
+      {
+        "href": "/certifications/email-specialist",
+        "label": "Marketing Cloud Email Specialist"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Which content type allows for dynamic, personalized content based on subscriber data?",
+      "options": [
+        "Static Content",
+        "AMPscript",
+        "HTML Block",
+        "Text Block"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AMPscript is Marketing Cloud's scripting language for dynamic, personalized email content based on subscriber data."
+    },
+    {
+      "question": "What is a Data Extension used for in Marketing Cloud?",
+      "options": [
+        "To create email templates",
+        "To store subscriber and relational data",
+        "To schedule sends",
+        "To track email opens"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Data Extensions store subscriber data, custom data, and relational data used for segmentation and personalization."
+    },
+    {
+      "question": "Which feature sends emails at the optimal time for each subscriber?",
+      "options": [
+        "Triggered Send",
+        "Send Time Optimization",
+        "Journey Builder",
+        "Automation Studio"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Send Time Optimization uses Einstein to send at the best time per subscriber."
+    },
+    {
+      "question": "What is the difference between an All Subscribers list and a Data Extension?",
+      "options": [
+        "No difference",
+        "All Subscribers is managed by SFMC; Data Extensions allow custom schema and relational data",
+        "Data Extensions only for SMS",
+        "All Subscribers is optional"
+      ],
+      "correctAnswer": 1,
+      "explanation": "All Subscribers is the system list; Data Extensions provide flexible schema for custom and relational data."
+    },
+    {
+      "question": "Which metric indicates how many recipients opened an email?",
+      "options": [
+        "Bounce rate",
+        "Open rate",
+        "Send count",
+        "Unsubscribe rate"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Open rate measures the percentage of delivered emails that were opened."
+    },
+    {
+      "question": "What is a triggered send used for?",
+      "options": [
+        "Batch campaigns only",
+        "Sending emails in real-time based on an event (e.g., welcome, password reset)",
+        "Only for testing",
+        "Only for unsubscribes"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Triggered sends fire based on events, enabling transactional and event-driven messaging."
+    },
+    {
+      "question": "Which tool schedules recurring email sends in Marketing Cloud?",
+      "options": [
+        "Journey Builder only",
+        "Automation Studio with Email Send activities",
+        "Content Builder only",
+        "Data Extensions only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Automation Studio can schedule recurring sends; Journey Builder handles journey-based sends."
+    },
+    {
+      "question": "What does CAN-SPAM require for commercial email?",
+      "options": [
+        "No requirements",
+        "Opt-out mechanism, physical address, and accurate subject/from",
+        "Only subject line",
+        "Only from address"
+      ],
+      "correctAnswer": 1,
+      "explanation": "CAN-SPAM requires opt-out, physical address, and accurate from/subject information."
+    },
+    {
+      "question": "Which feature prevents duplicate sends to the same subscriber?",
+      "options": [
+        "No such feature",
+        "Send Throttling and Suppression lists",
+        "Only Send Throttling",
+        "Only Data Extensions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Suppression lists and send throttling help prevent over-sending and duplicates."
+    },
+    {
+      "question": "What is a send classification used for?",
+      "options": [
+        "Colors only",
+        "Defining email type (e.g., commercial, transactional) for deliverability and compliance",
+        "Tracking only",
+        "Templates only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Send classifications define email type and affect deliverability and compliance rules."
+    },
+    {
+      "question": "Which block in an email can be personalized with subscriber attributes?",
+      "options": [
+        "Only images",
+        "Any content block can use personalization strings or AMPscript",
+        "Only subject line",
+        "Only preheader"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Content blocks support personalization strings and AMPscript for dynamic content."
+    },
+    {
+      "question": "What does the Tracking Extract provide?",
+      "options": [
+        "Email content",
+        "Send, open, click, bounce, and unsubscribe data for reporting",
+        "Subscriber data only",
+        "Template data only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tracking Extract delivers send and engagement data for analytics and reporting."
+    },
+    {
+      "question": "Which email authentication method helps improve deliverability?",
+      "options": [
+        "No authentication needed",
+        "SPF, DKIM, and DMARC",
+        "Only SPF",
+        "Only DKIM"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SPF, DKIM, and DMARC authenticate your domain and improve inbox placement."
+    },
+    {
+      "question": "What is a dynamic content block used for?",
+      "options": [
+        "Static text only",
+        "Showing different content to different segments based on rules",
+        "Images only",
+        "Tracking only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dynamic content displays different content based on rules and audience attributes."
+    },
+    {
+      "question": "Which report shows link-level click performance?",
+      "options": [
+        "Send report only",
+        "Click report with link-level detail",
+        "Open report only",
+        "Bounce report only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Click reports show which links were clicked and by whom for optimization."
+    }
+  ]
+}

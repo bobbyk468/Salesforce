@@ -1,0 +1,299 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "JS Developer I",
+    "description": "Certified JavaScript Developers have experience developing front-end and/or back-end JavaScript applications for the web stack, and work with JavaScript related technologies like Lightning Web Components.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~68%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "JavaScript Fundamentals",
+      "ES6+",
+      "DOM & Events",
+      "Lightning Web Components",
+      "Aura Basics",
+      "Debugging",
+      "Testing",
+      "Performance",
+      "Security",
+      "Salesforce APIs"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "JavaScript Developer I: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "JavaScript ES6+ Fundamentals",
+        "body": "The exam tests modern JavaScript syntax. let and const for block-scoped variables (never var). Arrow functions and lexical this binding. Destructuring for arrays and objects. Template literals (backtick strings). Spread/rest operators. Promises for async operations. async/await for readable async code. The exam presents code snippets and asks about scoping, closures, prototype chain, or async behaviour &mdash; understanding ES6+ is the foundation for LWC development."
+      },
+      {
+        "heading": "Web Component Standards (W3C)",
+        "body": "Lightning Web Components are built on Web Component standards: Custom Elements (define new HTML elements), Shadow DOM (encapsulated styles and markup), HTML Templates (declarative rendering). Understanding these standards is tested because LWC implements them directly. Shadow DOM encapsulation means CSS from outside cannot affect component internals by default. The exam tests how the Shadow DOM affects event propagation (events do not cross shadow boundaries unless composed:true is set)."
+      },
+      {
+        "heading": "Lightning Web Components: Lifecycle and Reactivity",
+        "body": "LWC lifecycle hooks: connectedCallback (component added to DOM), disconnectedCallback (removed from DOM), renderedCallback (after every render). @track (now redundant &mdash; all properties are reactive by default), @api (public property, set by parent), @wire (reactive data binding to Apex or platform adapters). The exam tests which lifecycle hook to use for a given scenario &mdash; connectedCallback for initial data fetch, renderedCallback for post-render DOM manipulation (with caution)."
+      },
+      {
+        "heading": "Apex Integration: @wire and Imperative Calls",
+        "body": "@wire automatically calls Apex and re-calls when parameters change &mdash; use for read-only data that should refresh reactively. Imperative calls (calling Apex directly like a JS function) are used when you need explicit control &mdash; on button click, or when combining results. @wire uses the getRecord and getFieldValue adapters from lightning/uiRecordApi for record access. The @AuraEnabled(cacheable=true) annotation is required on Apex methods called via @wire. The exam tests which approach to use for a given data-fetching scenario."
+      },
+      {
+        "heading": "Security in LWC and LockerService",
+        "body": "Locker Service is Salesforce's security architecture for Lightning components &mdash; it isolates components from each other and restricts access to the DOM. LWC uses Lightning Web Security (LWS) &mdash; similar isolation but more permissive for standard APIs. The exam tests what Locker/LWS prevents (direct DOM manipulation of other components, eval(), dangerous APIs). Permission checks should be done server-side in Apex, not in the component (UI checks can be bypassed). CRUD and FLS enforcement belongs in the @AuraEnabled Apex method, not the component."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce JavaScript Developer I Exam",
+    "intro": "The JavaScript Developer I exam tests core JavaScript and modern web concepts applied in the Salesforce context. Treat it as a JavaScript fundamentals exam first — LWC knowledge is important, but strong ES6+ and async programming foundations are what carry candidates through.",
+    "blocks": [
+      {
+        "heading": "Master ES6+ Syntax",
+        "body": "Arrow functions, destructuring, spread/rest operators, template literals, modules (import/export), and classes are heavily tested. Know how each differs from ES5 equivalents and common pitfalls."
+      },
+      {
+        "heading": "Promises & Async/Await",
+        "body": "Understand the Promise lifecycle (pending, fulfilled, rejected), chaining with .then()/.catch()/.finally(), and how async/await is syntactic sugar over promises. Know how errors propagate and how Promise.all() works."
+      },
+      {
+        "heading": "Closures, Scope & 'this'",
+        "body": "These classic JavaScript topics appear frequently. Understand lexical scope, how closures capture variables from outer functions, and the four rules that determine what 'this' refers to (default, implicit, explicit, new binding)."
+      },
+      {
+        "heading": "LWC Lifecycle & Reactivity",
+        "body": "Know the LWC component lifecycle hooks: constructor, connectedCallback, renderedCallback, disconnectedCallback. Understand reactive properties, how @track (legacy) and @api work, and how the wire service fetches data reactively."
+      },
+      {
+        "heading": "The Event Loop & Web APIs",
+        "body": "Understand call stack, event loop, microtask queue (promises), and macrotask queue (setTimeout). Know the fetch API, async patterns for HTTP calls, and how LWC's shadow DOM restricts direct DOM manipulation."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After Developer",
+    "intro": "After this certification, common next steps in the developer track:",
+    "links": [
+      {
+        "href": "/certifications/developer-2",
+        "label": "Platform Developer II"
+      },
+      {
+        "href": "/certifications/app-builder",
+        "label": "Platform App Builder"
+      },
+      {
+        "href": "/certifications/javascript-developer-i",
+        "label": "JavaScript Developer I"
+      },
+      {
+        "href": "/certifications/role/developer",
+        "label": "Developer certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "Which JavaScript feature is used to handle asynchronous operations without blocking the main thread?",
+      "options": [
+        "Callbacks only",
+        "Promises and async/await",
+        "Synchronous loops",
+        "var declarations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Promises and async/await are the modern JavaScript approach for handling asynchronous operations."
+    },
+    {
+      "question": "What is the primary use of Lightning Web Components (LWC) in the Salesforce ecosystem?",
+      "options": [
+        "Backend Apex only",
+        "Building reactive UI components that run on the Lightning Platform",
+        "Email templates",
+        "Data modeling"
+      ],
+      "correctAnswer": 1,
+      "explanation": "LWC is the standard for building performant, reusable UI components on the Salesforce Lightning Platform."
+    },
+    {
+      "question": "Which keyword creates a block-scoped variable in JavaScript?",
+      "options": [
+        "var",
+        "let",
+        "function",
+        "global"
+      ],
+      "correctAnswer": 1,
+      "explanation": "let (and const) create block-scoped variables; var is function-scoped."
+    },
+    {
+      "question": "What does the shadow DOM provide in web components?",
+      "options": [
+        "Server-side rendering",
+        "Encapsulation of styles and markup",
+        "Database access",
+        "API keys"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Shadow DOM provides style and markup encapsulation so component internals don't leak out."
+    },
+    {
+      "question": "Which LWC decorator makes a property available to the component's template?",
+      "options": [
+        "@api",
+        "@track",
+        "@wire",
+        "@invocable"
+      ],
+      "correctAnswer": 0,
+      "explanation": "@api exposes a public property that can be set by a parent component."
+    },
+    {
+      "question": "Which LWC wire adapter is used to get a record by Id?",
+      "options": [
+        "getListUi",
+        "getRecord",
+        "getObjectInfo",
+        "createRecord"
+      ],
+      "correctAnswer": 1,
+      "explanation": "getRecord wire adapter fetches a record by Id with specified fields."
+    },
+    {
+      "question": "What does the spread operator (...) do in JavaScript?",
+      "options": [
+        "Deletes properties",
+        "Expands iterables or copies/merges objects",
+        "Creates classes",
+        "Handles errors"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The spread operator expands arrays or copies/merges object properties."
+    },
+    {
+      "question": "Which LWC lifecycle hook runs when the component is inserted into the DOM?",
+      "options": [
+        "disconnectedCallback",
+        "connectedCallback",
+        "renderedCallback",
+        "errorCallback"
+      ],
+      "correctAnswer": 1,
+      "explanation": "connectedCallback runs when the component is added to the DOM."
+    },
+    {
+      "question": "What is the purpose of @wire in LWC?",
+      "options": [
+        "To track state",
+        "To reactively fetch data or call Apex imperatively with reactive parameters",
+        "To expose properties",
+        "To handle events"
+      ],
+      "correctAnswer": 1,
+      "explanation": "@wire reactively fetches data when parameters change."
+    },
+    {
+      "question": "Which JavaScript method creates a new array from another without mutating the original?",
+      "options": [
+        "push",
+        "map or slice",
+        "splice",
+        "pop"
+      ],
+      "correctAnswer": 1,
+      "explanation": "map and slice return new arrays; they don't mutate the original."
+    },
+    {
+      "question": "What does event.target refer to in a DOM event handler?",
+      "options": [
+        "The parent element",
+        "The element that dispatched the event",
+        "The document",
+        "The window"
+      ],
+      "correctAnswer": 1,
+      "explanation": "event.target is the element that triggered the event."
+    },
+    {
+      "question": "Which Aura component attribute type is similar to @api in LWC?",
+      "options": [
+        "aura:handler",
+        "aura:attribute with access='global' or 'public'",
+        "aura:registerEvent",
+        "aura:method"
+      ],
+      "correctAnswer": 1,
+      "explanation": "aura:attribute with public/global access exposes data like @api."
+    },
+    {
+      "question": "What is a JavaScript module?",
+      "options": [
+        "A class only",
+        "A file that exports bindings for reuse and encapsulates code",
+        "A function only",
+        "A variable only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Modules export bindings and provide encapsulation via import/export."
+    },
+    {
+      "question": "Which LWC method is used to navigate programmatically?",
+      "options": [
+        "window.location",
+        "NavigationMixin.GeneratePage",
+        "history.push",
+        "NavigationMixin is not used"
+      ],
+      "correctAnswer": 1,
+      "explanation": "NavigationMixin.GeneratePage enables programmatic navigation in LWC."
+    },
+    {
+      "question": "What does const prevent in JavaScript?",
+      "options": [
+        "Variable declaration",
+        "Reassignment of the variable binding (but not mutation of objects)",
+        "All mutations",
+        "Block scope"
+      ],
+      "correctAnswer": 1,
+      "explanation": "const prevents reassignment; object/array contents can still be mutated."
+    }
+  ]
+}

@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "UX Designer",
+    "description": "Certified Platform User Experience (UX) Designers are aspiring or experienced designers wanting to build and design human-centered experiences on the Salesforce Platform.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "105 min",
+      "cost": "$200"
+    },
+    "topics": [
+      "Human-Centered Design",
+      "Research",
+      "Wireframing",
+      "Prototyping",
+      "Lightning Experience",
+      "Experience Cloud",
+      "Accessibility",
+      "Usability",
+      "Design Systems",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "UX Designer: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Design Thinking Process: Five Phases",
+        "body": "Design Thinking is the core framework: Empathise (observe users, conduct interviews, develop empathy maps), Define (synthesise research into a problem statement — \"How Might We\" framing), Ideate (brainstorm solutions without judgment), Prototype (build low-fi or hi-fi representations), Test (validate with real users and iterate). The exam presents a UX activity (e.g., \"interviewing stakeholders about pain points\") and asks which phase it belongs to."
+      },
+      {
+        "heading": "UX Research Methods: Qualitative vs Quantitative",
+        "body": "Qualitative methods explore the \"why\": user interviews, contextual inquiry (observing users in their real environment), and moderated usability testing. Quantitative methods measure the \"what\": surveys, click analytics, and task completion rates. Card sorting tests how users categorise information (used to design navigation). Tree testing validates whether users can find content within a proposed structure. Affinity diagramming groups qualitative findings into themes. Know which method to select for a given research question."
+      },
+      {
+        "heading": "Wireframes, Prototypes, and the Design Handoff",
+        "body": "Low-fidelity wireframes communicate structure, hierarchy, and layout without visual polish — used for early stakeholder alignment. High-fidelity prototypes include visual design, real content, and interactive states — used for usability testing and developer handoff. The design handoff documents component specifications, spacing, and interaction behaviours. In Salesforce context, Experience Builder mockups and flow screens can be designed declaratively before development. Prototyping prevents rework by catching usability issues early."
+      },
+      {
+        "heading": "Accessibility: WCAG 2.1 and Salesforce SLDS",
+        "body": "WCAG 2.1 defines four principles (POUR): Perceivable (text alternatives for non-text content, sufficient colour contrast), Operable (keyboard navigation, no seizure-inducing animations), Understandable (clear labels, error messages, consistent navigation), Robust (compatible with assistive technologies). The Salesforce Lightning Design System (SLDS) provides accessible, pre-built UI components that meet WCAG AA. The exam tests which WCAG principle applies to a given accessibility scenario."
+      },
+      {
+        "heading": "Salesforce UX Tooling: Lightning App Builder and Dynamic Forms",
+        "body": "Lightning App Builder enables drag-and-drop page composition — Home, Record, and App pages — using standard and custom components. Dynamic Forms move fields and sections from the page layout into the record page, enabling conditional visibility based on field values or user permissions. Dynamic Actions control button visibility with similar logic. Compact Layouts define the fields shown in record highlights, mobile previews, and related lists. Know the difference between page layouts (object-level, profile-based) and dynamic forms (page-level, condition-based)."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce UX Designer Exam",
+    "intro": "The UX Designer exam tests user experience principles applied to Salesforce implementations. Focus on the Lightning Design System, accessibility standards, user research methods, and how to design usable Salesforce configurations.",
+    "blocks": [
+      {
+        "heading": "Lightning Design System (SLDS)",
+        "body": "Know the SLDS component library, design tokens, utility classes, and how SLDS ensures visual consistency across Salesforce. Understand when to use standard components vs. custom-styled components."
+      },
+      {
+        "heading": "Accessibility Standards",
+        "body": "Know WCAG 2.1 AA requirements: keyboard navigation, screen reader support (ARIA labels), color contrast ratios (4.5:1 for normal text), and how to use Salesforce Accessibility Checker to audit Lightning components."
+      },
+      {
+        "heading": "User Research in Salesforce Projects",
+        "body": "Know how to conduct user interviews, usability tests, and card sorting exercises for Salesforce page layout and navigation design. Understand how to translate findings into actionable design recommendations."
+      },
+      {
+        "heading": "Page Layout & App Design",
+        "body": "Know how to design Lightning page layouts: component placement, progressive disclosure, and how to use visibility rules to reduce cognitive load. Understand how the Lightning App Builder enables no-code page customization."
+      },
+      {
+        "heading": "Prototyping & Testing",
+        "body": "Know how to create wireframes and clickable prototypes for Salesforce configurations using tools like Figma or SLDS prototyping kits. Understand how to run usability tests with real Salesforce users."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Designer Certifications",
+    "intro": "After this designer certification, consider the other designer cert or Experience Cloud:",
+    "links": [
+      {
+        "href": "/certifications/strategy-designer",
+        "label": "Platform Strategy Designer"
+      },
+      {
+        "href": "/certifications/ux-designer",
+        "label": "User Experience Designer"
+      },
+      {
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary focus of a Certified UX Designer on the Salesforce Platform?",
+      "options": [
+        "Only backend",
+        "Building and designing human-centered experiences on the Salesforce Platform",
+        "Email only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certified UX Designers build and design human-centered experiences on the Salesforce Platform."
+    },
+    {
+      "question": "Which principle is central to human-centered design?",
+      "options": [
+        "Only aesthetics",
+        "Understanding user needs, behaviors, and context to design solutions",
+        "Only performance",
+        "Only cost"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Human-centered design focuses on user needs, behaviors, and context."
+    },
+    {
+      "question": "Which Salesforce capability do UX Designers often work with?",
+      "options": [
+        "Only Apex",
+        "Lightning Experience, Experience Cloud, and declarative UI",
+        "Only Heroku",
+        "Only MuleSoft"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They work with Lightning Experience, Experience Cloud, and declarative UI."
+    },
+    {
+      "question": "What does accessibility mean in UX design?",
+      "options": [
+        "Only speed",
+        "Designing so that products are usable by people with diverse abilities",
+        "Only mobile",
+        "Only desktop"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accessibility ensures products are usable by people with diverse abilities."
+    },
+    {
+      "question": "Who is the UX Designer certification for?",
+      "options": [
+        "Only developers",
+        "Aspiring or experienced designers wanting to build human-centered experiences on the Salesforce Platform",
+        "Only admins",
+        "Only marketers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "It's for aspiring or experienced designers building human-centered experiences on the platform."
+    },
+    {
+      "question": "What is the purpose of user research in UX design?",
+      "options": [
+        "To skip design",
+        "To understand user needs, pain points, and behaviors before designing",
+        "Only to validate",
+        "Only to test"
+      ],
+      "correctAnswer": 1,
+      "explanation": "User research informs design by understanding needs and behaviors."
+    },
+    {
+      "question": "Which deliverable communicates structure and layout before visual design?",
+      "options": [
+        "Final UI only",
+        "Wireframes",
+        "Code only",
+        "Reports only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Wireframes communicate structure and layout before visual design."
+    },
+    {
+      "question": "What does prototyping support in the design process?",
+      "options": [
+        "Only documentation",
+        "Testing and validating design concepts with users before development",
+        "Only coding",
+        "Only deployment"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Prototypes enable early testing and validation of design concepts."
+    },
+    {
+      "question": "Which WCAG principle ensures content is perceivable?",
+      "options": [
+        "Only operable",
+        "Perceivable (e.g., text alternatives, color contrast)",
+        "Only understandable",
+        "Only robust"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Perceivable covers alternatives and contrast for accessibility."
+    },
+    {
+      "question": "What is a design system?",
+      "options": [
+        "A single component",
+        "Reusable components, patterns, and guidelines for consistent UI",
+        "Only colors",
+        "Only typography"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Design systems provide reusable components and guidelines."
+    },
+    {
+      "question": "Which Experience Cloud capability supports UX Designers?",
+      "options": [
+        "Only Apex",
+        "Templates, themes, and declarative site building",
+        "Only APIs",
+        "Only batch"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Templates, themes, and declarative building support UX design."
+    },
+    {
+      "question": "What does usability testing measure?",
+      "options": [
+        "Only speed",
+        "How effectively users can complete tasks and identify issues",
+        "Only aesthetics",
+        "Only cost"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Usability testing measures task completion and identifies issues."
+    },
+    {
+      "question": "Which principle supports inclusive design?",
+      "options": [
+        "Design for one user only",
+        "Design for diverse abilities and contexts",
+        "Design for desktop only",
+        "Design for developers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Inclusive design considers diverse abilities and contexts."
+    },
+    {
+      "question": "What is the purpose of a user journey map?",
+      "options": [
+        "To replace wireframes",
+        "To visualize user steps, touchpoints, and emotions across an experience",
+        "To write code",
+        "To deploy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Journey maps visualize user steps and touchpoints."
+    },
+    {
+      "question": "Which best practice applies to Lightning Experience design?",
+      "options": [
+        "Ignore mobile",
+        "Design for responsive layouts and Lightning Design System",
+        "Desktop only",
+        "No accessibility"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Responsive design and LDS align with Lightning best practices."
+    }
+  ]
+}

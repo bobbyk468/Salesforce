@@ -1,0 +1,185 @@
+[
+  {
+    "id": "w5-thread-1-pd1-secrets",
+    "title": "Week 5 — PD1: What the courses don't tell you",
+    "status": "pending",
+    "tweets": [
+      "I've seen smart people fail PD1 three times in a row.\n\nnot because they couldn't code.\n\nbecause they studied Apex like a Java course instead of a Salesforce exam.\n\nhere's what actually matters 🧵",
+      "the exam doesn't care if you can build an app.\n\nit cares if you know what breaks when your code runs on a million records at once.\n\nevery scenario question is secretly asking: 'what governor limit is being violated here?'\n\nif you don't see that, you're reading it wrong.",
+      "three patterns that answer maybe 40% of the exam:\n\n- SOQL inside a for-loop → wrong\n- DML inside a for-loop → wrong\n- hardcoded IDs in code → wrong\n\nthey'll phrase these 8 different ways. you need to recognize the pattern, not memorize the phrasing.",
+      "the LWC question everyone gets wrong:\n\n@wire = fetch data from Salesforce\n@api = expose a prop to the parent component\n@track = make an object or array reactive\n\nsounds simple. but the exam gives you a scenario and asks which decorator 'best fits.'\n\nthe trick is knowing WHEN each one applies, not just what each one is.",
+      "test classes trip up so many people.\n\nthe thing that costs people points: not knowing that Test.startTest() / Test.stopTest() resets your governor limits inside the block.\n\nalso: System.assertEquals(expected, actual) — expected goes FIRST. I know it feels backwards. it is backwards. memorize it anyway.",
+      "real talk: PD1 is a comprehension exam, not a coding exam.\n\nyou don't write code. you read code and answer 'what happens when this runs?'\n\nbig difference. if you've been writing Apex to study, you might be over-engineering your prep.",
+      "what's your actual PD1 blocker right now?\n\nA) Apex syntax is foreign to me\nB) LWC vs Aura still confusing\nC) governor limits don't click yet\nD) can't find practice questions that feel like the real exam\n\ndrop it — I'll point you in the right direction for each one",
+      "if it's D:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\n60+ questions mapped to actual exam sections. free. full explanations on every answer.\n\nmade by people who've sat this exam, not people who've taught about it.\n\n#PD1 #SalesforceDev #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "unpopular opinion: most PD1 prep content teaches you to be a Salesforce developer. the exam tests whether you understand the Salesforce platform. those are not the same thing and nobody talks about it."
+      },
+      {
+        "text": "quick question: when you started studying PD1, what scared you most?\n\ncoding? governor limits? LWC? the test environment?\n\ngenuinely curious what the biggest mental block is for people"
+      }
+    ]
+  },
+  {
+    "id": "w5-thread-2-which-cert-first",
+    "title": "Week 5 — Which cert should you get first (honest answer)",
+    "status": "pending",
+    "tweets": [
+      "everyone asks me which Salesforce cert to get first.\n\nand everyone expects me to say 'it depends.'\n\nbut I'm going to give you a real answer instead.\n\n🧵",
+      "if you are completely new to Salesforce:\n\nAdmin. full stop.\n\nnot because it's easiest. because every other cert assumes you already know what a profile is, how OWD works, and what a validation rule does.\n\nskipping Admin is like skipping grammar to study literature. you can try. it just takes twice as long.",
+      "if you're already an Admin and wondering what's next:\n\nstop and ask yourself ONE question first.\n\n'what role do I actually want to be hired into in 12 months?'\n\nthe answer to that question IS your next cert. not what's trending. not what your manager has. what you want to do.",
+      "the mistake I see constantly:\n\npeople collecting certs they'll never use because someone on LinkedIn said they were valuable.\n\nI've spoken to people with 8 certs who can't get an interview.\nand people with 2 certs who had 3 offers.\n\nthe difference was relevance, not quantity.",
+      "if I had to pick 3 certs that give the most leverage in 2026:\n\n1. Admin — opens every door, prerequisite for nearly everything\n2. Agentforce Specialist — almost nobody has it yet, demand is rising fast\n3. Sales Cloud Consultant — every SF implementation has this role\n\nnot the most glamorous list. but the most hireable one.",
+      "one more thing nobody tells you:\n\nSalesforce certs expire. you need to pass maintenance exams every year to keep them active.\n\nso 8 certs means 8 maintenance exams every year. that's a real time commitment.\n\nget fewer certs you actually use. go deep on those.",
+      "where are you in your Salesforce journey right now?\n\nA) haven't started yet, completely new\nB) Admin certified, figuring out what's next\nC) Developer, aiming for Architect\nD) non-tech background, switching careers\n\ntell me and I'll give you the exact path I'd take in your position",
+      "full cert roadmaps by track — admin, developer, consultant, architect:\n\nhttps://trailblazeprep.com/certification-path\n\n#SalesforceCertification #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "the SF certification world has a dirty secret: most people get certs for confidence, not for jobs. which is fine. but if you're doing it for jobs, strategy matters more than volume."
+      },
+      {
+        "text": "if you skipped Admin and went straight to Developer or Consultant — how did that go? genuinely asking. I always assumed it was a mistake but maybe not for everyone."
+      }
+    ]
+  },
+  {
+    "id": "w5-thread-3-failure-comeback",
+    "title": "Week 5 — I failed ADM-201 three times",
+    "status": "pending",
+    "tweets": [
+      "I failed ADM-201 three times.\n\nattempt 1: 57%\nattempt 2: 63%\nattempt 3: 61%\n\nI studied every single day. I wasn't slacking. I was doing everything everyone told me to do.\n\nand I kept failing.\n\nhere's what I eventually figured out 🧵",
+      "first attempt: I did every Trailhead module in order. all 80+ of them.\n6 weeks. probably 200+ hours.\n\ngot to the exam and it felt completely different from anything I'd studied.\n\nI thought the exam was broken. it wasn't.",
+      "second attempt: bought a Udemy course. watched every video. took detailed notes.\n\nwas more prepared. still failed.\n\nthird attempt: bought two practice test banks. did every single question. memorized the explanations.\n\nscored lower than attempt 2.\n\nthat one really stung.",
+      "I almost quit after attempt 3.\n\nthen someone said something that stuck:\n\n'you're memorizing correct answers, not understanding why they're correct.'\n\nI'd been using practice tests to test myself instead of using them to FIND what I didn't understand.\n\ncompletely different activity.",
+      "attempt 4 looked like this:\n\nday 1: did a full practice exam cold. didn't study anything first.\nmarked every question I wasn't 100% sure on, even the ones I guessed right.\n\nthen: for every single flagged question — found the official Salesforce documentation and read it.\n\nnot a summary. the actual docs.",
+      "then did the practice exam again. only paid attention to my weak sections.\n\nkept repeating until I was consistently getting those sections right.\n\ndidn't touch the topics I already knew.\n\nattempt 4: 84%.\n\nnot because I studied more. because I stopped studying what I already knew.",
+      "the method: diagnose → learn the concept → verify.\n\nnot: study everything → hope → test.\n\nthe exam is not testing your memory. it's testing whether you understand WHY one approach is better than another in a specific situation.\n\nthat's a different skill than memorization.",
+      "if you've failed an SF exam: you're probably not studying wrong topics. you're studying in the wrong way.\n\nfree practice questions with explanations on every answer:\n\nhttps://trailblazeprep.com/certifications/administrator\n\n#ADM201 #SalesforceAdmin #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "there's a big difference between 'practicing with sample questions' and 'using sample questions to find your gaps.' almost everyone does the first. almost nobody does the second."
+      },
+      {
+        "text": "be honest: have you ever failed a Salesforce exam? drop your attempt number below. I'm willing to bet it's way more common than people admit."
+      }
+    ]
+  },
+  {
+    "id": "w6-thread-1-agentforce-study",
+    "title": "Week 6 — Agentforce Specialist: how to actually study for it",
+    "status": "pending",
+    "tweets": [
+      "Agentforce Specialist might be the smartest cert to get right now.\n\nnot because it's easy. because almost nobody has it yet.\n\nI mapped out exactly how I'd study for it if I were starting today.\n\n🧵",
+      "first: ignore the hype and understand what the exam is actually testing.\n\nit's not about whether you can code AI.\n\nit's about whether you can configure an Agent correctly — set up Topics, write Instructions, build Actions, test behavior — and know WHEN to use an Agent vs a Flow vs just a bot.",
+      "the exam breakdown:\n\nAgent Building: 35% (the biggest section by far)\nAgent Design: 22%\nAgentforce Concepts: 17%\nTesting & Debugging: 14%\nEvaluate and Iterate: 12%\n\nnotice that 35% is hands-on building. you cannot pass this section by reading about it.\nyou have to actually build agents in a developer org.",
+      "the section that trips people up: Agent Design.\n\nit's full of scenario questions like 'a customer is asking X, what should the agent do?'\n\nthose questions aren't testing your technical knowledge. they're testing whether you understand what an agent is supposed to be GOOD at vs what it should hand off to a human.",
+      "the Testing & Debugging section has a specific pattern I noticed:\n\nevery debugging question follows the same logic:\ntopic routing first → action inputs second → the action itself third.\n\nif the agent gives a wrong answer, you always start at the top of that chain and work down.\n\nknow that and you'll get those questions right.",
+      "the single most underused resource for this exam:\n\nSalesforce's actual implementation guides for Agentforce.\nnot the marketing pages. the 'how to configure' documentation.\n\nspend 2-3 hours in there and you'll understand the exam structure better than most study guides explain it.",
+      "who's currently studying for Agentforce Specialist? drop a ✋\n\nalso — what's the part you find most confusing so far? Topics? Actions? Instructions? something else?\n\nI'll do a follow-up thread on the most common answer.",
+      "full Agentforce Specialist exam breakdown and practice questions:\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\n#Agentforce #SalesforceAI #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "the people who fail Agentforce Specialist studied the docs. the people who pass built actual agents in a sandbox. this exam cannot be crammed from reading alone."
+      },
+      {
+        "text": "genuine question: are more people studying Agentforce Specialist right now because of the AI hype, or because it's actually useful for their job? curious what's driving it for people."
+      }
+    ]
+  },
+  {
+    "id": "w6-thread-2-spring26-changes",
+    "title": "Week 6 — Spring '26 is here. Here's what changed for your exam.",
+    "status": "pending",
+    "tweets": [
+      "Spring '26 just dropped.\n\nif you're studying for a Salesforce cert right now, some of your material might already be outdated.\n\nhere's what actually changed and how to know if it affects YOUR exam 🧵\n\n#Spring26 #SalesforceCertification",
+      "quick background on why this matters:\n\nSalesforce updates exam outlines 1-3 times a year to reflect new features.\n\nif your study guide hasn't been updated, you could be preparing for questions that no longer exist — or completely missing new ones that just got added.",
+      "what changed in Spring '26 that actually shows up on exams:\n\nAgentforce: multi-agent orchestration is in. if you're studying Admin or Agentforce Specialist, expect scenario questions about how agents hand off to each other.\n\nFlow: new debugging and orchestration tools. the 'how do you debug a failing flow?' question just got more nuanced.",
+      "Data Cloud: real-time data activation and identity resolution got expanded.\n\nif you're studying Data Cloud Consultant, governance and unification are heavier now.\n\nTableau: Pulse features for proactive analytics. Tableau exams may reference these in data storytelling questions.",
+      "what hasn't changed and probably never will:\n\nthe security model. governor limits. declarative-first philosophy. sharing and visibility architecture.\n\nthese make up 40-60% of most exams and they barely move between releases.\n\nif you're cramming, start here. always.",
+      "how to check if YOUR exam changed:\n\n1. search '[cert name] exam guide' on Trailhead\n2. find the 'Last Updated' date\n3. compare section weights to your study guide\n\nif they don't match: trust the official guide.\n\nno course vendor updates faster than Salesforce does.",
+      "all TrailblazePrep pages are updated for Spring '26.\n\nhttps://trailblazeprep.com/certifications\n\nwhich cert are you studying for? drop it below and I'll tell you specifically what Spring '26 changed for that one 👇\n\n#Spring26 #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "every release cycle I watch people fail exams because they studied from a year-old Udemy course. the official exam guide is free, always current, and more specific than any paid course. use it first."
+      },
+      {
+        "text": "has a Salesforce release ever caused you to fail an exam or discover your study material was outdated? I feel like this happens more than people share about it."
+      }
+    ]
+  },
+  {
+    "id": "w7-thread-1-salary-truth",
+    "title": "Week 7 — Real Salesforce salary numbers, no LinkedIn fluff",
+    "status": "pending",
+    "tweets": [
+      "let's talk about what Salesforce certs actually pay.\n\nnot the inflated LinkedIn numbers. not the job posting range that goes from $60k to $200k for the same role.\n\nreal ranges I've seen across hundreds of postings and salary surveys in 2026.\n\n🧵",
+      "entry level (0-2 years, 1-2 certs, US):\n\nAdmin: $65k-$80k\nJunior Developer: $75k-$95k\nJunior Consultant: $70k-$85k\n\nthe floor is higher than most people expect coming from outside tech.\n\nand it compounds fast once you add certs and project experience.",
+      "mid level (3-5 years, 3-4 certs):\n\nAdmin: $90k-$110k\nDeveloper I+II: $110k-$135k\nSales/Service Consultant: $100k-$125k\nSolution Architect: $130k-$155k\n\nthis is where picking the RIGHT next cert matters most. the gap between tracks starts to widen here.",
+      "senior / architect (6+ years):\n\nSenior Admin: $110k-$135k\nSenior Developer: $130k-$160k\nApplication/System Architect: $155k-$185k\nCTA: $175k-$250k+\n\nthe CTA is the highest non-executive salary in the Salesforce ecosystem. it takes years to get there but the ceiling is real.",
+      "the certs with the best ROI relative to study time in 2026:\n\nAdmin: unlocks literally every SF job. 6-10 weeks to prepare.\nAgentforce Specialist: low supply right now, high demand. 3-4 weeks to prepare.\nSales Cloud Consultant: every enterprise CRM project needs this. 6-8 weeks.\n\nnot the flashiest list. but the highest return per hour of study.",
+      "the thing people get wrong about SF salaries:\n\nit's not about how many certs you have.\n\na person with Admin + Agentforce Specialist + 2 years of real project experience earns more than someone with 7 random certs they got for LinkedIn.\n\nproject experience is the multiplier. certs are the door opener.",
+      "what track are you on?\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect\n\ntell me and I'll share what the salary ceiling looks like at each level for your track 👇",
+      "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\n#SalesforceCareer #SalesforceJobs #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "hot take: the $200 Salesforce exam fee might be the best ROI in all of tech. where else do you spend $200 and add $15k-$25k to your salary in the same year?"
+      },
+      {
+        "text": "if you're comfortable sharing: what's your role, years of experience, and rough salary range? building out real salary data for the community. anonymous is fine — just 'Senior Admin, 5 years, $110k' is enough."
+      }
+    ]
+  },
+  {
+    "id": "w7-thread-2-admin-to-developer",
+    "title": "Week 7 — Should Admins move to Developer?",
+    "status": "pending",
+    "tweets": [
+      "Admins always ask me: should I become a developer?\n\nmy honest answer: probably yes. but not for the reasons you think.\n\n🧵",
+      "the obvious reason to do it: developer salaries start $15k-$25k higher than admin salaries at entry level.\n\nbut that's not actually why I'd recommend it.\n\nI'd recommend it because the Salesforce dev path has a clear ceiling — Architect — and Architects earn real money.",
+      "the part nobody tells you:\n\nif you already know Flow well, you're maybe 40% of the way to understanding Apex.\n\nthe logic is the same. variables, decisions, loops, calling other things.\n\nApex is just Flow with curly braces and stricter rules.\n\nmost Admins are closer to this than they realize.",
+      "what 'Admin to Developer' actually looks like in practice:\n\nyou'll spend 2-3 months feeling slow and stupid while Apex syntax clicks.\n\nthen it clicks. and you realize your Admin knowledge just became a superpower — because you understand the platform developers are building on.",
+      "the case for NOT switching (and nobody says this enough):\n\nif you're excellent at Admin + configuration + process consulting, the Solution Architect path might pay MORE than the pure Developer path.\n\nbusiness-side Architects can earn as much as technical ones. different route to the same ceiling.",
+      "if I were an Admin today deciding whether to go Developer:\n\n1. get App Builder first. it's 4-6 weeks from your existing knowledge and proves you can go deeper.\n2. take a week to try writing a basic Apex trigger. see if you enjoy it.\n3. if yes: PD1. if no: Consultant or Architect track.\n\ndon't decide in the abstract. try it first.",
+      "Admins: what's actually holding you back from considering Developer?\n\nA) Apex feels intimidating\nB) not sure the pay difference justifies the time investment\nC) genuinely love being an Admin and don't want to change\nD) already started studying PD1\n\nhonest answers only 👇",
+      "PD1 exam breakdown and free practice questions:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\n#SalesforceAdmin #PD1 #SalesforceCareer"
+    ],
+    "engagementTweets": [
+      {
+        "text": "the Admin-to-Dev switch isn't really about learning to code. it's about learning to think about what happens when your code runs on 50,000 records instead of 50. Admins who understand scale already get this."
+      },
+      {
+        "text": "Devs who started as Admins: what's one thing you wish you knew before making the switch? and Admins who've considered it and decided against it — what made you stay?"
+      }
+    ]
+  },
+  {
+    "id": "w8-thread-1-exam-day",
+    "title": "Week 8 — What Salesforce exam day is actually like (14 exams in)",
+    "status": "pending",
+    "tweets": [
+      "I've taken 14 Salesforce certification exams.\n\nthe first one I nearly failed the check-in process before the test even started.\n\nhere's everything I wish I'd known about exam day before attempt 1.\n\n🧵\n\n#SalesforceCertification",
+      "you take the exam from your own computer via Kryterion Webassessor.\n\na live human proctor watches you through your webcam the whole time.\n\nthey will ask you to show them the room. they will ask you to remove things from your desk. they take this seriously.\n\nclear your space the night before.",
+      "the check-in process takes 15-20 minutes.\n\nif you log in at your exact exam time, you're already behind.\n\nlog in 30 minutes early. every time. without exception.\n\nalso: test your webcam and mic the night before. a technical issue 10 minutes before your exam is a very bad way to start.",
+      "the thing that trips up first-timers most: the question wording.\n\nSalesforce doesn't ask 'what is the right answer?'\n\nit asks 'what is the BEST approach?' or 'which is MOST appropriate?' or 'what is LEAST likely to cause issues?'\n\nthis matters. two answers can both be technically correct. only one is the most Salesforce-aligned.",
+      "how to handle questions you're stuck on:\n\n1. cross out the two obviously wrong answers first\n2. from the remaining options: which is more declarative / native to Salesforce?\n3. which protects data integrity better?\n4. still stuck? mark it and move on. come back later with fresh eyes.\n\nnever spend more than 90 seconds on a question the first time through.",
+      "the night before: do one practice exam, clear your desk, check your login.\n\nthat's it.\n\nno new material. no cramming. if you don't know it by the night before, two more hours won't save you.\n\nsleep is more useful than one more Trailhead module at 11pm.",
+      "what to do if you fail:\n\nget your score report — it shows exactly which sections you failed.\nwait a day before you decide anything.\nthen study ONLY the weak sections. don't restart everything.\n\nyou can retake after 1 day (first retake) or 14 days (subsequent). most people pass the retake once they know where they actually failed.",
+      "exam day guide + free practice questions:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\n#SalesforceCertification #SalesforceOhana #AdminCoach"
+    ],
+    "engagementTweets": [
+      {
+        "text": "the Webassessor check-in is genuinely stressful the first time. camera, ID check, room scan, tech check. 15-20 minutes minimum. log in 30 minutes early or you will be anxious for no reason."
+      },
+      {
+        "text": "what was the most stressful part of your first Salesforce exam? the check-in process? the question wording? running out of time? something else? I want to write a proper prep guide for this."
+      }
+    ]
+  }
+]

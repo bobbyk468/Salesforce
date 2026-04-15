@@ -1,0 +1,299 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "System Architect",
+    "description": "Certified System Architects focus on off-platform systems, integration, and securing access between systems. They're also skilled at managing governance and testing capabilities for deployment and ongoing Salesforce modification requirements.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~68%",
+      "duration": "120 min",
+      "cost": "$400"
+    },
+    "topics": [
+      "Off-Platform Systems",
+      "Integration",
+      "Security",
+      "Governance",
+      "Testing",
+      "Deployment",
+      "Release Management",
+      "Best Practices",
+      "Middleware",
+      "APIs"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "System Architect: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Integration Patterns: Choosing the Right Approach",
+        "body": "The exam presents an integration scenario and asks which pattern applies. Request-reply (REST/SOAP callout) — synchronous, caller waits for response; use for real-time data retrieval. Fire-and-forget (Platform Events, async queue) — caller publishes and moves on; use when immediate response is not needed. Batch ETL — high-volume data movement on a schedule. Change Data Capture — streams field-level record change events for near-real-time synchronisation. Point-to-point vs hub-and-spoke: as integration count grows, hub-and-spoke (middleware) reduces coupling."
+      },
+      {
+        "heading": "Authentication Patterns: OAuth 2.0 Flows",
+        "body": "Web Server Flow — user-facing; redirects to Salesforce login, returns authorisation code exchanged for token. JWT Bearer Flow — server-to-server; no user interaction; client signs a JWT assertion with a certificate. Client Credentials Flow — machine-to-machine; client ID + secret exchanged for access token without a user. Device Flow — for devices without browsers. Named Credentials store the endpoint and auth details in Salesforce, keeping credentials out of Apex code. Connected Apps define OAuth scopes, IP restrictions, and session policies."
+      },
+      {
+        "heading": "API-Led Connectivity and Middleware (MuleSoft)",
+        "body": "API-led connectivity organises APIs in three layers: System APIs wrap individual backend systems (ERP, legacy), exposing a stable contract regardless of the system's protocol. Process APIs orchestrate business logic across multiple System APIs — composable, reusable. Experience APIs tailor data for specific consumers (mobile app, partner portal). MuleSoft Anypoint Platform implements this pattern. Understand when native Salesforce integration (REST, Platform Events) is sufficient vs when middleware is warranted (protocol mismatch, fan-out orchestration, message transformation)."
+      },
+      {
+        "heading": "Sandbox Strategy and Release Management",
+        "body": "Sandbox types by size and use: Developer (5 MB data, metadata only, for development), Developer Pro (1 GB, for larger teams), Partial Copy (5 GB, subset of production data, for testing), Full Copy (full production replica, for load testing and final UAT). Deployment tools: Change Sets (org-to-org, no version control), Salesforce CLI + Metadata API (source-driven, supports Git), Unlocked Packages (modular, versioned, dependency-aware). The exam tests which combination of sandbox type and deployment tool fits a given governance requirement."
+      },
+      {
+        "heading": "Identity, SSO, and My Domain",
+        "body": "SAML 2.0 enables SSO: Salesforce can act as Identity Provider (issues assertions to external apps) or Service Provider (receives assertions from an external IdP like Okta or Azure AD). My Domain is required for SSO — it provides the custom login URL and enables domain-based login policies. Delegated Authentication sends the user's credentials to an external web service for validation (legacy approach). OAuth handles API access delegation, not web SSO. Know the trust chain: IdP issues SAML assertion → SP validates the assertion's signature using the IdP's certificate → session created."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce System Architect Exam",
+    "intro": "The System Architect credential validates expertise in multi-system integration and enterprise-scale Salesforce deployments. Focus on integration architecture patterns, data migration strategy, and managing complex org configurations.",
+    "blocks": [
+      {
+        "heading": "Enterprise Integration Patterns",
+        "body": "Know the full Enterprise Integration Patterns catalog applied to Salesforce: synchronous vs. asynchronous, point-to-point vs. hub-and-spoke, ESB, and event-driven architecture. Match each pattern to its ideal use case."
+      },
+      {
+        "heading": "Data Migration Strategy",
+        "body": "Understand how to plan data migration: data mapping, cleansing, load sequence (parent records before child records), external IDs for upsert, and how to validate data post-migration."
+      },
+      {
+        "heading": "Multi-Org Architecture",
+        "body": "Know the scenarios that require multiple orgs (geographies, business units, regulatory) vs. a single org with shared infrastructure. Understand org replication, data sharing between orgs, and Connected Orgs."
+      },
+      {
+        "heading": "Governor Limits at Scale",
+        "body": "Understand how governor limits affect architectural decisions: bulkification requirements, async patterns to bypass synchronous limits, and how to architect for high-volume data ingestion scenarios."
+      },
+      {
+        "heading": "Salesforce Connect & External Objects",
+        "body": "Know how External Objects (via Salesforce Connect / OData) provide real-time data virtualization. Understand when to use virtual data vs. replicating data into Salesforce, and the performance trade-offs."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Architect Certifications",
+    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "links": [
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
+      {
+        "href": "/architect-certification-path",
+        "label": "Architect certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What is the primary focus of a System Architect?",
+      "options": [
+        "Only on-platform",
+        "Off-platform systems, integration, and securing access between systems",
+        "Email only",
+        "Slack only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "System Architects focus on off-platform systems, integration, and securing access between systems."
+    },
+    {
+      "question": "Which area does a System Architect typically manage?",
+      "options": [
+        "Only UI",
+        "Governance and testing capabilities for deployment and ongoing Salesforce modification",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They manage governance and testing for deployment and ongoing modifications."
+    },
+    {
+      "question": "What does 'off-platform' mean in this context?",
+      "options": [
+        "Only Salesforce",
+        "Systems outside Salesforce (e.g., ERP, middleware) that integrate with Salesforce",
+        "Only Apex",
+        "Only LWC"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Off-platform refers to external systems that integrate with Salesforce."
+    },
+    {
+      "question": "Which consideration is critical for integration security?",
+      "options": [
+        "Only passwords",
+        "Authentication, encryption, and secure access between systems",
+        "Only HTTPS",
+        "Only IP allowlist"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Authentication, encryption, and secure access are critical for integration security."
+    },
+    {
+      "question": "What role does governance play for a System Architect?",
+      "options": [
+        "None",
+        "Ensuring change control, testing, and release management for deployments",
+        "Only documentation",
+        "Only coding standards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Governance includes change control, testing, and release management."
+    },
+    {
+      "question": "Which integration pattern is suitable for real-time, request-response sync?",
+      "options": [
+        "Batch only",
+        "Point-to-point API or REST callout",
+        "Event-driven only",
+        "ETL only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "REST/API callouts support real-time, synchronous request-response integration."
+    },
+    {
+      "question": "What is the purpose of middleware in integration architecture?",
+      "options": [
+        "To replace Salesforce",
+        "To orchestrate, transform, and route data between systems",
+        "To send emails only",
+        "To create reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Middleware orchestrates, transforms, and routes integration traffic."
+    },
+    {
+      "question": "Which security mechanism is used for server-to-server API authentication?",
+      "options": [
+        "User password only",
+        "OAuth 2.0 client credentials or JWT bearer flow",
+        "Session ID only",
+        "No authentication"
+      ],
+      "correctAnswer": 1,
+      "explanation": "OAuth 2.0 client credentials and JWT bearer are used for server-to-server auth."
+    },
+    {
+      "question": "What does release management include for a System Architect?",
+      "options": [
+        "Only coding",
+        "Sandbox strategy, deployment pipelines, and change sets or CI/CD",
+        "Only documentation",
+        "Only testing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Release management covers sandbox strategy, pipelines, and deployment tools."
+    },
+    {
+      "question": "Which testing type validates integration behavior?",
+      "options": [
+        "Unit tests only",
+        "Integration tests and end-to-end tests",
+        "No testing",
+        "Only UAT"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Integration and E2E tests validate system interaction and data flow."
+    },
+    {
+      "question": "What is the benefit of API-led connectivity?",
+      "options": [
+        "No benefits",
+        "Reusable, composable APIs that reduce point-to-point dependencies",
+        "Only for internal use",
+        "Only for external use"
+      ],
+      "correctAnswer": 1,
+      "explanation": "API-led connectivity promotes reusable, composable integrations."
+    },
+    {
+      "question": "Which consideration applies when integrating with legacy systems?",
+      "options": [
+        "Ignore security",
+        "Protocol support, data format translation, and security",
+        "No translation needed",
+        "Only real-time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Legacy integration requires protocol support, translation, and security."
+    },
+    {
+      "question": "What does encryption in transit protect?",
+      "options": [
+        "Data at rest only",
+        "Data moving between systems (e.g., TLS/HTTPS)",
+        "Passwords only",
+        "No protection"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Encryption in transit (TLS/HTTPS) protects data during transmission."
+    },
+    {
+      "question": "Which deployment capability supports zero-downtime releases?",
+      "options": [
+        "No capability",
+        "Blue-green deployments or canary releases",
+        "Direct production deploy only",
+        "Manual only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Blue-green and canary enable low-risk, low-downtime deployments."
+    },
+    {
+      "question": "What role does an IP allowlist play in integration security?",
+      "options": [
+        "No role",
+        "Restricting which IPs can access APIs or systems",
+        "Only for users",
+        "Only for reports"
+      ],
+      "correctAnswer": 1,
+      "explanation": "IP allowlists restrict API and system access to trusted IP ranges."
+    }
+  ]
+}

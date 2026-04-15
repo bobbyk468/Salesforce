@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "AP",
+    "description": "Accredited Advanced Field Service Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Advanced Field Service.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~65%",
+      "duration": "90 min",
+      "cost": "$100"
+    },
+    "topics": [
+      "Advanced Field Service",
+      "Scheduling",
+      "Optimization",
+      "Mobile",
+      "Service Cloud",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Advanced Field Service AP: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Scheduling & Optimization Engine",
+        "body": "The Field Service Scheduling Optimization Engine (Enhanced Scheduling and Optimization, or ESO) automatically schedules and optimizes work orders across a workforce. Scheduling Policies define rules, objectives, and constraints — balance travel time, skill matching, SLA compliance, and customer time preferences. Work Rules include availability, skills, territories, and travel limits. Optimization Objectives specify what to optimize (minimize travel, maximize utilization). Drip Feed Scheduling releases appointments incrementally to field workers. The Advanced FSL exam tests deep configuration of scheduling policies and understanding of how ESO decisions are made — know which rule types govern which behavior."
+      },
+      {
+        "heading": "Work Orders, Work Types & Service Appointments",
+        "body": "Work Orders are the central record for field service jobs. Work Types define templates — they set default skills, estimated duration, and required products. Service Appointments are the scheduled instances linked to Work Orders (or Account, Asset, Opportunity, or Work Order Line Items). Appointment Bundles group multiple appointments for efficient scheduling. Service Resources are workers or crews. Resource Absences block scheduling during PTO or non-working periods. Service Territories define geographic or operational coverage areas, with Operating Hours. The exam tests complex scenarios with multi-visit work orders, bundled appointments, and nested territories."
+      },
+      {
+        "heading": "Asset Management & Maintenance Plans",
+        "body": "Assets represent physical equipment or products owned by customers. Asset Relationships model complex asset hierarchies (parent-child, component-of). Maintenance Plans define recurring service schedules — set work type, frequency, and generation horizon. Work Order Generation automatically creates future work orders from the maintenance plan. Asset Warranties track coverage periods and terms. Service Contracts define the scope and duration of a service agreement. Entitlements within Service Cloud FSL determine response time SLAs. Advanced FSL exam questions often involve configuring proactive maintenance and linking warranty coverage to auto-generated work orders."
+      },
+      {
+        "heading": "Inventory & Parts Management",
+        "body": "Products Required on Work Order Line Items specify the parts needed for a job. Field technicians consume parts from their truck stock (Location Type: Vehicle). Return Orders handle defective or unused parts returned to a depot. Inventory Transfers move parts between locations (warehouse to van, van to van). Serialized Products track individual items; non-serialized track quantities. Price Books set part costs. The exam tests end-to-end parts flows: requesting parts, transferring from depot to van, consuming on job, and returning unused items. Know the difference between a Product Consumed (used on site) and a Product Requested (pre-job planning)."
+      },
+      {
+        "heading": "Mobile Worker Experience & Offline",
+        "body": "The Salesforce Field Service mobile app provides technicians with work order details, navigation, inventory, and signature capture. Offline mode caches assigned appointments and allows data entry without network connectivity — changes sync when connectivity is restored. Flow for Field Service delivers guided on-site workflows through the mobile app. The Gantt chart in the dispatcher console visualizes all scheduled work across the workforce. Global Actions add quick actions to the mobile app. The exam tests the configuration of mobile settings, what data is available offline, and how to build guided mobile workflows using Flow."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Salesforce Advanced Field Service Accredited Professional Exam",
+    "intro": "The Advanced Field Service AP exam tests deep expertise in complex Field Service configurations: optimization engine, advanced scheduling policies, and resource management at scale.",
+    "blocks": [
+      {
+        "heading": "Optimization Engine Architecture",
+        "body": "Know how the Field Service Optimization engine works: the relationship between Scheduling Policies, Work Rules (Service Objectives and Constraints), and how the optimizer balances competing objectives."
+      },
+      {
+        "heading": "Complex Scheduling Scenarios",
+        "body": "Know how to configure scheduling for complex scenarios: multi-day work orders, crew management (multi-resource), preferred technician logic, and skills-based routing with proficiency levels."
+      },
+      {
+        "heading": "Resource Capacity Planning",
+        "body": "Understand how to use the Optimization engine's global optimization to plan capacity, manage overtime, and handle emergency work insertion. Know how service territories and operating hours define scheduling windows."
+      },
+      {
+        "heading": "Field Service Analytics",
+        "body": "Know how to build Field Service analytics: first-time fix rate, travel time efficiency, SLA compliance, technician utilization, and how to use CRM Analytics for advanced field service reporting."
+      },
+      {
+        "heading": "Mobile App Advanced Configuration",
+        "body": "Know how to configure advanced mobile features: offline data synchronization, custom mobile flows, barcode scanning for parts lookup, and how to configure the mobile app for different technician roles."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certifications After This AP",
+    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "links": [
+      {
+        "href": "/certifications/sales-cloud",
+        "label": "Sales Cloud Consultant"
+      },
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Service Cloud Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
+        "href": "/certifications/role/administrator",
+        "label": "Admin certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does Advanced Field Service AP validate?",
+      "options": [
+        "Only basics",
+        "Designing, configuring, building, and implementing Advanced Field Service",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Accredited Advanced Field Service Professionals have demonstrated skills in designing, configuring, building, and implementing Advanced Field Service."
+    },
+    {
+      "question": "Which product does Advanced Field Service extend?",
+      "options": [
+        "Marketing Cloud",
+        "Service Cloud and Field Service",
+        "Commerce Cloud",
+        "Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Advanced Field Service extends Service Cloud and Field Service capabilities."
+    },
+    {
+      "question": "What is a key capability of Advanced Field Service?",
+      "options": [
+        "Email only",
+        "Scheduling, optimization, and mobile workforce management",
+        "CPQ only",
+        "Reporting only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scheduling, optimization, and mobile workforce management are key capabilities."
+    },
+    {
+      "question": "Which role typically pursues Advanced Field Service AP?",
+      "options": [
+        "Marketers",
+        "Partners and implementers working with Field Service",
+        "Sales only",
+        "Developers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Partners and implementers working with Field Service pursue this credential."
+    },
+    {
+      "question": "What does AP stand for in Accredited Professional?",
+      "options": [
+        "Application",
+        "Accredited Professional",
+        "Advanced Platform",
+        "Automation Process"
+      ],
+      "correctAnswer": 1,
+      "explanation": "AP stands for Accredited Professional—product/industry credentials for partners."
+    },
+    {
+      "question": "What is scheduling optimization in Field Service?",
+      "options": [
+        "Manual assignment only",
+        "Automated assignment of work orders to technicians based on skills, location, and availability",
+        "Email scheduling only",
+        "Report scheduling only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Optimization assigns work to the right technician based on criteria."
+    },
+    {
+      "question": "Which object represents a work order in Field Service?",
+      "options": [
+        "Case only",
+        "Service Appointment and Work Order",
+        "Task only",
+        "Event only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Work Order and Service Appointment track field service work."
+    },
+    {
+      "question": "What is mobile workforce management?",
+      "options": [
+        "Desktop only",
+        "Enabling technicians to view schedules, update work, and capture data on mobile devices",
+        "Email only",
+        "Reporting only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Mobile tools let technicians access schedules and update work in the field."
+    },
+    {
+      "question": "Which capability helps optimize technician routes?",
+      "options": [
+        "Manual routing only",
+        "Scheduling policies and optimization consider travel time and location",
+        "Email only",
+        "Chat only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Optimization considers travel time and location for efficient routing."
+    },
+    {
+      "question": "What does 'build and implement' mean for Advanced Field Service?",
+      "options": [
+        "Only coding",
+        "Configuring the solution and deploying it for the customer",
+        "Only reporting",
+        "Only training"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Build = configure; implement = deploy and go-live."
+    },
+    {
+      "question": "What is a work type in Field Service?",
+      "options": [
+        "A report",
+        "A template defining the skills, duration, and parts needed for a job type",
+        "A case type",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Work types standardize job definitions for scheduling and resource planning."
+    },
+    {
+      "question": "What is a Service Territory in Field Service?",
+      "options": [
+        "A report",
+        "A geographic or logical area for assigning and optimizing work",
+        "A case type",
+        "An email template"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Service Territories define areas for work assignment."
+    },
+    {
+      "question": "Why is capacity planning important for Field Service?",
+      "options": [
+        "Not important",
+        "Ensuring enough technician capacity for forecasted work volume",
+        "Only for sales",
+        "Only for marketing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Capacity planning aligns technician availability with demand."
+    },
+    {
+      "question": "What does resource optimization consider?",
+      "options": [
+        "Only skills",
+        "Skills, location, availability, and business rules",
+        "Only location",
+        "Only time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Optimization uses multiple factors for optimal assignment."
+    },
+    {
+      "question": "Which mobile feature helps technicians complete work?",
+      "options": [
+        "Email only",
+        "Field Service Mobile app for schedules, check-in, and work completion",
+        "Chat only",
+        "Reports only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Field Service Mobile provides the technician's field interface."
+    }
+  ]
+}

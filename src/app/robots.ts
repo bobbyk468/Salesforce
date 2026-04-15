@@ -8,6 +8,11 @@ const host = (() => {
     return 'www.trailblazeprep.com'
   }
 })()
+if (host === 'trailblazeprep.com') {
+  console.warn(
+    '[robots] NEXT_PUBLIC_SITE_URL uses apex; site redirects to www. Prefer https://www.trailblazeprep.com in Vercel.',
+  )
+}
 
 export default function robots(): MetadataRoute.Robots {
   return {

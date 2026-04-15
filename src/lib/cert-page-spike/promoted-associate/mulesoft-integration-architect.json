@@ -1,0 +1,295 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "MuleSoft Integration Architect",
+    "description": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "~68%",
+      "duration": "120 min",
+      "cost": "$400"
+    },
+    "topics": [
+      "Integration",
+      "APIs",
+      "Requirements",
+      "Interfaces",
+      "Implementations",
+      "Best Practices"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "MuleSoft Integration Architect: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Integration Architecture Patterns",
+        "body": "Integration patterns: Point-to-point (direct connection between two systems — brittle at scale), Hub-and-spoke (central integration hub mediates all connections — reduces n*(n-1) connections to n connections), API-led (layered API approach — flexible and composable), Event-driven (publish/subscribe decoupling — scalable but eventual consistency). The Integration Architect selects patterns based on: number of systems, latency requirements, scalability needs, and team capability. Know when API-led supersedes traditional hub-and-spoke."
+      },
+      {
+        "heading": "API-Led Connectivity: Three-Layer Architecture",
+        "body": "System APIs wrap individual backend systems — they insulate the network from system-specific protocols and expose stable REST interfaces regardless of what the backend system uses. Process APIs orchestrate business logic by calling multiple System APIs — they implement the business process without knowing which systems back each System API. Experience APIs tailor the data for specific consumers — mobile app, partner portal, web app — formatting and filtering for the channel. Each layer can be independently scaled and versioned. The exam tests how to assign capabilities to the correct API layer."
+      },
+      {
+        "heading": "Security Architecture for Integrations",
+        "body": "OAuth 2.0 client credentials flow for M2M API authentication. Mutual TLS (mTLS) for certificate-based authentication — both client and server present certificates. API Manager policy stacking — apply multiple policies in sequence (auth → rate limit → header injection). Secrets Manager for credential storage — never hardcode credentials in Mule apps. Anypoint Security (separate licence) provides tokenisation, secrets management, and crypto operations. The exam tests how to design a multi-layer security architecture for APIs and integrations."
+      },
+      {
+        "heading": "High Availability, Resilience, and SLAs",
+        "body": "CloudHub workers can be scaled horizontally (multiple workers) or vertically (larger worker size). Multiple workers in the same region provide active-active high availability — each worker processes a portion of the load. Persistent queues (VM connector with JMS) ensure message delivery even if a worker restarts. Reconnection strategies handle transient network failures. Circuit Breaker pattern prevents cascade failures. The architect designs resilience to meet SLA requirements (e.g., 99.9% uptime, maximum 5-second response time)."
+      },
+      {
+        "heading": "Anypoint Governance and Centre for Enablement",
+        "body": "Centre for Enablement (C4E) is MuleSoft's operating model for scaling API-led connectivity. The C4E team creates reusable assets (API templates, connector extensions, shared fragments) published to Exchange. Governance: API rating and certification in Exchange, API contract testing, dependency tracking via API Catalog. The Integration Architect designs governance policies — when new versions require review, how breaking changes are managed, and how teams discover and reuse existing assets. The exam tests C4E principles and governance framework design."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the MuleSoft Integration Architect Exam",
+    "intro": "The MuleSoft Integration Architect exam tests expertise in designing integration solutions using API-led connectivity and the Anypoint Platform. Focus on architecture patterns, Center for Enablement (C4E), and governance frameworks.",
+    "blocks": [
+      {
+        "heading": "API-Led Connectivity Layers",
+        "body": "Master the three-layer model: Experience APIs (channel-specific), Process APIs (orchestration), and System APIs (backend connectivity). Know how to identify which layer each integration belongs to and why."
+      },
+      {
+        "heading": "Center for Enablement (C4E)",
+        "body": "The C4E promotes reuse by publishing discoverable assets (connectors, APIs, templates) to Anypoint Exchange. Know how to establish a C4E, measure reuse metrics, and govern API lifecycle through the C4E."
+      },
+      {
+        "heading": "API Governance Framework",
+        "body": "Know how to use API Manager for API governance: applying policies, defining SLAs, monitoring API usage, and how API Autodiscovery links deployed applications to API Manager."
+      },
+      {
+        "heading": "Architecture Decision Trade-offs",
+        "body": "Architect questions test trade-off reasoning: synchronous vs. asynchronous, REST vs. SOAP, on-premise vs. cloud deployment. Always justify recommendations based on requirements (latency, volume, security)."
+      },
+      {
+        "heading": "Anypoint Platform Architecture",
+        "body": "Know the major platform components: Anypoint Studio (IDE), Anypoint Exchange (asset library), Runtime Manager (deployment), API Manager (governance), and MQ (async messaging). Understand how they integrate."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Architect Certifications",
+    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "links": [
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/certifications/system-architect",
+        "label": "System Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
+      {
+        "href": "/architect-certification-path",
+        "label": "Architect certification path"
+      }
+    ]
+  },
+  "tocSections": [
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "What does a MuleSoft Platform Integration Architect do?",
+      "options": [
+        "Only coding",
+        "Work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations",
+        "Only reporting",
+        "Only Slack"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations."
+    },
+    {
+      "question": "What is a key activity for a MuleSoft Integration Architect?",
+      "options": [
+        "Only coding",
+        "Translating requirements into integration interfaces and implementations",
+        "Only reporting",
+        "Only lists"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They translate requirements into integration interfaces and implementations."
+    },
+    {
+      "question": "Which stakeholders do MuleSoft Integration Architects work with?",
+      "options": [
+        "Only technical",
+        "Technical and non-technical stakeholders",
+        "Only non-technical",
+        "Only developers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "They work with technical and non-technical stakeholders."
+    },
+    {
+      "question": "Which role typically pursues MuleSoft Integration Architect?",
+      "options": [
+        "Marketers",
+        "Architects and senior consultants designing integration solutions",
+        "Sales only",
+        "Designers only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Architects and senior consultants designing integration solutions pursue this credential."
+    },
+    {
+      "question": "What does 'integration interfaces' mean?",
+      "options": [
+        "Only UI",
+        "APIs, contracts, and data flows between systems",
+        "Only reports",
+        "Only dashboards"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Integration interfaces are APIs, contracts, and data flows between systems."
+    },
+    {
+      "question": "Which design approach supports integration architecture?",
+      "options": [
+        "Ad-hoc only",
+        "Contract-first and API-led design",
+        "Code-first only",
+        "No design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Contract-first and API-led support sound architecture."
+    },
+    {
+      "question": "What does non-functional requirements include?",
+      "options": [
+        "Only features",
+        "Performance, security, scalability, and reliability",
+        "Only UI",
+        "Only data"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Non-functional requirements cover performance, security, etc."
+    },
+    {
+      "question": "Which MuleSoft tool supports API design?",
+      "options": [
+        "Mule runtime only",
+        "Design Center and RAML/OAS",
+        "CloudHub only",
+        "No design"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Design Center and RAML/OAS support API design."
+    },
+    {
+      "question": "What is the purpose of integration patterns?",
+      "options": [
+        "To replace APIs",
+        "To address common integration scenarios (sync, async, batch)",
+        "To delete only",
+        "To create only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Patterns address common integration scenarios."
+    },
+    {
+      "question": "Which stakeholder provides functional requirements?",
+      "options": [
+        "Developers only",
+        "Business analysts and domain experts",
+        "Only architects",
+        "Only operations"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Business and domain experts provide functional requirements."
+    },
+    {
+      "question": "What does implementation encompass?",
+      "options": [
+        "Only design",
+        "Mule flows, connectors, and deployment",
+        "Only documentation",
+        "Only testing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Implementation includes flows, connectors, and deployment."
+    },
+    {
+      "question": "Which consideration applies to integration security?",
+      "options": [
+        "Ignore security",
+        "Authentication, encryption, and authorization",
+        "Only HTTPS",
+        "No auth"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Integration security covers auth, encryption, and authorization."
+    },
+    {
+      "question": "What is the benefit of translating requirements to interfaces?",
+      "options": [
+        "No benefit",
+        "Clear contracts and reduced integration errors",
+        "More errors",
+        "Slower delivery"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Clear interfaces reduce integration errors."
+    },
+    {
+      "question": "What does RAML define in MuleSoft?",
+      "options": [
+        "Only runtime config",
+        "API contract: resources, methods, data types, and examples",
+        "Only deployment",
+        "Only security"
+      ],
+      "correctAnswer": 1,
+      "explanation": "RAML (RESTful API Modeling Language) defines the API contract and structure."
+    },
+    {
+      "question": "What does an Integration Architect ensure?",
+      "options": [
+        "Only code",
+        "Requirements are translated into sound, maintainable interfaces",
+        "Only deployment",
+        "Only testing"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Architects ensure requirements become maintainable interfaces."
+    }
+  ]
+}
