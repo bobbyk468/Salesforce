@@ -8,6 +8,7 @@ import CertPageCta from '@/components/CertPageCta'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
+import CertificationPageShell from '@/components/certifications/CertificationPageShell'
 import {
   getCertH1Text,
   getCertExamWeightageHeading,
@@ -23,7 +24,9 @@ import type {
   IntroSegment,
   LegacySpikeBody,
   MoreQuestionsParagraph,
+  RichTextContent,
 } from '@/lib/cert-page-spike/types'
+import { parseMarkdown, renderMarkdownSegments } from '@/lib/cert-page-spike/markdown-parser'
 import AdministratorCertBody from '@/components/certifications/AdministratorCertBody'
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import dynamic from 'next/dynamic'
@@ -60,6 +63,22 @@ function renderIntroSegments(segments: IntroSegment[]): ReactNode {
     }
     return null
   })
+}
+
+/**
+ * Flexible renderer for RichTextContent (markdown strings or segment arrays).
+ * Handles both legacy IntroSegment arrays and new markdown strings.
+ * Makes it easy to gradually migrate content to markdown.
+ */
+function renderRichText(content: RichTextContent): ReactNode {
+  if (typeof content === 'string') {
+    // Markdown string
+    const segments = parseMarkdown(content)
+    return renderMarkdownSegments(segments)
+  } else {
+    // Legacy segment array
+    return renderIntroSegments(content)
+  }
 }
 
 function renderMoreQuestionParagraph(p: MoreQuestionsParagraph, key: string, isLast: boolean): ReactNode {
@@ -143,91 +162,89 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
   const card = body.certificationCard
 
   return (
-    <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
+    <>
       <CertPageSeo slug={slug} certTitle={title} />
       {body.introLead?.length ? (
-        <p className="text-sm text-gray-600 mb-6">{renderIntroSegments(body.introLead)}</p>
+        <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       ) : (
-        <CertIntroParagraph slug={slug} />
+        <div className="max-w-7xl mx-auto px-4">
+          <CertIntroParagraph slug={slug} />
+        </div>
       )}
-      <CertPageCta slug={slug} certTitle={title} />
+      <div className="max-w-7xl mx-auto px-4">
+        <CertPageCta slug={slug} certTitle={title} />
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-3">
-          <ExamFeesSection slug={slug} />
+      <CertificationPageShell tocSections={body.tocSections}>
+        <ExamFeesSection slug={slug} />
 
-          <CertificationCard
-            slug={slug}
-            title={title}
-            code={card.code}
-            description={card.description}
-            examDetails={card.examDetails}
-            topics={card.topics}
-            examSections={examSections}
-            h1Text={getCertH1Text(slug)}
-            examWeightageHeading={getCertExamWeightageHeading(slug)}
-          />
+        <CertificationCard
+          slug={slug}
+          title={title}
+          code={card.code}
+          description={card.description}
+          examDetails={card.examDetails}
+          topics={card.topics}
+          examSections={examSections}
+          h1Text={getCertH1Text(slug)}
+          examWeightageHeading={getCertExamWeightageHeading(slug)}
+        />
 
-          <div id="exam-prep">
-            <ExamPrepContent slug={slug} />
-          </div>
-
-          <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
-
-          <ScenarioTipsSection
-            h2={body.scenarioTips.h2}
-            intro={body.scenarioTips.intro}
-            blocks={body.scenarioTips.blocks}
-          />
-
-          <DifficultyHeatmap slug={slug} />
-
-          <PracticeQuestionsSection
-            heading={getCertPracticeQuestionsHeading(slug)}
-            introText={getPracticeQuestionsIntro(
-              body.sampleQuestions.length,
-              body.practiceQuestionsIntroSuffix,
-            )}
-            questions={body.sampleQuestions}
-          />
-
-          <FullQuestionBankCta slug={slug} certTitle={title} />
-
-          {body.nextCertsAfter ? (
-            <section
-              className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
-              aria-labelledby="next-certs-heading"
-            >
-              <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">
-                {body.nextCertsAfter.heading}
-              </h2>
-              <p className="text-sm text-gray-700 mb-2">{body.nextCertsAfter.intro}</p>
-              <ul className="space-y-2 text-sm">
-                {body.nextCertsAfter.links.map((l) => (
-                  <li key={l.href}>
-                    <Link href={l.href} className="text-salesforce-blue font-medium hover:underline">
-                      {l.label}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </section>
-          ) : null}
-
-          <div id="related-certs">
-            <RelatedCertifications currentSlug={slug} />
-          </div>
-
-          <div id="faq">
-            <CertPageFaq slug={slug} certTitle={title} />
-          </div>
+        <div id="exam-prep">
+          <ExamPrepContent slug={slug} />
         </div>
 
-        <aside className="lg:col-span-1">
-          <CertTableOfContents sections={body.tocSections} />
-        </aside>
-      </div>
-    </div>
+        <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
+
+        <ScenarioTipsSection
+          h2={body.scenarioTips.h2}
+          intro={body.scenarioTips.intro}
+          blocks={body.scenarioTips.blocks}
+        />
+
+        <DifficultyHeatmap slug={slug} />
+
+        <PracticeQuestionsSection
+          heading={getCertPracticeQuestionsHeading(slug)}
+          introText={getPracticeQuestionsIntro(
+            body.sampleQuestions.length,
+            body.practiceQuestionsIntroSuffix,
+          )}
+          questions={body.sampleQuestions}
+        />
+
+        <FullQuestionBankCta slug={slug} certTitle={title} />
+
+        {body.nextCertsAfter ? (
+          <section
+            className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
+            aria-labelledby="next-certs-heading"
+          >
+            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">
+              {body.nextCertsAfter.heading}
+            </h2>
+            <p className="text-sm text-gray-700 mb-2">{body.nextCertsAfter.intro}</p>
+            <ul className="space-y-2 text-sm">
+              {body.nextCertsAfter.links.map((l) => (
+                <li key={l.href}>
+                  <Link href={l.href} className="text-salesforce-blue font-medium hover:underline">
+                    {l.label}
+                  </Link>
+                </li>
+              ))}
+            </ul>
+          </section>
+        ) : null}
+
+        <div id="related-certs">
+          <RelatedCertifications currentSlug={slug} />
+        </div>
+
+        <div id="faq">
+          <CertPageFaq slug={slug} certTitle={title} />
+        </div>
+      </CertificationPageShell>
+    </>
   )
 }
 
@@ -237,101 +254,97 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
   const card = body.certificationCard
 
   return (
-    <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
+    <>
       <CertPageSeo slug={slug} certTitle={title} />
-      <p className="text-sm text-gray-600 mb-6">{renderIntroSegments(body.introLead)}</p>
-      <CertPageCta slug={slug} certTitle={title} examCode={body.ctaExamCode} />
+      <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
+      <div className="max-w-7xl mx-auto px-4">
+        <CertPageCta slug={slug} certTitle={title} examCode={body.ctaExamCode} />
+      </div>
 
-      <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-3">
-          <ExamFeesSection slug={slug} />
+      <CertificationPageShell tocSections={body.tocSections}>
+        <ExamFeesSection slug={slug} />
 
-          <CertificationCard
-            slug={slug}
-            title={title}
-            code={card.code}
-            description={card.description}
-            examDetails={card.examDetails}
-            topics={card.topics}
-            examSections={examSections}
-            h1Text={getCertH1Text(slug)}
-            examWeightageHeading={getCertExamWeightageHeading(slug)}
-          />
+        <CertificationCard
+          slug={slug}
+          title={title}
+          code={card.code}
+          description={card.description}
+          examDetails={card.examDetails}
+          topics={card.topics}
+          examSections={examSections}
+          h1Text={getCertH1Text(slug)}
+          examWeightageHeading={getCertExamWeightageHeading(slug)}
+        />
 
-          <div id="exam-prep">
-            <ExamPrepContent slug={slug} />
-          </div>
-
-          <ScenarioTipsSection
-            h2={body.scenarioTips.h2}
-            intro={body.scenarioTips.intro}
-            blocks={body.scenarioTips.blocks}
-          />
-
-          <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
-
-          <DifficultyHeatmap slug={slug} />
-
-          <PracticeQuestionsSection
-            heading={getCertPracticeQuestionsHeading(slug)}
-            introText={getPracticeQuestionsIntro(body.sampleQuestions.length, body.practiceIntroSuffix)}
-            questions={body.sampleQuestions}
-          />
-
-          <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-6 sm:p-8 text-center">
-            <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
-              {body.moreQuestionsBlock.h3}
-            </h3>
-            {body.moreQuestionsBlock.paragraphs.map((para, idx) =>
-              renderMoreQuestionParagraph(
-                para,
-                `mq-${idx}`,
-                idx === body.moreQuestionsBlock.paragraphs.length - 1,
-              ),
-            )}
-            <a
-              href={body.moreQuestionsBlock.ctaHref}
-              className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
-            >
-              {body.moreQuestionsBlock.ctaLabel}
-            </a>
-          </div>
-
-          <div id="related-certs">
-            <RelatedCertifications currentSlug={slug} />
-          </div>
-
-          <section
-            className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
-            aria-labelledby={body.afterCertSection.id}
-          >
-            <h2 id={body.afterCertSection.id} className="text-base font-semibold text-gray-900 mb-3">
-              {body.afterCertSection.heading}
-            </h2>
-            <p className="text-sm text-gray-700 mb-2">{body.afterCertSection.intro}</p>
-            <ul className="space-y-2 text-sm">
-              {body.afterCertSection.items.map((item) => (
-                <li key={item.link.href}>
-                  {item.lead}
-                  <Link href={item.link.href} className="text-salesforce-blue font-medium hover:underline">
-                    {item.link.label}
-                  </Link>
-                  {item.tail}
-                </li>
-              ))}
-            </ul>
-          </section>
-
-          <div id="faq">
-            <CertPageFaq slug={slug} certTitle={title} />
-          </div>
+        <div id="exam-prep">
+          <ExamPrepContent slug={slug} />
         </div>
 
-        <aside className="lg:col-span-1">
-          <CertTableOfContents sections={body.tocSections} />
-        </aside>
-      </div>
-    </div>
+        <ScenarioTipsSection
+          h2={body.scenarioTips.h2}
+          intro={body.scenarioTips.intro}
+          blocks={body.scenarioTips.blocks}
+        />
+
+        <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
+
+        <DifficultyHeatmap slug={slug} />
+
+        <PracticeQuestionsSection
+          heading={getCertPracticeQuestionsHeading(slug)}
+          introText={getPracticeQuestionsIntro(body.sampleQuestions.length, body.practiceIntroSuffix)}
+          questions={body.sampleQuestions}
+        />
+
+        <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-6 sm:p-8 text-center">
+          <h3 className="text-xl sm:text-2xl font-bold text-gray-900 mb-3 sm:mb-4">
+            {body.moreQuestionsBlock.h3}
+          </h3>
+          {body.moreQuestionsBlock.paragraphs.map((para, idx) =>
+            renderMoreQuestionParagraph(
+              para,
+              `mq-${idx}`,
+              idx === body.moreQuestionsBlock.paragraphs.length - 1,
+            ),
+          )}
+          <a
+            href={body.moreQuestionsBlock.ctaHref}
+            className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
+          >
+            {body.moreQuestionsBlock.ctaLabel}
+          </a>
+        </div>
+
+        <div id="related-certs">
+          <RelatedCertifications currentSlug={slug} />
+        </div>
+
+        <section
+          className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
+          aria-labelledby={body.afterCertSection.id}
+        >
+          <h2 id={body.afterCertSection.id} className="text-base font-semibold text-gray-900 mb-3">
+            {body.afterCertSection.heading}
+          </h2>
+          <p className="text-sm text-gray-700 mb-2">{body.afterCertSection.intro}</p>
+          <ul className="space-y-2 text-sm">
+            {body.afterCertSection.items.map((item) => (
+              <li key={item.link.href}>
+                {item.lead}
+                <Link href={item.link.href} className="text-salesforce-blue font-medium hover:underline">
+                  {item.link.label}
+                </Link>
+                {item.tail}
+              </li>
+            ))}
+          </ul>
+        </section>
+
+        <div id="faq">
+          <CertPageFaq slug={slug} certTitle={title} />
+        </div>
+      </CertificationPageShell>
+    </>
   )
 }
 

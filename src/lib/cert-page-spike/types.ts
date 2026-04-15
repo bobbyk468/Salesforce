@@ -13,6 +13,19 @@ export type IntroSegment =
   | { type: 'link'; href: string; label: string }
   | { type: 'strong'; text: string }
 
+/**
+ * Forward-compatible rich text format.
+ * Supports both legacy segment arrays (IntroSegment[]) and markdown strings.
+ * New content should use markdown strings for better authoring experience.
+ *
+ * Markdown syntax:
+ * - **bold text** for strong emphasis
+ * - *italic text* for em emphasis
+ * - [link text](https://url.com) for internal/external links
+ * - [email](mailto:user@example.com) for email links
+ */
+export type RichTextContent = IntroSegment[] | string
+
 /** One titled paragraph block (Key Concepts / How to Pass sections). */
 export type RichSectionBlock = {
   heading: string
