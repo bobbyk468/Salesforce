@@ -12,6 +12,18 @@
  * 5. FILE A TICKET to complete the migration properly
  *
  * DO NOT leave certs in legacy mode long-term; it bypasses the spike architecture.
+ *
+ * CLEANUP CRITERIA (when to delete the escape hatch):
+ * - LEGACY_CERT_SLUGS remains empty for 2+ releases
+ * - cert-migration-status.mjs reports "0 legacy TSX"
+ * - No open tickets for legacy fallback restorations
+ * - The migration pattern is stable and proven (12+ weeks in production)
+ *
+ * At that point, remove:
+ * - src/lib/cert-page-spike/load-legacy-cert-body.ts
+ * - src/lib/cert-page-spike/legacy-cert-slugs.generated.ts
+ * - The legacy branch from src/app/certifications/[slug]/page.tsx
+ * - LegacySpikeBody type from src/lib/cert-page-spike/types.ts
  */
 import type { ComponentType } from 'react'
 
