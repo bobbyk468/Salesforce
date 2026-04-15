@@ -31,6 +31,7 @@ import AdministratorCertBody from '@/components/certifications/AdministratorCert
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -175,6 +176,10 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <CertPageCta slug={slug} certTitle={title} />
       </div>
 
+      <div className="max-w-7xl mx-auto px-4">
+        <ReleaseNoteBadge />
+      </div>
+
       <CertificationPageShell tocSections={body.tocSections}>
         <ExamFeesSection slug={slug} />
 
@@ -259,6 +264,10 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       <div className="max-w-7xl mx-auto px-4">
         <CertPageCta slug={slug} certTitle={title} examCode={body.ctaExamCode} />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <ReleaseNoteBadge />
       </div>
 
       <CertificationPageShell tocSections={body.tocSections}>
