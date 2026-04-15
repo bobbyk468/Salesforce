@@ -221,7 +221,7 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
         return {
           name: item.name,
           href: item.href,
-          anchorText: `${item.name} Winter '26 prep guide`,
+          anchorText: `${item.name} Spring '26 prep guide`,
         }
       })
       .filter((item): item is { name: string; href: string; anchorText: string } => item !== null)
