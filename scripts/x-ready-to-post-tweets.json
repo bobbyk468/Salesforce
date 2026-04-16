@@ -1,0 +1,239 @@
+{
+  "metadata": {
+    "account": "@trailblazeprep",
+    "created": "2026-04-16",
+    "category": "Salesforce Certification Study & Exam Strategy",
+    "instructions": "Copy tweet as-is or customize with your own examples. Post one per scheduled time. Reply to every comment in first 2 hours."
+  },
+  "questions_high_engagement": [
+    {
+      "id": "Q1",
+      "template": "What's Wrong - Scenario",
+      "tweet": "admin built a permission set for service reps:\n- read on accounts\n- edit on cases\n- create on tasks\n\nbut reps still can't see cases on their accounts.\n\nwhat's wrong with this setup? 👇",
+      "category": "ADM-201",
+      "engagement_expected": "8-12 replies"
+    },
+    {
+      "id": "Q2",
+      "template": "Hot Take Question",
+      "tweet": "hot take: ADM-201 is harder than App Builder, but only if you haven't touched Salesforce before.\n\nif you've implemented 2+ orgs, App Builder is the wall because it assumes you know declarative.\n\nagree or disagree? 👇",
+      "category": "Career",
+      "engagement_expected": "10-15 replies"
+    },
+    {
+      "id": "Q3",
+      "template": "Multiple Choice Question",
+      "tweet": "quick question:\n\nwhen you see 'supervisors manage their own queue capacity', are you thinking:\nA) Case Assignment Rules\nB) Omni-Channel\nC) Lead Assignment\n\ncontext: ADM-201 exam language\n\n👇",
+      "category": "ADM-201",
+      "engagement_expected": "6-10 replies"
+    },
+    {
+      "id": "Q4",
+      "template": "Confession Question",
+      "tweet": "confess: have you ever built a permission set without checking Field Security?\n\nasking because that's how you miss half the access issues in your org.\n\nraise your hand 👇",
+      "category": "ADM-201",
+      "engagement_expected": "7-12 replies"
+    },
+    {
+      "id": "Q5",
+      "template": "Multiple Choice Question",
+      "tweet": "exam question format:\n\ncases arrive from email. they need to route based on capacity. supervisors control it without admin help.\n\nwhich tool?\nA) Case Assignment Rules\nB) Omni-Channel\nC) Lead Assignment\nD) Email-to-Case\n\ndrop your answer 👇",
+      "category": "ADM-201",
+      "engagement_expected": "8-12 replies"
+    },
+    {
+      "id": "Q6",
+      "template": "Rapid Fire Question",
+      "tweet": "quick question for the Agentforce crew:\n\nmulti-agent orchestration — game changer or hype?\n\ncontext: Spring '26 feature that's reshaping how agents work together\n\n👇",
+      "category": "Agentforce",
+      "engagement_expected": "5-8 replies"
+    },
+    {
+      "id": "Q7",
+      "template": "Hot Take Question",
+      "tweet": "hot take: Agentforce Specialist is harder than Platform Developer I.\n\nPD1 assumes you know coding. Agentforce assumes you understand agent orchestration concepts that didn't exist before Spring '26.\n\nYou can't study it from 2025 material.\n\ncome at me 👇",
+      "category": "Agentforce",
+      "engagement_expected": "10-15 replies"
+    },
+    {
+      "id": "Q8",
+      "template": "Confession Question",
+      "tweet": "confess: how many times did you read the OWD explanation before it actually clicked?\n\nasking because everyone struggles with this. it's not you.\n\nbe honest 👇",
+      "category": "ADM-201",
+      "engagement_expected": "6-10 replies"
+    }
+  ],
+  "threads_high_value": [
+    {
+      "id": "T1",
+      "template": "You're Doing It Wrong - Omni-Channel",
+      "tweets": [
+        "everyone studying ADM-201 is doing Omni-Channel wrong.\n\nhere's what actually matters:\n\n🧵",
+        "WRONG: 'Omni-Channel is for routing cases like Assignment Rules'\nRIGHT: Omni-Channel lets SUPERVISORS control queue capacity in real-time without touching Setup. Assignment Rules need admin changes every time.\n\nKey diff: Who controls it? Supervisor (Omni) vs Admin (Rules)",
+        "WRONG: 'Omni-Channel is for Service Cloud only'\nRIGHT: You can use it anywhere you have a queue. Billing dept? Sales queue? Works anywhere.\n\nThe exam tests if you know when to use each tool, not just what they do.",
+        "WRONG: 'If you know Assignment Rules, you know Omni-Channel'\nRIGHT: Assignment Rules = push cases out based on rules you set. Omni-Channel = supervisors pull cases and manage their own queue.\n\nOpposite models. Know the difference.",
+        "That's it. 80% of test-takers get one of these wrong. Know them, and you're in the top 20% on this topic.\n\nfollow for the gaps the study guides won't cover.",
+        "#ADM201 #SalesforceExam"
+      ],
+      "category": "ADM-201",
+      "engagement_expected": "20-40 total replies + thread saves"
+    },
+    {
+      "id": "T2",
+      "template": "3 Things You Didn't Know",
+      "tweets": [
+        "3 things about multi-agent orchestration (Spring '26) that most people don't know:\n\n🧵",
+        "1. Agent B doesn't inherit Agent A's context automatically\nYou have to explicitly pass variables through the handoff action. Missing this = silent failures in production.",
+        "2. You can't orchestrate agents from a Flow\nAgent A can call flows. Flows can't call agents. One-way street. Exam tests this constantly.",
+        "3. Orchestration context is transient\nOnce the handoff is done, Agent A can't see what Agent B is doing. They're isolated after handoff.",
+        "test yourself: if Agent A needs to see Agent B's results, what do you do? 👇\n\n(answer: use a final action to report back, not orchestration)",
+        "#Agentforce #SpringRelease26"
+      ],
+      "category": "Agentforce",
+      "engagement_expected": "15-30 total replies"
+    },
+    {
+      "id": "T3",
+      "template": "Misconception Thread",
+      "tweets": [
+        "misconception: 'Permission Sets add access'\n\nreality: Permission Sets can ONLY grant/remove access. They can't override restrictions.\n\nIf OWD is Private, a Perm Set can't make it Public.\n\nhere's why this matters:\n\n🧵",
+        "Why people get this wrong:\nThey think Perm Sets = 'the thing that controls access'\n\nActually: OWD sets the floor. Perm Sets open from there. Field Security closes windows.",
+        "The hierarchy (bottom to top):\n- OWD = floor (most restrictive)\n- Role hierarchy can loosen (up the chain only)\n- Sharing = manual exceptions\n- Perm Sets = grant additional access\n- Field Security = restrict specific fields",
+        "Example:\n'Give this rep access to accounts they don't own'\n❌ WRONG: Perm Set 'Read All Accounts'\n✅ RIGHT: Sharing rule OR Account Team OR Manual sharing\n\nPerm Sets won't override OWD.",
+        "The lesson: Read the question for 'can' vs 'should' and 'all' vs 'specific'\n\nExam loves testing if you know what TOOL does what.\n\nfollow for more permission set gotchas.",
+        "#ADM201 #SalesforceAdmin"
+      ],
+      "category": "ADM-201",
+      "engagement_expected": "18-32 total replies"
+    }
+  ],
+  "hot_takes_controversy": [
+    {
+      "id": "H1",
+      "template": "Unpopular Opinion",
+      "tweet": "unpopular opinion:\n\nADM-201 is easier than App Builder.\n\nADM is concepts. App Builder is application. If you haven't touched Salesforce, ADM teaches you WHAT. App Builder assumes you know and teaches you WHERE.\n\ncome at me 👇",
+      "category": "Career",
+      "engagement_expected": "8-12 replies"
+    },
+    {
+      "id": "H2",
+      "template": "Stop Saying",
+      "tweet": "stop saying 'give them view all access'\n\nwhat you should say instead: 'loosen OWD or use a sharing rule'\n\nhere's why: 'View All' doesn't exist in Salesforce anymore (2017+). You're using old language. Exam will test the real terms.",
+      "category": "ADM-201",
+      "engagement_expected": "6-10 replies"
+    },
+    {
+      "id": "H3",
+      "template": "Field Comparison",
+      "tweet": "ADM-201 vs Agentforce Specialist in 2026:\n\neveryone says 'different tracks'\n\nbut actually: Agentforce Specialist is harder because it's all new. You can't reuse 2025 knowledge.\n\nthe real difference: ADM = proven concepts, Agentforce = bleeding edge\n\n👇",
+      "category": "Career",
+      "engagement_expected": "7-11 replies"
+    },
+    {
+      "id": "H4",
+      "template": "Unpopular Opinion",
+      "tweet": "unpopular opinion:\n\nYou don't need 5 certs to get a Salesforce job.\n\nYou need 1 cert + deep knowledge in 1 area.\n\nMost people study 5 shallow certs instead of 1 deep expertise.\n\nHiring managers want depth, not breadth.\n\ncome at me 👇",
+      "category": "Career",
+      "engagement_expected": "10-15 replies"
+    }
+  ],
+  "community_building": [
+    {
+      "id": "C1",
+      "template": "Amplify Others",
+      "tweet": "if you're studying for ADM-201, follow @BradleyRice1\n\nhe breaks down OWD vs Sharing in ways that stick. most admins get this wrong. his content is the difference between 68% (fail) and 82% (pass).\n\nyour study plan will thank you.",
+      "category": "Community",
+      "engagement_expected": "4-7 replies"
+    },
+    {
+      "id": "C2",
+      "template": "Ask for Help",
+      "tweet": "question for the ADM-201 crew:\n\nwhat's the ONE topic that keeps tripping you up on practice exams?\n\nasking because I want to build a deep-dive thread on the #1 problem area.\n\ndrop it 👇",
+      "category": "Community",
+      "engagement_expected": "8-12 replies"
+    },
+    {
+      "id": "C3",
+      "template": "Celebrate Wins",
+      "tweet": "just saw someone passed Agentforce Specialist 🎉\n\ntheir approach: skip the documentation, study actual agent behavior in sandbox first\n\nbuild intuition before memorizing features.\n\nthat's how you pass architect-level certs.\n\nif you're taking Agentforce, save this.",
+      "category": "Community",
+      "engagement_expected": "5-8 replies"
+    }
+  ],
+  "study_tips_value": [
+    {
+      "id": "S1",
+      "template": "One Thing Changed Everything",
+      "tweet": "one thing that changed my ADM-201 result:\n\nstopping trying to memorize, starting to ask 'what tool solves this problem?'\n\nwhy it worked: Every exam question is a problem statement. You pick the tool. Memorizing facts doesn't help. Pattern matching does.\n\ntest yourself 👇",
+      "category": "ADM-201",
+      "engagement_expected": "6-10 replies"
+    },
+    {
+      "id": "S2",
+      "template": "Study Strategy",
+      "tweet": "4 weeks until Agentforce Specialist:\n\nweek 1: understand agent architecture + topics/actions (concepts first)\nweek 2: build 2 agents in sandbox from scratch (hands-on)\nweek 3: study multi-agent orchestration + edge cases (harder stuff)\nweek 4: mock exams + weak spot drills (exam readiness)\n\ndetail 👇",
+      "category": "Agentforce",
+      "engagement_expected": "7-11 replies"
+    },
+    {
+      "id": "S3",
+      "template": "One Thing Changed Everything",
+      "tweet": "one thing that changed my App Builder result:\n\nstudying declarative automation deeply instead of checking boxes.\n\nflow logic, process builder concepts, formula functions — actually understand them.\n\nApp Builder isn't 'next level', it's 'deeper level'.\n\nsave this.",
+      "category": "App Builder",
+      "engagement_expected": "5-8 replies"
+    },
+    {
+      "id": "S4",
+      "template": "Common Mistake",
+      "tweet": "biggest mistake on ADM-201:\n\nstudying what OWD/Sharing ARE instead of studying WHEN to use them.\n\nthe exam doesn't ask 'define sharing'. it asks 'this company needs access control. which tool?'\n\nlearn the decision tree, not the definition.",
+      "category": "ADM-201",
+      "engagement_expected": "6-9 replies"
+    }
+  ],
+  "career_insights": [
+    {
+      "id": "CR1",
+      "template": "Job Market Reality",
+      "tweet": "job market reality for Salesforce admins in 2026:\n\nsalary: $70-95k (unchanged from 2024)\ndemand: still high but quality bar higher\ncompetition: 2x more certified admins than 2 years ago\n\nwhat companies actually want:\n- OWD/Sharing expertise\n- Org health management\n- CRM strategy\n\nthe move: get ADM-201 but study OWD deeper than the exam requires. that's what gets hired.",
+      "category": "Career",
+      "engagement_expected": "8-12 replies"
+    },
+    {
+      "id": "CR2",
+      "template": "Promotion Insight",
+      "tweet": "people getting promoted to Salesforce architect in 2026 aren't the ones with 10 certs.\n\nthey're the ones who killed projects that were about to ship hallucinated data to the CRO.\n\ncompanies are terrified of AI now. if you can say 'no' and explain why, you're valuable.\n\nif you want architect roles, develop judgment first, certs second.",
+      "category": "Career",
+      "engagement_expected": "10-15 replies"
+    },
+    {
+      "id": "CR3",
+      "template": "Salary Reality",
+      "tweet": "salary reality for certified Salesforce professionals:\n\nADM-201: $85k avg\nApp Builder: $95k avg\nPD1: $105k avg\nArchitect: $150k+ avg\n\nbut the jump from ADM to App Builder = small.\nthe jump from PD1 to Architect = huge.\n\nfocus on depth, not collecting certs.",
+      "category": "Career",
+      "engagement_expected": "6-10 replies"
+    }
+  ],
+  "daily_standup": [
+    {
+      "id": "D1",
+      "template": "Quick Win",
+      "tweet": "spring '26 highlight:\n\nmulti-agent orchestration is now native.\n\nthis means: agents can hand off work to other agents, passing context automatically.\n\nif you're studying Agentforce, this is on the exam.\n\nif you're building agents, this changes your architecture.",
+      "category": "Release Updates",
+      "engagement_expected": "3-5 replies"
+    },
+    {
+      "id": "D2",
+      "template": "Quick Win",
+      "tweet": "reminder: OWD privacy levels are:\n\n- Private\n- Public Read Only\n- Public Read/Write\n- Controlled by Parent\n\nif the exam says 'reps can read but not edit', and it's not a parent relationship:\n\nPublic Read Only wins.\n\ndon't overthink it.",
+      "category": "ADM-201",
+      "engagement_expected": "2-4 replies"
+    },
+    {
+      "id": "D3",
+      "template": "Quick Tip",
+      "tweet": "Agentforce tip:\n\nTopics and Actions are different.\n\nTopics = intent classification (what the user is asking for)\nActions = what the agent actually does\n\nagent routes topic → action performs\n\nknow the difference for the exam.",
+      "category": "Agentforce",
+      "engagement_expected": "3-5 replies"
+    }
+  ]
+}
