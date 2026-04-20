@@ -64,16 +64,6 @@ export default function ReleaseNoteBadge() {
         </p>
       </div>
 
-      {/* Learn More Link */}
-      <div className="mt-4">
-        <a
-          href="/docs/release-notes-sp26"
-          className="inline-flex items-center gap-2 text-sm font-medium text-blue-600 hover:text-blue-700"
-        >
-          Read full Spring '26 Release Notes
-          <span className="text-lg">→</span>
-        </a>
-      </div>
     </div>
   )
 }
