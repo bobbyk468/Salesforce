@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "Anypoint Platform and Development Lifecycle",
-        "body": "Anypoint Platform is MuleSoft's integration platform — Design, Develop, Deploy, Manage. Anypoint Studio is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. CloudHub is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
+        "body": "**Anypoint Platform** is MuleSoft's integration platform — Design, Develop, Deploy, Manage. **Anypoint Studio** is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. **CloudHub** is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
       },
       {
         "heading": "Mule Events, Flows, and Core Concepts",
@@ -35,7 +35,7 @@
       },
       {
         "heading": "DataWeave 2.0 Transformations",
-        "body": "DataWeave is MuleSoft's transformation language — used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
+        "body": "**DataWeave** is MuleSoft's transformation language — used to transform, filter, and map data. Key operators: map (transform array elements), filter (select matching elements), reduce (aggregate), pluck (transform object entries), groupBy (group array by key). Type system: String, Number, Boolean, Array, Object, Null, Any. Header declarations define input/output MIME types. %dw 2.0 output application/json --- means DataWeave version 2, output format JSON. The exam tests reading and writing DataWeave scripts for common transformation scenarios."
       },
       {
         "heading": "API Design with RAML and API-First",
@@ -57,7 +57,7 @@
       },
       {
         "heading": "DataWeave 2.0 Fundamentals",
-        "body": "DataWeave is the transformation language at the core of Mule 4. Know how to map, filter, transform, and coerce data types. Key functions: map, filter, mapObject, reduce, pluck, flatten, and type coercion operators."
+        "body": "**DataWeave** is the transformation language at the core of Mule 4. Know how to map, filter, transform, and coerce data types. Key functions: map, filter, mapObject, reduce, pluck, flatten, and type coercion operators."
       },
       {
         "heading": "Core Connectors",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "Deployment to CloudHub",
-        "body": "Know how to deploy a Mule application to CloudHub 1.0: environment selection, worker configuration (size and count), deployment properties, and how to monitor deployed applications."
+        "body": "Know how to deploy a Mule application to **CloudHub** 1.0: environment selection, worker configuration (size and count), deployment properties, and how to monitor deployed applications."
       }
     ]
   },

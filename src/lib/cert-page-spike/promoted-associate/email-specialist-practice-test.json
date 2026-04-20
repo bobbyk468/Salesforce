@@ -22,15 +22,15 @@
     "blocks": [
       {
         "heading": "Email Delivery, Compliance & Subscriber Management",
-        "body": "CAN-SPAM requires a physical mailing address, an unsubscribe mechanism honored within 10 days, and honest subject lines. GDPR requires explicit opt-in consent for EU subscribers and the right to erasure. CASL applies to Canadian recipients. Suppression Lists (global unsubscribes, bounces, complaints) prevent sending to opted-out addresses. Data Extensions store subscriber data with custom attributes for segmentation. Subscriber keys uniquely identify a contact across channels. Double opt-in sends a confirmation email before adding a subscriber to a sendable list. The practice exam frequently tests which compliance rule applies to a given scenario and how suppression lists interact with send classification."
+        "body": "CAN-SPAM requires a physical mailing address, an unsubscribe mechanism honored within 10 days, and honest subject lines. GDPR requires explicit opt-in consent for EU subscribers and the right to erasure. CASL applies to Canadian recipients. Suppression Lists (global unsubscribes, bounces, complaints) prevent sending to opted-out addresses. **Data Extensions** store subscriber data with custom attributes for segmentation. Subscriber keys uniquely identify a contact across channels. Double opt-in sends a confirmation email before adding a subscriber to a **Sendable** list. The practice exam frequently tests which compliance rule applies to a given scenario and how suppression lists interact with send classification."
       },
       {
         "heading": "Journey Builder & Triggered Sends",
-        "body": "Journey Builder orchestrates multi-step, multi-channel customer journeys. Entry Sources include Data Extensions (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation — good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
+        "body": "**Journey Builder** orchestrates multi-step, multi-channel customer journeys. Entry Sources include **Data Extensions** (scheduled batch entry), API Events (real-time triggered entry), Salesforce Data (CRM object record changes), and CloudPages forms. Activities include Email Send, SMS, Push, Wait, Decision Split (conditions), Engagement Split (opens/clicks), Einstein STO (Send Time Optimization), and Update Contact. Journey goals and exit criteria control when a contact completes or leaves the journey. Triggered Sends are simpler, single-email automation — good for transactional emails (order confirmations, password resets). The exam tests which journey activity to use for a given scenario and how entry source options differ."
       },
       {
         "heading": "Content Builder & Personalization",
-        "body": "Content Builder is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with AMPscript or SSJS for dynamic content. AMPscript is the scripting language for personalization — `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
+        "body": "**Content Builder** is the centralized asset library for emails, templates, images, and documents. Email templates use drag-and-drop blocks or HTML with **AMPscript** or **SSJS** for dynamic content. AMPscript is the scripting language for personalization — `%%[VAR %%]` syntax, `Lookup()` retrieves data extension values, `IF/THEN/ENDIF` for conditional content. Dynamic Content blocks show different content to different subscribers based on rules. Personalization Strings insert subscriber attributes inline. Content Syndication shares blocks across business units. The exam tests how to write an AMPscript snippet that retrieves a value from a data extension and conditionally displays content."
       },
       {
         "heading": "Send Classifications & Deliverability",
@@ -38,7 +38,7 @@
       },
       {
         "heading": "Analytics & Reporting",
-        "body": "Marketing Cloud Email reporting tracks: Sent, Delivered, Opens (unique + total), Clicks (unique + total), Bounces (hard + soft), Unsubscribes, and Spam Complaints. Click Rate = Clicks / Delivered. Open Rate = Opens / Delivered. The Tracking workspace in Email Studio shows send-level metrics. Data Views (hidden data extensions: _Sent, _Open, _Click, _Bounce, _Unsubscribe) allow SQL queries in Automation Studio for custom reporting. Einstein Engagement Scoring predicts which subscribers are likely to engage. Send Throttling limits the number of emails sent per hour to protect deliverability. The exam tests how to calculate email KPIs from raw numbers and which reporting tool to use for a given analysis need."
+        "body": "Marketing Cloud Email reporting tracks: Sent, Delivered, Opens (unique + total), Clicks (unique + total), Bounces (hard + soft), Unsubscribes, and Spam Complaints. Click Rate = Clicks / Delivered. Open Rate = Opens / Delivered. The Tracking workspace in **Email Studio** shows send-level metrics. Data Views (hidden **Data Extensions**: _Sent, _Open, _Click, _Bounce, _Unsubscribe) allow SQL queries in **Automation Studio** for custom reporting. Einstein Engagement Scoring predicts which subscribers are likely to engage. Send Throttling limits the number of emails sent per hour to protect deliverability. The exam tests how to calculate email KPIs from raw numbers and which reporting tool to use for a given analysis need."
       }
     ]
   },
@@ -48,15 +48,15 @@
     "blocks": [
       {
         "heading": "Simulate real exam pacing",
-        "body": "Work through a full set without opening Email Studio docs or saved AMPscript snippets. The exam expects you to pick the right feature or rule quickly (send classifications, suppression, entry sources), not to look up syntax."
+        "body": "Work through a full set without opening **Email Studio** docs or saved **AMPscript** snippets. The exam expects you to pick the right feature or rule quickly (send classifications, suppression, entry sources), not to look up syntax."
       },
       {
         "heading": "Review every explanation",
-        "body": "Wrong answers often differ by one compliance or architecture nuance — transactional vs commercial classification, REST vs SOAP for a given task, or when Journey Builder is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
+        "body": "Wrong answers often differ by one compliance or architecture nuance — transactional vs commercial classification, REST vs SOAP for a given task, or when **Journey Builder** is required over a simple triggered send. Read each explanation as a mini flashcard for those distinctions."
       },
       {
         "heading": "Turn heatmap reds into targeted study",
-        "body": "If Data Extensions and subscriber model questions dominate errors, re-read that key concept block and sketch a small DE schema on paper before the next practice round. Same for Journey activities or CAN-SPAM/GDPR scenarios."
+        "body": "If **Data Extensions** and subscriber model questions dominate errors, re-read that key concept block and sketch a small DE schema on paper before the next practice round. Same for Journey activities or CAN-SPAM/GDPR scenarios."
       },
       {
         "heading": "Cross-check with the full Email Specialist page",

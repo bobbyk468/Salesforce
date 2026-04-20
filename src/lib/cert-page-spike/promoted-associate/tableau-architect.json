@@ -23,19 +23,19 @@
     "blocks": [
       {
         "heading": "Tableau Platform Architecture and Deployment",
-        "body": "Tableau Server is the on-premise or customer-managed cloud deployment. Tableau Cloud is the fully managed SaaS offering. Server architecture: primary node runs all processes; worker nodes scale individual processes (VizQL Server, Data Server, Backgrounder, Application Server). Process distribution: VizQL renders visualisations; Backgrounder runs extract refreshes and subscriptions; Data Server manages data connections and caching. The architect selects the deployment model (Server vs Cloud) based on data residency, security, and operational capability requirements."
+        "body": "**Tableau Server** is the on-premise or customer-managed cloud deployment. Tableau Cloud is the fully managed SaaS offering. Server architecture: primary node runs all processes; worker nodes scale individual processes (VizQL Server, Data Server, Backgrounder, Application Server). Process distribution: VizQL renders visualisations; Backgrounder runs extract refreshes and subscriptions; Data Server manages data connections and caching. The architect selects the deployment model (Server vs Cloud) based on data residency, security, and operational capability requirements."
       },
       {
         "heading": "Data Architecture: Published Data Sources and Extracts",
-        "body": "Published Data Sources are centrally managed connections shared across workbooks — changes to the data source propagate to all workbooks using it. Embedded data sources are local to the workbook — simpler but harder to govern. Live connections query the database in real time; Extracts (.hyper files) snapshot data for fast performance. Tableau Prep Builder creates ETL pipelines that output clean, reshaped data. The architect designs the data source strategy — which sources to publish, what extract schedules to run, and when live connections are appropriate."
+        "body": "Published Data Sources are centrally managed connections shared across workbooks — changes to the data source propagate to all workbooks using it. Embedded data sources are local to the workbook — simpler but harder to govern. Live connections query the database in real time; **extracts** (.hyper files) snapshot data for fast performance. **Tableau Prep** Builder creates ETL **pipelines** that output clean, reshaped data. The architect designs the data source strategy — which sources to publish, what extract schedules to run, and when live connections are appropriate."
       },
       {
         "heading": "Security Architecture: Users, Groups, and Row-Level Security",
-        "body": "Tableau Server security layers: Site Roles define what a user can do on the server. Content permissions control who can view, edit, or publish each workbook or data source. Row-Level Security (RLS) filters data based on the logged-in user — implemented via user filters in the data source, calculated fields using USERNAME() and ISMEMBEROF(), or entitlement tables joined to the data. The architect designs the RLS implementation based on the complexity of the access model (single-attribute vs multi-attribute vs role-based entitlement table)."
+        "body": "**Tableau Server** security layers: Site Roles define what a user can do on the server. Content permissions control who can view, edit, or publish each workbook or data source. Row-Level Security (RLS) filters data based on the logged-in user — implemented via user filters in the data source, **calculated fields** using USERNAME() and ISMEMBEROF(), or entitlement tables joined to the data. The architect designs the RLS implementation based on the complexity of the access model (single-attribute vs multi-attribute vs role-based entitlement table)."
       },
       {
         "heading": "Performance Optimisation and Scalability",
-        "body": "Workbook performance factors: number of marks in the view, query complexity, extract size, and use of context filters. Performance Recorder in Tableau Desktop identifies slow queries and rendering. Extract optimisation: aggregating extracts, filtering to only needed rows, hiding unused fields. Server-level: worker node sizing for Backgrounder (concurrent extract refreshes) and VizQL (concurrent view renders). Tableau Workbook Advisor (Tableau Cloud) flags performance anti-patterns. The architect balances user experience performance with infrastructure cost."
+        "body": "Workbook performance factors: number of marks in the view, query complexity, extract size, and use of context filters. Performance Recorder in **Tableau Desktop** identifies slow queries and rendering. Extract optimisation: aggregating **extracts**, filtering to only needed rows, hiding unused fields. Server-level: worker node sizing for Backgrounder (concurrent extract refreshes) and VizQL (concurrent view renders). Tableau Workbook Advisor (Tableau Cloud) flags performance anti-patterns. The architect balances user experience performance with infrastructure cost."
       },
       {
         "heading": "Governance and Content Management at Scale",
@@ -49,7 +49,7 @@
     "blocks": [
       {
         "heading": "Tableau Server Architecture",
-        "body": "Know the Tableau Server component topology: Gateway, Application Server, VizQL Server, Data Server, Backgrounder, and Repository. Understand how each component scales and where bottlenecks occur in high-usage environments."
+        "body": "Know the **Tableau Server** component topology: Gateway, Application Server, VizQL Server, Data Server, Backgrounder, and Repository. Understand how each component scales and where bottlenecks occur in high-usage environments."
       },
       {
         "heading": "Performance Optimization",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "High Availability & Disaster Recovery",
-        "body": "Know how to configure Tableau Server for HA: multi-node cluster, repository failover (PostgreSQL clustering), and backup strategies. Understand TSM backup/restore and the Tableau Cloud migration options."
+        "body": "Know how to configure **Tableau Server** for HA: multi-node cluster, repository failover (PostgreSQL clustering), and backup strategies. Understand TSM backup/restore and the Tableau Cloud migration options."
       },
       {
         "heading": "Governance Framework",

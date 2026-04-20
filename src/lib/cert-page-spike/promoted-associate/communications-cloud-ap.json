@@ -27,7 +27,7 @@
       },
       {
         "heading": "Industries CPQ for Telco",
-        "body": "Industries CPQ (Configure, Price, Quote) in Communications Cloud handles complex telco quoting. Configuration Rules enforce product compatibility (e.g., a 5G plan requires a compatible device). Pricing Procedures calculate the total price including promotions, discounts, and one-time vs. recurring charges. Promotions apply time-limited discounts at the order or line level. Decomposition breaks complex product bundles into fulfillable line items for downstream systems. The exam tests how to configure CPQ for a scenario with bundled products, promotional pricing, and device+plan combinations — know the difference between attribute-based configuration and separate product selection."
+        "body": "Industries **CPQ** (Configure, Price, Quote) in Communications Cloud handles complex telco quoting. Configuration Rules enforce product compatibility (e.g., a 5G plan requires a compatible device). Pricing Procedures calculate the total price including promotions, discounts, and one-time vs. recurring charges. Promotions apply time-limited discounts at the order or line level. Decomposition breaks complex product bundles into fulfillable line items for downstream systems. The exam tests how to configure CPQ for a scenario with bundled products, promotional pricing, and device+plan combinations — know the difference between attribute-based configuration and separate product selection."
       },
       {
         "heading": "Order Management & Orchestration",
@@ -53,7 +53,7 @@
       },
       {
         "heading": "Industries CPQ for Telecom",
-        "body": "Know how Industries CPQ manages telecom product configuration: voice, data, and value-added services as products with attributes (data allowance, speeds). Understand bundled plan configuration."
+        "body": "Know how Industries **CPQ** manages telecom product configuration: voice, data, and value-added services as products with attributes (data allowance, speeds). Understand bundled plan configuration."
       },
       {
         "heading": "Order Management for CSPs",

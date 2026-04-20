@@ -25,19 +25,19 @@
     "blocks": [
       {
         "heading": "Email Studio: Content Builder and Templates",
-        "body": "Content Builder is the unified content management interface for emails, templates, blocks, and images. Email Templates use drag-and-drop layout blocks or HTML/AMPscript. Saved content blocks are reusable components — update once, updated everywhere. Guided Send walks through sending options step by step. The Foundations exam focuses on navigating Marketing Cloud and understanding the core feature set — it is the entry-level certification. Know how to create, preview, and test-send an email from start to finish."
+        "body": "**Content Builder** is the unified content management interface for emails, templates, blocks, and images. Email Templates use drag-and-drop layout blocks or HTML/**AMPscript**. Saved content blocks are reusable components — update once, updated everywhere. Guided Send walks through sending options step by step. The Foundations exam focuses on navigating Marketing Cloud and understanding the core feature set — it is the entry-level certification. Know how to create, preview, and test-send an email from start to finish."
       },
       {
         "heading": "Subscriber and List Management Basics",
-        "body": "All Subscribers list is the global subscriber table. Publication Lists let subscribers opt in or out of specific content types. Suppression Lists prevent sends to specific addresses. The Foundations exam tests the difference between these list types and when to use each. Subscriber statuses: Active, Unsubscribed, Bounced, Held. Unsubscribes process globally and cannot be reversed without subscriber consent. Import Wizard loads subscribers from CSV files — field mapping and import type (Add/Update, Overwrite) are tested."
+        "body": "**All Subscribers list** is the global subscriber table. Publication Lists let subscribers opt in or out of specific content types. Suppression Lists prevent sends to specific addresses. The Foundations exam tests the difference between these list types and when to use each. Subscriber statuses: Active, Unsubscribed, Bounced, Held. Unsubscribes process globally and cannot be reversed without subscriber consent. Import Wizard loads subscribers from CSV files — field mapping and import type (Add/Update, Overwrite) are tested."
       },
       {
         "heading": "Automation Studio Basics",
-        "body": "Automation Studio orchestrates multi-step marketing processes. Scheduled automations run on a time-based trigger. File Drop automations trigger when a file is uploaded to an FTP location. Automation activities: Import File (load data), SQL Query (segment data), Data Extract (export data), Send Email, Filter (create filtered DEs). Activities run sequentially within a step; multiple activities in the same step run in parallel. The Foundations exam tests basic automation workflow design and what each activity type does."
+        "body": "**Automation Studio** orchestrates multi-step marketing processes. Scheduled automations run on a time-based trigger. File Drop automations trigger when a file is uploaded to an FTP location. Automation activities: Import File (load data), SQL Query (segment data), Data Extract (export data), Send Email, Filter (create filtered DEs). Activities run sequentially within a step; multiple activities in the same step run in parallel. The Foundations exam tests basic automation workflow design and what each activity type does."
       },
       {
         "heading": "Journey Builder Basics",
-        "body": "Journey Builder creates event-triggered, multi-step customer journeys. Entry Sources: Data Extension entry (scheduled or real-time), Salesforce Entry (CRM record trigger), API Event, CloudPage Submit, Audience entry. Activities: Send Email, Send SMS, Wait (fixed time), Decision Split (audience split by criteria), Random Split (percentage-based A/B). Exit Criteria can remove contacts mid-journey. The Foundations exam tests how to design a simple linear journey — entry source, email activity, wait, exit."
+        "body": "**Journey Builder** creates event-triggered, multi-step customer journeys. Entry Sources: Data Extension entry (scheduled or real-time), Salesforce Entry (CRM record trigger), API Event, CloudPage Submit, Audience entry. Activities: Send Email, Send SMS, Wait (fixed time), Decision Split (audience split by criteria), Random Split (percentage-based A/B). Exit Criteria can remove contacts mid-journey. The Foundations exam tests how to design a simple linear journey — entry source, email activity, wait, exit."
       },
       {
         "heading": "Tracking and Reporting Basics",
@@ -51,11 +51,11 @@
     "blocks": [
       {
         "heading": "Core Studios Overview",
-        "body": "Know what each studio does: Email Studio (email campaigns), Mobile Studio (SMS/push), Advertising Studio (digital ads), Social Studio (social media), and Journey Builder (cross-channel orchestration)."
+        "body": "Know what each studio does: **Email Studio** (email campaigns), **Mobile Studio** (SMS/push), **Advertising Studio** (digital ads), **Social Studio** (social media), and **Journey Builder** (cross-channel orchestration)."
       },
       {
         "heading": "Subscriber Data Model",
-        "body": "Understand All Subscribers, Lists, and Data Extensions. Know when lists are appropriate (simple, volume-based segments) vs. data extensions (relational data, complex attributes)."
+        "body": "Understand All Subscribers, Lists, and **Data Extensions**. Know when lists are appropriate (simple, volume-based segments) vs. data extensions (relational data, complex attributes)."
       },
       {
         "heading": "Basic Email Send Process",
@@ -63,7 +63,7 @@
       },
       {
         "heading": "Contact Builder Overview",
-        "body": "Understand Contact Builder's role in unifying subscriber data: Attribute Groups, Relationships, and how data extension data links to the Contact record via Contact Key."
+        "body": "Understand **Contact Builder**'s role in unifying subscriber data: Attribute Groups, Relationships, and how data extension data links to the Contact record via Contact Key."
       },
       {
         "heading": "Reporting Fundamentals",

@@ -48,7 +48,7 @@
     "blocks": [
       {
         "heading": "Catalyst Methodology Framework",
-        "body": "Know the four Catalyst pillars: Organization (C4E setup, governance), Technology (platform architecture, reuse), Delivery (project delivery, agile), and Engagement (stakeholder alignment, value communication)."
+        "body": "Know the four Catalyst pillars: Organization (C4E setup, governance), Technology (platform architecture, reuse), Delivery (project delivery, **Agile**), and Engagement (stakeholder alignment, value communication)."
       },
       {
         "heading": "C4E Establishment",

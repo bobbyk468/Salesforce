@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "SFRA Architecture: Cartridges & Override Pattern",
-        "body": "SFRA is the Salesforce B2C Commerce reference architecture built on a cartridge system. Cartridges are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in Business Manager) defines override priority — the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution."
+        "body": "**SFRA** is the Salesforce B2C Commerce reference architecture built on a cartridge system. **cartridges** are modular packages containing controllers, templates, models, and static assets. The cartridge path (configured in **Business Manager**) defines override priority — the leftmost cartridge wins. To customize, create a custom cartridge that overrides specific controllers or templates without editing base cartridges. This keeps base cartridge upgrades non-destructive. The `server.extend` and `server.replace` patterns in controllers allow adding before/after steps or completely replacing a route. The developer exam tests the correct use of the override pattern and common mistakes that break cartridge path resolution."
       },
       {
         "heading": "Controllers, Scripts & Server-Side Logic",
-        "body": "SFRA controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog` — the Digital SDK — provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts."
+        "body": "**SFRA** controllers are JavaScript modules using the `server` framework. Routes handle GET and POST requests and render templates or return JSON. Middleware functions (authentication, CSRF, consent) can be prepended to any route. Models and helpers contain business logic separated from controllers. `dw.system`, `dw.order`, `dw.catalog` — the Digital SDK — provides access to Commerce Cloud server-side APIs. Custom scripts (`.js` files in `cartridge/scripts/`) encapsulate reusable logic. The exam tests how to add a middleware step to an existing controller route, how to call a custom script from a controller, and common governor limit considerations in server-side scripts."
       },
       {
         "heading": "Templates (ISML) & Client-Side Assets",
-        "body": "ISML (Internet Store Markup Language) is the server-side templating language. `<isinclude>` embeds sub-templates. `<isloop>` iterates collections. `<isset>` assigns variables. `<isif>` handles conditionals. Resource bundles (properties files) provide localized strings. Static assets (JS, CSS, images) are organized in `cartridge/static/` and referenced via `URLUtils.staticURL()`. Webpack compiles and bundles client-side JS in SFRA. SASS is compiled to CSS. Client-side JavaScript uses jQuery and Bootstrap in SFRA. The exam tests ISML syntax, how to pass data from controller to template via `pdict`, and how to add a new client-side component."
+        "body": "ISML (Internet Store Markup Language) is the server-side templating language. `<isinclude>` embeds sub-templates. `<isloop>` iterates collections. `<isset>` assigns variables. `<isif>` handles conditionals. Resource bundles (properties files) provide localized strings. Static assets (JS, CSS, images) are organized in `cartridge/static/` and referenced via `URLUtils.staticURL()`. Webpack compiles and bundles client-side JS in **SFRA**. SASS is compiled to CSS. Client-side JavaScript uses jQuery and Bootstrap in SFRA. The exam tests ISML syntax, how to pass data from controller to template via `pdict`, and how to add a new client-side component."
       },
       {
         "heading": "Jobs, Feeds & Business Manager Configuration",
-        "body": "Commerce Cloud Jobs run server-side scripts on a schedule or on-demand. Jobs process product feeds (import/export), order exports, and inventory updates. The Job Framework uses steps configured in Business Manager. IMPEX (Import/Export) handles large data loads via XML or CSV files placed in the IMPEX directory. Site Preferences store admin-configurable settings accessible in code via `dw.system.Site.current.preferences`. Custom Attributes extend standard objects (products, orders, customers) in Business Manager. The exam tests Job configuration, IMPEX file formats, and how to read custom site preferences in controller logic."
+        "body": "Commerce Cloud Jobs run server-side scripts on a schedule or on-demand. Jobs process product feeds (import/export), order exports, and inventory updates. The Job Framework uses steps configured in **Business Manager**. IMPEX (Import/Export) handles large data loads via XML or CSV files placed in the IMPEX directory. Site Preferences store admin-configurable settings accessible in code via `dw.system.Site.current.preferences`. Custom Attributes extend standard objects (products, orders, customers) in Business Manager. The exam tests Job configuration, IMPEX file formats, and how to read custom site preferences in controller logic."
       },
       {
         "heading": "Testing, Debugging & Deployment",
-        "body": "Commerce Cloud development uses the `sgmf-scripts` (SFRA build tools) and Salesforce Commerce Cloud CLI (`sfcc-ci`) for deployment. Code deployment uploads cartridges to a code version, which is then activated. The Request Log and Custom Log APIs (`dw.system.Logger`) support debugging. The Pipeline Profiler identifies slow controller routes. Functional tests use `mochawesome` reports. Unit testing is done with jest and `dw-api-types` mocks for Digital SDK. The exam tests the deployment sequence (cartridge upload → code version activation), how to write a testable controller with mocked dependencies, and how to diagnose errors using Business Manager logs."
+        "body": "Commerce Cloud development uses the `sgmf-scripts` (**SFRA** build tools) and Salesforce Commerce Cloud CLI (`sfcc-ci`) for deployment. Code deployment uploads **cartridges** to a code version, which is then activated. The Request Log and Custom Log APIs (`dw.system.Logger`) support debugging. The Pipeline Profiler identifies slow controller routes. Functional tests use `mochawesome` reports. Unit testing is done with jest and `dw-api-types` mocks for Digital SDK. The exam tests the deployment sequence (cartridge upload → code version activation), how to write a testable controller with mocked dependencies, and how to diagnose errors using **Business Manager** logs."
       }
     ]
   },
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "SFRA Architecture",
-        "body": "Know the Storefront Reference Architecture (SFRA) MVC pattern: Routes (controllers), Models (data layer), Templates (ISML views), and how cartridges layer on top of SFRA using the cartridge path."
+        "body": "Know the **storefront** Reference Architecture (**SFRA**) MVC pattern: Routes (controllers), Models (data layer), Templates (ISML views), and how **cartridges** layer on top of SFRA using the cartridge path."
       },
       {
         "heading": "Controller Development",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "Business Manager Configuration",
-        "body": "Know key Business Manager configurations: catalog setup, pricebook management, promotion configuration, storefront configuration (site preferences), and how to use the UX Studio for cartridge management."
+        "body": "Know key **Business Manager** configurations: catalog setup, pricebook management, promotion configuration, **storefront** configuration (site preferences), and how to use the UX Studio for cartridge management."
       }
     ]
   },

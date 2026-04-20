@@ -27,11 +27,11 @@
     "blocks": [
       {
         "heading": "NPSP Core Data Model: Households and Affiliations",
-        "body": "Nonprofit Success Pack (NPSP) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named \"[Last Name] Household.\" This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership) — distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit's engagement model and explains the household model to clients who are new to NPSP."
+        "body": "Nonprofit Success Pack (**NPSP**) is the data model foundation for Nonprofit Cloud. The Household Account Model creates an Account for each individual Contact (their household), automatically named \"[Last Name] Household.\" This differs from the standard B2B account model. Affiliations link Contacts to organisational Accounts (employer, chapter, board membership) — distinguishing where someone lives (Household) from where they work or serve (Organisation). The consultant configures the NPSP settings to match the nonprofit's engagement model and explains the household model to clients who are new to NPSP."
       },
       {
         "heading": "Fundraising: Opportunities, Payments, and Recurring Donations",
-        "body": "In NPSP, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity — a single donation can have multiple scheduled payments. Recurring Donations create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation's fundraising model."
+        "body": "In **NPSP**, Opportunities represent donations and grants. Payment objects track actual received payments against an Opportunity — a single donation can have multiple scheduled payments. **Recurring Donations** create a series of Opportunities automatically on a schedule (monthly, quarterly, annual). Soft Credits allow non-donors (spouses, organisations that encouraged a gift) to receive credit for a donation without being the primary donor. The consultant configures NPSP payment settings, recurring donation schedules, and soft credit relationships to match the organisation's fundraising model."
       },
       {
         "heading": "Program Management: Services and Deliveries",
@@ -39,11 +39,11 @@
       },
       {
         "heading": "Grant Management: Funds and Allocations",
-        "body": "NPSP uses General Accounting Units (GAUs) to track restricted funds and allocations. A GAU represents a fund, grant, or project that donors and grantors restrict their gifts to. GAU Allocations split a donation between multiple GAUs (e.g., 60% to the education programme, 40% to general operations). The Award object (in Grants Management package) tracks grant applications, awards, and reporting requirements from funders. The consultant configures the fund management structure to support the organisation's grant reporting and restricted fund accounting needs."
+        "body": "**NPSP** uses General Accounting Units (GAUs) to track restricted funds and allocations. A GAU represents a fund, grant, or project that donors and grantors restrict their gifts to. GAU Allocations split a donation between multiple GAUs (e.g., 60% to the education programme, 40% to general operations). The Award object (in Grants Management package) tracks grant applications, awards, and reporting requirements from funders. The consultant configures the fund management structure to support the organisation's grant reporting and restricted fund accounting needs."
       },
       {
         "heading": "Reporting and Impact Measurement",
-        "body": "Nonprofits need to demonstrate impact to funders and stakeholders. NPSP provides built-in reports for fundraising KPIs: donor retention rate, average gift size, year-over-year giving comparison, LYBUNT/SYBUNT analysis (Lapsed/Some Year But Unfortunately Not This year donors). Program impact reports track service delivery volume and client outcomes. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) for Nonprofits provides pre-built dashboards for major donor portfolio analysis, campaign performance, and program impact measurement. The consultant designs the reporting strategy to support annual reports, grant reporting, and board presentations."
+        "body": "Nonprofits need to demonstrate impact to funders and stakeholders. **NPSP** provides built-in reports for fundraising KPIs: donor retention rate, average gift size, year-over-year giving comparison, LYBUNT/SYBUNT analysis (Lapsed/Some Year But Unfortunately Not This year donors). Program impact reports track service delivery volume and client outcomes. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) for Nonprofits provides pre-built dashboards for major donor portfolio analysis, campaign performance, and program impact measurement. The consultant designs the reporting strategy to support annual reports, grant reporting, and board presentations."
       }
     ]
   },
@@ -53,15 +53,15 @@
     "blocks": [
       {
         "heading": "NPSP Household Account Model",
-        "body": "NPSP uses Household Accounts (one per family/household) with Contacts as household members. Understand how this differs from the standard B2B account model and implications for duplicate management and household giving."
+        "body": "**NPSP** uses **Household Accounts** (one per family/household) with Contacts as household members. Understand how this differs from the standard B2B account model and implications for duplicate management and household giving."
       },
       {
         "heading": "Gift Entry & Payment Processing",
-        "body": "Know Nonprofit Cloud Gift Entry with its batch entry templates, gift commitments, and partial soft credits. Understand how payment processors integrate and how gift records relate to Opportunities."
+        "body": "Know Nonprofit Cloud **Gift Entry** with its batch entry templates, gift commitments, and partial soft credits. Understand how payment processors integrate and how gift records relate to Opportunities."
       },
       {
         "heading": "Relationships & Affiliations",
-        "body": "NPSP Relationships track personal connections between Contacts (e.g., spouse, board member). Affiliations track organizational connections between Contacts and Accounts. Know when to use each and how reciprocal relationships work."
+        "body": "**NPSP** Relationships track personal connections between Contacts (e.g., spouse, board member). Affiliations track organizational connections between Contacts and Accounts. Know when to use each and how reciprocal relationships work."
       },
       {
         "heading": "Program Management",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "TDTM (Table-Driven Trigger Management)",
-        "body": "NPSP uses TDTM to manage its trigger logic through configuration records rather than code. Understand how TDTM Handler records control trigger behavior and how to troubleshoot TDTM-related issues."
+        "body": "**NPSP** uses TDTM to manage its trigger logic through configuration records rather than code. Understand how TDTM Handler records control trigger behavior and how to troubleshoot TDTM-related issues."
       }
     ]
   },

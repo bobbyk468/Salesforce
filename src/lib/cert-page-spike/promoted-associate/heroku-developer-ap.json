@@ -24,7 +24,7 @@
     "blocks": [
       {
         "heading": "Buildpacks, Runtime & Procfile",
-        "body": "Heroku detects the language/framework of an app using Buildpacks — Node.js, Python, Ruby, Java, Go, and more are officially supported. Custom Buildpacks extend the detection and build process. The build process: push code → detect buildpack → compile → create slug → deploy to dynos. The Procfile defines process types: `web: node server.js` (HTTP), `worker: node worker.js` (background). Multiple process types can run simultaneously. Eco and Basic dynos sleep after inactivity. The `heroku local` command runs the Procfile locally using `.env` for config vars. The AP exam tests how to configure a Procfile for a multi-process app and how to debug a build failure using build logs."
+        "body": "Heroku detects the language/framework of an app using Buildpacks — Node.js, Python, Ruby, Java, Go, and more are officially supported. Custom Buildpacks extend the detection and build process. The build process: push code → detect buildpack → compile → create slug → deploy to **dynos**. The Procfile defines process types: `web: node server.js` (HTTP), `worker: node worker.js` (background). Multiple process types can run simultaneously. Eco and Basic dynos sleep after inactivity. The `heroku local` command runs the Procfile locally using `.env` for config vars. The AP exam tests how to configure a Procfile for a multi-process app and how to debug a build failure using build logs."
       },
       {
         "heading": "Config Vars, Add-ons & Environment Management",
@@ -32,7 +32,7 @@
       },
       {
         "heading": "Heroku Connect & Salesforce Integration",
-        "body": "Heroku Connect maps Salesforce object records to Heroku Postgres tables, syncing data bidirectionally on a configurable schedule. Setup: provision Heroku Connect add-on → authenticate with Salesforce → create mappings (object, fields, direction). Read mappings pull Salesforce data to Postgres. Write mappings push Postgres changes back to Salesforce. Conflict detection handles records modified in both systems simultaneously. The `_hc_lastop`, `_hc_err`, and `isdeleted` system columns track sync status. Connection limits on Salesforce API calls govern sync frequency. The AP exam tests how to configure a Heroku Connect mapping, troubleshoot sync errors, and design for high-volume bidirectional sync within Salesforce API limits."
+        "body": "**Heroku Connect** maps Salesforce object records to **Heroku Postgres** tables, syncing data bidirectionally on a configurable schedule. Setup: provision Heroku Connect add-on → authenticate with Salesforce → create mappings (object, fields, direction). Read mappings pull Salesforce data to Postgres. Write mappings push Postgres changes back to Salesforce. Conflict detection handles records modified in both systems simultaneously. The `_hc_lastop`, `_hc_err`, and `isdeleted` system columns track sync status. Connection limits on Salesforce API calls govern sync frequency. The AP exam tests how to configure a Heroku Connect mapping, troubleshoot sync errors, and design for high-volume bidirectional sync within Salesforce API limits."
       },
       {
         "heading": "Async Jobs, Workers & Message Queues",
@@ -40,7 +40,7 @@
       },
       {
         "heading": "Monitoring, Logging & Performance",
-        "body": "Heroku Logplex aggregates logs from all Dynos, Router, and add-ons into a unified stream — `heroku logs --tail` for real-time viewing. Log Drains forward logs to external services (Papertrail, Datadog, Splunk). Application metrics (response time, throughput, error rate) are visible in the Heroku Dashboard. Dyno metrics show CPU and memory usage — memory leaks cause R14 (memory quota exceeded) errors. R10 (Boot timeout), H10 (App crashed), H12 (Request timeout at 30s) are common Heroku error codes. New Relic, Scout APM, and Datadog add-ons provide application performance monitoring. The exam tests how to diagnose a performance problem using logs and metrics, and how to configure alerting for dyno errors."
+        "body": "Heroku Logplex aggregates logs from all Dynos, Router, and **add-ons** into a unified stream — `heroku logs --tail` for real-time viewing. Log Drains forward logs to external services (Papertrail, Datadog, Splunk). Application metrics (response time, throughput, error rate) are visible in the Heroku Dashboard. Dyno metrics show CPU and memory usage — memory leaks cause R14 (memory quota exceeded) errors. R10 (Boot timeout), H10 (App crashed), H12 (Request timeout at 30s) are common Heroku error codes. New Relic, Scout APM, and Datadog add-ons provide application performance monitoring. The exam tests how to diagnose a performance problem using logs and metrics, and how to configure alerting for dyno errors."
       }
     ]
   },

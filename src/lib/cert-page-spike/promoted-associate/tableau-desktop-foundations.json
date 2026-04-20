@@ -23,7 +23,7 @@
     "blocks": [
       {
         "heading": "Connecting to Data and Data Source Basics",
-        "body": "Tableau Desktop connects to hundreds of data sources: files (Excel, CSV, JSON), databases (SQL Server, PostgreSQL, BigQuery), and cloud services. Data Source page: connect, join or union tables, preview data, rename fields, hide unused fields, change data types. Live connection queries the database each time; Extract (.hyper) snapshots the data for performance. Field types: Dimensions (qualitative, blue), Measures (quantitative, green). Discrete fields create headers; Continuous fields create axes. Understanding pills (fields), shelves (rows, columns, marks card) and how they map to the view is the foundation of the Foundations exam."
+        "body": "**Tableau Desktop** connects to hundreds of data sources: files (Excel, CSV, JSON), databases (SQL Server, PostgreSQL, BigQuery), and cloud services. Data Source page: connect, join or union tables, preview data, rename fields, hide unused fields, change data types. Live connection queries the database each time; Extract (.hyper) snapshots the data for performance. Field types: Dimensions (qualitative, blue), Measures (quantitative, green). Discrete fields create headers; Continuous fields create axes. Understanding pills (fields), shelves (rows, columns, marks card) and how they map to the view is the foundation of the Foundations exam."
       },
       {
         "heading": "Building Basic Visualisations",
@@ -35,7 +35,7 @@
       },
       {
         "heading": "Calculated Fields: Basic Formulas",
-        "body": "Calculated fields create new data from existing fields. Basic functions: String (LEFT, RIGHT, MID, CONTAINS, LEN), Date (DATEPART, DATEDIFF, DATEADD, TODAY), Logical (IF/ELSEIF/END, IIF, CASE), Aggregate (SUM, AVG, MAX, MIN, COUNTD). Table calculations reference values relative to other rows in the view (RUNNING_SUM, WINDOW_SUM, RANK, PREVIOUS_VALUE). The Foundations exam tests writing basic calculated fields to answer common business questions — e.g., profit margin (SUM([Profit])/SUM([Sales])), year-over-year growth, conditional categorisation."
+        "body": "**calculated fields** create new data from existing fields. Basic functions: String (LEFT, RIGHT, MID, CONTAINS, LEN), Date (DATEPART, DATEDIFF, DATEADD, TODAY), Logical (IF/ELSEIF/END, IIF, CASE), Aggregate (SUM, AVG, MAX, MIN, COUNTD). **table calculations** reference values relative to other rows in the view (RUNNING_SUM, WINDOW_SUM, RANK, PREVIOUS_VALUE). The Foundations exam tests writing basic calculated fields to answer common business questions — e.g., profit margin (SUM([Profit])/SUM([Sales])), year-over-year growth, conditional categorisation."
       },
       {
         "heading": "Dashboards and Stories",
@@ -61,11 +61,11 @@
       },
       {
         "heading": "Basic Calculations",
-        "body": "Know how to create simple calculated fields: string functions (LEFT, MID, CONTAINS), date functions (DATEDIFF, DATEPART), and aggregate functions (SUM, AVG, COUNT, COUNTD) applied to measures."
+        "body": "Know how to create simple **calculated fields**: string functions (LEFT, MID, CONTAINS), date functions (DATEDIFF, DATEPART), and aggregate functions (SUM, AVG, COUNT, COUNTD) applied to measures."
       },
       {
         "heading": "Sharing & Publishing",
-        "body": "Know how to publish workbooks and data sources to Tableau Server or Cloud, export views to images/PDFs/PowerPoint, and use Tableau Reader for offline sharing."
+        "body": "Know how to publish workbooks and data sources to **Tableau Server** or Cloud, export views to images/PDFs/PowerPoint, and use Tableau Reader for offline sharing."
       }
     ]
   },

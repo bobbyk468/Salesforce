@@ -27,11 +27,11 @@
     "blocks": [
       {
         "heading": "Field Service Objects: Work Orders, Appointments, and Resources",
-        "body": "The Field Service data model centres on Work Orders (the service job), Work Order Line Items (specific tasks within the job), Service Appointments (the scheduled visit), and Service Resources (the worker, equipment, or crew). Assets track the customer equipment being serviced. Locations store physical addresses for service territories and parts inventory. The consultant must understand how these objects relate and how data flows from a Case &rarr; Work Order &rarr; Service Appointment &rarr; Resource assignment and completion."
+        "body": "The Field Service data model centres on **Work Orders** (the service job), **Work Order Line Items** (specific tasks within the job), **Service Appointments** (the scheduled visit), and **Service Resources** (the worker, equipment, or crew). Assets track the customer equipment being serviced. Locations store physical addresses for service territories and parts inventory. The consultant must understand how these objects relate and how data flows from a Case &rarr; Work Order &rarr; Service Appointment &rarr; Resource assignment and completion."
       },
       {
         "heading": "Scheduling and the Gantt",
-        "body": "The Dispatcher Console Gantt view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler — constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation."
+        "body": "The **Dispatcher Console** **Gantt** view shows all appointments on a timeline by resource. Drag-and-drop scheduling assigns appointments to resources. The Scheduling Policy defines the rules for the scheduler — constraints (working hours, required skills, territory) and objectives (minimise travel, maximise utilisation). Appointment Booking lets customers or agents select available slots. The In-Day Optimisation automatically reschedules appointments as the day changes (cancellations, new high-priority jobs). Know the difference between manual scheduling and automated optimisation."
       },
       {
         "heading": "Service Territories, Resources, and Skills",
@@ -57,7 +57,7 @@
       },
       {
         "heading": "Scheduling Policies & Optimization",
-        "body": "Scheduling Policies define how Salesforce Scheduler and the Optimization engine assign appointments. Know the rule types (Work Rule, Service Objective), how they interact, and how to configure Scheduling Policy goals."
+        "body": "**Scheduling Policies** define how Salesforce Scheduler and the **Optimization engine** assign appointments. Know the rule types (Work Rule, Service Objective), how they interact, and how to configure Scheduling Policy goals."
       },
       {
         "heading": "Dispatcher Console",

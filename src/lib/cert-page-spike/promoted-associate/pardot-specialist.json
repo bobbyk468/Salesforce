@@ -27,11 +27,11 @@
     "blocks": [
       {
         "heading": "Scoring vs Grading: Interest vs Fit",
-        "body": "Scoring is activity-based — it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. Grading is attribute-based — it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The exam frequently asks you to distinguish which mechanism applies to a given scenario."
+        "body": "**Scoring** is activity-based — it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based — it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The exam frequently asks you to distinguish which mechanism applies to a given scenario."
       },
       {
         "heading": "Automation Hierarchy: Completion Actions vs Automation Rules vs Engagement Studio",
-        "body": "Completion Actions fire once when a prospect interacts with a specific asset (form submitted, email clicked). Automation Rules continuously evaluate all prospects against criteria and fire actions when criteria are met — they can run repeatedly. Engagement Studio is for time-based nurture with conditional branching — it combines wait steps and actions into a visual programme. Know when each is appropriate and when they overlap."
+        "body": "**Completion Actions** fire once when a prospect interacts with a specific asset (form submitted, email clicked). **Automation Rules** continuously evaluate all prospects against criteria and fire actions when criteria are met — they can run repeatedly. **Engagement Studio** is for time-based nurture with conditional branching — it combines wait steps and actions into a visual programme. Know when each is appropriate and when they overlap."
       },
       {
         "heading": "Pardot-Salesforce Sync: Field Sync Behaviour",
@@ -39,7 +39,7 @@
       },
       {
         "heading": "Prospects and Visitors: Identification and Tracking",
-        "body": "An anonymous website visitor becomes a Prospect when identified by email — via a form submission or a tracked email click that places a browser cookie. Pardot tracks all subsequent page views under that prospect record. Dynamic Lists automatically update membership as prospect attributes change. Scoring Categories maintain separate scores per product line. Know how each mechanism connects to prospect lifecycle stages."
+        "body": "An anonymous website visitor becomes a Prospect when identified by email — via a form submission or a tracked email click that places a browser cookie. Pardot tracks all subsequent page views under that prospect record. **Dynamic Lists** automatically update membership as prospect attributes change. Scoring Categories maintain separate scores per product line. Know how each mechanism connects to prospect lifecycle stages."
       },
       {
         "heading": "Pardot Forms vs Form Handlers",
@@ -53,11 +53,11 @@
     "blocks": [
       {
         "heading": "Automation Rules vs. Segmentation Rules",
-        "body": "Automation Rules run continuously and apply actions retroactively to matching prospects. Segmentation Rules run once. Dynamic Lists update membership continuously based on criteria. Know which to use for each requirement."
+        "body": "Automation Rules run continuously and apply actions retroactively to matching prospects. **Segmentation Rules** run once. Dynamic Lists update membership continuously based on criteria. Know which to use for each requirement."
       },
       {
         "heading": "Email Configuration & Deliverability",
-        "body": "Know the difference between List Emails, Engagement Studio emails, and Operational emails (bypass opt-out). Understand SPF, DKIM, and how sender score affects deliverability."
+        "body": "Know the difference between **List Emails**, Engagement Studio emails, and Operational emails (bypass opt-out). Understand SPF, DKIM, and how sender score affects deliverability."
       },
       {
         "heading": "Dynamic Content",

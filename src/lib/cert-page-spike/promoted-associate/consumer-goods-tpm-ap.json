@@ -23,7 +23,7 @@
     "blocks": [
       {
         "heading": "Trade Promotion Planning & Fund Management",
-        "body": "Trade Promotion Management (TPM) in Consumer Goods Cloud helps CPG companies plan, execute, and settle promotional spend with retail partners. Trade Funds define the budget available for promotions — split by account, territory, or brand. Fund Commitments allocate budget to planned promotions. Promotion Templates define the type of promotional activity (off-invoice discount, lump sum, scan data deal). Volume Planning forecasts the expected sales lift from a promotion. Baseline Volume represents the expected sales without promotion. The AP exam tests how to configure trade funds, allocate fund commitments to promotions, and calculate expected ROI from volume lift vs. promotional spend."
+        "body": "**Trade Promotion** Management (TPM) in Consumer Goods Cloud helps CPG companies plan, execute, and settle promotional spend with retail partners. Trade Funds define the budget available for promotions — split by account, territory, or brand. Fund Commitments allocate budget to planned promotions. Promotion Templates define the type of promotional activity (off-invoice discount, lump sum, scan data deal). Volume Planning forecasts the expected sales lift from a promotion. Baseline Volume represents the expected sales without promotion. The AP exam tests how to configure trade funds, allocate fund commitments to promotions, and calculate expected ROI from volume lift vs. promotional spend."
       },
       {
         "heading": "Promotion Execution & Tactics",
@@ -31,7 +31,7 @@
       },
       {
         "heading": "Settlement & Claims Processing",
-        "body": "Trade Promotion settlements reconcile the planned spend against actual retailer claims. Proof of Performance (POP) — scan data, invoices, photos — is required to validate claims. Deductions are amounts the retailer takes off payment; they must be matched to a promotion or flagged as unauthorized. Claim Management workflows route deductions for approval or dispute. Auto-settlement rules can automatically approve claims that match within a tolerance of the plan. Overpayment recovery processes handle situations where the retailer claims more than the agreed amount. The exam tests the settlement lifecycle, how to configure auto-settlement rules, and the deduction-to-promotion matching process."
+        "body": "Trade Promotion settlements reconcile the planned spend against actual retailer claims. Proof of Performance (POP) — scan data, invoices, photos — is required to validate claims. **Deductions** are amounts the retailer takes off payment; they must be matched to a promotion or flagged as unauthorized. Claim Management workflows route deductions for approval or dispute. Auto-settlement rules can automatically approve claims that match within a tolerance of the plan. Overpayment recovery processes handle situations where the retailer claims more than the agreed amount. The exam tests the settlement lifecycle, how to configure auto-settlement rules, and the deduction-to-promotion matching process."
       },
       {
         "heading": "Forecasting & Baseline Analytics",

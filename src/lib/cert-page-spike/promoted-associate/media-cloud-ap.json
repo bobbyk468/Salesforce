@@ -30,7 +30,7 @@
       },
       {
         "heading": "Revenue Management & Billing",
-        "body": "Media Cloud integrates with Revenue Cloud (CPQ Billing) for subscription and ad revenue management. Recurring subscription billing handles streaming services and digital subscriptions — with proration for mid-period changes. Advertising revenue uses milestone billing tied to campaign delivery and performance. Revenue Recognition (ASC 606) distributes subscription revenue ratably over the service period. Credit and adjustment workflows handle make-goods (compensation for under-delivery of ad campaigns). The exam tests how media-specific billing scenarios map to Revenue Cloud configuration and how make-good credits are processed."
+        "body": "Media Cloud integrates with **Revenue Cloud** (**CPQ** Billing) for subscription and ad revenue management. Recurring subscription billing handles streaming services and digital subscriptions — with proration for mid-period changes. Advertising revenue uses milestone billing tied to campaign delivery and performance. Revenue Recognition (ASC 606) distributes subscription revenue ratably over the service period. Credit and adjustment workflows handle make-goods (compensation for under-delivery of ad campaigns). The exam tests how media-specific billing scenarios map to Revenue Cloud configuration and how make-good credits are processed."
       },
       {
         "heading": "Partner & Agency Management",
@@ -60,7 +60,7 @@
       },
       {
         "heading": "Revenue Management & Billing",
-        "body": "Know how Media Cloud integrates with Revenue Cloud for billing: invoice generation from delivered campaign data, makegoods for underdelivery, and how revenue recognition handles media-specific scenarios."
+        "body": "Know how Media Cloud integrates with **Revenue Cloud** for billing: invoice generation from delivered campaign data, makegoods for underdelivery, and how revenue recognition handles media-specific scenarios."
       },
       {
         "heading": "Programmatic & Digital Integration",

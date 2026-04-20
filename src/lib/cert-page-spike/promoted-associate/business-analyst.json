@@ -51,11 +51,11 @@
     "blocks": [
       {
         "heading": "Requirements Lifecycle: Discovery → Analysis → Documentation → Validation",
-        "body": "The BA follows a defined requirements lifecycle: Discover requirements through interviews, workshops, and observation. Analyse them for conflicts, gaps, and feasibility. Document them as user stories with acceptance criteria. Validate them with stakeholders through review sessions and UAT. The exam frequently tests which phase a given activity belongs to and what output is expected."
+        "body": "The BA follows a defined requirements lifecycle: Discover requirements through interviews, workshops, and observation. Analyse them for conflicts, gaps, and feasibility. Document them as **User Stories** with acceptance criteria. Validate them with stakeholders through review sessions and UAT. The exam frequently tests which phase a given activity belongs to and what output is expected."
       },
       {
         "heading": "User Stories and Acceptance Criteria",
-        "body": "A user story follows the format \"As a [role], I want [goal] so that [benefit].\" Acceptance Criteria define the pass/fail conditions that confirm the story is done. Together, they are the primary deliverable connecting business requirements to development. The exam tests how to write effective user stories and how acceptance criteria differ from test cases."
+        "body": "A user story follows the format \"As a [role], I want [goal] so that [benefit].\" Acceptance Criteria define the pass/fail conditions that confirm the story is done. Together, they are the primary deliverable connecting business requirements to development. The exam tests how to write effective **User Stories** and how acceptance criteria differ from test cases."
       },
       {
         "heading": "Stakeholder Management: Power/Interest Grid and DACI",
@@ -77,7 +77,7 @@
     "blocks": [
       {
         "heading": "User Stories & Acceptance Criteria",
-        "body": "Know how to write user stories (As a [persona], I want [goal], so that [reason]) and define acceptance criteria that are testable, specific, and verifiable. Questions test whether criteria are complete and unambiguous."
+        "body": "Know how to write **User Stories** (As a [persona], I want [goal], so that [reason]) and define acceptance criteria that are testable, specific, and verifiable. Questions test whether criteria are complete and unambiguous."
       },
       {
         "heading": "Requirements Elicitation Techniques",

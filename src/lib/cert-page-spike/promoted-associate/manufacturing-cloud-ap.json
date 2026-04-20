@@ -22,11 +22,11 @@
     "blocks": [
       {
         "heading": "Account-Based Forecasting & Sales Agreements",
-        "body": "Manufacturing Cloud centers on the Sales Agreement object — a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales Agreement Terms define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions."
+        "body": "Manufacturing Cloud centers on the **Sales Agreement** object — a negotiated contract between a manufacturer and a distributor/dealer defining expected purchase volumes and prices over a period. Sales **Agreement Terms** define the monthly or quarterly expected volumes and net price for each product. Actuals (from Orders or Opportunities) are compared against agreement terms to show attainment. Account Forecasts roll up agreement actuals, open opportunities, and planned volumes into a single account-level demand forecast. Forecast Adjustments allow sales managers to manually override system-generated forecasts. The AP exam tests how Sales Agreements feed Account Forecasts, how actuals are calculated from order data, and how to configure forecast windows and adjustment permissions."
       },
       {
         "heading": "Run Rate Business & Demand Planning",
-        "body": "Run Rate Business tracks recurring purchase patterns from existing customers who order the same products regularly without a formal sales agreement. Manufacturing Cloud captures this demand by analyzing historical order data and projecting forward consumption. Run Rate Accounts have predictable demand signals that feed into the aggregate forecast. Demand Planning integration connects Manufacturing Cloud forecasts to ERP or S&OP (Sales & Operations Planning) systems. Forecast Collaboration allows multiple stakeholders (sales, supply chain, finance) to view and adjust the forecast. The exam tests how run rate demand is captured, how it differs from agreement-based demand, and how combined forecasts are presented to stakeholders."
+        "body": "**Run Rate Business** tracks recurring purchase patterns from existing customers who order the same products regularly without a formal sales agreement. Manufacturing Cloud captures this demand by analyzing historical order data and projecting forward consumption. Run Rate Accounts have predictable demand signals that feed into the aggregate forecast. **Demand Planning** integration connects Manufacturing Cloud forecasts to ERP or S&OP (Sales & Operations Planning) systems. Forecast Collaboration allows multiple stakeholders (sales, supply chain, finance) to view and adjust the forecast. The exam tests how run rate demand is captured, how it differs from agreement-based demand, and how combined forecasts are presented to stakeholders."
       },
       {
         "heading": "Partner Visit Management & Field Execution",
@@ -52,7 +52,7 @@
       },
       {
         "heading": "Account-Based Forecasting",
-        "body": "Know how Account-Based Forecasting works: forecast periods, forecast metrics (planned revenue, actual revenue, adjustments), and how forecasts roll up from account to regional and global levels."
+        "body": "Know how **Account-Based Forecasting** works: **forecast periods**, forecast metrics (planned revenue, actual revenue, adjustments), and how forecasts roll up from account to regional and global levels."
       },
       {
         "heading": "Rebate Management",

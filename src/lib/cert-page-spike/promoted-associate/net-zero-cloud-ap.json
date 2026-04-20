@@ -23,15 +23,15 @@
     "blocks": [
       {
         "heading": "Carbon Footprint Data Model",
-        "body": "Net Zero Cloud (NZC) stores sustainability data in a specialized data model. Footprint records track greenhouse gas (GHG) emissions, energy consumption, water usage, and waste data. Energy Use records capture electricity, natural gas, and fuel consumption by facility and period. Stationary Combustion, Mobile Combustion, Fugitive Emissions, and Purchased Electricity represent Scope 1 and 2 emission sources. Scope 3 categories (business travel, employee commuting, supply chain) require integration with travel management systems and supplier data. The AP exam tests how NZC objects relate to each other, how to input energy data, and how scope classifications are assigned to emission sources."
+        "body": "**Net Zero Cloud** (NZC) stores sustainability data in a specialized data model. Footprint records track greenhouse gas (GHG) emissions, energy consumption, water usage, and waste data. Energy Use records capture electricity, natural gas, and fuel consumption by facility and period. Stationary Combustion, Mobile Combustion, Fugitive Emissions, and Purchased Electricity represent Scope 1 and 2 emission sources. Scope 3 categories (business travel, employee commuting, supply chain) require integration with travel management systems and supplier data. The AP exam tests how NZC objects relate to each other, how to input energy data, and how scope classifications are assigned to emission sources."
       },
       {
         "heading": "Emissions Calculations & Emission Factors",
-        "body": "Net Zero Cloud calculates GHG emissions by multiplying activity data by an Emission Factor — a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments — RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
+        "body": "**Net Zero Cloud** calculates GHG emissions by multiplying activity data by an Emission Factor — a coefficient that converts a unit of activity (kWh, liters, miles) into kg CO2e. Emission Factor Libraries contain region-specific and source-specific factors from EPA, IEA, DEFRA, and other bodies. Custom Emission Factors allow organizations to use supplier-specific or measured factors. Scope 2 emissions support both Location-Based (grid average factor) and Market-Based (contractual instruments — RECs, PPAs) calculation methods. The exam tests how to assign emission factors to energy records, the difference between location-based and market-based Scope 2, and how formula-based calculation rules work in NZC."
       },
       {
         "heading": "Sustainability Reporting & Disclosures",
-        "body": "Net Zero Cloud generates reports aligned with major sustainability frameworks: GRI (Global Reporting Initiative), TCFD (Task Force on Climate-related Financial Disclosures), CDP, and emerging SEC climate disclosure rules. Disclosure Reports aggregate footprint data by business unit, facility, or reporting period. Audit Trail captures every data submission and approval for assurance purposes. Supplier Scorecards rate suppliers on their emissions intensity and sustainability commitments. Targets & Milestones track progress toward net zero goals (e.g., 50% reduction by 2030, net zero by 2040). The exam tests how to configure a disclosure report, how targets are defined and monitored, and what data flows into supplier scorecards."
+        "body": "**Net Zero Cloud** generates reports aligned with major sustainability frameworks: GRI (Global Reporting Initiative), TCFD (Task Force on Climate-related Financial Disclosures), CDP, and emerging SEC climate disclosure rules. Disclosure Reports aggregate footprint data by business unit, facility, or reporting period. Audit Trail captures every data submission and approval for assurance purposes. Supplier Scorecards rate suppliers on their emissions intensity and sustainability commitments. Targets & **Milestones** track progress toward net zero goals (e.g., 50% reduction by 2030, net zero by 2040). The exam tests how to configure a disclosure report, how targets are defined and monitored, and what data flows into supplier scorecards."
       },
       {
         "heading": "Data Collection & Integration",
@@ -49,15 +49,15 @@
     "blocks": [
       {
         "heading": "Emissions Data Model",
-        "body": "Know the Net Zero Cloud data model: Stationary Assets (facilities), Mobile Assets (fleet), Purchased Electricity, Business Travel, and how each emission source category maps to Scope 1, 2, and 3 emissions."
+        "body": "Know the **Net Zero Cloud** data model: Stationary Assets (facilities), Mobile Assets (fleet), Purchased Electricity, Business Travel, and how each emission source category maps to Scope 1, 2, and 3 emissions."
       },
       {
         "heading": "Carbon Calculation Methodology",
-        "body": "Know how Net Zero Cloud calculates emissions: emission factors (IPCC, EPA, IEA), activity data (kWh, fuel gallons, miles traveled), and how the calculation engine applies factors to produce CO2e metrics."
+        "body": "Know how **Net Zero Cloud** calculates emissions: emission factors (IPCC, EPA, IEA), activity data (kWh, fuel gallons, miles traveled), and how the calculation engine applies factors to produce CO2e metrics."
       },
       {
         "heading": "Supply Chain Reporting",
-        "body": "Know how Net Zero Cloud collects Scope 3 supply chain emissions: supplier surveys, supplier data entry portal configuration, and how supplier emissions roll up into the customer's total Scope 3 footprint."
+        "body": "Know how **Net Zero Cloud** collects Scope 3 supply chain emissions: supplier surveys, supplier data entry portal configuration, and how supplier emissions roll up into the customer's total Scope 3 footprint."
       },
       {
         "heading": "Sustainability Goals & Targets",
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Regulatory Reporting",
-        "body": "Know which reporting frameworks Net Zero Cloud supports: GRI, CDP, TCFD, and how to generate reports aligned to these standards. Understand how audit trails and data lineage support third-party verification."
+        "body": "Know which reporting frameworks **Net Zero Cloud** supports: GRI, CDP, TCFD, and how to generate reports aligned to these standards. Understand how audit trails and data lineage support third-party verification."
       }
     ]
   },

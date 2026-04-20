@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "Human-Centered Design Strategy",
-        "body": "The [Strategy Designer](/certifications/strategy-designer) cert focuses on applying design thinking at the strategic level — not just UI design but organisational and service design. Design thinking phases: Empathise (deep user research, stakeholder interviews, observation), Define (synthesise insights into a clear problem statement — How Might We framing), Ideate (divergent brainstorming, then convergent selection), Prototype (lo-fi representations to test concepts), Test (validate with users and iterate). The exam tests which phase a given activity belongs to and what artefacts are produced at each stage."
+        "body": "The [Strategy Designer](/certifications/strategy-designer) cert focuses on applying **design thinking** at the strategic level — not just UI design but organisational and service design. Design thinking phases: Empathise (deep user research, stakeholder interviews, observation), Define (synthesise insights into a clear problem statement — How Might We framing), Ideate (divergent brainstorming, then convergent selection), Prototype (lo-fi representations to test concepts), Test (validate with users and iterate). The exam tests which phase a given activity belongs to and what artefacts are produced at each stage."
       },
       {
         "heading": "Service Design and Journey Mapping",
-        "body": "Service Blueprints map the end-to-end service experience from the customer's viewpoint (frontstage) through the supporting processes (backstage) to the enabling systems and infrastructure. They reveal moments of truth — where the service experience is won or lost. User Journey Maps visualise the emotional arc of a user experience across touchpoints and channels. Ecosystem Maps show the full web of stakeholders and their relationships. The exam tests how to choose and apply the right mapping tool for a given design challenge."
+        "body": "Service Blueprints map the end-to-end service experience from the customer's viewpoint (frontstage) through the supporting processes (backstage) to the enabling systems and infrastructure. They reveal moments of truth — where the service experience is won or lost. User **journey maps** visualise the emotional arc of a user experience across touchpoints and channels. Ecosystem Maps show the full web of stakeholders and their relationships. The exam tests how to choose and apply the right mapping tool for a given design challenge."
       },
       {
         "heading": "Business Value Framing",
-        "body": "Strategy Designers must connect design decisions to business outcomes. Value Proposition Design: the Job-to-be-Done framework identifies what customers are trying to accomplish, what pains they experience, and what gains they seek — the value proposition relieves pains and creates gains. ROI of UX: reduced support volume, improved conversion rates, reduced onboarding time. Stakeholder alignment: presenting design concepts to executive sponsors using business language, not design terminology. The exam tests how to frame design decisions in terms of business metrics and stakeholder concerns."
+        "body": "[Strategy Designer](/certifications/strategy-designer)s must connect design decisions to business outcomes. Value Proposition Design: the Job-to-be-Done framework identifies what customers are trying to accomplish, what pains they experience, and what gains they seek — the value proposition relieves pains and creates gains. ROI of UX: reduced support volume, improved conversion rates, reduced onboarding time. Stakeholder alignment: presenting design concepts to executive sponsors using business language, not design terminology. The exam tests how to frame design decisions in terms of business metrics and stakeholder concerns."
       },
       {
         "heading": "Agile UX: Design Sprints and Dual-Track",
-        "body": "Dual-track Agile separates discovery (what to build) from delivery (how to build it). Discovery track: continuous research, prototype testing, and backlog refinement. Delivery track: sprint development of validated features. Design Sprints (Google Ventures model): 5-day intensive to solve a design challenge from definition to user-tested prototype. Lean UX: minimise waste by building the smallest testable increment. The exam tests how to integrate UX research into agile delivery without creating a waterfall design handoff."
+        "body": "Dual-track **Agile** separates discovery (what to build) from delivery (how to build it). Discovery track: continuous research, prototype testing, and backlog refinement. Delivery track: sprint development of validated features. Design Sprints (Google Ventures model): 5-day intensive to solve a design challenge from definition to user-tested prototype. Lean UX: minimise waste by building the smallest testable increment. The exam tests how to integrate UX research into agile delivery without creating a waterfall design handoff."
       },
       {
         "heading": "Ethics, Inclusion, and Responsible Design",
-        "body": "Strategy Designers bear responsibility for the impact of the solutions they recommend. Inclusive design: design for the full spectrum of human diversity — ability, age, culture, language. Dark patterns in UX: manipulative design that tricks users into unintended actions — the strategy designer advocates against these. AI ethics in Salesforce products: fairness, transparency, accountability, and human control (Einstein's Trusted AI principles apply here). The exam tests how to identify design decisions that could cause harm and how to advocate for more equitable alternatives."
+        "body": "[Strategy Designer](/certifications/strategy-designer)s bear responsibility for the impact of the solutions they recommend. Inclusive design: design for the full spectrum of human diversity — ability, age, culture, language. Dark patterns in UX: manipulative design that tricks users into unintended actions — the strategy designer advocates against these. AI ethics in Salesforce products: fairness, transparency, accountability, and human control (Einstein's Trusted AI principles apply here). The exam tests how to identify design decisions that could cause harm and how to advocate for more equitable alternatives."
       }
     ]
   },
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "Design Thinking Process",
-        "body": "Know the five-stage design thinking process: Empathize, Define, Ideate, Prototype, Test. Understand when to apply each stage and how to move between stages iteratively based on research findings."
+        "body": "Know the five-stage **design thinking** process: Empathize, Define, Ideate, Prototype, Test. Understand when to apply each stage and how to move between stages iteratively based on research findings."
       },
       {
         "heading": "Research Methods",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "Journey Mapping",
-        "body": "Know how to create current-state and future-state journey maps: identifying touchpoints, emotions, pain points, and opportunities. Understand the difference between journey maps, service blueprints, and experience maps."
+        "body": "Know how to create current-state and future-state **journey maps**: identifying touchpoints, emotions, pain points, and opportunities. Understand the difference between journey maps, service blueprints, and experience maps."
       },
       {
         "heading": "Problem Framing & HMW Statements",

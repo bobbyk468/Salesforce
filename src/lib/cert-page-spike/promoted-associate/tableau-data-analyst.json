@@ -38,7 +38,7 @@
     "blocks": [
       {
         "heading": "LOD Expressions (Level of Detail)",
-        "body": "LOD expressions compute aggregates at a different granularity than the current view. FIXED computes at the specified dimension, ignoring view-level dimensions. INCLUDE adds dimensions to the view level (finer detail). EXCLUDE removes dimensions (coarser). LOD questions appear frequently — understand which to use for per-customer averages, cohort analysis, and ratio calculations."
+        "body": "**LOD expressions** compute aggregates at a different granularity than the current view. FIXED computes at the specified dimension, ignoring view-level dimensions. INCLUDE adds dimensions to the view level (finer detail). EXCLUDE removes dimensions (coarser). LOD questions appear frequently — understand which to use for per-customer averages, cohort analysis, and ratio calculations."
       },
       {
         "heading": "Context Filters",
@@ -46,15 +46,15 @@
       },
       {
         "heading": "Parameters and Dynamic Analysis",
-        "body": "Parameters are workbook variables that users control via an input widget (slider, dropdown, etc.). They do not filter data by themselves — pair them with calculated fields to create dynamic filters, custom bins, or switchable measures. Parameter Actions (Tableau 2019.2+) allow clicking a mark to set a parameter value."
+        "body": "Parameters are workbook variables that users control via an input widget (slider, dropdown, etc.). They do not filter data by themselves — pair them with **calculated fields** to create dynamic filters, custom bins, or switchable measures. Parameter Actions (Tableau 2019.2+) allow clicking a mark to set a parameter value."
       },
       {
         "heading": "Table Calculations vs LOD Expressions",
-        "body": "Table calculations (RUNNING_SUM, WINDOW_AVG, RANK, LAST) operate on the data already returned to the view — they cannot change which rows are in the view. LOD expressions run at query time and can affect which rows return. Use table calculations for running totals, percent of total, and period-over-period; use LOD for controlling granularity independently of the view."
+        "body": "**table calculations** (RUNNING_SUM, WINDOW_AVG, RANK, LAST) operate on the data already returned to the view — they cannot change which rows are in the view. **LOD expressions** run at query time and can affect which rows return. Use table calculations for running totals, percent of total, and period-over-period; use LOD for controlling granularity independently of the view."
       },
       {
         "heading": "Live vs Extract Performance",
-        "body": "Choose Live when data must be current to the minute (financial dashboards, operations). Choose Extract (.hyper) when query performance is critical and a scheduled refresh cadence is acceptable. Extracts can be filtered at creation time to reduce size. Embedded credentials are required for scheduled extract refreshes on Tableau Server or Cloud."
+        "body": "Choose Live when data must be current to the minute (financial dashboards, operations). Choose Extract (.hyper) when query performance is critical and a scheduled refresh cadence is acceptable. **extracts** can be filtered at creation time to reduce size. Embedded credentials are required for scheduled extract refreshes on **Tableau Server** or Cloud."
       }
     ]
   },
@@ -68,7 +68,7 @@
       },
       {
         "heading": "Calculated Fields & LOD Expressions",
-        "body": "Know how to write basic calculated fields and the three LOD expression types: FIXED (independent of view), INCLUDE (adds granularity), and EXCLUDE (removes granularity). LOD expressions are heavily tested."
+        "body": "Know how to write basic **calculated fields** and the three LOD expression types: FIXED (independent of view), INCLUDE (adds granularity), and EXCLUDE (removes granularity). **LOD expressions** are heavily tested."
       },
       {
         "heading": "Filters & Filter Order",
@@ -80,7 +80,7 @@
       },
       {
         "heading": "Data Preparation in Tableau Prep",
-        "body": "Know basic Tableau Prep operations: cleaning steps (data type changes, null handling, rename), aggregation steps, join/union steps, and how to output flows to extracts or published data sources."
+        "body": "Know basic **Tableau Prep** operations: cleaning steps (data type changes, null handling, rename), aggregation steps, join/union steps, and how to output flows to **extracts** or published data sources."
       }
     ]
   },

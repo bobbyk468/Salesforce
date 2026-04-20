@@ -47,7 +47,7 @@
       },
       {
         "heading": "Subscriber Management and List Types",
-        "body": "All Subscribers list is the master subscriber list — it controls global unsubscribes. Publication Lists are opt-in lists for specific content types. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends. Data Extensions store relational data and support segmentation with SQL queries and Data Filters. Know the precedence: global unsubscribes override everything."
+        "body": "**All Subscribers list** is the master subscriber list — it controls global unsubscribes. Publication Lists are opt-in lists for specific content types. Suppression Lists exclude addresses from specific sends. Auto-Suppression Lists apply across all sends. **Data Extensions** store relational data and support segmentation with SQL queries and Data Filters. Know the precedence: global unsubscribes override everything."
       },
       {
         "heading": "Send Classification and Commercial vs Transactional",
@@ -55,7 +55,7 @@
       },
       {
         "heading": "AMPscript Key Functions",
-        "body": "Lookup() retrieves a single value from a Data Extension. LookupRows() returns a full row set. AttributeValue() accesses subscriber attribute values. IIF() is the inline conditional. These four functions cover most AMPscript personalisation scenarios tested in the exam."
+        "body": "Lookup() retrieves a single value from a Data Extension. LookupRows() returns a full row set. AttributeValue() accesses subscriber attribute values. IIF() is the inline conditional. These four functions cover most **AMPscript** personalisation scenarios tested in the exam."
       },
       {
         "heading": "Tracking Metrics to Know",
@@ -69,15 +69,15 @@
     "blocks": [
       {
         "heading": "Email Studio Data Model",
-        "body": "Know All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and Filtered Data Extensions. Understand how subscriber status (Active, Bounced, Unsubscribed, Held) affects send eligibility."
+        "body": "Know All Subscribers, Publication Lists, Suppression Lists, **Data Extensions**, and Filtered Data Extensions. Understand how subscriber status (Active, Bounced, Unsubscribed, Held) affects send eligibility."
       },
       {
         "heading": "AMPscript for Personalization",
-        "body": "Know core AMPscript functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Questions often present AMPscript snippets and ask what they output."
+        "body": "Know core **AMPscript** functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Questions often present AMPscript snippets and ask what they output."
       },
       {
         "heading": "Journey Builder vs. Automation Studio",
-        "body": "Journey Builder is customer-driven (triggered by individual behavior). Automation Studio is time/event-driven (runs on a schedule or file drop). Know when to use each and what activities are exclusive to each tool."
+        "body": "**Journey Builder** is customer-driven (triggered by individual behavior). **Automation Studio** is time/event-driven (runs on a schedule or file drop). Know when to use each and what activities are exclusive to each tool."
       },
       {
         "heading": "Deliverability Best Practices",

@@ -23,11 +23,11 @@
     "blocks": [
       {
         "heading": "Anypoint Platform Architecture: Control Plane and Runtime Plane",
-        "body": "Control Plane manages all platform operations: Runtime Manager, API Manager, Exchange, Access Management. Runtime Plane executes Mule applications: CloudHub (MuleSoft-managed cloud), Customer-Hosted Mule Runtime (on-premise or customer's cloud), Runtime Fabric (containerised deployment on Kubernetes). CloudHub 1.0 uses proprietary workers; CloudHub 2.0 uses Kubernetes pods. The Platform Architect selects the deployment model based on: data residency requirements, security policies, operational capability, and cost model."
+        "body": "Control Plane manages all platform operations: Runtime Manager, API Manager, Exchange, Access Management. Runtime Plane executes Mule applications: **CloudHub** (MuleSoft-managed cloud), Customer-Hosted **Mule runtime** (on-premise or customer's cloud), **Runtime Fabric** (containerised deployment on Kubernetes). CloudHub 1.0 uses proprietary workers; CloudHub 2.0 uses Kubernetes pods. The Platform Architect selects the deployment model based on: data residency requirements, security policies, operational capability, and cost model."
       },
       {
         "heading": "Runtime Fabric: Container-Based Deployment",
-        "body": "Anypoint Runtime Fabric (RTF) runs Mule apps in containers on customer-managed Kubernetes clusters. RTF components: Agent (connects cluster to Control Plane), Ingress controller (routes traffic), Monitoring (Titanium). RTF enables: bring-your-own-cloud deployment, air-gapped deployments, co-location with existing Kubernetes workloads. Namespace isolation provides security between applications. Resource allocation defines CPU and memory limits per Mule app. The exam tests RTF vs CloudHub trade-offs and RTF architecture components."
+        "body": "Anypoint **Runtime Fabric** (RTF) runs Mule apps in containers on customer-managed Kubernetes clusters. RTF components: Agent (connects cluster to Control Plane), Ingress controller (routes traffic), Monitoring (Titanium). RTF enables: bring-your-own-cloud deployment, air-gapped deployments, co-location with existing Kubernetes workloads. Namespace isolation provides security between applications. Resource allocation defines CPU and memory limits per Mule app. The exam tests RTF vs **CloudHub** trade-offs and RTF architecture components."
       },
       {
         "heading": "API-Led Governance at Scale",
@@ -35,7 +35,7 @@
       },
       {
         "heading": "Security Architecture: VPC, VPN, and Encryption",
-        "body": "CloudHub VPC (Virtual Private Cloud) isolates the CloudHub network from the public internet. VPC Peering connects the CloudHub VPC to the customer's cloud VPC. VPN (site-to-site) connects CloudHub to on-premise data centres. Dedicated Load Balancer provides static IPs for inbound CloudHub traffic. TLS termination at the load balancer. At-rest encryption is handled by CloudHub's underlying infrastructure (AWS KMS). Anypoint Security Tokenization replaces sensitive data with tokens — PCI DSS compliant."
+        "body": "**CloudHub** VPC (Virtual Private Cloud) isolates the CloudHub network from the public internet. VPC Peering connects the CloudHub VPC to the customer's cloud VPC. VPN (site-to-site) connects CloudHub to on-premise data centres. Dedicated Load Balancer provides static IPs for inbound CloudHub traffic. TLS termination at the load balancer. At-rest encryption is handled by CloudHub's underlying infrastructure (AWS KMS). Anypoint Security Tokenization replaces sensitive data with tokens — PCI DSS compliant."
       },
       {
         "heading": "Operational Excellence: Monitoring and SLAs",
@@ -49,23 +49,23 @@
     "blocks": [
       {
         "heading": "Deployment Model Selection",
-        "body": "Know when to use CloudHub 1.0 (managed, simple), CloudHub 2.0 (container-based, more control), Runtime Fabric (self-managed, on-prem or private cloud), and standalone Mule runtimes. Match deployment model to requirements."
+        "body": "Know when to use **CloudHub** 1.0 (managed, simple), CloudHub 2.0 (container-based, more control), **Runtime Fabric** (self-managed, on-prem or private cloud), and standalone Mule runtimes. Match deployment model to requirements."
       },
       {
         "heading": "High Availability Design",
-        "body": "Understand how to design HA: multiple workers in CloudHub, Runtime Fabric cluster configuration, persistent queues for message durability, and load balancer configuration for zero-downtime deployments."
+        "body": "Understand how to design HA: multiple workers in **CloudHub**, **Runtime Fabric** cluster configuration, persistent queues for message durability, and load balancer configuration for zero-downtime deployments."
       },
       {
         "heading": "Disaster Recovery Strategy",
-        "body": "Know how to plan DR for Anypoint Platform: multi-region CloudHub deployments, VPC peering, database backup strategies, and RTO/RPO targets for different integration tiers."
+        "body": "Know how to plan DR for **Anypoint Platform**: multi-region **CloudHub** deployments, VPC peering, database backup strategies, and RTO/RPO targets for different integration tiers."
       },
       {
         "heading": "Platform Security Architecture",
-        "body": "Know how to configure VPCs, VPNs, and Dedicated Load Balancers in CloudHub. Understand how Runtime Fabric handles network isolation, TLS termination, and credential management via Anypoint Secrets Manager."
+        "body": "Know how to configure VPCs, VPNs, and Dedicated Load Balancers in **CloudHub**. Understand how **Runtime Fabric** handles network isolation, TLS termination, and credential management via Anypoint Secrets Manager."
       },
       {
         "heading": "Capacity Planning",
-        "body": "Understand worker sizing (0.1 vCore to 8 vCore), how to calculate required capacity based on throughput, concurrency, and payload size, and how auto-scaling works in CloudHub 2.0 and Runtime Fabric."
+        "body": "Understand worker sizing (0.1 vCore to 8 vCore), how to calculate required capacity based on throughput, concurrency, and payload size, and how auto-scaling works in **CloudHub** 2.0 and **Runtime Fabric**."
       }
     ]
   },

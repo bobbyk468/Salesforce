@@ -31,11 +31,11 @@
       },
       {
         "heading": "Data Design and Management",
-        "body": "Contact Builder is the heart of Marketing Cloud. You must understand how to link data extensions to create a single view of the customer. Be comfortable with the difference between Lists and Data Extensions, and why Data Extensions are preferred. Basic SQL knowledge for queries in Automation Studio is also tested."
+        "body": "**Contact Builder** is the heart of Marketing Cloud. You must understand how to link **Data Extensions** to create a single view of the customer. Be comfortable with the difference between Lists and Data Extensions, and why Data Extensions are preferred. Basic SQL knowledge for queries in **Automation Studio** is also tested."
       },
       {
         "heading": "Automation Tools: Journey Builder vs. Automation Studio",
-        "body": "Know the difference: Journey Builder is for 1:1 customer journeys that react to customer behavior. Automation Studio is for ETL (Extract, Transform, Load) and other data management tasks on a schedule. You'll be given scenarios and asked to choose the right tool."
+        "body": "Know the difference: **Journey Builder** is for 1:1 customer journeys that react to customer behavior. **Automation Studio** is for ETL (Extract, Transform, Load) and other data management tasks on a schedule. You'll be given scenarios and asked to choose the right tool."
       },
       {
         "heading": "Marketing Cloud Connect",
@@ -43,7 +43,7 @@
       },
       {
         "heading": "Personalization with AMPscript and Dynamic Content",
-        "body": "You'll be tested on your ability to personalize content. Understand how to use personalization strings, Dynamic Content blocks, and basic AMPscript functions like `LookupRows()` to pull data from data extensions into your emails."
+        "body": "You'll be tested on your ability to personalize content. Understand how to use personalization strings, Dynamic Content blocks, and basic **AMPscript** functions like `LookupRows()` to pull data from **Data Extensions** into your emails."
       }
     ]
   },
@@ -57,15 +57,15 @@
       },
       {
         "heading": "Data Architecture Design",
-        "body": "Design data extensions, relationship tables, and how to structure data for efficient segmentation. Know when to use Contact Builder data model vs. standalone data extensions for complex subscriber data."
+        "body": "Design **Data Extensions**, relationship tables, and how to structure data for efficient segmentation. Know when to use **Contact Builder** data model vs. standalone data extensions for complex subscriber data."
       },
       {
         "heading": "Marketing Cloud Connect",
-        "body": "Know how Marketing Cloud Connect integrates with Salesforce CRM: synced data extensions, triggered sends from Salesforce records, Journey Builder Salesforce activities, and how the connected app is configured."
+        "body": "Know how Marketing Cloud Connect integrates with Salesforce CRM: synced **Data Extensions**, triggered sends from Salesforce records, **Journey Builder** Salesforce activities, and how the connected app is configured."
       },
       {
         "heading": "Cross-Channel Strategy",
-        "body": "Understand how to design coordinated campaigns across Email, SMS (MobileConnect), Push (MobilePush), and Advertising. Know how Journey Builder orchestrates cross-channel experiences."
+        "body": "Understand how to design coordinated campaigns across Email, SMS (MobileConnect), Push (MobilePush), and Advertising. Know how **Journey Builder** orchestrates cross-channel experiences."
       },
       {
         "heading": "Governance & Compliance",

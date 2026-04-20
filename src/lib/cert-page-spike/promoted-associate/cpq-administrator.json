@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "Product Rules vs Price Rules",
-        "body": "Product Rules control which products appear on a quote — they add, remove, hide, validate, or alert based on product combinations. Types: Alert, Validation, Selection, Filter. Price Rules control how products are priced — they evaluate conditions and inject values into quote line fields. The exam frequently tests which rule type applies to a given quoting scenario."
+        "body": "**Product Rules** control which products appear on a quote — they add, remove, hide, validate, or alert based on product combinations. Types: Alert, Validation, Selection, Filter. **Price Rules** control how products are priced — they evaluate conditions and inject values into quote line fields. The exam frequently tests which rule type applies to a given quoting scenario."
       },
       {
         "heading": "Bundles and Product Options",
@@ -39,11 +39,11 @@
       },
       {
         "heading": "CPQ and the Quote-to-Cash Lifecycle",
-        "body": "CPQ fits into the Quote-to-Cash process: Opportunity → Quote (built in QLE) → Quote Document (PDF via Quote Template) → Contract (created when Opportunity is Closed Won) → Subscription records (track active products and terms) → Renewal Opportunity (auto-generated at term end). Know which object stores which information at each stage."
+        "body": "**CPQ** fits into the Quote-to-Cash process: Opportunity → Quote (built in QLE) → Quote Document (PDF via Quote Template) → Contract (created when Opportunity is Closed Won) → Subscription records (track active products and terms) → Renewal Opportunity (auto-generated at term end). Know which object stores which information at each stage."
       },
       {
         "heading": "Subscription Products and Renewals",
-        "body": "Products can be set as Subscription or One-Time. Subscription products create Subscription records when a Contract is activated. At term end, CPQ generates a Renewal Opportunity and Quote populated with existing subscriptions. Amendments create a new Quote from the active Contract to add, remove, or change products mid-term. Understand the difference between Renewal and Amendment flows."
+        "body": "Products can be set as Subscription or One-Time. Subscription products create Subscription records when a Contract is activated. At term end, **CPQ** generates a Renewal Opportunity and Quote populated with existing subscriptions. Amendments create a new Quote from the active Contract to add, remove, or change products mid-term. Understand the difference between Renewal and Amendment flows."
       }
     ]
   },
@@ -57,19 +57,19 @@
       },
       {
         "heading": "Pricing Waterfall",
-        "body": "Understand the CPQ pricing waterfall sequence: List Price → Special Price → Regular Price → Customer Price → Net Price. Know how Discount Schedules, Block Pricing, and Price Rules modify prices at each stage."
+        "body": "Understand the **CPQ** pricing waterfall sequence: List Price → Special Price → Regular Price → Customer Price → Net Price. Know how Discount Schedules, Block Pricing, and **Price Rules** modify prices at each stage."
       },
       {
         "heading": "Approval Processes in CPQ",
-        "body": "CPQ approval processes can trigger based on quote line fields (e.g., discount thresholds). Know how Approval Rules work, how to chain approvals, and how the Approvals object integrates with Salesforce native approvals."
+        "body": "**CPQ** **Approval Processes** can trigger based on quote line fields (e.g., discount thresholds). Know how Approval Rules work, how to chain approvals, and how the Approvals object integrates with Salesforce native approvals."
       },
       {
         "heading": "Quote Document Generation",
-        "body": "Know how to configure Quote Templates using template content, template sections, and column objects. Understand how DocuSign integration enables e-signature and how quote documents relate to quote lines."
+        "body": "Know how to configure **Quote Templates** using template content, template sections, and column objects. Understand how DocuSign integration enables e-signature and how quote documents relate to quote lines."
       },
       {
         "heading": "Contract Amendments & Renewals",
-        "body": "Understand how CPQ manages contract amendments (adding/removing products mid-term), renewal opportunities (auto-created from contracts), and how co-termination works for multi-asset contracts."
+        "body": "Understand how **CPQ** manages contract amendments (adding/removing products mid-term), renewal opportunities (auto-created from contracts), and how co-termination works for multi-asset contracts."
       }
     ]
   },

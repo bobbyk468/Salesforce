@@ -27,15 +27,15 @@
       },
       {
         "heading": "Mobile Messaging: MobileConnect and MobilePush",
-        "body": "MobileConnect manages SMS/MMS marketing. Keywords and shortcodes for opt-in/opt-out. Triggered sends via API. MobilePush manages push notifications to iOS and Android apps registered with Marketing Cloud. In-app messaging within mobile apps. Both channels integrate with Journey Builder as activities. Compliance: SMS requires explicit opt-in (TCPA in US), double opt-in recommended. The exam tests channel-specific compliance requirements and how each mobile channel integrates into cross-channel journeys."
+        "body": "MobileConnect manages SMS/MMS marketing. Keywords and shortcodes for opt-in/opt-out. Triggered sends via API. MobilePush manages push notifications to iOS and Android apps registered with Marketing Cloud. In-app messaging within mobile apps. Both channels integrate with **Journey Builder** as activities. Compliance: SMS requires explicit opt-in (TCPA in US), double opt-in recommended. The exam tests channel-specific compliance requirements and how each mobile channel integrates into cross-channel journeys."
       },
       {
         "heading": "Advertising Studio: Audience Sync",
-        "body": "Advertising Studio syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences — sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match — same concept for Google Ads. Lead Ads — capture leads from Facebook/Google into Marketing Cloud Data Extensions. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data."
+        "body": "**Advertising Studio** syncs Marketing Cloud subscriber data with advertising platforms. Facebook Custom Audiences — sync email lists or Data Extension contacts to Facebook for matched advertising. Google Customer Match — same concept for Google Ads. Lead Ads — capture leads from Facebook/Google into Marketing Cloud **Data Extensions**. Audience Builder creates unified audiences across multiple data sources. The exam tests how to create, activate, and suppress audiences in advertising platforms using Marketing Cloud data."
       },
       {
         "heading": "Contact Builder and Data Architecture",
-        "body": "Contact Builder is the unified data management layer. Attribute Groups link Data Extensions to Contact records using a key field (usually Subscriber Key). Data Designer creates the contact data schema — defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity — Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile."
+        "body": "**Contact Builder** is the unified data management layer. Attribute Groups link **Data Extensions** to Contact records using a key field (usually **Subscriber Key**). Data Designer creates the contact data schema — defining which DEs store which attributes, and how they relate to the Contact record. The Contact model supports cross-channel identity — Email, SMS, push, and advertising all reference the same contact. The exam tests Contact Builder data model design and how to link multiple data sources into a unified Contact profile."
       },
       {
         "heading": "Einstein Features: Engagement Scoring and Recommendations",
@@ -49,7 +49,7 @@
     "blocks": [
       {
         "heading": "Advanced Journey Builder",
-        "body": "Know all Journey Builder entry sources (data extension, Salesforce data, inbound chat, API event), activity types, and decision splits. Understand how to use Einstein STO, Einstein Engagement Scoring, and random split for testing."
+        "body": "Know all **Journey Builder** entry sources (data extension, Salesforce data, inbound chat, API event), activity types, and decision splits. Understand how to use Einstein STO, Einstein Engagement Scoring, and random split for testing."
       },
       {
         "heading": "Cross-Channel Coordination",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "Personalization at Scale",
-        "body": "Know how to use Dynamic Content blocks driven by data extension lookups, AMPscript conditional content, and Einstein Content Selection for AI-driven personalization across large audiences."
+        "body": "Know how to use Dynamic Content blocks driven by data extension lookups, **AMPscript** conditional content, and Einstein Content Selection for AI-driven personalization across large audiences."
       },
       {
         "heading": "Journey Measurement & Optimization",

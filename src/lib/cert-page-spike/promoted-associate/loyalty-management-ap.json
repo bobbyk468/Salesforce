@@ -23,11 +23,11 @@
     "blocks": [
       {
         "heading": "Program Design: Tiers & Points",
-        "body": "Salesforce Loyalty Management structures programs around a Loyalty Program with one or more Tiers (e.g., Silver, Gold, Platinum) and a Currency (points, miles, cashback). Tier Groups define the criteria for tier qualification — spending thresholds, visit counts, or points earned. Tier Period determines how long earned status lasts and when it resets (anniversary, calendar year). The Loyalty Member object tracks each enrolled customer's current tier, points balance, and program history. Qualifying vs. Non-Qualifying Points: qualifying points count toward tier status; non-qualifying points are bonus awards that don't affect tier. The AP exam tests how to configure a tier structure with custom qualification rules and how tier periods interact with reset logic."
+        "body": "Salesforce Loyalty Management structures programs around a **Loyalty Program** with one or more **Tiers** (e.g., Silver, Gold, Platinum) and a Currency (points, miles, cashback). **Tier Groups** define the criteria for tier qualification — spending thresholds, visit counts, or points earned. Tier Period determines how long earned status lasts and when it resets (anniversary, calendar year). The Loyalty Member object tracks each enrolled customer's current tier, points balance, and program history. Qualifying vs. Non-Qualifying Points: qualifying points count toward tier status; non-qualifying points are bonus awards that don't affect tier. The AP exam tests how to configure a tier structure with custom qualification rules and how tier periods interact with reset logic."
       },
       {
         "heading": "Points Accrual & Redemption Rules",
-        "body": "Accrual Rules define how members earn points — by transaction amount, product category, channel, or event. Accrual Rate can be a fixed amount or a percentage of spend. Partner Accruals allow members to earn points at non-Salesforce partner businesses via API. Redemption Rules define how points are spent — minimum redemption threshold, redemption value (100 points = $1), and eligible products. Vouchers are generated upon redemption and tracked as Loyalty Vouchers. Point Expiry Rules define when dormant points expire and send pre-expiry notifications. The exam tests how to configure an accrual rule for a partner scenario, how to set a redemption rule with a minimum threshold, and how expiry notifications are triggered."
+        "body": "**Accrual Rules** define how members earn points — by transaction amount, product category, channel, or event. Accrual Rate can be a fixed amount or a percentage of spend. Partner Accruals allow members to earn points at non-Salesforce partner businesses via API. **Redemption Rules** define how points are spent — minimum redemption threshold, redemption value (100 points = $1), and eligible products. Vouchers are generated upon redemption and tracked as Loyalty Vouchers. Point Expiry Rules define when dormant points expire and send pre-expiry notifications. The exam tests how to configure an accrual rule for a partner scenario, how to set a redemption rule with a minimum threshold, and how expiry notifications are triggered."
       },
       {
         "heading": "Promotions & Member Engagement",
@@ -49,11 +49,11 @@
     "blocks": [
       {
         "heading": "Loyalty Program Setup",
-        "body": "Know how to configure a loyalty program: Program Currency (points, miles), Tier Groups with qualifying criteria (points threshold, transaction count), and Member Portal configuration for self-service member management."
+        "body": "Know how to configure a loyalty program: **Program Currency** (points, miles), Tier Groups with qualifying criteria (points threshold, transaction count), and Member Portal configuration for self-service member management."
       },
       {
         "heading": "Accrual & Redemption Rules",
-        "body": "Know how to configure Transaction Journal rules: earning rules (fixed points, multipliers, bonus events) and redemption rules (points-to-currency conversion, minimum redemption threshold). Understand how rule conditions restrict eligibility."
+        "body": "Know how to configure **Transaction Journal** rules: earning rules (fixed points, multipliers, bonus events) and redemption rules (points-to-currency conversion, minimum redemption threshold). Understand how rule conditions restrict eligibility."
       },
       {
         "heading": "Member Enrollment & Lifecycle",
