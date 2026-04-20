@@ -3,6 +3,7 @@ import { Award, ArrowRight } from 'lucide-react'
 import { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -116,6 +117,8 @@ export default function CertificationsIndexPage() {
           New to Salesforce? Start with <Link href="/certifications/administrator" className="text-salesforce-dark hover:underline font-medium">Administrator (ADM-201)</Link>. Already an admin? Progress to <Link href="/certifications/app-builder" className="text-salesforce-dark hover:underline font-medium">App Builder</Link> or a <Link href="/consultant-certification-path" className="text-salesforce-dark hover:underline font-medium">Consultant track</Link>. Working in AI? The <Link href="/certifications/agentforce-specialist" className="text-salesforce-dark hover:underline font-medium">Agentforce Specialist</Link> and <Link href="/certifications/ai-associate" className="text-salesforce-dark hover:underline font-medium">AI Associate</Link> certifications are the highest-demand credentials in {RELEASE_CURRENT}.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Most Popular Certifications */}
       <section className="mb-10">

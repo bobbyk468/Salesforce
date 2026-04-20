@@ -2,6 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import { getExamCost } from '@/lib/cert-seo-data'
@@ -99,6 +100,8 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
           Each certification below links to a free study guide with exam weightage, practice questions, and prep tips.
         </p>
       </header>
+
+      <ContentPageAuthor />
 
       {/* Summary stats */}
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

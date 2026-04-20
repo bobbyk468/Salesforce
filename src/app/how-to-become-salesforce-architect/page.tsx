@@ -5,6 +5,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Architect (${RELEASE_CURRENT} Guide)`
@@ -113,6 +114,8 @@ export default function HowToBecomeSalesforceArchitectPage() {
           The complete roadmap from ADM-201 to Certified Technical Architect (CTA) — certifications, experience milestones, timeline, and salary data.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       {/* At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

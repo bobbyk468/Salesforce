@@ -32,6 +32,8 @@ import { getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracti
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import {
   ADM_201_SECTION_SUBTOPICS,
   ADMINISTRATOR_SLUG,
@@ -91,7 +93,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
         {/* Condensed intro: shorter, benefit-focused (per CTR audit) */}
         <CertPageIntro slug={slug} />
-        
+        <ContentPageAuthor />
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
           {/* Main Content */}
           <div className="lg:col-span-3">
@@ -436,6 +439,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </ul>
             </section>
 
+            <CertTestimonialsSection slug={slug} />
+
             {/* FAQ section - rendered after H1 for proper SEO structure */}
             <div id="faq">
               <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -457,6 +462,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },
                 { id: 'platform-admin-vs-other', title: 'Cert Comparisons' },
                 { id: 'related-certs', title: 'Related Certifications' },
+                { id: 'student-reviews', title: 'Student Reviews' },
                 { id: 'faq', title: 'Exam FAQs' },
               ]}
             />

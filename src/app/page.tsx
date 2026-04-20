@@ -22,6 +22,7 @@ import {
   Star,
 } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
@@ -376,6 +377,9 @@ export default function Home() {
       {/* Why Use Trailblaze Prep / Overview - Updated */}
       <section className="py-20 px-4 bg-white" aria-labelledby="overview-heading">
         <div className="max-w-6xl mx-auto">
+          <div className="max-w-3xl mx-auto">
+            <ContentPageAuthor />
+          </div>
           <h2 id="overview-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
             Why Use Trailblaze Prep for Your Exam Prep
           </h2>

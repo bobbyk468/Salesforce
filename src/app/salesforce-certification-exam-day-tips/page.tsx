@@ -3,6 +3,7 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Exam Day Tips (${RELEASE_CURRENT})`
@@ -72,6 +73,8 @@ export default function SalesforceCertificationExamDayTipsPage() {
           Everything you need to know for exam day — online proctored and testing centre checklists, time management strategy, ID requirements, and what to do if something goes wrong.
         </p>
       </div>
+
+      <ContentPageAuthor />
 
       <div id="exam-day-checklist" className="print-checklist-section grid grid-cols-1 sm:grid-cols-2 gap-6 mb-8">
         <div className="no-print flex items-center justify-between sm:col-span-2 mb-2">

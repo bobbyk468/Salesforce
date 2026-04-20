@@ -15,6 +15,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -216,7 +218,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
 
         {/* Prominent CTA above fold */}
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
-        
+        <ContentPageAuthor />
+
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
@@ -536,6 +539,8 @@ private class CalloutServiceTest {
             </p>
           </section>
 
+          <CertTestimonialsSection slug={slug} />
+
           {/* FAQ section - rendered after H1 for proper SEO structure */}
           <div id="faq">
             <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -555,6 +560,7 @@ private class CalloutServiceTest {
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },
+              { id: 'student-reviews', title: 'Student Reviews' },
               { id: 'faq', title: 'Exam FAQs' },
             ]}
           />

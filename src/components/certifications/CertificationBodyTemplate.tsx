@@ -32,6 +32,8 @@ import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
+import ContentPageAuthor from '@/components/ContentPageAuthor'
+import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -180,6 +182,10 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <ReleaseNoteBadge />
       </div>
 
+      <div className="max-w-7xl mx-auto px-4">
+        <ContentPageAuthor />
+      </div>
+
       <CertificationPageShell tocSections={body.tocSections}>
         <ExamFeesSection slug={slug} />
 
@@ -245,6 +251,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           <RelatedCertifications currentSlug={slug} />
         </div>
 
+        <CertTestimonialsSection slug={slug} />
+
         <div id="faq">
           <CertPageFaq slug={slug} certTitle={title} />
         </div>
@@ -268,6 +276,10 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
 
       <div className="max-w-7xl mx-auto px-4">
         <ReleaseNoteBadge />
+      </div>
+
+      <div className="max-w-7xl mx-auto px-4">
+        <ContentPageAuthor />
       </div>
 
       <CertificationPageShell tocSections={body.tocSections}>
@@ -327,6 +339,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         <div id="related-certs">
           <RelatedCertifications currentSlug={slug} />
         </div>
+
+        <CertTestimonialsSection slug={slug} />
 
         <section
           className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"

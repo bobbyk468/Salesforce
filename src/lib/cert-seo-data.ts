@@ -523,96 +523,96 @@ function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
     'app-builder': `Platform App Builder: DEV-402 Free Practice (${TITLE_YEAR})`,
-    administrator: `ADM-201 Certification: Free Practice Exam (${TITLE_YEAR})`,
-    'advanced-administrator': `ADM-211 Advanced Admin: Free Practice Exam (${TITLE_YEAR})`,
-    'email-specialist': `Email Specialist Cert: Free Practice (${TITLE_YEAR})`,
-    'mulesoft-hyperautomation-developer': `MuleSoft Hyperautomation Dev Practice (${TITLE_YEAR})`,
-    'sharing-visibility-architect': `Sharing & Visibility Architect Prep: ${TITLE_YEAR}`,
-    'identity-access-management-architect': `Identity & Access Mgmt Architect (${TITLE_YEAR})`,
+    administrator: `Free ADM-201 Practice Exam 2026`,
+    'advanced-administrator': `Free ADM-211 Advanced Admin Practice Exam 2026`,
+    'email-specialist': `Free Email Specialist Practice Exam 2026`,
+    'mulesoft-hyperautomation-developer': `Free MuleSoft Hyperautomation Practice Exam 2026`,
+    'sharing-visibility-architect': `Free Sharing & Visibility Arch Practice Exam 2026`,
+    'identity-access-management-architect': `Free Identity & Access Arch Practice Exam 2026`,
     'marketing-cloud-consultant': `Marketing Cloud Consultant: Free Practice (${TITLE_YEAR})`,
     'business-analyst': `Business Analyst Certification: Free Practice (${TITLE_YEAR})`,
     'sales-cloud': `Sales Cloud Consultant: Free Practice & Study (${TITLE_YEAR})`,
-    'developer-2': `Platform Developer II (PD2): Free Practice (${TITLE_YEAR})`,
+    'developer-2': `Free Platform Developer II (PD2) Practice Exam 2026`,
     'cpq-administrator': `CPQ Admin Certification: Free Practice (${TITLE_YEAR})`,
     'pardot-consultant': `Pardot Consultant: Account Engagement Practice (${TITLE_YEAR})`,
-    'pardot-specialist': `Pardot Certification: Free Specialist Practice ${TITLE_YEAR}`,
+    'pardot-specialist': `Free Pardot Specialist Practice Exam 2026`,
     'experience-cloud': `Experience Cloud Certification: Free Practice (${TITLE_YEAR})`,
-    'mulesoft-integration-foundations': `MuleSoft Foundations: ${TITLE_YEAR} Exam Fees & Prep`,
-    'developer-1': `PD1 Certification: Free Practice Exam (${TITLE_YEAR})`,
-    'slack-developer': `Free Salesforce Slack Developer Study Guide (${TITLE_YEAR})`,
-    'tableau-data-analyst': `Tableau Data Analyst Practice Questions (${TITLE_YEAR})`,
-    'technical-architect-review-board': `Salesforce CTA Review Board Prep (${TITLE_YEAR})`,
-    'technical-architect': `Salesforce Architect Certification: CTA Guide ${TITLE_YEAR}`,
+    'mulesoft-integration-foundations': `Free MuleSoft Foundations Practice Exam 2026`,
+    'developer-1': `Free Platform Developer I (PD1) Practice Exam 2026`,
+    'slack-developer': `Free Slack Developer Practice Exam 2026`,
+    'tableau-data-analyst': `Free Tableau Data Analyst Practice Exam 2026`,
+    'technical-architect-review-board': `Free CTA Review Board Practice Exam 2026`,
+    'technical-architect': `Free Technical Architect (CTA) Practice Exam 2026`,
     'system-architect': `Salesforce System Architect: Free Practice (${TITLE_YEAR})`,
-    'application-architect': `Salesforce Application Architect Certification (${TITLE_YEAR})`,
+    'application-architect': `Free Application Architect Practice Exam 2026`,
     'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
     'data-architect': `Data Architect Certification: Free Practice (${TITLE_YEAR})`,
     // Extended coverage: All remaining certs for complete CTR optimization
-    'administrator-practice-test': `ADM-201 Practice Test: Real Exam Questions (${TITLE_YEAR})`,
-    'advanced-field-service-ap': `Advanced Field Service AP: Free Practice Guide (${TITLE_YEAR})`,
-    'agentforce-specialist': `Agentforce Specialist: Study Guide & Practice (${TITLE_YEAR})`,
-    'ai-associate': `Salesforce AI Associate: Free Practice Guide (${TITLE_YEAR})`,
-    'b2b-commerce-admin-ap': `Salesforce B2B Commerce Admin Certification (${TITLE_YEAR})`,
-    'b2b-commerce-developer-ap': `Salesforce B2B Commerce Developer Cert (${TITLE_YEAR})`,
-    'b2b-solution-architect': `Master B2B Solution Architecture: Design Guide (${TITLE_YEAR})`,
-    'b2c-commerce-architect': `Ace B2C Commerce Architect: Study & Practice (${TITLE_YEAR})`,
-    'b2c-commerce-developer': `Pass B2C Commerce Developer: Free Study Guide (${TITLE_YEAR})`,
-    'b2c-solution-architect': `Master B2C Solution Architecture: Design Study (${TITLE_YEAR})`,
-    'communications-cloud-ap': `Earn Communications Cloud AP: Study Guide (${TITLE_YEAR})`,
-    'consumer-goods-cloud-ap': `Get Certified: Consumer Goods Cloud AP (${TITLE_YEAR})`,
-    'consumer-goods-tpm-ap': `Earn TPM AP Certification: Study & Practice (${TITLE_YEAR})`,
-    'contact-center-ap': `Pass Contact Center AP: Free Practice Guide (${TITLE_YEAR})`,
-    'cpq-billing-ap': `Earn CPQ & Billing AP: Study Guide (${TITLE_YEAR})`,
-    'crm-analytics-einstein-discovery-consultant': `Master CRM Analytics & Einstein Discovery (${TITLE_YEAR})`,
-    'data-cloud-consultant': `Data Cloud Consultant Exam: Free Practice ${TITLE_YEAR}`,
-    'dev-lifecycle-deployment-architect': `Ace Dev Lifecycle & Deployment Architect (${TITLE_YEAR})`,
-    'education-cloud-consultant': `Master Education Cloud: Consultant Study Guide (${TITLE_YEAR})`,
-    'email-specialist-practice-test': `Email Specialist Practice Test: Start Free ${TITLE_YEAR}`,
-    'energy-utilities-ap': `Earn Energy & Utilities AP: Study Guide (${TITLE_YEAR})`,
-    'field-service': `Master Field Service Consultant: Study Guide (${TITLE_YEAR})`,
-    'financial-services-cloud-ap': `Get Certified: Financial Services Cloud AP (${TITLE_YEAR})`,
-    'health-cloud-ap': `Earn Health Cloud AP: Study Guide & Practice (${TITLE_YEAR})`,
-    'heroku-architect': `Master Heroku Architect: Design Study Guide (${TITLE_YEAR})`,
-    'heroku-developer-ap': `Earn Heroku Developer AP: Study Guide (${TITLE_YEAR})`,
-    'industries-cpq-developer': `Pass Industries CPQ Developer: Study Guide (${TITLE_YEAR})`,
-    'javascript-developer-i': `JavaScript Developer I: Exam Prep (${TITLE_YEAR})`,
-    'lightning-web-components-specialist': `Master Lightning Web Components: Study Guide (${TITLE_YEAR})`,
-    'loyalty-management-ap': `Earn Loyalty Management AP: Study Guide (${TITLE_YEAR})`,
-    'manufacturing-cloud-ap': `Get Certified: Manufacturing Cloud AP (${TITLE_YEAR})`,
-    'marketing-cloud-advanced-cross-channel-ap': `Earn Marketing Cloud Advanced AP (${TITLE_YEAR})`,
-    'marketing-cloud-engagement-admin': `Master Marketing Cloud Engagement Admin (${TITLE_YEAR})`,
-    'marketing-cloud-engagement-developer': `Pass Marketing Cloud Engagement Developer (${TITLE_YEAR})`,
-    'marketing-cloud-engagement-foundations': `Marketing Cloud Engagement Foundations (${TITLE_YEAR})`,
-    'marketing-cloud-intelligence-ap': `Earn Marketing Cloud Intelligence AP (${TITLE_YEAR})`,
-    'marketing-cloud-personalization-ap': `Get Certified: Marketing Cloud Personalization (${TITLE_YEAR})`,
-    'media-cloud-ap': `Earn Media Cloud AP: Study Guide (${TITLE_YEAR})`,
-    'mulesoft-catalyst-consultant': `MuleSoft Catalyst Consultant: Study Guide (${TITLE_YEAR})`,
-    'mulesoft-developer-i': `MuleSoft Developer I: Integration Study Guide (${TITLE_YEAR})`,
-    'mulesoft-developer-ii': `MuleSoft Developer II: Advanced Integration (${TITLE_YEAR})`,
-    'mulesoft-integration-architect': `MuleSoft Integration Architect Study Guide (${TITLE_YEAR})`,
-    'mulesoft-platform-architect': `Ace MuleSoft Platform Architect: Design Guide (${TITLE_YEAR})`,
-    'net-zero-cloud-ap': `Earn Net Zero Cloud AP: Sustainability Study (${TITLE_YEAR})`,
-    'nonprofit-cloud': `Master Nonprofit Cloud: Consultant Study Guide (${TITLE_YEAR})`,
-    'nonprofit-success-pack-consultant': `Pass Nonprofit Success Pack (NPSP): Study Guide (${TITLE_YEAR})`,
-    'omnistudio-consultant': `Master OmniStudio Consultant: Study & Practice (${TITLE_YEAR})`,
-    'omnistudio-developer': `OmniStudio Developer: Integration Study Guide (${TITLE_YEAR})`,
-    'order-management-admin-ap': `Earn Order Management Admin AP: Study Guide (${TITLE_YEAR})`,
-    'order-management-developer-ap': `Get Certified: Order Management Developer AP (${TITLE_YEAR})`,
-    'platform-foundations': `Start Your Journey: Platform Foundations Guide (${TITLE_YEAR})`,
-    'process-automation-ap': `Earn Process Automation AP: Study & Practice (${TITLE_YEAR})`,
-    'public-sector-solutions-ap': `Get Certified: Public Sector Solutions AP (${TITLE_YEAR})`,
-    'revenue-cloud-consultant': `Master Revenue Cloud Consultant: Study Guide (${TITLE_YEAR})`,
-    'sales-foundations': `Start Sales Foundation: Free Study Guide (${TITLE_YEAR})`,
-    'service-cloud': `Master Service Cloud Consultant: Study Guide (${TITLE_YEAR})`,
-    'slack-administrator': `Slack Administrator: Study & Practice Guide (${TITLE_YEAR})`,
-    'slack-consultant': `Become Slack Consultant: Solution Design Study (${TITLE_YEAR})`,
-    'strategy-designer': `Master Platform Strategy Designer: Study Guide (${TITLE_YEAR})`,
-    'tableau-architect': `Ace Tableau Architect: Design Study Guide (${TITLE_YEAR})`,
-    'tableau-consultant': `Master Tableau Consultant: Study & Practice (${TITLE_YEAR})`,
-    'tableau-desktop-foundations': `Start Tableau Desktop: Foundation Study Guide (${TITLE_YEAR})`,
-    'tableau-server-administrator': `Master Tableau Server Admin: Study Guide (${TITLE_YEAR})`,
-    'technical-architect-evaluation': `Pass CTA Evaluation: Scenario-Based Study Guide (${TITLE_YEAR})`,
-    'ux-designer': `UX Designer Certification: Free Practice (${TITLE_YEAR})`,
+    'administrator-practice-test': `Free ADM-201 Practice Test Practice Exam 2026`,
+    'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam 2026`,
+    'agentforce-specialist': `Free Agentforce Specialist Practice Exam 2026`,
+    'ai-associate': `Free AI Associate Practice Exam 2026`,
+    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP Practice Exam 2026`,
+    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP Practice Exam 2026`,
+    'b2b-solution-architect': `Free B2B Solution Architect Practice Exam 2026`,
+    'b2c-commerce-architect': `Free B2C Commerce Architect Practice Exam 2026`,
+    'b2c-commerce-developer': `Free B2C Commerce Developer Practice Exam 2026`,
+    'b2c-solution-architect': `Free B2C Solution Architect Practice Exam 2026`,
+    'communications-cloud-ap': `Free Communications Cloud AP Practice Exam 2026`,
+    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP Practice Exam 2026`,
+    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP Practice Exam 2026`,
+    'contact-center-ap': `Free Contact Center AP Practice Exam 2026`,
+    'cpq-billing-ap': `Free CPQ & Billing AP Practice Exam 2026`,
+    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics Practice Exam 2026`,
+    'data-cloud-consultant': `Free Data Cloud Consultant Practice Exam 2026`,
+    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch Practice Exam 2026`,
+    'education-cloud-consultant': `Free Education Cloud Consult Practice Exam 2026`,
+    'email-specialist-practice-test': `Free Email Spec Practice Practice Exam 2026`,
+    'energy-utilities-ap': `Free Energy & Utilities AP Practice Exam 2026`,
+    'field-service': `Free Field Service Consultant Practice Exam 2026`,
+    'financial-services-cloud-ap': `Free Financial Services AP Practice Exam 2026`,
+    'health-cloud-ap': `Free Health Cloud AP Practice Exam 2026`,
+    'heroku-architect': `Free Heroku Architect Practice Exam 2026`,
+    'heroku-developer-ap': `Free Heroku Developer AP Practice Exam 2026`,
+    'industries-cpq-developer': `Free Industries CPQ Developer Practice Exam 2026`,
+    'javascript-developer-i': `Free JavaScript Developer I Practice Exam 2026`,
+    'lightning-web-components-specialist': `Free LWC Specialist Practice Exam 2026`,
+    'loyalty-management-ap': `Free Loyalty Management AP Practice Exam 2026`,
+    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP Practice Exam 2026`,
+    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP Practice Exam 2026`,
+    'marketing-cloud-engagement-admin': `Free MC Engagement Admin Practice Exam 2026`,
+    'marketing-cloud-engagement-developer': `Free MC Engagement Dev Practice Exam 2026`,
+    'marketing-cloud-engagement-foundations': `Free MC Foundations Practice Exam 2026`,
+    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP Practice Exam 2026`,
+    'marketing-cloud-personalization-ap': `Free MC Personalization AP Practice Exam 2026`,
+    'media-cloud-ap': `Free Media Cloud AP Practice Exam 2026`,
+    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult Practice Exam 2026`,
+    'mulesoft-developer-i': `Free MuleSoft Developer I Practice Exam 2026`,
+    'mulesoft-developer-ii': `Free MuleSoft Developer II Practice Exam 2026`,
+    'mulesoft-integration-architect': `Free MuleSoft Integration Arch Practice Exam 2026`,
+    'mulesoft-platform-architect': `Free MuleSoft Platform Arch Practice Exam 2026`,
+    'net-zero-cloud-ap': `Free Net Zero Cloud AP Practice Exam 2026`,
+    'nonprofit-cloud': `Free Nonprofit Cloud Consult Practice Exam 2026`,
+    'nonprofit-success-pack-consultant': `Free NPSP Consultant Practice Exam 2026`,
+    'omnistudio-consultant': `Free OmniStudio Consultant Practice Exam 2026`,
+    'omnistudio-developer': `Free OmniStudio Developer Practice Exam 2026`,
+    'order-management-admin-ap': `Free Order Mgmt Admin AP Practice Exam 2026`,
+    'order-management-developer-ap': `Free Order Mgmt Dev AP Practice Exam 2026`,
+    'platform-foundations': `Free Platform Foundations Practice Exam 2026`,
+    'process-automation-ap': `Free Process Automation AP Practice Exam 2026`,
+    'public-sector-solutions-ap': `Free Public Sector AP Practice Exam 2026`,
+    'revenue-cloud-consultant': `Free Revenue Cloud Consult Practice Exam 2026`,
+    'sales-foundations': `Free Sales Foundations Practice Exam 2026`,
+    'service-cloud': `Free Service Cloud Consultant Practice Exam 2026`,
+    'slack-administrator': `Free Slack Administrator Practice Exam 2026`,
+    'slack-consultant': `Free Slack Consultant Practice Exam 2026`,
+    'strategy-designer': `Free Strategy Designer Practice Exam 2026`,
+    'tableau-architect': `Free Tableau Architect Practice Exam 2026`,
+    'tableau-consultant': `Free Tableau Consultant Practice Exam 2026`,
+    'tableau-desktop-foundations': `Free Tableau Desktop Found. Practice Exam 2026`,
+    'tableau-server-administrator': `Free Tableau Server Admin Practice Exam 2026`,
+    'technical-architect-evaluation': `Free CTA Evaluation Practice Exam 2026`,
+    'ux-designer': `Free UX Designer Practice Exam 2026`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -747,7 +747,7 @@ export function getCertMetaDescription(slug: string): string {
     'app-builder':
       `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `ADM-201 certification: Free practice exam — 15 questions, no sign-up. 60 Qs, 65% passing, 105 min. ${TITLE_YEAR} study guide & exam tips.`,
+      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-consultant':
       `Marketing Cloud Consultant: Free practice exam — no sign-up. 60 questions, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':
@@ -755,35 +755,35 @@ export function getCertMetaDescription(slug: string): string {
     'sales-cloud':
       `Sales Cloud Consultant: Free practice exam — no sign-up. 60 questions, 68% passing. Sample Qs & ${TITLE_YEAR} study guide. $200 fee.`,
     'advanced-administrator':
-      `Pass ADM-211 faster. ${TITLE_YEAR} prep guide with section weightage, realistic practice questions, and a focused admin study plan. Start free.`,
+      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'email-specialist':
-      `Salesforce Email Specialist certification: Free practice questions & exam tips. Start free — 15 sample questions, topic breakdowns. ${TITLE_YEAR} study guide.`,
+      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-hyperautomation-developer':
-      `Tackle MuleSoft Hyperautomation with confidence. Get ${TITLE_YEAR} exam topics, free practice questions, and practical prep guidance. Start now.`,
+      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'sharing-visibility-architect':
-      `Sharing & Visibility Architect: architect-level questions and focused guidance on visibility design decisions. Start free ${TITLE_YEAR}.`,
+      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'identity-access-management-architect':
-      `Prepare for IAM Architect with ${TITLE_YEAR} scenarios on SSO, OAuth, and access design. Use practice questions and focused exam tips. Start now.`,
+      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'developer-2':
-      `Salesforce PD2 free practice exam: 15 sample Qs, no sign-up. 60 Qs, ~65% passing, 120 min. ${TITLE_YEAR} study guide. $200 fee.`,
+      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'cpq-administrator':
       `CPQ certification: Free Salesforce CPQ Administrator practice. Start free — 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
     'pardot-consultant':
       `Pardot Consultant (Account Engagement): Free practice exam — no sign-up. 60 questions, 68% passing. Sample Qs & ${TITLE_YEAR} study guide.`,
     'pardot-specialist':
-      `Pardot certification: Free Account Engagement Specialist practice (60 questions, 72% passing). Start free — 15 sample questions & ${TITLE_YEAR} study guide.`,
+      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'experience-cloud':
       `Salesforce Experience Cloud certification: Free practice (60 questions, ~65% passing, 105 min). Start free — sample questions & ${TITLE_YEAR} study guide.`,
     'slack-developer':
-      `Salesforce Slack Developer certification: Free ${TITLE_YEAR} study guide, exam breakdowns, and practice tips to pass. Start free.`,
+      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'tableau-data-analyst':
-      `Master the Tableau Data Analyst exam with updated ${TITLE_YEAR} practice questions, detailed explanations, and exam weightage. Start practicing free today.`,
+      `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-foundations':
-      `MuleSoft Integration Foundations ${TITLE_YEAR}: exam fees, exam code, free practice questions and study tips to pass. Start free.`,
+      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'technical-architect':
-      `Salesforce Architect certification (CTA): CTA Evaluation & Review Board guide. Start free — format details, prep path, ${TITLE_YEAR} success tips.`,
+      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'technical-architect-review-board':
-      `Salesforce CTA Review Board: format details, prep path, and ${TITLE_YEAR} success tips. Get focused guidance before your board date. Start free.`,
+      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'integration-architect':
       `Integration Architect: Free practice exam — no sign-up. 60 Qs, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
     'data-architect':
@@ -791,73 +791,73 @@ export function getCertMetaDescription(slug: string): string {
     'system-architect':
       `Salesforce System Architect: Free practice exam — no sign-up. 60 questions, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} study guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
-    'advanced-field-service-ap': `Advanced Field Service AP: Free practice (60 questions, ~65% passing, 90 min). Start free — sample questions & ${TITLE_YEAR} study guide. $100 fee.`,
-    'administrator-practice-test': `ADM-201 practice test: real exam-style questions, section weightage, passing scores, detailed explanations. Free, no signup. Start free ${TITLE_YEAR}.`,
-    'agentforce-specialist': `Agentforce Specialist certification: Free practice questions, exam overview, and study strategy. Fundamentals explained simply. Start free ${TITLE_YEAR}.`,
-    'ai-associate': `Salesforce Associate certification: AI Associate free practice. Start free — 15 sample questions, Einstein AI topics. ${TITLE_YEAR} study guide.`,
-    'application-architect': `Salesforce Application Architect certification: Free practice (60 questions, ~65% passing). Start free — sample questions & ${TITLE_YEAR} study guide.`,
-    'b2b-commerce-admin-ap': `B2B Commerce Admin AP: Free practice (60 Qs, ~65% passing). Start free — sample Qs & ${TITLE_YEAR} study guide. $100 fee.`,
-    'b2b-commerce-developer-ap': `Salesforce B2B Commerce certification (Developer AP): Free practice (60 questions, ~65% passing). Start free — sample questions & ${TITLE_YEAR} study guide.`,
-    'b2b-solution-architect': `B2B Solution Architecture: design patterns, solution approach, and best practices. Free study guide with architecture examples. Start free ${TITLE_YEAR}.`,
-    'b2c-commerce-architect': `B2C Commerce Architect: e-commerce design, storefront architecture, and scaling patterns. Free study guide. Start free ${TITLE_YEAR}.`,
-    'b2c-commerce-developer': `B2C Commerce Developer: Front-end development, cart logic, and customization. Free practice questions ${TITLE_YEAR}. Start free now.`,
-    'b2c-solution-architect': `B2C Solution Architect: Digital commerce design, customer experience & strategy. Study guide ${TITLE_YEAR}. Start free practice now.`,
-    'communications-cloud-ap': `Earn Communications Cloud AP. Messaging platform, SMS integration, and customer communication setup. Free study guide ${TITLE_YEAR}.`,
-    'consumer-goods-cloud-ap': `Consumer Goods Cloud AP: industry-specific features, commerce, and planning. Study guide with industry use cases. Start free ${TITLE_YEAR}.`,
-    'consumer-goods-tpm-ap': `Earn TPM AP certification for consumer goods. Trade promotion management, spending, and analytics. ${TITLE_YEAR} study guide.`,
-    'contact-center-ap': `Contact Center AP: Call center features, routing, and service setup. Free practice questions and exam guide ${TITLE_YEAR}. Start free.`,
-    'cpq-billing-ap': `Earn CPQ & Billing AP. Configure-Price-Quote, billing cycles, and revenue management. Study guide with real examples ${TITLE_YEAR}.`,
-    'crm-analytics-einstein-discovery-consultant': `Master CRM Analytics & Einstein Discovery. Dashboards, analytics, predictive AI, and insights. Complete study guide ${TITLE_YEAR}.`,
-    'data-cloud-consultant': `Data Cloud Consultant exam: Free practice (60 questions, ~65% passing, 105 min). Start free — 15 sample questions & ${TITLE_YEAR} study guide.`,
-    'developer-1': `Salesforce PD1 free practice exam: 15 sample Qs, no sign-up. 60 Qs, 68% passing, 110 min. Apex, SOQL & LWC. ${TITLE_YEAR} study guide. $200 fee.`,
-    'dev-lifecycle-deployment-architect': `Ace Dev Lifecycle & Deployment Architect. GitHub, deployment, testing, and CI/CD. Architecture patterns guide ${TITLE_YEAR}.`,
-    'education-cloud-consultant': `Master Education Cloud Consultant. Student lifecycle, admissions, courses, and engagement. Industry guide with exam tips ${TITLE_YEAR}.`,
-    'email-specialist-practice-test': `Email Specialist practice test: Start free. Real exam-style questions, Marketing Cloud topics, section weightage. Free — no signup. ${TITLE_YEAR}.`,
-    'energy-utilities-ap': `Energy & Utilities AP: Utility features, billing, and customer management. Study guide ${TITLE_YEAR}. Start free practice now.`,
-    'field-service': `Field Service Consultant: Mobile scheduling, work orders, and field operations. Study guide ${TITLE_YEAR}. Start free practice now.`,
-    'financial-services-cloud-ap': `Financial Services Cloud AP: banking, insurance, and wealth solutions. Free study guide with industry scenarios. Start free ${TITLE_YEAR}.`,
-    'health-cloud-ap': `Earn Health Cloud AP. Healthcare delivery, patient management, and clinical info. Medical industry study guide ${TITLE_YEAR}.`,
-    'heroku-architect': `Master Heroku Architect. Container orchestration, scaling patterns, and deployment strategy. Architecture design guide ${TITLE_YEAR}.`,
-    'heroku-developer-ap': `Earn Heroku Developer AP. Platform management, environment setup, and best practices. Free study guide ${TITLE_YEAR}.`,
-    'industries-cpq-developer': `Pass Industries CPQ Developer. Industry-specific quoting, pricing logic, and customization. Free practice questions ${TITLE_YEAR}.`,
-    'javascript-developer-i': `Pass JavaScript Developer I. JavaScript fundamentals, ES6+, and async programming. Coding interview prep guide ${TITLE_YEAR}.`,
-    'lightning-web-components-specialist': `Master Lightning Web Components. LWC syntax, lifecycle, and component patterns. Complete developer study guide ${TITLE_YEAR}.`,
-    'loyalty-management-ap': `Earn Loyalty Management AP. Reward programs, points, and customer retention. Study guide with business examples ${TITLE_YEAR}.`,
-    'manufacturing-cloud-ap': `Get Manufacturing Cloud AP certified. Supply chain, planning, and production management. Industry-focused study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-advanced-cross-channel-ap': `Earn Marketing Cloud Advanced AP. Multi-channel campaigns, automation, and strategy. Advanced study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-engagement-admin': `Master Marketing Cloud Engagement Admin. Platform setup, user management, and administration. Complete admin guide ${TITLE_YEAR}.`,
-    'marketing-cloud-engagement-developer': `Pass Marketing Cloud Engagement Developer. Automation scripting, journeys, and API integration. Developer study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-engagement-foundations': `Start Marketing Cloud Engagement foundation knowledge. Email setup, lists, and basic automation. Beginner study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-intelligence-ap': `Earn Marketing Cloud Intelligence AP. Data warehouse, reporting, and analytics. Free study guide ${TITLE_YEAR}.`,
-    'marketing-cloud-personalization-ap': `Marketing Cloud Personalization AP: Web personalization, targeting, and recommendations. Study guide ${TITLE_YEAR}. Start free.`,
-    'media-cloud-ap': `Earn Media Cloud AP. Content publishing, digital asset mgmt, and media orchestration. Study guide ${TITLE_YEAR}.`,
-    'mulesoft-catalyst-consultant': `Master MuleSoft Catalyst Consultant. Customer success, adoption, and strategic guidance. Consultant study guide ${TITLE_YEAR}.`,
-    'mulesoft-developer-i': `Pass MuleSoft Developer I. Integration patterns, connectors, and API design. Free practice questions and study tips ${TITLE_YEAR}.`,
-    'mulesoft-developer-ii': `Pass MuleSoft Developer II. Advanced integration, security, and performance. Expert-level study guide ${TITLE_YEAR}.`,
-    'mulesoft-integration-architect': `Master MuleSoft Integration Architect. Architecture patterns, governance, and enterprise integration. Design study guide ${TITLE_YEAR}.`,
-    'mulesoft-platform-architect': `Ace MuleSoft Platform Architect. Infrastructure, deployments, and platform strategy. Architecture patterns guide ${TITLE_YEAR}.`,
-    'net-zero-cloud-ap': `Earn Net Zero Cloud AP. Sustainability tracking, emissions management, and carbon accounting. Green tech study guide ${TITLE_YEAR}.`,
-    'nonprofit-cloud': `Nonprofit Cloud Consultant: grant management, constituent engagement, and fundraising. Nonprofit-specific study guide. Start free ${TITLE_YEAR}.`,
-    'nonprofit-success-pack-consultant': `Pass NPSP (Nonprofit Success Pack) Consultant. Donations, relationships, and nonprofit configuration. Free study guide ${TITLE_YEAR}.`,
-    'omnistudio-consultant': `Master OmniStudio Consultant. Omni-channel design, integration, and customer experience. Solution design study guide ${TITLE_YEAR}.`,
-    'omnistudio-developer': `Pass OmniStudio Developer. Component development, data handling, and OmniScript. Developer study guide ${TITLE_YEAR}.`,
-    'order-management-admin-ap': `Earn Order Management Admin AP. Order operations, fulfillment, and supply chain. Admin study guide ${TITLE_YEAR}.`,
-    'order-management-developer-ap': `Get Order Management Developer AP certified. API customization, integrations, and extensions. Developer guide ${TITLE_YEAR}.`,
-    'platform-foundations': `Salesforce Platform Foundations: Free practice (40 questions, ~65% passing, 75 min). Start free — sample questions & ${TITLE_YEAR} study guide. $75 fee.`,
-    'process-automation-ap': `Earn Process Automation AP. Business processes, automation design, and optimization. Free study guide ${TITLE_YEAR}.`,
-    'public-sector-solutions-ap': `Get Public Sector Solutions AP certified. Government features, compliance, and citizen engagement. Sector study guide ${TITLE_YEAR}.`,
-    'revenue-cloud-consultant': `Master Revenue Cloud Consultant. Billing cycles, revenue recognition, and order mgmt. Enterprise billing study guide ${TITLE_YEAR}.`,
-    'sales-foundations': `Start Sales Foundation. Sales fundamentals, CRM basics, and customer management. Beginner study guide ${TITLE_YEAR}.`,
-    'service-cloud': `Master Service Cloud Consultant. Case management, knowledge base, and customer service. Complete study guide + exam tips ${TITLE_YEAR}.`,
-    'slack-administrator': `Master Slack Administrator. Workspace setup, user management, and governance. Admin study guide with best practices ${TITLE_YEAR}.`,
-    'slack-consultant': `Become Slack Consultant. Slack strategy, integration design, and adoption. Solution design guide ${TITLE_YEAR}.`,
-    'strategy-designer': `Master Platform Strategy Designer. Strategy frameworks, go-to-market, and digital transformation. Strategy study guide ${TITLE_YEAR}.`,
-    'tableau-architect': `Ace Tableau Architect. Architecture design, governance, and enterprise analytics. Design patterns guide ${TITLE_YEAR}.`,
-    'tableau-consultant': `Master Tableau Consultant. Dashboard design, analytics, and visualization. Complete study guide with examples ${TITLE_YEAR}.`,
-    'tableau-desktop-foundations': `Start Tableau Desktop foundation knowledge. Dashboard basics, data visualization, and setup. Beginner guide ${TITLE_YEAR}.`,
-    'tableau-server-administrator': `Master Tableau Server Admin. Server setup, user management, and governance. Complete admin guide ${TITLE_YEAR}.`,
-    'technical-architect-evaluation': `Pass CTA Evaluation. Scenario-based exam, architectural decisions, and design justification. Exam strategy guide ${TITLE_YEAR}.`,
-    'ux-designer': `UX Designer certification: Free practice exam — 15 sample Qs, no sign-up. 60 questions, ~65% passing. ${TITLE_YEAR} study guide.`,
+    'advanced-field-service-ap': `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'administrator-practice-test': `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'agentforce-specialist': `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'application-architect': `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2b-solution-architect': `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2c-commerce-architect': `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2c-commerce-developer': `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'b2c-solution-architect': `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'communications-cloud-ap': `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'contact-center-ap': `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'cpq-billing-ap': `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'data-cloud-consultant': `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'email-specialist-practice-test': `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'energy-utilities-ap': `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'field-service': `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'financial-services-cloud-ap': `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'health-cloud-ap': `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'heroku-architect': `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'heroku-developer-ap': `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'industries-cpq-developer': `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'javascript-developer-i': `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'lightning-web-components-specialist': `Free LWC Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'loyalty-management-ap': `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-admin': `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-developer': `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-foundations': `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-personalization-ap': `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'media-cloud-ap': `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'mulesoft-developer-i': `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'mulesoft-developer-ii': `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'mulesoft-integration-architect': `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'mulesoft-platform-architect': `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'net-zero-cloud-ap': `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'nonprofit-cloud': `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'nonprofit-success-pack-consultant': `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'omnistudio-consultant': `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'omnistudio-developer': `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'order-management-admin-ap': `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'order-management-developer-ap': `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'platform-foundations': `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'process-automation-ap': `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'public-sector-solutions-ap': `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'revenue-cloud-consultant': `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'sales-foundations': `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'service-cloud': `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'slack-administrator': `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'slack-consultant': `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'strategy-designer': `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-server-administrator': `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'technical-architect-evaluation': `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'ux-designer': `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
@@ -866,189 +866,189 @@ export function getCertMetaDescription(slug: string): string {
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
-      'Prepare for the Salesforce Certified Platform Foundations certification (2026). $75 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'ai-associate':
-      'Prepare for the Salesforce Certified AI Associate certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-engagement-foundations':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-foundations':
-      'Prepare for the Salesforce Certified MuleSoft Integration Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      'Prepare for the Salesforce ADM-201 exam with updated 2026 objectives, section-wise weightage, exam tips, and free practice questions. Start your mock test today — no sign-up required.',
+      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'advanced-administrator':
-      'Prepare for the Salesforce Certified Advanced Administrator (ADM-211) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'app-builder':
       'No-code Salesforce certification. DEV-402 exam guide 2026: $200 fee, 60 questions, declarative app building. Perfect for admins ready to build custom apps. Free practice questions.',
     'agentforce-specialist':
-      'Prepare for the Salesforce Certified Agentforce Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'business-analyst':
       'Prepare for the Salesforce Certified Business Analyst certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'cpq-administrator':
       'Prepare for the Salesforce Certified CPQ Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-engagement-admin':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Admin certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'slack-administrator':
-      'Prepare for the Salesforce Certified Slack Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'administrator-practice-test':
-      'ADM-201 practice test: real-style questions, section weightage, passing score. Free. Updated 2026. Test yourself before the exam.',
+      `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
     'developer-1':
-      'Coding-focused Salesforce certification. PD1 exam guide 2026: $200 fee, 60 questions, Apex, triggers, SOQL, and Lightning Web Components. Required for architect paths. Free practice questions.',
+      `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'developer-2':
-      'Prepare for the Salesforce Certified Platform Developer II (PD2) certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'javascript-developer-i':
-      'Prepare for the Salesforce Certified JavaScript Developer I certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2c-commerce-developer':
-      'Prepare for the Salesforce Certified B2C Commerce Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'industries-cpq-developer':
-      'Prepare for the Salesforce Certified Industries CPQ Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-engagement-developer':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-developer-i':
-      'Prepare for the Salesforce Certified MuleSoft Developer I certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-developer-ii':
-      'Prepare for the Salesforce Certified MuleSoft Developer II certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-hyperautomation-developer':
-      'Prepare for the Salesforce Certified MuleSoft Hyperautomation Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'omnistudio-developer':
-      'Prepare for the Salesforce Certified OmniStudio Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'slack-developer':
-      'Prepare for the Salesforce Certified Slack Developer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
     'crm-analytics-einstein-discovery-consultant':
-      'Prepare for the Salesforce Certified CRM Analytics & Einstein Discovery Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'data-cloud-consultant':
-      'Prepare for the Salesforce Certified Data Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'education-cloud-consultant':
-      'Prepare for the Salesforce Certified Education Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'experience-cloud':
       'Prepare for the Salesforce Certified Experience Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'field-service':
-      'Prepare for the Salesforce Certified Field Service Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'pardot-consultant':
       'Prepare for the Salesforce Certified Pardot (Account Engagement) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-consultant':
       'Prepare for the Salesforce Certified Marketing Cloud Engagement Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'nonprofit-cloud':
-      'Prepare for the Salesforce Certified Nonprofit Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'nonprofit-success-pack-consultant':
-      'Prepare for the Salesforce Certified Nonprofit Success Pack (NPSP) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'omnistudio-consultant':
-      'Prepare for the Salesforce Certified OmniStudio Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'revenue-cloud-consultant':
-      'Prepare for the Salesforce Certified Revenue Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'sales-cloud':
       'Prepare for the Salesforce Certified Sales Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'service-cloud':
-      'Prepare for the Salesforce Certified Service Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'slack-consultant':
-      'Prepare for the Salesforce Certified Slack Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Marketing (strong CTR)
     'email-specialist':
-      'Prepare for the Salesforce Certified Marketing Cloud Email Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'pardot-specialist':
-      'Prepare for the Salesforce Certified Pardot (Account Engagement) Specialist certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'email-specialist-practice-test':
-      'Email Specialist practice test: real-style questions, weightage, passing score. Free. Updated 2026. Start free.',
+      `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Architect (Prepare for… format) - $400
     'application-architect':
-      'Prepare for the Salesforce Certified Application Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'data-architect':
       'Prepare for the Salesforce Certified Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'integration-architect':
       'Prepare for the Salesforce Certified Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'sharing-visibility-architect':
-      'Prepare for the Salesforce Certified Sharing and Visibility Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'system-architect':
       'Prepare for the Salesforce Certified System Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'identity-access-management-architect':
-      'Prepare for the Salesforce Certified Identity and Access Management Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'dev-lifecycle-deployment-architect':
-      'Prepare for the Salesforce Certified Dev Lifecycle and Deployment Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'technical-architect':
-      'Prepare for the Salesforce Certified Technical Architect (CTA) certification (2026). $6000 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'technical-architect-evaluation':
-      'Prepare for the CTA Architect Evaluation (2026). $6000 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'technical-architect-review-board':
-      'Prepare for the CTA Architect Review Board (2026). Practice questions and study materials to help you pass.',
+      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2b-solution-architect':
-      'Prepare for the Salesforce Certified B2B Solution Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2c-commerce-architect':
-      'Prepare for the Salesforce Certified B2C Commerce Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2c-solution-architect':
-      'Prepare for the Salesforce Certified B2C Solution Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'heroku-architect':
-      'Prepare for the Salesforce Certified Heroku Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-catalyst-consultant':
-      'Prepare for the Salesforce Certified MuleSoft Catalyst Consultant certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-platform-architect':
-      'Prepare for the Salesforce Certified MuleSoft Platform Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-architect':
-      'Prepare for the Salesforce Certified MuleSoft Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Accredited Professional (Prepare for… format; shorten long names to stay ≤160) - $100
     'advanced-field-service-ap':
-      'Prepare for the Salesforce Certified Advanced Field Service AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2b-commerce-admin-ap':
-      'Prepare for the Salesforce Certified B2B Commerce Admin AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'b2b-commerce-developer-ap':
-      'Prepare for the Salesforce Certified B2B Commerce Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'communications-cloud-ap':
-      'Prepare for the Salesforce Certified Communications Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'consumer-goods-cloud-ap':
-      'Prepare for the Salesforce Certified Consumer Goods Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'consumer-goods-tpm-ap':
-      'Prepare for the Salesforce Certified Consumer Goods TPM AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'contact-center-ap':
-      'Prepare for the Salesforce Certified Contact Center AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'cpq-billing-ap':
-      'Prepare for the Salesforce Certified CPQ and Billing AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'energy-utilities-ap':
-      'Prepare for the Salesforce Certified Energy and Utilities Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'financial-services-cloud-ap':
-      'Prepare for the Salesforce Certified Financial Services Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'health-cloud-ap':
-      'Prepare for the Salesforce Certified Health Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'heroku-developer-ap':
-      'Prepare for the Salesforce Certified Heroku Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'loyalty-management-ap':
-      'Prepare for the Salesforce Certified Loyalty Management AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'manufacturing-cloud-ap':
-      'Prepare for the Salesforce Certified Manufacturing Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-advanced-cross-channel-ap':
-      'Prepare for the Salesforce Certified Marketing Cloud Advanced Cross Channel AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-intelligence-ap':
-      'Prepare for the Salesforce Certified Marketing Cloud Intelligence AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-personalization-ap':
-      'Prepare for the Salesforce Certified Marketing Cloud Personalization AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'media-cloud-ap':
-      'Prepare for the Salesforce Certified Media Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'net-zero-cloud-ap':
-      'Prepare for the Salesforce Certified Net Zero Cloud AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'order-management-admin-ap':
-      'Prepare for the Salesforce Certified Order Management Admin AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'order-management-developer-ap':
-      'Prepare for the Salesforce Certified Order Management Developer AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'process-automation-ap':
-      'Prepare for the Salesforce Certified Process Automation AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'public-sector-solutions-ap':
-      'Prepare for the Salesforce Certified Public Sector Solutions AP certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Sales
     'sales-foundations':
-      'Prepare for the Salesforce Certified Sales Foundations certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Designer
     'strategy-designer':
-      'Prepare for the Salesforce Certified Platform Strategy Designer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'ux-designer':
-      'Prepare for the Salesforce Certified UX Designer certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
     // Tableau - $250 (except Desktop Foundations $100)
-    'tableau-architect': 'Salesforce Tableau Architect',
-    'tableau-consultant': 'Salesforce Tableau Consultant',
-    'tableau-data-analyst': 'Salesforce Tableau Data Analyst',
+    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-data-analyst': `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'tableau-desktop-foundations':
-      'Prepare for the Salesforce Certified Tableau Desktop Foundations certification (2026). $100 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
     'tableau-server-administrator':
-      'Prepare for the Salesforce Certified Tableau Server Administrator certification (2026). $250 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
   }
   const custom = templates[slug]
   // Keep custom templates only for practice-test pages; otherwise use the standardized description
