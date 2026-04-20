@@ -31,7 +31,7 @@
       },
       {
         "heading": "Leads, Opportunities & Pipeline Management",
-        "body": "Lead Status (New → Working → Converted/Dead) tracks qualification progress. Lead Assignment Rules automatically route new leads to the right rep or queue based on criteria (geography, industry, source). Opportunity Stages reflect the sales process steps — tied to Probability % for forecasting. Close Date, Amount, and Stage drive the opportunity pipeline view. Opportunity Contact Roles define each contact's role in the deal (Decision Maker, Evaluator, Economic Buyer). Path provides stage guidance with key fields and coach notes at each stage. The exam tests how to configure lead assignment, how opportunity stages feed forecasting, and what Opportunity Contact Roles represent."
+        "body": "Lead Status (New → Working → Converted/Dead) tracks qualification progress. Lead **Assignment Rules** automatically route new leads to the right rep or queue based on criteria (geography, industry, source). Opportunity Stages reflect the sales process steps — tied to Probability % for forecasting. Close Date, Amount, and Stage drive the opportunity pipeline view. Opportunity Contact Roles define each contact's role in the deal (Decision Maker, Evaluator, Economic Buyer). Path provides stage guidance with key fields and coach notes at each stage. The exam tests how to configure lead assignment, how opportunity stages feed forecasting, and what Opportunity Contact Roles represent."
       },
       {
         "heading": "Forecasting & Collaboration",
@@ -39,11 +39,11 @@
       },
       {
         "heading": "Productivity Tools: Email, Calendar & Mobile",
-        "body": "Salesforce Inbox integrates Outlook/Gmail with Salesforce — log emails to records, view related CRM data in the email client, and schedule meetings with calendar sync. Einstein Activity Capture automatically logs emails and calendar events to related Salesforce records, reducing manual data entry. Salesforce Mobile App lets reps access accounts, opportunities, and tasks on the go. Mobile Quick Actions (Log a Call, New Event) are customizable per object. Einstein Relationship Insights surfaces web and LinkedIn data about contacts and accounts. The exam tests how to configure Einstein Activity Capture, how email-to-case differs from email logging, and which productivity features are available on the mobile app without additional configuration."
+        "body": "Salesforce Inbox integrates Outlook/Gmail with Salesforce — log emails to records, view related CRM data in the email client, and schedule meetings with calendar sync. Einstein Activity Capture automatically logs emails and calendar events to related Salesforce records, reducing manual data entry. Salesforce Mobile App lets reps access accounts, opportunities, and tasks on the go. Mobile Quick Actions (Log a Call, New Event) are customizable per object. Einstein Relationship Insights surfaces web and LinkedIn data about contacts and accounts. The exam tests how to configure Einstein Activity Capture, how **email-to-case** differs from email logging, and which productivity features are available on the mobile app without additional configuration."
       },
       {
         "heading": "Reports, Dashboards & Sales Analytics",
-        "body": "Sales reports and dashboards provide visibility into pipeline health, quota attainment, and activity metrics. Key sales reports: Opportunities by Stage, Pipeline by Rep, Activities by Type, Lead Conversion Rate, Won/Lost Analysis. Summary reports group opportunities by stage or rep for subtotals. Matrix reports cross-reference rep by quarter for attainment tracking. Dashboards surface key metrics: Pipeline Value, Win Rate, Average Deal Size, Sales Cycle Length. CRM Analytics (Einstein Analytics) Sales Wave provides advanced pre-built dashboards. Report subscriptions deliver scheduled reports via email. The exam tests how to build a pipeline summary report, how to configure a dashboard for a VP of Sales, and how to share reports with the appropriate audience."
+        "body": "Sales reports and dashboards provide visibility into pipeline health, quota attainment, and activity metrics. Key sales reports: Opportunities by Stage, Pipeline by Rep, Activities by Type, Lead Conversion Rate, Won/Lost Analysis. Summary reports group opportunities by stage or rep for subtotals. Matrix reports cross-reference rep by quarter for attainment tracking. Dashboards surface key metrics: Pipeline Value, Win Rate, Average Deal Size, Sales Cycle Length. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (**Einstein Analytics**) Sales Wave provides advanced pre-built dashboards. Report subscriptions deliver scheduled reports via email. The exam tests how to build a pipeline summary report, how to configure a dashboard for a VP of Sales, and how to share reports with the appropriate audience."
       }
     ]
   },
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "Leads & Lead Management",
-        "body": "Know the Lead lifecycle: capture, qualify, assign (assignment rules), and convert. Understand what data transfers to Account, Contact, and Opportunity during conversion and what does not."
+        "body": "Know the Lead lifecycle: capture, qualify, assign (**assignment rules**), and convert. Understand what data transfers to Account, Contact, and Opportunity during conversion and what does not."
       },
       {
         "heading": "Account & Contact Management",

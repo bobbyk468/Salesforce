@@ -65,11 +65,11 @@
       },
       {
         "heading": "Calculated Insights & Einstein",
-        "body": "Know how to create Calculated Insights for metric computation (e.g., LTV, engagement score) using SOQL-like query language. Understand how Einstein features in Data Cloud use unified profiles for predictions."
+        "body": "Know how to create Calculated Insights for metric computation (e.g., LTV, engagement score) using **SOQL**-like query language. Understand how Einstein features in Data Cloud use unified profiles for predictions."
       },
       {
         "heading": "Data Cloud Permissions & Governance",
-        "body": "Understand Data Cloud permission sets, data spaces for data segregation, consent management, and the Data Cloud governance framework for handling PII and regulatory compliance."
+        "body": "Understand Data Cloud **permission sets**, data spaces for data segregation, consent management, and the Data Cloud governance framework for handling PII and regulatory compliance."
       }
     ]
   },

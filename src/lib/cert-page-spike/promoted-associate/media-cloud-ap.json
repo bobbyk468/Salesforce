@@ -38,7 +38,7 @@
       },
       {
         "heading": "Analytics & Campaign Performance",
-        "body": "Media Cloud reporting tracks advertising campaign delivery, pacing, and performance. Delivery Reports compare contracted impressions/spots against actual delivered figures. Pacing dashboards alert sales ops when a campaign is at risk of under-delivery. Post-Campaign Analysis reports provide the final performance summary for advertiser billing and make-good decisions. CRM Analytics Media Cloud apps provide pre-built revenue and inventory dashboards. Integration with ad servers (DFP, FreeWheel, Operative) pulls in actual delivery data. The exam tests how campaign performance data flows from ad servers into Media Cloud, which standard reports are available, and how under-delivery triggers a make-good workflow."
+        "body": "Media Cloud reporting tracks advertising campaign delivery, pacing, and performance. Delivery Reports compare contracted impressions/spots against actual delivered figures. Pacing dashboards alert sales ops when a campaign is at risk of under-delivery. Post-Campaign Analysis reports provide the final performance summary for advertiser billing and make-good decisions. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) Media Cloud apps provide pre-built revenue and inventory dashboards. Integration with ad servers (DFP, FreeWheel, Operative) pulls in actual delivery data. The exam tests how campaign performance data flows from ad servers into Media Cloud, which standard reports are available, and how under-delivery triggers a make-good workflow."
       }
     ]
   },

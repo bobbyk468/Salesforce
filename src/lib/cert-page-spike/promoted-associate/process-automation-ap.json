@@ -22,11 +22,11 @@
     "blocks": [
       {
         "heading": "Flow Builder: Types & Trigger Contexts",
-        "body": "Flow Builder is the primary automation tool in Salesforce. Flow types: Record-Triggered (fires before/after save on record create/update/delete), Screen Flow (guided UI for users), Scheduled Flow (batch process at a set time), Autolaunched Flow (called programmatically, no UI). Before-Save flows are faster and can update the triggering record without a DML statement — cannot create/update other records. After-Save flows can create/update related records but run after the transaction. The AP exam tests deep Flow configuration: complex branching logic, loop handling, fault paths, and the performance differences between Before-Save and After-Save contexts."
+        "body": "Flow Builder is the primary automation tool in Salesforce. Flow types: Record-Triggered (fires before/after save on record create/update/delete), **Screen Flow** (guided UI for users), **Scheduled Flow** (batch process at a set time), **Autolaunched Flow** (called programmatically, no UI). Before-Save flows are faster and can update the triggering record without a **DML** statement — cannot create/update other records. After-Save flows can create/update related records but run after the transaction. The AP exam tests deep Flow configuration: complex branching logic, loop handling, fault paths, and the performance differences between Before-Save and After-Save contexts."
       },
       {
         "heading": "Advanced Flow Patterns",
-        "body": "Subflows allow one flow to call another — promotes reusability. Screen Flows can be embedded in Lightning pages, Experience Cloud sites, and utility bars. Dynamic Forms and Dynamic Actions in Lightning App Builder work alongside Screen Flows for fully conditional UI. Collection variables hold multiple records for batch operations within a flow. Loop elements iterate over collections. Decision elements branch based on conditions. Assignment elements modify variable values. Get Records / Create Records / Update Records / Delete Records elements perform DML. The exam tests how to design a flow that processes a collection of related records, handles errors gracefully, and uses a subflow to encapsulate a reusable business logic pattern."
+        "body": "Subflows allow one flow to call another — promotes reusability. Screen Flows can be embedded in Lightning pages, Experience Cloud sites, and utility bars. **Dynamic Forms** and Dynamic Actions in **Lightning App Builder** work alongside Screen Flows for fully conditional UI. Collection variables hold multiple records for batch operations within a flow. Loop elements iterate over collections. Decision elements branch based on conditions. Assignment elements modify variable values. Get Records / Create Records / Update Records / Delete Records elements perform **DML**. The exam tests how to design a flow that processes a collection of related records, handles errors gracefully, and uses a subflow to encapsulate a reusable business logic pattern."
       },
       {
         "heading": "Approval Processes & Entitlements",
@@ -34,11 +34,11 @@
       },
       {
         "heading": "Triggered Automation: Apex Triggers",
-        "body": "When declarative automation is insufficient, Apex Triggers provide code-based automation. Triggers fire before/after insert, update, delete, and undelete events. Best practice: one trigger per object, all logic in a handler class (Trigger Handler pattern). Bulkification is mandatory — triggers must handle 200 records at once using collections instead of per-record DML or SOQL. Context variables: `Trigger.new`, `Trigger.old`, `Trigger.isInsert`, `Trigger.isBefore`. Recursion prevention: use a static Boolean flag to prevent triggers from re-firing. The AP exam tests how to design a bulkified trigger with a handler class, how to prevent recursion, and how to write test classes with sufficient bulk data."
+        "body": "When declarative automation is insufficient, **Apex** Triggers provide code-based automation. Triggers fire before/after insert, update, delete, and undelete events. Best practice: one trigger per object, all logic in a handler class (Trigger Handler pattern). Bulkification is mandatory — triggers must handle 200 records at once using collections instead of per-record **DML** or **SOQL**. Context variables: `Trigger.new`, `Trigger.old`, `Trigger.isInsert`, `Trigger.isBefore`. Recursion prevention: use a static Boolean flag to prevent triggers from re-firing. The AP exam tests how to design a bulkified trigger with a handler class, how to prevent recursion, and how to write test classes with sufficient bulk data."
       },
       {
         "heading": "Testing, Debugging & Best Practices",
-        "body": "All Apex automation (triggers, classes) requires ≥75% code coverage for deployment to production. Test classes use `@isTest` annotation, `Test.startTest()` / `Test.stopTest()` to isolate governor limits, and `System.assert` for validation. Flow testing: use the Flow Debug feature in Flow Builder for step-through debugging; unit tests for flows via Apex use `Flow.Interview`. Process Automation audit trail: the Setup Audit Trail records configuration changes. Debug Logs capture detailed execution traces. Automation order of execution matters: Validation Rules → Before Triggers → Before Flows → After Triggers → After Flows → Workflow Rules → Processes → After-Save Flows. The exam tests how to diagnose an automation conflict and the correct sequence of execution."
+        "body": "All **Apex** automation (triggers, classes) requires ≥75% code coverage for deployment to production. Test classes use `@isTest` annotation, `Test.startTest()` / `Test.stopTest()` to isolate **governor limits**, and `System.assert` for validation. Flow testing: use the Flow Debug feature in Flow Builder for step-through debugging; unit tests for flows via Apex use `Flow.Interview`. Process Automation audit trail: the Setup Audit Trail records configuration changes. Debug Logs capture detailed execution traces. Automation order of execution matters: **Validation Rules** → Before Triggers → Before Flows → After Triggers → After Flows → Workflow Rules → Processes → After-Save Flows. The exam tests how to diagnose an automation conflict and the correct sequence of execution."
       }
     ]
   },
@@ -52,7 +52,7 @@
       },
       {
         "heading": "Before-Save vs. After-Save Trade-offs",
-        "body": "Before-save flows are faster (no DML operation) and best for updating the triggering record's fields. After-save flows allow related record operations and sending emails but consume DML statements and governor limits."
+        "body": "Before-save flows are faster (no **DML** operation) and best for updating the triggering record's fields. After-save flows allow related record operations and sending emails but consume DML statements and **governor limits**."
       },
       {
         "heading": "Error Handling with Fault Paths",
@@ -60,7 +60,7 @@
       },
       {
         "heading": "Collections & Governor Limits",
-        "body": "Flows count against DML and SOQL limits. Use collections and loops efficiently — get all records first in one Get element, loop through them, and store results in a collection before a single DML operation."
+        "body": "Flows count against **DML** and **SOQL** limits. Use collections and loops efficiently — get all records first in one Get element, loop through them, and store results in a collection before a single DML operation."
       },
       {
         "heading": "Flow Testing & Deployment",

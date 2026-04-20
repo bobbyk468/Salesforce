@@ -39,7 +39,7 @@
       },
       {
         "heading": "Analytics and Population Health Management",
-        "body": "Health Cloud analytics use CRM Analytics (Einstein Analytics) with pre-built Health Cloud datasets and dashboards. Population Health dashboards segment patients by condition, risk score, engagement level, or care gap. Risk stratification identifies high-risk patients who need proactive outreach. Care gap analysis identifies patients overdue for preventive care (annual wellness visits, screenings). Patient lists (list views of patients meeting specific criteria) drive targeted outreach campaigns. The consultant designs the analytics strategy to support value-based care performance measurement."
+        "body": "Health Cloud analytics use [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (**Einstein Analytics**) with pre-built Health Cloud datasets and dashboards. Population Health dashboards segment patients by condition, risk score, engagement level, or care gap. Risk stratification identifies high-risk patients who need proactive outreach. Care gap analysis identifies patients overdue for preventive care (annual wellness visits, screenings). Patient lists (list views of patients meeting specific criteria) drive targeted outreach campaigns. The consultant designs the analytics strategy to support value-based care performance measurement."
       }
     ]
   },

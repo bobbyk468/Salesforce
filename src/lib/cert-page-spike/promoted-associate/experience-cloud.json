@@ -31,7 +31,7 @@
       },
       {
         "heading": "Sharing Model for External Users",
-        "body": "External user record access follows a different model than internal users. Sharing Sets grant access to records matching the user's Account or Contact — without roles or sharing rules. External Account Hierarchy allows partner users to see records owned by users below them in the partner account hierarchy. Sharing Rules extend access beyond these mechanisms. Guest users get access only through explicit guest user sharing rules. Know which mechanism to apply for each access scenario."
+        "body": "External user record access follows a different model than internal users. Sharing Sets grant access to records matching the user's Account or Contact — without roles or **sharing rules**. External Account Hierarchy allows partner users to see records owned by users below them in the partner account hierarchy. Sharing Rules extend access beyond these mechanisms. Guest users get access only through explicit guest user sharing rules. Know which mechanism to apply for each access scenario."
       },
       {
         "heading": "User Licensing: Customer, Partner, and Guest Users",
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "External User Sharing Model",
-        "body": "External users have their own sharing rules separate from internal users. Know how to configure Sharing Sets (for portal users), External Account Hierarchy, and how Super User Access works for partner users."
+        "body": "External users have their own **sharing rules** separate from internal users. Know how to configure Sharing Sets (for portal users), External Account Hierarchy, and how Super User Access works for partner users."
       },
       {
         "heading": "Template & Page Configuration",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "User Authentication Options",
-        "body": "Know the difference between username/password login, SSO (SAML, OAuth), social login, and self-registration flows. Understand how to configure login pages, login flows, and identity verification."
+        "body": "Know the difference between username/password login, **SSO** (**SAML**, **OAuth**), social login, and self-registration flows. Understand how to configure login pages, login flows, and identity verification."
       },
       {
         "heading": "CMS & Content Management",

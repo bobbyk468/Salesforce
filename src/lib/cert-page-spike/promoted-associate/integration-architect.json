@@ -46,7 +46,7 @@
       },
       {
         "heading": "Integration Security",
-        "body": "Be comfortable with security concepts like OAuth 2.0 flows, Connected Apps, Named Credentials, and when to use different authentication mechanisms to secure data in transit."
+        "body": "Be comfortable with security concepts like **OAuth** 2.0 flows, **Connected Apps**, **Named Credentials**, and when to use different authentication mechanisms to secure data in transit."
       },
       {
         "heading": "Error Handling and Recovery",
@@ -54,7 +54,7 @@
       },
       {
         "heading": "Platform Events and Event-Driven Architecture",
-        "body": "Know how to use Platform Events to build a scalable, event-driven architecture. Understand the publish-subscribe model and how it helps in decoupling systems."
+        "body": "Know how to use **Platform Events** to build a scalable, event-driven architecture. Understand the publish-subscribe model and how it helps in decoupling systems."
       },
       {
         "heading": "API Management",
@@ -72,11 +72,11 @@
       },
       {
         "heading": "REST vs. SOAP vs. Bulk API",
-        "body": "REST API for CRUD operations and real-time integrations; SOAP API for older enterprise systems requiring WSDL; Bulk API for high-volume data loads; Streaming API for real-time push notifications. Know when each is appropriate."
+        "body": "**REST API** for CRUD operations and real-time integrations; **SOAP API** for older enterprise systems requiring WSDL; **Bulk API** for high-volume data loads; **Streaming API** for real-time push notifications. Know when each is appropriate."
       },
       {
         "heading": "Platform Events & Change Data Capture",
-        "body": "Platform Events decouple publisher/subscriber and support event-driven integration. CDC pushes field-level change records to subscribers. Know how to configure each and handle event replay for reliability."
+        "body": "**Platform Events** decouple publisher/subscriber and support event-driven integration. CDC pushes field-level change records to subscribers. Know how to configure each and handle event replay for reliability."
       },
       {
         "heading": "Middleware & MuleSoft",
@@ -84,7 +84,7 @@
       },
       {
         "heading": "Security in Integrations",
-        "body": "Know how to use Named Credentials for secure outbound connections, OAuth flows for external system authentication, and how to implement IP restrictions and mutual TLS for sensitive integrations."
+        "body": "Know how to use **Named Credentials** for secure outbound connections, **OAuth** flows for external system authentication, and how to implement IP restrictions and mutual TLS for sensitive integrations."
       }
     ]
   },

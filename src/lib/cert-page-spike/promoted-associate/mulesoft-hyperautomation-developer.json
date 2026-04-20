@@ -39,7 +39,7 @@
       },
       {
         "heading": "Orchestrating Automation with Salesforce Flow",
-        "body": "Salesforce Flow orchestrates the human-facing process steps — approvals, guided data entry, notifications. MuleSoft handles the system integration behind the Flow. In Hyperautomation scenarios: a Flow captures user input, triggers a MuleSoft API via an Apex callout or Platform Event, MuleSoft calls external systems, and returns results to update Salesforce records. RPA handles legacy system interaction that cannot be API-ified. The developer designs the orchestration layer — deciding which tool owns each step of the process."
+        "body": "Salesforce Flow orchestrates the human-facing process steps — approvals, guided data entry, notifications. MuleSoft handles the system integration behind the Flow. In Hyperautomation scenarios: a Flow captures user input, triggers a MuleSoft API via an **Apex** callout or Platform Event, MuleSoft calls external systems, and returns results to update Salesforce records. RPA handles legacy system interaction that cannot be API-ified. The developer designs the orchestration layer — deciding which tool owns each step of the process."
       },
       {
         "heading": "Governance and Security for Bots",

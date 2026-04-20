@@ -39,7 +39,7 @@
       },
       {
         "heading": "Marketing Cloud REST and SOAP APIs",
-        "body": "REST API: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). SOAP API: Subscriber, List, TriggeredSend objects — legacy but still tested. Authentication: obtain access token via OAuth 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
+        "body": "**REST API**: subscriber management (POST /contacts/v1/contacts), Data Extension CRUD (/data/v1/async/dataextensions/), message send (/messaging/v1/messageDefinitionSends/). **SOAP API**: Subscriber, List, TriggeredSend objects — legacy but still tested. Authentication: obtain access token via **OAuth** 2.0 client credentials flow, include Bearer token in API headers. The developer exam tests which API endpoint handles a given task and how to construct the request body."
       },
       {
         "heading": "Automation Studio Script Activities",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "REST & SOAP API Usage",
-        "body": "Know the key Marketing Cloud REST API endpoints: /contacts/v1/contacts, /messaging/v1/messageDefinitionSends, /data/v1/async, and how to authenticate using OAuth 2.0 client credentials."
+        "body": "Know the key Marketing Cloud **REST API** endpoints: /contacts/v1/contacts, /messaging/v1/messageDefinitionSends, /data/v1/async, and how to authenticate using **OAuth** 2.0 client credentials."
       },
       {
         "heading": "Custom Activities in Journey Builder",

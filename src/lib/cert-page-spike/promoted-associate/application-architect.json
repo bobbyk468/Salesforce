@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "Data Architecture: Object Design and Large Data Volumes",
-        "body": "Application Architects design the data model to support business processes, sharing requirements, and performance. Master-Detail vs Lookup choice impacts cascade delete, sharing inheritance, roll-up summaries, and required relationship. Junction objects for many-to-many. External Objects for data federation. Large Data Volume (LDV) considerations &mdash; indexed fields, selective queries, skinny tables &mdash; must be built into the design, not retrofitted. The architect evaluates trade-offs between normalised and denormalised structures based on query patterns."
+        "body": "Application Architects design the data model to support business processes, sharing requirements, and performance. **Master-Detail** vs Lookup choice impacts cascade delete, sharing inheritance, roll-up summaries, and required relationship. **Junction objects** for many-to-many. External Objects for data federation. Large Data Volume (LDV) considerations &mdash; indexed fields, selective queries, skinny tables &mdash; must be built into the design, not retrofitted. The architect evaluates trade-offs between normalised and denormalised structures based on query patterns."
       },
       {
         "heading": "Business Logic: Flow vs Apex Decision Matrix",
-        "body": "Prefer declarative (Flow) over programmatic (Apex) when flows can handle the logic without governor limit concerns. Use Apex when: the logic is too complex for Flow, requires complex data manipulation, needs callouts, or has performance requirements that Flow cannot meet. Platform Events decouple systems &mdash; use for fire-and-forget async messaging. Change Data Capture streams record changes to external systems. The exam tests the trade-off decision at the architect level &mdash; maintainability, scalability, and test coverage requirements factor into the choice."
+        "body": "Prefer declarative (Flow) over programmatic (**Apex**) when flows can handle the logic without governor limit concerns. Use Apex when: the logic is too complex for Flow, requires complex data manipulation, needs callouts, or has performance requirements that Flow cannot meet. **Platform Events** decouple systems &mdash; use for fire-and-forget async messaging. **Change Data Capture** streams record changes to external systems. The exam tests the trade-off decision at the architect level &mdash; maintainability, scalability, and test coverage requirements factor into the choice."
       },
       {
         "heading": "Integration Architecture: Patterns and Tools",
-        "body": "REST callouts for synchronous data retrieval. Platform Events for async, decoupled messaging. Bulk API 2.0 for high-volume data exchange. MuleSoft for complex orchestration, protocol translation, or multi-system fan-out. Named Credentials secure endpoint and auth configuration. The integration pattern selection depends on: synchronous vs asynchronous requirements, volume (Bulk API threshold is typically 200+ records), direction (inbound vs outbound), and latency requirements. The exam tests pattern selection based on these criteria."
+        "body": "REST callouts for synchronous data retrieval. **Platform Events** for async, decoupled messaging. **Bulk API** 2.0 for high-volume data exchange. MuleSoft for complex orchestration, protocol translation, or multi-system fan-out. **Named Credentials** secure endpoint and auth configuration. The integration pattern selection depends on: synchronous vs asynchronous requirements, volume (Bulk API threshold is typically 200+ records), direction (inbound vs outbound), and latency requirements. The exam tests pattern selection based on these criteria."
       },
       {
         "heading": "Security Architecture: Layered Access Design",
-        "body": "Security design starts at the data model &mdash; OWD determines the record access baseline. Role Hierarchy grants manager visibility. Sharing Rules extend access. Permission Sets and Permission Set Groups manage object/field permissions. The architect must also consider Connected App policies, OAuth scopes, Named Credentials, Shield Platform Encryption for sensitive data, and Event Monitoring for audit. The exam tests holistic security design &mdash; identifying which layer to configure for a given access requirement."
+        "body": "Security design starts at the data model &mdash; **OWD** determines the record access baseline. **Role Hierarchy** grants manager visibility. **Sharing Rules** extend access. **Permission Sets** and **Permission Set Groups** manage object/field permissions. The architect must also consider Connected App policies, **OAuth** scopes, **Named Credentials**, Shield Platform Encryption for sensitive data, and Event Monitoring for audit. The exam tests holistic security design &mdash; identifying which layer to configure for a given access requirement."
       },
       {
         "heading": "Declarative vs Programmatic Trade-offs",
-        "body": "Architects make build-vs-configure decisions. Declarative tools (Flow, Validation Rules, Formula Fields, Approval Processes) are preferred for maintainability &mdash; no deployment complexity, admins can modify without code deployment. Programmatic code (Apex, LWC) is required for: complex conditional logic exceeding Flow capabilities, external system callouts requiring transformation, and UI patterns not achievable declaratively. The exam presents a business requirement and asks which combination of declarative and programmatic tools provides the best architecture, weighing complexity, maintainability, and scalability."
+        "body": "Architects make build-vs-configure decisions. Declarative tools (Flow, **Validation Rules**, Formula Fields, Approval Processes) are preferred for maintainability &mdash; no deployment complexity, admins can modify without code deployment. Programmatic code (**Apex**, **LWC**) is required for: complex conditional logic exceeding Flow capabilities, external system callouts requiring transformation, and UI patterns not achievable declaratively. The exam presents a business requirement and asks which combination of declarative and programmatic tools provides the best architecture, weighing complexity, maintainability, and scalability."
       }
     ]
   },
@@ -53,19 +53,19 @@
     "blocks": [
       {
         "heading": "Data Modeling for Scale",
-        "body": "Know when to use lookup vs. master-detail, external objects (Salesforce Connect), big objects, and custom metadata types. Understand the impact of each relationship type on reporting, rollups, and data access."
+        "body": "Know when to use lookup vs. **master-detail**, external objects (Salesforce Connect), big objects, and custom metadata types. Understand the impact of each relationship type on reporting, rollups, and data access."
       },
       {
         "heading": "Security Architecture Layers",
-        "body": "Understand how object-level, field-level, and record-level security interact. Know the order of evaluation and how to use the Access Checker to diagnose access issues in complex orgs."
+        "body": "Understand how object-level, field-level, and **record-level security** interact. Know the order of evaluation and how to use the Access Checker to diagnose access issues in complex orgs."
       },
       {
         "heading": "Apex Design Patterns",
-        "body": "Know common design patterns: Singleton, Strategy, and Decorator for Apex. Understand trigger frameworks (one trigger per object pattern), virtual/abstract classes, and interface-based design for testability."
+        "body": "Know common design patterns: Singleton, Strategy, and Decorator for **Apex**. Understand trigger frameworks (one trigger per object pattern), virtual/abstract classes, and interface-based design for testability."
       },
       {
         "heading": "Integration Patterns",
-        "body": "Know the canonical integration patterns: Remote Process Invocation (request/reply and fire-and-forget), Data Virtualization, Batch Data Sync, and UI Update via Remote Process. Match each to REST/SOAP/Platform Events."
+        "body": "Know the canonical integration patterns: Remote Process Invocation (request/reply and fire-and-forget), Data Virtualization, Batch Data Sync, and UI Update via Remote Process. Match each to REST/SOAP/**Platform Events**."
       },
       {
         "heading": "Declarative vs. Programmatic Decision",

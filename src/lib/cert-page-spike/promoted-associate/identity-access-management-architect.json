@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "Identity Fundamentals: Authentication vs Authorisation",
-        "body": "Authentication verifies who you are (login). Authorisation determines what you can access (permissions). An Identity Provider (IdP) authenticates users and issues assertions. A Service Provider (SP) relies on the IdP's assertion to grant access. Salesforce can act as both &mdash; as an IdP for connected apps and external systems, and as an SP when receiving SSO from corporate identity systems like Okta or Azure AD. Understanding this distinction is the foundation for all IAM exam questions."
+        "body": "Authentication verifies who you are (login). Authorisation determines what you can access (permissions). An Identity Provider (IdP) authenticates users and issues assertions. A Service Provider (SP) relies on the IdP's assertion to grant access. Salesforce can act as both &mdash; as an IdP for **connected apps** and external systems, and as an SP when receiving **SSO** from corporate identity systems like Okta or Azure AD. Understanding this distinction is the foundation for all IAM exam questions."
       },
       {
         "heading": "SAML 2.0 SSO: SP-Initiated vs IdP-Initiated",
-        "body": "SAML 2.0 is the standard for web SSO. SP-Initiated SSO: the user accesses Salesforce, gets redirected to the IdP for login, the IdP sends a SAML assertion back to Salesforce. IdP-Initiated SSO: the user logs in at the IdP portal first, then accesses Salesforce from there &mdash; no redirect needed. My Domain is required for SSO &mdash; it provides the Salesforce login URL that the IdP redirects to. The exam tests the SSO flow direction, how to configure the SAML settings, and certificate management."
+        "body": "**SAML** 2.0 is the standard for web **SSO**. SP-Initiated SSO: the user accesses Salesforce, gets redirected to the IdP for login, the IdP sends a SAML assertion back to Salesforce. IdP-Initiated SSO: the user logs in at the IdP portal first, then accesses Salesforce from there &mdash; no redirect needed. My Domain is required for SSO &mdash; it provides the Salesforce login URL that the IdP redirects to. The exam tests the SSO flow direction, how to configure the SAML settings, and certificate management."
       },
       {
         "heading": "OAuth 2.0 Flows: Server, JWT, and Client Credentials",
-        "body": "Web Server Flow (Authorization Code): user-facing, browser redirect, best for interactive login. JWT Bearer Flow: server-to-server, no user interaction &mdash; client signs a JWT with a private key registered as a certificate on the Connected App. Client Credentials Flow: machine-to-machine authentication using client ID & secret. Device Flow: for devices without browsers (smart TV, IoT). PKCE (Proof Key for Code Exchange): protects mobile apps against authorization code interception. The exam presents an integration scenario and asks which OAuth flow is appropriate."
+        "body": "Web Server Flow (Authorization Code): user-facing, browser redirect, best for interactive login. **JWT** Bearer Flow: server-to-server, no user interaction &mdash; client signs a JWT with a private key registered as a certificate on the Connected App. Client Credentials Flow: machine-to-machine authentication using client ID & secret. Device Flow: for devices without browsers (smart TV, IoT). PKCE (Proof Key for Code Exchange): protects mobile apps against authorization code interception. The exam presents an integration scenario and asks which **OAuth** flow is appropriate."
       },
       {
         "heading": "Connected Apps: Scopes, Policies, and Sessions",
-        "body": "Connected Apps define the OAuth configuration &mdash; scopes (which Salesforce data the app can access), IP ranges, session duration, and refresh token policy. OAuth scopes include api, full, refresh_token, web, chatter_api, and others. The Manage Connected Apps permission is required to modify policies. IP allowlists on Connected Apps can restrict which IPs can obtain tokens. Certificate-based authentication (mutual TLS) eliminates shared secrets by using client certificates for authentication."
+        "body": "**Connected Apps** define the **OAuth** configuration &mdash; scopes (which Salesforce data the app can access), IP ranges, session duration, and refresh token policy. OAuth scopes include api, full, refresh_token, web, chatter_api, and others. The Manage Connected Apps permission is required to modify policies. IP allowlists on Connected Apps can restrict which IPs can obtain tokens. Certificate-based authentication (mutual TLS) eliminates shared secrets by using client certificates for authentication."
       },
       {
         "heading": "MFA, My Domain, and Identity Connect",
-        "body": "Multi-Factor Authentication (MFA) is now required for all Salesforce users &mdash; admins cannot disable it org-wide. MFA methods: Salesforce Authenticator (push notification), TOTP apps (Google Authenticator), security keys (WebAuthn). My Domain customises the Salesforce login URL and is required for SSO, custom components, and some lightning features. Identity Connect (Salesforce Identity for AD) syncs Active Directory users to Salesforce &mdash; supports LDAP directory integration for provisioning and deprovisioning."
+        "body": "Multi-Factor Authentication (**MFA**) is now required for all Salesforce users &mdash; admins cannot disable it org-wide. MFA methods: Salesforce Authenticator (push notification), TOTP apps (Google Authenticator), security keys (WebAuthn). My Domain customises the Salesforce login URL and is required for **SSO**, custom components, and some lightning features. Identity Connect (Salesforce Identity for AD) syncs Active Directory users to Salesforce &mdash; supports LDAP directory integration for provisioning and deprovisioning."
       }
     ]
   },
@@ -53,23 +53,23 @@
     "blocks": [
       {
         "heading": "OAuth 2.0 Flows",
-        "body": "Know all OAuth flows: Web Server (authorization code), User-Agent (implicit), Username-Password, JWT Bearer, Device, and Refresh Token flows. Match each flow to its use case and security characteristics."
+        "body": "Know all **OAuth** flows: Web Server (authorization code), User-Agent (implicit), Username-Password, **JWT** Bearer, Device, and Refresh Token flows. Match each flow to its use case and security characteristics."
       },
       {
         "heading": "SAML & SSO Configuration",
-        "body": "Understand how SAML 2.0 enables SSO: SP-Initiated vs. IdP-Initiated flows, assertion attributes, Federation IDs, and how to configure Salesforce as a SP or IdP. Know common troubleshooting steps."
+        "body": "Understand how **SAML** 2.0 enables **SSO**: SP-Initiated vs. IdP-Initiated flows, assertion attributes, Federation IDs, and how to configure Salesforce as a SP or IdP. Know common troubleshooting steps."
       },
       {
         "heading": "Connected Apps & Scopes",
-        "body": "Know how Connected Apps control external system access to Salesforce APIs. Understand OAuth scopes, IP restrictions, user provisioning (SCIM), and how policies control access."
+        "body": "Know how **Connected Apps** control external system access to Salesforce APIs. Understand **OAuth** scopes, IP restrictions, user provisioning (SCIM), and how policies control access."
       },
       {
         "heading": "Multi-Factor Authentication",
-        "body": "Know MFA enforcement methods: Salesforce Authenticator, TOTP apps, security keys. Understand how MFA interacts with SSO (IdP-provided MFA vs. Salesforce MFA), and the MFA enforcement timeline implications."
+        "body": "Know **MFA** enforcement methods: Salesforce Authenticator, TOTP apps, security keys. Understand how MFA interacts with **SSO** (IdP-provided MFA vs. Salesforce MFA), and the MFA enforcement timeline implications."
       },
       {
         "heading": "Salesforce Identity Features",
-        "body": "Know User Provisioning for Connected Apps, Identity Connect (AD sync), Login Flows for custom authentication logic, and how External Identity licenses differ from internal user licenses."
+        "body": "Know User Provisioning for **Connected Apps**, Identity Connect (AD sync), Login Flows for custom authentication logic, and how External Identity licenses differ from internal user licenses."
       }
     ]
   },

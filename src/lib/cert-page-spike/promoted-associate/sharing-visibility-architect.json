@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "OWD and the Security Baseline",
-        "body": "Organisation-Wide Defaults set the baseline record access: Private (only owner and above in role hierarchy), Public Read Only (all users read, only owner writes), Public Read/Write (all users read and write), Controlled by Parent (detail records follow master). OWD is the minimum &mdash; it can only be opened wider by other mechanisms, never restricted further. The exam tests which OWD setting applies to a given scenario and what the downstream implications are for sharing mechanisms."
+        "body": "[Organisation-Wide Defaults](/certifications/sharing-visibility-architect) set the baseline record access: Private (only owner and above in **role hierarchy**), Public Read Only (all users read, only owner writes), Public Read/Write (all users read and write), Controlled by Parent (detail records follow master). **OWD** is the minimum &mdash; it can only be opened wider by other mechanisms, never restricted further. The exam tests which OWD setting applies to a given scenario and what the downstream implications are for sharing mechanisms."
       },
       {
         "heading": "Record Sharing: Role Hierarchy, Rules, and Manual Sharing",
-        "body": "Role Hierarchy automatically grants managers access to their subordinates' records &mdash; this is implicit sharing. Sharing Rules extend access beyond OWD to specific roles, groups, or territories &mdash; either ownership-based or criteria-based. Manual Sharing allows record owners to grant access to specific users for individual records &mdash; not scalable. Apex Sharing (using Share objects) enables programmatic sharing for complex business rules. The exam tests which sharing mechanism is appropriate for each access requirement."
+        "body": "**Role Hierarchy** automatically grants managers access to their subordinates' records &mdash; this is implicit sharing. **Sharing Rules** extend access beyond **OWD** to specific roles, groups, or territories &mdash; either ownership-based or criteria-based. **Manual Sharing** allows record owners to grant access to specific users for individual records &mdash; not scalable. **Apex Sharing** (using Share objects) enables programmatic sharing for complex business rules. The exam tests which sharing mechanism is appropriate for each access requirement."
       },
       {
         "heading": "External User Sharing: Communities and Partner Portals",
-        "body": "External users follow a different sharing model. Sharing Sets grant external users (Customer Community licence) access to records related to their Account or Contact &mdash; without roles or sharing rules. External Account Hierarchy enables partner users to see records owned by users below them in the partner account hierarchy. Guest User sharing rules grant unauthenticated visitors access to specific records. Know the licence-to-sharing mechanism mapping: Customer Community &rarr; Sharing Sets, Customer Community Plus &rarr; Sharing Rules & Roles, Partner Community &rarr; External Account Hierarchy."
+        "body": "External users follow a different sharing model. Sharing Sets grant external users (Customer Community licence) access to records related to their Account or Contact &mdash; without roles or **sharing rules**. External Account Hierarchy enables partner users to see records owned by users below them in the partner account hierarchy. Guest User sharing rules grant unauthenticated visitors access to specific records. Know the licence-to-sharing mechanism mapping: Customer Community &rarr; Sharing Sets, Customer Community Plus &rarr; Sharing Rules & Roles, Partner Community &rarr; External Account Hierarchy."
       },
       {
         "heading": "Field and Object Security: Profiles vs Permission Sets",
-        "body": "Object permissions (CRED: Create, Read, Edit, Delete) are set on Profiles and Permission Sets. Field-Level Security controls which fields a user can see and edit &mdash; also set on Profiles and Permission Sets. The effective permissions are the union of the profile and all assigned permission sets. View All and Modify All object permissions bypass the sharing model for that object. The exam tests layered permission evaluation and when to use Profiles vs Permission Sets for access management."
+        "body": "Object permissions (CRED: Create, Read, Edit, Delete) are set on Profiles and **Permission Sets**. **Field-Level Security** controls which fields a user can see and edit &mdash; also set on Profiles and Permission Sets. The effective permissions are the union of the profile and all assigned permission sets. View All and Modify All object permissions bypass the sharing model for that object. The exam tests layered permission evaluation and when to use Profiles vs Permission Sets for access management."
       },
       {
         "heading": "Sharing Performance and Audit",
-        "body": "Sharing recalculation runs automatically when OWD or sharing rules change &mdash; this can be a long-running operation for large orgs. Sharing recalculation can be deferred using the Defer Sharing Recalculation feature. The Sharing Hierarchy viewer shows which mechanisms grant access to a specific record. Shield Platform Encryption encrypts data at rest for fields configured with encryption &mdash; this interacts with sharing and SOQL performance. The exam tests when to use audit tools (Setup Audit Trail, Field History Tracking) and the performance implications of sharing configurations."
+        "body": "Sharing recalculation runs automatically when **OWD** or **sharing rules** change &mdash; this can be a long-running operation for large orgs. Sharing recalculation can be deferred using the Defer Sharing Recalculation feature. The Sharing Hierarchy viewer shows which mechanisms grant access to a specific record. Shield Platform Encryption encrypts data at rest for fields configured with encryption &mdash; this interacts with sharing and **SOQL** performance. The exam tests when to use audit tools (Setup Audit Trail, Field History Tracking) and the performance implications of sharing configurations."
       }
     ]
   },
@@ -53,15 +53,15 @@
     "blocks": [
       {
         "heading": "Access Evaluation Order",
-        "body": "Understand the exact order in which access is evaluated: OWD → Role Hierarchy → Sharing Rules → Manual Sharing → Teams → Apex Managed Sharing → Profile/PermSet object permissions. Know which layers are additive."
+        "body": "Understand the exact order in which access is evaluated: **OWD** → **Role Hierarchy** → **Sharing Rules** → **Manual Sharing** → Teams → **Apex** Managed Sharing → Profile/PermSet object permissions. Know which layers are additive."
       },
       {
         "heading": "Criteria-Based Sharing Rules",
-        "body": "Know the difference between Owner-Based and Criteria-Based Sharing Rules. Understand when criteria-based rules fire, their limits (300 per object), and how they interact with other sharing mechanisms."
+        "body": "Know the difference between Owner-Based and Criteria-Based **Sharing Rules**. Understand when criteria-based rules fire, their limits (300 per object), and how they interact with other sharing mechanisms."
       },
       {
         "heading": "External Sharing Model",
-        "body": "The external sharing model (OWD for portal users) is separate from the internal model. Know how to configure Sharing Sets for portal users and how Account Teams extend access to Experience Cloud contacts."
+        "body": "The external sharing model (**OWD** for portal users) is separate from the internal model. Know how to configure Sharing Sets for portal users and how Account Teams extend access to Experience Cloud contacts."
       },
       {
         "heading": "Performance Considerations",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "Apex Managed Sharing",
-        "body": "Apex Managed Sharing uses Share objects (AccountShare, etc.) with a specific Cause value. Know how to grant, revoke, and maintain programmatic shares and how they persist through OWD changes."
+        "body": "**Apex** Managed Sharing uses Share objects (AccountShare, etc.) with a specific Cause value. Know how to grant, revoke, and maintain programmatic shares and how they persist through **OWD** changes."
       }
     ]
   },

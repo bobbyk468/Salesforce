@@ -27,11 +27,11 @@
     "blocks": [
       {
         "heading": "Product Catalog & Configuration",
-        "body": "Industries CPQ (formerly Vlocity CPQ) uses a TM Forum-aligned product catalog. Product Specifications define the attributes and structure of a product. Product Offerings are the sellable versions with pricing. Product Bundles group related offerings (e.g., a broadband + voice + TV bundle). Attributes define configurable options — data cap, contract term, device color. Configuration Rules enforce valid attribute combinations and auto-set dependent attributes. Context Rules make product availability conditional on account type, geography, or existing products. The developer exam tests how to configure attribute rules, implement context rules in declarative logic, and extend configuration behavior with custom Apex when rules are insufficient."
+        "body": "Industries CPQ (formerly Vlocity CPQ) uses a TM Forum-aligned product catalog. Product Specifications define the attributes and structure of a product. Product Offerings are the sellable versions with pricing. Product Bundles group related offerings (e.g., a broadband + voice + TV bundle). Attributes define configurable options — data cap, contract term, device color. Configuration Rules enforce valid attribute combinations and auto-set dependent attributes. Context Rules make product availability conditional on account type, geography, or existing products. The developer exam tests how to configure attribute rules, implement context rules in declarative logic, and extend configuration behavior with custom **Apex** when rules are insufficient."
       },
       {
         "heading": "Pricing Rules & Calculation Framework",
-        "body": "Pricing in Industries CPQ uses a layered calculation framework. Price Lists define base prices for products and attributes. Pricing Procedures define the sequence of pricing steps — list price → adjustments → promotions → taxes → total. Pricing Elements are individual steps in the procedure (e.g., apply 10% loyalty discount). Pricing Variables store intermediate calculation results. Custom Pricing Apex classes implement complex pricing logic not achievable declaratively. Price Waterfall shows the full breakdown of how the final price was calculated. The developer exam tests how to implement a custom pricing step, how to debug a price calculation using the price waterfall, and how pricing procedures interact with multi-product bundles."
+        "body": "Pricing in Industries CPQ uses a layered calculation framework. Price Lists define base prices for products and attributes. Pricing Procedures define the sequence of pricing steps — list price → adjustments → promotions → taxes → total. Pricing Elements are individual steps in the procedure (e.g., apply 10% loyalty discount). Pricing Variables store intermediate calculation results. Custom Pricing **Apex** classes implement complex pricing logic not achievable declaratively. Price Waterfall shows the full breakdown of how the final price was calculated. The developer exam tests how to implement a custom pricing step, how to debug a price calculation using the price waterfall, and how pricing procedures interact with multi-product bundles."
       },
       {
         "heading": "Quote & Order Lifecycle",
@@ -43,7 +43,7 @@
       },
       {
         "heading": "Customization: Apex, LWC & OmniStudio",
-        "body": "Industries CPQ customization uses: Custom Apex for complex business logic (configuration rules, pricing steps, order validation), LWC components for custom UI within the CPQ cart or checkout, and OmniStudio (FlexCards, OmniScripts) for guided selling experiences. Integration Procedures (OmniStudio) handle multi-step API orchestration. DataRaptors transform data between Salesforce and external systems within CPQ flows. The developer exam tests which customization tool to use for a given requirement — declarative rules first, Apex for complex logic, LWC for custom UI, and OmniStudio for guided workflows. Know the OmniStudio activation sequence: DataRaptor → Integration Procedure → OmniScript."
+        "body": "Industries CPQ customization uses: Custom **Apex** for complex business logic (configuration rules, pricing steps, order validation), **LWC** components for custom UI within the CPQ cart or checkout, and OmniStudio (FlexCards, OmniScripts) for guided selling experiences. Integration Procedures (OmniStudio) handle multi-step API orchestration. DataRaptors transform data between Salesforce and external systems within CPQ flows. The developer exam tests which customization tool to use for a given requirement — declarative rules first, Apex for complex logic, LWC for custom UI, and OmniStudio for guided workflows. Know the OmniStudio activation sequence: DataRaptor → Integration Procedure → OmniScript."
       }
     ]
   },
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Custom Development Patterns",
-        "body": "Know how to extend Industries CPQ with Apex: custom pricing engine hooks, custom product validation rules, and how to integrate custom calculation logic without overriding managed package logic."
+        "body": "Know how to extend Industries CPQ with **Apex**: custom pricing engine hooks, custom product **validation rules**, and how to integrate custom calculation logic without overriding managed package logic."
       },
       {
         "heading": "Order Management Integration",

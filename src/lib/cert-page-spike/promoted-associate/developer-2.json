@@ -32,19 +32,19 @@
       },
       {
         "heading": "Asynchronous Apex: Choosing the Right Context",
-        "body": "@future — simplest async, no complex parameters, no chaining, no job IDs. Queueable — supports complex sObject parameters, job chaining (enqueue from finish), and returns AsyncApexJob ID. Batch Apex — processes up to 50 million records in chunks; implement Database.Stateful to retain instance variables across iterations; chain in finish() via Database.executeBatch(). Schedulable — time-based entry point; use to kick off Batch or Queueable. The exam presents a scenario and asks which context is appropriate."
+        "body": "@future — simplest async, no complex parameters, no chaining, no job IDs. Queueable — supports complex sObject parameters, job chaining (enqueue from finish), and returns AsyncApexJob ID. **Batch Apex** — processes up to 50 million records in chunks; implement Database.Stateful to retain instance variables across iterations; chain in finish() via Database.executeBatch(). Schedulable — time-based entry point; use to kick off Batch or Queueable. The exam presents a scenario and asks which context is appropriate."
       },
       {
         "heading": "Integration: Callouts, Named Credentials, and Platform Events",
-        "body": "Callouts cannot be made from synchronous triggers — use @future(callout=true) or Queueable with Database.AllowsCallouts. Named Credentials store the endpoint URL and authentication credentials securely, referenced in Apex as callout:NamedCredName. Platform Events provide loosely coupled, fire-and-forget publish/subscribe messaging — publishers do not wait for subscribers. Change Data Capture streams record change events to external systems without polling. The exam tests when each mechanism is appropriate."
+        "body": "Callouts cannot be made from synchronous triggers — use @future(callout=true) or Queueable with Database.AllowsCallouts. **Named Credentials** store the endpoint URL and authentication credentials securely, referenced in **Apex** as callout:NamedCredName. **Platform Events** provide loosely coupled, fire-and-forget publish/subscribe messaging — publishers do not wait for subscribers. **Change Data Capture** streams record change events to external systems without polling. The exam tests when each mechanism is appropriate."
       },
       {
         "heading": "Testing Strategy: Setup, Mocking, and Coverage",
-        "body": "@TestSetup creates test data once for all test methods in the class, preventing repeated DML and improving performance. Test.startTest() / Test.stopTest() resets governor limits for the code under test and forces async jobs to complete. Mock callouts using HttpCalloutMock (implement the interface) or StaticResourceCalloutMock (use a static resource JSON file). System.assert patterns: assertEquals(expected, actual), assertNotEquals, assertTrue — always provide a meaningful message. 75% code coverage is required for deployment."
+        "body": "@TestSetup creates test data once for all test methods in the class, preventing repeated **DML** and improving performance. Test.startTest() / Test.stopTest() resets **governor limits** for the code under test and forces async jobs to complete. Mock callouts using **HttpCalloutMock** (implement the interface) or StaticResourceCalloutMock (use a static resource JSON file). System.assert patterns: assertEquals(expected, actual), assertNotEquals, assertTrue — always provide a meaningful message. 75% code coverage is required for deployment."
       },
       {
         "heading": "Security in Apex: Sharing, FLS, and AuraEnabled",
-        "body": "with sharing enforces the running user's sharing rules; without sharing bypasses them; inherited sharing inherits from caller context. Classes default to without sharing if unspecified — a PD2-level trap. FLS enforcement: use Schema.SObjectType.getDescribe().fields.getMap() to check field accessibility, or stripInaccessible() to filter query results. @AuraEnabled exposes methods to LWC and Aura components — always combine with FLS and sharing checks. CRUD checks require Schema.SObjectType.Account.isCreateable() style checks."
+        "body": "with sharing enforces the running user's **sharing rules**; without sharing bypasses them; inherited sharing inherits from caller context. Classes default to without sharing if unspecified — a PD2-level trap. FLS enforcement: use Schema.SObjectType.getDescribe().fields.getMap() to check field accessibility, or stripInaccessible() to filter query results. @AuraEnabled exposes methods to **LWC** and Aura components — always combine with FLS and sharing checks. CRUD checks require Schema.SObjectType.Account.isCreateable() style checks."
       }
     ]
   },
@@ -54,23 +54,23 @@
     "blocks": [
       {
         "heading": "Asynchronous Apex Mastery",
-        "body": "Know all four async patterns: Queueable (chainable, stateful), Batch (large data sets), Scheduled (time-based), and Future (simple async). Understand governor limits in async contexts (higher SOQL/DML limits) and when each pattern is appropriate."
+        "body": "Know all four async patterns: Queueable (chainable, stateful), Batch (large data sets), Scheduled (time-based), and Future (simple async). Understand **governor limits** in async contexts (higher **SOQL**/**DML** limits) and when each pattern is appropriate."
       },
       {
         "heading": "Integration Architecture Decisions",
-        "body": "REST vs. SOAP vs. Platform Events vs. Change Data Capture — know the use cases for each. Understand outbound messaging, callout limits, Named Credentials, and how to handle integration errors gracefully."
+        "body": "REST vs. SOAP vs. **Platform Events** vs. **Change Data Capture** — know the use cases for each. Understand outbound messaging, callout limits, **Named Credentials**, and how to handle integration errors gracefully."
       },
       {
         "heading": "Platform Events & Event-Driven Architecture",
-        "body": "Know how Platform Events enable event-driven, decoupled architectures. Understand the difference between Platform Events and CDC, how to publish events from Apex and Flows, and how subscribers process events reliably."
+        "body": "Know how **Platform Events** enable event-driven, decoupled architectures. Understand the difference between Platform Events and CDC, how to publish events from **Apex** and Flows, and how subscribers process events reliably."
       },
       {
         "heading": "LWC Advanced Patterns",
-        "body": "Understand component communication patterns: parent-to-child via properties, child-to-parent via custom events, and sibling communication via a shared service. Know when to use @wire vs. imperative Apex calls."
+        "body": "Understand component communication patterns: parent-to-child via properties, child-to-parent via custom events, and sibling communication via a shared service. Know when to use @wire vs. imperative **Apex** calls."
       },
       {
         "heading": "Testing Architecture",
-        "body": "PD2 emphasizes test design: mock callouts with Test.setMock, test data isolation (SeeAllData=false), testing async Apex with Test.startTest/stopTest, and achieving meaningful code coverage vs. superficial coverage."
+        "body": "PD2 emphasizes test design: mock callouts with Test.setMock, test data isolation (SeeAllData=false), testing async **Apex** with Test.startTest/stopTest, and achieving meaningful code coverage vs. superficial coverage."
       }
     ]
   },

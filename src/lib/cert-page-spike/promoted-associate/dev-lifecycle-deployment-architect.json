@@ -35,7 +35,7 @@
       },
       {
         "heading": "CI/CD Pipelines: Salesforce CLI and Packages",
-        "body": "Salesforce CLI (sf commands) drives automated deployments. Unlocked Packages are the recommended packaging model &mdash; versioned, installable, supports dependency management. Managed Packages are for ISVs distributing on AppExchange &mdash; locked source. The exam tests the deployment tool hierarchy: Change Sets (org-based, no version control) &rarr; Salesforce CLI & MDAPI (scriptable) &rarr; Unlocked Packages (modular, versioned). CI/CD tools (GitHub Actions, Jenkins, CircleCI) automate test runs and deployments on code push."
+        "body": "Salesforce CLI (sf commands) drives automated deployments. Unlocked Packages are the recommended packaging model &mdash; versioned, installable, supports dependency management. Managed Packages are for ISVs distributing on **AppExchange** &mdash; locked source. The exam tests the deployment tool hierarchy: Change Sets (org-based, no version control) &rarr; Salesforce CLI & MDAPI (scriptable) &rarr; Unlocked Packages (modular, versioned). CI/CD tools (GitHub Actions, Jenkins, CircleCI) automate test runs and deployments on code push."
       },
       {
         "heading": "Testing in the Deployment Pipeline",
@@ -43,7 +43,7 @@
       },
       {
         "heading": "Release Management and Deployment Order",
-        "body": "Destructive Changes (destructiveChanges.xml) remove components during deployment &mdash; must be planned carefully as deleted components cannot be recovered. Dependency order matters: deploy custom objects before fields, custom fields before validation rules referencing them. Rollback strategy: Salesforce does not have built-in rollback &mdash; plan with sandbox parity, feature flags, and version-controlled deployment scripts. Post-deployment verification should include running smoke tests and checking critical business processes. The exam tests deployment sequencing and risk mitigation strategies."
+        "body": "Destructive Changes (destructiveChanges.xml) remove components during deployment &mdash; must be planned carefully as deleted components cannot be recovered. Dependency order matters: deploy custom objects before fields, custom fields before **validation rules** referencing them. Rollback strategy: Salesforce does not have built-in rollback &mdash; plan with sandbox parity, feature flags, and version-controlled deployment scripts. Post-deployment verification should include running smoke tests and checking critical business processes. The exam tests deployment sequencing and risk mitigation strategies."
       }
     ]
   },

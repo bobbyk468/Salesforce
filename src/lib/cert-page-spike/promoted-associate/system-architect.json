@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "Integration Patterns: Choosing the Right Approach",
-        "body": "The exam presents an integration scenario and asks which pattern applies. Request-reply (REST/SOAP callout) — synchronous, caller waits for response; use for real-time data retrieval. Fire-and-forget (Platform Events, async queue) — caller publishes and moves on; use when immediate response is not needed. Batch ETL — high-volume data movement on a schedule. Change Data Capture — streams field-level record change events for near-real-time synchronisation. Point-to-point vs hub-and-spoke: as integration count grows, hub-and-spoke (middleware) reduces coupling."
+        "body": "The exam presents an integration scenario and asks which pattern applies. Request-reply (REST/SOAP callout) — synchronous, caller waits for response; use for real-time data retrieval. Fire-and-forget (**Platform Events**, async queue) — caller publishes and moves on; use when immediate response is not needed. Batch ETL — high-volume data movement on a schedule. **Change Data Capture** — streams field-level record change events for near-real-time synchronisation. Point-to-point vs hub-and-spoke: as integration count grows, hub-and-spoke (middleware) reduces coupling."
       },
       {
         "heading": "Authentication Patterns: OAuth 2.0 Flows",
-        "body": "Web Server Flow — user-facing; redirects to Salesforce login, returns authorisation code exchanged for token. JWT Bearer Flow — server-to-server; no user interaction; client signs a JWT assertion with a certificate. Client Credentials Flow — machine-to-machine; client ID + secret exchanged for access token without a user. Device Flow — for devices without browsers. Named Credentials store the endpoint and auth details in Salesforce, keeping credentials out of Apex code. Connected Apps define OAuth scopes, IP restrictions, and session policies."
+        "body": "Web Server Flow — user-facing; redirects to Salesforce login, returns authorisation code exchanged for token. **JWT** Bearer Flow — server-to-server; no user interaction; client signs a JWT assertion with a certificate. Client Credentials Flow — machine-to-machine; client ID + secret exchanged for access token without a user. Device Flow — for devices without browsers. **Named Credentials** store the endpoint and auth details in Salesforce, keeping credentials out of **Apex** code. **Connected Apps** define **OAuth** scopes, IP restrictions, and session policies."
       },
       {
         "heading": "API-Led Connectivity and Middleware (MuleSoft)",
-        "body": "API-led connectivity organises APIs in three layers: System APIs wrap individual backend systems (ERP, legacy), exposing a stable contract regardless of the system's protocol. Process APIs orchestrate business logic across multiple System APIs — composable, reusable. Experience APIs tailor data for specific consumers (mobile app, partner portal). MuleSoft Anypoint Platform implements this pattern. Understand when native Salesforce integration (REST, Platform Events) is sufficient vs when middleware is warranted (protocol mismatch, fan-out orchestration, message transformation)."
+        "body": "API-led connectivity organises APIs in three layers: System APIs wrap individual backend systems (ERP, legacy), exposing a stable contract regardless of the system's protocol. Process APIs orchestrate business logic across multiple System APIs — composable, reusable. Experience APIs tailor data for specific consumers (mobile app, partner portal). MuleSoft Anypoint Platform implements this pattern. Understand when native Salesforce integration (REST, **Platform Events**) is sufficient vs when middleware is warranted (protocol mismatch, fan-out orchestration, message transformation)."
       },
       {
         "heading": "Sandbox Strategy and Release Management",
-        "body": "Sandbox types by size and use: Developer (5 MB data, metadata only, for development), Developer Pro (1 GB, for larger teams), Partial Copy (5 GB, subset of production data, for testing), Full Copy (full production replica, for load testing and final UAT). Deployment tools: Change Sets (org-to-org, no version control), Salesforce CLI + Metadata API (source-driven, supports Git), Unlocked Packages (modular, versioned, dependency-aware). The exam tests which combination of sandbox type and deployment tool fits a given governance requirement."
+        "body": "Sandbox types by size and use: Developer (5 MB data, metadata only, for development), Developer Pro (1 GB, for larger teams), Partial Copy (5 GB, subset of production data, for testing), Full Copy (full production replica, for load testing and final UAT). Deployment tools: Change Sets (org-to-org, no version control), Salesforce CLI + **Metadata API** (source-driven, supports Git), Unlocked Packages (modular, versioned, dependency-aware). The exam tests which combination of sandbox type and deployment tool fits a given governance requirement."
       },
       {
         "heading": "Identity, SSO, and My Domain",
-        "body": "SAML 2.0 enables SSO: Salesforce can act as Identity Provider (issues assertions to external apps) or Service Provider (receives assertions from an external IdP like Okta or Azure AD). My Domain is required for SSO — it provides the custom login URL and enables domain-based login policies. Delegated Authentication sends the user's credentials to an external web service for validation (legacy approach). OAuth handles API access delegation, not web SSO. Know the trust chain: IdP issues SAML assertion → SP validates the assertion's signature using the IdP's certificate → session created."
+        "body": "**SAML** 2.0 enables **SSO**: Salesforce can act as Identity Provider (issues assertions to external apps) or Service Provider (receives assertions from an external IdP like Okta or Azure AD). My Domain is required for SSO — it provides the custom login URL and enables domain-based login policies. Delegated Authentication sends the user's credentials to an external web service for validation (legacy approach). **OAuth** handles API access delegation, not web SSO. Know the trust chain: IdP issues SAML assertion → SP validates the assertion's signature using the IdP's certificate → session created."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "heading": "Data Migration Strategy",
-        "body": "Understand how to plan data migration: data mapping, cleansing, load sequence (parent records before child records), external IDs for upsert, and how to validate data post-migration."
+        "body": "Understand how to plan data migration: data mapping, cleansing, load sequence (parent records before child records), **external IDs** for upsert, and how to validate data post-migration."
       },
       {
         "heading": "Multi-Org Architecture",
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Governor Limits at Scale",
-        "body": "Understand how governor limits affect architectural decisions: bulkification requirements, async patterns to bypass synchronous limits, and how to architect for high-volume data ingestion scenarios."
+        "body": "Understand how **governor limits** affect architectural decisions: bulkification requirements, async patterns to bypass synchronous limits, and how to architect for high-volume data ingestion scenarios."
       },
       {
         "heading": "Salesforce Connect & External Objects",

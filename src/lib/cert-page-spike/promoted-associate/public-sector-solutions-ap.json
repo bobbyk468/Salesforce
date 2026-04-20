@@ -22,7 +22,7 @@
     "blocks": [
       {
         "heading": "Case Management for Government",
-        "body": "Public Sector Solutions (PSS) extends Service Cloud for government constituent service. Cases represent constituent inquiries, complaints, or service requests. Case Classification uses a topic taxonomy to route and report on cases by type. Omni-Channel routes cases to the correct department or agent based on case type and priority. Knowledge Articles provide agents and constituents with self-service answers. Service Level Agreements (SLAs) via Entitlements enforce government response time mandates. Case Escalation Rules auto-escalate aging cases. The AP exam tests how to configure a government case management workflow, how to use knowledge for constituent self-service, and how to enforce compliance with response time SLAs."
+        "body": "Public Sector Solutions (PSS) extends Service Cloud for government constituent service. Cases represent constituent inquiries, complaints, or service requests. Case Classification uses a topic taxonomy to route and report on cases by type. **Omni-Channel** routes cases to the correct department or agent based on case type and priority. **Knowledge Articles** provide agents and constituents with self-service answers. Service Level Agreements (SLAs) via **Entitlements** enforce government response time mandates. Case **Escalation Rules** auto-escalate aging cases. The AP exam tests how to configure a government case management workflow, how to use knowledge for constituent self-service, and how to enforce compliance with response time SLAs."
       },
       {
         "heading": "Licensing & Permitting",
@@ -34,7 +34,7 @@
       },
       {
         "heading": "Inspections & Compliance",
-        "body": "Government inspections verify compliance with regulations — building permits, health codes, environmental standards. Inspection Visit records capture inspection dates, findings, and outcomes. Violations are documented with severity levels, corrective action requirements, and deadlines. Reinspection workflows schedule follow-up inspections when violations are found. Mobile inspection apps (Salesforce Field Service mobile or custom LWC) provide inspectors with offline access to inspection checklists and violation history. The AP exam tests how to configure an inspection workflow from scheduling through violation resolution, how mobile offline access works for inspectors, and how to generate compliance reports from inspection data."
+        "body": "Government inspections verify compliance with regulations — building permits, health codes, environmental standards. Inspection Visit records capture inspection dates, findings, and outcomes. Violations are documented with severity levels, corrective action requirements, and deadlines. Reinspection workflows schedule follow-up inspections when violations are found. Mobile inspection apps (Salesforce Field Service mobile or custom **LWC**) provide inspectors with offline access to inspection checklists and violation history. The AP exam tests how to configure an inspection workflow from scheduling through violation resolution, how mobile offline access works for inspectors, and how to generate compliance reports from inspection data."
       },
       {
         "heading": "Constituent Engagement & Digital Experience",

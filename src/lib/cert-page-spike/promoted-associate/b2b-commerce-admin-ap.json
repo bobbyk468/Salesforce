@@ -22,11 +22,11 @@
     "blocks": [
       {
         "heading": "Store Setup & Storefront Configuration",
-        "body": "B2B Commerce stores are built on Experience Cloud sites. The Commerce Setup Assistant guides the initial configuration of a store, including currency, tax, and locale settings. Storefronts use LWC (Lightning Web Components) for the buyer-facing UI. Store Context defines which products, pricebooks, and catalogs are available to buyers. Buyer Groups link accounts to specific catalogs and price books. Guest Browse allows unauthenticated users to view products but not purchase. The AP exam tests how to configure a store for a specific business model — know which settings live in the store vs. the Experience Cloud site."
+        "body": "B2B Commerce stores are built on Experience Cloud sites. The Commerce Setup Assistant guides the initial configuration of a store, including currency, tax, and locale settings. Storefronts use **LWC** (Lightning Web Components) for the buyer-facing UI. Store Context defines which products, pricebooks, and catalogs are available to buyers. Buyer Groups link accounts to specific catalogs and price books. Guest Browse allows unauthenticated users to view products but not purchase. The AP exam tests how to configure a store for a specific business model — know which settings live in the store vs. the Experience Cloud site."
       },
       {
         "heading": "Product Catalog & Pricing",
-        "body": "Entitlement Policies define which products a buyer group can see and purchase. Price Books in B2B Commerce work similarly to standard Salesforce Price Books — assign products with list and negotiated prices. Price Adjustments apply tier-based or account-specific discounts. Product media (images, documents) is managed through CMS (Content Management System) connected to the store. Product variations (color, size) use Variation Parents and Child Products. Category hierarchies organize products for navigation. The exam focuses on catalog entitlements, pricing logic order of operations, and how to configure account-specific pricing without custom development."
+        "body": "Entitlement Policies define which products a buyer group can see and purchase. Price Books in B2B Commerce work similarly to standard Salesforce Price Books — assign products with list and negotiated prices. Price Adjustments apply tier-based or account-specific discounts. Product media (images, documents) is managed through CMS (Content Management System) connected to the store. Product variations (color, size) use Variation Parents and Child Products. Category hierarchies organize products for navigation. The exam focuses on catalog **entitlements**, pricing logic order of operations, and how to configure account-specific pricing without custom development."
       },
       {
         "heading": "Buyer Account & Contact Management",
@@ -56,7 +56,7 @@
       },
       {
         "heading": "Buyer Groups & Entitlements",
-        "body": "Know how Buyer Groups control catalog and pricing entitlements: associating accounts to buyer groups, configuring entitlement policies, and how B2B buyers see only their entitled products and prices."
+        "body": "Know how Buyer Groups control catalog and pricing **entitlements**: associating accounts to buyer groups, configuring entitlement policies, and how B2B buyers see only their entitled products and prices."
       },
       {
         "heading": "Cart & Checkout Configuration",

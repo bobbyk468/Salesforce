@@ -38,7 +38,7 @@
       },
       {
         "heading": "Integration & OCI (Omnichannel Inventory)",
-        "body": "OCI (Omnichannel Inventory) is the Salesforce API layer for real-time inventory availability checks across fulfillment locations. External systems (e-commerce platforms, ERP, WMS) integrate with SOM via the Order Management APIs. Webhooks and Platform Events notify external systems of order state changes. External Fulfillment Provider integration sends Fulfillment Orders to 3PL partners. The External Catalog and Pricing APIs support headless commerce scenarios where the storefront is not Salesforce B2B/B2C Commerce. The AP exam tests how to design the integration between a Salesforce-native Commerce Cloud storefront and SOM, how OCI responds to an availability check, and how to handle an external fulfillment partner that cannot receive Salesforce webhooks."
+        "body": "OCI (Omnichannel Inventory) is the Salesforce API layer for real-time inventory availability checks across fulfillment locations. External systems (e-commerce platforms, ERP, WMS) integrate with SOM via the Order Management APIs. Webhooks and **Platform Events** notify external systems of order state changes. External Fulfillment Provider integration sends Fulfillment Orders to 3PL partners. The External Catalog and Pricing APIs support headless commerce scenarios where the storefront is not Salesforce B2B/B2C Commerce. The AP exam tests how to design the integration between a Salesforce-native Commerce Cloud storefront and SOM, how OCI responds to an availability check, and how to handle an external fulfillment partner that cannot receive Salesforce webhooks."
       }
     ]
   },

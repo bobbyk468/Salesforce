@@ -28,11 +28,11 @@
     "blocks": [
       {
         "heading": "Case Management: Origins, Assignment, and Escalation",
-        "body": "Web-to-Case captures cases from website forms. Email-to-Case converts inbound emails into cases. Case Assignment Rules route cases to users or queues based on criteria. Escalation Rules automatically reassign or send alerts when cases breach time thresholds. The exam frequently presents a routing scenario and asks whether to use Assignment Rules, Omni-Channel, or Escalation Rules — know the trigger condition for each: rules are criteria-based, Omni-Channel is real-time workload-based."
+        "body": "**Web-to-Case** captures cases from website forms. **Email-to-Case** converts inbound emails into cases. Case **Assignment Rules** route cases to users or queues based on criteria. **Escalation Rules** automatically reassign or send alerts when cases breach time thresholds. The exam frequently presents a routing scenario and asks whether to use Assignment Rules, **Omni-Channel**, or Escalation Rules — know the trigger condition for each: rules are criteria-based, Omni-Channel is real-time workload-based."
       },
       {
         "heading": "Entitlements, Milestones, and Service Contracts",
-        "body": "Entitlements define the support a customer is contractually entitled to (e.g., 24/7 phone support, 4-hour response). Entitlement Processes define milestone timelines within an entitlement period. Milestones track specific SLA events — First Response, Resolution — with configurable warning and violation actions. Service Contracts aggregate entitlements for a customer or account over a contract period. The exam tests the hierarchy: Contract → Entitlement → Entitlement Process → Milestones."
+        "body": "**Entitlements** define the support a customer is contractually entitled to (e.g., 24/7 phone support, 4-hour response). Entitlement Processes define milestone timelines within an entitlement period. Milestones track specific SLA events — First Response, Resolution — with configurable warning and violation actions. Service Contracts aggregate entitlements for a customer or account over a contract period. The exam tests the hierarchy: Contract → Entitlement → Entitlement Process → Milestones."
       },
       {
         "heading": "Omni-Channel: Routing Models and Agent Capacity",
@@ -40,11 +40,11 @@
       },
       {
         "heading": "Knowledge Management: Articles, Data Categories, and Case Deflection",
-        "body": "Knowledge Articles have a lifecycle: Draft → Review → Published → Archived. Data Category Groups control which articles different users and customer portal visitors can see — a common exam topic for multi-product or multi-region organisations. Case Deflection surfaces suggested articles before a customer submits a case (requires Knowledge enabled on the community/portal). Einstein Article Recommendations suggest relevant articles to agents in real-time based on case fields. Know the difference between Article Types (Lightning Knowledge uses one unified type)."
+        "body": "**Knowledge Articles** have a lifecycle: Draft → Review → Published → Archived. Data Category Groups control which articles different users and customer portal visitors can see — a common exam topic for multi-product or multi-region organisations. Case Deflection surfaces suggested articles before a customer submits a case (requires Knowledge enabled on the community/portal). Einstein Article Recommendations suggest relevant articles to agents in real-time based on case fields. Know the difference between Article Types (Lightning Knowledge uses one unified type)."
       },
       {
         "heading": "Service Console: Macros, Quick Text, and Einstein Features",
-        "body": "The Service Console is a multi-panel app layout for agents — with split view, utility bar, and subtabs for related records. Macros execute a sequence of actions with a single click (update a field, send an email, add a note). Quick Text inserts pre-approved message snippets into emails or chats. Einstein for Service adds: Case Classification (auto-suggests field values), Reply Recommendations (suggests chat responses), and Next Best Action (recommendation strategies based on Einstein Recommendation Builder)."
+        "body": "The **Service Console** is a multi-panel app layout for agents — with split view, utility bar, and subtabs for related records. Macros execute a sequence of actions with a single click (update a field, send an email, add a note). Quick Text inserts pre-approved message snippets into emails or chats. Einstein for Service adds: Case Classification (auto-suggests field values), Reply Recommendations (suggests chat responses), and Next Best Action (recommendation strategies based on Einstein Recommendation Builder)."
       }
     ]
   },
@@ -54,7 +54,7 @@
     "blocks": [
       {
         "heading": "Case Routing: Which Tool When",
-        "body": "Know all routing options: Assignment Rules (criteria-based), Queues (manual or rules-based), Omni-Channel (capacity-based, real-time), and Einstein Case Routing (AI-driven). Match each to the right complexity level."
+        "body": "Know all routing options: **Assignment Rules** (criteria-based), Queues (manual or rules-based), **Omni-Channel** (capacity-based, real-time), and Einstein Case Routing (AI-driven). Match each to the right complexity level."
       },
       {
         "heading": "Knowledge Management",
@@ -62,7 +62,7 @@
       },
       {
         "heading": "Entitlements & SLAs",
-        "body": "Know how Entitlement Processes define SLA milestones, how Entitlements link to accounts and contacts, and how warning/violation actions trigger when milestones are at risk. Milestone Actions are heavily tested."
+        "body": "Know how Entitlement Processes define SLA milestones, how **Entitlements** link to accounts and contacts, and how warning/violation actions trigger when milestones are at risk. Milestone Actions are heavily tested."
       },
       {
         "heading": "Omni-Channel Configuration",

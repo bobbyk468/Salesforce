@@ -39,7 +39,7 @@
       },
       {
         "heading": "Roles, Permissions, and Security",
-        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive — a user can have roles in multiple BUs. Marketing Cloud SSO connects to corporate identity systems (SAML/OAuth). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
+        "body": "Marketing Cloud enforces role-based access control at the Business Unit level. Roles are additive — a user can have roles in multiple BUs. Marketing Cloud **SSO** connects to corporate identity systems (**SAML**/**OAuth**). IP allowlisting restricts login to authorised IP ranges. Two-factor authentication can be enforced at the account level. Data access permissions control which data extensions users can view or modify. The admin configures and maintains the security model, monitors login activity, and manages Connected App integrations."
       },
       {
         "heading": "Salesforce CRM Integration (MC Connect)",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "API Integration & Security",
-        "body": "Know how to create and manage API integrations (installed packages with OAuth credentials), configure IP whitelisting for API access, and monitor API usage for security anomalies."
+        "body": "Know how to create and manage API integrations (installed packages with **OAuth** credentials), configure IP whitelisting for API access, and monitor API usage for security anomalies."
       }
     ]
   },

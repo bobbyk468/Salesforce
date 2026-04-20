@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "NPSP Installation and Configuration",
-        "body": "NPSP is a managed package installed from AppExchange. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household) — not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex."
+        "body": "NPSP is a managed package installed from **AppExchange**. The NPSP Settings page (in Setup or via the NPSP tile) controls all key configurations: Account model (Household vs Individual vs Organisation), relationship settings, payment behaviour, and rollup configuration. The Household Account model creates one Account per person (their household) — not the same as a standard person account. The 1-to-1 Account model creates one Account per Contact. The consultant selects and documents the correct model before implementation and understands that switching models after data entry is complex."
       },
       {
         "heading": "Donation Processing and Gift Entry",
@@ -39,11 +39,11 @@
       },
       {
         "heading": "Engagement Plans and Levels",
-        "body": "Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time — e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts — Bronze, Silver, Gold, Platinum. Level Assignment rules automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation's major donor stewardship strategy."
+        "body": "Engagement Plans create task-based workflows for stewardship and donor cultivation. An Engagement Plan Template defines a sequence of tasks assigned to roles over time — e.g., 3 days after a major gift: send thank you note (task 1); 30 days: handwritten letter from ED (task 2); 60 days: phone call from program staff (task 3). Levels assign donors to stewardship tiers based on giving amounts — Bronze, Silver, Gold, Platinum. Level **Assignment rules** automatically categorise donors and can trigger Engagement Plans. The consultant configures Levels and Plans to match the organisation's major donor stewardship strategy."
       },
       {
         "heading": "Data Quality and Migration",
-        "body": "NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP — handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP's built-in validation plus custom Validation Rules to enforce data completeness. The consultant designs the data migration strategy — mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration."
+        "body": "NPSP Data Importer is a tool specifically designed for importing constituent and donation data into NPSP — handling the household model logic, matching existing records, and creating correct relationships. It is preferred over Data Loader for initial NPSP data migration. Deduplication: NPSP includes merge tools for duplicate Contact and Account records. Data quality validation: using NPSP's built-in validation plus custom **Validation Rules** to enforce data completeness. The consultant designs the data migration strategy — mapping source system fields to NPSP objects, testing in sandbox, and validating results before production migration."
       }
     ]
   },
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Engagement Plans",
-        "body": "Engagement Plans automate constituent stewardship tasks (thank-you calls, acknowledgment letters) triggered by donation milestones. Know how to configure Engagement Plan Templates and the task assignment rules."
+        "body": "Engagement Plans automate constituent stewardship tasks (thank-you calls, acknowledgment letters) triggered by donation milestones. Know how to configure Engagement Plan Templates and the task **assignment rules**."
       },
       {
         "heading": "Reports & Dashboards for Nonprofits",

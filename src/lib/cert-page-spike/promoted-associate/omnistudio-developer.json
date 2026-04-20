@@ -27,19 +27,19 @@
     "blocks": [
       {
         "heading": "Custom LWC Integration with OmniStudio",
-        "body": "OmniStudio Developer extends the platform with custom Lightning Web Components (LWC) embedded within OmniScripts and FlexCards. Custom LWC elements in OmniScripts receive and pass data via the OmniScript SDK methods (omniApplyCallResp, omniUpdateDataJson). Custom FlexCard actions can trigger custom LWC components. The developer creates reusable custom components that follow OmniStudio data contracts — understanding the JSON data model that flows through OmniStudio is critical. The exam tests how to integrate custom LWC with OmniScript data binding."
+        "body": "[OmniStudio Developer](/certifications/omnistudio-developer) extends the platform with custom Lightning Web Components (**LWC**) embedded within OmniScripts and FlexCards. Custom LWC elements in OmniScripts receive and pass data via the OmniScript SDK methods (omniApplyCallResp, omniUpdateDataJson). Custom FlexCard actions can trigger custom LWC components. The developer creates reusable custom components that follow OmniStudio data contracts — understanding the JSON data model that flows through OmniStudio is critical. The exam tests how to integrate custom LWC with OmniScript data binding."
       },
       {
         "heading": "DataRaptor Architecture: Extract, Load, Transform",
-        "body": "DataRaptor Extract queries Salesforce data using SOQL within a structured configuration — supports parent-child relationships and field mapping. DataRaptor Load creates or updates records using a structured JSON input — supports multi-object transactions (parent + children in one call). DataRaptor Transform maps and reshapes JSON data between two structures — no Salesforce DML involved. Turbo Extract is a simplified, high-performance version of Extract that runs a direct SOQL query. The developer exam tests DataRaptor configuration for complex data transformation scenarios and when each type is appropriate."
+        "body": "DataRaptor Extract queries Salesforce data using **SOQL** within a structured configuration — supports parent-child relationships and field mapping. DataRaptor Load creates or updates records using a structured JSON input — supports multi-object transactions (parent + children in one call). DataRaptor Transform maps and reshapes JSON data between two structures — no Salesforce **DML** involved. Turbo Extract is a simplified, high-performance version of Extract that runs a direct SOQL query. The developer exam tests DataRaptor configuration for complex data transformation scenarios and when each type is appropriate."
       },
       {
         "heading": "Integration Procedures: Advanced Patterns",
-        "body": "Advanced IP design: chaining Integration Procedures (calling a sub-IP from a parent IP), conditional branching (If Block, Filter Block), and looping (Loop Block to iterate over arrays). Error handling: Set Error action captures exceptions from HTTP actions or Apex. Response mapping transforms the action response into the IP's output structure. Combining multiple data sources in one IP — e.g., call DataRaptor Extract for Salesforce data, HTTP Action for external pricing API, then Transform to merge results. The developer designs IPs that are efficient, maintainable, and handle errors gracefully."
+        "body": "Advanced IP design: chaining Integration Procedures (calling a sub-IP from a parent IP), conditional branching (If Block, Filter Block), and looping (Loop Block to iterate over arrays). Error handling: Set Error action captures exceptions from HTTP actions or **Apex**. Response mapping transforms the action response into the IP's output structure. Combining multiple data sources in one IP — e.g., call DataRaptor Extract for Salesforce data, HTTP Action for external pricing API, then Transform to merge results. The developer designs IPs that are efficient, maintainable, and handle errors gracefully."
       },
       {
         "heading": "Debugging OmniStudio Components",
-        "body": "OmniScript debug mode activates the step-by-step data viewer — showing the JSON data model at each step. DataRaptor preview allows testing Extract, Load, and Transform configurations with sample inputs without running through a full OmniScript. Integration Procedure test console sends test payloads and inspects responses. FlexCard preview shows the rendered card with sample data. Browser developer tools (Network tab, Console) help debug HTTP Action calls and LWC component errors. The developer uses these tools systematically to isolate issues — checking data, mapping, and API calls independently."
+        "body": "OmniScript debug mode activates the step-by-step data viewer — showing the JSON data model at each step. DataRaptor preview allows testing Extract, Load, and Transform configurations with sample inputs without running through a full OmniScript. Integration Procedure test console sends test payloads and inspects responses. FlexCard preview shows the rendered card with sample data. Browser developer tools (Network tab, Console) help debug HTTP Action calls and **LWC** component errors. The developer uses these tools systematically to isolate issues — checking data, mapping, and API calls independently."
       },
       {
         "heading": "OmniStudio Deployment and Packaging",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "Custom LWC in OmniStudio",
-        "body": "Know how to create custom LWC components that extend OmniStudio: OmniscriptBaseMixin for accessing OmniScript context, custom components in FlexCards, and how to register custom components as OmniStudio elements."
+        "body": "Know how to create custom **LWC** components that extend OmniStudio: OmniscriptBaseMixin for accessing OmniScript context, custom components in FlexCards, and how to register custom components as OmniStudio elements."
       }
     ]
   },

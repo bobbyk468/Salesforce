@@ -38,7 +38,7 @@
       },
       {
         "heading": "API Integration and Automation",
-        "body": "Intelligence REST API allows external systems to push data, retrieve insights, and manage streams programmatically. Scheduled exports can push Intelligence data to external data warehouses. Zapier integration enables no-code triggers from Intelligence events. The exam tests basic API concepts — authentication, stream management via API, and how to automate data flows between Intelligence and other marketing systems."
+        "body": "Intelligence **REST API** allows external systems to push data, retrieve insights, and manage streams programmatically. Scheduled exports can push Intelligence data to external data warehouses. Zapier integration enables no-code triggers from Intelligence events. The exam tests basic API concepts — authentication, stream management via API, and how to automate data flows between Intelligence and other marketing systems."
       }
     ]
   },

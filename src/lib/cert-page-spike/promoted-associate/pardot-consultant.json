@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "Implementation and Configuration",
-        "body": "The Pardot Consultant exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture — single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions."
+        "body": "The [Pardot Consultant](/certifications/pardot-consultant) exam focuses on strategic configuration beyond the Specialist level. Implementation includes Business Unit setup, connector configuration (Pardot-Salesforce sync settings), user management across roles (Admin, Marketing, Sales), and account-level settings. The consultant designs the overall marketing automation architecture — single vs multi-business unit strategy, campaign attribution model, and integration with Salesforce CRM campaigns. Know the difference between Pardot Admin permissions and Salesforce Connected User permissions."
       },
       {
         "heading": "Advanced Lead Nurturing Strategy",
@@ -35,7 +35,7 @@
       },
       {
         "heading": "Pardot-Salesforce Campaign Alignment",
-        "body": "Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities — configured via Campaign Influence settings. B2B Marketing Analytics (built on CRM Analytics) provides advanced attribution dashboards. The consultant designs the campaign data model — Campaign Hierarchy, campaign member statuses, and attribution window settings — to align marketing and sales reporting."
+        "body": "Pardot Campaigns track first-touch attribution. Salesforce Campaigns track multi-touch attribution and enable influence reporting. Pardot Campaign Influence connects Pardot prospect activity to Salesforce Opportunities — configured via Campaign Influence settings. B2B Marketing Analytics (built on [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant)) provides advanced attribution dashboards. The consultant designs the campaign data model — Campaign Hierarchy, campaign member statuses, and attribution window settings — to align marketing and sales reporting."
       },
       {
         "heading": "Advanced Scoring, Grading, and Segmentation",
@@ -43,7 +43,7 @@
       },
       {
         "heading": "Reporting, ROI, and B2B Marketing Analytics",
-        "body": "The Pipeline Report connects Pardot activities to Salesforce Opportunities — showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (Einstein Analytics for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %)."
+        "body": "The Pipeline Report connects Pardot activities to Salesforce Opportunities — showing which campaigns generated pipeline. Engagement History embedded on Salesforce records shows individual prospect activity timelines. B2B Marketing Analytics (**Einstein Analytics** for B2B) provides pre-built dashboards for engagement, pipeline influence, and campaign performance. The consultant designs the reporting strategy to demonstrate marketing ROI to leadership and aligns metrics to business outcomes (MQL-to-SQL rate, campaign attribution, pipeline influence %)."
       }
     ]
   },
@@ -61,7 +61,7 @@
       },
       {
         "heading": "Salesforce Sync Architecture",
-        "body": "Understand the sync between Pardot (Prospects) and Salesforce (Leads/Contacts), sync triggers (Salesforce Connector user, assignment rules), and how to troubleshoot sync errors. Know the connector user's required permissions."
+        "body": "Understand the sync between Pardot (Prospects) and Salesforce (Leads/Contacts), sync triggers (Salesforce Connector user, **assignment rules**), and how to troubleshoot sync errors. Know the connector user's required permissions."
       },
       {
         "heading": "Forms, Landing Pages & Tracking",

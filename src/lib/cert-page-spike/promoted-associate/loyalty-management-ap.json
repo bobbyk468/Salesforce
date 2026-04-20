@@ -39,7 +39,7 @@
       },
       {
         "heading": "Analytics & Program Reporting",
-        "body": "Key Loyalty KPIs: Active Member Rate, Redemption Rate, Point Liability (total outstanding points × redemption value), Tier Attainment Distribution, and Program ROI. CRM Analytics Loyalty apps provide pre-built dashboards for program performance, member engagement, and financial liability. Member 360 views surface all loyalty activity alongside CRM data. Churn prediction identifies at-risk members for proactive re-engagement. Cohort analysis tracks how engagement changes as members progress through tiers. The exam tests which CRM Analytics datasets are populated by Loyalty data, how to measure point liability from journal records, and how to configure a member churn alert."
+        "body": "Key Loyalty KPIs: Active Member Rate, Redemption Rate, Point Liability (total outstanding points × redemption value), Tier Attainment Distribution, and Program ROI. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) Loyalty apps provide pre-built dashboards for program performance, member engagement, and financial liability. Member 360 views surface all loyalty activity alongside CRM data. Churn prediction identifies at-risk members for proactive re-engagement. Cohort analysis tracks how engagement changes as members progress through tiers. The exam tests which CRM Analytics datasets are populated by Loyalty data, how to measure point liability from journal records, and how to configure a member churn alert."
       }
     ]
   },
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Loyalty Analytics",
-        "body": "Know key loyalty KPIs: member acquisition rate, tier distribution, redemption rate, points liability, and how to use CRM Analytics dashboards to track program health and identify at-risk members."
+        "body": "Know key loyalty KPIs: member acquisition rate, tier distribution, redemption rate, points liability, and how to use [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards to track program health and identify at-risk members."
       }
     ]
   },

@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "Topics and Actions — the Core Configuration Unit",
-        "body": "An agent is built from Topics and Actions. Each Topic defines an area of expertise — including the description (used by the LLM to route requests), instructions, and available actions. Actions are the discrete tasks the agent can perform: Flows, Apex methods, external service calls, prompt templates, or standard actions like escalate to human. Exam questions often present a requirement and ask which action type or topic configuration is correct."
+        "body": "An agent is built from Topics and Actions. Each Topic defines an area of expertise — including the description (used by the LLM to route requests), instructions, and available actions. Actions are the discrete tasks the agent can perform: Flows, **Apex** methods, external service calls, prompt templates, or standard actions like escalate to human. Exam questions often present a requirement and ask which action type or topic configuration is correct."
       },
       {
         "heading": "Guardrails and Agent Instructions",
@@ -43,7 +43,7 @@
       },
       {
         "heading": "Channels and Escalation",
-        "body": "Agentforce agents can be deployed across Experience Cloud, web chat, Slack, and messaging channels (SMS, WhatsApp). The Escalate to Agent standard action hands off the conversation — including full transcript — to Omni-Channel routing for a human agent. Know which channels require which configuration steps and when escalation is the appropriate action type."
+        "body": "Agentforce agents can be deployed across Experience Cloud, web chat, Slack, and messaging channels (SMS, WhatsApp). The Escalate to Agent standard action hands off the conversation — including full transcript — to **Omni-Channel** routing for a human agent. Know which channels require which configuration steps and when escalation is the appropriate action type."
       }
     ]
   },
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "Topics and Actions Scenarios",
-        "body": "When a question asks &ldquo;how does the agent know which topic to use?&rdquo; — the answer is the Topic's natural language description. The LLM reads the description to route incoming requests. When a question asks &ldquo;what does the agent do within a topic?&rdquo; — the answer is an Action (Flow, Apex, Prompt Template, external service, or standard action). If a scenario requires the agent to retrieve real-time customer data, the answer is typically a Flow action or an Integration Procedure — not a Prompt Template."
+        "body": "When a question asks &ldquo;how does the agent know which topic to use?&rdquo; — the answer is the Topic's natural language description. The LLM reads the description to route incoming requests. When a question asks &ldquo;what does the agent do within a topic?&rdquo; — the answer is an Action (Flow, **Apex**, Prompt Template, external service, or standard action). If a scenario requires the agent to retrieve real-time customer data, the answer is typically a Flow action or an Integration Procedure — not a Prompt Template."
       },
       {
         "heading": "Einstein Trust Layer Questions",
@@ -65,11 +65,11 @@
       },
       {
         "heading": "Human Escalation and Channel Scenarios",
-        "body": "When a scenario says &ldquo;the agent should transfer the conversation to a human agent when it cannot resolve the issue&rdquo; — the answer is the &ldquo;Escalate to Human Agent&rdquo; standard action with Omni-Channel routing. The agent passes the full transcript to the human agent. When a scenario asks which channels Agentforce supports — know that it supports Experience Cloud, web chat, Slack, SMS, and WhatsApp. Each channel has specific configuration requirements tested in scenario questions."
+        "body": "When a scenario says &ldquo;the agent should transfer the conversation to a human agent when it cannot resolve the issue&rdquo; — the answer is the &ldquo;Escalate to Human Agent&rdquo; standard action with **Omni-Channel** routing. The agent passes the full transcript to the human agent. When a scenario asks which channels Agentforce supports — know that it supports Experience Cloud, web chat, Slack, SMS, and WhatsApp. Each channel has specific configuration requirements tested in scenario questions."
       },
       {
         "heading": "Exam Strategy",
-        "body": "The Agentforce Specialist exam is relatively new and evolves with each Salesforce release. Prioritise the official Trailhead Agentforce Specialist Trailmix as your primary study resource — it is the most current and aligned to the actual exam outline. Passing score is approximately 65% (39/60 questions). Aim for 75%+ on full mock exams before booking. Candidates with hands-on Agentforce sandbox experience (building and testing actual agents with Topics and Actions) consistently report higher first-attempt pass rates."
+        "body": "The [Agentforce Specialist](/certifications/agentforce-specialist) exam is relatively new and evolves with each Salesforce release. Prioritise the official **Trailhead** Agentforce Specialist Trailmix as your primary study resource — it is the most current and aligned to the actual exam outline. Passing score is approximately 65% (39/60 questions). Aim for 75%+ on full mock exams before booking. Candidates with hands-on Agentforce sandbox experience (building and testing actual agents with Topics and Actions) consistently report higher first-attempt pass rates."
       }
     ]
   },

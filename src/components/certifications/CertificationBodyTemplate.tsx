@@ -121,7 +121,7 @@ function KeyConceptsSection({
             {b.bodySegments?.length ? (
               <p>{renderIntroSegments(b.bodySegments)}</p>
             ) : (
-              <p>{b.body}</p>
+              <p>{renderRichText(b.body)}</p>
             )}
           </div>
         ))}
@@ -150,7 +150,7 @@ function ScenarioTipsSection({
             {b.bodySegments?.length ? (
               <p>{renderIntroSegments(b.bodySegments)}</p>
             ) : (
-              <p>{b.body}</p>
+              <p>{renderRichText(b.body)}</p>
             )}
           </div>
         ))}

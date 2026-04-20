@@ -31,7 +31,7 @@
       },
       {
         "heading": "Permissions, Security, and Compliance",
-        "body": "Slack admin roles: Primary Owner, Owner, Admin, Member, Guest (Single-channel or Multi-channel). Message retention policies define how long messages and files are kept — configurable per workspace or per channel. Data exports: standard exports include public channel messages; eDiscovery requires Enterprise Grid. IP allowlisting restricts workspace login to authorised networks. SSO (SAML 2.0) integration with corporate IdP centralises authentication. Two-factor authentication can be enforced at the workspace level. The exam tests security configuration options and their scope."
+        "body": "Slack admin roles: Primary Owner, Owner, Admin, Member, Guest (Single-channel or Multi-channel). Message retention policies define how long messages and files are kept — configurable per workspace or per channel. Data exports: standard exports include public channel messages; eDiscovery requires Enterprise Grid. IP allowlisting restricts workspace login to authorised networks. **SSO** (**SAML** 2.0) integration with corporate IdP centralises authentication. Two-factor authentication can be enforced at the workspace level. The exam tests security configuration options and their scope."
       },
       {
         "heading": "App Integration and App Directory",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "User Provisioning & SSO",
-        "body": "Know how to configure SAML SSO for Slack, SCIM provisioning for automated user lifecycle management, and how to use Slack's Directory to manage user profiles and deactivations."
+        "body": "Know how to configure **SAML** **SSO** for Slack, SCIM provisioning for automated user lifecycle management, and how to use Slack's Directory to manage user profiles and deactivations."
       }
     ]
   },

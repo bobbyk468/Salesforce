@@ -27,7 +27,7 @@
       },
       {
         "heading": "Installation, Configuration, and TSM",
-        "body": "Tableau Services Manager (TSM) is the command-line and web UI administration tool for Tableau Server. tsm configuration set changes server settings. tsm maintenance backup/restore handles server backup and recovery. TSM web UI provides a graphical interface for common admin tasks. Installation: requires a dedicated server, admin user, and product key. Initial configuration: server admin account, authentication mode (local, Active Directory, SAML), SSL/TLS certificate upload. Identity store: Local (Tableau manages users), Active Directory (sync from AD), or LDAP."
+        "body": "Tableau Services Manager (TSM) is the command-line and web UI administration tool for Tableau Server. tsm configuration set changes server settings. tsm maintenance backup/restore handles server backup and recovery. TSM web UI provides a graphical interface for common admin tasks. Installation: requires a dedicated server, admin user, and product key. Initial configuration: server admin account, authentication mode (local, Active Directory, **SAML**), SSL/TLS certificate upload. Identity store: Local (Tableau manages users), Active Directory (sync from AD), or LDAP."
       },
       {
         "heading": "User Management and Licensing",
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Authentication Configuration",
-        "body": "Know how to configure local authentication, Active Directory/LDAP, SAML SSO, OpenID Connect, and Kerberos. Understand how authentication method affects user provisioning and session management."
+        "body": "Know how to configure local authentication, Active Directory/LDAP, **SAML** **SSO**, OpenID Connect, and Kerberos. Understand how authentication method affects user provisioning and session management."
       }
     ]
   },

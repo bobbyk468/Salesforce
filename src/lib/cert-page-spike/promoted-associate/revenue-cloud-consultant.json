@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "CPQ Configuration & Product Rules",
-        "body": "Salesforce Revenue Cloud (CPQ + Billing) starts with product configuration. Product Features group options within a bundle. Configuration Attributes set product-level settings. Product Rules enforce valid configurations: Validation Rules (block invalid combos), Selection Rules (auto-add/remove products), Alert Rules (warn users), Filter Rules (hide irrelevant options). Option Constraints define which options are mutually exclusive or required together. Price Rules execute pricing logic at specific stages of the quote calculation. The consultant exam tests how to design a product bundle for a complex SaaS offering, which rule type handles a given scenario, and how to troubleshoot a rule that isn't firing as expected."
+        "body": "Salesforce Revenue Cloud (CPQ + Billing) starts with product configuration. Product Features group options within a bundle. Configuration Attributes set product-level settings. Product Rules enforce valid configurations: **Validation Rules** (block invalid combos), Selection Rules (auto-add/remove products), Alert Rules (warn users), Filter Rules (hide irrelevant options). Option Constraints define which options are mutually exclusive or required together. Price Rules execute pricing logic at specific stages of the quote calculation. The consultant exam tests how to design a product bundle for a complex SaaS offering, which rule type handles a given scenario, and how to troubleshoot a rule that isn't firing as expected."
       },
       {
         "heading": "Pricing, Discounting & Approvals",
@@ -69,7 +69,7 @@
       },
       {
         "heading": "Reporting & Forecasting for Revenue",
-        "body": "Know how Revenue Cloud extends Sales Cloud forecasting with subscription revenue, ARR/MRR metrics, and churn reporting. Understand how CRM Analytics (Tableau CRM) is used for revenue analytics."
+        "body": "Know how Revenue Cloud extends Sales Cloud forecasting with subscription revenue, ARR/MRR metrics, and churn reporting. Understand how [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (Tableau CRM) is used for revenue analytics."
       }
     ]
   },

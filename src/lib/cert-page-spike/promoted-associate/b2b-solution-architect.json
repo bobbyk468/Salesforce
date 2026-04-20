@@ -31,15 +31,15 @@
       },
       {
         "heading": "Integration Architecture Patterns",
-        "body": "Common B2B integration patterns: Point-to-Point (simple but brittle), Hub-and-Spoke (MuleSoft as integration hub), Event-Driven (Platform Events, Change Data Capture). MuleSoft API-led connectivity uses System, Process, and Experience API layers. Salesforce Connect enables OData-based external object integration. REST/SOAP callouts from Apex require Named Credentials and remote site settings. Bulk API handles high-volume data loads. Idempotent design prevents duplicate processing on retry. The exam tests which integration pattern fits a given latency, volume, and error-handling requirement — know the trade-offs between synchronous and asynchronous patterns."
+        "body": "Common B2B integration patterns: Point-to-Point (simple but brittle), Hub-and-Spoke (MuleSoft as integration hub), Event-Driven (**Platform Events**, **Change Data Capture**). MuleSoft API-led connectivity uses System, Process, and Experience API layers. Salesforce Connect enables OData-based external object integration. REST/SOAP callouts from **Apex** require **Named Credentials** and remote site settings. **Bulk API** handles high-volume data loads. Idempotent design prevents duplicate processing on retry. The exam tests which integration pattern fits a given latency, volume, and error-handling requirement — know the trade-offs between synchronous and asynchronous patterns."
       },
       {
         "heading": "Security & Compliance Design",
-        "body": "B2B solutions must address data residency, access control, and audit requirements. Shield Platform Encryption encrypts data at rest. Event Monitoring captures detailed user activity logs. Field Audit Trail retains field history beyond the standard 18 months. Customer-Managed Keys (Bring Your Own Key) give enterprises control over encryption keys. GDPR and CCPA compliance require Right to Be Forgotten capabilities and data retention policies. Health Check and Security Center provide org-level security scoring. The exam tests how to design security controls that meet enterprise compliance requirements without breaking Salesforce native functionality or Apex logic."
+        "body": "B2B solutions must address data residency, access control, and audit requirements. Shield Platform Encryption encrypts data at rest. Event Monitoring captures detailed user activity logs. Field Audit Trail retains field history beyond the standard 18 months. Customer-Managed Keys (Bring Your Own Key) give enterprises control over encryption keys. GDPR and CCPA compliance require Right to Be Forgotten capabilities and data retention policies. Health Check and Security Center provide org-level security scoring. The exam tests how to design security controls that meet enterprise compliance requirements without breaking Salesforce native functionality or **Apex** logic."
       },
       {
         "heading": "Governance, Change Management & Scalability",
-        "body": "Governance frameworks define how changes move from concept to production — org strategy (single org vs. multi-org), release management (change sets, CLI, CI/CD), and team structure (center of excellence). Sandbox strategy: scratch orgs for development, full sandboxes for UAT. Governor limits must be designed around — particularly SOQL limits in triggers, callout limits in async processes, and heap size in batch jobs. Scalability considerations include: large data volumes (skinny tables, custom indexes), high API throughput (Bulk API, async), and global deployments (multi-currency, multi-language). The exam tests the right governance approach for a given enterprise scale and deployment cadence."
+        "body": "Governance frameworks define how changes move from concept to production — org strategy (single org vs. multi-org), release management (change sets, CLI, CI/CD), and team structure (center of excellence). Sandbox strategy: scratch orgs for development, full sandboxes for UAT. **Governor limits** must be designed around — particularly **SOQL** limits in triggers, callout limits in async processes, and heap size in batch jobs. Scalability considerations include: large data volumes (skinny tables, custom indexes), high API throughput (**Bulk API**, async), and global deployments (multi-currency, multi-language). The exam tests the right governance approach for a given enterprise scale and deployment cadence."
       }
     ]
   },
@@ -57,7 +57,7 @@
       },
       {
         "heading": "Integration Architecture for B2B",
-        "body": "Know common B2B integration scenarios: ERP integration for order fulfillment (SAP, Oracle), PIM integration for product data, and how Platform Events or MuleSoft orchestrate these integrations."
+        "body": "Know common B2B integration scenarios: ERP integration for order fulfillment (SAP, Oracle), PIM integration for product data, and how **Platform Events** or MuleSoft orchestrate these integrations."
       },
       {
         "heading": "CPQ for B2B Commerce",

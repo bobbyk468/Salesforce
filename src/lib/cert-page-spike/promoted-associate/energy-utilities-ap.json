@@ -34,7 +34,7 @@
       },
       {
         "heading": "Customer Portal and Self-Service",
-        "body": "Experience Cloud provides the customer-facing portal for energy utility customers. Self-service capabilities: view bills and payment history, make payments, report outages, start/stop/transfer service, manage account preferences. Knowledge articles address common questions (how to read your meter, what to do during an outage). The consultant configures the Experience Cloud site for utility customers — balancing self-service capabilities with the utility's compliance requirements around data access and service request validation."
+        "body": "Experience Cloud provides the customer-facing portal for energy utility customers. Self-service capabilities: view bills and payment history, make payments, report outages, start/stop/transfer service, manage account preferences. **Knowledge articles** address common questions (how to read your meter, what to do during an outage). The consultant configures the Experience Cloud site for utility customers — balancing self-service capabilities with the utility's compliance requirements around data access and service request validation."
       },
       {
         "heading": "Billing Integration and Account Management",
@@ -64,7 +64,7 @@
       },
       {
         "heading": "Industry-Specific Analytics",
-        "body": "Know the utility KPIs tracked in CRM Analytics: customer satisfaction, outage metrics, service request volumes, energy efficiency program adoption, and how predictive analytics identifies at-risk customers."
+        "body": "Know the utility KPIs tracked in [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant): customer satisfaction, outage metrics, service request volumes, energy efficiency program adoption, and how predictive analytics identifies at-risk customers."
       }
     ]
   },

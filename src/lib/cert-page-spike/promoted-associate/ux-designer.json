@@ -43,7 +43,7 @@
       },
       {
         "heading": "Salesforce UX Tooling: Lightning App Builder and Dynamic Forms",
-        "body": "Lightning App Builder enables drag-and-drop page composition — Home, Record, and App pages — using standard and custom components. Dynamic Forms move fields and sections from the page layout into the record page, enabling conditional visibility based on field values or user permissions. Dynamic Actions control button visibility with similar logic. Compact Layouts define the fields shown in record highlights, mobile previews, and related lists. Know the difference between page layouts (object-level, profile-based) and dynamic forms (page-level, condition-based)."
+        "body": "**Lightning App Builder** enables drag-and-drop page composition — Home, Record, and App pages — using standard and custom components. **Dynamic Forms** move fields and sections from the page layout into the record page, enabling conditional visibility based on field values or user permissions. Dynamic Actions control button visibility with similar logic. Compact Layouts define the fields shown in record highlights, mobile previews, and related lists. Know the difference between **page layouts** (object-level, profile-based) and dynamic forms (page-level, condition-based)."
       }
     ]
   },
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Page Layout & App Design",
-        "body": "Know how to design Lightning page layouts: component placement, progressive disclosure, and how to use visibility rules to reduce cognitive load. Understand how the Lightning App Builder enables no-code page customization."
+        "body": "Know how to design Lightning **page layouts**: component placement, progressive disclosure, and how to use visibility rules to reduce cognitive load. Understand how the **Lightning App Builder** enables no-code page customization."
       },
       {
         "heading": "Prototyping & Testing",

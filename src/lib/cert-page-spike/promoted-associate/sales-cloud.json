@@ -28,7 +28,7 @@
     "blocks": [
       {
         "heading": "Lead Management: Assignment Rules and Lead Conversion",
-        "body": "Lead Assignment Rules automatically route leads to users or queues based on criteria — region, lead source, company size. Web-to-Lead captures leads directly from web forms. When a lead converts, Salesforce creates or merges an Account, Contact, and optionally an Opportunity — understanding what maps to what is a high-frequency exam topic. Duplicate rules should be configured to prevent duplicate leads entering the funnel."
+        "body": "Lead **Assignment Rules** automatically route leads to users or queues based on criteria — region, lead source, company size. **Web-to-Lead** captures leads directly from web forms. When a lead converts, Salesforce creates or merges an Account, Contact, and optionally an Opportunity — understanding what maps to what is a high-frequency exam topic. **Duplicate rules** should be configured to prevent duplicate leads entering the funnel."
       },
       {
         "heading": "Opportunity Management: Stages, Splits, and Teams",
@@ -36,7 +36,7 @@
       },
       {
         "heading": "Collaborative Forecasts: Categories and Adjustments",
-        "body": "Collaborative Forecasts roll up opportunity amounts through the role hierarchy. Each opportunity stage maps to a Forecast Category: Pipeline, Best Case, Commit, Closed, or Omitted. Managers can submit adjustments to subordinate forecasts. Custom Forecast Types let organisations forecast on non-amount fields (quantity, revenue). Understand how categories roll up and when manager adjustments override rep numbers."
+        "body": "Collaborative Forecasts roll up opportunity amounts through the **role hierarchy**. Each opportunity stage maps to a Forecast Category: Pipeline, Best Case, Commit, Closed, or Omitted. Managers can submit adjustments to subordinate forecasts. Custom Forecast Types let organisations forecast on non-amount fields (quantity, revenue). Understand how categories roll up and when manager adjustments override rep numbers."
       },
       {
         "heading": "Products, Price Books, and Quotes",
@@ -54,11 +54,11 @@
     "blocks": [
       {
         "heading": "Lead-to-Cash Process Mastery",
-        "body": "Understand the full lifecycle: Lead capture → Lead Assignment Rules → Conversion → Opportunity stages → Quotes → Close. Know what data transfers during lead conversion and what must be manually re-entered."
+        "body": "Understand the full lifecycle: Lead capture → Lead **Assignment Rules** → Conversion → Opportunity stages → Quotes → Close. Know what data transfers during lead conversion and what must be manually re-entered."
       },
       {
         "heading": "Forecasting & Territory Management",
-        "body": "Know the difference between Collaborative Forecasts, Territory Forecasts, and customizable forecasting. Understand how Opportunity Splits share revenue credit and how territory assignment rules work."
+        "body": "Know the difference between Collaborative Forecasts, Territory Forecasts, and customizable forecasting. Understand how Opportunity Splits share revenue credit and how territory **assignment rules** work."
       },
       {
         "heading": "Einstein Sales Features",
@@ -66,7 +66,7 @@
       },
       {
         "heading": "Sales Process Configuration",
-        "body": "Understand Opportunity stages and sales processes, how to configure multiple sales processes for different record types, and how Path guides reps through stages with key fields and coaching tips."
+        "body": "Understand Opportunity stages and sales processes, how to configure multiple sales processes for different **record types**, and how Path guides reps through stages with key fields and coaching tips."
       },
       {
         "heading": "CPQ Integration Basics",

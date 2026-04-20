@@ -23,7 +23,7 @@
     "blocks": [
       {
         "heading": "Integration Architecture Patterns",
-        "body": "Integration patterns: Point-to-point (direct connection between two systems — brittle at scale), Hub-and-spoke (central integration hub mediates all connections — reduces n*(n-1) connections to n connections), API-led (layered API approach — flexible and composable), Event-driven (publish/subscribe decoupling — scalable but eventual consistency). The Integration Architect selects patterns based on: number of systems, latency requirements, scalability needs, and team capability. Know when API-led supersedes traditional hub-and-spoke."
+        "body": "Integration patterns: Point-to-point (direct connection between two systems — brittle at scale), Hub-and-spoke (central integration hub mediates all connections — reduces n*(n-1) connections to n connections), API-led (layered API approach — flexible and composable), Event-driven (publish/subscribe decoupling — scalable but eventual consistency). The [Integration Architect](/certifications/integration-architect) selects patterns based on: number of systems, latency requirements, scalability needs, and team capability. Know when API-led supersedes traditional hub-and-spoke."
       },
       {
         "heading": "API-Led Connectivity: Three-Layer Architecture",
@@ -31,7 +31,7 @@
       },
       {
         "heading": "Security Architecture for Integrations",
-        "body": "OAuth 2.0 client credentials flow for M2M API authentication. Mutual TLS (mTLS) for certificate-based authentication — both client and server present certificates. API Manager policy stacking — apply multiple policies in sequence (auth → rate limit → header injection). Secrets Manager for credential storage — never hardcode credentials in Mule apps. Anypoint Security (separate licence) provides tokenisation, secrets management, and crypto operations. The exam tests how to design a multi-layer security architecture for APIs and integrations."
+        "body": "**OAuth** 2.0 client credentials flow for M2M API authentication. Mutual TLS (mTLS) for certificate-based authentication — both client and server present certificates. API Manager policy stacking — apply multiple policies in sequence (auth → rate limit → header injection). Secrets Manager for credential storage — never hardcode credentials in Mule apps. Anypoint Security (separate licence) provides tokenisation, secrets management, and crypto operations. The exam tests how to design a multi-layer security architecture for APIs and integrations."
       },
       {
         "heading": "High Availability, Resilience, and SLAs",
@@ -39,7 +39,7 @@
       },
       {
         "heading": "Anypoint Governance and Centre for Enablement",
-        "body": "Centre for Enablement (C4E) is MuleSoft's operating model for scaling API-led connectivity. The C4E team creates reusable assets (API templates, connector extensions, shared fragments) published to Exchange. Governance: API rating and certification in Exchange, API contract testing, dependency tracking via API Catalog. The Integration Architect designs governance policies — when new versions require review, how breaking changes are managed, and how teams discover and reuse existing assets. The exam tests C4E principles and governance framework design."
+        "body": "Centre for Enablement (C4E) is MuleSoft's operating model for scaling API-led connectivity. The C4E team creates reusable assets (API templates, connector extensions, shared fragments) published to Exchange. Governance: API rating and certification in Exchange, API contract testing, dependency tracking via API Catalog. The [Integration Architect](/certifications/integration-architect) designs governance policies — when new versions require review, how breaking changes are managed, and how teams discover and reuse existing assets. The exam tests C4E principles and governance framework design."
       }
     ]
   },

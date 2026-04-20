@@ -38,7 +38,7 @@
       },
       {
         "heading": "Analytics & Field Performance Reporting",
-        "body": "Consumer Goods Cloud reports and dashboards measure field execution quality, sell-in vs. sell-out performance, and promotional effectiveness. Visit Completion Rate, OSA (On-Shelf Availability), and planogram compliance are key metrics. Einstein Analytics (CRM Analytics) apps for Consumer Goods provide pre-built dashboards for territory managers. Scorecards aggregate KPIs at the rep, territory, and national levels. Alerts notify managers when execution falls below threshold. The exam tests which standard reports are available, how to configure custom KPI scorecards, and how CRM Analytics datasets are populated from visit activity data."
+        "body": "Consumer Goods Cloud reports and dashboards measure field execution quality, sell-in vs. sell-out performance, and promotional effectiveness. Visit Completion Rate, OSA (On-Shelf Availability), and planogram compliance are key metrics. **Einstein Analytics** ([CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant)) apps for Consumer Goods provide pre-built dashboards for territory managers. Scorecards aggregate KPIs at the rep, territory, and national levels. Alerts notify managers when execution falls below threshold. The exam tests which standard reports are available, how to configure custom KPI scorecards, and how CRM Analytics datasets are populated from visit activity data."
       }
     ]
   },
@@ -64,7 +64,7 @@
       },
       {
         "heading": "Analytics & Reporting",
-        "body": "Know the standard CG Cloud reports and dashboards: visit compliance rates, distribution KPIs, survey response trends, and how CRM Analytics is used for advanced territory and account performance analysis."
+        "body": "Know the standard CG Cloud reports and dashboards: visit compliance rates, distribution KPIs, survey response trends, and how [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) is used for advanced territory and account performance analysis."
       }
     ]
   },

@@ -27,7 +27,7 @@
     "blocks": [
       {
         "heading": "Data Architecture: Datasets & Dataflows",
-        "body": "CRM Analytics (formerly Tableau CRM / Einstein Analytics) stores data in Datasets — optimized columnar data stores separate from the Salesforce database. Dataflows define how data is extracted from Salesforce objects, joined, aggregated, and loaded into datasets — using a JSON-based recipe. Recipes (Data Prep) provide a visual ETL interface for data transformation. External data can be loaded via CSV upload or connected datasets. Incremental sync keeps datasets fresh with only changed records. The consultant exam tests how to design a dataflow for a multi-object scenario (e.g., joining Accounts, Opportunities, and Cases), how to configure incremental sync, and how to troubleshoot failed dataflow jobs."
+        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (formerly Tableau CRM / **Einstein Analytics**) stores data in Datasets — optimized columnar data stores separate from the Salesforce database. Dataflows define how data is extracted from Salesforce objects, joined, aggregated, and loaded into datasets — using a JSON-based recipe. Recipes (Data Prep) provide a visual ETL interface for data transformation. External data can be loaded via CSV upload or connected datasets. Incremental sync keeps datasets fresh with only changed records. The consultant exam tests how to design a dataflow for a multi-object scenario (e.g., joining Accounts, Opportunities, and Cases), how to configure incremental sync, and how to troubleshoot failed dataflow jobs."
       },
       {
         "heading": "Lenses, Dashboards & Stories",
@@ -39,11 +39,11 @@
       },
       {
         "heading": "Security: Row-Level & Field-Level Access",
-        "body": "CRM Analytics uses a separate security model from Salesforce record sharing. Dataset Security Predicates filter rows based on the logged-in user — referencing user fields like role, profile, or a custom attribute. Inheritance mode automatically applies Salesforce sharing rules to the dataset. User Attributes defined in CRM Analytics can be used in predicates and SAQL. Field-level security hides specific columns from certain users or groups. App sharing (Viewer, Editor, Manager) controls who can access and modify dashboards. The exam tests how to design a security predicate for a hierarchical visibility scenario (managers see their team's data, reps see only their own)."
+        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) uses a separate security model from Salesforce record sharing. Dataset Security Predicates filter rows based on the logged-in user — referencing user fields like role, profile, or a custom attribute. Inheritance mode automatically applies Salesforce **sharing rules** to the dataset. User Attributes defined in CRM Analytics can be used in predicates and SAQL. **Field-level security** hides specific columns from certain users or groups. App sharing (Viewer, Editor, Manager) controls who can access and modify dashboards. The exam tests how to design a security predicate for a hierarchical visibility scenario (managers see their team's data, reps see only their own)."
       },
       {
         "heading": "Deployment, Administration & Integration",
-        "body": "CRM Analytics apps are deployed using packages (change sets or CLI). Template Apps provide pre-built analytics solutions for Sales, Service, and specific industries. Custom apps extend or replace template apps. Connected objects define the Salesforce data sources for a template app — configuring which objects and fields feed each dataset. Scheduled dataflow runs keep datasets refreshed (up to 24 scheduled runs per day). Admin setup includes enabling CRM Analytics, assigning permission sets, and configuring connected objects. Integration with Einstein Discovery requires a CRM Analytics Plus license. The exam tests deployment sequences, template app configuration, and troubleshooting scheduling and data refresh issues."
+        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) apps are deployed using packages (change sets or CLI). Template Apps provide pre-built analytics solutions for Sales, Service, and specific industries. Custom apps extend or replace template apps. Connected objects define the Salesforce data sources for a template app — configuring which objects and fields feed each dataset. Scheduled dataflow runs keep datasets refreshed (up to 24 scheduled runs per day). Admin setup includes enabling CRM Analytics, assigning **permission sets**, and configuring connected objects. Integration with Einstein Discovery requires a CRM Analytics Plus license. The exam tests deployment sequences, template app configuration, and troubleshooting scheduling and data refresh issues."
       }
     ]
   },
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Dashboard Design & Embedding",
-        "body": "Understand how to configure widgets (chart, number, table, filter), link steps for drill-through navigation, and embed CRM Analytics dashboards in Lightning pages and the mobile app."
+        "body": "Understand how to configure widgets (chart, number, table, filter), link steps for drill-through navigation, and embed [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards in Lightning pages and the mobile app."
       },
       {
         "heading": "Security & Data Access",

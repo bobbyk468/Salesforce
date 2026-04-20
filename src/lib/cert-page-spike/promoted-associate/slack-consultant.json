@@ -39,7 +39,7 @@
       },
       {
         "heading": "Data Governance and Compliance",
-        "body": "Data residency: sensitive Salesforce data shared in Slack must comply with data governance policies. DLP (Data Loss Prevention) integrations scan messages for sensitive data (credit card numbers, SSNs) and can block, alert, or redact. eDiscovery integration with Slack Enterprise Grid allows legal holds and exports for compliance. The consultant advises on which Salesforce record types can be shared in Slack, what retention policies apply to Slack channels containing Salesforce data, and how to configure compliance controls."
+        "body": "Data residency: sensitive Salesforce data shared in Slack must comply with data governance policies. DLP (Data Loss Prevention) integrations scan messages for sensitive data (credit card numbers, SSNs) and can block, alert, or redact. eDiscovery integration with Slack Enterprise Grid allows legal holds and exports for compliance. The consultant advises on which Salesforce **record types** can be shared in Slack, what retention policies apply to Slack channels containing Salesforce data, and how to configure compliance controls."
       },
       {
         "heading": "Adoption Strategy and Change Management",

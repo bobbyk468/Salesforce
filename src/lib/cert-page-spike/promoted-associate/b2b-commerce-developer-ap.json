@@ -27,19 +27,19 @@
       },
       {
         "heading": "Commerce APIs & Storefront REST APIs",
-        "body": "The Commerce Connect API (Connect in Apex) provides programmatic access to storefront operations. REST APIs power all storefront interactions — search, product detail, cart, checkout, and order history. The Product Search API supports faceted search with category and attribute filters. Custom price calculators can be implemented via the Commerce Extension framework. The B2C and B2B APIs share similar patterns but differ in auth context (buyer session vs. guest). The exam tests which API to use for a given scenario, how to authenticate as a buyer, and how to extend standard behavior using the extension framework."
+        "body": "The Commerce Connect API (Connect in **Apex**) provides programmatic access to storefront operations. REST APIs power all storefront interactions — search, product detail, cart, checkout, and order history. The Product Search API supports faceted search with category and attribute filters. Custom price calculators can be implemented via the Commerce Extension framework. The B2C and B2B APIs share similar patterns but differ in auth context (buyer session vs. guest). The exam tests which API to use for a given scenario, how to authenticate as a buyer, and how to extend standard behavior using the extension framework."
       },
       {
         "heading": "Checkout Integrations & Tax/Payment",
-        "body": "Custom checkout integrations implement the `CartExtension` or `CheckoutExtension` Apex interfaces. Tax calculation extensions receive a cart and return line-item tax amounts. Shipping calculation extensions provide shipping options and costs. Payment integrations use the Payment Gateway framework — implement `commercepayments.PaymentGatewayAdapter`. Test classes for commerce extensions must mock the cart and checkout context. The exam tests how to implement and register each extension type, how to handle exceptions gracefully, and how to write unit tests for commerce Apex extensions."
+        "body": "Custom checkout integrations implement the `CartExtension` or `CheckoutExtension` **Apex** interfaces. Tax calculation extensions receive a cart and return line-item tax amounts. Shipping calculation extensions provide shipping options and costs. Payment integrations use the Payment Gateway framework — implement `commercepayments.PaymentGatewayAdapter`. Test classes for commerce extensions must mock the cart and checkout context. The exam tests how to implement and register each extension type, how to handle exceptions gracefully, and how to write unit tests for commerce Apex extensions."
       },
       {
         "heading": "Search Configuration & Merchandising",
-        "body": "B2B Commerce search uses the Salesforce Search Index — products are indexed when published. Search configuration allows field boosts, synonym groups, and exclusion rules. Facets are configured from product attributes and category fields. Sorting options are configurable. Merchandising Rules let admins pin, boost, or bury specific products in search results. CMS-managed banners can appear in search result pages. The developer exam tests how to configure search tuning, how to add custom product attributes to the search index, and how to implement custom search result handling in LWC."
+        "body": "B2B Commerce search uses the Salesforce Search Index — products are indexed when published. Search configuration allows field boosts, synonym groups, and exclusion rules. Facets are configured from product attributes and category fields. Sorting options are configurable. Merchandising Rules let admins pin, boost, or bury specific products in search results. CMS-managed banners can appear in search result pages. The developer exam tests how to configure search tuning, how to add custom product attributes to the search index, and how to implement custom search result handling in **LWC**."
       },
       {
         "heading": "Testing, Deployment & Performance",
-        "body": "B2B Commerce deployments use standard Salesforce metadata tooling — Salesforce CLI, change sets, or CI/CD pipelines. Commerce metadata types include StoreIntegratedService, CommerceSettings, and custom LWC components. Integration tests for commerce extensions use Apex test utilities to simulate cart operations. Page performance is governed by LWC best practices: avoid unnecessary re-renders, use lazy loading for images, minimize wire adapter calls. CDN configuration for Experience Cloud handles static asset caching. The exam tests the correct deployment sequence for a store update and how to diagnose checkout performance issues."
+        "body": "B2B Commerce deployments use standard Salesforce metadata tooling — Salesforce CLI, change sets, or CI/CD pipelines. Commerce metadata types include StoreIntegratedService, CommerceSettings, and custom **LWC** components. Integration tests for commerce extensions use **Apex** test utilities to simulate cart operations. Page performance is governed by LWC best practices: avoid unnecessary re-renders, use lazy loading for images, minimize wire adapter calls. CDN configuration for Experience Cloud handles static asset caching. The exam tests the correct deployment sequence for a store update and how to diagnose checkout performance issues."
       }
     ]
   },
@@ -49,11 +49,11 @@
     "blocks": [
       {
         "heading": "B2B Commerce Extensibility Framework",
-        "body": "Know the key extension points: Custom LWC components in the storefront, Cart Extension Apex classes for custom cart logic, Integration APIs for external catalog and pricing, and checkout step overrides."
+        "body": "Know the key extension points: Custom **LWC** components in the storefront, Cart Extension **Apex** classes for custom cart logic, Integration APIs for external catalog and pricing, and checkout step overrides."
       },
       {
         "heading": "Storefront LWC Development",
-        "body": "Know how to create custom LWC components for the B2B storefront: using the ConnectApi in JavaScript, styling with the B2B CSS framework, and deploying components to the Experience Cloud site."
+        "body": "Know how to create custom **LWC** components for the B2B storefront: using the ConnectApi in JavaScript, styling with the B2B CSS framework, and deploying components to the Experience Cloud site."
       },
       {
         "heading": "Apex Extension Points",

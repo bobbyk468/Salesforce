@@ -29,19 +29,19 @@
       },
       {
         "heading": "Data Modeling Basics",
-        "body": "Salesforce organizes data into Objects (equivalent to database tables) and Records (rows). Standard Objects (Account, Contact, Lead, Opportunity, Case) are pre-built. Custom Objects store business-specific data. Fields define the data types stored in an object. Record Types allow different page layouts and picklist values per user group on the same object. Relationships connect objects: Lookup (loose coupling, optional parent), Master-Detail (tight coupling, cascade delete, roll-up summary). External Objects connect to external data via Salesforce Connect. The exam tests field type selection (Formula, Roll-Up Summary, Picklist, Text, Currency), when to use Lookup vs. Master-Detail, and how Record Types enable different business processes on the same object."
+        "body": "Salesforce organizes data into Objects (equivalent to database tables) and Records (rows). Standard Objects (Account, Contact, Lead, Opportunity, Case) are pre-built. Custom Objects store business-specific data. Fields define the data types stored in an object. **Record Types** allow different **page layouts** and picklist values per user group on the same object. Relationships connect objects: Lookup (loose coupling, optional parent), **Master-Detail** (tight coupling, cascade delete, **roll-up summary**). External Objects connect to external data via Salesforce Connect. The exam tests field type selection (Formula, Roll-Up Summary, Picklist, Text, Currency), when to use Lookup vs. Master-Detail, and how Record Types enable different business processes on the same object."
       },
       {
         "heading": "Security Model Overview",
-        "body": "Salesforce security operates at four levels: Org (login, network access), Object (CRUD via profiles/permission sets), Field (read/edit via profiles/permission sets), and Record (OWD + Role Hierarchy + Sharing). Profiles assign baseline permissions to every user of a type. Permission Sets grant additional permissions to specific users without changing the profile. Permission Set Groups bundle multiple Permission Sets. Org-Wide Defaults (OWD) set the most restrictive baseline access for records. Role Hierarchy and Sharing Rules extend record visibility beyond OWD. The exam tests which security layer to modify to solve a given access problem — know that you always configure the most restrictive layer first, then open up selectively."
+        "body": "Salesforce security operates at four levels: Org (login, network access), Object (CRUD via profiles/**permission sets**), Field (read/edit via profiles/permission sets), and Record (**OWD** + **Role Hierarchy** + Sharing). Profiles assign baseline permissions to every user of a type. Permission Sets grant additional permissions to specific users without changing the profile. **Permission Set Groups** bundle multiple Permission Sets. Org-Wide Defaults (OWD) set the most restrictive baseline access for records. Role Hierarchy and **Sharing Rules** extend record visibility beyond OWD. The exam tests which security layer to modify to solve a given access problem — know that you always configure the most restrictive layer first, then open up selectively."
       },
       {
         "heading": "Automation Overview: Declarative Tools",
-        "body": "Salesforce provides a suite of declarative automation tools. Validation Rules prevent records from being saved if data doesn't meet criteria — fires before save. Formula Fields calculate values automatically from other field values — read-only. Default Field Values pre-fill fields on new records. Record-Triggered Flows execute automation before or after a record save — replaces Process Builder and Workflow Rules. Approval Processes route records through human reviewers. Scheduled Flows process batches of records at a scheduled time. The Foundations exam tests which tool to use for: enforcing data quality (Validation Rule), calculating a derived value (Formula Field), automating a multi-step process (Flow), or requiring manager sign-off (Approval Process)."
+        "body": "Salesforce provides a suite of declarative automation tools. **Validation Rules** prevent records from being saved if data doesn't meet criteria — fires before save. Formula Fields calculate values automatically from other field values — read-only. Default Field Values pre-fill fields on new records. Record-Triggered Flows execute automation before or after a record save — replaces Process Builder and Workflow Rules. Approval Processes route records through human reviewers. Scheduled Flows process batches of records at a scheduled time. The Foundations exam tests which tool to use for: enforcing data quality (Validation Rule), calculating a derived value (Formula Field), automating a multi-step process (Flow), or requiring manager sign-off (Approval Process)."
       },
       {
         "heading": "AppExchange, Ecosystem & Trailhead",
-        "body": "AppExchange is Salesforce's marketplace for third-party applications, components, Flows, and Lightning Bolts. Managed Packages are ISV-published solutions that are upgradeable and have protected code. Unmanaged Packages are open-source and not upgradeable. Security Review ensures AppExchange listings meet Salesforce security standards. Partner Ecosystem includes consulting SIs, ISVs, and Salesforce-trained professionals (Trailblazers). Trailhead is the free learning platform — modules, trails, superbadges, and certifications. Trailblazer Community provides forums and user groups. The Foundations exam tests the difference between managed and unmanaged packages, how to evaluate an AppExchange listing, and the role of the Salesforce ecosystem in extending the platform."
+        "body": "**AppExchange** is Salesforce's marketplace for third-party applications, components, Flows, and Lightning Bolts. Managed Packages are ISV-published solutions that are upgradeable and have protected code. Unmanaged Packages are open-source and not upgradeable. Security Review ensures AppExchange listings meet Salesforce security standards. Partner Ecosystem includes consulting SIs, ISVs, and Salesforce-trained professionals (Trailblazers). **Trailhead** is the free learning platform — modules, trails, superbadges, and certifications. Trailblazer Community provides forums and user groups. The Foundations exam tests the difference between managed and unmanaged packages, how to evaluate an AppExchange listing, and the role of the Salesforce ecosystem in extending the platform."
       }
     ]
   },
@@ -51,15 +51,15 @@
     "blocks": [
       {
         "heading": "Understand the Core Data Model",
-        "body": "Know standard vs. custom objects, field types, and relationship types (lookup vs. master-detail). Understand how the App Builder uses these building blocks to create business applications."
+        "body": "Know standard vs. custom objects, field types, and relationship types (lookup vs. **master-detail**). Understand how the App Builder uses these building blocks to create business applications."
       },
       {
         "heading": "Core Automation Features",
-        "body": "Know Flow Builder for automation, validation rules for data quality, formula fields for calculated values, and approval processes for multi-step reviews. No deep configuration details required — focus on use cases."
+        "body": "Know Flow Builder for automation, **validation rules** for data quality, formula fields for calculated values, and approval processes for multi-step reviews. No deep configuration details required — focus on use cases."
       },
       {
         "heading": "User Management Basics",
-        "body": "Profiles control what users can do; Roles control what data they can see via the role hierarchy. Permission Sets add access beyond a profile. These three work together to govern user access."
+        "body": "Profiles control what users can do; Roles control what data they can see via the **role hierarchy**. **Permission Sets** add access beyond a profile. These three work together to govern user access."
       },
       {
         "heading": "Reports & Dashboards Overview",
@@ -67,7 +67,7 @@
       },
       {
         "heading": "The Salesforce Ecosystem",
-        "body": "Understand AppExchange for third-party apps, Trailhead for learning, and the main Salesforce clouds (Sales, Service, Marketing, Experience, Platform) at a high level — what each cloud solves and when it's appropriate."
+        "body": "Understand **AppExchange** for third-party apps, **Trailhead** for learning, and the main Salesforce clouds (Sales, Service, Marketing, Experience, Platform) at a high level — what each cloud solves and when it's appropriate."
       }
     ]
   },

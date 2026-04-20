@@ -23,15 +23,15 @@
     "blocks": [
       {
         "heading": "Data Model & Object Relationships",
-        "body": "The ADM-201 practice exam heavily tests data modeling. Know the difference between Master-Detail (cascade delete, roll-up summaries, child shares parent OWD) and Lookup (no cascade delete, independent sharing, no roll-up summaries). External IDs mark a text field for upsert operations and external system matching. Schema Builder provides a visual canvas to view and create objects and relationships. Junction Objects enable many-to-many. Compound fields (Address, Geolocation) store multiple components in one field. Expect 3–5 data model questions in every practice set."
+        "body": "The ADM-201 practice exam heavily tests data modeling. Know the difference between **Master-Detail** (cascade delete, roll-up summaries, child shares parent **OWD**) and Lookup (no cascade delete, independent sharing, no roll-up summaries). **External IDs** mark a text field for upsert operations and external system matching. **Schema Builder** provides a visual canvas to view and create objects and relationships. **Junction Objects** enable many-to-many. Compound fields (Address, Geolocation) store multiple components in one field. Expect 3–5 data model questions in every practice set."
       },
       {
         "heading": "Security & Access Control",
-        "body": "Object-level security: set via Profiles and Permission Sets (CRUD). Field-level security: set via Profiles and Permission Sets per field. Record-level security: OWDs, Role Hierarchy, Sharing Rules, Manual Sharing, Teams. The principle of least privilege applies — start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. Connected Apps and OAuth govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change."
+        "body": "**Object-level security**: set via Profiles and **Permission Sets** (CRUD). **Field-level security**: set via Profiles and Permission Sets per field. **Record-level security**: OWDs, **Role Hierarchy**, **Sharing Rules**, **Manual Sharing**, Teams. The principle of least privilege applies — start restrictive, open up selectively. Login Hours and Login IP Ranges restrict when and where users can log in. **Connected Apps** and **OAuth** govern API access. Delegated Administration lets non-sysadmin users manage specific user groups. Practice questions often present a user who can/cannot see something and ask what setting to change."
       },
       {
         "heading": "Automation & Process Logic",
-        "body": "Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). Validation Rules fire before the record saves — use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. Roll-Up Summary fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for Master-Detail from child to parent in roll-up direction)."
+        "body": "Flows are the primary answer for most automation questions in ADM-201. Record-Triggered (before/after save), Screen Flows (guided UI), Scheduled Flows (time-based), and Autolaunched Flows (called from other automation). **Validation Rules** fire before the record saves — use them to enforce data quality. Formula fields are read-only calculated fields that update automatically. **Roll-Up Summary** fields aggregate child data on the parent. Default field values pre-fill fields on new records. Cross-Object Formulas reference parent object fields (up to 5 levels for Lookup, 1 level for **Master-Detail** from child to parent in roll-up direction)."
       },
       {
         "heading": "Reports & Dashboards for Practice Questions",
@@ -39,7 +39,7 @@
       },
       {
         "heading": "AppExchange & Change Management",
-        "body": "AppExchange packages come in Managed (ISV, upgradeable, code protected) and Unmanaged (source editable, no upgrades) varieties. Always install AppExchange packages in a sandbox first and review required permissions before production install. Change Sets move metadata between orgs in the same Salesforce environment (e.g., sandbox to production). Sandboxes: Developer (small data), Developer Pro (more storage), Partial Copy (subset of data), Full (full copy). The deployment cycle is: develop in sandbox → test → deploy via Change Set, Metadata API, or Salesforce CLI."
+        "body": "**AppExchange** packages come in Managed (ISV, upgradeable, code protected) and Unmanaged (source editable, no upgrades) varieties. Always install AppExchange packages in a sandbox first and review required permissions before production install. Change Sets move metadata between orgs in the same Salesforce environment (e.g., sandbox to production). Sandboxes: Developer (small data), Developer Pro (more storage), Partial Copy (subset of data), Full (full copy). The deployment cycle is: develop in sandbox → test → deploy via Change Set, **Metadata API**, or Salesforce CLI."
       }
     ]
   },
@@ -49,11 +49,11 @@
     "blocks": [
       {
         "heading": "Simulate real exam pacing",
-        "body": "Complete a full block of practice questions in one sitting with no Trailhead, notes, or search. The live exam rewards quick pattern recognition on sharing, Flow vs older automation, and report formats — rehearsal without lookups trains that recall."
+        "body": "Complete a full block of practice questions in one sitting with no **Trailhead**, notes, or search. The live exam rewards quick pattern recognition on sharing, Flow vs older automation, and report formats — rehearsal without lookups trains that recall."
       },
       {
         "heading": "Review every explanation",
-        "body": "For every miss, read the explanation and the “why wrong” pattern: ADM-201 often swaps plausible distractors (e.g., Lookup vs Master-Detail, profile vs permission set, OWD vs sharing rule). Noting why each distractor fails prevents the same trap on a reworded question."
+        "body": "For every miss, read the explanation and the “why wrong” pattern: ADM-201 often swaps plausible distractors (e.g., Lookup vs **Master-Detail**, profile vs permission set, **OWD** vs sharing rule). Noting why each distractor fails prevents the same trap on a reworded question."
       },
       {
         "heading": "Drill weak sections from the heatmap",

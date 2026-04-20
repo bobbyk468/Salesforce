@@ -31,7 +31,7 @@
       },
       {
         "heading": "Asset Management & Maintenance Plans",
-        "body": "Assets represent physical equipment or products owned by customers. Asset Relationships model complex asset hierarchies (parent-child, component-of). Maintenance Plans define recurring service schedules — set work type, frequency, and generation horizon. Work Order Generation automatically creates future work orders from the maintenance plan. Asset Warranties track coverage periods and terms. Service Contracts define the scope and duration of a service agreement. Entitlements within Service Cloud FSL determine response time SLAs. Advanced FSL exam questions often involve configuring proactive maintenance and linking warranty coverage to auto-generated work orders."
+        "body": "Assets represent physical equipment or products owned by customers. Asset Relationships model complex asset hierarchies (parent-child, component-of). Maintenance Plans define recurring service schedules — set work type, frequency, and generation horizon. Work Order Generation automatically creates future work orders from the maintenance plan. Asset Warranties track coverage periods and terms. Service Contracts define the scope and duration of a service agreement. **Entitlements** within Service Cloud FSL determine response time SLAs. Advanced FSL exam questions often involve configuring proactive maintenance and linking warranty coverage to auto-generated work orders."
       },
       {
         "heading": "Inventory & Parts Management",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "Field Service Analytics",
-        "body": "Know how to build Field Service analytics: first-time fix rate, travel time efficiency, SLA compliance, technician utilization, and how to use CRM Analytics for advanced field service reporting."
+        "body": "Know how to build Field Service analytics: first-time fix rate, travel time efficiency, SLA compliance, technician utilization, and how to use [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) for advanced field service reporting."
       },
       {
         "heading": "Mobile App Advanced Configuration",

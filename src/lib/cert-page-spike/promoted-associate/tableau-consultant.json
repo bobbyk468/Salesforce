@@ -39,7 +39,7 @@
       },
       {
         "heading": "Tableau Server Administration for Consultants",
-        "body": "Consultants configure Tableau Server for clients: create sites (for multi-tenancy — each site is isolated), configure projects and permissions, set up user authentication (Local, Active Directory, SAML SSO), and schedule extract refreshes. Subscriptions send emailed snapshots of views on a schedule. Webhooks trigger external systems when Tableau events occur (publish, refresh completion). The consultant advises on content governance — project structure, who can publish where, certification workflows, and data source governance to prevent fragmented analytics environments."
+        "body": "Consultants configure Tableau Server for clients: create sites (for multi-tenancy — each site is isolated), configure projects and permissions, set up user authentication (Local, Active Directory, **SAML** **SSO**), and schedule extract refreshes. Subscriptions send emailed snapshots of views on a schedule. Webhooks trigger external systems when Tableau events occur (publish, refresh completion). The consultant advises on content governance — project structure, who can publish where, certification workflows, and data source governance to prevent fragmented analytics environments."
       }
     ]
   },

@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "JavaScript ES6+ Fundamentals",
-        "body": "The exam tests modern JavaScript syntax. let and const for block-scoped variables (never var). Arrow functions and lexical this binding. Destructuring for arrays and objects. Template literals (backtick strings). Spread/rest operators. Promises for async operations. async/await for readable async code. The exam presents code snippets and asks about scoping, closures, prototype chain, or async behaviour &mdash; understanding ES6+ is the foundation for LWC development."
+        "body": "The exam tests modern JavaScript syntax. let and const for block-scoped variables (never var). Arrow functions and lexical this binding. Destructuring for arrays and objects. Template literals (backtick strings). Spread/rest operators. Promises for async operations. async/await for readable async code. The exam presents code snippets and asks about scoping, closures, prototype chain, or async behaviour &mdash; understanding ES6+ is the foundation for **LWC** development."
       },
       {
         "heading": "Web Component Standards (W3C)",
-        "body": "Lightning Web Components are built on Web Component standards: Custom Elements (define new HTML elements), Shadow DOM (encapsulated styles and markup), HTML Templates (declarative rendering). Understanding these standards is tested because LWC implements them directly. Shadow DOM encapsulation means CSS from outside cannot affect component internals by default. The exam tests how the Shadow DOM affects event propagation (events do not cross shadow boundaries unless composed:true is set)."
+        "body": "Lightning Web Components are built on Web Component standards: Custom Elements (define new HTML elements), Shadow DOM (encapsulated styles and markup), HTML Templates (declarative rendering). Understanding these standards is tested because **LWC** implements them directly. Shadow DOM encapsulation means CSS from outside cannot affect component internals by default. The exam tests how the Shadow DOM affects event propagation (events do not cross shadow boundaries unless composed:true is set)."
       },
       {
         "heading": "Lightning Web Components: Lifecycle and Reactivity",
-        "body": "LWC lifecycle hooks: connectedCallback (component added to DOM), disconnectedCallback (removed from DOM), renderedCallback (after every render). @track (now redundant &mdash; all properties are reactive by default), @api (public property, set by parent), @wire (reactive data binding to Apex or platform adapters). The exam tests which lifecycle hook to use for a given scenario &mdash; connectedCallback for initial data fetch, renderedCallback for post-render DOM manipulation (with caution)."
+        "body": "**LWC** lifecycle hooks: connectedCallback (component added to DOM), disconnectedCallback (removed from DOM), renderedCallback (after every render). @track (now redundant &mdash; all properties are reactive by default), @api (public property, set by parent), @wire (reactive data binding to **Apex** or platform adapters). The exam tests which lifecycle hook to use for a given scenario &mdash; connectedCallback for initial data fetch, renderedCallback for post-render DOM manipulation (with caution)."
       },
       {
         "heading": "Apex Integration: @wire and Imperative Calls",
-        "body": "@wire automatically calls Apex and re-calls when parameters change &mdash; use for read-only data that should refresh reactively. Imperative calls (calling Apex directly like a JS function) are used when you need explicit control &mdash; on button click, or when combining results. @wire uses the getRecord and getFieldValue adapters from lightning/uiRecordApi for record access. The @AuraEnabled(cacheable=true) annotation is required on Apex methods called via @wire. The exam tests which approach to use for a given data-fetching scenario."
+        "body": "@wire automatically calls **Apex** and re-calls when parameters change &mdash; use for read-only data that should refresh reactively. Imperative calls (calling Apex directly like a JS function) are used when you need explicit control &mdash; on button click, or when combining results. @wire uses the getRecord and getFieldValue adapters from lightning/uiRecordApi for record access. The @AuraEnabled(cacheable=true) annotation is required on Apex methods called via @wire. The exam tests which approach to use for a given data-fetching scenario."
       },
       {
         "heading": "Security in LWC and LockerService",
-        "body": "Locker Service is Salesforce's security architecture for Lightning components &mdash; it isolates components from each other and restricts access to the DOM. LWC uses Lightning Web Security (LWS) &mdash; similar isolation but more permissive for standard APIs. The exam tests what Locker/LWS prevents (direct DOM manipulation of other components, eval(), dangerous APIs). Permission checks should be done server-side in Apex, not in the component (UI checks can be bypassed). CRUD and FLS enforcement belongs in the @AuraEnabled Apex method, not the component."
+        "body": "Locker Service is Salesforce's security architecture for Lightning components &mdash; it isolates components from each other and restricts access to the DOM. **LWC** uses Lightning Web Security (LWS) &mdash; similar isolation but more permissive for standard APIs. The exam tests what Locker/LWS prevents (direct DOM manipulation of other components, eval(), dangerous APIs). Permission checks should be done server-side in **Apex**, not in the component (UI checks can be bypassed). CRUD and FLS enforcement belongs in the @AuraEnabled Apex method, not the component."
       }
     ]
   },
@@ -65,11 +65,11 @@
       },
       {
         "heading": "LWC Lifecycle & Reactivity",
-        "body": "Know the LWC component lifecycle hooks: constructor, connectedCallback, renderedCallback, disconnectedCallback. Understand reactive properties, how @track (legacy) and @api work, and how the wire service fetches data reactively."
+        "body": "Know the **LWC** component lifecycle hooks: constructor, connectedCallback, renderedCallback, disconnectedCallback. Understand reactive properties, how @track (legacy) and @api work, and how the wire service fetches data reactively."
       },
       {
         "heading": "The Event Loop & Web APIs",
-        "body": "Understand call stack, event loop, microtask queue (promises), and macrotask queue (setTimeout). Know the fetch API, async patterns for HTTP calls, and how LWC's shadow DOM restricts direct DOM manipulation."
+        "body": "Understand call stack, event loop, microtask queue (promises), and macrotask queue (setTimeout). Know the fetch API, async patterns for HTTP calls, and how **LWC**'s shadow DOM restricts direct DOM manipulation."
       }
     ]
   },

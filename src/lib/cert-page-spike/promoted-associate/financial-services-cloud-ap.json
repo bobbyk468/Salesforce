@@ -27,7 +27,7 @@
       },
       {
         "heading": "Relationship Management and Referrals",
-        "body": "Relationship Map visually displays a client's relationships — family members, business associates, advisors. Relationship Groups define formal groupings (household, trust, business entity). Referral Management tracks leads referred between advisors or from clients. The consultant configures the Relationship Map to reflect the organisation's coverage model. FSC uses RecordType-specific page layouts for each account type (Individual, Household, Business). The exam tests how to configure Relationship Groups and Referral workflows for a given financial services firm's client coverage model."
+        "body": "Relationship Map visually displays a client's relationships — family members, business associates, advisors. Relationship Groups define formal groupings (household, trust, business entity). Referral Management tracks leads referred between advisors or from clients. The consultant configures the Relationship Map to reflect the organisation's coverage model. FSC uses RecordType-specific **page layouts** for each account type (Individual, Household, Business). The exam tests how to configure Relationship Groups and Referral workflows for a given financial services firm's client coverage model."
       },
       {
         "heading": "Action Plans for Client Lifecycle Management",

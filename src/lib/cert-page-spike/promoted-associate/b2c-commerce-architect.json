@@ -31,7 +31,7 @@
       },
       {
         "heading": "Integration Architecture: OCAPI, SCAPI & Connectors",
-        "body": "OCAPI (Open Commerce API) is the REST API for Shop (storefront), Data (admin), and Meta endpoints — used by SFRA and third-party integrations. SCAPI (Salesforce Commerce API) is the newer, more secure API replacing OCAPI for front-end use. Connectors integrate Commerce Cloud with Service Cloud, Marketing Cloud, and Order Management. The Salesforce Connector for Order Management syncs orders to Salesforce OMS. Einstein Recommendations API surfaces personalized product recommendations. B2C Connect (now Commerce to Service Cloud Connector) links shopper profiles to Service Cloud cases. The exam tests the correct API for each use case and the security model (PKCE flow for SCAPI)."
+        "body": "OCAPI (Open Commerce API) is the **REST API** for Shop (storefront), Data (admin), and Meta endpoints — used by SFRA and third-party integrations. SCAPI (Salesforce Commerce API) is the newer, more secure API replacing OCAPI for front-end use. Connectors integrate Commerce Cloud with Service Cloud, Marketing Cloud, and Order Management. The Salesforce Connector for Order Management syncs orders to Salesforce OMS. Einstein Recommendations API surfaces personalized product recommendations. B2C Connect (now Commerce to Service Cloud Connector) links shopper profiles to Service Cloud cases. The exam tests the correct API for each use case and the security model (PKCE flow for SCAPI)."
       },
       {
         "heading": "Performance, Caching & CDN Strategy",

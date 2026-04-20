@@ -33,7 +33,7 @@
       },
       {
         "heading": "Common Failure Areas & How to Avoid Them",
-        "body": "Statistical analysis of failed Review Board attempts reveals recurring gaps: (1) Incomplete solution — not addressing all scenario requirements; use a checklist before presenting. (2) Lack of specificity — saying \"we will use Salesforce's security model\" without specifying OWD, role hierarchy, sharing rules, or Shield. (3) Ignoring non-functional requirements — scalability, performance, availability, compliance. (4) No integration error handling — every integration must address what happens when it fails. (5) Defensive responses to challenges — treat every challenge as a \"help me understand\" question, not an attack. (6) Time management — running over on presentation leaves no time for Q&A, which is where most probing happens. Practice with a timer religiously."
+        "body": "Statistical analysis of failed Review Board attempts reveals recurring gaps: (1) Incomplete solution — not addressing all scenario requirements; use a checklist before presenting. (2) Lack of specificity — saying \"we will use Salesforce's security model\" without specifying **OWD**, **role hierarchy**, **sharing rules**, or Shield. (3) Ignoring non-functional requirements — scalability, performance, availability, compliance. (4) No integration error handling — every integration must address what happens when it fails. (5) Defensive responses to challenges — treat every challenge as a \"help me understand\" question, not an attack. (6) Time management — running over on presentation leaves no time for Q&A, which is where most probing happens. Practice with a timer religiously."
       },
       {
         "heading": "Responding to Board Challenges",

@@ -27,23 +27,23 @@
     "blocks": [
       {
         "heading": "Data Modeling: Objects, Relationships, and Big Objects",
-        "body": "Beyond standard objects, Data Architects design custom objects with appropriate relationship types. External Objects connect to data stored outside Salesforce via OData connectors. Big Objects store billions of records but have limited SOQL support (no GROUP BY, aggregate queries) &mdash; used for archival. Platform Events are schema-defined and support publish/subscribe. The exam tests when to use each object type and the implications for querying, sharing, and storage."
+        "body": "Beyond standard objects, Data Architects design custom objects with appropriate relationship types. External Objects connect to data stored outside Salesforce via OData connectors. Big Objects store billions of records but have limited **SOQL** support (no GROUP BY, aggregate queries) &mdash; used for archival. **Platform Events** are schema-defined and support publish/subscribe. The exam tests when to use each object type and the implications for querying, sharing, and storage."
       },
       {
         "heading": "Master Data Management and Deduplication",
-        "body": "MDM strategies define the golden record &mdash; the authoritative version of a data entity. Salesforce Matching Rules define how duplicates are identified (fuzzy vs exact matching on fields). Duplicate Rules control what happens when a match is found &mdash; alert, block, allow with warning, or report. External IDs support upsert operations &mdash; the system matches on external ID to update existing records or insert new ones. The exam tests MDM patterns and duplicate prevention configuration for large-scale data integrations."
+        "body": "MDM strategies define the golden record &mdash; the authoritative version of a data entity. Salesforce Matching Rules define how duplicates are identified (fuzzy vs exact matching on fields). **Duplicate Rules** control what happens when a match is found &mdash; alert, block, allow with warning, or report. **External IDs** support upsert operations &mdash; the system matches on external ID to update existing records or insert new ones. The exam tests MDM patterns and duplicate prevention configuration for large-scale data integrations."
       },
       {
         "heading": "Data Migration: Bulk API and Integration Patterns",
-        "body": "Bulk API 2.0 processes up to 100 million records per batch job &mdash; preferred for large-scale data loads. Data Loader uses Bulk API for loads over 200 records. For complex migrations, ETL (Extract, Transform, Load) tools (MuleSoft, Informatica) prepare data before loading. Heroku Connect provides bi-directional sync between Heroku Postgres and Salesforce. The exam tests which migration tool matches the data volume, transformation complexity, and latency requirements of each scenario."
+        "body": "**Bulk API** 2.0 processes up to 100 million records per batch job &mdash; preferred for large-scale data loads. Data Loader uses Bulk API for loads over 200 records. For complex migrations, ETL (Extract, Transform, Load) tools (MuleSoft, Informatica) prepare data before loading. Heroku Connect provides bi-directional sync between Heroku Postgres and Salesforce. The exam tests which migration tool matches the data volume, transformation complexity, and latency requirements of each scenario."
       },
       {
         "heading": "Data Quality and Governance",
-        "body": "Validation Rules enforce data quality at the point of entry &mdash; they run on all DML paths (UI, API, Data Loader). Field History Tracking captures changes to up to 20 fields per object and retains data for 18 months. Setup Audit Trail tracks admin configuration changes for 180 days. Data Quality dashboards using CRM Analytics can surface completeness, accuracy, and consistency metrics. The exam tests which governance mechanism addresses a specific data quality requirement."
+        "body": "**Validation Rules** enforce data quality at the point of entry &mdash; they run on all **DML** paths (UI, API, Data Loader). Field History Tracking captures changes to up to 20 fields per object and retains data for 18 months. Setup Audit Trail tracks admin configuration changes for 180 days. Data Quality dashboards using [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) can surface completeness, accuracy, and consistency metrics. The exam tests which governance mechanism addresses a specific data quality requirement."
       },
       {
         "heading": "Large Data Volumes: Performance and Archiving",
-        "body": "Large Data Volume (LDV) considerations: indexed fields in WHERE clauses improve SOQL performance (standard fields are indexed; custom fields can be requested). Avoid non-selective queries. Skinny Tables pre-join frequently queried field combinations for reporting performance. Async SOQL runs long-running queries asynchronously. Data archiving to Big Objects or external systems reduces active data volume. The exam tests LDV performance patterns and when to recommend archiving, skinny tables, or query optimisation."
+        "body": "Large Data Volume (LDV) considerations: indexed fields in WHERE clauses improve **SOQL** performance (standard fields are indexed; custom fields can be requested). Avoid non-selective queries. Skinny Tables pre-join frequently queried field combinations for reporting performance. Async SOQL runs long-running queries asynchronously. Data archiving to Big Objects or external systems reduces active data volume. The exam tests LDV performance patterns and when to recommend archiving, skinny tables, or query optimisation."
       }
     ]
   },
@@ -53,7 +53,7 @@
     "blocks": [
       {
         "heading": "Advanced Data Modeling",
-        "body": "Know when to use lookup, master-detail, hierarchical (self-referential), and external relationships. Understand junction objects, indirect lookup fields, and how relationship type affects roll-up summaries, cascade delete, and record access."
+        "body": "Know when to use lookup, **master-detail**, hierarchical (self-referential), and external relationships. Understand **junction objects**, indirect lookup fields, and how relationship type affects roll-up summaries, cascade delete, and record access."
       },
       {
         "heading": "Large Data Volume (LDV) Strategies",
@@ -61,11 +61,11 @@
       },
       {
         "heading": "Data Quality & Duplicate Management",
-        "body": "Know Duplicate Rules, Matching Rules, and how they interact. Understand how to use Data.com clean rules (legacy knowledge), field validation, and data stewardship processes for ongoing data quality."
+        "body": "Know **Duplicate Rules**, Matching Rules, and how they interact. Understand how to use Data.com clean rules (legacy knowledge), field validation, and data stewardship processes for ongoing data quality."
       },
       {
         "heading": "Data Migration Architecture",
-        "body": "Plan migration using external IDs (upsert strategy), parent-before-child load order, and the appropriate API (Bulk API for volume, REST for real-time). Understand data validation and rollback strategies."
+        "body": "Plan migration using **external IDs** (upsert strategy), parent-before-child load order, and the appropriate API (**Bulk API** for volume, REST for real-time). Understand data validation and rollback strategies."
       },
       {
         "heading": "Master Data Management",

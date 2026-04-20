@@ -60,7 +60,7 @@
     "blocks": [
       {
         "heading": "Slack API: Bolt Framework and Authentication",
-        "body": "The Bolt framework (available for Node.js, Python, Java) simplifies Slack app development by handling OAuth, event dispatching, and middleware. App authentication: Bot token (scoped to workspace, long-lived) vs User token (acts on behalf of a specific user). OAuth 2.0 installation flow for distributing apps to other workspaces. Socket Mode enables the app to receive events without a public HTTP endpoint — useful for development and firewalled environments. HTTP mode requires a public URL and event subscription verification."
+        "body": "The Bolt framework (available for Node.js, Python, Java) simplifies Slack app development by handling **OAuth**, event dispatching, and middleware. App authentication: Bot token (scoped to workspace, long-lived) vs User token (acts on behalf of a specific user). OAuth 2.0 installation flow for distributing apps to other workspaces. Socket Mode enables the app to receive events without a public HTTP endpoint — useful for development and firewalled environments. HTTP mode requires a public URL and event subscription verification."
       },
       {
         "heading": "Slack Surfaces: Home Tab, Messages, and Modals",
@@ -76,7 +76,7 @@
       },
       {
         "heading": "Security: Token Management and Signature Verification",
-        "body": "Never expose bot tokens in client-side code or version control. Store tokens in environment variables or secrets management systems. Slack signs all inbound payloads with a signing secret — verify the X-Slack-Signature header using HMAC-SHA256 to prevent spoofed requests. Token rotation: OAuth tokens can be rotated programmatically. App scopes should follow least privilege — request only the OAuth scopes the app actually needs. The exam tests signature verification implementation and token security best practices."
+        "body": "Never expose bot tokens in client-side code or version control. Store tokens in environment variables or secrets management systems. Slack signs all inbound payloads with a signing secret — verify the X-Slack-Signature header using HMAC-SHA256 to prevent spoofed requests. Token rotation: **OAuth** tokens can be rotated programmatically. App scopes should follow least privilege — request only the OAuth scopes the app actually needs. The exam tests signature verification implementation and token security best practices."
       }
     ]
   },
@@ -86,7 +86,7 @@
     "blocks": [
       {
         "heading": "Bolt Framework Architecture",
-        "body": "Know how to build Slack apps using the Bolt framework (Node.js, Python, Java): app initialization, event handling, action handling, shortcut handling, and how OAuth 2.0 app installation works."
+        "body": "Know how to build Slack apps using the Bolt framework (Node.js, Python, Java): app initialization, event handling, action handling, shortcut handling, and how **OAuth** 2.0 app installation works."
       },
       {
         "heading": "Block Kit UI Framework",
@@ -102,7 +102,7 @@
       },
       {
         "heading": "App Distribution & Security",
-        "body": "Know how to distribute Slack apps through the Slack App Directory, implement scoped OAuth for multi-workspace apps, and security best practices: token storage, request signature verification, and HTTPS requirements."
+        "body": "Know how to distribute Slack apps through the Slack App Directory, implement scoped **OAuth** for multi-workspace apps, and security best practices: token storage, request signature verification, and HTTPS requirements."
       }
     ]
   },

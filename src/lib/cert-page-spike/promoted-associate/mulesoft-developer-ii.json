@@ -35,7 +35,7 @@
       },
       {
         "heading": "API Security: Policies and OAuth",
-        "body": "Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), OAuth 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically — no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling)."
+        "body": "Anypoint API Manager applies security policies to deployed APIs. Common policies: Client ID Enforcement (all clients must register and send client ID), **OAuth** 2.0 Token Enforcement (validate Bearer tokens), IP Allowlist, Rate Limiting (throttle by client or overall). Policies are applied through API Manager and injected into the runtime automatically — no code changes needed. The exam tests which policy combination to use for a given security requirement (authentication + authorisation + throttling)."
       },
       {
         "heading": "Performance: Scatter-Gather and Cache Scope",
@@ -61,7 +61,7 @@
       },
       {
         "heading": "API Security Policies",
-        "body": "Know how to apply policies in API Manager: Rate Limiting, JWT Validation, OAuth 2.0 (client credentials, authorization code), CORS, and IP whitelist. Understand policy ordering and how custom policies are built."
+        "body": "Know how to apply policies in API Manager: Rate Limiting, **JWT** Validation, **OAuth** 2.0 (client credentials, authorization code), CORS, and IP whitelist. Understand policy ordering and how custom policies are built."
       },
       {
         "heading": "Advanced Deployment Strategies",
