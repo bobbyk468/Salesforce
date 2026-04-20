@@ -1,0 +1,119 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-size="40" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Multi-Agent Orchestration: The Reality
+  </text>
+
+  <!-- Agent A Box -->
+  <g id="agent-a">
+    <rect x="80" y="100" width="220" height="160" fill="#fed7aa" stroke="#f97316" stroke-width="3" rx="8"/>
+    <text x="190" y="135" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Agent A
+    </text>
+    <text x="190" y="165" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Working on Task
+    </text>
+    <text x="190" y="190" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Context: Data X
+    </text>
+    <text x="190" y="215" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Context: Info Y
+    </text>
+  </g>
+
+  <!-- Handoff Arrow -->
+  <g id="handoff">
+    <line x1="310" y1="180" x2="420" y2="180" stroke="#059669" stroke-width="4" marker-end="url(#arrowhead-green)"/>
+    <text x="365" y="165" font-size="16" font-weight="bold" text-anchor="middle" fill="#059669">
+      EXPLICIT HANDOFF
+    </text>
+    <text x="365" y="205" font-size="14" text-anchor="middle" fill="#059669">
+      Variables Passed
+    </text>
+  </g>
+
+  <!-- Agent B Box -->
+  <g id="agent-b">
+    <rect x="900" y="100" width="220" height="160" fill="#a7f3d0" stroke="#10b981" stroke-width="3" rx="8"/>
+    <text x="1010" y="135" font-size="24" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Agent B
+    </text>
+    <text x="1010" y="165" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Receives Variables
+    </text>
+    <text x="1010" y="190" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Works Isolated
+    </text>
+    <text x="1010" y="215" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      No Access to A
+    </text>
+  </g>
+
+  <!-- Wrong Approach Section -->
+  <g id="wrong">
+    <rect x="80" y="300" width="500" height="280" fill="#fee2e2" stroke="#dc2626" stroke-width="2" rx="8"/>
+
+    <text x="330" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#991b1b">
+      ❌ MISTAKE
+    </text>
+
+    <text x="330" y="365" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Agent B auto-inherits
+    </text>
+    <text x="330" y="395" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Agent A's context
+    </text>
+
+    <text x="330" y="440" font-size="18" text-anchor="middle" fill="#991b1b" font-weight="bold">
+      RESULT: SILENT FAILURES
+    </text>
+    <text x="330" y="470" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Developer assumes context carries.
+    </text>
+    <text x="330" y="500" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      It doesn't.
+    </text>
+  </g>
+
+  <!-- Right Approach Section -->
+  <g id="right">
+    <rect x="620" y="300" width="500" height="280" fill="#dcfce7" stroke="#16a34a" stroke-width="2" rx="8"/>
+
+    <text x="870" y="330" font-size="22" font-weight="bold" text-anchor="middle" fill="#166534">
+      ✅ THE RIGHT WAY
+    </text>
+
+    <text x="870" y="365" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Agent B receives
+    </text>
+    <text x="870" y="395" font-size="18" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      explicit variables
+    </text>
+
+    <text x="870" y="440" font-size="18" text-anchor="middle" fill="#166534" font-weight="bold">
+      RESULT: WORKS RELIABLY
+    </text>
+    <text x="870" y="470" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Variables passed explicitly.
+    </text>
+    <text x="870" y="500" font-size="16" text-anchor="middle" fill="#1a1a1a">
+      Context is transient (isolated).
+    </text>
+  </g>
+
+  <!-- Key Gotcha -->
+  <rect x="80" y="600" width="1040" height="20" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+  <text x="600" y="615" font-size="16" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    KEY GOTCHA: Orchestration context is TRANSIENT. After handoff, Agent A can't see what Agent B does.
+  </text>
+
+  <!-- Arrow marker -->
+  <defs>
+    <marker id="arrowhead-green" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto">
+      <polygon points="0 0, 10 3, 0 6" fill="#059669"/>
+    </marker>
+  </defs>
+</svg>

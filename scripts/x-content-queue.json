@@ -840,19 +840,23 @@
     "id": "month2-tip-5-admin-vs-cta",
     "title": "Month2 Tip 5 — Admin vs CTA Comparison",
     "scheduledFor": "2026-04-17T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "admin and CTA are both \"salesforce certified.\" the day-to-day work is completely different.\n\nthat's like saying an intern and a CTO both \"work in tech.\"\n\ndon't compare certifications without comparing actual skills.\nfollow — i say what they won't.\n#SalesforceCareer"
-    ]
+    ],
+    "postedAt": "2026-04-17T13:30:02.722Z",
+    "firstTweetId": "2045132681168773610"
   },
   {
     "id": "month2-tip-6-data-cloud",
     "title": "Month2 Tip 6 — Data Cloud Exam Focus Areas",
     "scheduledFor": "2026-04-19T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "data cloud exam: the three things tested most heavily are identity resolution, the difference between DLOs and DMOs, and activation targets.\n\nknow those three cold and you're probably 50% ready.\nfollow — i say what they won't.\n#DataCloud"
-    ]
+    ],
+    "postedAt": "2026-04-19T13:30:41.817Z",
+    "firstTweetId": "2045857620347560166"
   },
   {
     "id": "month2-thread-cert-reality",
@@ -999,39 +1003,47 @@
     "id": "quiz-admin-omni-channel-q",
     "title": "Quiz Q — quiz-admin-omni-channel",
     "scheduledFor": "2026-04-16T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#ADM201 exam question — drop your answer 👇\n\ncases need to route automatically, but the business wants to manage their own queue capacity without admin help.\n\nwhich tool?\n\nA. Case Assignment Rules\nB. Email-to-Case\nC. Omni-Channel\nD. Lead Assignment Rules\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-04-16T13:36:11.176Z",
+    "firstTweetId": "2044771838363156544"
   },
   {
     "id": "quiz-admin-omni-channel-a",
     "title": "Quiz A — quiz-admin-omni-channel",
     "scheduledFor": "2026-04-16T11:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answer: C. Omni-Channel\n\nomni-channel lets supervisors manage queue capacity in real time without touching setup. assignment rules require admin config every time the team changes.\n\nkey word in the question: \"control its own assignment.\" that's omni-channel."
     ],
-    "replyToEntryId": "quiz-admin-omni-channel-q"
+    "replyToEntryId": "quiz-admin-omni-channel-q",
+    "postedAt": "2026-04-16T15:30:01.969Z",
+    "firstTweetId": "2044800488126992685"
   },
   {
     "id": "quiz-admin-sharing-rules-q",
     "title": "Quiz Q — quiz-admin-sharing-rules",
     "scheduledFor": "2026-04-18T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#ADM201 exam question — drop your answer 👇\n\nOWD = Private. a VP needs to report on records owned by people across different parts of the role hierarchy.\n\nwhat do you configure?\n\nA. Field-Level Security\nB. Sharing Rules\nC. Permission Sets\nD. Restriction Rules\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-04-18T13:30:02.094Z",
+    "firstTweetId": "2045495065804448233"
   },
   {
     "id": "quiz-admin-sharing-rules-a",
     "title": "Quiz A — quiz-admin-sharing-rules",
     "scheduledFor": "2026-04-18T11:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answer: B. Sharing Rules\n\nrole hierarchy gives visibility upward. sharing rules extend access sideways or across branches.\n\ncommon trap: people pick permission sets. permission sets control what you can do. sharing rules control what you can see. two different problems."
     ],
-    "replyToEntryId": "quiz-admin-sharing-rules-q"
+    "replyToEntryId": "quiz-admin-sharing-rules-q",
+    "postedAt": "2026-04-18T15:30:01.863Z",
+    "firstTweetId": "2045525264004940093"
   },
   {
     "id": "quiz-admin-flow-cross-object-q",

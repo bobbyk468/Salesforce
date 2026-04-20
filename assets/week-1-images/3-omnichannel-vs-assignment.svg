@@ -1,0 +1,83 @@
+<svg viewBox="0 0 1200 630" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <rect width="1200" height="630" fill="#f8f9fa"/>
+
+  <!-- Title -->
+  <text x="600" y="50" font-size="40" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+    Omni-Channel vs Case Assignment Rules
+  </text>
+
+  <!-- Left Side: PUSH Model -->
+  <g id="push-section">
+    <!-- Blue background -->
+    <rect x="50" y="100" width="500" height="480" fill="#dbeafe" stroke="#2563eb" stroke-width="3" rx="10"/>
+
+    <!-- Title -->
+    <text x="300" y="160" font-size="32" font-weight="bold" text-anchor="middle" fill="#1e40af">
+      PUSH Model
+    </text>
+    <text x="300" y="200" font-size="26" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Case Assignment Rules
+    </text>
+
+    <!-- Push arrows -->
+    <text x="300" y="280" font-size="60" text-anchor="middle" fill="#2563eb">↓ ↓ ↓</text>
+
+    <!-- Content -->
+    <text x="300" y="350" font-size="22" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Admin Controls
+    </text>
+    <text x="300" y="390" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • Rules fire automatically
+    </text>
+    <text x="300" y="425" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • Static logic
+    </text>
+    <text x="300" y="460" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • Admin changes = setup work
+    </text>
+    <text x="300" y="500" font-size="18" text-anchor="middle" fill="#0c4a6e" font-weight="bold" font-style="italic">
+      Admin pushes cases to reps
+    </text>
+  </g>
+
+  <!-- Center separator -->
+  <line x1="600" y1="100" x2="600" y2="580" stroke="#999" stroke-width="3"/>
+
+  <!-- Right Side: PULL Model -->
+  <g id="pull-section">
+    <!-- Purple background -->
+    <rect x="650" y="100" width="500" height="480" fill="#e9d5ff" stroke="#7c3aed" stroke-width="3" rx="10"/>
+
+    <!-- Title -->
+    <text x="900" y="160" font-size="32" font-weight="bold" text-anchor="middle" fill="#5b21b6">
+      PULL Model
+    </text>
+    <text x="900" y="200" font-size="26" font-weight="bold" text-anchor="middle" fill="#1a1a1a">
+      Omni-Channel
+    </text>
+
+    <!-- Pull arrows -->
+    <text x="900" y="280" font-size="60" text-anchor="middle" fill="#7c3aed">↑ ↑ ↑</text>
+
+    <!-- Content -->
+    <text x="900" y="350" font-size="22" text-anchor="middle" fill="#1a1a1a" font-weight="bold">
+      Supervisor Controls
+    </text>
+    <text x="900" y="390" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • Supervisors pull from queue
+    </text>
+    <text x="900" y="425" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • Dynamic capacity management
+    </text>
+    <text x="900" y="460" font-size="20" text-anchor="middle" fill="#1a1a1a">
+      • No admin changes needed
+    </text>
+    <text x="900" y="500" font-size="18" text-anchor="middle" fill="#4c1d95" font-weight="bold" font-style="italic">
+      Supervisors pull cases themselves
+    </text>
+  </g>
+
+  <!-- Bottom key point -->
+  <rect x="50" y="600" width="1100" height="20" fill="#fbbf24" stroke="#b45309" stroke-width="2"/>
+</svg>
