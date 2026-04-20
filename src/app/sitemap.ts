@@ -1,4 +1,6 @@
 import { MetadataRoute } from 'next'
+import { readdirSync } from 'fs'
+import { join } from 'path'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -16,6 +18,17 @@ if (host === 'trailblazeprep.com') {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
+  // Dynamically discover all exam-tips routes — each is self-canonical so all belong in sitemap.
+  const appDir = join(process.cwd(), 'src/app')
+  const examTipsUrls: MetadataRoute.Sitemap = readdirSync(appDir, { withFileTypes: true })
+    .filter((d) => d.isDirectory() && d.name.endsWith('-exam-tips'))
+    .map((d) => ({
+      url: `${baseUrl}/${d.name}`,
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.75,
+    }))
+
   // Exclude non-canonical pages from sitemap — these pages have canonical URLs pointing to their
   // parent cert pages, so including them in the sitemap creates a contradiction (Ahref flags this).
   const excludedCertPaths = new Set<string>([
@@ -157,9 +170,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/contact`, lastModified: new Date(), changeFrequency: 'monthly', priority: 0.6 },
     { url: `${baseUrl}/privacy`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date(), changeFrequency: 'yearly', priority: 0.3 },
-    // Exam tips pages are intentionally excluded from the sitemap:
-    // each page has rel=canonical pointing to its parent cert page,
-    // so including them here creates a non-canonical page in sitemap conflict.
+    ...examTipsUrls,
     ...roleUrls,
     ...uniqueCertUrls,
   ]

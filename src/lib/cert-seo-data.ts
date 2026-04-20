@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
-import { RELEASE_CURRENT } from './release-data'
+import { RELEASE_CURRENT, RELEASE_YEAR } from './release-data'
 import { getExamWeightage } from './exam-weightage-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -523,96 +523,96 @@ function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
     'app-builder': `Platform App Builder: DEV-402 Free Practice (${TITLE_YEAR})`,
-    administrator: `Free ADM-201 Practice Exam 2026`,
-    'advanced-administrator': `Free ADM-211 Advanced Admin Practice Exam 2026`,
-    'email-specialist': `Free Email Specialist Practice Exam 2026`,
-    'mulesoft-hyperautomation-developer': `Free MuleSoft Hyperautomation Practice Exam 2026`,
-    'sharing-visibility-architect': `Free Sharing & Visibility Arch Practice Exam 2026`,
-    'identity-access-management-architect': `Free Identity & Access Arch Practice Exam 2026`,
+    administrator: `Free ADM-201 Practice Exam ${RELEASE_YEAR}`,
+    'advanced-administrator': `Free ADM-211 Advanced Admin Practice Exam ${RELEASE_YEAR}`,
+    'email-specialist': `Free Email Specialist Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-hyperautomation-developer': `Free MuleSoft Hyperautomation Practice Exam ${RELEASE_YEAR}`,
+    'sharing-visibility-architect': `Free Sharing & Visibility Arch Practice Exam ${RELEASE_YEAR}`,
+    'identity-access-management-architect': `Free Identity & Access Arch Practice Exam ${RELEASE_YEAR}`,
     'marketing-cloud-consultant': `Marketing Cloud Consultant: Free Practice (${TITLE_YEAR})`,
     'business-analyst': `Business Analyst Certification: Free Practice (${TITLE_YEAR})`,
     'sales-cloud': `Sales Cloud Consultant: Free Practice & Study (${TITLE_YEAR})`,
-    'developer-2': `Free Platform Developer II (PD2) Practice Exam 2026`,
+    'developer-2': `Free Platform Developer II (PD2) Practice Exam ${RELEASE_YEAR}`,
     'cpq-administrator': `CPQ Admin Certification: Free Practice (${TITLE_YEAR})`,
     'pardot-consultant': `Pardot Consultant: Account Engagement Practice (${TITLE_YEAR})`,
-    'pardot-specialist': `Free Pardot Specialist Practice Exam 2026`,
+    'pardot-specialist': `Free Pardot Specialist Practice Exam ${RELEASE_YEAR}`,
     'experience-cloud': `Experience Cloud Certification: Free Practice (${TITLE_YEAR})`,
-    'mulesoft-integration-foundations': `Free MuleSoft Foundations Practice Exam 2026`,
-    'developer-1': `Free Platform Developer I (PD1) Practice Exam 2026`,
-    'slack-developer': `Free Slack Developer Practice Exam 2026`,
-    'tableau-data-analyst': `Free Tableau Data Analyst Practice Exam 2026`,
-    'technical-architect-review-board': `Free CTA Review Board Practice Exam 2026`,
-    'technical-architect': `Free Technical Architect (CTA) Practice Exam 2026`,
+    'mulesoft-integration-foundations': `Free MuleSoft Foundations Practice Exam ${RELEASE_YEAR}`,
+    'developer-1': `Free Platform Developer I (PD1) Practice Exam ${RELEASE_YEAR}`,
+    'slack-developer': `Free Slack Developer Practice Exam ${RELEASE_YEAR}`,
+    'tableau-data-analyst': `Free Tableau Data Analyst Practice Exam ${RELEASE_YEAR}`,
+    'technical-architect-review-board': `Free CTA Review Board Practice Exam ${RELEASE_YEAR}`,
+    'technical-architect': `Free Technical Architect (CTA) Practice Exam ${RELEASE_YEAR}`,
     'system-architect': `Salesforce System Architect: Free Practice (${TITLE_YEAR})`,
-    'application-architect': `Free Application Architect Practice Exam 2026`,
+    'application-architect': `Free Application Architect Practice Exam ${RELEASE_YEAR}`,
     'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
     'data-architect': `Data Architect Certification: Free Practice (${TITLE_YEAR})`,
     // Extended coverage: All remaining certs for complete CTR optimization
-    'administrator-practice-test': `Free ADM-201 Practice Test Practice Exam 2026`,
-    'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam 2026`,
-    'agentforce-specialist': `Free Agentforce Specialist Practice Exam 2026`,
-    'ai-associate': `Free AI Associate Practice Exam 2026`,
-    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP Practice Exam 2026`,
-    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP Practice Exam 2026`,
-    'b2b-solution-architect': `Free B2B Solution Architect Practice Exam 2026`,
-    'b2c-commerce-architect': `Free B2C Commerce Architect Practice Exam 2026`,
-    'b2c-commerce-developer': `Free B2C Commerce Developer Practice Exam 2026`,
-    'b2c-solution-architect': `Free B2C Solution Architect Practice Exam 2026`,
-    'communications-cloud-ap': `Free Communications Cloud AP Practice Exam 2026`,
-    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP Practice Exam 2026`,
-    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP Practice Exam 2026`,
-    'contact-center-ap': `Free Contact Center AP Practice Exam 2026`,
-    'cpq-billing-ap': `Free CPQ & Billing AP Practice Exam 2026`,
-    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics Practice Exam 2026`,
-    'data-cloud-consultant': `Free Data Cloud Consultant Practice Exam 2026`,
-    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch Practice Exam 2026`,
-    'education-cloud-consultant': `Free Education Cloud Consult Practice Exam 2026`,
-    'email-specialist-practice-test': `Free Email Spec Practice Practice Exam 2026`,
-    'energy-utilities-ap': `Free Energy & Utilities AP Practice Exam 2026`,
-    'field-service': `Free Field Service Consultant Practice Exam 2026`,
-    'financial-services-cloud-ap': `Free Financial Services AP Practice Exam 2026`,
-    'health-cloud-ap': `Free Health Cloud AP Practice Exam 2026`,
-    'heroku-architect': `Free Heroku Architect Practice Exam 2026`,
-    'heroku-developer-ap': `Free Heroku Developer AP Practice Exam 2026`,
-    'industries-cpq-developer': `Free Industries CPQ Developer Practice Exam 2026`,
-    'javascript-developer-i': `Free JavaScript Developer I Practice Exam 2026`,
-    'lightning-web-components-specialist': `Free LWC Specialist Practice Exam 2026`,
-    'loyalty-management-ap': `Free Loyalty Management AP Practice Exam 2026`,
-    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP Practice Exam 2026`,
-    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP Practice Exam 2026`,
-    'marketing-cloud-engagement-admin': `Free MC Engagement Admin Practice Exam 2026`,
-    'marketing-cloud-engagement-developer': `Free MC Engagement Dev Practice Exam 2026`,
-    'marketing-cloud-engagement-foundations': `Free MC Foundations Practice Exam 2026`,
-    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP Practice Exam 2026`,
-    'marketing-cloud-personalization-ap': `Free MC Personalization AP Practice Exam 2026`,
-    'media-cloud-ap': `Free Media Cloud AP Practice Exam 2026`,
-    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult Practice Exam 2026`,
-    'mulesoft-developer-i': `Free MuleSoft Developer I Practice Exam 2026`,
-    'mulesoft-developer-ii': `Free MuleSoft Developer II Practice Exam 2026`,
-    'mulesoft-integration-architect': `Free MuleSoft Integration Arch Practice Exam 2026`,
-    'mulesoft-platform-architect': `Free MuleSoft Platform Arch Practice Exam 2026`,
-    'net-zero-cloud-ap': `Free Net Zero Cloud AP Practice Exam 2026`,
-    'nonprofit-cloud': `Free Nonprofit Cloud Consult Practice Exam 2026`,
-    'nonprofit-success-pack-consultant': `Free NPSP Consultant Practice Exam 2026`,
-    'omnistudio-consultant': `Free OmniStudio Consultant Practice Exam 2026`,
-    'omnistudio-developer': `Free OmniStudio Developer Practice Exam 2026`,
-    'order-management-admin-ap': `Free Order Mgmt Admin AP Practice Exam 2026`,
-    'order-management-developer-ap': `Free Order Mgmt Dev AP Practice Exam 2026`,
-    'platform-foundations': `Free Platform Foundations Practice Exam 2026`,
-    'process-automation-ap': `Free Process Automation AP Practice Exam 2026`,
-    'public-sector-solutions-ap': `Free Public Sector AP Practice Exam 2026`,
-    'revenue-cloud-consultant': `Free Revenue Cloud Consult Practice Exam 2026`,
-    'sales-foundations': `Free Sales Foundations Practice Exam 2026`,
-    'service-cloud': `Free Service Cloud Consultant Practice Exam 2026`,
-    'slack-administrator': `Free Slack Administrator Practice Exam 2026`,
-    'slack-consultant': `Free Slack Consultant Practice Exam 2026`,
-    'strategy-designer': `Free Strategy Designer Practice Exam 2026`,
-    'tableau-architect': `Free Tableau Architect Practice Exam 2026`,
-    'tableau-consultant': `Free Tableau Consultant Practice Exam 2026`,
-    'tableau-desktop-foundations': `Free Tableau Desktop Found. Practice Exam 2026`,
-    'tableau-server-administrator': `Free Tableau Server Admin Practice Exam 2026`,
-    'technical-architect-evaluation': `Free CTA Evaluation Practice Exam 2026`,
-    'ux-designer': `Free UX Designer Practice Exam 2026`,
+    'administrator-practice-test': `Free ADM-201 Practice Test Practice Exam ${RELEASE_YEAR}`,
+    'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam ${RELEASE_YEAR}`,
+    'agentforce-specialist': `Free Agentforce Specialist Practice Exam ${RELEASE_YEAR}`,
+    'ai-associate': `Free AI Associate Practice Exam ${RELEASE_YEAR}`,
+    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP Practice Exam ${RELEASE_YEAR}`,
+    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP Practice Exam ${RELEASE_YEAR}`,
+    'b2b-solution-architect': `Free B2B Solution Architect Practice Exam ${RELEASE_YEAR}`,
+    'b2c-commerce-architect': `Free B2C Commerce Architect Practice Exam ${RELEASE_YEAR}`,
+    'b2c-commerce-developer': `Free B2C Commerce Developer Practice Exam ${RELEASE_YEAR}`,
+    'b2c-solution-architect': `Free B2C Solution Architect Practice Exam ${RELEASE_YEAR}`,
+    'communications-cloud-ap': `Free Communications Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP Practice Exam ${RELEASE_YEAR}`,
+    'contact-center-ap': `Free Contact Center AP Practice Exam ${RELEASE_YEAR}`,
+    'cpq-billing-ap': `Free CPQ & Billing AP Practice Exam ${RELEASE_YEAR}`,
+    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics Practice Exam ${RELEASE_YEAR}`,
+    'data-cloud-consultant': `Free Data Cloud Consultant Practice Exam ${RELEASE_YEAR}`,
+    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch Practice Exam ${RELEASE_YEAR}`,
+    'education-cloud-consultant': `Free Education Cloud Consult Practice Exam ${RELEASE_YEAR}`,
+    'email-specialist-practice-test': `Free Email Spec Practice Practice Exam ${RELEASE_YEAR}`,
+    'energy-utilities-ap': `Free Energy & Utilities AP Practice Exam ${RELEASE_YEAR}`,
+    'field-service': `Free Field Service Consultant Practice Exam ${RELEASE_YEAR}`,
+    'financial-services-cloud-ap': `Free Financial Services AP Practice Exam ${RELEASE_YEAR}`,
+    'health-cloud-ap': `Free Health Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'heroku-architect': `Free Heroku Architect Practice Exam ${RELEASE_YEAR}`,
+    'heroku-developer-ap': `Free Heroku Developer AP Practice Exam ${RELEASE_YEAR}`,
+    'industries-cpq-developer': `Free Industries CPQ Developer Practice Exam ${RELEASE_YEAR}`,
+    'javascript-developer-i': `Free JavaScript Developer I Practice Exam ${RELEASE_YEAR}`,
+    'lightning-web-components-specialist': `Free LWC Specialist Practice Exam ${RELEASE_YEAR}`,
+    'loyalty-management-ap': `Free Loyalty Management AP Practice Exam ${RELEASE_YEAR}`,
+    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-engagement-admin': `Free MC Engagement Admin Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-engagement-developer': `Free MC Engagement Dev Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-engagement-foundations': `Free MC Foundations Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP Practice Exam ${RELEASE_YEAR}`,
+    'marketing-cloud-personalization-ap': `Free MC Personalization AP Practice Exam ${RELEASE_YEAR}`,
+    'media-cloud-ap': `Free Media Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-developer-i': `Free MuleSoft Developer I Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-developer-ii': `Free MuleSoft Developer II Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-integration-architect': `Free MuleSoft Integration Arch Practice Exam ${RELEASE_YEAR}`,
+    'mulesoft-platform-architect': `Free MuleSoft Platform Arch Practice Exam ${RELEASE_YEAR}`,
+    'net-zero-cloud-ap': `Free Net Zero Cloud AP Practice Exam ${RELEASE_YEAR}`,
+    'nonprofit-cloud': `Free Nonprofit Cloud Consult Practice Exam ${RELEASE_YEAR}`,
+    'nonprofit-success-pack-consultant': `Free NPSP Consultant Practice Exam ${RELEASE_YEAR}`,
+    'omnistudio-consultant': `Free OmniStudio Consultant Practice Exam ${RELEASE_YEAR}`,
+    'omnistudio-developer': `Free OmniStudio Developer Practice Exam ${RELEASE_YEAR}`,
+    'order-management-admin-ap': `Free Order Mgmt Admin AP Practice Exam ${RELEASE_YEAR}`,
+    'order-management-developer-ap': `Free Order Mgmt Dev AP Practice Exam ${RELEASE_YEAR}`,
+    'platform-foundations': `Free Platform Foundations Practice Exam ${RELEASE_YEAR}`,
+    'process-automation-ap': `Free Process Automation AP Practice Exam ${RELEASE_YEAR}`,
+    'public-sector-solutions-ap': `Free Public Sector AP Practice Exam ${RELEASE_YEAR}`,
+    'revenue-cloud-consultant': `Free Revenue Cloud Consult Practice Exam ${RELEASE_YEAR}`,
+    'sales-foundations': `Free Sales Foundations Practice Exam ${RELEASE_YEAR}`,
+    'service-cloud': `Free Service Cloud Consultant Practice Exam ${RELEASE_YEAR}`,
+    'slack-administrator': `Free Slack Administrator Practice Exam ${RELEASE_YEAR}`,
+    'slack-consultant': `Free Slack Consultant Practice Exam ${RELEASE_YEAR}`,
+    'strategy-designer': `Free Strategy Designer Practice Exam ${RELEASE_YEAR}`,
+    'tableau-architect': `Free Tableau Architect Practice Exam ${RELEASE_YEAR}`,
+    'tableau-consultant': `Free Tableau Consultant Practice Exam ${RELEASE_YEAR}`,
+    'tableau-desktop-foundations': `Free Tableau Desktop Found. Practice Exam ${RELEASE_YEAR}`,
+    'tableau-server-administrator': `Free Tableau Server Admin Practice Exam ${RELEASE_YEAR}`,
+    'technical-architect-evaluation': `Free CTA Evaluation Practice Exam ${RELEASE_YEAR}`,
+    'ux-designer': `Free UX Designer Practice Exam ${RELEASE_YEAR}`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -747,7 +747,7 @@ export function getCertMetaDescription(slug: string): string {
     'app-builder':
       `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-consultant':
       `Marketing Cloud Consultant: Free practice exam — no sign-up. 60 questions, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':
@@ -755,35 +755,35 @@ export function getCertMetaDescription(slug: string): string {
     'sales-cloud':
       `Sales Cloud Consultant: Free practice exam — no sign-up. 60 questions, 68% passing. Sample Qs & ${TITLE_YEAR} study guide. $200 fee.`,
     'advanced-administrator':
-      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'email-specialist':
-      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-hyperautomation-developer':
-      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'sharing-visibility-architect':
-      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'identity-access-management-architect':
-      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'developer-2':
-      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'cpq-administrator':
       `CPQ certification: Free Salesforce CPQ Administrator practice. Start free — 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
     'pardot-consultant':
       `Pardot Consultant (Account Engagement): Free practice exam — no sign-up. 60 questions, 68% passing. Sample Qs & ${TITLE_YEAR} study guide.`,
     'pardot-specialist':
-      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'experience-cloud':
       `Salesforce Experience Cloud certification: Free practice (60 questions, ~65% passing, 105 min). Start free — sample questions & ${TITLE_YEAR} study guide.`,
     'slack-developer':
-      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'tableau-data-analyst':
-      `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-foundations':
-      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'technical-architect':
-      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'technical-architect-review-board':
-      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'integration-architect':
       `Integration Architect: Free practice exam — no sign-up. 60 Qs, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
     'data-architect':
@@ -791,73 +791,73 @@ export function getCertMetaDescription(slug: string): string {
     'system-architect':
       `Salesforce System Architect: Free practice exam — no sign-up. 60 questions, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} study guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
-    'advanced-field-service-ap': `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'administrator-practice-test': `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'agentforce-specialist': `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'application-architect': `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2b-solution-architect': `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2c-commerce-architect': `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2c-commerce-developer': `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'b2c-solution-architect': `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'communications-cloud-ap': `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'contact-center-ap': `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'cpq-billing-ap': `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'data-cloud-consultant': `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'email-specialist-practice-test': `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'energy-utilities-ap': `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'field-service': `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'financial-services-cloud-ap': `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'health-cloud-ap': `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'heroku-architect': `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'heroku-developer-ap': `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'industries-cpq-developer': `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'javascript-developer-i': `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'lightning-web-components-specialist': `Free LWC Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'loyalty-management-ap': `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-engagement-admin': `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-engagement-developer': `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-engagement-foundations': `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'marketing-cloud-personalization-ap': `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'media-cloud-ap': `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'mulesoft-developer-i': `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'mulesoft-developer-ii': `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'mulesoft-integration-architect': `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'mulesoft-platform-architect': `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'net-zero-cloud-ap': `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'nonprofit-cloud': `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'nonprofit-success-pack-consultant': `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'omnistudio-consultant': `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'omnistudio-developer': `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'order-management-admin-ap': `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'order-management-developer-ap': `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'platform-foundations': `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'process-automation-ap': `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'public-sector-solutions-ap': `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'revenue-cloud-consultant': `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'sales-foundations': `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'service-cloud': `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'slack-administrator': `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'slack-consultant': `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'strategy-designer': `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-server-administrator': `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'technical-architect-evaluation': `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'ux-designer': `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'advanced-field-service-ap': `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'administrator-practice-test': `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'agentforce-specialist': `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'application-architect': `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2b-solution-architect': `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2c-commerce-architect': `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2c-commerce-developer': `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'b2c-solution-architect': `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'communications-cloud-ap': `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'consumer-goods-cloud-ap': `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'consumer-goods-tpm-ap': `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'contact-center-ap': `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'cpq-billing-ap': `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'data-cloud-consultant': `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'email-specialist-practice-test': `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'energy-utilities-ap': `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'field-service': `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'financial-services-cloud-ap': `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'health-cloud-ap': `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'heroku-architect': `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'heroku-developer-ap': `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'industries-cpq-developer': `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'javascript-developer-i': `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'lightning-web-components-specialist': `Free LWC Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'loyalty-management-ap': `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'manufacturing-cloud-ap': `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-advanced-cross-channel-ap': `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-admin': `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-developer': `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-engagement-foundations': `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-intelligence-ap': `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'marketing-cloud-personalization-ap': `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'media-cloud-ap': `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'mulesoft-catalyst-consultant': `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'mulesoft-developer-i': `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'mulesoft-developer-ii': `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'mulesoft-integration-architect': `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'mulesoft-platform-architect': `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'net-zero-cloud-ap': `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'nonprofit-cloud': `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'nonprofit-success-pack-consultant': `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'omnistudio-consultant': `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'omnistudio-developer': `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'order-management-admin-ap': `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'order-management-developer-ap': `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'platform-foundations': `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'process-automation-ap': `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'public-sector-solutions-ap': `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'revenue-cloud-consultant': `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'sales-foundations': `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'service-cloud': `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'slack-administrator': `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'slack-consultant': `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'strategy-designer': `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-server-administrator': `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'technical-architect-evaluation': `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'ux-designer': `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
@@ -866,189 +866,189 @@ export function getCertMetaDescription(slug: string): string {
   const templates: Record<string, string> = {
     // Associate (strong CTR: weightage, passing score, Updated 2026)
     'platform-foundations':
-      `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'ai-associate':
-      `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-engagement-foundations':
-      `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-foundations':
-      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Administrator track (base certs – strong CTR for people who start here)
     administrator:
-      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'advanced-administrator':
-      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'app-builder':
       'No-code Salesforce certification. DEV-402 exam guide 2026: $200 fee, 60 questions, declarative app building. Perfect for admins ready to build custom apps. Free practice questions.',
     'agentforce-specialist':
-      `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'business-analyst':
       'Prepare for the Salesforce Certified Business Analyst certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'cpq-administrator':
       'Prepare for the Salesforce Certified CPQ Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-engagement-admin':
-      `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'slack-administrator':
-      `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'administrator-practice-test':
-      `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
     'developer-1':
-      `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'developer-2':
-      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'javascript-developer-i':
-      `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2c-commerce-developer':
-      `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'industries-cpq-developer':
-      `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-engagement-developer':
-      `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-developer-i':
-      `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-developer-ii':
-      `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-hyperautomation-developer':
-      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'omnistudio-developer':
-      `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'slack-developer':
-      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
     'crm-analytics-einstein-discovery-consultant':
-      `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'data-cloud-consultant':
-      `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'education-cloud-consultant':
-      `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'experience-cloud':
       'Prepare for the Salesforce Certified Experience Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'field-service':
-      `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'pardot-consultant':
       'Prepare for the Salesforce Certified Pardot (Account Engagement) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'marketing-cloud-consultant':
       'Prepare for the Salesforce Certified Marketing Cloud Engagement Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'nonprofit-cloud':
-      `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'nonprofit-success-pack-consultant':
-      `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'omnistudio-consultant':
-      `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'revenue-cloud-consultant':
-      `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'sales-cloud':
       'Prepare for the Salesforce Certified Sales Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'service-cloud':
-      `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'slack-consultant':
-      `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Marketing (strong CTR)
     'email-specialist':
-      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'pardot-specialist':
-      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'email-specialist-practice-test':
-      `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Architect (Prepare for… format) - $400
     'application-architect':
-      `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'data-architect':
       'Prepare for the Salesforce Certified Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'integration-architect':
       'Prepare for the Salesforce Certified Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'sharing-visibility-architect':
-      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'system-architect':
       'Prepare for the Salesforce Certified System Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'identity-access-management-architect':
-      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'dev-lifecycle-deployment-architect':
-      `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'technical-architect':
-      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'technical-architect-evaluation':
-      `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'technical-architect-review-board':
-      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2b-solution-architect':
-      `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2c-commerce-architect':
-      `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2c-solution-architect':
-      `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'heroku-architect':
-      `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-catalyst-consultant':
-      `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-platform-architect':
-      `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'mulesoft-integration-architect':
-      `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Accredited Professional (Prepare for… format; shorten long names to stay ≤160) - $100
     'advanced-field-service-ap':
-      `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2b-commerce-admin-ap':
-      `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'b2b-commerce-developer-ap':
-      `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'communications-cloud-ap':
-      `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'consumer-goods-cloud-ap':
-      `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'consumer-goods-tpm-ap':
-      `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'contact-center-ap':
-      `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'cpq-billing-ap':
-      `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'energy-utilities-ap':
-      `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'financial-services-cloud-ap':
-      `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'health-cloud-ap':
-      `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'heroku-developer-ap':
-      `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'loyalty-management-ap':
-      `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'manufacturing-cloud-ap':
-      `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-advanced-cross-channel-ap':
-      `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-intelligence-ap':
-      `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'marketing-cloud-personalization-ap':
-      `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'media-cloud-ap':
-      `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'net-zero-cloud-ap':
-      `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'order-management-admin-ap':
-      `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'order-management-developer-ap':
-      `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'process-automation-ap':
-      `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'public-sector-solutions-ap':
-      `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Sales
     'sales-foundations':
-      `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Designer
     'strategy-designer':
-      `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'ux-designer':
-      `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     // Tableau - $250 (except Desktop Foundations $100)
-    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
-    'tableau-data-analyst': `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'tableau-data-analyst': `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'tableau-desktop-foundations':
-      `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'tableau-server-administrator':
-      `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. 2026 study guide with exam tips & detailed explanations included.`,
+      `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
   }
   const custom = templates[slug]
   // Keep custom templates only for practice-test pages; otherwise use the standardized description
@@ -1083,7 +1083,7 @@ export function getCertMetadata(slug: string): Metadata {
   const descForMeta = getCertMetaDescription(slug)
   const canonicalUrl = `${baseUrl}/certifications/${slug}`
   const primaryName = getCertPrimaryName(slug, certName)
-  // Updated 2026 for title/H1 and E-E-A-T
+  // Updated ${RELEASE_YEAR} for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'
   const modifiedTime = '2026-02-12T00:00:00Z'
 
@@ -2626,7 +2626,7 @@ export function getExamWeightageTableJsonLd(
   }
 }
 
-/** Single H1 per cert page: aligned with query intent (Complete 2026 Guide) for CTR. */
+/** Single H1 per cert page: aligned with query intent (Complete ${RELEASE_YEAR} Guide) for CTR. */
 export function getCertH1Text(slug: string): string {
   // ADM-201: official current name + legacy code for long-term ranking stability
   if (slug === 'administrator') {
