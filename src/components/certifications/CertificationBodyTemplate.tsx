@@ -39,7 +39,8 @@ import type { ReactNode } from 'react'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
-    ssr: false,
+    // ssr: true (default) — server renders questions so Googlebot sees content immediately.
+    // "Check Answer" interactivity activates after client hydration (progressive enhancement).
     loading: () => (
       <div id="practice-questions" className="mt-12 min-h-[440px] w-full" aria-hidden="true" />
     ),

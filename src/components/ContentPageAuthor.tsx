@@ -1,4 +1,5 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 /**
@@ -13,9 +14,15 @@ export default function ContentPageAuthor() {
   return (
     <div className="flex items-start gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 mb-8 text-sm text-gray-700">
       <div className="flex-shrink-0 mt-0.5">
-        <div className="h-8 w-8 rounded-full bg-salesforce-blue flex items-center justify-center">
-          <span className="text-xs font-bold text-white">KM</span>
-        </div>
+        {/* Replace placeholder.jpg with krishna-mohan.jpg once the headshot is added to public/authors/ */}
+        <Image
+          src="/authors/placeholder.jpg"
+          alt="Krishna Mohan — Salesforce certified author"
+          width={32}
+          height={32}
+          className="h-8 w-8 rounded-full object-cover"
+          priority
+        />
       </div>
       <div>
         <p>
