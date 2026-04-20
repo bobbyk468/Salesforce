@@ -117,7 +117,7 @@ function KeyConceptsSection({
       <div className="space-y-4 text-sm text-gray-700">
         {blocks.map((b) => (
           <div key={b.heading}>
-            <p className="font-semibold text-gray-900 mb-1">{b.heading}</p>
+            <h3 className="font-semibold text-gray-900 mb-1 text-base">{b.heading}</h3>
             {b.bodySegments?.length ? (
               <p>{renderIntroSegments(b.bodySegments)}</p>
             ) : (
@@ -146,7 +146,7 @@ function ScenarioTipsSection({
       <div className="space-y-4 text-sm text-gray-700">
         {blocks.map((b) => (
           <div key={b.heading}>
-            <p className="font-semibold text-gray-900 mb-1">{b.heading}</p>
+            <h3 className="font-semibold text-gray-900 mb-1 text-base">{b.heading}</h3>
             {b.bodySegments?.length ? (
               <p>{renderIntroSegments(b.bodySegments)}</p>
             ) : (

@@ -83,19 +83,21 @@ export default function CertTableOfContents({ sections }: CertTableOfContentsPro
             <ul className="space-y-2">
               {sections.map((section) => (
                 <li key={section.id}>
-                  <button
-                    onClick={() => {
+                  <a
+                    href={`#${section.id}`}
+                    onClick={(e) => {
+                      e.preventDefault()
                       scrollToSection(section.id)
                       setIsOpen(false)
                     }}
-                    className={`w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
+                    className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition-all duration-200 ${
                       activeSection === section.id
                         ? 'bg-salesforce-blue/10 text-salesforce-dark font-medium border-l-2 border-salesforce-blue'
                         : 'text-gray-600 hover:bg-gray-50 hover:text-salesforce-blue'
                     }`}
                   >
                     {section.title}
-                  </button>
+                  </a>
                 </li>
               ))}
             </ul>
