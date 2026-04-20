@@ -23,7 +23,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     type: 'article',
-    url: `${siteUrl}/adm-201-exam-tips-2026`,
+    url: `${siteUrl}/adm-201-exam-tips`,
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
@@ -38,7 +38,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: `ADM-201 Exam Tips ${RELEASE_CURRENT}`, url: '/adm-201-exam-tips-2026' },
+  { name: `ADM-201 Exam Tips ${RELEASE_CURRENT}`, url: '/adm-201-exam-tips' },
 ]
 
 const faqItems = [
@@ -62,13 +62,13 @@ const faqItems = [
     question: 'What concepts do most ADM-201 candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the ADM-201 exam are: (1) OWD vs Profiles vs Roles — Three Layers, One Wrong Answer; (2) Flow vs Process Builder — Know the Exam\'s Recommended Tool; (3) Reports vs Dashboards — Joined Reports and Filter Limits. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
-  ...getConceptFaqs('adm-201-exam-tips-2026'),
+  ...getConceptFaqs('adm-201-exam-tips'),
 ]
 
 export default function Adm201ExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/adm-201-exam-tips-2026" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/adm-201-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

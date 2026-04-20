@@ -297,7 +297,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 </p>
                 <p className="text-sm text-gray-600 mt-3 pt-3 border-t border-gray-200">
                   Want a focused strategy? Read our{' '}
-                  <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                  <Link href="/adm-201-exam-tips" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 exam tips ({RELEASE_CURRENT})
                   </Link>{' '}
                   and detailed{' '}
@@ -398,7 +398,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   <span className="text-gray-600 ml-2">All 7 exam sections explained with scenario strategies, key topics, and a 6-week study plan.</span>
                 </li>
                 <li>
-                  <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                  <Link href="/adm-201-exam-tips" className="text-salesforce-blue font-medium hover:underline">
                     ADM-201 Exam Tips ({RELEASE_CURRENT}) →
                   </Link>
                   <span className="text-gray-600 ml-2">Proven strategies, common mistakes, and a day-of checklist for the Platform Administrator exam.</span>

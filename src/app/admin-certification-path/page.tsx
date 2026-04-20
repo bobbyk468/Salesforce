@@ -283,7 +283,7 @@ export default function AdminCertificationPathPage() {
             Browse All Admin Certs
           </Link>
           <Link
-            href="/adm-201-exam-tips-2026"
+            href="/adm-201-exam-tips"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
           >
             ADM-201 Exam Tips {RELEASE_CURRENT}

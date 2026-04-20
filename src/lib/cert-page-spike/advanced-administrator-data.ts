@@ -12,7 +12,7 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
     { type: 'text', text: "If you haven't passed the entry-level admin exam yet, start with our " },
     { type: 'link', href: '/certifications/administrator', label: 'ADM-201 study guide' },
     { type: 'text', text: ' first. For faster prep, use our ' },
-    { type: 'link', href: '/adm-201-exam-tips-2026', label: `ADM-201 exam tips (${RELEASE_CURRENT})` },
+    { type: 'link', href: '/adm-201-exam-tips', label: `ADM-201 exam tips (${RELEASE_CURRENT})` },
     { type: 'text', text: ' and ' },
     { type: 'link', href: '/adm-201-vs-app-builder', label: 'ADM-201 vs App Builder guide' },
     { type: 'text', text: '.' },

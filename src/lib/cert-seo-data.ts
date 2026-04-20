@@ -67,11 +67,11 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
 
 /** Slug -> exam tips page path. Used in CertIntroParagraph for internal linking. */
 export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
-  administrator: '/adm-201-exam-tips-2026',
-  'administrator-practice-test': '/adm-201-exam-tips-2026',
+  administrator: '/adm-201-exam-tips',
+  'administrator-practice-test': '/adm-201-exam-tips',
   'email-specialist-practice-test': '/email-specialist-exam-tips',
-  'developer-1': '/pd1-exam-tips-2026',
-  'developer-2': '/pd2-exam-tips-2026',
+  'developer-1': '/pd1-exam-tips',
+  'developer-2': '/pd2-exam-tips',
   'app-builder': '/app-builder-exam-tips',
   'email-specialist': '/email-specialist-exam-tips',
   'mulesoft-integration-foundations': '/mulesoft-integration-foundations-exam-tips',

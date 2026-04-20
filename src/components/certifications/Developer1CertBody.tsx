@@ -506,7 +506,7 @@ private class CalloutServiceTest {
             <h2 id="pd1-guides-heading" className="text-base font-semibold text-gray-900 mb-3">PD1 Study Resources</h2>
             <ul className="space-y-2 text-sm">
               <li>
-                <Link href="/pd1-exam-tips-2026" className="text-salesforce-blue font-medium hover:underline">
+                <Link href="/pd1-exam-tips" className="text-salesforce-blue font-medium hover:underline">
                   PD1 Exam Tips ({RELEASE_CURRENT}) →
                 </Link>
                 <span className="text-gray-600 ml-2">Governor limits, bulkification, 75% coverage rule, and a mock-test benchmark to pass first attempt.</span>
@@ -532,7 +532,7 @@ private class CalloutServiceTest {
             </ul>
             <p className="text-xs text-gray-600 mt-3">
               Coming from the admin track?{' '}
-              <Link href="/adm-201-exam-tips-2026" className="text-salesforce-blue underline">
+              <Link href="/adm-201-exam-tips" className="text-salesforce-blue underline">
                 ADM-201 exam tips ({RELEASE_CURRENT})
               </Link>
               {' '}covers the Salesforce fundamentals that overlap with PD1.

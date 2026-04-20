@@ -58,6 +58,22 @@ const nextConfig = {
         destination: '/certifications/javascript-developer-i',
         permanent: true,
       },
+      // Generic exam-tips slugs (year-specific → permanent URLs)
+      {
+        source: '/adm-201-exam-tips-2026',
+        destination: '/adm-201-exam-tips',
+        permanent: true,
+      },
+      {
+        source: '/pd1-exam-tips-2026',
+        destination: '/pd1-exam-tips',
+        permanent: true,
+      },
+      {
+        source: '/pd2-exam-tips-2026',
+        destination: '/pd2-exam-tips',
+        permanent: true,
+      },
     ]
   },
   async headers() {

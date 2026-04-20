@@ -24,7 +24,7 @@ export const metadata: Metadata = {
     title: pageTitle,
     description: pageDescription,
     type: 'article',
-    url: `${siteUrl}/pd2-exam-tips-2026`,
+    url: `${siteUrl}/pd2-exam-tips`,
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
@@ -39,7 +39,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: `PD2 Exam Tips ${RELEASE_CURRENT}`, url: '/pd2-exam-tips-2026' },
+  { name: `PD2 Exam Tips ${RELEASE_CURRENT}`, url: '/pd2-exam-tips' },
 ]
 
 const faqItems = [
@@ -63,7 +63,7 @@ const faqItems = [
     question: 'What concepts do most Platform Developer II (PD2) candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Platform Developer II (PD2) exam are: (1) Apex Design Patterns — Separation of Concerns in Trigger Architecture; (2) Asynchronous Apex: Future vs Queueable vs Batch vs Scheduled; (3) Platform Cache — Partitioned Storage That Does Not Persist Across Deployments. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
-  ...getConceptFaqs('pd2-exam-tips-2026'),
+  ...getConceptFaqs('pd2-exam-tips'),
 ]
 
 export default function Pd2ExamTipsPage() {
@@ -72,7 +72,7 @@ export default function Pd2ExamTipsPage() {
       <ContentPageSchemas
         headline={pageTitle}
         description={pageDescription}
-        path="/pd2-exam-tips-2026"
+        path="/pd2-exam-tips"
         breadcrumbItems={breadcrumbItems}
         faqItems={faqItems}
       />
@@ -226,7 +226,7 @@ export default function Pd2ExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
-          <Link href="/pd1-exam-tips-2026" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
+          <Link href="/pd1-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
             <span className="text-sm font-medium text-gray-800 group-hover:text-salesforce-blue">PD1 Exam Tips</span>
           </Link>

@@ -182,7 +182,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/adm-201-exam-tips-2026" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link href="/adm-201-exam-tips" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   ADM-201 exam tips
                 </Link>
               </li>

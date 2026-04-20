@@ -130,7 +130,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Salesforce Administrator (ADM-201) — Foundation</p>
               <p className="text-sm text-gray-600 mt-0.5">Not a component exam but required knowledge base. Platform security model, object relationships, and declarative automation are tested across all architect components.</p>
-              <Link href="/adm-201-exam-tips-2026" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
+              <Link href="/adm-201-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">ADM-201 exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
@@ -146,7 +146,7 @@ export default function ArchitectCertificationPathPage() {
             <div>
               <p className="font-semibold text-gray-900">Platform Developer I (PD1) — Component 2</p>
               <p className="text-sm text-gray-600 mt-0.5">Apex fundamentals, SOQL/DML, governor limits, triggers, and LWC. 68% passing score. Requires hands-on Apex coding practice.</p>
-              <Link href="/pd1-exam-tips-2026" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
+              <Link href="/pd1-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">PD1 exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
