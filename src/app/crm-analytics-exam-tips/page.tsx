@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/crm-analytics-einstein-discovery-consultant` },
+  alternates: { canonical: `${siteUrl}/crm-analytics-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `CRM Analytics Consultant exam tips ${RELEASE_CURRENT}, how to pass CRM Analytics Consultant, Salesforce Einstein Analytics certification, Tableau CRM exam study guide`,
 }
 
 const breadcrumbItems = [

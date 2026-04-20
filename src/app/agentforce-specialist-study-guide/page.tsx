@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Agentforce Specialist study guide ${RELEASE_CURRENT}, how to pass Agentforce Specialist exam, Salesforce AI agent certification prep, Agent Builder exam topics, Agentforce exam sections`,
 }
 
 const breadcrumbItems = [

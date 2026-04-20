@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/net-zero-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/net-zero-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Net Zero Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Net Zero Cloud Accredited Professional, Salesforce sustainability certification, carbon accounting exam`,
 }
 
 const breadcrumbItems = [

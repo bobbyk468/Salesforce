@@ -41,8 +41,6 @@ export const metadata: Metadata = {
     description: pathDescription,
     images: [{ url: ogImageUrl, alt: pathTitle }],
   },
-  keywords:
-    'Salesforce certification path, certification roadmap, CTA path, admin path, developer path, Salesforce career path',
 }
 
 const pathBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Certification Paths', url: '/certification-path' }]

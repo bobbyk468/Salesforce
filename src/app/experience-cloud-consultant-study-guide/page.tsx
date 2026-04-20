@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Experience Cloud Consultant study guide ${RELEASE_CURRENT}, how to pass Experience Cloud Consultant exam, Salesforce Community Cloud certification prep, external user sharing exam, Experience Builder exam topics`,
 }
 
 const breadcrumbItems = [

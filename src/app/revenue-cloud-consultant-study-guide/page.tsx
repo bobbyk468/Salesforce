@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce revenue cloud consultant study guide, revenue cloud certification 2026, revenue cloud exam prep, salesforce billing certification`,
 }
 
 const breadcrumbItems = [

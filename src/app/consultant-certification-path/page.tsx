@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce consultant certification path ${RELEASE_CURRENT}, how to become Salesforce consultant, Sales Cloud consultant path, Service Cloud consultant path, Salesforce consultant career`,
 }
 
 const breadcrumbItems = [

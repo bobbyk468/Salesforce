@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `tableau data analyst study guide, tableau certified data analyst 2026, tableau certification exam prep, tableau LOD expressions study guide`,
 }
 
 const breadcrumbItems = [

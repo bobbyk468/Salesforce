@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `free salesforce certification 2026, salesforce certification free exam, how to get salesforce certified free, dreamforce free certification`,
 }
 
 const breadcrumbItems = [

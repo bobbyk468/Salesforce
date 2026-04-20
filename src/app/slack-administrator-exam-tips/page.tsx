@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/slack-administrator` },
+  alternates: { canonical: `${siteUrl}/slack-administrator-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Slack Administrator exam tips ${RELEASE_CURRENT}, how to pass Slack Administrator, Slack admin certification study guide, Slack certification tips`,
 }
 
 const breadcrumbItems = [

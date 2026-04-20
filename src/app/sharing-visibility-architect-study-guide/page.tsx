@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce sharing visibility architect study guide, sharing architect certification 2026, OWD role hierarchy exam prep, salesforce record access architect`,
 }
 
 const breadcrumbItems = [

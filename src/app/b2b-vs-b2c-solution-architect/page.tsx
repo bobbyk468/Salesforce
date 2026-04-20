@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `b2b vs b2c solution architect salesforce, b2b solution architect certification, b2c solution architect certification, salesforce architect comparison 2026`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/tableau-architect` },
+  alternates: { canonical: `${siteUrl}/tableau-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Tableau Architect exam tips ${RELEASE_CURRENT}, how to pass Tableau Architect, Tableau certified architect study guide, Tableau enterprise deployment exam`,
 }
 
 const breadcrumbItems = [

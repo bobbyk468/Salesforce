@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-intelligence-ap` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-intelligence-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Intelligence AP exam tips ${RELEASE_CURRENT}, Datorama certification, how to pass MCI AP exam, marketing analytics Salesforce`,
 }
 
 const breadcrumbItems = [

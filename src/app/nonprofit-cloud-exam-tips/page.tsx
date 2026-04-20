@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/nonprofit-cloud` },
+  alternates: { canonical: `${siteUrl}/nonprofit-cloud-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Nonprofit Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Nonprofit Cloud Consultant, Salesforce NPC certification, Nonprofit Cloud exam study guide`,
 }
 
 const breadcrumbItems = [

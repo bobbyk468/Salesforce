@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/energy-utilities-ap` },
+  alternates: { canonical: `${siteUrl}/energy-utilities-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Energy Utilities Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Energy Utilities AP, Salesforce utilities certification, EUC exam study guide`,
 }
 
 const breadcrumbItems = [

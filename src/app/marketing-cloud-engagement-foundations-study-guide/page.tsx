@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `marketing cloud engagement foundations study guide, marketing cloud foundations exam, salesforce mc foundations certification 2026, marketing cloud associate cert`,
 }
 
 const breadcrumbItems = [

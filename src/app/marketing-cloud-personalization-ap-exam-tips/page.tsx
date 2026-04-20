@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-personalization-ap` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-personalization-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Personalization AP exam tips ${RELEASE_CURRENT}, Interaction Studio certification, how to pass MCP AP exam, real-time personalisation Salesforce`,
 }
 
 const breadcrumbItems = [

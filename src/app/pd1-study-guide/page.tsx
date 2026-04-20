@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `PD1 study guide ${RELEASE_CURRENT}, Platform Developer I exam prep, how to pass Salesforce PD1, Salesforce developer certification study guide, Apex governor limits exam, PD1 topics`,
 }
 
 const breadcrumbItems = [

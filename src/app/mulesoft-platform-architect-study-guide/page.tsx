@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `mulesoft platform architect study guide, mulesoft platform architect exam, anypoint platform architect certification 2026, mulesoft architect exam prep`,
 }
 
 const breadcrumbItems = [

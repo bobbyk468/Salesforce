@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/data-cloud-consultant` },
+  alternates: { canonical: `${siteUrl}/data-cloud-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Data Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Data Cloud Consultant, Salesforce CDP certification, Data Cloud exam study guide 2026`,
 }
 
 const breadcrumbItems = [

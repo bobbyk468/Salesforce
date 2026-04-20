@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/javascript-developer-i` },
+  alternates: { canonical: `${siteUrl}/javascript-developer-i-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `JavaScript Developer I exam tips ${RELEASE_CURRENT}, how to pass Salesforce JavaScript Developer I, JSD1 exam study guide, Salesforce LWC certification`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/sales-cloud` },
+  alternates: { canonical: `${siteUrl}/sales-cloud-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Sales Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Sales Cloud Consultant, Salesforce Sales Cloud certification study guide, Sales Cloud Consultant first attempt`,
 }
 
 const breadcrumbItems = [

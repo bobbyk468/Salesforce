@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce business analyst study guide, business analyst certification 2026, salesforce BA exam prep, business analysis certification`,
 }
 
 const breadcrumbItems = [

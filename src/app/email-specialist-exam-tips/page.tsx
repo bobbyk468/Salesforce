@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/email-specialist` },
+  alternates: { canonical: `${siteUrl}/email-specialist-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Email Specialist exam tips ${RELEASE_CURRENT}, how to pass SFMC Email Specialist, email specialist certification tips, SFMC study guide, Marketing Cloud Email Specialist study plan`,
 }
 
 const breadcrumbItems = [

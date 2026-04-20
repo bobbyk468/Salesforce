@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce certification salary ${RELEASE_CURRENT}, how much do Salesforce certifications pay, Salesforce certified salary, Salesforce architect salary, Salesforce admin salary`,
 }
 
 const breadcrumbItems = [

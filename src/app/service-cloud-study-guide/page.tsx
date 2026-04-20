@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Service Cloud Consultant study guide ${RELEASE_CURRENT}, how to pass Service Cloud Consultant, Salesforce service cloud certification exam prep, Omni-Channel routing exam, case management certification`,
 }
 
 const breadcrumbItems = [

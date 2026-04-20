@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `education cloud consultant study guide, salesforce education cloud exam, EDA certification prep, salesforce education cloud consultant 2026`,
 }
 
 const breadcrumbItems = [

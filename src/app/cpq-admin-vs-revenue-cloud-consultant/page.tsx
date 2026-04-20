@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `CPQ admin vs revenue cloud consultant, salesforce CPQ vs revenue cloud certification, quote to cash certification comparison 2026`,
 }
 
 const breadcrumbItems = [

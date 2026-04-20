@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/dev-lifecycle-deployment-architect` },
+  alternates: { canonical: `${siteUrl}/dev-lifecycle-deployment-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Dev Lifecycle Deployment Architect exam tips ${RELEASE_CURRENT}, Salesforce release management architect, deployment architect study guide, CI/CD Salesforce certification`,
 }
 
 const breadcrumbItems = [

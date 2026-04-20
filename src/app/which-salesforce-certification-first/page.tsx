@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `which salesforce certification first, salesforce certification for beginners, first salesforce cert 2026, best salesforce certification to start with`,
 }
 
 const breadcrumbItems = [

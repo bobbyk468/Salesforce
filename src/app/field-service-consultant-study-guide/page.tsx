@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce field service consultant study guide, field service certification 2026, FSL exam prep, field service lightning certification`,
 }
 
 const breadcrumbItems = [

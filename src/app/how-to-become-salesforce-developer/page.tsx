@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `how to become salesforce developer, salesforce developer career path, PD1 certification guide, salesforce developer salary 2026, learn salesforce development`,
 }
 
 const breadcrumbItems = [

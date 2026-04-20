@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce admin certification path ${RELEASE_CURRENT}, how to become Salesforce administrator, Salesforce admin career path, ADM-201 path, Salesforce Advanced Admin cert order`,
 }
 
 const breadcrumbItems = [

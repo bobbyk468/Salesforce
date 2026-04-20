@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/ai-associate` },
+  alternates: { canonical: `${siteUrl}/ai-associate-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `AI Associate exam tips ${RELEASE_CURRENT}, how to pass Salesforce AI Associate, Salesforce AI certification, Einstein AI exam study guide 2026`,
 }
 
 const breadcrumbItems = [

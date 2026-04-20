@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/consumer-goods-tpm-ap` },
+  alternates: { canonical: `${siteUrl}/consumer-goods-tpm-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Consumer Goods TPM AP exam tips ${RELEASE_CURRENT}, how to pass CG TPM AP, Salesforce trade promotion management certification, CGC TPM exam`,
 }
 
 const breadcrumbItems = [

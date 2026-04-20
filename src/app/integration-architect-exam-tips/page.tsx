@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/integration-architect` },
+  alternates: { canonical: `${siteUrl}/integration-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Integration Architect exam tips ${RELEASE_CURRENT}, how to pass Integration Architect, Salesforce integration certification study guide, Integration Architect first attempt`,
 }
 
 const breadcrumbItems = [

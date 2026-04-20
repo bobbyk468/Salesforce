@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce javascript developer i study guide, JavaScript Developer certification 2026, JS developer exam prep, LWC javascript certification`,
 }
 
 const breadcrumbItems = [

@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `mulesoft developer ii study guide, MCIA-Level-2 exam prep, mulesoft advanced certification 2026, anypoint platform developer II`,
 }
 
 const breadcrumbItems = [

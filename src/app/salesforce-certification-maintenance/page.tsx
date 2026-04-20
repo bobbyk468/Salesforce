@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce certification maintenance, salesforce certification renewal 2026, how to maintain salesforce certification, trailhead maintenance modules`,
 }
 
 const breadcrumbItems = [

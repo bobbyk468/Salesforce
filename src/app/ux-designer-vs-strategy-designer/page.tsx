@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `ux designer vs strategy designer salesforce, ux designer or strategy designer, salesforce designer certifications comparison 2026`,
 }
 
 const breadcrumbItems = [

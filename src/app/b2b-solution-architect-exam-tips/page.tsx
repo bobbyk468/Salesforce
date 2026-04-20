@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/b2b-solution-architect` },
+  alternates: { canonical: `${siteUrl}/b2b-solution-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `B2B Solution Architect exam tips ${RELEASE_CURRENT}, how to pass B2B Solution Architect, Salesforce multi-cloud B2B architecture, B2B architect exam study guide`,
 }
 
 const breadcrumbItems = [

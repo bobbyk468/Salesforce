@@ -18,7 +18,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/administrator` },
+  alternates: { canonical: `${siteUrl}/adm-201-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `ADM-201 exam tips ${RELEASE_CURRENT}, how to pass ADM-201 first attempt, Salesforce Administrator exam tips, ADM-201 study plan, ADM-201 mock test strategy`,
 }
 
 const breadcrumbItems = [

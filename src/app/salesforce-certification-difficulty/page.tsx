@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce certification difficulty, hardest salesforce certification, easiest salesforce certification, salesforce certification ranking 2026`,
 }
 
 const breadcrumbItems = [

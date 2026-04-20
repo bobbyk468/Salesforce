@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/application-architect` },
+  alternates: { canonical: `${siteUrl}/application-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Application Architect exam tips ${RELEASE_CURRENT}, how to pass Application Architect, Salesforce architect certification study guide, Application Architect first attempt`,
 }
 
 const breadcrumbItems = [

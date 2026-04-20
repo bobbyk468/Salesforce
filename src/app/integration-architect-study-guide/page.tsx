@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce integration architect study guide, integration architect certification 2026, salesforce integration exam prep, MCIA architect certification`,
 }
 
 const breadcrumbItems = [

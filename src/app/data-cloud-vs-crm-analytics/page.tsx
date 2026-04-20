@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'Data Cloud vs CRM Analytics, Salesforce Data Cloud Consultant vs Einstein Analytics, which analytics certification Salesforce, data certification comparison',
 }
 
 const breadcrumbItems = [

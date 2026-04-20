@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/consumer-goods-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/consumer-goods-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Consumer Goods Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Consumer Goods Cloud AP, Salesforce CGC certification, retail execution exam study guide`,
 }
 
 const breadcrumbItems = [

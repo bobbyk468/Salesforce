@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce CTA study guide, salesforce certified technical architect, CTA board review preparation, salesforce architect certification highest level`,
 }
 
 const breadcrumbItems = [

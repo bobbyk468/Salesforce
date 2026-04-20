@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/identity-access-management-architect` },
+  alternates: { canonical: `${siteUrl}/identity-access-management-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce IAM Architect exam tips ${RELEASE_CURRENT}, Identity Access Management Architect study guide, how to pass IAM Architect, Salesforce SSO certification`,
 }
 
 const breadcrumbItems = [

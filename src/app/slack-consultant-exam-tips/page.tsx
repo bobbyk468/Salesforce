@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/slack-consultant` },
+  alternates: { canonical: `${siteUrl}/slack-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Slack Consultant exam tips ${RELEASE_CURRENT}, how to pass Slack Consultant, Salesforce Slack consulting certification, Slack implementation study guide`,
 }
 
 const breadcrumbItems = [

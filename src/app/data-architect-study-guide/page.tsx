@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce data architect study guide, data architect certification 2026, salesforce data exam prep, LDV Salesforce architect`,
 }
 
 const breadcrumbItems = [

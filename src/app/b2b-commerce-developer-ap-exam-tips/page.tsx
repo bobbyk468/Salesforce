@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/b2b-commerce-developer-ap` },
+  alternates: { canonical: `${siteUrl}/b2b-commerce-developer-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `B2B Commerce Developer AP exam tips ${RELEASE_CURRENT}, how to pass B2B Commerce Developer AP, Salesforce B2B Commerce LWC, headless commerce Salesforce`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/business-analyst` },
+  alternates: { canonical: `${siteUrl}/business-analyst-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Business Analyst exam tips ${RELEASE_CURRENT}, how to pass Salesforce BA certification, Business Analyst study guide, Salesforce BA first attempt`,
 }
 
 const breadcrumbItems = [

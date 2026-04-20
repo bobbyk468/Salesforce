@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce developer certification path ${RELEASE_CURRENT}, how to become Salesforce developer, Salesforce developer career path, PD1 PD2 path, Salesforce JavaScript Developer cert order`,
 }
 
 const breadcrumbItems = [

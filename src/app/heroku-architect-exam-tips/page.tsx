@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/heroku-architect` },
+  alternates: { canonical: `${siteUrl}/heroku-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Heroku Architect exam tips ${RELEASE_CURRENT}, how to pass Heroku Architect, Salesforce Heroku certification, Heroku architecture study guide`,
 }
 
 const breadcrumbItems = [

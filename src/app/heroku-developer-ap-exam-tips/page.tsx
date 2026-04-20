@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/heroku-developer-ap` },
+  alternates: { canonical: `${siteUrl}/heroku-developer-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Heroku Developer AP exam tips ${RELEASE_CURRENT}, how to pass Heroku Developer AP, Salesforce Heroku certification, Heroku dyno deployment exam`,
 }
 
 const breadcrumbItems = [

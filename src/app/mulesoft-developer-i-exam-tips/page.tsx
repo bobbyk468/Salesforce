@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/mulesoft-developer-i` },
+  alternates: { canonical: `${siteUrl}/mulesoft-developer-i-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `MuleSoft Developer I exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Developer I, MCPA-Level-1 study guide, MuleSoft certification tips 2026`,
 }
 
 const breadcrumbItems = [

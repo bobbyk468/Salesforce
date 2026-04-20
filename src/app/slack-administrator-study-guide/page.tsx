@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `slack administrator study guide, salesforce slack admin exam, slack administrator certification 2026, slack admin exam prep`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/media-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/media-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Media Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Media Cloud Accredited Professional, Salesforce media industry certification, media sales exam`,
 }
 
 const breadcrumbItems = [

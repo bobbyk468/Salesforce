@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/tableau-desktop-foundations` },
+  alternates: { canonical: `${siteUrl}/tableau-desktop-foundations-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Tableau Desktop Foundations exam tips ${RELEASE_CURRENT}, how to pass Tableau Desktop Foundations, entry-level Tableau certification, Tableau foundations study guide`,
 }
 
 const breadcrumbItems = [

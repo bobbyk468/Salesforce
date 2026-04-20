@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `CRM analytics study guide, salesforce tableau CRM certification 2026, Einstein analytics exam prep, SAQL salesforce analytics`,
 }
 
 const breadcrumbItems = [

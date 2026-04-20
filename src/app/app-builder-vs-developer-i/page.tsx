@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `App Builder vs Platform Developer I, Salesforce App Builder or PD1, which cert after ADM-201, App Builder vs PD1 comparison 2026`,
 }
 
 const breadcrumbItems = [

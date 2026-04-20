@@ -18,7 +18,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/advanced-administrator` },
+  alternates: { canonical: `${siteUrl}/advanced-administrator-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Advanced Administrator exam tips ${RELEASE_CURRENT}, ADM-211 study guide, how to pass Advanced Administrator, Salesforce ADM-211 tips, advanced admin certification`,
 }
 
 const breadcrumbItems = [

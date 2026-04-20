@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-engagement-foundations` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-engagement-foundations-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Foundations exam tips ${RELEASE_CURRENT}, how to pass Marketing Cloud Engagement Foundations, Salesforce SFMC foundations certification, Marketing Cloud basics exam study guide`,
 }
 
 const breadcrumbItems = [

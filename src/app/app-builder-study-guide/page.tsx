@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `App Builder study guide ${RELEASE_CURRENT}, how to pass Salesforce App Builder, Platform App Builder exam prep, App Builder certification study guide, Flow Builder exam topics`,
 }
 
 const breadcrumbItems = [

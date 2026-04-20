@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `nonprofit cloud consultant study guide, salesforce nonprofit cloud exam, nonprofit cloud certification 2026, NPSP consultant exam prep`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/industries-cpq-developer` },
+  alternates: { canonical: `${siteUrl}/industries-cpq-developer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Industries CPQ Developer exam tips ${RELEASE_CURRENT}, how to pass Industries CPQ Developer, Salesforce Industries CPQ certification, Vlocity CPQ exam tips`,
 }
 
 const breadcrumbItems = [

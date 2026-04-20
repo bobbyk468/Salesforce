@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/health-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/health-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Health Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Health Cloud Accredited Professional, Salesforce Health Cloud certification, healthcare Salesforce exam`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/system-architect` },
+  alternates: { canonical: `${siteUrl}/system-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce System Architect exam tips ${RELEASE_CURRENT}, how to pass System Architect, System Architect study guide, Salesforce architect certification tips, System Architect first attempt`,
 }
 
 const breadcrumbItems = [

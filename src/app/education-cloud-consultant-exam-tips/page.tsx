@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/education-cloud-consultant` },
+  alternates: { canonical: `${siteUrl}/education-cloud-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Education Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Education Cloud Consultant, Salesforce EDA certification, Education Cloud exam study guide`,
 }
 
 const breadcrumbItems = [

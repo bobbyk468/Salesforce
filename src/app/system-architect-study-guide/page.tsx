@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce system architect study guide, salesforce system architect credential, system architect domain exams, salesforce architect certification path`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/mulesoft-integration-foundations` },
+  alternates: { canonical: `${siteUrl}/mulesoft-integration-foundations-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `MuleSoft Integration Foundations exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Integration Foundations, MuleSoft foundations study guide, MuleSoft API-led connectivity exam, Anypoint Platform certification tips`,
 }
 
 const breadcrumbItems = [

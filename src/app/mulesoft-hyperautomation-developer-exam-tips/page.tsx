@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/mulesoft-hyperautomation-developer` },
+  alternates: { canonical: `${siteUrl}/mulesoft-hyperautomation-developer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `MuleSoft Hyperautomation Developer exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Hyperautomation Developer, MuleSoft RPA certification, hyperautomation study guide`,
 }
 
 const breadcrumbItems = [

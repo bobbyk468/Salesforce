@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `javascript developer i vs platform developer i, JS dev I vs PD1, salesforce developer certification comparison, which salesforce developer cert first`,
 }
 
 const breadcrumbItems = [

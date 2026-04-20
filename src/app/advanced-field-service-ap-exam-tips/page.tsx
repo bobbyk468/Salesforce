@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/advanced-field-service-ap` },
+  alternates: { canonical: `${siteUrl}/advanced-field-service-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Advanced Field Service AP exam tips ${RELEASE_CURRENT}, how to pass Advanced Field Service AP, Salesforce FSL advanced certification, field service optimisation exam`,
 }
 
 const breadcrumbItems = [

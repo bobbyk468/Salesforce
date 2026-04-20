@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'Salesforce Administrator vs Advanced Administrator, ADM-201 vs ADM-211, when to take Advanced Administrator, Salesforce admin certification progression',
 }
 
 const breadcrumbItems = [

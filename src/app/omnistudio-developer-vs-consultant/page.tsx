@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'OmniStudio Developer vs Consultant, which OmniStudio certification, OmniStudio cert comparison, Salesforce OmniStudio career path',
 }
 
 const breadcrumbItems = [

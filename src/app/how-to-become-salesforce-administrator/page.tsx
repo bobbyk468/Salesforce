@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `how to become Salesforce administrator, Salesforce admin career path, how to get Salesforce certified, ADM-201 requirements, Salesforce admin salary, Salesforce certification for beginners`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/developer-2` },
+  alternates: { canonical: `${siteUrl}/pd2-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `PD2 exam tips ${RELEASE_CURRENT}, how to pass Platform Developer II, Salesforce PD2 study guide, PD2 advanced Apex, Platform Developer II first attempt`,
 }
 
 const breadcrumbItems = [

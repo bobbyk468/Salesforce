@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/public-sector-solutions-ap` },
+  alternates: { canonical: `${siteUrl}/public-sector-solutions-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Public Sector Solutions AP exam tips ${RELEASE_CURRENT}, how to pass Public Sector Solutions Accredited Professional, Salesforce government certification, PSS exam study guide`,
 }
 
 const breadcrumbItems = [

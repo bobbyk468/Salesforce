@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce dev lifecycle deployment architect study guide, DLDA certification 2026, salesforce CI/CD exam prep, org strategy salesforce architect`,
 }
 
 const breadcrumbItems = [

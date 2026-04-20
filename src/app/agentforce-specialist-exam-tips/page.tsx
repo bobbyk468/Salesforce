@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/agentforce-specialist` },
+  alternates: { canonical: `${siteUrl}/agentforce-specialist-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Agentforce Specialist exam tips ${RELEASE_CURRENT}, how to pass Agentforce Specialist, Agentforce Specialist study guide, Salesforce AI certification tips, Einstein Copilot exam prep`,
 }
 
 const breadcrumbItems = [

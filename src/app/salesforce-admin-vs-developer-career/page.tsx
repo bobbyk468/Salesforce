@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce admin vs developer career, salesforce administrator career path, salesforce developer career path, admin vs developer salary salesforce`,
 }
 
 const breadcrumbItems = [

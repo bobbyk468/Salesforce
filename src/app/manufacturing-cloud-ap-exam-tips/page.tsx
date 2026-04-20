@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/manufacturing-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/manufacturing-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Manufacturing Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Manufacturing Cloud Accredited Professional, Salesforce manufacturing certification, sales agreements exam`,
 }
 
 const breadcrumbItems = [

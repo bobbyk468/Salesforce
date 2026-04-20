@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `how to become salesforce consultant, salesforce consultant career path, sales cloud consultant certification, salesforce consultant salary 2026`,
 }
 
 const breadcrumbItems = [

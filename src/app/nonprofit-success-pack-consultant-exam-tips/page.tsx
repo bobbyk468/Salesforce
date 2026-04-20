@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/nonprofit-success-pack-consultant` },
+  alternates: { canonical: `${siteUrl}/nonprofit-success-pack-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `NPSP Consultant exam tips ${RELEASE_CURRENT}, how to pass Nonprofit Success Pack Consultant, Salesforce NPSP certification, nonprofit Salesforce exam study guide`,
 }
 
 const breadcrumbItems = [

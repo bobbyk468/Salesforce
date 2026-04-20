@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce certification voucher, salesforce exam discount 2026, salesforce certification 50% off, how to get salesforce certification discount`,
 }
 
 const breadcrumbItems = [

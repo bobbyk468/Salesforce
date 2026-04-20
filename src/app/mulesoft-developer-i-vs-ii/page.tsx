@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'MuleSoft Developer I vs II, MuleSoft Level 1 vs Level 2, MuleSoft certification comparison, which MuleSoft exam to take',
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/platform-foundations` },
+  alternates: { canonical: `${siteUrl}/platform-foundations-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Platform Foundations exam tips ${RELEASE_CURRENT}, how to pass Salesforce Platform Foundations, Salesforce Foundations certification, entry-level Salesforce exam study guide`,
 }
 
 const breadcrumbItems = [

@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'Integration Architect vs System Architect Salesforce, architect certification comparison, CTA prerequisites, Salesforce architect track comparison',
 }
 
 const breadcrumbItems = [

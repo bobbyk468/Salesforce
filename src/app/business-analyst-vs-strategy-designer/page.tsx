@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'Salesforce Business Analyst vs Strategy Designer, which certification business analyst, strategy designer cert comparison, Salesforce BA cert',
 }
 
 const breadcrumbItems = [

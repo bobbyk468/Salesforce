@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/revenue-cloud-consultant` },
+  alternates: { canonical: `${siteUrl}/revenue-cloud-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Revenue Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Revenue Cloud Consultant, Salesforce CPQ billing certification, Revenue Cloud exam study guide`,
 }
 
 const breadcrumbItems = [

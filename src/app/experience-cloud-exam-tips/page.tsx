@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/experience-cloud` },
+  alternates: { canonical: `${siteUrl}/experience-cloud-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Experience Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Experience Cloud Consultant, Salesforce Communities certification study guide, Experience Cloud exam first attempt`,
 }
 
 const breadcrumbItems = [

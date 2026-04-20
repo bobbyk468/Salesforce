@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/omnistudio-consultant` },
+  alternates: { canonical: `${siteUrl}/omnistudio-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `OmniStudio Consultant exam tips ${RELEASE_CURRENT}, how to pass OmniStudio Consultant, Salesforce OmniStudio consulting certification, Vlocity consultant exam tips`,
 }
 
 const breadcrumbItems = [

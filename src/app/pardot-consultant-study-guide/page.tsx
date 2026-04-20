@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `pardot consultant study guide, account engagement consultant exam, salesforce pardot consultant certification 2026, pardot consultant exam prep`,
 }
 
 const breadcrumbItems = [

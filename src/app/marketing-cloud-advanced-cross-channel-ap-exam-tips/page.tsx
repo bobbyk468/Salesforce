@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-advanced-cross-channel-ap` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-advanced-cross-channel-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Advanced Cross-Channel AP exam tips ${RELEASE_CURRENT}, MC cross-channel certification, Journey Builder AP exam, multi-channel marketing Salesforce`,
 }
 
 const breadcrumbItems = [

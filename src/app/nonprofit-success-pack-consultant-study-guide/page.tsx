@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `NPSP consultant study guide, salesforce nonprofit success pack exam, NPSP certification prep 2026, nonprofit success pack consultant`,
 }
 
 const breadcrumbItems = [

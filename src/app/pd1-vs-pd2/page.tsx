@@ -30,8 +30,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `PD1 vs PD2, Salesforce Platform Developer I vs II, PD1 PD2 difference, which Salesforce developer cert first, PD2 difficulty, PD1 prerequisites`,
 }
 
 const breadcrumbItems = [

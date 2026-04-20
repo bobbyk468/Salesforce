@@ -16,7 +16,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-engagement-admin` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-engagement-admin-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -30,8 +30,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Engagement Admin exam tips ${RELEASE_CURRENT}, how to pass Marketing Cloud Administrator, Salesforce SFMC Admin certification, Email Studio Automation Studio exam study guide`,
 }
 
 const breadcrumbItems = [

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `system architect vs application architect salesforce, salesforce architect credentials comparison, application architect or system architect first 2026`,
 }
 
 const breadcrumbItems = [

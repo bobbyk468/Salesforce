@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/sharing-visibility-architect` },
+  alternates: { canonical: `${siteUrl}/sharing-visibility-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Sharing Visibility Architect exam tips ${RELEASE_CURRENT}, how to pass Sharing Visibility Architect, Salesforce sharing model certification, Sharing Visibility Architect first attempt`,
 }
 
 const breadcrumbItems = [

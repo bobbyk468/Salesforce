@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce exam retake policy, salesforce certification fail retake 2026, how many times can you retake salesforce exam, salesforce exam waiting period`,
 }
 
 const breadcrumbItems = [

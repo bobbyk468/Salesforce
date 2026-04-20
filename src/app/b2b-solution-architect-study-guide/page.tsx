@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `B2B solution architect study guide, salesforce B2B architect certification 2026, cross-cloud B2B exam prep, CPQ revenue cloud architect`,
 }
 
 const breadcrumbItems = [

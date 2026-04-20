@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/tableau-server-administrator` },
+  alternates: { canonical: `${siteUrl}/tableau-server-administrator-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Tableau Server Administrator exam tips ${RELEASE_CURRENT}, how to pass Tableau Server Administrator, Tableau Server admin certification, TSM exam study guide`,
 }
 
 const breadcrumbItems = [

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `platform foundations vs ai associate salesforce, salesforce $75 certification comparison, ai associate or platform foundations first 2026`,
 }
 
 const breadcrumbItems = [

@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce certification cost ${RELEASE_CURRENT}, Salesforce exam fee, Salesforce certification price, Salesforce retake fee, how much does Salesforce certification cost`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/strategy-designer` },
+  alternates: { canonical: `${siteUrl}/strategy-designer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Strategy Designer exam tips ${RELEASE_CURRENT}, how to pass Strategy Designer, Salesforce design thinking certification, Strategy Designer exam study guide`,
 }
 
 const breadcrumbItems = [

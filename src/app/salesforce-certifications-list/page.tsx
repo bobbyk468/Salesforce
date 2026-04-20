@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `all Salesforce certifications ${RELEASE_CURRENT}, Salesforce certification list, Salesforce certifications complete list, how many Salesforce certifications are there, Salesforce cert catalog`,
 }
 
 const breadcrumbItems = [

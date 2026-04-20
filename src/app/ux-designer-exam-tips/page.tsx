@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/ux-designer` },
+  alternates: { canonical: `${siteUrl}/ux-designer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce UX Designer exam tips ${RELEASE_CURRENT}, how to pass UX Designer certification, Salesforce design certification study guide, UX Designer exam first attempt`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/app-builder` },
+  alternates: { canonical: `${siteUrl}/app-builder-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Platform App Builder exam tips ${RELEASE_CURRENT}, how to pass DEV-402, Salesforce App Builder study guide, DEV-402 exam tips, app builder certification tips`,
 }
 
 const breadcrumbItems = [

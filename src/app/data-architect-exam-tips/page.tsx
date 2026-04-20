@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/data-architect` },
+  alternates: { canonical: `${siteUrl}/data-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Data Architect exam tips ${RELEASE_CURRENT}, how to pass Data Architect, Salesforce data architect certification study guide, Data Architect first attempt`,
 }
 
 const breadcrumbItems = [

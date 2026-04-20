@@ -26,7 +26,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce exam day tips, salesforce certification exam checklist, what to bring salesforce exam 2026, online proctored salesforce exam tips`,
 }
 
 const breadcrumbItems = [

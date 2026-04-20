@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `how to become salesforce architect, salesforce CTA path, salesforce architect certification path, salesforce architect salary 2026, become CTA`,
 }
 
 const breadcrumbItems = [

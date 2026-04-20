@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce email specialist study guide, marketing cloud email specialist certification 2026, email specialist exam prep, Marketing Cloud certification`,
 }
 
 const breadcrumbItems = [

@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `B2C solution architect study guide, salesforce B2C architect certification 2026, commerce cloud marketing cloud exam prep, omnichannel salesforce architect`,
 }
 
 const breadcrumbItems = [

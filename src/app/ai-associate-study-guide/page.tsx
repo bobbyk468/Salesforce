@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `AI Associate study guide ${RELEASE_CURRENT}, how to pass Salesforce AI Associate exam, Salesforce Einstein AI certification prep, AI Associate exam sections, ethical AI Salesforce exam`,
 }
 
 const breadcrumbItems = [

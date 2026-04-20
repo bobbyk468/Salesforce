@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Advanced Administrator study guide ${RELEASE_CURRENT}, how to pass Salesforce Advanced Admin exam, Advanced Admin certification prep, Salesforce Advanced Administrator exam sections, complex security automation exam`,
 }
 
 const breadcrumbItems = [

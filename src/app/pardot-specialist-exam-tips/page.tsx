@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/pardot-specialist` },
+  alternates: { canonical: `${siteUrl}/pardot-specialist-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Pardot Specialist exam tips ${RELEASE_CURRENT}, how to pass Pardot Specialist, Salesforce Marketing Automation certification study guide, Pardot exam first attempt`,
 }
 
 const breadcrumbItems = [

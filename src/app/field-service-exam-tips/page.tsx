@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/field-service` },
+  alternates: { canonical: `${siteUrl}/field-service-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Field Service Consultant exam tips ${RELEASE_CURRENT}, how to pass Field Service Consultant, Salesforce Field Service certification study guide, FSL exam tips`,
 }
 
 const breadcrumbItems = [

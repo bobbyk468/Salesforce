@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/communications-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/communications-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Communications Cloud AP exam tips ${RELEASE_CURRENT}, how to pass Communications Cloud AP, Salesforce telco certification, TMF communications exam`,
 }
 
 const breadcrumbItems = [

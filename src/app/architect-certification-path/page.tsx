@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce architect certification path ${RELEASE_CURRENT}, how to become Salesforce architect, Application Architect roadmap, System Architect path, CTA path`,
 }
 
 const breadcrumbItems = [

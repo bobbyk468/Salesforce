@@ -31,7 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `mulesoft integration foundations study guide, MCIA associate certification 2026, anypoint platform exam prep, API-led connectivity certification`,
 }
 
 const breadcrumbItems = [

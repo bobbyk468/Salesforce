@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/b2c-commerce-architect` },
+  alternates: { canonical: `${siteUrl}/b2c-commerce-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `B2C Commerce Architect exam tips ${RELEASE_CURRENT}, how to pass B2C Commerce Architect, Salesforce Commerce Cloud architect, SFRA architecture exam study guide`,
 }
 
 const breadcrumbItems = [

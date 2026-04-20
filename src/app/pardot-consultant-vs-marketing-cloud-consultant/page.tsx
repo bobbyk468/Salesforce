@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `pardot consultant vs marketing cloud consultant, account engagement vs marketing cloud certification, salesforce marketing certification comparison 2026`,
 }
 
 const breadcrumbItems = [

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `education cloud vs nonprofit cloud consultant salesforce, education cloud or nonprofit cloud certification, industry cloud comparison salesforce 2026`,
 }
 
 const breadcrumbItems = [

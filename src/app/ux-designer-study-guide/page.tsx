@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce ux designer study guide, salesforce ux designer exam, salesforce ux designer certification 2026, ux designer exam prep`,
 }
 
 const breadcrumbItems = [

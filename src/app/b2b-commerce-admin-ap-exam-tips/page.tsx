@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/b2b-commerce-admin-ap` },
+  alternates: { canonical: `${siteUrl}/b2b-commerce-admin-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `B2B Commerce Admin AP exam tips ${RELEASE_CURRENT}, how to pass B2B Commerce Administrator AP, Salesforce B2B Commerce certification, B2B storefront admin exam`,
 }
 
 const breadcrumbItems = [

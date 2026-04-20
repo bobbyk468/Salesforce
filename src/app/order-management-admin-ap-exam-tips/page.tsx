@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/order-management-admin-ap` },
+  alternates: { canonical: `${siteUrl}/order-management-admin-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Order Management Admin AP exam tips ${RELEASE_CURRENT}, how to pass Order Management Administrator AP, Salesforce OMS certification, order fulfilment exam`,
 }
 
 const breadcrumbItems = [

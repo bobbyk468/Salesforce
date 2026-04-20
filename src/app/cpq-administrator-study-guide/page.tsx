@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce CPQ administrator study guide, CPQ certification 2026, salesforce CPQ exam prep, configure price quote certification`,
 }
 
 const breadcrumbItems = [

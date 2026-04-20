@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce certification passing score, salesforce exam passing percentage, salesforce exam score 2026, what score to pass salesforce exam`,
 }
 
 const breadcrumbItems = [

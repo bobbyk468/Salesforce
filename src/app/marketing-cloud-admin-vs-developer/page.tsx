@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'Marketing Cloud Admin vs Developer, MC Engagement Administrator vs Developer certification, which Marketing Cloud cert, SFMC admin developer comparison',
 }
 
 const breadcrumbItems = [

@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    'CPQ Administrator vs CPQ Billing AP, Salesforce CPQ certification comparison, Revenue Cloud cert, CPQ exam which to take',
 }
 
 const breadcrumbItems = [

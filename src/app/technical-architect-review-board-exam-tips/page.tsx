@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/technical-architect-review-board` },
+  alternates: { canonical: `${siteUrl}/technical-architect-review-board-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `CTA Review Board tips ${RELEASE_CURRENT}, how to pass CTA Review Board, Salesforce Technical Architect presentation, CTA whiteboard exam strategy`,
 }
 
 const breadcrumbItems = [

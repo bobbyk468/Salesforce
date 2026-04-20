@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/financial-services-cloud-ap` },
+  alternates: { canonical: `${siteUrl}/financial-services-cloud-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Financial Services Cloud AP exam tips ${RELEASE_CURRENT}, how to pass FSC Accredited Professional, Salesforce FSC certification, financial services Salesforce exam`,
 }
 
 const breadcrumbItems = [

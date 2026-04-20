@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/omnistudio-developer` },
+  alternates: { canonical: `${siteUrl}/omnistudio-developer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `OmniStudio Developer exam tips ${RELEASE_CURRENT}, how to pass OmniStudio Developer, Salesforce OmniStudio certification study guide, FlexCard DataRaptor exam tips`,
 }
 
 const breadcrumbItems = [

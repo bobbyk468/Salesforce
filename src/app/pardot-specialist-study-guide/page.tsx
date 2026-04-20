@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `pardot specialist study guide, marketing cloud account engagement certification 2026, pardot exam prep, MCAE specialist certification`,
 }
 
 const breadcrumbItems = [

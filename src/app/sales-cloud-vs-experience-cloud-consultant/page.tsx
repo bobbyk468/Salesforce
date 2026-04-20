@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Sales Cloud vs Experience Cloud Consultant, Salesforce Sales Cloud or Experience Cloud, which consultant cert first, Sales Cloud Consultant vs Experience Cloud Consultant comparison`,
 }
 
 const breadcrumbItems = [

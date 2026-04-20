@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce IAM architect study guide, identity access management architect 2026, SAML OAuth Salesforce exam, SSO salesforce architect certification`,
 }
 
 const breadcrumbItems = [

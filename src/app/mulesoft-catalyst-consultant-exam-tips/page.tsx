@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/mulesoft-catalyst-consultant` },
+  alternates: { canonical: `${siteUrl}/mulesoft-catalyst-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `MuleSoft Catalyst Consultant exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Catalyst, Catalyst methodology certification, MuleSoft operating model exam`,
 }
 
 const breadcrumbItems = [

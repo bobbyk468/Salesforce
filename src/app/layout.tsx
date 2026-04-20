@@ -6,7 +6,6 @@ import Footer from '@/components/Footer'
 import DesktopSidebarSlot from '@/components/DesktopSidebarSlot'
 import StickyContentCta from '@/components/StickyContentCta'
 
-import HreflangLinks from '@/components/HreflangLinks'
 import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import dynamic from 'next/dynamic'
@@ -41,8 +40,6 @@ export const metadata: Metadata = {
     template: `%s | ${SITE_NAME}`,
   },
   description: defaultDescription,
-  keywords:
-    'Salesforce certification, Salesforce practice questions, Salesforce exam weightage, ADM-201, Platform Administrator, Sales Cloud, Service Cloud, Marketing Cloud, Salesforce study guide',
   icons: {
     icon: [
       { url: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
@@ -197,7 +194,6 @@ export default function RootLayout({
         <style dangerouslySetInnerHTML={{ __html: criticalLayoutCSS }} />
       </head>
       <body className={inter.className}>
-        <HreflangLinks />
         {process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID && <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID} />}
         <script
           type="application/ld+json"

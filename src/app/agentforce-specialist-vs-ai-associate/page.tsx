@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Agentforce Specialist vs AI Associate, Salesforce AI certification comparison, which Salesforce AI cert first, Agentforce or AI Associate 2026`,
 }
 
 const breadcrumbItems = [

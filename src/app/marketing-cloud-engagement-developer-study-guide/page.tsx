@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `marketing cloud engagement developer study guide, mc engagement developer exam, salesforce marketing cloud developer certification 2026, ampscript ssjs exam prep`,
 }
 
 const breadcrumbItems = [

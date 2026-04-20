@@ -4,6 +4,8 @@ const nextConfig = {
   compress: true,
   // Prevent /path vs /path/ duplication — Google indexes both without this, causing "chose different canonical"
   trailingSlash: false,
+  // Increase timeout for local builds (default 60s can fail on resource-constrained machines)
+  staticPageGenerationTimeout: 180,
   experimental: {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,

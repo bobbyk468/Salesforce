@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Platform Developer II study guide ${RELEASE_CURRENT}, PD2 exam prep, how to pass PD2 exam, Salesforce PD2 certification, Apex design patterns governor limits PD2`,
 }
 
 const breadcrumbItems = [

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `mulesoft developer i vs integration foundations, mulesoft certification comparison, which mulesoft cert first, MCIA vs MCIA-Level-1`,
 }
 
 const breadcrumbItems = [

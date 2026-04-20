@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/slack-developer` },
+  alternates: { canonical: `${siteUrl}/slack-developer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Slack Developer exam tips ${RELEASE_CURRENT}, how to pass Slack Developer certification, Salesforce Slack Developer study guide, Slack app developer certification tips, Bolt Framework exam`,
 }
 
 const breadcrumbItems = [

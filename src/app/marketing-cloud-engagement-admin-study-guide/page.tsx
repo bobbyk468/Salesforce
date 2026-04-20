@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `marketing cloud engagement admin study guide, marketing cloud administrator certification 2026, SFMC admin exam prep, salesforce marketing cloud admin`,
 }
 
 const breadcrumbItems = [

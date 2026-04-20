@@ -1083,11 +1083,6 @@ export function getCertMetadata(slug: string): Metadata {
   const descForMeta = getCertMetaDescription(slug)
   const canonicalUrl = `${baseUrl}/certifications/${slug}`
   const primaryName = getCertPrimaryName(slug, certName)
-  const formerNameForKeywords = getCertFormerName(slug)
-  const keywords =
-    slug === 'administrator'
-      ? `ADM-201 practice test free, ADM-201 mock exam ${TITLE_YEAR}, ADM-201 exam questions, ADM-201 weightage, Salesforce Certified Platform Administrator, ADM-201 study guide, Salesforce admin exam, ADM-201 free practice test, is ADM-201 hard, ADM-201 dumps alternative`
-      : `${primaryName}, Salesforce certification, practice questions, exam weightage, study guide${examCode ? `, ${examCode}` : ''}${formerNameForKeywords ? `, ${formerNameForKeywords}` : ''}`
   // Updated 2026 for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'
   const modifiedTime = '2026-02-12T00:00:00Z'
@@ -1098,7 +1093,6 @@ export function getCertMetadata(slug: string): Metadata {
   return {
     title: { absolute: titleForMeta },
     description: descForMeta,
-    keywords,
     alternates: { canonical: canonicalUrl },
     openGraph: {
       title: titleForMeta,

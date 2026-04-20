@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `how to register salesforce certification exam, webassessor salesforce 2026, book salesforce exam, salesforce exam registration steps`,
 }
 
 const breadcrumbItems = [

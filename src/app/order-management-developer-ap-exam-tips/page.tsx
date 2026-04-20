@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/order-management-developer-ap` },
+  alternates: { canonical: `${siteUrl}/order-management-developer-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Order Management Developer AP exam tips ${RELEASE_CURRENT}, how to pass Order Management Developer AP, Salesforce OMS developer certification, OMS API integration`,
 }
 
 const breadcrumbItems = [

@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Data Cloud vs Marketing Cloud, Data Cloud Consultant vs Marketing Cloud certification, which Salesforce data cert, Data Cloud or Marketing Cloud 2026`,
 }
 
 const breadcrumbItems = [

@@ -27,7 +27,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `do salesforce certifications expire, salesforce certification validity 2026, how long salesforce certification valid, salesforce cert expiry`,
 }
 
 const breadcrumbItems = [

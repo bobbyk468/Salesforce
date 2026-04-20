@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Sales Cloud Consultant study guide ${RELEASE_CURRENT}, how to pass Sales Cloud Consultant exam, Salesforce Sales Cloud certification prep, Sales Cloud Consultant exam sections, territory management forecasting exam`,
 }
 
 const breadcrumbItems = [

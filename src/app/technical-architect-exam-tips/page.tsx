@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/technical-architect` },
+  alternates: { canonical: `${siteUrl}/technical-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Salesforce Technical Architect exam tips ${RELEASE_CURRENT}, how to pass CTA exam, Certified Technical Architect strategy, CTA Review Board tips`,
 }
 
 const breadcrumbItems = [

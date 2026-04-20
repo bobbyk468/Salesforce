@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce omnistudio developer study guide, omnistudio certification 2026, OmniScript exam prep, DataRaptor FlexCard study guide`,
 }
 
 const breadcrumbItems = [

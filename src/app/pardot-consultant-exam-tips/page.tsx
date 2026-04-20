@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/pardot-consultant` },
+  alternates: { canonical: `${siteUrl}/pardot-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Pardot Consultant exam tips ${RELEASE_CURRENT}, Account Engagement Consultant certification, how to pass Pardot Consultant exam, lead scoring grading Pardot study guide`,
 }
 
 const breadcrumbItems = [

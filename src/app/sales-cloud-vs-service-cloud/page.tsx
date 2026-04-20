@@ -29,8 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Sales Cloud vs Service Cloud, Salesforce Sales Cloud or Service Cloud consultant, which Salesforce consultant cert first, Sales Cloud Consultant vs Service Cloud Consultant`,
 }
 
 const breadcrumbItems = [

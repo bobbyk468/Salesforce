@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/mulesoft-integration-architect` },
+  alternates: { canonical: `${siteUrl}/mulesoft-integration-architect-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `MuleSoft Integration Architect exam tips ${RELEASE_CURRENT}, how to pass MuleSoft Integration Architect, Anypoint integration architecture, MuleSoft architect certification`,
 }
 
 const breadcrumbItems = [

@@ -18,7 +18,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/developer-1` },
+  alternates: { canonical: `${siteUrl}/pd1-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -32,8 +32,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `PD1 exam tips ${RELEASE_CURRENT}, how to pass Salesforce Platform Developer I, PD1 study guide, Apex governor limits, PD1 practice exam, Salesforce developer certification tips`,
 }
 
 const breadcrumbItems = [

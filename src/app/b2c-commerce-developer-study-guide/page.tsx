@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `B2C commerce developer study guide, SFCC developer certification 2026, salesforce commerce cloud exam prep, demandware developer certification`,
 }
 
 const breadcrumbItems = [

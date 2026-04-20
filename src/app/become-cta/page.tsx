@@ -27,8 +27,6 @@ export const metadata: Metadata = {
     description: ctaDescription,
     images: [{ url: ogImageUrl, alt: ctaTitle }],
   },
-  keywords:
-    'CTA path, Certified Technical Architect, Salesforce CTA, CTA from beginner, Technical Architect certification, Application Architect, System Architect',
 }
 
 const becomeCtaBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Become a CTA', url: '/become-cta' }]

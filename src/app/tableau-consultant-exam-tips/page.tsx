@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/tableau-consultant` },
+  alternates: { canonical: `${siteUrl}/tableau-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Tableau Business Intelligence Analyst exam tips ${RELEASE_CURRENT}, how to pass Tableau BI Analyst, Tableau certification study guide, Tableau consultant exam tips`,
 }
 
 const breadcrumbItems = [

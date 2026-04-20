@@ -25,7 +25,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `how to study for salesforce certification, salesforce exam study tips, salesforce certification study method 2026, salesforce trailhead exam prep`,
 }
 
 const breadcrumbItems = [

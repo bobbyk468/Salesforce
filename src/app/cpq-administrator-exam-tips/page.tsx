@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/cpq-administrator` },
+  alternates: { canonical: `${siteUrl}/cpq-administrator-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `CPQ Specialist exam tips ${RELEASE_CURRENT}, how to pass Salesforce CPQ Specialist, Salesforce CPQ Administrator exam study guide, CPQ certification tips`,
 }
 
 const breadcrumbItems = [

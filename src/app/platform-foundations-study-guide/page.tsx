@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce platform foundations study guide, platform foundations exam prep, salesforce platform foundations certification 2026, salesforce associate certification`,
 }
 
 const breadcrumbItems = [

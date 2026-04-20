@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/tableau-data-analyst` },
+  alternates: { canonical: `${siteUrl}/tableau-data-analyst-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Tableau Data Analyst exam tips ${RELEASE_CURRENT}, how to pass Salesforce Tableau certification, Tableau Data Analyst study guide, Salesforce certified Tableau Data Analyst tips, Tableau LOD exam`,
 }
 
 const breadcrumbItems = [

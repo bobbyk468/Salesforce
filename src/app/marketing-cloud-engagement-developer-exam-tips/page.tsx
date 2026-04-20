@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-engagement-developer` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-engagement-developer-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Developer exam tips ${RELEASE_CURRENT}, how to pass Marketing Cloud Developer, Salesforce SFMC Developer certification, AMPscript SSJS exam study guide`,
 }
 
 const breadcrumbItems = [

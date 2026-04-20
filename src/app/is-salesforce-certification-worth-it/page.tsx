@@ -28,7 +28,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `is salesforce certification worth it, salesforce certification ROI, salesforce certification salary increase, salesforce certification value 2026`,
 }
 
 const breadcrumbItems = [

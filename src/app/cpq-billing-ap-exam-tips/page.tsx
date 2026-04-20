@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/cpq-billing-ap` },
+  alternates: { canonical: `${siteUrl}/cpq-billing-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `CPQ Billing AP exam tips ${RELEASE_CURRENT}, how to pass CPQ Billing Accredited Professional, Salesforce CPQ certification, Revenue Cloud billing exam`,
 }
 
 const breadcrumbItems = [

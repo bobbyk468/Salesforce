@@ -29,7 +29,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
-  keywords: `salesforce strategy designer study guide, strategy designer certification exam, salesforce strategy designer 2026, human-centred design salesforce`,
 }
 
 const breadcrumbItems = [

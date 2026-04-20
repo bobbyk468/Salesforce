@@ -31,8 +31,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `ADM-201 study guide ${RELEASE_CURRENT}, how to pass Salesforce Administrator exam, ADM-201 exam prep, Salesforce admin certification study guide, ADM-201 topics, Salesforce Administrator exam sections`,
 }
 
 const breadcrumbItems = [

@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/loyalty-management-ap` },
+  alternates: { canonical: `${siteUrl}/loyalty-management-ap-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Loyalty Management AP exam tips ${RELEASE_CURRENT}, how to pass Loyalty Management Accredited Professional, Salesforce loyalty programme certification, points management exam`,
 }
 
 const breadcrumbItems = [

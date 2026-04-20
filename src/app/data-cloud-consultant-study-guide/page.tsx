@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Data Cloud Consultant study guide ${RELEASE_CURRENT}, how to pass Data Cloud Consultant exam, Salesforce CDP certification prep, identity resolution segmentation exam, Data Cloud exam sections`,
 }
 
 const breadcrumbItems = [

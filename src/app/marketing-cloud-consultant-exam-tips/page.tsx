@@ -19,7 +19,7 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/certifications/marketing-cloud-consultant` },
+  alternates: { canonical: `${siteUrl}/marketing-cloud-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
@@ -33,8 +33,6 @@ export const metadata: Metadata = {
     description: pageDescription,
     images: [{ url: ogImageUrl, alt: pageTitle }],
   },
-  keywords:
-    `Marketing Cloud Consultant exam tips ${RELEASE_CURRENT}, how to pass Marketing Cloud Consultant, Salesforce Marketing Cloud certification study guide, Marketing Cloud Consultant first attempt`,
 }
 
 const breadcrumbItems = [
