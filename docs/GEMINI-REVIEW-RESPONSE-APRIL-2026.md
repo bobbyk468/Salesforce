@@ -237,3 +237,94 @@ This is a content and outreach task, not a code task. Noted as the primary growt
 | Core Web Vitals (CLS, LCP, SSR) | ✅ Complete |
 | Sitemap + internal linking | ✅ Complete |
 | **Off-page SEO / backlinks** | 🚀 **Active — this is the next phase** |
+
+---
+
+---
+
+## Part 5: Post-Gemini Sprint — Additional Improvements (April 2026)
+
+*Work completed after Gemini's final hard verification verdict. These items were surfaced during a follow-up architecture audit and crawler validation session.*
+
+---
+
+### 5.1 — Exam Fee Data Correction ✅ Complete
+
+**Issue identified:** Exam fee and retake data across cert pages did not match official Salesforce pricing.
+
+**Corrections applied to `src/lib/cert-seo-data.ts` and all 87 cert JSON files:**
+
+| Category | Fee (Before) | Fee (After) | Retake (Before) | Retake (After) |
+|---|---|---|---|---|
+| Associate tier (4 certs) | $75–$200 (mixed) | $75 | $37.50–$100 | Free |
+| AP exams (23 certs) | $100 | $150 | $50 | $150 |
+| CTA Architect Evaluation | $6,000 | $1,500 | $3,000 | $750 |
+| CTA Review Board | $6,000 | $4,500 | $3,000 | $2,250 |
+
+`getRetakeCost()` refactored to derive from cost tier — no more slug-specific hardcoding. All 25 affected JSON files updated with correct `"cost"` values.
+
+---
+
+### 5.2 — URL Feed Endpoint ✅ Complete
+
+**Added:** `public/urls.json` — a static JSON feed of all 296 canonical site URLs, structured by category.
+
+| Category | Count |
+|---|---|
+| Static pages (home, study guides, vs pages, how-tos) | 112 |
+| Role hub pages (`/certifications/role/[slug]`) | 10 |
+| Certification pages (`/certifications/[slug]`) | 87 |
+| Exam-tips pages (`/[slug]-exam-tips`) | 87 |
+| **Total** | **296** |
+
+Accessible at `https://www.trailblazeprep.com/urls.json`. Eliminates the need for XML parsing — any bot, script, or AI indexing agent can consume it directly.
+
+---
+
+### 5.3 — Intent Separation: Exam-Tips Stats Block Removed ✅ Complete
+
+**Issue identified:** The "Exam At a Glance" stats block (questions / time / passing score / fee) was duplicated identically on both the main cert page and the exam-tips page for all 87 certs. This blurred the NLP semantic boundary between the two pages' intents.
+
+**Fix:** Created `ExamTipsCertLink` component — renders a single contextual parent-child link replacing the stats block:
+
+> *"For the complete syllabus, passing score, and registration details, view our [Cert Name] Exam Guide."*
+
+**Outcome:**
+- Cert page: authoritative hub for **facts** (syllabus, weightage, practice questions)
+- Exam-tips page: authoritative hub for **strategy** (study plan, scenario tips, pitfall avoidance)
+- Zero duplicated factual blocks across 87 page pairs
+- FAQPage JSON-LD confirmed present on all 87 exam-tips pages via `ContentPageSchemas`
+
+**Files changed:** 88 (1 new component + 87 exam-tips pages updated)
+
+---
+
+### 5.4 — IndexNow Automation ✅ Complete
+
+**Added:** Automated IndexNow submission pipeline wired to every Vercel deployment.
+
+| Component | Detail |
+|---|---|
+| Key file | `public/trailblazeprep-indexnow-31aded69c6aa7fb9bcde3b846ac91e27.txt` |
+| Submission script | `scripts/submit-indexnow.mjs` — reads `public/urls.json`, batches 100 URLs/request |
+| GitHub Action | `.github/workflows/indexnow.yml` — triggers on push, waits 90s for Vercel propagation, then submits |
+| Endpoint | `https://api.indexnow.org/indexnow` (fan-out to Bing, Yandex, Seznam) |
+| Verified result | 296 URLs submitted across 3 batches — 3× HTTP 200 OK |
+
+Every future code push now automatically pings IndexNow 90 seconds after Vercel deployment completes. No manual GSC intervention required for routine updates.
+
+---
+
+### Updated Score
+
+| Category | Status |
+|---|---|
+| Technical SEO foundation | ✅ A+ |
+| Content depth (87/87 pages) | ✅ A+ |
+| E-E-A-T (author, schema) | ✅ A+ |
+| Core Web Vitals (CLS, LCP, SSR) | ✅ A+ |
+| Sitemap + internal linking | ✅ A+ |
+| Exam fee data accuracy | ✅ A+ (corrected to official Salesforce pricing) |
+| Intent separation (cert vs tips pages) | ✅ A+ (zero NLP entity duplication) |
+| Crawl pipeline (IndexNow) | ✅ A+ (automated, 296 URLs, fires on every deploy) |
+| Off-page SEO / backlinks | ❌ Pending — outreach required |
