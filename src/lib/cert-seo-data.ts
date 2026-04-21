@@ -213,7 +213,7 @@ export const SLUG_TO_STUDY_GUIDE: Record<string, string> = {
   'pardot-consultant': '/pardot-consultant-study-guide',
 }
 
-/** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $100 for AP, $400 for Architect, $250 for Tableau, $75 for Foundations, $6000 for CTA. */
+/** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $150 for AP, $400 for Architect, $250 for Tableau, $75 for Associate/Foundations, $1,500/$4,500 for CTA tiers. */
 export const SLUG_TO_EXAM_COST: Record<string, string> = {
   // $200 (most certs - default)
   administrator: '$200',
@@ -252,33 +252,33 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'email-specialist': '$200',
   'pardot-specialist': '$200',
   'strategy-designer': '$200',
-  'ai-associate': '$200',
-  'marketing-cloud-engagement-foundations': '$200',
+  'ai-associate': '$75',
+  'marketing-cloud-engagement-foundations': '$75',
   'mulesoft-integration-foundations': '$75',
-  // $100 (Accredited Professional)
-  'advanced-field-service-ap': '$100',
-  'b2b-commerce-admin-ap': '$100',
-  'b2b-commerce-developer-ap': '$100',
-  'communications-cloud-ap': '$100',
-  'consumer-goods-cloud-ap': '$100',
-  'consumer-goods-tpm-ap': '$100',
-  'contact-center-ap': '$100',
-  'cpq-billing-ap': '$100',
-  'energy-utilities-ap': '$100',
-  'financial-services-cloud-ap': '$100',
-  'health-cloud-ap': '$100',
-  'heroku-developer-ap': '$100',
-  'loyalty-management-ap': '$100',
-  'manufacturing-cloud-ap': '$100',
-  'marketing-cloud-advanced-cross-channel-ap': '$100',
-  'marketing-cloud-intelligence-ap': '$100',
-  'marketing-cloud-personalization-ap': '$100',
-  'media-cloud-ap': '$100',
-  'net-zero-cloud-ap': '$100',
-  'order-management-admin-ap': '$100',
-  'order-management-developer-ap': '$100',
-  'process-automation-ap': '$100',
-  'public-sector-solutions-ap': '$100',
+  // $150 (Accredited Professional)
+  'advanced-field-service-ap': '$150',
+  'b2b-commerce-admin-ap': '$150',
+  'b2b-commerce-developer-ap': '$150',
+  'communications-cloud-ap': '$150',
+  'consumer-goods-cloud-ap': '$150',
+  'consumer-goods-tpm-ap': '$150',
+  'contact-center-ap': '$150',
+  'cpq-billing-ap': '$150',
+  'energy-utilities-ap': '$150',
+  'financial-services-cloud-ap': '$150',
+  'health-cloud-ap': '$150',
+  'heroku-developer-ap': '$150',
+  'loyalty-management-ap': '$150',
+  'manufacturing-cloud-ap': '$150',
+  'marketing-cloud-advanced-cross-channel-ap': '$150',
+  'marketing-cloud-intelligence-ap': '$150',
+  'marketing-cloud-personalization-ap': '$150',
+  'media-cloud-ap': '$150',
+  'net-zero-cloud-ap': '$150',
+  'order-management-admin-ap': '$150',
+  'order-management-developer-ap': '$150',
+  'process-automation-ap': '$150',
+  'public-sector-solutions-ap': '$150',
   // $400 (Architect certs)
   'application-architect': '$400',
   'data-architect': '$400',
@@ -303,10 +303,10 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   // $75 (Foundations)
   'platform-foundations': '$75',
   'sales-foundations': '$200',
-  // $6000 (CTA)
-  'technical-architect': '$6000',
-  'technical-architect-evaluation': '$6000',
-  'technical-architect-review-board': '$6000',
+  // CTA (two-phase: Architect Evaluation $1,500 → Review Board $4,500)
+  'technical-architect': '$1,500',
+  'technical-architect-evaluation': '$1,500',
+  'technical-architect-review-board': '$4,500',
   // UX Designer
   'ux-designer': '$200',
 }
@@ -361,15 +361,16 @@ export function getSocialProofNumber(slug: string): number {
   return SLUG_TO_SOCIAL_PROOF[slug] || 800
 }
 
-/** Retake cost: MuleSoft Foundations is free; otherwise typically half of exam cost (or $100 default). */
+/** Retake cost per official Salesforce pricing. Associate tier: Free; AP: same as fee ($150); most certs: half fee; Tableau Foundations: $50; CTA: half fee. */
 export function getRetakeCost(slug: string): string {
-  if (slug === 'mulesoft-integration-foundations') return 'Free'
   const cost = getExamCost(slug)
-  if (cost === '$6000') return '$3000'
+  if (cost === '$4,500') return '$2,250'
+  if (cost === '$1,500') return '$750'
   if (cost === '$400') return '$200'
   if (cost === '$250') return '$125'
+  if (cost === '$150') return '$150'
   if (cost === '$100') return '$50'
-  if (cost === '$75') return '$37.50'
+  if (cost === '$75') return 'Free'
   return '$100'
 }
 
