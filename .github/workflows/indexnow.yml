@@ -18,7 +18,7 @@ jobs:
       - name: Setup Node
         uses: actions/setup-node@v4
         with:
-          node-version: '20'
+          node-version: '24'
 
       # Wait for Vercel to finish deploying the new build before pinging IndexNow,
       # so crawlers fetch the freshly deployed HTML rather than the previous version.
