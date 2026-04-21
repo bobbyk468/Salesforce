@@ -1,81 +1,85 @@
 #!/usr/bin/env node
 /**
- * Submit all sitemap URLs to IndexNow (Bing, Yandex, etc.).
- * Run after deploy: node scripts/submit-indexnow.mjs
+ * Submit all site URLs to IndexNow after each Vercel deployment.
+ * Reads from public/urls.json (pre-built URL feed) so it works both locally
+ * and in CI without needing the live site to be up yet.
  *
- * Requires: key file at public/{key}.txt (already exists)
+ * Run: node scripts/submit-indexnow.mjs
+ * CI:  triggered by .github/workflows/indexnow.yml after Vercel deploys
+ *
+ * Key file: public/trailblazeprep-indexnow-31aded69c6aa7fb9bcde3b846ac91e27.txt
  * Docs: https://www.indexnow.org/documentation
  */
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const SITEMAP_URL = `${SITE_URL}/sitemap.xml`
+import { readFileSync } from 'fs'
+import { join, dirname } from 'path'
+import { fileURLToPath } from 'url'
+
+const __dirname = dirname(fileURLToPath(import.meta.url))
+
+const SITE_URL = 'https://www.trailblazeprep.com'
 const INDEXNOW_KEY = 'trailblazeprep-indexnow-31aded69c6aa7fb9bcde3b846ac91e27'
 const KEY_LOCATION = `${SITE_URL}/${INDEXNOW_KEY}.txt`
+const BATCH_SIZE = 100
 
-const INDEXNOW_ENDPOINTS = [
-  'https://www.bing.com/indexnow',
-  'https://yandex.com/indexnow',
-]
+// api.indexnow.org distributes to all participating engines (Bing, Yandex, Seznam, etc.)
+const INDEXNOW_ENDPOINT = 'https://api.indexnow.org/indexnow'
 
-async function fetchUrlsFromSitemap() {
-  const res = await fetch(SITEMAP_URL)
-  if (!res.ok) throw new Error(`Failed to fetch sitemap: ${res.status}`)
-  const xml = await res.text()
-  const urls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1])
-  return [...new Set(urls)]
+function loadUrls() {
+  const urlsPath = join(__dirname, '..', 'public', 'urls.json')
+  const data = JSON.parse(readFileSync(urlsPath, 'utf-8'))
+  return data.urls
 }
 
-async function submitToIndexNow(urlList) {
+async function submitBatch(urlList) {
   const body = {
     host: new URL(SITE_URL).hostname,
     key: INDEXNOW_KEY,
     keyLocation: KEY_LOCATION,
     urlList,
   }
-
-  const results = []
-  for (const endpoint of INDEXNOW_ENDPOINTS) {
-    try {
-      const res = await fetch(endpoint, {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json; charset=utf-8' },
-        body: JSON.stringify(body),
-      })
-      const name = new URL(endpoint).hostname
-      results.push({ engine: name, status: res.status, ok: res.ok })
-      console.log(`${name}: ${res.status} ${res.ok ? 'OK' : res.statusText}`)
-    } catch (err) {
-      results.push({ engine: endpoint, error: err.message })
-      console.error(`${endpoint}: ${err.message}`)
-    }
-  }
-  return results
+  const res = await fetch(INDEXNOW_ENDPOINT, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json; charset=utf-8' },
+    body: JSON.stringify(body),
+  })
+  return res
 }
 
 async function main() {
-  console.log('Fetching URLs from sitemap...')
-  const urls = await fetchUrlsFromSitemap()
-  console.log(`Found ${urls.length} URLs`)
+  const urls = loadUrls()
+  console.log(`Loaded ${urls.length} URLs from public/urls.json`)
 
-  if (urls.length === 0) {
-    console.error('No URLs found in sitemap')
-    process.exit(1)
+  const batches = []
+  for (let i = 0; i < urls.length; i += BATCH_SIZE) {
+    batches.push(urls.slice(i, i + BATCH_SIZE))
+  }
+  console.log(`Submitting ${batches.length} batch(es) of up to ${BATCH_SIZE} URLs each...\n`)
+
+  let totalOk = 0
+  let totalFailed = 0
+
+  for (let i = 0; i < batches.length; i++) {
+    const batch = batches[i]
+    try {
+      const res = await submitBatch(batch)
+      const ok = res.status === 200 || res.status === 202
+      if (ok) {
+        totalOk += batch.length
+        console.log(`Batch ${i + 1}/${batches.length}: ${res.status} OK (${batch.length} URLs)`)
+      } else {
+        const body = await res.text()
+        totalFailed += batch.length
+        console.warn(`Batch ${i + 1}/${batches.length}: ${res.status} — ${body.slice(0, 120)}`)
+      }
+    } catch (err) {
+      totalFailed += batch.length
+      console.error(`Batch ${i + 1}/${batches.length}: network error — ${err.message}`)
+    }
   }
 
-  // IndexNow allows up to 10,000 URLs per request
-  console.log('\nSubmitting to IndexNow...')
-  const results = await submitToIndexNow(urls)
-
-  const succeeded = results.filter((r) => r.ok || r.status === 202)
-  const failed = results.filter((r) => !r.ok && r.status !== 202 && !r.error)
-  if (succeeded.length === 0) {
-    console.error('\nAll submissions failed')
-    process.exit(1)
-  }
-  if (failed.length > 0) {
-    console.warn('\nNote: Some engines returned errors (e.g. Bing 403 if site not in Bing Webmaster)')
-  }
-  console.log(`\nDone. Submitted to ${succeeded.length} engine(s).`)
+  console.log(`\nDone. ${totalOk} URLs submitted successfully, ${totalFailed} failed.`)
+  if (totalFailed > 0) process.exit(1)
 }
 
 main().catch((err) => {

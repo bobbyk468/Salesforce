@@ -1,0 +1,31 @@
+name: Submit IndexNow after Vercel deploy
+
+on:
+  push:
+    branches:
+      - Spring'26
+      - main
+
+jobs:
+  indexnow:
+    name: Ping IndexNow
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      # Wait for Vercel to finish deploying the new build before pinging IndexNow,
+      # so crawlers fetch the freshly deployed HTML rather than the previous version.
+      - name: Wait for Vercel deployment
+        run: |
+          echo "Waiting 90s for Vercel edge propagation..."
+          sleep 90
+
+      - name: Submit URLs to IndexNow
+        run: node scripts/submit-indexnow.mjs
