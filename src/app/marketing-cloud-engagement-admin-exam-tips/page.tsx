@@ -4,9 +4,11 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const slug = 'marketing-cloud-engagement-admin'
 
 const pageTitle = `Marketing Cloud Engagement Admin Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
@@ -83,27 +85,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
 
       <ContentPageAuthor />
 
-      <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">Exam At a Glance</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">90 min</p>
-            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">67%</p>
-            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
-          </div>
-        </div>
-      </section>
+      <ExamTipsCertLink certSlug={slug} />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Marketing Cloud Admin Tests</h2>

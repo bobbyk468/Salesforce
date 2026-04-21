@@ -4,6 +4,7 @@ import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 
@@ -85,27 +86,7 @@ export default function HerokuArchitectExamTipsPage() {
 
       <ContentPageAuthor />
 
-      <section className="rounded-xl border border-gray-100 bg-gray-50 p-5 mb-8">
-        <p className="text-xs font-semibold uppercase tracking-widest text-gray-600 mb-3">Exam At a Glance</p>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 text-center">
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">60</p>
-            <p className="text-xs text-gray-600 mt-0.5">Questions</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">105 min</p>
-            <p className="text-xs text-gray-600 mt-0.5">Time Limit</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">65%</p>
-            <p className="text-xs text-gray-600 mt-0.5">Passing Score</p>
-          </div>
-          <div>
-            <p className="text-2xl font-bold text-salesforce-blue">$200</p>
-            <p className="text-xs text-gray-600 mt-0.5">Exam Fee</p>
-          </div>
-        </div>
-      </section>
+      <ExamTipsCertLink certSlug={slug} />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
