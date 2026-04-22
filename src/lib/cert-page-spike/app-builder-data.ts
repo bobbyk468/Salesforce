@@ -4,6 +4,7 @@ export const APP_BUILDER_SLUG = 'app-builder' as const
 
 export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   template: 'app-builder',
+  expertInsight: "App Builder is deceptively scenario-heavy — most questions aren't \"what does this feature do\" but \"which tool is the right choice here.\" The dividing line between Flow, Process Builder legacy knowledge, and custom Lightning components shows up constantly. I found the hardest section to be governor limits in declarative context: when does a screen flow hit CPU time limits vs. when does it hit DML limits? That nuance doesn't appear in most study guides.",
   introLead: [
     { type: 'text', text: 'New to Salesforce admin? Our ' },
     {

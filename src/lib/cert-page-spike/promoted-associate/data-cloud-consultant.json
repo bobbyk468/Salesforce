@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "The exam goes deep on identity resolution rules and unified profile merging logic — areas that genuinely require hands-on practice in a Data Cloud-enabled org. Reconciliation rules (most recent vs. source priority) are heavily tested in scenario format. About 30% of questions involved DMO relationship mapping, which is very hard to absorb from documentation alone — you need to build a few data streams yourself to internalize it.",
   "certificationCard": {
     "code": "Data Cloud",
     "description": "Certified Data Cloud Consultants have experience implementing and consulting on enterprise data platforms in a customer-facing role.",

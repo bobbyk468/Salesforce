@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Experience Cloud catches most candidates off guard with licensing nuances — the exam specifically tests when to use Partner Community vs. Customer Community Plus vs. Customer Community licenses for different access levels. I counted 6–8 questions on sharing rules vs. sharing sets vs. super user access. Memorize the sharing model comparison table before exam day; it's the single highest-leverage thing you can do in the final week.",
   "certificationCard": {
     "code": "Experience Cloud",
     "description": "The Experience Cloud Consultant certification validates your expertise in designing and implementing Experience Cloud sites for customers, partners, and employees.",

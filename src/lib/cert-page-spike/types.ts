@@ -35,6 +35,8 @@ export type RichSectionBlock = {
 }
 
 export type SharedCertCardAndContent = {
+  /** First-hand exam observation rendered as an ExpertInsightCallout. Targets Google's E-E-A-T "Experience" signal. */
+  expertInsight?: string
   certificationCard: {
     code: string
     description: string

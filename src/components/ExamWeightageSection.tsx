@@ -35,6 +35,24 @@ export default function ExamWeightageSection({ sections, title = 'Exam Weightage
           <p className="text-xs text-gray-600 pt-1">Total weight: {total}% (sections may vary by exam version)</p>
         )}
       </div>
+
+      {/* Semantic table for crawlers and assistive tech — visually hidden, same data as bars above */}
+      <table className="sr-only" aria-label={title}>
+        <thead>
+          <tr>
+            <th scope="col">Exam Section</th>
+            <th scope="col">Weightage</th>
+          </tr>
+        </thead>
+        <tbody>
+          {sections.map((section, i) => (
+            <tr key={i}>
+              <td>{section.name}</td>
+              <td>{section.percentage}%</td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
     </div>
   )
 }

@@ -34,6 +34,7 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
+import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -206,6 +207,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           <ExamPrepContent slug={slug} />
         </div>
 
+        {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
+
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
 
         <ScenarioTipsSection
@@ -301,6 +304,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         <div id="exam-prep">
           <ExamPrepContent slug={slug} />
         </div>
+
+        {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
