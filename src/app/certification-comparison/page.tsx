@@ -4,6 +4,7 @@ import { ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import { getComparisonHubJsonLd } from '@/lib/schema-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -94,8 +95,20 @@ const COMPARISONS: ComparisonEntry[] = [
 const tags = [...new Set(COMPARISONS.map(c => c.tag))]
 
 export default function CertificationComparisonPage() {
+  const vsPageUrls = COMPARISONS.map(c => `/${c.slug}`)
+  const hubJsonLd = getComparisonHubJsonLd({
+    headline: pageTitle,
+    description: pageDescription,
+    path: '/certification-comparison',
+    vsPageUrls,
+  })
+
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(hubJsonLd) }}
+      />
       <ContentPageSchemas
         headline={pageTitle}
         description={pageDescription}

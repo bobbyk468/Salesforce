@@ -63,7 +63,7 @@ const faqItems = [
 export default function Adm201VsAppBuilderPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/adm-201-vs-app-builder" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/adm-201-vs-app-builder" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/adm-201', '/certifications/app-builder']} />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

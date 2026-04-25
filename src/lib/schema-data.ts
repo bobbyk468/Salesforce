@@ -32,6 +32,7 @@ export function getArticleJsonLd({
   datePublished,
   dateModified,
   mainEntityUrl,
+  about,
 }: {
   headline: string
   description: string
@@ -39,11 +40,12 @@ export function getArticleJsonLd({
   datePublished?: string
   dateModified?: string
   mainEntityUrl?: string
+  about?: string[]
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
   const now = new Date().toISOString()
   const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
-  return {
+  const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
@@ -74,13 +76,22 @@ export function getArticleJsonLd({
       url: baseUrl,
       logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
     },
-    ...(mainEntityUrl ? {
-      mainEntityOfPage: {
-        '@type': 'WebPage',
-        '@id': mainEntityUrl.startsWith('http') ? mainEntityUrl : `${baseUrl}${mainEntityUrl}`,
-      },
-    } : {}),
   }
+
+  // Use 'about' if provided (for comparison pages), otherwise use mainEntityOfPage
+  if (about && about.length > 0) {
+    article.about = about.map(entityUrl => ({
+      '@type': 'Thing',
+      url: entityUrl.startsWith('http') ? entityUrl : `${baseUrl}${entityUrl}`,
+    }))
+  } else if (mainEntityUrl) {
+    article.mainEntityOfPage = {
+      '@type': 'WebPage',
+      '@id': mainEntityUrl.startsWith('http') ? mainEntityUrl : `${baseUrl}${mainEntityUrl}`,
+    }
+  }
+
+  return article
 }
 
 export interface FaqItem {
@@ -212,6 +223,55 @@ export function getHowToJsonLd({
       { '@type': 'HowToStep', name: 'Practice with sample questions', text: 'Answer the free practice questions and read the explanations to reinforce your understanding.' },
       { '@type': 'HowToStep', name: 'Book your exam', text: 'When you feel ready, schedule your certification exam on Trailhead or the Salesforce Certification portal.' },
     ],
+  }
+}
+
+/** ComparisonHub JSON-LD with hasPart listing. Makes the hub the parent entity of all VS pages. */
+export function getComparisonHubJsonLd({
+  headline,
+  description,
+  path,
+  vsPageUrls,
+}: {
+  headline: string
+  description: string
+  path: string
+  vsPageUrls: string[]
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  const now = new Date().toISOString()
+  const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline,
+    description,
+    url,
+    image: [
+      { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
+      imageUrl,
+    ],
+    datePublished: now,
+    dateModified: now,
+    author: [
+      { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+      {
+        '@type': 'Person',
+        name: 'Krishna Mohan',
+        url: `${baseUrl}/team`,
+        sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+      },
+    ],
+    publisher: {
+      '@type': 'Organization',
+      name: 'Trailblaze Prep',
+      url: baseUrl,
+      logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
+    },
+    hasPart: vsPageUrls.map(vsUrl => ({
+      '@type': 'CreativeWork',
+      url: vsUrl.startsWith('http') ? vsUrl : `${baseUrl}${vsUrl}`,
+    })),
   }
 }
 

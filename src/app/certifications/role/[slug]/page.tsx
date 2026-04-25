@@ -289,7 +289,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
 
   const breadcrumb = [
     { name: 'Home', url: '/' },
-    { name: 'All Certifications', url: '/certifications' },
+    { name: 'Certifications', url: '/certifications' },
     { name: `${category.name} Certifications`, url: `/certifications/role/${slug}` },
   ]
   const roleFaqs = ROLE_FAQS[slug] ?? []

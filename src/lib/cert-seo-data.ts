@@ -2718,3 +2718,42 @@ export function getCertWebPageJsonLd(
 }
 
 export { slugToDisplayName }
+
+/** AP Exam → Parent Role mapping for salary proxy. Used to inject Occupation schema on AP pages. */
+export const AP_SLUG_TO_PARENT_ROLE: Record<string, string> = {
+  // Industry/Solution Cloud APs
+  'health-cloud-ap': 'service-cloud',
+  'financial-services-cloud-ap': 'sales-cloud',
+  'manufacturing-cloud-ap': 'sales-cloud',
+  'consumer-goods-cloud-ap': 'sales-cloud',
+  'energy-utilities-ap': 'sales-cloud',
+  'communications-cloud-ap': 'service-cloud',
+  'public-sector-solutions-ap': 'sales-cloud',
+  'media-cloud-ap': 'sales-cloud',
+  'process-automation-ap': 'administrator',
+  'cpq-billing-ap': 'cpq-administrator',
+  'order-management-admin-ap': 'administrator',
+  'b2b-commerce-admin-ap': 'app-builder',
+  'b2b-commerce-developer-ap': 'b2c-commerce-developer',
+  'b2c-commerce-developer-ap': 'b2c-commerce-developer',
+  'consumer-goods-tpm-ap': 'administrator',
+  'marketing-cloud-personalization-ap': 'marketing-cloud-consultant',
+  'marketing-cloud-advanced-cross-channel-ap': 'marketing-cloud-consultant',
+  'marketing-cloud-intelligence-ap': 'data-360-consultant',
+  'contact-center-ap': 'service-cloud',
+  'advanced-field-service-ap': 'field-service',
+  'loyalty-management-ap': 'service-cloud',
+  'heroku-developer-ap': 'b2c-commerce-developer',
+}
+
+/** Get parent role for an AP exam slug. */
+export function getApParentRoleSlug(apSlug: string): string | undefined {
+  return AP_SLUG_TO_PARENT_ROLE[apSlug]
+}
+
+/** Get occupation data for an AP by proxying to parent role. */
+export function getApOccupationData(apSlug: string) {
+  const parentRoleSlug = getApParentRoleSlug(apSlug)
+  if (!parentRoleSlug) return undefined
+  return getOccupationData(parentRoleSlug)
+}

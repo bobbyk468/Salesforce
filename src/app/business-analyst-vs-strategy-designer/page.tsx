@@ -63,7 +63,7 @@ const faqItems = [
 export default function BusinessAnalystVsStrategyDesignerPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/business-analyst-vs-strategy-designer" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/business-analyst-vs-strategy-designer" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/business-analyst', '/certifications/strategy-designer']} />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

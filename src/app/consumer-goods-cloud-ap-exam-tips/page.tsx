@@ -7,6 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import ApOccupationSchema from '@/components/ApOccupationSchema'
 import CredentialSchema from '@/components/CredentialSchema'
 
 
