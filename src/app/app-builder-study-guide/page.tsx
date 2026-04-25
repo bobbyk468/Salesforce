@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function AppBuilderStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="app-builder-exam-tips" certName="Platform App Builder" />
       <CertInsightBlock certSlug="app-builder" />
+      <ExamPricingCard
+        certSlug="app-builder"
+        certName="Platform App Builder"
+        certPageSlug="app-builder"
+      />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

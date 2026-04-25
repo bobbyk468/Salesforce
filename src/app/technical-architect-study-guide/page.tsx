@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function TechnicalArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="technical-architect-exam-tips" certName="Technical Architect" />
       <CertInsightBlock certSlug="technical-architect" />
+      <ExamPricingCard
+        certSlug="technical-architect"
+        certName="Technical Architect"
+        certPageSlug="technical-architect"
+      />
 
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-purple-900 mb-1">No multiple-choice exam</h2>

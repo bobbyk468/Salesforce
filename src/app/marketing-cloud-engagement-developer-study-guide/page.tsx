@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function MarketingCloudEngagementDeveloperStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="marketing-cloud-engagement-developer-exam-tips" certName="Marketing Cloud Engagement Developer" />
       <CertInsightBlock certSlug="marketing-cloud-engagement-developer" />
+      <ExamPricingCard
+        certSlug="marketing-cloud-engagement-developer"
+        certName="Marketing Cloud Engagement Developer"
+        certPageSlug="marketing-cloud-engagement-developer"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

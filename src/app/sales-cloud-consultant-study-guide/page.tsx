@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -104,6 +106,11 @@ export default function SalesCloudConsultantStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="sales-cloud-exam-tips" certName="Sales Cloud Consultant" />
       <CertInsightBlock certSlug="sales-cloud-consultant" />
+      <ExamPricingCard
+        certSlug="sales-cloud"
+        certName="Sales Cloud Consultant"
+        certPageSlug="sales-cloud"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Sales Cloud Consultant Exam at a Glance</h2>

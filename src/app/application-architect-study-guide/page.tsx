@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -98,6 +100,11 @@ export default function ApplicationArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="application-architect-exam-tips" certName="Application Architect" />
       <CertInsightBlock certSlug="application-architect" />
+      <ExamPricingCard
+        certSlug="application-architect"
+        certName="Application Architect"
+        certPageSlug="application-architect"
+      />
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-blue-900 mb-1">Multi-exam credential</h2>

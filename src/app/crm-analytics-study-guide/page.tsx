@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -100,6 +102,11 @@ export default function CrmAnalyticsStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="crm-analytics-exam-tips" certName="CRM Analytics & Einstein Discovery" />
       <CertInsightBlock certSlug="crm-analytics" />
+      <ExamPricingCard
+        certSlug="crm-analytics-einstein-discovery-consultant"
+        certName="CRM Analytics Consultant"
+        certPageSlug="crm-analytics-einstein-discovery-consultant"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

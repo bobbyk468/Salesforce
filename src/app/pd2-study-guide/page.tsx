@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -108,6 +110,11 @@ export default function Pd2StudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="pd2-exam-tips" certName="Platform Developer II" />
       <CertInsightBlock certSlug="pd2" />
+      <ExamPricingCard
+        certSlug="developer-2"
+        certName="Platform Developer II"
+        certPageSlug="developer-2"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">PD2 Exam at a Glance</h2>

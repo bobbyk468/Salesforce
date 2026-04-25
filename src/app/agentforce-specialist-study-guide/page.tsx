@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -102,6 +104,11 @@ export default function AgentforceSpecialistStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="agentforce-specialist-exam-tips" certName="Agentforce Specialist" />
       <CertInsightBlock certSlug="agentforce-specialist" />
+      <ExamPricingCard
+        certSlug="agentforce-specialist"
+        certName="Agentforce Specialist"
+        certPageSlug="agentforce-specialist"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Agentforce Specialist Exam at a Glance</h2>

@@ -7,6 +7,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import type { Metadata } from 'next'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -97,6 +99,11 @@ export default function ServiceCloudStudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
+      <ExamPricingCard
+        certSlug="service-cloud"
+        certName="Service Cloud Consultant"
+        certPageSlug="service-cloud"
+      />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

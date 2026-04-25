@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function AiAssociateStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="ai-associate-exam-tips" certName="AI Associate" />
       <CertInsightBlock certSlug="ai-associate" />
+      <ExamPricingCard
+        certSlug="ai-associate"
+        certName="AI Associate"
+        certPageSlug="ai-associate"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">AI Associate Exam at a Glance</h2>

@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -102,6 +104,11 @@ export default function DataCloudConsultantStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="data-cloud-consultant-exam-tips" certName="Data Cloud Consultant" />
       <CertInsightBlock certSlug="data-cloud-consultant" />
+      <ExamPricingCard
+        certSlug="data-cloud-consultant"
+        certName="Data Cloud Consultant"
+        certPageSlug="data-cloud-consultant"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Data Cloud Consultant Exam at a Glance</h2>

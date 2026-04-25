@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="b2c-solution-architect-exam-tips" certName="B2C Solution Architect" />
       <CertInsightBlock certSlug="b2c-solution-architect" />
+      <ExamPricingCard
+        certSlug="b2c-solution-architect"
+        certName="B2C Solution Architect"
+        certPageSlug="b2c-solution-architect"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

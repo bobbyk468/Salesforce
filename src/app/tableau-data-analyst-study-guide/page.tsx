@@ -10,6 +10,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function TableauDataAnalystStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="tableau-data-analyst-exam-tips" certName="Tableau Data Analyst" />
       <CertInsightBlock certSlug="tableau-data-analyst" />
+      <ExamPricingCard
+        certSlug="tableau-data-analyst"
+        certName="Tableau Data Analyst"
+        certPageSlug="tableau-data-analyst"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

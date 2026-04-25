@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function Adm201StudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="adm-201-exam-tips" certName="Salesforce Administrator" />
       <CertInsightBlock certSlug="adm-201" />
+      <ExamPricingCard
+        certSlug="administrator"
+        certName="Salesforce Administrator"
+        certPageSlug="administrator-practice-test"
+      />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -103,6 +105,11 @@ export default function AdvancedAdministratorStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="advanced-administrator-exam-tips" certName="Advanced Administrator" />
       <CertInsightBlock certSlug="advanced-administrator" />
+      <ExamPricingCard
+        certSlug="advanced-administrator"
+        certName="Advanced Administrator"
+        certPageSlug="advanced-administrator"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Advanced Administrator Exam at a Glance</h2>

@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function SharingVisibilityArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="sharing-visibility-architect-exam-tips" certName="Sharing & Visibility Architect" />
       <CertInsightBlock certSlug="sharing-visibility-architect" />
+      <ExamPricingCard
+        certSlug="sharing-visibility-architect"
+        certName="Sharing & Visibility Architect"
+        certPageSlug="sharing-visibility-architect"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

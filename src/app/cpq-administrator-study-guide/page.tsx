@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -100,6 +102,11 @@ export default function CpqAdministratorStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="cpq-administrator-exam-tips" certName="CPQ Administrator" />
       <CertInsightBlock certSlug="cpq-administrator" />
+      <ExamPricingCard
+        certSlug="cpq-administrator"
+        certName="CPQ Administrator"
+        certPageSlug="cpq-administrator"
+      />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

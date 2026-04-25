@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function OmnistudioDeveloperStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="omnistudio-developer-exam-tips" certName="OmniStudio Developer" />
       <CertInsightBlock certSlug="omnistudio-developer" />
+      <ExamPricingCard
+        certSlug="omnistudio-developer"
+        certName="OmniStudio Developer"
+        certPageSlug="omnistudio-developer"
+      />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

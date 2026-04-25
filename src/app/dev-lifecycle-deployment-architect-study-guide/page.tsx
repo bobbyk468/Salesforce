@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="dev-lifecycle-deployment-architect-exam-tips" certName="Development Lifecycle & Deployment Architect" />
       <CertInsightBlock certSlug="dev-lifecycle-deployment-architect" />
+      <ExamPricingCard
+        certSlug="dev-lifecycle-deployment-architect"
+        certName="Dev Lifecycle & Deployment Architect"
+        certPageSlug="dev-lifecycle-deployment-architect"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

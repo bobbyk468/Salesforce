@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -101,6 +103,11 @@ export default function MulesoftDeveloperIStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="mulesoft-developer-i-exam-tips" certName="MuleSoft Developer I" />
       <CertInsightBlock certSlug="mulesoft-developer-i" />
+      <ExamPricingCard
+        certSlug="mulesoft-developer-i"
+        certName="MuleSoft Developer I"
+        certPageSlug="mulesoft-developer-i"
+      />
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">

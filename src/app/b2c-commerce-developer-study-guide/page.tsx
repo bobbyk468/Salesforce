@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="b2c-commerce-developer-exam-tips" certName="B2C Commerce Developer" />
       <CertInsightBlock certSlug="b2c-commerce-developer" />
+      <ExamPricingCard
+        certSlug="b2c-commerce-developer"
+        certName="B2C Commerce Developer"
+        certPageSlug="b2c-commerce-developer-ap"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="identity-access-management-architect-exam-tips" certName="Identity & Access Management Architect" />
       <CertInsightBlock certSlug="identity-access-management-architect" />
+      <ExamPricingCard
+        certSlug="identity-access-management-architect"
+        certName="Identity & Access Management Architect"
+        certPageSlug="identity-access-management-architect"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

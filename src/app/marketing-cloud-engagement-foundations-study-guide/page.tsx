@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -98,6 +100,11 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="marketing-cloud-engagement-foundations-exam-tips" certName="Marketing Cloud Engagement Foundations" />
       <CertInsightBlock certSlug="marketing-cloud-engagement-foundations" />
+      <ExamPricingCard
+        certSlug="marketing-cloud-engagement-foundations"
+        certName="Marketing Cloud Engagement Foundations"
+        certPageSlug="marketing-cloud-engagement-foundations"
+      />
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-8">
         <p className="text-sm text-green-800"><strong>Entry-level certification:</strong> No prior Marketing Cloud experience required. 40 questions, 70-minute limit, 70% passing score. Most candidates pass with 3–4 weeks of study combining Trailhead modules and email marketing fundamentals reading.</p>

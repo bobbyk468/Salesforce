@@ -9,6 +9,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -100,6 +102,11 @@ export default function Pd1StudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="pd1-exam-tips" certName="Platform Developer I" />
       <CertInsightBlock certSlug="pd1" />
+      <ExamPricingCard
+        certSlug="developer-1"
+        certName="Platform Developer I"
+        certPageSlug="developer-1"
+      />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

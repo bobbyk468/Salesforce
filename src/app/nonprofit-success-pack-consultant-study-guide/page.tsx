@@ -8,6 +8,8 @@ import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -99,6 +101,11 @@ export default function NonprofitSuccessPackConsultantStudyGuidePage() {
       <ContentPageAuthor />
       <ExamTipsCrossLink examTipsSlug="nonprofit-success-pack-consultant-exam-tips" certName="Nonprofit Success Pack Consultant" />
       <CertInsightBlock certSlug="nonprofit-success-pack-consultant" />
+      <ExamPricingCard
+        certSlug="nonprofit-success-pack-consultant"
+        certName="Nonprofit Success Pack Consultant"
+        certPageSlug="nonprofit-success-pack-consultant"
+      />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

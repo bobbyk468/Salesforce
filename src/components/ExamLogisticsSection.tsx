@@ -1,6 +1,7 @@
 'use client'
 
 import { getExamLogistics } from '@/lib/cert-seo-data'
+import { tierFromFeeString, getIndiaGstNote } from '@/lib/exam-pricing-data'
 
 interface ExamLogisticsSectionProps {
   slug: string
@@ -17,6 +18,9 @@ export default function ExamLogisticsSection({ slug, examCodeNote }: ExamLogisti
     ? `${logistics.questions} multiple-choice`
     : logistics.questions
 
+  const tier = tierFromFeeString(logistics.fee)
+  const gstNote = getIndiaGstNote(tier.fee)
+
   return (
     <section className="my-6 rounded-lg border border-gray-200 bg-gray-50 p-4 sm:p-5" aria-label="Exam logistics">
       <h2 className="text-lg font-semibold text-gray-900 mb-3">Exam logistics</h2>
@@ -31,6 +35,17 @@ export default function ExamLogisticsSection({ slug, examCodeNote }: ExamLogisti
           </tbody>
         </table>
       </div>
+      {tier.note && (
+        <p className="mt-3 text-xs text-amber-700 bg-amber-50 border border-amber-100 rounded px-3 py-2">
+          {tier.note}
+        </p>
+      )}
+      {gstNote && (
+        <p className="mt-2 text-xs text-gray-500 flex items-start gap-1.5">
+          <span className="shrink-0 mt-0.5">🇮🇳</span>
+          {gstNote}. Final amount confirmed at Webassessor checkout.
+        </p>
+      )}
       {examCodeNote && (
         <p className="mt-3 text-sm text-gray-600">
           {examCodeNote}
