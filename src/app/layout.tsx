@@ -18,6 +18,8 @@ const inter = Inter({
 
 const DeferredStickyContentCta = dynamic(() => import('@/components/StickyContentCta'), { ssr: false })
 const DeferredDesktopSidebarSlot = dynamic(() => import('@/components/DesktopSidebarSlot'), { ssr: false })
+const DeferredChatBot = dynamic(() => import('@/components/ChatBot'), { ssr: false })
+const DeferredFloatingContactButtons = dynamic(() => import('@/components/FloatingContactButtons'), { ssr: false })
 import { GoogleAnalytics } from '@next/third-parties/google'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -218,6 +220,8 @@ export default function RootLayout({
           </main>
           <Footer />
         </div>
+        <DeferredFloatingContactButtons />
+        <DeferredChatBot />
       </body>
     </html>
   )

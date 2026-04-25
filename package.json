@@ -33,7 +33,8 @@
     "x:analyze": "node scripts/analyze-x-queue.mjs",
     "cert:migration": "node scripts/cert-migration-status.mjs",
     "cert:bulk-legacy": "node scripts/bulk-migrate-cert-legacy-bodies.mjs",
-    "cert:promote-associate": "node scripts/promote-all-certs-to-associate.mjs"
+    "cert:promote-associate": "node scripts/promote-all-certs-to-associate.mjs",
+    "bot:train": "node scripts/train-bot.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.3",

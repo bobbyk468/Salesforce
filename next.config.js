@@ -1,5 +1,9 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
+  // Include bot-data JSON in the serverless bundle for /api/chat on Vercel
+  outputFileTracingIncludes: {
+    '/api/chat': ['./bot-data/**/*'],
+  },
   reactStrictMode: true,
   compress: true,
   // Prevent /path vs /path/ duplication — Google indexes both without this, causing "chose different canonical"
