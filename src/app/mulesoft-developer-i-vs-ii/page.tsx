@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -234,6 +236,13 @@ export default function MulesoftDeveloperIVsIIPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "pd1-vs-pd2", label: "Platform Developer I vs II" },
+          { slug: "javascript-developer-i-vs-pd1", label: "JavaScript Developer I vs PD1" },
+          { slug: "integration-architect-vs-system-architect", label: "Integration vs System Architect" },
+        ]}
+      />
     </div>
   )
 }

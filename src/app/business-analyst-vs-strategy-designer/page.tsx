@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -234,6 +236,13 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "ux-designer-vs-strategy-designer", label: "UX Designer vs Strategy Designer" },
+          { slug: "salesforce-admin-vs-developer-career", label: "Admin vs Developer Career" },
+          { slug: "sales-cloud-vs-service-cloud", label: "Sales Cloud vs Service Cloud" },
+        ]}
+      />
     </div>
   )
 }

@@ -18,12 +18,13 @@ export interface ExamSection {
 export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   administrator: [
     { name: 'Configuration and Setup', percentage: 20 },
-    { name: 'Object Manager and Lightning App Builder', percentage: 20 },
-    { name: 'Workflow and Process Automation', percentage: 16 },
-    { name: 'Data and Analytics Management', percentage: 14 },
-    { name: 'Sales and Marketing Applications', percentage: 12 },
-    { name: 'Service and Support Applications', percentage: 11 },
-    { name: 'Productivity and Collaboration', percentage: 7 },
+    { name: 'Object Manager and Lightning App Builder', percentage: 17 },
+    { name: 'Workflow and Process Automation', percentage: 14 },
+    { name: 'Data and Analytics Management', percentage: 17 },
+    { name: 'Sales and Marketing Applications', percentage: 11 },
+    { name: 'Service and Support Applications', percentage: 9 },
+    { name: 'Productivity and Collaboration', percentage: 4 },
+    { name: "Agentforce (Spring ‘26)", percentage: 8 },
   ],
   'advanced-administrator': [
     { name: 'Organization Setup', percentage: 18 },
@@ -36,10 +37,11 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
   ],
   'administrator-practice-test': [
     { name: 'Configuration and Setup', percentage: 20 },
-    { name: 'Security and Objects', percentage: 22 },
-    { name: 'Automation', percentage: 18 },
-    { name: 'Data and Reports', percentage: 20 },
+    { name: 'Security and Objects', percentage: 19 },
+    { name: 'Automation', percentage: 14 },
+    { name: 'Data and Analytics', percentage: 17 },
     { name: 'Sales and Service', percentage: 20 },
+    { name: "Agentforce (Spring '26)", percentage: 10 },
   ],
   'app-builder': [
     { name: 'Data Modeling and Management', percentage: 20 },

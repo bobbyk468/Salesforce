@@ -30,7 +30,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Salesforce Exam Day Tips', url: '/salesforce-certification-exam-day-tips' },
+  { name: 'Salesforce Certifications', url: '/certifications' },
+  { name: 'Exam Day Tips', url: '/salesforce-certification-exam-day-tips' },
 ]
 
 const faqItems = [

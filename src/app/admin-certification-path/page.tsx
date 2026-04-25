@@ -36,7 +36,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Salesforce Admin Certification Path', url: '/admin-certification-path' },
+  { name: 'Certifications', url: '/certifications' },
+  { name: 'Admin Certification Path', url: '/admin-certification-path' },
 ]
 
 const faqItems = [

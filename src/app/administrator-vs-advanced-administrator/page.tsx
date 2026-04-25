@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -238,6 +240,13 @@ export default function AdministratorVsAdvancedAdministratorPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "adm-201-vs-app-builder", label: "ADM-201 vs App Builder" },
+          { slug: "app-builder-vs-developer-i", label: "App Builder vs Platform Developer I" },
+          { slug: "salesforce-admin-vs-developer-career", label: "Admin vs Developer Career" },
+        ]}
+      />
     </div>
   )
 }

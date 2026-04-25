@@ -19,7 +19,7 @@ const slug = 'data-cloud-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Data Cloud Consultant exam tips for ${RELEASE_CURRENT}: data ingestion, identity resolution, segmentation, activation.`
+  `Salesforce Data 360 Consultant exam tips (formerly Data Cloud Consultant) for ${RELEASE_CURRENT}: data ingestion, identity resolution, segmentation, activation.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

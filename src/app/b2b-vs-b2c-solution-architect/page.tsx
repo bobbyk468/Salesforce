@@ -6,6 +6,8 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -237,6 +239,13 @@ export default function B2bVsB2cSolutionArchitectPage() {
           </Link>
         </div>
       </div>
+      <RelatedComparisons
+        links={[
+          { slug: "integration-architect-vs-system-architect", label: "Integration vs System Architect" },
+          { slug: "business-analyst-vs-strategy-designer", label: "Business Analyst vs Strategy Designer" },
+          { slug: "salesforce-admin-vs-developer-career", label: "Admin vs Developer Career" },
+        ]}
+      />
     </div>
   )
 }

@@ -7,6 +7,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -69,6 +71,12 @@ export default function PublicSectorSolutionsApExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/public-sector-solutions-ap-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="public-sector-solutions-ap"
+        certName="Public Sector Solutions AP"
+        description={pageDescription}
+        pageUrl="/public-sector-solutions-ap-exam-tips"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

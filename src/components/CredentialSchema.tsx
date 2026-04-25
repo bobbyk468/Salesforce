@@ -1,5 +1,6 @@
 import { getCertInsight, DIFFICULTY_LABELS } from '@/lib/cert-insights-data'
-import { RELEASE_VALID_THROUGH } from '@/lib/release-data'
+import { RELEASE_CURRENT } from '@/lib/release-data'
+import { getReleaseWindow } from '@/utils/releaseDates'
 
 const SITE_URL = 'https://www.trailblazeprep.com'
 
@@ -53,7 +54,7 @@ export default function CredentialSchema({ certSlug, certName, description, page
           percentile10: salary.min,
           median: salary.median,
           percentile90: salary.max,
-          validThrough: RELEASE_VALID_THROUGH,
+          validThrough: getReleaseWindow(RELEASE_CURRENT),
         },
         occupationLocation: {
           '@type': 'Country',

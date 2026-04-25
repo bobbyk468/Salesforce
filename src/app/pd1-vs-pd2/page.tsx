@@ -6,6 +6,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import type { Metadata } from 'next'
 import { buildVsTitle } from '@/lib/seo-title-helpers'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -330,6 +332,13 @@ export default function Pd1VsPd2Page() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "app-builder-vs-developer-i", label: "App Builder vs Platform Developer I" },
+          { slug: "javascript-developer-i-vs-pd1", label: "JavaScript Developer I vs PD1" },
+          { slug: "mulesoft-developer-i-vs-ii", label: "MuleSoft Developer I vs II" },
+        ]}
+      />
     </div>
   )
 }

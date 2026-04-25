@@ -29,7 +29,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Which Salesforce Certification First?', url: '/which-salesforce-certification-first' },
+  { name: 'Salesforce Careers', url: '/certifications' },
+  { name: 'Which Salesforce Certification First', url: '/which-salesforce-certification-first' },
 ]
 
 const faqItems = [

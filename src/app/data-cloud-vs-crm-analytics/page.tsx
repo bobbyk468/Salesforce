@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -227,6 +229,13 @@ export default function DataCloudVsCrmAnalyticsPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "sales-cloud-vs-service-cloud", label: "Sales Cloud vs Service Cloud" },
+          { slug: "field-service-vs-service-cloud-consultant", label: "Field Service vs Service Cloud" },
+          { slug: "agentforce-specialist-vs-ai-associate", label: "Agentforce Specialist vs AI Associate" },
+        ]}
+      />
     </div>
   )
 }

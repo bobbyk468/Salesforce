@@ -646,7 +646,7 @@ function getCertMetaTitle(slug: string): string {
     // Consultant track ("Salesforce" first for broader queries)
     'sales-cloud': 'Salesforce Sales Cloud Consultant',
     'service-cloud': 'Salesforce Certified Service Cloud Consultant',
-    'data-cloud-consultant': 'Salesforce Certified Data Cloud Consultant',
+    'data-cloud-consultant': 'Salesforce Certified Data 360 Consultant',
     'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery',
     'education-cloud-consultant': 'Salesforce Certified Education Cloud Consultant',
     'experience-cloud': 'Salesforce Certified Experience Cloud Consultant',

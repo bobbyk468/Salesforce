@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -234,6 +236,13 @@ export default function CpqAdminVsCpqBillingApPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "sales-cloud-vs-service-cloud", label: "Sales Cloud vs Service Cloud" },
+          { slug: "pardot-specialist-vs-pardot-consultant", label: "Pardot Specialist vs Consultant" },
+          { slug: "integration-architect-vs-system-architect", label: "Integration vs System Architect" },
+        ]}
+      />
     </div>
   )
 }

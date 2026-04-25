@@ -5,6 +5,8 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -288,6 +290,13 @@ export default function SalesCloudVsServiceCloudPage() {
           </Link>
         </div>
       </section>
+      <RelatedComparisons
+        links={[
+          { slug: "field-service-vs-service-cloud-consultant", label: "Field Service vs Service Cloud" },
+          { slug: "data-cloud-vs-crm-analytics", label: "Data Cloud vs CRM Analytics" },
+          { slug: "pardot-specialist-vs-pardot-consultant", label: "Pardot Specialist vs Consultant" },
+        ]}
+      />
     </div>
   )
 }

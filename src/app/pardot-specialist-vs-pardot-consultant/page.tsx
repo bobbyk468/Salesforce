@@ -6,6 +6,8 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -241,6 +243,13 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           </Link>
         </div>
       </div>
+      <RelatedComparisons
+        links={[
+          { slug: "sales-cloud-vs-service-cloud", label: "Sales Cloud vs Service Cloud" },
+          { slug: "marketing-cloud-admin-vs-developer", label: "Marketing Cloud Admin vs Developer" },
+          { slug: "cpq-admin-vs-cpq-billing-ap", label: "CPQ Admin vs CPQ Billing AP" },
+        ]}
+      />
     </div>
   )
 }

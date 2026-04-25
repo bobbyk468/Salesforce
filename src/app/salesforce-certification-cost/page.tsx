@@ -33,7 +33,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Salesforce Certification Cost', url: '/salesforce-certification-cost' },
+  { name: 'Salesforce Careers', url: '/certifications' },
+  { name: 'Salesforce Certification Cost Guide', url: '/salesforce-certification-cost' },
 ]
 
 const faqItems = [

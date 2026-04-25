@@ -6,6 +6,8 @@ import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import WhichFirstBlock from '@/components/WhichFirstBlock'
+import RelatedComparisons from '@/components/RelatedComparisons'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -261,6 +263,13 @@ export default function JavascriptDeveloperIVsPd1Page() {
           </Link>
         </div>
       </div>
+      <RelatedComparisons
+        links={[
+          { slug: "pd1-vs-pd2", label: "Platform Developer I vs II" },
+          { slug: "app-builder-vs-developer-i", label: "App Builder vs Platform Developer I" },
+          { slug: "mulesoft-developer-i-vs-ii", label: "MuleSoft Developer I vs II" },
+        ]}
+      />
     </div>
   )
 }

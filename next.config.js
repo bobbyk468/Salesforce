@@ -64,6 +64,22 @@ const nextConfig = {
         destination: '/certifications/javascript-developer-i',
         permanent: true,
       },
+      // Data Cloud Consultant → Data 360 Consultant (rebranded March 2026)
+      {
+        source: '/certifications/data-360-consultant',
+        destination: '/certifications/data-cloud-consultant',
+        permanent: false,
+      },
+      {
+        source: '/data-360-consultant-study-guide',
+        destination: '/data-cloud-consultant-study-guide',
+        permanent: false,
+      },
+      {
+        source: '/data-360-consultant-exam-tips',
+        destination: '/data-cloud-consultant-exam-tips',
+        permanent: false,
+      },
       // Generic exam-tips slugs (year-specific → permanent URLs)
       {
         source: '/adm-201-exam-tips-2026',
