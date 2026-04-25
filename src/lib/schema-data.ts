@@ -31,12 +31,14 @@ export function getArticleJsonLd({
   path,
   datePublished,
   dateModified,
+  mainEntityUrl,
 }: {
   headline: string
   description: string
   path: string
   datePublished?: string
   dateModified?: string
+  mainEntityUrl?: string
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
   const now = new Date().toISOString()
@@ -54,7 +56,7 @@ export function getArticleJsonLd({
     datePublished: datePublished ?? now,
     dateModified: dateModified ?? now,
     author: [
-      { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
+      { '@type': 'Organization', '@id': `${baseUrl}/#organization`, name: 'Trailblaze Prep', url: baseUrl },
       {
         '@type': 'Person',
         name: 'Krishna Mohan',
@@ -67,10 +69,17 @@ export function getArticleJsonLd({
     ],
     publisher: {
       '@type': 'Organization',
+      '@id': `${baseUrl}/#organization`,
       name: 'Trailblaze Prep',
       url: baseUrl,
       logo: { '@type': 'ImageObject', url: `${baseUrl}/logo.png` },
     },
+    ...(mainEntityUrl ? {
+      mainEntityOfPage: {
+        '@type': 'WebPage',
+        '@id': mainEntityUrl.startsWith('http') ? mainEntityUrl : `${baseUrl}${mainEntityUrl}`,
+      },
+    } : {}),
   }
 }
 

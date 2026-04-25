@@ -8,6 +8,8 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -71,7 +73,8 @@ const faqItems = [
 export default function BusinessAnalystExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/business-analyst-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/business-analyst-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/business-analyst-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
@@ -91,6 +94,11 @@ export default function BusinessAnalystExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="business-analyst-study-guide" certName="Business Analyst" />
+      <ExamPricingCard
+        certSlug="business-analyst"
+        certName="Business Analyst"
+        certPageSlug="business-analyst"
+      />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

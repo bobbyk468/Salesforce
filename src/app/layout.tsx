@@ -96,6 +96,7 @@ export default function RootLayout({
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
+    '@id': `${siteUrl}/#organization`,
     name: 'Trailblaze Prep',
     url: siteUrl,
     description:

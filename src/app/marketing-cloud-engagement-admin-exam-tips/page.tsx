@@ -7,6 +7,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -69,7 +71,8 @@ const faqItems = [
 export default function MarketingCloudEngagementAdminExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/marketing-cloud-engagement-admin-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/marketing-cloud-engagement-admin-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/marketing-cloud-engagement-admin-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
@@ -90,6 +93,11 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="marketing-cloud-engagement-admin-study-guide" certName="Marketing Cloud Engagement Admin" />
+      <ExamPricingCard
+        certSlug="marketing-cloud-engagement-admin"
+        certName="Marketing Cloud Engagement Admin"
+        certPageSlug="marketing-cloud-engagement-admin"
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Marketing Cloud Admin Tests</h2>

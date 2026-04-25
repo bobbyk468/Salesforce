@@ -8,6 +8,8 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -71,7 +73,8 @@ const faqItems = [
 export default function SystemArchitectExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/system-architect-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/system-architect-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/system-architect-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
@@ -91,6 +94,11 @@ export default function SystemArchitectExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="system-architect-study-guide" certName="System Architect" />
+      <ExamPricingCard
+        certSlug="system-architect"
+        certName="System Architect"
+        certPageSlug="system-architect"
+      />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

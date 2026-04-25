@@ -31,6 +31,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Certification Comparison', url: '/certification-comparison' },
   { name: 'CPQ Admin vs Revenue Cloud Consultant', url: '/cpq-admin-vs-revenue-cloud-consultant' },
 ]
 

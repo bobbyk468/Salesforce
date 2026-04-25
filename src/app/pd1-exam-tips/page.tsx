@@ -8,6 +8,8 @@ import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import type { Metadata } from 'next'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -70,7 +72,8 @@ const faqItems = [
 export default function Pd1ExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pd1-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pd1-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/pd1-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
@@ -89,6 +92,11 @@ export default function Pd1ExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="pd1-study-guide" certName="Platform Developer I" />
+      <ExamPricingCard
+        certSlug="developer-1"
+        certName="Platform Developer I"
+        certPageSlug="developer-1"
+      />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

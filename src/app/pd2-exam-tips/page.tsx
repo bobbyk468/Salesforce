@@ -8,6 +8,8 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+import ExamPricingCard from '@/components/ExamPricingCard'
+
 
 
 
@@ -77,6 +79,7 @@ export default function Pd2ExamTipsPage() {
         path="/pd2-exam-tips"
         breadcrumbItems={breadcrumbItems}
         faqItems={faqItems}
+        mainEntityUrl="/pd2-study-guide"
       />
 
       <header data-lcp-header className="mb-10">
@@ -97,6 +100,11 @@ export default function Pd2ExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="pd2-study-guide" certName="Platform Developer II" />
+      <ExamPricingCard
+        certSlug="developer-2"
+        certName="Platform Developer II"
+        certPageSlug="developer-2"
+      />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

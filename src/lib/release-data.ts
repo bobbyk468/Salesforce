@@ -12,6 +12,10 @@ export const RELEASE_YEAR = '2026'
 /** ISO date when content was last refreshed for current release — used for Article dateModified, freshness signals. */
 export const RELEASE_DATE = '2026-04-05'
 
+/** ISO date when current salary / YMYL data expires — set to end of release cycle.
+ *  Update alongside RELEASE_CURRENT each season so Occupation schema validThrough stays current. */
+export const RELEASE_VALID_THROUGH = '2026-06-30'
+
 /** What's new in the current release vs previous — relevant to certification exams and study. */
 export const WHATS_NEW_CURRENT_RELEASE: string[] = [
   'Agentforce and AI: Expanded Agentforce capabilities including multi-agent orchestration and enhanced Agent Builder tools—expect updated AI and automation objectives on Admin and Developer exams.',

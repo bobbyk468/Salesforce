@@ -18,6 +18,9 @@ export interface ContentPageSchemasProps {
   faqItems?: FaqItem[]
   /** Optional: custom HowTo name (defaults to "How to prepare using this guide") */
   howToName?: string
+  /** Optional: URL of the authoritative page this content is about (e.g. study guide URL for exam-tips pages).
+   *  Sets mainEntityOfPage on the Article schema — tells Google which page is the canonical authority. */
+  mainEntityUrl?: string
 }
 
 /**
@@ -31,6 +34,7 @@ export default function ContentPageSchemas({
   breadcrumbItems,
   faqItems,
   howToName,
+  mainEntityUrl,
 }: ContentPageSchemasProps) {
   const webPageJsonLd = getWebPageJsonLd({
     name: headline,
@@ -39,7 +43,7 @@ export default function ContentPageSchemas({
     breadcrumbItems,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
-  const articleJsonLd = getArticleJsonLd({ headline, description, path })
+  const articleJsonLd = getArticleJsonLd({ headline, description, path, mainEntityUrl })
   const courseJsonLd = getCourseJsonLd({ name: headline, description, path })
   const learningResourceJsonLd = getLearningResourceJsonLd({ name: headline, description, path })
   const howToJsonLd = getHowToJsonLd({
