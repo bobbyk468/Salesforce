@@ -1099,13 +1099,20 @@ export function getCertMetaDescription(slug: string): string {
   )
 }
 
+/** Practice test pages map to their parent cert for canonical (duplicate without user-selected canonical fix). */
+const PRACTICE_TEST_TO_PARENT: Record<string, string> = {
+  'administrator-practice-test': 'administrator',
+  'email-specialist-practice-test': 'email-specialist',
+}
+
 /** SEO metadata for a certification page: unique title <60 chars (absolute), description 140–160, canonical. */
 export function getCertMetadata(slug: string): Metadata {
   const certName = slugToDisplayName(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const titleForMeta = getCertMetaTitle(slug)
   const descForMeta = getCertMetaDescription(slug)
-  const canonicalUrl = `${baseUrl}/certifications/${slug}`
+  const canonicalSlug = PRACTICE_TEST_TO_PARENT[slug] || slug
+  const canonicalUrl = `${baseUrl}/certifications/${canonicalSlug}`
   const primaryName = getCertPrimaryName(slug, certName)
   // Updated ${RELEASE_YEAR} for title/H1 and E-E-A-T
   const publishedTime = '2025-01-01T00:00:00Z'

@@ -1,9 +1,12 @@
 import type { Metadata } from 'next'
 
+const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+
 // Minimal test to verify metadata.description renders correctly
 export const metadata: Metadata = {
   title: 'Test Meta Description',
   description: 'This is a test description that should appear in the meta tag.',
+  alternates: { canonical: `${baseUrl}/test-meta` },
 }
 
 export default function TestMetaPage() {
