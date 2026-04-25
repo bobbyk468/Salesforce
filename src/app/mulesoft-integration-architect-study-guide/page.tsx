@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'MuleSoft Integration Architect', url: '/certifications/mulesoft-integration-architect' },
   { name: 'MuleSoft Integration Architect Study Guide', url: '/mulesoft-integration-architect-study-guide' },
 ]
 

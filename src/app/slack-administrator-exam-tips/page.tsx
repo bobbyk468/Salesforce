@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Slack Administrator', url: '/certifications/slack-administrator' },
   { name: 'Slack Administrator Exam Tips', url: '/slack-administrator-exam-tips' },
 ]
 

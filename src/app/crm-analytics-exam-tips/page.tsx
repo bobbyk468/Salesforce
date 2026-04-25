@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'CRM Analytics Consultant', url: '/certifications/crm-analytics-einstein-discovery-consultant' },
   { name: 'CRM Analytics Consultant Exam Tips', url: '/crm-analytics-exam-tips' },
 ]
 

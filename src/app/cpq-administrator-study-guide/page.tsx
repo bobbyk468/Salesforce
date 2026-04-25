@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'CPQ Administrator', url: '/certifications/cpq-administrator' },
   { name: 'CPQ Administrator Study Guide', url: '/cpq-administrator-study-guide' },
 ]
 

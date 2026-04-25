@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Marketing Cloud Engagement Developer', url: '/certifications/marketing-cloud-engagement-developer' },
   { name: 'Marketing Cloud Developer Exam Tips', url: '/marketing-cloud-engagement-developer-exam-tips' },
 ]
 

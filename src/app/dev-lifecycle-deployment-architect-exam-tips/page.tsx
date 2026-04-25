@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Dev Lifecycle & Deployment Architect', url: '/certifications/dev-lifecycle-deployment-architect' },
   { name: 'Dev Lifecycle & Deployment Architect Exam Tips', url: '/dev-lifecycle-deployment-architect-exam-tips' },
 ]
 

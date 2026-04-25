@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Agentforce Specialist', url: '/certifications/agentforce-specialist' },
   { name: 'Agentforce Specialist Study Guide', url: '/agentforce-specialist-study-guide' },
 ]
 

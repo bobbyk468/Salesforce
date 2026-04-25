@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Tableau Data Analyst', url: '/certifications/tableau-data-analyst' },
   { name: 'Tableau Data Analyst Exam Tips', url: '/tableau-data-analyst-exam-tips' },
 ]
 

@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'OmniStudio Consultant', url: '/certifications/omnistudio-consultant' },
   { name: 'OmniStudio Consultant Exam Tips', url: '/omnistudio-consultant-exam-tips' },
 ]
 

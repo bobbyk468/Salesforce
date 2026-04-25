@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Nonprofit Success Pack Consultant', url: '/certifications/nonprofit-success-pack-consultant' },
   { name: 'NPSP Consultant Exam Tips', url: '/nonprofit-success-pack-consultant-exam-tips' },
 ]
 

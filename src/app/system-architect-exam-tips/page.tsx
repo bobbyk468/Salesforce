@@ -40,6 +40,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'System Architect', url: '/certifications/system-architect' },
   { name: 'System Architect Exam Tips', url: '/system-architect-exam-tips' },
 ]
 

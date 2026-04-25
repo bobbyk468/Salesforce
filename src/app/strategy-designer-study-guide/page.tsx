@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Strategy Designer', url: '/certifications/strategy-designer' },
   { name: 'Strategy Designer Study Guide', url: '/strategy-designer-study-guide' },
 ]
 

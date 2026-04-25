@@ -36,6 +36,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
+  { name: 'Pardot Consultant', url: '/certifications/pardot-consultant' },
   { name: 'Pardot Consultant Study Guide', url: '/pardot-consultant-study-guide' },
 ]
 
