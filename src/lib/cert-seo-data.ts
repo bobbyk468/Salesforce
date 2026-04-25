@@ -97,7 +97,7 @@ export const SLUG_TO_EXAM_TIPS: Record<string, string> = {
   'education-cloud-consultant': '/education-cloud-consultant-exam-tips',
   'ai-associate': '/ai-associate-exam-tips',
   'cpq-administrator': '/cpq-administrator-exam-tips',
-  'data-cloud-consultant': '/data-cloud-consultant-exam-tips',
+  'data-360-consultant': '/data-360-consultant-exam-tips',
   'crm-analytics-einstein-discovery-consultant': '/crm-analytics-exam-tips',
   'revenue-cloud-consultant': '/revenue-cloud-consultant-exam-tips',
   'marketing-cloud-consultant': '/marketing-cloud-consultant-exam-tips',
@@ -167,7 +167,7 @@ export const SLUG_TO_STUDY_GUIDE: Record<string, string> = {
   'sales-cloud': '/sales-cloud-consultant-study-guide',
   'service-cloud': '/service-cloud-consultant-study-guide',
   'agentforce-specialist': '/agentforce-specialist-study-guide',
-  'data-cloud-consultant': '/data-cloud-consultant-study-guide',
+  'data-360-consultant': '/data-360-consultant-study-guide',
   'ai-associate': '/ai-associate-study-guide',
   'experience-cloud': '/experience-cloud-consultant-study-guide',
   'advanced-administrator': '/advanced-administrator-study-guide',
@@ -237,7 +237,7 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'slack-developer': '$200',
   'sales-cloud': '$200',
   'service-cloud': '$200',
-  'data-cloud-consultant': '$200',
+  'data-360-consultant': '$200',
   'crm-analytics-einstein-discovery-consultant': '$200',
   'education-cloud-consultant': '$200',
   'experience-cloud': '$200',
@@ -399,7 +399,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'slack-developer': { questions: 60, passingScore: '~68%', duration: '105 min' },
   'sales-cloud': { questions: 60, passingScore: '68%', duration: '105 min' },
   'service-cloud': { questions: 60, passingScore: '67%', duration: '105 min' },
-  'data-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'data-360-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'crm-analytics-einstein-discovery-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'education-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'experience-cloud': { questions: 60, passingScore: '~65%', duration: '105 min' },
@@ -492,7 +492,7 @@ export const SLUG_TO_OCCUPATION_DATA: Record<string, { jobTitle: string; medianS
   'sales-cloud': { jobTitle: 'Sales Cloud Consultant', medianSalary: 122500, salaryRange: { minSalary: 110000, maxSalary: 135000 } },
   'service-cloud': { jobTitle: 'Service Cloud Consultant', medianSalary: 122500, salaryRange: { minSalary: 110000, maxSalary: 135000 } },
   'marketing-cloud-consultant': { jobTitle: 'Marketing Cloud Consultant', medianSalary: 130000, salaryRange: { minSalary: 115000, maxSalary: 145000 } },
-  'data-cloud-consultant': { jobTitle: 'Data Cloud Consultant', medianSalary: 125000, salaryRange: { minSalary: 110000, maxSalary: 140000 } },
+  'data-360-consultant': { jobTitle: 'Data Cloud Consultant', medianSalary: 125000, salaryRange: { minSalary: 110000, maxSalary: 140000 } },
   'application-architect': { jobTitle: 'Salesforce Application Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
   'system-architect': { jobTitle: 'Salesforce System Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
   'integration-architect': { jobTitle: 'Salesforce Integration Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
@@ -588,7 +588,7 @@ function getCertMetaTitle(slug: string): string {
     'contact-center-ap': `Free Contact Center AP Practice Exam ${RELEASE_YEAR}`,
     'cpq-billing-ap': `Free CPQ & Billing AP Practice Exam ${RELEASE_YEAR}`,
     'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics Practice Exam ${RELEASE_YEAR}`,
-    'data-cloud-consultant': `Free Data Cloud Consultant Practice Exam ${RELEASE_YEAR}`,
+    'data-360-consultant': `Free Data Cloud Consultant Practice Exam ${RELEASE_YEAR}`,
     'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch Practice Exam ${RELEASE_YEAR}`,
     'education-cloud-consultant': `Free Education Cloud Consult Practice Exam ${RELEASE_YEAR}`,
     'email-specialist-practice-test': `Free Email Spec Practice Practice Exam ${RELEASE_YEAR}`,
@@ -669,7 +669,7 @@ function getCertMetaTitle(slug: string): string {
     // Consultant track ("Salesforce" first for broader queries)
     'sales-cloud': 'Salesforce Sales Cloud Consultant',
     'service-cloud': 'Salesforce Certified Service Cloud Consultant',
-    'data-cloud-consultant': 'Salesforce Certified Data 360 Consultant',
+    'data-360-consultant': 'Salesforce Certified Data 360 Consultant',
     'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery',
     'education-cloud-consultant': 'Salesforce Certified Education Cloud Consultant',
     'experience-cloud': 'Salesforce Certified Experience Cloud Consultant',
@@ -832,7 +832,7 @@ export function getCertMetaDescription(slug: string): string {
     'contact-center-ap': `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'cpq-billing-ap': `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
-    'data-cloud-consultant': `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
+    'data-360-consultant': `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
@@ -942,7 +942,7 @@ export function getCertMetaDescription(slug: string): string {
     // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
     'crm-analytics-einstein-discovery-consultant':
       `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
-    'data-cloud-consultant':
+    'data-360-consultant':
       `Free Data Cloud Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
     'education-cloud-consultant':
       `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} study guide with exam tips & detailed explanations included.`,
@@ -1589,7 +1589,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'Yes, Platform Administrator is required. You should also have hands-on experience with Field Service features like scheduling, dispatch, mobile app, and work order management.',
     },
   ],
-  'data-cloud-consultant': [
+  'data-360-consultant': [
     {
       question: 'What is Data Cloud (formerly Customer Data Platform)?',
       answer: 'Data Cloud unifies customer data from multiple sources, creates a single customer identity, and activates that data across Salesforce clouds for personalized experiences.',

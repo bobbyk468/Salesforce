@@ -82,8 +82,8 @@ export default function DataCloudVsCrmAnalyticsPage() {
       <WhichFirstBlock
         certA={{
           name: "Data Cloud Consultant",
-          certSlug: "data-cloud-consultant",
-          examTipsSlug: "data-cloud-consultant-exam-tips",
+          certSlug: "data-360-consultant",
+          examTipsSlug: "data-360-consultant-exam-tips",
           conditions: [
           "Your clients are unifying customer data across channels",
           "You work with Salesforce CDP, Data Cloud, or real-time data activation",
@@ -104,8 +104,8 @@ export default function DataCloudVsCrmAnalyticsPage() {
         }}
         recommendation={{
           certName: "Data Cloud Consultant",
-          certSlug: "data-cloud-consultant",
-          examTipsSlug: "data-cloud-consultant-exam-tips",
+          certSlug: "data-360-consultant",
+          examTipsSlug: "data-360-consultant-exam-tips",
           reason: "Data Cloud Consultant is the higher-growth investment — demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
           
         }}
@@ -218,7 +218,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Preparing</h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/data-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/data-360-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Data Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/certifications/crm-analytics-einstein-discovery-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

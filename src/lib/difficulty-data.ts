@@ -117,7 +117,7 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
     { sectionName: 'Assets and Inventory', difficulty: 'Moderate', tip: 'Asset hierarchy and product consumption — relationship and lifecycle matter.' },
     { sectionName: 'Analytics', difficulty: 'Easy', tip: 'Scheduling and utilization reports — factual recall of key metrics.' },
   ],
-  'data-cloud-consultant': [
+  'data-360-consultant': [
     { sectionName: 'Data Cloud Architecture', difficulty: 'Hard', tip: 'Data model objects (Data Lake, Data Model Object) and when to use Data Cloud vs CRM analytics.' },
     { sectionName: 'Data Model and Identity', difficulty: 'Trap', tip: 'Identity resolution and graph — many candidates confuse identity types and resolution rules.' },
     { sectionName: 'Activation and Insights', difficulty: 'Moderate', tip: 'Activation targets and insight types — know which channel or object each applies to.' },

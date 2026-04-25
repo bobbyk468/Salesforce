@@ -34,7 +34,7 @@ export const OFFICIAL_CERT_NAMES: Record<string, string> = {
   'slack-developer': 'Salesforce Certified Slack Developer',
   // Consultant
   'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery Consultant',
-  'data-cloud-consultant': 'Salesforce Certified Data Cloud Consultant',
+  'data-360-consultant': 'Salesforce Certified Data Cloud Consultant',
   'education-cloud-consultant': 'Salesforce Certified Education Cloud Consultant',
   'experience-cloud': 'Salesforce Certified Experience Cloud Consultant',
   'field-service': 'Salesforce Certified Field Service Consultant',

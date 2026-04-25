@@ -72,7 +72,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/service-cloud-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/agentforce-specialist-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/sales-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/data-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
+    { url: `${baseUrl}/data-360-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/ai-associate-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/experience-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/advanced-administrator-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },

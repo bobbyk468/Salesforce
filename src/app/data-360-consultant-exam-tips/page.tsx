@@ -14,7 +14,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'data-cloud-consultant'
+const slug = 'data-360-consultant'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
@@ -24,12 +24,12 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/data-cloud-consultant-exam-tips` },
+  alternates: { canonical: `${siteUrl}/data-360-consultant-exam-tips` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
     type: 'article',
-    url: `${siteUrl}/data-cloud-consultant-exam-tips`,
+    url: `${siteUrl}/data-360-consultant-exam-tips`,
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
@@ -42,8 +42,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Data Cloud Consultant', url: '/certifications/data-cloud-consultant' },
-  { name: 'Data Cloud Consultant Exam Tips', url: '/data-cloud-consultant-exam-tips' },
+  { name: 'Data Cloud Consultant', url: '/certifications/data-360-consultant' },
+  { name: 'Data Cloud Consultant Exam Tips', url: '/data-360-consultant-exam-tips' },
 ]
 
 const faqItems = [
@@ -67,13 +67,13 @@ const faqItems = [
     question: 'What concepts do most Data Cloud Consultant candidates get wrong?',
     answer: 'The most commonly misunderstood topics for the Data Cloud Consultant exam are: (1) Data Streams vs Data Model Objects vs Calculated Insights; (2) Identity Resolution — Matching Rules and Reconciliation Rules; (3) Segments vs Activation Targets vs Data Actions. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
   },
-  ...getConceptFaqs('data-cloud-consultant-exam-tips'),
+  ...getConceptFaqs('data-360-consultant-exam-tips'),
 ]
 
 export default function DataCloudConsultantExamTipsPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/data-cloud-consultant-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/data-cloud-consultant-study-guide"
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/data-360-consultant-exam-tips" breadcrumbItems={breadcrumbItems} faqItems={faqItems}   mainEntityUrl="/data-360-consultant-study-guide"
       />
 
       <header data-lcp-header className="mb-10">
@@ -93,11 +93,11 @@ export default function DataCloudConsultantExamTipsPage() {
       <ContentPageAuthor />
 
       <ExamTipsCertLink certSlug={slug} />
-      <StudyGuideCrossLink studyGuideSlug="data-cloud-consultant-study-guide" certName="Data Cloud Consultant" />
+      <StudyGuideCrossLink studyGuideSlug="data-360-consultant-study-guide" certName="Data Cloud Consultant" />
       <ExamPricingCard
-        certSlug="data-cloud-consultant"
+        certSlug="data-360-consultant"
         certName="Data Cloud Consultant"
-        certPageSlug="data-cloud-consultant"
+        certPageSlug="data-360-consultant"
       />
 
 
@@ -219,7 +219,7 @@ export default function DataCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Start Data Cloud Consultant Prep</h2>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/data-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/data-360-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Analytics Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/certifications/marketing-cloud-engagement-admin" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">

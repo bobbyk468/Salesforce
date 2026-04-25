@@ -93,7 +93,7 @@ export const CERT_INSIGHTS: Record<string, CertInsight> = {
     salaryRange: '$120,000–$160,000',
     worthIt: 'Mandatory on the CTA path. Also valuable standalone for architects working on complex data migration or multi-org consolidation projects.',
   },
-  'data-cloud-consultant': {
+  'data-360-consultant': {
     difficulty: 4,
     difficultyNote: 'Fastest-growing Salesforce product — and the study materials are still catching up. Unified profiles, calculated insights, and activation targets require real platform time.',
     salaryRange: '$108,000–$150,000',

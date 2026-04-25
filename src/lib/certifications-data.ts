@@ -62,7 +62,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     items: [
       { name: 'Business Analyst', href: '/certifications/business-analyst' },
       { name: 'CRM Analytics & Einstein Discovery', href: '/certifications/crm-analytics-einstein-discovery-consultant' },
-      { name: 'Data Cloud Consultant', href: '/certifications/data-cloud-consultant' },
+      { name: 'Data Cloud Consultant', href: '/certifications/data-360-consultant' },
       { name: 'Education Cloud Consultant', href: '/certifications/education-cloud-consultant' },
       { name: 'Experience Cloud Consultant', href: '/certifications/experience-cloud' },
       { name: 'Field Service Consultant', href: '/certifications/field-service' },
@@ -201,7 +201,7 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
     'slack-developer': ['slack-administrator', 'slack-consultant', 'developer-1'],
     'application-architect': ['data-architect', 'sharing-visibility-architect', 'technical-architect-review-board'],
     // "People also studied" style pairings.
-    'ai-associate': ['data-cloud-consultant', 'administrator'],
+    'ai-associate': ['data-360-consultant', 'administrator'],
     'pardot-specialist': ['pardot-consultant', 'email-specialist'],
     'education-cloud-consultant': ['nonprofit-cloud', 'sales-cloud'],
   }
@@ -426,7 +426,7 @@ export const CERT_DIFFICULTY_LEVELS: Record<string, DifficultyLevel> = {
   'pardot-specialist': 'intermediate',
   'pardot-consultant': 'intermediate',
   'marketing-cloud-consultant': 'intermediate',
-  'data-cloud-consultant': 'intermediate',
+  'data-360-consultant': 'intermediate',
   'revenue-cloud-consultant': 'intermediate',
   'crm-analytics-einstein-discovery-consultant': 'intermediate',
   'tableau-data-analyst': 'intermediate',

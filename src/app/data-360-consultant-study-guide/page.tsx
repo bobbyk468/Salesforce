@@ -16,7 +16,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const slug = 'data-cloud-consultant'
+const slug = 'data-360-consultant'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
@@ -26,12 +26,12 @@ const pageDescription =
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
-  alternates: { canonical: `${siteUrl}/data-cloud-consultant-study-guide` },
+  alternates: { canonical: `${siteUrl}/data-360-consultant-study-guide` },
   openGraph: {
     title: pageTitle,
     description: pageDescription,
     type: 'article',
-    url: `${siteUrl}/data-cloud-consultant-study-guide`,
+    url: `${siteUrl}/data-360-consultant-study-guide`,
     images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
   },
   twitter: {
@@ -44,8 +44,8 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Data Cloud Consultant', url: '/certifications/data-cloud-consultant' },
-  { name: 'Data Cloud Consultant Study Guide', url: '/data-cloud-consultant-study-guide' },
+  { name: 'Data Cloud Consultant', url: '/certifications/data-360-consultant' },
+  { name: 'Data Cloud Consultant Study Guide', url: '/data-360-consultant-study-guide' },
 ]
 
 const faqItems = [
@@ -78,12 +78,12 @@ const examSections = [
 export default function DataCloudConsultantStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/data-cloud-consultant-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/data-360-consultant-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
       <CredentialSchema
-        certSlug="data-cloud-consultant"
+        certSlug="data-360-consultant"
         certName="Data Cloud Consultant"
         description={pageDescription}
-        pageUrl="/data-cloud-consultant-study-guide"
+        pageUrl="/data-360-consultant-study-guide"
       />
 
       <header data-lcp-header className="mb-10">
@@ -102,12 +102,12 @@ export default function DataCloudConsultantStudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
-      <ExamTipsCrossLink examTipsSlug="data-cloud-consultant-exam-tips" certName="Data Cloud Consultant" />
-      <CertInsightBlock certSlug="data-cloud-consultant" />
+      <ExamTipsCrossLink examTipsSlug="data-360-consultant-exam-tips" certName="Data Cloud Consultant" />
+      <CertInsightBlock certSlug="data-360-consultant" />
       <ExamPricingCard
-        certSlug="data-cloud-consultant"
+        certSlug="data-360-consultant"
         certName="Data Cloud Consultant"
-        certPageSlug="data-cloud-consultant"
+        certPageSlug="data-360-consultant"
       />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -252,10 +252,10 @@ export default function DataCloudConsultantStudyGuidePage() {
           Apply this study guide with free Data Cloud Consultant practice questions:
         </p>
         <div className="flex flex-col sm:flex-row gap-3">
-          <Link href="/certifications/data-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
+          <Link href="/certifications/data-360-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             Data Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
-          <Link href="/data-cloud-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
+          <Link href="/data-360-consultant-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             Data Cloud Exam Tips
           </Link>
           <Link href="/data-cloud-vs-marketing-cloud" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
@@ -272,13 +272,13 @@ export default function DataCloudConsultantStudyGuidePage() {
         </p>
       </section>
 
-      <DifficultyHeatmap slug="data-cloud-consultant" />
+      <DifficultyHeatmap slug="data-360-consultant" />
       {/* Hub CTA */}
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white mt-10">
         <h2 className="text-2xl font-bold mb-2">Ready to Test Your Knowledge?</h2>
         <p className="text-white mb-6">Try the Data Cloud Consultant free practice exam — scored with full explanations.</p>
         <Link
-          href="/certifications/data-cloud-consultant"
+          href="/certifications/data-360-consultant"
           className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors"
         >
           Data Cloud Consultant Free Practice Exam &rarr;

@@ -165,8 +165,8 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
     notes: 'Service Cloud configuration and consulting',
   },
 
-  'data-cloud-consultant': {
-    slug: 'data-cloud-consultant',
+  'data-360-consultant': {
+    slug: 'data-360-consultant',
     recommendedPrerequisite: 'administrator',
     notes: 'Salesforce Data Cloud (CDP) implementation',
   },

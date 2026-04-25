@@ -112,7 +112,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Assets and Inventory', percentage: 15 },
     { name: 'Analytics', percentage: 10 },
   ],
-  'data-cloud-consultant': [
+  'data-360-consultant': [
     { name: 'Data Cloud Architecture', percentage: 25 },
     { name: 'Data Model and Identity', percentage: 25 },
     { name: 'Activation and Insights', percentage: 25 },

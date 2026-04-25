@@ -135,7 +135,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/certifications/data-cloud-consultant" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link href="/certifications/data-360-consultant" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Data Cloud Consultant practice questions
                 </Link>
               </li>

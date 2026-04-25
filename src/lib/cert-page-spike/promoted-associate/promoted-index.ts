@@ -20,7 +20,7 @@ import cpqAdministratorJson from './cpq-administrator.json'
 import cpqBillingApJson from './cpq-billing-ap.json'
 import crmAnalyticsEinsteinDiscoveryConsultantJson from './crm-analytics-einstein-discovery-consultant.json'
 import dataArchitectJson from './data-architect.json'
-import dataCloudConsultantJson from './data-cloud-consultant.json'
+import dataCloudConsultantJson from './data-360-consultant.json'
 import devLifecycleDeploymentArchitectJson from './dev-lifecycle-deployment-architect.json'
 import developer2Json from './developer-2.json'
 import educationCloudConsultantJson from './education-cloud-consultant.json'
@@ -109,7 +109,7 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'cpq-billing-ap',
   'crm-analytics-einstein-discovery-consultant',
   'data-architect',
-  'data-cloud-consultant',
+  'data-360-consultant',
   'dev-lifecycle-deployment-architect',
   'developer-2',
   'education-cloud-consultant',
@@ -198,7 +198,7 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'cpq-billing-ap': validateAssociateSpikeBody(cpqBillingApJson, 'cpq-billing-ap'),
   'crm-analytics-einstein-discovery-consultant': validateAssociateSpikeBody(crmAnalyticsEinsteinDiscoveryConsultantJson, 'crm-analytics-einstein-discovery-consultant'),
   'data-architect': validateAssociateSpikeBody(dataArchitectJson, 'data-architect'),
-  'data-cloud-consultant': validateAssociateSpikeBody(dataCloudConsultantJson, 'data-cloud-consultant'),
+  'data-360-consultant': validateAssociateSpikeBody(dataCloudConsultantJson, 'data-360-consultant'),
   'dev-lifecycle-deployment-architect': validateAssociateSpikeBody(devLifecycleDeploymentArchitectJson, 'dev-lifecycle-deployment-architect'),
   'developer-2': validateAssociateSpikeBody(developer2Json, 'developer-2'),
   'education-cloud-consultant': validateAssociateSpikeBody(educationCloudConsultantJson, 'education-cloud-consultant'),

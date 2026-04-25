@@ -276,7 +276,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
     focusAreas: ['CPQ Data Model', 'Products and Pricing', 'Quoting and Configuration', 'Integration'],
     studyStrategy: 'Use a CPQ sandbox. Configure products, price rules, and a full quote flow. Align each feature with the exam outline.',
   },
-  'data-cloud-consultant': {
+  'data-360-consultant': {
     ...DEFAULT_PREP,
     examTips: [
       'Data Cloud Architecture and Data Model are 50%—know identity resolution and data model.',

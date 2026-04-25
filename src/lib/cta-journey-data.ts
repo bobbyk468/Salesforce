@@ -60,7 +60,7 @@ export const CTA_JOURNEY_PHASES: CtaJourneyPhase[] = [
       { name: 'Sales Cloud Consultant', href: base('sales-cloud'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }, { name: 'Platform Administrator', href: base('administrator') }] },
       { name: 'Service Cloud Consultant', href: base('service-cloud'), prerequisites: [{ name: 'Platform Foundations', href: base('platform-foundations') }, { name: 'Platform Administrator', href: base('administrator') }] },
       { name: 'Experience Cloud Consultant', href: base('experience-cloud'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Platform Developer I', href: base('developer-1') }] },
-      { name: 'Data Cloud Consultant', href: base('data-cloud-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }], note: 'Helpful before Data Architect' },
+      { name: 'Data Cloud Consultant', href: base('data-360-consultant'), prerequisites: [{ name: 'Platform Administrator', href: base('administrator') }, { name: 'Sales Cloud Consultant', href: base('sales-cloud') }], note: 'Helpful before Data Architect' },
     ],
   },
   {

@@ -95,7 +95,7 @@ const certificationCategories = [
       { name: 'Service Cloud Consultant', href: '/certifications/service-cloud' },
       { name: 'Experience Cloud Consultant', href: '/certifications/experience-cloud' },
       { name: 'Field Service Consultant', href: '/certifications/field-service' },
-      { name: 'Data Cloud Consultant', href: '/certifications/data-cloud-consultant' },
+      { name: 'Data Cloud Consultant', href: '/certifications/data-360-consultant' },
       { name: 'CRM Analytics & Einstein Discovery', href: '/certifications/crm-analytics-einstein-discovery-consultant' },
       { name: 'Education Cloud Consultant', href: '/certifications/education-cloud-consultant' },
       { name: 'Revenue Cloud Consultant', href: '/certifications/revenue-cloud-consultant' },
