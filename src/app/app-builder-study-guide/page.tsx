@@ -8,6 +8,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 
@@ -75,6 +77,12 @@ export default function AppBuilderStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/app-builder-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="app-builder"
+        certName="Platform App Builder"
+        description={pageDescription}
+        pageUrl="/app-builder-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

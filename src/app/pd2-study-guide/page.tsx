@@ -8,6 +8,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 
@@ -80,6 +82,12 @@ export default function Pd2StudyGuidePage() {
         path="/pd2-study-guide"
         breadcrumbItems={breadcrumbItems}
         faqItems={faqItems}
+      />
+      <CredentialSchema
+        certSlug="pd2"
+        certName="Platform Developer II"
+        description={pageDescription}
+        pageUrl="/pd2-study-guide"
       />
 
       <header data-lcp-header className="mb-10">

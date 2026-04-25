@@ -8,6 +8,8 @@ import type { Metadata } from 'next'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -74,6 +76,12 @@ export default function Pd1StudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/pd1-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="pd1"
+        certName="Platform Developer I"
+        description={pageDescription}
+        pageUrl="/pd1-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

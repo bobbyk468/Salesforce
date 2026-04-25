@@ -7,6 +7,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 
@@ -76,6 +78,12 @@ export default function MulesoftDeveloperIStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/mulesoft-developer-i-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="mulesoft-developer-i"
+        certName="MuleSoft Developer I"
+        description={pageDescription}
+        pageUrl="/mulesoft-developer-i-study-guide"
+      />
 
       {/* Header */}
       <div data-lcp-header className="mb-10">

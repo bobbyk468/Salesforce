@@ -6,6 +6,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import type { Metadata } from 'next'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'service-cloud'
@@ -73,6 +75,12 @@ export default function ServiceCloudStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/service-cloud-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="service-cloud-consultant"
+        certName="Service Cloud Consultant"
+        description={pageDescription}
+        pageUrl="/service-cloud-study-guide"
+      />
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">

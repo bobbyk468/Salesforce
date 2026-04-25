@@ -7,6 +7,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 
@@ -76,6 +78,12 @@ export default function EmailSpecialistStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/email-specialist-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="email-specialist"
+        certName="Marketing Cloud Email Specialist"
+        description={pageDescription}
+        pageUrl="/email-specialist-study-guide"
+      />
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">

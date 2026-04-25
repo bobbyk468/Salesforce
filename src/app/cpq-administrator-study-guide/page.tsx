@@ -7,6 +7,8 @@ import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
+import CredentialSchema from '@/components/CredentialSchema'
+
 
 
 
@@ -75,6 +77,12 @@ export default function CpqAdministratorStudyGuidePage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/cpq-administrator-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
+      <CredentialSchema
+        certSlug="cpq-administrator"
+        certName="CPQ Administrator"
+        description={pageDescription}
+        pageUrl="/cpq-administrator-study-guide"
+      />
 
       {/* Header */}
       <div data-lcp-header className="mb-10">
