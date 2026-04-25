@@ -7,6 +7,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -87,6 +90,8 @@ export default function TableauDataAnalystStudyGuidePage() {
       </div>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="tableau-data-analyst-exam-tips" certName="Tableau Data Analyst" />
+      <CertInsightBlock certSlug="tableau-data-analyst" />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

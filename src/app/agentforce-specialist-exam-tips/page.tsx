@@ -7,6 +7,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -87,6 +89,7 @@ export default function AgentforceSpecialistExamTipsPage() {
       <ContentPageAuthor />
 
       <ExamTipsCertLink certSlug={slug} />
+      <StudyGuideCrossLink studyGuideSlug="agentforce-specialist-study-guide" certName="Agentforce Specialist" />
 
 
       {/* Quick answer */}

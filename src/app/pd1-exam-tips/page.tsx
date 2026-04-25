@@ -7,6 +7,8 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import type { Metadata } from 'next'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -85,6 +87,7 @@ export default function Pd1ExamTipsPage() {
       <ContentPageAuthor />
 
       <ExamTipsCertLink certSlug={slug} />
+      <StudyGuideCrossLink studyGuideSlug="pd1-study-guide" certName="Platform Developer I" />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

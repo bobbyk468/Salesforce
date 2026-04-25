@@ -5,6 +5,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -87,6 +90,8 @@ export default function TechnicalArchitectStudyGuidePage() {
       </div>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="technical-architect-exam-tips" certName="Technical Architect" />
+      <CertInsightBlock certSlug="technical-architect" />
 
       <div className="bg-purple-50 border border-purple-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-purple-900 mb-1">No multiple-choice exam</h2>

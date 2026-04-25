@@ -7,6 +7,8 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
+import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -88,6 +90,7 @@ export default function PardotConsultantExamTipsPage() {
       <ContentPageAuthor />
 
       <ExamTipsCertLink certSlug={slug} />
+      <StudyGuideCrossLink studyGuideSlug="pardot-consultant-study-guide" certName="Pardot Consultant" />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Pardot Consultant Tests</h2>

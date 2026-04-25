@@ -6,6 +6,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -94,6 +97,8 @@ export default function Pd2StudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="pd2-exam-tips" certName="Platform Developer II" />
+      <CertInsightBlock certSlug="pd2" />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">PD2 Exam at a Glance</h2>

@@ -5,6 +5,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -84,6 +87,8 @@ export default function PlatformFoundationsStudyGuidePage() {
       </div>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="platform-foundations-exam-tips" certName="Platform Foundations" />
+      <CertInsightBlock certSlug="platform-foundations" />
 
       <div className="bg-green-50 border border-green-200 rounded-xl p-4 mb-8">
         <p className="text-sm text-green-800"><strong>Entry-level certification:</strong> No prior Salesforce experience required. 40 questions, 70-minute limit, 70% passing score. Most candidates pass with 3–4 weeks of focused Trailhead study.</p>

@@ -5,6 +5,9 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -85,6 +88,8 @@ export default function EducationCloudConsultantStudyGuidePage() {
       </div>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="education-cloud-consultant-exam-tips" certName="Education Cloud Consultant" />
+      <CertInsightBlock certSlug="education-cloud-consultant" />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[

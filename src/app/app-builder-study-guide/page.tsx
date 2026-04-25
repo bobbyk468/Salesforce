@@ -6,6 +6,9 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -87,6 +90,8 @@ export default function AppBuilderStudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="app-builder-exam-tips" certName="Platform App Builder" />
+      <CertInsightBlock certSlug="app-builder" />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

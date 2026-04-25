@@ -6,6 +6,9 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import type { Metadata } from 'next'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
+import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
+import CertInsightBlock from '@/components/CertInsightBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'developer-1'
@@ -86,6 +89,8 @@ export default function Pd1StudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
+      <ExamTipsCrossLink examTipsSlug="pd1-exam-tips" certName="Platform Developer I" />
+      <CertInsightBlock certSlug="pd1" />
 
       {/* Exam snapshot */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
