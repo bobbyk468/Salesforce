@@ -2,6 +2,7 @@
 
 import { getExamLogistics } from '@/lib/cert-seo-data'
 import { tierFromFeeString, getIndiaGstNote } from '@/lib/exam-pricing-data'
+import IndiaGstNote from '@/components/IndiaGstNote'
 
 interface ExamLogisticsSectionProps {
   slug: string
@@ -40,12 +41,7 @@ export default function ExamLogisticsSection({ slug, examCodeNote }: ExamLogisti
           {tier.note}
         </p>
       )}
-      {gstNote && (
-        <p className="mt-2 text-xs text-gray-500 flex items-start gap-1.5">
-          <span className="shrink-0 mt-0.5">🇮🇳</span>
-          {gstNote}. Final amount confirmed at Webassessor checkout.
-        </p>
-      )}
+      {gstNote && <IndiaGstNote note={gstNote} />}
       {examCodeNote && (
         <p className="mt-3 text-sm text-gray-600">
           {examCodeNote}

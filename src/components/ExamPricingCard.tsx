@@ -1,10 +1,11 @@
 import Link from 'next/link'
 import { tierFromFeeString, getIndiaGstNote } from '@/lib/exam-pricing-data'
 import { getExamCost, getRetakeCost } from '@/lib/cert-seo-data'
+import IndiaGstNote from '@/components/IndiaGstNote'
 
 interface Props {
-  certSlug: string    // e.g. "administrator", "developer-1"
-  certName: string    // e.g. "Salesforce Administrator"
+  certSlug: string     // e.g. "administrator", "developer-1"
+  certName: string     // e.g. "Salesforce Administrator"
   certPageSlug: string // e.g. "administrator-practice-test" for /certifications/
 }
 
@@ -46,12 +47,7 @@ export default function ExamPricingCard({ certSlug, certName, certPageSlug }: Pr
 
       {gstNote && (
         <div className="px-5 pb-3">
-          <p className="text-xs text-gray-500 flex items-start gap-1.5">
-            <span className="shrink-0">🇮🇳</span>
-            <span>
-              {gstNote}. Confirmed at Webassessor checkout.
-            </span>
-          </p>
+          <IndiaGstNote note={gstNote} />
         </div>
       )}
 
