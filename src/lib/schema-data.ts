@@ -214,3 +214,38 @@ export function getHowToJsonLd({
     ],
   }
 }
+
+/** Occupation JSON-LD for cert pages with salary range. Helps Google understand the economic value of the credential. */
+export function getOccupationJsonLd({
+  jobTitle,
+  description,
+  medianSalary,
+  salaryRange,
+}: {
+  jobTitle: string
+  description: string
+  medianSalary: number
+  salaryRange?: { minSalary?: number; maxSalary?: number }
+}) {
+  const occupation: Record<string, unknown> = {
+    '@context': 'https://schema.org',
+    '@type': 'Occupation',
+    name: jobTitle,
+    description,
+    estimatedSalary: {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'USD',
+      price: medianSalary,
+    },
+    qualifications: 'Salesforce Professional Certification',
+  }
+  if (salaryRange?.minSalary && salaryRange?.maxSalary) {
+    occupation.estimatedSalaryRange = {
+      '@type': 'PriceSpecification',
+      priceCurrency: 'USD',
+      minPrice: salaryRange.minSalary,
+      maxPrice: salaryRange.maxSalary,
+    }
+  }
+  return occupation
+}

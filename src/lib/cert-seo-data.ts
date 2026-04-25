@@ -482,6 +482,29 @@ export function getExamLogistics(slug: string): (ExamLogisticsDetail & { fee: st
   return { ...detail, fee: cost, retake }
 }
 
+/** Occupation role-proxy data for Occupation schema. Maps cert slug to parent role job title and mid-level salary range. */
+export const SLUG_TO_OCCUPATION_DATA: Record<string, { jobTitle: string; medianSalary: number; salaryRange: { minSalary: number; maxSalary: number } }> = {
+  administrator: { jobTitle: 'Salesforce Administrator', medianSalary: 90000, salaryRange: { minSalary: 80000, maxSalary: 100000 } },
+  'advanced-administrator': { jobTitle: 'Senior Salesforce Administrator', medianSalary: 112500, salaryRange: { minSalary: 100000, maxSalary: 125000 } },
+  'app-builder': { jobTitle: 'Salesforce App Builder', medianSalary: 100000, salaryRange: { minSalary: 85000, maxSalary: 120000 } },
+  'developer-1': { jobTitle: 'Salesforce Platform Developer', medianSalary: 117500, salaryRange: { minSalary: 105000, maxSalary: 130000 } },
+  'developer-2': { jobTitle: 'Senior Salesforce Developer', medianSalary: 137500, salaryRange: { minSalary: 125000, maxSalary: 150000 } },
+  'sales-cloud': { jobTitle: 'Sales Cloud Consultant', medianSalary: 122500, salaryRange: { minSalary: 110000, maxSalary: 135000 } },
+  'service-cloud': { jobTitle: 'Service Cloud Consultant', medianSalary: 122500, salaryRange: { minSalary: 110000, maxSalary: 135000 } },
+  'marketing-cloud-consultant': { jobTitle: 'Marketing Cloud Consultant', medianSalary: 130000, salaryRange: { minSalary: 115000, maxSalary: 145000 } },
+  'data-cloud-consultant': { jobTitle: 'Data Cloud Consultant', medianSalary: 125000, salaryRange: { minSalary: 110000, maxSalary: 140000 } },
+  'application-architect': { jobTitle: 'Salesforce Application Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
+  'system-architect': { jobTitle: 'Salesforce System Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
+  'integration-architect': { jobTitle: 'Salesforce Integration Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
+  'data-architect': { jobTitle: 'Salesforce Data Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
+  'technical-architect': { jobTitle: 'Certified Technical Architect', medianSalary: 215000, salaryRange: { minSalary: 180000, maxSalary: 250000 } },
+}
+
+/** Get occupation role-proxy data for a cert slug; returns undefined if not available. */
+export function getOccupationData(slug: string) {
+  return SLUG_TO_OCCUPATION_DATA[slug]
+}
+
 function clampTitle(raw: string, max = 60): string {
   const normalized = raw.replace(/\s+/g, ' ').trim()
   if (normalized.length <= max) return normalized

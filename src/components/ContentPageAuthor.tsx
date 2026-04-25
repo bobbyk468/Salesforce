@@ -14,9 +14,8 @@ export default function ContentPageAuthor() {
   return (
     <div className="flex items-start gap-3 rounded-xl border border-gray-100 bg-white px-4 py-3 mb-8 text-sm text-gray-700">
       <div className="flex-shrink-0 mt-0.5">
-        {/* Replace placeholder.jpg with krishna-mohan.jpg once the headshot is added to public/authors/ */}
         <Image
-          src="/authors/placeholder.jpg"
+          src="/authors/krishna-mohan.jpg"
           alt="Krishna Mohan — Salesforce certified author"
           width={32}
           height={32}
@@ -27,9 +26,9 @@ export default function ContentPageAuthor() {
       <div>
         <p>
           Written and reviewed by{' '}
-          <Link href="/team" className="font-medium text-salesforce-blue underline hover:no-underline">
+          <a href="https://trailblazer.me/id/krishnamohan" target="_blank" rel="noopener noreferrer" className="font-medium text-salesforce-blue underline hover:no-underline">
             Krishna Mohan
-          </Link>
+          </a>
           {' '}— ADM-201, PD1, PD2, App Builder &amp; Consultant certified. Updated for {RELEASE_CURRENT}.{' '}
           <Link href="/about" className="text-salesforce-blue underline hover:no-underline">
             Methodology

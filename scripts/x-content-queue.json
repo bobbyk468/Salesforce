@@ -862,7 +862,7 @@
     "id": "month2-thread-cert-reality",
     "title": "Month2 Week 3 — Certs in 2026",
     "scheduledFor": "2026-04-21T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "the admin cert is the new high school diploma. everyone has one and it gets you exactly nowhere.\n\nhere's what actually moves the needle for real job offers in 2026 (and what is now totally worthless).\na thread\n\n#SalesforceCertification #SalesforceCareer",
       "in 2020 a salesforce admin cert was rare. posting it on linkedin got you recruiter messages within days.\n\nnow hundreds of thousands of people hold it.\n\nthe cert didn't get easier. the market got crowded.",
@@ -872,25 +872,31 @@
       "certs get you the recruiter dm.\n\nthe offer goes to the guy who can tell the story of the flow that exploded in prod at 3am while the cro was on the earnings call.\n\nnobody hires paper tigers anymore.",
       "if i were starting today:\n\nget the admin cert. then stop cert-stacking like a junkie and go build something real for a food bank before you touch another exam.\n\nthen get one specialist cert matching the exact job you want. that's the whole playbook.",
       "stop stacking dead certs.\n\ni've watched hundreds of people cert-stack their way to unemployment. follow — every monday i post the shit the cert vendors won't tell you.\n\n#SalesforceCareer"
-    ]
+    ],
+    "postedAt": "2026-04-21T13:30:20.153Z",
+    "firstTweetId": "2046582227992199611"
   },
   {
     "id": "month2-tip-7-validation-rules",
     "title": "Month2 Tip 7 — Junior Admin Validation Rule Danger",
     "scheduledFor": "2026-04-22T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "spring '26 quietly killed the 'salesforce-only' career path.\n\nthe admins getting hired aren't the ones with the most certs. they're the ones who know when to turn off agentforce before it costs the company 400k in bad data.\nfollow — i say what they won't.\n#Agentforce"
-    ]
+    ],
+    "postedAt": "2026-04-22T13:30:02.432Z",
+    "firstTweetId": "2046944617690701898"
   },
   {
     "id": "month2-tip-8-sales-cloud",
     "title": "Month2 Tip 8 — Sales Cloud Consultant Exam",
     "scheduledFor": "2026-04-24T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "sales cloud consultant tests more than salesforce knowledge.\n\nit tests whether you actually understand sales: pipeline management, territory models, forecast categories, quota tracking.\n\nno sales background? study those concepts first.\nfollow — i say what they won't.\n#SalesCloud"
-    ]
+    ],
+    "postedAt": "2026-04-24T13:30:02.500Z",
+    "firstTweetId": "2047669394571186399"
   },
   {
     "id": "month2-tip-9-maintenance",
@@ -1049,20 +1055,24 @@
     "id": "quiz-admin-flow-cross-object-q",
     "title": "Quiz Q — quiz-admin-flow-cross-object",
     "scheduledFor": "2026-04-23T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#ADM201 exam question — drop your answer 👇\n\nreps manually apply a discount to opportunity products after winning a deal. the manager wants it automated.\n\nwhat's the right tool?\n\nA. Approval Process\nB. Formula Field\nC. Flow Builder\nD. Prebuilt Macro\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-04-23T13:30:02.382Z",
+    "firstTweetId": "2047307006844019059"
   },
   {
     "id": "quiz-admin-flow-cross-object-a",
     "title": "Quiz A — quiz-admin-flow-cross-object",
     "scheduledFor": "2026-04-23T11:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answer: C. Flow Builder\n\napproval processes handle approvals. formula fields calculate but can't update related records. macros are for service reps clicking through tasks.\n\nflow triggers on close, loops through products, applies the discount. declarative and clean."
     ],
-    "replyToEntryId": "quiz-admin-flow-cross-object-q"
+    "replyToEntryId": "quiz-admin-flow-cross-object-q",
+    "postedAt": "2026-04-23T15:30:02.832Z",
+    "firstTweetId": "2047337207741260104"
   },
   {
     "id": "quiz-admin-approval-actions-q",

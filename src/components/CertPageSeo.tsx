@@ -12,8 +12,10 @@ import {
   getCertWebPageJsonLd,
   getExamWeightageTableJsonLd,
   SLUG_TO_EXAM_CODE,
+  getOccupationData,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
+import { getOccupationJsonLd } from '@/lib/schema-data'
 
 const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -114,6 +116,14 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
 
   const tableJsonLd = getExamWeightageTableJsonLd(slug, certTitle)
 
+  const occupationData = getOccupationData(slug)
+  const occupationJsonLd = occupationData ? getOccupationJsonLd({
+    jobTitle: occupationData.jobTitle,
+    description: `${occupationData.jobTitle} role with ${certTitle} certification. Mid-level salary range in United States.`,
+    medianSalary: occupationData.medianSalary,
+    salaryRange: occupationData.salaryRange,
+  }) : null
+
   return (
     <>
       <script
@@ -152,6 +162,12 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(tableJsonLd) }}
+        />
+      )}
+      {occupationJsonLd && (
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(occupationJsonLd) }}
         />
       )}
 
