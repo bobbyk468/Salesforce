@@ -309,3 +309,76 @@ export function getOccupationJsonLd({
   }
   return occupation
 }
+
+/** RoleOccupationAggregation JSON-LD: Aggregate salary data across a role cluster */
+export function getRoleOccupationAggregationJsonLd({
+  roleTitle,
+  certCount,
+  minSalary,
+  maxSalary,
+  medianSalary,
+  path,
+}: {
+  roleTitle: string
+  certCount: number
+  minSalary: number
+  maxSalary: number
+  medianSalary: number
+  path: string
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'AggregateOffer',
+    name: `${roleTitle} Certification Cluster`,
+    description: `${certCount} Salesforce certifications in the ${roleTitle} path. Median salary: $${medianSalary.toLocaleString()}`,
+    url,
+    offerCount: certCount,
+    priceCurrency: 'USD',
+    lowPrice: minSalary,
+    highPrice: maxSalary,
+    availability: 'InStock',
+  }
+}
+
+/** RoleDifficultyProfile JSON-LD: Difficulty distribution for a role cluster */
+export function getRoleDifficultyProfileJsonLd({
+  roleTitle,
+  path,
+  easyCount,
+  mediumCount,
+  hardCount,
+}: {
+  roleTitle: string
+  path: string
+  easyCount: number
+  mediumCount: number
+  hardCount: number
+}) {
+  const url = path.startsWith('http') ? path : `${baseUrl}${path}`
+  const total = easyCount + mediumCount + hardCount
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Thing',
+    name: `${roleTitle} Path Difficulty Profile`,
+    description: `${roleTitle} certifications by difficulty: ${easyCount} easy (${Math.round((easyCount/total)*100)}%), ${mediumCount} medium (${Math.round((mediumCount/total)*100)}%), ${hardCount} hard (${Math.round((hardCount/total)*100)}%)`,
+    url,
+    subjectOf: [
+      {
+        '@type': 'Thing',
+        name: 'Easy Exams',
+        identifier: easyCount,
+      },
+      {
+        '@type': 'Thing',
+        name: 'Medium Exams',
+        identifier: mediumCount,
+      },
+      {
+        '@type': 'Thing',
+        name: 'Hard Exams',
+        identifier: hardCount,
+      },
+    ],
+  }
+}

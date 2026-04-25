@@ -39,3 +39,11 @@ next-env.d.ts
 # IDE
 .idea
 .vscode
+# Google Indexing API tokens (never commit)
+indexing_token_p*.json
+tbprep_gsc_inspect*.py
+tbprep_gsc_inspection.json
+tbprep_indexed.txt
+tbprep_pending.txt
+submit_google_indexing.py
+pending_indexing_urls.txt

@@ -2757,3 +2757,132 @@ export function getApOccupationData(apSlug: string) {
   if (!parentRoleSlug) return undefined
   return getOccupationData(parentRoleSlug)
 }
+
+/** Difficulty level for exam ranking and role profile */
+export type CertDifficulty = 'easy' | 'medium' | 'hard'
+
+export const SLUG_TO_DIFFICULTY: Record<string, CertDifficulty> = {
+  // Easy (entry-level, <3 months prep)
+  'platform-foundations': 'easy',
+  'ai-associate': 'easy',
+  'marketing-cloud-engagement-foundations': 'easy',
+  'mulesoft-integration-foundations': 'easy',
+  'sales-foundations': 'easy',
+  
+  // Medium (foundational, 3-6 months prep)
+  'administrator': 'medium',
+  'app-builder': 'medium',
+  'agentforce-specialist': 'medium',
+  'business-analyst': 'medium',
+  'cpq-administrator': 'medium',
+  'marketing-cloud-engagement-admin': 'medium',
+  'slack-administrator': 'medium',
+  'sales-cloud': 'medium',
+  'service-cloud': 'medium',
+  'email-specialist': 'medium',
+  'pardot-specialist': 'medium',
+  'field-service': 'medium',
+  'education-cloud-consultant': 'medium',
+  'nonprofit-cloud': 'medium',
+  'experience-cloud': 'medium',
+  'crm-analytics-einstein-discovery-consultant': 'medium',
+  'data-360-consultant': 'medium',
+  'marketing-cloud-consultant': 'medium',
+  'marketing-cloud-engagement-developer': 'medium',
+  'pardot-consultant': 'medium',
+  'revenue-cloud-consultant': 'medium',
+  'slack-consultant': 'medium',
+  'b2c-commerce-developer': 'medium',
+  'industries-cpq-developer': 'medium',
+  'javascript-developer-i': 'medium',
+  'mulesoft-developer-i': 'medium',
+  'omnistudio-developer': 'medium',
+  'omnistudio-consultant': 'medium',
+  'slack-developer': 'medium',
+  'tableau-consultant': 'medium',
+  'tableau-data-analyst': 'medium',
+  'tableau-desktop-foundations': 'medium',
+  'tableau-server-administrator': 'medium',
+  'ux-designer': 'medium',
+  'strategy-designer': 'medium',
+  'nonprofit-success-pack-consultant': 'medium',
+  
+  // Hard (advanced, 6+ months prep)
+  'advanced-administrator': 'hard',
+  'developer-1': 'hard',
+  'developer-2': 'hard',
+  'application-architect': 'hard',
+  'data-architect': 'hard',
+  'integration-architect': 'hard',
+  'sharing-visibility-architect': 'hard',
+  'system-architect': 'hard',
+  'identity-access-management-architect': 'hard',
+  'dev-lifecycle-deployment-architect': 'hard',
+  'technical-architect': 'hard',
+  'technical-architect-evaluation': 'hard',
+  'technical-architect-review-board': 'hard',
+  'b2b-solution-architect': 'hard',
+  'b2c-commerce-architect': 'hard',
+  'b2c-solution-architect': 'hard',
+  'heroku-architect': 'hard',
+  'mulesoft-catalyst-consultant': 'hard',
+  'mulesoft-platform-architect': 'hard',
+  'mulesoft-integration-architect': 'hard',
+  'mulesoft-developer-ii': 'hard',
+  'mulesoft-hyperautomation-developer': 'hard',
+}
+
+export function getCertDifficulty(slug: string): CertDifficulty {
+  return SLUG_TO_DIFFICULTY[slug] || 'medium'
+}
+
+export interface RoleOccupationAggregation {
+  roleTitle: string
+  certCount: number
+  minSalary: number
+  maxSalary: number
+  medianSalary: number
+}
+
+export function getRoleOccupationAggregation(roleCerts: Array<{ href: string }>): RoleOccupationAggregation | null {
+  const slugs = roleCerts.map(cert => cert.href.replace('/certifications/', ''))
+  const salaryData = slugs
+    .map(slug => SLUG_TO_OCCUPATION_DATA[slug])
+    .filter(Boolean)
+
+  if (!salaryData.length) return null
+
+  const minSalaries = salaryData.map(d => d.salaryRange.minSalary)
+  const maxSalaries = salaryData.map(d => d.salaryRange.maxSalary)
+  const medians = salaryData.map(d => d.medianSalary)
+
+  const minSalary = Math.min(...minSalaries)
+  const maxSalary = Math.max(...maxSalaries)
+  const medianSalary = Math.round(medians.reduce((a, b) => a + b) / medians.length)
+
+  return {
+    roleTitle: '',
+    certCount: salaryData.length,
+    minSalary,
+    maxSalary,
+    medianSalary,
+  }
+}
+
+export interface RoleDifficultyDistribution {
+  easy: number
+  medium: number
+  hard: number
+}
+
+export function getRoleDifficultyDistribution(roleCerts: Array<{ href: string }>): RoleDifficultyDistribution {
+  const distribution: RoleDifficultyDistribution = { easy: 0, medium: 0, hard: 0 }
+
+  for (const cert of roleCerts) {
+    const slug = cert.href.replace('/certifications/', '')
+    const difficulty = getCertDifficulty(slug)
+    distribution[difficulty]++
+  }
+
+  return distribution
+}

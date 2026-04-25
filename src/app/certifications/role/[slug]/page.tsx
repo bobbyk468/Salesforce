@@ -4,6 +4,7 @@ import { Award, ArrowRight, ChevronLeft } from 'lucide-react'
 import { Metadata } from 'next'
 import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
+import RoleAggregationSchemas from '@/components/RoleAggregationSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
@@ -303,6 +304,11 @@ export default async function RoleCertificationsPage({ params }: Props) {
         path={`/certifications/role/${slug}`}
         breadcrumbItems={breadcrumb}
         faqItems={roleFaqs}
+      />
+      <RoleAggregationSchemas
+        roleTitle={category.name}
+        roleCerts={category.items}
+        rolePath={`/certifications/role/${slug}`}
       />
       <Link
         href="/certifications"
