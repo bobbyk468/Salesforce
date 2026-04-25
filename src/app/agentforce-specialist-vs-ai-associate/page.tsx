@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -76,6 +78,38 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Agentforce Specialist",
+          certSlug: "agentforce-specialist",
+          examTipsSlug: "agentforce-specialist-exam-tips",
+          conditions: [
+          "You already hold AI Associate or want to build on it",
+          "Your org is actively deploying Agentforce or Einstein Copilot",
+          "You want hands-on configuration skills, not just AI concepts",
+          "You are targeting the highest-demand Salesforce skill in 2026",
+          ],
+        }}
+        certB={{
+          name: "AI Associate",
+          certSlug: "ai-associate",
+          examTipsSlug: "ai-associate-exam-tips",
+          conditions: [
+          "You are new to AI and want a conceptual foundation first",
+          "You have limited Salesforce hands-on experience",
+          "You want the fastest Salesforce credential to earn (2 weeks)",
+          "You plan to use it as a stepping stone to Agentforce Specialist",
+          ],
+        }}
+        recommendation={{
+          certName: "AI Associate",
+          certSlug: "ai-associate",
+          examTipsSlug: "ai-associate-exam-tips",
+          reason: "AI Associate takes two weeks and costs $75 — take it first to build the conceptual foundation, then move directly to Agentforce Specialist. Both together represent the strongest AI signal you can add to a Salesforce profile in 2026.",
+          careerPathSlug: "agentforce-specialist-study-guide",
+          careerPathLabel: "Agentforce Specialist Guide",
+        }}
+      />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

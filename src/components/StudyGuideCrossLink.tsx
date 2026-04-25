@@ -14,9 +14,9 @@ export default function StudyGuideCrossLink({ studyGuideSlug, certName }: Props)
       <p className="text-sm text-gray-700">
         Looking for a full study plan, topic breakdown, and key concepts?{' '}
         <Link href={`/${studyGuideSlug}`} className="font-semibold text-salesforce-blue hover:underline">
-          View the comprehensive {certName} Study Guide
+          View the {certName} Study Guide
         </Link>
-        {' '}for everything you need before sitting the exam.
+        {' '}— complete syllabus, difficulty heatmap, and key concepts for exam day.
       </p>
     </div>
   )

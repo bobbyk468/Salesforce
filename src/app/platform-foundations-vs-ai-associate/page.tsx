@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Platform Foundations vs AI Associate (${RELEASE_CURRENT})`
@@ -75,6 +77,37 @@ export default function PlatformFoundationsVsAiAssociatePage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Platform Foundations",
+          certSlug: "platform-foundations",
+          examTipsSlug: "platform-foundations-exam-tips",
+          conditions: [
+          "You are completely new to Salesforce with zero platform exposure",
+          "You want the gentlest possible introduction to the ecosystem",
+          "You are evaluating whether a Salesforce career is right for you",
+          "You plan to follow up immediately with the Administrator credential",
+          ],
+        }}
+        certB={{
+          name: "AI Associate",
+          certSlug: "ai-associate",
+          examTipsSlug: "ai-associate-exam-tips",
+          conditions: [
+          "You have some Salesforce experience and want an AI credential quickly",
+          "You want the fastest Salesforce cert with the highest growth relevance",
+          "You plan to pursue Agentforce Specialist as your next step",
+          "Your organisation is actively using or evaluating Einstein or Agentforce",
+          ],
+        }}
+        recommendation={{
+          certName: "AI Associate",
+          certSlug: "ai-associate",
+          examTipsSlug: "ai-associate-exam-tips",
+          reason: "AI Associate is faster to earn and far more relevant in the 2026 market. Platform Foundations is only worth considering if you have zero Salesforce exposure — otherwise, AI Associate gives you a better return on study time.",
+          
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

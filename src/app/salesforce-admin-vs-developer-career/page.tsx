@@ -3,6 +3,8 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Admin vs Developer Career Paths (${RELEASE_CURRENT})`
@@ -73,6 +75,38 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          conditions: [
+          "You prefer configuration, automation, and business process work over coding",
+          "You want the broadest range of job opportunities from a single certification",
+          "You come from a non-technical, operations, or project management background",
+          "You want a faster path to employment — Admin roles are the highest volume",
+          ],
+        }}
+        certB={{
+          name: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          conditions: [
+          "You enjoy writing code and want to build Apex classes and LWC components",
+          "You come from a software development or computer science background",
+          "You want the highest salary ceiling in the Salesforce non-architect track",
+          "You are willing to invest 3–6 months in technical preparation",
+          ],
+        }}
+        recommendation={{
+          certName: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          reason: "Administrator is the better starting point for most career switchers — higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
+          careerPathSlug: "which-salesforce-certification-first",
+          careerPathLabel: "Which Certification First Guide",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border border-gray-100 p-6 shadow-sm">

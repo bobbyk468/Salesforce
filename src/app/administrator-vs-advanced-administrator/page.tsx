@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,38 @@ export default function AdministratorVsAdvancedAdministratorPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          conditions: [
+          "You do not yet hold any Salesforce certification",
+          "You are new to the platform or have less than 1 year of hands-on experience",
+          "You want the most widely required credential across all Salesforce roles",
+          "You are starting any Salesforce career path",
+          ],
+        }}
+        certB={{
+          name: "Advanced Administrator",
+          certSlug: "advanced-administrator",
+          examTipsSlug: "advanced-administrator-exam-tips",
+          conditions: [
+          "You already hold the Administrator certification",
+          "You have 2+ years of hands-on Salesforce admin experience",
+          "You work with advanced automation, territory management, or Salesforce Connect",
+          "You are targeting senior admin or platform manager roles",
+          ],
+        }}
+        recommendation={{
+          certName: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          reason: "Administrator is the mandatory first step — Advanced Administrator explicitly tests you on Admin concepts plus additional depth. You cannot reasonably attempt Advanced Admin without first having mastered the Admin credential.",
+          careerPathSlug: "admin-certification-path",
+          careerPathLabel: "Admin Certification Path",
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

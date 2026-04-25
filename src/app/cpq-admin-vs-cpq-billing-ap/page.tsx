@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,37 @@ export default function CpqAdminVsCpqBillingApPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "CPQ Administrator",
+          certSlug: "cpq-administrator",
+          examTipsSlug: "cpq-administrator-exam-tips",
+          conditions: [
+          "You configure Salesforce CPQ — products, pricing rules, quote templates",
+          "You implement quote-to-cash processes for clients",
+          "You are earlier in your CPQ journey and need the foundational credential",
+          "You want the more widely recognised CPQ certification",
+          ],
+        }}
+        certB={{
+          name: "CPQ Billing Accredited Professional",
+          certSlug: "cpq-administrator",
+          examTipsSlug: "cpq-billing-ap-exam-tips",
+          conditions: [
+          "You already hold CPQ Administrator and want a specialist extension",
+          "Your clients use Salesforce Billing for invoicing and revenue recognition",
+          "You work on full Revenue Cloud implementations including billing workflows",
+          "You want to differentiate as a Revenue Cloud specialist",
+          ],
+        }}
+        recommendation={{
+          certName: "CPQ Administrator",
+          certSlug: "cpq-administrator",
+          examTipsSlug: "cpq-administrator-exam-tips",
+          reason: "CPQ Administrator is the essential foundation. Billing AP builds directly on CPQ knowledge — attempting it without CPQ Administrator experience is one of the most common reasons candidates struggle. Take CPQ Admin first, then specialise into Billing AP once you have real CPQ project experience.",
+          
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

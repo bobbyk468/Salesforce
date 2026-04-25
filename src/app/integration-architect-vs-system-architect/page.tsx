@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,38 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Integration Architect",
+          certSlug: "integration-architect",
+          examTipsSlug: "integration-architect-exam-tips",
+          conditions: [
+          "You work on API design, middleware, or enterprise integration projects",
+          "You are not yet pursuing the full CTA path",
+          "You want a standalone architect credential with a strong salary premium",
+          "Your clients regularly need multi-system integration architecture",
+          ],
+        }}
+        certB={{
+          name: "System Architect",
+          certSlug: "system-architect",
+          examTipsSlug: "system-architect-exam-tips",
+          conditions: [
+          "You are committed to the full Certified Technical Architect path",
+          "You already hold two or more domain architect credentials",
+          "You have 8+ years of Salesforce experience across multiple orgs",
+          "You are targeting the highest architect salary tier",
+          ],
+        }}
+        recommendation={{
+          certName: "Integration Architect",
+          certSlug: "integration-architect",
+          examTipsSlug: "integration-architect-exam-tips",
+          reason: "Integration Architect is a strong standalone credential with real salary impact — worth pursuing on its own merits. System Architect is a milestone on the CTA path, not a target in isolation. Only pursue System Architect if you are genuinely committed to reaching CTA.",
+          careerPathSlug: "architect-certification-path",
+          careerPathLabel: "Architect Certification Path",
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Specialist vs Pardot Consultant (${RELEASE_CURRENT})`
@@ -75,6 +77,37 @@ export default function PardotSpecialistVsPardotConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Pardot Specialist",
+          certSlug: "pardot-specialist",
+          examTipsSlug: "pardot-specialist-exam-tips",
+          conditions: [
+          "You are new to Account Engagement (formerly Pardot)",
+          "You work in a B2B marketing role and want a foundational credential",
+          "You manage email campaigns, automation rules, or lead scoring",
+          "You are building toward the Pardot Consultant certification",
+          ],
+        }}
+        certB={{
+          name: "Pardot Consultant",
+          certSlug: "pardot-consultant",
+          examTipsSlug: "pardot-consultant-exam-tips",
+          conditions: [
+          "You already hold Pardot Specialist",
+          "You design and implement full Account Engagement solutions for clients",
+          "You work at a consulting firm delivering B2B marketing implementations",
+          "You have 2+ years of hands-on Pardot/Account Engagement experience",
+          ],
+        }}
+        recommendation={{
+          certName: "Pardot Specialist",
+          certSlug: "pardot-specialist",
+          examTipsSlug: "pardot-specialist-exam-tips",
+          reason: "Pardot Specialist is the required foundation. Consultant content assumes Specialist-level mastery plus additional implementation strategy depth. Take Specialist first, then progress to Consultant after 12+ months of platform experience.",
+          
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

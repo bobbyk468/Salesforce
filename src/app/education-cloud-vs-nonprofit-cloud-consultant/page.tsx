@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Education Cloud vs Nonprofit Cloud Consultant (${RELEASE_CURRENT})`
@@ -75,6 +77,37 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Education Cloud Consultant",
+          certSlug: "education-cloud-consultant",
+          examTipsSlug: "education-cloud-consultant-exam-tips",
+          conditions: [
+          "Your clients are universities, K-12 schools, or education departments",
+          "You work with student lifecycle, admissions, or advancement use cases",
+          "You want to dominate a niche with very low certified competition",
+          "Your implementation work is in higher education or ed-tech",
+          ],
+        }}
+        certB={{
+          name: "Nonprofit Cloud Consultant",
+          certSlug: "nonprofit-cloud",
+          examTipsSlug: "nonprofit-cloud-exam-tips",
+          conditions: [
+          "Your clients are charities, NGOs, foundations, or social enterprises",
+          "You work with NPSP, fundraising, grants, or program management",
+          "You serve organisations using Salesforce.org or Nonprofit Success Pack",
+          "You want a niche credential with higher brand recognition than Education",
+          ],
+        }}
+        recommendation={{
+          certName: "Nonprofit Cloud Consultant",
+          certSlug: "nonprofit-cloud",
+          examTipsSlug: "nonprofit-cloud-exam-tips",
+          reason: "Nonprofit Cloud Consultant has slightly broader employer recognition and a larger addressable market. Only choose Education Cloud first if your current work is exclusively in the education sector.",
+          
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">

@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,38 @@ export default function Adm201VsAppBuilderPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          conditions: [
+          "You are new to Salesforce entirely",
+          "Your role involves users, data, security, or reports",
+          "You want the most widely required Salesforce credential",
+          "You are building a foundation for all future certifications",
+          ],
+        }}
+        certB={{
+          name: "Platform App Builder",
+          certSlug: "app-builder",
+          examTipsSlug: "app-builder-exam-tips",
+          conditions: [
+          "You already hold the Admin certification",
+          "You build Lightning pages, flows, or custom apps regularly",
+          "You want a fast second cert with high overlap to your existing knowledge",
+          "You are planning toward the Architect certification path",
+          ],
+        }}
+        recommendation={{
+          certName: "Salesforce Administrator",
+          certSlug: "administrator-practice-test",
+          examTipsSlug: "adm-201-exam-tips",
+          reason: "Always take Administrator first. It is the required foundation — App Builder explicitly builds on ADM-201 content, and many employers list Admin as a prerequisite for App Builder roles. Attempting App Builder without Admin knowledge is the most common reason candidates fail.",
+          careerPathSlug: "admin-certification-path",
+          careerPathLabel: "Admin Certification Path",
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

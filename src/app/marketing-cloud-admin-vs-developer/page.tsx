@@ -6,6 +6,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -76,6 +78,37 @@ export default function MarketingCloudAdminVsDeveloperPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Marketing Cloud Engagement Admin",
+          certSlug: "marketing-cloud-engagement-admin",
+          examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
+          conditions: [
+          "You configure Marketing Cloud — Business Units, users, and deliverability",
+          "You work in a platform admin or operations role within Marketing Cloud",
+          "You do not write AMPscript or SSJS",
+          "You want a foundational Marketing Cloud credential",
+          ],
+        }}
+        certB={{
+          name: "Marketing Cloud Engagement Developer",
+          certSlug: "marketing-cloud-engagement-developer",
+          examTipsSlug: "marketing-cloud-engagement-developer-exam-tips",
+          conditions: [
+          "You write AMPscript, SSJS, or custom content blocks",
+          "You build API integrations with Marketing Cloud",
+          "You come from a developer or technical consultant background",
+          "You want the higher-salary Marketing Cloud credential",
+          ],
+        }}
+        recommendation={{
+          certName: "Marketing Cloud Engagement Admin",
+          certSlug: "marketing-cloud-engagement-admin",
+          examTipsSlug: "marketing-cloud-engagement-admin-exam-tips",
+          reason: "Admin is the foundational credential — take it first to understand the platform architecture before adding Developer-level complexity. The exception: if you are already a developer with AMPscript experience, Developer is a better direct investment.",
+          
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

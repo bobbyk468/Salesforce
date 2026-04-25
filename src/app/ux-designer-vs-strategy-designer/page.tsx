@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `UX Designer vs Strategy Designer: Which Cert to Take (${RELEASE_CURRENT})`
@@ -75,6 +77,37 @@ export default function UxDesignerVsStrategyDesignerPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "UX Designer",
+          certSlug: "ux-designer",
+          examTipsSlug: "ux-designer-exam-tips",
+          conditions: [
+          "You design interfaces, flows, or Lightning page layouts in Salesforce",
+          "You want to demonstrate UX fundamentals and accessibility knowledge",
+          "You work closely with developers on component and page design",
+          "You are new to the designer certification track",
+          ],
+        }}
+        certB={{
+          name: "Strategy Designer",
+          certSlug: "strategy-designer",
+          examTipsSlug: "strategy-designer-exam-tips",
+          conditions: [
+          "You lead discovery workshops, journey mapping, or design sprints",
+          "You translate ambiguous business problems into Salesforce solutions",
+          "You work at a strategic level with stakeholders, not just on UI",
+          "You want the higher-differentiation credential in the designer track",
+          ],
+        }}
+        recommendation={{
+          certName: "UX Designer",
+          certSlug: "ux-designer",
+          examTipsSlug: "ux-designer-exam-tips",
+          reason: "UX Designer covers the foundational design principles that underpin Strategy Designer content. Take it first to build the vocabulary and frameworks, then Strategy Designer becomes a natural, well-supported progression.",
+          
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">

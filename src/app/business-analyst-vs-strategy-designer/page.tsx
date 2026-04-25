@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,37 @@ export default function BusinessAnalystVsStrategyDesignerPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Business Analyst",
+          certSlug: "business-analyst",
+          examTipsSlug: "business-analyst-exam-tips",
+          conditions: [
+          "You gather requirements, write user stories, or manage stakeholders",
+          "You work in a non-technical Salesforce role and want a credential to match",
+          "You are transitioning from a BA or project management background",
+          "You want a cert that pairs well with a functional consultant credential",
+          ],
+        }}
+        certB={{
+          name: "Strategy Designer",
+          certSlug: "strategy-designer",
+          examTipsSlug: "strategy-designer-exam-tips",
+          conditions: [
+          "You lead design thinking workshops or UX research sessions",
+          "You translate business needs into Salesforce solutions visually",
+          "You work closely with UX teams or run journey mapping exercises",
+          "You want to differentiate as a consultant who can lead human-centred design",
+          ],
+        }}
+        recommendation={{
+          certName: "Business Analyst",
+          certSlug: "business-analyst",
+          examTipsSlug: "business-analyst-exam-tips",
+          reason: "Business Analyst has broader employer recognition and pairs naturally with any functional consultant cert. Strategy Designer is a strong differentiator but is best taken after BA — it extends the skillset rather than replacing it.",
+          
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

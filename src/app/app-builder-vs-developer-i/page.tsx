@@ -6,6 +6,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -77,6 +79,38 @@ export default function AppBuilderVsDeveloperIPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Platform App Builder",
+          certSlug: "app-builder",
+          examTipsSlug: "app-builder-exam-tips",
+          conditions: [
+          "You work in a non-developer, admin, or BA role",
+          "You have no Apex or LWC coding experience",
+          "You want to build toward the Architect path",
+          "You are looking for the fastest cert after Admin",
+          ],
+        }}
+        certB={{
+          name: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          conditions: [
+          "You write — or plan to write — Apex code",
+          "You work in a developer role and need the credential to match",
+          "You want the highest salary ceiling among non-architect certs",
+          "You already understand SOQL, triggers, and governor limits",
+          ],
+        }}
+        recommendation={{
+          certName: "Platform App Builder",
+          certSlug: "app-builder",
+          examTipsSlug: "app-builder-exam-tips",
+          reason: "App Builder is the natural next step after Admin for most Salesforce professionals — no coding required, strong salary bump, and it opens the architect path. Only pivot to Platform Developer I first if you are actively writing Apex code in your current role.",
+          careerPathSlug: "admin-certification-path",
+          careerPathLabel: "Admin & Builder Certification Path",
+        }}
+      />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

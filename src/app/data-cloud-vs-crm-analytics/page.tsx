@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -74,6 +76,37 @@ export default function DataCloudVsCrmAnalyticsPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Data Cloud Consultant",
+          certSlug: "data-cloud-consultant",
+          examTipsSlug: "data-cloud-consultant-exam-tips",
+          conditions: [
+          "Your clients are unifying customer data across channels",
+          "You work with Salesforce CDP, Data Cloud, or real-time data activation",
+          "You want the fastest-growing and most in-demand cert of 2026",
+          "You are comfortable with data pipelines and identity resolution concepts",
+          ],
+        }}
+        certB={{
+          name: "CRM Analytics Consultant",
+          certSlug: "crm-analytics-einstein-discovery-consultant",
+          examTipsSlug: "crm-analytics-exam-tips",
+          conditions: [
+          "You build dashboards, SAQL queries, and Einstein Discovery models",
+          "Your work is analytics and reporting within Salesforce CRM",
+          "You work with Tableau CRM or Einstein Analytics regularly",
+          "You are in a BI or data analyst role inside a Salesforce org",
+          ],
+        }}
+        recommendation={{
+          certName: "Data Cloud Consultant",
+          certSlug: "data-cloud-consultant",
+          examTipsSlug: "data-cloud-consultant-exam-tips",
+          reason: "Data Cloud Consultant is the higher-growth investment — demand is accelerating and certified talent is genuinely scarce. CRM Analytics is a strong credential for analytics-focused roles, but Data Cloud commands a higher salary premium and broader client demand in 2026.",
+          
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

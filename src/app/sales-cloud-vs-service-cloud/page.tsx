@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -75,6 +77,38 @@ export default function SalesCloudVsServiceCloudPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Sales Cloud Consultant",
+          certSlug: "sales-cloud",
+          examTipsSlug: "sales-cloud-exam-tips",
+          conditions: [
+          "Your clients use Salesforce primarily for pipeline, forecasting, or CRM",
+          "You come from a sales operations or CRM admin background",
+          "You want the most widely needed consultant credential",
+          "You work in B2B or enterprise sales environments",
+          ],
+        }}
+        certB={{
+          name: "Service Cloud Consultant",
+          certSlug: "service-cloud",
+          examTipsSlug: "service-cloud-consultant-exam-tips",
+          conditions: [
+          "Your clients run call centres, field service, or customer support operations",
+          "You work with cases, entitlements, Omni-Channel, or Knowledge",
+          "You are in a service-intensive industry — telco, utilities, retail",
+          "You want to differentiate from the larger pool of Sales Cloud consultants",
+          ],
+        }}
+        recommendation={{
+          certName: "Sales Cloud Consultant",
+          certSlug: "sales-cloud",
+          examTipsSlug: "sales-cloud-exam-tips",
+          reason: "Sales Cloud Consultant has the broadest demand — almost every Salesforce implementation involves Sales Cloud at some level. Take it first to maximise consulting opportunities, then add Service Cloud to double your client-facing credential coverage.",
+          careerPathSlug: "certification-path",
+          careerPathLabel: "Salesforce Certification Path",
+        }}
+      />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

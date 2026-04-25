@@ -5,6 +5,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import type { Metadata } from 'next'
 import { buildVsTitle } from '@/lib/seo-title-helpers'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -75,6 +77,38 @@ export default function Pd1VsPd2Page() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          conditions: [
+          "You do not yet hold the PD1 certification",
+          "You are building foundational Apex and LWC skills",
+          "You have 0–2 years of Salesforce development experience",
+          "You want the credential that unlocks developer career paths",
+          ],
+        }}
+        certB={{
+          name: "Platform Developer II",
+          certSlug: "developer-2",
+          examTipsSlug: "pd2-exam-tips",
+          conditions: [
+          "You already hold Platform Developer I",
+          "You work with Apex design patterns, async jobs, or performance tuning daily",
+          "You are targeting senior developer or tech lead roles",
+          "You have 3+ years of Salesforce development experience",
+          ],
+        }}
+        recommendation={{
+          certName: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          reason: "PD1 is the prerequisite — not just logically but in employer expectations. You cannot attempt PD2 credibly without having mastered PD1 content. Most developers spend 6–12 months between PD1 and PD2.",
+          careerPathSlug: "developer-certification-path",
+          careerPathLabel: "Developer Certification Path",
+        }}
+      />
 
       {/* Side-by-side table */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

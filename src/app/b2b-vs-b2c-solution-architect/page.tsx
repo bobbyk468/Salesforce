@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `B2B vs B2C Solution Architect Certification (${RELEASE_CURRENT})`
@@ -75,6 +77,38 @@ export default function B2bVsB2cSolutionArchitectPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "B2B Solution Architect",
+          certSlug: "b2b-solution-architect",
+          examTipsSlug: "b2b-solution-architect-exam-tips",
+          conditions: [
+          "Your clients are enterprise B2B organisations using Sales, Service, and Revenue Cloud",
+          "You architect multi-cloud solutions for business-to-business use cases",
+          "You work with complex CRM, CPQ, and partner portal implementations",
+          "You want an architect credential outside the CTA path",
+          ],
+        }}
+        certB={{
+          name: "B2C Solution Architect",
+          certSlug: "b2c-solution-architect",
+          examTipsSlug: "b2c-solution-architect-exam-tips",
+          conditions: [
+          "Your clients are consumer-facing businesses using Commerce, Marketing, and Service Cloud",
+          "You design solutions for B2C e-commerce, loyalty, or marketing automation",
+          "You work with Salesforce Commerce Cloud or Marketing Cloud integrations",
+          "You architect high-volume consumer data flows",
+          ],
+        }}
+        recommendation={{
+          certName: "B2B Solution Architect",
+          certSlug: "b2b-solution-architect",
+          examTipsSlug: "b2b-solution-architect-exam-tips",
+          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud — otherwise B2B gives you wider applicability.",
+          careerPathSlug: "architect-certification-path",
+          careerPathLabel: "Architect Certification Path",
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[

@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `JavaScript Developer I vs Platform Developer I (${RELEASE_CURRENT})`
@@ -75,6 +77,38 @@ export default function JavascriptDeveloperIVsPd1Page() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "JavaScript Developer I",
+          certSlug: "javascript-developer-i",
+          examTipsSlug: "javascript-developer-i-exam-tips",
+          conditions: [
+          "You are a frontend developer moving into Salesforce",
+          "You are already strong in JavaScript ES6+ and web components",
+          "You build LWC components and want the credential to match",
+          "You want to differentiate from pure Apex developers",
+          ],
+        }}
+        certB={{
+          name: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          conditions: [
+          "You write Apex code, triggers, or Salesforce automation",
+          "You come from a Java or backend development background",
+          "You want the most widely recognised Salesforce developer credential",
+          "You plan to build toward Platform Developer II or the Architect track",
+          ],
+        }}
+        recommendation={{
+          certName: "Platform Developer I",
+          certSlug: "developer-1",
+          examTipsSlug: "pd1-exam-tips",
+          reason: "Platform Developer I has broader employer recognition and is the standard entry point for Salesforce developer careers. JavaScript Developer I is a strong complement — take PD1 first to establish your core credentials, then add JavaScript Developer I to demonstrate frontend depth.",
+          careerPathSlug: "developer-certification-path",
+          careerPathLabel: "Developer Certification Path",
+        }}
+      />
 
       {/* Quick comparison */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">

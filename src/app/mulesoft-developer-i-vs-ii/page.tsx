@@ -4,6 +4,8 @@ import { ArrowRight, CheckCircle2 } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -75,6 +77,37 @@ export default function MulesoftDeveloperIVsIIPage() {
       </header>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "MuleSoft Developer I",
+          certSlug: "mulesoft-developer-i",
+          examTipsSlug: "mulesoft-developer-i-exam-tips",
+          conditions: [
+          "You are new to MuleSoft or Anypoint Platform",
+          "You want the foundational developer credential first",
+          "You have 0–2 years of MuleSoft hands-on experience",
+          "You are starting the MuleSoft certification path",
+          ],
+        }}
+        certB={{
+          name: "MuleSoft Developer II",
+          certSlug: "mulesoft-developer-ii",
+          examTipsSlug: "mulesoft-developer-ii-exam-tips",
+          conditions: [
+          "You already hold MuleSoft Developer I",
+          "You work with advanced DataWeave, performance tuning, or complex flows daily",
+          "You are targeting senior developer or integration lead roles",
+          "You have 3+ years of MuleSoft development experience",
+          ],
+        }}
+        recommendation={{
+          certName: "MuleSoft Developer I",
+          certSlug: "mulesoft-developer-i",
+          examTipsSlug: "mulesoft-developer-i-exam-tips",
+          reason: "MuleSoft Developer I is the required foundation — both in terms of knowledge and employer expectations. Developer II content assumes full mastery of Developer I concepts. Most candidates take 6–12 months between the two.",
+          
+        }}
+      />
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Side-by-Side Comparison</h2>

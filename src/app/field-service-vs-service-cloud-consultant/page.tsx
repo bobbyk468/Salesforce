@@ -5,6 +5,8 @@ import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import WhichFirstBlock from '@/components/WhichFirstBlock'
+
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Field Service vs Service Cloud Consultant (${RELEASE_CURRENT})`
@@ -75,6 +77,37 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
       </div>
 
       <ContentPageAuthor />
+      <WhichFirstBlock
+        certA={{
+          name: "Field Service Consultant",
+          certSlug: "field-service",
+          examTipsSlug: "field-service-exam-tips",
+          conditions: [
+          "Your clients dispatch technicians, manage work orders, or run field operations",
+          "You work in utilities, telco, manufacturing, or facilities management",
+          "You want a niche credential with low supply and strong demand",
+          "You have hands-on FSL scheduling and configuration experience",
+          ],
+        }}
+        certB={{
+          name: "Service Cloud Consultant",
+          certSlug: "service-cloud",
+          examTipsSlug: "service-cloud-consultant-exam-tips",
+          conditions: [
+          "Your clients run contact centres, case management, or customer support",
+          "You work with Omni-Channel, entitlements, or Knowledge",
+          "You want a broader service credential that applies to more clients",
+          "You are earlier in your Salesforce consulting career",
+          ],
+        }}
+        recommendation={{
+          certName: "Service Cloud Consultant",
+          certSlug: "service-cloud",
+          examTipsSlug: "service-cloud-consultant-exam-tips",
+          reason: "Service Cloud Consultant applies to a much wider range of clients. Take it first to build a strong service foundation, then add Field Service as a specialist credential if your clients operate in field-heavy industries.",
+          
+        }}
+      />
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         {[
