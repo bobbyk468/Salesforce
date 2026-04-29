@@ -13,7 +13,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'Marketing Cloud Engagement Admin vs Developer: Which Cert to Take?'
+const pageTitle = 'MC Engagement Admin vs Developer: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Marketing Cloud Admin vs Developer: what each tests, who each is for. Which cert to take first. Free practice questions.'

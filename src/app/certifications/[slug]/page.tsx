@@ -16,8 +16,15 @@ export function generateStaticParams() {
 
 type PageProps = { params: { slug: string } }
 
+const PRACTICE_TEST_SLUGS = ['administrator-practice-test', 'email-specialist-practice-test']
+
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   if (!isSpikedCertSlug(params.slug)) notFound()
+  // Practice test pages are canonicalized to parent cert pages — noindex prevents
+  // GSC "Duplicate without user-selected canonical" warnings.
+  if (PRACTICE_TEST_SLUGS.includes(params.slug)) {
+    return { ...getCertMetadata(params.slug), robots: { index: false, follow: true } }
+  }
   if (params.slug === ADMINISTRATOR_SLUG) {
     const baseMetadata = getCertMetadata(params.slug)
     const descriptionText = administratorMetadataDescription

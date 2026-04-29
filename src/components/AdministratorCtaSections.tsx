@@ -16,16 +16,16 @@ export default function AdministratorCtaSections() {
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
           If you&apos;re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
         </p>
-        <p className="text-gray-600 text-xs max-w-md mx-auto mb-2">
-          Candidates who complete full mock exams report strong first-time pass rates. For pricing and access, use the contact form below or kindly reach out to{' '}
+        <p className="text-gray-600 text-xs max-w-md mx-auto mb-4">
+          Want to ensure you pass on your first try? Request our full 60-question mock exams, a personalized study plan, and pricing details by filling out the contact form. You can also reach out to{' '}
           <a href="mailto:km.krishnamohan25@gmail.com" className="text-salesforce-blue font-medium hover:underline">km.krishnamohan25@gmail.com</a>—mention ADM-201.
         </p>
-        <a
+        <Link
           href="/contact#exam=Salesforce%20Certified%20Platform%20Administrator%20(ADM-201)"
           className="inline-block px-6 sm:px-8 py-3 sm:py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95 text-sm sm:text-base"
         >
-          Get Full Question Bank
-        </a>
+          Request Mock Exams &amp; Study Plan
+        </Link>
       </div>
 
       <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">

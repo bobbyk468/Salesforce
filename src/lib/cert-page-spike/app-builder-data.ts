@@ -108,7 +108,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
     ],
   },
   moreQuestionsBlock: {
-    h3: 'Get the Full DEV-402 Question Bank',
+    h3: 'Request Full DEV-402 Mock Exams & Study Plan',
     paragraphs: [
       { kind: 'segments', segments: [
         { type: 'text', text: 'Most candidates book the exam after scoring ' },
@@ -124,7 +124,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
         segments: [
           {
             type: 'text',
-            text: 'Candidates who complete full mock exams report strong first-time pass rates. For pricing and access, use the contact form below or kindly reach out to ',
+            text: 'Want to ensure you pass on your first try? Request our full 60-question mock exams, a personalized study plan, and pricing details by filling out the contact form. You can also reach out to ',
           },
           {
             type: 'link',
@@ -136,7 +136,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       },
     ],
     ctaHref: '/contact#exam=DEV-402',
-    ctaLabel: 'Get Full Question Bank',
+    ctaLabel: 'Request Mock Exams & Study Plan',
   },
   afterCertSection: {
     id: 'app-builder-next-steps-heading',

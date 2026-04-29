@@ -59,9 +59,9 @@ export default function CertPageCta({ slug, certTitle, examCode }: CertPageCtaPr
         </p>
       )}
       {singleDominantCta && (
-        <p className="text-center mt-2">
+        <p className="text-center mt-3">
           <Link href={contactHref} className="text-white hover:text-white text-sm font-medium underline underline-offset-2">
-            {effectiveExamCode ? `Get full ${effectiveExamCode} question bank` : 'Get full question bank'}
+            {effectiveExamCode ? `Request full ${effectiveExamCode} mock exam & study plan` : 'Request full mock exam & study plan'}
           </Link>
         </p>
       )}

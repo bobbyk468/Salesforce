@@ -204,6 +204,23 @@ export function getRelatedCerts(certSlug: string): { name: string; href: string;
     'ai-associate': ['data-360-consultant', 'administrator'],
     'pardot-specialist': ['pardot-consultant', 'email-specialist'],
     'education-cloud-consultant': ['nonprofit-cloud', 'sales-cloud'],
+    // Parent cert → related AP certs (improves internal linking depth for AP pages).
+    'service-cloud': ['contact-center-ap', 'order-management-admin-ap', 'field-service'],
+    'field-service': ['advanced-field-service-ap', 'service-cloud', 'contact-center-ap'],
+    'cpq-administrator': ['cpq-billing-ap', 'revenue-cloud-consultant', 'administrator'],
+    'marketing-cloud-consultant': ['marketing-cloud-personalization-ap', 'marketing-cloud-intelligence-ap', 'marketing-cloud-advanced-cross-channel-ap'],
+    'heroku-architect': ['heroku-developer-ap', 'developer-1', 'developer-2'],
+    'b2c-commerce-developer': ['b2b-commerce-developer-ap', 'b2b-commerce-admin-ap', 'b2c-solution-architect'],
+    'omnistudio-developer': ['omnistudio-consultant', 'industries-cpq-developer', 'developer-1'],
+    'data-360-consultant': ['marketing-cloud-intelligence-ap', 'marketing-cloud-personalization-ap', 'crm-analytics-einstein-discovery-consultant'],
+    // AP cert → related parent + sibling APs (bidirectional discovery).
+    'contact-center-ap': ['service-cloud', 'order-management-admin-ap', 'advanced-field-service-ap'],
+    'advanced-field-service-ap': ['field-service', 'contact-center-ap', 'service-cloud'],
+    'cpq-billing-ap': ['cpq-administrator', 'revenue-cloud-consultant', 'order-management-admin-ap'],
+    'process-automation-ap': ['administrator', 'advanced-administrator', 'app-builder'],
+    'marketing-cloud-personalization-ap': ['marketing-cloud-consultant', 'marketing-cloud-intelligence-ap', 'data-360-consultant'],
+    'marketing-cloud-intelligence-ap': ['marketing-cloud-consultant', 'marketing-cloud-personalization-ap', 'data-360-consultant'],
+    'loyalty-management-ap': ['marketing-cloud-consultant', 'marketing-cloud-personalization-ap', 'service-cloud'],
   }
 
   const slugToItem = new Map(

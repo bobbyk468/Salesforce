@@ -11,7 +11,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'CPQ Administrator vs CPQ & Billing AP: Which Certification to Take?'
+const pageTitle = 'CPQ Admin vs CPQ & Billing AP: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   'Compare Salesforce CPQ Administrator and CPQ & Billing AP: what each tests, exam format differences, which to target for Revenue Cloud.'

@@ -19,15 +19,27 @@ if (host === 'trailblazeprep.com') {
 }
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  // Dynamically discover all exam-tips routes — each is self-canonical so all belong in sitemap.
+  // Dynamically discover all exam-tips and study-guide routes — prevents new pages being
+  // orphaned from the sitemap when added to the filesystem without updating this file.
   const appDir = join(process.cwd(), 'src/app')
-  const examTipsUrls: MetadataRoute.Sitemap = readdirSync(appDir, { withFileTypes: true })
-    .filter((d) => d.isDirectory() && d.name.endsWith('-exam-tips'))
+  const allDirs = readdirSync(appDir, { withFileTypes: true }).filter((d) => d.isDirectory())
+
+  const examTipsUrls: MetadataRoute.Sitemap = allDirs
+    .filter((d) => d.name.endsWith('-exam-tips'))
     .map((d) => ({
       url: `${baseUrl}/${d.name}`,
       lastModified: new Date(RELEASE_DATE),
       changeFrequency: 'monthly' as const,
       priority: 0.75,
+    }))
+
+  const studyGuideUrls: MetadataRoute.Sitemap = allDirs
+    .filter((d) => d.name.endsWith('-study-guide'))
+    .map((d) => ({
+      url: `${baseUrl}/${d.name}`,
+      lastModified: new Date(RELEASE_DATE),
+      changeFrequency: 'weekly' as const,
+      priority: 0.8,
     }))
 
   // Exclude non-canonical pages from sitemap — these pages have canonical URLs pointing to their
@@ -66,30 +78,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/adm-201-vs-app-builder`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-cost`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/pd1-vs-pd2`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/adm-201-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/pd1-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/app-builder-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/service-cloud-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/agentforce-specialist-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/sales-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/data-360-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/ai-associate-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/experience-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/advanced-administrator-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/pd2-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/service-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/marketing-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/business-analyst-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/cpq-administrator-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/field-service-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/omnistudio-developer-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/mulesoft-developer-i-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/javascript-developer-i-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/email-specialist-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/tableau-data-analyst-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/revenue-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/omnistudio-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/mulesoft-developer-ii-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/how-to-become-salesforce-developer`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/how-to-become-salesforce-architect`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/how-to-become-salesforce-consultant`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
@@ -116,18 +104,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/is-salesforce-certification-worth-it`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-maintenance`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-difficulty`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/integration-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/data-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/sharing-visibility-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/identity-access-management-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/dev-lifecycle-deployment-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/pardot-specialist-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/crm-analytics-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/b2b-solution-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/b2c-solution-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/mulesoft-integration-foundations-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/marketing-cloud-engagement-admin-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/b2c-commerce-developer-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/pardot-specialist-vs-pardot-consultant`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/cpq-admin-vs-revenue-cloud-consultant`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-voucher`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
@@ -135,22 +111,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/salesforce-certification-validity`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/how-to-register-salesforce-exam`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-free-certification`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
-    { url: `${baseUrl}/system-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/application-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/ux-designer-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/strategy-designer-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/pardot-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/marketing-cloud-engagement-developer-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/education-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/nonprofit-cloud-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/platform-foundations-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/technical-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/marketing-cloud-engagement-foundations-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/slack-administrator-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/mulesoft-integration-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/mulesoft-platform-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/nonprofit-success-pack-consultant-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
-    { url: `${baseUrl}/b2c-commerce-architect-study-guide`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/ux-designer-vs-strategy-designer`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/system-architect-vs-application-architect`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/pardot-consultant-vs-marketing-cloud-consultant`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
@@ -172,6 +132,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/privacy`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'yearly', priority: 0.3 },
     { url: `${baseUrl}/terms`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'yearly', priority: 0.3 },
     ...examTipsUrls,
+    ...studyGuideUrls,
     ...roleUrls,
     ...uniqueCertUrls,
   ]

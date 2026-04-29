@@ -25,8 +25,8 @@ function isQuestionBankFlow(exam: string | null): boolean {
 
 function getQuestionBankHeading(exam: string): string {
   const match = exam.match(/[A-Z]{2,5}-\d{3}/i)
-  if (match) return `Get Full ${match[0].toUpperCase()} Question Bank Access`
-  return 'Get Full Question Bank Access'
+  if (match) return `Request Full ${match[0].toUpperCase()} Mock Exams & Study Plan`
+  return 'Request Full Mock Exams & Study Plan'
 }
 
 const COMMON_EMAIL_DOMAINS = [
@@ -378,7 +378,7 @@ function ContactPageContent() {
                     {examParam && (
                       <p className="text-sm text-gray-600 mb-6">
                         {isQuestionBankFlow(examParam) ? (
-                          <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice. Add your message below and we&apos;ll respond with pricing and access details.</>
+                          <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice + personalized study plan. Add your message below and we&apos;ll respond with pricing and access details.</>
                         ) : (
                           <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.</>
                         )}
@@ -509,7 +509,7 @@ function ContactPageContent() {
                         ) : (
                           <>
                             <Send className="h-5 w-5 mr-2" />
-                            {examParam && isQuestionBankFlow(examParam) ? 'Request Access & Pricing' : 'Send Message'}
+                            {examParam && isQuestionBankFlow(examParam) ? 'Request Mock Exams & Study Plan' : 'Send Message'}
                           </>
                         )}
                       </button>

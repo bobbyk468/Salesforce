@@ -5,7 +5,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Certification Voucher & Discount Guide (${RELEASE_CURRENT})`
+const pageTitle = `Salesforce Cert Voucher & Discount Guide (${RELEASE_CURRENT})`
 const pageDescription = `Salesforce cert discounts and vouchers: Dreamforce, Trailhead, partner discounts, 50% retake vouchers Free practice questions.`
 
 export const metadata: Metadata = {

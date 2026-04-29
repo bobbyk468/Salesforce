@@ -7,7 +7,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `System Architect vs Application Architect: Differences (${RELEASE_CURRENT})`
+const pageTitle = `System vs Application Architect: Differences (${RELEASE_CURRENT})`
 const pageDescription = `System vs Application Architect: required exams, domain differences, costs, career value. Which to pursue first on CTA path.`
 
 export const metadata: Metadata = {

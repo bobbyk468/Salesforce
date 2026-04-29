@@ -9,7 +9,7 @@ import RoadmapWithDownload from '@/components/RoadmapWithDownload'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Consultant Certification Path (${RELEASE_CURRENT}): Which Order?`
+const pageTitle = `Salesforce Consultant Cert Path (${RELEASE_CURRENT}): Which Order?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce consultant certification path (${RELEASE_CURRENT}): right order for Sales Cloud, Service Cloud, Experience Cloud, Field Service. Start free practice now.`

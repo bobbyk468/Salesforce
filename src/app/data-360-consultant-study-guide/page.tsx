@@ -21,7 +21,7 @@ const slug = 'data-360-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Data 360 Consultant study guide (formerly Data Cloud Consultant): data ingestion, identity resolution, segmentation, activation. Pass first attempt. Free practice questions.`
+  `Data 360 Consultant study guide: data ingestion, identity resolution, segmentation & activation. Free practice questions — no sign-up.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

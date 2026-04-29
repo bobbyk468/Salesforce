@@ -66,6 +66,10 @@ const nextConfig = {
       },
       // Data Cloud Consultant → Data 360 Consultant (rebranded March 2026)
       // Changed to permanent 301 redirects; new canonical URLs use data-360 (2026 entity naming standard)
+      // CAUTION: These are single-hop 301s — destinations must remain live pages.
+      // If data-360-consultant, data-360-consultant-study-guide, or data-360-consultant-exam-tips
+      // are ever renamed, update the destinations here immediately to avoid a redirect chain.
+      // Redirect chains dilute PageRank flow and are flagged by Ahrefs Site Audit.
       {
         source: '/certifications/data-cloud-consultant',
         destination: '/certifications/data-360-consultant',

@@ -44,6 +44,18 @@ export function buildExamTipsTitle(slug: string): string {
 
 /** Authority‑framed title for `[slug]-study-guide` pages. */
 export function buildStudyGuideTitle(slug: string): string {
+  // Overrides for cert names that are too long for the default format.
+  const overrides: Record<string, string> = {
+    'crm-analytics-einstein-discovery-consultant': `CRM Analytics Study Guide [${TITLE_YEAR}]`,
+    'identity-access-management-architect': `Identity & Access Mgmt Architect Study Guide [${TITLE_YEAR}]`,
+    'dev-lifecycle-deployment-architect': `Dev Lifecycle & Deployment Arch Study Guide [${TITLE_YEAR}]`,
+    'marketing-cloud-engagement-foundations': `MC Engagement Foundations Study Guide [${TITLE_YEAR}]`,
+    'marketing-cloud-engagement-developer': `MC Engagement Developer Study Guide [${TITLE_YEAR}]`,
+    'pardot-consultant': `Pardot Consultant Study Guide [${TITLE_YEAR}]`,
+    'pardot-specialist': `Pardot Specialist Study Guide [${TITLE_YEAR}]`,
+  }
+  if (overrides[slug]) return overrides[slug]
+
   const official = getCertPrimaryName(slug, getShortCertLabel(slug))
   const short =
     official
@@ -51,7 +63,7 @@ export function buildStudyGuideTitle(slug: string): string {
       .replace(/\s*Certification\s*/i, ' ')
       .trim() || getShortCertLabel(slug)
 
-  const base = `${short} Study Guide & Prep Roadmap [${TITLE_YEAR}]`
+  const base = `${short} Study Guide [${TITLE_YEAR}]`
   return clampTitle(base)
 }
 

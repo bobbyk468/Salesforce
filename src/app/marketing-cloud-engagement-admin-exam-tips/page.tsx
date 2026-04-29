@@ -14,7 +14,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'marketing-cloud-engagement-admin'
 
-const pageTitle = `Marketing Cloud Engagement Admin Exam Tips (${RELEASE_CURRENT}): Study Guide`
+const pageTitle = `MC Engagement Admin Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
   `Salesforce Marketing Cloud Engagement Administrator exam tips for ${RELEASE_CURRENT}: email studio, automation studio, data extensions, deliverability.`
