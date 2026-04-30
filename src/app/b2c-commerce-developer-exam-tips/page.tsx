@@ -97,7 +97,7 @@ export default function B2CCommerceDeveloperExamTipsPage() {
       <ExamPricingCard
         certSlug="b2c-commerce-developer"
         certName="B2C Commerce Developer"
-        certPageSlug="b2c-commerce-developer-ap"
+        certPageSlug="b2c-commerce-developer"
       />
 
 

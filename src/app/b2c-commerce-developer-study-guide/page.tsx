@@ -104,7 +104,7 @@ export default function B2cCommerceDeveloperStudyGuidePage() {
       <ExamPricingCard
         certSlug="b2c-commerce-developer"
         certName="B2C Commerce Developer"
-        certPageSlug="b2c-commerce-developer-ap"
+        certPageSlug="b2c-commerce-developer"
       />
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
