@@ -416,7 +416,7 @@ export default function Home() {
             <ContentPageAuthor />
           </div>
           <div className="text-center max-w-2xl mx-auto mb-14">
-            <span className="inline-block text-xs font-semibold text-salesforce-blue uppercase tracking-widest bg-salesforce-blue/10 px-3 py-1.5 rounded-full mb-4">
+            <span className="inline-block text-xs font-semibold text-salesforce-dark uppercase tracking-widest bg-salesforce-blue/10 px-3 py-1.5 rounded-full mb-4">
               Why Trailblaze Prep
             </span>
             <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
