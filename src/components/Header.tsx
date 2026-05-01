@@ -30,34 +30,28 @@ export default function Header() {
             </span>
           </Link>
 
-          <div className="hidden lg:flex items-center gap-3">
+          <div className="hidden lg:flex items-center gap-1">
             <Link
               href="/certifications"
-              className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"
+              className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm"
             >
               All Certifications
             </Link>
             <Link
               href="/certification-path"
-              className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"
+              className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm"
             >
-              Certification Path
+              Cert Path
             </Link>
             <Link
               href="/become-cta"
-              className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"
+              className="nav-link px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors text-sm"
             >
               Become a CTA
             </Link>
             <Link
-              href="/certifications"
-              className="px-4 py-2 text-gray-600 hover:text-salesforce-blue font-medium rounded-lg hover:bg-salesforce-blue/5 transition-colors"
-            >
-              Search
-            </Link>
-            <Link
               href="/contact"
-              className="px-4 py-2 bg-salesforce-blue text-white rounded-lg font-medium hover:bg-salesforce-dark transition-colors shadow-md hover:shadow-lg"
+              className="ml-2 px-4 py-2.5 bg-salesforce-blue text-white rounded-lg font-semibold text-sm hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
             >
               Contact Us
             </Link>

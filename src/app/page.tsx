@@ -15,11 +15,8 @@ import {
   Palette,
   GraduationCap,
   BadgeCheck,
-  FileQuestion,
   BarChart3,
-  Lightbulb,
-  RefreshCw,
-  Star,
+  Sparkles,
 } from 'lucide-react'
 import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
@@ -200,25 +197,6 @@ const certificationCategories = [
   },
 ]
 
-const features = [
-  {
-    icon: BookOpen,
-    title: 'Practice Questions',
-    description: 'Hundreds of practice questions for each certification exam',
-  },
-  {
-    icon: CheckCircle,
-    title: 'Updated Content',
-    description: 'Regularly updated to match the latest exam objectives',
-  },
-  {
-    icon: TrendingUp,
-    title: 'Aligned with Official Exam Outlines',
-    description: 'Content aligned with official Salesforce exam blueprints so you study what’s actually on the exam.',
-    proof: { learners: '10,000+', rating: 4.8 },
-  },
-]
-
 const faqItems = [
   {
     question: 'How accurate are these practice questions?',
@@ -301,363 +279,201 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }} />
 
       {/* Hero Section */}
-      <section data-lcp-hero className="gradient-bg text-white py-20 px-4" aria-label="Primary content">
-        <div className="max-w-7xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold mb-6">
-            Salesforce Certification Resources, Practice Questions & Study Guides
-          </h1>
-          <p className="text-xl md:text-2xl text-white mb-4 max-w-3xl mx-auto">
-            Prepare for every Salesforce certification with practice questions, exam weightage, and study guides in one place.
-          </p>
-          <p className="text-lg text-white mb-2 max-w-2xl mx-auto">
-            Studying for Admin (ADM-201), Developer I, Sales Cloud Consultant, or 80+ other credentials? We give you exam tips, prerequisites, and sample questions.
-          </p>
-          <p className="text-base text-white/80 mb-8 max-w-2xl mx-auto">
-            Clear outlines. Actionable study plans. Practice under exam-like conditions.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link
-              href="/certifications/administrator"
-              className="px-10 py-4 bg-white text-salesforce-dark rounded-lg font-bold text-lg hover:bg-gray-50 transition-all flex items-center justify-center shadow-xl hover:shadow-2xl transform hover:scale-105"
-            >
-              Free ADM-201 Practice Test
-              <ArrowRight className="ml-2 h-5 w-5" />
-            </Link>
-            <Link
-              href="/certifications"
-              className="px-8 py-4 border-2 border-white text-white rounded-lg font-semibold hover:bg-white hover:text-salesforce-dark transition-all shadow-lg hover:shadow-xl"
-            >
-              All Certifications
-            </Link>
-            <Link
-              href="/contact"
-              className="px-8 py-4 border-2 border-white/70 text-white rounded-lg font-semibold hover:bg-white/10 hover:border-white transition-all"
-            >
-              Contact Us
-            </Link>
-          </div>
-          <p className="text-sm text-white/85 mt-4">
-            Popular reads:{' '}
-            <Link href="/adm-201-exam-tips" className="underline hover:text-white font-medium">ADM-201 exam tips</Link>
-            {' · '}
-            <Link href="/adm-201-vs-app-builder" className="underline hover:text-white font-medium">ADM-201 vs App Builder</Link>
-            {' · '}
-            <Link href="/which-salesforce-certification-first" className="underline hover:text-white font-medium">Which cert first?</Link>
-            {' · '}
-            <Link href="/how-to-study-for-salesforce-certification" className="underline hover:text-white font-medium">How to study</Link>
-            {' · '}
-            <Link href="/how-to-become-salesforce-consultant" className="underline hover:text-white font-medium">Become a Consultant</Link>
-            {' · '}
-            <Link href="/how-to-become-salesforce-developer" className="underline hover:text-white font-medium">Become a Developer</Link>
-            {' · '}
-            <Link href="/salesforce-admin-vs-developer-career" className="underline hover:text-white font-medium">Admin vs Developer</Link>
-            {' · '}
-            <Link href="/salesforce-certification-difficulty" className="underline hover:text-white font-medium">Difficulty ranking</Link>
-            {' · '}
-            <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-white font-medium">UX vs Strategy Designer</Link>
-            {' · '}
-            <Link href="/app-builder-vs-developer-i" className="underline hover:text-white font-medium">App Builder vs PD1</Link>
-            {' · '}
-            <Link href="/business-analyst-study-guide" className="underline hover:text-white font-medium">Business Analyst guide</Link>
-            {' · '}
-            <Link href="/tableau-data-analyst-study-guide" className="underline hover:text-white font-medium">Tableau Data Analyst</Link>
-            {' · '}
-            <Link href="/salesforce-certification-validity" className="underline hover:text-white font-medium">Cert validity</Link>
-          </p>
-          <p className="text-sm text-white/85 mt-1">
-            <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-white font-medium">Field vs Service Cloud</Link>
-            {' · '}
-            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-white font-medium">Education vs Nonprofit Cloud</Link>
-            {' · '}
-            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-white font-medium">CPQ vs Revenue Cloud</Link>
-          </p>
-        </div>
-      </section>
+      <section data-lcp-hero className="py-16 sm:py-24 px-4" aria-label="Primary content">
+        <div className="max-w-7xl mx-auto">
+          <div className="grid grid-cols-1 lg:grid-cols-[1fr_460px] gap-12 lg:gap-16 items-center">
 
-      {/* Why Use Trailblaze Prep / Overview - Updated */}
-      <section className="py-20 px-4 bg-white" aria-labelledby="overview-heading">
-        <div className="max-w-6xl mx-auto">
-          <div className="max-w-3xl mx-auto">
-            <ContentPageAuthor />
-          </div>
-          <h2 id="overview-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4 text-center">
-            Why Use Trailblaze Prep for Your Exam Prep
-          </h2>
-          <p className="text-xl text-gray-600 text-center mb-12 max-w-3xl mx-auto">
-            Built for professionals who want clarity and confidence before their exam.
-          </p>
-
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-12">
-            {/* Who This Site Is For */}
-            <div className="bg-gradient-to-br from-blue-50 to-white rounded-2xl p-8 border border-blue-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-salesforce-blue rounded-xl flex items-center justify-center">
-                  <Target className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">Who This Site Is For</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                Trailblaze Prep is for anyone preparing for a Salesforce certification. Admins, developers, consultants, architects, and marketers.
-              </p>
-              <ul className="space-y-2 text-gray-700">
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Want to see exactly how each exam is weighted by section</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Need clear exam tips and prerequisites</span>
-                </li>
-                <li className="flex items-start gap-2">
-                  <CheckCircle className="h-5 w-5 text-green-600 flex-shrink-0 mt-0.5" />
-                  <span>Want to practice with sample questions before the real exam</span>
-                </li>
-              </ul>
-            </div>
-
-            {/* What We Cover */}
-            <div className="bg-gradient-to-br from-purple-50 to-white rounded-2xl p-8 border border-purple-100">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-12 h-12 bg-purple-600 rounded-xl flex items-center justify-center">
-                  <Award className="h-6 w-6 text-white" />
-                </div>
-                <h3 className="text-2xl font-bold text-gray-900">What We Cover</h3>
-              </div>
-              <p className="text-gray-700 leading-relaxed mb-4">
-                We cover <strong className="text-gray-900">80+ Salesforce certifications</strong> across all major categories:
-              </p>
-              <div className="grid grid-cols-2 gap-3 text-sm">
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Associate</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Administrator</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Developer</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Consultant</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Marketing</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Architect</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">Tableau</span>
-                </div>
-                <div className="flex items-center gap-2">
-                  <BadgeCheck className="h-4 w-4 text-purple-600 flex-shrink-0" />
-                  <span className="text-gray-700">And more</span>
-                </div>
-              </div>
-              <p className="text-sm text-gray-600 mt-4 pt-4 border-t border-purple-100">
-                Every certification page includes section-wise exam weightage so you can prioritize your study time effectively.
-              </p>
-            </div>
-          </div>
-
-          {/* Key Benefits */}
-          <div className="bg-gradient-to-r from-salesforce-blue/5 via-salesforce-light/5 to-salesforce-blue/5 rounded-2xl p-8 border border-salesforce-blue/10">
-            <h3 className="text-2xl font-bold text-gray-900 mb-6 text-center">Why Choose Trailblaze Prep?</h3>
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-salesforce-blue rounded-xl mb-4">
-                  <TrendingUp className="h-7 w-7 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Study Smarter</h4>
-                <p className="text-sm text-gray-600">
-                  Focus on high-weightage sections first. Maximize your study efficiency with data-driven insights.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-salesforce-blue rounded-xl mb-4">
-                  <BookOpen className="h-7 w-7 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Comprehensive Content</h4>
-                <p className="text-sm text-gray-600">
-                  Get exam tips, prerequisites, study strategies, and practice questions—all in one place.
-                </p>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-14 h-14 bg-salesforce-blue rounded-xl mb-4">
-                  <CheckCircle className="h-7 w-7 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">Exam-Ready</h4>
-                <p className="text-sm text-gray-600">
-                  Practice with sample questions and detailed explanations. Know when you&apos;re ready to sit the exam.
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What Makes Us Different - Card-style panel (distinct background) */}
-      <section className="py-20 px-4 bg-salesforce-blue/5" aria-labelledby="different-heading">
-        <div className="max-w-6xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <div className="text-center mb-12 pb-10 border-b border-gray-100">
-            <h2 id="different-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              What Makes Us Different
-            </h2>
-            <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-              We combine three features on every certification page for a complete study experience.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-            {/* Feature 1 */}
-            <div className="rounded-2xl border-l-4 border-salesforce-blue bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-salesforce-blue/30 transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue/10 rounded-2xl mb-6">
-                <BarChart3 className="h-8 w-8 text-salesforce-blue" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Exam Weightage by Section
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                See the exact share of the exam for each topic. Focus your study time where it counts.
-              </p>
-            </div>
-
-            {/* Feature 2 */}
-            <div className="rounded-2xl border-l-4 border-purple-500 bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-purple-200 transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-purple-100 rounded-2xl mb-6">
-                <Lightbulb className="h-8 w-8 text-purple-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Exam Prep Content
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Tips, prerequisites, focus areas, and a study plan for each exam. Targeted guidance, not generic advice.
-              </p>
-            </div>
-
-            {/* Feature 3 */}
-            <div className="rounded-2xl border-l-4 border-green-500 bg-white shadow-md p-8 border border-gray-100 hover:shadow-lg hover:border-green-200 transition-all">
-              <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-2xl mb-6">
-                <FileQuestion className="h-8 w-8 text-green-600" />
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-3">
-                Sample Practice Questions
-              </h3>
-              <p className="text-gray-600 leading-relaxed">
-                Sample questions with clear explanations. Practice under exam-like conditions before the real test.
-              </p>
-            </div>
-          </div>
-
-          {/* Update Notice */}
-          <div className="bg-salesforce-blue/10 border-l-4 border-salesforce-blue border border-salesforce-blue/20 rounded-xl p-6 flex items-start gap-4">
-            <div className="flex-shrink-0">
-              <RefreshCw className="h-6 w-6 text-salesforce-blue" />
-            </div>
+            {/* Left: heading, lead, CTAs, stats */}
             <div>
-              <h4 className="font-semibold text-gray-900 mb-2">Always Up-to-Date</h4>
-              <p className="text-gray-700 text-sm">
-                We align content with official exam outlines and update when Salesforce changes exams. No outdated material.
+              <span className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark font-semibold text-sm px-4 py-1.5 rounded-full border border-salesforce-blue/20 mb-5">
+                <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
+                Updated for {RELEASE_CURRENT}
+              </span>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-5">
+                Pass your{' '}
+                <span className="hero-gradient-text">Salesforce certification</span>
+                {' '}on the first try.
+              </h1>
+              <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl mb-8">
+                Practice questions, exam weightage, and study guides for every Salesforce certification &mdash; Admin, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and more.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* What You Get - Card-style panel (distinct background) */}
-      <section className="py-20 px-4 bg-gray-100/80" aria-labelledby="features-heading">
-        <div className="max-w-7xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <div className="text-center pb-10 mb-10 border-b border-gray-100">
-            <h2 id="features-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
-              What You Get
-            </h2>
-            <p className="text-center text-gray-600 max-w-2xl mx-auto">
-            Practice questions, updated content, and materials aligned with official exam outlines.
-            </p>
-          </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {features.map((feature) => (
-              <div
-                key={feature.title}
-                className="text-center p-8 rounded-2xl border-l-4 border-salesforce-blue border border-gray-100 bg-salesforce-blue/5 shadow-md hover:shadow-lg hover:bg-salesforce-blue/10 transition-all duration-200"
-              >
-                <div className="inline-flex items-center justify-center w-16 h-16 bg-salesforce-blue rounded-2xl mb-5 text-white">
-                  <feature.icon className="h-8 w-8" />
+              <div className="flex flex-wrap gap-3 mb-9">
+                <Link
+                  href="/certifications/administrator"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-salesforce-blue text-white rounded-lg font-semibold text-base hover:bg-salesforce-dark transition-all duration-200 shadow-md hover:shadow-lg active:scale-95"
+                >
+                  Start Free ADM-201 Practice Test
+                  <ArrowRight className="h-4 w-4" aria-hidden="true" />
+                </Link>
+                <Link
+                  href="/certifications"
+                  className="inline-flex items-center gap-2 px-6 py-3.5 bg-white text-salesforce-blue rounded-lg font-semibold text-base border border-salesforce-blue/25 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/50 transition-all duration-200 shadow-sm"
+                >
+                  <BookOpen className="h-4 w-4" aria-hidden="true" />
+                  Browse Certifications
+                </Link>
+              </div>
+              <div className="flex gap-8">
+                <div>
+                  <div className="text-2xl font-bold text-salesforce-dark leading-none">90+</div>
+                  <div className="text-sm text-gray-500 mt-1">Certifications</div>
                 </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{feature.title}</h3>
-                <p className="text-gray-600">{feature.description}</p>
-                {'proof' in feature && feature.proof && (
-                  <div className="mt-5 pt-5 border-t border-salesforce-blue/20">
-                    <p className="text-sm font-semibold text-gray-900 mb-1">
-                      Trusted by {feature.proof.learners} learners
+                <div>
+                  <div className="text-2xl font-bold text-salesforce-dark leading-none">4,200+</div>
+                  <div className="text-sm text-gray-500 mt-1">Practice Questions</div>
+                </div>
+                <div>
+                  <div className="text-2xl font-bold text-salesforce-dark leading-none">100%</div>
+                  <div className="text-sm text-gray-500 mt-1">Free</div>
+                </div>
+              </div>
+            </div>
+
+            {/* Right: sample practice question card (desktop only) */}
+            <div className="hidden lg:block">
+              <div className="bg-white border border-gray-100 rounded-3xl p-7 relative overflow-hidden shadow-2xl shadow-gray-200/40">
+                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 pointer-events-none" aria-hidden="true" />
+                <div className="relative">
+                  <div className="flex justify-between items-center mb-5">
+                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Sample question &middot; ADM-201</span>
+                    <span className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Free</span>
+                  </div>
+                  <div className="bg-white border border-gray-100 rounded-xl p-5">
+                    <div className="flex justify-between text-xs text-gray-500 mb-2.5">
+                      <span className="font-mono font-semibold text-salesforce-blue">ADM-201 &middot; Q12</span>
+                      <span>Single-select</span>
+                    </div>
+                    <p className="text-sm font-semibold text-gray-900 leading-snug mb-4">
+                      A Sales Manager wants to receive an email when an Opportunity is updated. Which automation should the admin recommend?
                     </p>
-                    <div className="flex items-center justify-center gap-0.5" aria-label={`Rated ${feature.proof.rating} out of 5 stars`}>
-                      {[1, 2, 3, 4, 5].map((i) => (
-                        <Star
-                          key={i}
-                          className={`h-5 w-5 ${i <= Math.round(feature.proof.rating) ? 'fill-amber-400 text-amber-400' : 'text-gray-200'}`}
-                          aria-hidden
-                        />
-                      ))}
-                      <span className="ml-1.5 text-sm font-medium text-gray-600">{feature.proof.rating}</span>
+                    <div className="space-y-2">
+                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
+                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">A</span>
+                        <span>Approval Process triggered on edit</span>
+                      </div>
+                      <div className="flex gap-2.5 items-start p-3 border border-emerald-200 rounded-xl text-sm text-emerald-900 bg-emerald-50">
+                        <span className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-xs font-bold flex-shrink-0 text-white" aria-hidden="true">B</span>
+                        <span>Flow with a Record-Triggered Email Alert</span>
+                      </div>
+                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
+                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">C</span>
+                        <span>Validation Rule with custom error message</span>
+                      </div>
+                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
+                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">D</span>
+                        <span>Sharing Rule based on owner role</span>
+                      </div>
                     </div>
                   </div>
-                )}
+                </div>
               </div>
-            ))}
+            </div>
+
           </div>
+
+          {/* Popular reads — SEO internal links */}
+          <p className="text-sm text-gray-500 mt-10">
+            Popular:{' '}
+            <Link href="/adm-201-exam-tips" className="underline hover:text-salesforce-dark font-medium">ADM-201 exam tips</Link>
+            {' · '}
+            <Link href="/adm-201-vs-app-builder" className="underline hover:text-salesforce-dark font-medium">ADM-201 vs App Builder</Link>
+            {' · '}
+            <Link href="/which-salesforce-certification-first" className="underline hover:text-salesforce-dark font-medium">Which cert first?</Link>
+            {' · '}
+            <Link href="/how-to-study-for-salesforce-certification" className="underline hover:text-salesforce-dark font-medium">How to study</Link>
+            {' · '}
+            <Link href="/how-to-become-salesforce-consultant" className="underline hover:text-salesforce-dark font-medium">Become a Consultant</Link>
+            {' · '}
+            <Link href="/how-to-become-salesforce-developer" className="underline hover:text-salesforce-dark font-medium">Become a Developer</Link>
+            {' · '}
+            <Link href="/salesforce-admin-vs-developer-career" className="underline hover:text-salesforce-dark font-medium">Admin vs Developer</Link>
+            {' · '}
+            <Link href="/salesforce-certification-difficulty" className="underline hover:text-salesforce-dark font-medium">Difficulty ranking</Link>
+            {' · '}
+            <Link href="/ux-designer-vs-strategy-designer" className="underline hover:text-salesforce-dark font-medium">UX vs Strategy Designer</Link>
+            {' · '}
+            <Link href="/app-builder-vs-developer-i" className="underline hover:text-salesforce-dark font-medium">App Builder vs PD1</Link>
+            {' · '}
+            <Link href="/business-analyst-study-guide" className="underline hover:text-salesforce-dark font-medium">Business Analyst guide</Link>
+            {' · '}
+            <Link href="/tableau-data-analyst-study-guide" className="underline hover:text-salesforce-dark font-medium">Tableau Data Analyst</Link>
+            {' · '}
+            <Link href="/salesforce-certification-validity" className="underline hover:text-salesforce-dark font-medium">Cert validity</Link>
+            {' · '}
+            <Link href="/field-service-vs-service-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">Field vs Service Cloud</Link>
+            {' · '}
+            <Link href="/education-cloud-vs-nonprofit-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">Education vs Nonprofit Cloud</Link>
+            {' · '}
+            <Link href="/cpq-admin-vs-revenue-cloud-consultant" className="underline hover:text-salesforce-dark font-medium">CPQ vs Revenue Cloud</Link>
+          </p>
         </div>
       </section>
 
-      {/* What's Inside Each Certification Page - Card-style panel (distinct background) */}
-      <section className="py-20 px-4 bg-slate-50/90" aria-labelledby="how-it-works-heading">
-        <div className="max-w-4xl mx-auto rounded-3xl border border-salesforce-blue/25 bg-white shadow-2xl shadow-gray-200/40 p-8 md:p-12 ring-1 ring-salesforce-blue/15">
-          <div className="text-center pb-10 mb-10 border-b border-gray-100">
-            <h2 id="how-it-works-heading" className="text-3xl font-bold text-gray-900 mb-2 text-center">
-              What&apos;s Inside Each Certification Page
+      {/* Features — Why Trailblaze Prep */}
+      <section className="py-20 px-4 bg-gray-50" aria-labelledby="features-heading">
+        <div className="max-w-7xl mx-auto">
+          <div className="max-w-3xl mx-auto mb-4">
+            <ContentPageAuthor />
+          </div>
+          <div className="text-center max-w-2xl mx-auto mb-14">
+            <span className="inline-block text-xs font-semibold text-salesforce-blue uppercase tracking-widest bg-salesforce-blue/10 px-3 py-1.5 rounded-full mb-4">
+              Why Trailblaze Prep
+            </span>
+            <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Everything you need to pass — in one place.
             </h2>
-            <p className="text-center text-gray-600 max-w-2xl mx-auto">
-              Each certification page has exam weightage, tips, prerequisites, and sample questions with explanations.
+            <p className="text-lg text-gray-600">
+              Each certification page has section weightage, study tips, prerequisites, and practice questions written against the official exam outline.
             </p>
           </div>
-          <div className="rounded-2xl border-l-4 border-salesforce-blue bg-salesforce-blue/5 border border-gray-100 shadow-md p-8">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-salesforce-blue/10 rounded-full mb-3">
-                  <Target className="h-6 w-6 text-salesforce-blue" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Section Weightage</h3>
-                <p className="text-sm text-gray-600">See exactly how much each topic contributes to your exam score</p>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-salesforce-blue flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <Target className="h-6 w-6" aria-hidden="true" />
               </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-salesforce-blue/10 rounded-full mb-3">
-                  <BookOpen className="h-6 w-6 text-salesforce-blue" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Study Strategy</h3>
-                <p className="text-sm text-gray-600">Get exam tips, prerequisites, and focus areas tailored to each certification</p>
-              </div>
-              <div className="text-center">
-                <div className="inline-flex items-center justify-center w-12 h-12 bg-salesforce-blue/10 rounded-full mb-3">
-                  <FileQuestion className="h-6 w-6 text-salesforce-blue" />
-                </div>
-                <h3 className="font-semibold text-gray-900 mb-2">Practice Questions</h3>
-                <p className="text-sm text-gray-600">Test your knowledge with sample questions and detailed explanations</p>
-              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Section weightage</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Know exactly how each topic is weighted. Spend more time on the 30% sections, less on the 5% ones.</p>
             </div>
-            <div className="mt-8 text-center">
-              <Link
-                href="/certifications/administrator"
-                className="inline-flex items-center gap-2 px-6 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
-              >
-                ADM-201 Study Guide &amp; Practice Questions
-                <ArrowRight className="h-4 w-4" />
-              </Link>
+
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-purple-600 flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <BookOpen className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Practice questions</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">4,200+ questions aligned with official Salesforce exam outlines, each with a written explanation.</p>
+            </div>
+
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-emerald-500 flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <BadgeCheck className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Study guides</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Crisp, exam-focused notes &mdash; no fluff. Skim the night before or read top-to-bottom over a weekend.</p>
+            </div>
+
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <BarChart3 className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Real exam stats</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Question count, passing score, duration, and fee for every cert. Confirmed against current Salesforce docs.</p>
+            </div>
+
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-salesforce-dark flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <TrendingUp className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">{RELEASE_CURRENT} ready</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Updated within 30 days of every Salesforce release. We track the changelog so you don&apos;t have to.</p>
+            </div>
+
+            <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
+              <div className="w-12 h-12 rounded-xl bg-salesforce-blue flex items-center justify-center text-white mb-5 flex-shrink-0">
+                <CheckCircle className="h-6 w-6" aria-hidden="true" />
+              </div>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">100% free, no login</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">No paywall, no email gate, no ads. Bookmarked by 60,000+ admins, devs, and consultants.</p>
             </div>
           </div>
         </div>

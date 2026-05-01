@@ -3,9 +3,32 @@
 @tailwind utilities;
 
 :root {
+  /* ── Brand (Tailwind aliases + design-system tokens) ─────────── */
   --salesforce-blue: #0176D3;
   --salesforce-dark: #032D60;
   --salesforce-light: #1B96FF;
+
+  /* Design-system canonical names */
+  --sf-dark:  #032D60;
+  --sf-blue:  #0176D3;
+  --sf-light: #1B96FF;
+
+  /* Tints */
+  --sf-blue-05: rgba(1, 118, 211, 0.05);
+  --sf-blue-10: rgba(1, 118, 211, 0.10);
+  --sf-blue-20: rgba(1, 118, 211, 0.20);
+  --sf-blue-25: rgba(1, 118, 211, 0.25);
+  --sf-blue-30: rgba(1, 118, 211, 0.30);
+
+  /* ── Gradients ────────────────────────────────────────────────── */
+  --gradient-hero:     linear-gradient(135deg, #032D60 0%, #0176D3 40%, #1B96FF 100%);
+  --gradient-mark:     linear-gradient(135deg, #032D60 0%, #0176D3 100%);
+  --gradient-progress: linear-gradient(90deg, #0176D3 0%, #1B96FF 50%, #0176D3 100%);
+
+  /* ── Animation ────────────────────────────────────────────────── */
+  --ease-standard: cubic-bezier(0.4, 0, 0.2, 1);
+  --dur-fast: 150ms;
+  --dur:       300ms;
 }
 
 body {
@@ -40,6 +63,14 @@ body {
 .gradient-bg {
   background: linear-gradient(135deg, #032D60 0%, #0176D3 40%, #1B96FF 100%);
   box-shadow: 0 4px 14px rgba(3, 45, 96, 0.2);
+}
+
+/* Gradient clip text for hero headings */
+.hero-gradient-text {
+  background: var(--gradient-hero);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
 }
 
 .card-hover {
