@@ -186,6 +186,13 @@ body {
   padding-bottom: env(safe-area-inset-bottom, 0px);
 }
 
+/* Below-fold layout deferral — browser skips layout/paint until section enters viewport.
+   contain-intrinsic-size reserves approximate height to prevent scrollbar jumps. */
+.cv-auto {
+  content-visibility: auto;
+  contain-intrinsic-size: auto 600px;
+}
+
 /* Print: hide no-print elements; show syllabus checklist content even when details is closed */
 @media print {
   .no-print {
