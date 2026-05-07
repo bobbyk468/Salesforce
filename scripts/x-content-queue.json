@@ -1645,15 +1645,33 @@
     ],
     "engagementTweets": [
       {
-        "text": "be honest: does your resume still say 'detail-oriented team player'? delete half the adjectives and add one metric. we'll wait."
+        "text": "be honest: does your resume still say 'detail-oriented team player'? delete half the adjectives and add one metric. we'll wait.",
+        "imageFile": "tweet-images/w9-thread-5-resume-needle-f1-engage-1.png"
       },
       {
-        "text": "hiring managers — what line on a junior SF resume makes you schedule the phone screen vs skip? genuinely curious."
+        "text": "hiring managers — what line on a junior SF resume makes you schedule the phone screen vs skip? genuinely curious.",
+        "imageFile": "tweet-images/w9-thread-5-resume-needle-f1-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-29T10:30:00-04:00",
     "certFocus": "mulesoft-integration-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations",
+    "_updatedEngagement": [
+      {
+        "text": "be honest: does your resume still say 'detail-oriented team player'? delete half the adjectives and add one metric. we'll wait.",
+        "imageFile": "tweet-images/w9-thread-5-resume-needle-f1-engage-1.png"
+      },
+      {
+        "text": "hiring managers — what line on a junior SF resume makes you schedule the phone screen vs skip? genuinely curious.",
+        "imageFile": "tweet-images/w9-thread-5-resume-needle-f1-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w9-thread-5-resume-needle-f1-cover.png",
+      "2": "tweet-images/w9-thread-5-resume-needle-f1-stats.png",
+      "7": "tweet-images/w9-thread-5-resume-needle-f1-cta.png"
+    }
   },
   {
     "id": "w9-tip-resume-donts-f2",
@@ -1695,17 +1713,35 @@
     ],
     "engagementTweets": [
       {
-        "text": "real talk: did you start Agentforce because AI is hot, or because your job actually needs it? both are valid — only one keeps you studying after week two."
+        "text": "real talk: did you start Agentforce because AI is hot, or because your job actually needs it? both are valid — only one keeps you studying after week two.",
+        "imageFile": "tweet-images/w10-thread-1-agentforce-mistakes-e1-engage-1.png"
       },
       {
-        "text": "what part of Agentforce still feels like black magic — Topics, Actions, or guardrails? reply with one word."
+        "text": "what part of Agentforce still feels like black magic — Topics, Actions, or guardrails? reply with one word.",
+        "imageFile": "tweet-images/w10-thread-1-agentforce-mistakes-e1-engage-2.png"
       }
     ],
     "scheduledFor": "2026-06-03T10:30:00-04:00",
     "certFocus": "administrator",
     "certPath": "https://www.trailblazeprep.com/certifications/administrator",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "_updatedEngagement": [
+      {
+        "text": "real talk: did you start Agentforce because AI is hot, or because your job actually needs it? both are valid — only one keeps you studying after week two.",
+        "imageFile": "tweet-images/w10-thread-1-agentforce-mistakes-e1-engage-1.png"
+      },
+      {
+        "text": "what part of Agentforce still feels like black magic — Topics, Actions, or guardrails? reply with one word.",
+        "imageFile": "tweet-images/w10-thread-1-agentforce-mistakes-e1-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w10-thread-1-agentforce-mistakes-e1-cover.png",
+      "2": "tweet-images/w10-thread-1-agentforce-mistakes-e1-stats.png",
+      "5": "tweet-images/w10-thread-1-agentforce-mistakes-e1-cta.png"
+    }
   },
   {
     "id": "w10-thread-2-agentforce-debug-e2",
@@ -1729,17 +1765,35 @@
     ],
     "engagementTweets": [
       {
-        "text": "debugging hot take: if you changed the prompt before you checked inputs, you already lost the afternoon."
+        "text": "debugging hot take: if you changed the prompt before you checked inputs, you already lost the afternoon.",
+        "imageFile": "tweet-images/w10-thread-2-agentforce-debug-e2-engage-1.png"
       },
       {
-        "text": "engineers love skipping to 'the model is wrong.' half the time it's routing. do you fight me on that?"
+        "text": "engineers love skipping to 'the model is wrong.' half the time it's routing. do you fight me on that?",
+        "imageFile": "tweet-images/w10-thread-2-agentforce-debug-e2-engage-2.png"
       }
     ],
     "scheduledFor": "2026-06-06T10:30:00-04:00",
     "certFocus": "administrator",
     "certPath": "https://www.trailblazeprep.com/certifications/administrator",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "_updatedEngagement": [
+      {
+        "text": "debugging hot take: if you changed the prompt before you checked inputs, you already lost the afternoon.",
+        "imageFile": "tweet-images/w10-thread-2-agentforce-debug-e2-engage-1.png"
+      },
+      {
+        "text": "engineers love skipping to 'the model is wrong.' half the time it's routing. do you fight me on that?",
+        "imageFile": "tweet-images/w10-thread-2-agentforce-debug-e2-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w10-thread-2-agentforce-debug-e2-cover.png",
+      "2": "tweet-images/w10-thread-2-agentforce-debug-e2-stats.png",
+      "5": "tweet-images/w10-thread-2-agentforce-debug-e2-cta.png"
+    }
   },
   {
     "id": "w10-thread-3-agentforce-admin-gap-e3",
@@ -1762,17 +1816,35 @@
     ],
     "engagementTweets": [
       {
-        "text": "admins who added Agentforce — what's one thing you wish you'd configured on day one instead of day thirty?"
+        "text": "admins who added Agentforce — what's one thing you wish you'd configured on day one instead of day thirty?",
+        "imageFile": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-engage-1.png"
       },
       {
-        "text": "does Agentforce feel like 'real Salesforce' yet or still a sidecar? curious where the ecosystem actually lands in 2026."
+        "text": "does Agentforce feel like 'real Salesforce' yet or still a sidecar? curious where the ecosystem actually lands in 2026.",
+        "imageFile": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-engage-2.png"
       }
     ],
     "scheduledFor": "2026-06-10T10:30:00-04:00",
     "certFocus": "advanced-administrator",
     "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "_updatedEngagement": [
+      {
+        "text": "admins who added Agentforce — what's one thing you wish you'd configured on day one instead of day thirty?",
+        "imageFile": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-engage-1.png"
+      },
+      {
+        "text": "does Agentforce feel like 'real Salesforce' yet or still a sidecar? curious where the ecosystem actually lands in 2026.",
+        "imageFile": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-cover.png",
+      "2": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-stats.png",
+      "4": "tweet-images/w10-thread-3-agentforce-admin-gap-e3-cta.png"
+    }
   },
   {
     "id": "w9-tip-maintenance-calendar",
