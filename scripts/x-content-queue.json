@@ -1429,13 +1429,31 @@
     ],
     "engagementTweets": [
       {
-        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos."
+        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos.",
+        "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-1.png"
       },
       {
-        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one."
+        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one.",
+        "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-08T10:30:00-04:00",
+    "_updatedEngagement": [
+      {
+        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos.",
+        "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-1.png"
+      },
+      {
+        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one.",
+        "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w9-thread-1-adm201-traps-d1-cover.png",
+      "2": "tweet-images/w9-thread-1-adm201-traps-d1-stats.png",
+      "7": "tweet-images/w9-thread-1-adm201-traps-d1-cta.png"
+    },
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "administrator",
@@ -1465,13 +1483,31 @@
     ],
     "engagementTweets": [
       {
-        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose."
+        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose.",
+        "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-1.png"
       },
       {
-        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn."
+        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn.",
+        "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-11T10:30:00-04:00",
+    "_updatedEngagement": [
+      {
+        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose.",
+        "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-1.png"
+      },
+      {
+        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn.",
+        "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w9-thread-2-adm201-flow-traps-d2-cover.png",
+      "2": "tweet-images/w9-thread-2-adm201-flow-traps-d2-stats.png",
+      "6": "tweet-images/w9-thread-2-adm201-flow-traps-d2-cta.png"
+    },
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
@@ -1501,13 +1537,31 @@
     ],
     "engagementTweets": [
       {
-        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline."
+        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline.",
+        "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-1.png"
       },
       {
-        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have."
+        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have.",
+        "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-14T10:30:00-04:00",
+    "_updatedEngagement": [
+      {
+        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline.",
+        "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-1.png"
+      },
+      {
+        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have.",
+        "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w9-thread-3-adm201-security-traps-d3-cover.png",
+      "2": "tweet-images/w9-thread-3-adm201-security-traps-d3-stats.png",
+      "6": "tweet-images/w9-thread-3-adm201-security-traps-d3-cta.png"
+    },
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
@@ -1537,13 +1591,31 @@
     ],
     "engagementTweets": [
       {
-        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise."
+        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise.",
+        "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-1.png"
       },
       {
-        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word."
+        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word.",
+        "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-16T10:30:00-04:00",
+    "_updatedEngagement": [
+      {
+        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise.",
+        "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-1.png"
+      },
+      {
+        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word.",
+        "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w9-thread-4-exam-wording-d4-cover.png",
+      "2": "tweet-images/w9-thread-4-exam-wording-d4-stats.png",
+      "6": "tweet-images/w9-thread-4-exam-wording-d4-cta.png"
+    },
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
@@ -2259,5 +2331,1179 @@
     "scheduledFor": "2026-06-10T09:00:00-04:00",
     "certFocus": "advanced-administrator",
     "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0001",
+    "title": "Tip — exam grind (2026-06-11)",
+    "status": "pending",
+    "tweets": [
+      "formula fields crossing objects bite on 201 when you forget relationship limits.\n\nif the stem whispers 'rollup without rollup summary,' slow down.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-11T09:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0002",
+    "title": "Tip — platform pattern (2026-06-11)",
+    "status": "pending",
+    "tweets": [
+      "custom report types are boring until the stem wants a join you didn't model.\n\nknow what CRT can and can't see before you burn time.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-11T15:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0003",
+    "title": "Tip — exam grind (2026-06-12)",
+    "status": "pending",
+    "tweets": [
+      "hierarchy columns in reports aren't decoration.\n\nsometimes they're the difference between 'looks right' and 'answers the question.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-12T09:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0004",
+    "title": "Tip — platform pattern (2026-06-12)",
+    "status": "pending",
+    "tweets": [
+      "dashboard filters vs report filters stack wrong in people's heads.\n\nread which layer the scenario is actually testing.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-12T15:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0005",
+    "title": "Tip — exam grind (2026-06-13)",
+    "status": "pending",
+    "tweets": [
+      "data skew on lookups is real exam vocabulary.\n\none parent with 50k children is a different problem than 'sharing is hard.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-13T09:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0006",
+    "title": "Tip — platform pattern (2026-06-13)",
+    "status": "pending",
+    "tweets": [
+      "person accounts show up rarely — and people panic.\n\nif the stem mentions consumers + b2c, don't force a b2b mental model.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-13T15:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0007",
+    "title": "Tip — exam grind (2026-06-14)",
+    "status": "pending",
+    "tweets": [
+      "territory management vs role hierarchy: pick the story the stem is telling, not your favorite feature.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-14T09:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+  },
+  {
+    "id": "gw-bk26-0008",
+    "title": "Tip — platform pattern (2026-06-14)",
+    "status": "pending",
+    "tweets": [
+      "manual sharing is the 'break glass' answer.\n\nif the stem wants maintainability at scale, it's usually not manual.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-14T15:45:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0009",
+    "title": "Tip — exam grind (2026-06-15)",
+    "status": "pending",
+    "tweets": [
+      "criteria-based sharing rules vs owner-based: different triggers, same exam noise.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-15T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0010",
+    "title": "Tip — platform pattern (2026-06-15)",
+    "status": "pending",
+    "tweets": [
+      "login flows vs post-login flows: timing matters for 'first screen' stories.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-15T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0011",
+    "title": "Tip — exam grind (2026-06-16)",
+    "status": "pending",
+    "tweets": [
+      "experience cloud vs internal security: guests exist. read for external user language.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-16T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0012",
+    "title": "Tip — platform pattern (2026-06-16)",
+    "status": "pending",
+    "tweets": [
+      "field-level security vs page layout read-only: users feel it differently — exam cares which tool you picked.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-16T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0013",
+    "title": "Tip — exam grind (2026-06-17)",
+    "status": "pending",
+    "tweets": [
+      "record-triggered flow 'only when' conditions save you from infinite loops — know that toggle exists.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-06-17T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0014",
+    "title": "Tip — platform pattern (2026-06-17)",
+    "status": "pending",
+    "tweets": [
+      "subflow error handling isn't glamorous — it's where production vs exam scenarios meet.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-06-17T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0015",
+    "title": "Tip — exam grind (2026-06-18)",
+    "status": "pending",
+    "tweets": [
+      "platform events for integrations: exam might test publish vs subscribe mental model, not your kafka opinions.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-18T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0016",
+    "title": "Tip — platform pattern (2026-06-18)",
+    "status": "pending",
+    "tweets": [
+      "outbound messages still haunt older orgs — if your prep skipped integrations entirely, fix the gap.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-18T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0017",
+    "title": "Tip — exam grind (2026-06-19)",
+    "status": "pending",
+    "tweets": [
+      "custom settings vs custom metadata: one is data-ish, one is config-ish — the exam loves that distinction.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-19T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0018",
+    "title": "Tip — platform pattern (2026-06-19)",
+    "status": "pending",
+    "tweets": [
+      "hierarchy custom settings: sneaky way to branch behavior without hardcoding profile names.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-19T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0019",
+    "title": "Tip — exam grind (2026-06-20)",
+    "status": "pending",
+    "tweets": [
+      "named credentials abstract auth — exam items sometimes test 'who runs the call,' not the endpoint string.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-20T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0020",
+    "title": "Tip — platform pattern (2026-06-20)",
+    "status": "pending",
+    "tweets": [
+      "external objects and indirect lookups: if you only studied core CRM, skim this once.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-20T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0021",
+    "title": "Tip — exam grind (2026-06-21)",
+    "status": "pending",
+    "tweets": [
+      "big objects: know the 'when you can't use normal soql like a toddler' story at a high level.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-21T09:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0022",
+    "title": "Tip — platform pattern (2026-06-21)",
+    "status": "pending",
+    "tweets": [
+      "softphone vs omni: service cloud stems sometimes telegraph which routing world you're in.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-21T15:45:00-04:00",
+    "certFocus": "app-builder",
+    "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+  },
+  {
+    "id": "gw-bk26-0023",
+    "title": "Tip — exam grind (2026-06-22)",
+    "status": "pending",
+    "tweets": [
+      "macros vs quick actions: both save clicks — different constraints.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-22T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0024",
+    "title": "Tip — platform pattern (2026-06-22)",
+    "status": "pending",
+    "tweets": [
+      "quick actions vs buttons: screen vs url vs create — read the verb in the stem.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-22T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0025",
+    "title": "Tip — exam grind (2026-06-23)",
+    "status": "pending",
+    "tweets": [
+      "path vs kanban: path is guidance; kanban is a list view mood — don't swap them under stress.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-23T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0026",
+    "title": "Tip — platform pattern (2026-06-23)",
+    "status": "pending",
+    "tweets": [
+      "forecasting categories vs stages: sales cloud scenarios punish sloppy vocabulary.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-23T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0027",
+    "title": "Tip — exam grind (2026-06-24)",
+    "status": "pending",
+    "tweets": [
+      "campaign influence: if marketing cloud engagement leaks into your admin exam brain, know the 101 version.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-24T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0028",
+    "title": "Tip — platform pattern (2026-06-24)",
+    "status": "pending",
+    "tweets": [
+      "lead conversion mapping isn't trivia — it's how ops survives messy stacks.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-24T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0029",
+    "title": "Tip — exam grind (2026-06-25)",
+    "status": "pending",
+    "tweets": [
+      "duplicate lead handling: matching on email only vs fuzzy — stem usually hints which evil you picked.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-25T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0030",
+    "title": "Tip — platform pattern (2026-06-25)",
+    "status": "pending",
+    "tweets": [
+      "assignment rules run once on insert — if the scenario needs re-evaluation, that's a different tool.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-25T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0031",
+    "title": "Tip — exam grind (2026-06-26)",
+    "status": "pending",
+    "tweets": [
+      "escalation rules vs milestone: service cloud loves 'timer' language — learn which one owns clocks.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-26T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0032",
+    "title": "Tip — platform pattern (2026-06-26)",
+    "status": "pending",
+    "tweets": [
+      "entitlement processes: you won't implement one on the exam, but you might recognize the shape.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-26T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0033",
+    "title": "Tip — exam grind (2026-06-27)",
+    "status": "pending",
+    "tweets": [
+      "survey vs feedback: newer features show up as 'pick the native option' stems.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-27T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0034",
+    "title": "Tip — platform pattern (2026-06-27)",
+    "status": "pending",
+    "tweets": [
+      "dynamic forms: visibility rules vs FLS — both can hide fields, different knobs.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-27T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0035",
+    "title": "Tip — exam grind (2026-06-28)",
+    "status": "pending",
+    "tweets": [
+      "dependent lookups: if the stem says 'only show contacts for selected account,' that's relationship filters.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-28T09:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0036",
+    "title": "Tip — platform pattern (2026-06-28)",
+    "status": "pending",
+    "tweets": [
+      "junction objects: many-to-many stories almost always want the junction named explicitly.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-28T15:45:00-04:00",
+    "certFocus": "agentforce-specialist",
+    "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0037",
+    "title": "Tip — exam grind (2026-06-29)",
+    "status": "pending",
+    "tweets": [
+      "master-detail vs lookup cascade: delete behavior is the exam's favorite cudgel.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-29T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0038",
+    "title": "Tip — platform pattern (2026-06-29)",
+    "status": "pending",
+    "tweets": [
+      "roll-up summary eligibility: master-detail isn't the only story anymore — know current guide language.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-29T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0039",
+    "title": "Tip — exam grind (2026-06-30)",
+    "status": "pending",
+    "tweets": [
+      "cross filters in reports: 'with / without' language is a tell.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-06-30T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0040",
+    "title": "Tip — platform pattern (2026-06-30)",
+    "status": "pending",
+    "tweets": [
+      "bucket vs summary formula: buckets are for bands; summaries aggregate — don't swap under pressure.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-06-30T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0041",
+    "title": "Tip — exam grind (2026-07-01)",
+    "status": "pending",
+    "tweets": [
+      "joined reports: when one dataset isn't enough — stem usually screams 'different objects.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-01T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0042",
+    "title": "Tip — platform pattern (2026-07-01)",
+    "status": "pending",
+    "tweets": [
+      "row-level formulas in reports: quick math without a field — exam likes 'no new custom field' constraints.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-01T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0043",
+    "title": "Tip — exam grind (2026-07-02)",
+    "status": "pending",
+    "tweets": [
+      "conditional highlighting: sounds cosmetic — sometimes it's the 'flag outliers' answer.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-02T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0044",
+    "title": "Tip — platform pattern (2026-07-02)",
+    "status": "pending",
+    "tweets": [
+      "export reports vs data loader: one is snapshot; one is operational — read the stem's job.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-02T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0045",
+    "title": "Tip — exam grind (2026-07-03)",
+    "status": "pending",
+    "tweets": [
+      "sandbox refresh: devs forget admins own the calendar — maintenance beats heroics.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-07-03T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0046",
+    "title": "Tip — platform pattern (2026-07-03)",
+    "status": "pending",
+    "tweets": [
+      "change sets + profiles: the exam loves 'forgot to include the tab' tragedies.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-03T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0047",
+    "title": "Tip — exam grind (2026-07-04)",
+    "status": "pending",
+    "tweets": [
+      "metadata coverage: if your study plan is 100% ui clicking, add one hour reading deployment boundaries.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-04T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0048",
+    "title": "Tip — platform pattern (2026-07-04)",
+    "status": "pending",
+    "tweets": [
+      "api names vs labels: automation breaks on renames — stems sometimes test whether you know that.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-04T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0049",
+    "title": "Tip — exam grind (2026-07-05)",
+    "status": "pending",
+    "tweets": [
+      "custom metadata in formulas: not every org uses it — exam might still mention the pattern.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-05T09:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0050",
+    "title": "Tip — platform pattern (2026-07-05)",
+    "status": "pending",
+    "tweets": [
+      "summer '26 prep: same ritual — exam guide date first, youtube second.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-07-05T15:45:00-04:00",
+    "certFocus": "business-analyst",
+    "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+  },
+  {
+    "id": "gw-bk26-0051",
+    "title": "Tip — exam grind (2026-07-06)",
+    "status": "pending",
+    "tweets": [
+      "if you're burnt out, swap depth for one timed practice block.\n\nconsistency beats another passive module.\n\n#Trailblazer"
+    ],
+    "scheduledFor": "2026-07-06T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0052",
+    "title": "Tip — platform pattern (2026-07-06)",
+    "status": "pending",
+    "tweets": [
+      "teach one concept out loud before you call the day done.\n\nif you can't say it, you don't own it yet.\n\n#SalesforceCertified"
+    ],
+    "scheduledFor": "2026-07-06T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0053",
+    "title": "Tip — exam grind (2026-07-07)",
+    "status": "pending",
+    "tweets": [
+      "exam anxiety is often hydration + sleep pretending to be 'i forgot everything.'\n\nboring fixes work.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-07-07T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0054",
+    "title": "Tip — platform pattern (2026-07-07)",
+    "status": "pending",
+    "tweets": [
+      "retake mindset: narrow the syllabus to the score report, not your ego.\n\n#SalesforceCertified"
+    ],
+    "scheduledFor": "2026-07-07T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0055",
+    "title": "Tip — exam grind (2026-07-08)",
+    "status": "pending",
+    "tweets": [
+      "community answers are helpful — verify against the guide for your cert generation.\n\n#SalesforceOhana"
+    ],
+    "scheduledFor": "2026-07-08T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0056",
+    "title": "Tip — platform pattern (2026-07-08)",
+    "status": "pending",
+    "tweets": [
+      "linkedin is loud — the exam is quiet and specific.\n\ntrain on stems, not hot takes.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-08T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0057",
+    "title": "Tip — exam grind (2026-07-09)",
+    "status": "pending",
+    "tweets": [
+      "pd1 reading: trace variable scope in the snippet before you admire the syntax.\n\n#SalesforceDev"
+    ],
+    "scheduledFor": "2026-07-09T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0058",
+    "title": "Tip — platform pattern (2026-07-09)",
+    "status": "pending",
+    "tweets": [
+      "test data factories in real life; on pd1 you mostly predict assert failures.\n\n#SalesforceDev"
+    ],
+    "scheduledFor": "2026-07-09T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0059",
+    "title": "Tip — exam grind (2026-07-10)",
+    "status": "pending",
+    "tweets": [
+      "lwc bundle size won't save you if you miss @api vs @track semantics.\n\n#SalesforceDev"
+    ],
+    "scheduledFor": "2026-07-10T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0060",
+    "title": "Tip — platform pattern (2026-07-10)",
+    "status": "pending",
+    "tweets": [
+      "agentforce study: one broken action teaches more than ten perfect demos.\n\n#Agentforce"
+    ],
+    "scheduledFor": "2026-07-10T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "gw-bk26-0061",
+    "title": "Tip — exam grind (2026-07-11)",
+    "status": "pending",
+    "tweets": [
+      "data cloud stems on admin exams: high level identity + consent language — don't deep-dive the wrong cert.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-11T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0062",
+    "title": "Tip — platform pattern (2026-07-11)",
+    "status": "pending",
+    "tweets": [
+      "formula fields crossing objects bite on 201 when you forget relationship limits.\n\nif the stem whispers 'rollup without rollup summary,' slow down.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-11T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0063",
+    "title": "Tip — exam grind (2026-07-12)",
+    "status": "pending",
+    "tweets": [
+      "custom report types are boring until the stem wants a join you didn't model.\n\nknow what CRT can and can't see before you burn time.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-12T09:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0064",
+    "title": "Tip — platform pattern (2026-07-12)",
+    "status": "pending",
+    "tweets": [
+      "hierarchy columns in reports aren't decoration.\n\nsometimes they're the difference between 'looks right' and 'answers the question.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-12T15:45:00-04:00",
+    "certFocus": "cpq-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+  },
+  {
+    "id": "gw-bk26-0065",
+    "title": "Tip — exam grind (2026-07-13)",
+    "status": "pending",
+    "tweets": [
+      "dashboard filters vs report filters stack wrong in people's heads.\n\nread which layer the scenario is actually testing.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-13T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0066",
+    "title": "Tip — platform pattern (2026-07-13)",
+    "status": "pending",
+    "tweets": [
+      "data skew on lookups is real exam vocabulary.\n\none parent with 50k children is a different problem than 'sharing is hard.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-13T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0067",
+    "title": "Tip — exam grind (2026-07-14)",
+    "status": "pending",
+    "tweets": [
+      "person accounts show up rarely — and people panic.\n\nif the stem mentions consumers + b2c, don't force a b2b mental model.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-14T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0068",
+    "title": "Tip — platform pattern (2026-07-14)",
+    "status": "pending",
+    "tweets": [
+      "territory management vs role hierarchy: pick the story the stem is telling, not your favorite feature.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-14T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0069",
+    "title": "Tip — exam grind (2026-07-15)",
+    "status": "pending",
+    "tweets": [
+      "manual sharing is the 'break glass' answer.\n\nif the stem wants maintainability at scale, it's usually not manual.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-15T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0070",
+    "title": "Tip — platform pattern (2026-07-15)",
+    "status": "pending",
+    "tweets": [
+      "criteria-based sharing rules vs owner-based: different triggers, same exam noise.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-15T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0071",
+    "title": "Tip — exam grind (2026-07-16)",
+    "status": "pending",
+    "tweets": [
+      "login flows vs post-login flows: timing matters for 'first screen' stories.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-16T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0072",
+    "title": "Tip — platform pattern (2026-07-16)",
+    "status": "pending",
+    "tweets": [
+      "experience cloud vs internal security: guests exist. read for external user language.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-16T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0073",
+    "title": "Tip — exam grind (2026-07-17)",
+    "status": "pending",
+    "tweets": [
+      "field-level security vs page layout read-only: users feel it differently — exam cares which tool you picked.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-17T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0074",
+    "title": "Tip — platform pattern (2026-07-17)",
+    "status": "pending",
+    "tweets": [
+      "record-triggered flow 'only when' conditions save you from infinite loops — know that toggle exists.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-07-17T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0075",
+    "title": "Tip — exam grind (2026-07-18)",
+    "status": "pending",
+    "tweets": [
+      "subflow error handling isn't glamorous — it's where production vs exam scenarios meet.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-07-18T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0076",
+    "title": "Tip — platform pattern (2026-07-18)",
+    "status": "pending",
+    "tweets": [
+      "platform events for integrations: exam might test publish vs subscribe mental model, not your kafka opinions.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-18T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0077",
+    "title": "Tip — exam grind (2026-07-19)",
+    "status": "pending",
+    "tweets": [
+      "outbound messages still haunt older orgs — if your prep skipped integrations entirely, fix the gap.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-19T09:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+  },
+  {
+    "id": "gw-bk26-0078",
+    "title": "Tip — platform pattern (2026-07-19)",
+    "status": "pending",
+    "tweets": [
+      "custom settings vs custom metadata: one is data-ish, one is config-ish — the exam loves that distinction.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-19T15:45:00-04:00",
+    "certFocus": "marketing-cloud-engagement-admin",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0079",
+    "title": "Tip — exam grind (2026-07-20)",
+    "status": "pending",
+    "tweets": [
+      "hierarchy custom settings: sneaky way to branch behavior without hardcoding profile names.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-20T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0080",
+    "title": "Tip — platform pattern (2026-07-20)",
+    "status": "pending",
+    "tweets": [
+      "named credentials abstract auth — exam items sometimes test 'who runs the call,' not the endpoint string.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-20T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0081",
+    "title": "Tip — exam grind (2026-07-21)",
+    "status": "pending",
+    "tweets": [
+      "external objects and indirect lookups: if you only studied core CRM, skim this once.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-21T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0082",
+    "title": "Tip — platform pattern (2026-07-21)",
+    "status": "pending",
+    "tweets": [
+      "big objects: know the 'when you can't use normal soql like a toddler' story at a high level.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-21T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0083",
+    "title": "Tip — exam grind (2026-07-22)",
+    "status": "pending",
+    "tweets": [
+      "softphone vs omni: service cloud stems sometimes telegraph which routing world you're in.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-22T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0084",
+    "title": "Tip — platform pattern (2026-07-22)",
+    "status": "pending",
+    "tweets": [
+      "macros vs quick actions: both save clicks — different constraints.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-22T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0085",
+    "title": "Tip — exam grind (2026-07-23)",
+    "status": "pending",
+    "tweets": [
+      "quick actions vs buttons: screen vs url vs create — read the verb in the stem.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-23T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0086",
+    "title": "Tip — platform pattern (2026-07-23)",
+    "status": "pending",
+    "tweets": [
+      "path vs kanban: path is guidance; kanban is a list view mood — don't swap them under stress.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-23T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0087",
+    "title": "Tip — exam grind (2026-07-24)",
+    "status": "pending",
+    "tweets": [
+      "forecasting categories vs stages: sales cloud scenarios punish sloppy vocabulary.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-24T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0088",
+    "title": "Tip — platform pattern (2026-07-24)",
+    "status": "pending",
+    "tweets": [
+      "campaign influence: if marketing cloud engagement leaks into your admin exam brain, know the 101 version.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-24T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0089",
+    "title": "Tip — exam grind (2026-07-25)",
+    "status": "pending",
+    "tweets": [
+      "lead conversion mapping isn't trivia — it's how ops survives messy stacks.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-25T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0090",
+    "title": "Tip — platform pattern (2026-07-25)",
+    "status": "pending",
+    "tweets": [
+      "duplicate lead handling: matching on email only vs fuzzy — stem usually hints which evil you picked.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-25T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0091",
+    "title": "Tip — exam grind (2026-07-26)",
+    "status": "pending",
+    "tweets": [
+      "assignment rules run once on insert — if the scenario needs re-evaluation, that's a different tool.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-26T09:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0092",
+    "title": "Tip — platform pattern (2026-07-26)",
+    "status": "pending",
+    "tweets": [
+      "escalation rules vs milestone: service cloud loves 'timer' language — learn which one owns clocks.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-26T15:45:00-04:00",
+    "certFocus": "slack-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+  },
+  {
+    "id": "gw-bk26-0093",
+    "title": "Tip — exam grind (2026-07-27)",
+    "status": "pending",
+    "tweets": [
+      "entitlement processes: you won't implement one on the exam, but you might recognize the shape.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-27T09:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "gw-bk26-0094",
+    "title": "Tip — platform pattern (2026-07-27)",
+    "status": "pending",
+    "tweets": [
+      "survey vs feedback: newer features show up as 'pick the native option' stems.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-27T15:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "gw-bk26-0095",
+    "title": "Tip — exam grind (2026-07-28)",
+    "status": "pending",
+    "tweets": [
+      "dynamic forms: visibility rules vs FLS — both can hide fields, different knobs.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-28T09:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0096",
+    "title": "Tip — platform pattern (2026-07-28)",
+    "status": "pending",
+    "tweets": [
+      "dependent lookups: if the stem says 'only show contacts for selected account,' that's relationship filters.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-28T15:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "gw-bk26-0097",
+    "title": "Tip — exam grind (2026-07-29)",
+    "status": "pending",
+    "tweets": [
+      "junction objects: many-to-many stories almost always want the junction named explicitly.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-29T09:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0098",
+    "title": "Tip — platform pattern (2026-07-29)",
+    "status": "pending",
+    "tweets": [
+      "master-detail vs lookup cascade: delete behavior is the exam's favorite cudgel.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-29T15:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "gw-bk26-0099",
+    "title": "Tip — exam grind (2026-07-30)",
+    "status": "pending",
+    "tweets": [
+      "roll-up summary eligibility: master-detail isn't the only story anymore — know current guide language.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-30T09:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0100",
+    "title": "Tip — platform pattern (2026-07-30)",
+    "status": "pending",
+    "tweets": [
+      "cross filters in reports: 'with / without' language is a tell.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-30T15:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "gw-bk26-0101",
+    "title": "Tip — exam grind (2026-07-31)",
+    "status": "pending",
+    "tweets": [
+      "bucket vs summary formula: buckets are for bands; summaries aggregate — don't swap under pressure.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-07-31T09:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-bk26-0102",
+    "title": "Tip — platform pattern (2026-07-31)",
+    "status": "pending",
+    "tweets": [
+      "joined reports: when one dataset isn't enough — stem usually screams 'different objects.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-07-31T15:45:00-04:00",
+    "certFocus": "developer-1",
+    "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
   }
 ]

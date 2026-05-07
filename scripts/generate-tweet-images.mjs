@@ -9,6 +9,7 @@
  * Usage:
  *   node scripts/generate-tweet-images.mjs                    # pending threads + pending tip PNGs
  *   node scripts/generate-tweet-images.mjs <thread-id>        # one thread + pending tips
+ *   node scripts/generate-tweet-images.mjs <thread-id> --no-tips
  *   node scripts/generate-tweet-images.mjs --tips-only        # all tips (sets imageFile on every row)
  *   node scripts/generate-tweet-images.mjs --tips-only --missing-only  # tips missing PNG or imageFile
  */
@@ -804,6 +805,24 @@ function extractUrl(tweets) {
   return 'https://www.trailblazeprep.com';
 }
 
+/** Final tweet is weekly spotlight p.s. only — main CTA lives on previous tweet. */
+function isSpotlightPsTweet(text) {
+  const t = (text || '').trim().toLowerCase();
+  return t.startsWith('p.s.') && t.includes('spotlight');
+}
+
+function ctaTweetIndex(thread) {
+  const n = thread.tweets.length;
+  if (n >= 2 && isSpotlightPsTweet(thread.tweets[n - 1])) return n - 2;
+  return n - 1;
+}
+
+/** Prefer topic page for link card when queue row tags a primary exam topic. */
+function ctaUrlForThread(thread) {
+  if (thread.topicCertPath) return thread.topicCertPath;
+  return extractUrl(thread.tweets);
+}
+
 function extractCertName(title) {
   const m = title.match(/\(([^)]+)\)/);
   if (m) return m[1];
@@ -842,14 +861,15 @@ async function generateImages(browser, thread) {
   images[2] = queueRelImage(`${thread.id}-stats.png`);
   console.log(`  ✅ Stats: ${thread.id}-stats.png`);
 
-  // CTA image (last tweet)
-  const url = extractUrl(thread.tweets);
+  // CTA image (usually last tweet; if final tweet is spotlight p.s., attach to prior value tweet)
+  const ctaIdx = ctaTweetIndex(thread);
+  const url = ctaUrlForThread(thread);
   const certName = extractCertName(thread.title);
   const ctaPath = resolve(IMAGES_DIR, `${thread.id}-cta.png`);
   await page.setContent(ctaTemplate(url, certName, sfDataUrl), { waitUntil: 'domcontentloaded' });
   await page.screenshot({ path: ctaPath, type: 'png' });
-  images[thread.tweets.length - 1] = queueRelImage(`${thread.id}-cta.png`);
-  console.log(`  ✅ CTA:   ${thread.id}-cta.png`);
+  images[ctaIdx] = queueRelImage(`${thread.id}-cta.png`);
+  console.log(`  ✅ CTA:   ${thread.id}-cta.png (tweet ${ctaIdx})`);
 
   // Link reply image (immediate reply with URL)
   let immediateReplyImage = null;
@@ -895,6 +915,7 @@ async function main() {
   const argv = process.argv.slice(2);
   const tipsOnly = argv.includes('--tips-only');
   const missingOnly = argv.includes('--missing-only');
+  const skipTips = argv.includes('--no-tips');
   const targetId = argv.find((a) => !a.startsWith('--')) ?? null;
 
   if (tipsOnly) {
@@ -948,7 +969,9 @@ async function main() {
     }
   }
 
-  await generateTipImages(browser, { scope: 'pending', missingOnly: false });
+  if (!skipTips) {
+    await generateTipImages(browser, { scope: 'pending', missingOnly: false });
+  }
 
   await browser.close();
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2));
