@@ -1423,7 +1423,7 @@
       "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nthe exam loves jamming both into one story.",
       "trap 4 — workflow rules & process builder.\n\nstill show up in old notes.\n\nfor *new* declarative automation the exam wants flow-first energy. if the answers still treat workflow like the default, your material is stale.",
       "trap 5 — stem says 'without code.'\n\nyour lizard brain reaches for legacy tools.\n\non current 201, 'without code' + update related records usually means flow — boring, but that's the game now.",
-      "which trap got you last time? reply A–E:\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
+      "which trap got you last time? reply A–E — i check back same-day.\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
       "free admin qs mapped to topics (same stuff the guide weights):\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for part 2 (flow timing traps) + weekly breakdowns + no-fluff tips.\n\n#ADM201 #SalesforceAdmin",
       "p.s. site spotlight this week is platform foundations — free page:\n\nhttps://trailblazeprep.com/certifications/platform-foundations\n\n#Salesforce"
     ],
@@ -1472,7 +1472,7 @@
     },
     "status": "pending",
     "tweets": [
-      "part 2 — flow timing traps on ADM-201.\n\nthe exam doesn't want you to draw diagrams like an architect.\n\nit wants you to know *when* the platform runs something — because wrong timing = wrong answer.\n\na thread\n\n#ADM201 #SalesforceFlow",
+      "before-save vs after-save — still a timing fork on the 2026 ADM outline.\n\nnot architecture diagrams. wrong *when* = wrong answer.\n\nflow timing traps\n\na thread\n\n#ADM201 #SalesforceFlow",
       "before-save vs after-save isn't trivia.\n\nbefore-save runs in the same database transaction as the save. good for field updates that have to happen *before* validation finishes its job.\n\nafter-save = you already committed. different constraints.",
       "record-triggered flow that updates the *same* record that fired it — know what the exam considers safe vs recursive nightmare fuel.\n\nif you've only built happy-path flows, this is where practice qs beat youtube.",
       "scheduled paths vs record-triggered.\n\nscheduled = clock / batch-ish mental model.\n\nrecord-triggered = something happened to a row, react now (with entry conditions). stems usually telegraph which one they want.",
@@ -1526,7 +1526,7 @@
     },
     "status": "pending",
     "tweets": [
-      "part 3 — security *combo* traps.\n\n201 doesn't just ask 'what is OWD.'\n\nit stacks profile + permission set + FLS + maybe sharing in one ugly paragraph.\n\na thread\n\n#ADM201 #SalesforceAdmin",
+      "FLS + profile + sharing in one ugly paragraph — still how 201 stacks security on the guide.\n\nOWD is the basement. everything else is furniture on top.\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "OWD is the basement.\n\neverything else is furniture you put on top.\n\nif you start reasoning from permission sets without anchoring OWD, you'll talk yourself into a clever wrong answer.",
       "FLS can make a record visible but a field 'disappear.'\n\npeople mix that up with record access.\n\nexam loves 'user sees the row but not the amount' style stories — that's not magically sharing rules every time.",
       "permission set groups vs one giant profile.\n\nreal orgs use groups. the exam sometimes wants the *least admin overhead* answer that still meets a weird requirement.\n\nread the stem for 'least maintenance' language.",
@@ -1580,7 +1580,7 @@
     },
     "status": "pending",
     "tweets": [
-      "part 4 — exam wording.\n\nSalesforce doesn't ask for the 'correct' architecture in your head.\n\nit asks BEST / MOST / LEAST in a *constrained* story.\n\nthat's a different skill than twitter debates.\n\n#ADM201",
+      "BEST / MOST / LEAST — still how 201 hides the Salesforce answer in 2026.\n\nconstrained story beats the perfect org design in your head.\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "BEST usually means: most native, most maintainable, least surprise for the next admin — not the cleverest thing you could build with enough time.",
       "MOST appropriate = often 'pick the least destructive option' when two features could technically work.\n\ndata integrity beats vibes. declarative beats code when the stem allows both.",
       "LEAST likely to cause issues = your pessimist hat.\n\nwhat breaks when volume doubles? what breaks when a new profile shows up? the exam rewards boring stability here.",
