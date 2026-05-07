@@ -35,7 +35,9 @@
     "cert:migration": "node scripts/cert-migration-status.mjs",
     "cert:bulk-legacy": "node scripts/bulk-migrate-cert-legacy-bodies.mjs",
     "cert:promote-associate": "node scripts/promote-all-certs-to-associate.mjs",
-    "bot:train": "node scripts/train-bot.mjs"
+    "bot:train": "node scripts/train-bot.mjs",
+    "content:advisors": "node scripts/query-content-advisors.mjs",
+    "x:tag-cert-focus": "node scripts/tag-queue-cert-focus.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.3",

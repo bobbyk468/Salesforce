@@ -41,7 +41,9 @@
       }
     ],
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-22T08:45:01.290Z"
+    "engagementPostedAt": "2026-03-22T08:45:01.290Z",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "w1-thread-2-career-story",
@@ -85,7 +87,9 @@
     "postedAt": "2026-03-22T16:20:07.920Z",
     "firstTweetId": "2035753309353689515",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-22T18:45:01.262Z"
+    "engagementPostedAt": "2026-03-22T18:45:01.262Z",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "w1-thread-3-study-method",
@@ -130,7 +134,9 @@
     "postedAt": "2026-03-24T16:30:25.449Z",
     "firstTweetId": "2036480676825014633",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "w2-thread-1-pd1-roadmap",
@@ -175,7 +181,9 @@
     "postedAt": "2026-03-24T16:30:48.003Z",
     "firstTweetId": "2036480773554053256",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z",
+    "topicCert": "developer-1",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
   },
   {
     "id": "w2-thread-2-pd1-apex",
@@ -220,7 +228,9 @@
     "postedAt": "2026-03-24T16:31:11.451Z",
     "firstTweetId": "2036480869192573273",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z",
+    "topicCert": "developer-1",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
   },
   {
     "id": "w2-thread-3-pd1-vs-admin",
@@ -265,7 +275,9 @@
     "postedAt": "2026-03-24T16:31:34.593Z",
     "firstTweetId": "2036480967167320099",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z",
+    "topicCert": "developer-1",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
   },
   {
     "id": "w3-thread-1-app-builder",
@@ -310,7 +322,9 @@
     "postedAt": "2026-03-24T16:31:58.227Z",
     "firstTweetId": "2036481062801686967",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-24T18:45:01.656Z"
+    "engagementPostedAt": "2026-03-24T18:45:01.656Z",
+    "topicCert": "app-builder",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/app-builder"
   },
   {
     "id": "w3-thread-2-flow-tips",
@@ -400,7 +414,9 @@
     "postedAt": "2026-03-24T22:00:23.942Z",
     "firstTweetId": "2036563719547998245",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-25T00:45:01.196Z"
+    "engagementPostedAt": "2026-03-25T00:45:01.196Z",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "w4-thread-1-agentforce",
@@ -443,7 +459,9 @@
     ],
     "immediateReply": "agentforce specialist prep: https://trailblazeprep.com/certifications/agentforce-specialist\n\n@salesforceben @walters954\n\n#Agentforce #SalesforceAI",
     "postedAt": "2026-03-25T14:09:49.197Z",
-    "firstTweetId": "2036807681093357976"
+    "firstTweetId": "2036807681093357976",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "w4-thread-2-adm211",
@@ -488,7 +506,9 @@
     "postedAt": "2026-03-25T23:22:04.396Z",
     "firstTweetId": "2036941208757637438",
     "engagementPosted": true,
-    "engagementPostedAt": "2026-03-26T02:45:01.100Z"
+    "engagementPostedAt": "2026-03-26T02:45:01.100Z",
+    "topicCert": "advanced-administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
   },
   {
     "id": "w4-thread-3-salary-stats",
@@ -538,39 +558,93 @@
   {
     "id": "w5-thread-1-pd1-secrets",
     "title": "Week 5 — PD1: What the courses don't tell you",
-    "status": "pending",
+    "series": {
+      "id": "pd1-without-java",
+      "label": "PD1 without cosplaying Java",
+      "episode": 1,
+      "episodesPlanned": 2,
+      "nextEntryId": "w5-thread-4-pd1-episode-2"
+    },
+    "mediaNotes": {
+      "video": "15–30s vertical: Apex SOQL-in-loop vs bulkified snippet side-by-side"
+    },
+    "status": "posted",
     "tweets": [
-      "I've seen smart people fail PD1 three times in a row.\n\nnot because they couldn't code.\n\nbecause they studied Apex like a Java course instead of a Salesforce exam.\n\nhere's what actually matters ",
+      "smart people fail PD1 three times because they studied Apex like Java.\n\nnot because they couldn't code.\n\nbecause the exam tests the platform, not your repo skills.\n\nhere's what actually matters ",
       "the exam doesn't care if you can build an app.\n\nit cares if you know what breaks when your code runs on a million records at once.\n\nevery scenario question is secretly asking: 'what governor limit is being violated here?'\n\nif you don't see that, you're reading it wrong.",
       "three patterns that answer maybe 40% of the exam:\n\n- SOQL inside a for-loop → wrong\n- DML inside a for-loop → wrong\n- hardcoded IDs in code → wrong\n\nthey'll phrase these 8 different ways. you need to recognize the pattern, not memorize the phrasing.",
-      "the LWC question everyone gets wrong:\n\n@wire = fetch data from Salesforce\n@api = expose a prop to the parent component\n@track = make an object or array reactive\n\nsounds simple. but the exam gives you a scenario and asks which decorator 'best fits.'\n\nthe trick is knowing WHEN each one applies, not just what each one is.",
-      "test classes trip up so many people.\n\nthe thing that costs people points: not knowing that Test.startTest() / Test.stopTest() resets your governor limits inside the block.\n\nalso: System.assertEquals(expected, actual) — expected goes FIRST. I know it feels backwards. it is backwards. memorize it anyway.",
+      "LWC trap: exam asks WHEN to use each decorator, not the definition.\n\n@wire = pull data from Salesforce\n@api = passed in from parent\n@track = reactive local state\n\nKnow the use case. That's what scores points.",
+      "Test classes cost points when you miss two things:\n\n1. Test.startTest()/stopTest() resets governor limits inside the block.\n2. assertEquals(expected, actual) — expected FIRST.\n\nMemorize the order. It's backwards but required.",
       "real talk: PD1 is a comprehension exam, not a coding exam.\n\nyou don't write code. you read code and answer 'what happens when this runs?'\n\nbig difference. if you've been writing Apex to study, you might be over-engineering your prep.",
       "what's your actual PD1 blocker right now?\n\nA) Apex syntax is foreign to me\nB) LWC vs Aura still confusing\nC) governor limits don't click yet\nD) can't find practice questions that feel like the real exam\n\ndrop it — I'll point you in the right direction for each one",
-      "if it's D:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\n60+ questions mapped to actual exam sections. free. full explanations on every answer.\n\nmade by people who've sat this exam, not people who've taught about it.\n\n#PD1 #SalesforceDev #SalesforceOhana"
+      "free PD1 qs (mapped by section):\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for part 2 tomorrow — the exact reading habits that score points on PD1.\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#PD1 #SalesforceDev"
     ],
     "engagementTweets": [
       {
-        "text": "unpopular opinion: most PD1 prep content teaches you to be a Salesforce developer. the exam tests whether you understand the Salesforce platform. those are not the same thing and nobody talks about it."
+        "text": "quote-bait: most PD1 prep teaches you to be a Salesforce developer. the exam tests whether you understand the platform. those are not the same thing — fight me in the quotes if you disagree."
       },
       {
         "text": "quick question: when you started studying PD1, what scared you most?\n\ncoding? governor limits? LWC? the test environment?\n\ngenuinely curious what the biggest mental block is for people"
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-02T10:30:00-04:00",
+    "postedAt": "2026-05-07T05:00:20.340Z",
+    "firstTweetId": "2052252089225769298",
+    "topicCert": "developer-1",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
+  },
+  {
+    "id": "w5-thread-4-pd1-episode-2",
+    "title": "Week 5b — PD1 without Java (part 2): reading code like the exam does",
+    "series": {
+      "id": "pd1-without-java",
+      "label": "PD1 without cosplaying Java",
+      "episode": 2,
+      "episodesPlanned": 2,
+      "prevEntryId": "w5-thread-1-pd1-secrets",
+      "nextEntryId": null
+    },
+    "status": "pending",
+    "tweets": [
+      "part 2 — PD1 isn't Java (see yesterday's thread).\n\ntoday: two reading habits that claw back points when you're tired and the snippet looks like noise.\n\na short thread\n\n#PD1",
+      "habit 1: see a loop + SOQL or DML inside → stop reading line by line.\n\nask 'bulk safe or not?' first.\n\nmost trap answers assume it isn't.",
+      "habit 2: LWC qs want WHEN to use a decorator, not the textbook definition.\n\nwire = pull from Salesforce. @api = parent passes it in. @track = local state that has to rerender.",
+      "if Test.startTest / stopTest shows up, they're usually testing limit reset + async timing — read what wraps the asserts, not just the asserts.",
+      "you won't write Apex on this exam. you'll read it like a debugger.\n\ncover the answers, predict what breaks at 10k rows, then uncover.",
+      "questions that read like the real thing (free, mapped by section):\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceDev #SalesforceOhana"
+    ],
+    "engagementTweets": [
+      {
+        "text": "PD1 hot take: if your prep is mostly typing Apex in an IDE, you're practicing the wrong muscle. the exam muscle is 'what blows up at scale.'"
+      }
+    ],
+    "scheduledFor": "2026-05-07T10:30:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "developer-1",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
   },
   {
     "id": "w5-thread-2-which-cert-first",
     "title": "Week 5 — Which cert should you get first (honest answer)",
-    "status": "pending",
+    "series": {
+      "id": "from-fail-to-seat",
+      "label": "From fail → to seat",
+      "episode": 2,
+      "episodesPlanned": 3,
+      "prevEntryId": "w5-thread-3-failure-comeback",
+      "nextEntryId": "w8-thread-1-exam-day"
+    },
+    "status": "posted",
     "tweets": [
       "everyone asks me which Salesforce cert to get first.\n\nand everyone expects me to say 'it depends.'\n\nbut I'm going to give you a real answer instead.\n\na thread",
-      "if you are completely new to Salesforce:\n\nAdmin. full stop.\n\nnot because it's easiest. because every other cert assumes you already know what a profile is, how OWD works, and what a validation rule does.\n\nskipping Admin is like skipping grammar to study literature. you can try. it just takes twice as long.",
+      "if you're brand new to Salesforce:\n\nAdmin. full stop.\n\nEvery other cert assumes you know profiles, OWD, validation rules. Skipping Admin is like skipping grammar to study literature — it just takes twice as long.",
       "if you're already an Admin and wondering what's next:\n\nstop and ask yourself ONE question first.\n\n'what role do I actually want to be hired into in 12 months?'\n\nthe answer to that question IS your next cert. not what's trending. not what your manager has. what you want to do.",
       "the mistake I see constantly:\n\npeople collecting certs they'll never use because someone on LinkedIn said they were valuable.\n\nI've spoken to people with 8 certs who can't get an interview.\nand people with 2 certs who had 3 offers.\n\nthe difference was relevance, not quantity.",
-      "if I had to pick 3 certs that give the most leverage in 2026:\n\n1. Admin — opens every door, prerequisite for nearly everything\n2. Agentforce Specialist — almost nobody has it yet, demand is rising fast\n3. Sales Cloud Consultant — every SF implementation has this role\n\nnot the most glamorous list. but the most hireable one.",
+      "3 certs with best leverage in 2026:\n\n1. Admin — prerequisite for nearly everything\n2. Agentforce Specialist — low supply, rising demand\n3. Sales Cloud Consultant — every implementation needs it\n\nNot glamorous. Highest hireability.",
       "one more thing nobody tells you:\n\nSalesforce certs expire. you need to pass maintenance exams every year to keep them active.\n\nso 8 certs means 8 maintenance exams every year. that's a real time commitment.\n\nget fewer certs you actually use. go deep on those.",
-      "where are you in your Salesforce journey right now?\n\nA) haven't started yet, completely new\nB) Admin certified, figuring out what's next\nC) Developer, aiming for Architect\nD) non-tech background, switching careers\n\ntell me and I'll give you the exact path I'd take in your position",
-      "full cert roadmaps by track — admin, developer, consultant, architect:\n\nhttps://trailblazeprep.com/certification-path\n\n#SalesforceCertification #SalesforceOhana"
+      "Where are you right now?\n\nA) brand new, haven't started\nB) Admin certified, next steps?\nC) Developer aiming for Architect\nD) career switcher, non-tech bg\n\nReply with your letter — I'll give the exact path.",
+      "roadmaps by track (admin, dev, consultant, architect):\n\nhttps://trailblazeprep.com/certification-path\n\nfollow for episode 3 (exam day) + weekly cert threads + no-fluff tips.\n\n#SalesforceCertification #SalesforceOhana"
     ],
     "engagementTweets": [
       {
@@ -579,21 +653,39 @@
       {
         "text": "if you skipped Admin and went straight to Developer or Consultant — how did that go? genuinely asking. I always assumed it was a mistake but maybe not for everyone."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-04T10:30:00-04:00",
+    "postedAt": "2026-05-07T05:00:38.924Z",
+    "firstTweetId": "2052252168162570540",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "w5-thread-3-failure-comeback",
     "title": "Week 5 — I failed ADM-201 three times",
-    "status": "pending",
+    "series": {
+      "id": "from-fail-to-seat",
+      "label": "From fail → to seat",
+      "episode": 1,
+      "episodesPlanned": 3,
+      "nextEntryId": "w5-thread-2-which-cert-first"
+    },
+    "mediaNotes": {
+      "video": "15–30s vertical: screen record practice exam score breakdown → weak sections"
+    },
+    "status": "posted",
     "tweets": [
-      "I failed ADM-201 three times.\n\nattempt 1: 57%\nattempt 2: 63%\nattempt 3: 61%\n\nI studied every single day. I wasn't slacking. I was doing everything everyone told me to do.\n\nand I kept failing.\n\nhere's what I eventually figured out ",
+      "I failed ADM-201 three times.\n\nattempt 4: 84%.\n\nsame person. I wasn't slacking — I was studying the wrong way.\n\nhere's what finally moved the score ",
       "first attempt: I did every Trailhead module in order. all 80+ of them.\n6 weeks. probably 200+ hours.\n\ngot to the exam and it felt completely different from anything I'd studied.\n\nI thought the exam was broken. it wasn't.",
       "second attempt: bought a Udemy course. watched every video. took detailed notes.\n\nwas more prepared. still failed.\n\nthird attempt: bought two practice test banks. did every single question. memorized the explanations.\n\nscored lower than attempt 2.\n\nthat one really stung.",
-      "I almost quit after attempt 3.\n\nthen someone said something that stuck:\n\n'you're memorizing correct answers, not understanding why they're correct.'\n\nI'd been using practice tests to test myself instead of using them to FIND what I didn't understand.\n\ncompletely different activity.",
-      "attempt 4 looked like this:\n\nday 1: did a full practice exam cold. didn't study anything first.\nmarked every question I wasn't 100% sure on, even the ones I guessed right.\n\nthen: for every single flagged question — found the official Salesforce documentation and read it.\n\nnot a summary. the actual docs.",
+      "I almost quit after attempt 3.\n\nthen someone said something that stuck:\n\n'you're memorizing correct answers, not understanding why they're correct.'\n\nI'd been using practice tests to test myself instead of using them to FIND what I didn't understand.",
+      "attempt 4 looked like this:\n\nday 1: full practice exam cold. no cram first.\nmarked every Q I wasn't 100% on — including lucky guesses.\n\neach flag → opened official Salesforce docs for that topic.\n\nnot a summary. the actual docs.",
       "then did the practice exam again. only paid attention to my weak sections.\n\nkept repeating until I was consistently getting those sections right.\n\ndidn't touch the topics I already knew.\n\nattempt 4: 84%.\n\nnot because I studied more. because I stopped studying what I already knew.",
       "the method: diagnose → learn the concept → verify.\n\nnot: study everything → hope → test.\n\nthe exam is not testing your memory. it's testing whether you understand WHY one approach is better than another in a specific situation.\n\nthat's a different skill than memorization.",
-      "if you've failed an SF exam: you're probably not studying wrong topics. you're studying in the wrong way.\n\nfree practice questions with explanations on every answer:\n\nhttps://trailblazeprep.com/certifications/administrator\n\n#ADM201 #SalesforceAdmin #SalesforceOhana"
+      "quick poll — which ADM-201 attempt are you on? reply A/B/C/D + follow if this hit home. I'll drop the full study method next week.\n\nA) first sit\nB) retake (2nd+)\nC) already passed\nD) not sitting yet",
+      "if you've failed an SF exam: wrong method, not wrong topics.\n\nfree qs + explanations:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for ep 3 (exam day) + weekly breakdowns + no-fluff tips.\n\n#ADM201 #SalesforceAdmin"
     ],
     "engagementTweets": [
       {
@@ -602,21 +694,34 @@
       {
         "text": "be honest: have you ever failed a Salesforce exam? drop your attempt number below. I'm willing to bet it's way more common than people admit."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-01T10:30:00-04:00",
+    "postedAt": "2026-05-07T05:00:59.659Z",
+    "firstTweetId": "2052252245983654118",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "w6-thread-1-agentforce-study",
     "title": "Week 6 — Agentforce Specialist: how to actually study for it",
-    "status": "pending",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 2,
+      "episodesPlanned": 6,
+      "prevEntryId": "w6-thread-2-spring26-changes",
+      "nextEntryId": "quiz-agentforce-aiagentsession-q"
+    },
+    "status": "posted",
     "tweets": [
       "Agentforce Specialist might be the smartest cert to get right now.\n\nnot because it's easy. because almost nobody has it yet.\n\nI mapped out exactly how I'd study for it if I were starting today.\n\na thread",
-      "first: ignore the hype and understand what the exam is actually testing.\n\nit's not about whether you can code AI.\n\nit's about whether you can configure an Agent correctly — set up Topics, write Instructions, build Actions, test behavior — and know WHEN to use an Agent vs a Flow vs just a bot.",
-      "the exam breakdown:\n\nAgent Building: 35% (the biggest section by far)\nAgent Design: 22%\nAgentforce Concepts: 17%\nTesting & Debugging: 14%\nEvaluate and Iterate: 12%\n\nnotice that 35% is hands-on building. you cannot pass this section by reading about it.\nyou have to actually build agents in a developer org.",
-      "the section that trips people up: Agent Design.\n\nit's full of scenario questions like 'a customer is asking X, what should the agent do?'\n\nthose questions aren't testing your technical knowledge. they're testing whether you understand what an agent is supposed to be GOOD at vs what it should hand off to a human.",
-      "the Testing & Debugging section has a specific pattern I noticed:\n\nevery debugging question follows the same logic:\ntopic routing first → action inputs second → the action itself third.\n\nif the agent gives a wrong answer, you always start at the top of that chain and work down.\n\nknow that and you'll get those questions right.",
+      "First: ignore hype. The exam tests whether you can configure an Agent: Topics, Instructions, Actions, and WHEN to use Agent vs Flow vs bot.\n\nNot 'can you code AI.'",
+      "Exam breakdown:\nAgent Building 35% (hands-on)\nAgent Design 22%\nConcepts 17%\nTesting/Debug 14%\nIterate 12%\n\n35% requires actually building agents in a dev org. Reading alone won't pass it.",
+      "Agent Design trips most people.\n\nScenario Qs: 'customer asks X, what should agent do?'\n\nNot testing syntax — testing if you know what an agent should handle vs hand off to a human.",
+      "Testing/Debug has a pattern:\n\nWrong answer? Start at top of chain:\ntopic routing → action inputs → action itself.\n\nAlways work top-down. That's the reliable path.",
       "the single most underused resource for this exam:\n\nSalesforce's actual implementation guides for Agentforce.\nnot the marketing pages. the 'how to configure' documentation.\n\nspend 2-3 hours in there and you'll understand the exam structure better than most study guides explain it.",
       "who's currently studying for Agentforce Specialist? drop a ✋\n\nalso — what's the part you find most confusing so far? Topics? Actions? Instructions? something else?\n\nI'll do a follow-up thread on the most common answer.",
-      "full Agentforce Specialist exam breakdown and practice questions:\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\n#Agentforce #SalesforceAI #SalesforceOhana"
+      "full Agentforce Specialist exam breakdown + practice qs:\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
@@ -625,20 +730,35 @@
       {
         "text": "genuine question: are more people studying Agentforce Specialist right now because of the AI hype, or because it's actually useful for their job? curious what's driving it for people."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-04T04:00:00Z",
+    "postedAt": "2026-05-07T05:01:19.695Z",
+    "firstTweetId": "2052252332986155141",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "w6-thread-2-spring26-changes",
-    "title": "Week 6 — Spring '26 is here. Here's what changed for your exam.",
-    "status": "pending",
+    "title": "Week 6 — Spring '26: what changed for YOUR exam (short)",
+    "notes": "Shorter than the posted Spring '26 mega-thread — exam-guide angle only, no full release tour.",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 1,
+      "episodesPlanned": 6,
+      "nextEntryId": "w6-thread-1-agentforce-study"
+    },
+    "status": "posted",
     "tweets": [
-      "Spring '26 just dropped.\n\nif you're studying for a Salesforce cert right now, some of your material might already be outdated.\n\nhere's what actually changed and how to know if it affects YOUR exam\na thread\n\n#Spring26 #SalesforceCertification",
-      "quick background on why this matters:\n\nSalesforce updates exam outlines 1-3 times a year to reflect new features.\n\nif your study guide hasn't been updated, you could be preparing for questions that no longer exist — or completely missing new ones that just got added.",
-      "what changed in Spring '26 that actually shows up on exams:\n\nAgentforce: multi-agent orchestration is in. if you're studying Admin or Agentforce Specialist, expect scenario questions about how agents hand off to each other.\n\nFlow: new debugging and orchestration tools. the 'how do you debug a failing flow?' question just got more nuanced.",
-      "Data Cloud: real-time data activation and identity resolution got expanded.\n\nif you're studying Data Cloud Consultant, governance and unification are heavier now.\n\nTableau: Pulse features for proactive analytics. Tableau exams may reference these in data storytelling questions.",
-      "what hasn't changed and probably never will:\n\nthe security model. governor limits. declarative-first philosophy. sharing and visibility architecture.\n\nthese make up 40-60% of most exams and they barely move between releases.\n\nif you're cramming, start here. always.",
-      "how to check if YOUR exam changed:\n\n1. search '[cert name] exam guide' on Trailhead\n2. find the 'Last Updated' date\n3. compare section weights to your study guide\n\nif they don't match: trust the official guide.\n\nno course vendor updates faster than Salesforce does.",
-      "all TrailblazePrep pages are updated for Spring '26.\n\nhttps://trailblazeprep.com/certifications\n\nwhich cert are you studying for? drop it below and I'll tell you specifically what Spring '26 changed for that one 👇\n\n#Spring26 #SalesforceOhana"
+      "Spring '26 is live.\n\nsome of your study material is already wrong — not because you're dumb, because the exam guide moved.\n\nthis thread is ONLY what to check before you pay for a seat\n\n#Spring26 #SalesforceCertification",
+      "Salesforce updates cert outlines when the platform shifts. stale PDF = you're training on trivia that won't show up, or skipping a new scenario family entirely.",
+      "Admin / Flow-heavy / Agentforce certs: expect more scenario qs where work hands off between automation + agents. stay high level — verify what's actually listed on YOUR exam guide, not blog hype.",
+      "Data Cloud / Tableau tracks: identity, activation, and analytics storylines get heavier when those clouds expand — still, your north star is the official section weights.",
+      "the boring backbone is still most of the score: security model, governor limits, declarative-first instincts. that stuff barely moves release to release.",
+      "do this today: open your cert's exam guide on Trailhead → check Last Updated → compare weights to your notes. trust that doc over any course slide deck.",
+      "which cert? reply A/B/C/D:\n\nA) Admin / 201\nB) PD1\nC) Agentforce Specialist\nD) other (say which)\n\nI'll tell you what to re-check in the exam guide.\n\nhttps://trailblazeprep.com/certifications\n\nfollow for weekly cert threads + no-fluff tips.\n\n#Spring26 #SalesforceOhana"
     ],
     "engagementTweets": [
       {
@@ -647,21 +767,37 @@
       {
         "text": "has a Salesforce release ever caused you to fail an exam or discover your study material was outdated? I feel like this happens more than people share about it."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-03T10:30:00-04:00",
+    "postedAt": "2026-05-07T05:01:35.339Z",
+    "firstTweetId": "2052252417006490037",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "w7-thread-1-salary-truth",
     "title": "Week 7 — Real Salesforce salary numbers, no LinkedIn fluff",
-    "status": "pending",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 5,
+      "episodesPlanned": 6,
+      "prevEntryId": "quiz-agentforce-guardrails-q",
+      "nextEntryId": "w7-thread-2-admin-to-developer"
+    },
+    "mediaNotes": {
+      "video": "15–30s vertical: simple bar animation — entry / mid / senior bands (no fake precision)"
+    },
+    "status": "posted",
     "tweets": [
-      "let's talk about what Salesforce certs actually pay.\n\nnot the inflated LinkedIn numbers. not the job posting range that goes from $60k to $200k for the same role.\n\nreal ranges I've seen across hundreds of postings and salary surveys in 2026.\n\na thread",
+      "Real Salesforce salary numbers, no LinkedIn fluff.\n\nnot the zombie job posts that say $60k-$200k for the same title.\n\nreal bands from 2026 postings + community surveys — your mileage varies by location and actual scope.\n\na thread\n\n#SalesforceCareer",
       "entry level (0-2 years, 1-2 certs, US):\n\nAdmin: $65k-$80k\nJunior Developer: $75k-$95k\nJunior Consultant: $70k-$85k\n\nthe floor is higher than most people expect coming from outside tech.\n\nand it compounds fast once you add certs and project experience.",
       "mid level (3-5 years, 3-4 certs):\n\nAdmin: $90k-$110k\nDeveloper I+II: $110k-$135k\nSales/Service Consultant: $100k-$125k\nSolution Architect: $130k-$155k\n\nthis is where picking the RIGHT next cert matters most. the gap between tracks starts to widen here.",
-      "senior / architect (6+ years):\n\nSenior Admin: $110k-$135k\nSenior Developer: $130k-$160k\nApplication/System Architect: $155k-$185k\nCTA: $175k-$250k+\n\nthe CTA is the highest non-executive salary in the Salesforce ecosystem. it takes years to get there but the ceiling is real.",
-      "the certs with the best ROI relative to study time in 2026:\n\nAdmin: unlocks literally every SF job. 6-10 weeks to prepare.\nAgentforce Specialist: low supply right now, high demand. 3-4 weeks to prepare.\nSales Cloud Consultant: every enterprise CRM project needs this. 6-8 weeks.\n\nnot the flashiest list. but the highest return per hour of study.",
-      "the thing people get wrong about SF salaries:\n\nit's not about how many certs you have.\n\na person with Admin + Agentforce Specialist + 2 years of real project experience earns more than someone with 7 random certs they got for LinkedIn.\n\nproject experience is the multiplier. certs are the door opener.",
-      "what track are you on?\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect\n\ntell me and I'll share what the salary ceiling looks like at each level for your track 👇",
-      "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\n#SalesforceCareer #SalesforceJobs #SalesforceOhana"
+      "senior+ (6+ yrs):\n\nSr Admin: $110k-$135k\nSr Dev: $130k-$160k\nApp/Sys Architect: $155k-$185k\nCTA: $175k-$250k+\n\ntiny pool, long road — ceiling is still real.",
+      "best ROI vs study time (2026):\n\nAdmin — every door, ~6-10 wks.\nAgentforce Specialist — thin supply right now, ~3-4 wks.\nSales Cloud Consultant — every big CRM impl, ~6-8 wks.\n\nnot flashy. highest return per hour.",
+      "people get this wrong:\n\nit's not cert count.\n\nAdmin + Agentforce + 2 yrs real delivery > seven random badges for LinkedIn.\n\nexperience multiplies. certs open the door.",
+      "what track are you on? reply A/B/C/D + follow for the next salary + career fork threads. real numbers, no LinkedIn fluff.\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect",
+      "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceCareer #SalesforceJobs"
     ],
     "engagementTweets": [
       {
@@ -670,21 +806,39 @@
       {
         "text": "if you're comfortable sharing: what's your role, years of experience, and rough salary range? building out real salary data for the community. anonymous is fine — just 'Senior Admin, 5 years, $110k' is enough."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-05T13:00:00-04:00",
+    "postedAt": "2026-05-07T05:01:53.658Z",
+    "firstTweetId": "2052252482689261991",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "w7-thread-2-admin-to-developer",
     "title": "Week 7 — Should Admins move to Developer?",
-    "status": "pending",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 6,
+      "episodesPlanned": 6,
+      "prevEntryId": "w7-thread-1-salary-truth",
+      "nextEntryId": null
+    },
+    "mediaNotes": {
+      "carousel": "4–6 slides: one decision per slide (App Builder → try Apex → PD1 vs consultant path)"
+    },
+    "status": "posted",
     "tweets": [
-      "Admins always ask me: should I become a developer?\n\nmy honest answer: probably yes. but not for the reasons you think.\n\na thread",
-      "the obvious reason to do it: developer salaries start $15k-$25k higher than admin salaries at entry level.\n\nbut that's not actually why I'd recommend it.\n\nI'd recommend it because the Salesforce dev path has a clear ceiling — Architect — and Architects earn real money.",
-      "the part nobody tells you:\n\nif you already know Flow well, you're maybe 40% of the way to understanding Apex.\n\nthe logic is the same. variables, decisions, loops, calling other things.\n\nApex is just Flow with curly braces and stricter rules.\n\nmost Admins are closer to this than they realize.",
+      "Admins always ask: should I become a developer?\n\nmy honest answer: probably yes — but not for the obvious reason.\n\na thread\n\n#SalesforceAdmin #PD1",
+      "the obvious reason to do it: dev tracks often screen higher than pure admin at entry level in the same market.\n\nbut that's not actually why I'd recommend it.\n\nI'd recommend it because the Salesforce dev path has a clear ceiling — Architect — and that lane still pays.",
+      "Nobody tells you: if you know Flow well, you're ~40% to Apex.\n\nSame logic: variables, decisions, loops, sub-calls.\n\nApex = Flow + curly braces + stricter rules.\n\nMost Admins are closer than they think.",
       "what 'Admin to Developer' actually looks like in practice:\n\nyou'll spend 2-3 months feeling slow and stupid while Apex syntax clicks.\n\nthen it clicks. and you realize your Admin knowledge just became a superpower — because you understand the platform developers are building on.",
-      "the case for NOT switching (and nobody says this enough):\n\nif you're excellent at Admin + configuration + process consulting, the Solution Architect path might pay MORE than the pure Developer path.\n\nbusiness-side Architects can earn as much as technical ones. different route to the same ceiling.",
-      "if I were an Admin today deciding whether to go Developer:\n\n1. get App Builder first. it's 4-6 weeks from your existing knowledge and proves you can go deeper.\n2. take a week to try writing a basic Apex trigger. see if you enjoy it.\n3. if yes: PD1. if no: Consultant or Architect track.\n\ndon't decide in the abstract. try it first.",
-      "Admins: what's actually holding you back from considering Developer?\n\nA) Apex feels intimidating\nB) not sure the pay difference justifies the time investment\nC) genuinely love being an Admin and don't want to change\nD) already started studying PD1\n\nhonest answers only 👇",
-      "PD1 exam breakdown and free practice questions:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\n#SalesforceAdmin #PD1 #SalesforceCareer"
+      "The case against switching (rarely said):\n\nIf you're great at Admin + consulting, Solution Architect path can pay MORE than pure Dev.\n\nBusiness Architects earn as much as technical ones — different route, same ceiling.",
+      "If deciding today:\n1. App Builder first (4-6 wks, proves depth).\n2. Try a basic Apex trigger for 1 week. See if you like it.\n3. Yes → PD1. No → Consultant/Architect track.\n\nDon't decide abstractly. Try first.",
+      "what's actually holding you back from going Developer? reply A/B/C/D + follow if this thread helped. more career path threads coming.\n\nA) Apex feels intimidating\nB) not sure the pay bump is worth the time\nC) love being an Admin, don't want to change\nD) already grinding PD1",
+      "part of the 2026 stack series — follow for the full path (release → AI → money → fork).\n\nPD1 prep + free qs:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceAdmin #PD1"
     ],
     "engagementTweets": [
       {
@@ -693,21 +847,37 @@
       {
         "text": "Devs who started as Admins: what's one thing you wish you knew before making the switch? and Admins who've considered it and decided against it — what made you stay?"
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-06T10:30:00-04:00",
+    "postedAt": "2026-05-07T05:02:11.487Z",
+    "firstTweetId": "2052252559478583453",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
   },
   {
     "id": "w8-thread-1-exam-day",
     "title": "Week 8 — What Salesforce exam day is actually like (14 exams in)",
-    "status": "pending",
+    "series": {
+      "id": "from-fail-to-seat",
+      "label": "From fail → to seat",
+      "episode": 3,
+      "episodesPlanned": 3,
+      "prevEntryId": "w5-thread-2-which-cert-first",
+      "nextEntryId": null
+    },
+    "mediaNotes": {
+      "carousel": "4–6 slides: Webassessor check-in steps (room scan, ID, login buffer)"
+    },
+    "status": "posted",
     "tweets": [
-      "I've taken 14 Salesforce certification exams.\n\nthe first one I nearly failed the check-in process before the test even started.\n\nhere's everything I wish I'd known about exam day before attempt 1.\n\na thread\n\n#SalesforceCertification",
-      "you take the exam from your own computer via Kryterion Webassessor.\n\na live human proctor watches you through your webcam the whole time.\n\nthey will ask you to show them the room. they will ask you to remove things from your desk. they take this seriously.\n\nclear your space the night before.",
-      "the check-in process takes 15-20 minutes.\n\nif you log in at your exact exam time, you're already behind.\n\nlog in 30 minutes early. every time. without exception.\n\nalso: test your webcam and mic the night before. a technical issue 10 minutes before your exam is a very bad way to start.",
-      "the thing that trips up first-timers most: the question wording.\n\nSalesforce doesn't ask 'what is the right answer?'\n\nit asks 'what is the BEST approach?' or 'which is MOST appropriate?' or 'what is LEAST likely to cause issues?'\n\nthis matters. two answers can both be technically correct. only one is the most Salesforce-aligned.",
-      "how to handle questions you're stuck on:\n\n1. cross out the two obviously wrong answers first\n2. from the remaining options: which is more declarative / native to Salesforce?\n3. which protects data integrity better?\n4. still stuck? mark it and move on. come back later with fresh eyes.\n\nnever spend more than 90 seconds on a question the first time through.",
+      "I've taken 14 Salesforce certification exams.\n\nthe first one I nearly failed the check-in before the test started.\n\nhere's what exam day is actually like\n\na thread\n\n#SalesforceCertification",
+      "You take it from your computer via Kryterion Webassessor.\n\nLive proctor watches via webcam the whole time.\n\nThey'll ask you to show the room, clear your desk. They take it seriously.\n\nClear your space the night before.",
+      "Check-in takes 15-20 min.\n\nLog in at your exact time = already behind.\n\nLog in 30 min early. Every time.\n\nTest webcam/mic night before — a last-minute tech issue is the worst start.",
+      "Biggest first-timer trap: question wording.\n\nSF never asks 'right answer?'\n\nIt asks BEST approach / MOST appropriate / LEAST likely to cause issues.\n\nTwo answers can be correct. Only one is the Salesforce way.",
+      "Stuck on a Q?\n1. Cross out the two obviously wrong.\n2. Of remaining: more declarative/native?\n3. Better for data integrity?\n4. Still stuck? Mark & move on.\n\nNever >90s first pass. Come back fresh.",
       "the night before: do one practice exam, clear your desk, check your login.\n\nthat's it.\n\nno new material. no cramming. if you don't know it by the night before, two more hours won't save you.\n\nsleep is more useful than one more Trailhead module at 11pm.",
-      "what to do if you fail:\n\nget your score report — it shows exactly which sections you failed.\nwait a day before you decide anything.\nthen study ONLY the weak sections. don't restart everything.\n\nyou can retake after 1 day (first retake) or 14 days (subsequent). most people pass the retake once they know where they actually failed.",
-      "exam day guide + free practice questions:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\n#SalesforceCertification #SalesforceOhana #AdminCoach"
+      "If you fail:\nGet score report (shows exact weak sections).\nBreathe. Then study ONLY those sections — don't restart everything.\n\nretake rules exist and they bite — verify current policy in Webassessor before you bank on a date. the waiting game is mental too.",
+      "exam day guide + free practice qs:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceCertification #AdminCoach"
     ],
     "engagementTweets": [
       {
@@ -716,7 +886,12 @@
       {
         "text": "what was the most stressful part of your first Salesforce exam? the check-in process? the question wording? running out of time? something else? I want to write a proper prep guide for this."
       }
-    ]
+    ],
+    "scheduledFor": "2026-05-06T18:00:00-04:00",
+    "postedAt": "2026-05-07T05:02:29.370Z",
+    "firstTweetId": "2052252634355208559",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
   },
   {
     "id": "spring26-release-thread",
@@ -804,7 +979,9 @@
       "choosing between admin and app builder for your first cert:\n\nadmin first. always.\n\napp builder assumes you understand the platform. admin is where you learn it. skip that foundation and you'll feel the gaps constantly.\nfollow — i say what they won't.\n#ADM201"
     ],
     "postedAt": "2026-04-12T13:30:02.659Z",
-    "firstTweetId": "2043320741194785156"
+    "firstTweetId": "2043320741194785156",
+    "topicCert": "app-builder",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/app-builder"
   },
   {
     "id": "month2-thread-agentforce-reality",
@@ -823,7 +1000,9 @@
       "the admins getting promoted in 2026 aren't the ones who built the most agents.\n\nthey're the ones who had the balls to kill the agents that were about to ship $400k of hallucinated pipeline straight to the cro's forecast."
     ],
     "postedAt": "2026-04-14T13:30:23.221Z",
-    "firstTweetId": "2044045516988920153"
+    "firstTweetId": "2044045516988920153",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "month2-tip-4-action-vs-flow",
@@ -834,7 +1013,9 @@
       "agentforce tip: an action and a flow aren't the same thing.\n\na flow is a process you build. an action is how an agent calls it. agentforce calls flow — it doesn't replace it.\n\nthe exam will test if you know the difference.\nfollow — i say what they won't.\n#Agentforce"
     ],
     "postedAt": "2026-04-15T14:30:02.876Z",
-    "firstTweetId": "2044423005443654029"
+    "firstTweetId": "2044423005443654029",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "month2-tip-5-admin-vs-cta",
@@ -874,7 +1055,9 @@
       "stop stacking dead certs.\n\ni've watched hundreds of people cert-stack their way to unemployment. follow — every monday i post the shit the cert vendors won't tell you.\n\n#SalesforceCareer"
     ],
     "postedAt": "2026-04-21T13:30:20.153Z",
-    "firstTweetId": "2046582227992199611"
+    "firstTweetId": "2046582227992199611",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "month2-tip-7-validation-rules",
@@ -885,7 +1068,9 @@
       "spring '26 quietly killed the 'salesforce-only' career path.\n\nthe admins getting hired aren't the ones with the most certs. they're the ones who know when to turn off agentforce before it costs the company 400k in bad data.\nfollow — i say what they won't.\n#Agentforce"
     ],
     "postedAt": "2026-04-22T13:30:02.432Z",
-    "firstTweetId": "2046944617690701898"
+    "firstTweetId": "2046944617690701898",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "month2-tip-8-sales-cloud",
@@ -902,16 +1087,18 @@
     "id": "month2-tip-9-maintenance",
     "title": "Month2 Tip 9 — Maintenance Exam Window",
     "scheduledFor": "2026-04-26T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "nobody tells you this about maintenance exams: you have a window. miss it and your cert goes inactive.\n\nfree, open-book, 30 minutes. set a reminder.\nhttps://trailhead.salesforce.com/credentials/administrator\nfollow — i say what they won't.\n#SalesforceCertification"
-    ]
+    ],
+    "postedAt": "2026-04-26T13:30:02.454Z",
+    "firstTweetId": "2048394170440810917"
   },
   {
     "id": "month2-thread-study-method",
-    "title": "Month2 Week 4 — The Study Method",
-    "scheduledFor": "2026-04-28T09:30:00-04:00",
-    "status": "pending",
+    "title": "Month2 Week 4 — The Study Method (9-tweet thread)",
+    "scheduledFor": "2026-04-28T04:00:00Z",
+    "status": "posted",
     "tweets": [
       "i've taken 14 salesforce certification exams. failed two. changed my study method five times.\n\nthe method that finally worked is embarrassingly simple.\n\nmost people aren't using it. here's what it is.\na thread\n\n#SalesforceCertification #SalesforceAdmin",
       "before you open a single course: download the official exam guide from trailhead.\n\nit lists every topic and the exact percentage each one is worth. if you study without this document you're just guessing.",
@@ -920,44 +1107,59 @@
       "study in blocks. one topic. 45 minutes. finish it before you stop.\n\nsecurity model. automation. data management. one at a time.\n\ntrying to learn sharing rules while reviewing flow limits means you'll fail questions on both. context switching destroys retention.",
       "every time you read something, immediately go do it.\n\nread about sharing rules? go configure one. read about omnichannel? build a basic setup.\n\nthe exam gives you a scenario. your brain needs to know what to do with it — not just what it is.",
       "two weeks before the exam: stop learning new things.\n\nonly review what you've already covered.\n\nnew material at that stage creates doubt more than it creates readiness. your only job in the final stretch is to sharpen what you have.",
-      "stop guessing what you don't know.\ntake the free practice test that actually shows your gaps before you waste another $200:\nhttps://trailblazeprep.com/certifications\n\nfollow — i drop these reality checks every monday."
-    ]
+      "stop guessing what you don't know.\n\nwhich one of these steps would have saved you the most time (or points) on your first Salesforce exam attempt?\n\ndrop your answer 👇\n\n#SalesforceAdmin #SalesforceStudy #SalesforceCertified",
+      "Free practice tests with topic breakdowns here: https://trailblazeprep.com/certifications"
+    ],
+    "postedAt": "2026-04-28T04:00:21.505Z",
+    "firstTweetId": "2048975498198520091"
   },
   {
     "id": "month2-tip-10-app-builder",
     "title": "Month2 Tip 10 — App Builder vs Admin",
-    "scheduledFor": "2026-04-29T09:30:00-04:00",
-    "status": "pending",
+    "scheduledFor": "2026-04-27T10:30:00-04:00",
+    "status": "posted",
     "tweets": [
-      "app builder is not admin part 2.\n\nadmin = managing the platform (users, security, data)\napp builder = building on it (pages, components, schema)\n\npeople expect admin questions and get surprised. completely different subject.\nfollow — i say what they won't.\n#AppBuilder"
-    ]
+      "app builder is not admin part 2.\n\nadmin = managing the platform (users, security, data)\napp builder = building on it (pages, components, schema)\n\npeople expect admin questions and get surprised. completely different subject.\n#AppBuilder"
+    ],
+    "postedAt": "2026-04-27T15:00:01.659Z",
+    "firstTweetId": "2048779204129591632",
+    "topicCert": "app-builder",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/app-builder"
   },
   {
     "id": "month2-tip-11-service-cloud",
     "title": "Month2 Tip 11 — Service Cloud: Entitlements",
-    "scheduledFor": "2026-05-01T09:30:00-04:00",
-    "status": "pending",
+    "scheduledFor": "2026-04-29T04:00:00Z",
+    "status": "posted",
     "tweets": [
-      "service cloud: entitlement, entitlement process, milestone. all three get confused.\n\nentitlement = the SLA\nentitlement process = the SLA template\nmilestone = checkpoints inside\n\nknow how they nest.\nfollow — i say what they won't.\n#ServiceCloud"
-    ]
+      "service cloud: entitlement, entitlement process, milestone. all three get confused.\n\nentitlement = the SLA\nentitlement process = the SLA template\nmilestone = checkpoints inside\n\nknow how they nest.\n#ServiceCloud"
+    ],
+    "postedAt": "2026-04-29T04:00:02.063Z",
+    "firstTweetId": "2049337886613651535"
   },
   {
     "id": "month2-tip-12-deprecated",
     "title": "Month2 Tip 12 — Deprecated Tools Warning",
-    "scheduledFor": "2026-05-03T09:30:00-04:00",
-    "status": "pending",
+    "scheduledFor": "2026-04-28T10:30:00-04:00",
+    "status": "posted",
     "tweets": [
-      "pattern in every salesforce exam:\n\n\"without code\" or \"declarative only\" — the answer is flow.\n\nnot workflow rules. not process builder. both deprecated.\n\nif your study material still lists those as current, it's outdated.\nfollow — i say what they won't.\n#SalesforceAdmin"
-    ]
+      "pattern in every salesforce exam:\n\n\"without code\" or \"declarative only\" — the answer is flow.\n\nnot workflow rules. not process builder. both deprecated.\n\nif your study material still lists those as current, it's outdated.\n#SalesforceAdmin"
+    ],
+    "postedAt": "2026-04-28T14:30:02.672Z",
+    "firstTweetId": "2049134047016984643"
   },
   {
     "id": "month2-tip-13-outdated-material",
     "title": "Month2 Tip 13 — Outdated Study Material Warning",
-    "scheduledFor": "2026-05-05T09:30:00-04:00",
-    "status": "pending",
+    "scheduledFor": "2026-04-30T04:00:00Z",
+    "status": "posted",
     "tweets": [
-      "cert vendors are still pumping 2025 study material.\n\nyour org is on spring '26. most people studying are prepping for an exam that no longer matches the platform.\n\nthe ones getting hired noticed.\nfollow — i say the shit the cert vendors won't.\n#Agentforce #SalesforceCertification"
-    ]
+      "cert vendors are still pumping 2025 study material.\n\nyour org is on spring '26. most people studying are prepping for an exam that no longer matches the platform.\n\nthe ones getting hired noticed.\n\n#Agentforce #SalesforceCertification"
+    ],
+    "postedAt": "2026-04-30T04:00:24.040Z",
+    "firstTweetId": "2049700367043383426",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "quiz-admin-bucket-column-q",
@@ -968,7 +1170,9 @@
       "#ADM201 exam question — drop your answer 👇\n\nan org wants a report that buckets accounts into small, medium, and large based on contract value.\n\nwhich feature?\n\nA. Group Rows\nB. Filter Logic\nC. Bucket Column\nD. Detail Column\nanswer in 2 hours."
     ],
     "postedAt": "2026-04-09T17:30:06.974Z",
-    "firstTweetId": "2042293993745367160"
+    "firstTweetId": "2042293993745367160",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-bucket-column-a",
@@ -980,7 +1184,9 @@
     ],
     "replyToEntryId": "quiz-admin-bucket-column-q",
     "postedAt": "2026-04-09T17:30:07.405Z",
-    "firstTweetId": "2042293995632803992"
+    "firstTweetId": "2042293995632803992",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-dashboard-running-user-q",
@@ -991,7 +1197,9 @@
       "#ADM201 exam question — drop your answer 👇\n\nOWD = Private. reps are still seeing all cases on dashboards. sharing is fine everywhere else.\n\nwhat's causing it?\n\nA. Dashboard Filters\nB. Public Dashboards\nC. Dashboard's running user\nD. Dashboard Subscriptions\nanswer in 2 hours."
     ],
     "postedAt": "2026-04-11T16:00:20.276Z",
-    "firstTweetId": "2042996175973007666"
+    "firstTweetId": "2042996175973007666",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-dashboard-running-user-a",
@@ -1003,7 +1211,9 @@
     ],
     "replyToEntryId": "quiz-admin-dashboard-running-user-q",
     "postedAt": "2026-04-11T16:00:20.791Z",
-    "firstTweetId": "2042996178296668409"
+    "firstTweetId": "2042996178296668409",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-omni-channel-q",
@@ -1014,7 +1224,9 @@
       "#ADM201 exam question — drop your answer 👇\n\ncases need to route automatically, but the business wants to manage their own queue capacity without admin help.\n\nwhich tool?\n\nA. Case Assignment Rules\nB. Email-to-Case\nC. Omni-Channel\nD. Lead Assignment Rules\nanswer in 2 hours."
     ],
     "postedAt": "2026-04-16T13:36:11.176Z",
-    "firstTweetId": "2044771838363156544"
+    "firstTweetId": "2044771838363156544",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-omni-channel-a",
@@ -1026,7 +1238,9 @@
     ],
     "replyToEntryId": "quiz-admin-omni-channel-q",
     "postedAt": "2026-04-16T15:30:01.969Z",
-    "firstTweetId": "2044800488126992685"
+    "firstTweetId": "2044800488126992685",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-sharing-rules-q",
@@ -1037,7 +1251,9 @@
       "#ADM201 exam question — drop your answer 👇\n\nOWD = Private. a VP needs to report on records owned by people across different parts of the role hierarchy.\n\nwhat do you configure?\n\nA. Field-Level Security\nB. Sharing Rules\nC. Permission Sets\nD. Restriction Rules\nanswer in 2 hours."
     ],
     "postedAt": "2026-04-18T13:30:02.094Z",
-    "firstTweetId": "2045495065804448233"
+    "firstTweetId": "2045495065804448233",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-sharing-rules-a",
@@ -1049,7 +1265,9 @@
     ],
     "replyToEntryId": "quiz-admin-sharing-rules-q",
     "postedAt": "2026-04-18T15:30:01.863Z",
-    "firstTweetId": "2045525264004940093"
+    "firstTweetId": "2045525264004940093",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-flow-cross-object-q",
@@ -1060,7 +1278,9 @@
       "#ADM201 exam question — drop your answer 👇\n\nreps manually apply a discount to opportunity products after winning a deal. the manager wants it automated.\n\nwhat's the right tool?\n\nA. Approval Process\nB. Formula Field\nC. Flow Builder\nD. Prebuilt Macro\nanswer in 2 hours."
     ],
     "postedAt": "2026-04-23T13:30:02.382Z",
-    "firstTweetId": "2047307006844019059"
+    "firstTweetId": "2047307006844019059",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-flow-cross-object-a",
@@ -1072,63 +1292,972 @@
     ],
     "replyToEntryId": "quiz-admin-flow-cross-object-q",
     "postedAt": "2026-04-23T15:30:02.832Z",
-    "firstTweetId": "2047337207741260104"
+    "firstTweetId": "2047337207741260104",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-approval-actions-q",
     "title": "Quiz Q — quiz-admin-approval-actions",
     "scheduledFor": "2026-04-25T09:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#ADM201 exam question — drop your answer 👇 (select 2)\n\nan admin created an approval process for time-off requests.\n\nwhich two automated actions can be added?\n\nA. Field Update\nB. Email Alert\nC. Chatter Post\nD. Autolaunched Flow\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-04-25T13:30:02.376Z",
+    "firstTweetId": "2048031782239654318",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-admin-approval-actions-a",
     "title": "Quiz A — quiz-admin-approval-actions",
     "scheduledFor": "2026-04-25T11:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answers: A + B. Field Update and Email Alert.\n\napproval processes support field updates, email alerts, outbound messages, tasks. chatter posts and flows aren't on the list — the exam loves to trick you here.\n\nknow what's on the list or you'll get burned on the real test."
     ],
-    "replyToEntryId": "quiz-admin-approval-actions-q"
+    "replyToEntryId": "quiz-admin-approval-actions-q",
+    "postedAt": "2026-04-25T17:00:02.577Z",
+    "firstTweetId": "2048084631782854987",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
   },
   {
     "id": "quiz-agentforce-guardrails-q",
     "title": "Quiz Q — quiz-agentforce-guardrails",
-    "scheduledFor": "2026-04-30T09:30:00-04:00",
-    "status": "pending",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 4,
+      "episodesPlanned": 6,
+      "seriesSegment": "quiz",
+      "prevEntryId": "quiz-agentforce-aiagentsession-q",
+      "nextEntryId": "w7-thread-1-salary-truth"
+    },
+    "scheduledFor": "2026-05-05T08:30:00-04:00",
+    "notes": "Text-only quick engagement — skip video/carousel.",
+    "status": "posted",
     "tweets": [
       "#Agentforce exam question — drop your answer 👇\n\nan employee agent keeps discussing the CEO's health plan. staff shouldn't see it.\n\nhow do you fix it?\n\nA. Assignment rules\nB. Permissions + FLS\nC. Instructions and guardrails\nD. Retrain on employee plans\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-05-07T05:02:29.834Z",
+    "firstTweetId": "2052252709269762458",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "quiz-agentforce-guardrails-a",
     "title": "Quiz A — quiz-agentforce-guardrails",
-    "scheduledFor": "2026-04-30T11:30:00-04:00",
-    "status": "pending",
+    "scheduledFor": "2026-05-05T10:30:00-04:00",
+    "status": "posted",
     "tweets": [
-      "answer: C. instructions and guardrails\n\npermissions and FLS control data access. guardrails control what the agent will even attempt to discuss.\n\ntwo different layers. permissions control the data. guardrails control what the agent will even attempt.\n\n#Agentforce"
+      "answer: C. instructions and guardrails\n\npermissions and FLS control data access. guardrails control what the agent will even attempt to discuss.\n\ntwo different layers.\n\nfollow for daily quiz questions + explanations. no spam, just useful.\n\n#Agentforce"
     ],
-    "replyToEntryId": "quiz-agentforce-guardrails-q"
+    "replyToEntryId": "quiz-agentforce-guardrails-q",
+    "postedAt": "2026-05-07T05:02:30.362Z",
+    "firstTweetId": "2052252711425609751",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "quiz-agentforce-aiagentsession-q",
     "title": "Quiz Q — quiz-agentforce-aiagentsession",
-    "scheduledFor": "2026-05-02T09:30:00-04:00",
-    "status": "pending",
+    "series": {
+      "id": "2026-stack",
+      "label": "2026 stack: release → AI → money → fork",
+      "episode": 3,
+      "episodesPlanned": 6,
+      "seriesSegment": "quiz",
+      "prevEntryId": "w6-thread-1-agentforce-study",
+      "nextEntryId": "quiz-agentforce-guardrails-q"
+    },
+    "scheduledFor": "2026-05-04T17:00:00-04:00",
+    "notes": "Text-only quick engagement — skip video/carousel.",
+    "status": "posted",
     "tweets": [
       "#Agentforce exam question — drop your answer 👇\n\nwhich data lake object (DLO) captures all contiguous interactions with one or more AI agents?\n\nA. AIAgentInteractionMessage\nB. AIAgentInteraction\nC. AIAgentSession\nanswer in 2 hours."
-    ]
+    ],
+    "postedAt": "2026-05-07T05:02:30.778Z",
+    "firstTweetId": "2052252713422086194",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
   },
   {
     "id": "quiz-agentforce-aiagentsession-a",
     "title": "Quiz A — quiz-agentforce-aiagentsession",
-    "scheduledFor": "2026-05-02T11:30:00-04:00",
+    "scheduledFor": "2026-05-04T19:00:00-04:00",
+    "status": "posted",
+    "tweets": [
+      "answer: C. AIAgentSession\n\nsession = full conversation across agents\ninteraction = one exchange\nmessage = one line in that exchange\n\nData Cloud reporting? know how they nest.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#Agentforce"
+    ],
+    "replyToEntryId": "quiz-agentforce-aiagentsession-q",
+    "postedAt": "2026-05-07T05:02:31.310Z",
+    "firstTweetId": "2052252715607302412",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "w9-thread-1-adm201-traps-d1",
+    "title": "Week 9 — ADM-201 traps still on the guide in 2026 (part 1)",
+    "series": {
+      "id": "adm201-traps-2026",
+      "label": "ADM-201 traps that still eat people in 2026",
+      "episode": 1,
+      "episodesPlanned": 4,
+      "nextEntryId": "w9-thread-2-adm201-flow-traps-d2"
+    },
     "status": "pending",
     "tweets": [
-      "answer: C. AIAgentSession\n\nsession = the full conversation across all agents\ninteraction = one exchange within the session\nmessage = individual message within an interaction\n\nreporting on agent behavior in Data Cloud? these three nest. know them."
+      "ADM-201 isn't 'trick questions.'\n\nit's places where the answer that *feels* right in a messy org is wrong on the exam — because the item is testing one specific rule.\n\nhere are traps i still see people miss in 2026\n\na thread\n\n#ADM201 #SalesforceAdmin",
+      "trap 1 — bucket column vs filter.\n\nfilters throw away rows.\n\nbucket columns label groups *inside* the report without building a custom field.\n\nif the stem says categorize / bucket / ranges, brain wants 'filter logic.' slow down.",
+      "trap 2 — dashboard running user.\n\nOWD can look sane everywhere else and dashboards still show too much — because the dashboard runs as whoever you set as runner.\n\npower user runner = everyone inherits that visibility. classic exam play.",
+      "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nthe exam loves jamming both into one story.",
+      "trap 4 — workflow rules & process builder.\n\nstill show up in old notes.\n\nfor *new* declarative automation the exam wants flow-first energy. if the answers still treat workflow like the default, your material is stale.",
+      "trap 5 — stem says 'without code.'\n\nyour lizard brain reaches for legacy tools.\n\non current 201, 'without code' + update related records usually means flow — boring, but that's the game now.",
+      "which trap got you last time? reply A–E:\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
+      "free admin qs mapped to topics (same stuff the guide weights):\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for part 2 (flow timing traps) + weekly breakdowns + no-fluff tips.\n\n#ADM201 #SalesforceAdmin",
+      "p.s. site spotlight this week is platform foundations — free page:\n\nhttps://trailblazeprep.com/certifications/platform-foundations\n\n#Salesforce"
     ],
-    "replyToEntryId": "quiz-agentforce-aiagentsession-q"
+    "engagementTweets": [
+      {
+        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos."
+      },
+      {
+        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one."
+      }
+    ],
+    "scheduledFor": "2026-05-08T10:30:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-thread-2-adm201-flow-traps-d2",
+    "title": "Week 9 — ADM-201 Flow timing traps (part 2)",
+    "series": {
+      "id": "adm201-traps-2026",
+      "label": "ADM-201 traps that still eat people in 2026",
+      "episode": 2,
+      "episodesPlanned": 4,
+      "prevEntryId": "w9-thread-1-adm201-traps-d1",
+      "nextEntryId": "w9-thread-3-adm201-security-traps-d3"
+    },
+    "status": "pending",
+    "tweets": [
+      "part 2 — flow timing traps on ADM-201.\n\nthe exam doesn't want you to draw diagrams like an architect.\n\nit wants you to know *when* the platform runs something — because wrong timing = wrong answer.\n\na thread\n\n#ADM201 #SalesforceFlow",
+      "before-save vs after-save isn't trivia.\n\nbefore-save runs in the same database transaction as the save. good for field updates that have to happen *before* validation finishes its job.\n\nafter-save = you already committed. different constraints.",
+      "record-triggered flow that updates the *same* record that fired it — know what the exam considers safe vs recursive nightmare fuel.\n\nif you've only built happy-path flows, this is where practice qs beat youtube.",
+      "scheduled paths vs record-triggered.\n\nscheduled = clock / batch-ish mental model.\n\nrecord-triggered = something happened to a row, react now (with entry conditions). stems usually telegraph which one they want.",
+      "subflows aren't just 'cleaner.'\n\nsometimes they're the right answer because you reuse the same chunk from three places and the scenario says maintainability / duplication.\n\nthe exam cares about that wording.",
+      "autolaunched vs screen flow.\n\nscreen = human in the loop.\n\nautolaunched = something else kicked it off. if the question has a user clicking 'next,' it's not autolaunched. sounds obvious. people still miss it cold.",
+      "more flow + admin qs (free, by section):\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for part 3 (security combo traps) + weekly threads.\n\n#ADM201 #SalesforceAdmin",
+      "p.s. site spotlight this week is ai associate:\n\nhttps://trailblazeprep.com/certifications/ai-associate\n\n#Salesforce"
+    ],
+    "engagementTweets": [
+      {
+        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose."
+      },
+      {
+        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn."
+      }
+    ],
+    "scheduledFor": "2026-05-11T10:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-thread-3-adm201-security-traps-d3",
+    "title": "Week 9 — ADM-201 security combo traps (part 3)",
+    "series": {
+      "id": "adm201-traps-2026",
+      "label": "ADM-201 traps that still eat people in 2026",
+      "episode": 3,
+      "episodesPlanned": 4,
+      "prevEntryId": "w9-thread-2-adm201-flow-traps-d2",
+      "nextEntryId": "w9-thread-4-exam-wording-d4"
+    },
+    "status": "pending",
+    "tweets": [
+      "part 3 — security *combo* traps.\n\n201 doesn't just ask 'what is OWD.'\n\nit stacks profile + permission set + FLS + maybe sharing in one ugly paragraph.\n\na thread\n\n#ADM201 #SalesforceAdmin",
+      "OWD is the basement.\n\neverything else is furniture you put on top.\n\nif you start reasoning from permission sets without anchoring OWD, you'll talk yourself into a clever wrong answer.",
+      "FLS can make a record visible but a field 'disappear.'\n\npeople mix that up with record access.\n\nexam loves 'user sees the row but not the amount' style stories — that's not magically sharing rules every time.",
+      "permission set groups vs one giant profile.\n\nreal orgs use groups. the exam sometimes wants the *least admin overhead* answer that still meets a weird requirement.\n\nread the stem for 'least maintenance' language.",
+      "restriction rules (where applicable on the guide) vs sharing rules.\n\ndifferent job. if your prep material lumps them as 'extra security stuff,' fix that before you pay for a seat.",
+      "role hierarchy isn't 'sharing.'\n\nit's its own visibility lane upward.\n\nwhen the VP needs to see sideways across branches, that's usually sharing rules — not 'promote everyone in the hierarchy.'",
+      "drill this stuff with scenarios, not flash cards:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for part 4 (BEST / MOST / LEAST decoding) + no-fluff tips.\n\n#ADM201 #SalesforceAdmin",
+      "p.s. site spotlight this week is still ai associate:\n\nhttps://trailblazeprep.com/certifications/ai-associate\n\n#Salesforce"
+    ],
+    "engagementTweets": [
+      {
+        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline."
+      },
+      {
+        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have."
+      }
+    ],
+    "scheduledFor": "2026-05-14T10:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-thread-4-exam-wording-d4",
+    "title": "Week 9 — ADM-201: surviving BEST / MOST / LEAST wording (part 4)",
+    "series": {
+      "id": "adm201-traps-2026",
+      "label": "ADM-201 traps that still eat people in 2026",
+      "episode": 4,
+      "episodesPlanned": 4,
+      "prevEntryId": "w9-thread-3-adm201-security-traps-d3",
+      "nextEntryId": "w9-thread-5-resume-needle-f1"
+    },
+    "status": "pending",
+    "tweets": [
+      "part 4 — exam wording.\n\nSalesforce doesn't ask for the 'correct' architecture in your head.\n\nit asks BEST / MOST / LEAST in a *constrained* story.\n\nthat's a different skill than twitter debates.\n\n#ADM201",
+      "BEST usually means: most native, most maintainable, least surprise for the next admin — not the cleverest thing you could build with enough time.",
+      "MOST appropriate = often 'pick the least destructive option' when two features could technically work.\n\ndata integrity beats vibes. declarative beats code when the stem allows both.",
+      "LEAST likely to cause issues = your pessimist hat.\n\nwhat breaks when volume doubles? what breaks when a new profile shows up? the exam rewards boring stability here.",
+      "process of elimination still works.\n\ntwo answers are sometimes there just to burn clock. kill the obviously wrong pair first, then fight the remaining two with the wording keyword.",
+      "if you're guessing, you're usually ignoring one sentence in the stem.\n\ngo back and underline the constraint (can't use code, must be realtime, must not add fields, etc.). that's the boss of the question.",
+      "practice with explanations > rereading notes:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for weekly cert threads + resume reality late may (spacing beats career fatigue).\n\n#ADM201 #SalesforceAdmin",
+      "p.s. site spotlight this week is ai associate:\n\nhttps://trailblazeprep.com/certifications/ai-associate\n\n#Salesforce"
+    ],
+    "engagementTweets": [
+      {
+        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise."
+      },
+      {
+        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word."
+      }
+    ],
+    "scheduledFor": "2026-05-16T10:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-thread-5-resume-needle-f1",
+    "title": "Week 9 — What actually moves a Salesforce resume in 2026",
+    "series": {
+      "id": "resume-reality-2026",
+      "label": "Resume + career reality (2026)",
+      "episode": 1,
+      "episodesPlanned": 2,
+      "prevEntryId": "w9-thread-4-exam-wording-d4",
+      "nextEntryId": "w9-tip-resume-donts-f2"
+    },
+    "status": "pending",
+    "tweets": [
+      "certs open the inbox.\n\nthey don't close the offer.\n\nwhat actually moves a Salesforce resume in 2026 is boring and nobody wants to hear it\n\na thread\n\n#SalesforceCareer",
+      "line recruiters skim first isn't your cert stack.\n\nit's whether you shipped something measurable in the last 12–24 months.\n\n'implemented X' without a number is wallpaper.",
+      "template that still works:\n\nBuilt [thing] that cut [manual process] from [before] to [after] for [who] — Salesforce [cloud/products].\n\nfill the brackets with truth. exaggeration burns you in interviews.",
+      "Trailhead is great for learning.\n\nlisted alone it signals 'i can follow tutorials.'\n\npair it with a nonprofit build, internal project, or sandbox story — anything with a stakeholder.",
+      "two offers with same certs — the one with the clearer *scope* story wins.\n\nscope = what you personally owned vs what the team did. hiring managers hunt for that sentence.",
+      "LinkedIn headline stuffing (#Salesforce #Admin #Flow #Apex #Agentforce) looks busy, not senior.\n\none role + one proof point beats twelve buzzwords.",
+      "if you're switching careers: show transferable ops discipline.\n\nSalesforce hiring is full of people who can learn the platform — scarce part is judgment under ambiguity.",
+      "free cert prep if you're still building the story:\n\nhttps://trailblazeprep.com/certifications\n\nfollow for part 2 (resume don'ts) + weekly threads.\n\n#SalesforceCareer #SalesforceAdmin"
+    ],
+    "engagementTweets": [
+      {
+        "text": "be honest: does your resume still say 'detail-oriented team player'? delete half the adjectives and add one metric. we'll wait."
+      },
+      {
+        "text": "hiring managers — what line on a junior SF resume makes you schedule the phone screen vs skip? genuinely curious."
+      }
+    ],
+    "scheduledFor": "2026-05-29T10:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "w9-tip-resume-donts-f2",
+    "title": "Week 9 tip — Resume don'ts (part 2 of resume series)",
+    "series": {
+      "id": "resume-reality-2026",
+      "label": "Resume + career reality (2026)",
+      "episode": 2,
+      "episodesPlanned": 2,
+      "prevEntryId": "w9-thread-5-resume-needle-f1",
+      "nextEntryId": null
+    },
+    "status": "pending",
+    "tweets": [
+      "resume don'ts i keep seeing on SF profiles in 2026:\n\n— superbadge list with zero business outcome\n— 'expert' next to six different clouds\n— certs in the headline but no project dates\n\nrecruiters aren't mean. they're just skimming fast.\n\n#SalesforceCareer"
+    ],
+    "scheduledFor": "2026-05-30T09:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "w10-thread-1-agentforce-mistakes-e1",
+    "title": "Week 10 — Agentforce study mistakes (part 1)",
+    "series": {
+      "id": "agentforce-mistakes-2026",
+      "label": "Agentforce Specialist mistakes in the wild",
+      "episode": 1,
+      "episodesPlanned": 3,
+      "nextEntryId": "w10-thread-2-agentforce-debug-e2"
+    },
+    "status": "pending",
+    "tweets": [
+      "Agentforce Specialist isn't 'prompt engineering cosplay.'\n\nif you study it like a chatgpt demo, scenario qs will humble you fast.\n\nmistake #1 people make\n\na thread\n\n#Agentforce",
+      "the exam cares about Topics + Instructions + Actions as a system.\n\nnot how clever your system prompt sounds in a slide deck.\n\nif you can't explain what each piece *owns*, you don't have a study plan yet.",
+      "Actions aren't 'optional extras.'\n\nthey're how the agent does real work without hallucinating database updates.\n\nskipping actions because 'we'll wire that later' is how POCs die and how people miss points.",
+      "Instructions are where routing quietly breaks.\n\nvague instructions = wrong topic = wrong action = you debugging for an hour thinking the model is 'dumb.'\n\nit's usually your spec.",
+      "building in a clean trial org teaches the happy path.\n\nthe exam lives in the weird middle: permissions, guardrails, when to escalate to human.\n\nyou need messy test cases on purpose.",
+      "if your prep is 90% keynote and 10% clicking — flip it.\n\nwhat i'm seeing in early 2026: passes correlate with ugly sandbox builds + fixes, not slick decks.\n\ncheck the official guide often — this track moves.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 2 (debug order) + weekly threads.\n\n#Agentforce #SalesforceAI"
+    ],
+    "engagementTweets": [
+      {
+        "text": "real talk: did you start Agentforce because AI is hot, or because your job actually needs it? both are valid — only one keeps you studying after week two."
+      },
+      {
+        "text": "what part of Agentforce still feels like black magic — Topics, Actions, or guardrails? reply with one word."
+      }
+    ],
+    "scheduledFor": "2026-06-03T10:30:00-04:00",
+    "certFocus": "administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "w10-thread-2-agentforce-debug-e2",
+    "title": "Week 10 — Agentforce debugging order (part 2)",
+    "series": {
+      "id": "agentforce-mistakes-2026",
+      "label": "Agentforce Specialist mistakes in the wild",
+      "episode": 2,
+      "episodesPlanned": 3,
+      "prevEntryId": "w10-thread-1-agentforce-mistakes-e1",
+      "nextEntryId": "w10-thread-3-agentforce-admin-gap-e3"
+    },
+    "status": "pending",
+    "tweets": [
+      "part 2 — debugging Agentforce without losing your mind.\n\nrandomly tweaking prompts is not a methodology.\n\nthis is the order that keeps showing up on practice qs + in messy prod\n\n#Agentforce",
+      "start at topic routing.\n\nif the wrong topic wins, nothing downstream matters — you'll 'fix' actions that were never the problem.",
+      "then action inputs.\n\nmissing / wrong shape / wrong record context — the UI will look fine and the agent still does nonsense.\n\ninputs are where silent failures hide.",
+      "then the action itself.\n\nonly after the first two checks.\n\ni've watched teams burn a day tuning copy while an input was still null.",
+      "guardrails aren't 'compliance theater.'\n\nthey're how you stop the agent from volunteering stuff humans shouldn't hear.\n\nthe exam treats them as first-class, not a footnote.",
+      "log one thing: topic fired + inputs passed.\n\ncuts most war rooms in half.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 3 (Admin → Agent brain) + daily quizzes.\n\n#Agentforce #SalesforceAI"
+    ],
+    "engagementTweets": [
+      {
+        "text": "debugging hot take: if you changed the prompt before you checked inputs, you already lost the afternoon."
+      },
+      {
+        "text": "engineers love skipping to 'the model is wrong.' half the time it's routing. do you fight me on that?"
+      }
+    ],
+    "scheduledFor": "2026-06-06T10:30:00-04:00",
+    "certFocus": "administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "w10-thread-3-agentforce-admin-gap-e3",
+    "title": "Week 10 — Passed Admin, still fail Agentforce brain (part 3)",
+    "series": {
+      "id": "agentforce-mistakes-2026",
+      "label": "Agentforce Specialist mistakes in the wild",
+      "episode": 3,
+      "episodesPlanned": 3,
+      "prevEntryId": "w10-thread-2-agentforce-debug-e2",
+      "nextEntryId": null
+    },
+    "status": "pending",
+    "tweets": [
+      "part 3 — you passed Admin and thought Agentforce would be 'lighter.'\n\nsometimes it is.\n\nsometimes it's a different animal because the failure modes are probabilistic, not deterministic.\n\n#Agentforce #SalesforceAdmin",
+      "Admin muscle: deterministic config.\n\nturn this knob, get that behavior.\n\nAgent muscle: constrain a system that wants to improvise.\n\ndifferent discipline. not harder — just not the same exam with AI stickers.",
+      "what transfers: data model literacy, permissions thinking, 'who should see what' instincts.\n\nwhat doesn't transfer: assuming the UI you trained users on maps cleanly to how an agent reasons about tools.",
+      "you'll ship guardrails late once, get embarrassed in a review, and then you start designing them first.\n\nthat's the real curriculum.",
+      "after Admin, Agentforce in 2026 is 'learn in public' for a lot of us.\n\nsandboxes eat ego cheaply. still worth it.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for weekly AI + cert threads + no-fluff tips.\n\n#Agentforce #SalesforceAI"
+    ],
+    "engagementTweets": [
+      {
+        "text": "admins who added Agentforce — what's one thing you wish you'd configured on day one instead of day thirty?"
+      },
+      {
+        "text": "does Agentforce feel like 'real Salesforce' yet or still a sidecar? curious where the ecosystem actually lands in 2026."
+      }
+    ],
+    "scheduledFor": "2026-06-10T10:30:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator",
+    "topicCert": "agentforce-specialist",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+  },
+  {
+    "id": "w9-tip-maintenance-calendar",
+    "title": "Tip — maintenance exam calendar",
+    "status": "pending",
+    "tweets": [
+      "maintenance exams are the quiet way certs die.\n\nnot because they're hard — because people forget the window.\n\nput the release calendar + reminder in the same place you keep passport expiry. boring = real.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-05-09T12:00:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+  },
+  {
+    "id": "w9-tip-sandbox-preview",
+    "title": "Tip — sandbox before prod release",
+    "status": "pending",
+    "tweets": [
+      "if you only test flows after prod updates, you're not doing release management — you're doing incident practice.\n\nsandbox preview exists so you can fail loudly on tuesday instead of quietly on friday.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-10T09:30:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+  },
+  {
+    "id": "w9-tip-exam-guide-date",
+    "title": "Tip — exam guide last updated",
+    "status": "pending",
+    "tweets": [
+      "before you buy another practice pack: open the official exam guide and read *last updated*.\n\nif your pdf is older than that date, you're paying to study ghosts.\n\n#ADM201 #Trailblazer"
+    ],
+    "scheduledFor": "2026-05-12T14:00:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-tip-superbadge-wallpaper",
+    "title": "Tip — superbadge without story",
+    "status": "pending",
+    "tweets": [
+      "a superbadge on a resume without a one-line business story is decoration.\n\nrecruiters can't tell if you clicked through or shipped.\n\npair every badge with who it helped.\n\n#SalesforceCareer"
+    ],
+    "scheduledFor": "2026-05-13T11:00:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "w9-tip-interview-sharing",
+    "title": "Tip — interview sharing model answer",
+    "status": "pending",
+    "tweets": [
+      "when they say 'explain sharing,' they want one clean mental model in under 60 seconds.\n\nOWD basement → role up → sharing sideways → perm sets for exceptions.\n\nnot a 10-minute poetry reading.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-17T09:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "w9-tip-trailhead-happy-path",
+    "title": "Tip — Trailhead vs exam middle path",
+    "status": "pending",
+    "tweets": [
+      "Trailhead teaches happy paths.\n\nexams live in the weird middle: two features both 'work,' pick the one Salesforce likes for that stem.\n\nthat's why practice qs beat rewatching modules.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-20T15:30:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "w9-tip-declarative-first-reality",
+    "title": "Tip — declarative first in real orgs",
+    "status": "pending",
+    "tweets": [
+      "declarative-first is the right exam religion.\n\nin prod it's 'flow until the flow is unmaintainable, then code with tests.'\n\nknow both layers or you'll argue with your future self at 9pm.\n\n#SalesforceAdmin #SalesforceFlow"
+    ],
+    "scheduledFor": "2026-05-23T10:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "quiz-adm-validation-cross-field-q",
+    "title": "Quiz Q — ADM validation rule cross-field",
+    "status": "pending",
+    "scheduledFor": "2026-05-09T09:30:00-04:00",
+    "tweets": [
+      "#ADM201 — drop your answer 👇\n\nOpp is Closed Won with Amount = $0. business says invalid.\n\nwhat blocks the save?\n\nA. Workflow\nB. Validation Rule\nC. Formula\nD. Duplicate Rule\nanswer in 2 hours."
+    ],
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "quiz-adm-validation-cross-field-a",
+    "title": "Quiz A — ADM validation cross-field",
+    "status": "pending",
+    "scheduledFor": "2026-05-09T11:30:00-04:00",
+    "tweets": [
+      "answer: B. Validation Rule\n\nblock save when two fields contradict — that's validation.\n\nformula won't block. duplicate rule won't catch this. workflow isn't the 2026 play.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#ADM201 #SalesforceAdmin"
+    ],
+    "replyToEntryId": "quiz-adm-validation-cross-field-q",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "quiz-adm-roles-vs-groups-q",
+    "title": "Quiz Q — ADM public group vs role for sharing",
+    "status": "pending",
+    "scheduledFor": "2026-05-15T09:30:00-04:00",
+    "tweets": [
+      "#ADM201 — drop your answer 👇\n\nCase OWD private. three regional manager groups need each other's cases for escalations — not the whole org.\n\nsimplest maintainable fix?\n\nA. OWD public read\nB. One role for all\nC. Public group + sharing rule\nD. Profile view all\nanswer in 2 hours."
+    ],
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "quiz-adm-roles-vs-groups-a",
+    "title": "Quiz A — ADM public group sharing",
+    "status": "pending",
+    "scheduledFor": "2026-05-15T11:30:00-04:00",
+    "tweets": [
+      "answer: C. public group + sharing rule\n\nsubset across branches — not whole org. OWD public too wide. view all = sledgehammer. one role won't model three regions; group + rule is the clean pattern.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#ADM201 #SalesforceAdmin"
+    ],
+    "replyToEntryId": "quiz-adm-roles-vs-groups-q",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-fill-07-profile-overhead",
+    "title": "Tip — profile vs perm set overhead (exam angle)",
+    "status": "pending",
+    "tweets": [
+      "201 loves 'least admin overhead' stories.\n\nbefore you clone another profile, ask if a perm set (or group) answers the stem.\n\nduplicating one-off boxes across profiles is the trap answer.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-07T16:00:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+  },
+  {
+    "id": "gw-may-fill-08-picklist-integration",
+    "title": "Tip — picklists and integration users",
+    "status": "pending",
+    "tweets": [
+      "restricted picklists look quiet until an integration user blows up loads.\n\nglobal vs dependent restrictions matter — 201 hides that inside scenario wording.\n\n#ADM201 #SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-08T18:00:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-fill-11-queue-visibility",
+    "title": "Tip — queues vs clever routing",
+    "status": "pending",
+    "tweets": [
+      "queues aren't just routing.\n\nthey're shared visibility + ownership in one object.\n\nwhen the stem wants workload visible without handing everyone view-all, queue beats a clever hack.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-11T18:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "gw-may-fill-14-formula-blank",
+    "title": "Tip — formula blank vs error",
+    "status": "pending",
+    "tweets": [
+      "formula fields: blank isn't the same as error.\n\nsome stems want 'show nothing' not 'blow up the save.' read whether they're testing display vs validation.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-14T17:00:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-18-case-safe",
+    "title": "Tip — Case Safe default",
+    "status": "pending",
+    "tweets": [
+      "case safe isn't trivia if you touch service cloud.\n\nknow what it changes for feeds + visibility before the exam throws a service scenario at you.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-18T12:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-18-owner-report",
+    "title": "Tip — who runs the report",
+    "status": "pending",
+    "tweets": [
+      "report folder sharing is boring until the wrong person owns the folder.\n\n'running user' on dashboards is loud — folder ownership is the quiet cousin that still costs points.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-18T16:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-18-debug-log-gold",
+    "title": "Tip — debug log noise budget",
+    "status": "pending",
+    "tweets": [
+      "if you live in debug logs, learn filters before prod screams.\n\nexam won't make you read a wall — but it expects you to know what logs are *for* when someone says 'it only fails for one user.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-18T20:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-24-flow-governor",
+    "title": "Tip — Flow and governor intuition",
+    "status": "pending",
+    "tweets": [
+      "flow can still hit limits when you loop like it's a script.\n\nexam scenarios care whether you *bulkified the automation*, not whether the builder UI looks cute.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-05-24T11:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-24-import-wizard",
+    "title": "Tip — import wizard vs API mental model",
+    "status": "pending",
+    "tweets": [
+      "data import wizard is 'easy' until the stem asks what happens on duplicates + permissions.\n\ndon't sleep on who can run it and what the tool won't fix for them.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-24T17:30:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-26-change-set-story",
+    "title": "Tip — change sets and the forgotten dependency",
+    "status": "pending",
+    "tweets": [
+      "change sets fail in real life because something tiny wasn't included.\n\n201 uses that pain — 'what else has to move with this field' beats 'click upload harder.'\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-26T10:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-26-login-hours",
+    "title": "Tip — login hours vs IP relax",
+    "status": "pending",
+    "tweets": [
+      "login hours and IP ranges stack in people's heads wrong.\n\nwhen the stem says 'contractors only 9–5,' slow down and draw the timeline before you pick profile vs perm set band-aids.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-26T15:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-27-duplicate-layers",
+    "title": "Tip — duplicate rules vs matching rules",
+    "status": "pending",
+    "tweets": [
+      "matching rules find candidates.\n\nduplicate rules decide whether you block or alert.\n\nmixing those up is a free 201 miss.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-27T09:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-27-screen-flow-user",
+    "title": "Tip — screen flow running user",
+    "status": "pending",
+    "tweets": [
+      "screen flows run as a user — that user's field access matters.\n\n'it works for me' in a sysadmin session is a classic fake win.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-05-27T14:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-31-sandbox-seed",
+    "title": "Tip — sandbox data realism",
+    "status": "pending",
+    "tweets": [
+      "empty sandboxes make flows look perfect.\n\nthrow messy volume + bad data once — you'll see the same failure families the exam paints in two sentences.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-31T11:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-31-cert-maintenance-anxiety",
+    "title": "Tip — maintenance as habit not panic",
+    "status": "pending",
+    "tweets": [
+      "maintenance is easier when it's calendar muscle memory.\n\npanic mode is how people miss a window and then argue with credential verification at the worst time.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-05-31T16:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-29-release-notes-habit",
+    "title": "Tip — release notes in small bites",
+    "status": "pending",
+    "tweets": [
+      "nobody reads 500 pages of release notes.\n\n10 minutes on highlights + one sandbox click beats pretending you'll study the pdf like a novel.\n\n#Spring26 #SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-29T15:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-30-stakeholder-language",
+    "title": "Tip — translate tech for stakeholders",
+    "status": "pending",
+    "tweets": [
+      "certs test salesforce language.\n\ninterviews test whether you can say the same thing without acronyms.\n\npractice one plain-english sentence per project or you'll sound like a release note.\n\n#SalesforceCareer"
+    ],
+    "scheduledFor": "2026-05-30T12:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-25-owd-recalc",
+    "title": "Tip — OWD change mental model",
+    "status": "pending",
+    "tweets": [
+      "tightening OWD can feel like 'just security' until sharing breaks in three places you forgot existed.\n\n201 wants you to predict that ripple — not just name the setting.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-25T17:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-28-territory-teaser",
+    "title": "Tip — when the answer is territory",
+    "status": "pending",
+    "tweets": [
+      "if the stem is obsessed with geographic rollups + account ownership rules, don't force a sharing-rule story when territory is sitting there waving.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-28T11:30:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-19-validation-order",
+    "title": "Tip — validation vs before-save order",
+    "status": "pending",
+    "tweets": [
+      "before-save flow can still lose to a validation rule if you misread what 'runs first' in the stem.\n\ndraw the timeline once — saves hours of arguing with the ui.\n\n#ADM201 #SalesforceFlow"
+    ],
+    "scheduledFor": "2026-05-19T10:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-19-heap-size-myth",
+    "title": "Tip — governor limits as exam vocabulary",
+    "status": "pending",
+    "tweets": [
+      "you don't need to quote heap numbers from memory.\n\nyou do need to recognize 'what limit is this violating' when the snippet loops like a villain.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-19T18:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-21-org-wide-email",
+    "title": "Tip — org-wide email addresses",
+    "status": "pending",
+    "tweets": [
+      "org-wide email sounds boring until deliverability + compliance show up in the same scenario.\n\nif the stem mentions 'from address users trust,' start there before you reach for hacks.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-21T11:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-21-list-view-sharing",
+    "title": "Tip — list views are not reports",
+    "status": "pending",
+    "tweets": [
+      "list view sharing and report folder sharing rhyme in your head — they're not the same mechanism.\n\n201 will use that confusion on purpose.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-21T17:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-22-scheduled-path",
+    "title": "Tip — scheduled path vs time-based wf",
+    "status": "pending",
+    "tweets": [
+      "scheduled paths in flow replaced a lot of old 'wait' patterns.\n\nif your flash cards still say time-based workflow as the default answer, update them.\n\n#SalesforceFlow"
+    ],
+    "scheduledFor": "2026-05-22T09:30:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-22-multi-select-bad",
+    "title": "Tip — multi-select picklists in automation",
+    "status": "pending",
+    "tweets": [
+      "multi-select picklists are where 'simple' field updates go to die.\n\nif a scenario hands you one, read the stem twice before you pick formula vs flow.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-22T15:30:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-25-approval-skip",
+    "title": "Tip — approval process exit ramps",
+    "status": "pending",
+    "tweets": [
+      "approvals aren't only 'manager says yes.'\n\nknow recall vs reject vs final approval behaviors — 201 loves the exception path, not the happy path.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-25T10:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-28-encryption-feel",
+    "title": "Tip — encryption questions feel scary",
+    "status": "pending",
+    "tweets": [
+      "encryption qs sound enterprise-heavy.\n\nusually they're testing whether you know what users still *see* vs what's protected at rest — read slow.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-28T16:00:00-04:00",
+    "certFocus": "mulesoft-integration-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+  },
+  {
+    "id": "gw-may-10-field-history",
+    "title": "Tip — field history vs feed tracking",
+    "status": "pending",
+    "tweets": [
+      "field history and feed tracking both 'show changes' — different limits, different objects, different exam traps.\n\ndon't pick from muscle memory.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-10T14:00:00-04:00",
+    "certFocus": "platform-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+  },
+  {
+    "id": "gw-may-12-custom-labels",
+    "title": "Tip — custom labels on exams",
+    "status": "pending",
+    "tweets": [
+      "custom labels aren't just i18n trivia.\n\nthey're sometimes the right answer when the stem wants text reused in flow + apex without hardcoding.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-12T18:00:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "gw-may-13-mobile-config",
+    "title": "Tip — mobile vs desktop admin",
+    "status": "pending",
+    "tweets": [
+      "mobile layouts and compact layouts are easy to ignore until one exam scenario is about sales reps on phones.\n\nread who the user is before you pick fields.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-13T16:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "gw-may-16-record-type-default",
+    "title": "Tip — record types and page layout assignment",
+    "status": "pending",
+    "tweets": [
+      "record type without the right page layout assignment is a silent bug.\n\n201 will describe weird missing fields — trace record type + profile combo first.\n\n#ADM201"
+    ],
+    "scheduledFor": "2026-05-16T15:00:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "topicCert": "administrator",
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-may-17-managed-package-fear",
+    "title": "Tip — managed package boundaries",
+    "status": "pending",
+    "tweets": [
+      "managed package questions aren't asking you to code around vendors.\n\nthey're asking what you *can't* change and what still lives in your org's config layer.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-17T14:30:00-04:00",
+    "certFocus": "ai-associate",
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+  },
+  {
+    "id": "gw-may-20-integration-idempotent",
+    "title": "Tip — idempotent integration thinking",
+    "status": "pending",
+    "tweets": [
+      "exam stories about integrations often hide a retry.\n\nif the stem mentions duplicates after a replay, think external id + upsert mental model.\n\n#SalesforceAdmin"
+    ],
+    "scheduledFor": "2026-05-20T11:00:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-may-23-lwc-readonly",
+    "title": "Tip — LWC read-only vs disabled",
+    "status": "pending",
+    "tweets": [
+      "on PD1-style reading, know whether the component is blocking input vs just showing data.\n\ntiny words in the stem decide between decorator patterns.\n\n#SalesforceDev"
+    ],
+    "scheduledFor": "2026-05-23T14:30:00-04:00",
+    "certFocus": "marketing-cloud-engagement-foundations",
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+  },
+  {
+    "id": "gw-jun-03-spotlight-breather",
+    "title": "Tip — between heavy threads",
+    "status": "pending",
+    "tweets": [
+      "if you post a long thread, your next tweet can be a one-liner observation.\n\nalgorithm aside, humans need a palate cleanser too.\n\n#SalesforceOhana"
+    ],
+    "scheduledFor": "2026-06-03T16:00:00-04:00",
+    "certFocus": "administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-jun-06-practice-exam-ritual",
+    "title": "Tip — practice exam ritual",
+    "status": "pending",
+    "tweets": [
+      "same chair, same noise level, same tab discipline as exam day.\n\nif you only take practice qs sprawled on the couch, you're surprised by focus cost.\n\n#SalesforceCertified"
+    ],
+    "scheduledFor": "2026-06-06T17:30:00-04:00",
+    "certFocus": "administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/administrator"
+  },
+  {
+    "id": "gw-jun-10-note-hygiene",
+    "title": "Tip — notes that survive retakes",
+    "status": "pending",
+    "tweets": [
+      "after a fail, the score report is gold.\n\nif your notes don't reorganize around those sections, you'll restudy the stuff you already knew.\n\n#SalesforceCertification"
+    ],
+    "scheduledFor": "2026-06-10T09:00:00-04:00",
+    "certFocus": "advanced-administrator",
+    "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
   }
 ]

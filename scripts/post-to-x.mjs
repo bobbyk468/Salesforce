@@ -135,15 +135,23 @@ async function cmdList() {
   console.log('\n📅 X Content Queue\n');
   console.log('─'.repeat(60));
   for (const thread of queue) {
-    const scheduled = new Date(thread.scheduledFor).toLocaleString('en-US', {
-      timeZone: 'America/New_York',
-      dateStyle: 'medium',
-      timeStyle: 'short',
-    });
+    const scheduled = thread.scheduledFor
+      ? new Date(thread.scheduledFor).toLocaleString('en-US', {
+          timeZone: 'America/New_York',
+          dateStyle: 'medium',
+          timeStyle: 'short',
+        })
+      : '(not scheduled)';
     const statusIcon = { pending: '⏳', posted: '✅', skipped: '⏭️' }[thread.status] ?? '❓';
     console.log(`\n${statusIcon} [${thread.id}]`);
     console.log(`   Title:     ${thread.title}`);
     console.log(`   Scheduled: ${scheduled} ET`);
+    if (thread.certFocus || thread.topicCert) {
+      const bits = [];
+      if (thread.certFocus) bits.push(`week → ${thread.certFocus}`);
+      if (thread.topicCert) bits.push(`topic → ${thread.topicCert}`);
+      console.log(`   Certs:     ${bits.join(' · ')}`);
+    }
   }
   console.log('\n' + '─'.repeat(60) + '\n');
 }

@@ -1,0 +1,529 @@
+{
+  "generated": "2026-05-07T04:55:23.853Z",
+  "anchorNote": "weekStarting is each Monday; week 1 = 2026-05-04. Change week0Monday in this script to realign the calendar.",
+  "totalWeeks": 87,
+  "weeks": [
+    {
+      "weekIndex": 1,
+      "weekStarting": "2026-05-04",
+      "certFocus": "platform-foundations",
+      "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    },
+    {
+      "weekIndex": 2,
+      "weekStarting": "2026-05-11",
+      "certFocus": "ai-associate",
+      "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    },
+    {
+      "weekIndex": 3,
+      "weekStarting": "2026-05-18",
+      "certFocus": "marketing-cloud-engagement-foundations",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    },
+    {
+      "weekIndex": 4,
+      "weekStarting": "2026-05-25",
+      "certFocus": "mulesoft-integration-foundations",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-foundations"
+    },
+    {
+      "weekIndex": 5,
+      "weekStarting": "2026-06-01",
+      "certFocus": "administrator",
+      "certPath": "https://www.trailblazeprep.com/certifications/administrator"
+    },
+    {
+      "weekIndex": 6,
+      "weekStarting": "2026-06-08",
+      "certFocus": "advanced-administrator",
+      "certPath": "https://www.trailblazeprep.com/certifications/advanced-administrator"
+    },
+    {
+      "weekIndex": 7,
+      "weekStarting": "2026-06-15",
+      "certFocus": "app-builder",
+      "certPath": "https://www.trailblazeprep.com/certifications/app-builder"
+    },
+    {
+      "weekIndex": 8,
+      "weekStarting": "2026-06-22",
+      "certFocus": "agentforce-specialist",
+      "certPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    },
+    {
+      "weekIndex": 9,
+      "weekStarting": "2026-06-29",
+      "certFocus": "business-analyst",
+      "certPath": "https://www.trailblazeprep.com/certifications/business-analyst"
+    },
+    {
+      "weekIndex": 10,
+      "weekStarting": "2026-07-06",
+      "certFocus": "cpq-administrator",
+      "certPath": "https://www.trailblazeprep.com/certifications/cpq-administrator"
+    },
+    {
+      "weekIndex": 11,
+      "weekStarting": "2026-07-13",
+      "certFocus": "marketing-cloud-engagement-admin",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-admin"
+    },
+    {
+      "weekIndex": 12,
+      "weekStarting": "2026-07-20",
+      "certFocus": "slack-administrator",
+      "certPath": "https://www.trailblazeprep.com/certifications/slack-administrator"
+    },
+    {
+      "weekIndex": 13,
+      "weekStarting": "2026-07-27",
+      "certFocus": "developer-1",
+      "certPath": "https://www.trailblazeprep.com/certifications/developer-1"
+    },
+    {
+      "weekIndex": 14,
+      "weekStarting": "2026-08-03",
+      "certFocus": "developer-2",
+      "certPath": "https://www.trailblazeprep.com/certifications/developer-2"
+    },
+    {
+      "weekIndex": 15,
+      "weekStarting": "2026-08-10",
+      "certFocus": "javascript-developer-i",
+      "certPath": "https://www.trailblazeprep.com/certifications/javascript-developer-i"
+    },
+    {
+      "weekIndex": 16,
+      "weekStarting": "2026-08-17",
+      "certFocus": "b2c-commerce-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2c-commerce-developer"
+    },
+    {
+      "weekIndex": 17,
+      "weekStarting": "2026-08-24",
+      "certFocus": "industries-cpq-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/industries-cpq-developer"
+    },
+    {
+      "weekIndex": 18,
+      "weekStarting": "2026-08-31",
+      "certFocus": "marketing-cloud-engagement-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-developer"
+    },
+    {
+      "weekIndex": 19,
+      "weekStarting": "2026-09-07",
+      "certFocus": "mulesoft-developer-i",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-developer-i"
+    },
+    {
+      "weekIndex": 20,
+      "weekStarting": "2026-09-14",
+      "certFocus": "mulesoft-developer-ii",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-developer-ii"
+    },
+    {
+      "weekIndex": 21,
+      "weekStarting": "2026-09-21",
+      "certFocus": "mulesoft-hyperautomation-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-hyperautomation-developer"
+    },
+    {
+      "weekIndex": 22,
+      "weekStarting": "2026-09-28",
+      "certFocus": "omnistudio-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/omnistudio-developer"
+    },
+    {
+      "weekIndex": 23,
+      "weekStarting": "2026-10-05",
+      "certFocus": "slack-developer",
+      "certPath": "https://www.trailblazeprep.com/certifications/slack-developer"
+    },
+    {
+      "weekIndex": 24,
+      "weekStarting": "2026-10-12",
+      "certFocus": "crm-analytics-einstein-discovery-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/crm-analytics-einstein-discovery-consultant"
+    },
+    {
+      "weekIndex": 25,
+      "weekStarting": "2026-10-19",
+      "certFocus": "data-360-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/data-360-consultant"
+    },
+    {
+      "weekIndex": 26,
+      "weekStarting": "2026-10-26",
+      "certFocus": "education-cloud-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/education-cloud-consultant"
+    },
+    {
+      "weekIndex": 27,
+      "weekStarting": "2026-11-02",
+      "certFocus": "experience-cloud",
+      "certPath": "https://www.trailblazeprep.com/certifications/experience-cloud"
+    },
+    {
+      "weekIndex": 28,
+      "weekStarting": "2026-11-09",
+      "certFocus": "field-service",
+      "certPath": "https://www.trailblazeprep.com/certifications/field-service"
+    },
+    {
+      "weekIndex": 29,
+      "weekStarting": "2026-11-16",
+      "certFocus": "pardot-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/pardot-consultant"
+    },
+    {
+      "weekIndex": 30,
+      "weekStarting": "2026-11-23",
+      "certFocus": "marketing-cloud-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-consultant"
+    },
+    {
+      "weekIndex": 31,
+      "weekStarting": "2026-11-30",
+      "certFocus": "nonprofit-cloud",
+      "certPath": "https://www.trailblazeprep.com/certifications/nonprofit-cloud"
+    },
+    {
+      "weekIndex": 32,
+      "weekStarting": "2026-12-07",
+      "certFocus": "nonprofit-success-pack-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/nonprofit-success-pack-consultant"
+    },
+    {
+      "weekIndex": 33,
+      "weekStarting": "2026-12-14",
+      "certFocus": "omnistudio-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/omnistudio-consultant"
+    },
+    {
+      "weekIndex": 34,
+      "weekStarting": "2026-12-21",
+      "certFocus": "revenue-cloud-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/revenue-cloud-consultant"
+    },
+    {
+      "weekIndex": 35,
+      "weekStarting": "2026-12-28",
+      "certFocus": "sales-cloud",
+      "certPath": "https://www.trailblazeprep.com/certifications/sales-cloud"
+    },
+    {
+      "weekIndex": 36,
+      "weekStarting": "2027-01-04",
+      "certFocus": "service-cloud",
+      "certPath": "https://www.trailblazeprep.com/certifications/service-cloud"
+    },
+    {
+      "weekIndex": 37,
+      "weekStarting": "2027-01-11",
+      "certFocus": "slack-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/slack-consultant"
+    },
+    {
+      "weekIndex": 38,
+      "weekStarting": "2027-01-18",
+      "certFocus": "email-specialist",
+      "certPath": "https://www.trailblazeprep.com/certifications/email-specialist"
+    },
+    {
+      "weekIndex": 39,
+      "weekStarting": "2027-01-25",
+      "certFocus": "pardot-specialist",
+      "certPath": "https://www.trailblazeprep.com/certifications/pardot-specialist"
+    },
+    {
+      "weekIndex": 40,
+      "weekStarting": "2027-02-01",
+      "certFocus": "application-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/application-architect"
+    },
+    {
+      "weekIndex": 41,
+      "weekStarting": "2027-02-08",
+      "certFocus": "data-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/data-architect"
+    },
+    {
+      "weekIndex": 42,
+      "weekStarting": "2027-02-15",
+      "certFocus": "integration-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/integration-architect"
+    },
+    {
+      "weekIndex": 43,
+      "weekStarting": "2027-02-22",
+      "certFocus": "sharing-visibility-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/sharing-visibility-architect"
+    },
+    {
+      "weekIndex": 44,
+      "weekStarting": "2027-03-01",
+      "certFocus": "system-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/system-architect"
+    },
+    {
+      "weekIndex": 45,
+      "weekStarting": "2027-03-08",
+      "certFocus": "identity-access-management-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/identity-access-management-architect"
+    },
+    {
+      "weekIndex": 46,
+      "weekStarting": "2027-03-15",
+      "certFocus": "dev-lifecycle-deployment-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/dev-lifecycle-deployment-architect"
+    },
+    {
+      "weekIndex": 47,
+      "weekStarting": "2027-03-22",
+      "certFocus": "technical-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/technical-architect"
+    },
+    {
+      "weekIndex": 48,
+      "weekStarting": "2027-03-29",
+      "certFocus": "technical-architect-evaluation",
+      "certPath": "https://www.trailblazeprep.com/certifications/technical-architect-evaluation"
+    },
+    {
+      "weekIndex": 49,
+      "weekStarting": "2027-04-05",
+      "certFocus": "technical-architect-review-board",
+      "certPath": "https://www.trailblazeprep.com/certifications/technical-architect-review-board"
+    },
+    {
+      "weekIndex": 50,
+      "weekStarting": "2027-04-12",
+      "certFocus": "b2b-solution-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2b-solution-architect"
+    },
+    {
+      "weekIndex": 51,
+      "weekStarting": "2027-04-19",
+      "certFocus": "b2c-commerce-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2c-commerce-architect"
+    },
+    {
+      "weekIndex": 52,
+      "weekStarting": "2027-04-26",
+      "certFocus": "b2c-solution-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2c-solution-architect"
+    },
+    {
+      "weekIndex": 53,
+      "weekStarting": "2027-05-03",
+      "certFocus": "heroku-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/heroku-architect"
+    },
+    {
+      "weekIndex": 54,
+      "weekStarting": "2027-05-10",
+      "certFocus": "mulesoft-catalyst-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-catalyst-consultant"
+    },
+    {
+      "weekIndex": 55,
+      "weekStarting": "2027-05-17",
+      "certFocus": "mulesoft-platform-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-platform-architect"
+    },
+    {
+      "weekIndex": 56,
+      "weekStarting": "2027-05-24",
+      "certFocus": "mulesoft-integration-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/mulesoft-integration-architect"
+    },
+    {
+      "weekIndex": 57,
+      "weekStarting": "2027-05-31",
+      "certFocus": "advanced-field-service-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/advanced-field-service-ap"
+    },
+    {
+      "weekIndex": 58,
+      "weekStarting": "2027-06-07",
+      "certFocus": "b2b-commerce-admin-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2b-commerce-admin-ap"
+    },
+    {
+      "weekIndex": 59,
+      "weekStarting": "2027-06-14",
+      "certFocus": "b2b-commerce-developer-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/b2b-commerce-developer-ap"
+    },
+    {
+      "weekIndex": 60,
+      "weekStarting": "2027-06-21",
+      "certFocus": "communications-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/communications-cloud-ap"
+    },
+    {
+      "weekIndex": 61,
+      "weekStarting": "2027-06-28",
+      "certFocus": "consumer-goods-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/consumer-goods-cloud-ap"
+    },
+    {
+      "weekIndex": 62,
+      "weekStarting": "2027-07-05",
+      "certFocus": "consumer-goods-tpm-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/consumer-goods-tpm-ap"
+    },
+    {
+      "weekIndex": 63,
+      "weekStarting": "2027-07-12",
+      "certFocus": "contact-center-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/contact-center-ap"
+    },
+    {
+      "weekIndex": 64,
+      "weekStarting": "2027-07-19",
+      "certFocus": "cpq-billing-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/cpq-billing-ap"
+    },
+    {
+      "weekIndex": 65,
+      "weekStarting": "2027-07-26",
+      "certFocus": "energy-utilities-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/energy-utilities-ap"
+    },
+    {
+      "weekIndex": 66,
+      "weekStarting": "2027-08-02",
+      "certFocus": "financial-services-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/financial-services-cloud-ap"
+    },
+    {
+      "weekIndex": 67,
+      "weekStarting": "2027-08-09",
+      "certFocus": "health-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/health-cloud-ap"
+    },
+    {
+      "weekIndex": 68,
+      "weekStarting": "2027-08-16",
+      "certFocus": "heroku-developer-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/heroku-developer-ap"
+    },
+    {
+      "weekIndex": 69,
+      "weekStarting": "2027-08-23",
+      "certFocus": "loyalty-management-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/loyalty-management-ap"
+    },
+    {
+      "weekIndex": 70,
+      "weekStarting": "2027-08-30",
+      "certFocus": "manufacturing-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/manufacturing-cloud-ap"
+    },
+    {
+      "weekIndex": 71,
+      "weekStarting": "2027-09-06",
+      "certFocus": "marketing-cloud-advanced-cross-channel-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-advanced-cross-channel-ap"
+    },
+    {
+      "weekIndex": 72,
+      "weekStarting": "2027-09-13",
+      "certFocus": "marketing-cloud-intelligence-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-intelligence-ap"
+    },
+    {
+      "weekIndex": 73,
+      "weekStarting": "2027-09-20",
+      "certFocus": "marketing-cloud-personalization-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-personalization-ap"
+    },
+    {
+      "weekIndex": 74,
+      "weekStarting": "2027-09-27",
+      "certFocus": "media-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/media-cloud-ap"
+    },
+    {
+      "weekIndex": 75,
+      "weekStarting": "2027-10-04",
+      "certFocus": "net-zero-cloud-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/net-zero-cloud-ap"
+    },
+    {
+      "weekIndex": 76,
+      "weekStarting": "2027-10-11",
+      "certFocus": "order-management-admin-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/order-management-admin-ap"
+    },
+    {
+      "weekIndex": 77,
+      "weekStarting": "2027-10-18",
+      "certFocus": "order-management-developer-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/order-management-developer-ap"
+    },
+    {
+      "weekIndex": 78,
+      "weekStarting": "2027-10-25",
+      "certFocus": "process-automation-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/process-automation-ap"
+    },
+    {
+      "weekIndex": 79,
+      "weekStarting": "2027-11-01",
+      "certFocus": "public-sector-solutions-ap",
+      "certPath": "https://www.trailblazeprep.com/certifications/public-sector-solutions-ap"
+    },
+    {
+      "weekIndex": 80,
+      "weekStarting": "2027-11-08",
+      "certFocus": "sales-foundations",
+      "certPath": "https://www.trailblazeprep.com/certifications/sales-foundations"
+    },
+    {
+      "weekIndex": 81,
+      "weekStarting": "2027-11-15",
+      "certFocus": "strategy-designer",
+      "certPath": "https://www.trailblazeprep.com/certifications/strategy-designer"
+    },
+    {
+      "weekIndex": 82,
+      "weekStarting": "2027-11-22",
+      "certFocus": "ux-designer",
+      "certPath": "https://www.trailblazeprep.com/certifications/ux-designer"
+    },
+    {
+      "weekIndex": 83,
+      "weekStarting": "2027-11-29",
+      "certFocus": "tableau-architect",
+      "certPath": "https://www.trailblazeprep.com/certifications/tableau-architect"
+    },
+    {
+      "weekIndex": 84,
+      "weekStarting": "2027-12-06",
+      "certFocus": "tableau-consultant",
+      "certPath": "https://www.trailblazeprep.com/certifications/tableau-consultant"
+    },
+    {
+      "weekIndex": 85,
+      "weekStarting": "2027-12-13",
+      "certFocus": "tableau-data-analyst",
+      "certPath": "https://www.trailblazeprep.com/certifications/tableau-data-analyst"
+    },
+    {
+      "weekIndex": 86,
+      "weekStarting": "2027-12-20",
+      "certFocus": "tableau-desktop-foundations",
+      "certPath": "https://www.trailblazeprep.com/certifications/tableau-desktop-foundations"
+    },
+    {
+      "weekIndex": 87,
+      "weekStarting": "2027-12-27",
+      "certFocus": "tableau-server-administrator",
+      "certPath": "https://www.trailblazeprep.com/certifications/tableau-server-administrator"
+    }
+  ]
+}
