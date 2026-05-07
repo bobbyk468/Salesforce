@@ -876,7 +876,7 @@
       "Biggest first-timer trap: question wording.\n\nSF never asks 'right answer?'\n\nIt asks BEST approach / MOST appropriate / LEAST likely to cause issues.\n\nTwo answers can be correct. Only one is the Salesforce way.",
       "Stuck on a Q?\n1. Cross out the two obviously wrong.\n2. Of remaining: more declarative/native?\n3. Better for data integrity?\n4. Still stuck? Mark & move on.\n\nNever >90s first pass. Come back fresh.",
       "the night before: do one practice exam, clear your desk, check your login.\n\nthat's it.\n\nno new material. no cramming. if you don't know it by the night before, two more hours won't save you.\n\nsleep is more useful than one more Trailhead module at 11pm.",
-      "If you fail:\nGet score report (shows exact weak sections).\nBreathe. Then study ONLY those sections — don't restart everything.\n\nretake rules exist and they bite — verify current policy in Webassessor before you bank on a date. the waiting game is mental too.",
+      "If you fail:\nGet score report (weak sections).\nBreathe. Then study ONLY those — don't restart everything.\n\nretake timing bites — Webassessor + score report (first retake ≠ later sits). don't parrot one-liners from X. the wait is mental too.",
       "exam day guide + free practice qs:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceCertification #AdminCoach"
     ],
     "engagementTweets": [
@@ -1417,7 +1417,7 @@
     },
     "status": "pending",
     "tweets": [
-      "ADM-201 isn't 'trick questions.'\n\nit's places where the answer that *feels* right in a messy org is wrong on the exam — because the item is testing one specific rule.\n\nhere are traps i still see people miss in 2026\n\na thread\n\n#ADM201 #SalesforceAdmin",
+      "dashboard running user — still weighted on the 2026 ADM outline.\n\nnot 'trick questions.' it's where messy-org instinct loses because the item tests one specific rule.\n\nmore traps i still see people miss\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "trap 1 — bucket column vs filter.\n\nfilters throw away rows.\n\nbucket columns label groups *inside* the report without building a custom field.\n\nif the stem says categorize / bucket / ranges, brain wants 'filter logic.' slow down.",
       "trap 2 — dashboard running user.\n\nOWD can look sane everywhere else and dashboards still show too much — because the dashboard runs as whoever you set as runner.\n\npower user runner = everyone inherits that visibility. classic exam play.",
       "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nthe exam loves jamming both into one story.",
@@ -1634,7 +1634,7 @@
     },
     "status": "pending",
     "tweets": [
-      "certs open the inbox.\n\nthey don't close the offer.\n\nwhat actually moves a Salesforce resume in 2026 is boring and nobody wants to hear it\n\na thread\n\n#SalesforceCareer",
+      "the resume line that makes recruiters skip your certs:\n\n'Salesforce work' with no number, no stakeholder, no before/after.\n\ncerts open the inbox — proof closes it.\n\nthe boring part nobody wants to hear\n\na thread\n\n#SalesforceCareer",
       "line recruiters skim first isn't your cert stack.\n\nit's whether you shipped something measurable in the last 12–24 months.\n\n'implemented X' without a number is wallpaper.",
       "template that still works:\n\nBuilt [thing] that cut [manual process] from [before] to [after] for [who] — Salesforce [cloud/products].\n\nfill the brackets with truth. exaggeration burns you in interviews.",
       "Trailhead is great for learning.\n\nlisted alone it signals 'i can follow tutorials.'\n\npair it with a nonprofit build, internal project, or sandbox story — anything with a stakeholder.",
@@ -1704,12 +1704,12 @@
     },
     "status": "pending",
     "tweets": [
-      "Agentforce Specialist isn't 'prompt engineering cosplay.'\n\nif you study it like a chatgpt demo, scenario qs will humble you fast.\n\nmistake #1 people make\n\na thread\n\n#Agentforce",
+      "the guardrail that blew up in prod last week usually isn't 'bad AI.'\n\nit's routing + actions — the specialist outline still punishes skipping that after Spring '26 multi-agent.\n\nmistake #1 people make\n\na thread\n\n#Agentforce",
       "the exam cares about Topics + Instructions + Actions as a system.\n\nnot how clever your system prompt sounds in a slide deck.\n\nif you can't explain what each piece *owns*, you don't have a study plan yet.",
       "Actions aren't 'optional extras.'\n\nthey're how the agent does real work without hallucinating database updates.\n\nskipping actions because 'we'll wire that later' is how POCs die and how people miss points.",
       "Instructions are where routing quietly breaks.\n\nvague instructions = wrong topic = wrong action = you debugging for an hour thinking the model is 'dumb.'\n\nit's usually your spec.",
       "building in a clean trial org teaches the happy path.\n\nthe exam lives in the weird middle: permissions, guardrails, when to escalate to human.\n\nyou need messy test cases on purpose.",
-      "if your prep is 90% keynote and 10% clicking — flip it.\n\nwhat i'm seeing in early 2026: passes correlate with ugly sandbox builds + fixes, not slick decks.\n\ncheck the official guide often — this track moves.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 2 (debug order) + weekly threads.\n\n#Agentforce #SalesforceAI"
+      "if prep is 90% keynote / 10% clicking — flip it.\n\npasses correlate with sandbox builds + fixes, not decks.\n\ncheck the guide — this track moves.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 2 + weekly threads.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
@@ -1756,7 +1756,7 @@
     },
     "status": "pending",
     "tweets": [
-      "part 2 — debugging Agentforce without losing your mind.\n\nrandomly tweaking prompts is not a methodology.\n\nthis is the order that keeps showing up on practice qs + in messy prod\n\n#Agentforce",
+      "part 2 — debugging Agentforce without losing your mind.\n\nsame cert domain as the Spring '26 stack posts — this is *outline + exam* depth, not hype replay.\n\nrandomly tweaking prompts is not a methodology.\n\n#Agentforce",
       "start at topic routing.\n\nif the wrong topic wins, nothing downstream matters — you'll 'fix' actions that were never the problem.",
       "then action inputs.\n\nmissing / wrong shape / wrong record context — the UI will look fine and the agent still does nonsense.\n\ninputs are where silent failures hide.",
       "then the action itself.\n\nonly after the first two checks.\n\ni've watched teams burn a day tuning copy while an input was still null.",
@@ -1808,7 +1808,7 @@
     },
     "status": "pending",
     "tweets": [
-      "part 3 — you passed Admin and thought Agentforce would be 'lighter.'\n\nsometimes it is.\n\nsometimes it's a different animal because the failure modes are probabilistic, not deterministic.\n\n#Agentforce #SalesforceAdmin",
+      "part 3 — you passed Admin and thought Agentforce would be 'lighter.'\n\nre-open your exam guide — weights shifted since Spring; mental model didn't get easier.\n\nsometimes lighter.\n\nsometimes failure modes are probabilistic, not deterministic.\n\n#Agentforce #SalesforceAdmin",
       "Admin muscle: deterministic config.\n\nturn this knob, get that behavior.\n\nAgent muscle: constrain a system that wants to improvise.\n\ndifferent discipline. not harder — just not the same exam with AI stickers.",
       "what transfers: data model literacy, permissions thinking, 'who should see what' instincts.\n\nwhat doesn't transfer: assuming the UI you trained users on maps cleanly to how an agent reasons about tools.",
       "you'll ship guardrails late once, get embarrassed in a review, and then you start designing them first.\n\nthat's the real curriculum.",

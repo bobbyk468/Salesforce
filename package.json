@@ -37,7 +37,8 @@
     "cert:promote-associate": "node scripts/promote-all-certs-to-associate.mjs",
     "bot:train": "node scripts/train-bot.mjs",
     "content:advisors": "node scripts/query-content-advisors.mjs",
-    "x:tag-cert-focus": "node scripts/tag-queue-cert-focus.mjs"
+    "x:tag-cert-focus": "node scripts/tag-queue-cert-focus.mjs",
+    "x:seed-tips-range": "node scripts/seed-queue-tips-range.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.2.3",
