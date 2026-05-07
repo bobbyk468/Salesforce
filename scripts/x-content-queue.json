@@ -576,7 +576,7 @@
       "lwc trap that burns points:\n\nthe exam won't ask what @wire means.\n\nit asks which decorator fits the scenario.\n\n@wire = pull from salesforce\n@api = value from parent\n@track = reactive local state\n\nknow the job each one is hired for.",
       "Test classes cost points when you miss two things:\n\n1. Test.startTest()/stopTest() resets governor limits inside the block.\n2. assertEquals(expected, actual) — expected FIRST.\n\nMemorize the order. It's backwards but required.",
       "real talk: PD1 is a comprehension exam, not a coding exam.\n\nyou don't write code. you read code and answer 'what happens when this runs?'\n\nbig difference. if you've been writing Apex to study, you might be over-engineering your prep.",
-      "what's your actual PD1 blocker right now?\n\nA) Apex syntax is foreign to me\nB) LWC vs Aura still confusing\nC) governor limits don't click yet\nD) can't find practice questions that feel like the real exam\n\ndrop it — I'll point you in the right direction for each one",
+      "what's your PD1 blocker right now? reply A/B/C/D — i'll send the study move i'd use first.\n\nA) apex syntax feels foreign\nB) lwc vs aura still fuzzy\nC) governor limits still don't click\nD) practice qs don't feel real",
       "if you keep failing pd1, it's usually not coding.\n\nit's the study model.\n\nfree pd1 questions mapped to the exam:\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for part 2 — reading habits that score points.\n\n#PD1 #SalesforceDev"
     ],
     "engagementTweets": [
@@ -672,7 +672,7 @@
       "the mistake I see constantly:\n\npeople collecting certs they'll never use because someone on LinkedIn said they were valuable.\n\nI've spoken to people with 8 certs who can't get an interview.\nand people with 2 certs who had 3 offers.\n\nthe difference was relevance, not quantity.",
       "3 certs with best leverage in 2026:\n\n1. Admin — prerequisite for nearly everything\n2. Agentforce Specialist — low supply, rising demand\n3. Sales Cloud Consultant — every implementation needs it\n\nNot glamorous. Highest hireability.",
       "one more thing nobody tells you:\n\nSalesforce certs expire. you need to pass maintenance exams every year to keep them active.\n\nso 8 certs means 8 maintenance exams every year. that's a real time commitment.\n\nget fewer certs you actually use. go deep on those.",
-      "Where are you right now?\n\nA) brand new, haven't started\nB) Admin certified, next steps?\nC) Developer aiming for Architect\nD) career switcher, non-tech bg\n\nReply with your letter — I'll give the exact path.",
+      "where are you right now? reply A/B/C/D — i'll point to the best next cert move.\n\nA) brand new, not started\nB) admin certified, next step\nC) developer aiming for architect\nD) career switcher, non-tech bg",
       "roadmaps by track (admin, dev, consultant, architect):\n\nhttps://trailblazeprep.com/certification-path\n\nfollow for episode 3 (exam day) + practical cert breakdowns you can use same day.\n\n#SalesforceCertification #SalesforceOhana"
     ],
     "engagementTweets": [
@@ -729,7 +729,7 @@
       "attempt 4 looked like this:\n\nday 1: full practice exam cold. no cram first.\nmarked every Q I wasn't 100% on — including lucky guesses.\n\neach flag → opened official Salesforce docs for that topic.\n\nnot a summary. the actual docs.",
       "then did the practice exam again. only paid attention to my weak sections.\n\nkept repeating until I was consistently getting those sections right.\n\ndidn't touch the topics I already knew.\n\nattempt 4: 84%.\n\nnot because I studied more. because I stopped studying what I already knew.",
       "the method: diagnose → learn the concept → verify.\n\nnot: study everything → hope → test.\n\nthe exam is not testing your memory. it's testing whether you understand WHY one approach is better than another in a specific situation.\n\nthat's a different skill than memorization.",
-      "quick poll — which ADM-201 attempt are you on? reply A/B/C/D + follow if this hit home. I'll drop the full study method next week.\n\nA) first sit\nB) retake (2nd+)\nC) already passed\nD) not sitting yet",
+      "quick poll — which ADM-201 attempt are you on? reply A/B/C/D — i'll share the next best move for each.\n\nA) first sit\nB) retake (2nd+)\nC) already passed\nD) not sitting yet",
       "if you've failed an SF exam: wrong method, not wrong topics.\n\nfree qs + explanations:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for ep 3 (exam day) + practical cert breakdowns you can use same day.\n\n#ADM201 #SalesforceAdmin"
     ],
     "engagementTweets": [
@@ -835,7 +835,7 @@
       "Data Cloud / Tableau tracks: identity, activation, and analytics storylines get heavier when those clouds expand — still, your north star is the official section weights.",
       "the boring backbone is still most of the score: security model, governor limits, declarative-first instincts. that stuff barely moves release to release.",
       "do this today: open your cert's exam guide on Trailhead → check Last Updated → compare weights to your notes. trust that doc over any course slide deck.",
-      "which cert? reply A/B/C/D:\n\nA) Admin / 201\nB) PD1\nC) Agentforce Specialist\nD) other (say which)\n\ni'll tell you what to re-check in the guide.\n\nhttps://trailblazeprep.com/certifications\n\nfollow for practical cert breakdowns.\n\n#Spring26 #SalesforceOhana"
+      "which cert are you sitting next? reply A/B/C/D — i'll reply with what to re-check first.\n\nA) Admin / 201\nB) PD1\nC) Agentforce Specialist\nD) other (say which)\n\nhttps://trailblazeprep.com/certifications\n\nfollow for practical cert breakdowns.\n\n#Spring26 #SalesforceOhana"
     ],
     "engagementTweets": [
       {
@@ -889,7 +889,7 @@
       "senior+ (6+ yrs):\n\nSr Admin: $110k-$135k\nSr Dev: $130k-$160k\nApp/Sys Architect: $155k-$185k\nCTA: $175k-$250k+\n\ntiny pool, long road — ceiling is still real.",
       "best ROI vs study time (2026):\n\nAdmin — every door, ~6-10 wks.\nAgentforce Specialist — thin supply right now, ~3-4 wks.\nSales Cloud Consultant — every big CRM impl, ~6-8 wks.\n\nnot flashy. highest return per hour.",
       "people get this wrong:\n\nit's not cert count.\n\nAdmin + Agentforce + 2 yrs real delivery > seven random badges for LinkedIn.\n\nexperience multiplies. certs open the door.",
-      "what track are you on? reply A/B/C/D + follow for the next salary + career fork threads. real numbers, no LinkedIn fluff.\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect",
+      "what track are you on? reply A/B/C/D — i'll point to the cert path with best ROI next.\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect",
       "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceCareer #SalesforceJobs"
     ],
     "engagementTweets": [
@@ -946,7 +946,7 @@
       "what 'Admin to Developer' actually looks like in practice:\n\nyou'll spend 2-3 months feeling slow and stupid while Apex syntax clicks.\n\nthen it clicks. and you realize your Admin knowledge just became a superpower — because you understand the platform developers are building on.",
       "The case against switching (rarely said):\n\nIf you're great at Admin + consulting, Solution Architect path can pay MORE than pure Dev.\n\nBusiness Architects earn as much as technical ones — different route, same ceiling.",
       "If deciding today:\n1. App Builder first (4-6 wks, proves depth).\n2. Try a basic Apex trigger for 1 week. See if you like it.\n3. Yes → PD1. No → Consultant/Architect track.\n\nDon't decide abstractly. Try first.",
-      "what's actually holding you back from going Developer? reply A/B/C/D + follow if this thread helped. more career path threads coming.\n\nA) Apex feels intimidating\nB) not sure the pay bump is worth the time\nC) love being an Admin, don't want to change\nD) already grinding PD1",
+      "what's holding you back from going developer? reply A/B/C/D — i'll give the next step i'd take.\n\nA) apex feels intimidating\nB) not sure pay bump is worth the time\nC) love being an admin, don't want to switch\nD) already grinding PD1",
       "part of the 2026 stack series.\n\nPD1 prep + free qs:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceAdmin #PD1"
     ],
     "engagementTweets": [
@@ -1556,7 +1556,7 @@
       "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nperm set ≠ sharing rule — same stem, two different problems.",
       "trap 4 — workflow rules & process builder.\n\nstill show up in old notes.\n\nfor *new* declarative automation the exam wants flow-first energy. if the answers still treat workflow like the default, your material is stale.",
       "trap 5 — stem says 'without code.'\n\nyour lizard brain reaches for legacy tools.\n\non current 201, 'without code' + update related records usually means flow — boring, but that's the game now.",
-      "which trap got you last time? reply A–E — i check back same-day.\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
+      "which trap got you last time? reply A–E — i'll drop the fix for each in replies today.\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
       "free admin qs mapped to topics (same stuff the guide weights):\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for part 2 (flow timing traps) + weekly breakdowns + no-fluff tips.\n\n#ADM201 #SalesforceAdmin",
       "p.s. site spotlight this week is platform foundations — free page:\n\nhttps://trailblazeprep.com/certifications/platform-foundations\n\n#Salesforce"
     ],
