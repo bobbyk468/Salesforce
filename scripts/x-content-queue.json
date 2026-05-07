@@ -1420,7 +1420,7 @@
       "dashboard running user — still weighted on the 2026 ADM outline.\n\nnot 'trick questions.' it's where messy-org instinct loses because the item tests one specific rule.\n\nmore traps i still see people miss\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "trap 1 — bucket column vs filter.\n\nfilters throw away rows.\n\nbucket columns label groups *inside* the report without building a custom field.\n\nif the stem says categorize / bucket / ranges, brain wants 'filter logic.' slow down.",
       "trap 2 — dashboard running user.\n\nOWD can look sane everywhere else and dashboards still show too much — because the dashboard runs as whoever you set as runner.\n\npower user runner = everyone inherits that visibility. classic exam play.",
-      "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nthe exam loves jamming both into one story.",
+      "trap 3 — sharing rules vs permission sets.\n\npermission sets mostly expand what someone can *do*.\n\nsharing rules often expand what they can *see* across branches the role hierarchy doesn't cover.\n\nperm set ≠ sharing rule — same stem, two different problems.",
       "trap 4 — workflow rules & process builder.\n\nstill show up in old notes.\n\nfor *new* declarative automation the exam wants flow-first energy. if the answers still treat workflow like the default, your material is stale.",
       "trap 5 — stem says 'without code.'\n\nyour lizard brain reaches for legacy tools.\n\non current 201, 'without code' + update related records usually means flow — boring, but that's the game now.",
       "which trap got you last time? reply A–E — i check back same-day.\n\nA) buckets vs filters\nB) dashboard runner\nC) sharing vs perm sets\nD) deprecated automation\nE) 'without code' wording",
@@ -1429,22 +1429,22 @@
     ],
     "engagementTweets": [
       {
-        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos.",
+        "text": "honest question: ever miss a 201 q because real-org chaos overrode the clean exam model? part 2 (flow timing) mon 5/11.",
         "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-1.png"
       },
       {
-        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one.",
+        "text": "what ADM topic do you pretend to get? reply — part 3 (security stacks) thu 5/14, part 4 (wording) sat 5/16.",
         "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-08T10:30:00-04:00",
     "_updatedEngagement": [
       {
-        "text": "honest question: did you ever miss a 201 q because you *overthought* it with real-org war stories? the exam is meaner when you know too much chaos.",
+        "text": "honest question: ever miss a 201 q because real-org chaos overrode the clean exam model? part 2 (flow timing) mon 5/11.",
         "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-1.png"
       },
       {
-        "text": "what's the one ADM topic you pretend you understand but secretly don't? reply — no judgment, we've all got one.",
+        "text": "what ADM topic do you pretend to get? reply — part 3 (security stacks) thu 5/14, part 4 (wording) sat 5/16.",
         "imageFile": "tweet-images/w9-thread-1-adm201-traps-d1-engage-2.png"
       }
     ],
@@ -1474,7 +1474,7 @@
     "tweets": [
       "before-save vs after-save — still a timing fork on the 2026 ADM outline.\n\nnot architecture diagrams. wrong *when* = wrong answer.\n\nflow timing traps\n\na thread\n\n#ADM201 #SalesforceFlow",
       "before-save vs after-save isn't trivia.\n\nbefore-save runs in the same database transaction as the save. good for field updates that have to happen *before* validation finishes its job.\n\nafter-save = you already committed. different constraints.",
-      "record-triggered flow that updates the *same* record that fired it — know what the exam considers safe vs recursive nightmare fuel.\n\nif you've only built happy-path flows, this is where practice qs beat youtube.",
+      "record-triggered flow that updates the *same* record that fired it — safe vs recursive nightmare fuel.\n\ncross-object write after stage change? formula won't update the related record. flow will.\n\nhappy-path builds won't teach that — practice qs will.",
       "scheduled paths vs record-triggered.\n\nscheduled = clock / batch-ish mental model.\n\nrecord-triggered = something happened to a row, react now (with entry conditions). stems usually telegraph which one they want.",
       "subflows aren't just 'cleaner.'\n\nsometimes they're the right answer because you reuse the same chunk from three places and the scenario says maintainability / duplication.\n\nthe exam cares about that wording.",
       "autolaunched vs screen flow.\n\nscreen = human in the loop.\n\nautolaunched = something else kicked it off. if the question has a user clicking 'next,' it's not autolaunched. sounds obvious. people still miss it cold.",
@@ -1483,22 +1483,22 @@
     ],
     "engagementTweets": [
       {
-        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose.",
+        "text": "hot take: most 201 flow misses are timing, not syntax. break something in a dev org on purpose once. part 3 thu 5/14.",
         "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-1.png"
       },
       {
-        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn.",
+        "text": "before-save vs after-save — which one cost you points? part 4 (BEST/MOST/LEAST) sat 5/16 after security.",
         "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-11T10:30:00-04:00",
     "_updatedEngagement": [
       {
-        "text": "hot take: most 201 flow misses aren't syntax. they're 'what runs first' intuition you only get from breaking something in a dev org on purpose.",
+        "text": "hot take: most 201 flow misses are timing, not syntax. break something in a dev org on purpose once. part 3 thu 5/14.",
         "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-1.png"
       },
       {
-        "text": "before-save vs after-save — which one actually cost you points on a practice test? curious if it's universal or just me being stubborn.",
+        "text": "before-save vs after-save — which one cost you points? part 4 (BEST/MOST/LEAST) sat 5/16 after security.",
         "imageFile": "tweet-images/w9-thread-2-adm201-flow-traps-d2-engage-2.png"
       }
     ],
@@ -1537,22 +1537,22 @@
     ],
     "engagementTweets": [
       {
-        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline.",
+        "text": "security qs reward the boring Salesforce default, not the clever prod workaround you'd ship under deadline. part 4 sat 5/16.",
         "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-1.png"
       },
       {
-        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have.",
+        "text": "ever 'fixed access' with a perm set when FLS was the bug? reply yes — humbled club. resume thread fri 5/29 after this arc.",
         "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-14T10:30:00-04:00",
     "_updatedEngagement": [
       {
-        "text": "security qs are where smart people outthink themselves. the exam wants the salesforce-default mental model, not the clever workaround you'd ship under deadline.",
+        "text": "security qs reward the boring Salesforce default, not the clever prod workaround you'd ship under deadline. part 4 sat 5/16.",
         "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-1.png"
       },
       {
-        "text": "ever fixed 'access' with a perm set when the real bug was FLS? reply yes if you've been humbled — i have.",
+        "text": "ever 'fixed access' with a perm set when FLS was the bug? reply yes — humbled club. resume thread fri 5/29 after this arc.",
         "imageFile": "tweet-images/w9-thread-3-adm201-security-traps-d3-engage-2.png"
       }
     ],
@@ -1591,22 +1591,22 @@
     ],
     "engagementTweets": [
       {
-        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise.",
+        "text": "linkedin architecture debates train the wrong muscle for 201 — the item picks one sanctioned compromise. resume thread fri 5/29 if you're job hunting.",
         "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-1.png"
       },
       {
-        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word.",
+        "text": "BEST, MOST, or LEAST — which keyword burns you? one-word replies. trap series wraps here.",
         "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-16T10:30:00-04:00",
     "_updatedEngagement": [
       {
-        "text": "unpopular: arguing about the 'right' enterprise design on linkedin makes you *worse* at 201 because the exam picks one sanctioned compromise.",
+        "text": "linkedin architecture debates train the wrong muscle for 201 — the item picks one sanctioned compromise. resume thread fri 5/29 if you're job hunting.",
         "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-1.png"
       },
       {
-        "text": "which wording kills you most — BEST, MOST, or LEAST? reply with one word.",
+        "text": "BEST, MOST, or LEAST — which keyword burns you? one-word replies. trap series wraps here.",
         "imageFile": "tweet-images/w9-thread-4-exam-wording-d4-engage-2.png"
       }
     ],
