@@ -830,6 +830,7 @@ function extractCertName(title) {
   if (title.includes('App Builder')) return 'Platform App Builder';
   if (title.includes('Agentforce')) return 'Agentforce Specialist';
   if (title.includes('ADM-211') || title.includes('Advanced Admin')) return 'Advanced Administrator';
+  if (title.toLowerCase().includes('resume') || title.toLowerCase().includes('career')) return 'Certification Hub';
   return 'Salesforce Certification';
 }
 
