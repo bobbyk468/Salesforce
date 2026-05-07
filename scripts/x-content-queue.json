@@ -627,18 +627,31 @@
       "habit 2: LWC qs want WHEN to use a decorator, not the textbook definition.\n\nwire = pull from Salesforce. @api = parent passes it in. @track = local state that has to rerender.",
       "if Test.startTest / stopTest shows up, they're usually testing limit reset + async timing — read what wraps the asserts, not just the asserts.",
       "you won't write Apex on this exam. you'll read it like a debugger.\n\ncover the answers, predict what breaks at 10k rows, then uncover.",
-      "questions that read like the real thing (free, mapped by section):\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceDev #SalesforceOhana"
+      "questions that read like the real thing (free, mapped by section):\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceDev #SalesforceOhana"
     ],
     "engagementTweets": [
       {
-        "text": "PD1 hot take: if your prep is mostly typing Apex in an IDE, you're practicing the wrong muscle. the exam muscle is 'what blows up at scale.'"
+        "text": "PD1 hot take: if your prep is mostly typing Apex in an IDE, you're practicing the wrong muscle. the exam muscle is 'what blows up at scale.'",
+        "imageFile": "tweet-images/w5-thread-4-pd1-episode-2-engage-1.png"
       }
     ],
     "scheduledFor": "2026-05-07T10:30:00-04:00",
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "developer-1",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/developer-1",
+    "_updatedEngagement": [
+      {
+        "text": "PD1 hot take: if your prep is mostly typing Apex in an IDE, you're practicing the wrong muscle. the exam muscle is 'what blows up at scale.'",
+        "imageFile": "tweet-images/w5-thread-4-pd1-episode-2-engage-1.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w5-thread-4-pd1-episode-2-cover.png",
+      "2": "tweet-images/w5-thread-4-pd1-episode-2-stats.png",
+      "5": "tweet-images/w5-thread-4-pd1-episode-2-cta.png"
+    }
   },
   {
     "id": "w5-thread-2-which-cert-first",
@@ -660,21 +673,39 @@
       "3 certs with best leverage in 2026:\n\n1. Admin — prerequisite for nearly everything\n2. Agentforce Specialist — low supply, rising demand\n3. Sales Cloud Consultant — every implementation needs it\n\nNot glamorous. Highest hireability.",
       "one more thing nobody tells you:\n\nSalesforce certs expire. you need to pass maintenance exams every year to keep them active.\n\nso 8 certs means 8 maintenance exams every year. that's a real time commitment.\n\nget fewer certs you actually use. go deep on those.",
       "Where are you right now?\n\nA) brand new, haven't started\nB) Admin certified, next steps?\nC) Developer aiming for Architect\nD) career switcher, non-tech bg\n\nReply with your letter — I'll give the exact path.",
-      "roadmaps by track (admin, dev, consultant, architect):\n\nhttps://trailblazeprep.com/certification-path\n\nfollow for episode 3 (exam day) + weekly cert threads + no-fluff tips.\n\n#SalesforceCertification #SalesforceOhana"
+      "roadmaps by track (admin, dev, consultant, architect):\n\nhttps://trailblazeprep.com/certification-path\n\nfollow for episode 3 (exam day) + practical cert breakdowns you can use same day.\n\n#SalesforceCertification #SalesforceOhana"
     ],
     "engagementTweets": [
       {
-        "text": "the SF certification world has a dirty secret: most people get certs for confidence, not for jobs. which is fine. but if you're doing it for jobs, strategy matters more than volume."
+        "text": "the SF certification world has a dirty secret: most people get certs for confidence, not for jobs. which is fine. but if you're doing it for jobs, strategy matters more than volume.",
+        "imageFile": "tweet-images/w5-thread-2-which-cert-first-engage-1.png"
       },
       {
-        "text": "if you skipped Admin and went straight to Developer or Consultant — how did that go? genuinely asking. I always assumed it was a mistake but maybe not for everyone."
+        "text": "if you skipped Admin and went straight to Developer or Consultant — how did that go? genuinely asking. I always assumed it was a mistake but maybe not for everyone.",
+        "imageFile": "tweet-images/w5-thread-2-which-cert-first-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-04T10:30:00-04:00",
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "_updatedEngagement": [
+      {
+        "text": "the SF certification world has a dirty secret: most people get certs for confidence, not for jobs. which is fine. but if you're doing it for jobs, strategy matters more than volume.",
+        "imageFile": "tweet-images/w5-thread-2-which-cert-first-engage-1.png"
+      },
+      {
+        "text": "if you skipped Admin and went straight to Developer or Consultant — how did that go? genuinely asking. I always assumed it was a mistake but maybe not for everyone.",
+        "imageFile": "tweet-images/w5-thread-2-which-cert-first-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w5-thread-2-which-cert-first-cover.png",
+      "2": "tweet-images/w5-thread-2-which-cert-first-stats.png",
+      "7": "tweet-images/w5-thread-2-which-cert-first-cta.png"
+    }
   },
   {
     "id": "w5-thread-3-failure-comeback",
@@ -699,7 +730,7 @@
       "then did the practice exam again. only paid attention to my weak sections.\n\nkept repeating until I was consistently getting those sections right.\n\ndidn't touch the topics I already knew.\n\nattempt 4: 84%.\n\nnot because I studied more. because I stopped studying what I already knew.",
       "the method: diagnose → learn the concept → verify.\n\nnot: study everything → hope → test.\n\nthe exam is not testing your memory. it's testing whether you understand WHY one approach is better than another in a specific situation.\n\nthat's a different skill than memorization.",
       "quick poll — which ADM-201 attempt are you on? reply A/B/C/D + follow if this hit home. I'll drop the full study method next week.\n\nA) first sit\nB) retake (2nd+)\nC) already passed\nD) not sitting yet",
-      "if you've failed an SF exam: wrong method, not wrong topics.\n\nfree qs + explanations:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for ep 3 (exam day) + weekly breakdowns + no-fluff tips.\n\n#ADM201 #SalesforceAdmin"
+      "if you've failed an SF exam: wrong method, not wrong topics.\n\nfree qs + explanations:\n\nhttps://trailblazeprep.com/certifications/administrator\n\nfollow for ep 3 (exam day) + practical cert breakdowns you can use same day.\n\n#ADM201 #SalesforceAdmin"
     ],
     "engagementTweets": [
       {
@@ -751,7 +782,7 @@
       "Testing/Debug has a pattern:\n\nWrong answer? Start at top of chain:\ntopic routing → action inputs → action itself.\n\nAlways work top-down. That's the reliable path.",
       "the single most underused resource for this exam:\n\nSalesforce's actual implementation guides for Agentforce.\nnot the marketing pages. the 'how to configure' documentation.\n\nspend 2-3 hours in there and you'll understand the exam structure better than most study guides explain it.",
       "who's currently studying for Agentforce Specialist? drop a ✋\n\nalso — what's the part you find most confusing so far? Topics? Actions? Instructions? something else?\n\nI'll do a follow-up thread on the most common answer.",
-      "full Agentforce Specialist exam breakdown + practice qs:\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#Agentforce #SalesforceAI"
+      "full Agentforce Specialist exam breakdown + practice qs:\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
@@ -804,19 +835,37 @@
       "Data Cloud / Tableau tracks: identity, activation, and analytics storylines get heavier when those clouds expand — still, your north star is the official section weights.",
       "the boring backbone is still most of the score: security model, governor limits, declarative-first instincts. that stuff barely moves release to release.",
       "do this today: open your cert's exam guide on Trailhead → check Last Updated → compare weights to your notes. trust that doc over any course slide deck.",
-      "which cert? reply A/B/C/D:\n\nA) Admin / 201\nB) PD1\nC) Agentforce Specialist\nD) other (say which)\n\nI'll tell you what to re-check in the exam guide.\n\nhttps://trailblazeprep.com/certifications\n\nfollow for weekly cert threads + no-fluff tips.\n\n#Spring26 #SalesforceOhana"
+      "which cert? reply A/B/C/D:\n\nA) Admin / 201\nB) PD1\nC) Agentforce Specialist\nD) other (say which)\n\ni'll tell you what to re-check in the guide.\n\nhttps://trailblazeprep.com/certifications\n\nfollow for practical cert breakdowns.\n\n#Spring26 #SalesforceOhana"
     ],
     "engagementTweets": [
       {
-        "text": "every release cycle I watch people fail exams because they studied from a year-old Udemy course. the official exam guide is free, always current, and more specific than any paid course. use it first."
+        "text": "every release cycle I watch people fail exams because they studied from a year-old Udemy course. the official exam guide is free, always current, and more specific than any paid course. use it first.",
+        "imageFile": "tweet-images/w6-thread-2-spring26-changes-engage-1.png"
       },
       {
-        "text": "has a Salesforce release ever caused you to fail an exam or discover your study material was outdated? I feel like this happens more than people share about it."
+        "text": "has a Salesforce release ever caused you to fail an exam or discover your study material was outdated? I feel like this happens more than people share about it.",
+        "imageFile": "tweet-images/w6-thread-2-spring26-changes-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-03T10:30:00-04:00",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "_updatedEngagement": [
+      {
+        "text": "every release cycle I watch people fail exams because they studied from a year-old Udemy course. the official exam guide is free, always current, and more specific than any paid course. use it first.",
+        "imageFile": "tweet-images/w6-thread-2-spring26-changes-engage-1.png"
+      },
+      {
+        "text": "has a Salesforce release ever caused you to fail an exam or discover your study material was outdated? I feel like this happens more than people share about it.",
+        "imageFile": "tweet-images/w6-thread-2-spring26-changes-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w6-thread-2-spring26-changes-cover.png",
+      "2": "tweet-images/w6-thread-2-spring26-changes-stats.png",
+      "6": "tweet-images/w6-thread-2-spring26-changes-cta.png"
+    }
   },
   {
     "id": "w7-thread-1-salary-truth",
@@ -841,7 +890,7 @@
       "best ROI vs study time (2026):\n\nAdmin — every door, ~6-10 wks.\nAgentforce Specialist — thin supply right now, ~3-4 wks.\nSales Cloud Consultant — every big CRM impl, ~6-8 wks.\n\nnot flashy. highest return per hour.",
       "people get this wrong:\n\nit's not cert count.\n\nAdmin + Agentforce + 2 yrs real delivery > seven random badges for LinkedIn.\n\nexperience multiplies. certs open the door.",
       "what track are you on? reply A/B/C/D + follow for the next salary + career fork threads. real numbers, no LinkedIn fluff.\n\nA) Admin\nB) Developer\nC) Consultant\nD) Architect",
-      "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceCareer #SalesforceJobs"
+      "full breakdown by cert, role, and region:\n\nhttps://trailblazeprep.com/salesforce-certification-salary\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceCareer #SalesforceJobs"
     ],
     "engagementTweets": [
       {
@@ -898,7 +947,7 @@
       "The case against switching (rarely said):\n\nIf you're great at Admin + consulting, Solution Architect path can pay MORE than pure Dev.\n\nBusiness Architects earn as much as technical ones — different route, same ceiling.",
       "If deciding today:\n1. App Builder first (4-6 wks, proves depth).\n2. Try a basic Apex trigger for 1 week. See if you like it.\n3. Yes → PD1. No → Consultant/Architect track.\n\nDon't decide abstractly. Try first.",
       "what's actually holding you back from going Developer? reply A/B/C/D + follow if this thread helped. more career path threads coming.\n\nA) Apex feels intimidating\nB) not sure the pay bump is worth the time\nC) love being an Admin, don't want to change\nD) already grinding PD1",
-      "part of the 2026 stack series — follow for the full path (release → AI → money → fork).\n\nPD1 prep + free qs:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceAdmin #PD1"
+      "part of the 2026 stack series.\n\nPD1 prep + free qs:\n\nhttps://trailblazeprep.com/certifications/developer-1\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceAdmin #PD1"
     ],
     "engagementTweets": [
       {
@@ -953,19 +1002,37 @@
       "Stuck on a Q?\n1. Cross out the two obviously wrong.\n2. Of remaining: more declarative/native?\n3. Better for data integrity?\n4. Still stuck? Mark & move on.\n\nNever >90s first pass. Come back fresh.",
       "the night before: do one practice exam, clear your desk, check your login.\n\nthat's it.\n\nno new material. no cramming. if you don't know it by the night before, two more hours won't save you.\n\nsleep is more useful than one more Trailhead module at 11pm.",
       "If you fail:\nGet score report (weak sections).\nBreathe. Then study ONLY those — don't restart everything.\n\nretake timing bites — Webassessor + score report (first retake ≠ later sits). don't parrot one-liners from X. the wait is mental too.",
-      "exam day guide + free practice qs:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\nfollow for weekly cert breakdowns, career threads, and no-fluff study tips.\n\n#SalesforceCertification #AdminCoach"
+      "exam day guide + free practice qs:\n\nhttps://trailblazeprep.com/salesforce-certification-exam-day-tips\n\nfollow for weekly cert threads + practical breakdowns you can use same day.\n\n#SalesforceCertification #AdminCoach"
     ],
     "engagementTweets": [
       {
-        "text": "the Webassessor check-in is genuinely stressful the first time. camera, ID check, room scan, tech check. 15-20 minutes minimum. log in 30 minutes early or you will be anxious for no reason."
+        "text": "the Webassessor check-in is genuinely stressful the first time. camera, ID check, room scan, tech check. 15-20 minutes minimum. log in 30 minutes early or you will be anxious for no reason.",
+        "imageFile": "tweet-images/w8-thread-1-exam-day-engage-1.png"
       },
       {
-        "text": "what was the most stressful part of your first Salesforce exam? the check-in process? the question wording? running out of time? something else? I want to write a proper prep guide for this."
+        "text": "what was the most stressful part of your first Salesforce exam? the check-in process? the question wording? running out of time? something else? I want to write a proper prep guide for this.",
+        "imageFile": "tweet-images/w8-thread-1-exam-day-engage-2.png"
       }
     ],
     "scheduledFor": "2026-05-06T18:00:00-04:00",
     "certFocus": "platform-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "_updatedEngagement": [
+      {
+        "text": "the Webassessor check-in is genuinely stressful the first time. camera, ID check, room scan, tech check. 15-20 minutes minimum. log in 30 minutes early or you will be anxious for no reason.",
+        "imageFile": "tweet-images/w8-thread-1-exam-day-engage-1.png"
+      },
+      {
+        "text": "what was the most stressful part of your first Salesforce exam? the check-in process? the question wording? running out of time? something else? I want to write a proper prep guide for this.",
+        "imageFile": "tweet-images/w8-thread-1-exam-day-engage-2.png"
+      }
+    ],
+    "_immediateReplyImage": null,
+    "tweetImages": {
+      "0": "tweet-images/w8-thread-1-exam-day-cover.png",
+      "2": "tweet-images/w8-thread-1-exam-day-stats.png",
+      "7": "tweet-images/w8-thread-1-exam-day-cta.png"
+    }
   },
   {
     "id": "spring26-release-thread",
@@ -1707,7 +1774,7 @@
       "two offers with same certs — the one with the clearer *scope* story wins.\n\nscope = what you personally owned vs what the team did. hiring managers hunt for that sentence.",
       "LinkedIn headline stuffing (#Salesforce #Admin #Flow #Apex #Agentforce) looks busy, not senior.\n\none role + one proof point beats twelve buzzwords.",
       "if you're switching careers: show transferable ops discipline.\n\nSalesforce hiring is full of people who can learn the platform — scarce part is judgment under ambiguity.",
-      "free cert prep if you're still building the story:\n\nhttps://trailblazeprep.com/certifications\n\nfollow for part 2 (resume don'ts) tomorrow morning + weekly no-fluff threads.\n\n#SalesforceCareer #SalesforceAdmin"
+      "free cert prep if you're still building the story:\n\nhttps://trailblazeprep.com/certifications\n\nfollow for part 2 (resume don'ts) tomorrow morning + practical career breakdowns.\n\n#SalesforceCareer #SalesforceAdmin"
     ],
     "engagementTweets": [
       {
@@ -1775,7 +1842,7 @@
       "Actions aren't 'optional extras.'\n\nthey're how the agent does real work without hallucinating database updates.\n\nskipping actions because 'we'll wire that later' is how POCs die and how people miss points.",
       "Instructions are where routing quietly breaks.\n\nvague instructions = wrong topic = wrong action = you debugging for an hour thinking the model is 'dumb.'\n\nit's usually your spec.",
       "building in a clean trial org teaches the happy path.\n\nthe exam lives in the weird middle: permissions, guardrails, when to escalate to human.\n\nyou need messy test cases on purpose.",
-      "if prep is 90% keynote / 10% clicking — flip it.\n\npasses correlate with sandbox builds + fixes, not decks.\n\ncheck the guide — this track moves.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 2 + weekly threads.\n\n#Agentforce #SalesforceAI"
+      "if prep is 90% keynote / 10% clicking — flip it.\n\npasses correlate with sandbox builds + fixes, not decks.\n\ncheck the guide — this track moves.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 2 + practical breakdowns.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
@@ -1827,7 +1894,7 @@
       "then action inputs.\n\nmissing / wrong shape / wrong record context — the UI will look fine and the agent still does nonsense.\n\ninputs are where silent failures hide.",
       "then the action itself.\n\nonly after the first two checks.\n\ni've watched teams burn a day tuning copy while an input was still null.",
       "guardrails aren't 'compliance theater.'\n\nthey're how you stop the agent from volunteering stuff humans shouldn't hear.\n\nthe exam treats them as first-class, not a footnote.",
-      "log one thing: topic fired + inputs passed.\n\ncuts most war rooms in half.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 3 (Admin → Agent brain) + daily quizzes.\n\n#Agentforce #SalesforceAI"
+      "log one thing: topic fired + inputs passed.\n\ncuts most war rooms in half.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for part 3 (admin → agent brain) + practical quiz-style breakdowns.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
@@ -1878,7 +1945,7 @@
       "Admin muscle: deterministic config.\n\nturn this knob, get that behavior.\n\nAgent muscle: constrain a system that wants to improvise.\n\ndifferent discipline. not harder — just not the same exam with AI stickers.",
       "what transfers: data model literacy, permissions thinking, 'who should see what' instincts.\n\nwhat doesn't transfer: assuming the UI you trained users on maps cleanly to how an agent reasons about tools.",
       "you'll ship guardrails late once, get embarrassed in a review, and then you start designing them first.\n\nthat's the real curriculum.",
-      "after Admin, Agentforce in 2026 is 'learn in public' for a lot of us.\n\nsandboxes eat ego cheaply. still worth it.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for weekly AI + cert threads + no-fluff tips.\n\n#Agentforce #SalesforceAI"
+      "after Admin, Agentforce in 2026 is 'learn in public' for a lot of us.\n\nsandboxes eat ego cheaply. still worth it.\n\nhttps://trailblazeprep.com/certifications/agentforce-specialist\n\nfollow for practical cert breakdowns.\n\n#Agentforce #SalesforceAI"
     ],
     "engagementTweets": [
       {
