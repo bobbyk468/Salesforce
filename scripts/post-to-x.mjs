@@ -381,11 +381,22 @@ async function cmdEngage(dryRun) {
 async function cmdSchedule(dryRun) {
   const queue = loadQueue();
   const now = new Date();
-  const due = queue.filter(t => t.status === 'pending' && new Date(t.scheduledFor) <= now);
+  const dueAll = queue
+    .filter(t => t.status === 'pending' && new Date(t.scheduledFor) <= now)
+    .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor));
 
-  if (due.length === 0) {
+  const maxDue = Number.parseInt(process.env.X_SCHEDULE_MAX_DUE ?? '', 10);
+  const due = Number.isFinite(maxDue) && maxDue > 0 ? dueAll.slice(0, maxDue) : dueAll;
+
+  if (dueAll.length === 0) {
     console.log('\n⏳ No threads due yet.\n');
     return;
+  }
+
+  if (due.length < dueAll.length) {
+    console.log(
+      `\n⚠️  ${dueAll.length} due item(s) found; limited to ${due.length} this run (X_SCHEDULE_MAX_DUE=${maxDue}).\n`,
+    );
   }
 
   console.log(`\n📬 ${due.length} thread(s) due for posting...\n`);
