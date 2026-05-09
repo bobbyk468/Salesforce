@@ -960,7 +960,7 @@
     "mediaNotes": {
       "carousel": "4–6 slides: one decision per slide (App Builder → try Apex → PD1 vs consultant path)"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "should admins move to developer?\n\nyes for some people. no for others.\n\nthe wrong reason is money hype.\n\nthe right reason is whether you want to own behavior at scale.\n\na thread\n\n#SalesforceAdmin #PD1",
       "the obvious reason to do it: dev tracks often screen higher than pure admin at entry level in the same market.\n\nbut that's not actually why I'd recommend it.\n\nI'd recommend it because the Salesforce dev path has a clear ceiling — Architect — and that lane still pays.",
@@ -999,7 +999,9 @@
       "0": "tweet-images/w7-thread-2-admin-to-developer-cover.png",
       "2": "tweet-images/w7-thread-2-admin-to-developer-stats.png",
       "7": "tweet-images/w7-thread-2-admin-to-developer-cta.png"
-    }
+    },
+    "firstTweetId": "2053258781606199700",
+    "postedAt": "2026-05-09T23:40:34.178Z"
   },
   {
     "id": "w8-thread-1-exam-day",
