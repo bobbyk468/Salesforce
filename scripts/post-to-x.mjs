@@ -2,7 +2,8 @@
  * X posting: threads (with tweetImages + optional immediateReplyImage), tips (imageFile), engagement replies.
  * Scheduled flow (e.g. cron): from repo root, same machine as clone — run `npm run x:schedule` when due,
  * plus `x:tip` / `x:engage` on your cadence. If you run in GitHub Actions, commit+push the queue JSON after
- * each run or the next checkout will still see items as pending (duplicate posts). Tips default to replying
+ * each run (including failures) or the next checkout will still see items as pending. Partial threads use
+ * postCheckpoint after each tweet so a crash mid-thread resumes instead of re-posting the hook. Tips default to replying
  * under the latest thread; use
  * `npm run x:tip:standalone` for a top-level tip (reach experiment). Generate PNGs: `npm run x:images`.
  */
@@ -160,12 +161,22 @@ async function cmdList() {
 
 async function cmdPost(threadId, dryRun) {
   const queue = loadQueue();
-  const thread = findThread(queue, threadId);
+  const idx = queue.findIndex(t => t.id === threadId);
+  if (idx === -1) {
+    console.error(`\n❌ Thread "${threadId}" not found in queue.\n`);
+    process.exit(1);
+  }
+  const thread = queue[idx];
 
   console.log(`\n${dryRun ? '🔍 DRY RUN — ' : ''}Posting thread: "${thread.title}"\n`);
   console.log('─'.repeat(60));
 
   if (dryRun) {
+    if (thread.postCheckpoint?.nextTweetIndex != null) {
+      console.log(
+        `\n↩️  Resume checkpoint: next index ${thread.postCheckpoint.nextTweetIndex} / ${thread.tweets.length}\n`,
+      );
+    }
     thread.tweets.forEach((tweet, i) => {
       console.log(`\n[Tweet ${i + 1}/${thread.tweets.length}]`);
       console.log(tweet);
@@ -186,11 +197,43 @@ async function cmdPost(threadId, dryRun) {
   }
 
   const client = getClient();
+  const n = thread.tweets.length;
   let replyToId = null;
-  let firstTweetId = null;
+  let firstTweetId = thread.firstTweetId ?? null;
+  let startIndex = 0;
+  let skipMainTweets = false;
 
-  // Quiz answer support: reply to the question tweet's firstTweetId
-  if (thread.replyToEntryId) {
+  const cp = thread.postCheckpoint;
+  if (cp && typeof cp.nextTweetIndex === 'number') {
+    const nxt = cp.nextTweetIndex;
+    if (nxt < 0 || nxt > n) {
+      console.error(
+        `\n❌ Invalid postCheckpoint.nextTweetIndex (${nxt}) for "${thread.id}" (tweet count ${n}). Fix x-content-queue.json.\n`,
+      );
+      process.exit(1);
+    }
+    if (nxt === n) {
+      skipMainTweets = true;
+      replyToId = cp.replyToTweetId;
+      if (n > 0 && !replyToId) {
+        console.error(`\n❌ Checkpoint at end of thread missing replyToTweetId for "${thread.id}".\n`);
+        process.exit(1);
+      }
+    } else {
+      startIndex = nxt;
+      replyToId = cp.replyToTweetId;
+      if (startIndex > 0 && !firstTweetId) {
+        console.error(
+          `\n❌ Resume requires firstTweetId on "${thread.id}" (partial thread). Fix or clear postCheckpoint.\n`,
+        );
+        process.exit(1);
+      }
+      console.log(`\n↩️  Resuming thread at tweet ${startIndex + 1}/${n} (checkpoint).\n`);
+    }
+  }
+
+  // Quiz answer: first tweet only replies to parent when starting the thread from the top.
+  if (thread.replyToEntryId && !skipMainTweets && startIndex === 0) {
     const parentEntry = queue.find(t => t.id === thread.replyToEntryId);
     if (parentEntry?.firstTweetId) {
       replyToId = parentEntry.firstTweetId;
@@ -200,31 +243,48 @@ async function cmdPost(threadId, dryRun) {
     }
   }
 
-  for (let i = 0; i < thread.tweets.length; i++) {
-    const tweet = thread.tweets[i];
-    const imagePath = threadTweetImagePath(thread, i);
-    console.log(`\nPosting tweet ${i + 1}/${thread.tweets.length}${imagePath ? ' [+image]' : ''}...`);
+  if (skipMainTweets && !thread.immediateReply) {
+    delete queue[idx].postCheckpoint;
+    queue[idx].status = 'posted';
+    queue[idx].postedAt = new Date().toISOString();
+    queue[idx].firstTweetId = firstTweetId;
+    saveQueue(queue);
+    console.log(`\n🎉 Thread "${thread.title}" marked posted (checkpoint cleared, no immediate reply).\n`);
+    return;
+  }
 
-    const payload = { text: tweet };
-    if (replyToId) payload.reply = { in_reply_to_tweet_id: replyToId };
+  if (!skipMainTweets) {
+    for (let i = startIndex; i < n; i++) {
+      const tweet = thread.tweets[i];
+      const imagePath = threadTweetImagePath(thread, i);
+      console.log(`\nPosting tweet ${i + 1}/${n}${imagePath ? ' [+image]' : ''}...`);
 
-    if (imagePath) {
-      try {
-        const mediaId = await client.v1.uploadMedia(imagePath, { mimeType: mimeForImagePath(imagePath) });
-        payload.media = { media_ids: [mediaId] };
-        console.log(`  📎 Image uploaded`);
-      } catch (err) {
-        console.warn(`  ⚠️  Image upload failed (posting text only): ${err.message}`);
+      const payload = { text: tweet };
+      if (replyToId) payload.reply = { in_reply_to_tweet_id: replyToId };
+
+      if (imagePath) {
+        try {
+          const mediaId = await client.v1.uploadMedia(imagePath, { mimeType: mimeForImagePath(imagePath) });
+          payload.media = { media_ids: [mediaId] };
+          console.log(`  📎 Image uploaded`);
+        } catch (err) {
+          console.warn(`  ⚠️  Image upload failed (posting text only): ${err.message}`);
+        }
       }
-    }
 
-    const { data } = await client.v2.tweet(payload);
-    replyToId = data.id;
-    if (i === 0) firstTweetId = data.id;
-    console.log(`  ✅ Posted: https://x.com/i/web/status/${data.id}`);
+      const { data } = await client.v2.tweet(payload);
+      replyToId = data.id;
+      if (i === 0) firstTweetId = data.id;
 
-    if (i < thread.tweets.length - 1) {
-      await new Promise(r => setTimeout(r, 2000));
+      queue[idx].firstTweetId = firstTweetId;
+      queue[idx].postCheckpoint = { nextTweetIndex: i + 1, replyToTweetId: data.id };
+      saveQueue(queue);
+
+      console.log(`  ✅ Posted: https://x.com/i/web/status/${data.id}`);
+
+      if (i < n - 1) {
+        await new Promise(r => setTimeout(r, 2000));
+      }
     }
   }
 
@@ -246,7 +306,7 @@ async function cmdPost(threadId, dryRun) {
     console.log(`  ✅ Link Reply Posted: https://x.com/i/web/status/${data.id}`);
   }
 
-  const idx = queue.findIndex(t => t.id === threadId);
+  delete queue[idx].postCheckpoint;
   queue[idx].status = 'posted';
   queue[idx].postedAt = new Date().toISOString();
   queue[idx].firstTweetId = firstTweetId;
