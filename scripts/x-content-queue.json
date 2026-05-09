@@ -901,7 +901,7 @@
     "mediaNotes": {
       "video": "15–30s vertical: simple bar animation — entry / mid / senior bands (no fake precision)"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "salesforce cert salaries don't have one average.\n\nthey swing hard based on what you shipped.\n\n2026 postings + community surveys put the gap at $40k+ between similar titles.\n\nthe numbers people dodge on linkedin\n\na thread\n\n#SalesforceCareer",
       "entry level (0-2 years, 1-2 certs, US):\n\nAdmin: $65k-$80k\nJunior Developer: $75k-$95k\nJunior Consultant: $70k-$85k\n\nthe floor is higher than most people expect coming from outside tech.\n\nand it compounds fast once you add certs and project experience.",
@@ -942,7 +942,9 @@
       "0": "tweet-images/w7-thread-1-salary-truth-cover.png",
       "2": "tweet-images/w7-thread-1-salary-truth-stats.png",
       "7": "tweet-images/w7-thread-1-salary-truth-cta.png"
-    }
+    },
+    "firstTweetId": "2053247198612033776",
+    "postedAt": "2026-05-09T22:54:32.656Z"
   },
   {
     "id": "w7-thread-2-admin-to-developer",
