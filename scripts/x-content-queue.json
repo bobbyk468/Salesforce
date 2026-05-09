@@ -711,7 +711,9 @@
       "7": "tweet-images/w5-thread-2-which-cert-first-cta.png"
     },
     "firstTweetId": "2053174695621493231",
-    "postedAt": "2026-05-09T18:06:25.785Z"
+    "postedAt": "2026-05-09T18:06:25.785Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-09T21:02:15.707Z"
   },
   {
     "id": "w5-thread-3-failure-comeback",
