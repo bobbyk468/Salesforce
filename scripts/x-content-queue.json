@@ -831,7 +831,7 @@
       "episodesPlanned": 6,
       "nextEntryId": "w6-thread-1-agentforce-study"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "Spring '26 is live.\n\nsome of your study material is already wrong — not because you're dumb, because the exam guide moved.\n\nthis thread is ONLY what to check before you pay for a seat\n\n#Spring26 #SalesforceCertification",
       "Salesforce updates cert outlines when the platform shifts. stale PDF = you're training on trivia that won't show up, or skipping a new scenario family entirely.",
@@ -869,7 +869,9 @@
       "0": "tweet-images/w6-thread-2-spring26-changes-cover.png",
       "2": "tweet-images/w6-thread-2-spring26-changes-stats.png",
       "6": "tweet-images/w6-thread-2-spring26-changes-cta.png"
-    }
+    },
+    "firstTweetId": "2053145141351789019",
+    "postedAt": "2026-05-09T16:08:57.351Z"
   },
   {
     "id": "w7-thread-1-salary-truth",
