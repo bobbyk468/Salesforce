@@ -1533,14 +1533,16 @@
     },
     "scheduledFor": "2026-05-04T17:00:00-04:00",
     "notes": "Text-only quick engagement — skip video/carousel.",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#Agentforce exam question — drop your answer 👇\n\nwhich data lake object (DLO) captures all contiguous interactions with one or more AI agents?\n\nA. AIAgentInteractionMessage\nB. AIAgentInteraction\nC. AIAgentSession\nanswer in 2 hours."
     ],
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "firstTweetId": "2053194057866764639",
+    "postedAt": "2026-05-09T19:23:04.685Z"
   },
   {
     "id": "quiz-agentforce-aiagentsession-a",
