@@ -764,7 +764,9 @@
       "8": "tweet-images/w5-thread-3-failure-comeback-cta.png"
     },
     "postedAt": "2026-05-09T14:26:24.048Z",
-    "firstTweetId": "2053119311208657082"
+    "firstTweetId": "2053119311208657082",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-09T17:11:37.591Z"
   },
   {
     "id": "w6-thread-1-agentforce-study",
