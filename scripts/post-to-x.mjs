@@ -57,6 +57,13 @@ function saveQueue(queue) {
   writeFileSync(QUEUE_FILE, JSON.stringify(queue, null, 2));
 }
 
+/** Parse scheduledFor to instant; missing/invalid → null */
+function scheduledInstant(t) {
+  if (!t.scheduledFor) return null;
+  const d = new Date(t.scheduledFor);
+  return Number.isNaN(d.getTime()) ? null : d;
+}
+
 function mimeForImagePath(p) {
   const lower = p.toLowerCase();
   if (lower.endsWith('.jpg') || lower.endsWith('.jpeg')) return 'image/jpeg';
@@ -145,7 +152,7 @@ async function cmdList() {
           timeStyle: 'short',
         })
       : '(not scheduled)';
-    const statusIcon = { pending: '⏳', posted: '✅', skipped: '⏭️' }[thread.status] ?? '❓';
+    const statusIcon = { pending: '⏳', posting: '🔒', posted: '✅', skipped: '⏭️' }[thread.status] ?? '❓';
     console.log(`\n${statusIcon} [${thread.id}]`);
     console.log(`   Title:     ${thread.title}`);
     console.log(`   Scheduled: ${scheduled} ET`);
@@ -196,7 +203,15 @@ async function cmdPost(threadId, dryRun) {
     return;
   }
 
-  const client = getClient();
+  if (thread.status === 'posted') {
+    console.error(`\n❌ Thread "${threadId}" is already posted.\n`);
+    process.exit(1);
+  }
+  if (thread.status !== 'pending' && thread.status !== 'posting') {
+    console.error(`\n❌ Thread "${threadId}" has status "${thread.status}" — cannot post.\n`);
+    process.exit(1);
+  }
+
   const n = thread.tweets.length;
   let replyToId = null;
   let firstTweetId = thread.firstTweetId ?? null;
@@ -245,6 +260,7 @@ async function cmdPost(threadId, dryRun) {
 
   if (skipMainTweets && !thread.immediateReply) {
     delete queue[idx].postCheckpoint;
+    delete queue[idx].postingStartedAt;
     queue[idx].status = 'posted';
     queue[idx].postedAt = new Date().toISOString();
     queue[idx].firstTweetId = firstTweetId;
@@ -252,6 +268,16 @@ async function cmdPost(threadId, dryRun) {
     console.log(`\n🎉 Thread "${thread.title}" marked posted (checkpoint cleared, no immediate reply).\n`);
     return;
   }
+
+  // After validation only: claim so we never leave posting set if we exit() above.
+  if (queue[idx].status === 'pending') {
+    queue[idx].status = 'posting';
+    queue[idx].postingStartedAt = new Date().toISOString();
+    saveQueue(queue);
+    console.log(`\n🔒 Claimed (status=posting) — persisted to queue.\n`);
+  }
+
+  const client = getClient();
 
   if (!skipMainTweets) {
     for (let i = startIndex; i < n; i++) {
@@ -307,6 +333,7 @@ async function cmdPost(threadId, dryRun) {
   }
 
   delete queue[idx].postCheckpoint;
+  delete queue[idx].postingStartedAt;
   queue[idx].status = 'posted';
   queue[idx].postedAt = new Date().toISOString();
   queue[idx].firstTweetId = firstTweetId;
@@ -443,25 +470,61 @@ async function cmdEngage(dryRun) {
 async function cmdSchedule(dryRun) {
   const queue = loadQueue();
   const now = new Date();
-  const dueAll = queue
-    .filter(t => t.status === 'pending' && new Date(t.scheduledFor) <= now)
-    .sort((a, b) => new Date(a.scheduledFor) - new Date(b.scheduledFor));
 
-  const maxDue = Number.parseInt(process.env.X_SCHEDULE_MAX_DUE ?? '', 10);
-  const due = Number.isFinite(maxDue) && maxDue > 0 ? dueAll.slice(0, maxDue) : dueAll;
-
-  if (dueAll.length === 0) {
-    console.log('\n⏳ No threads due yet.\n');
+  const inFlight = queue.filter(t => t.status === 'posting');
+  if (inFlight.length > 1) {
+    console.error(
+      `\n❌ Multiple rows with status=posting (${inFlight.map(t => t.id).join(', ')}). Fix scripts/x-content-queue.json.\n`,
+    );
+    process.exit(1);
+  }
+  if (inFlight.length === 1) {
+    const t = inFlight[0];
+    console.log(
+      `\n🔒 In-flight thread "${t.id}" — resuming before any other scheduled item.\n`,
+    );
+    console.log('Images resolve from scripts/tweet-images (queue paths + fallbacks).\n');
+    await cmdPost(t.id, dryRun);
     return;
   }
 
-  if (due.length < dueAll.length) {
-    console.log(
-      `\n⚠️  ${dueAll.length} due item(s) found; limited to ${due.length} this run (X_SCHEDULE_MAX_DUE=${maxDue}).\n`,
-    );
+  const pending = queue.filter(t => t.status === 'pending');
+  if (pending.length === 0) {
+    console.log('\n⏳ No pending threads.\n');
+    return;
   }
 
-  console.log(`\n📬 ${due.length} thread(s) due for posting...\n`);
+  let next = null;
+  let nextWhen = null;
+  for (const t of pending) {
+    const w = scheduledInstant(t);
+    if (w == null) continue;
+    const tieBreak = next && +w === +nextWhen && String(t.id).localeCompare(String(next.id)) < 0;
+    if (nextWhen == null || w < nextWhen || tieBreak) {
+      next = t;
+      nextWhen = w;
+    }
+  }
+
+  if (!next || nextWhen == null) {
+    console.log('\n⏳ No pending threads with a valid scheduledFor.\n');
+    return;
+  }
+
+  if (nextWhen > now) {
+    console.log(
+      `\n⏳ Earliest pending is "${next.id}" @ ${next.scheduledFor} — not before that time (now ${now.toISOString()}).\n`,
+    );
+    return;
+  }
+
+  const maxDue = Number.parseInt(process.env.X_SCHEDULE_MAX_DUE ?? '', 10);
+  const limit = Number.isFinite(maxDue) && maxDue > 0 ? maxDue : Number.POSITIVE_INFINITY;
+  const due = [next].slice(0, limit);
+
+  console.log(
+    `\n📬 Next in queue: "${next.id}" (${next.scheduledFor}) — only earliest pending is eligible until it is posted.\n`,
+  );
   console.log('Images resolve from scripts/tweet-images (queue paths + fallbacks).\n');
   for (const thread of due) {
     await cmdPost(thread.id, dryRun);

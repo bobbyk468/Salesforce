@@ -95,5 +95,14 @@ jobs:
             echo "No queue changes to commit."
           else
             git commit -m "chore(x): sync queue after automated post [skip ci]"
-            git push
+            ok=0
+            for attempt in 1 2 3; do
+              git pull --rebase origin "${GITHUB_REF_NAME}" && git push && ok=1 && break
+              echo "Push failed (attempt $attempt), retrying..."
+              sleep 8
+            done
+            if [ "$ok" != 1 ]; then
+              echo "::error::git push failed after 3 attempts — queue updates may not be on GitHub."
+              exit 1
+            fi
           fi
