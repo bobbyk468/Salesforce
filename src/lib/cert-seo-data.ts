@@ -2044,6 +2044,11 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
   'agentforce-specialist': [
     {
+      question: 'Is the Salesforce Agentforce Specialist exam hard?',
+      answer:
+        'It is scenario-heavy and still relatively new, so many candidates find it tough until they have built agents hands-on. Use the difficulty heatmap on this page: Agentforce Configuration and Integration and Best Practices are often the steepest sections; Platform and Security is usually moderate. Budget sandbox time for Topics, Actions, Einstein Trust Layer, Data Cloud grounding, and human escalation paths.',
+    },
+    {
       question: 'What is Agentforce?',
       answer: 'Agentforce is Salesforce\'s AI-powered agent solution that helps automate customer interactions using AI agents that can answer questions and perform tasks.',
     },
@@ -2533,36 +2538,77 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   ],
 }
 
+/** Optional overrides for the four generic base FAQs (People Also Ask–style wording per high-value slug). */
+const CERT_BASE_FAQ_OVERRIDES: Partial<
+  Record<
+    string,
+    Partial<
+      Record<
+        'coverage' | 'freeQuestions' | 'prepare' | 'officialOutline',
+        FaqItem
+      >
+    >
+  >
+> = {
+  'agentforce-specialist': {
+    coverage: {
+      question: `What is on the Salesforce Certified Agentforce Specialist exam syllabus (${TITLE_YEAR})?`,
+      answer: `The syllabus follows Salesforce's official Agentforce Specialist exam guide: four weighted areas — Agentforce Configuration (25%), Platform and Security (25%), Agent Capabilities and Optimization (25%), and Integration and Best Practices (25%). Expect scenario questions on Topics and Actions, guardrails vs instructions, Einstein Trust Layer, Data Cloud grounding, channels, and human escalation. Use the section weightage, architecture overview, and key concepts on this page to match the current ${TITLE_YEAR} outline.`,
+    },
+    freeQuestions: {
+      question: 'Are there free Salesforce Agentforce Specialist practice questions?',
+      answer:
+        'Yes. This page includes 15 free sample questions with explanations — scenario-style, similar to the real exam. Use them before you book; aim for steady scores above the passing threshold on full timed sets.',
+    },
+    prepare: {
+      question: 'How should I prepare for the Agentforce Specialist certification exam?',
+      answer:
+        'Use the official Agentforce Specialist Trailmix, then build at least one agent in a sandbox (Topics, Actions, Trust Layer behavior). Prioritise the difficulty heatmap “Hard” sections, review the FAQs on this page, and schedule the exam when your mock scores are consistent.',
+    },
+    officialOutline: {
+      question: 'Where is the official Salesforce Agentforce Specialist exam guide?',
+      answer:
+        'Salesforce publishes the official exam guide in the Trailhead certification catalog (exam name: Salesforce Certified Agentforce Specialist). Cross-check the published outline with this page’s weightage and topics — we align content to that guide for exam prep.',
+    },
+  },
+}
+
 export function getCertFaq(slug: string, certTitle: string): FaqItem[] {
   const faqName = getCertFaqName(slug, certTitle)
   const formerName = getCertFormerName(slug)
   const formerlyPhrase = formerName ? `—formerly ${formerName}—` : ''
-  
+  const baseOverrides = CERT_BASE_FAQ_OVERRIDES[slug]
+
   // Get cert-specific FAQs if available
   const certSpecificFaqs = CERT_SPECIFIC_FAQS[slug] || []
-  
+
   // Base FAQs (always included) — also used for FAQPage schema
+  const baseCoverage: FaqItem = {
+    question: `What is covered on the ${faqName} exam?`,
+    answer: formerName
+      ? `The ${faqName} exam${formerlyPhrase} covers section-wise weightage as shown above. Use the exam topics and practice questions on this page to align your study with the official outline.`
+      : `This page shows the section-wise exam weightage so you know exactly which topics carry the most weight. Use the exam topics and practice questions above to align your study with the official outline.`,
+  }
+  const baseFree: FaqItem = {
+    question: `Are there free practice questions for the ${faqName} exam?`,
+    answer: `Yes. This page includes 15 free sample practice questions with explanations. Use them to test your knowledge before booking the exam.`,
+  }
+  const basePrepare: FaqItem = {
+    question: `How do I prepare for the ${faqName} certification?`,
+    answer: formerName
+      ? `Use the exam tips, prerequisites, and study strategy on this ${faqName} study guide${formerlyPhrase} Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`
+      : `Use the exam tips, prerequisites, and study strategy on this page. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`,
+  }
+  const baseOfficial: FaqItem = {
+    question: `Where can I find the official exam outline for ${faqName}?`,
+    answer: `Salesforce publishes exam guides and outlines on Trailhead (trailhead.salesforce.com). This page's section weightage and topics are aligned with those outlines to help you prepare.`,
+  }
+
   const baseFaqs: FaqItem[] = [
-    {
-      question: `What is covered on the ${faqName} exam?`,
-      answer: formerName
-        ? `The ${faqName} exam${formerlyPhrase} covers section-wise weightage as shown above. Use the exam topics and practice questions on this page to align your study with the official outline.`
-        : `This page shows the section-wise exam weightage so you know exactly which topics carry the most weight. Use the exam topics and practice questions above to align your study with the official outline.`,
-    },
-    {
-      question: `Are there free practice questions for the ${faqName} exam?`,
-      answer: `Yes. This page includes 15 free sample practice questions with explanations. Use them to test your knowledge before booking the exam.`,
-    },
-    {
-      question: `How do I prepare for the ${faqName} certification?`,
-      answer: formerName
-        ? `Use the exam tips, prerequisites, and study strategy on this ${faqName} study guide${formerlyPhrase} Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`
-        : `Use the exam tips, prerequisites, and study strategy on this page. Focus first on the highest-weighted sections, then take the sample practice questions. Schedule the exam when you consistently score well on practice tests.`,
-    },
-    {
-      question: `Where can I find the official exam outline for ${faqName}?`,
-      answer: `Salesforce publishes exam guides and outlines on Trailhead (trailhead.salesforce.com). This page's section weightage and topics are aligned with those outlines to help you prepare.`,
-    },
+    { ...baseCoverage, ...baseOverrides?.coverage },
+    { ...baseFree, ...baseOverrides?.freeQuestions },
+    { ...basePrepare, ...baseOverrides?.prepare },
+    { ...baseOfficial, ...baseOverrides?.officialOutline },
   ]
   
   // Combine cert-specific FAQs with base FAQs

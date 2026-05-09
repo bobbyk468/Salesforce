@@ -29,6 +29,7 @@ import type {
 import { parseMarkdown, renderMarkdownSegments } from '@/lib/cert-page-spike/markdown-parser'
 import AdministratorCertBody from '@/components/certifications/AdministratorCertBody'
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
+import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -210,6 +211,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
 
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
+
+        {slug === 'agentforce-specialist' ? <AgentforceArchitectureDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}

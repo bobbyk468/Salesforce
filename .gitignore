@@ -43,6 +43,8 @@ next-env.d.ts
 indexing_token_p*.json
 tbprep_gsc_inspect*.py
 tbprep_gsc_inspection.json
+# Local GSC OAuth client + refresh token (never commit)
+scripts/.gsc/
 tbprep_indexed.txt
 tbprep_pending.txt
 submit_google_indexing.py

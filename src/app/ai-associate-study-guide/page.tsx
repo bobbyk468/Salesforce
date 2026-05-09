@@ -253,15 +253,21 @@ export default function AiAssociateStudyGuidePage() {
         <p className="text-sm text-gray-700 mb-4">
           Apply this study guide with free AI Associate practice questions:
         </p>
-        <div className="flex flex-col sm:flex-row gap-3">
+        <div className="flex flex-col sm:flex-row flex-wrap gap-3">
           <Link href="/certifications/ai-associate" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
             AI Associate Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/ai-associate-exam-tips" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             AI Associate Exam Tips
           </Link>
+          <Link
+            href="/certifications/agentforce-specialist"
+            className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors"
+          >
+            Next step: Agentforce Specialist — practice &amp; exam guide
+          </Link>
           <Link href="/agentforce-specialist-study-guide" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
-            Agentforce Specialist Study Guide
+            Agentforce Specialist study guide (long-form)
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">

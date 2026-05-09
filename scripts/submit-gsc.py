@@ -2,7 +2,10 @@
 """
 Google Search Console Indexing API — submit trailblazeprep.com URLs for crawl.
 
-Uses OAuth2 credentials from Downloads/Salesforce Blog/gsc_token.json.
+OAuth: place a Desktop-app client JSON at scripts/.gsc/client_secret.json
+       or set GSC_OAUTH_CLIENT_JSON. Token is saved to scripts/.gsc/token.json
+       (or GSC_OAUTH_TOKEN_JSON). See scripts/gsc_oauth_env.py.
+
 Your Google account must be verified Owner of trailblazeprep.com in GSC.
 
 Run:
@@ -14,9 +17,9 @@ import sys
 import time
 from pathlib import Path
 
-# Credentials path (from Salesforce Blog directory)
-TOKEN_FILE = Path("/Users/brahmajikatragadda/Downloads/Salesforce Blog/gsc_token.json")
-CREDS_FILE = Path("/Users/brahmajikatragadda/Downloads/client_secret_73655452385-663rt0ah01sugeljjcbmapa7ek5mkbma.apps.googleusercontent.com.json")
+from gsc_oauth_env import load_oauth_credentials, oauth_token_json_path
+
+TOKEN_FILE = oauth_token_json_path()
 
 # URLs to submit (generated from public/urls.json)
 URLS_FILE = Path(__file__).parent.parent / "public" / "urls.json"
@@ -29,53 +32,6 @@ SCOPES = [
     "https://www.googleapis.com/auth/webmasters.readonly"
 ]
 RATE_LIMIT_DELAY = 0.5  # Stay well under 600 requests/minute
-
-
-def get_credentials():
-    """Load or refresh OAuth2 credentials."""
-    try:
-        from google.oauth2.credentials import Credentials
-        from google_auth_oauthlib.flow import InstalledAppFlow
-        from google.auth.transport.requests import Request
-    except ImportError:
-        print("ERROR: Install dependencies:")
-        print("  pip3 install google-auth-oauthlib --break-system-packages")
-        sys.exit(1)
-
-    creds = None
-
-    # Load existing token if valid
-    if TOKEN_FILE.exists():
-        try:
-            creds = Credentials.from_authorized_user_file(str(TOKEN_FILE), SCOPES)
-        except:
-            pass
-
-    # Refresh if expired
-    if creds and creds.expired and creds.refresh_token:
-        try:
-            creds.refresh(Request())
-            TOKEN_FILE.write_text(creds.to_json())
-            print(f"✓ Token refreshed")
-            return creds
-        except Exception as e:
-            print(f"⚠ Token refresh failed: {e}")
-            creds = None
-
-    # Otherwise get new credentials
-    if not creds or not creds.valid:
-        if not CREDS_FILE.exists():
-            print(f"ERROR: Credentials file not found: {CREDS_FILE}")
-            print("Download from: https://console.cloud.google.com/apis/credentials")
-            sys.exit(1)
-
-        print("Opening browser for authentication...")
-        flow = InstalledAppFlow.from_client_secrets_file(str(CREDS_FILE), SCOPES)
-        creds = flow.run_local_server(port=0)
-        TOKEN_FILE.write_text(creds.to_json())
-        print(f"✓ Token saved to {TOKEN_FILE}")
-
-    return creds
 
 
 def load_urls():
@@ -140,7 +96,15 @@ def main():
 
     # Authenticate
     print("Authenticating (browser will open on first run)...\n")
-    creds = get_credentials()
+    try:
+        creds = load_oauth_credentials(TOKEN_FILE, SCOPES)
+    except FileNotFoundError as e:
+        print(str(e))
+        sys.exit(1)
+    except RuntimeError as e:
+        print(str(e))
+        sys.exit(1)
+    print(f"✓ Token ready at {TOKEN_FILE}\n")
 
     try:
         from google.auth.transport.requests import AuthorizedSession

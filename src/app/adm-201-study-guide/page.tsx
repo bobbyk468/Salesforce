@@ -253,6 +253,17 @@ export default function Adm201StudyGuidePage() {
             </Link>
             {' '}depending on your current org and target role.
           </li>
+          <li>
+            On the AI agent track, many admins pair{' '}
+            <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">
+              Salesforce AI Associate
+            </Link>
+            {' '}with{' '}
+            <Link href="/certifications/agentforce-specialist" className="text-salesforce-blue font-medium hover:underline">
+              Salesforce Certified Agentforce Specialist
+            </Link>
+            — free practice questions, syllabus-aligned weightage, and scenario tips on one page.
+          </li>
         </ul>
       </section>
 
