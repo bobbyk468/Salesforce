@@ -826,7 +826,9 @@
       "7": "tweet-images/w6-thread-1-agentforce-study-cta.png"
     },
     "firstTweetId": "2053161253686980631",
-    "postedAt": "2026-05-09T17:13:00.826Z"
+    "postedAt": "2026-05-09T17:13:00.826Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-09T19:21:55.150Z"
   },
   {
     "id": "w6-thread-2-spring26-changes",
@@ -879,7 +881,9 @@
       "6": "tweet-images/w6-thread-2-spring26-changes-cta.png"
     },
     "firstTweetId": "2053145141351789019",
-    "postedAt": "2026-05-09T16:08:57.351Z"
+    "postedAt": "2026-05-09T16:08:57.351Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-09T19:21:55.150Z"
   },
   {
     "id": "w7-thread-1-salary-truth",
