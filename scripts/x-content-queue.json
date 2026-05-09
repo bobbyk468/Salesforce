@@ -668,7 +668,7 @@
       "prevEntryId": "w5-thread-3-failure-comeback",
       "nextEntryId": "w8-thread-1-exam-day"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "everyone asks me which Salesforce cert to get first.\n\nand everyone expects me to say 'it depends.'\n\nbut I'm going to give you a real answer instead.\n\na thread",
       "if you're brand new to Salesforce:\n\nAdmin. full stop.\n\nEvery other cert assumes you know profiles, OWD, validation rules. Skipping Admin is like skipping grammar to study literature — it just takes twice as long.",
@@ -709,7 +709,9 @@
       "0": "tweet-images/w5-thread-2-which-cert-first-cover.png",
       "2": "tweet-images/w5-thread-2-which-cert-first-stats.png",
       "7": "tweet-images/w5-thread-2-which-cert-first-cta.png"
-    }
+    },
+    "firstTweetId": "2053174695621493231",
+    "postedAt": "2026-05-09T18:06:25.785Z"
   },
   {
     "id": "w5-thread-3-failure-comeback",
