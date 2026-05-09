@@ -9,6 +9,9 @@
  * Tips default to replying
  * under the latest thread; use
  * `npm run x:tip:standalone` for a top-level tip (reach experiment). Generate PNGs: `npm run x:images`.
+ *
+ * Lock: Node does not run try/finally after process.exit(). We validate `post` args before acquiring
+ * scripts/.x-posting.lock; cmdPost/cmdSchedule still use process.exit() on error — remove stale lock if needed.
  */
 import { TwitterApi } from 'twitter-api-v2';
 import { readFileSync, writeFileSync, existsSync, openSync, closeSync, unlinkSync } from 'fs';
@@ -673,6 +676,11 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const arg = args.find(a => !a.startsWith('--') && a !== cmd);
 
+  if (cmd === 'post' && (!arg || arg === '--dry-run')) {
+    console.error('Usage: node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
+    process.exit(1);
+  }
+
   const useLocalLock =
     !dryRun &&
     process.env.GITHUB_ACTIONS !== 'true' &&
@@ -686,10 +694,6 @@ async function main() {
         await cmdList();
         break;
       case 'post':
-        if (!arg || arg === '--dry-run') {
-          console.error('Usage: node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
-          process.exit(1);
-        }
         await cmdPost(arg, dryRun);
         break;
       case 'schedule':

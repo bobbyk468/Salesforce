@@ -62,3 +62,23 @@ fix(x): finalize thread before immediate reply; harden engage loop
 - Engage: try/catch per tweet, JSON errors, skip engagementPosted if stopped early
 - Richer repair warning; workflow concurrency clarification comment
 ```
+
+---
+
+## Paste as PR summary (comment or description)
+
+**X posting — immediate reply, engagement, lock validation**
+
+- **Immediate reply:** Main thread is saved as `posted` *before* the link-reply X API call, so a failure there does not leave `posting` + checkpoint (avoids duplicate link replies on retry). `immediateReplyPostedAt` records success; `x_immediate_reply_failed` JSON on failure.
+- **Engagement:** Each reply is try/catch; `engagementPosted` is set only if every tweet succeeds. Failures log `x_engage_tweet_failed` with `engagementIndex`. Partial success may duplicate earlier engagement tweets on the next run (documented limitation).
+- **Repair:** `pending` + `firstTweetId` warning now includes checkpoint hint for ops.
+- **Actions:** Comment clarifies concurrency group **queues** runs (no parallel same-group jobs).
+- **Lock:** `post` usage is validated **before** acquiring `scripts/.x-posting.lock`, so bad `npm run … post` usage does not leak the lock. Header documents that `process.exit()` still skips `finally` on internal validation errors.
+
+---
+
+## Follow-up: lock file + `process.exit`
+
+**Resolved for CLI usage:** Invalid `post` (missing thread id) exits before lock acquisition.
+
+**Remaining:** `cmdPost` / `cmdSchedule` still call `process.exit(1)` on validation errors after the lock is held (rare). Mitigation: delete stale `scripts/.x-posting.lock` locally. A deeper fix would replace those exits with `throw` and a single `catch` in `main`.
