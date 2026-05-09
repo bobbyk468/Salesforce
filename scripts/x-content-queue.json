@@ -1498,14 +1498,16 @@
     },
     "scheduledFor": "2026-05-05T08:30:00-04:00",
     "notes": "Text-only quick engagement — skip video/carousel.",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "#Agentforce exam question — drop your answer 👇\n\nan employee agent keeps discussing the CEO's health plan. staff shouldn't see it.\n\nhow do you fix it?\n\nA. Assignment rules\nB. Permissions + FLS\nC. Instructions and guardrails\nD. Retrain on employee plans\nanswer in 2 hours."
     ],
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "firstTweetId": "2053219306100424953",
+    "postedAt": "2026-05-09T21:03:24.309Z"
   },
   {
     "id": "quiz-agentforce-guardrails-a",
