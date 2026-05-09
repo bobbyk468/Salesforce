@@ -1,7 +1,9 @@
 /**
  * X posting: threads (with tweetImages + optional immediateReplyImage), tips (imageFile), engagement replies.
  * Scheduled flow (e.g. cron): from repo root, same machine as clone — run `npm run x:schedule` when due,
- * plus `x:tip` / `x:engage` on your cadence. Tips default to replying under the latest thread; use
+ * plus `x:tip` / `x:engage` on your cadence. If you run in GitHub Actions, commit+push the queue JSON after
+ * each run or the next checkout will still see items as pending (duplicate posts). Tips default to replying
+ * under the latest thread; use
  * `npm run x:tip:standalone` for a top-level tip (reach experiment). Generate PNGs: `npm run x:images`.
  */
 import { TwitterApi } from 'twitter-api-v2';

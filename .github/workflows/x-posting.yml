@@ -29,7 +29,8 @@ jobs:
   run:
     runs-on: ubuntu-latest
     permissions:
-      contents: read
+      # Needed to push queue JSON after posting so the next run does not re-post the same item.
+      contents: write
 
     steps:
       - name: Checkout
@@ -81,3 +82,17 @@ jobs:
           X_ACCESS_TOKEN: ${{ secrets.X_ACCESS_TOKEN }}
           X_ACCESS_TOKEN_SECRET: ${{ secrets.X_ACCESS_TOKEN_SECRET }}
         run: npm run x:engage ${{ inputs.dry_run && '-- --dry-run' || '' }}
+
+      # Without this, the queue file on GitHub never gets status=posted — every run would see the same pending item and post duplicates.
+      - name: Commit and push queue updates
+        if: ${{ success() && (github.event_name == 'schedule' || (github.event_name == 'workflow_dispatch' && !inputs.dry_run)) }}
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add scripts/x-content-queue.json scripts/x-tips-queue.json
+          if git diff --staged --quiet; then
+            echo "No queue changes to commit."
+          else
+            git commit -m "chore(x): sync queue after automated post [skip ci]"
+            git push
+          fi
