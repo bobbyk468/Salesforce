@@ -5,6 +5,7 @@
  * each run (including failures) or the next checkout will still see items as pending. Partial threads use
  * postCheckpoint after each tweet so a crash mid-thread resumes instead of re-posting the hook. Stale empty
  * posting rows reset after X_POSTING_STALE_MS (default 2h). Local schedule/post uses scripts/.x-posting.lock (skipped in CI).
+ * Threads with immediateReply: main chain is marked posted before the link reply; immediateReplyPostedAt is set only if that reply succeeds.
  * Tips default to replying
  * under the latest thread; use
  * `npm run x:tip:standalone` for a top-level tip (reach experiment). Generate PNGs: `npm run x:images`.
@@ -86,8 +87,9 @@ function repairQueueForSchedule(queue, dryRun) {
 
   for (const t of queue) {
     if (t.status === 'pending' && t.firstTweetId) {
+      const cpNote = t.postCheckpoint ? 'has checkpoint' : 'no checkpoint';
       console.warn(
-        `\n⚠️  "${t.id}" was pending but has firstTweetId — treating as posting (resume).\n`,
+        `\n⚠️  "${t.id}" was pending but has firstTweetId (${cpNote}) — likely a prior crash or race; coercing to posting for resume. Investigate if this repeats.\n`,
       );
       t.status = 'posting';
       if (!t.postingStartedAt) t.postingStartedAt = new Date().toISOString();
@@ -409,6 +411,14 @@ async function cmdPost(threadId, dryRun) {
   }
 
   if (thread.immediateReply) {
+    // Persist posted *before* link reply so a crash here does not leave posting+checkpoint and re-run immediateReply.
+    delete queue[idx].postCheckpoint;
+    delete queue[idx].postingStartedAt;
+    queue[idx].status = 'posted';
+    queue[idx].postedAt = new Date().toISOString();
+    queue[idx].firstTweetId = firstTweetId;
+    saveQueue(queue);
+
     console.log('\nPosting immediate reply (link hack)...');
     await new Promise(r => setTimeout(r, 2000));
     const replyPayload = { text: thread.immediateReply, reply: { in_reply_to_tweet_id: replyToId } };
@@ -422,16 +432,30 @@ async function cmdPost(threadId, dryRun) {
         console.warn(`  ⚠️  Link reply image failed (text only): ${err.message}`);
       }
     }
-    const { data } = await client.v2.tweet(replyPayload);
-    console.log(`  ✅ Link Reply Posted: https://x.com/i/web/status/${data.id}`);
+    try {
+      const { data } = await client.v2.tweet(replyPayload);
+      console.log(`  ✅ Link Reply Posted: https://x.com/i/web/status/${data.id}`);
+      queue[idx].immediateReplyPostedAt = new Date().toISOString();
+      saveQueue(queue);
+    } catch (err) {
+      console.error(
+        JSON.stringify({
+          event: 'x_immediate_reply_failed',
+          threadId: thread.id,
+          message: err.message ?? String(err),
+          at: new Date().toISOString(),
+        }),
+      );
+      throw err;
+    }
+  } else {
+    delete queue[idx].postCheckpoint;
+    delete queue[idx].postingStartedAt;
+    queue[idx].status = 'posted';
+    queue[idx].postedAt = new Date().toISOString();
+    queue[idx].firstTweetId = firstTweetId;
+    saveQueue(queue);
   }
-
-  delete queue[idx].postCheckpoint;
-  delete queue[idx].postingStartedAt;
-  queue[idx].status = 'posted';
-  queue[idx].postedAt = new Date().toISOString();
-  queue[idx].firstTweetId = firstTweetId;
-  saveQueue(queue);
 
   console.log(`\n🎉 Thread "${thread.title}" posted successfully!\n`);
 }
@@ -528,12 +552,14 @@ async function cmdEngage(dryRun) {
       continue;
     }
 
-    for (const eng of thread.engagementTweets) {
+    let engagementStoppedEarly = false;
+    for (let engIdx = 0; engIdx < thread.engagementTweets.length; engIdx++) {
+      const eng = thread.engagementTweets[engIdx];
       const text = typeof eng === 'string' ? eng : eng.text;
       const rawImg = typeof eng === 'object' ? eng.imageFile : null;
       const imageFile = resolveImageFile(rawImg);
       console.log(`\n  [Reply to thread${imageFile ? ' +image' : ''}]\n  ${text}\n  (${text.length} chars)`);
-      
+
       if (!dryRun) {
         const payload = { text, reply: { in_reply_to_tweet_id: replyToId } };
         if (imageFile) {
@@ -545,13 +571,27 @@ async function cmdEngage(dryRun) {
             console.warn(`  ⚠️  Image upload failed: ${err.message}`);
           }
         }
-        const { data } = await client.v2.tweet(payload);
-        console.log(`  ✅ Replied: https://x.com/i/web/status/${data.id}`);
+        try {
+          const { data } = await client.v2.tweet(payload);
+          console.log(`  ✅ Replied: https://x.com/i/web/status/${data.id}`);
+        } catch (err) {
+          console.error(
+            JSON.stringify({
+              event: 'x_engage_tweet_failed',
+              threadId: thread.id,
+              engagementIndex: engIdx,
+              message: err.message ?? String(err),
+              at: new Date().toISOString(),
+            }),
+          );
+          engagementStoppedEarly = true;
+          break;
+        }
         await new Promise(r => setTimeout(r, 3000));
       }
     }
 
-    if (!dryRun) {
+    if (!dryRun && !engagementStoppedEarly) {
       const idx = queue.findIndex(t => t.id === thread.id);
       queue[idx].engagementPosted = true;
       queue[idx].engagementPostedAt = now.toISOString();

@@ -22,6 +22,7 @@ on:
         default: false
 
 # cancel-in-progress: true would abort a run mid-thread and risks duplicate roots — keep false so queued runs wait.
+# Subsequent workflow runs for this group are queued; they do not execute in parallel.
 concurrency:
   group: x-posting
   cancel-in-progress: false
