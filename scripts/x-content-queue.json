@@ -779,7 +779,7 @@
       "prevEntryId": "w6-thread-2-spring26-changes",
       "nextEntryId": "quiz-agentforce-aiagentsession-q"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "agentforce specialist isn't hard because of ai buzzwords.\n\nit's hard because one routing mistake can break the whole answer path.\n\nhere's the study order that actually survives the exam\n\na thread\n\n#Agentforce",
       "First: ignore hype. The exam tests whether you can configure an Agent: Topics, Instructions, Actions, and WHEN to use Agent vs Flow vs bot.\n\nNot 'can you code AI.'",
@@ -820,7 +820,9 @@
       "0": "tweet-images/w6-thread-1-agentforce-study-cover.png",
       "2": "tweet-images/w6-thread-1-agentforce-study-stats.png",
       "7": "tweet-images/w6-thread-1-agentforce-study-cta.png"
-    }
+    },
+    "firstTweetId": "2053161253686980631",
+    "postedAt": "2026-05-09T17:13:00.826Z"
   },
   {
     "id": "w6-thread-2-spring26-changes",
