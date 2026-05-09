@@ -1548,7 +1548,7 @@
     "id": "quiz-agentforce-aiagentsession-a",
     "title": "Quiz A — quiz-agentforce-aiagentsession",
     "scheduledFor": "2026-05-04T19:00:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answer: C. AIAgentSession\n\nsession = full conversation across agents\ninteraction = one exchange\nmessage = one line in that exchange\n\nData Cloud reporting? know how they nest.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#Agentforce"
     ],
@@ -1556,7 +1556,9 @@
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "firstTweetId": "2053205370655375642",
+    "postedAt": "2026-05-09T20:08:01.854Z"
   },
   {
     "id": "w9-thread-1-adm201-traps-d1",
