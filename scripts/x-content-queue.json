@@ -1513,7 +1513,7 @@
     "id": "quiz-agentforce-guardrails-a",
     "title": "Quiz A — quiz-agentforce-guardrails",
     "scheduledFor": "2026-05-05T10:30:00-04:00",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "answer: C. instructions and guardrails\n\npermissions and FLS control data access. guardrails control what the agent will even attempt to discuss.\n\ntwo different layers.\n\nfollow for daily quiz questions + explanations. no spam, just useful.\n\n#Agentforce"
     ],
@@ -1521,7 +1521,9 @@
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "agentforce-specialist",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/agentforce-specialist",
+    "firstTweetId": "2053233732522233877",
+    "postedAt": "2026-05-09T22:00:43.851Z"
   },
   {
     "id": "quiz-agentforce-aiagentsession-q",
