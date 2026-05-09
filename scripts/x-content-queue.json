@@ -609,7 +609,9 @@
       "7": "tweet-images/w5-thread-1-pd1-secrets-cta.png"
     },
     "firstTweetId": "2053131085324636342",
-    "postedAt": "2026-05-09T15:13:08.398Z"
+    "postedAt": "2026-05-09T15:13:08.398Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-09T18:04:55.406Z"
   },
   {
     "id": "w5-thread-4-pd1-episode-2",
