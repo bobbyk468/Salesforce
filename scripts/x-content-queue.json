@@ -720,7 +720,7 @@
     "mediaNotes": {
       "video": "15–30s vertical: screen record practice exam score breakdown → weak sections"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "i failed adm-201 three times.\n\nattempt 4: 84%.\n\nsame person. same hours. different method.\n\nhere's what changed between 61% and 84%\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "first attempt: I did every Trailhead module in order. all 80+ of them.\n6 weeks. probably 200+ hours.\n\ngot to the exam and it felt completely different from anything I'd studied.\n\nI thought the exam was broken. it wasn't.",
@@ -760,7 +760,9 @@
       "0": "tweet-images/w5-thread-3-failure-comeback-cover.png",
       "2": "tweet-images/w5-thread-3-failure-comeback-stats.png",
       "8": "tweet-images/w5-thread-3-failure-comeback-cta.png"
-    }
+    },
+    "postedAt": "2026-05-09T14:26:24.048Z",
+    "firstTweetId": "2053119311208657082"
   },
   {
     "id": "w6-thread-1-agentforce-study",
