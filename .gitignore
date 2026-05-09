@@ -26,6 +26,9 @@ yarn-error.log*
 .env*.local
 .env
 
+# Local mutex for post-to-x.mjs (schedule/post)
+scripts/.x-posting.lock
+
 # PageSpeed audit results (regenerated; do not commit)
 scripts/psi_results_trailblaze.json
 

@@ -21,6 +21,7 @@ on:
         type: boolean
         default: false
 
+# cancel-in-progress: true would abort a run mid-thread and risks duplicate roots — keep false so queued runs wait.
 concurrency:
   group: x-posting
   cancel-in-progress: false

@@ -3,12 +3,14 @@
  * Scheduled flow (e.g. cron): from repo root, same machine as clone — run `npm run x:schedule` when due,
  * plus `x:tip` / `x:engage` on your cadence. If you run in GitHub Actions, commit+push the queue JSON after
  * each run (including failures) or the next checkout will still see items as pending. Partial threads use
- * postCheckpoint after each tweet so a crash mid-thread resumes instead of re-posting the hook. Tips default to replying
+ * postCheckpoint after each tweet so a crash mid-thread resumes instead of re-posting the hook. Stale empty
+ * posting rows reset after X_POSTING_STALE_MS (default 2h). Local schedule/post uses scripts/.x-posting.lock (skipped in CI).
+ * Tips default to replying
  * under the latest thread; use
  * `npm run x:tip:standalone` for a top-level tip (reach experiment). Generate PNGs: `npm run x:images`.
  */
 import { TwitterApi } from 'twitter-api-v2';
-import { readFileSync, writeFileSync, existsSync } from 'fs';
+import { readFileSync, writeFileSync, existsSync, openSync, closeSync, unlinkSync } from 'fs';
 import { resolve, dirname, basename } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -17,6 +19,7 @@ const ROOT = resolve(__dirname, '..');
 const QUEUE_FILE = resolve(__dirname, 'x-content-queue.json');
 const TIPS_FILE = resolve(__dirname, 'x-tips-queue.json');
 const TWEET_IMAGES_DIR = resolve(__dirname, 'tweet-images');
+const LOCK_FILE = resolve(__dirname, '.x-posting.lock');
 
 function loadEnv() {
   try {
@@ -62,6 +65,83 @@ function scheduledInstant(t) {
   if (!t.scheduledFor) return null;
   const d = new Date(t.scheduledFor);
   return Number.isNaN(d.getTime()) ? null : d;
+}
+
+/** Max age (ms) for status=posting with no checkpoint/firstTweetId before auto-reset to pending. Override: X_POSTING_STALE_MS */
+function postingStaleMs() {
+  const n = Number.parseInt(process.env.X_POSTING_STALE_MS ?? '', 10);
+  if (Number.isFinite(n) && n > 0) return n;
+  return 2 * 60 * 60 * 1000;
+}
+
+/**
+ * Fix inconsistent rows before scheduling. Persists when !dryRun.
+ * - pending + firstTweetId → posting (resume path)
+ * - posting for > stale window with no progress → pending
+ */
+function repairQueueForSchedule(queue, dryRun) {
+  const staleMs = postingStaleMs();
+  const now = Date.now();
+  let changed = false;
+
+  for (const t of queue) {
+    if (t.status === 'pending' && t.firstTweetId) {
+      console.warn(
+        `\n⚠️  "${t.id}" was pending but has firstTweetId — treating as posting (resume).\n`,
+      );
+      t.status = 'posting';
+      if (!t.postingStartedAt) t.postingStartedAt = new Date().toISOString();
+      changed = true;
+    }
+  }
+
+  for (const t of queue) {
+    if (t.status !== 'posting' || !t.postingStartedAt) continue;
+    const age = now - new Date(t.postingStartedAt).getTime();
+    if (age <= staleMs) continue;
+
+    const hasProgress = Boolean(t.postCheckpoint || t.firstTweetId);
+    if (hasProgress) {
+      console.warn(
+        `\n⚠️  "${t.id}" has status=posting for ${Math.round(age / 60000)}m (stale threshold ${Math.round(staleMs / 60000)}m) but has checkpoint/firstTweetId — not auto-reset. Fix JSON or bump postingStartedAt if needed.\n`,
+      );
+      continue;
+    }
+
+    console.warn(
+      `\n⚠️  "${t.id}" stuck in posting with no progress (${Math.round(age / 60000)}m) — resetting to pending.\n`,
+    );
+    t.status = 'pending';
+    delete t.postingStartedAt;
+    changed = true;
+  }
+
+  if (changed && !dryRun) saveQueue(queue);
+}
+
+function acquirePostingLock() {
+  if (process.env.GITHUB_ACTIONS === 'true' || process.env.CI === 'true') {
+    return () => {};
+  }
+  try {
+    const fd = openSync(LOCK_FILE, 'wx');
+    closeSync(fd);
+  } catch (e) {
+    if (e?.code === 'EEXIST') {
+      console.error(
+        '\n❌ Lock file scripts/.x-posting.lock exists — another local post may be running. Remove the file if it is stale.\n',
+      );
+      process.exit(1);
+    }
+    throw e;
+  }
+  return () => {
+    try {
+      unlinkSync(LOCK_FILE);
+    } catch {
+      /* ignore */
+    }
+  };
 }
 
 function mimeForImagePath(p) {
@@ -298,7 +378,21 @@ async function cmdPost(threadId, dryRun) {
         }
       }
 
-      const { data } = await client.v2.tweet(payload);
+      let data;
+      try {
+        ({ data } = await client.v2.tweet(payload));
+      } catch (err) {
+        console.error(
+          JSON.stringify({
+            event: 'x_post_tweet_failed',
+            threadId: thread.id,
+            tweetIndex: i,
+            message: err.message ?? String(err),
+            at: new Date().toISOString(),
+          }),
+        );
+        throw err;
+      }
       replyToId = data.id;
       if (i === 0) firstTweetId = data.id;
 
@@ -469,6 +563,7 @@ async function cmdEngage(dryRun) {
 
 async function cmdSchedule(dryRun) {
   const queue = loadQueue();
+  repairQueueForSchedule(queue, dryRun);
   const now = new Date();
 
   const inFlight = queue.filter(t => t.status === 'posting');
@@ -538,32 +633,43 @@ async function main() {
   const dryRun = args.includes('--dry-run');
   const arg = args.find(a => !a.startsWith('--') && a !== cmd);
 
-  switch (cmd) {
-    case 'list':
-      await cmdList();
-      break;
-    case 'post':
-      if (!arg || arg === '--dry-run') {
-        console.error('Usage: node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
-        process.exit(1);
-      }
-      await cmdPost(arg, dryRun);
-      break;
-    case 'schedule':
-      await cmdSchedule(dryRun);
-      break;
-    case 'tip':
-      await cmdTip(dryRun, args.includes('--standalone'));
-      break;
-    case 'engage':
-      await cmdEngage(dryRun);
-      break;
-    default:
-      console.log('\nUsage:');
-      console.log('  node scripts/post-to-x.mjs list');
-      console.log('  node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
-      console.log('  node scripts/post-to-x.mjs schedule [--dry-run]');
-      console.log('  node scripts/post-to-x.mjs tip [--dry-run] [--standalone]\n');
+  const useLocalLock =
+    !dryRun &&
+    process.env.GITHUB_ACTIONS !== 'true' &&
+    process.env.CI !== 'true' &&
+    (cmd === 'schedule' || cmd === 'post');
+  const releaseLock = useLocalLock ? acquirePostingLock() : () => {};
+
+  try {
+    switch (cmd) {
+      case 'list':
+        await cmdList();
+        break;
+      case 'post':
+        if (!arg || arg === '--dry-run') {
+          console.error('Usage: node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
+          process.exit(1);
+        }
+        await cmdPost(arg, dryRun);
+        break;
+      case 'schedule':
+        await cmdSchedule(dryRun);
+        break;
+      case 'tip':
+        await cmdTip(dryRun, args.includes('--standalone'));
+        break;
+      case 'engage':
+        await cmdEngage(dryRun);
+        break;
+      default:
+        console.log('\nUsage:');
+        console.log('  node scripts/post-to-x.mjs list');
+        console.log('  node scripts/post-to-x.mjs post <thread-id> [--dry-run]');
+        console.log('  node scripts/post-to-x.mjs schedule [--dry-run]');
+        console.log('  node scripts/post-to-x.mjs tip [--dry-run] [--standalone]\n');
+    }
+  } finally {
+    releaseLock();
   }
 }
 
