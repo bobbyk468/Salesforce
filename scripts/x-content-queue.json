@@ -568,7 +568,7 @@
     "mediaNotes": {
       "video": "15–30s vertical: Apex SOQL-in-loop vs bulkified snippet side-by-side"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "most people study apex like it's java.\n\nthe exam doesn't care if your code is pretty.\n\nit cares what explodes when 50,000 records hit your trigger.\n\nhere's the difference that actually moves your score\n\na thread\n\n#PD1 #SalesforceDev",
       "the exam doesn't care if you can build an app.\n\nit cares if you know what breaks when your code runs on a million records at once.\n\nevery scenario question is secretly asking: 'what governor limit is being violated here?'\n\nif you don't see that, you're reading it wrong.",
@@ -607,7 +607,9 @@
       "0": "tweet-images/w5-thread-1-pd1-secrets-cover.png",
       "2": "tweet-images/w5-thread-1-pd1-secrets-stats.png",
       "7": "tweet-images/w5-thread-1-pd1-secrets-cta.png"
-    }
+    },
+    "firstTweetId": "2053131085324636342",
+    "postedAt": "2026-05-09T15:13:08.398Z"
   },
   {
     "id": "w5-thread-4-pd1-episode-2",
