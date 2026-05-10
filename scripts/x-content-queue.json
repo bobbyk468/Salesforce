@@ -944,7 +944,9 @@
       "7": "tweet-images/w7-thread-1-salary-truth-cta.png"
     },
     "firstTweetId": "2053247198612033776",
-    "postedAt": "2026-05-09T22:54:32.656Z"
+    "postedAt": "2026-05-09T22:54:32.656Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-10T04:13:28.759Z"
   },
   {
     "id": "w7-thread-2-admin-to-developer",
@@ -1001,7 +1003,9 @@
       "7": "tweet-images/w7-thread-2-admin-to-developer-cta.png"
     },
     "firstTweetId": "2053258781606199700",
-    "postedAt": "2026-05-09T23:40:34.178Z"
+    "postedAt": "2026-05-09T23:40:34.178Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-10T04:13:28.759Z"
   },
   {
     "id": "w8-thread-1-exam-day",
@@ -1058,7 +1062,9 @@
       "7": "tweet-images/w8-thread-1-exam-day-cta.png"
     },
     "firstTweetId": "2053285300458147898",
-    "postedAt": "2026-05-10T01:25:56.405Z"
+    "postedAt": "2026-05-10T01:25:56.405Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-10T04:13:28.759Z"
   },
   {
     "id": "spring26-release-thread",
