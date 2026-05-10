@@ -2126,7 +2126,7 @@
   {
     "id": "quiz-adm-validation-cross-field-a",
     "title": "Quiz A — ADM validation cross-field",
-    "status": "pending",
+    "status": "posted",
     "scheduledFor": "2026-05-09T11:30:00-04:00",
     "tweets": [
       "answer: B. Validation Rule\n\nblock save when two fields contradict — that's validation.\n\nformula won't block. duplicate rule won't catch this. workflow isn't the 2026 play.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#ADM201 #SalesforceAdmin"
@@ -2135,7 +2135,9 @@
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2053455321322897457",
+    "postedAt": "2026-05-10T12:41:14.748Z"
   },
   {
     "id": "quiz-adm-roles-vs-groups-q",
