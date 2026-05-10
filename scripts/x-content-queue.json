@@ -1636,7 +1636,9 @@
     "topicCert": "administrator",
     "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
     "firstTweetId": "2053402907496595556",
-    "postedAt": "2026-05-10T09:13:18.628Z"
+    "postedAt": "2026-05-10T09:13:18.628Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-10T12:02:24.884Z"
   },
   {
     "id": "w9-thread-2-adm201-flow-traps-d2",
