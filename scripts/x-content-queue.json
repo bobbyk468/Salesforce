@@ -1592,7 +1592,7 @@
       "episodesPlanned": 4,
       "nextEntryId": "w9-thread-2-adm201-flow-traps-d2"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "dashboard running user — still weighted on the 2026 ADM outline.\n\nnot 'trick questions.' it's where messy-org instinct loses because the item tests one specific rule.\n\nmore traps i still see people miss\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "trap 1 — bucket column vs filter.\n\nfilters throw away rows.\n\nbucket columns label groups *inside* the report without building a custom field.\n\nif the stem says categorize / bucket / ranges, brain wants 'filter logic.' slow down.",
@@ -1634,7 +1634,9 @@
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2053402907496595556",
+    "postedAt": "2026-05-10T09:13:18.628Z"
   },
   {
     "id": "w9-thread-2-adm201-flow-traps-d2",
