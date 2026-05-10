@@ -2176,7 +2176,7 @@
   {
     "id": "gw-may-fill-08-picklist-integration",
     "title": "Tip — picklists and integration users",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "restricted picklists look quiet until an integration user blows up loads.\n\nglobal vs dependent restrictions matter — 201 hides that inside scenario wording.\n\n#ADM201 #SalesforceAdmin"
     ],
@@ -2184,7 +2184,9 @@
     "certFocus": "platform-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2053424305959064029",
+    "postedAt": "2026-05-10T10:38:00.091Z"
   },
   {
     "id": "gw-may-fill-11-queue-visibility",
