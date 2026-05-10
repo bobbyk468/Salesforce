@@ -2030,13 +2030,15 @@
   {
     "id": "w9-tip-maintenance-calendar",
     "title": "Tip — maintenance exam calendar",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "maintenance exams are the quiet way certs die.\n\nnot because they're hard — because people forget the window.\n\nput the release calendar + reminder in the same place you keep passport expiry. boring = real.\n\n#SalesforceCertification"
     ],
     "scheduledFor": "2026-05-09T12:00:00-04:00",
     "certFocus": "platform-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "firstTweetId": "2053477043082289225",
+    "postedAt": "2026-05-10T14:07:33.596Z"
   },
   {
     "id": "w9-tip-sandbox-preview",
