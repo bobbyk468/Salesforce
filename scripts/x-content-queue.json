@@ -624,7 +624,7 @@
       "prevEntryId": "w5-thread-1-pd1-secrets",
       "nextEntryId": null
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "part 2 — PD1 isn't Java (see yesterday's thread).\n\ntoday: two reading habits that claw back points when you're tired and the snippet looks like noise.\n\na short thread\n\n#PD1",
       "habit 1: see a loop + SOQL or DML inside → stop reading line by line.\n\nask 'bulk safe or not?' first.\n\nmost trap answers assume it isn't.",
@@ -655,7 +655,9 @@
       "0": "tweet-images/w5-thread-4-pd1-episode-2-cover.png",
       "2": "tweet-images/w5-thread-4-pd1-episode-2-stats.png",
       "5": "tweet-images/w5-thread-4-pd1-episode-2-cta.png"
-    }
+    },
+    "firstTweetId": "2053339211365806169",
+    "postedAt": "2026-05-10T05:00:05.331Z"
   },
   {
     "id": "w5-thread-2-which-cert-first",
