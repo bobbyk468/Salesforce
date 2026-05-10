@@ -1017,7 +1017,7 @@
     "mediaNotes": {
       "carousel": "4–6 slides: Webassessor check-in steps (room scan, ID, login buffer)"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "I've taken 14 Salesforce certification exams.\n\nthe first one I nearly failed the check-in before the test started.\n\nhere's what exam day is actually like\n\na thread\n\n#SalesforceCertification",
       "You take it from your computer via Kryterion Webassessor.\n\nLive proctor watches via webcam the whole time.\n\nThey'll ask you to show the room, clear your desk. They take it seriously.\n\nClear your space the night before.",
@@ -1056,7 +1056,9 @@
       "0": "tweet-images/w8-thread-1-exam-day-cover.png",
       "2": "tweet-images/w8-thread-1-exam-day-stats.png",
       "7": "tweet-images/w8-thread-1-exam-day-cta.png"
-    }
+    },
+    "firstTweetId": "2053285300458147898",
+    "postedAt": "2026-05-10T01:25:56.405Z"
   },
   {
     "id": "spring26-release-thread",
