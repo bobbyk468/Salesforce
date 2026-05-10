@@ -2159,13 +2159,15 @@
   {
     "id": "gw-may-fill-07-profile-overhead",
     "title": "Tip — profile vs perm set overhead (exam angle)",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "201 loves 'least admin overhead' stories.\n\nbefore you clone another profile, ask if a perm set (or group) answers the stem.\n\nduplicating one-off boxes across profiles is the trap answer.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-07T16:00:00-04:00",
     "certFocus": "platform-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "firstTweetId": "2053376293811728514",
+    "postedAt": "2026-05-10T07:27:13.109Z"
   },
   {
     "id": "gw-may-fill-08-picklist-integration",
