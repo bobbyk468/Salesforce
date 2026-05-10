@@ -2488,13 +2488,15 @@
   {
     "id": "gw-may-10-field-history",
     "title": "Tip — field history vs feed tracking",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "field history and feed tracking both 'show changes' — different limits, different objects, different exam traps.\n\ndon't pick from muscle memory.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-10T14:00:00-04:00",
     "certFocus": "platform-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "firstTweetId": "2053537260604178687",
+    "postedAt": "2026-05-10T18:06:50.580Z"
   },
   {
     "id": "gw-may-12-custom-labels",
