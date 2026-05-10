@@ -2043,13 +2043,15 @@
   {
     "id": "w9-tip-sandbox-preview",
     "title": "Tip — sandbox before prod release",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "if you only test flows after prod updates, you're not doing release management — you're doing incident practice.\n\nsandbox preview exists so you can fail loudly on tuesday instead of quietly on friday.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-10T09:30:00-04:00",
     "certFocus": "platform-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/platform-foundations",
+    "firstTweetId": "2053493765034168616",
+    "postedAt": "2026-05-10T15:14:00.423Z"
   },
   {
     "id": "w9-tip-exam-guide-date",
