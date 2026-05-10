@@ -657,7 +657,9 @@
       "5": "tweet-images/w5-thread-4-pd1-episode-2-cta.png"
     },
     "firstTweetId": "2053339211365806169",
-    "postedAt": "2026-05-10T05:00:05.331Z"
+    "postedAt": "2026-05-10T05:00:05.331Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-10T09:01:56.117Z"
   },
   {
     "id": "w5-thread-2-which-cert-first",
