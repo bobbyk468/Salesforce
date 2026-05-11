@@ -1694,7 +1694,9 @@
     "topicCert": "administrator",
     "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
     "firstTweetId": "2053880425840279635",
-    "postedAt": "2026-05-11T16:50:46.923Z"
+    "postedAt": "2026-05-11T16:50:46.923Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-11T20:03:20.928Z"
   },
   {
     "id": "w9-thread-3-adm201-security-traps-d3",
