@@ -2205,13 +2205,15 @@
   {
     "id": "gw-may-fill-11-queue-visibility",
     "title": "Tip — queues vs clever routing",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "queues aren't just routing.\n\nthey're shared visibility + ownership in one object.\n\nwhen the stem wants workload visible without handing everyone view-all, queue beats a clever hack.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-11T18:30:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2053970282701095145",
+    "postedAt": "2026-05-11T22:47:31.087Z"
   },
   {
     "id": "gw-may-fill-14-formula-blank",
