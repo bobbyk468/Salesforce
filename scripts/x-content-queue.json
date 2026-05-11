@@ -1651,7 +1651,7 @@
       "prevEntryId": "w9-thread-1-adm201-traps-d1",
       "nextEntryId": "w9-thread-3-adm201-security-traps-d3"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "before-save vs after-save — still a timing fork on the 2026 ADM outline.\n\nnot architecture diagrams. wrong *when* = wrong answer.\n\nflow timing traps\n\na thread\n\n#ADM201 #SalesforceFlow",
       "before-save vs after-save isn't trivia.\n\nbefore-save runs in the same database transaction as the save. good for field updates that have to happen *before* validation finishes its job.\n\nafter-save = you already committed. different constraints.",
@@ -1692,7 +1692,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2053880425840279635",
+    "postedAt": "2026-05-11T16:50:46.923Z"
   },
   {
     "id": "w9-thread-3-adm201-security-traps-d3",
