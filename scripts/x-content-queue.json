@@ -2060,7 +2060,7 @@
   {
     "id": "w9-tip-exam-guide-date",
     "title": "Tip — exam guide last updated",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "before you buy another practice pack: open the official exam guide and read *last updated*.\n\nif your pdf is older than that date, you're paying to study ghosts.\n\n#ADM201 #Trailblazer"
     ],
@@ -2068,7 +2068,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2054283387310141563",
+    "postedAt": "2026-05-12T19:31:41.035Z"
   },
   {
     "id": "w9-tip-superbadge-wallpaper",
