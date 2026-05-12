@@ -2509,13 +2509,15 @@
   {
     "id": "gw-may-12-custom-labels",
     "title": "Tip — custom labels on exams",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "custom labels aren't just i18n trivia.\n\nthey're sometimes the right answer when the stem wants text reused in flow + apex without hardcoding.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-12T18:00:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2054326547805245457",
+    "postedAt": "2026-05-12T22:23:11.305Z"
   },
   {
     "id": "gw-may-13-mobile-config",
