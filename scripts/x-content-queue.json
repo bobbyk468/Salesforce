@@ -2524,13 +2524,15 @@
   {
     "id": "gw-may-13-mobile-config",
     "title": "Tip — mobile vs desktop admin",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "mobile layouts and compact layouts are easy to ignore until one exam scenario is about sales reps on phones.\n\nread who the user is before you pick fields.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-13T16:30:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2054671060910424468",
+    "postedAt": "2026-05-13T21:12:09.687Z"
   },
   {
     "id": "gw-may-16-record-type-default",
