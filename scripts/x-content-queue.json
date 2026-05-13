@@ -2075,13 +2075,15 @@
   {
     "id": "w9-tip-superbadge-wallpaper",
     "title": "Tip — superbadge without story",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "a superbadge on a resume without a one-line business story is decoration.\n\nrecruiters can't tell if you clicked through or shipped.\n\npair every badge with who it helped.\n\n#SalesforceCareer"
     ],
     "scheduledFor": "2026-05-13T11:00:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2054586566933467494",
+    "postedAt": "2026-05-13T15:36:24.689Z"
   },
   {
     "id": "w9-tip-interview-sharing",
