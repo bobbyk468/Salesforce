@@ -1709,7 +1709,7 @@
       "prevEntryId": "w9-thread-2-adm201-flow-traps-d2",
       "nextEntryId": "w9-thread-4-exam-wording-d4"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "FLS + profile + sharing in one ugly paragraph — still how 201 stacks security on the guide.\n\nOWD is the basement. everything else is furniture on top.\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "OWD is the basement.\n\neverything else is furniture you put on top.\n\nif you start reasoning from permission sets without anchoring OWD, you'll talk yourself into a clever wrong answer.",
@@ -1750,7 +1750,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2054940911214170140",
+    "postedAt": "2026-05-14T15:04:45.641Z"
   },
   {
     "id": "w9-thread-4-exam-wording-d4",
