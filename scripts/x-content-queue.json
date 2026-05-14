@@ -2226,7 +2226,7 @@
   {
     "id": "gw-may-fill-14-formula-blank",
     "title": "Tip — formula blank vs error",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "formula fields: blank isn't the same as error.\n\nsome stems want 'show nothing' not 'blow up the save.' read whether they're testing display vs validation.\n\n#ADM201"
     ],
@@ -2234,7 +2234,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2055043409916608726",
+    "postedAt": "2026-05-14T21:51:44.550Z"
   },
   {
     "id": "gw-may-18-case-safe",
