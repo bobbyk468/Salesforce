@@ -1752,7 +1752,9 @@
     "topicCert": "administrator",
     "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
     "firstTweetId": "2054940911214170140",
-    "postedAt": "2026-05-14T15:04:45.641Z"
+    "postedAt": "2026-05-14T15:04:45.641Z",
+    "engagementPosted": true,
+    "engagementPostedAt": "2026-05-14T18:06:25.405Z"
   },
   {
     "id": "w9-thread-4-exam-wording-d4",
