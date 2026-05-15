@@ -2158,7 +2158,7 @@
   {
     "id": "quiz-adm-roles-vs-groups-q",
     "title": "Quiz Q — ADM public group vs role for sharing",
-    "status": "pending",
+    "status": "posted",
     "scheduledFor": "2026-05-15T09:30:00-04:00",
     "tweets": [
       "#ADM201 — drop your answer 👇\n\nCase OWD private. three regional manager groups need each other's cases for escalations — not the whole org.\n\nsimplest maintainable fix?\n\nA. OWD public read\nB. One role for all\nC. Public group + sharing rule\nD. Profile view all\nanswer in 2 hours."
@@ -2166,7 +2166,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2055311068948292082",
+    "postedAt": "2026-05-15T15:35:19.442Z"
   },
   {
     "id": "quiz-adm-roles-vs-groups-a",
