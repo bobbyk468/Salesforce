@@ -2173,7 +2173,7 @@
   {
     "id": "quiz-adm-roles-vs-groups-a",
     "title": "Quiz A — ADM public group sharing",
-    "status": "pending",
+    "status": "posted",
     "scheduledFor": "2026-05-15T11:30:00-04:00",
     "tweets": [
       "answer: C. public group + sharing rule\n\nsubset across branches — not whole org. OWD public too wide. view all = sledgehammer. one role won't model three regions; group + rule is the clean pattern.\n\nfollow for daily quiz qs + explanations. no spam.\n\n#ADM201 #SalesforceAdmin"
@@ -2182,7 +2182,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2055336227872682214",
+    "postedAt": "2026-05-15T17:15:17.823Z"
   },
   {
     "id": "gw-may-fill-07-profile-overhead",
