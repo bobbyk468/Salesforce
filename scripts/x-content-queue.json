@@ -2551,7 +2551,7 @@
   {
     "id": "gw-may-16-record-type-default",
     "title": "Tip — record types and page layout assignment",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "record type without the right page layout assignment is a silent bug.\n\n201 will describe weird missing fields — trace record type + profile combo first.\n\n#ADM201"
     ],
@@ -2559,7 +2559,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2055730972990054750",
+    "postedAt": "2026-05-16T19:23:52.368Z"
   },
   {
     "id": "gw-may-17-managed-package-fear",
