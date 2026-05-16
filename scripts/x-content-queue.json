@@ -1767,7 +1767,7 @@
       "prevEntryId": "w9-thread-3-adm201-security-traps-d3",
       "nextEntryId": "w9-thread-5-resume-needle-f1"
     },
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "BEST / MOST / LEAST — still how 201 hides the Salesforce answer in 2026.\n\nconstrained story beats the perfect org design in your head.\n\na thread\n\n#ADM201 #SalesforceAdmin",
       "BEST usually means: most native, most maintainable, least surprise for the next admin — not the cleverest thing you could build with enough time.",
@@ -1808,7 +1808,9 @@
     "certFocus": "ai-associate",
     "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2055668721105187098",
+    "postedAt": "2026-05-16T15:16:48.544Z"
   },
   {
     "id": "w9-thread-5-resume-needle-f1",
