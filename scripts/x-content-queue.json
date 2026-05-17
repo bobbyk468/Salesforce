@@ -2096,13 +2096,15 @@
   {
     "id": "w9-tip-interview-sharing",
     "title": "Tip — interview sharing model answer",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "when they say 'explain sharing,' they want one clean mental model in under 60 seconds.\n\nOWD basement → role up → sharing sideways → perm sets for exceptions.\n\nnot a 10-minute poetry reading.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-17T09:30:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2056021966314959153",
+    "postedAt": "2026-05-17T14:40:10.587Z"
   },
   {
     "id": "w9-tip-trailhead-happy-path",
