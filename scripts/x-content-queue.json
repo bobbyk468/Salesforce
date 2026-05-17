@@ -2568,13 +2568,15 @@
   {
     "id": "gw-may-17-managed-package-fear",
     "title": "Tip — managed package boundaries",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "managed package questions aren't asking you to code around vendors.\n\nthey're asking what you *can't* change and what still lives in your org's config layer.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-17T14:30:00-04:00",
     "certFocus": "ai-associate",
-    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate"
+    "certPath": "https://www.trailblazeprep.com/certifications/ai-associate",
+    "firstTweetId": "2056083113613427010",
+    "postedAt": "2026-05-17T18:43:09.224Z"
   },
   {
     "id": "gw-may-20-integration-idempotent",
