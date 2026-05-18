@@ -2264,7 +2264,7 @@
   {
     "id": "gw-may-18-owner-report",
     "title": "Tip — who runs the report",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "report folder sharing is boring until the wrong person owns the folder.\n\n'running user' on dashboards is loud — folder ownership is the quiet cousin that still costs points.\n\n#ADM201"
     ],
@@ -2272,7 +2272,9 @@
     "certFocus": "marketing-cloud-engagement-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2056467591254659237",
+    "postedAt": "2026-05-18T20:10:55.854Z"
   },
   {
     "id": "gw-may-18-debug-log-gold",
