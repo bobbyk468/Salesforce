@@ -2251,13 +2251,15 @@
   {
     "id": "gw-may-18-case-safe",
     "title": "Tip — Case Safe default",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "case safe isn't trivia if you touch service cloud.\n\nknow what it changes for feeds + visibility before the exam throws a service scenario at you.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-18T12:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2056414938818548152",
+    "postedAt": "2026-05-18T16:41:42.536Z"
   },
   {
     "id": "gw-may-18-owner-report",
