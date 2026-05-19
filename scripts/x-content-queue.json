@@ -2428,7 +2428,7 @@
   {
     "id": "gw-may-19-validation-order",
     "title": "Tip — validation vs before-save order",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "before-save flow can still lose to a validation rule if you misread what 'runs first' in the stem.\n\ndraw the timeline once — saves hours of arguing with the ui.\n\n#ADM201 #SalesforceFlow"
     ],
@@ -2436,7 +2436,9 @@
     "certFocus": "marketing-cloud-engagement-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2056776609441448151",
+    "postedAt": "2026-05-19T16:38:51.540Z"
   },
   {
     "id": "gw-may-19-heap-size-myth",
