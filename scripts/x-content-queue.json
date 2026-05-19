@@ -2279,13 +2279,15 @@
   {
     "id": "gw-may-18-debug-log-gold",
     "title": "Tip — debug log noise budget",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "if you live in debug logs, learn filters before prod screams.\n\nexam won't make you read a wall — but it expects you to know what logs are *for* when someone says 'it only fails for one user.'\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-18T20:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2056552601647530049",
+    "postedAt": "2026-05-19T01:48:43.902Z"
   },
   {
     "id": "gw-may-24-flow-governor",
