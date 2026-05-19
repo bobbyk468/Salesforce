@@ -2443,13 +2443,15 @@
   {
     "id": "gw-may-19-heap-size-myth",
     "title": "Tip — governor limits as exam vocabulary",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "you don't need to quote heap numbers from memory.\n\nyou do need to recognize 'what limit is this violating' when the snippet loops like a villain.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-19T18:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2056869979090235894",
+    "postedAt": "2026-05-19T22:49:52.597Z"
   },
   {
     "id": "gw-may-21-org-wide-email",
