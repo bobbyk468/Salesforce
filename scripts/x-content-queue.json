@@ -2591,13 +2591,15 @@
   {
     "id": "gw-may-20-integration-idempotent",
     "title": "Tip — idempotent integration thinking",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "exam stories about integrations often hide a retry.\n\nif the stem mentions duplicates after a replay, think external id + upsert mental model.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-20T11:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2057133490018419154",
+    "postedAt": "2026-05-20T16:16:58.490Z"
   },
   {
     "id": "gw-may-23-lwc-readonly",
