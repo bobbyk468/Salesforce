@@ -2109,7 +2109,7 @@
   {
     "id": "w9-tip-trailhead-happy-path",
     "title": "Tip — Trailhead vs exam middle path",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "Trailhead teaches happy paths.\n\nexams live in the weird middle: two features both 'work,' pick the one Salesforce likes for that stem.\n\nthat's why practice qs beat rewatching modules.\n\n#ADM201"
     ],
@@ -2117,7 +2117,9 @@
     "certFocus": "marketing-cloud-engagement-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2057203204039774638",
+    "postedAt": "2026-05-20T20:53:59.597Z"
   },
   {
     "id": "w9-tip-declarative-first-reality",
