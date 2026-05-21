@@ -2458,13 +2458,15 @@
   {
     "id": "gw-may-21-org-wide-email",
     "title": "Tip — org-wide email addresses",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "org-wide email sounds boring until deliverability + compliance show up in the same scenario.\n\nif the stem mentions 'from address users trust,' start there before you reach for hacks.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-21T11:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2057499125315240264",
+    "postedAt": "2026-05-21T16:29:52.737Z"
   },
   {
     "id": "gw-may-21-list-view-sharing",
