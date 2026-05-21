@@ -2471,7 +2471,7 @@
   {
     "id": "gw-may-21-list-view-sharing",
     "title": "Tip — list views are not reports",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "list view sharing and report folder sharing rhyme in your head — they're not the same mechanism.\n\n201 will use that confusion on purpose.\n\n#ADM201"
     ],
@@ -2479,7 +2479,9 @@
     "certFocus": "marketing-cloud-engagement-foundations",
     "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
     "topicCert": "administrator",
-    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator"
+    "topicCertPath": "https://www.trailblazeprep.com/certifications/administrator",
+    "firstTweetId": "2057581174340657377",
+    "postedAt": "2026-05-21T21:55:54.728Z"
   },
   {
     "id": "gw-may-22-scheduled-path",
