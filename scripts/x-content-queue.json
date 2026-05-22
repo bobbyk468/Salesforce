@@ -2499,13 +2499,15 @@
   {
     "id": "gw-may-22-multi-select-bad",
     "title": "Tip — multi-select picklists in automation",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "multi-select picklists are where 'simple' field updates go to die.\n\nif a scenario hands you one, read the stem twice before you pick formula vs flow.\n\n#SalesforceAdmin"
     ],
     "scheduledFor": "2026-05-22T15:30:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2057916164966171020",
+    "postedAt": "2026-05-22T20:07:02.766Z"
   },
   {
     "id": "gw-may-25-approval-skip",
