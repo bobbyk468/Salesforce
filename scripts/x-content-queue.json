@@ -2124,13 +2124,15 @@
   {
     "id": "w9-tip-declarative-first-reality",
     "title": "Tip — declarative first in real orgs",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "declarative-first is the right exam religion.\n\nin prod it's 'flow until the flow is unmaintainable, then code with tests.'\n\nknow both layers or you'll argue with your future self at 9pm.\n\n#SalesforceAdmin #SalesforceFlow"
     ],
     "scheduledFor": "2026-05-23T10:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2058197278306005283",
+    "postedAt": "2026-05-23T14:44:05.363Z"
   },
   {
     "id": "quiz-adm-validation-cross-field-q",
