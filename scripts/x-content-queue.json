@@ -2616,13 +2616,15 @@
   {
     "id": "gw-may-23-lwc-readonly",
     "title": "Tip — LWC read-only vs disabled",
-    "status": "pending",
+    "status": "posted",
     "tweets": [
       "on PD1-style reading, know whether the component is blocking input vs just showing data.\n\ntiny words in the stem decide between decorator patterns.\n\n#SalesforceDev"
     ],
     "scheduledFor": "2026-05-23T14:30:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "firstTweetId": "2058262772660457507",
+    "postedAt": "2026-05-23T19:04:20.451Z"
   },
   {
     "id": "gw-jun-03-spotlight-breather",
