@@ -2296,13 +2296,14 @@
   {
     "id": "gw-may-24-flow-governor",
     "title": "Tip — Flow and governor intuition",
-    "status": "pending",
+    "status": "posting",
     "tweets": [
       "flow can still hit limits when you loop like it's a script.\n\nexam scenarios care whether you *bulkified the automation*, not whether the builder UI looks cute.\n\n#SalesforceFlow"
     ],
     "scheduledFor": "2026-05-24T11:00:00-04:00",
     "certFocus": "marketing-cloud-engagement-foundations",
-    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations"
+    "certPath": "https://www.trailblazeprep.com/certifications/marketing-cloud-engagement-foundations",
+    "postingStartedAt": "2026-05-24T15:06:40.763Z"
   },
   {
     "id": "gw-may-24-import-wizard",
