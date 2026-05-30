@@ -41,7 +41,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Salesforce Administrator', url: '/certifications/administrator-practice-test' },
+  { name: 'Salesforce Administrator', url: '/certifications/administrator' },
   { name: `ADM-201 Exam Tips ${RELEASE_CURRENT}`, url: '/adm-201-exam-tips' },
 ]
 
