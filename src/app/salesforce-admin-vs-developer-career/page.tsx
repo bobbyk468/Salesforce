@@ -81,7 +81,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
       <WhichFirstBlock
         certA={{
           name: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           conditions: [
           "You prefer configuration, automation, and business process work over coding",
@@ -103,7 +103,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
         }}
         recommendation={{
           certName: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           reason: "Administrator is the better starting point for most career switchers — higher job volume, faster time to employment, and it remains useful even if you pivot to developer later. Only start with Developer I if you have an existing coding background and are certain about the technical path.",
           careerPathSlug: "which-salesforce-certification-first",

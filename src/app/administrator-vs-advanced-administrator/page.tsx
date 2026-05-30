@@ -82,7 +82,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
       <WhichFirstBlock
         certA={{
           name: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           conditions: [
           "You do not yet hold any Salesforce certification",
@@ -104,7 +104,7 @@ export default function AdministratorVsAdvancedAdministratorPage() {
         }}
         recommendation={{
           certName: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           reason: "Administrator is the mandatory first step — Advanced Administrator explicitly tests you on Admin concepts plus additional depth. You cannot reasonably attempt Advanced Admin without first having mastered the Admin credential.",
           careerPathSlug: "admin-certification-path",

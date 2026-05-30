@@ -95,7 +95,7 @@ export default function Adm201ExamTipsPage() {
       <ExamPricingCard
         certSlug="administrator"
         certName="Salesforce Administrator"
-        certPageSlug="administrator-practice-test"
+        certPageSlug="administrator"
       />
 
 

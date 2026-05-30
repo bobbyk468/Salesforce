@@ -59,7 +59,7 @@ const certificationCategories = [
       { name: 'CPQ Administrator', href: '/certifications/cpq-administrator' },
       { name: 'Marketing Cloud Engagement Admin', href: '/certifications/marketing-cloud-engagement-admin' },
       { name: 'Slack Administrator', href: '/certifications/slack-administrator' },
-      { name: 'Platform Administrator Practice Test', href: '/certifications/administrator-practice-test' },
+      { name: 'Platform Administrator Practice Test', href: '/certifications/administrator' },
     ],
   },
   {
@@ -114,7 +114,7 @@ const certificationCategories = [
       { name: 'Marketing Cloud Engagement Developer', href: '/certifications/marketing-cloud-engagement-developer' },
       { name: 'Account Engagement (Pardot) Specialist', href: '/certifications/pardot-specialist' },
       { name: 'Account Engagement (Pardot) Consultant', href: '/certifications/pardot-consultant' },
-      { name: 'Marketing Cloud Email Specialist Practice Test', href: '/certifications/email-specialist-practice-test' },
+      { name: 'Marketing Cloud Email Specialist Practice Test', href: '/certifications/email-specialist' },
     ],
   },
   {

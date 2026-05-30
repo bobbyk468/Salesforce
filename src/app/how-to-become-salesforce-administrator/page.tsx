@@ -133,7 +133,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">4</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Practice With Scenario-Based Mock Questions</p>
-              <p>ADM-201 is a scenario-based exam — it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough — you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
+              <p>ADM-201 is a scenario-based exam — it asks &ldquo;a company needs X, what should the administrator do?&rdquo; rather than pure knowledge questions. Reading documentation is not enough — you need to practise answering scenario questions under time pressure. Use free practice tests to identify your weak areas, then return to Trailhead or hands-on practice to fill gaps. Score 75%+ on 3 full mock exams before booking. Use our <Link href="/certifications/administrator" className="text-salesforce-blue underline">free ADM-201 practice test</Link> to benchmark your readiness.</p>
             </div>
           </div>
           <div className="flex gap-4">

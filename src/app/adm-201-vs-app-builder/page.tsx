@@ -82,7 +82,7 @@ export default function Adm201VsAppBuilderPage() {
       <WhichFirstBlock
         certA={{
           name: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           conditions: [
           "You are new to Salesforce entirely",
@@ -104,7 +104,7 @@ export default function Adm201VsAppBuilderPage() {
         }}
         recommendation={{
           certName: "Salesforce Administrator",
-          certSlug: "administrator-practice-test",
+          certSlug: "administrator",
           examTipsSlug: "adm-201-exam-tips",
           reason: "Always take Administrator first. It is the required foundation — App Builder explicitly builds on ADM-201 content, and many employers list Admin as a prerequisite for App Builder roles. Attempting App Builder without Admin knowledge is the most common reason candidates fail.",
           careerPathSlug: "admin-certification-path",
