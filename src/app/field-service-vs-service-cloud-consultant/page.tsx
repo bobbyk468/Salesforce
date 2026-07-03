@@ -65,7 +65,7 @@ const faqItems = [
 export default function FieldServiceVsServiceCloudConsultantPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
-      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/field-service-vs-service-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/field-service-consultant', '/certifications/service-cloud']} />
+      <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/field-service-vs-service-cloud-consultant" breadcrumbItems={breadcrumbItems} faqItems={faqItems} aboutEntities={['/certifications/field-service', '/certifications/service-cloud']} />
 
       <div data-lcp-header className="mb-10">
         <div className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark text-sm font-semibold px-3 py-1 rounded-full mb-4">
