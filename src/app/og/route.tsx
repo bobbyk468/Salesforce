@@ -185,6 +185,16 @@ export async function GET(req: NextRequest) {
         </div>
       </div>
     ),
-    { width: W, height: H },
+    {
+      width: W,
+      height: H,
+      headers: {
+        // Keep this endpoint crawlable so social crawlers (X, LinkedIn, Slack)
+        // can still fetch preview images, but tell Google not to index each
+        // generated image URL as a page — otherwise every /og?t=... shows up
+        // in Search Console under "Crawled - currently not indexed".
+        'X-Robots-Tag': 'noindex',
+      },
+    },
   )
 }
