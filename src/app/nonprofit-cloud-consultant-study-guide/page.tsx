@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Nonprofit Cloud Consultant certification?',
-    answer: 'The Salesforce Certified Nonprofit Cloud Consultant validates expertise in implementing Salesforce for nonprofit organisations. It covers the Nonprofit Success Pack (NPSP) data model, fundraising management, volunteer coordination, programme delivery, and outcomes tracking. It is designed for Salesforce implementation consultants, system admins at nonprofits, and technology staff at nonprofit technology solution providers.',
+    answer: 'The Salesforce Certified Agentforce Nonprofit Consultant validates expertise in implementing Salesforce for nonprofit organisations. It covers the Nonprofit Success Pack (NPSP) data model, fundraising management, volunteer coordination, programme delivery, and outcomes tracking. It is designed for Salesforce implementation consultants, system admins at nonprofits, and technology staff at nonprofit technology solution providers.',
   },
   {
     question: 'What is NPSP and how does it relate to Nonprofit Cloud?',
@@ -94,7 +94,7 @@ export default function NonprofitCloudConsultantStudyGuidePage() {
           Salesforce Nonprofit Cloud Consultant Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          A complete study guide for the Salesforce Certified Nonprofit Cloud Consultant exam — NPSP data model, fundraising, volunteer management, and programme outcomes measurement.
+          A complete study guide for the Salesforce Certified Agentforce Nonprofit Consultant exam — NPSP data model, fundraising, volunteer management, and programme outcomes measurement.
         </p>
       </div>
 

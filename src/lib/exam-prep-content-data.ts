@@ -114,7 +114,7 @@ export const EXAM_PREP_CONTENT: Record<string, ExamPrepContent> = {
       'Understand namespaced packages, unlocked packages, and dependency management.',
       'Be ready for “how would you design?” and “what is the best approach?” questions.',
     ],
-    prerequisites: ['Salesforce Certified Platform Developer I', '2+ years development experience'],
+    prerequisites: ['Salesforce Certified Platform Developer', '2+ years development experience'],
     focusAreas: ['Architecture and Design Patterns', 'Advanced Apex and LWC', 'Testing and Deployment', 'Integration'],
     studyStrategy: 'Focus on design and best practices, not just syntax. Review trigger frameworks, dependency injection, and package development. Practice explaining trade-offs.',
   },

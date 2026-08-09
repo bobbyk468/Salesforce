@@ -646,40 +646,40 @@ function getCertMetaTitle(slug: string): string {
   const shortTitles: Record<string, string> = {
     // Administrator track (base certs – people start here; "Salesforce" first for broader queries)
     administrator: 'Salesforce Platform Administrator (ADM-201)',
-    'advanced-administrator': 'Salesforce Certified Advanced Administrator (ADM-211)',
+    'advanced-administrator': 'Salesforce Certified Platform Administrator II (ADM-211)',
     'app-builder': 'Salesforce Platform App Builder (DEV-402)',
     'agentforce-specialist': 'Salesforce Certified Agentforce Specialist',
     'business-analyst': 'Salesforce Business Analyst',
     'cpq-administrator': 'Salesforce Certified CPQ Administrator',
-    'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Admin',
+    'marketing-cloud-engagement-admin': 'Salesforce Certified Marketing Cloud Engagement Administrator',
     'slack-administrator': 'Salesforce Certified Slack Administrator',
     'administrator-practice-test': 'ADM-201 Practice Test',
     // Developer track ("Salesforce" first for broader queries)
     'developer-1': 'Salesforce Platform Developer I (PD1)',
     'developer-2': 'Salesforce Certified Platform Developer II (PD2)',
-    'javascript-developer-i': 'Salesforce Certified JavaScript Developer I',
-    'b2c-commerce-developer': 'Salesforce Certified B2C Commerce Developer',
+    'javascript-developer-i': 'Salesforce Certified JavaScript Developer',
+    'b2c-commerce-developer': 'Salesforce Certified B2C Commerce Cloud Developer',
     'industries-cpq-developer': 'Salesforce Certified Industries CPQ Developer',
     'marketing-cloud-engagement-developer': 'Salesforce Certified Marketing Cloud Engagement Developer',
-    'mulesoft-developer-i': 'Salesforce Certified MuleSoft Developer I',
+    'mulesoft-developer-i': 'Salesforce Certified MuleSoft Developer',
     'mulesoft-developer-ii': 'Salesforce Certified MuleSoft Developer II',
     'mulesoft-hyperautomation-developer': 'Salesforce Certified MuleSoft Hyperautomation Developer',
     'omnistudio-developer': 'Salesforce Certified OmniStudio Developer',
     'slack-developer': 'Salesforce Certified Slack Developer',
     // Consultant track ("Salesforce" first for broader queries)
     'sales-cloud': 'Salesforce Sales Cloud Consultant',
-    'service-cloud': 'Salesforce Certified Service Cloud Consultant',
+    'service-cloud': 'Salesforce Certified Agentforce Service Consultant',
     'data-360-consultant': 'Salesforce Certified Data 360 Consultant',
     'crm-analytics-einstein-discovery-consultant': 'Salesforce Certified CRM Analytics & Einstein Discovery',
     'education-cloud-consultant': 'Salesforce Certified Education Cloud Consultant',
     'experience-cloud': 'Salesforce Certified Experience Cloud Consultant',
-    'field-service': 'Salesforce Certified Field Service Consultant',
+    'field-service': 'Salesforce Certified Agentforce Field Service and Operations Consultant',
     'pardot-consultant': 'Salesforce Certified Pardot (Account Engagement) Consultant',
     'marketing-cloud-consultant': 'Salesforce Certified Marketing Cloud Engagement Consultant',
-    'nonprofit-cloud': 'Salesforce Certified Nonprofit Cloud Consultant',
+    'nonprofit-cloud': 'Salesforce Certified Agentforce Nonprofit Consultant',
     'nonprofit-success-pack-consultant': 'Salesforce Certified Nonprofit Success Pack (NPSP)',
     'omnistudio-consultant': 'Salesforce Certified OmniStudio Consultant',
-    'revenue-cloud-consultant': 'Salesforce Certified Revenue Cloud Consultant',
+    'revenue-cloud-consultant': 'Salesforce Certified Revenue Management Consultant',
     'slack-consultant': 'Salesforce Certified Slack Consultant',
     // Associate
     'platform-foundations': 'Salesforce Certified Platform Foundations',
@@ -693,7 +693,7 @@ function getCertMetaTitle(slug: string): string {
     // Architect ("Salesforce" first for broader queries)
     'application-architect': 'Salesforce Certified Application Architect',
     'data-architect': 'Salesforce Data Architect',
-    'integration-architect': 'Salesforce Certified Integration Architect',
+    'integration-architect': 'Salesforce Certified Platform Integration Architect',
     'sharing-visibility-architect': 'Salesforce Certified Sharing & Visibility Architect',
     'system-architect': 'Salesforce Certified System Architect',
     'identity-access-management-architect': 'Salesforce Certified Identity & Access Mgmt Architect',
@@ -733,7 +733,7 @@ function getCertMetaTitle(slug: string): string {
     'process-automation-ap': 'Salesforce Certified Process Automation AP',
     'public-sector-solutions-ap': 'Salesforce Certified Public Sector Solutions AP',
     // Sales
-    'sales-foundations': 'Salesforce Certified Sales Foundations',
+    'sales-foundations': 'Salesforce Certified Agentforce Sales Foundations',
     // Designer
     'strategy-designer': 'Salesforce Certified Platform Strategy Designer',
     'ux-designer': 'Salesforce Certified UX Designer',
@@ -963,7 +963,7 @@ export function getCertMetaDescription(slug: string): string {
     'revenue-cloud-consultant':
       `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'sales-cloud':
-      'Prepare for the Salesforce Certified Sales Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Agentforce Sales Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'service-cloud':
       `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'slack-consultant':
@@ -979,9 +979,9 @@ export function getCertMetaDescription(slug: string): string {
     'application-architect':
       `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'data-architect':
-      'Prepare for the Salesforce Certified Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'integration-architect':
-      'Prepare for the Salesforce Certified Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
+      'Prepare for the Salesforce Certified Platform Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
     'sharing-visibility-architect':
       `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'system-architect':

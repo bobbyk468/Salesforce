@@ -36,8 +36,8 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     formerName: 'Salesforce Certified Platform Developer II',
   },
   'email-specialist': {
-    primaryName: 'Salesforce Certified Marketing Cloud Email Specialist',
-    formerName: 'Salesforce Certified Email Specialist',
+    primaryName: 'Salesforce Certified Marketing Cloud Engagement Specialist',
+    formerName: 'Salesforce Certified Marketing Cloud Email Specialist',
   },
   'pardot-specialist': {
     primaryName: 'Salesforce Certified Account Engagement (Pardot) Specialist',
@@ -86,6 +86,30 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
   'marketing-cloud-engagement-admin': {
     primaryName: 'Salesforce Certified Marketing Cloud Engagement Administrator',
     formerName: 'Salesforce Certified Marketing Cloud Administrator',
+  },
+  'sales-cloud': {
+    primaryName: 'Salesforce Certified Agentforce Sales Consultant',
+    formerName: 'Salesforce Certified Sales Cloud Consultant',
+  },
+  'service-cloud': {
+    primaryName: 'Salesforce Certified Agentforce Service Consultant',
+    formerName: 'Salesforce Certified Service Cloud Consultant',
+  },
+  'field-service': {
+    primaryName: 'Salesforce Certified Agentforce Field Service and Operations Consultant',
+    formerName: 'Salesforce Certified Field Service Consultant',
+  },
+  'sales-foundations': {
+    primaryName: 'Salesforce Certified Agentforce Sales Foundations',
+    formerName: 'Salesforce Certified Sales Foundations',
+  },
+  'revenue-cloud-consultant': {
+    primaryName: 'Salesforce Certified Revenue Management Consultant',
+    formerName: 'Salesforce Certified Revenue Cloud Consultant',
+  },
+  'nonprofit-cloud': {
+    primaryName: 'Salesforce Certified Agentforce Nonprofit Consultant',
+    formerName: 'Salesforce Certified Nonprofit Cloud Consultant',
   },
 }
 
