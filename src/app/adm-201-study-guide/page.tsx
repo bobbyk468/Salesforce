@@ -292,7 +292,7 @@ export default function Adm201StudyGuidePage() {
 
       {/* Mock benchmark */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
         <p className="text-sm text-gray-700 mb-2">
           ADM-201 passing score is 65% (39/60 questions). Use this benchmark before scheduling:
         </p>

@@ -212,7 +212,7 @@ export default function AiAssociateStudyGuidePage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           80%+ on 2 timed full mocks (40 Q / 70 min) before booking
@@ -241,7 +241,7 @@ export default function AiAssociateStudyGuidePage() {
         </ol>
       </section>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
           <li><Link href="/platform-foundations-vs-ai-associate" className="text-sm text-salesforce-dark hover:underline font-medium">→ Platform Foundations vs AI Associate — which cert is right for you?</Link></li>
         </ul>
@@ -279,7 +279,7 @@ export default function AiAssociateStudyGuidePage() {
 
       
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator (ADM-201)</Link>, <Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link>, or <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">AI Associate</Link>.
         </p>

@@ -125,7 +125,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* Exam Sections */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exam Is Weighted</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -143,7 +143,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* What Each Section Tests */}
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Inside Each Exam Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -183,7 +183,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* Scenario Tips */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Memorise the pricing cascade:</strong> List Price → Partner Discount → Partner Price → Additional Discount → Customer Price → Additional Discount → Net Price. Knowing each step&apos;s name and what affects it is tested directly.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Know the four product rule types:</strong> Validation (enforces rules on save), Selection (auto-selects/deselects options), Alert (warns the user), Filter (hides options). Exam scenarios describe a business requirement and ask which rule type to use.</span></li>
@@ -194,13 +194,13 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. CPQ has many interconnected concepts — if you can correctly configure a bundle with pricing rules and a contract renewal in your sandbox, you are ready for the exam. Products &amp; Pricebooks (30%) alone is nearly a third of the exam, so master it first.</p>
       </div>
 
       {/* Top 10 Review */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Concepts Checklist</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>CPQ product hierarchy: bundle → feature → option and their relationships</li>
           <li>Four product rule types (Validation, Selection, Alert, Filter) and when to use each</li>
@@ -217,7 +217,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* FAQ */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -230,14 +230,14 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* CTA */}
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
           <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — comparison</Link></li>
         </ul>
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">Advanced Administrator</Link>, <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link>, or <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>.
         </p>
@@ -245,7 +245,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       <DifficultyHeatmap slug="cpq-administrator" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Test Yourself</h2>
         <p className="text-white mb-6">Test yourself with free CPQ Administrator practice questions covering all 5 exam sections.</p>
         <Link
           href="/certifications/cpq-administrator"

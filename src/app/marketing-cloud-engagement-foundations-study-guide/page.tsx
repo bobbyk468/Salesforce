@@ -125,7 +125,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -163,7 +163,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -175,7 +175,7 @@ export default function MarketingCloudEngagementFoundationsStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator (ADM-201)</Link>, <Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link>, or <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">AI Associate</Link>.
         </p>

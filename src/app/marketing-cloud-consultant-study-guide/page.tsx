@@ -223,7 +223,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks (60 Q / 105 min) before booking
@@ -278,7 +278,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
 
       
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Engagement Consultant</Link>, <Link href="/certifications/pardot-consultant" className="text-salesforce-blue font-medium hover:underline">Account Engagement (Pardot) Consultant</Link>, or <Link href="/certifications/email-specialist" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Email Specialist</Link>.
         </p>

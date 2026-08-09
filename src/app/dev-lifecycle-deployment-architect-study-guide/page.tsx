@@ -122,7 +122,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exam Is Weighted</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Inside Each Exam Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -179,7 +179,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Sandbox vs scratch org decision:</strong> Use scratch orgs for short-lived, isolated developer work and CI/CD pipelines. Use sandboxes for persistent integration testing, UAT, and environments that need production-matching data or configuration.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>SFDX over change sets for teams:</strong> Any scenario with multiple developers, version control requirements, or CI/CD should recommend SFDX/Salesforce CLI over change sets. Change sets are appropriate only for simple admin-driven deployments without version control.</span></li>
@@ -189,12 +189,12 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. DLDA is conceptual and scenario-driven — questions describe a team&apos;s development situation and ask for the best environment strategy, deployment tool, or CI/CD design. Hands-on experience with Salesforce CLI and Git significantly improves performance.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Concepts Checklist</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Sandbox types: storage, data, metadata, refresh frequency, use cases</li>
           <li>Scratch orgs: Dev Hub, definition file, lifecycle, vs sandboxes</li>
@@ -210,7 +210,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -222,7 +222,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>
@@ -230,7 +230,7 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
 
       <DifficultyHeatmap slug="dev-lifecycle-deployment-architect" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Test Yourself</h2>
         <p className="text-white mb-6">Free Dev Lifecycle &amp; Deployment Architect practice questions covering all 5 exam sections.</p>
         <Link
           href="/certifications/dev-lifecycle-deployment-architect"

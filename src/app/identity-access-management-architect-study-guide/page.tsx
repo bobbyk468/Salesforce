@@ -122,7 +122,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section-by-Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -179,7 +179,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>SAML = SSO for enterprise users; OAuth = API access:</strong> When a scenario says &quot;employees need to log into Salesforce using their corporate credentials,&quot; the answer is SAML SSO. When a scenario says &quot;an application needs to access Salesforce data on behalf of a user,&quot; the answer is OAuth 2.0.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>JWT Bearer for server-to-server:</strong> Any scenario involving background jobs, integration middleware, or automated processes accessing Salesforce APIs — without a user present — should use JWT Bearer Token flow. Never Username-Password flow for production systems.</span></li>
@@ -189,12 +189,12 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. IAM Architect is protocol-heavy — many candidates who know Salesforce well struggle because they haven&apos;t worked with SAML and OAuth deeply. Hands-on SSO configuration is the best preparation. If you can configure SSO end-to-end from scratch, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Must-Know Concepts</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>SAML 2.0: IdP vs SP roles, assertion types, SP-initiated vs IdP-initiated flows</li>
           <li>OAuth 2.0 flows: when to use each (Web Server, JWT Bearer, Client Credentials, Device)</li>
@@ -210,7 +210,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -222,7 +222,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>
@@ -230,7 +230,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
 
       <DifficultyHeatmap slug="identity-access-management-architect" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Free IAM Architect practice questions covering SAML, OAuth, SSO design, and connected apps.</p>
         <Link
           href="/certifications/identity-access-management-architect"

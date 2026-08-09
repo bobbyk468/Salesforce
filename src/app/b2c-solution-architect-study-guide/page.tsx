@@ -122,7 +122,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Domain Covers</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -178,7 +178,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Map the consumer journey:</strong> Browse (SFCC) → Personalise (MC Personalisation) → Purchase (SFCC) → Confirm (Marketing Cloud email) → Support (Service Cloud) → Re-engage (Marketing Cloud journey). Every exam scenario will describe a stage in this journey.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Data Cloud for identity resolution:</strong> When a scenario involves unifying consumer data across touchpoints (web, mobile, in-store, email), the answer involves Data Cloud as the unified profile layer — not just Marketing Cloud or SFCC alone.</span></li>
@@ -188,12 +188,12 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2C Solution Architect is scenario-heavy and requires genuine multi-cloud consumer experience. Candidates who have only worked in one cloud (e.g., only Marketing Cloud) typically struggle. The more cross-cloud project experience you have, the better your exam performance.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>SFCC architecture: SFRA, cartridges, Business Manager, OCAPI vs SCAPI</li>
           <li>Marketing Cloud Journey Builder for post-purchase and re-engagement journeys</li>
@@ -209,7 +209,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -220,7 +220,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
         </dl>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare the Alternatives</h2>
         <ul className="space-y-2">
           <li><Link href="/b2b-vs-b2c-solution-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ B2B vs B2C Solution Architect — which path fits your role?</Link></li>
         </ul>
@@ -228,7 +228,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
 
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>
@@ -236,7 +236,7 @@ export default function B2cSolutionArchitectStudyGuidePage() {
 
       <DifficultyHeatmap slug="b2c-solution-architect" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Try It Yourself</h2>
         <p className="text-white mb-6">Free B2C Solution Architect practice questions covering all 5 exam sections.</p>
         <Link
           href="/certifications/b2c-solution-architect"

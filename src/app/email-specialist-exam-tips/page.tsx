@@ -137,7 +137,7 @@ export default function EmailSpecialistExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
         <p className="text-sm text-gray-700 mb-2">
           Use this minimum benchmark before scheduling your Email Specialist exam:
         </p>
@@ -172,7 +172,7 @@ export default function EmailSpecialistExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">

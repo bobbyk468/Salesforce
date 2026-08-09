@@ -123,7 +123,7 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -140,7 +140,7 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Domain Covers</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -178,7 +178,7 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Dataflows vs recipes:</strong> For complex transformations requiring custom JSON logic, use a dataflow. For visual, maintainable ETL without coding, use a recipe. When both could work, the exam typically favours recipes as the modern recommended approach.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>RLS predicates must be applied to every dataset:</strong> Row-level security does not cascade. If a user joins two datasets in a dashboard query, the predicate must be applied to both datasets separately. Forgetting this is a common exam mistake.</span></li>
@@ -188,12 +188,12 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. CRM Analytics is very tool-specific — knowing the exact transformation nodes in a dataflow (sfdcDigest, augment, computeExpression, flatten) and SAQL syntax is tested directly. There is no shortcut other than hands-on practice in the tool.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Dataflow transformation nodes: sfdcDigest, augment, computeExpression, flatten, filter, sfdcRegister</li>
           <li>Recipes vs dataflows: when to use each, how they differ in architecture</li>
@@ -209,7 +209,7 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -221,7 +221,7 @@ export default function CrmAnalyticsStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
         </p>
@@ -229,7 +229,7 @@ export default function CrmAnalyticsStudyGuidePage() {
 
       <DifficultyHeatmap slug="crm-analytics-einstein-discovery-consultant" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Try It Yourself</h2>
         <p className="text-white mb-6">Free CRM Analytics practice questions covering dataflows, recipes, SAQL, and dashboard design.</p>
         <Link
           href="/certifications/crm-analytics-einstein-discovery-consultant"

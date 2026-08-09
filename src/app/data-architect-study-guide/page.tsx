@@ -122,7 +122,7 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Domain Covers</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -179,7 +179,7 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>LDV mitigation hierarchy:</strong> When performance is the problem, first check if a custom index can help. If not, consider skinny tables. If the model itself causes skew, redesign the relationship or use big objects for archiving.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>MDM pattern selection:</strong> Consolidation = merge all data into Salesforce as master. Coexistence = Salesforce is one of several authoritative systems. Centralisation = Salesforce is the single hub but doesn&apos;t own all data. Match the pattern to the business scenario described.</span></li>
@@ -189,12 +189,12 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Data Architect questions are scenario-heavy — most describe a business situation with performance, compliance, or data quality challenges and ask for the optimal design. If you can justify your answer (not just identify it), you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Object relationship types and when to use lookup vs master-detail</li>
           <li>Three MDM patterns: consolidation, coexistence, centralisation — and when to use each</li>
@@ -210,7 +210,7 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -222,7 +222,7 @@ export default function DataArchitectStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>
@@ -230,7 +230,7 @@ export default function DataArchitectStudyGuidePage() {
 
       <DifficultyHeatmap slug="data-architect" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Try It Yourself</h2>
         <p className="text-white mb-6">Test yourself with free Data Architect practice questions covering all 5 exam sections.</p>
         <Link
           href="/certifications/data-architect"

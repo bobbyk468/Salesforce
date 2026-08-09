@@ -122,7 +122,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exam Is Weighted</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Inside Each Exam Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -177,7 +177,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Business Unit design is frequently tested:</strong> When a scenario describes a company with multiple brands or regional teams that need separate content, users, and data — Business Units are the answer. Understand cross-BU sharing limitations: data and content can be shared upward from child BU to parent, but not sideways between sibling BUs.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Subscriber key vs email address:</strong> The subscriber key is the unique identifier — it can be any value (CRM ID, email, phone). Using email as subscriber key causes problems when subscribers change email addresses. Best practice: use Salesforce Contact ID as subscriber key to maintain consistent identity across systems.</span></li>
@@ -187,12 +187,12 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Marketing Cloud Admin is very configuration-specific — questions describe exact Marketing Cloud settings and ask what each does. Hands-on experience in a Marketing Cloud trial account is essential for the Account Administration and Data Management sections.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Key Concepts Checklist</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Business Units: purpose, cross-BU sharing rules, user assignment</li>
           <li>User roles: Administrator, Content Creator, Analyst, MC Connect User — capabilities</li>
@@ -208,7 +208,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -219,7 +219,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
         </dl>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
           <li><Link href="/marketing-cloud-admin-vs-developer" className="text-sm text-salesforce-dark hover:underline font-medium">→ Marketing Cloud Admin vs Developer — which cert to take?</Link></li>
         </ul>
@@ -227,7 +227,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
 
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Engagement Consultant</Link>, <Link href="/certifications/pardot-consultant" className="text-salesforce-blue font-medium hover:underline">Account Engagement (Pardot) Consultant</Link>, or <Link href="/certifications/email-specialist" className="text-salesforce-blue font-medium hover:underline">Marketing Cloud Email Specialist</Link>.
         </p>
@@ -235,7 +235,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
 
       <DifficultyHeatmap slug="marketing-cloud-engagement-admin" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Test Yourself</h2>
         <p className="text-white mb-6">Free Marketing Cloud Engagement Admin practice questions covering all 5 exam sections.</p>
         <Link
           href="/certifications/marketing-cloud-engagement-admin"

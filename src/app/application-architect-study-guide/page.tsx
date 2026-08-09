@@ -200,7 +200,7 @@ export default function ApplicationArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -211,7 +211,7 @@ export default function ApplicationArchitectStudyGuidePage() {
         </dl>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">See Related Certifications</h2>
         <ul className="space-y-2">
           <li><Link href="/system-architect-vs-application-architect" className="text-sm text-salesforce-dark hover:underline font-medium">→ System Architect vs Application Architect — which to take first?</Link></li>
         </ul>
@@ -233,7 +233,7 @@ export default function ApplicationArchitectStudyGuidePage() {
 
       
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Your Next Certification Step</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>

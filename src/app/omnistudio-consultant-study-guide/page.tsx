@@ -121,7 +121,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Weightings by Section</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -138,7 +138,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Domain Covers</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -174,7 +174,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Working Through Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Component selection decision tree:</strong> User needs to complete a guided multi-step process? → OmniScript. Agent needs to view contextual data on a record page? → FlexCard. Need server-side data orchestration (read, write, transform, callout)? → Integration Procedure. Need to read/write Salesforce data or transform JSON? → DataRaptor.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Reuse over rebuild:</strong> OmniStudio Consultant questions often test whether you choose a reusable component design (shared Integration Procedure called by multiple OmniScripts) vs duplicating logic. Always favour reuse — it is the correct design pattern.</span></li>
@@ -184,12 +184,12 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong>. Discovery &amp; Analysis (30%) and Solution Design (28%) together are 58% of the exam — the consultant exam is more strategic than technical. If you can correctly map a business requirement to the right OmniStudio component and justify the design decision, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Concepts Worth Reviewing</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Component selection: OmniScript vs FlexCard vs Integration Procedure vs DataRaptor — when to use each</li>
           <li>DataRaptor types: Extract, Load, Transform, Turbo Extract — correct type for each data operation</li>
@@ -205,7 +205,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -217,7 +217,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
       </div>
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Plan Your Next Certification</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
         </p>
@@ -225,7 +225,7 @@ export default function OmnistudioConsultantStudyGuidePage() {
 
       <DifficultyHeatmap slug="omnistudio-consultant" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Try It Yourself</h2>
         <p className="text-white mb-6">Test yourself with free OmniStudio Consultant practice questions.</p>
         <Link href="/certifications/omnistudio-consultant" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions

@@ -127,7 +127,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -144,7 +144,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section-by-Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -178,7 +178,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Map every scenario to an API layer:</strong> If a question describes accessing a backend SAP system, that&apos;s a System API. If it describes combining data from multiple System APIs for a business process, that&apos;s a Process API. If it describes delivering data to a mobile app, that&apos;s an Experience API.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Anypoint Exchange is the API marketplace:</strong> When a question asks where developers discover and share reusable APIs and connectors within an organisation, the answer is Anypoint Exchange — not Design Center (which is for designing) or Runtime Manager (which is for deployment).</span></li>
@@ -188,12 +188,12 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong> before scheduling — the 70% passing score leaves less margin than most Salesforce exams. The exam is entirely conceptual; if you can explain all three API-led layers and the purpose of each Anypoint Platform component without looking them up, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Must-Know Concepts</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>Three API-led connectivity layers: System, Process, Experience — definition and examples of each</li>
           <li>API-led benefits: reusability, composability, discoverability, agility</li>
@@ -209,7 +209,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -222,7 +222,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
 
       <RelatedGuides links={getRelatedGuides('mulesoft-integration-foundations-study-guide')} />
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
           <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations — which to pursue?</Link></li>
         </ul>
@@ -230,7 +230,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
 
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/administrator" className="text-salesforce-blue font-medium hover:underline">Platform Administrator (ADM-201)</Link>, <Link href="/certifications/developer-1" className="text-salesforce-blue font-medium hover:underline">Platform Developer I</Link>, or <Link href="/certifications/ai-associate" className="text-salesforce-blue font-medium hover:underline">AI Associate</Link>.
         </p>
@@ -238,7 +238,7 @@ export default function MulesoftIntegrationFoundationsStudyGuidePage() {
 
       <DifficultyHeatmap slug="mulesoft-integration-foundations" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Free MuleSoft Integration Foundations practice questions covering all 4 exam sections.</p>
         <Link
           href="/certifications/mulesoft-integration-foundations"

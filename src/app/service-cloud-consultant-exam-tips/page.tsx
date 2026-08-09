@@ -203,7 +203,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
 
       {/* Mock benchmark */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
           Service Cloud Consultant passing score is 67% (40/60 questions). Use this benchmark before scheduling:
         </p>
@@ -240,7 +240,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -252,7 +252,7 @@ export default function ServiceCloudConsultantExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Keep Studying</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/sales-cloud-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />

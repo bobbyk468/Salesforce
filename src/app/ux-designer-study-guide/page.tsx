@@ -122,7 +122,7 @@ export default function UxDesignerStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -140,7 +140,7 @@ export default function UxDesignerStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section-by-Section Breakdown</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
           {[
             { title: 'Discovery & User Research', items: ['User interview techniques', 'Affinity mapping & synthesis', 'Journey mapping', 'Persona creation', 'Research planning'] },
@@ -186,7 +186,7 @@ export default function UxDesignerStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -197,7 +197,7 @@ export default function UxDesignerStudyGuidePage() {
         </dl>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
           <li><Link href="/ux-designer-vs-strategy-designer" className="text-sm text-salesforce-dark hover:underline font-medium">→ UX Designer vs Strategy Designer — which cert should you take first?</Link></li>
         </ul>
@@ -205,7 +205,7 @@ export default function UxDesignerStudyGuidePage() {
 
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/strategy-designer" className="text-salesforce-blue font-medium hover:underline">Platform Strategy Designer</Link>, <Link href="/certifications/ux-designer" className="text-salesforce-blue font-medium hover:underline">User Experience Designer</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
         </p>

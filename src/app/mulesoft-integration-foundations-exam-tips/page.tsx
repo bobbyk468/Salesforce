@@ -135,7 +135,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
         <p className="text-sm text-gray-700 mb-2">
           Use this minimum benchmark before scheduling your MuleSoft Integration Foundations exam:
         </p>
@@ -171,7 +171,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Questions Candidates Ask</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -182,7 +182,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         </dl>
       </section>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">Compare the Alternatives</h2>
         <ul className="space-y-2">
           <li><Link href="/mulesoft-integration-foundations-study-guide" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Integration Foundations full study guide</Link></li>
           <li><Link href="/mulesoft-developer-i-vs-integration-foundations" className="text-sm text-salesforce-dark hover:underline font-medium">→ MuleSoft Developer I vs Integration Foundations — which to take?</Link></li>

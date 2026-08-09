@@ -122,7 +122,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Sections &amp; Weightings</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -139,7 +139,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       </div>
 
       <div className="mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Section-by-Section Breakdown</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name} className="bg-white rounded-xl border border-gray-100 p-5 shadow-sm">
@@ -177,7 +177,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Scenario Strategy Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Trace the full quote-to-cash flow:</strong> Quote → Order → Contract → Billing Schedule → Invoice → Payment → Revenue Schedule. Knowing which object is created at each step, and what triggers each transition, is tested heavily.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Billing treatment determines billing schedule:</strong> Billing treatment on a product order item drives the invoice schedule (frequency) and payment schedule. Different products in the same order can have different billing treatments — invoiced monthly, annually, or at delivery.</span></li>
@@ -187,12 +187,12 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Mock Exam Benchmark</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Product Catalog &amp; CPQ (28%) and Orders &amp; Contracts (24%) together are 52% of the exam — strong CPQ Administrator knowledge is essential. Billing &amp; Invoicing (22%) is the most uniquely Revenue Cloud section and requires hands-on sandbox practice.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Top 10 Concepts to Review</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">10 Must-Know Concepts</h2>
         <ol className="space-y-2 text-sm text-gray-700 list-decimal list-inside">
           <li>End-to-end Revenue Cloud flow: Quote → Order → Contract → Billing → Invoice → Payment → Revenue</li>
           <li>Billing treatment: invoice schedule + payment schedule configuration on products</li>
@@ -208,7 +208,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Common Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item) => (
             <div key={item.question} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -219,7 +219,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
         </dl>
       </div>
       <div className="bg-gray-50 rounded-xl border border-gray-100 p-5 mb-8">
-        <h2 className="text-base font-bold text-gray-900 mb-3">Compare Certifications</h2>
+        <h2 className="text-base font-bold text-gray-900 mb-3">How It Compares</h2>
         <ul className="space-y-2">
           <li><Link href="/cpq-admin-vs-revenue-cloud-consultant" className="text-sm text-salesforce-dark hover:underline font-medium">→ CPQ Admin vs Revenue Cloud Consultant — which cert is right?</Link></li>
         </ul>
@@ -227,7 +227,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
 
 
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go Next</h2>
         <p className="text-sm text-gray-700">
           After this certification, consider: <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">Sales Cloud Consultant</Link>, <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">Service Cloud Consultant</Link>, or <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">Experience Cloud Consultant</Link>.
         </p>
@@ -235,7 +235,7 @@ export default function RevenueCloudConsultantStudyGuidePage() {
 
       <DifficultyHeatmap slug="revenue-cloud-consultant" />
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Ready to Practice?</h2>
+        <h2 className="text-2xl font-bold mb-2">Put It Into Practice</h2>
         <p className="text-white mb-6">Test yourself with free Revenue Cloud Consultant practice questions covering all 5 exam sections.</p>
         <Link href="/certifications/revenue-cloud-consultant" className="inline-flex items-center px-6 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors">
           Start Free Practice Questions

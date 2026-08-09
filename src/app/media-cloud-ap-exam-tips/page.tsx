@@ -99,7 +99,7 @@ export default function MediaCloudApExamTipsPage() {
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Media Cloud AP Tests</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Media Cloud AP Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Media sales and advertising management</strong> — The advertising sales lifecycle: advertiser account management, request for proposal (RFP) intake, media planning and proposal creation, avails checking (available inventory), insertion order management, campaign trafficking, and advertiser billing and collections through the media billing workflow.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Subscriber and audience management</strong> — Managing consumer subscribers (direct-to-consumer streaming or publication subscribers): sign-up and entitlement provisioning, subscription plan management, payment and billing, retention offer configuration for at-risk subscribers, churn prediction, and audience segmentation for personalised content and offers.</li>
@@ -108,7 +108,7 @@ export default function MediaCloudApExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Highest-Weight Exam Sections</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <span className="font-medium text-gray-900">Media Sales and Advertising Management</span>
@@ -145,7 +145,7 @@ export default function MediaCloudApExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">AP Exam Benchmark</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Before You Book the AP Exam</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           Pass 3 timed 40-question mocks before booking (Pass/Fail scoring)
@@ -179,7 +179,7 @@ export default function MediaCloudApExamTipsPage() {
       </section>
 
 <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -191,7 +191,7 @@ export default function MediaCloudApExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Related Exam Tips</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Keep Studying</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-3">
           <Link href="/communications-cloud-ap-exam-tips" className="flex items-center gap-2 p-3 rounded-lg border border-gray-100 hover:border-salesforce-blue/40 hover:bg-salesforce-blue/5 transition-colors group">
             <ArrowRight className="h-4 w-4 text-salesforce-blue flex-shrink-0" />
