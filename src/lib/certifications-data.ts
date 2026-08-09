@@ -33,7 +33,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       { name: 'Agentforce Specialist', href: '/certifications/agentforce-specialist' },
       { name: 'Business Analyst', href: '/certifications/business-analyst' },
       { name: 'CPQ Administrator', href: '/certifications/cpq-administrator' },
-      { name: 'Marketing Cloud Engagement Admin', href: '/certifications/marketing-cloud-engagement-admin' },
+      { name: 'Marketing Cloud Engagement Administrator', href: '/certifications/marketing-cloud-engagement-admin' },
       { name: 'Slack Administrator', href: '/certifications/slack-administrator' },
       { name: 'Platform Administrator Practice Test', href: '/certifications/administrator-practice-test' },
     ],
@@ -43,13 +43,13 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     name: 'Developer',
     items: [
       { name: 'Platform App Builder', href: '/certifications/app-builder' },
-      { name: 'Platform Developer I', href: '/certifications/developer-1' },
+      { name: 'Platform Developer', href: '/certifications/developer-1' },
       { name: 'Platform Developer II', href: '/certifications/developer-2' },
-      { name: 'JavaScript Developer I', href: '/certifications/javascript-developer-i' },
-      { name: 'B2C Commerce Developer', href: '/certifications/b2c-commerce-developer' },
+      { name: 'JavaScript Developer', href: '/certifications/javascript-developer-i' },
+      { name: 'B2C Commerce Cloud Developer', href: '/certifications/b2c-commerce-developer' },
       { name: 'Industries CPQ Developer', href: '/certifications/industries-cpq-developer' },
       { name: 'Marketing Cloud Engagement Developer', href: '/certifications/marketing-cloud-engagement-developer' },
-      { name: 'MuleSoft Developer I', href: '/certifications/mulesoft-developer-i' },
+      { name: 'MuleSoft Developer', href: '/certifications/mulesoft-developer-i' },
       { name: 'MuleSoft Developer II', href: '/certifications/mulesoft-developer-ii' },
       { name: 'MuleSoft Hyperautomation Developer', href: '/certifications/mulesoft-hyperautomation-developer' },
       { name: 'OmniStudio Developer', href: '/certifications/omnistudio-developer' },
@@ -82,7 +82,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     name: 'Marketing',
     items: [
       { name: 'Marketing Cloud Email Specialist', href: '/certifications/email-specialist' },
-      { name: 'Marketing Cloud Engagement Admin', href: '/certifications/marketing-cloud-engagement-admin' },
+      { name: 'Marketing Cloud Engagement Administrator', href: '/certifications/marketing-cloud-engagement-admin' },
       { name: 'Marketing Cloud Engagement Consultant', href: '/certifications/marketing-cloud-consultant' },
       { name: 'Marketing Cloud Engagement Developer', href: '/certifications/marketing-cloud-engagement-developer' },
       { name: 'Account Engagement (Pardot) Specialist', href: '/certifications/pardot-specialist' },
@@ -95,12 +95,12 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     name: 'Architect',
     items: [
       { name: 'Application Architect', href: '/certifications/application-architect' },
-      { name: 'Data Architect', href: '/certifications/data-architect' },
-      { name: 'Integration Architect', href: '/certifications/integration-architect' },
-      { name: 'Sharing & Visibility Architect', href: '/certifications/sharing-visibility-architect' },
+      { name: 'Platform Data Architect', href: '/certifications/data-architect' },
+      { name: 'Platform Integration Architect', href: '/certifications/integration-architect' },
+      { name: 'Platform Sharing & Visibility Architect', href: '/certifications/sharing-visibility-architect' },
       { name: 'System Architect', href: '/certifications/system-architect' },
-      { name: 'Identity & Access Mgmt Architect', href: '/certifications/identity-access-management-architect' },
-      { name: 'Dev Lifecycle & Deployment Architect', href: '/certifications/dev-lifecycle-deployment-architect' },
+      { name: 'Platform Identity & Access Mgmt Architect', href: '/certifications/identity-access-management-architect' },
+      { name: 'Platform Dev Lifecycle & Deployment Architect', href: '/certifications/dev-lifecycle-deployment-architect' },
       { name: 'Technical Architect (CTA)', href: '/certifications/technical-architect' },
       { name: 'CTA - Architect Evaluation', href: '/certifications/technical-architect-evaluation' },
       { name: 'CTA - Architect Review Board', href: '/certifications/technical-architect-review-board' },
@@ -154,7 +154,7 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
     name: 'Designer',
     items: [
       { name: 'Platform Strategy Designer', href: '/certifications/strategy-designer' },
-      { name: 'User Experience (UX) Designer', href: '/certifications/ux-designer' },
+      { name: 'Platform User Experience (UX) Designer', href: '/certifications/ux-designer' },
     ],
   },
   {
@@ -314,9 +314,9 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
   if (isDeveloperRelated) {
     links.push(
       {
-        name: 'Salesforce Certified Platform Developer I',
+        name: 'Salesforce Certified Platform Developer',
         href: '/certifications/developer-1',
-        anchorText: 'Salesforce Certified Platform Developer I (PD1) study guide',
+        anchorText: 'Salesforce Certified Platform Developer (PD1) study guide',
       },
       {
         name: 'Developer role certifications',
@@ -334,9 +334,9 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
     certSlug === 'process-automation-ap'
   if (usesApexOrLwc) {
     links.push({
-      name: 'Salesforce Certified Platform Developer I',
+      name: 'Salesforce Certified Platform Developer',
       href: '/certifications/developer-1',
-      anchorText: 'Salesforce Certified Platform Developer I (PD1) — the Apex & LWC certification',
+      anchorText: 'Salesforce Certified Platform Developer (PD1) — the Apex & LWC certification',
     })
   }
 

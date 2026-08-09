@@ -20,15 +20,15 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     formerName: 'Salesforce Certified Administrator',
   },
   'advanced-administrator': {
-    primaryName: 'Salesforce Certified Advanced Administrator',
-    formerName: 'Salesforce Certified Platform Administrator II',
+    primaryName: 'Salesforce Certified Platform Administrator II',
+    formerName: 'Salesforce Certified Advanced Administrator',
   },
   'app-builder': {
     primaryName: 'Salesforce Certified Platform App Builder',
     formerName: 'Salesforce Certified App Builder',
   },
   'developer-1': {
-    primaryName: 'Salesforce Certified Platform Developer I',
+    primaryName: 'Salesforce Certified Platform Developer',
     formerName: 'Salesforce Certified Platform Developer I',
   },
   'developer-2': {
@@ -46,6 +46,46 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
   'pardot-consultant': {
     primaryName: 'Salesforce Certified Account Engagement (Pardot) Consultant',
     formerName: 'Salesforce Certified Pardot Consultant',
+  },
+  'data-architect': {
+    primaryName: 'Salesforce Certified Platform Data Architect',
+    formerName: 'Salesforce Certified Data Architect',
+  },
+  'dev-lifecycle-deployment-architect': {
+    primaryName: 'Salesforce Certified Platform Development Lifecycle and Deployment Architect',
+    formerName: 'Salesforce Certified Dev Lifecycle and Deployment Architect',
+  },
+  'identity-access-management-architect': {
+    primaryName: 'Salesforce Certified Platform Identity and Access Management Architect',
+    formerName: 'Salesforce Certified Identity and Access Management Architect',
+  },
+  'integration-architect': {
+    primaryName: 'Salesforce Certified Platform Integration Architect',
+    formerName: 'Salesforce Certified Integration Architect',
+  },
+  'sharing-visibility-architect': {
+    primaryName: 'Salesforce Certified Platform Sharing and Visibility Architect',
+    formerName: 'Salesforce Certified Sharing and Visibility Architect',
+  },
+  'ux-designer': {
+    primaryName: 'Salesforce Certified Platform User Experience Designer',
+    formerName: 'Salesforce Certified User Experience (UX) Designer',
+  },
+  'javascript-developer-i': {
+    primaryName: 'Salesforce Certified JavaScript Developer',
+    formerName: 'Salesforce Certified JavaScript Developer I',
+  },
+  'mulesoft-developer-i': {
+    primaryName: 'Salesforce Certified MuleSoft Developer',
+    formerName: 'Salesforce Certified MuleSoft Developer I',
+  },
+  'b2c-commerce-developer': {
+    primaryName: 'Salesforce Certified B2C Commerce Cloud Developer',
+    formerName: 'Salesforce Certified B2C Commerce Developer',
+  },
+  'marketing-cloud-engagement-admin': {
+    primaryName: 'Salesforce Certified Marketing Cloud Engagement Administrator',
+    formerName: 'Salesforce Certified Marketing Cloud Administrator',
   },
 }
 
