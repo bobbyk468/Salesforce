@@ -1,0 +1,210 @@
+{
+  "template": "associate",
+  "certificationCard": {
+    "code": "CCAR-F",
+    "description": "The Claude Certified Architect – Foundations (CCAR-F) validates your ability to design multi-agent systems, architect MCP integrations, configure Claude Code workflows, and build reliable AI solutions. Anthropic's first official technical certification, launched March 2026 as part of the Claude Partner Network.",
+    "examDetails": {
+      "questions": 60,
+      "passingScore": "720/1000",
+      "duration": "120 min",
+      "cost": "$125"
+    },
+    "topics": [
+      "Agentic Architecture (27%)",
+      "Claude Code Configuration (20%)",
+      "Tool Design & MCP (18%)",
+      "Prompt Engineering",
+      "Structured Output",
+      "Context Management",
+      "Reliability Patterns",
+      "Orchestration"
+    ]
+  },
+  "keyConcepts": {
+    "h2": "Claude Certified Architect Foundations: Key Concepts for the Exam",
+    "blocks": [
+      {
+        "heading": "Agentic Architecture and Orchestration (27%)",
+        "body": "The largest domain on the CCAR-F exam. Design multi-agent systems with task decomposition, hub-and-spoke orchestration models, and subagent coordination. Know agentic loops — how Claude iteratively calls tools, evaluates results, and decides next steps. Understand reliability patterns for autonomous systems: maximum iteration limits, error recovery, human-in-the-loop escalation, and graceful degradation. The exam presents complex system designs and asks you to identify the correct orchestration pattern, failure mode, or scaling strategy."
+      },
+      {
+        "heading": "Tool Design and MCP Integration (18%)",
+        "body": "Design Model Context Protocol servers and clients for production use. Know how to define tool schemas that Claude can reliably invoke, manage tool boundaries (what the agent can and cannot do), and choose between SSE and stdio transport based on deployment requirements. Understand authentication patterns for MCP servers, how to handle tool errors gracefully, and when to build an MCP server vs. use direct API integration. The exam tests MCP architecture decisions with real-world scenarios."
+      },
+      {
+        "heading": "Claude Code Configuration and Workflows (20%)",
+        "body": "Claude Code is Anthropic's CLI agent for software engineering. Know the CLAUDE.md markdown hierarchy — how project-level, directory-level, and user-level instructions are resolved. Understand custom slash commands, how to configure permissions and hooks, and how to integrate Claude Code into CI/CD pipelines. The exam tests practical configuration scenarios: setting up a Claude Code workflow for a team, managing persistent project context, and automating development tasks."
+      },
+      {
+        "heading": "Prompt Engineering and Structured Output",
+        "body": "At the architect level, prompt engineering goes beyond basic instruction writing. Know how to enforce reliability via JSON schemas, design few-shot examples that handle edge cases, and implement validation retry loops for structured output. Understand system prompt architecture for complex applications — how to structure multi-section system prompts, manage context windows effectively, and design prompts that produce consistent results across thousands of invocations."
+      },
+      {
+        "heading": "Context Management and Reliability",
+        "body": "Production AI systems must handle long contexts reliably. Know how to preserve relevant context across multi-turn conversations, design handoff patterns between agents, and perform confidence calibration. Understand context window limits, summarization strategies for long conversations, and how to architect systems that degrade gracefully when context is exhausted. The exam tests your ability to design systems that remain reliable at scale."
+      }
+    ]
+  },
+  "scenarioTips": {
+    "h2": "How to Pass the Claude Certified Architect Foundations Exam",
+    "intro": "The CCAR-F is a scenario-based exam for technical architects and senior engineers. It tests system design judgment — not code syntax. You need hands-on experience building multi-agent systems, MCP servers, and production Claude Code workflows.",
+    "blocks": [
+      {
+        "heading": "Focus on Agentic Architecture",
+        "body": "27% of the exam covers agentic patterns. Build at least one multi-agent system before sitting the exam. Practice task decomposition, hub-and-spoke orchestration, and designing reliability patterns. Know when to use a single agent vs. multiple specialized subagents."
+      },
+      {
+        "heading": "Build MCP Servers",
+        "body": "Hands-on MCP experience is essential. Build a server that exposes tools, resources, and prompts. Understand the protocol's transport layer, authentication model, and how to write tool schemas that Claude can invoke reliably. Practice debugging MCP connections."
+      },
+      {
+        "heading": "Master Claude Code Configuration",
+        "body": "Set up Claude Code on a real project. Write CLAUDE.md files at different levels, create custom slash commands, configure hooks, and integrate with CI/CD. The exam tests your understanding of the configuration hierarchy and how instructions are resolved."
+      },
+      {
+        "heading": "Study Reliability Patterns",
+        "body": "Production AI systems fail differently than traditional software. Study maximum iteration limits for agentic loops, circuit breaker patterns for tool calls, fallback strategies when context windows are exhausted, and monitoring/observability for AI systems."
+      },
+      {
+        "heading": "Practice System Design",
+        "body": "The exam presents architectural scenarios and asks you to choose the best design. Practice diagramming AI system architectures, identifying bottlenecks, and designing for scale. Know the trade-offs between latency, cost, reliability, and capability for different architectural choices."
+      }
+    ]
+  },
+  "nextCertsAfter": {
+    "heading": "Next Certification After Architect Foundations",
+    "intro": "After earning the Architect Foundations credential, advance to the professional level:",
+    "links": [
+      {
+        "href": "/certifications/claude-certified-architect-professional",
+        "label": "Claude Certified Architect – Professional (CCAR-P)"
+      },
+      {
+        "href": "/certifications/claude-certified-developer",
+        "label": "Claude Certified Developer – Foundations (CCDV-F)"
+      }
+    ]
+  },
+  "tocSections": [
+    { "id": "exam-prep", "title": "Exam Prep Content" },
+    { "id": "key-concepts", "title": "Key Concepts" },
+    { "id": "scenario-tips", "title": "How to Pass" },
+    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
+    { "id": "practice-questions", "title": "Practice Questions" },
+    { "id": "more-questions", "title": "Get More Questions" },
+    { "id": "related-certs", "title": "Related Certifications" },
+    { "id": "faq", "title": "Exam FAQs" }
+  ],
+  "sampleQuestions": [
+    {
+      "question": "You are designing a customer onboarding agent that needs to collect information, verify documents, and provision accounts. Which orchestration pattern is most appropriate?",
+      "options": [
+        "A single monolithic agent that handles all steps sequentially",
+        "A hub-and-spoke model where a coordinator agent delegates to specialized subagents for data collection, document verification, and account provisioning, with the coordinator managing state and error recovery",
+        "Three independent agents that run in parallel with no coordination",
+        "A human operator who manually triggers each step after reviewing the previous step's output"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hub-and-spoke orchestration separates concerns into specialized subagents while maintaining centralized coordination. The coordinator manages task flow, handles errors, and ensures all steps complete. This pattern scales better than a monolithic agent and is more reliable than uncoordinated parallel agents."
+    },
+    {
+      "question": "An MCP server exposes a tool that deletes database records. What is the most important safety measure?",
+      "options": [
+        "Use SSE transport instead of stdio for better logging",
+        "Implement a confirmation step that requires human approval before any destructive operation executes, along with authentication, audit logging, and rate limiting",
+        "Cache the deletion results so they can be undone",
+        "Add a description to the tool schema warning that it is destructive"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Destructive operations in MCP tools require defense in depth: human-in-the-loop confirmation prevents unintended deletions, authentication ensures only authorized agents can invoke the tool, audit logging creates accountability, and rate limiting prevents bulk misuse. A tool description alone is insufficient."
+    },
+    {
+      "question": "A project has CLAUDE.md files at the repo root, in a subdirectory, and in the user's home directory. How does Claude Code resolve conflicting instructions?",
+      "options": [
+        "Only the repo root CLAUDE.md is used; others are ignored",
+        "Instructions are merged with specificity: user-level provides defaults, repo-root provides project context, and directory-level provides the most specific overrides for files in that directory",
+        "The most recently modified file takes priority",
+        "All files are concatenated alphabetically with no conflict resolution"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Claude Code uses a hierarchical resolution model: user-level CLAUDE.md sets global defaults, repo-root CLAUDE.md provides project-wide context, and directory-level CLAUDE.md files provide specific overrides for code in that directory. More specific instructions override more general ones."
+    },
+    {
+      "question": "An agentic loop has been running for 30 tool calls without completing its task. What is the best architectural response?",
+      "options": [
+        "Increase the maximum iteration limit to 100",
+        "Implement a circuit breaker that pauses the agent, logs its current state and reasoning, and either escalates to a human reviewer or retries with a revised strategy that addresses why the agent got stuck",
+        "Restart the agent with the exact same prompt and hope for different results",
+        "Switch to a more powerful model mid-loop"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A circuit breaker pattern is essential for production agentic systems. When an agent exceeds its iteration budget, the system should capture the agent's state for debugging, analyze why progress stalled, and either escalate or retry with a refined approach. Simply increasing limits or restarting masks the underlying issue."
+    },
+    {
+      "question": "You need to design a system where Claude processes customer support tickets using three different tools: ticket lookup, knowledge base search, and response generation. What is the most reliable architecture?",
+      "options": [
+        "Hard-code the tool call order: always lookup first, then search, then generate",
+        "Let Claude autonomously decide the tool call sequence based on the ticket content, with proper error handling for each tool and a maximum iteration limit",
+        "Call all three tools simultaneously in parallel and combine the results",
+        "Use a separate Claude instance for each tool with no shared context"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Claude's tool use is most effective when the model can decide the sequence based on context. Some tickets may need only a knowledge base search; others need a ticket lookup first. Autonomous tool selection with error handling and iteration limits is more flexible and reliable than hard-coded sequences."
+    },
+    {
+      "question": "When designing structured output for a data extraction pipeline, what combination provides the highest reliability?",
+      "options": [
+        "Natural language instructions in the prompt asking for JSON format",
+        "A JSON schema definition in tool_use parameters, combined with response validation and an automatic retry loop that includes the validation error in the retry prompt",
+        "Setting temperature to 0 and hoping the format is consistent",
+        "Post-processing with regex to extract fields from free-text responses"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Maximum reliability comes from schema enforcement (tool_use), validation (catch malformed responses), and intelligent retry (feed the error back so Claude can self-correct). This three-layer approach handles edge cases that any single technique would miss."
+    },
+    {
+      "question": "A multi-agent system needs to hand off context from a research agent to a writing agent. What is the best handoff pattern?",
+      "options": [
+        "Pass the entire conversation history from the research agent to the writing agent",
+        "Have the research agent produce a structured summary of its findings, which the coordinator passes to the writing agent along with the specific task instructions",
+        "Give the writing agent access to the research agent's tools so it can re-research if needed",
+        "Store the research results in a shared global variable"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Structured handoffs preserve essential context while avoiding context window bloat. The research agent's raw conversation history may contain irrelevant exploration, dead ends, and tool call noise. A curated summary plus clear task instructions gives the writing agent exactly what it needs."
+    },
+    {
+      "question": "What is the primary advantage of using Claude Code hooks in a CI/CD pipeline?",
+      "options": [
+        "Hooks make Claude Code run faster",
+        "Hooks let you execute custom shell commands in response to Claude Code events — such as running linters after file edits, validating changes before commits, or triggering tests after code generation — automating quality gates in the development workflow",
+        "Hooks are required for Claude Code to read files",
+        "Hooks bypass the need for human review of AI-generated code"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Hooks integrate Claude Code into existing development workflows by triggering automated actions on specific events. In CI/CD, this means linting, testing, and validation can run automatically as Claude Code makes changes, maintaining code quality standards without manual intervention."
+    },
+    {
+      "question": "A Claude-powered agent needs to process a 200,000-token document. The context window is 200K tokens. What architectural approach is best?",
+      "options": [
+        "Send the entire document in a single prompt and hope it fits",
+        "Implement a chunking strategy with overlap, process each chunk independently, then aggregate results — with a summarization pass if the combined output exceeds the context window for the final synthesis step",
+        "Truncate the document to fit within the context window",
+        "Use a smaller model that processes text faster"
+      ],
+      "correctAnswer": 1,
+      "explanation": "When documents approach or exceed context limits, chunking with overlap ensures no information is lost at boundaries. Independent processing of each chunk with a final aggregation step is a standard pattern for large document processing. The overlap ensures context continuity between chunks."
+    },
+    {
+      "question": "When should an architect choose SSE transport over stdio for an MCP server?",
+      "options": [
+        "Always — SSE is newer and therefore better",
+        "When the MCP server needs to run as a remote service accessible over HTTP, serve multiple concurrent clients, or operate in environments where subprocess management is impractical",
+        "Only when the MCP server handles file operations",
+        "stdio is deprecated and should never be used"
+      ],
+      "correctAnswer": 1,
+      "explanation": "SSE (Server-Sent Events) transport is appropriate for remote MCP servers, multi-client scenarios, and cloud deployments. stdio is simpler and better for local, single-client use cases like IDE integrations. The choice depends on deployment topology, not on which is 'newer' — both are production-supported."
+    }
+  ]
+}

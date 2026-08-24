@@ -85,6 +85,10 @@ import technicalArchitectJson from './technical-architect.json'
 import technicalArchitectEvaluationJson from './technical-architect-evaluation.json'
 import technicalArchitectReviewBoardJson from './technical-architect-review-board.json'
 import uxDesignerJson from './ux-designer.json'
+import claudeCertifiedAssociateJson from './claude-certified-associate.json'
+import claudeCertifiedDeveloperJson from './claude-certified-developer.json'
+import claudeCertifiedArchitectFoundationsJson from './claude-certified-architect-foundations.json'
+import claudeCertifiedArchitectProfessionalJson from './claude-certified-architect-professional.json'
 
 // Removed unsafe asBody() in favor of explicit validateAssociateSpikeBody() calls
 
@@ -174,6 +178,10 @@ export const PROMOTED_ASSOCIATE_SLUGS = [
   'technical-architect-evaluation',
   'technical-architect-review-board',
   'ux-designer',
+  'claude-certified-associate',
+  'claude-certified-developer',
+  'claude-certified-architect-foundations',
+  'claude-certified-architect-professional',
 ] as const
 
 export type PromotedAssociateSlug = (typeof PROMOTED_ASSOCIATE_SLUGS)[number]
@@ -263,4 +271,8 @@ export const promotedAssociateCertBodies: Record<PromotedAssociateSlug, Associat
   'technical-architect-evaluation': validateAssociateSpikeBody(technicalArchitectEvaluationJson, 'technical-architect-evaluation'),
   'technical-architect-review-board': validateAssociateSpikeBody(technicalArchitectReviewBoardJson, 'technical-architect-review-board'),
   'ux-designer': validateAssociateSpikeBody(uxDesignerJson, 'ux-designer'),
+  'claude-certified-associate': validateAssociateSpikeBody(claudeCertifiedAssociateJson, 'claude-certified-associate'),
+  'claude-certified-developer': validateAssociateSpikeBody(claudeCertifiedDeveloperJson, 'claude-certified-developer'),
+  'claude-certified-architect-foundations': validateAssociateSpikeBody(claudeCertifiedArchitectFoundationsJson, 'claude-certified-architect-foundations'),
+  'claude-certified-architect-professional': validateAssociateSpikeBody(claudeCertifiedArchitectProfessionalJson, 'claude-certified-architect-professional'),
 }

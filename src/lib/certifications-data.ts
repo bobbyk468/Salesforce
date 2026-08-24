@@ -168,6 +168,16 @@ const RAW_CERTIFICATION_CATEGORIES: CertificationCategory[] = [
       { name: 'Tableau Server Administrator', href: '/certifications/tableau-server-administrator' },
     ],
   },
+  {
+    slug: 'claude',
+    name: 'Claude',
+    items: [
+      { name: 'Claude Certified Associate – Foundations', href: '/certifications/claude-certified-associate' },
+      { name: 'Claude Certified Developer – Foundations', href: '/certifications/claude-certified-developer' },
+      { name: 'Claude Certified Architect – Foundations', href: '/certifications/claude-certified-architect-foundations' },
+      { name: 'Claude Certified Architect – Professional', href: '/certifications/claude-certified-architect-professional' },
+    ],
+  },
 ]
 
 /** Categories with official "Salesforce Certified X" naming for every certification. */
@@ -397,6 +407,7 @@ const CATEGORY_ORDER: { slug: string; level: CertificationLevel }[] = [
   { slug: 'tableau', level: 'intermediate' },
   { slug: 'architect', level: 'advanced' },
   { slug: 'accredited-professional', level: 'advanced' },
+  { slug: 'claude', level: 'intermediate' },
 ]
 
 /** Difficulty level for each certification. Used for badge display + filtering. */
@@ -501,6 +512,12 @@ export const CERT_DIFFICULTY_LEVELS: Record<string, DifficultyLevel> = {
   'tableau-server-administrator': 'advanced',
   'omnistudio-consultant': 'advanced',
   'nonprofit-success-pack-consultant': 'advanced',
+
+  // ===== Claude (Anthropic) =====
+  'claude-certified-associate': 'beginner',
+  'claude-certified-developer': 'intermediate',
+  'claude-certified-architect-foundations': 'advanced',
+  'claude-certified-architect-professional': 'expert',
 
   // ===== EXPERT (CTA level / Highest difficulty) =====
   'technical-architect': 'expert',

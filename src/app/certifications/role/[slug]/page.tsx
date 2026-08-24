@@ -25,6 +25,7 @@ const ROLE_TITLES: Record<string, string> = {
   'accredited-professional': `Salesforce Accredited Professional Certs (${RELEASE_CURRENT})`,
   sales:                  `Salesforce Sales Certification Guide (${RELEASE_CURRENT})`,
   designer:               `Salesforce Designer Certifications (${RELEASE_CURRENT})`,
+  claude:                 `Claude Certification Guide: All 4 Exams (${RELEASE_CURRENT})`,
 }
 
 type FaqItem = { question: string; answer: string }
@@ -175,6 +176,20 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
     careerPath: 'ADM-201 → Sales Cloud Consultant → Sales Foundations (optional) → Service Cloud Consultant or CPQ Admin',
     topSkills: ['Sales Cloud configuration', 'Territory management', 'Forecasting', 'Pipeline reporting', 'Sales process automation'],
   },
+  claude: {
+    salaryRange: '$80,000–$145,000',
+    seniorSalaryRange: '$150,000–$225,000',
+    yearsToFirst: '6–12 months',
+    dailyResponsibilities: [
+      'Building AI-powered applications using the Claude API and Anthropic SDK',
+      'Designing multi-agent systems and MCP integrations for enterprise clients',
+      'Writing effective prompts and evaluating AI outputs for business use cases',
+      'Architecting production-grade AI pipelines with security and observability',
+      'Advising teams on responsible AI practices and model selection',
+    ],
+    careerPath: 'CCAO-F (Associate) → CCDV-F (Developer) or CCAR-F (Architect Foundations) → CCAR-P (Architect Professional)',
+    topSkills: ['Claude API', 'Prompt engineering', 'MCP server design', 'Agentic architecture', 'AI security', 'Production reliability'],
+  },
 }
 
 const ROLE_FAQS: Record<string, FaqItem[]> = {
@@ -214,6 +229,11 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
     { question: 'What is a Salesforce Accredited Professional (AP) certification?', answer: 'Salesforce Accredited Professional certifications validate implementation expertise in specific Salesforce industry clouds or add-on products. Examples include Field Service AP, Health Cloud AP, Financial Services Cloud AP, and B2B Commerce AP. APs are typically add-on credentials for consultants who already hold a relevant core certification.' },
     { question: 'Do I need ADM-201 before an Accredited Professional cert?', answer: 'Most Accredited Professional certifications do not formally require ADM-201, but they assume advanced Salesforce configuration knowledge. Field Service AP, for example, assumes deep familiarity with Service Cloud. Health Cloud AP requires Service Cloud or Sales Cloud knowledge. In practice, most AP candidates have 2+ years of hands-on Salesforce experience.' },
   ],
+  claude: [
+    { question: 'Which Claude certification should I take first?', answer: 'The Claude Certified Associate – Foundations (CCAO-F, $99) is the recommended starting point. It tests practical Claude skills — prompt writing, output evaluation, model selection, and responsible AI — with no coding required. Business professionals, consultants, and non-technical users should start here.' },
+    { question: 'What is the difference between Claude Developer and Architect certifications?', answer: 'The Developer certification (CCDV-F) tests hands-on engineering skills: building with the Claude API, tool use, MCP servers, and shipping AI applications. The Architect certifications (CCAR-F and CCAR-P) test system design: multi-agent orchestration, Claude Code configuration, reliability patterns, and enterprise-scale architecture. Developers build; architects design.' },
+    { question: 'Do I need a prerequisite for the Claude Architect Professional (CCAR-P)?', answer: 'Yes — the Claude Certified Architect – Foundations (CCAR-F) is a prerequisite for CCAR-P. The Professional exam builds on Foundations concepts and tests advanced topics: enterprise architecture, multi-agent orchestration, security, compliance, and cost optimization at scale.' },
+  ],
 }
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
@@ -237,6 +257,8 @@ const ROLE_DESCRIPTIONS: Record<string, string> = {
     'Salesforce Sales certification: Sales Cloud Consultant and Certified Sales Foundations. Free practice & study guides. Start free now.',
   designer:
     'Salesforce Designer certifications: Platform Strategy Designer and UX Designer. Free practice & study guides. Start free now.',
+  claude:
+    'Claude certifications by Anthropic: Associate, Developer, Architect Foundations and Professional. Free practice questions and study guides. Start free now.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

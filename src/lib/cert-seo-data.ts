@@ -63,6 +63,10 @@ export const SLUG_TO_EXAM_CODE: Record<string, string> = {
   'technical-architect': 'CTA',
   'technical-architect-evaluation': 'CTA Evaluation',
   'technical-architect-review-board': 'CTA Review Board',
+  'claude-certified-associate': 'CCAO-F',
+  'claude-certified-developer': 'CCDV-F',
+  'claude-certified-architect-foundations': 'CCAR-F',
+  'claude-certified-architect-professional': 'CCAR-P',
 }
 
 /** Slug -> exam tips page path. Used in CertIntroParagraph for internal linking. */
@@ -309,6 +313,11 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'technical-architect-review-board': '$4,500',
   // UX Designer
   'ux-designer': '$200',
+  // Claude (Anthropic)
+  'claude-certified-associate': '$99',
+  'claude-certified-developer': '$125',
+  'claude-certified-architect-foundations': '$125',
+  'claude-certified-architect-professional': '$175',
 }
 
 /** Get exam cost for a certification slug. Defaults to $200 if not specified. */
@@ -354,6 +363,11 @@ export const SLUG_TO_SOCIAL_PROOF: Record<string, number> = {
   'slack-consultant': 300,
   'strategy-designer': 250,
   'ai-associate': 400,
+  // Claude (Anthropic)
+  'claude-certified-associate': 500,
+  'claude-certified-developer': 350,
+  'claude-certified-architect-foundations': 300,
+  'claude-certified-architect-professional': 150,
 }
 
 /** Get approximate social proof number (students passed this month). Useful for CTAs like "Join 5,000+ passed this month". */
@@ -471,6 +485,11 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'technical-architect': { questions: 'Board exam', passingScore: 'Board review', duration: 'Board' },
   'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
   'technical-architect-review-board': { questions: 'Board scenario', passingScore: 'Board decision', duration: 'Board session' },
+  // Claude (Anthropic)
+  'claude-certified-associate': { questions: 50, passingScore: '720/1000', duration: '120 min' },
+  'claude-certified-developer': { questions: 53, passingScore: '720/1000', duration: '120 min' },
+  'claude-certified-architect-foundations': { questions: 60, passingScore: '720/1000', duration: '120 min' },
+  'claude-certified-architect-professional': { questions: 65, passingScore: '720/1000', duration: '120 min' },
 }
 
 /** Returns exam logistics for the Exam logistics section; null if slug not in map (e.g. role page). */
@@ -498,6 +517,11 @@ export const SLUG_TO_OCCUPATION_DATA: Record<string, { jobTitle: string; medianS
   'integration-architect': { jobTitle: 'Salesforce Integration Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
   'data-architect': { jobTitle: 'Salesforce Data Architect', medianSalary: 162500, salaryRange: { minSalary: 150000, maxSalary: 175000 } },
   'technical-architect': { jobTitle: 'Certified Technical Architect', medianSalary: 215000, salaryRange: { minSalary: 180000, maxSalary: 250000 } },
+  // Claude (Anthropic)
+  'claude-certified-associate': { jobTitle: 'AI Business Analyst', medianSalary: 95000, salaryRange: { minSalary: 80000, maxSalary: 110000 } },
+  'claude-certified-developer': { jobTitle: 'AI Engineer', medianSalary: 145000, salaryRange: { minSalary: 125000, maxSalary: 165000 } },
+  'claude-certified-architect-foundations': { jobTitle: 'AI Solutions Architect', medianSalary: 170000, salaryRange: { minSalary: 150000, maxSalary: 190000 } },
+  'claude-certified-architect-professional': { jobTitle: 'Senior AI Solutions Architect', medianSalary: 200000, salaryRange: { minSalary: 175000, maxSalary: 225000 } },
 }
 
 /** Get occupation role-proxy data for a cert slug; returns undefined if not available. */
@@ -2569,6 +2593,46 @@ const CERT_BASE_FAQ_OVERRIDES: Partial<
       question: 'Where is the official Salesforce Agentforce Specialist exam guide?',
       answer:
         'Salesforce publishes the official exam guide in the Trailhead certification catalog (exam name: Salesforce Certified Agentforce Specialist). Cross-check the published outline with this page’s weightage and topics — we align content to that guide for exam prep.',
+    },
+  },
+  'claude-certified-associate': {
+    coverage: {
+      question: 'What is covered on the Claude Certified Associate – Foundations (CCAO-F) exam?',
+      answer: 'The CCAO-F covers prompt engineering, output evaluation (the largest domain), model selection, Projects and configuration, responsible AI, workflow integration, and troubleshooting. All questions are scenario-based — no coding required.',
+    },
+    officialOutline: {
+      question: 'Where can I find the official CCAO-F exam guide?',
+      answer: 'Anthropic publishes the official Claude Certified Associate: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+    },
+  },
+  'claude-certified-developer': {
+    coverage: {
+      question: 'What is covered on the Claude Certified Developer – Foundations (CCDV-F) exam?',
+      answer: 'The CCDV-F covers eight domains: Applications & Integration (heaviest weight), Model Selection & Optimization, Claude API integration, agent development, MCP server design, prompt engineering, security, and software delivery. The exam tests applied engineering judgment.',
+    },
+    officialOutline: {
+      question: 'Where can I find the official CCDV-F exam guide?',
+      answer: 'Anthropic publishes the official Claude Certified Developer: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+    },
+  },
+  'claude-certified-architect-foundations': {
+    coverage: {
+      question: 'What is covered on the Claude Certified Architect – Foundations (CCAR-F) exam?',
+      answer: 'The CCAR-F covers five domains: Agentic Architecture and Orchestration (27%), Claude Code Configuration and Workflows (20%), Tool Design and MCP Integration (18%), Prompt Engineering and Structured Output, and Context Management and Reliability.',
+    },
+    officialOutline: {
+      question: 'Where can I find the official CCAR-F exam guide?',
+      answer: 'Anthropic publishes the official Claude Certified Architect: Foundations Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
+    },
+  },
+  'claude-certified-architect-professional': {
+    coverage: {
+      question: 'What is covered on the Claude Certified Architect – Professional (CCAR-P) exam?',
+      answer: 'The CCAR-P covers seven domains including enterprise-scale AI architecture, advanced multi-agent orchestration, security architecture, production reliability and observability, cost optimization, compliance and governance, and migration strategy. CCAR-F is a prerequisite.',
+    },
+    officialOutline: {
+      question: 'Where can I find the official CCAR-P exam guide?',
+      answer: 'Anthropic publishes the official Claude Certified Architect: Professional Exam Guide on the Claude Partner Network portal and Pearson VUE. This page aligns with that guide.',
     },
   },
 }

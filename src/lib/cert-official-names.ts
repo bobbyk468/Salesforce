@@ -105,4 +105,9 @@ export const OFFICIAL_CERT_NAMES: Record<string, string> = {
   'tableau-data-analyst': 'Salesforce Certified Tableau Data Analyst',
   'tableau-desktop-foundations': 'Salesforce Certified Tableau Desktop Foundations',
   'tableau-server-administrator': 'Salesforce Certified Tableau Server Administrator',
+  // Claude (Anthropic)
+  'claude-certified-associate': 'Claude Certified Associate – Foundations',
+  'claude-certified-developer': 'Claude Certified Developer – Foundations',
+  'claude-certified-architect-foundations': 'Claude Certified Architect – Foundations',
+  'claude-certified-architect-professional': 'Claude Certified Architect – Professional',
 }
