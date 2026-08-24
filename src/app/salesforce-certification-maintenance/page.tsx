@@ -155,8 +155,8 @@ export default function SalesforceCertificationMaintenancePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Release Schedule ({RELEASE_CURRENT})</h2>
         <div className="space-y-3">
           {[
-            { release: 'Spring &apos;26', period: 'Jan–Feb 2026', maintenance: 'Feb–Mar 2026', status: 'Upcoming' },
-            { release: 'Summer &apos;26', period: 'May–Jun 2026', maintenance: 'Jun–Jul 2026', status: 'Upcoming' },
+            { release: 'Spring &apos;26', period: 'Jan–Feb 2026', maintenance: 'Feb–Mar 2026', status: 'Complete' },
+            { release: 'Summer &apos;26', period: 'May–Jun 2026', maintenance: 'Jun–Jul 2026', status: 'Current' },
             { release: 'Winter &apos;27', period: 'Sep–Oct 2026', maintenance: 'Oct–Nov 2026', status: 'Upcoming' },
           ].map((row) => (
             <div key={row.release} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0 text-sm">
