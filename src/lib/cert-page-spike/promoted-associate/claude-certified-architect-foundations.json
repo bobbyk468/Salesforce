@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "CCAR-F",
-    "description": "The Claude Certified Architect – Foundations (CCAR-F) validates your ability to design multi-agent systems, architect MCP integrations, configure Claude Code workflows, and build reliable AI solutions. Anthropic's first official technical certification, launched March 2026 as part of the Claude Partner Network.",
+    "description": "Anthropic&apos;s architecture-level credential for engineers who design AI systems rather than just build them. The CCAR-F tests your ability to decompose problems into agent workflows, wire up MCP servers that external tools can talk through, configure Claude Code for team-wide consistency, and make the tradeoffs that keep multi-agent pipelines reliable under real production load.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -12,62 +12,59 @@
     "topics": [
       "Agentic Architecture (27%)",
       "Claude Code Configuration (20%)",
-      "Tool Design & MCP (18%)",
-      "Prompt Engineering",
-      "Structured Output",
-      "Context Management",
-      "Reliability Patterns",
-      "Orchestration"
+      "Tool Design and MCP (18%)",
+      "Prompt Architecture (20%)",
+      "Reliability and Context (15%)"
     ]
   },
   "keyConcepts": {
     "h2": "Claude Certified Architect Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Agentic Architecture and Orchestration (27%)",
-        "body": "The largest domain on the CCAR-F exam. Design multi-agent systems with task decomposition, hub-and-spoke orchestration models, and subagent coordination. Know agentic loops — how Claude iteratively calls tools, evaluates results, and decides next steps. Understand reliability patterns for autonomous systems: maximum iteration limits, error recovery, human-in-the-loop escalation, and graceful degradation. The exam presents complex system designs and asks you to identify the correct orchestration pattern, failure mode, or scaling strategy."
+        "heading": "Designing Multi-Agent Systems",
+        "body": "Over a quarter of the exam asks you to architect systems where multiple agents collaborate on a task. You need to decide when a single agent with several tools is enough and when to split work across specialized subagents coordinated by a hub. The exam presents scenarios — a compliance review pipeline, an automated onboarding flow, a research-and-write workflow — and asks which orchestration pattern fits, where failures will surface, and how to add human checkpoints without bottlenecking throughput."
       },
       {
-        "heading": "Tool Design and MCP Integration (18%)",
-        "body": "Design Model Context Protocol servers and clients for production use. Know how to define tool schemas that Claude can reliably invoke, manage tool boundaries (what the agent can and cannot do), and choose between SSE and stdio transport based on deployment requirements. Understand authentication patterns for MCP servers, how to handle tool errors gracefully, and when to build an MCP server vs. use direct API integration. The exam tests MCP architecture decisions with real-world scenarios."
+        "heading": "MCP Servers and Tool Boundaries",
+        "body": "The Model Context Protocol gives Claude a standardized way to reach databases, APIs, file systems, and other services. The exam tests your judgment on designing those integrations: what belongs inside one MCP server vs. split across two, when to use stdio transport (local, single-client) vs. SSE (remote, multi-client), how to write tool schemas tight enough that Claude rarely mis-invokes them, and what security controls to put between the model and your production systems."
       },
       {
-        "heading": "Claude Code Configuration and Workflows (20%)",
-        "body": "Claude Code is Anthropic's CLI agent for software engineering. Know the CLAUDE.md markdown hierarchy — how project-level, directory-level, and user-level instructions are resolved. Understand custom slash commands, how to configure permissions and hooks, and how to integrate Claude Code into CI/CD pipelines. The exam tests practical configuration scenarios: setting up a Claude Code workflow for a team, managing persistent project context, and automating development tasks."
+        "heading": "Claude Code for Teams and CI/CD",
+        "body": "Claude Code is a terminal-based coding agent. The CCAR-F goes beyond using it and into configuring it at the team level. You need to understand how CLAUDE.md files layer — user-level defaults, repo-root project context, directory-level overrides — and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
       },
       {
-        "heading": "Prompt Engineering and Structured Output",
-        "body": "At the architect level, prompt engineering goes beyond basic instruction writing. Know how to enforce reliability via JSON schemas, design few-shot examples that handle edge cases, and implement validation retry loops for structured output. Understand system prompt architecture for complex applications — how to structure multi-section system prompts, manage context windows effectively, and design prompts that produce consistent results across thousands of invocations."
+        "heading": "Prompt Architecture for Complex Applications",
+        "body": "At the architect level, prompts are system components, not one-off instructions. The exam tests multi-section system prompts that define roles, constraints, output formats, and escalation rules all in one document. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting — how much of the window to reserve for instructions vs. user content vs. tool results."
       },
       {
-        "heading": "Context Management and Reliability",
-        "body": "Production AI systems must handle long contexts reliably. Know how to preserve relevant context across multi-turn conversations, design handoff patterns between agents, and perform confidence calibration. Understand context window limits, summarization strategies for long conversations, and how to architect systems that degrade gracefully when context is exhausted. The exam tests your ability to design systems that remain reliable at scale."
+        "heading": "Keeping Systems Reliable as They Scale",
+        "body": "The final domain covers what goes wrong when an agent runs in production. You need iteration limits that stop runaway loops, circuit breakers that pause work and escalate rather than silently failing, context-management strategies for conversations that approach the window limit, and handoff patterns that pass curated summaries between agents instead of dumping entire histories. The exam also tests graceful degradation — what should happen when a tool is down, a model returns garbage, or context is exhausted."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Architect Foundations Exam",
-    "intro": "The CCAR-F is a scenario-based exam for technical architects and senior engineers. It tests system design judgment — not code syntax. You need hands-on experience building multi-agent systems, MCP servers, and production Claude Code workflows.",
+    "intro": "The CCAR-F rewards system-design instinct more than memorized syntax. If you have designed and operated a production system that uses Claude agents, MCP, or Claude Code at the team level, you are well-positioned. If not, build one first.",
     "blocks": [
       {
-        "heading": "Focus on Agentic Architecture",
-        "body": "27% of the exam covers agentic patterns. Build at least one multi-agent system before sitting the exam. Practice task decomposition, hub-and-spoke orchestration, and designing reliability patterns. Know when to use a single agent vs. multiple specialized subagents."
+        "heading": "Build a Multi-Agent Workflow End-to-End",
+        "body": "Pick a task that naturally decomposes — say, research a topic, draft a report, and fact-check the result — and implement it with a coordinator agent that delegates to subagents. Pay attention to how you pass context between agents, where failures happen, and what metrics you would monitor. That experience directly maps to exam questions."
       },
       {
-        "heading": "Build MCP Servers",
-        "body": "Hands-on MCP experience is essential. Build a server that exposes tools, resources, and prompts. Understand the protocol's transport layer, authentication model, and how to write tool schemas that Claude can invoke reliably. Practice debugging MCP connections."
+        "heading": "Stand Up an MCP Server",
+        "body": "Build a server that exposes two or three tools (a database lookup, a file reader, a webhook sender). Connect it to Claude Code or a custom agent. Notice when Claude mis-selects a tool and ask yourself what you would change in the schema to fix it. That debugging habit is what the MCP questions test."
       },
       {
-        "heading": "Master Claude Code Configuration",
-        "body": "Set up Claude Code on a real project. Write CLAUDE.md files at different levels, create custom slash commands, configure hooks, and integrate with CI/CD. The exam tests your understanding of the configuration hierarchy and how instructions are resolved."
+        "heading": "Configure Claude Code on a Real Codebase",
+        "body": "Write CLAUDE.md files at different directory levels and observe how Claude Code merges them. Create a custom slash command, set up a pre-commit hook, and run Claude Code in a CI job. The exam tests the configuration hierarchy and conflict-resolution rules — hands-on experience makes those questions obvious."
       },
       {
-        "heading": "Study Reliability Patterns",
-        "body": "Production AI systems fail differently than traditional software. Study maximum iteration limits for agentic loops, circuit breaker patterns for tool calls, fallback strategies when context windows are exhausted, and monitoring/observability for AI systems."
+        "heading": "Practice Architectural Tradeoff Conversations",
+        "body": "The exam is not about right vs. wrong — it is about better vs. worse given constraints. When you see a question with four plausible answers, ask yourself which option handles the constraint the question emphasized (latency? cost? security? compliance?) without introducing a new failure mode. That lens resolves most ambiguous choices."
       },
       {
-        "heading": "Practice System Design",
-        "body": "The exam presents architectural scenarios and asks you to choose the best design. Practice diagramming AI system architectures, identifying bottlenecks, and designing for scale. Know the trade-offs between latency, cost, reliability, and capability for different architectural choices."
+        "heading": "Study Failure Modes, Not Just Happy Paths",
+        "body": "What happens when the third tool call in a five-step pipeline fails? What if the model hallucinates a tool name that doesn&apos;t exist? What if the context window fills up mid-conversation? The exam loves these edge cases. Catalog five or six failure scenarios and write down the recovery strategy for each."
       }
     ]
   },
@@ -97,114 +94,114 @@
   ],
   "sampleQuestions": [
     {
-      "question": "You are designing a customer onboarding agent that needs to collect information, verify documents, and provision accounts. Which orchestration pattern is most appropriate?",
+      "question": "A legal team needs an agent that reads contracts, flags risky clauses, and drafts suggested revisions. Which orchestration pattern fits best?",
       "options": [
-        "A single monolithic agent that handles all steps sequentially",
-        "A hub-and-spoke model where a coordinator agent delegates to specialized subagents for data collection, document verification, and account provisioning, with the coordinator managing state and error recovery",
-        "Three independent agents that run in parallel with no coordination",
-        "A human operator who manually triggers each step after reviewing the previous step's output"
+        "One agent that reads, flags, and rewrites in a single prompt",
+        "A coordinator that sends the contract to a clause-extraction subagent, routes flagged clauses to a risk-assessment subagent, and passes high-risk items to a drafting subagent — with human review before any revision is finalized",
+        "Three independent agents that each process the full contract separately and vote on the output",
+        "A rule-based system with no AI involvement"
       ],
       "correctAnswer": 1,
-      "explanation": "Hub-and-spoke orchestration separates concerns into specialized subagents while maintaining centralized coordination. The coordinator manages task flow, handles errors, and ensures all steps complete. This pattern scales better than a monolithic agent and is more reliable than uncoordinated parallel agents."
+      "explanation": "Hub-and-spoke orchestration lets each subagent specialize — one excels at extraction, another at risk scoring, another at legal drafting. The coordinator manages sequencing and error handling, and human review before finalization provides accountability for high-stakes legal output."
     },
     {
-      "question": "An MCP server exposes a tool that deletes database records. What is the most important safety measure?",
+      "question": "An MCP server exposes a tool that executes SQL queries against a production database. What is the most critical architectural safeguard?",
       "options": [
-        "Use SSE transport instead of stdio for better logging",
-        "Implement a confirmation step that requires human approval before any destructive operation executes, along with authentication, audit logging, and rate limiting",
-        "Cache the deletion results so they can be undone",
-        "Add a description to the tool schema warning that it is destructive"
+        "Using the fastest transport protocol for lower latency",
+        "Restricting the tool to read-only queries via a dedicated database role, enforcing parameterized queries to prevent injection, requiring authentication, and logging every query for audit",
+        "Caching every query result to reduce database load",
+        "Adding a disclaimer in the tool description that says 'be careful'"
       ],
       "correctAnswer": 1,
-      "explanation": "Destructive operations in MCP tools require defense in depth: human-in-the-loop confirmation prevents unintended deletions, authentication ensures only authorized agents can invoke the tool, audit logging creates accountability, and rate limiting prevents bulk misuse. A tool description alone is insufficient."
+      "explanation": "When an AI agent has database access, defense in depth is mandatory: read-only roles prevent accidental writes, parameterized queries block injection, authentication ensures only authorized agents connect, and audit logs create accountability. A disclaimer in the tool description provides no actual protection."
     },
     {
-      "question": "A project has CLAUDE.md files at the repo root, in a subdirectory, and in the user's home directory. How does Claude Code resolve conflicting instructions?",
+      "question": "A repo has a root-level CLAUDE.md that says 'always use TypeScript strict mode' and a subdirectory CLAUDE.md that says 'JavaScript is acceptable in this folder.' Which instruction does Claude Code follow when editing a file in the subdirectory?",
       "options": [
-        "Only the repo root CLAUDE.md is used; others are ignored",
-        "Instructions are merged with specificity: user-level provides defaults, repo-root provides project context, and directory-level provides the most specific overrides for files in that directory",
-        "The most recently modified file takes priority",
-        "All files are concatenated alphabetically with no conflict resolution"
+        "The root-level instruction always takes precedence",
+        "The directory-level instruction overrides the root for files in that folder, because Claude Code resolves instructions from most-specific to least-specific",
+        "Both instructions are ignored in favor of the user-level config",
+        "Claude Code prompts the user to resolve the conflict"
       ],
       "correctAnswer": 1,
-      "explanation": "Claude Code uses a hierarchical resolution model: user-level CLAUDE.md sets global defaults, repo-root CLAUDE.md provides project-wide context, and directory-level CLAUDE.md files provide specific overrides for code in that directory. More specific instructions override more general ones."
+      "explanation": "Claude Code uses a specificity hierarchy: directory-level CLAUDE.md overrides repo-root for files in that directory, just as a .eslintrc in a subdirectory overrides the root config. More specific instructions take precedence over more general ones."
     },
     {
-      "question": "An agentic loop has been running for 30 tool calls without completing its task. What is the best architectural response?",
+      "question": "An agentic loop has made 20 tool calls without completing its task. What is the best architectural response?",
       "options": [
-        "Increase the maximum iteration limit to 100",
-        "Implement a circuit breaker that pauses the agent, logs its current state and reasoning, and either escalates to a human reviewer or retries with a revised strategy that addresses why the agent got stuck",
-        "Restart the agent with the exact same prompt and hope for different results",
-        "Switch to a more powerful model mid-loop"
+        "Let it continue indefinitely — it will eventually finish",
+        "Trigger a circuit breaker that pauses the agent, captures its state and the reasoning so far, and either escalates to a human or retries with a narrower task scope",
+        "Restart the loop from scratch with the same instructions",
+        "Lower the temperature to make the agent more deterministic"
       ],
       "correctAnswer": 1,
-      "explanation": "A circuit breaker pattern is essential for production agentic systems. When an agent exceeds its iteration budget, the system should capture the agent's state for debugging, analyze why progress stalled, and either escalate or retry with a refined approach. Simply increasing limits or restarting masks the underlying issue."
+      "explanation": "Circuit breakers are essential for production agents. Capturing state enables debugging, and escalation or a refined retry prevents repeated failure. Unlimited loops waste tokens and risk cascading errors, while a blind restart discards useful partial progress."
     },
     {
-      "question": "You need to design a system where Claude processes customer support tickets using three different tools: ticket lookup, knowledge base search, and response generation. What is the most reliable architecture?",
+      "question": "You are handing off context from a research agent to a writing agent. Which method preserves quality while keeping token costs manageable?",
       "options": [
-        "Hard-code the tool call order: always lookup first, then search, then generate",
-        "Let Claude autonomously decide the tool call sequence based on the ticket content, with proper error handling for each tool and a maximum iteration limit",
-        "Call all three tools simultaneously in parallel and combine the results",
-        "Use a separate Claude instance for each tool with no shared context"
+        "Pass the entire raw conversation history from the research agent",
+        "Have the research agent produce a structured summary of findings — key facts, sources, and open questions — and pass only that summary plus the writing task instructions to the writing agent",
+        "Give the writing agent access to the research agent&apos;s tools so it can re-research everything",
+        "Store the research output in a database and give the writing agent a SQL tool to query it"
       ],
       "correctAnswer": 1,
-      "explanation": "Claude's tool use is most effective when the model can decide the sequence based on context. Some tickets may need only a knowledge base search; others need a ticket lookup first. Autonomous tool selection with error handling and iteration limits is more flexible and reliable than hard-coded sequences."
+      "explanation": "Raw conversation histories contain dead ends, tool noise, and irrelevant exploration that bloat the context window. A curated summary gives the writing agent exactly the information it needs, at a fraction of the token cost, and produces more focused output."
     },
     {
-      "question": "When designing structured output for a data extraction pipeline, what combination provides the highest reliability?",
+      "question": "When designing a system prompt for a production application that processes thousands of requests per day, what is the most important structural consideration?",
       "options": [
-        "Natural language instructions in the prompt asking for JSON format",
-        "A JSON schema definition in tool_use parameters, combined with response validation and an automatic retry loop that includes the validation error in the retry prompt",
-        "Setting temperature to 0 and hoping the format is consistent",
-        "Post-processing with regex to extract fields from free-text responses"
+        "Keep the system prompt under 50 tokens for cost savings",
+        "Organize the prompt into clearly separated sections — role definition, output format with schema, constraints and guardrails, and escalation rules — so behavior is consistent across all requests and easy to update when requirements change",
+        "Write the prompt in casual conversational language to feel more natural",
+        "Change the system prompt randomly for each request to increase variety"
       ],
       "correctAnswer": 1,
-      "explanation": "Maximum reliability comes from schema enforcement (tool_use), validation (catch malformed responses), and intelligent retry (feed the error back so Claude can self-correct). This three-layer approach handles edge cases that any single technique would miss."
+      "explanation": "Production system prompts are infrastructure. Structured sections make behavior predictable across thousands of invocations and allow targeted updates (change the output format without touching the role definition). Unstructured or variable prompts produce inconsistent results at scale."
     },
     {
-      "question": "A multi-agent system needs to hand off context from a research agent to a writing agent. What is the best handoff pattern?",
+      "question": "An architect needs to choose between stdio and SSE transport for an MCP server. Which scenario clearly favors SSE?",
       "options": [
-        "Pass the entire conversation history from the research agent to the writing agent",
-        "Have the research agent produce a structured summary of its findings, which the coordinator passes to the writing agent along with the specific task instructions",
-        "Give the writing agent access to the research agent's tools so it can re-research if needed",
-        "Store the research results in a shared global variable"
+        "A local development tool used by a single developer on their laptop",
+        "A shared service running in a cloud container that serves multiple Claude Code instances and external API clients simultaneously",
+        "A simple file-reading utility for a CI pipeline",
+        "A one-off script that runs once and exits"
       ],
       "correctAnswer": 1,
-      "explanation": "Structured handoffs preserve essential context while avoiding context window bloat. The research agent's raw conversation history may contain irrelevant exploration, dead ends, and tool call noise. A curated summary plus clear task instructions gives the writing agent exactly what it needs."
+      "explanation": "SSE transport is designed for remote, multi-client deployments. A cloud-hosted service serving multiple concurrent clients needs HTTP-based transport. Stdio is simpler and better for local, single-client scenarios like IDE plugins or CI scripts."
     },
     {
-      "question": "What is the primary advantage of using Claude Code hooks in a CI/CD pipeline?",
+      "question": "A customer onboarding pipeline uses Claude to verify documents, check compliance, and generate welcome materials. The compliance check occasionally produces false positives that block legitimate customers. What is the best architectural improvement?",
       "options": [
-        "Hooks make Claude Code run faster",
-        "Hooks let you execute custom shell commands in response to Claude Code events — such as running linters after file edits, validating changes before commits, or triggering tests after code generation — automating quality gates in the development workflow",
-        "Hooks are required for Claude Code to read files",
-        "Hooks bypass the need for human review of AI-generated code"
+        "Remove the compliance check entirely to improve throughput",
+        "Add a confidence score to the compliance agent&apos;s output; auto-approve high-confidence passes, auto-reject clear violations, and route borderline cases to a human reviewer with the agent&apos;s reasoning attached",
+        "Lower the model&apos;s temperature to zero so it never flags false positives",
+        "Run the compliance check twice and use the more lenient result"
       ],
       "correctAnswer": 1,
-      "explanation": "Hooks integrate Claude Code into existing development workflows by triggering automated actions on specific events. In CI/CD, this means linting, testing, and validation can run automatically as Claude Code makes changes, maintaining code quality standards without manual intervention."
+      "explanation": "A confidence-tiered approach handles the tradeoff between automation speed and accuracy. Clear cases are processed instantly, while uncertain cases get human review. Attaching the agent's reasoning helps the reviewer decide quickly, maintaining throughput without sacrificing compliance quality."
     },
     {
-      "question": "A Claude-powered agent needs to process a 200,000-token document. The context window is 200K tokens. What architectural approach is best?",
+      "question": "What is the primary benefit of using Claude Code hooks in a development workflow?",
       "options": [
-        "Send the entire document in a single prompt and hope it fits",
-        "Implement a chunking strategy with overlap, process each chunk independently, then aggregate results — with a summarization pass if the combined output exceeds the context window for the final synthesis step",
-        "Truncate the document to fit within the context window",
-        "Use a smaller model that processes text faster"
+        "Hooks make Claude Code run faster by skipping unnecessary steps",
+        "Hooks trigger automated actions — linting, testing, validation — in response to specific Claude Code events, so quality gates run automatically as the agent makes changes",
+        "Hooks are required for Claude Code to read files from disk",
+        "Hooks let Claude Code bypass code review entirely"
       ],
       "correctAnswer": 1,
-      "explanation": "When documents approach or exceed context limits, chunking with overlap ensures no information is lost at boundaries. Independent processing of each chunk with a final aggregation step is a standard pattern for large document processing. The overlap ensures context continuity between chunks."
+      "explanation": "Hooks integrate Claude Code into existing development quality standards by attaching automated checks to events like file edits or commits. This ensures AI-generated changes pass the same gates as human changes, without requiring manual intervention."
     },
     {
-      "question": "When should an architect choose SSE transport over stdio for an MCP server?",
+      "question": "A multi-agent system processes insurance claims. The coordinator agent spawns subagents for claim intake, policy lookup, and payout calculation. The policy-lookup subagent occasionally returns stale data because the policy database was recently updated. What architectural change addresses this?",
       "options": [
-        "Always — SSE is newer and therefore better",
-        "When the MCP server needs to run as a remote service accessible over HTTP, serve multiple concurrent clients, or operate in environments where subprocess management is impractical",
-        "Only when the MCP server handles file operations",
-        "stdio is deprecated and should never be used"
+        "Cache all policy data at startup so the subagent never queries the database",
+        "Ensure the policy-lookup tool always queries the database at request time rather than relying on cached data, and add a staleness check that compares the record&apos;s last-modified timestamp against the claim&apos;s submission date",
+        "Replace the subagent with a hardcoded lookup table",
+        "Run the entire pipeline twice and compare results"
       ],
       "correctAnswer": 1,
-      "explanation": "SSE (Server-Sent Events) transport is appropriate for remote MCP servers, multi-client scenarios, and cloud deployments. stdio is simpler and better for local, single-client use cases like IDE integrations. The choice depends on deployment topology, not on which is 'newer' — both are production-supported."
+      "explanation": "Stale data in a claims pipeline creates compliance risk. The fix is architectural: the tool must query live data (not cache), and a staleness check catches edge cases where a policy was updated between claim submission and processing. This is a standard pattern for data-sensitive agent workflows."
     }
   ]
 }

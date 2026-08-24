@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "CCAR-P",
-    "description": "The Claude Certified Architect – Professional (CCAR-P) is Anthropic's most advanced certification, validating deep expertise in enterprise-scale AI system design, advanced multi-agent orchestration, security architecture, and production reliability patterns. Requires CCAR-F as a prerequisite.",
+    "description": "The hardest exam in Anthropic&apos;s certification program. The CCAR-P is built for senior architects who design AI platforms at enterprise scale — multi-region deployments, cross-team cost governance, regulatory compliance for AI-driven decisions, advanced agent orchestration with self-healing workflows, and the observability infrastructure that keeps it all visible.",
     "examDetails": {
       "questions": 65,
       "passingScore": "720/1000",
@@ -10,63 +10,61 @@
       "cost": "$175"
     },
     "topics": [
-      "Enterprise Architecture",
-      "Advanced Multi-Agent Systems",
-      "Security Architecture",
-      "Production Reliability",
-      "Cost Optimization",
-      "Compliance & Governance",
-      "Migration Strategy"
+      "Enterprise Architecture (25%)",
+      "Advanced Multi-Agent Systems (20%)",
+      "Security Architecture (18%)",
+      "Production Reliability (17%)",
+      "Cost Optimization and Governance (20%)"
     ]
   },
   "keyConcepts": {
     "h2": "Claude Certified Architect Professional: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Enterprise-Scale AI System Design",
-        "body": "The CCAR-P tests your ability to design AI systems that serve thousands of concurrent users with strict SLA requirements. Know how to architect multi-region deployments, design for high availability and disaster recovery, implement caching layers for AI responses, and choose between direct API integration and managed services. Understand capacity planning for AI workloads — predicting token usage, managing rate limits across teams, and designing cost allocation models. The exam presents enterprise scenarios with competing requirements (latency, cost, compliance) and asks you to make defensible architecture decisions."
+        "heading": "Architecting AI Platforms for Enterprise Scale",
+        "body": "The CCAR-P assumes you are designing systems that serve thousands of users across multiple teams and geographies. You need to make decisions about multi-region deployment topology, high-availability patterns, disaster recovery for AI services, and capacity planning for token-based workloads. The exam gives you a company with competing constraints — one team needs real-time chat, another needs batch processing, a third has strict data-residency rules — and asks how you design the platform so every team is served without architectural sprawl."
       },
       {
-        "heading": "Advanced Multi-Agent Orchestration",
-        "body": "Beyond the hub-and-spoke patterns tested in CCAR-F, the Professional exam covers advanced orchestration: dynamic agent spawning based on workload, cross-agent memory and state management, competitive evaluation (running multiple agents and selecting the best result), and hierarchical agent teams. Know how to design agent communication protocols, implement consensus mechanisms when agents disagree, and build self-healing agent workflows that detect and recover from partial failures without human intervention."
+        "heading": "Advanced Agent Orchestration",
+        "body": "Beyond the coordinator-and-subagent patterns in CCAR-F, the Professional exam tests dynamic orchestration. You may need to spawn agents on the fly based on incoming workload, run competing agents against the same input and pick the best result, manage shared memory across long-running agent sessions, or design hierarchical teams where a senior agent delegates to a squad of specialists. The exam also covers self-healing workflows — systems that detect when an agent is stuck, diagnose the cause, and restart with a refined strategy, all without human involvement."
       },
       {
-        "heading": "Security Architecture for AI Systems",
-        "body": "Enterprise AI systems face unique security challenges. Know how to design end-to-end security architectures: data classification and handling policies for AI inputs/outputs, multi-layer prompt injection defense, secure credential management for tool-calling agents, network isolation for MCP servers, and audit trails for AI-driven decisions. Understand regulatory requirements (SOC 2, GDPR, HIPAA) as they apply to AI systems and how to design architectures that satisfy compliance without sacrificing capability."
+        "heading": "Security Architecture for AI-Driven Decisions",
+        "body": "Enterprise AI touches regulated data and makes decisions that affect real people. The exam tests end-to-end security design: classifying data before it enters any AI pipeline, layered prompt-injection defense (input filtering, privilege separation, output scanning, anomaly detection), secure credential management for tool-calling agents, network isolation for MCP servers in production, and audit trails that satisfy SOC 2, GDPR, and HIPAA requirements. Expect scenario questions where you must choose between architectures that trade off capability for compliance."
       },
       {
-        "heading": "Production Reliability and Observability",
-        "body": "The Professional exam heavily tests production engineering. Know how to implement comprehensive observability for AI systems: tracing individual requests through multi-agent pipelines, monitoring model performance degradation over time, alerting on quality regressions, and building dashboards that surface AI-specific metrics (hallucination rate, tool call success rate, context utilization). Understand chaos engineering principles applied to AI: testing what happens when a model returns unexpected output, a tool call fails, or context is corrupted."
+        "heading": "Observability and Incident Response",
+        "body": "AI systems degrade silently — outputs get worse without throwing errors. The exam tests your ability to design monitoring that catches this: distributed tracing across multi-agent pipelines, dashboards that track AI-specific metrics (task completion rate, tool-call success ratio, output quality scores, context utilization), alerting on quality regressions, and incident-response playbooks for when a model update changes behavior unexpectedly. You also need to understand chaos engineering applied to AI — deliberately testing what happens when a tool is unavailable, a model returns nonsense, or context corruption occurs mid-conversation."
       },
       {
-        "heading": "Cost Optimization at Scale",
-        "body": "At enterprise scale, AI costs can dominate infrastructure budgets. Know how to design cost-efficient architectures: intelligent model routing (sending simple tasks to Haiku, complex tasks to Opus), prompt caching strategies that maximize cache hit rates, batch processing for non-real-time workloads, and token budget management. Understand how to build cost monitoring and alerting, implement usage quotas per team or use case, and forecast AI infrastructure costs for annual planning."
+        "heading": "Cost Governance at Scale",
+        "body": "When AI costs reach six figures per month, governance becomes an architecture concern. The exam tests intelligent model routing (sending cheap tasks to Haiku and reserving Opus for complex reasoning), prompt-caching strategies that maximize cache-hit rates across shared system prompts, batch processing for non-urgent workloads, per-team usage tracking and budget alerts, and annual cost forecasting. Expect questions that ask you to evaluate a current architecture and recommend the optimization that produces the highest cost reduction without degrading quality."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Architect Professional Exam",
-    "intro": "The CCAR-P is Anthropic's hardest exam — designed for senior architects with production AI experience at enterprise scale. You need deep knowledge of system design, security, reliability, and cost optimization. CCAR-F is a prerequisite.",
+    "intro": "The CCAR-P is designed for architects who have built and operated AI systems in production at enterprise scale. If your experience is limited to prototypes or single-team deployments, earn the CCAR-F first and gain more production exposure before attempting this exam.",
     "blocks": [
       {
-        "heading": "Think Enterprise, Not Prototype",
-        "body": "Every CCAR-P question assumes enterprise constraints: compliance requirements, multi-team access, SLAs, cost budgets, and security policies. When evaluating answer choices, always consider scale, reliability, and governance — not just technical correctness."
+        "heading": "Think in Platforms, Not Features",
+        "body": "Every CCAR-P question assumes enterprise constraints: multiple teams sharing infrastructure, compliance requirements that vary by geography, SLAs that differ by use case, and cost budgets that span fiscal years. When evaluating answers, always ask which option serves the organization, not just the immediate technical need."
       },
       {
-        "heading": "Master Multi-Agent Patterns",
-        "body": "Study advanced orchestration beyond CCAR-F: dynamic agent pools, competitive evaluation, hierarchical teams, and cross-agent state management. Practice designing systems where agents collaborate, compete, and recover from failures. Know when each pattern applies."
+        "heading": "Study Enterprise Security Frameworks",
+        "body": "The security domain goes beyond prompt injection. Study how SOC 2 controls apply to AI pipelines, what GDPR means for model inputs and outputs, how HIPAA governs AI-processed health data, and what a shared-responsibility model looks like when Anthropic hosts the model but you own the data. These compliance questions reward specific knowledge, not general principles."
       },
       {
-        "heading": "Study Security and Compliance",
-        "body": "Security questions are more nuanced at the Professional level. Study SOC 2 controls for AI systems, data residency requirements, prompt injection defense at the network level, and how to design audit trails that satisfy regulatory audits. Know the shared responsibility model for AI services."
+        "heading": "Practice Cost Modeling on Real Numbers",
+        "body": "Take your current or projected AI usage, break it down by model tier and request type, and calculate what intelligent routing, prompt caching, and batch processing would save. The exam presents similar scenarios with specific dollar amounts and asks which optimization has the largest impact. Real arithmetic practice makes these questions fast."
       },
       {
-        "heading": "Build Production Observability",
-        "body": "The exam tests your ability to design monitoring for AI-specific metrics. Study distributed tracing across agent pipelines, model performance dashboards, quality regression detection, and incident response procedures for AI system failures."
+        "heading": "Design Monitoring Before You Need It",
+        "body": "Sketch the dashboard you would build for a multi-agent production system. What metrics would you track? What thresholds would trigger alerts? What does your incident-response runbook look like when output quality drops 10%? The exam tests this kind of proactive observability thinking, and candidates who have actually built monitoring systems recognize the right answers immediately."
       },
       {
-        "heading": "Practice Cost Modeling",
-        "body": "Enterprise cost optimization is a significant exam topic. Practice calculating token costs across model tiers, designing intelligent routing systems, forecasting usage, and building cost allocation models. Know the financial impact of architectural decisions."
+        "heading": "Know Advanced Orchestration Patterns Cold",
+        "body": "Competitive evaluation (two agents, pick the better result), dynamic agent pools (spawn agents based on load), hierarchical teams (lead agent delegates to specialists), and self-healing loops (detect stalls, diagnose, retry with a new strategy). For each pattern, know when it applies, what failure modes it introduces, and how to monitor it. The exam tests pattern selection, not implementation syntax."
       }
     ]
   },
@@ -96,114 +94,114 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A financial services company needs a Claude-powered document processing system that handles 100,000 loan applications per day. The system must comply with SOC 2 Type II and GDPR. Which architecture is most appropriate?",
+      "question": "A bank processes 80,000 mortgage applications per month with Claude. The system must comply with SOC 2 Type II and regional data-residency laws. Which architecture is most appropriate?",
       "options": [
-        "A single Claude API endpoint processing applications sequentially with results stored in a shared database",
-        "A distributed architecture with intelligent model routing (Haiku for classification, Sonnet for extraction, Opus for complex decisions), batch processing for non-urgent tasks, encrypted data handling, comprehensive audit logging, and regional data residency controls",
-        "A monolithic agent that handles the entire application lifecycle for each loan",
-        "Direct API calls from the frontend with client-side result caching"
+        "A single centralized API endpoint that handles all applications sequentially",
+        "A distributed pipeline with model routing (Haiku for intake classification, Sonnet for document extraction, Opus for underwriting decisions), regional processing nodes for data residency, encrypted data handling at every stage, and a comprehensive audit trail",
+        "One monolithic agent that processes each application from start to finish",
+        "Direct API calls from the customer-facing web app with no middleware"
       ],
       "correctAnswer": 1,
-      "explanation": "Enterprise-scale processing requires distributed architecture, intelligent model routing for cost and performance optimization, and compliance controls built into the design. SOC 2 requires audit logging and access controls; GDPR requires data residency controls. A monolithic approach cannot meet SLA, cost, or compliance requirements at this scale."
+      "explanation": "Enterprise-scale regulated processing demands distributed architecture for throughput, model routing for cost and capability matching, regional nodes for data residency compliance, encryption for data protection, and audit trails for SOC 2. No single-endpoint or monolithic approach meets all these constraints at this volume."
     },
     {
-      "question": "A multi-agent system processes insurance claims. Agent A classifies the claim, Agent B reviews policy coverage, and Agent C drafts a determination letter. Agent B occasionally produces incorrect coverage assessments. What is the best reliability improvement?",
+      "question": "A multi-agent claims system has three agents: intake, assessment, and payout. The assessment agent occasionally disagrees with itself when the same claim is run twice. How should an architect improve consistency?",
       "options": [
-        "Replace Agent B with a rule-based system",
-        "Implement a competitive evaluation pattern where two independent agents assess coverage, a consensus mechanism resolves disagreements, and edge cases are escalated to a human underwriter with both agents' reasoning attached",
-        "Add more few-shot examples to Agent B's prompt",
-        "Run Agent B twice and use the second result"
+        "Set temperature to 0 for the assessment agent and call it a day",
+        "Implement competitive evaluation — run two independent assessment agents, compare results with predefined criteria, auto-approve agreements, and escalate disagreements to a human reviewer with both agents&apos; reasoning attached",
+        "Run the assessment agent three times and take a majority vote without any evaluation criteria",
+        "Replace the AI assessment with a rules engine"
       ],
       "correctAnswer": 1,
-      "explanation": "Competitive evaluation with consensus is the standard pattern for improving reliability on high-stakes decisions. Two independent assessments catch errors that a single agent would miss. A consensus mechanism handles agreement cases automatically, while human escalation covers disagreements — maintaining throughput while improving accuracy where it matters most."
+      "explanation": "Competitive evaluation with defined criteria catches inconsistency systematically. Auto-approving agreements keeps throughput high, while human escalation on disagreements provides accuracy where it matters most. Temperature alone does not eliminate variability, and a majority vote without evaluation criteria masks rather than addresses the root cause."
     },
     {
-      "question": "An enterprise AI platform serves 50 teams with different use cases. Monthly Claude API costs have grown to $200K with no visibility into which teams drive the most usage. What architectural change addresses this?",
+      "question": "An enterprise AI platform serves 40 teams. Monthly spend has reached $180K with no visibility into which teams or use cases drive costs. What is the highest-impact architectural change?",
       "options": [
-        "Switch all teams to the Haiku model to reduce costs",
-        "Implement a cost allocation layer with per-team API keys or headers, usage tracking and dashboards, budget alerts, and intelligent model routing that suggests cheaper models when task complexity allows it",
-        "Cap total API usage at $150K and reject requests over the limit",
-        "Require management approval for every API call"
+        "Force all teams onto the cheapest model",
+        "Deploy a cost-allocation layer that tags each request with a team identifier, publishes per-team usage dashboards, sends budget alerts at configurable thresholds, and provides intelligent routing recommendations when a team&apos;s task complexity allows a cheaper model",
+        "Set a hard cap at $150K and reject requests once the budget is exhausted",
+        "Require managerial approval for every API request above 1,000 tokens"
       ],
       "correctAnswer": 1,
-      "explanation": "Cost visibility requires attribution (tracking usage per team), transparency (dashboards), proactive management (budget alerts), and optimization (intelligent routing). Blanket cost cuts reduce capability; hard caps create availability issues. A cost allocation layer gives teams ownership of their usage while enabling organization-wide optimization."
+      "explanation": "Visibility drives optimization. Per-team attribution lets teams own their costs, dashboards create accountability, budget alerts prevent surprises, and routing recommendations reduce spend without forcing capability cuts. Hard caps and approval flows introduce availability and throughput risks that enterprise platforms cannot accept."
     },
     {
-      "question": "A healthcare company wants to use Claude for patient record summarization. HIPAA compliance is required. Which design consideration is most critical?",
+      "question": "A healthcare AI system summarizes patient records. HIPAA compliance is mandatory. Which design element is most critical?",
       "options": [
-        "Using the latest Claude model for maximum summarization quality",
-        "Implementing end-to-end encryption, ensuring no PHI is stored in AI service logs, establishing a Business Associate Agreement with Anthropic, using de-identification where possible, and maintaining a complete audit trail of every AI interaction involving patient data",
-        "Processing records in batches during off-peak hours to reduce costs",
-        "Using prompt caching to avoid resending patient data"
+        "Using the newest model for the highest summary quality",
+        "End-to-end encryption, a Business Associate Agreement with Anthropic, no PHI in any AI service logs, de-identification where feasible, and a complete audit trail of every AI interaction that touches patient data",
+        "Processing records in off-peak batches to save money",
+        "Prompt caching to avoid resending patient information"
       ],
       "correctAnswer": 1,
-      "explanation": "HIPAA compliance for AI systems requires: encryption in transit and at rest, no PHI in logs, a BAA with the AI provider, de-identification when feasible, and complete audit trails. These are non-negotiable architectural requirements that must be designed in from the start, not added as an afterthought."
+      "explanation": "HIPAA compliance for AI is non-negotiable and architectural: encryption protects data in transit and at rest, a BAA establishes legal accountability, log exclusion prevents incidental PHI exposure, de-identification reduces risk surface, and audit trails satisfy regulatory audits. These must be designed in from day one."
     },
     {
-      "question": "You are designing observability for a production multi-agent system. Which metrics are most important for detecting quality degradation?",
+      "question": "You need to monitor a production multi-agent pipeline for quality degradation. Which set of metrics is most effective?",
       "options": [
-        "Server CPU utilization and memory usage only",
-        "Agent task completion rate, tool call success/failure ratio, response latency percentiles, output quality scores from automated evaluation, context utilization percentage, and human escalation rate trends",
-        "Total number of API calls per day",
-        "Cost per request only"
+        "CPU usage and memory consumption of the host servers",
+        "Task completion rate, tool-call success ratio, response latency at p50/p95/p99, automated output quality scores, context-window utilization, and human-escalation rate trends over time",
+        "Total API calls per day",
+        "Monthly cost totals"
       ],
       "correctAnswer": 1,
-      "explanation": "AI system quality degrades differently than traditional software: outputs may become less accurate without any errors being thrown. Comprehensive observability includes task completion rate (is work getting done?), tool call ratios (are integrations healthy?), latency (is performance acceptable?), automated quality scoring (are outputs meeting standards?), context utilization (are we hitting limits?), and escalation trends (is the system handling less autonomously over time?)."
+      "explanation": "AI systems fail differently than traditional software — quality can degrade without any errors being thrown. Task completion rate shows whether work finishes, tool-call ratios reveal integration health, latency percentiles surface slowdowns, quality scores catch output degradation, context utilization warns of approaching limits, and escalation trends indicate whether the system is handling less autonomously over time."
     },
     {
-      "question": "A competitive evaluation pattern runs two agents on the same task. Agent A completes in 2 seconds; Agent B completes in 8 seconds. The results disagree. What is the optimal handling strategy?",
+      "question": "An AI-powered document processor runs two competing agents on the same input. Agent A finishes in 3 seconds; Agent B finishes in 12 seconds. Their outputs disagree. How should the system decide?",
       "options": [
-        "Always use Agent A's result because it was faster",
-        "Wait for both agents to complete, compare results using predefined evaluation criteria, select the result that scores higher on accuracy and completeness, and log the disagreement for offline analysis to improve future consistency",
-        "Use Agent A's result and discard Agent B's to save time",
-        "Average the two results to create a compromise"
+        "Always pick the faster agent&apos;s output to minimize latency",
+        "Wait for both to finish, evaluate both outputs against predefined accuracy and completeness criteria, select the higher-scoring result, and log the disagreement for offline analysis",
+        "Average the two outputs to create a compromise",
+        "Alternate between agents on every other request"
       ],
       "correctAnswer": 1,
-      "explanation": "Speed is not a quality signal in competitive evaluation. Both results should complete and be evaluated against the same criteria. The higher-quality result is selected regardless of which agent produced it. Logging disagreements enables offline analysis to identify systematic differences and improve the agents over time."
+      "explanation": "In competitive evaluation, speed is irrelevant to quality. Both outputs must be evaluated against the same objective criteria. The higher-quality result is used regardless of which agent produced it. Logging disagreements enables continuous improvement of both agents."
     },
     {
-      "question": "An enterprise is migrating from a legacy NLP pipeline to Claude-powered processing. The legacy system handles 10M requests per month. What migration strategy minimizes risk?",
+      "question": "An enterprise is migrating from a legacy keyword-search system to Claude-powered semantic search. The legacy system handles 5M queries per month. What migration strategy minimizes risk?",
       "options": [
-        "Full cutover on a single date after testing in staging",
-        "Canary deployment: route 1% of production traffic to the Claude-powered system, compare results against the legacy system in parallel, gradually increase traffic as confidence grows, with automatic rollback if quality metrics drop below thresholds",
-        "Build the Claude system and let users choose which one to use",
-        "Run the Claude system in shadow mode for one week, then switch immediately to 100%"
+        "Full cutover on a scheduled maintenance window",
+        "Canary deployment — route 1-2% of traffic to the Claude system while running the legacy system in parallel, compare result quality side-by-side, gradually increase Claude&apos;s traffic share as confidence grows, with automatic rollback if quality or latency metrics drop below thresholds",
+        "Let individual teams opt in at their own pace with no centralized monitoring",
+        "Run the Claude system in shadow mode for a week, then switch all traffic immediately"
       ],
       "correctAnswer": 1,
-      "explanation": "Canary deployment with parallel comparison is the lowest-risk migration strategy. Starting with 1% traffic limits blast radius, parallel comparison validates quality against the known-good system, gradual rollout builds confidence, and automatic rollback prevents quality regressions from reaching all users. Shadow mode with a hard cutover is too risky for mission-critical systems."
+      "explanation": "Canary deployment with parallel comparison is the safest migration path at scale. Small initial traffic limits blast radius, parallel comparison validates quality against the known-good baseline, gradual rollout builds organizational confidence, and automatic rollback prevents degraded service from reaching all users."
     },
     {
-      "question": "A Claude-powered agent has access to 15 MCP tools. In production, the agent frequently calls the wrong tool on the first attempt before self-correcting. How should an architect address this?",
+      "question": "A production agent has access to 12 MCP tools and frequently selects the wrong one on its first attempt before self-correcting. What architectural change most improves first-attempt accuracy?",
       "options": [
-        "Add more detail to every tool description",
-        "Reduce the number of available tools by grouping related capabilities into composite tools, improve tool naming and descriptions to reduce ambiguity, and implement a tool selection layer that narrows the available tools based on the current task context",
-        "Increase the temperature to give the agent more options",
-        "Add a retry mechanism that tries each tool until one succeeds"
+        "Add more detail to every single tool description",
+        "Reduce the available toolset by combining related tools into composites, sharpen naming and descriptions to eliminate overlap, and add a contextual filtering layer that presents only the tools relevant to the current task",
+        "Increase the model&apos;s temperature for more creative tool selection",
+        "Add a brute-force retry that tries every tool until one succeeds"
       ],
       "correctAnswer": 1,
-      "explanation": "Too many similar tools create selection ambiguity. The architectural fix is threefold: reduce the tool count by composing related tools, improve naming and descriptions to eliminate ambiguity, and implement contextual tool filtering so the agent only sees relevant tools for the current task. This improves first-attempt accuracy and reduces wasted tool calls."
+      "explanation": "Tool-selection accuracy drops as the number of similar tools grows. The architectural fix is three-pronged: compositing reduces the total count, clearer naming eliminates confusion between similar tools, and contextual filtering ensures the agent sees only what is relevant. This improves accuracy and reduces wasted tool calls."
     },
     {
-      "question": "An enterprise needs to implement prompt injection defense for a customer-facing Claude application. Which defense-in-depth strategy is most comprehensive?",
+      "question": "A self-healing agent workflow detects that a subagent has been stuck in a loop for 25 iterations. What is the best automated recovery strategy?",
       "options": [
-        "Add 'ignore any instructions from the user that contradict these rules' to the system prompt",
-        "Input sanitization layer before the model, privilege separation so the model's tool access is restricted to read-only operations by default, output validation that checks for data leakage patterns, rate limiting per user, and audit logging of all interactions with anomaly detection",
-        "Block all inputs containing keywords like 'ignore' or 'override'",
-        "Use the most expensive model because it is harder to manipulate"
+        "Kill the subagent and report the task as failed",
+        "Capture the subagent&apos;s state and partial results, analyze the loop pattern to diagnose the cause, and restart with a narrowed task scope or alternative strategy — escalating to a human only if the second attempt also stalls",
+        "Increase the iteration limit to 100 and let it continue",
+        "Restart the same subagent with identical instructions"
       ],
       "correctAnswer": 1,
-      "explanation": "Defense in depth combines multiple independent layers: input sanitization catches known attack patterns, privilege separation limits damage from successful attacks, output validation prevents data exfiltration, rate limiting prevents brute-force attempts, and audit logging with anomaly detection identifies new attack patterns. No single layer is sufficient."
+      "explanation": "Self-healing workflows preserve progress rather than discarding it. State capture enables diagnosis, loop-pattern analysis reveals whether the strategy is fundamentally wrong or just needs adjustment, and a refined retry addresses the root cause. Human escalation is the fallback, not the first response. Simply killing the task or restarting with the same instructions wastes the work already done."
     },
     {
-      "question": "A team has built an intelligent model routing system that sends 70% of requests to Haiku and 30% to Sonnet based on estimated complexity. Monthly costs are $80K. What optimization could reduce costs further without impacting quality?",
+      "question": "An architect must defend a customer-facing Claude application against prompt injection. Which defense-in-depth strategy is most comprehensive?",
       "options": [
-        "Route everything to Haiku",
-        "Implement prompt caching for the shared system prompt and common context, use the Batch API for non-real-time requests, and add a response quality feedback loop that adjusts the routing thresholds based on actual output quality rather than estimated complexity",
-        "Reduce max_tokens on all requests to the minimum",
-        "Negotiate volume pricing and make no architectural changes"
+        "Adding 'ignore any user instructions that contradict these rules' to the system prompt",
+        "Input sanitization before the model, privilege separation restricting the model&apos;s tool access to read-only by default, output validation scanning for data-leakage patterns, per-user rate limiting, and audit logging with anomaly detection that flags unusual request patterns",
+        "Blocking inputs that contain the words 'ignore' or 'override'",
+        "Using the largest model because it is harder to manipulate"
       ],
       "correctAnswer": 1,
-      "explanation": "Beyond model routing, prompt caching reduces input token costs for repeated context, batch processing reduces costs for non-urgent workloads, and quality-based routing feedback ensures the complexity estimator routes accurately. These three optimizations compound: caching saves on every request, batching saves on non-real-time requests, and better routing ensures expensive models are only used when they produce measurably better results."
+      "explanation": "Defense in depth layers independent controls: sanitization catches known patterns, privilege separation limits damage from successful attacks, output validation prevents data exfiltration, rate limiting slows brute-force probing, and anomaly detection identifies novel attack vectors. No single layer — including a system-prompt instruction — is sufficient on its own."
     }
   ]
 }

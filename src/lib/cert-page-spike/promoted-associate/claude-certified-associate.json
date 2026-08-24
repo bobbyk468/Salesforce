@@ -2,72 +2,71 @@
   "template": "associate",
   "certificationCard": {
     "code": "CCAO-F",
-    "description": "The Claude Certified Associate – Foundations (CCAO-F) validates that you can apply Claude to real business and productivity work: structuring prompts, evaluating outputs, choosing the right product and model, integrating Claude into a workflow, configuring Projects, and using Claude responsibly.",
+    "description": "Anthropic&apos;s entry-level credential for non-technical professionals. The CCAO-F tests whether you can write well-structured prompts, spot errors in AI-generated responses, pick the right Claude model for a task, set up Projects with knowledge sources, and handle sensitive data responsibly — all without writing a single line of code.",
     "examDetails": {
-      "questions": 50,
+      "questions": 60,
       "passingScore": "720/1000",
       "duration": "120 min",
       "cost": "$99"
     },
     "topics": [
-      "Prompt Engineering",
-      "Output Evaluation",
-      "Model Selection",
-      "Projects & Configuration",
-      "Responsible AI",
-      "Workflow Integration",
-      "Productivity",
-      "Troubleshooting"
+      "Prompt Writing (14%)",
+      "Response Quality (21%)",
+      "Model & Product Fit (12%)",
+      "Workflow Design (16%)",
+      "Project Setup (12%)",
+      "Governance (15%)",
+      "Troubleshooting (10%)"
     ]
   },
   "keyConcepts": {
     "h2": "Claude Certified Associate: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Prompt Engineering Fundamentals",
-        "body": "Effective prompting is the core skill tested on CCAO-F. Learn how to structure prompts with clear instructions, provide relevant context, break complex requests into manageable steps, and refine prompts iteratively. Understand the difference between zero-shot, few-shot, and chain-of-thought prompting. The exam tests your ability to choose the right prompting strategy for different business scenarios — writing a report, analyzing data, drafting communications, or summarizing documents."
+        "heading": "Writing Prompts That Get Reliable Results",
+        "body": "At its core the CCAO-F is a prompting exam. You need to know how to give Claude a clear role, provide enough background, and specify the format you want back. The exam distinguishes between asking for a single answer (zero-shot), showing Claude an example first (few-shot), and walking it through reasoning steps (chain-of-thought). Questions describe a workplace task — drafting a quarterly summary, comparing vendor proposals, turning meeting notes into action items — and ask which prompting pattern produces the most dependable output."
       },
       {
-        "heading": "Output Evaluation and Quality",
-        "body": "Output Evaluation is the single largest domain on the CCAO-F exam. You must judge whether a Claude response is accurate, complete, relevant, and safe to use. Know how to identify hallucinations (confident but incorrect information), evaluate factual accuracy, assess tone and appropriateness, and determine when a response needs revision. The exam presents real-world outputs and asks whether they meet the stated requirements."
+        "heading": "Catching Mistakes in AI Output",
+        "body": "More than a fifth of CCAO-F questions ask you to judge a response Claude already gave. You may see a paragraph with a fabricated statistic, a summary that quietly drops a key point, or a recommendation that sounds right but contradicts the source document. Your job is to decide whether the output is usable, fixable, or needs to be regenerated from scratch. Practice spotting invented citations, confident but wrong numbers, and subtle omissions — these are the traps the exam sets."
       },
       {
-        "heading": "Claude Products and Model Selection",
-        "body": "Know the Claude product lineup: Claude.ai (web/desktop), Claude Code (CLI for developers), Claude API (for building applications), and Claude for Enterprise (team features). Understand Claude model tiers — Haiku (fast, cost-effective), Sonnet (balanced), and Opus (most capable) — and when to choose each based on task complexity, latency requirements, and cost. The exam tests whether you can recommend the right product and model for a given use case."
+        "heading": "Choosing the Right Claude Product and Model",
+        "body": "Claude ships as a web and desktop app (Claude.ai), a terminal-based coding agent (Claude Code), a REST API for custom applications, and an enterprise tier with team controls. Each model tier trades speed for depth: Haiku is fast and cheap for high-volume sorting; Sonnet balances capability with throughput; Opus handles the hardest reasoning and creative work. Exam scenarios give you a team, a task, and a constraint (budget, latency, data sensitivity) and ask which combination fits."
       },
       {
-        "heading": "Projects and Knowledge Configuration",
-        "body": "Claude Projects let you create persistent workspaces with custom instructions and uploaded knowledge files. Know how to configure Project instructions to set behavior, add relevant documents as context, and organize work across multiple projects. Understand how knowledge sources affect Claude's responses and how to structure project context for maximum effectiveness. The exam tests practical configuration scenarios."
+        "heading": "Setting Up Projects and Knowledge Sources",
+        "body": "A Project in Claude is a reusable workspace where you pin instructions and upload reference documents. When you ask a question inside a Project, Claude sees those instructions and files alongside your prompt. The exam tests configuration judgment: when to create a separate Project vs. a single conversation, how uploaded documents shape Claude&apos;s responses, and what happens when Project instructions conflict with a user&apos;s in-chat request."
       },
       {
-        "heading": "Responsible AI and Data Privacy",
-        "body": "Anthropic's responsible AI principles are a core exam topic. Know what data sensitivity levels mean for Claude usage, when to avoid sharing confidential information, how Anthropic handles data retention and privacy, and what guardrails Claude has built in. Understand the difference between consumer and enterprise data handling. The exam presents governance scenarios and asks you to identify the responsible approach."
+        "heading": "Data Sensitivity and Responsible Use",
+        "body": "Governance questions cut across every domain. You need to classify information by sensitivity before sharing it with any AI tool, know the difference between consumer-tier and enterprise-tier data handling, and recognize when a human must review output before it goes to a customer. The exam also tests edge cases: what to do when Claude refuses a legitimate request, how to handle personally identifiable information in prompts, and when an organization should create a usage policy rather than rely on default guardrails."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Associate Exam",
-    "intro": "The CCAO-F is designed for business professionals who use Claude daily — no coding or API experience required. Focus on practical prompt writing, output judgment, and responsible AI use. This is a scenario-based exam that tests applied knowledge, not theory.",
+    "intro": "Every CCAO-F question tells a short story — a team, a task, and a constraint — then asks what you would do. There is no code, no API syntax, and no prerequisite. Prepare by practicing with Claude daily, paying attention to when it works well and when it doesn&apos;t.",
     "blocks": [
       {
-        "heading": "Master Prompt Structure",
-        "body": "Practice writing prompts with clear role assignments, specific instructions, and structured output formats. Know when to use system prompts vs. user messages, how to provide examples (few-shot), and how to chain prompts for multi-step tasks. Most exam questions present a business scenario and ask which prompt approach is most effective."
+        "heading": "Treat Prompts Like Mini-Briefs",
+        "body": "Write prompts the same way you would brief a colleague: state the goal, provide the context, and describe what good output looks like. Get comfortable with few-shot examples and step-by-step reasoning. On the exam, the best answer is almost always the prompt that gives Claude the most relevant context up front."
       },
       {
-        "heading": "Practice Output Evaluation",
-        "body": "The largest exam domain tests your ability to evaluate Claude's responses. Practice identifying hallucinations, checking factual accuracy, assessing completeness, and determining whether a response meets business requirements. Know the difference between a good response that needs minor edits and one that requires a completely different approach."
+        "heading": "Build Your Error-Spotting Instinct",
+        "body": "The response-evaluation domain carries the most weight. Before the exam, give Claude tasks where you already know the right answer — financial calculations, factual summaries, data comparisons — and force yourself to verify every claim. That habit makes the exam&apos;s quality-judgment questions straightforward."
       },
       {
-        "heading": "Know the Product Lineup",
-        "body": "Understand when to recommend Claude.ai vs. Claude Code vs. the API vs. Enterprise features. Know what Projects, Artifacts, and custom instructions do. The exam tests product selection based on team size, use case, security requirements, and integration needs."
+        "heading": "Map Each Product to a Use Case",
+        "body": "Don&apos;t memorize feature lists. Instead, build a mental decision tree: one person, occasional use → Claude.ai. Consistent brand voice across a team → a shared Project with custom instructions. Automated pipeline feeding a database → the API. A developer fixing code → Claude Code. The exam rewards use-case thinking, not product trivia."
       },
       {
-        "heading": "Responsible AI Scenarios",
-        "body": "Study data sensitivity classifications, privacy best practices, and Anthropic's usage policies. Know what types of content Claude will and won't generate, how to handle sensitive data in prompts, and when human review is required. Governance questions appear across multiple domains."
+        "heading": "Know the Governance Boundaries",
+        "body": "When a question mentions confidential contracts, customer PII, or regulated data, the correct answer almost always involves the enterprise tier, a data-classification review, or both. If none of the options mention those safeguards, look for the one that limits exposure rather than the one that maximizes convenience."
       },
       {
-        "heading": "Workflow Integration",
-        "body": "Understand how Claude fits into real business workflows — document review, email drafting, data analysis, content creation, and meeting preparation. Know how to combine Claude with existing tools and when AI assistance adds the most value vs. when manual work is more appropriate."
+        "heading": "Practice Across Real Workflows",
+        "body": "Use Claude for your actual daily tasks for at least two weeks before sitting the exam. Draft emails, summarize documents, compare options, build slide outlines, and review Claude&apos;s work critically. That hands-on muscle memory is worth more than any study guide."
       }
     ]
   },
@@ -111,100 +110,100 @@
       "question": "Claude generates a response that includes a specific statistic: 'According to a 2024 McKinsey report, 78% of enterprises have adopted generative AI.' How should you evaluate this output?",
       "options": [
         "Accept it as accurate because Claude cited a specific source and percentage",
-        "Treat the statistic as potentially hallucinated — verify the source and figure independently before using it in any deliverable",
+        "Treat the statistic as potentially fabricated — verify the source and figure independently before using it in any deliverable",
         "Remove the percentage but keep the McKinsey attribution",
         "Ask Claude to confirm the statistic is correct in a follow-up prompt"
       ],
       "correctAnswer": 1,
-      "explanation": "Specific statistics, citations, and attributed claims are common hallucination patterns in LLMs. The responsible approach is to verify any factual claim independently, especially numbers and source attributions, before using them in business communications."
+      "explanation": "LLMs routinely generate plausible-sounding citations that don't exist. Any time Claude names a specific report, percentage, or author, treat it as unverified until you check the original source yourself."
     },
     {
-      "question": "Which Claude model tier is most appropriate for a customer support team that needs to classify incoming tickets into categories in real time?",
+      "question": "A support team handles 5,000 ticket classifications per day and needs near-instant categorization. Which Claude model tier fits best?",
       "options": [
         "Opus, because it is the most capable model",
-        "Haiku, because ticket classification is a well-defined, high-volume task where speed and cost matter more than deep reasoning",
-        "Sonnet, because it is the newest model",
-        "Any model will perform identically on classification tasks"
+        "Haiku, because high-volume classification rewards speed and low cost over deep reasoning",
+        "Sonnet, because it is the default model",
+        "Any model — classification performance is identical across tiers"
       ],
       "correctAnswer": 1,
-      "explanation": "Haiku is optimized for fast, cost-effective tasks like classification, routing, and extraction. High-volume, well-defined tasks benefit from Haiku's speed and lower cost per token, while Opus is reserved for complex reasoning and creative tasks."
+      "explanation": "Ticket classification is a well-defined, repetitive task where latency and cost-per-call matter far more than nuanced reasoning. Haiku handles it at a fraction of the cost and latency of heavier models."
     },
     {
       "question": "A sales team wants to use Claude to analyze confidential customer contracts. What is the most responsible approach?",
       "options": [
-        "Copy and paste contract text directly into Claude.ai consumer version",
-        "Use Claude for Enterprise with appropriate data handling agreements, and ensure contracts are reviewed per company data classification policies before sharing with any AI tool",
+        "Copy and paste contract text directly into the free consumer version of Claude",
+        "Use the enterprise tier with a data-handling agreement in place, and confirm each document clears the company's data-classification policy before it touches any AI tool",
         "Summarize the contracts manually and only share non-sensitive summaries with Claude",
         "There are no data privacy concerns when using Claude with business documents"
       ],
       "correctAnswer": 1,
-      "explanation": "Confidential business documents require enterprise-grade data handling. Claude for Enterprise provides data privacy agreements, no training on customer data, and SOC 2 compliance. Always follow your organization's data classification policies before sharing sensitive content with any AI tool."
+      "explanation": "Confidential documents demand enterprise-grade controls — a signed data agreement, no model training on customer inputs, and compliance certifications. Organizational policy should always be checked before any sensitive file enters an AI workflow."
     },
     {
-      "question": "What is the primary purpose of Claude Projects?",
+      "question": "What problem does a Claude Project solve that a regular conversation does not?",
       "options": [
-        "To track billing and usage metrics across an organization",
-        "To create persistent workspaces with custom instructions and uploaded knowledge that shape Claude's responses for a specific use case",
-        "To share Claude conversations publicly on the internet",
-        "To train Claude on proprietary data so it permanently learns new information"
+        "Projects track billing and usage metrics across an organization",
+        "Projects give Claude persistent instructions and reference files that carry over to every conversation inside that workspace, so you never have to re-explain the context",
+        "Projects let you share Claude conversations publicly",
+        "Projects fine-tune the model on proprietary data so it permanently learns new information"
       ],
       "correctAnswer": 1,
-      "explanation": "Projects let you configure persistent context — custom instructions that define how Claude should behave and knowledge files that Claude can reference. This creates a tailored workspace for specific use cases without permanently modifying the model."
+      "explanation": "A Project pins your instructions and documents so Claude reads them on every turn. Without a Project, each new conversation starts from zero — you would have to paste the same background every time."
     },
     {
-      "question": "You ask Claude to write a Python script, but you have no programming experience and cannot evaluate whether the code is correct. What is the best approach?",
+      "question": "You ask Claude to write a Python script, but you have no programming experience and cannot tell whether the code is correct. What should you do?",
       "options": [
         "Trust the code because Claude is highly capable at programming",
         "Run the code immediately in production to see if it works",
-        "Acknowledge that you cannot verify the code's correctness, and have a developer review it before using it in any production context",
+        "Flag that you cannot verify it yourself and have a developer review the code before it runs in any production context",
         "Ask Claude if the code is correct — if it says yes, proceed"
       ],
       "correctAnswer": 2,
-      "explanation": "If you lack the expertise to evaluate an output, you should not deploy it without expert review. This applies to code, legal text, medical information, or any domain-specific content. Responsible AI use means knowing the limits of your own ability to verify outputs."
+      "explanation": "When you lack the expertise to verify an output, responsible use means getting a qualified person to review it. Asking the same model to confirm its own work is not independent verification."
     },
     {
-      "question": "A user wants Claude to maintain a consistent brand voice across all marketing content. Which feature best supports this?",
+      "question": "A content team wants every blog post to follow the same brand voice. Which Claude feature addresses this most reliably?",
       "options": [
         "Adjusting the temperature parameter in every API call",
-        "Setting up a Project with custom instructions that define the brand voice, tone guidelines, and example content",
-        "Asking Claude to 'be creative' at the start of each conversation",
-        "Using a different Claude model for each type of content"
+        "Creating a Project whose instructions define the brand voice, tone rules, and a few reference paragraphs that demonstrate the style",
+        "Starting every conversation with 'be creative'",
+        "Using a different Claude model for each post"
       ],
       "correctAnswer": 1,
-      "explanation": "Project custom instructions persist across all conversations within that project, ensuring consistent behavior. By defining brand voice, tone, vocabulary, and examples in the project instructions, every response follows the same guidelines without repeating the context."
+      "explanation": "Project-level instructions persist across every conversation in the workspace. By encoding voice guidelines once, every response inherits the same tone without anyone remembering to restate the rules."
     },
     {
-      "question": "What does chain-of-thought prompting achieve?",
+      "question": "Why does asking Claude to 'think step by step' sometimes improve accuracy?",
       "options": [
         "It forces Claude to respond in exactly three paragraphs",
-        "It asks Claude to reason through a problem step by step before giving a final answer, improving accuracy on complex tasks",
-        "It connects multiple Claude conversations into a single thread",
-        "It reduces the token count of Claude's response"
+        "It makes Claude work through intermediate reasoning before giving a final answer, which reduces errors on math, logic, and multi-part problems",
+        "It links multiple Claude conversations into a single thread",
+        "It reduces the number of tokens Claude generates"
       ],
       "correctAnswer": 1,
-      "explanation": "Chain-of-thought prompting instructs Claude to show its reasoning process step by step. This technique improves accuracy on math, logic, analysis, and multi-step reasoning tasks by making the model's thinking explicit and verifiable."
+      "explanation": "Step-by-step reasoning (chain-of-thought) gives the model space to show its working before committing to an answer. On tasks that require calculation, comparison, or sequencing, visible reasoning catches mistakes that a direct answer might miss."
     },
     {
-      "question": "When should you use Claude's extended thinking feature?",
+      "question": "When is extended thinking worth the extra wait and cost?",
       "options": [
-        "For every prompt to ensure maximum accuracy",
-        "For simple lookups and quick formatting tasks",
-        "For complex analytical, reasoning, or multi-step tasks where you want Claude to think more deeply before responding",
-        "Only when using the Haiku model"
+        "On every prompt, to guarantee maximum quality",
+        "On simple lookups and quick formatting tasks",
+        "On complex analysis, code review, or multi-step planning where deeper reasoning measurably improves the result",
+        "Only when using the smallest model"
       ],
       "correctAnswer": 2,
-      "explanation": "Extended thinking gives Claude additional computation time for complex reasoning. It is most valuable for analysis, strategy, code review, and multi-step problems. Simple tasks like formatting or basic Q&A don't benefit from extended thinking and would unnecessarily increase latency and cost."
+      "explanation": "Extended thinking adds latency and token cost. It pays off on tasks that need deep reasoning — strategy documents, math-heavy analysis, comparative evaluations — but adds nothing to straightforward formatting or quick lookups."
     },
     {
-      "question": "A team is evaluating whether to build an internal tool using the Claude API or use Claude.ai directly. Which factor most favors the API approach?",
+      "question": "A team is deciding between using Claude.ai directly and building a custom tool on the Claude API. Which factor most favors the API?",
       "options": [
-        "The team has no developers and needs an immediate solution",
-        "The tool requires automated processing of hundreds of documents per day with structured output integrated into an existing database",
-        "Only one person needs to use Claude occasionally for brainstorming",
-        "The team wants the simplest possible setup with no maintenance"
+        "The team has no developers and needs something today",
+        "They need to process hundreds of invoices per day automatically, extract structured fields, and feed the output into a database",
+        "Only one person uses Claude occasionally for brainstorming",
+        "They want the simplest setup with zero maintenance"
       ],
       "correctAnswer": 1,
-      "explanation": "The API is best for automated, high-volume, or integration-heavy use cases. When you need structured output piped into other systems, batch processing, or programmatic control, the API provides the flexibility that Claude.ai's interface cannot. For ad-hoc, low-volume, or non-technical use, Claude.ai is simpler."
+      "explanation": "Automated, high-volume pipelines that push structured data into other systems need programmatic control — exactly what the API provides. Claude.ai is better for ad-hoc, low-volume, interactive use."
     }
   ]
 }

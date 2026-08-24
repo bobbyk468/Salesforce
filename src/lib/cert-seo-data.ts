@@ -486,7 +486,7 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
   'technical-architect-review-board': { questions: 'Board scenario', passingScore: 'Board decision', duration: 'Board session' },
   // Claude (Anthropic)
-  'claude-certified-associate': { questions: 50, passingScore: '720/1000', duration: '120 min' },
+  'claude-certified-associate': { questions: 60, passingScore: '720/1000', duration: '120 min' },
   'claude-certified-developer': { questions: 53, passingScore: '720/1000', duration: '120 min' },
   'claude-certified-architect-foundations': { questions: 60, passingScore: '720/1000', duration: '120 min' },
   'claude-certified-architect-professional': { questions: 65, passingScore: '720/1000', duration: '120 min' },
