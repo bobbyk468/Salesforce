@@ -12,5 +12,5 @@ const RELEASE_WINDOWS: Record<string, string> = {
 }
 
 export function getReleaseWindow(release: string): string {
-  return RELEASE_WINDOWS[release] ?? '2026-06-30'
+  return RELEASE_WINDOWS[release] ?? '2026-09-30'
 }

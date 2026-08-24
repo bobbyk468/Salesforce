@@ -40,12 +40,12 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     formerName: 'Salesforce Certified Marketing Cloud Email Specialist',
   },
   'pardot-specialist': {
-    primaryName: 'Salesforce Certified Account Engagement (Pardot) Specialist',
-    formerName: 'Salesforce Certified Pardot Specialist',
+    primaryName: 'Salesforce Certified Marketing Cloud Account Engagement Specialist',
+    formerName: 'Salesforce Certified Account Engagement (Pardot) Specialist',
   },
   'pardot-consultant': {
-    primaryName: 'Salesforce Certified Account Engagement (Pardot) Consultant',
-    formerName: 'Salesforce Certified Pardot Consultant',
+    primaryName: 'Salesforce Certified Marketing Cloud Account Engagement Consultant',
+    formerName: 'Salesforce Certified Account Engagement (Pardot) Consultant',
   },
   'data-architect': {
     primaryName: 'Salesforce Certified Platform Data Architect',
@@ -80,8 +80,8 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
     formerName: 'Salesforce Certified MuleSoft Developer I',
   },
   'b2c-commerce-developer': {
-    primaryName: 'Salesforce Certified B2C Commerce Cloud Developer',
-    formerName: 'Salesforce Certified B2C Commerce Developer',
+    primaryName: 'Salesforce Certified B2C Commerce Developer',
+    formerName: 'Salesforce Certified B2C Commerce Cloud Developer',
   },
   'marketing-cloud-engagement-admin': {
     primaryName: 'Salesforce Certified Marketing Cloud Engagement Administrator',
@@ -110,6 +110,46 @@ export const CERT_NAME_ALIASES: Record<string, CertNameAlias> = {
   'nonprofit-cloud': {
     primaryName: 'Salesforce Certified Agentforce Nonprofit Consultant',
     formerName: 'Salesforce Certified Nonprofit Cloud Consultant',
+  },
+  'data-360-consultant': {
+    primaryName: 'Salesforce Certified Data 360 Consultant',
+    formerName: 'Salesforce Certified Data Cloud Consultant',
+  },
+  'crm-analytics-einstein-discovery-consultant': {
+    primaryName: 'Salesforce Certified CRM Analytics and Einstein Discovery Consultant',
+    formerName: 'Salesforce Certified CRM Analytics & Einstein Discovery Consultant',
+  },
+  'communications-cloud-ap': {
+    primaryName: 'Salesforce Accredited Agentforce Communications Professional',
+    formerName: 'Salesforce Certified Communications Cloud Accredited Professional',
+  },
+  'consumer-goods-cloud-ap': {
+    primaryName: 'Salesforce Accredited Agentforce Consumer Goods Professional',
+    formerName: 'Salesforce Certified Consumer Goods Cloud Accredited Professional',
+  },
+  'financial-services-cloud-ap': {
+    primaryName: 'Salesforce Accredited Agentforce Financial Services Professional',
+    formerName: 'Salesforce Certified Financial Services Cloud Accredited Professional',
+  },
+  'health-cloud-ap': {
+    primaryName: 'Salesforce Accredited Agentforce Health Professional',
+    formerName: 'Salesforce Certified Health Cloud Accredited Professional',
+  },
+  'manufacturing-cloud-ap': {
+    primaryName: 'Salesforce Accredited Agentforce Manufacturing Professional',
+    formerName: 'Salesforce Certified Manufacturing Cloud Accredited Professional',
+  },
+  'public-sector-solutions-ap': {
+    primaryName: 'Salesforce Accredited Agentforce 360 for Public Sector Professional',
+    formerName: 'Salesforce Certified Public Sector Solutions Accredited Professional',
+  },
+  'b2b-commerce-admin-ap': {
+    primaryName: 'Salesforce Accredited B2B Commerce Administrator Professional',
+    formerName: 'Salesforce Certified B2B Commerce Admin Accredited Professional',
+  },
+  'b2b-commerce-developer-ap': {
+    primaryName: 'Salesforce Accredited B2B Commerce Developer Professional',
+    formerName: 'Salesforce Certified B2B Commerce Developer Accredited Professional',
   },
 }
 

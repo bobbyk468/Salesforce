@@ -24,7 +24,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Sales and Marketing Applications', percentage: 11 },
     { name: 'Service and Support Applications', percentage: 9 },
     { name: 'Productivity and Collaboration', percentage: 4 },
-    { name: "Agentforce (Spring ‘26)", percentage: 8 },
+    { name: "Agentforce (Summer ‘26)", percentage: 8 },
   ],
   'advanced-administrator': [
     { name: 'Organization Setup', percentage: 18 },
@@ -41,7 +41,7 @@ export const EXAM_WEIGHTAGE: Record<string, ExamSection[]> = {
     { name: 'Automation', percentage: 14 },
     { name: 'Data and Analytics', percentage: 17 },
     { name: 'Sales and Service', percentage: 20 },
-    { name: "Agentforce (Spring '26)", percentage: 10 },
+    { name: "Agentforce (Summer '26)", percentage: 10 },
   ],
   'app-builder': [
     { name: 'Data Modeling and Management', percentage: 20 },

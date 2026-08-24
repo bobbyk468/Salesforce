@@ -226,7 +226,7 @@ export default function MarketingCloudConsultantExamTipsPage() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Account Engagement (Pardot) Consultant</Link> next.
+          After this exam, consider <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue underline">Marketing Cloud Engagement Consultant</Link> or <Link href="/certifications/pardot-consultant" className="text-salesforce-blue underline">Marketing Cloud Account Engagement Consultant</Link> next.
         </p>
       </section>
     </div>

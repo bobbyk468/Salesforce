@@ -3,14 +3,14 @@
  * Update when a new release is generally available and exam outlines align.
  */
 
-export const RELEASE_CURRENT = "Spring '26"
-export const RELEASE_PREVIOUS = "Winter '26"
+export const RELEASE_CURRENT = "Summer '26"
+export const RELEASE_PREVIOUS = "Spring '26"
 
 /** Calendar year of the current release — used in page titles and content. Update alongside RELEASE_CURRENT. */
 export const RELEASE_YEAR = '2026'
 
 /** ISO date when content was last refreshed for current release — used for Article dateModified, freshness signals. */
-export const RELEASE_DATE = '2026-04-05'
+export const RELEASE_DATE = '2026-08-24'
 
 
 /** What's new in the current release vs previous — relevant to certification exams and study. */

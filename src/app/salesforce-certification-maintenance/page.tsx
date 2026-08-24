@@ -61,12 +61,12 @@ export default function SalesforceCertificationMaintenancePage() {
     <div className="max-w-4xl mx-auto px-4 py-12">
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/salesforce-certification-maintenance" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
 
-      {/* Breaking news banner — Spring '26 maintenance now live */}
+      {/* Breaking news banner — Summer '26 maintenance now live */}
       <div className="mb-6 flex items-start gap-3 rounded-xl border border-red-200 bg-red-50 px-5 py-4">
         <span className="shrink-0 mt-0.5 text-sm font-bold text-red-600 uppercase tracking-wide">Breaking</span>
         <div>
           <p className="text-sm font-semibold text-red-800">
-            Spring &apos;26 maintenance modules are now live on Trailhead — released April 23, 2026.
+            Summer &apos;26 maintenance modules are now live on Trailhead — released August 2026.
           </p>
           <p className="text-sm text-red-700 mt-0.5">
             Deadline to complete: <strong>April 16, 2027.</strong> Log in to{' '}

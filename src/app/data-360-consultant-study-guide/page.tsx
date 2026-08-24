@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
 const breadcrumbItems = [
   { name: 'Home', url: '/' },
-  { name: 'Data Cloud Consultant', url: '/certifications/data-360-consultant' },
+  { name: 'Data 360 Consultant', url: '/certifications/data-360-consultant' },
   { name: 'Data Cloud Consultant Study Guide', url: '/data-360-consultant-study-guide' },
 ]
 
@@ -81,7 +81,7 @@ export default function DataCloudConsultantStudyGuidePage() {
       <ContentPageSchemas headline={pageTitle} description={pageDescription} path="/data-360-consultant-study-guide" breadcrumbItems={breadcrumbItems} faqItems={faqItems} />
       <CredentialSchema
         certSlug="data-360-consultant"
-        certName="Data Cloud Consultant"
+        certName="Data 360 Consultant"
         description={pageDescription}
         pageUrl="/data-360-consultant-study-guide"
       />
@@ -102,11 +102,11 @@ export default function DataCloudConsultantStudyGuidePage() {
       </header>
 
       <ContentPageAuthor />
-      <ExamTipsCrossLink examTipsSlug="data-360-consultant-exam-tips" certName="Data Cloud Consultant" />
+      <ExamTipsCrossLink examTipsSlug="data-360-consultant-exam-tips" certName="Data 360 Consultant" />
       <CertInsightBlock certSlug="data-360-consultant" />
       <ExamPricingCard
         certSlug="data-360-consultant"
-        certName="Data Cloud Consultant"
+        certName="Data 360 Consultant"
         certPageSlug="data-360-consultant"
       />
 

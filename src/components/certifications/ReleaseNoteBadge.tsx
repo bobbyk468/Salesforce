@@ -1,7 +1,7 @@
 /**
  * Release Note Badge Component
- * Displays "What's New in Spring '26" section on each certification page
- * Highlights major changes from Winter '26 to Spring '26
+ * Displays "What's New in Summer '26" section on each certification page
+ * Highlights major changes from Spring '26 to Summer '26
  */
 
 import { Sparkles, CheckCircle, Zap, Smartphone, Shield } from 'lucide-react'
@@ -13,8 +13,8 @@ export default function ReleaseNoteBadge() {
       <div className="flex items-start gap-3">
         <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900">What&apos;s New in Spring &apos;26</h3>
-          <p className="mt-1 text-sm text-gray-600">Major improvements from Winter &apos;26</p>
+          <h3 className="text-lg font-bold text-gray-900">What&apos;s New in Summer &apos;26</h3>
+          <p className="mt-1 text-sm text-gray-600">Major improvements from Spring &apos;26</p>
         </div>
       </div>
 
