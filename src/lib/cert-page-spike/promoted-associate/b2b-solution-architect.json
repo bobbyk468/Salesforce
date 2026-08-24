@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "B2B Architect",
-    "description": "Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products.",
+    "description": "This exam covers designing end-to-end B2B solutions that span Sales Cloud, Service Cloud, B2B Commerce, and CPQ — connecting multiple Salesforce products into a unified architecture.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

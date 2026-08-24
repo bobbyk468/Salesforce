@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Heroku Architect",
-    "description": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku.",
+    "description": "This exam tests enterprise-scale Heroku architecture — dyno sizing, Postgres configuration, Private Spaces, and CI/CD pipelines. You&apos;ll need to know Heroku Connect patterns for Salesforce data sync and how to design for high availability.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

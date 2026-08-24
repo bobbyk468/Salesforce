@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MuleSoft Architect",
-    "description": "Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy.",
+    "description": "This exam tests your ability to define and own an organization&amp;apos;s Anypoint Platform strategy, covering deployment architecture, governance, security, and API-led connectivity at enterprise scale.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

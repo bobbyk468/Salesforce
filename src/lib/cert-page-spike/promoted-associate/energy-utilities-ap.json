@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Energy and Utilities Cloud Professionals have fundamental knowledge, skills, and experience to deliver business value to customers through Energy and Utilities Cloud.",
+    "description": "This exam covers the Energy &amp; Utilities Cloud data model, including service points, premises, and meter-to-cash processes. You&apos;ll need to understand OmniStudio-powered customer journeys, outage management, and billing system integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

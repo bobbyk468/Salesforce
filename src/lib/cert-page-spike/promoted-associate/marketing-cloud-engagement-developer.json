@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MC Engagement Developer",
-    "description": "Certified Marketing Cloud Developers have experience developing across the full platform. They create personalized, dynamic messages and landing pages, and are fluent in Marketing Cloud scripting languages.",
+    "description": "This exam tests hands-on coding in Marketing Cloud: writing AMPscript and SSJS, building CloudPages, calling REST and SOAP APIs, and creating custom Journey Builder activities.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~67%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Advanced Field Service Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Advanced Field Service.",
+    "description": "This exam covers advanced Field Service Lightning configuration, including scheduling optimization policies, complex work order scenarios, asset maintenance plans, inventory management, and mobile technician workflows.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

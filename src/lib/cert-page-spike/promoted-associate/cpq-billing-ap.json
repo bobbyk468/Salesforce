@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions.",
+    "description": "This exam covers the full Salesforce quote-to-cash process — CPQ product configuration, pricing rules, Billing invoice generation, subscription management, and revenue recognition.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

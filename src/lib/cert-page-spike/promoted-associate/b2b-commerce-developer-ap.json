@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce in the context of sample apps and real world implementations.",
+    "description": "This exam tests your ability to customize B2B Commerce storefronts using LWC components, Apex extensions, and Commerce APIs for real-world implementations.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

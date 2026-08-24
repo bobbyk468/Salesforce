@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Contact Center Professionals have fundamental knowledge, skills, and experience to discover, design, plan, and deliver product value to customers with Contact Center.",
+    "description": "This exam covers Salesforce Contact Center implementation — Omni-Channel routing, Service Cloud Voice, Einstein Bots, digital engagement channels, and agent workspace configuration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

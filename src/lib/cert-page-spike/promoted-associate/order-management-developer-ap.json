@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Order Management Developer Professionals have demonstrated skills and knowledge in configuring and customizing Salesforce Order Management.",
+    "description": "This exam tests your ability to extend Salesforce Order Management with Apex, Flow, and APIs -- building custom fulfillment logic, external system integrations, and event-driven order processing.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

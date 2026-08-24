@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data.",
+    "description": "This exam tests your ability to configure Net Zero Cloud for carbon accounting, including emissions data collection, Scope 1/2/3 tracking, sustainability reporting, and goal management.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Catalyst",
-    "description": "Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes.",
+    "description": "This exam tests the MuleSoft Catalyst methodology: standing up a Center for Enablement, driving API reuse across teams, measuring integration ROI, and guiding organizations through the Land-Expand-Engage maturity model.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

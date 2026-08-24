@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Strategy Designer",
-    "description": "Certified Platform Strategy Designers have expertise using design methods to create compelling experience strategies that drive business outcomes using the Salesforce Platform.",
+    "description": "This exam covers applying design thinking and human-centered research to shape experience strategies on the Salesforce Platform, from stakeholder alignment through journey mapping and prototyping.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

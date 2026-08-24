@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MuleSoft Developer II",
-    "description": "Certified MuleSoft Developers II are seasoned developers who have proven knowledge and skills to independently work on production-ready Mule applications in a DevOps environment.",
+    "description": "The advanced MuleSoft developer exam. Expect deep questions on DataWeave modules, batch processing, API security policies, CI/CD pipelines with Maven, and production deployment strategies.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~70%",

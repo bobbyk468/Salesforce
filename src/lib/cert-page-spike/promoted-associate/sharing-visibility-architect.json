@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Sharing & Visibility",
-    "description": "Certified Platform Sharing and Visibility Architects are fluent in designing sound, scalable, and high-performing technical solutions on the Salesforce Platform that meet sharing and visibility security requirements.",
+    "description": "This architect-level exam tests your ability to design record access models at scale, covering OWDs, role hierarchies, sharing rules, Apex managed sharing, and field-level security across internal and external users.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Hyperautomation",
-    "description": "Certified MuleSoft Hyperautomation Developers develop hyperautomation solutions across the Salesforce and MuleSoft products.",
+    "description": "This exam covers building end-to-end automation solutions that combine MuleSoft APIs, RPA bots, Composer, and Salesforce Flow to automate complex business processes across multiple systems.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

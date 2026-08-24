@@ -35,7 +35,7 @@
   ],
   "certificationCard": {
     "code": "Slack Developer",
-    "description": "Certified Slack Developers have deep knowledge of the Slack Platform and Slack's APIs and possess the knowledge, skills, and experience to design and build custom applications within Slack.",
+    "description": "This exam tests building custom Slack apps using the Bolt framework, Block Kit UI components, Events API, slash commands, and OAuth-based app distribution across workspaces.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

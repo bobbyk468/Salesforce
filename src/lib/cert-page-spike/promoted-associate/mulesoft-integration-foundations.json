@@ -17,7 +17,7 @@
   ],
   "certificationCard": {
     "code": "MuleSoft Associate",
-    "description": "The Certified MuleSoft Integrations Foundations certification is designed for individuals who have knowledge of core integration and API-led connectivity terminology and can work as an informed member of a MuleSoft project team.",
+    "description": "This entry-level exam covers API-led connectivity basics, Anypoint Platform fundamentals, and core integration terminology you&amp;apos;ll need to contribute effectively on a MuleSoft project team.",
     "examDetails": {
       "questions": 40,
       "passingScore": "70%",

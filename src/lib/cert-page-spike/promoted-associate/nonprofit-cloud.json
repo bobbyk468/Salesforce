@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "NPC",
-    "description": "The Nonprofit Cloud Consultant certification validates your expertise in implementing Salesforce solutions for nonprofit organizations.",
+    "description": "This exam covers implementing Salesforce for nonprofits, including the NPSP data model, fundraising with donations and recurring giving, program management, grant tracking, and impact reporting.",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",

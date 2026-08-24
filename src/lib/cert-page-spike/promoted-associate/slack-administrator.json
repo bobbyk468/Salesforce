@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Slack Admin",
-    "description": "Certified Slack Administrators have the skills to implement, configure, and manage Slack and can recommend policies, settings, and features to enhance team productivity.",
+    "description": "This exam covers setting up and managing Slack workspaces, including channel governance, user provisioning, security policies, app management, and Enterprise Grid administration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

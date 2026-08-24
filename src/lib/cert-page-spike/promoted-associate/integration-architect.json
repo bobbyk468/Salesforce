@@ -17,7 +17,7 @@
   ],
   "certificationCard": {
     "code": "Integration Architect",
-    "description": "Certified Platform Integration Architects are experts at assessing architecture environments and requirements in order to design sound and scalable technical solutions on the Salesforce Platform that meet end-to-end integration requirements.",
+    "description": "This exam tests designing integration solutions between Salesforce and external systems using REST, SOAP, Bulk, and Streaming APIs. You&apos;ll need to select the right integration pattern, middleware approach, and error-handling strategy for complex enterprise scenarios.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",
@@ -41,24 +41,24 @@
     "h2": "Integration Architect: Key Concepts",
     "blocks": [
       {
-        "heading": "Integration Patterns",
-        "body": "Understand the common integration patterns like Fire-and-Forget, Request-Reply, and Batch Data Synchronization. Know when to use each based on business requirements for real-time or asynchronous processing."
+        "heading": "Integration Patterns: When to Use Each",
+        "body": "Salesforce documents specific integration patterns that map directly to exam scenarios. Remote Process Invocation &mdash; Request/Reply: synchronous callout from Salesforce to an external system, waiting for a response (e.g., real-time address validation during record save). Remote Process Invocation &mdash; Fire and Forget: Salesforce sends a message and does not wait for a response &mdash; typically via **Platform Events** or outbound messages. Batch Data Synchronization: scheduled bulk data movement between systems using **Bulk API** or ETL tools (MuleSoft, Informatica). Data Virtualization: querying external data in real time without storing it in Salesforce, using External Objects and OData connectors. UI Update Based on Data Changes: Streaming API or Change Data Capture pushes record changes to a subscribed UI in near real time. The exam presents a business scenario (latency tolerance, data volume, error-handling needs) and asks which pattern fits &mdash; knowing the trade-offs between sync and async, and between push and pull, is essential."
       },
       {
-        "heading": "Integration Security",
-        "body": "Be comfortable with security concepts like **OAuth** 2.0 flows, **Connected Apps**, **Named Credentials**, and when to use different authentication mechanisms to secure data in transit."
+        "heading": "Salesforce APIs: REST, SOAP, Bulk, Streaming, and Connect",
+        "body": "Each Salesforce API serves a different integration scenario. **REST API**: lightweight JSON-based CRUD for real-time integrations &mdash; supports both inbound (external system calls Salesforce) and outbound (Apex HTTP callouts). **SOAP API**: XML/WSDL-based, used by legacy enterprise systems that require formal contracts. **Bulk API** 2.0: processes millions of records asynchronously in CSV format &mdash; the go-to for data migration and large scheduled syncs. **Streaming API** (PushTopic, Generic Streaming): server-push via CometD/Bayeux for near-real-time notifications. **Change Data Capture** (CDC): publishes field-level change events for subscribed objects. **Composite API**: bundles multiple REST requests into a single call, reducing round trips. **Connect API**: pre-built REST endpoints for Chatter, Communities, and CRM-specific operations. The exam tests which API to recommend for a given data volume, latency, and directionality requirement &mdash; and the governor limits that constrain each (100 callouts per transaction, 6 MB response size, API call daily limits)."
       },
       {
-        "heading": "Error Handling and Recovery",
-        "body": "Design for failures. Understand how to implement retry mechanisms with exponential backoff, how to use a dead-letter queue for failed messages, and how to build resilient integrations that can recover from outages."
+        "heading": "Error Handling, Idempotency, and Recovery",
+        "body": "Production integrations fail &mdash; the exam tests how you design for it. Retry with exponential backoff: failed callouts retry at increasing intervals (1s, 2s, 4s, 8s) to avoid overwhelming the target system. Idempotency: ensuring that replaying a message produces the same result without duplicating records &mdash; typically using external IDs or unique request identifiers. Dead-letter queues: messages that fail after all retries are routed to a holding queue for manual review or reprocessing. Circuit breaker pattern: after repeated failures, the integration stops calling the target and falls back to a cached response or queued retry. Outbound message retry: Salesforce retries outbound messages for up to 24 hours. **Platform Events**: replay ID lets subscribers resume from the last successfully processed event after a disconnection (events retained for 72 hours). The exam presents failure scenarios and asks which combination of retry logic, idempotency checks, and error-routing mechanisms produces a resilient integration."
       },
       {
-        "heading": "Platform Events and Event-Driven Architecture",
-        "body": "Know how to use **Platform Events** to build a scalable, event-driven architecture. Understand the publish-subscribe model and how it helps in decoupling systems."
+        "heading": "Platform Events, CDC, and Event-Driven Architecture",
+        "body": "**Platform Events** are the backbone of event-driven integration on Salesforce. They follow a publish-subscribe model &mdash; Apex, Flow, or external systems publish events, and Apex triggers, Flow, or external CometD subscribers consume them. Events are durable: retained for 72 hours with a replay ID for subscriber recovery. High-volume Platform Events support up to tens of thousands of events per hour. Change Data Capture (CDC) is a specialised event channel &mdash; Salesforce automatically publishes events when records are created, updated, deleted, or undeleted, including the specific field changes. CDC events contain the change delta (only modified fields), the change type, and the user who made the change. External subscribers use the CometD long-polling protocol or the Pub/Sub API (gRPC-based, recommended for new integrations). The exam tests when to use Platform Events vs. CDC vs. outbound messages, how to handle event replay for reliability, and the limits on event publishing and delivery."
       },
       {
-        "heading": "API Management",
-        "body": "Understand the importance of API versioning, rate limiting, and monitoring. Know how to use API gateways to manage and secure your APIs."
+        "heading": "Middleware, MuleSoft, and API Governance",
+        "body": "Enterprise integrations rarely connect systems point-to-point &mdash; middleware orchestrates the data flow. MuleSoft Anypoint Platform uses API-led connectivity with three layers: System APIs (connect to backend systems), Process APIs (orchestrate business logic across systems), and Experience APIs (serve specific consumer channels). Anypoint Exchange is the API catalog for reuse and discovery. API gateways enforce rate limiting, authentication, and traffic policies. Named Credentials in Salesforce store endpoint URLs and authentication details (OAuth, password, JWT) so that Apex callouts never contain hardcoded secrets &mdash; the exam heavily favours Named Credentials over manual auth headers. External Services let admins register an OpenAPI spec and invoke the external API declaratively from Flow without code. The exam tests when to use middleware vs. direct API integration, how to design the API layer hierarchy, and how to manage API versioning, deprecation, and consumer migration across the integration landscape."
       }
     ]
   },

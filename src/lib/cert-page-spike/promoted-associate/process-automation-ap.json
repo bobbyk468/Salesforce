@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Process Automation Professionals have skills and knowledge in designing, configuring, building, and implementing Process Automation.",
+    "description": "This exam covers Flow Builder in depth -- record-triggered flows, screen flows, approval processes, and automation best practices -- plus when to reach for Apex triggers over declarative tools.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Public Sector Solutions Professionals drive successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that best align with a company's vision and business value goals.",
+    "description": "This exam covers implementing Salesforce Public Sector Solutions for government agencies, including grants management, licensing and permitting, case management, and constituent digital services.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

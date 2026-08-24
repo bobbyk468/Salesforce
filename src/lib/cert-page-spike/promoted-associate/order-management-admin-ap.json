@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role.",
+    "description": "This exam covers administering Salesforce Order Management, including order lifecycle configuration, fulfillment routing, inventory allocation, return/refund processing, and Commerce Cloud integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

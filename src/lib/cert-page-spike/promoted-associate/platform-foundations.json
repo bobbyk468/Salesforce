@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Associate",
-    "description": "The Salesforce Associate Certification is designed for individuals who may have up to 6 months of user experience. It validates foundational knowledge and understanding of the Customer 360 Platform.",
+    "description": "An entry-level exam for people with up to 6 months of Salesforce experience, covering Customer 360 basics -- navigation, objects and records, reports, security fundamentals, and the Salesforce ecosystem.",
     "examDetails": {
       "questions": 40,
       "passingScore": "~65%",

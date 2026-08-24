@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MC Consultant",
-    "description": "The Marketing Cloud Consultant certification validates your expertise in implementing Marketing Cloud solutions for digital marketing campaigns.",
+    "description": "This exam tests solution design for Marketing Cloud: gathering requirements, architecting data models, configuring Journey Builder and Automation Studio, and integrating with Salesforce CRM.",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",

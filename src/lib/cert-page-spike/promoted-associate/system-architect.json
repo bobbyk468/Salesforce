@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "System Architect",
-    "description": "Certified System Architects focus on off-platform systems, integration, and securing access between systems. They're also skilled at managing governance and testing capabilities for deployment and ongoing Salesforce modification requirements.",
+    "description": "This exam tests enterprise integration architecture, covering API patterns (sync, async, batch), OAuth authentication flows, middleware design, sandbox strategy, and release management for multi-system Salesforce deployments.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

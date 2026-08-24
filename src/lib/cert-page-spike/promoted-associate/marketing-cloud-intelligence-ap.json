@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Marketing Cloud Intelligence Professional have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers.",
+    "description": "This exam covers Marketing Cloud Intelligence (Datorama) implementation: connecting data streams, harmonizing cross-channel metrics, building dashboards, and configuring calculated KPIs.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

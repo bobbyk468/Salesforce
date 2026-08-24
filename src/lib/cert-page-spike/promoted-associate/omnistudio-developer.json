@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "OmniStudio Developer",
-    "description": "Certified OmniStudio Developers have hands-on experience designing and configuring cloud applications using various OmniStudio declarative development tools.",
+    "description": "This exam tests hands-on development with OmniStudio declarative tools -- building OmniScripts, DataRaptors, FlexCards, and Integration Procedures, plus extending them with custom LWC components.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Application Architect",
-    "description": "Certified Application Architects have a deep understanding of native Salesforce features and functionality. They're also experts at modeling a role hierarchy, data, and appropriate sharing mechanisms.",
+    "description": "This exam tests your ability to design data models, role hierarchies, and sharing configurations using native Salesforce features — the architectural decisions that shape how an org scales.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "UX Designer",
-    "description": "Certified Platform User Experience (UX) Designers are aspiring or experienced designers wanting to build and design human-centered experiences on the Salesforce Platform.",
+    "description": "This exam covers applying UX research, wireframing, prototyping, and accessibility standards (WCAG 2.1) to design usable experiences within Lightning Experience and Experience Cloud.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

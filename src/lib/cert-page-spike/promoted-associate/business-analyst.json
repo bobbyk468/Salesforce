@@ -26,7 +26,7 @@
   ],
   "certificationCard": {
     "code": "Business Analyst",
-    "description": "Certified Business Analysts understand business needs, capture requirements, and collaborate with stakeholders to develop Salesforce solutions that drive business improvements.",
+    "description": "This exam covers the BA lifecycle on Salesforce projects — requirements discovery, user story writing, stakeholder facilitation, process mapping, and UAT planning.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

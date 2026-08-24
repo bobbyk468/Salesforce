@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Media Cloud Professionals have knowledge, skills, and experience to plan, design, and implement business value to customers through Media Cloud.",
+    "description": "This exam covers Salesforce Media Cloud for broadcasters, publishers, and digital media companies — ad sales workflows, rights and entitlements management, campaign delivery, and revenue billing.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Communications Cloud Professionals have knowledge, skills, and experience to discover, design, plan, and deliver business value to customers through Communications Cloud.",
+    "description": "This exam covers implementing Communications Cloud for telecom and media companies — product catalog setup, Industries CPQ, order orchestration, and subscription lifecycle management.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

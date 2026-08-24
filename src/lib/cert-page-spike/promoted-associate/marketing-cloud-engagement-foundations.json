@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Marketing Associate",
-    "description": "The Salesforce Marketing Associate certification is designed for individuals with a foundational understanding of the Salesforce platform and up to six months of experience with Salesforce Marketing Cloud Engagement.",
+    "description": "An entry-level exam for anyone new to Marketing Cloud Engagement. It covers Email Studio basics, subscriber lists vs. Data Extensions, simple Journey Builder workflows, and core reporting metrics.",
     "examDetails": {
       "questions": 40,
       "passingScore": "~65%",

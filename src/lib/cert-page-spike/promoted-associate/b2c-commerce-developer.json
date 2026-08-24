@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "B2C Commerce Developer",
-    "description": "Certified B2C Commerce Cloud Developers have experience as full-stack developers for Salesforce B2C Commerce Digital.",
+    "description": "This exam covers full-stack SFCC development — SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

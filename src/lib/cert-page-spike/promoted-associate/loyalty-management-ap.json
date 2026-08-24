@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Loyalty Management Professionals has 2-3 years' experience designing solutions using the Loyalty Management functionality and can lead the implementation of these solutions within a customer organization.",
+    "description": "This exam covers configuring Salesforce Loyalty Management — tiers, points accrual, redemption rules, and partner integrations. Expect questions on program design and end-to-end implementation.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

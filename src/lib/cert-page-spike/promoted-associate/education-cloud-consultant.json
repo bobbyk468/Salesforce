@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Education Cloud",
-    "description": "Certified Education Cloud Consultants have experience implementing Salesforce Education Cloud solutions in a customer-facing role.",
+    "description": "This exam tests configuring Education Data Architecture (EDA), student lifecycle management, and advising workflows for schools and universities. Expect questions on admissions pipelines, course enrollment, and SIS/LMS integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

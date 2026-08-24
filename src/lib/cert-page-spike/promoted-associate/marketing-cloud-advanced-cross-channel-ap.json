@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Marketing Cloud Advanced Cross Channel Professionals have demonstrated knowledge, skills, and experience with key Marketing Cloud Cross Channel topics.",
+    "description": "This exam goes beyond single-channel sends. You&amp;apos;ll need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

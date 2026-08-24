@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited B2B Commerce For Administrators Professionals have developed broad knowledge of the B2B Commerce discipline and knowledge of the Salesforce platform capabilities in order to troubleshoot and solve basic platform issues.",
+    "description": "This exam covers B2B Commerce store administration — configuring storefronts, catalogs, buyer groups, pricing, and checkout flows on the Salesforce platform.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

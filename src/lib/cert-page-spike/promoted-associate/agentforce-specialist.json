@@ -3,7 +3,7 @@
   "expertInsight": "The live exam leans heavily on Agentforce Studio configuration — expect 8–10 questions on agent topic classification, channel setup, and escalation rules. Trailhead modules alone won't cover the nuances; you need hands-on time in a scratch org building actual agents. The hardest questions involved multi-channel routing scenarios where you had to choose between Agent, Bot, and Flow.",
   "certificationCard": {
     "code": "Agentforce",
-    "description": "Certified Agentforce Specialists are responsible for managing and optimizing Agentforce and have deep understanding of both Salesforce platform configuration and Agentforce capabilities.",
+    "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

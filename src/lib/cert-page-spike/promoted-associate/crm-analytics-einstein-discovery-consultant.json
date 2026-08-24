@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Analytics & Discovery",
-    "description": "Certified CRM Analytics and Einstein Discovery Consultants have experience designing and implementing on the CRM Analytics and Einstein Discovery platforms in a customer-facing or internal architect role.",
+    "description": "This exam covers building dashboards, dataflows, and predictive models in CRM Analytics and Einstein Discovery. You&apos;ll need hands-on knowledge of SAQL, dataset security, and deploying AI-driven predictions back to Salesforce records.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

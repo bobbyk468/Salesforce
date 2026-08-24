@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Industries CPQ",
-    "description": "Certified Industries CPQ Developers understand how to develop Industries CPQ (Configure, Price, Quote) applications for the Salesforce Communications, Media, and Energy & Utilities Clouds.",
+    "description": "This exam covers building CPQ solutions for Communications, Media, and Energy &amp; Utilities using the Industries product catalog, pricing procedures, and order decomposition. Expect questions on attribute rules, custom Apex pricing hooks, and OmniStudio integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "JS Developer I",
-    "description": "Certified JavaScript Developers have experience developing front-end and/or back-end JavaScript applications for the web stack, and work with JavaScript related technologies like Lightning Web Components.",
+    "description": "This exam tests core JavaScript (ES6+), async programming, and Lightning Web Components on the Salesforce Platform. Expect code-reading questions on closures, promises, the event loop, and LWC lifecycle hooks — strong JS fundamentals matter more than Salesforce-specific knowledge.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "NPSP",
-    "description": "Certified Nonprofit Success Pack Consultants have experience designing and implementing nonprofit managed package solutions in a customer-facing role.",
+    "description": "This exam focuses on configuring the NPSP managed package for nonprofits, covering household accounts, donation processing, recurring giving, customisable rollups, engagement plans, and data migration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MC Engagement Admin",
-    "description": "Certified Marketing Cloud Engagement Administrators have hands-on experience configuring Marketing Cloud products utilizing industry and product best practices. They understand data structure in subscriber data management and can thoroughly navigate Setup.",
+    "description": "This exam focuses on the admin side of Marketing Cloud Engagement: Business Unit setup, user roles and permissions, subscriber data management, deliverability configuration, and CRM integration.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

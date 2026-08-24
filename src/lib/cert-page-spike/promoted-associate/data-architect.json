@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Data Architect",
-    "description": "Certified Platform Data Architects are experts at designing sound, scalable, high-performing solutions on the Salesforce Platform that are tailored for enterprise data management.",
+    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You&apos;ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "B2C Architect",
-    "description": "Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns.",
+    "description": "This exam tests your ability to architect global B2C Commerce (SFCC) sites across multiple brands, locales, and channels using SFRA, headless patterns, and CDN caching strategies.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

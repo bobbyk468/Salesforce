@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Pardot Specialist",
-    "description": "The Pardot Specialist certification validates your skills in B2B marketing automation, lead nurturing, and marketing analytics.",
+    "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync.",
     "examDetails": {
       "questions": 60,
       "passingScore": "72%",

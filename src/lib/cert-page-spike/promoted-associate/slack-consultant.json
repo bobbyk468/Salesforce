@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Slack Consultant",
-    "description": "Certified Slack Consultants help clients maximize the potential of Slack by transforming their organization's collaboration through solution design, change management, and user adoption.",
+    "description": "This exam tests your ability to plan and execute Slack deployments, covering solution design, Salesforce-Slack integration, change management strategy, and driving user adoption across an organization.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

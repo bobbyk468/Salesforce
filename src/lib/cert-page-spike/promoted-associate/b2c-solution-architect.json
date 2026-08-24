@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "B2C Solution Architect",
-    "description": "Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer.",
+    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management for seamless customer journeys.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

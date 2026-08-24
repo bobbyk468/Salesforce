@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud.",
+    "description": "This exam tests the Financial Services Cloud data model — households, financial accounts, and relationship management for banking, wealth management, and insurance. Expect questions on action plans, rollup summaries, and KYC compliance workflows.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

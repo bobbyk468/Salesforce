@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Heroku Developer Professionals can demonstrate their skills and knowledge in designing, configuring, building, and implementing on Salesforce Heroku.",
+    "description": "This exam covers hands-on Heroku development: deploying apps with buildpacks, configuring dynos, managing add-ons, and integrating with Salesforce via Heroku Connect. Expect questions on Procfile setup, config vars, and worker-based background jobs.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

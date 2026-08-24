@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization.",
+    "description": "This exam tests real-time personalization with Marketing Cloud Personalization (Interaction Studio): web SDK setup, catalog configuration, Einstein Recipes, campaign targeting, and A/B testing.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

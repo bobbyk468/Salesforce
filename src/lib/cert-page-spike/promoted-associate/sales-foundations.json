@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Sales Foundations",
-    "description": "The Certified Sales Foundations certification is designed for individuals who exemplify sales excellence using a customer-centric methodology.",
+    "description": "This entry-level exam tests core Sales Cloud skills: managing leads and opportunities, running pipeline reports, using forecasting tools, and applying customer-centric selling practices.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Pardot Consultant",
-    "description": "The Pardot Consultant certification validates your expertise in designing and implementing Pardot solutions aligned with business requirements.",
+    "description": "This exam covers strategic B2B marketing automation design with Account Engagement (Pardot), including lead scoring models, Engagement Studio nurture programs, Salesforce sync architecture, and campaign attribution.",
     "examDetails": {
       "questions": 60,
       "passingScore": "68%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Identity & Access Mgmt",
-    "description": "Certified Platform Identity and Access Management Architects are experts at assessing architecture environments and requirements in order to design sound, high-performing solutions on the Salesforce Platform that meet Single Sign-On (SSO) requirements.",
+    "description": "This exam tests SSO architecture, OAuth 2.0 flows, SAML configuration, and Connected App security on the Salesforce Platform. You&apos;ll need to match authentication patterns to integration scenarios and configure MFA, My Domain, and identity federation.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

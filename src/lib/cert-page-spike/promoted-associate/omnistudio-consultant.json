@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "OmniStudio Consultant",
-    "description": "Certified OmniStudio Consultants are experts at designing and implementing solutions utilizing OmniStudio tools that are sustainable and scalable, meet customer business requirements, and contribute to long-term customer success.",
+    "description": "This exam covers solution design with OmniStudio tools -- selecting the right mix of FlexCards, OmniScripts, DataRaptors, and Integration Procedures to build scalable guided experiences for Industry Cloud implementations.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MuleSoft Integration Architect",
-    "description": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations.",
+    "description": "This exam tests your ability to design integration architectures on Anypoint Platform — choosing the right API-led layers, defining security and resilience patterns, and establishing governance through a Center for Enablement.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

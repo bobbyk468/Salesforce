@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "AP",
-    "description": "Accredited Health Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Health Cloud solution with industry-specific data models.",
+    "description": "This exam covers Health Cloud&apos;s care plan management, patient engagement, and FHIR-based EHR integration for providers, payers, and life sciences orgs. Expect questions on care coordination workflows, appointment scheduling, and population health analytics.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

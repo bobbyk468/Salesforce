@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "MuleSoft Developer I",
-    "description": "Certified MuleSoft Developers have proven knowledge and skills to design, build, test and debug, deploy and manage basic APIs and integrations.",
+    "description": "The entry-level MuleSoft developer exam. You&amp;apos;ll need to build Mule flows in Anypoint Studio, write DataWeave transformations, design APIs with RAML, handle errors, and deploy to CloudHub.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~70%",

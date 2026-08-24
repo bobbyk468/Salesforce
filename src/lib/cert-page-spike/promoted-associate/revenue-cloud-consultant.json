@@ -2,7 +2,7 @@
   "template": "associate",
   "certificationCard": {
     "code": "Revenue Cloud",
-    "description": "Certified Revenue Cloud Consultants have hands-on experience designing and implementing the Revenue Cloud product on core, and have extensive knowledge of the Product-to-Cash lifecycle.",
+    "description": "This exam tests your ability to configure the full quote-to-cash lifecycle in Revenue Cloud, covering CPQ product bundles, subscription billing, contract amendments, and revenue recognition under ASC 606.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
