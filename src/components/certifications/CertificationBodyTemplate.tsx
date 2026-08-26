@@ -34,6 +34,8 @@ import AgentforceArchitectureDiagram from '@/components/certifications/Agentforc
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import CertDifficultySection from '@/components/CertDifficultySection'
+import CertMockScoreGuide from '@/components/CertMockScoreGuide'
+import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
@@ -227,6 +229,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
 
         <DifficultyHeatmap slug={slug} />
         <CertDifficultySection slug={slug} />
+        <CertMockScoreGuide slug={slug} />
+        <CertPracticeVsDumps />
 
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
@@ -326,6 +330,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
 
         <DifficultyHeatmap slug={slug} />
         <CertDifficultySection slug={slug} />
+        <CertMockScoreGuide slug={slug} />
+        <CertPracticeVsDumps />
 
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}

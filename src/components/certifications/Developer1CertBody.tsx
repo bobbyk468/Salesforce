@@ -17,6 +17,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import dynamic from 'next/dynamic'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import CertDifficultySection from '@/components/CertDifficultySection'
+import CertMockScoreGuide from '@/components/CertMockScoreGuide'
+import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 const PracticeQuestionsSection = dynamic(
@@ -480,6 +482,8 @@ private class CalloutServiceTest {
 
           <DifficultyHeatmap slug={slug} />
           <CertDifficultySection slug={slug} />
+          <CertMockScoreGuide slug={slug} />
+          <CertPracticeVsDumps />
 
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}

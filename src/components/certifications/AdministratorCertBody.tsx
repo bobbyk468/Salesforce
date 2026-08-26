@@ -33,6 +33,8 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import CertDifficultySection from '@/components/CertDifficultySection'
+import CertMockScoreGuide from '@/components/CertMockScoreGuide'
+import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import {
@@ -375,6 +377,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           <DifficultyHeatmap slug={slug} />
           <CertDifficultySection slug={slug} />
+          <CertMockScoreGuide slug={slug} />
+          <CertPracticeVsDumps />
 
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
