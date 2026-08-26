@@ -4,6 +4,36 @@ export const APP_BUILDER_SLUG = 'app-builder' as const
 
 export const appBuilderCertPageBody: AppBuilderSpikeBody = {
   template: 'app-builder',
+  whoIsThisFor: {
+    heading: 'Who is the Platform App Builder exam for?',
+    personas: [
+      { label: 'Admins levelling up', description: 'You passed ADM-201 and want to prove you can design and build custom Salesforce applications using declarative tools.' },
+      { label: 'Business app builders', description: 'You create custom objects, flows, and Lightning pages for your team and want the credential to formalise those skills.' },
+      { label: 'Aspiring developers', description: 'You want to understand declarative boundaries before moving into Apex development and PD1.' },
+    ],
+  },
+  examDifficulty: {
+    heading: 'Is the Platform App Builder Exam Hard?',
+    summary: 'App Builder is considered moderately difficult. It builds on ADM-201 knowledge but goes deeper into data modelling, business logic, and Lightning app configuration.',
+    bullets: [
+      '<strong>60 multiple-choice questions</strong> in 105 minutes.',
+      '<strong>63% passing score</strong> — slightly lower than ADM-201, but the questions are harder.',
+      '<strong>Scenario-heavy</strong> — most questions describe a business requirement and ask which declarative tool solves it.',
+      '<strong>No coding required</strong> — entirely declarative, but you need to know where declarative ends and code begins.',
+    ],
+    passRateGuidance: 'Score 75%+ on 3 timed practice exams before booking. Candidates with hands-on ADM-201 experience and custom app-building practice perform best.',
+  },
+  examFormat: {
+    heading: 'App Builder Exam Format Explained',
+    intro: 'The exam is proctored online or at a test centre through Webassessor. Here is the format:',
+    scenarioPercent: 'About 60-70% of questions are scenario-based. They typically describe a business need and ask which combination of declarative features (objects, relationships, flows, validation rules, page layouts) satisfies it. The hardest scenarios involve choosing between Flow, approval processes, and custom Lightning components.',
+    bestWayToPass: [
+      '<strong>Master data modelling:</strong> Know when to use lookup vs. master-detail, external objects, junction objects, and roll-up summary fields.',
+      '<strong>Study Flow Builder deeply:</strong> Screen flows, record-triggered flows, scheduled flows, and subflows are the most tested automation topics.',
+      '<strong>Know declarative vs. code boundaries:</strong> Understand when a requirement exceeds declarative capabilities and needs Apex or LWC.',
+      '<strong>Practice Lightning app configuration:</strong> Build apps with dynamic forms, Lightning pages, and utility bar components in a Developer Edition org.',
+    ],
+  },
   expertInsight: "App Builder is deceptively scenario-heavy — most questions aren't \"what does this feature do\" but \"which tool is the right choice here.\" The dividing line between Flow, Process Builder legacy knowledge, and custom Lightning components shows up constantly. I found the hardest section to be governor limits in declarative context: when does a screen flow hit CPU time limits vs. when does it hit DML limits? That nuance doesn't appear in most study guides.",
   introLead: [
     { type: 'text', text: 'New to Salesforce admin? Our ' },

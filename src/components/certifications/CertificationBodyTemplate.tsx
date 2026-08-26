@@ -311,6 +311,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
       </div>
 
       <CertificationPageShell tocSections={body.tocSections}>
+        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
+
         <ExamFeesSection slug={slug} />
         <OfficialSourceRef slug={slug} />
 
@@ -331,6 +333,9 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         </div>
 
         {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
+
+        {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
+        {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}

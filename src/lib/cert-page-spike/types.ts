@@ -126,6 +126,12 @@ export type AppBuilderSpikeBody = SharedCertCardAndContent & {
     intro: string
     items: { lead: string; link: { href: string; label: string }; tail: string }[]
   }
+  /** Admin-style "Who is this cert for?" persona section. */
+  whoIsThisFor?: WhoIsThisFor
+  /** Admin-style "Is this exam hard?" difficulty section. */
+  examDifficulty?: ExamDifficulty
+  /** Admin-style "Exam format explained" section. */
+  examFormat?: ExamFormat
 }
 
 /** Administrator (ADM-201): bespoke layout lives in `AdministratorCertBody`; registry entry is a marker only. */
