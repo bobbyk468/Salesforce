@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'What is the passing score for ADM-201?',
-    answer: 'The ADM-201 passing score is 65%. The exam has 65 multiple-choice questions with a 105-minute time limit. The exam fee is $200 and a retake costs $100.',
+    answer: 'The ADM-201 passing score is 68%. The exam has 65 multiple-choice questions with a 105-minute time limit. The exam fee is $200 and a retake costs $100.',
   },
   {
     question: 'How long should I study for the ADM-201 exam?',
@@ -116,7 +116,7 @@ export default function Adm201StudyGuidePage() {
           {[
             { label: 'Questions', value: '60' },
             { label: 'Time Limit', value: '105 min' },
-            { label: 'Passing Score', value: '65%' },
+            { label: 'Passing Score', value: '68%' },
             { label: 'Exam Fee', value: '$200' },
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
@@ -294,7 +294,7 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Readiness Check Before You Book</h2>
         <p className="text-sm text-gray-700 mb-2">
-          ADM-201 passing score is 65% (39/60 questions). Use this benchmark before scheduling:
+          ADM-201 passing score is 68% (41/60 questions). Use this benchmark before scheduling:
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />

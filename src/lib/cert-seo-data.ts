@@ -848,7 +848,7 @@ export function getCertMetaDescription(slug: string): string {
     'app-builder':
       `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free ADM-201 practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'marketing-cloud-consultant':
       `Marketing Cloud Consultant: Free practice exam — no sign-up. 60 questions, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':

@@ -195,7 +195,7 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
 const ROLE_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     { question: 'What is the first Salesforce certification for an administrator?', answer: 'The Salesforce Administrator (ADM-201) is the recommended first certification for anyone on the admin track. It covers the full platform — security model, automation, data management, reports, and dashboards. All other admin certifications (Advanced Administrator, App Builder) build on ADM-201 knowledge.' },
-    { question: 'How long does it take to get the Salesforce Administrator certification?', answer: 'Most candidates with no prior Salesforce experience pass ADM-201 in 8–12 weeks of part-time study. Candidates with existing CRM or Salesforce user experience often pass in 4–6 weeks. The exam is 60 questions, 105 minutes, and requires a 65% score.' },
+    { question: 'How long does it take to get the Salesforce Administrator certification?', answer: 'Most candidates with no prior Salesforce experience pass ADM-201 in 8–12 weeks of part-time study. Candidates with existing CRM or Salesforce user experience often pass in 4–6 weeks. The exam is 60 questions, 105 minutes, and requires a 68% score.' },
     { question: 'What admin certifications come after ADM-201?', answer: 'After ADM-201, the most common next certifications are Platform App Builder (declarative customisation), Advanced Administrator (advanced security and automation), and Salesforce Business Analyst. Admins who want to move into consulting typically take Sales Cloud Consultant or Service Cloud Consultant.' },
   ],
   developer: [

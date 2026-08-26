@@ -48,7 +48,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the ADM-201 exam format?',
-    answer: 'The ADM-201 exam has 65 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It is administered online or at a Pearson VUE test centre.',
+    answer: 'The ADM-201 exam has 65 multiple-choice questions, a 105-minute time limit, a 68% passing score, and a $200 fee. It is administered online or at a Pearson VUE test centre.',
   },
   {
     question: 'What are the highest-weight ADM-201 exam sections?',

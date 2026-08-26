@@ -126,7 +126,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          73% passing score — higher than most Salesforce exams (ADM-201 is 65%). Retake fee: $100. Requires hands-on Agent Builder experience.
+          73% passing score — higher than most Salesforce exams (ADM-201 is 68%). Retake fee: $100. Requires hands-on Agent Builder experience.
         </p>
       </section>
 

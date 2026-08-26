@@ -47,7 +47,7 @@ const faqItems = [
   },
   {
     question: 'Is the Salesforce Administrator (ADM-201) exam hard?',
-    answer: 'ADM-201 is moderately challenging for complete beginners. The exam covers a broad range of Salesforce features — objects, security model (profiles, roles, sharing rules), automation, reports, dashboards, and data management — and requires 65% to pass. Most candidates without Salesforce experience pass in 8–12 weeks of part-time study. The biggest challenge is the breadth of topics — no single section is very deep, but all areas need solid coverage.',
+    answer: 'ADM-201 is moderately challenging for complete beginners. The exam covers a broad range of Salesforce features — objects, security model (profiles, roles, sharing rules), automation, reports, dashboards, and data management — and requires 68% to pass. Most candidates without Salesforce experience pass in 8–12 weeks of part-time study. The biggest challenge is the breadth of topics — no single section is very deep, but all areas need solid coverage.',
   },
   {
     question: 'Do Salesforce consultant exams have a higher fail rate than admin exams?',
@@ -73,7 +73,7 @@ const tiers = [
     borderColor: 'border-yellow-200',
     description: 'Foundational certifications. Require 8–12 weeks of study with no prior experience.',
     certs: [
-      { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '~65%', note: 'Broad but not deep. Most common first cert.' },
+      { name: 'Administrator (ADM-201)', fee: '$200', questions: '60', passing: '68%', note: 'Broad but not deep. Most common first cert.' },
       { name: 'Platform App Builder', fee: '$200', questions: '60', passing: '~65%', note: 'Declarative Salesforce. Assumes ADM-201 knowledge.' },
       { name: 'Agentforce Specialist', fee: '$200', questions: '60', passing: '~73%', note: 'Higher passing score. AI/agent concepts are new for most.' },
       { name: 'Tableau Data Analyst', fee: '$250', questions: '55', passing: '75%', note: 'Highest passing score. Hands-on Tableau required.' },

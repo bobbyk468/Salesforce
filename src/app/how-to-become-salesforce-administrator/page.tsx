@@ -44,7 +44,7 @@ const faqItems = [
   },
   {
     question: 'What qualifications do I need to become a Salesforce Administrator?',
-    answer: 'There are no formal educational prerequisites for the Salesforce Administrator (ADM-201) exam. You do not need a computer science degree, prior Salesforce experience, or any other certification. The entry requirements are: pass the ADM-201 exam (65% score), access to study resources, and a Salesforce Developer Edition org for hands-on practice. Many successful admins come from business, sales, marketing, and non-technical backgrounds.',
+    answer: 'There are no formal educational prerequisites for the Salesforce Administrator (ADM-201) exam. You do not need a computer science degree, prior Salesforce experience, or any other certification. The entry requirements are: pass the ADM-201 exam (68% score), access to study resources, and a Salesforce Developer Edition org for hands-on practice. Many successful admins come from business, sales, marketing, and non-technical backgrounds.',
   },
   {
     question: 'Is Salesforce administration a good career in 2026?',
@@ -140,7 +140,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">5</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Book and Pass the ADM-201 Exam</p>
-              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 65 questions, 105 minutes, 65% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day — the retake costs $100.</p>
+              <p>Register through Webassessor (webassessor.com). You can take the exam online proctored from home (requires a webcam, quiet room, and verified ID) or at a physical test centre. The exam is 65 questions, 105 minutes, 68% passing score. The result is shown immediately after you submit. If you do not pass, you can retake after 1 day — the retake costs $100.</p>
             </div>
           </div>
           <div className="flex gap-4">
@@ -278,7 +278,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />
-            <span><strong>Booking too early.</strong> Score 75%+ on 3 full mock exams consistently before booking. The 65% passing score feels comfortable until you experience the actual scenario complexity. Many first-time failures score 62–64% — just below passing — due to premature booking.</span>
+            <span><strong>Booking too early.</strong> Score 75%+ on 3 full mock exams consistently before booking. The 68% passing score feels comfortable until you experience the actual scenario complexity. Many first-time failures score 65–67% — just below passing — due to premature booking.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-red-500 flex-shrink-0" />

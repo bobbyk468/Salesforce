@@ -51,7 +51,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Service Cloud Consultant exam format?',
-    answer: 'The Service Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee ($100 retake). ADM-201 certification is strongly recommended, and 2+ years of Service Cloud implementation experience is expected. The exam tests your ability to design and implement omnichannel customer service solutions.',
+    answer: 'The Service Cloud Consultant (now Agentforce Service Consultant) exam has 60 multiple-choice questions, a 105-minute time limit, a 78% passing score, and a $200 fee ($100 retake). ADM-201 certification is strongly recommended, and 2+ years of Service Cloud implementation experience is expected. The exam tests your ability to design and implement omnichannel customer service solutions.',
   },
   {
     question: 'What are the highest-weight Service Cloud Consultant exam sections?',

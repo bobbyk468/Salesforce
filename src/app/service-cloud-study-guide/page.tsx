@@ -50,7 +50,7 @@ const faqItems = [
   },
   {
     question: 'What is the passing score for Service Cloud Consultant?',
-    answer: 'The Service Cloud Consultant passing score is 65%. The exam has 60 multiple-choice questions, a 105-minute time limit, and a $200 fee ($100 retake). Salesforce recommends having the ADM-201 certification before attempting Service Cloud Consultant.',
+    answer: 'The Service Cloud Consultant (now Agentforce Service Consultant) passing score is 78%. The exam has 60 multiple-choice questions, a 105-minute time limit, and a $200 fee ($100 retake). Salesforce recommends having the ADM-201 certification before attempting this exam.',
   },
   {
     question: 'What are the hardest topics on the Service Cloud Consultant exam?',

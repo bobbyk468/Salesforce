@@ -132,7 +132,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               description="The Salesforce Administrator Certification (ADM-201) validates your knowledge of Salesforce CRM administration, including data management, security, automation, and analytics. Prepare for the Salesforce Certified Administrator exam with this study guide."
               examDetails={{
                 questions: 60,
-                passingScore: "65%",
+                passingScore: "68%",
                 duration: "105 min",
                 cost: "$200",
               }}
@@ -231,7 +231,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 </p>
                 <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside mb-4">
                   <li><strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.</li>
-                  <li><strong>65% passing score</strong> — you can miss up to 21 questions and still pass.</li>
+                  <li><strong>68% passing score</strong> — you can miss up to 19 questions and still pass.</li>
                   <li><strong>No coding required</strong> — the exam is entirely declarative (clicks, not code).</li>
                   <li><strong>Broad but not deep</strong> — expect questions across all 7 exam sections, weighted by the official outline.</li>
                 </ul>
@@ -268,7 +268,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Passing Score</p>
-                    <p className="text-sm text-gray-700">65% (39 of 60 scored questions)</p>
+                    <p className="text-sm text-gray-700">68% (41 of 60 scored questions)</p>
                   </div>
                   <div className="bg-blue-50 rounded-lg p-4 border border-blue-100">
                     <p className="font-semibold text-gray-900 text-sm mb-1">Question Type</p>

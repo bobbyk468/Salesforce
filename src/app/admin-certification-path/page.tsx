@@ -67,7 +67,7 @@ const pathSteps = [
     badge: 'Start Here',
     badgeColor: 'bg-emerald-100 text-emerald-800',
     fee: '$200',
-    passingScore: '65%',
+    passingScore: '68%',
     prereq: 'None',
     timeEstimate: '6–8 weeks',
     why: 'ADM-201 is the foundation of the admin track and the most widely held Salesforce credential. It tests every core admin function: security model, automation (Flow Builder), data management, reports and dashboards, and the sales/service application setup. Almost every Salesforce admin role lists this as a requirement — it is the starting point for any admin career path.',
