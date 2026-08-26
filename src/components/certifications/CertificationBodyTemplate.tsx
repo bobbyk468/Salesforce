@@ -5,6 +5,7 @@ import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
+import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
@@ -177,6 +178,9 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           <CertIntroParagraph slug={slug} />
         </div>
       )}
+      <div className="max-w-7xl mx-auto px-4">
+        <CertTrustBar slug={slug} />
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <CertPageCta slug={slug} certTitle={title} />
       </div>

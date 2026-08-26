@@ -5,6 +5,7 @@ import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
+import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
 import ExamLogisticsSection from '@/components/ExamLogisticsSection'
 import RelatedCertifications from '@/components/RelatedCertifications'
@@ -216,7 +217,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
           <p className="text-xs text-gray-600 mt-3">15 full practice questions with explanations are below ↓</p>
         </div>
 
-        {/* Prominent CTA above fold */}
+        {/* Trust signals + Prominent CTA above fold */}
+        <CertTrustBar slug={slug} />
         <CertPageCta slug={slug} certTitle={slugToDisplayName(slug)} />
         <ContentPageAuthor />
 
