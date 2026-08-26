@@ -8,7 +8,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
     code: 'AI Associate',
     description:
       'The Salesforce AI Associate credential is designed for individuals who may have knowledge of AI, whether beginners or more experienced. It validates foundational skills in ethical and responsible handling of data as they apply to AI in CRM.',
-    examDetails: { questions: 40, passingScore: '~65%', duration: '75 min', cost: '$75' },
+    examDetails: { questions: 40, passingScore: '65%', duration: '70 min', cost: '$75' },
     topics: [
       'AI Fundamentals',
       'Ethics & Responsibility',

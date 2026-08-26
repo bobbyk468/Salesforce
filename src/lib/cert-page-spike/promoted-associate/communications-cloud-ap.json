@@ -4,8 +4,8 @@
     "code": "AP",
     "description": "This exam covers implementing Communications Cloud for telecom and media companies — product catalog setup, Industries CPQ, order orchestration, and subscription lifecycle management.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~65%",
+      "questions": 55,
+      "passingScore": "56%",
       "duration": "90 min",
       "cost": "$150"
     },

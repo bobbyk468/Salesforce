@@ -5,7 +5,7 @@
     "description": "This exam covers hands-on Heroku development: deploying apps with buildpacks, configuring dynos, managing add-ons, and integrating with Salesforce via Heroku Connect. Expect questions on Procfile setup, config vars, and worker-based background jobs.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "68%",
       "duration": "90 min",
       "cost": "$150"
     },

@@ -5,8 +5,8 @@
     "description": "This exam covers Salesforce Media Cloud for broadcasters, publishers, and digital media companies — ad sales workflows, rights and entitlements management, campaign delivery, and revenue billing.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "passingScore": "66%",
+      "duration": "75 min",
       "cost": "$150"
     },
     "topics": [

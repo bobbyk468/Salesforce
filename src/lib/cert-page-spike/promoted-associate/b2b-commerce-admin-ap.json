@@ -5,7 +5,7 @@
     "description": "This exam covers B2B Commerce store administration — configuring storefronts, catalogs, buyer groups, pricing, and checkout flows on the Salesforce platform.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "75%",
       "duration": "90 min",
       "cost": "$150"
     },
