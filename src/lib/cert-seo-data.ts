@@ -223,7 +223,7 @@ export const SLUG_TO_STUDY_GUIDE: Record<string, string> = {
   'pardot-consultant': '/pardot-consultant-study-guide',
 }
 
-/** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $150 for AP, $400 for Architect, $250 for Tableau, $75 for Associate/Foundations, $1,500/$4,500 for CTA tiers. */
+/** Exam cost mapping for SEO (meta descriptions, titles). Default: $200 for most certs, $150 for AP, $400 for Architect, $75 for Foundations, $1,500/$4,500 for CTA tiers. */
 export const SLUG_TO_EXAM_COST: Record<string, string> = {
   // $200 (most certs - default)
   administrator: '$200',
@@ -259,9 +259,13 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'omnistudio-consultant': '$200',
   'revenue-cloud-consultant': '$200',
   'slack-consultant': '$200',
+  'mulesoft-catalyst-consultant': '$200',
   'email-specialist': '$200',
   'pardot-specialist': '$200',
   'strategy-designer': '$200',
+  'tableau-consultant': '$200',
+  'tableau-data-analyst': '$200',
+  'tableau-server-administrator': '$200',
   'ai-associate': '$75',
   'marketing-cloud-engagement-foundations': '$75',
   'mulesoft-integration-foundations': '$75',
@@ -301,18 +305,13 @@ export const SLUG_TO_EXAM_COST: Record<string, string> = {
   'b2c-commerce-architect': '$400',
   'b2c-solution-architect': '$400',
   'heroku-architect': '$400',
-  'mulesoft-catalyst-consultant': '$400',
   'mulesoft-platform-architect': '$400',
   'mulesoft-integration-architect': '$400',
-  // $250 (Tableau)
-  'tableau-architect': '$250',
-  'tableau-consultant': '$250',
-  'tableau-data-analyst': '$250',
-  'tableau-server-administrator': '$250',
-  'tableau-desktop-foundations': '$100',
-  // $75 (Foundations)
+  'tableau-architect': '$400',
+  // $75 (Foundations — free retake)
   'platform-foundations': '$75',
-  'sales-foundations': '$200',
+  'sales-foundations': '$75',
+  'tableau-desktop-foundations': '$75',
   // CTA (two-phase: Architect Evaluation $1,500 → Review Board $4,500)
   'technical-architect': '$1,500',
   'technical-architect-evaluation': '$1,500',
@@ -387,9 +386,7 @@ export function getRetakeCost(slug: string): string {
   if (cost === '$4,500') return '$2,250'
   if (cost === '$1,500') return '$750'
   if (cost === '$400') return '$200'
-  if (cost === '$250') return '$125'
   if (cost === '$150') return '$150'
-  if (cost === '$100') return '$50'
   if (cost === '$75') return 'Free'
   return '$100'
 }
@@ -398,28 +395,28 @@ export function getRetakeCost(slug: string): string {
 export type ExamLogisticsDetail = { questions: number | string; passingScore: string; duration: string }
 
 const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
-  administrator: { questions: 60, passingScore: '65%', duration: '105 min' },
-  'advanced-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'app-builder': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  administrator: { questions: 60, passingScore: '68%', duration: '105 min' },
+  'advanced-administrator': { questions: 60, passingScore: '65%', duration: '105 min' },
+  'app-builder': { questions: 60, passingScore: '63%', duration: '105 min' },
   'agentforce-specialist': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'business-analyst': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'business-analyst': { questions: 60, passingScore: '72%', duration: '105 min' },
   'cpq-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'marketing-cloud-engagement-admin': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'slack-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'developer-1': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'developer-2': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'javascript-developer-i': { questions: 60, passingScore: '~68%', duration: '105 min' },
+  'developer-1': { questions: 60, passingScore: '68%', duration: '105 min' },
+  'developer-2': { questions: 60, passingScore: '70%', duration: '120 min' },
+  'javascript-developer-i': { questions: 60, passingScore: '65%', duration: '105 min' },
   'b2c-commerce-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'industries-cpq-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'marketing-cloud-engagement-developer': { questions: 60, passingScore: '~67%', duration: '105 min' },
-  'mulesoft-developer-i': { questions: 60, passingScore: '~70%', duration: '120 min' },
-  'mulesoft-developer-ii': { questions: 60, passingScore: '~70%', duration: '120 min' },
+  'mulesoft-developer-i': { questions: 60, passingScore: '70%', duration: '120 min' },
+  'mulesoft-developer-ii': { questions: 60, passingScore: '70%', duration: '120 min' },
   'mulesoft-hyperautomation-developer': { questions: 60, passingScore: '~68%', duration: '105 min' },
   'omnistudio-developer': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'slack-developer': { questions: 60, passingScore: '~68%', duration: '105 min' },
   'sales-cloud': { questions: 60, passingScore: '68%', duration: '105 min' },
-  'service-cloud': { questions: 60, passingScore: '67%', duration: '105 min' },
-  'data-360-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'service-cloud': { questions: 60, passingScore: '78%', duration: '105 min' },
+  'data-360-consultant': { questions: 60, passingScore: '70%', duration: '105 min' },
   'crm-analytics-einstein-discovery-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'education-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'experience-cloud': { questions: 60, passingScore: '~65%', duration: '105 min' },
@@ -429,20 +426,20 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'nonprofit-cloud': { questions: 60, passingScore: '65%', duration: '105 min' },
   'nonprofit-success-pack-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'omnistudio-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'revenue-cloud-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  'revenue-cloud-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
   'slack-consultant': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'email-specialist': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'pardot-specialist': { questions: 60, passingScore: '72%', duration: '90 min' },
   'strategy-designer': { questions: 60, passingScore: '~65%', duration: '105 min' },
   'ai-associate': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'marketing-cloud-engagement-foundations': { questions: 40, passingScore: '~65%', duration: '75 min' },
+  'marketing-cloud-engagement-foundations': { questions: 40, passingScore: '~62%', duration: '70 min' },
   'mulesoft-integration-foundations': { questions: 40, passingScore: '70%', duration: '70 min' },
   'ux-designer': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'platform-foundations': { questions: 40, passingScore: '~65%', duration: '75 min' },
-  'sales-foundations': { questions: 60, passingScore: '~65%', duration: '90 min' },
-  'administrator-practice-test': { questions: 60, passingScore: '65%', duration: '105 min' },
+  'platform-foundations': { questions: 40, passingScore: '62%', duration: '70 min' },
+  'sales-foundations': { questions: 40, passingScore: '62%', duration: '70 min' },
+  'administrator-practice-test': { questions: 60, passingScore: '68%', duration: '105 min' },
   'email-specialist-practice-test': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  // $100 AP
+  // $150 AP
   'advanced-field-service-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   'b2b-commerce-admin-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   'b2b-commerce-developer-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
@@ -467,26 +464,28 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'process-automation-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   'public-sector-solutions-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   // $400 Architects
-  'application-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'data-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'integration-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'sharing-visibility-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'system-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'identity-access-management-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'dev-lifecycle-deployment-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'b2b-solution-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'b2c-commerce-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'b2c-solution-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'heroku-architect': { questions: 60, passingScore: '~65%', duration: '105 min' },
-  'mulesoft-catalyst-consultant': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'mulesoft-platform-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  'mulesoft-integration-architect': { questions: 60, passingScore: '~68%', duration: '120 min' },
-  // Tableau
-  'tableau-architect': { questions: 45, passingScore: '~70%', duration: '90 min' },
-  'tableau-consultant': { questions: 45, passingScore: '~70%', duration: '90 min' },
-  'tableau-data-analyst': { questions: 45, passingScore: '~70%', duration: '90 min' },
-  'tableau-server-administrator': { questions: 45, passingScore: '~70%', duration: '90 min' },
-  'tableau-desktop-foundations': { questions: 40, passingScore: '~65%', duration: '60 min' },
+  'application-architect': { questions: 60, passingScore: '~58%', duration: '105 min' },
+  'data-architect': { questions: 60, passingScore: '58%', duration: '105 min' },
+  'integration-architect': { questions: 60, passingScore: '67%', duration: '105 min' },
+  'sharing-visibility-architect': { questions: 60, passingScore: '58%', duration: '120 min' },
+  'system-architect': { questions: 60, passingScore: '~58%', duration: '105 min' },
+  'identity-access-management-architect': { questions: 60, passingScore: '~58%', duration: '105 min' },
+  'dev-lifecycle-deployment-architect': { questions: 60, passingScore: '~58%', duration: '105 min' },
+  'b2b-solution-architect': { questions: 60, passingScore: '~63%', duration: '105 min' },
+  'b2c-commerce-architect': { questions: 60, passingScore: '~63%', duration: '105 min' },
+  'b2c-solution-architect': { questions: 60, passingScore: '~63%', duration: '105 min' },
+  'heroku-architect': { questions: 60, passingScore: '~63%', duration: '105 min' },
+  'mulesoft-platform-architect': { questions: 60, passingScore: '~67%', duration: '120 min' },
+  'mulesoft-integration-architect': { questions: 60, passingScore: '~67%', duration: '120 min' },
+  'tableau-architect': { questions: 59, passingScore: '63%', duration: '105 min' },
+  // Tableau ($200 tier)
+  'tableau-consultant': { questions: 60, passingScore: '63%', duration: '105 min' },
+  'tableau-data-analyst': { questions: 60, passingScore: '65%', duration: '105 min' },
+  'tableau-server-administrator': { questions: 60, passingScore: '~65%', duration: '105 min' },
+  // Tableau Foundations ($75 tier)
+  'tableau-desktop-foundations': { questions: 40, passingScore: '48%', duration: '70 min' },
+  // Consultant ($200 tier)
+  'mulesoft-catalyst-consultant': { questions: 60, passingScore: '~63%', duration: '105 min' },
   // CTA / Board
   'technical-architect': { questions: 'Board exam', passingScore: 'Board review', duration: 'Board' },
   'technical-architect-evaluation': { questions: 'Scenario + MC', passingScore: 'Per exam', duration: 'Timed' },
@@ -841,7 +840,7 @@ export function getCertMetaDescription(slug: string): string {
     'slack-developer':
       `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'tableau-data-analyst':
-      `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free Tableau Data Analyst practice exam: 60 questions, 65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'mulesoft-integration-foundations':
       `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
     'technical-architect':
@@ -849,17 +848,17 @@ export function getCertMetaDescription(slug: string): string {
     'technical-architect-review-board':
       `Free CTA Review Board prep: practice presenting and defending architecture decisions, scenario walkthroughs, and board Q&A drills. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
     'integration-architect':
-      `Integration Architect: Free practice exam — no sign-up. 60 Qs, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
+      `Integration Architect: Free practice exam — no sign-up. 60 Qs, 67% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
     'data-architect':
-      `Free Data Architect (ARC-801) practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free Data Architect (ARC-801) practice exam: 60 questions, 58% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'system-architect':
-      `Salesforce System Architect: Free practice exam — no sign-up. 60 questions, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} study guide.`,
+      `Salesforce System Architect: Free practice exam — no sign-up. 60 questions, ~58% passing. $400 fee. Sample Qs & ${TITLE_YEAR} study guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
     'advanced-field-service-ap': `Advanced Field Service AP exam prep: covers work order lifecycle, scheduling optimization & mobile worker tools. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'agentforce-specialist': `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'application-architect': `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. Exam retired Feb 2026. ${RELEASE_YEAR} — no sign-up.`,
+    'application-architect': `Free Application Architect practice exam: 60 questions, ~58% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'b2b-commerce-admin-ap': `B2B Commerce Admin AP exam prep: covers storefront setup, catalog management, buyer groups & entitlements. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'b2b-commerce-developer-ap': `B2B Commerce Developer AP exam prep: covers storefront customization, APIs, checkout & integration. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'b2b-solution-architect': `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
@@ -910,16 +909,16 @@ export function getCertMetaDescription(slug: string): string {
     'platform-foundations': `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
     'process-automation-ap': `Process Automation AP exam prep: covers Flow Builder, approval processes, automation rules & invocable actions. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'public-sector-solutions-ap': `Public Sector Solutions AP exam prep: covers grants management, licensing, inspections & case management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'revenue-cloud-consultant': `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'sales-foundations': `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'service-cloud': `Free Service Cloud (CRT-261) practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'revenue-cloud-consultant': `Free Revenue Cloud Consult practice exam: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'sales-foundations': `Free Agentforce Sales Foundations practice exam: 40 questions, 62% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'service-cloud': `Free Service Cloud (CRT-261) practice exam: 60 questions, 78% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'slack-administrator': `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'slack-consultant': `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'strategy-designer': `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-server-administrator': `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'tableau-architect': `Free Tableau Architect practice exam: 59 questions, 63% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'tableau-consultant': `Free Tableau Consultant practice exam: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, 48% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'tableau-server-administrator': `Free Tableau Server Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'technical-architect-evaluation': `Free CTA Evaluation prep: scenario-based architecture questions, multiple-choice sections, and timed design exercises. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
     'ux-designer': `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     // Claude (Anthropic) certifications
@@ -1048,7 +1047,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     {
       question: 'What is the Salesforce Administrator (ADM-201) passing score in Summer \'26?',
-      answer: 'The ADM-201 passing score is 65%, which means you need at least 39 correct answers out of 60 scored questions. You get 105 minutes, and Salesforce may include 5 unscored pilot questions in the exam session.',
+      answer: 'The ADM-201 passing score is 68%, which means you need at least 41 correct answers out of 60 scored questions. You get 105 minutes, and Salesforce may include 5 unscored pilot questions in the exam session.',
     },
     {
       question: 'What is the ADM-201 exam fee in Summer \'26?',
@@ -1056,7 +1055,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'How many questions are on the ADM-201 exam, and what is the passing score?',
-      answer: 'The ADM-201 exam has 60 multiple-choice questions. You have 105 minutes and need 65% (39 correct answers) to pass. There are also 5 unscored pilot questions, so your actual exam will have 65 questions.',
+      answer: 'The ADM-201 exam has 60 multiple-choice questions. You have 105 minutes and need 68% (41 correct answers) to pass. There are also 5 unscored pilot questions, so your actual exam will have 65 questions.',
     },
     {
       question: 'Can I use ADM-201 exam dumps to pass?',
@@ -1214,7 +1213,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Service Cloud Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Service Cloud Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 67%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
+      answer: 'The Agentforce Service Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 78%. The exam fee is $200 USD (retake $100 USD). Salesforce may include 5 unscored pilot questions.',
     },
     {
       question: 'What are the highest-weight sections in the Service Cloud Consultant exam?',
@@ -1256,7 +1255,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the PD1 passing score and exam format in Summer \'26?',
-      answer: 'The Platform Developer I (PD1) exam has 60 multiple-choice questions, 110 minutes, and a passing score of 68% (41 correct). Salesforce may include 5 unscored pilot questions. The exam costs $200 USD (retake $100 USD) and is available online-proctored or at a test center.',
+      answer: 'The Platform Developer I (PD1) exam has 60 multiple-choice questions, 105 minutes, and a passing score of 68% (41 correct). Salesforce may include 5 unscored pilot questions. The exam costs $200 USD (retake $100 USD) and is available online-proctored or at a test center.',
     },
     {
       question: 'What are the most common reasons candidates fail PD1?',
@@ -1317,8 +1316,8 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
       answer: 'The exam covers Einstein capabilities across Sales Cloud, Service Cloud, Marketing Cloud, and Commerce Cloud. You should understand what each Einstein product does, when to use it, and responsible AI principles.',
     },
     {
-      question: 'What is the AI Associate passing score and exam fee in Summer \'26?',
-      answer: 'The Salesforce AI Associate exam has 40 multiple-choice questions, 70 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). It is an associate-level credential with no formal prerequisite.',
+      question: 'What is the AI Associate passing score and exam fee?',
+      answer: 'The Salesforce AI Associate certification was retired on February 2, 2026. When active, it had 60 multiple-choice questions, 105 minutes, a ~65% passing score, and a $75 USD fee (free retake). Salesforce now recommends the Agentforce Specialist certification and Agentblazer Status as replacements.',
     },
     {
       question: 'Is the AI Associate exam technical or conceptual?',
@@ -1351,7 +1350,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the passing score and exam fee for ADM-211?',
-      answer: 'The Advanced Administrator (ADM-211) certification has a passing score of 64% and exam fee of typically $200 USD (retake $100 USD). The exam consists of 60 multiple-choice questions with 105 minutes allowed.',
+      answer: 'The Advanced Administrator (ADM-211) certification has a passing score of 65% and exam fee of $200 USD (retake $100 USD). The exam consists of 60 multiple-choice questions with 105 minutes allowed.',
     },
     {
       question: 'What topics are covered in the ADM-211 Advanced Administrator exam?',
@@ -1393,7 +1392,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the PD2 passing score and exam fee in Summer \'26?',
-      answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite — you cannot sit PD2 without it.',
+      answer: 'The Platform Developer II (PD2) exam has 60 multiple-choice questions, 120 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). PD1 certification is a mandatory prerequisite — you cannot sit PD2 without it.',
     },
     {
       question: 'What design patterns are tested in Platform Developer II?',
@@ -1457,7 +1456,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the Data 360 Consultant passing score and exam fee in Summer \'26?',
-      answer: 'The Salesforce Data 360 Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 62%. The exam fee is $200 USD (retake $100 USD). Platform Administrator certification is required.',
+      answer: 'The Salesforce Data 360 Consultant exam has 60 multiple-choice questions, 105 minutes, and a passing score of 70%. The exam fee is $200 USD (retake $100 USD). Platform Administrator certification is required.',
     },
     {
       question: 'What is identity resolution in Data Cloud and why does it appear on the exam?',
@@ -2074,7 +2073,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
     },
     {
       question: 'What is the passing score and exam fee for the Salesforce Certified Tableau Data Analyst?',
-      answer: 'The Tableau Data Analyst exam has 45 questions, approximately 90 minutes, and a passing score of around 70%. The exam fee is $250 USD. No formal prerequisite, though Salesforce recommends Tableau Desktop experience and real-world data analysis practice before attempting.',
+      answer: 'The Tableau Data Analyst exam has 60 questions, 105 minutes, and a passing score of 65%. The exam fee is $200 USD (retake $100 USD). No formal prerequisite, though Salesforce recommends Tableau Desktop experience and real-world data analysis practice before attempting.',
     },
     {
       question: 'What topics are covered in the Tableau Data Analyst exam?',
