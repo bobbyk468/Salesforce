@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Business Analyst surprised me with how much it leans into stakeholder management and discovery techniques over platform configuration. About a third of my exam was pure BA methodology — elicitation techniques, user story formats, acceptance criteria, and how to prioritise a backlog when stakeholders disagree. The Salesforce-specific questions focus on when to recommend declarative vs. programmatic solutions and how to translate business requirements into data model decisions. I&apos;d recommend spending equal time on Agile/Scrum concepts as on the platform itself — the 72% passing score is one of the highest for consultant-level exams.",
   "introLead": [
     {
       "type": "text",

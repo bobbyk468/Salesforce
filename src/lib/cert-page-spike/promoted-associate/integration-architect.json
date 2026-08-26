@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Integration Architect is one of the harder architect-level exams because it spans so many integration patterns — REST, SOAP, Platform Events, Change Data Capture, Heroku Connect, MuleSoft, and outbound messaging all show up. The questions I found hardest involved choosing between near-real-time and batch patterns when the scenario description is deliberately ambiguous about latency requirements. Pay close attention to governor limits on callouts (100 per transaction, 120-second timeout) and the order-of-execution implications when mixing triggers with @future or Queueable. Canvas apps and Connected Apps for SSO came up more than I expected.",
   "introLead": [
     {
       "type": "text",
