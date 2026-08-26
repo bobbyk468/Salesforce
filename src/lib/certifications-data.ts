@@ -385,6 +385,133 @@ export function getStrategicInternalLinks(certSlug: string): StrategicInternalLi
     }
   }
 
+  const comparisonMap: Record<string, { href: string; text: string }[]> = {
+    administrator: [
+      { href: '/adm-201-vs-app-builder', text: 'ADM-201 vs App Builder: which to take first?' },
+      { href: '/administrator-vs-advanced-administrator', text: 'Administrator vs Advanced Administrator comparison' },
+    ],
+    'advanced-administrator': [
+      { href: '/administrator-vs-advanced-administrator', text: 'Administrator vs Advanced Administrator comparison' },
+    ],
+    'app-builder': [
+      { href: '/adm-201-vs-app-builder', text: 'ADM-201 vs App Builder: which to take first?' },
+      { href: '/app-builder-vs-developer-i', text: 'App Builder vs Developer I comparison' },
+    ],
+    'developer-1': [
+      { href: '/pd1-vs-pd2', text: 'PD1 vs PD2: when to upgrade' },
+      { href: '/javascript-developer-i-vs-pd1', text: 'JavaScript Developer I vs PD1 comparison' },
+      { href: '/app-builder-vs-developer-i', text: 'App Builder vs Developer I comparison' },
+    ],
+    'developer-2': [
+      { href: '/pd1-vs-pd2', text: 'PD1 vs PD2: when to upgrade' },
+    ],
+    'javascript-developer-i': [
+      { href: '/javascript-developer-i-vs-pd1', text: 'JavaScript Developer I vs PD1 comparison' },
+    ],
+    'sales-cloud': [
+      { href: '/sales-cloud-vs-service-cloud', text: 'Sales Cloud vs Service Cloud comparison' },
+      { href: '/sales-cloud-vs-experience-cloud-consultant', text: 'Sales Cloud vs Experience Cloud comparison' },
+    ],
+    'service-cloud': [
+      { href: '/sales-cloud-vs-service-cloud', text: 'Sales Cloud vs Service Cloud comparison' },
+      { href: '/field-service-vs-service-cloud-consultant', text: 'Field Service vs Service Cloud comparison' },
+    ],
+    'experience-cloud': [
+      { href: '/sales-cloud-vs-experience-cloud-consultant', text: 'Sales Cloud vs Experience Cloud comparison' },
+    ],
+    'field-service': [
+      { href: '/field-service-vs-service-cloud-consultant', text: 'Field Service vs Service Cloud comparison' },
+    ],
+    'data-360-consultant': [
+      { href: '/data-cloud-vs-crm-analytics', text: 'Data Cloud vs CRM Analytics comparison' },
+      { href: '/data-cloud-vs-marketing-cloud', text: 'Data Cloud vs Marketing Cloud comparison' },
+    ],
+    'crm-analytics-einstein-discovery-consultant': [
+      { href: '/data-cloud-vs-crm-analytics', text: 'Data Cloud vs CRM Analytics comparison' },
+    ],
+    'pardot-consultant': [
+      { href: '/pardot-consultant-vs-marketing-cloud-consultant', text: 'Pardot vs Marketing Cloud Consultant comparison' },
+      { href: '/pardot-specialist-vs-pardot-consultant', text: 'Pardot Specialist vs Consultant comparison' },
+    ],
+    'pardot-specialist': [
+      { href: '/pardot-specialist-vs-pardot-consultant', text: 'Pardot Specialist vs Consultant comparison' },
+    ],
+    'marketing-cloud-consultant': [
+      { href: '/pardot-consultant-vs-marketing-cloud-consultant', text: 'Pardot vs Marketing Cloud Consultant comparison' },
+    ],
+    'agentforce-specialist': [
+      { href: '/agentforce-specialist-vs-ai-associate', text: 'Agentforce Specialist vs AI Associate comparison' },
+    ],
+    'ai-associate': [
+      { href: '/agentforce-specialist-vs-ai-associate', text: 'Agentforce Specialist vs AI Associate comparison' },
+      { href: '/platform-foundations-vs-ai-associate', text: 'Platform Foundations vs AI Associate comparison' },
+    ],
+    'platform-foundations': [
+      { href: '/platform-foundations-vs-ai-associate', text: 'Platform Foundations vs AI Associate comparison' },
+    ],
+    'integration-architect': [
+      { href: '/integration-architect-vs-system-architect', text: 'Integration Architect vs System Architect comparison' },
+    ],
+    'system-architect': [
+      { href: '/system-architect-vs-application-architect', text: 'System Architect vs Application Architect comparison' },
+      { href: '/integration-architect-vs-system-architect', text: 'Integration Architect vs System Architect comparison' },
+    ],
+    'application-architect': [
+      { href: '/system-architect-vs-application-architect', text: 'System Architect vs Application Architect comparison' },
+    ],
+    'ux-designer': [
+      { href: '/ux-designer-vs-strategy-designer', text: 'UX Designer vs Strategy Designer comparison' },
+    ],
+    'strategy-designer': [
+      { href: '/ux-designer-vs-strategy-designer', text: 'UX Designer vs Strategy Designer comparison' },
+      { href: '/business-analyst-vs-strategy-designer', text: 'Business Analyst vs Strategy Designer comparison' },
+    ],
+    'business-analyst': [
+      { href: '/business-analyst-vs-strategy-designer', text: 'Business Analyst vs Strategy Designer comparison' },
+    ],
+    'mulesoft-developer-i': [
+      { href: '/mulesoft-developer-i-vs-ii', text: 'MuleSoft Developer I vs II comparison' },
+      { href: '/mulesoft-developer-i-vs-integration-foundations', text: 'MuleSoft Developer I vs Integration Foundations' },
+    ],
+    'mulesoft-developer-ii': [
+      { href: '/mulesoft-developer-i-vs-ii', text: 'MuleSoft Developer I vs II comparison' },
+    ],
+    'mulesoft-integration-foundations': [
+      { href: '/mulesoft-developer-i-vs-integration-foundations', text: 'MuleSoft Developer I vs Integration Foundations' },
+    ],
+    'omnistudio-developer': [
+      { href: '/omnistudio-developer-vs-consultant', text: 'OmniStudio Developer vs Consultant comparison' },
+    ],
+    'omnistudio-consultant': [
+      { href: '/omnistudio-developer-vs-consultant', text: 'OmniStudio Developer vs Consultant comparison' },
+    ],
+  }
+  const comparisons = comparisonMap[certSlug] ?? []
+  for (const c of comparisons) {
+    links.push({ name: c.text, href: c.href, anchorText: c.text })
+  }
+
+  const pathMap: Record<string, { href: string; text: string }> = {
+    administrator: { href: '/admin-certification-path', text: 'Full Admin certification path' },
+    'advanced-administrator': { href: '/admin-certification-path', text: 'Full Admin certification path' },
+    'app-builder': { href: '/admin-certification-path', text: 'Full Admin certification path' },
+    'developer-1': { href: '/developer-certification-path', text: 'Full Developer certification path' },
+    'developer-2': { href: '/developer-certification-path', text: 'Full Developer certification path' },
+    'javascript-developer-i': { href: '/developer-certification-path', text: 'Full Developer certification path' },
+    'sales-cloud': { href: '/consultant-certification-path', text: 'Full Consultant certification path' },
+    'service-cloud': { href: '/consultant-certification-path', text: 'Full Consultant certification path' },
+    'experience-cloud': { href: '/consultant-certification-path', text: 'Full Consultant certification path' },
+    'technical-architect': { href: '/architect-certification-path', text: 'Full Architect certification path' },
+    'application-architect': { href: '/architect-certification-path', text: 'Full Architect certification path' },
+    'system-architect': { href: '/architect-certification-path', text: 'Full Architect certification path' },
+    'data-architect': { href: '/architect-certification-path', text: 'Full Architect certification path' },
+    'integration-architect': { href: '/architect-certification-path', text: 'Full Architect certification path' },
+  }
+  const path = pathMap[certSlug]
+  if (path) {
+    links.push({ name: path.text, href: path.href, anchorText: path.text })
+  }
+
   return dedupeLinks(links).filter((link) => link.href !== currentHref)
 }
 
