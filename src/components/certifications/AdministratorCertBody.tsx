@@ -25,6 +25,7 @@ import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
+import OfficialSourceRef from '@/components/OfficialSourceRef'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
 import PrintChecklistButton from '@/components/PrintChecklistButton'
@@ -122,7 +123,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
-            
+            <OfficialSourceRef slug={slug} />
+
             <CertificationCard
               slug={slug}
               title={slugToDisplayName(slug)}

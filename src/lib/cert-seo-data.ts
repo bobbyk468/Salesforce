@@ -506,6 +506,44 @@ export function getExamLogistics(slug: string): (ExamLogisticsDetail & { fee: st
   return { ...detail, fee: cost, retake }
 }
 
+export const EXAM_PRICING_URL = 'https://help.salesforce.com/s/articleView?id=005298916&type=1&language=en_US'
+
+export const SLUG_TO_EXAM_GUIDE_URL: Record<string, string> = {
+  administrator: 'https://help.salesforce.com/s/articleView?id=005298966&language=en_US&type=1',
+  'advanced-administrator': 'https://help.salesforce.com/s/articleView?id=005298969&language=en_US&type=1',
+  'app-builder': 'https://help.salesforce.com/s/articleView?id=005298964&language=en_US&type=1',
+  'agentforce-specialist': 'https://help.salesforce.com/s/articleView?id=005298924&type=1&language=en_US',
+  'business-analyst': 'https://help.salesforce.com/s/articleView?id=005298939&language=en_US&type=1',
+  'cpq-administrator': 'https://help.salesforce.com/s/articleView?id=005298937&type=1&language=en_US',
+  'developer-1': 'https://help.salesforce.com/s/articleView?id=005298965&language=en_US&type=1',
+  'developer-2': 'https://help.salesforce.com/s/articleView?id=005298967&language=en_US&type=1',
+  'javascript-developer-i': 'https://help.salesforce.com/s/articleView?id=005298945&language=en_US&type=1',
+  'mulesoft-developer-i': 'https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1',
+  'mulesoft-developer-ii': 'https://help.salesforce.com/s/articleView?id=005298955&language=en_US&type=1',
+  'omnistudio-developer': 'https://help.salesforce.com/s/articleView?id=005298971&language=en_US&type=1',
+  'slack-developer': 'https://help.salesforce.com/s/articleView?id=005298987&type=1&language=en_US',
+  'sales-cloud': 'https://trailhead.salesforce.com/en/credentials/salescloudsonsultant',
+  'service-cloud': 'https://help.salesforce.com/s/articleView?id=005298989&language=en_US&type=1',
+  'data-360-consultant': 'https://help.salesforce.com/s/articleView?id=005298940&language=en_US&type=1',
+  'education-cloud-consultant': 'https://help.salesforce.com/s/articleView?id=005298934&type=1&language=en_US',
+  'pardot-consultant': 'https://help.salesforce.com/s/articleView?id=005298951&type=1&language=en_US',
+  'nonprofit-success-pack-consultant': 'https://help.salesforce.com/s/articleView?id=005298973&language=en_US&type=1',
+  'omnistudio-consultant': 'https://help.salesforce.com/s/articleView?id=005298970&language=en_US&type=1',
+  'revenue-cloud-consultant': 'https://help.salesforce.com/s/articleView?id=005298978&language=en_US&type=1',
+  'data-architect': 'https://help.salesforce.com/s/articleView?id=005298972&language=en_US&type=1',
+  'integration-architect': 'https://help.salesforce.com/s/articleView?id=005298980&language=en_US&type=1',
+  'sharing-visibility-architect': 'https://help.salesforce.com/s/articleView?id=005298977&language=en_US&type=1',
+  'mulesoft-platform-architect': 'https://help.salesforce.com/s/articleView?id=005298957&language=en_US&type=1',
+  'b2c-solution-architect': 'https://help.salesforce.com/s/articleView?id=005298942&language=en_US&type=1',
+  'b2c-commerce-architect': 'https://help.salesforce.com/s/articleView?id=005298936&language=en_US&type=1',
+  'platform-foundations': 'https://help.salesforce.com/s/articleView?id=005298979&language=en_US&type=1',
+  'tableau-architect': 'https://help.salesforce.com/s/articleView?id=005298985&language=en_US&type=1',
+  'tableau-consultant': 'https://help.salesforce.com/s/articleView?id=005298993&language=en_US&type=1',
+  'tableau-data-analyst': 'https://help.salesforce.com/s/articleView?id=005298984&language=en_US&type=1',
+  'tableau-desktop-foundations': 'https://help.salesforce.com/s/articleView?id=005298988&language=en_US&type=1',
+  'ai-associate': 'https://help.salesforce.com/s/articleView?id=005298930&type=1&language=en_US',
+}
+
 /** Occupation role-proxy data for Occupation schema. Maps cert slug to parent role job title and mid-level salary range. */
 export const SLUG_TO_OCCUPATION_DATA: Record<string, { jobTitle: string; medianSalary: number; salaryRange: { minSalary: number; maxSalary: number } }> = {
   administrator: { jobTitle: 'Salesforce Administrator', medianSalary: 90000, salaryRange: { minSalary: 80000, maxSalary: 100000 } },

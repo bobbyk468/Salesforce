@@ -40,6 +40,7 @@ import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import ExpertInsightCallout from '@/components/ExpertInsightCallout'
+import OfficialSourceRef from '@/components/OfficialSourceRef'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -198,6 +199,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
 
       <CertificationPageShell tocSections={body.tocSections}>
         <ExamFeesSection slug={slug} />
+        <OfficialSourceRef slug={slug} />
 
         <CertificationCard
           slug={slug}
@@ -301,6 +303,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
 
       <CertificationPageShell tocSections={body.tocSections}>
         <ExamFeesSection slug={slug} />
+        <OfficialSourceRef slug={slug} />
 
         <CertificationCard
           slug={slug}

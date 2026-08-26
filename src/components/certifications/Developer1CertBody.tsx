@@ -21,6 +21,7 @@ import CertMockScoreGuide from '@/components/CertMockScoreGuide'
 import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
+import OfficialSourceRef from '@/components/OfficialSourceRef'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -230,7 +231,8 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
         <div className="lg:col-span-3">
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
-            
+            <OfficialSourceRef slug={slug} />
+
             <CertificationCard
               slug={slug}
             title={slugToDisplayName(slug)}
