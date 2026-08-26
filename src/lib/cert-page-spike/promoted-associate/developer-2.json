@@ -2,6 +2,36 @@
   "template": "associate",
   "expertInsight": "PD2 is nothing like PD1 — the multiple-choice section barely matters if you bomb the programming assignment. The assignment is graded on test coverage AND code quality: I’ve seen people pass all functional tests but fail because their trigger handler wasn’t bulkified or they used SOQL inside a loop. Write your tests to cover bulk scenarios (200+ records) from the start, not as an afterthought. Also, the Visualforce and Lightning component questions lean heavily on controller lifecycle — when does init fire vs. afterRender, what happens on a rerender, and where server calls actually execute.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "whoIsThisFor": {
+    "heading": "Who is the Platform Developer II exam for?",
+    "personas": [
+      { "label": "Mid-senior developers", "description": "You write Apex daily and want to prove advanced design pattern and architecture skills." },
+      { "label": "PD1 holders", "description": "You passed Developer I and want the next credential in the developer track." },
+      { "label": "Tech leads", "description": "You review code, make architecture decisions, and need to demonstrate senior-level Salesforce development expertise." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Platform Developer II Exam Hard?",
+    "summary": "PD2 is widely considered one of the hardest Salesforce certifications. It combines a 60-question multiple-choice exam with a separate programming assignment, and the $400 price tag reflects its architect-tier difficulty.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes — the longest non-architect exam.",
+      "<strong>70% passing score</strong> — higher than PD1 and most consultant exams.",
+      "<strong>Separate programming assignment</strong> — graded on code quality, test coverage, and bulkification, not just passing tests.",
+      "<strong>Advanced Apex patterns</strong> — trigger frameworks, governor limit strategies, asynchronous processing, and enterprise integration patterns."
+    ],
+    "passRateGuidance": "Most successful candidates have 2+ years of daily Apex development. Score 80%+ on multiple-choice practice exams before attempting the programming assignment."
+  },
+  "examFormat": {
+    "heading": "Platform Developer II Exam Format Explained",
+    "intro": "PD2 has a unique two-part format. You must pass both the multiple-choice exam and the programming assignment to earn the certification:",
+    "scenarioPercent": "The multiple-choice section is roughly 40% scenario-based, but the programming assignment is 100% hands-on. You receive a set of requirements and must build a working solution with proper test coverage in a proctored environment.",
+    "bestWayToPass": [
+      "<strong>Write bulkified code from day one:</strong> The programming assignment tests bulk data handling with 200+ records. SOQL inside loops is an automatic failure pattern.",
+      "<strong>Master async Apex:</strong> Know when to use @future, Queueable, Batch, and Schedulable — and their respective governor limits.",
+      "<strong>Study design patterns:</strong> Trigger handler patterns, selector/domain/service layer separation, and dependency injection appear in both the MC and programming sections.",
+      "<strong>Practice test-driven development:</strong> Write tests before code. The assignment grades test coverage AND assertion quality."
+    ]
+  },
   "certificationCard": {
     "code": "PD2",
     "description": "The Platform Developer II certification validates your advanced development skills including design patterns, testing strategies, and integration techniques.",

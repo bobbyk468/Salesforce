@@ -1,6 +1,36 @@
 {
   "template": "associate",
   "expertInsight": "Integration Architect is one of the harder architect-level exams because it spans so many integration patterns — REST, SOAP, Platform Events, Change Data Capture, Heroku Connect, MuleSoft, and outbound messaging all show up. The questions I found hardest involved choosing between near-real-time and batch patterns when the scenario description is deliberately ambiguous about latency requirements. Pay close attention to governor limits on callouts (100 per transaction, 120-second timeout) and the order-of-execution implications when mixing triggers with @future or Queueable. Canvas apps and Connected Apps for SSO came up more than I expected.",
+  "whoIsThisFor": {
+    "heading": "Who is the Integration Architect exam for?",
+    "personas": [
+      { "label": "Senior developers", "description": "You design integration solutions and want to validate your API architecture and middleware expertise." },
+      { "label": "Aspiring architects", "description": "You are pursuing the Application Architect or CTA path and need Integration Architect as a prerequisite." },
+      { "label": "Integration consultants", "description": "You deliver complex multi-system integrations with Salesforce and need the credential to demonstrate architecture skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Integration Architect Exam Hard?",
+    "summary": "Integration Architect is considered one of the harder architect-level exams. It spans a wide range of integration patterns and requires deep understanding of both Salesforce APIs and external middleware.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>67% passing score</strong> — moderate threshold, but questions require deep architectural reasoning.",
+      "<strong>Broad pattern coverage</strong> — REST, SOAP, Platform Events, Change Data Capture, Heroku Connect, MuleSoft, and outbound messaging all appear.",
+      "<strong>Governor limit awareness</strong> — callout limits (100 per transaction, 120-second timeout) and async processing are frequently tested."
+    ],
+    "passRateGuidance": "Candidates with 3+ years of integration project experience perform best. Score 75%+ on practice exams and be comfortable whiteboarding integration architectures before booking."
+  },
+  "examFormat": {
+    "heading": "Integration Architect Exam Format Explained",
+    "intro": "The exam is proctored online or at a test centre. Here is the format:",
+    "scenarioPercent": "Roughly 60-70% of questions are scenario-based. The most common pattern is describing a data sync requirement between Salesforce and an external system and asking you to choose the optimal integration pattern (real-time vs. near-real-time vs. batch, push vs. pull).",
+    "bestWayToPass": [
+      "<strong>Master integration patterns:</strong> Know when to use REST vs. SOAP, Platform Events vs. CDC, synchronous vs. asynchronous, and push vs. pull for each scenario type.",
+      "<strong>Understand governor limits for callouts:</strong> 100 callout limit per transaction, 120-second timeout, and how to design around them with @future and Queueable.",
+      "<strong>Study Canvas and Connected Apps:</strong> These show up more than expected — know SSO flows, OAuth scopes, and Canvas app lifecycle.",
+      "<strong>Review middleware options:</strong> Understand when to use MuleSoft, Heroku Connect, or native Salesforce APIs for different integration complexity levels."
+    ]
+  },
   "introLead": [
     {
       "type": "text",

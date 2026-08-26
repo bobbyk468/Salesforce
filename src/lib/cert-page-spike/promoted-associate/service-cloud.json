@@ -2,6 +2,36 @@
   "template": "associate",
   "expertInsight": "The trickiest questions involve entitlement processes and milestone triggers — specifically whether a milestone resets on status change vs. a field value change. Several scenario questions present a complex SLA matrix and ask you to identify the correct milestone action. Spend extra time on Omni-Channel capacity models too; the difference between tab-based and capacity-based routing trips up a lot of candidates.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "whoIsThisFor": {
+    "heading": "Who is the Service Cloud Consultant exam for?",
+    "personas": [
+      { "label": "Support leads", "description": "You manage a service team and want to validate your Salesforce Service Cloud configuration skills." },
+      { "label": "Admins moving into consulting", "description": "You have ADM-201 and want to specialise in service operations and case management." },
+      { "label": "Implementation consultants", "description": "You deliver Service Cloud projects and need the credential to back your hands-on expertise." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Service Cloud Consultant Exam Hard?",
+    "summary": "The Agentforce Service Consultant (formerly Service Cloud Consultant) exam is considered challenging. The 78% passing score is one of the highest among consultant-level exams, and questions are heavily scenario-based.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes — roughly 1.75 minutes per question.",
+      "<strong>78% passing score</strong> — significantly higher than most Salesforce exams. You can only miss about 13 questions.",
+      "<strong>Scenario-heavy</strong> — most questions describe a business situation and ask you to design the correct Service Cloud solution.",
+      "<strong>ADM-201 knowledge assumed</strong> — the exam builds directly on admin fundamentals."
+    ],
+    "passRateGuidance": "Aim for 85%+ on practice exams before booking. The 78% passing score leaves very little margin for error compared to other consultant exams."
+  },
+  "examFormat": {
+    "heading": "Service Cloud Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or in-person through Webassessor. Here is the format breakdown:",
+    "scenarioPercent": "Roughly 60-70% of questions are scenario-based. They typically describe a customer support requirement and ask which Service Cloud feature or configuration addresses it. Entitlement/Milestone scenarios and Omni-Channel routing decisions are the most common patterns.",
+    "bestWayToPass": [
+      "<strong>Master Omni-Channel routing models:</strong> Know the difference between queue-based, skills-based, and external routing. Understand capacity models (tab-based vs. status-based).",
+      "<strong>Build entitlement processes hands-on:</strong> Configure milestones with warning and violation actions in a Developer Edition org. This is tested heavily.",
+      "<strong>Study Knowledge Management lifecycle:</strong> Understand article versioning, data categories, and case deflection metrics.",
+      "<strong>Take timed practice exams:</strong> Simulate 60 questions in 105 minutes. Target 85%+ before booking due to the high passing score."
+    ]
+  },
   "certificationCard": {
     "code": "SVC",
     "description": "The Service Cloud Consultant certification validates your expertise in designing and implementing Service Cloud solutions for customer service operations.",

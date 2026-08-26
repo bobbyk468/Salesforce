@@ -41,6 +41,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
+import { WhoIsThisForSection, ExamDifficultySection, ExamFormatSection } from '@/components/CertAdminStyleSections'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -198,6 +199,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
       </div>
 
       <CertificationPageShell tocSections={body.tocSections}>
+        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
+
         <ExamFeesSection slug={slug} />
         <OfficialSourceRef slug={slug} />
 
@@ -218,6 +221,9 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         </div>
 
         {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
+
+        {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
+        {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
 
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
 
@@ -289,6 +295,9 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
     <>
       <CertPageSeo slug={slug} certTitle={title} />
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
+      <div className="max-w-7xl mx-auto px-4">
+        <CertTrustBar slug={slug} />
+      </div>
       <div className="max-w-7xl mx-auto px-4">
         <CertPageCta slug={slug} certTitle={title} examCode={body.ctaExamCode} />
       </div>

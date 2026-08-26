@@ -1,6 +1,36 @@
 {
   "template": "associate",
   "expertInsight": "Experience Cloud catches most candidates off guard with licensing nuances — the exam specifically tests when to use Partner Community vs. Customer Community Plus vs. Customer Community licenses for different access levels. I counted 6–8 questions on sharing rules vs. sharing sets vs. super user access. Memorize the sharing model comparison table before exam day; it's the single highest-leverage thing you can do in the final week.",
+  "whoIsThisFor": {
+    "heading": "Who is the Experience Cloud Consultant exam for?",
+    "personas": [
+      { "label": "Community builders", "description": "You configure Experience Cloud sites (portals, communities) and want to validate your implementation skills." },
+      { "label": "Consultants", "description": "You deliver portal projects and need the credential to demonstrate experience with Experience Cloud templates, sharing, and CMS." },
+      { "label": "Admins specialising in external users", "description": "You manage partner or customer portals and want to formalise your knowledge of external user licensing and sharing models." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Experience Cloud Consultant Exam Hard?",
+    "summary": "Experience Cloud Consultant is considered one of the harder consultant exams. The content covers niche topics — external user licensing, sharing sets, CMS, and template configuration — that require specific project experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> — moderate threshold, but the content difficulty compensates.",
+      "<strong>Licensing-heavy</strong> — expect 6-8 questions on when to use Partner Community, Customer Community, and Customer Community Plus licenses.",
+      "<strong>Sharing model for external users</strong> — sharing sets, super user access, and sharing groups are heavily tested."
+    ],
+    "passRateGuidance": "Build at least one Experience Cloud site with external users in a Developer Edition org before booking. Memorise the sharing model comparison table."
+  },
+  "examFormat": {
+    "heading": "Experience Cloud Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or at a test centre through Webassessor. Here is the format:",
+    "scenarioPercent": "About 55-65% of questions are scenario-based. Common patterns include selecting the right license type for an external user access requirement, configuring sharing rules for portal users, and choosing the right Experience Cloud template for a business need.",
+    "bestWayToPass": [
+      "<strong>Master the licensing model:</strong> Know the exact capabilities and limits of each Community license type — this is the single highest-tested topic.",
+      "<strong>Understand sharing for external users:</strong> Sharing sets, sharing groups, and super user access are different from internal sharing and are tested in detail.",
+      "<strong>Study CMS configuration:</strong> Know how to create content, build pages with Lightning components, and configure navigation.",
+      "<strong>Practice template selection:</strong> Understand when to use Customer Service, Partner Central, Help Center, and custom templates."
+    ]
+  },
   "certificationCard": {
     "code": "Experience Cloud",
     "description": "The Experience Cloud Consultant certification validates your expertise in designing and implementing Experience Cloud sites for customers, partners, and employees.",

@@ -1,6 +1,36 @@
 {
   "template": "associate",
   "expertInsight": "Business Analyst surprised me with how much it leans into stakeholder management and discovery techniques over platform configuration. About a third of my exam was pure BA methodology — elicitation techniques, user story formats, acceptance criteria, and how to prioritise a backlog when stakeholders disagree. The Salesforce-specific questions focus on when to recommend declarative vs. programmatic solutions and how to translate business requirements into data model decisions. I&apos;d recommend spending equal time on Agile/Scrum concepts as on the platform itself — the 72% passing score is one of the highest for consultant-level exams.",
+  "whoIsThisFor": {
+    "heading": "Who is the Salesforce Business Analyst exam for?",
+    "personas": [
+      { "label": "Business analysts", "description": "You gather requirements and translate them into Salesforce solutions. This cert validates your BA methodology on the platform." },
+      { "label": "Admins expanding their role", "description": "You already configure Salesforce and want to formalise your requirements-gathering and stakeholder management skills." },
+      { "label": "Project managers", "description": "You manage Salesforce implementations and want to demonstrate your ability to bridge business and technical teams." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Business Analyst Exam Hard?",
+    "summary": "The Business Analyst exam is moderately challenging. The 72% passing score is one of the highest for consultant-level exams, and the content splits evenly between BA methodology and Salesforce platform knowledge.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>72% passing score</strong> — higher than most consultant exams. You can only miss about 17 questions.",
+      "<strong>Heavy on methodology</strong> — expect questions on elicitation techniques, user stories, acceptance criteria, and backlog prioritisation.",
+      "<strong>Salesforce-specific</strong> — you must know when to recommend declarative vs. programmatic solutions and translate requirements into data model decisions."
+    ],
+    "passRateGuidance": "Spend equal study time on Agile/Scrum methodology and Salesforce platform capabilities. Score 80%+ on practice exams before booking."
+  },
+  "examFormat": {
+    "heading": "Business Analyst Exam Format Explained",
+    "intro": "The exam is proctored and delivered online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right elicitation technique for a stakeholder situation, prioritising competing requirements, and recommending declarative vs. custom development for a given business need.",
+    "bestWayToPass": [
+      "<strong>Master elicitation techniques:</strong> Know when to use interviews, workshops, surveys, observation, and document analysis — the exam tests which technique fits which situation.",
+      "<strong>Study user story formats:</strong> Understand the As a/I want/So that format, acceptance criteria, and how to decompose epics into stories.",
+      "<strong>Know declarative vs. programmatic boundaries:</strong> For every Salesforce feature, know when it requires code vs. clicks — this is the most tested platform topic.",
+      "<strong>Understand Agile ceremonies:</strong> Sprint planning, backlog refinement, retrospectives, and the BA role in each."
+    ]
+  },
   "introLead": [
     {
       "type": "text",

@@ -2,6 +2,36 @@
   "template": "associate",
   "expertInsight": "Sales Cloud questions cluster around forecasting hierarchy setup and opportunity splits — two areas most candidates underestimate. At least 20% of questions test when to use Territory Management vs. Opportunity Teams vs. Collaborative Forecasting. Time-box your study on collaborative forecasting; it shows up in scenario questions far more than the official exam guide suggests.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "whoIsThisFor": {
+    "heading": "Who is the Sales Cloud Consultant exam for?",
+    "personas": [
+      { "label": "Sales ops professionals", "description": "You configure Salesforce for sales teams and want to validate your solution design skills." },
+      { "label": "Admins moving into consulting", "description": "You have ADM-201 and want to specialise in sales process automation and forecasting." },
+      { "label": "CRM consultants", "description": "You deliver Sales Cloud implementations and need the credential for client-facing engagements." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Sales Cloud Consultant Exam Hard?",
+    "summary": "The Sales Cloud Consultant exam is moderately difficult. It is scenario-heavy and assumes strong ADM-201 knowledge plus real-world Sales Cloud project experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Scenario-driven</strong> — questions describe sales team requirements and ask you to choose the best Salesforce configuration.",
+      "<strong>Forecasting and territory management</strong> are heavily tested and often the most challenging topics."
+    ],
+    "passRateGuidance": "Score 75%+ on at least 3 full-length practice exams before booking. Candidates with hands-on Sales Cloud project experience have a significant advantage."
+  },
+  "examFormat": {
+    "heading": "Sales Cloud Consultant Exam Format Explained",
+    "intro": "The exam is delivered online or at a test centre through Webassessor. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include: configuring opportunity stages and sales processes for different business units, setting up collaborative forecasting, and choosing between Territory Management and manual sharing for complex org structures.",
+    "bestWayToPass": [
+      "<strong>Master forecasting:</strong> Understand Collaborative Forecasting, forecast types, forecast hierarchies, and forecast adjustments. This is the most tested area.",
+      "<strong>Know opportunity management deeply:</strong> Sales processes, record types, path, and opportunity splits all appear frequently.",
+      "<strong>Study territory management:</strong> Understand Territory Management 2.0 — territory types, models, assignment rules, and how they interact with forecasting.",
+      "<strong>Practice in a real org:</strong> Set up a Developer Edition with sample sales data and configure the features you study."
+    ]
+  },
   "certificationCard": {
     "code": "SCC",
     "description": "The Sales Cloud Consultant certification validates your expertise in designing and implementing Sales Cloud solutions to meet business requirements.",

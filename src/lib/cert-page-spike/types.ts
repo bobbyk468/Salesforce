@@ -61,6 +61,28 @@ export type SharedCertCardAndContent = {
   sampleQuestions: SpikeSampleQuestion[]
 }
 
+/** Persona-based “Who is this cert for?” section. */
+export type WhoIsThisFor = {
+  heading: string
+  personas: { label: string; description: string }[]
+}
+
+/** “Is this exam hard?” difficulty and pass-rate section. */
+export type ExamDifficulty = {
+  heading: string
+  summary: string
+  bullets: string[]
+  passRateGuidance: string
+}
+
+/** “Exam format explained” quick-reference grid + strategy. */
+export type ExamFormat = {
+  heading: string
+  intro: string
+  scenarioPercent?: string
+  bestWayToPass: string[]
+}
+
 /** AI Associate stack: intro paragraph component, key concepts before scenarios, FullQuestionBank CTA. */
 export type AssociateSpikeBody = SharedCertCardAndContent & {
   template: 'associate'
@@ -74,6 +96,12 @@ export type AssociateSpikeBody = SharedCertCardAndContent & {
     intro: string
     links: { href: string; label: string }[]
   }
+  /** Admin-style “Who is this cert for?” persona section. */
+  whoIsThisFor?: WhoIsThisFor
+  /** Admin-style “Is this exam hard?” difficulty section. */
+  examDifficulty?: ExamDifficulty
+  /** Admin-style “Exam format explained” section. */
+  examFormat?: ExamFormat
 }
 
 export type MoreQuestionsParagraph =

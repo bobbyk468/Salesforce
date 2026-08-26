@@ -1,6 +1,36 @@
 {
   "template": "associate",
   "expertInsight": "The exam goes deep on identity resolution rules and unified profile merging logic — areas that genuinely require hands-on practice in a Data Cloud-enabled org. Reconciliation rules (most recent vs. source priority) are heavily tested in scenario format. About 30% of questions involved DMO relationship mapping, which is very hard to absorb from documentation alone — you need to build a few data streams yourself to internalize it.",
+  "whoIsThisFor": {
+    "heading": "Who is the Data Cloud Consultant exam for?",
+    "personas": [
+      { "label": "Data architects", "description": "You design data models and want to validate your Salesforce Data Cloud and CDP expertise." },
+      { "label": "CRM analysts", "description": "You work with customer data unification and want to prove your identity resolution and segmentation skills." },
+      { "label": "Implementation consultants", "description": "You deliver Data Cloud projects and need the credential to demonstrate hands-on proficiency." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Data Cloud Consultant Exam Hard?",
+    "summary": "The Data Cloud Consultant exam is challenging. The 70% passing score is above average, and the content covers Data Cloud-specific concepts (DMOs, identity resolution, calculated insights) that require hands-on experience in a Data Cloud-enabled org.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>70% passing score</strong> — you can only miss about 18 questions.",
+      "<strong>Data Cloud-specific concepts</strong> — data model objects (DMOs), data streams, identity resolution rules, and segmentation are all heavily tested.",
+      "<strong>Hands-on required</strong> — documentation alone is insufficient; you need to configure data streams and reconciliation rules yourself."
+    ],
+    "passRateGuidance": "Build at least one end-to-end Data Cloud implementation (ingest, model, resolve, segment, activate) in a trial org before booking. Target 80%+ on practice exams."
+  },
+  "examFormat": {
+    "heading": "Data Cloud Consultant Exam Format Explained",
+    "intro": "The exam is proctored and delivered online through Webassessor. Here is the format:",
+    "scenarioPercent": "Roughly 50-60% of questions are scenario-based. Common patterns include choosing the correct identity resolution rule type for a merge scenario, mapping DMO relationships for a given business requirement, and selecting the right activation target for a segment.",
+    "bestWayToPass": [
+      "<strong>Master identity resolution:</strong> Understand reconciliation rules (most recent, source priority), match rules, and how unified profiles are built.",
+      "<strong>Build DMO relationships hands-on:</strong> Map data streams to DMOs, configure relationships, and understand how calculated insights work.",
+      "<strong>Study segmentation and activation:</strong> Know how to build segments, schedule activations, and choose the right activation target (Marketing Cloud, Ads, etc.).",
+      "<strong>Understand data ingestion patterns:</strong> Know the difference between connector-based ingestion, API-based ingestion, and file-based ingestion."
+    ]
+  },
   "certificationCard": {
     "code": "Data Cloud",
     "description": "This exam tests your ability to design data ingestion, identity resolution, segmentation, and activation workflows in Salesforce Data Cloud. Expect scenario questions on unified profiles, calculated insights, and consent management.",

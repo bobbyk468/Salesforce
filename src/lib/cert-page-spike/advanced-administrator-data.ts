@@ -19,6 +19,36 @@ export const advancedAdministratorCertPageBody: AssociateSpikeBody = {
   ],
   practiceQuestionsIntroSuffix:
     ". Click on an answer to select it, then check your answer to see if you're correct.",
+  whoIsThisFor: {
+    heading: 'Who is the Advanced Administrator exam for?',
+    personas: [
+      { label: 'Experienced admins', description: 'You have ADM-201 and 2+ years of admin experience and want to validate advanced configuration skills.' },
+      { label: 'Senior admins', description: 'You manage complex orgs with advanced security models, delegated administration, and multi-layer automation.' },
+      { label: 'Admins moving into consulting', description: 'You want to demonstrate senior-level admin expertise before pursuing consultant certifications.' },
+    ],
+  },
+  examDifficulty: {
+    heading: 'Is the Advanced Administrator Exam Hard?',
+    summary: 'The Advanced Administrator exam is moderately difficult. It builds directly on ADM-201 but goes significantly deeper into security, automation, and change management topics.',
+    bullets: [
+      '<strong>60 multiple-choice questions</strong> in 105 minutes.',
+      '<strong>65% passing score</strong> — you can miss up to 21 questions.',
+      '<strong>Deeper than ADM-201</strong> — advanced Flow patterns, delegated administration, territory management, and complex sharing rules are all tested.',
+      '<strong>Requires real-world experience</strong> — scenario questions assume you have managed a production Salesforce org.',
+    ],
+    passRateGuidance: 'Score 75%+ on 3 full practice exams before booking. Focus on the areas where ADM-201 was surface-level: advanced security, approval processes with cross-object conditions, and change sets.',
+  },
+  examFormat: {
+    heading: 'Advanced Administrator Exam Format Explained',
+    intro: 'The exam is proctored online or in-person through Webassessor. Here is the format:',
+    scenarioPercent: 'About 50-60% of questions are scenario-based. Common patterns include designing complex sharing rules for multi-business-unit orgs, troubleshooting automation conflicts (multiple flows on the same object), and configuring delegated administration for regional admin teams.',
+    bestWayToPass: [
+      '<strong>Master advanced security:</strong> Delegated administration, custom sharing rules, Apex-managed sharing, and territory management are the highest-tested areas.',
+      '<strong>Study advanced Flow patterns:</strong> Subflows, fault paths, scheduled paths, and the order of execution when multiple automations fire on the same record.',
+      '<strong>Know approval processes deeply:</strong> Cross-object field updates, parallel approvals, recall actions, and dynamic approval routing.',
+      '<strong>Understand change management:</strong> Change sets, deployment strategies, and sandbox types are tested more than in ADM-201.',
+    ],
+  },
   certificationCard: {
     code: 'ADM-211',
     description:

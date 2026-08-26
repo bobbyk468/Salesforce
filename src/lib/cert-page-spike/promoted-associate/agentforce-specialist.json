@@ -1,6 +1,36 @@
 {
   "template": "associate",
   "expertInsight": "The live exam leans heavily on Agentforce Studio configuration — expect 8–10 questions on agent topic classification, channel setup, and escalation rules. Trailhead modules alone won't cover the nuances; you need hands-on time in a scratch org building actual agents. The hardest questions involved multi-channel routing scenarios where you had to choose between Agent, Bot, and Flow.",
+  "whoIsThisFor": {
+    "heading": "Who is the Agentforce Specialist exam for?",
+    "personas": [
+      { "label": "AI-curious admins", "description": "You want to add AI and agent-building skills to your Salesforce admin toolkit." },
+      { "label": "Automation specialists", "description": "You build flows and bots and want to expand into Agentforce Studio and autonomous agents." },
+      { "label": "Consultants and architects", "description": "You need to design AI agent solutions for clients and want the credential to validate your expertise." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Agentforce Specialist Exam Hard?",
+    "summary": "Agentforce Specialist is moderately hard. The 73% passing score is notably higher than most Salesforce exams, and the content covers relatively new AI agent concepts that many candidates have limited hands-on exposure to.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>73% passing score</strong> — higher than ADM-201 (68%) and most consultant exams.",
+      "<strong>Rapidly evolving content</strong> — the Agentforce platform is still maturing, so some exam questions cover features with limited community documentation.",
+      "<strong>Hands-on required</strong> — Trailhead modules alone are not sufficient; you need scratch org experience with Agent Builder."
+    ],
+    "passRateGuidance": "Build at least 2-3 agents in a scratch org before booking. Score 80%+ on practice exams to leave margin for the unfamiliar questions."
+  },
+  "examFormat": {
+    "heading": "Agentforce Specialist Exam Format Explained",
+    "intro": "The exam is proctored and delivered online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include choosing the right agent type for a business requirement, configuring topic classification, and designing escalation flows between AI agents and human support.",
+    "bestWayToPass": [
+      "<strong>Get hands-on with Agent Builder:</strong> Build agents with multiple topics, configure channel routing, and test escalation paths in a scratch org.",
+      "<strong>Understand Einstein Trust Layer:</strong> Know how data masking, toxicity detection, and grounding work — these concepts appear frequently.",
+      "<strong>Study agent lifecycle:</strong> Topic classification, action mapping, guardrails, and how agents decide when to escalate to humans.",
+      "<strong>Review Prompt Builder:</strong> Understand prompt templates, grounding with CRM data, and how to test prompt effectiveness."
+    ]
+  },
   "certificationCard": {
     "code": "Agentforce",
     "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment.",
