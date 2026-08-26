@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { CERTIFICATION_CATEGORIES } from './certifications-data'
 import { getCertPrimaryName, getCertFormerName } from './cert-name-aliases'
-import { RELEASE_CURRENT, RELEASE_YEAR } from './release-data'
+import { RELEASE_CURRENT, RELEASE_DATE, RELEASE_YEAR } from './release-data'
 import { getExamWeightage } from './exam-weightage-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
@@ -2720,6 +2720,12 @@ export function getCertWebPageJsonLd(
     name: title,
     description,
     url,
+    dateModified: `${RELEASE_DATE}T00:00:00Z`,
+    reviewedBy: {
+      '@type': 'Person',
+      name: 'Krishna Mohan',
+      url: `${baseUrl}/team`,
+    },
     publisher: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
     breadcrumb: getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName),
   }

@@ -1,4 +1,4 @@
-import { RELEASE_CURRENT } from './release-data'
+import { RELEASE_DATE_DISPLAY } from './release-data'
 
 export const CONTACT_EMAIL = 'km.krishnamohan25@gmail.com'
 export const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=918807570951&text=Hello%2C%0A%0A%20%20%20%20%20%20%20%20Drop%20us%20your%20query'
@@ -7,7 +7,7 @@ export const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=918807570951&t
 export const SITE_NAME = 'Trailblaze Prep'
 
 /** Shown on cert pages and About for E-E-A-T; update when content is refreshed. */
-export const CONTENT_LAST_UPDATED = RELEASE_CURRENT
+export const CONTENT_LAST_UPDATED = RELEASE_DATE_DISPLAY
 
 /**
  * Social profile URLs for Organization schema (sameAs) and footer.

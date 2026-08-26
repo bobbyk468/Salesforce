@@ -12,6 +12,9 @@ export const RELEASE_YEAR = '2026'
 /** ISO date when content was last refreshed for current release — used for Article dateModified, freshness signals. */
 export const RELEASE_DATE = '2026-08-24'
 
+/** Human-readable version of RELEASE_DATE for visible E-E-A-T review notes. */
+export const RELEASE_DATE_DISPLAY = 'August 24, 2026'
+
 
 /** What's new in the current release vs previous — relevant to certification exams and study. */
 export const WHATS_NEW_CURRENT_RELEASE: string[] = [
