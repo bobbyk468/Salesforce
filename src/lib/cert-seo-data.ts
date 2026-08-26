@@ -596,7 +596,7 @@ function getCertMetaTitle(slug: string): string {
     'integration-architect': `Integration Architect Cert: Free Practice (${TITLE_YEAR})`,
     'data-architect': `Data Architect Certification: Free Practice (${TITLE_YEAR})`,
     // Extended coverage: All remaining certs for complete CTR optimization
-    'administrator-practice-test': `Free ADM-201 Practice Test Practice Exam ${RELEASE_YEAR}`,
+    'administrator-practice-test': `Free ADM-201 Mock Practice Exam ${RELEASE_YEAR}`,
     'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam ${RELEASE_YEAR}`,
     'agentforce-specialist': `Free Agentforce Specialist Practice Exam ${RELEASE_YEAR}`,
     'ai-associate': `Free AI Associate Practice Exam ${RELEASE_YEAR}`,
@@ -615,7 +615,7 @@ function getCertMetaTitle(slug: string): string {
     'data-360-consultant': `Free Data 360 Consultant Practice Exam ${RELEASE_YEAR}`,
     'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch Practice Exam ${RELEASE_YEAR}`,
     'education-cloud-consultant': `Free Education Cloud Consult Practice Exam ${RELEASE_YEAR}`,
-    'email-specialist-practice-test': `Free Email Spec Practice Practice Exam ${RELEASE_YEAR}`,
+    'email-specialist-practice-test': `Free Email Specialist Mock Practice Exam ${RELEASE_YEAR}`,
     'energy-utilities-ap': `Free Energy & Utilities AP Practice Exam ${RELEASE_YEAR}`,
     'field-service': `Free Field Service Consultant Practice Exam ${RELEASE_YEAR}`,
     'financial-services-cloud-ap': `Free Agentforce Financial Services AP Practice Exam ${RELEASE_YEAR}`,
@@ -661,6 +661,11 @@ function getCertMetaTitle(slug: string): string {
     'tableau-server-administrator': `Free Tableau Server Admin Practice Exam ${RELEASE_YEAR}`,
     'technical-architect-evaluation': `Free CTA Evaluation Practice Exam ${RELEASE_YEAR}`,
     'ux-designer': `Free UX Designer Practice Exam ${RELEASE_YEAR}`,
+    // Claude (Anthropic) certifications
+    'claude-certified-associate': `Free Claude Associate (CCAO-F) Practice Exam ${RELEASE_YEAR}`,
+    'claude-certified-developer': `Free Claude Developer (CCDV-F) Practice Exam ${RELEASE_YEAR}`,
+    'claude-certified-architect-foundations': `Free Claude Architect Foundations (CCAR-F) Exam ${RELEASE_YEAR}`,
+    'claude-certified-architect-professional': `Free Claude Architect Pro (CCAR-P) Exam ${RELEASE_YEAR}`,
   }
   const ctrTitle = ctrTitleOverrides[slug]
   if (ctrTitle) return clampTitle(ctrTitle)
@@ -767,6 +772,11 @@ function getCertMetaTitle(slug: string): string {
     'tableau-data-analyst': 'Salesforce Certified Tableau Data Analyst',
     'tableau-desktop-foundations': 'Salesforce Certified Tableau Desktop Foundations',
     'tableau-server-administrator': 'Salesforce Certified Tableau Server Administrator',
+    // Claude (Anthropic) certifications
+    'claude-certified-associate': 'Claude Certified Associate (CCAO-F)',
+    'claude-certified-developer': 'Claude Certified Developer (CCDV-F)',
+    'claude-certified-architect-foundations': 'Claude Certified Architect Foundations (CCAR-F)',
+    'claude-certified-architect-professional': 'Claude Certified Architect Professional (CCAR-P)',
   }
   const short = shortTitles[slug]
   if (short) {
@@ -829,9 +839,9 @@ export function getCertMetaDescription(slug: string): string {
     'mulesoft-integration-foundations':
       `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
     'technical-architect':
-      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free CTA practice scenarios: board-style design questions, solution defense prep, and architecture trade-off drills. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
     'technical-architect-review-board':
-      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free CTA Review Board prep: practice presenting and defending architecture decisions, scenario walkthroughs, and board Q&A drills. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
     'integration-architect':
       `Integration Architect: Free practice exam — no sign-up. 60 Qs, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
     'data-architect':
@@ -840,7 +850,7 @@ export function getCertMetaDescription(slug: string): string {
       `Salesforce System Architect: Free practice exam — no sign-up. 60 questions, ~68% passing. $400 fee. Sample Qs & ${TITLE_YEAR} study guide.`,
     // Extended coverage: All remaining certs for universal CTR optimization
     'advanced-field-service-ap': `Advanced Field Service AP exam prep: covers work order lifecycle, scheduling optimization & mobile worker tools. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'administrator-practice-test': `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'agentforce-specialist': `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'ai-associate': `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'application-architect': `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
@@ -860,7 +870,7 @@ export function getCertMetaDescription(slug: string): string {
     'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'email-specialist-practice-test': `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'email-specialist-practice-test': `Free Email Specialist mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'energy-utilities-ap': `Energy & Utilities AP exam prep: covers meter management, rates, service agreements & billing. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'field-service': `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'financial-services-cloud-ap': `Financial Services Cloud AP exam prep: covers wealth management, insurance, mortgages & referral management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
@@ -904,207 +914,17 @@ export function getCertMetaDescription(slug: string): string {
     'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
     'tableau-desktop-foundations': `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
     'tableau-server-administrator': `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'technical-architect-evaluation': `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'technical-architect-evaluation': `Free CTA Evaluation prep: scenario-based architecture questions, multiple-choice sections, and timed design exercises. $6,000 total fee. ${RELEASE_YEAR} — no sign-up.`,
     'ux-designer': `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    // Claude (Anthropic) certifications
+    'claude-certified-associate': `Free Claude Associate (CCAO-F) practice exam: 60 questions, 720/1000 passing, 120 min. $99 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'claude-certified-developer': `Free Claude Developer (CCDV-F) practice exam: 53 questions, 720/1000 passing, 120 min. $125 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'claude-certified-architect-foundations': `Free Claude Architect (CCAR-F) practice exam: 60 questions, 720/1000 passing, 120 min. $125 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'claude-certified-architect-professional': `Free Claude Architect Pro (CCAR-P) practice exam: 65 questions, 720/1000 passing, 120 min. $175 fee. ${RELEASE_YEAR} — no sign-up.`,
   }
   const override = ctrDescriptionOverrides[slug]
   if (override) {
     return finalizeMetaDescription(override)
-  }
-  const templates: Record<string, string> = {
-    // Associate (strong CTR: weightage, passing score, Updated 2026)
-    'platform-foundations':
-      `Free Platform Foundations practice exam: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'ai-associate':
-      `Free AI Associate practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-engagement-foundations':
-      `Free MC Foundations practice exam: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-integration-foundations':
-      `Free MuleSoft Foundations practice exam: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Administrator track (base certs – strong CTR for people who start here)
-    administrator:
-      `Free ADM-201 practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'advanced-administrator':
-      `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'app-builder':
-      'No-code Salesforce certification. DEV-402 exam guide 2026: $200 fee, 60 questions, declarative app building. Perfect for admins ready to build custom apps. Free practice questions.',
-    'agentforce-specialist':
-      `Free Agentforce Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'business-analyst':
-      'Prepare for the Salesforce Certified Business Analyst certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'cpq-administrator':
-      'Prepare for the Salesforce Certified CPQ Administrator certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'marketing-cloud-engagement-admin':
-      `Free MC Engagement Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'slack-administrator':
-      `Free Slack Administrator practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'administrator-practice-test':
-      `Free ADM-201 Practice Test practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Developer track (strong CTR: numbers, passing score, cost, Updated 2026)
-    'developer-1':
-      `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'developer-2':
-      `Free Platform Developer II (PD2) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'javascript-developer-i':
-      `Free JavaScript Developer I practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2c-commerce-developer':
-      `Free B2C Commerce Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'industries-cpq-developer':
-      `Free Industries CPQ Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-engagement-developer':
-      `Free MC Engagement Dev practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-developer-i':
-      `Free MuleSoft Developer I practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-developer-ii':
-      `Free MuleSoft Developer II practice exam: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-hyperautomation-developer':
-      `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'omnistudio-developer':
-      `Free OmniStudio Developer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'slack-developer':
-      `Free Slack Developer practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Consultant track (strong CTR: numbers, passing score, cost, Updated 2026)
-    'crm-analytics-einstein-discovery-consultant':
-      `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'data-360-consultant':
-      `Free Data 360 Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'education-cloud-consultant':
-      `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'experience-cloud':
-      'Prepare for the Salesforce Certified Experience Cloud Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'field-service':
-      `Free Field Service Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'pardot-consultant':
-      'Prepare for the Salesforce Certified Pardot (Account Engagement) Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'marketing-cloud-consultant':
-      'Prepare for the Salesforce Certified Marketing Cloud Engagement Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'nonprofit-cloud':
-      `Free Nonprofit Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'nonprofit-success-pack-consultant':
-      `Free NPSP Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'omnistudio-consultant':
-      `Free OmniStudio Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'revenue-cloud-consultant':
-      `Free Revenue Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'sales-cloud':
-      'Prepare for the Salesforce Certified Agentforce Sales Consultant certification (2026). $200 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'service-cloud':
-      `Free Service Cloud Consultant practice exam: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'slack-consultant':
-      `Free Slack Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Marketing (strong CTR)
-    'email-specialist':
-      `Free Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'pardot-specialist':
-      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'email-specialist-practice-test':
-      `Free Email Spec Practice practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Architect (Prepare for… format) - $400
-    'application-architect':
-      `Free Application Architect practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'data-architect':
-      'Prepare for the Salesforce Certified Platform Data Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'integration-architect':
-      'Prepare for the Salesforce Certified Platform Integration Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'sharing-visibility-architect':
-      `Free Sharing & Visibility Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'system-architect':
-      'Prepare for the Salesforce Certified System Architect certification (2026). $400 exam fee, exam weightage, syllabus, prerequisites, and practice questions to help you pass.',
-    'identity-access-management-architect':
-      `Free Identity & Access Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'dev-lifecycle-deployment-architect':
-      `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'technical-architect':
-      `Free Technical Architect (CTA) practice exam: Board exam questions, ~Board review% passing score, Board min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'technical-architect-evaluation':
-      `Free CTA Evaluation practice exam: Scenario + MC questions, ~Per exam% passing score, Timed min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'technical-architect-review-board':
-      `Free CTA Review Board practice exam: Board scenario questions, ~Board decision% passing score, Board session min. $6000 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2b-solution-architect':
-      `Free B2B Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2c-commerce-architect':
-      `Free B2C Commerce Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2c-solution-architect':
-      `Free B2C Solution Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'heroku-architect':
-      `Free Heroku Architect practice exam: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-catalyst-consultant':
-      `Free MuleSoft Catalyst Consult practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-platform-architect':
-      `Free MuleSoft Platform Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'mulesoft-integration-architect':
-      `Free MuleSoft Integration Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Accredited Professional (Prepare for… format; shorten long names to stay ≤160) - $100
-    'advanced-field-service-ap':
-      `Free Advanced Field Service AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2b-commerce-admin-ap':
-      `Free B2B Commerce Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'b2b-commerce-developer-ap':
-      `Free B2B Commerce Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'communications-cloud-ap':
-      `Free Communications Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'consumer-goods-cloud-ap':
-      `Free Consumer Goods Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'consumer-goods-tpm-ap':
-      `Free Consumer Goods TPM AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'contact-center-ap':
-      `Free Contact Center AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'cpq-billing-ap':
-      `Free CPQ & Billing AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'energy-utilities-ap':
-      `Free Energy & Utilities AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'financial-services-cloud-ap':
-      `Free Financial Services AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'health-cloud-ap':
-      `Free Health Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'heroku-developer-ap':
-      `Free Heroku Developer AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'loyalty-management-ap':
-      `Free Loyalty Management AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'manufacturing-cloud-ap':
-      `Free Manufacturing Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-advanced-cross-channel-ap':
-      `Free MC Cross Channel AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-intelligence-ap':
-      `Free MC Intelligence AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'marketing-cloud-personalization-ap':
-      `Free MC Personalization AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'media-cloud-ap':
-      `Free Media Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'net-zero-cloud-ap':
-      `Free Net Zero Cloud AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'order-management-admin-ap':
-      `Free Order Mgmt Admin AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'order-management-developer-ap':
-      `Free Order Mgmt Dev AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'process-automation-ap':
-      `Free Process Automation AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'public-sector-solutions-ap':
-      `Free Public Sector AP practice exam: 60 questions, ~65% passing score, 90 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Sales
-    'sales-foundations':
-      `Free Sales Foundations practice exam: 60 questions, ~65% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Designer
-    'strategy-designer':
-      `Free Strategy Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'ux-designer':
-      `Free UX Designer practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    // Tableau - $250 (except Desktop Foundations $100)
-    'tableau-architect': `Free Tableau Architect practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-consultant': `Free Tableau Consultant practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-data-analyst': `Free Tableau Data Analyst practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-desktop-foundations':
-      `Free Tableau Desktop Found. practice exam: 40 questions, ~65% passing score, 60 min. $100 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'tableau-server-administrator':
-      `Free Tableau Server Admin practice exam: 45 questions, ~70% passing score, 90 min. $250 fee. ${RELEASE_YEAR} — no sign-up.`,
-  }
-  const custom = templates[slug]
-  // Keep custom templates only for practice-test pages; otherwise use the standardized description
-  // so all certification pages follow the same meta format as ADM-201.
-  if (custom && slug.endsWith('-practice-test')) {
-    // Replace placeholder cost if present, or add cost for non-template certs
-    const withCost = custom.includes('exam fee') ? custom : custom.replace('Exam weightage', `${examCost} exam fee, exam weightage`)
-    return finalizeMetaDescription(withCost)
   }
   const primaryName = getCertPrimaryName(slug, certName)
   const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
