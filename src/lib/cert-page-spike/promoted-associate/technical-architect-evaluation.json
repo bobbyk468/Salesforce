@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Technical Architect Evaluation exam for?",
+    "personas": [
+      {
+        "label": "Hands-on practitioners",
+        "description": "You work with Salesforce architecture features and want to prove you can apply them in realistic implementation scenarios."
+      },
+      {
+        "label": "Solution designers",
+        "description": "You support Salesforce projects where Solution Design, Security & Identity, and Integration Architecture decisions affect the final design."
+      },
+      {
+        "label": "Career builders",
+        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Technical Architect Evaluation Exam Hard?",
+    "summary": "The Technical Architect Evaluation exam is very challenging. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "bullets": [
+      "<strong>60 questions</strong> in Timed.",
+      "<strong>Per exam passing score</strong> — build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong> — expect questions that test when to use Solution Design, Security & Identity, or Integration Architecture.",
+      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Salesforce architecture in a real org are better prepared than candidates who only memorize notes."
+    ],
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+  },
+  "examFormat": {
+    "heading": "Technical Architect Evaluation Exam Format Explained",
+    "intro": "The Technical Architect Evaluation is a Salesforce architecture assessment. Use the format below to plan preparation, design-review practice, and readiness checks.",
+    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Salesforce architecture.",
+    "bestWayToPass": [
+      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
+      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Solution Design, Security & Identity, and Integration Architecture because these usually drive the hardest scenario questions.",
+      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
+      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+    ]
+  },
   "practiceQuestionsIntroSuffix": "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.",
   "certificationCard": {
     "code": "CTA Step 1",

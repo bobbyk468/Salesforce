@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Email Specialist exam for?",
+    "personas": [
+      {
+        "label": "Hands-on practitioners",
+        "description": "You work with Email Specialist features and want to prove you can apply them in realistic implementation scenarios."
+      },
+      {
+        "label": "Consultants and admins",
+        "description": "You support Salesforce projects where Email Studio & Content, Data Extensions & Subscribers, and Send Management decisions affect the final design."
+      },
+      {
+        "label": "Career builders",
+        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for specialist roles."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Email Specialist Exam Hard?",
+    "summary": "This practice-test page supports Email Specialist readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "bullets": [
+      "<strong>60 questions</strong> in 90 min.",
+      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong> — expect questions that test when to use Email Studio & Content, Data Extensions & Subscribers, or Send Management.",
+      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Email Specialist in a real org are better prepared than candidates who only memorize notes."
+    ],
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+  },
+  "examFormat": {
+    "heading": "Email Specialist Exam Format Explained",
+    "intro": "The Email Specialist exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
+    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Email Specialist.",
+    "bestWayToPass": [
+      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
+      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Email Studio & Content, Data Extensions & Subscribers, and Send Management because these usually drive the hardest scenario questions.",
+      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
+      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+    ]
+  },
   "certificationCard": {
     "code": "Practice Test",
     "description": "Official-style practice test for the Marketing Cloud Email Specialist certification. Use this to gauge readiness and practice under exam-like conditions before taking the real exam.",

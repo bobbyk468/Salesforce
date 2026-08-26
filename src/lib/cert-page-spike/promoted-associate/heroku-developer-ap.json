@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Heroku Developer Accredited Professional exam for?",
+    "personas": [
+      {
+        "label": "Hands-on practitioners",
+        "description": "You work with Heroku features and want to prove you can apply them in realistic implementation scenarios."
+      },
+      {
+        "label": "Developers",
+        "description": "You support Salesforce projects where Heroku, PaaS, and Dynos decisions affect the final design."
+      },
+      {
+        "label": "Career builders",
+        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for developer roles."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Heroku Developer Accredited Professional Exam Hard?",
+    "summary": "The Heroku Developer Accredited Professional exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "bullets": [
+      "<strong>60 questions</strong> in 90 min.",
+      "<strong>68% passing score</strong> — build a margin above the minimum before booking.",
+      "<strong>Scenario-based choices</strong> — expect questions that test when to use Heroku, PaaS, or Dynos.",
+      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Heroku in a real org are better prepared than candidates who only memorize notes."
+    ],
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+  },
+  "examFormat": {
+    "heading": "Heroku Developer Accredited Professional Exam Format Explained",
+    "intro": "The Heroku Developer Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
+    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Heroku.",
+    "bestWayToPass": [
+      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
+      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Heroku, PaaS, and Dynos because these usually drive the hardest scenario questions.",
+      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
+      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers hands-on Heroku development: deploying apps with buildpacks, configuring dynos, managing add-ons, and integrating with Salesforce via Heroku Connect. Expect questions on Procfile setup, config vars, and worker-based background jobs.",

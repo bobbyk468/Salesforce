@@ -4,6 +4,52 @@ export const AI_ASSOCIATE_SLUG = 'ai-associate' as const
 
 export const aiAssociateCertPageBody: AssociateSpikeBody = {
   template: 'associate',
+  whoIsThisFor: {
+    heading: 'Who is the Salesforce AI Associate exam for?',
+    personas: [
+      {
+        label: 'Salesforce beginners',
+        description:
+          'You want an entry-level Salesforce credential that proves you understand AI concepts, trusted AI principles, and how AI applies to CRM.',
+      },
+      {
+        label: 'Admins and consultants',
+        description:
+          'You advise business users on AI features and need to explain data quality, grounding, bias, privacy, and responsible AI choices clearly.',
+      },
+      {
+        label: 'Career switchers',
+        description:
+          'You want a lower-cost credential that strengthens your Salesforce profile before moving into Administrator, Agentforce, or Data Cloud certifications.',
+      },
+    ],
+  },
+  examDifficulty: {
+    heading: 'Is the Salesforce AI Associate Exam Hard?',
+    summary:
+      'The Salesforce AI Associate exam is beginner-friendly, but it is not a pure vocabulary test. It checks whether you can connect AI concepts, responsible data use, and Salesforce Einstein use cases to realistic CRM scenarios.',
+    bullets: [
+      '<strong>40 multiple-choice questions</strong> in 70 minutes.',
+      '<strong>65% passing score</strong> — build enough margin that ethics and data-governance questions do not surprise you.',
+      '<strong>Conceptual, not code-heavy</strong> — you do not need Apex, Python, or machine-learning math.',
+      '<strong>Responsible AI focus</strong> — expect questions about bias, hallucinations, data quality, privacy, and human oversight.',
+    ],
+    passRateGuidance:
+      'Aim for 75%+ on timed practice sets before booking. If you miss ethics or data-quality questions, review the Trusted AI principles and Einstein Trust Layer before retesting.',
+  },
+  examFormat: {
+    heading: 'Salesforce AI Associate Exam Format Explained',
+    intro:
+      'The AI Associate exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.',
+    scenarioPercent:
+      'Many questions are scenario-based at a conceptual level. Common patterns ask whether a use case is predictive AI or generative AI, what risk a poor data set creates, or which trusted AI principle applies to a business decision.',
+    bestWayToPass: [
+      '<strong>Master AI vocabulary:</strong> Know the difference between AI, machine learning, predictive AI, generative AI, prompts, grounding, and hallucinations.',
+      '<strong>Study trusted AI principles:</strong> Connect responsible, accountable, transparent, empowering, and inclusive AI to practical CRM examples.',
+      '<strong>Understand data quality:</strong> Duplicates, missing fields, biased historical data, and stale records can all weaken AI output.',
+      '<strong>Review Einstein use cases:</strong> Know when Salesforce AI supports scoring, recommendations, summaries, generated content, and guided user actions.',
+    ],
+  },
   certificationCard: {
     code: 'AI Associate',
     description:

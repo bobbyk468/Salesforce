@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Technical Architect exam for?",
+    "personas": [
+      {
+        "label": "Hands-on practitioners",
+        "description": "You work with Salesforce architecture features and want to prove you can apply them in realistic implementation scenarios."
+      },
+      {
+        "label": "Solution designers",
+        "description": "You support Salesforce projects where Solution Design, Security, and Integration decisions affect the final design."
+      },
+      {
+        "label": "Career builders",
+        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Technical Architect Exam Hard?",
+    "summary": "The Technical Architect exam is very challenging. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "bullets": [
+      "<strong>Board-style assessment</strong> — prepare to explain architecture trade-offs clearly, not just choose a multiple-choice answer.",
+      "<strong>Panel evaluation</strong> — success depends on design quality, communication, trade-off analysis, and defensible recommendations.",
+      "<strong>Scenario-based choices</strong> — expect questions that test when to use Solution Design, Security, or Integration.",
+      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Salesforce architecture in a real org are better prepared than candidates who only memorize notes."
+    ],
+    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+  },
+  "examFormat": {
+    "heading": "Technical Architect Exam Format Explained",
+    "intro": "The Technical Architect path is a board-style Salesforce architecture credential. Use the format below to plan preparation, presentation practice, and design-review readiness.",
+    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Salesforce architecture.",
+    "bestWayToPass": [
+      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
+      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Solution Design, Security, and Integration because these usually drive the hardest scenario questions.",
+      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
+      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+    ]
+  },
   "certificationCard": {
     "code": "CTA",
     "description": "The CTA Review Board evaluates your ability to architect end-to-end enterprise solutions on the Salesforce Platform, defending design trade-offs across security, integration, data, and performance under live questioning.",
