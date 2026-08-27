@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Architect exam for?",
+    "personas": [
+      { "label": "Enterprise Architects", "description": "Professionals designing large-scale Tableau deployments with multi-node server topology, high availability, and disaster recovery." },
+      { "label": "Tableau Server Admins Moving Up", "description": "Experienced administrators who want to validate their skills in architecture design, security planning, and governance frameworks." },
+      { "label": "BI Platform Leads", "description": "Leaders responsible for Tableau platform scalability, performance optimization, content management, and enterprise data governance." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Architect Exam Hard?",
+    "summary": "The Tableau Architect exam is one of the harder Tableau certifications. It tests deep knowledge of Tableau Server topology, multi-node clustering, row-level security, and enterprise governance — surface-level familiarity with Tableau administration is not enough to pass.",
+    "bullets": [
+      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, but architecture scenarios often require careful analysis.",
+      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>Enterprise-scale depth required</strong> — questions test server process distribution, HA configuration, RLS implementation patterns, and content governance at scale.",
+      "<strong>Hands-on architecture experience is critical</strong> — candidates who have designed or managed multi-node Tableau Server environments with security layers and governance frameworks are best prepared."
+    ],
+    "passRateGuidance": "Book when you can confidently design a Tableau Server topology, configure row-level security, plan disaster recovery, and build a governance framework without referencing documentation."
+  },
+  "examFormat": {
+    "heading": "Tableau Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions describe enterprise environments and ask you to design the correct server topology, security model, or governance framework for the given requirements.",
+    "bestWayToPass": [
+      "<strong>Server topology:</strong> Know every Tableau Server process (VizQL, Data Server, Backgrounder, Repository) and how to distribute them across nodes for performance and redundancy.",
+      "<strong>Security layers:</strong> Master site roles, content permissions, and row-level security implementation patterns including user filters and entitlement tables.",
+      "<strong>Performance tuning:</strong> Understand extract optimization, Backgrounder sizing, workbook performance analysis, and the Performance Recorder tool.",
+      "<strong>Governance design:</strong> Study project hierarchies, content certification, Data Catalog lineage, and content lifecycle management for enterprise environments."
+    ]
+  },
   "certificationCard": {
     "code": "Tableau Architect",
     "description": "Tableau Architects design and govern enterprise Tableau analytics solutions. They define architecture, governance, scalability, and best practices for Tableau Server and Tableau Cloud.",

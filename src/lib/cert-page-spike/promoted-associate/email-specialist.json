@@ -16,6 +16,36 @@
     }
   ],
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
+  "whoIsThisFor": {
+    "heading": "Who is the Email Specialist exam for?",
+    "personas": [
+      { "label": "Marketing Cloud email practitioners", "description": "You build and send email campaigns in Marketing Cloud and want to validate your skills in subscriber management, AMPscript, and deliverability." },
+      { "label": "Digital marketers moving to Salesforce", "description": "You have email marketing experience with other platforms and want to prove your Marketing Cloud Email Studio expertise." },
+      { "label": "Marketing ops professionals", "description": "You manage data extensions, automation workflows, and deliverability settings and need a credential to demonstrate your technical email marketing skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Email Specialist Exam Hard?",
+    "summary": "The Email Specialist exam is moderately difficult. It tests deep knowledge of Marketing Cloud email features, from AMPscript personalization to deliverability protocols, which goes well beyond basic email campaign management.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>67% passing score</strong> &mdash; you can miss up to 20 questions.",
+      "<strong>AMPscript code reading</strong> &mdash; expect questions that show AMPscript snippets and ask what they output or which function to use for a given personalization requirement.",
+      "<strong>Deliverability depth</strong> &mdash; you need to know SPF, DKIM, DMARC, the Sender Authentication Package, and how hard vs soft bounces affect sender reputation."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can distinguish Journey Builder from Automation Studio use cases and read basic AMPscript Lookup() and IIF() functions."
+  },
+  "examFormat": {
+    "heading": "Email Specialist Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right subscriber list type for a segmentation requirement, selecting the correct AMPscript function for personalization, and diagnosing a deliverability issue.",
+    "bestWayToPass": [
+      "<strong>Know the subscriber data model:</strong> All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and how global unsubscribes override everything else.",
+      "<strong>Learn core AMPscript functions:</strong> Lookup(), LookupRows(), AttributeValue(), and IIF() cover most exam scenarios &mdash; practice reading code snippets and predicting output.",
+      "<strong>Distinguish Journey Builder from Automation Studio:</strong> Journey Builder is customer-behavior-driven; Automation Studio is schedule/event-driven. Know which activities are exclusive to each tool.",
+      "<strong>Understand email authentication:</strong> Know what SPF, DKIM, and DMARC each do, how the Sender Authentication Package bundles them, and how IP warming protects sender reputation."
+    ]
+  },
   "certificationCard": {
     "code": "Email Specialist",
     "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability.",

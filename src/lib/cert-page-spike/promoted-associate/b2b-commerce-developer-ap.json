@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the B2B Commerce Developer AP exam for?",
+    "personas": [
+      {
+        "label": "Developers building custom storefronts",
+        "description": "You create LWC components for B2B Commerce stores and want to prove your storefront development skills."
+      },
+      {
+        "label": "Integration engineers",
+        "description": "You connect B2B Commerce to ERP, pricing, and inventory systems using Commerce APIs and need the credential to back up your integration expertise."
+      },
+      {
+        "label": "Technical consultants",
+        "description": "You extend B2B checkout and cart logic with Apex extensions and want formal validation of your Commerce development capabilities."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the B2B Commerce Developer AP Exam Hard?",
+    "summary": "The B2B Commerce Developer AP is moderately difficult. The ~65% passing score is standard, but the exam dives deep into the Commerce extension framework, LWC development, and Apex integration patterns that require hands-on coding experience rather than theoretical knowledge.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; a standard threshold, but the technical depth of the questions makes it harder than the score suggests.",
+      "<strong>Code-level knowledge required</strong> &mdash; questions test specific Commerce APIs, LWC wire adapters, and Apex extension interfaces rather than high-level concepts.",
+      "<strong>Hands-on coding essential</strong> &mdash; building at least one custom LWC commerce component and writing an Apex cart extension before sitting the exam helps significantly."
+    ],
+    "passRateGuidance": "Deploy a custom storefront component and implement a checkout extension in a developer org before booking. Score consistently above 75% on practice tests to build a comfortable margin."
+  },
+  "examFormat": {
+    "heading": "B2B Commerce Developer AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Expect scenario-based questions describing a storefront customization requirement and asking which API, extension point, or component pattern solves it. Common themes include cart calculations, custom checkout steps, and external system integration.",
+    "bestWayToPass": [
+      "<strong>Build custom LWC components:</strong> Create a product detail override or custom checkout component using the @salesforce/commerce scoped modules in a hands-on org.",
+      "<strong>Implement Apex extensions:</strong> Write a CartExtension for custom pricing and a CheckoutExtension for validation &mdash; the exam tests these interfaces specifically.",
+      "<strong>Study the Commerce Connect API:</strong> Know which API to call for product search, cart operations, and order management, and how buyer authentication differs from guest access.",
+      "<strong>Practice deployment workflows:</strong> Understand the correct sequence for deploying commerce metadata, LWC components, and integration services to an Experience Cloud site."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam tests your ability to customize B2B Commerce storefronts using LWC components, Apex extensions, and Commerce APIs for real-world implementations.",

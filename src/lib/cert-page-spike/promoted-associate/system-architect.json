@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the System Architect exam for?",
+    "personas": [
+      { "label": "Enterprise Architects", "description": "Architects who design multi-system integration landscapes connecting Salesforce with ERP, middleware, and legacy systems across the enterprise." },
+      { "label": "Integration Specialists", "description": "Developers and architects who build API-led integrations, configure OAuth authentication flows, and design for high-volume data exchange." },
+      { "label": "IT Leaders", "description": "Technical leaders responsible for org strategy, release management, and governance for complex Salesforce deployments spanning multiple business units." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the System Architect Exam Hard?",
+    "summary": "The System Architect exam is broad and demanding because it spans integration architecture, identity management, deployment strategy, and multi-org governance. Unlike domain-specific architect exams, System Architect tests your ability to connect all of these areas into a cohesive enterprise solution. The breadth of topics means you cannot rely on depth in one area alone.",
+    "bullets": [
+      "<strong>60 questions</strong> in 120 minutes &mdash; questions cover integration patterns, OAuth flows, sandbox strategy, and release management in a single exam.",
+      "<strong>~68% passing score</strong> &mdash; about 41 correct answers, with cross-domain questions that require knowledge of both integration and deployment topics.",
+      "<strong>Integration pattern selection</strong> &mdash; expect scenarios asking you to choose between synchronous, asynchronous, batch, and event-driven patterns based on latency and volume constraints.",
+      "<strong>Enterprise breadth</strong> &mdash; the exam tests middleware design (MuleSoft API-led connectivity), SSO architecture, multi-org strategy, and release governance in a single sitting."
+    ],
+    "passRateGuidance": "Book the exam when you can match any integration scenario to the correct pattern, explain OAuth flows and SAML SSO configuration, and design a sandbox-to-production promotion strategy."
+  },
+  "examFormat": {
+    "heading": "System Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Questions describe enterprise integration and deployment scenarios, asking you to select the right combination of architecture pattern, authentication flow, and governance approach.",
+    "bestWayToPass": [
+      "<strong>Master integration patterns:</strong> Know request-reply, fire-and-forget, batch ETL, and Change Data Capture &mdash; and the exact criteria for choosing each (latency, volume, error handling).",
+      "<strong>Study API-led connectivity:</strong> Understand MuleSoft&apos;s System, Process, and Experience API layers and when native Salesforce integration is sufficient vs. when middleware is warranted.",
+      "<strong>Review identity and SSO:</strong> SAML 2.0 SP-initiated vs. IdP-initiated flows, OAuth 2.0 JWT Bearer and Client Credentials flows, and My Domain requirements appear frequently.",
+      "<strong>Know sandbox and release strategy:</strong> Match sandbox types to development phases, compare change sets vs. CLI vs. unlocked packages, and design deployment sequencing for complex orgs."
+    ]
+  },
   "certificationCard": {
     "code": "System Architect",
     "description": "This exam tests enterprise integration architecture, covering API patterns (sync, async, batch), OAuth authentication flows, middleware design, sandbox strategy, and release management for multi-system Salesforce deployments.",

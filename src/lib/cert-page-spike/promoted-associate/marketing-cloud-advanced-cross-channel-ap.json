@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Advanced Cross-Channel exam for?",
+    "personas": [
+      {
+        "label": "Cross-channel marketing specialists",
+        "description": "You design campaigns across email, SMS, push, and advertising in Marketing Cloud and want to validate your multi-channel expertise."
+      },
+      {
+        "label": "Marketing Cloud implementation partners",
+        "description": "You implement Marketing Cloud solutions for clients and need the AP credential to demonstrate advanced cross-channel delivery skills."
+      },
+      {
+        "label": "Journey Builder power users",
+        "description": "You build complex multi-branch journeys with Einstein features and want to certify your advanced orchestration skills."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Advanced Cross-Channel Exam Hard?",
+    "summary": "The Advanced Cross-Channel AP exam is moderately difficult. It goes well beyond single-channel email marketing and requires deep knowledge of Journey Builder&apos;s advanced features, Mobile Studio, Advertising Studio, and Einstein engagement tools. Candidates who have only worked with Email Studio will find this exam challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — standard for AP-level exams.",
+      "<strong>Multi-channel depth</strong> — you need hands-on experience with MobileConnect (SMS), MobilePush, Advertising Studio audience sync, and cross-channel Journey Builder design.",
+      "<strong>Einstein features tested</strong> — Engagement Scoring, Send Time Optimization, and Content Selection are all fair game."
+    ],
+    "passRateGuidance": "Build at least 2-3 multi-channel journeys using SMS and push alongside email before booking. Practice configuring Advertising Studio audiences and Einstein engagement splits."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Advanced Cross-Channel Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. You&apos;ll be asked to design a cross-channel journey, choose the right Einstein feature for a personalization requirement, or configure mobile messaging compliance.",
+    "bestWayToPass": [
+      "<strong>Master advanced Journey Builder features:</strong> Einstein Engagement Splits, Random Splits for A/B testing, Wait Until Event, and Engagement Frequency Splits.",
+      "<strong>Know mobile messaging compliance:</strong> TCPA opt-in requirements for SMS, push notification permissions, and how each channel&apos;s consent model differs from email.",
+      "<strong>Study Advertising Studio:</strong> Understand how to sync audiences to Facebook Custom Audiences and Google Customer Match, and how Lead Ads capture data back into Marketing Cloud.",
+      "<strong>Learn Einstein engagement tools:</strong> Know how Engagement Scoring, Send Time Optimization, and Content Selection work together to personalize at scale."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam goes beyond single-channel sends. You&amp;apos;ll need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",

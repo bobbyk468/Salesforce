@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Education Cloud Consultant exam for?",
+    "personas": [
+      { "label": "Higher education CRM consultants", "description": "You implement Salesforce for universities and colleges and need to validate your expertise in EDA, student lifecycle management, and admissions workflows." },
+      { "label": "Salesforce admins at educational institutions", "description": "You manage an Education Cloud org and want to prove your knowledge of the Education Data Architecture, advising tools, and student success features." },
+      { "label": "EdTech implementation partners", "description": "You deliver Education Cloud projects and need the credential to demonstrate competency in configuring student recruitment, enrollment, and advancement solutions." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Education Cloud Consultant Exam Hard?",
+    "summary": "The Education Cloud Consultant exam is moderately to significantly difficult. It covers the Education Data Architecture (EDA), student lifecycle management, advising workflows, and integration with SIS/LMS systems. Candidates need both Salesforce platform skills and understanding of higher education processes.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>EDA data model is central</strong> — you must understand affiliations, course connections, program plans, and how EDA replaces the standard account/contact model.",
+      "<strong>Cross-functional knowledge required</strong> — questions span admissions, advising, advancement (fundraising), and IT integration scenarios."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and ensure you can diagram the EDA object model before booking. Prior experience with a higher education Salesforce implementation or familiarity with university admissions and advising processes is strongly recommended."
+  },
+  "examFormat": {
+    "heading": "Education Cloud Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include designing an admissions pipeline for a university, configuring Student Success Hub alerts for at-risk students, and selecting the right integration approach for SIS data.",
+    "bestWayToPass": [
+      "<strong>Master the EDA data model:</strong> Know accounts (institutions, departments, households), contacts (students, faculty), affiliations, course connections, and program plans inside and out.",
+      "<strong>Understand the student lifecycle:</strong> Study how prospects move through recruitment, admissions, enrollment, retention, and alumni engagement in Education Cloud.",
+      "<strong>Learn Student Success Hub:</strong> Know how to configure alerts, advising appointments, success plans, and case management for student support workflows.",
+      "<strong>Study integration patterns:</strong> Understand how Education Cloud integrates with SIS (Banner, PeopleSoft) and LMS (Canvas, Blackboard) systems, and which system is the record of truth for academic data."
+    ]
+  },
   "certificationCard": {
     "code": "Education Cloud",
     "description": "This exam tests configuring Education Data Architecture (EDA), student lifecycle management, and advising workflows for schools and universities. Expect questions on admissions pipelines, course enrollment, and SIS/LMS integration.",

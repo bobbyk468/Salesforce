@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Order Management Developer AP exam for?",
+    "personas": [
+      {
+        "label": "Developers extending OMS",
+        "description": "You write Apex, build Flows, and use OMS APIs to customize order processing and fulfillment logic and want the credential to validate your development skills."
+      },
+      {
+        "label": "Integration engineers",
+        "description": "You connect Salesforce Order Management to external WMS, ERP, and 3PL systems and need formal recognition of your integration architecture expertise."
+      },
+      {
+        "label": "Technical consultants",
+        "description": "You build custom fulfillment adapters, event-driven order processing, and inbound callback endpoints and want to prove your ability to extend the OMS platform."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Order Management Developer AP Exam Hard?",
+    "summary": "The Order Management Developer AP is moderately difficult. The ~65% passing score is standard, but the exam tests deep technical skills including OMS Connect APIs, Flow orchestration, Platform Events, and custom fulfillment adapter development that require hands-on coding experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; standard threshold, but the technical depth of OMS API and Apex integration questions makes it harder than the number suggests.",
+      "<strong>API-level knowledge required</strong> &mdash; questions test specific ConnectApi methods, REST API endpoints, and Platform Event patterns rather than high-level concepts.",
+      "<strong>Integration complexity</strong> &mdash; the exam expects you to design solutions for external fulfillment provider integration, idempotent retry logic, and asynchronous event processing."
+    ],
+    "passRateGuidance": "Write Apex that calls OMS Connect APIs, build a Flow-based order orchestration, and implement at least one external fulfillment integration in a developer org before booking."
+  },
+  "examFormat": {
+    "heading": "Order Management Developer AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Expect scenario questions describing a fulfillment customization or integration requirement and asking which API, Apex pattern, or Flow design solves it. Common themes include custom routing logic, external system callbacks, Platform Event-driven processing, and error handling for failed fulfillment calls.",
+    "bestWayToPass": [
+      "<strong>Master the OMS Connect APIs:</strong> Know how to create Order Summaries, adjust Order Product Summaries, create Fulfillment Orders, and process returns programmatically using ConnectApi in Apex.",
+      "<strong>Build Flow-based orchestrations:</strong> Design order orchestration flows with parallel and sequential steps, implement retry logic for failed API calls, and use Platform Events for async integration.",
+      "<strong>Implement a custom fulfillment adapter:</strong> Build an outbound integration that sends Fulfillment Orders to an external system and an inbound callback endpoint that updates Salesforce with shipping confirmations.",
+      "<strong>Study testing patterns:</strong> Know how to write unit tests for OMS Apex using ConnectApi mocks, how to achieve >75% coverage on trigger logic, and how to test both happy path and error scenarios."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam tests your ability to extend Salesforce Order Management with Apex, Flow, and APIs -- building custom fulfillment logic, external system integrations, and event-driven order processing.",

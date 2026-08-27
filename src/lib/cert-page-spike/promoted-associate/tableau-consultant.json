@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Consultant exam for?",
+    "personas": [
+      { "label": "Analytics Consultants", "description": "Professionals who implement Tableau solutions for clients, covering requirements gathering, data modeling, and visualization design." },
+      { "label": "BI Implementation Leads", "description": "Team leads responsible for designing and delivering Tableau deployments including data source strategy, governance, and user training." },
+      { "label": "Solution Architects", "description": "Technical advisors who recommend Tableau Server vs. Cloud, live vs. extract connections, and published data source strategies for organizations." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Consultant Exam Hard?",
+    "summary": "The Tableau Consultant exam is moderately difficult. It blends technical Tableau product knowledge with consulting and advisory competencies, so strong product skills alone are not enough — you also need experience translating business requirements into Tableau solutions.",
+    "bullets": [
+      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which gives adequate time for scenario analysis.",
+      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>Consulting scenarios dominate</strong> — questions describe client requirements and ask you to recommend the best Tableau approach, not just identify a feature.",
+      "<strong>Implementation experience is essential</strong> — candidates with real project experience advising clients on Tableau deployments perform significantly better."
+    ],
+    "passRateGuidance": "Book when you have completed at least one Tableau implementation project and can confidently recommend data source strategies, deployment models, and adoption approaches."
+  },
+  "examFormat": {
+    "heading": "Tableau Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions describe a client requirement and ask you to recommend the best Tableau approach — data source strategy, deployment model, or visualization technique.",
+    "bestWayToPass": [
+      "<strong>Requirements mapping:</strong> Practice translating business questions into Tableau solution designs covering data sources, visualizations, and deployment architecture.",
+      "<strong>Live vs. Extract trade-offs:</strong> Know when to recommend each connection type based on data freshness needs, query performance, and infrastructure constraints.",
+      "<strong>Tableau Prep knowledge:</strong> Understand when to preprocess data in Prep Builder versus using Desktop calculated fields or database-side transformations.",
+      "<strong>Adoption strategy:</strong> Study user training plans, Champions programs, and how to measure Tableau ROI using built-in usage analytics."
+    ]
+  },
   "certificationCard": {
     "code": "Tableau Consultant",
     "description": "Tableau Consultants implement Tableau solutions and advise organizations on analytics strategy, dashboard design, and data visualization best practices.",

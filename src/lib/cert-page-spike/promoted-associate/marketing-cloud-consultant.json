@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Consultant exam for?",
+    "personas": [
+      {
+        "label": "Marketing Cloud implementers",
+        "description": "You design and deploy Marketing Cloud solutions for clients and want to validate your consulting expertise."
+      },
+      {
+        "label": "Email marketing managers",
+        "description": "You run campaigns in Marketing Cloud and want to prove you can architect data models, journeys, and integrations."
+      },
+      {
+        "label": "Salesforce consultants adding marketing skills",
+        "description": "You already hold a core Salesforce credential and want to expand into Marketing Cloud solution design."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Consultant Exam Hard?",
+    "summary": "Marketing Cloud Consultant is a challenging exam. It tests solution architecture across Journey Builder, Automation Studio, Contact Builder, and CRM integration. You need both technical depth and the ability to translate business requirements into a scalable Marketing Cloud design.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>67% passing score</strong> — standard for consultant-level Salesforce exams.",
+      "<strong>Breadth of coverage</strong> — you must know data architecture, Journey Builder vs Automation Studio selection, and Marketing Cloud Connect configuration.",
+      "<strong>Real-world design skills</strong> — expect scenario questions that require you to recommend the right tool for a given business requirement."
+    ],
+    "passRateGuidance": "Complete at least two end-to-end Marketing Cloud implementations before booking. Score 80%+ on practice exams to feel confident on test day."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. You&apos;ll be given a business requirement and asked to recommend the correct Marketing Cloud tool, data architecture, or integration approach.",
+    "bestWayToPass": [
+      "<strong>Master Journey Builder vs Automation Studio:</strong> Know when to use each tool and how they complement each other in a campaign architecture.",
+      "<strong>Study data architecture:</strong> Understand Data Extensions, Contact Builder relationships, and how to design a data model that supports segmentation and personalization.",
+      "<strong>Learn Marketing Cloud Connect:</strong> Know how synchronized Data Extensions, triggered sends, and CRM data flow between Salesforce and Marketing Cloud.",
+      "<strong>Practice compliance scenarios:</strong> Understand CAN-SPAM, GDPR, and CASL requirements and how Marketing Cloud implements consent management."
+    ]
+  },
   "certificationCard": {
     "code": "MC Consultant",
     "description": "This exam tests solution design for Marketing Cloud: gathering requirements, architecting data models, configuring Journey Builder and Automation Studio, and integrating with Salesforce CRM.",

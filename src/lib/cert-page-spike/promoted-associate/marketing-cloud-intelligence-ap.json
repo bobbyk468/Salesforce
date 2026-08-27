@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Intelligence exam for?",
+    "personas": [
+      {
+        "label": "Marketing analytics professionals",
+        "description": "You build dashboards and analyze cross-channel marketing data and want to validate your Intelligence (Datorama) implementation skills."
+      },
+      {
+        "label": "Data-driven marketing consultants",
+        "description": "You implement Marketing Cloud Intelligence for clients and need the AP credential to demonstrate your delivery expertise."
+      },
+      {
+        "label": "BI specialists moving into marketing analytics",
+        "description": "You have experience with analytics platforms and want to specialize in Salesforce&apos;s marketing measurement and attribution tooling."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Intelligence Exam Hard?",
+    "summary": "The Marketing Cloud Intelligence AP exam is moderately difficult. It is heavily focused on data ingestion, harmonization, and dashboard creation within the Intelligence (Datorama) platform. Candidates who lack hands-on experience connecting data streams and building unified marketing reports will find the exam challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — standard for AP-level exams.",
+      "<strong>Data harmonization focus</strong> — you must understand how to map fields from multiple advertising and marketing platforms into a unified data model.",
+      "<strong>Dashboard design tested</strong> — expect questions on widget types, cross-widget filtering, date controls, and how to share reports with external stakeholders."
+    ],
+    "passRateGuidance": "Connect at least 3-4 data streams from different platforms and build a unified cross-channel dashboard before booking. Practice creating custom calculated metrics and configuring anomaly detection alerts."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Intelligence Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring a new data stream from a marketing platform, resolving field mapping conflicts during harmonization, and designing a dashboard for a specific stakeholder audience.",
+    "bestWayToPass": [
+      "<strong>Master data stream configuration:</strong> Know how to connect native connectors (Google Ads, Facebook Ads, Marketing Cloud), API-based streams, and file-based imports.",
+      "<strong>Understand the unified data model:</strong> Learn how dimensions (Campaign, Ad Set, Ad) and metrics (Impressions, Clicks, Spend) are harmonized across sources.",
+      "<strong>Practice dashboard building:</strong> Create boards with multiple widget types, configure global filters and date controls, and share dashboards via public URL or embedded iFrame.",
+      "<strong>Study custom metrics and attribution:</strong> Know how to create calculated KPIs in Model Builder and understand first-touch, last-touch, and multi-touch attribution models."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers Marketing Cloud Intelligence (Datorama) implementation: connecting data streams, harmonizing cross-channel metrics, building dashboards, and configuring calculated KPIs.",

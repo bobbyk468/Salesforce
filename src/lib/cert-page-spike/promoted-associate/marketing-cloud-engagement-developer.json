@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Engagement Developer exam for?",
+    "personas": [
+      {
+        "label": "Marketing Cloud developers",
+        "description": "You write AMPscript, SSJS, and build CloudPages and want to certify your development skills."
+      },
+      {
+        "label": "Email developers moving to Marketing Cloud",
+        "description": "You have HTML/CSS email experience and want to prove your ability to build dynamic, data-driven content in Marketing Cloud."
+      },
+      {
+        "label": "Integration specialists",
+        "description": "You work with Marketing Cloud REST and SOAP APIs and want to validate your ability to build custom solutions and automations."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Engagement Developer Exam Hard?",
+    "summary": "The Engagement Developer exam is one of the harder Marketing Cloud certifications. It requires you to write and interpret AMPscript and SSJS code, understand REST and SOAP API patterns, and know how to build custom Journey Builder activities. Candidates without coding experience will struggle significantly.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~67% passing score</strong> — standard for developer-level exams, but the technical depth makes it challenging.",
+      "<strong>Code interpretation required</strong> — expect questions that show AMPscript or SSJS snippets and ask you to predict the output or identify errors.",
+      "<strong>API knowledge tested</strong> — you must know REST and SOAP endpoint patterns, OAuth authentication, and when to use each API."
+    ],
+    "passRateGuidance": "Build at least 3-5 AMPscript-powered emails and 2-3 CloudPages before booking. Write SSJS Script Activities in Automation Studio and make at least a few REST API calls to feel confident."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Engagement Developer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. You&apos;ll be asked to select the correct AMPscript function for a data retrieval task, choose between SSJS and AMPscript for a given use case, or design an API integration approach.",
+    "bestWayToPass": [
+      "<strong>Master AMPscript data functions:</strong> Lookup, LookupRows, LookupOrderedRows, InsertData, and UpdateData are tested heavily. Know when to use each one.",
+      "<strong>Know SSJS vs AMPscript boundaries:</strong> Use AMPscript for email personalization, SSJS for complex logic and API calls in CloudPages and Script Activities.",
+      "<strong>Study REST API endpoints:</strong> Know the key /contacts/, /messaging/, and /data/ endpoint families and how OAuth 2.0 client credentials authentication works.",
+      "<strong>Practice CloudPages development:</strong> Build landing pages with form capture, personalized URLs, and dynamic content to prepare for hands-on scenario questions."
+    ]
+  },
   "certificationCard": {
     "code": "MC Engagement Developer",
     "description": "This exam tests hands-on coding in Marketing Cloud: writing AMPscript and SSJS, building CloudPages, calling REST and SOAP APIs, and creating custom Journey Builder activities.",

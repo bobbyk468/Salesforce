@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the CPQ and Billing AP exam for?",
+    "personas": [
+      {
+        "label": "CPQ consultants expanding into Billing",
+        "description": "You already configure Salesforce CPQ and want to validate your ability to extend implementations through invoicing, payment processing, and revenue recognition."
+      },
+      {
+        "label": "Finance and operations teams",
+        "description": "You manage invoice generation, subscription billing, and revenue schedules in Salesforce and need the credential to demonstrate your quote-to-cash expertise."
+      },
+      {
+        "label": "Implementation partners",
+        "description": "You design end-to-end quote-to-cash solutions covering CPQ configuration through Billing deployment and want formal recognition of that full-lifecycle skill set."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the CPQ and Billing AP Exam Hard?",
+    "summary": "The CPQ and Billing AP is moderately difficult. The ~65% passing score is standard, but the exam spans two products &mdash; Salesforce CPQ and Salesforce Billing &mdash; requiring knowledge of the full quote-to-cash lifecycle from product configuration through revenue recognition.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; a standard threshold, but covering both CPQ and Billing doubles the surface area you need to study.",
+      "<strong>Two-product breadth</strong> &mdash; the exam tests CPQ configuration (bundles, rules, discounts) alongside Billing concepts (invoicing, usage billing, revenue recognition) in a single sitting.",
+      "<strong>Process knowledge critical</strong> &mdash; understanding the complete object chain from Quote through Invoice and Revenue Schedule is more important than memorizing individual features."
+    ],
+    "passRateGuidance": "Walk through a complete quote-to-cash scenario in a developer org &mdash; creating a quote, generating an order, running an invoice, and configuring a revenue schedule &mdash; before booking the exam."
+  },
+  "examFormat": {
+    "heading": "CPQ and Billing AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Expect scenario questions that follow a deal through the full lifecycle &mdash; from quote configuration to invoice generation and revenue recognition. Common patterns describe a billing requirement (monthly subscription billed in advance, usage-based overage) and ask which Billing configuration meets it.",
+    "bestWayToPass": [
+      "<strong>Trace the full object chain:</strong> Know how Quote &rarr; Quote Line &rarr; Order &rarr; Order Product &rarr; Invoice &rarr; Invoice Line connects, and what triggers each object&apos;s creation.",
+      "<strong>Study Billing rules deeply:</strong> Understand Bill Now vs. Bill in Advance vs. Bill in Arrears, billing frequency options, and how invoice consolidation groups charges by account.",
+      "<strong>Know usage-based billing:</strong> Understand how Usage Summaries aggregate consumption data, how Usage Rate Cards define pricing tiers, and how overage billing is calculated.",
+      "<strong>Review revenue recognition:</strong> Study how Revenue Schedules distribute revenue across accounting periods, the difference between ratable and event-based recognition, and how ASC 606 compliance is configured."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers the full Salesforce quote-to-cash process — CPQ product configuration, pricing rules, Billing invoice generation, subscription management, and revenue recognition.",

@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Development Lifecycle and Deployment Architect exam for?",
+    "personas": [
+      { "label": "DevOps Engineers", "description": "Engineers who build and maintain CI/CD pipelines, automate Salesforce deployments, and manage source-driven development workflows." },
+      { "label": "Release Managers", "description": "Professionals who coordinate sandbox strategies, manage deployment sequences, and govern the promotion path from development to production." },
+      { "label": "Platform Architects", "description": "Architects who design org strategy, package architecture, and release governance for enterprise-scale Salesforce implementations." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Development Lifecycle and Deployment Architect Exam Hard?",
+    "summary": "The Dev Lifecycle and Deployment Architect exam is challenging because it tests hands-on operational knowledge &mdash; not just theory. You need to know sandbox types, their refresh intervals, deployment tool trade-offs, and how to design a CI/CD pipeline that handles destructive changes, test coverage requirements, and dependency ordering. Candidates with real deployment experience have a significant advantage.",
+    "bullets": [
+      "<strong>60 questions</strong> in 120 minutes &mdash; many questions describe a deployment scenario and ask you to select the correct tool, sandbox type, or sequencing approach.",
+      "<strong>~68% passing score</strong> &mdash; about 41 correct answers needed, with questions that test nuanced differences between change sets, Salesforce CLI, and unlocked packages.",
+      "<strong>Operational depth</strong> &mdash; expect questions on destructive changes, deployment dependency ordering, and how to handle failed production deployments without built-in rollback.",
+      "<strong>CI/CD pipeline design</strong> &mdash; the exam tests your ability to design automated pipelines using scratch orgs, version-controlled source, and package-based deployment."
+    ],
+    "passRateGuidance": "Book the exam when you have hands-on experience with Salesforce CLI deployments, can explain the trade-offs between change sets and unlocked packages, and have designed at least one sandbox promotion strategy."
+  },
+  "examFormat": {
+    "heading": "Development Lifecycle and Deployment Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Questions present deployment and release management scenarios, asking you to choose the right combination of sandbox type, deployment tool, and governance process for each situation.",
+    "bestWayToPass": [
+      "<strong>Know all sandbox types cold:</strong> Developer, Developer Pro, Partial Copy, and Full Copy &mdash; their data limits, refresh intervals, and the development phase each one serves.",
+      "<strong>Compare deployment tools:</strong> Understand the exact limitations of change sets (no delete, no version control) and when to recommend Salesforce CLI, MDAPI, or unlocked packages instead.",
+      "<strong>Study destructive changes:</strong> Know how destructiveChanges.xml works, what happens when you delete a field referenced by a validation rule, and how to plan safe metadata removal.",
+      "<strong>Design CI/CD pipelines:</strong> Practice designing a complete pipeline from Git commit through scratch org validation, test execution, and production deployment with approval gates."
+    ]
+  },
   "certificationCard": {
     "code": "Dev Lifecycle & Deployment",
     "description": "This exam covers sandbox strategy, source-driven development, CI/CD pipelines, and package-based deployment on the Salesforce Platform. You&apos;ll need to choose between change sets and unlocked packages and design a release management process.",

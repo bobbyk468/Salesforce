@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the CPQ Administrator exam for?",
+    "personas": [
+      {
+        "label": "Salesforce admins managing CPQ",
+        "description": "You maintain product catalogs, pricing rules, and quoting workflows in Salesforce CPQ and want the certification to formalize your expertise."
+      },
+      {
+        "label": "Revenue operations professionals",
+        "description": "You design discount schedules, approval processes, and contract renewal flows and need the credential to validate your quote-to-cash configuration skills."
+      },
+      {
+        "label": "Implementation consultants",
+        "description": "You configure CPQ bundles, product rules, and price rules for clients and want formal recognition of your ability to deliver CPQ solutions."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the CPQ Administrator Exam Hard?",
+    "summary": "The CPQ Administrator exam is widely considered one of the harder Salesforce certifications. The ~65% passing score is standard, but the exam covers a dense product with its own data model, pricing waterfall, and rule engine that differ significantly from core Salesforce administration.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> &mdash; standard threshold, but the volume of CPQ-specific concepts (product rules, price rules, discount schedules, bundles) makes achieving it challenging.",
+      "<strong>CPQ is its own world</strong> &mdash; the pricing waterfall, Quote Line Editor, and advanced approval framework are unique to CPQ and cannot be learned from general Salesforce admin experience alone.",
+      "<strong>Scenario-heavy</strong> &mdash; most questions describe a pricing or quoting requirement and expect you to identify the correct CPQ configuration, not just recall definitions."
+    ],
+    "passRateGuidance": "Configure a complete quote-to-cash flow in a CPQ developer org &mdash; including bundles, product rules, price rules, discount schedules, and at least one approval process &mdash; before booking."
+  },
+  "examFormat": {
+    "heading": "CPQ Administrator Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Roughly 50-60% of questions are scenario-based. Expect questions describing complex quoting requirements (tiered discounts, bundle constraints, subscription renewals) and asking which CPQ feature or configuration solves the problem.",
+    "bestWayToPass": [
+      "<strong>Master Product Rules vs. Price Rules:</strong> Know exactly when to use each rule type &mdash; product rules control which products appear on a quote, while price rules modify pricing fields on quote lines.",
+      "<strong>Understand the pricing waterfall:</strong> Memorize the CPQ pricing sequence (List &rarr; Special &rarr; Regular &rarr; Customer &rarr; Net) and how discount schedules, block pricing, and price rules interact at each stage.",
+      "<strong>Build bundles hands-on:</strong> Create multi-level bundles with features, option constraints, and configuration attributes in a developer org to understand how the Quote Line Editor renders them.",
+      "<strong>Study the contract lifecycle:</strong> Know how contracts generate subscriptions, how renewals auto-create opportunities and quotes, and how amendments handle mid-term product changes with proration."
+    ]
+  },
   "certificationCard": {
     "code": "CPQ",
     "description": "Certified CPQ Administrators are skilled at implementing Salesforce CPQ (Configure, Price, Quote) and can expertly design, build, and implement quoting flows.",

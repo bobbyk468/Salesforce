@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Desktop Foundations exam for?",
+    "personas": [
+      { "label": "Tableau Beginners", "description": "People learning Tableau Desktop who want an entry-level credential to validate their core data visualization skills." },
+      { "label": "Business Users", "description": "Professionals transitioning from Excel and spreadsheet reporting to interactive Tableau dashboards for data analysis." },
+      { "label": "Students &amp; Career Changers", "description": "Individuals building a foundation in analytics and visualization as a stepping stone to advanced Tableau certifications." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Desktop Foundations Exam Hard?",
+    "summary": "The Tableau Desktop Foundations exam is the easiest Tableau certification. It tests foundational knowledge of Tableau Desktop features rather than advanced calculations or architecture, making it accessible to candidates with a few weeks of focused practice.",
+    "bullets": [
+      "<strong>40 questions</strong> in 60 minutes — 90 seconds per question, which is comfortable for candidates familiar with the Tableau Desktop interface.",
+      "<strong>~65% passing score</strong> — you need approximately 26 correct answers out of 40 to pass.",
+      "<strong>Breadth over depth</strong> — the exam covers data connections, chart types, filters, basic calculations, and dashboards, so you need working knowledge across all areas.",
+      "<strong>Two to four weeks of daily practice is typically enough</strong> — candidates with basic data literacy who practice in Tableau Desktop using sample data (like Superstore) are well prepared."
+    ],
+    "passRateGuidance": "Book when you can connect to data, build common chart types, apply filters, write basic calculated fields, and create a multi-sheet dashboard without following a tutorial."
+  },
+  "examFormat": {
+    "heading": "Tableau Desktop Foundations Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Questions describe a task — build a bar chart, apply a filter, create a calculated field — and ask you to identify the correct Tableau Desktop steps or feature.",
+    "bestWayToPass": [
+      "<strong>Show Me panel:</strong> Know which chart type Tableau recommends for each combination of dimensions and measures, and when to override it.",
+      "<strong>Marks card:</strong> Understand how Color, Size, Label, Detail, and Tooltip encode data on marks and how changing them affects the view.",
+      "<strong>Filters and sorting:</strong> Practice applying dimension filters, measure filters, and date filters, and sorting by field value, manual drag, or nested sort.",
+      "<strong>Build a dashboard:</strong> Create a multi-sheet dashboard with Filter Actions and Highlight Actions to understand interactivity and layout containers."
+    ]
+  },
   "certificationCard": {
     "code": "Tableau Desktop Foundations",
     "description": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards using Tableau Desktop. It is an entry-level credential for analytics and visualization.",

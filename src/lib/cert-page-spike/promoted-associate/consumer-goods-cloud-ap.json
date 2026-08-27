@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Consumer Goods Cloud Accredited Professional exam for?",
+    "personas": [
+      { "label": "CPG implementation consultants", "description": "You deliver Consumer Goods Cloud projects for CPG manufacturers and distributors and need the credential to validate your retail execution expertise." },
+      { "label": "Salesforce admins in consumer goods", "description": "You manage a Consumer Goods Cloud org and want to prove your knowledge of visit planning, in-store audits, and field team management." },
+      { "label": "Retail execution and field sales partners", "description": "You design solutions for field reps covering store visits, shelf compliance, and order capture and need to demonstrate your configuration skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Consumer Goods Cloud Accredited Professional Exam Hard?",
+    "summary": "The Consumer Goods Cloud AP exam is moderately difficult. It tests CPG-specific workflows like visit planning, in-store execution, direct store delivery, and retail analytics. Candidates without exposure to consumer goods field operations will find the domain terminology and retail execution concepts challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Field execution workflows</strong> — you must understand visit plans, route optimisation, shelf audits, and how surveys capture compliance data during store visits.",
+      "<strong>Order and inventory management</strong> — questions cover direct store delivery (van sales), pricing rules, and inventory tracking at the vehicle level."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and ensure you understand the end-to-end retail execution workflow before booking. Hands-on experience with Consumer Goods Cloud visit planning or in-store audit configuration is strongly recommended."
+  },
+  "examFormat": {
+    "heading": "Consumer Goods Cloud Accredited Professional Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring visit plans for a beverage distributor, setting up shelf audit surveys for planogram compliance, and designing order workflows for direct store delivery.",
+    "bestWayToPass": [
+      "<strong>Master visit planning:</strong> Know how to configure visit plans, route optimisation rules, visit templates, and priority scoring for different store tiers.",
+      "<strong>Understand in-store execution:</strong> Study how surveys, shelf audits, photo capture, and Einstein Vision work together for planogram compliance tracking.",
+      "<strong>Learn order management:</strong> Know the direct store delivery workflow from cart creation through invoicing, including price books, promotions, and vehicle inventory management.",
+      "<strong>Study analytics and KPIs:</strong> Understand key retail execution metrics like on-shelf availability, visit completion rate, and how CRM Analytics dashboards aggregate field performance data."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers Consumer Goods Cloud implementation — visit planning, retail execution, in-store audits, direct store delivery, and field team performance management for CPG companies.",

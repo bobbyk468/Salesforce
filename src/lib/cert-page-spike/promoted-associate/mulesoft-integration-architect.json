@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Integration Architect exam for?",
+    "personas": [
+      {
+        "label": "Senior integration consultants",
+        "description": "You design integration solutions for clients and want the credential to validate your API-led architecture expertise on Anypoint Platform."
+      },
+      {
+        "label": "Enterprise architects",
+        "description": "You define integration strategy across the organization and need to demonstrate mastery of MuleSoft&apos;s architecture patterns and governance frameworks."
+      },
+      {
+        "label": "Technical leads",
+        "description": "You guide development teams on Anypoint Platform best practices and want to certify your ability to translate requirements into integration designs."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Integration Architect Exam Hard?",
+    "summary": "MuleSoft Integration Architect is a challenging exam. It tests your ability to make architectural trade-off decisions — choosing between synchronous and asynchronous patterns, designing API-led layers, and establishing governance frameworks for enterprise-scale integration programs.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
+      "<strong>Architecture reasoning</strong> — most questions require justifying a design choice based on non-functional requirements like latency, scalability, and security.",
+      "<strong>Broad scope</strong> — candidates must understand API-led connectivity layers, C4E governance, security architecture, and resilience patterns across the entire Anypoint Platform."
+    ],
+    "passRateGuidance": "Gain experience designing at least 2–3 integration architectures using API-led connectivity before booking. Score 80%+ on practice exams to account for trade-off questions with nuanced answer choices."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Integration Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 55–65% of questions are scenario-based. Common patterns include assigning capabilities to the correct API-led layer (System, Process, or Experience), designing security architecture with OAuth and mutual TLS, and recommending Center for Enablement governance frameworks.",
+    "bestWayToPass": [
+      "<strong>Master API-led connectivity layers:</strong> Know exactly when a capability belongs in the System, Process, or Experience API layer and be able to justify the decision.",
+      "<strong>Study C4E governance:</strong> Understand how to establish a Center for Enablement, measure reuse metrics, and govern the API lifecycle across teams.",
+      "<strong>Know security patterns:</strong> Practice combining OAuth 2.0, mutual TLS, API Manager policies, and Anypoint Secrets Manager for multi-layer security designs.",
+      "<strong>Think in trade-offs:</strong> Every architecture question has multiple valid approaches — the exam rewards candidates who can articulate why one pattern fits the stated requirements better than alternatives."
+    ]
+  },
   "certificationCard": {
     "code": "MuleSoft Integration Architect",
     "description": "This exam tests your ability to design integration architectures on Anypoint Platform — choosing the right API-led layers, defining security and resilience patterns, and establishing governance through a Center for Enablement.",

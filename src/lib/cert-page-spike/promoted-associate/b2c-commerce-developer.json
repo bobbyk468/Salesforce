@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the B2C Commerce Developer exam for?",
+    "personas": [
+      {
+        "label": "SFCC developers",
+        "description": "You build and customize B2C Commerce storefronts using SFRA, ISML, and server-side JavaScript and want the certification to validate your full-stack SFCC skills."
+      },
+      {
+        "label": "Full-stack commerce engineers",
+        "description": "You work with controllers, templates, OCAPI/SCAPI, and Business Manager configuration and need a credential that covers the entire SFCC development stack."
+      },
+      {
+        "label": "Technical leads",
+        "description": "You manage cartridge architecture, deployment pipelines, and storefront performance for B2C Commerce projects and want to formalize your technical leadership."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the B2C Commerce Developer Exam Hard?",
+    "summary": "The B2C Commerce Developer exam is considered one of the harder Salesforce developer certifications. The ~65% passing score is moderate, but the exam covers the full SFCC stack &mdash; from SFRA architecture and ISML templates to OCAPI/SCAPI integration and Business Manager configuration &mdash; demanding broad and deep hands-on experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> &mdash; moderate on paper, but the breadth of topics (SFRA, scripting, APIs, data model, deployment) makes it demanding.",
+      "<strong>Full-stack depth</strong> &mdash; questions span server-side controllers, ISML templates, client-side JavaScript, and Business Manager operations, so you cannot skip any layer.",
+      "<strong>Hands-on SFRA experience essential</strong> &mdash; real project experience with SFRA controller development and at least one OCAPI or SCAPI integration is the strongest preparation."
+    ],
+    "passRateGuidance": "Spend time in a B2C Commerce sandbox building custom controllers, overriding SFRA templates, and configuring jobs in Business Manager before booking the exam."
+  },
+  "examFormat": {
+    "heading": "B2C Commerce Developer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Around 40-50% of questions are scenario-based. Common patterns describe a storefront customization requirement and ask which SFRA pattern, controller method, or API approach meets it. Expect questions on cartridge path resolution, template overrides, and OCAPI resource configuration.",
+    "bestWayToPass": [
+      "<strong>Master the cartridge override pattern:</strong> Know how the cartridge path resolves controllers and templates, and when to use server.extend vs. server.replace.",
+      "<strong>Build with SFRA hands-on:</strong> Create custom controllers, override ISML templates, and work with the dw.* API in a sandbox environment.",
+      "<strong>Study OCAPI and SCAPI:</strong> Understand the Shop API vs. Data API, how authentication works for headless scenarios, and when to use each API.",
+      "<strong>Know Business Manager inside out:</strong> Practice configuring site preferences, running jobs, managing code versions, and diagnosing issues using the request log and pipeline profiler."
+    ]
+  },
   "certificationCard": {
     "code": "B2C Commerce Developer",
     "description": "This exam covers full-stack SFCC development — SFRA cartridge architecture, ISML templates, controller scripting, OCAPI/SCAPI integration, and Business Manager configuration.",

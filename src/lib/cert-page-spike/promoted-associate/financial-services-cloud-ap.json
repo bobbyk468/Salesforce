@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Financial Services Cloud Accredited Professional exam for?",
+    "personas": [
+      { "label": "Banking and wealth management consultants", "description": "You implement Salesforce for financial institutions and need to prove your expertise in the FSC data model, households, and advisor workflows." },
+      { "label": "Salesforce admins at financial firms", "description": "You administer a Financial Services Cloud org and want to validate your knowledge of financial accounts, relationship management, and compliance features." },
+      { "label": "Insurance and fintech implementation partners", "description": "You deliver FSC projects for insurance carriers or fintech companies and need the credential for client-facing engagements." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Financial Services Cloud Accredited Professional Exam Hard?",
+    "summary": "The Financial Services Cloud AP exam is moderately difficult. It requires strong knowledge of the FSC data model, household structures, and financial services workflows. Candidates without exposure to banking, wealth management, or insurance processes will find the domain-specific questions challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Household and relationship model complexity</strong> — you must understand individual accounts, household rollups, financial account roles, and relationship maps.",
+      "<strong>Compliance knowledge expected</strong> — KYC workflows, audit trail requirements, and data privacy considerations are tested throughout the exam."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can explain the FSC household model and financial account relationships before booking. Experience with at least one FSC implementation in banking, wealth, or insurance is highly beneficial."
+  },
+  "examFormat": {
+    "heading": "Financial Services Cloud Accredited Professional Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include designing a household structure for a wealth management firm, configuring action plans for client onboarding, and selecting the right rollup approach for assets under management.",
+    "bestWayToPass": [
+      "<strong>Master the FSC data model:</strong> Know individual accounts, household accounts, financial accounts, financial account roles, and how rollups aggregate data at the household level.",
+      "<strong>Understand action plans:</strong> Study how action plan templates automate client lifecycle tasks like onboarding, annual reviews, and compliance checks.",
+      "<strong>Learn relationship management:</strong> Know how relationship maps, relationship groups, and referral management work for advisor-client engagement.",
+      "<strong>Study compliance workflows:</strong> Understand KYC processes, document checklist items, consent management, and how Salesforce Shield supports regulatory requirements."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam tests the Financial Services Cloud data model — households, financial accounts, and relationship management for banking, wealth management, and insurance. Expect questions on action plans, rollup summaries, and KYC compliance workflows.",

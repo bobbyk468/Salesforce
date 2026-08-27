@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Claude Certified Architect Professional exam for?",
+    "personas": [
+      { "label": "Enterprise AI Architects", "description": "Senior architects who design AI platforms serving multiple teams across geographies, handling multi-region deployments, regulatory compliance, and cross-team cost governance." },
+      { "label": "Security and Compliance Architects", "description": "Architects responsible for end-to-end security design in AI systems — data classification, prompt-injection defense layers, credential management for tool-calling agents, and audit trails for SOC 2, GDPR, and HIPAA." },
+      { "label": "Platform Engineering Directors", "description": "Technical leaders who own the AI infrastructure budget, set model-routing policies, design observability stacks for multi-agent pipelines, and build self-healing workflows that operate without human intervention." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Claude Certified Architect Professional Exam Hard?",
+    "summary": "The CCAR-P is the hardest exam in Anthropic&apos;s certification program. It is built for senior architects who have designed and operated enterprise-scale AI platforms — not prototypes or single-team deployments. Every question assumes you are balancing competing organizational constraints: compliance requirements that vary by geography, SLAs that differ by use case, six-figure monthly budgets, and multi-agent systems that must self-heal without human intervention. Candidates without genuine enterprise AI architecture experience will find this exam extremely challenging.",
+    "bullets": [
+      "<strong>65 multiple-choice questions</strong> in 120 minutes — under two minutes per question, which is demanding given the complexity of enterprise architecture scenarios.",
+      "<strong>720/1000 passing score</strong> — strong performance across all five domains is required, with no single section easy enough to carry a weak area.",
+      "<strong>Enterprise Architecture and Cost Governance together account for 45%</strong> — expect questions involving multi-region deployments, per-team cost attribution, intelligent model routing, and annual budget forecasting.",
+      "<strong>Production-scale experience is non-negotiable</strong> — the exam tests decisions that only arise when AI systems serve thousands of users across multiple compliance jurisdictions with real financial consequences."
+    ],
+    "passRateGuidance": "If you can design a multi-region AI platform with per-team cost attribution, build a defense-in-depth security architecture for regulated data, and explain when to use competitive evaluation vs. hierarchical agent teams, you are ready to book."
+  },
+  "examFormat": {
+    "heading": "Claude Certified Architect Professional Exam Format Explained",
+    "intro": "The exam is proctored online. Here is the format:",
+    "scenarioPercent": "Every question presents an enterprise scenario with specific organizational constraints — regulatory requirements, team structures, budget limits, uptime SLAs, and multi-agent system behaviors. The exam tests strategic architectural judgment: which design serves the organization, not just the immediate technical need.",
+    "bestWayToPass": [
+      "<strong>Think in platforms, not features:</strong> Every answer should serve the enterprise — multiple teams, varying compliance requirements, different SLAs, and fiscal-year budgets — not just the immediate technical problem.",
+      "<strong>Study enterprise security frameworks deeply:</strong> Know how SOC 2 controls apply to AI pipelines, what GDPR means for model inputs and outputs, how HIPAA governs AI-processed health data, and what shared-responsibility looks like with Anthropic.",
+      "<strong>Practice cost modeling with real numbers:</strong> Break down usage by model tier and request type, then calculate savings from intelligent routing, prompt caching, and batch processing — the exam presents similar scenarios with specific dollar amounts.",
+      "<strong>Design monitoring before you need it:</strong> Sketch dashboards for multi-agent production systems — task completion rate, tool-call success ratio, output quality scores, context utilization, and escalation-rate trends — the exam rewards proactive observability thinking."
+    ]
+  },
   "certificationCard": {
     "code": "CCAR-P",
     "description": "The hardest exam in Anthropic&apos;s certification program. The CCAR-P is built for senior architects who design AI platforms at enterprise scale — multi-region deployments, cross-team cost governance, regulatory compliance for AI-driven decisions, advanced agent orchestration with self-healing workflows, and the observability infrastructure that keeps it all visible.",

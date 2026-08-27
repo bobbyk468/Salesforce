@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Claude Certified Architect Foundations exam for?",
+    "personas": [
+      { "label": "Platform Engineers", "description": "Engineers who design multi-agent systems, configure MCP servers, and build the infrastructure that other developers ship Claude-powered features on top of." },
+      { "label": "DevOps and Infrastructure Leads", "description": "Team leads responsible for integrating Claude Code into CI/CD pipelines, managing CLAUDE.md configuration hierarchies, and enforcing quality gates on AI-generated code changes." },
+      { "label": "Senior Developers Moving Into Architecture", "description": "Experienced developers who have built Claude integrations and now need to prove they can design reliable, multi-agent workflows with proper orchestration, failure handling, and context management." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Claude Certified Architect Foundations Exam Hard?",
+    "summary": "The CCAR-F is a significant step up from the Developer exam. It tests system-design judgment — decomposing problems into agent workflows, choosing MCP transport protocols, configuring Claude Code for team-wide consistency, and designing prompt architectures that stay reliable under production load. Candidates who have designed and operated a real multi-agent system find the exam manageable; those with only single-agent or prototype experience will find the orchestration and reliability domains challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes — two minutes per question, which is tight for scenario-heavy architecture questions that require evaluating tradeoffs.",
+      "<strong>720/1000 passing score</strong> — you must perform well across all five domains, especially the heavily weighted Agentic Architecture section.",
+      "<strong>Agentic Architecture carries the most weight at 27%</strong> — expect multi-step orchestration scenarios where you must choose between single-agent, hub-and-spoke, and pipeline patterns based on real constraints.",
+      "<strong>Hands-on system design experience is essential</strong> — candidates who have built an MCP server, configured Claude Code at the team level, and debugged a multi-agent failure loop report the exam aligns closely with real-world problems."
+    ],
+    "passRateGuidance": "If you can design a multi-agent workflow, explain when to use stdio vs. SSE transport for MCP, and write a CLAUDE.md hierarchy that resolves cleanly, you are ready to book."
+  },
+  "examFormat": {
+    "heading": "Claude Certified Architect Foundations Exam Format Explained",
+    "intro": "The exam is proctored online. Here is the format:",
+    "scenarioPercent": "Almost every question describes a production system with specific constraints — latency requirements, compliance needs, team structure, failure modes — and asks which architectural decision best addresses the scenario. The exam tests tradeoff reasoning, not implementation syntax.",
+    "bestWayToPass": [
+      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline — this directly maps to the exam&apos;s largest domain.",
+      "<strong>Stand up an MCP server with real tools:</strong> Expose a database lookup and a file reader, connect them to Claude Code, and debug tool-selection errors by refining your schemas.",
+      "<strong>Configure Claude Code on a real codebase:</strong> Write CLAUDE.md files at different directory levels, create custom slash commands, and set up hooks — the exam tests the configuration hierarchy and conflict-resolution rules.",
+      "<strong>Study failure modes, not just happy paths:</strong> What happens when a tool call fails mid-pipeline, when the context window fills up, or when an agent loops indefinitely? Catalog these scenarios and write recovery strategies for each."
+    ]
+  },
   "certificationCard": {
     "code": "CCAR-F",
     "description": "Anthropic&apos;s architecture-level credential for engineers who design AI systems rather than just build them. The CCAR-F tests your ability to decompose problems into agent workflows, wire up MCP servers that external tools can talk through, configure Claude Code for team-wide consistency, and make the tradeoffs that keep multi-agent pipelines reliable under real production load.",

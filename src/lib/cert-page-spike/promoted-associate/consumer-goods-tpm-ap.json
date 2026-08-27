@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Consumer Goods Cloud TPM Accredited Professional exam for?",
+    "personas": [
+      { "label": "Trade promotion management consultants", "description": "You implement TPM solutions for CPG companies and need the credential to validate your expertise in promotion planning, fund management, and settlement workflows." },
+      { "label": "Revenue growth management analysts", "description": "You work with trade promotion data, ROI analysis, and promotional spend optimisation and want to prove your Consumer Goods Cloud TPM skills." },
+      { "label": "CPG implementation partners", "description": "You deliver Consumer Goods Cloud TPM projects for manufacturers and retailers and need the credential for client-facing project work." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Consumer Goods Cloud TPM Accredited Professional Exam Hard?",
+    "summary": "The Consumer Goods Cloud TPM AP exam is moderately difficult. It tests trade promotion lifecycle management including fund allocation, promotion execution, settlement, and analytics. Candidates without experience in CPG trade spend processes will find the financial concepts and promotion mechanics challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Trade promotion lifecycle knowledge</strong> — you must understand fund management, promotion tactics, conditional deals, and how planned spend reconciles against actual claims.",
+      "<strong>Financial settlement concepts</strong> — questions cover deduction matching, proof of performance, auto-settlement rules, and overpayment recovery workflows."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can explain the full TPM lifecycle from fund allocation through settlement before booking. Experience with CPG trade promotion processes or ERP integration for promotional spend is strongly recommended."
+  },
+  "examFormat": {
+    "heading": "Consumer Goods Cloud TPM Accredited Professional Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring a multi-tactic promotion with conditional payout tiers, designing fund allocation for a national retailer, and troubleshooting settlement discrepancies between planned and actual spend.",
+    "bestWayToPass": [
+      "<strong>Master fund management:</strong> Know how trade funds are structured, how fund commitments allocate budget to promotions, and how fund utilisation is tracked throughout the promotional cycle.",
+      "<strong>Understand promotion execution:</strong> Study promotion headers, tactics, conditional deal logic, and how the calendar tool prevents overlapping promotions for the same customer.",
+      "<strong>Learn settlement workflows:</strong> Know how claims are matched to promotions, how auto-settlement rules work, and how deductions and proof of performance are processed.",
+      "<strong>Study TPM analytics:</strong> Understand baseline modelling, lift measurement, post-promotion dip analysis, and how CRM Analytics dashboards measure promotional effectiveness and fund ROI."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers trade promotion management in Consumer Goods Cloud — promotion planning, fund allocation, settlement workflows, claims processing, and ROI analytics for CPG retailers.",

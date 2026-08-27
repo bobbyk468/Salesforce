@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Field Service Consultant exam for?",
+    "personas": [
+      { "label": "Service Cloud consultants expanding scope", "description": "You already implement Service Cloud and want to add Field Service expertise for mobile workforce management projects." },
+      { "label": "Field operations managers", "description": "You manage dispatchers and field technicians using Salesforce Field Service and want to validate your configuration and scheduling knowledge." },
+      { "label": "Implementation partners", "description": "You deliver Field Service implementations for clients and need the consultant credential to demonstrate end-to-end solution design expertise." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Field Service Consultant Exam Hard?",
+    "summary": "The Field Service Consultant exam is moderately to highly difficult. The scheduling engine, dispatcher console, and mobile app configuration create a large surface area that requires hands-on experience to master.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>63% passing score</strong> &mdash; you can miss up to 22 questions, but the low pass mark reflects the exam&apos;s complexity.",
+      "<strong>Scheduling policy configuration</strong> &mdash; expect scenario questions on work rules, service objectives, and how the optimization engine assigns appointments based on skills, territory, and travel time.",
+      "<strong>Mobile app and offline behavior</strong> &mdash; you need to know which records are available offline, how data syncs when connectivity is restored, and how mobile flows guide technician workflows."
+    ],
+    "passRateGuidance": "Score 70%+ on practice exams and make sure you can configure a scheduling policy with work rules and service objectives, and explain the Work Order to Service Appointment data flow."
+  },
+  "examFormat": {
+    "heading": "Field Service Consultant Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 55-65% of questions are scenario-based. Common patterns include designing a scheduling policy for a multi-territory workforce, configuring the dispatcher console for a dispatch centre, and setting up inventory tracking for van stock.",
+    "bestWayToPass": [
+      "<strong>Master the data model:</strong> Know the hierarchy from Work Order to Work Order Line Items to Service Appointments, and how Service Resources, Territories, and Operating Hours connect.",
+      "<strong>Understand scheduling policies:</strong> Know the difference between work rules (constraints like skills and territory) and service objectives (goals like minimize travel), and how they combine in a Scheduling Policy.",
+      "<strong>Know the dispatcher console:</strong> Gantt view for timeline scheduling, map view for geographic context, drag-and-drop assignment, and how absence management blocks resource availability.",
+      "<strong>Study mobile app configuration:</strong> Offline record access, mobile flows for inspection checklists, Products Required vs Products Consumed for parts tracking, and signature capture."
+    ]
+  },
   "certificationCard": {
     "code": "Field Service",
     "description": "The Field Service Consultant certification validates your expertise in implementing Salesforce Field Service solutions for mobile workforce management.",

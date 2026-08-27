@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Slack Administrator exam for?",
+    "personas": [
+      { "label": "IT Administrators", "description": "Professionals managing Slack workspaces and Enterprise Grid environments, including channel governance, security policies, and compliance." },
+      { "label": "Workspace Owners", "description": "Admins responsible for user provisioning, app approval workflows, retention policies, and Slack Connect configuration." },
+      { "label": "Collaboration Platform Managers", "description": "Managers overseeing enterprise messaging tools who want to validate their Slack administration skills and best practices knowledge." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Slack Administrator Exam Hard?",
+    "summary": "The Slack Administrator exam is moderately difficult. It covers a wide surface area — workspace setup, Enterprise Grid, Slack Connect, security, compliance, and Workflow Builder — so depth in just one area is not enough. Candidates need broad familiarity with Slack&apos;s admin console and enterprise features.",
+    "bullets": [
+      "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which is adequate for most scenario-based items.",
+      "<strong>~65% passing score</strong> — you need approximately 39 correct answers out of 60 to pass.",
+      "<strong>Breadth is the challenge</strong> — the exam spans workspace configuration, Enterprise Grid administration, Slack Connect, app management, compliance, and Workflow Builder.",
+      "<strong>Hands-on admin experience helps most</strong> — candidates who have configured permissions, app approval workflows, and retention policies in a real Slack workspace pass at higher rates."
+    ],
+    "passRateGuidance": "Book when you can confidently configure workspace permissions, set up SAML SSO, manage app approvals, create Workflow Builder automations, and explain Enterprise Grid vs. single-workspace differences."
+  },
+  "examFormat": {
+    "heading": "Slack Administrator Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions describe an organizational need — a security requirement, channel structure decision, or compliance mandate — and ask you to select the correct Slack admin configuration.",
+    "bestWayToPass": [
+      "<strong>Enterprise Grid:</strong> Know the difference between workspace-level and org-level admin controls, including centralized user provisioning and cross-workspace channels.",
+      "<strong>Security policies:</strong> Study SAML SSO, SCIM provisioning, IP allowlisting, two-factor enforcement, and message retention settings and their configuration scope.",
+      "<strong>App management:</strong> Understand app approval workflows, the approved apps list, and how to restrict or permit app installations for compliance.",
+      "<strong>Workflow Builder:</strong> Practice creating workflows with different trigger types (shortcut, emoji reaction, schedule, webhook) and step types (send message, open form, add to channel)."
+    ]
+  },
   "certificationCard": {
     "code": "Slack Admin",
     "description": "This exam covers setting up and managing Slack workspaces, including channel governance, user provisioning, security policies, app management, and Enterprise Grid administration.",

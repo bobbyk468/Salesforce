@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Hyperautomation Developer exam for?",
+    "personas": [
+      {
+        "label": "Automation developers",
+        "description": "You build end-to-end automation solutions and want to validate your ability to combine MuleSoft APIs with RPA and Composer."
+      },
+      {
+        "label": "MuleSoft developers expanding into RPA",
+        "description": "You already build Mule integrations and want to add robotic process automation and intelligent document processing to your skillset."
+      },
+      {
+        "label": "Salesforce automation specialists",
+        "description": "You build flows and process automations in Salesforce and want to extend into MuleSoft-powered hyperautomation across enterprise systems."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Hyperautomation Developer Exam Hard?",
+    "summary": "MuleSoft Hyperautomation Developer is moderately challenging. The exam spans multiple automation technologies — MuleSoft APIs, RPA bots, Composer, and Salesforce Flow — requiring breadth across tools rather than deep expertise in any single one.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
+      "<strong>Multi-tool breadth</strong> — candidates must understand when to use APIs, RPA, Composer, or Salesforce Flow for each step of an automation.",
+      "<strong>RPA-specific knowledge</strong> — MuleSoft RPA Builder and Manager concepts are less commonly encountered, making this the area where most candidates need the most study."
+    ],
+    "passRateGuidance": "Build at least one end-to-end automation that combines a Mule API with an RPA bot and Salesforce Flow before booking. Score 80%+ on practice exams to cover the breadth of automation tools tested."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Hyperautomation Developer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 45–55% of questions are scenario-based. Common patterns include choosing the right automation tool for each step of a business process, designing RPA bot triggers from Mule flows, and deciding when to use Composer for simple cloud-to-cloud integrations vs Anypoint Studio for complex transformations.",
+    "bestWayToPass": [
+      "<strong>Know the automation selection framework:</strong> Use APIs for systems with integration interfaces, RPA for legacy UI-only systems, Composer for simple cloud-to-cloud flows, and Salesforce Flow for human-facing process steps.",
+      "<strong>Learn MuleSoft RPA:</strong> Understand RPA Builder for bot creation, RPA Manager for orchestration, attended vs unattended bots, and credential vault security.",
+      "<strong>Practice process orchestration:</strong> Build multi-step automations that combine API calls, RPA bot executions, and Salesforce Flow steps within a single end-to-end process.",
+      "<strong>Study Composer use cases:</strong> Know when to recommend MuleSoft Composer (no-code, business-user-friendly, cloud-to-cloud) vs Anypoint Studio (complex transformations, on-premise connectivity)."
+    ]
+  },
   "certificationCard": {
     "code": "Hyperautomation",
     "description": "This exam covers building end-to-end automation solutions that combine MuleSoft APIs, RPA bots, Composer, and Salesforce Flow to automate complex business processes across multiple systems.",

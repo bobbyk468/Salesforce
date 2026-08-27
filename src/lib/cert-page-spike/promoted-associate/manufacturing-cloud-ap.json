@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Manufacturing Cloud Accredited Professional exam for?",
+    "personas": [
+      { "label": "Manufacturing implementation consultants", "description": "You deliver Manufacturing Cloud projects for industrial manufacturers and need the credential to validate your expertise in sales agreements, forecasting, and rebate management." },
+      { "label": "Salesforce admins in manufacturing", "description": "You manage a Manufacturing Cloud org and want to prove your knowledge of account-based forecasting, demand planning, and dealer visit management." },
+      { "label": "Supply chain and ERP integration partners", "description": "You design integrations between Salesforce Manufacturing Cloud and ERP systems like SAP or Oracle and need to demonstrate your solution design skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Manufacturing Cloud Accredited Professional Exam Hard?",
+    "summary": "The Manufacturing Cloud AP exam is moderately difficult. It tests manufacturing-specific workflows including sales agreements, account-based forecasting, rebate programs, and ERP integration patterns. Candidates without exposure to manufacturing sales operations and demand planning will find the domain concepts challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Sales agreement complexity</strong> — you must understand agreement terms, attainment calculations, and how actuals from orders feed into agreement tracking.",
+      "<strong>Forecasting and demand planning</strong> — questions test account-based forecasting, run rate business, forecast adjustments, and how Manufacturing Cloud bridges sales planning with operations."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain how sales agreements drive account-based forecasts before booking. Hands-on experience with Manufacturing Cloud or familiarity with manufacturing demand planning and dealer/distributor management is strongly recommended."
+  },
+  "examFormat": {
+    "heading": "Manufacturing Cloud Accredited Professional Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring sales agreements for a distributor network, designing an account-based forecast that combines agreement-based and run-rate demand, and setting up a tiered rebate program for dealer incentives.",
+    "bestWayToPass": [
+      "<strong>Master sales agreements:</strong> Know agreement headers, agreement terms (product-level commitments), how actuals are calculated, and how attainment data flows from orders or opportunities.",
+      "<strong>Understand account-based forecasting:</strong> Study forecast periods, forecast metrics (planned vs. actual revenue), forecast adjustments, and how forecasts roll up across account hierarchies.",
+      "<strong>Learn rebate management:</strong> Know rebate program types (volume, growth, promotional), tiered payout structures, accrual calculations, and how payouts are processed at program end.",
+      "<strong>Study ERP integration patterns:</strong> Understand how order data, inventory levels, and pricing from SAP or Oracle flow into Manufacturing Cloud, and how MuleSoft is commonly used as integration middleware."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam tests your ability to configure Sales Agreements, Account-Based Forecasting, rebate programs, and ERP integrations in Manufacturing Cloud.",

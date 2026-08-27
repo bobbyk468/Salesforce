@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Sharing and Visibility Architect exam for?",
+    "personas": [
+      { "label": "Security-Focused Admins", "description": "Administrators who design and troubleshoot complex sharing models, OWD configurations, and record access for large orgs with multiple user populations." },
+      { "label": "Platform Architects", "description": "Architects who need to prove deep expertise in Salesforce&apos;s layered security model as part of the Application Architect or CTA path." },
+      { "label": "Compliance Specialists", "description": "Professionals responsible for ensuring record-level data access meets regulatory and internal audit requirements across internal and external users." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Sharing and Visibility Architect Exam Hard?",
+    "summary": "The Sharing and Visibility Architect exam is deceptively challenging because every question tests how multiple security layers interact. You need to evaluate OWD settings, role hierarchy, sharing rules, and Apex managed sharing together &mdash; not in isolation. Many candidates underestimate this exam because they are comfortable with individual sharing concepts but struggle when the exam combines them in a single scenario.",
+    "bullets": [
+      "<strong>60 questions</strong> in 120 minutes &mdash; questions require you to trace record access through multiple sharing layers simultaneously.",
+      "<strong>~68% passing score</strong> &mdash; about 41 correct answers needed, with many questions containing two plausible answers that differ by one sharing layer.",
+      "<strong>External sharing complexity</strong> &mdash; Community and portal user sharing models (Sharing Sets, external OWD, Guest User rules) trip up candidates who only study internal sharing.",
+      "<strong>Performance implications</strong> &mdash; the exam tests your understanding of sharing recalculation cost and how deep role hierarchies impact org performance."
+    ],
+    "passRateGuidance": "Book the exam when you can whiteboard the complete access evaluation order from OWD through Apex Managed Sharing, and confidently explain external sharing for Community licence types."
+  },
+  "examFormat": {
+    "heading": "Sharing and Visibility Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Nearly every question is scenario-based, describing a specific access requirement and asking you to select the correct combination of sharing mechanisms to achieve it.",
+    "bestWayToPass": [
+      "<strong>Memorize the access evaluation order:</strong> OWD, role hierarchy, sharing rules, manual sharing, teams, Apex managed sharing &mdash; know exactly which layer is additive and which sets the floor.",
+      "<strong>Study external sharing deeply:</strong> Sharing Sets for Customer Community, roles and sharing rules for Customer Community Plus, and External Account Hierarchy for Partner Community are frequently tested.",
+      "<strong>Understand performance trade-offs:</strong> Know when sharing recalculation is triggered, how to defer it, and how role hierarchy depth affects query performance in large orgs.",
+      "<strong>Practice Apex Managed Sharing:</strong> Know how Share objects work, how to set the rowCause field, and when programmatic sharing is the only option for a business requirement."
+    ]
+  },
   "certificationCard": {
     "code": "Sharing & Visibility",
     "description": "This architect-level exam tests your ability to design record access models at scale, covering OWDs, role hierarchies, sharing rules, Apex managed sharing, and field-level security across internal and external users.",

@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Platform Foundations exam for?",
+    "personas": [
+      { "label": "Salesforce beginners", "description": "You have up to 6 months of Salesforce experience and want an entry-level credential to prove you understand the platform basics." },
+      { "label": "Career changers exploring CRM", "description": "You&apos;re transitioning into the Salesforce ecosystem and want a low-risk first certification before tackling ADM-201 or Developer I." },
+      { "label": "Business users seeking formal validation", "description": "You use Salesforce daily in a sales, service, or operations role and want to validate your understanding of objects, reports, and security fundamentals." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Platform Foundations Exam Hard?",
+    "summary": "The Platform Foundations exam is considered easy to moderate. It covers a wide surface area at a shallow depth, which means the challenge is breadth of knowledge rather than deep configuration expertise.",
+    "bullets": [
+      "<strong>40 multiple-choice questions</strong> in 75 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 14 questions.",
+      "<strong>Broad but shallow</strong> &mdash; questions span Customer 360, data modelling, security basics, reports, and the Salesforce ecosystem, but none go deep into configuration.",
+      "<strong>Terminology traps</strong> &mdash; many answers sound plausible because they use real Salesforce terms in slightly wrong contexts. Focus on what each Cloud product actually does."
+    ],
+    "passRateGuidance": "If you can score 80%+ on two full practice exams and clearly distinguish Sales Cloud from Service Cloud from Marketing Cloud, you&apos;re ready to book."
+  },
+  "examFormat": {
+    "heading": "Platform Foundations Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 30-40% of questions are scenario-based. Common patterns include identifying which standard object fits a business requirement, choosing the correct Cloud product for a use case, and selecting the right security layer to solve an access problem.",
+    "bestWayToPass": [
+      "<strong>Learn the core data model:</strong> Know the standard objects (Account, Contact, Lead, Opportunity, Case), their relationships, and when to use Lookup vs Master-Detail.",
+      "<strong>Distinguish the Salesforce Clouds:</strong> Sales Cloud for pipeline and forecasting, Service Cloud for cases and support, Marketing Cloud for campaigns &mdash; the exam tests which product solves which problem.",
+      "<strong>Understand security layers:</strong> Know the four-level security model (Org, Object, Field, Record) and that Profiles control what users can do while Roles control what data they see.",
+      "<strong>Know AppExchange and Trailhead:</strong> Understand managed vs unmanaged packages, how to evaluate an AppExchange listing, and the role of Trailhead in the Salesforce learning ecosystem."
+    ]
+  },
   "expertInsight": "Platform Foundations is positioned as entry-level, but don&apos;t underestimate it — the 62% passing score is low, yet the questions cover a surprisingly wide surface area. You&apos;ll see questions on AppExchange, Trailhead, the Salesforce ecosystem, basic data modelling, and even some light security concepts. The trap is that many answers sound plausible because they use real Salesforce terminology in slightly wrong contexts. Focus on understanding what each Cloud product actually does (Sales Cloud vs. Service Cloud vs. Marketing Cloud) and the difference between standard and custom objects. If you&apos;re already studying for Admin, this exam is excellent warm-up.",
   "certificationCard": {
     "code": "Associate",

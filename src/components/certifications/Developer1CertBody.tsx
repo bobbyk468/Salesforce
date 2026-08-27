@@ -229,6 +229,16 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
         <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
         {/* Main Content */}
         <div className="lg:col-span-3">
+            {/* Who Is This Cert For */}
+            <section className="mb-8 rounded-xl border border-gray-100 bg-gray-50/50 p-5 sm:p-6">
+              <h2 className="text-lg font-bold text-gray-900 mb-3">Who is the Platform Developer I exam for?</h2>
+              <ul className="space-y-2 text-sm text-gray-700">
+                <li><strong className="text-gray-900">Developers new to Salesforce:</strong> You have programming experience in Java, JavaScript, or another language and want to build on the Salesforce platform using Apex and LWC.</li>
+                <li><strong className="text-gray-900">Admins transitioning to development:</strong> You passed ADM-201 and want to move beyond declarative tools into custom code, triggers, and integrations.</li>
+                <li><strong className="text-gray-900">Full-stack developers at SI partners:</strong> Your firm requires PD1 certification for project staffing, and you need to validate Salesforce-specific development skills.</li>
+              </ul>
+            </section>
+
             {/* Exam Fees & Registration section */}
             <ExamFeesSection slug={slug} />
             <OfficialSourceRef slug={slug} />
@@ -314,6 +324,27 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
                   Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you&apos;re scoring below 70% on mocks, focus on governor limits and bulkification — those two topics cover over 30% of the exam combined.
                 </p>
               </div>
+            </div>
+          </details>
+
+          {/* Exam Format Explained */}
+          <details id="exam-format" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_680px]">
+            <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
+              PD1 Exam Format Explained
+            </summary>
+            <div className="hidden group-open:block lg:block">
+              <h2 className="hidden lg:block text-lg font-bold text-gray-900 mb-3">PD1 Exam Format Explained</h2>
+              <p className="text-sm text-gray-700 mb-3">The exam is proctored online or at a test centre through Webassessor. Here is the format:</p>
+              <ExamLogisticsSection slug={slug} />
+              <h3 className="text-base font-semibold text-gray-900 mb-2 mt-4">How Many Questions Are Code-Based?</h3>
+              <p className="text-sm text-gray-700 mb-3">About 30-40% of questions include Apex code snippets or pseudocode. You need to read the code, identify issues (governor limit violations, bulkification failures, incorrect trigger context), and select the correct fix or outcome. Another 30-40% are scenario-based without code, describing a business requirement and asking which approach is best.</p>
+              <h3 className="text-base font-semibold text-gray-900 mb-2">Best Way to Pass on Your First Attempt</h3>
+              <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
+                <li><strong>Write real Apex code:</strong> Set up a Developer Edition org and build triggers, batch classes, and test classes. Reading alone is not sufficient for PD1.</li>
+                <li><strong>Memorise governor limits:</strong> 100 SOQL queries, 150 DML statements, 50K query rows, 6MB heap, 10s CPU. These numbers appear in nearly every mock and the real exam.</li>
+                <li><strong>Master the trigger handler pattern:</strong> One trigger per object, all logic in a handler class. Know when to use before vs after triggers and the full order of execution.</li>
+                <li><strong>Practice reading code under time pressure:</strong> At 1.8 minutes per question, you need to parse code snippets quickly. Time yourself on practice exams.</li>
+              </ul>
             </div>
           </details>
 
@@ -563,6 +594,7 @@ private class CalloutServiceTest {
             sections={[
               { id: 'exam-prep', title: 'Exam Prep Content' },
               { id: 'is-pd1-hard', title: 'Is PD1 Hard?' },
+              { id: 'exam-format', title: 'Exam Format' },
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'apex-code-patterns', title: 'Apex Code Patterns' },
               { id: 'scenario-tips', title: 'How to Pass PD1' },

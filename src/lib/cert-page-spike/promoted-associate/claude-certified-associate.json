@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Claude Certified Associate exam for?",
+    "personas": [
+      { "label": "Business Professionals", "description": "Marketing managers, operations leads, and project managers who use Claude daily to draft content, summarize documents, and streamline workflows without writing code." },
+      { "label": "Team Leads Evaluating AI Tools", "description": "Managers responsible for choosing and rolling out AI tools across their organization who need to demonstrate competency in prompt design and responsible AI use." },
+      { "label": "Career Changers Entering AI", "description": "Professionals from non-technical backgrounds who want a recognized credential proving they can work effectively with generative AI in a business context." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Claude Certified Associate Exam Hard?",
+    "summary": "The CCAO-F is Anthropic&apos;s most accessible exam, but don&apos;t mistake entry-level for easy. It tests practical judgment — spotting hallucinations, choosing the right Claude model for a task, and knowing when data sensitivity demands enterprise-grade controls — which means candidates who only skim the surface tend to stumble on the response-quality and governance sections.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes — roughly two minutes per question, which is comfortable for most candidates.",
+      "<strong>720/1000 passing score</strong> — you need consistent accuracy across all seven domains, not just strength in one area.",
+      "<strong>Response Quality carries the most weight at 21%</strong> — identifying hallucinations, omissions, and fabricated citations is the single biggest differentiator between passing and failing.",
+      "<strong>No coding required</strong> — the exam is designed for non-technical professionals, but two weeks of daily hands-on Claude usage is the minimum preparation most successful candidates report."
+    ],
+    "passRateGuidance": "If you can consistently spot errors in Claude&apos;s output and explain why one prompting approach outperforms another, you are ready to book."
+  },
+  "examFormat": {
+    "heading": "Claude Certified Associate Exam Format Explained",
+    "intro": "The exam is proctored online. Here is the format:",
+    "scenarioPercent": "Nearly every question is scenario-based: you are given a team, a task, and a constraint, then asked which approach produces the best outcome. Pure recall questions are rare — the exam rewards applied judgment over memorized definitions.",
+    "bestWayToPass": [
+      "<strong>Use Claude daily for two weeks before sitting the exam:</strong> Draft emails, summarize reports, compare options, and critically review every response Claude gives you.",
+      "<strong>Focus on the Response Quality domain:</strong> Practice giving Claude tasks where you already know the correct answer, then verify every claim in the output — this habit alone covers the highest-weighted section.",
+      "<strong>Map products to use cases, not feature lists:</strong> Know when Claude.ai, a shared Project, the API, or Claude Code is the right fit based on team size, automation needs, and data sensitivity.",
+      "<strong>Default to the most cautious governance answer:</strong> When a question mentions confidential data, PII, or regulated content, the correct choice almost always involves the enterprise tier and a data-classification review."
+    ]
+  },
   "certificationCard": {
     "code": "CCAO-F",
     "description": "Anthropic&apos;s entry-level credential for non-technical professionals. The CCAO-F tests whether you can write well-structured prompts, spot errors in AI-generated responses, pick the right Claude model for a task, set up Projects with knowledge sources, and handle sensitive data responsibly — all without writing a single line of code.",

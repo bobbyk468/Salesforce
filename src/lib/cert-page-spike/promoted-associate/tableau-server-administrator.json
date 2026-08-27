@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Server Administrator exam for?",
+    "personas": [
+      { "label": "IT Administrators", "description": "Professionals responsible for deploying, configuring, and maintaining Tableau Server or Tableau Cloud environments for their organization." },
+      { "label": "System Administrators", "description": "Admins managing user provisioning, authentication (SAML, LDAP, Active Directory), and security policies for Tableau Server." },
+      { "label": "Operations Teams", "description": "Teams monitoring server health, managing extract refresh schedules, troubleshooting failures, and performing backup and recovery." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Server Administrator Exam Hard?",
+    "summary": "The Tableau Server Administrator exam is moderately difficult. It requires fluency with TSM commands, server process architecture, and real troubleshooting scenarios — studying documentation without hands-on server management experience leaves significant gaps.",
+    "bullets": [
+      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which is manageable for candidates familiar with the admin interface.",
+      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>TSM command-line fluency is essential</strong> — the exam tests specific TSM operations for configuration, backup, restore, and maintenance.",
+      "<strong>Hands-on server administration helps most</strong> — candidates who have managed extract refreshes, configured authentication, and used Admin Views pass at higher rates."
+    ],
+    "passRateGuidance": "Book when you can confidently run TSM commands, troubleshoot failed extract refreshes, configure SAML SSO, and interpret Admin Views without looking up steps."
+  },
+  "examFormat": {
+    "heading": "Tableau Server Administrator Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions describe server issues — failed extract refreshes, slow dashboard loads, authentication errors — and ask you to identify the correct diagnostic or resolution step.",
+    "bestWayToPass": [
+      "<strong>TSM commands:</strong> Memorize key TSM operations — tsm status, tsm configuration set/get, tsm maintenance backup/restore, and tsm restart.",
+      "<strong>Process architecture:</strong> Know what each Tableau Server process does (VizQL, Backgrounder, Data Server, Repository) and which logs to check when it fails.",
+      "<strong>Authentication configuration:</strong> Understand SAML SSO, Active Directory sync, OpenID Connect, and Kerberos setup, including common troubleshooting steps.",
+      "<strong>Admin Views:</strong> Practice using built-in monitoring dashboards (Background Tasks, Traffic to Views, Stats for Space Used) for proactive maintenance."
+    ]
+  },
   "certificationCard": {
     "code": "Tableau Server Admin",
     "description": "Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud. They handle installation, security, user management, sites, and performance.",

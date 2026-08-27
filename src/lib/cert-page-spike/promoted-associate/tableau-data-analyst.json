@@ -15,6 +15,36 @@
       "text": "."
     }
   ],
+  "whoIsThisFor": {
+    "heading": "Who is the Tableau Data Analyst exam for?",
+    "personas": [
+      { "label": "BI Analysts", "description": "Professionals building dashboards, reports, and interactive visualizations with Tableau Desktop for business stakeholders." },
+      { "label": "Data Analysts", "description": "Analysts transitioning from spreadsheet-based reporting to Tableau&apos;s visual analytics platform for deeper insights." },
+      { "label": "Self-Service Analytics Users", "description": "Business users who create their own Tableau workbooks and want a credential to validate their data visualization skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Tableau Data Analyst Exam Hard?",
+    "summary": "The Tableau Data Analyst exam is moderately difficult. It tests practical Tableau Desktop skills — not just feature awareness — so you need hands-on experience building visualizations, writing calculations, and configuring dashboard interactivity.",
+    "bullets": [
+      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which is comfortable for most candidates.",
+      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>LOD expressions are heavily tested</strong> — FIXED, INCLUDE, and EXCLUDE calculations require practice beyond reading documentation.",
+      "<strong>Hands-on Tableau Desktop experience helps most</strong> — candidates who have built real workbooks with calculated fields and dashboard actions pass at higher rates."
+    ],
+    "passRateGuidance": "Book when you can confidently build LOD expressions, table calculations, and multi-sheet dashboards with filter actions without referencing documentation."
+  },
+  "examFormat": {
+    "heading": "Tableau Data Analyst Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions present a business question and ask you to choose the correct chart type, calculation method, or filter configuration to answer it.",
+    "bestWayToPass": [
+      "<strong>Practice LOD expressions:</strong> Build FIXED, INCLUDE, and EXCLUDE calculations in Tableau Desktop until they feel intuitive — this topic appears frequently.",
+      "<strong>Memorize filter order:</strong> Know the filter order of operations (Extract, Data Source, Context, Dimension, Measure, Table Calculation) and when context filters change the outcome.",
+      "<strong>Chart selection logic:</strong> Know when to use bar, line, scatter, heat map, treemap, and dual-axis charts for different analytical questions.",
+      "<strong>Build interactive dashboards:</strong> Practice configuring Filter Actions, Highlight Actions, and URL Actions in multi-sheet dashboards."
+    ]
+  },
   "certificationCard": {
     "code": "Tableau Data Analyst",
     "description": "Tableau Data Analysts analyze data and build actionable insights using Tableau. They connect to data, create calculations, and design visualizations that drive business decisions.",

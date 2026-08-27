@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Platform Architect exam for?",
+    "personas": [
+      {
+        "label": "Platform architects",
+        "description": "You own the Anypoint Platform deployment strategy and want the credential to validate your infrastructure and governance expertise."
+      },
+      {
+        "label": "Infrastructure engineers",
+        "description": "You manage CloudHub, Runtime Fabric, or on-premise Mule deployments and want to certify your platform architecture skills."
+      },
+      {
+        "label": "IT directors and technical leads",
+        "description": "You define the organization&apos;s integration platform roadmap and need to demonstrate mastery of Anypoint Platform at enterprise scale."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Platform Architect Exam Hard?",
+    "summary": "MuleSoft Platform Architect is one of MuleSoft&apos;s most challenging exams. It requires deep understanding of deployment models (CloudHub, Runtime Fabric, on-premise), VPC and VPN networking, high availability design, and capacity planning — topics that demand real-world infrastructure experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
+      "<strong>Infrastructure depth</strong> — expect detailed questions on VPC configuration, load balancer setup, Runtime Fabric cluster sizing, and disaster recovery planning.",
+      "<strong>Cross-domain knowledge</strong> — candidates must understand networking, security, monitoring, and capacity planning in addition to Anypoint Platform specifics."
+    ],
+    "passRateGuidance": "Gain hands-on experience managing at least one production Anypoint Platform deployment before booking. Score 80%+ on practice exams to leave margin for infrastructure-specific questions."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Platform Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 55–65% of questions are scenario-based. Common patterns include choosing between CloudHub and Runtime Fabric for a given set of requirements, designing VPC and VPN configurations for hybrid connectivity, and sizing workers for throughput and high availability.",
+    "bestWayToPass": [
+      "<strong>Compare deployment models:</strong> Know the trade-offs between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premise — and when each model fits a customer&apos;s data residency, security, and cost requirements.",
+      "<strong>Master networking:</strong> Understand VPC peering, VPN site-to-site tunnels, Dedicated Load Balancers, and TLS termination for CloudHub and Runtime Fabric deployments.",
+      "<strong>Design for HA and DR:</strong> Practice multi-worker configurations, persistent queues, multi-region deployments, and RTO/RPO planning for different integration tiers.",
+      "<strong>Learn capacity planning:</strong> Know worker sizing (vCore allocations), how to calculate required capacity from throughput and concurrency, and how auto-scaling works in CloudHub 2.0 and Runtime Fabric."
+    ]
+  },
   "certificationCard": {
     "code": "MuleSoft Architect",
     "description": "This exam tests your ability to define and own an organization&amp;apos;s Anypoint Platform strategy, covering deployment architecture, governance, security, and API-led connectivity at enterprise scale.",

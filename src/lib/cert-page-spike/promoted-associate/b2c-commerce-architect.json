@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the B2C Commerce Architect exam for?",
+    "personas": [
+      {
+        "label": "Senior SFCC architects",
+        "description": "You design multi-brand, multi-locale Commerce Cloud solutions for enterprise retailers and want the certification to validate your architectural expertise."
+      },
+      {
+        "label": "Technical leads evaluating commerce patterns",
+        "description": "You assess headless vs. SFRA approaches, CDN caching strategies, and integration architecture for large-scale B2C deployments."
+      },
+      {
+        "label": "Solution architects",
+        "description": "You integrate Commerce Cloud with Order Management, Marketing Cloud, and payment providers and need the credential to demonstrate cross-cloud architectural competence."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the B2C Commerce Architect Exam Hard?",
+    "summary": "The B2C Commerce Architect exam is one of the more difficult Salesforce certifications. The ~68% passing score is above average, and the exam tests architectural judgment &mdash; evaluating trade-offs between caching strategies, headless patterns, and integration approaches rather than recalling isolated configuration steps.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>~68% passing score</strong> &mdash; above the standard 65%, reflecting the advanced level of architectural reasoning expected.",
+      "<strong>Trade-off analysis</strong> &mdash; questions require choosing between viable approaches (headless vs. SFRA, CDN strategies, integration patterns) based on business and technical constraints.",
+      "<strong>Deep project experience expected</strong> &mdash; multiple years of SFCC project experience across different site configurations and traffic patterns is the strongest preparation."
+    ],
+    "passRateGuidance": "This exam rewards breadth of real-world project experience over study alone. If you have designed at least two multi-site SFCC deployments and can articulate caching, performance, and integration trade-offs confidently, you are ready to book."
+  },
+  "examFormat": {
+    "heading": "B2C Commerce Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "The majority of questions are scenario-based. Expect long scenarios describing a global retailer&apos;s requirements (multi-brand, multi-locale, high traffic) and asking you to select the architecture that best meets performance, scalability, and maintainability goals.",
+    "bestWayToPass": [
+      "<strong>Know the SFRA vs. headless trade-offs:</strong> Understand when SFRA is the right choice vs. PWA Kit or a custom headless front-end, and how each affects performance, SEO, and development cost.",
+      "<strong>Master CDN and caching strategy:</strong> Study the caching hierarchy (browser, CDN, application), page cache configuration, and how to handle dynamic content alongside cached pages.",
+      "<strong>Study integration architecture deeply:</strong> Know OCAPI vs. SCAPI, the Salesforce Connector for Order Management, and how to design fault-tolerant integrations with external payment and tax providers.",
+      "<strong>Review security and compliance:</strong> Understand PCI DSS responsibility boundaries, GDPR data handling, and how to design graceful degradation when external services are unavailable."
+    ]
+  },
   "certificationCard": {
     "code": "B2C Architect",
     "description": "This exam tests your ability to architect global B2C Commerce (SFCC) sites across multiple brands, locales, and channels using SFRA, headless patterns, and CDN caching strategies.",

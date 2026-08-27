@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Engagement Administrator exam for?",
+    "personas": [
+      {
+        "label": "Marketing Cloud administrators",
+        "description": "You manage day-to-day Marketing Cloud operations and want to validate your platform administration skills."
+      },
+      {
+        "label": "Email operations specialists",
+        "description": "You handle deliverability, user permissions, and data management in Marketing Cloud and want formal recognition."
+      },
+      {
+        "label": "Salesforce admins expanding into marketing",
+        "description": "You already manage the core Salesforce platform and want to add Marketing Cloud admin skills to your credentials."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Engagement Administrator Exam Hard?",
+    "summary": "The Engagement Administrator exam is moderately difficult. It tests platform setup, security configuration, subscriber data management, and deliverability best practices. You need hands-on experience with Business Unit architecture, role-based permissions, and Sender Authentication Packages.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> — slightly lower than some consultant exams, but the content is operationally deep.",
+      "<strong>Admin-specific focus</strong> — expect questions on Business Unit setup, IP warming, SAP configuration, and API security that pure marketers may not encounter.",
+      "<strong>Deliverability knowledge required</strong> — SPF, DKIM, DMARC, Reply Mail Management, and IP reputation monitoring are all tested."
+    ],
+    "passRateGuidance": "Spend at least 6 months managing a Marketing Cloud account before booking. Practice configuring Business Units, user roles, and Sender Authentication Packages in a sandbox."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Engagement Administrator Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring user permissions for a multi-Business Unit org, troubleshooting deliverability issues, and designing subscriber data retention policies.",
+    "bestWayToPass": [
+      "<strong>Know Business Unit architecture:</strong> Understand parent vs child BU settings, permission inheritance, and when to use shared vs local Data Extensions.",
+      "<strong>Study deliverability inside out:</strong> IP warming schedules, SAP setup, SPF/DKIM/DMARC, and Reply Mail Management are high-frequency topics.",
+      "<strong>Master user roles and security:</strong> Know the standard Marketing Cloud roles, how custom roles work, and how SSO and IP allowlisting secure the platform.",
+      "<strong>Understand Marketing Cloud Connect:</strong> Know how the Salesforce connector user is configured, what sync errors look like, and how to troubleshoot them."
+    ]
+  },
   "certificationCard": {
     "code": "MC Engagement Admin",
     "description": "This exam focuses on the admin side of Marketing Cloud Engagement: Business Unit setup, user roles and permissions, subscriber data management, deliverability configuration, and CRM integration.",

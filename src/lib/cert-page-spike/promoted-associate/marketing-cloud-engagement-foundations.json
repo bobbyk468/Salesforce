@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Engagement Foundations exam for?",
+    "personas": [
+      {
+        "label": "Marketing Cloud beginners",
+        "description": "You are new to Marketing Cloud Engagement and want an entry-level credential to validate your foundational knowledge."
+      },
+      {
+        "label": "Digital marketers exploring Salesforce",
+        "description": "You work in email or digital marketing and want to demonstrate that you understand the Marketing Cloud platform basics."
+      },
+      {
+        "label": "Career changers entering the Salesforce ecosystem",
+        "description": "You are building a Salesforce career and want a low-cost, entry-level marketing certification to add to your resume."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Engagement Foundations Exam Hard?",
+    "summary": "The Engagement Foundations exam is one of the easier Salesforce certifications. It is designed for people with up to 6 months of Marketing Cloud experience and tests basic platform navigation, email sends, subscriber management, and core reporting metrics. This is a great starting point if you are new to Marketing Cloud.",
+    "bullets": [
+      "<strong>40 multiple-choice questions</strong> in 75 minutes.",
+      "<strong>~65% passing score</strong> — you need to answer roughly 26 out of 40 questions correctly.",
+      "<strong>Entry-level content</strong> — no coding, no advanced data architecture. The focus is on navigating Email Studio, understanding subscriber lists vs Data Extensions, and basic Journey Builder workflows.",
+      "<strong>Lower cost barrier</strong> — at $75, this exam is significantly cheaper than role-based certifications."
+    ],
+    "passRateGuidance": "Complete the Marketing Cloud Engagement Foundations Trailhead module and spend at least a few weeks using the platform. If you can navigate Email Studio and explain the subscriber data model, you are likely ready."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Engagement Foundations Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 30-40% of questions are scenario-based. They focus on practical tasks like choosing the right audience source for an email send or interpreting basic tracking metrics.",
+    "bestWayToPass": [
+      "<strong>Learn the core studios:</strong> Know what Email Studio, Mobile Studio, Advertising Studio, Social Studio, and Journey Builder each do at a high level.",
+      "<strong>Understand subscribers vs Data Extensions:</strong> Know the All Subscribers list, Publication Lists, Suppression Lists, and when to use Data Extensions instead of lists.",
+      "<strong>Practice basic email sends:</strong> Walk through the guided send process, understand send classifications, and know how to use test sends.",
+      "<strong>Study tracking metrics:</strong> Know what Delivered, Opened, Clicked, Bounced (hard vs soft), and Unsubscribed mean and how to find these reports in the UI."
+    ]
+  },
   "certificationCard": {
     "code": "Marketing Associate",
     "description": "An entry-level exam for anyone new to Marketing Cloud Engagement. It covers Email Studio basics, subscriber lists vs. Data Extensions, simple Journey Builder workflows, and core reporting metrics.",

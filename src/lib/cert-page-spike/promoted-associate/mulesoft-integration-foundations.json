@@ -15,6 +15,45 @@
       "text": "."
     }
   ],
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Integration Foundations exam for?",
+    "personas": [
+      {
+        "label": "New MuleSoft team members",
+        "description": "You&apos;re joining a MuleSoft project and want to demonstrate baseline knowledge of API-led connectivity and Anypoint Platform."
+      },
+      {
+        "label": "Business analysts on integration projects",
+        "description": "You work alongside MuleSoft developers and need to understand integration terminology, patterns, and platform capabilities."
+      },
+      {
+        "label": "IT professionals exploring MuleSoft",
+        "description": "You&apos;re evaluating MuleSoft for your organization and want an entry-level credential to build foundational knowledge before pursuing developer or architect certifications."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Integration Foundations Exam Hard?",
+    "summary": "MuleSoft Integration Foundations is one of the easiest MuleSoft certifications. It tests conceptual understanding of API-led connectivity, Anypoint Platform components, and integration terminology — not hands-on coding or DataWeave syntax.",
+    "bullets": [
+      "<strong>40 multiple-choice questions</strong> in 70 minutes — fewer questions and more time per question than developer exams.",
+      "<strong>70% passing score</strong> — 28 correct answers needed.",
+      "<strong>Conceptual focus</strong> — the exam tests definitions, component roles, and integration patterns rather than implementation details.",
+      "<strong>Entry-level barrier</strong> — candidates with general IT experience and completion of the Trailhead MuleSoft modules typically pass on their first attempt."
+    ],
+    "passRateGuidance": "Complete the Trailhead MuleSoft Integration Foundations trail and review the API-led connectivity concepts before booking. Score 85%+ on practice exams since this is the most approachable MuleSoft certification."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Integration Foundations Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 30–40% of questions are scenario-based. Common patterns include identifying which API-led layer handles a given integration need, choosing the correct Anypoint Platform component for a task, and selecting the appropriate integration pattern (synchronous vs asynchronous, batch vs real-time).",
+    "bestWayToPass": [
+      "<strong>Learn the three API-led layers:</strong> Know exactly what System APIs, Process APIs, and Experience APIs do and be able to assign a given integration scenario to the correct layer.",
+      "<strong>Study Anypoint Platform components:</strong> Understand the role of Anypoint Studio, Design Center, Exchange, Runtime Manager, API Manager, and CloudHub at a high level.",
+      "<strong>Know integration patterns:</strong> Understand point-to-point, hub-and-spoke, ESB, and API-led connectivity — and why MuleSoft recommends API-led.",
+      "<strong>Review connector basics:</strong> Know the difference between core connectors (HTTP, Database, File) and premium connectors (Salesforce, SAP) and when each is used."
+    ]
+  },
   "certificationCard": {
     "code": "MuleSoft Associate",
     "description": "This entry-level exam covers API-led connectivity basics, Anypoint Platform fundamentals, and core integration terminology you&amp;apos;ll need to contribute effectively on a MuleSoft project team.",

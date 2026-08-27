@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Marketing Cloud Personalization exam for?",
+    "personas": [
+      {
+        "label": "Personalization specialists",
+        "description": "You implement real-time web and email personalization using Marketing Cloud Personalization (Interaction Studio) and want to certify your skills."
+      },
+      {
+        "label": "Marketing Cloud implementation partners",
+        "description": "You deliver personalization projects for clients and need the AP credential to validate your hands-on expertise with the platform."
+      },
+      {
+        "label": "E-commerce and content strategists",
+        "description": "You manage product recommendations and dynamic content experiences and want to prove your ability to configure Einstein Recipes and campaign targeting."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Marketing Cloud Personalization Exam Hard?",
+    "summary": "The Marketing Cloud Personalization AP exam is moderately difficult. It tests real-time personalization concepts including web SDK implementation, catalog configuration, Einstein Recipes, and A/B testing. Candidates who have not implemented the Personalization (Interaction Studio) web beacon and configured campaigns will struggle.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — standard for AP-level exams.",
+      "<strong>Technical SDK knowledge</strong> — you need to understand how the web SDK (Evergage beacon) captures behavioral data and sends events to the Personalization platform.",
+      "<strong>ML-driven recommendations</strong> — expect questions on Einstein Recipe types (Collaborative Filtering, Content Affinity, User Trending) and how to configure Strategies with boosters and exclusions."
+    ],
+    "passRateGuidance": "Implement the web SDK on at least one site, configure a product catalog, and build at least 2-3 web campaigns with A/B testing before booking. Hands-on experience with Einstein Recipes is essential."
+  },
+  "examFormat": {
+    "heading": "Marketing Cloud Personalization Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. You&apos;ll be asked to choose between server-side and client-side campaigns, configure a recommendation strategy for a specific page type, or design a triggered campaign based on segment entry.",
+    "bestWayToPass": [
+      "<strong>Understand the web SDK:</strong> Know how the Evergage beacon is deployed, how sitemap configurations map page types, and how events flow to the Personalization platform.",
+      "<strong>Master Einstein Recipes:</strong> Know the difference between Collaborative Filtering, Content Affinity, and User Trending, and how to combine them in a Strategy with boosters and exclusions.",
+      "<strong>Know campaign types:</strong> Understand server-side (pre-render) vs client-side (post-render) campaigns, triggered email, and open-time email personalization.",
+      "<strong>Practice A/B testing:</strong> Configure control groups, measure lift metrics (CTR, revenue per impression), and know how to interpret campaign performance reports."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam tests real-time personalization with Marketing Cloud Personalization (Interaction Studio): web SDK setup, catalog configuration, Einstein Recipes, campaign targeting, and A/B testing.",

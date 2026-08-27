@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Developer I exam for?",
+    "personas": [
+      {
+        "label": "Integration developers",
+        "description": "You build Mule applications in Anypoint Studio and want to validate your foundational MuleSoft development skills."
+      },
+      {
+        "label": "Java and backend developers",
+        "description": "You&apos;re transitioning into integration development and want a credential that proves your Mule 4 and DataWeave proficiency."
+      },
+      {
+        "label": "Salesforce developers",
+        "description": "You work on the Salesforce platform and want to add MuleSoft integration skills to connect enterprise systems through Anypoint."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Developer I Exam Hard?",
+    "summary": "MuleSoft Developer I is moderately challenging. The exam requires hands-on familiarity with Anypoint Studio, DataWeave 2.0 syntax, and Mule flow design — textbook knowledge alone won&apos;t be enough to pass.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>~70% passing score</strong> — roughly 42 correct answers needed to pass.",
+      "<strong>DataWeave syntax</strong> — reading and writing transformation scripts is the biggest hurdle for candidates without hands-on practice.",
+      "<strong>Hands-on building required</strong> — candidates who have built and deployed at least 3–5 Mule applications in Anypoint Studio perform significantly better."
+    ],
+    "passRateGuidance": "Build several Mule apps end-to-end in Anypoint Studio before booking. Score 80%+ on practice exams to leave a buffer for DataWeave questions."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Developer I Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40–50% of questions present a scenario requiring you to choose the correct Mule component, DataWeave function, or error handling approach. Common patterns include selecting the right connector for a use case, writing DataWeave expressions, and choosing between On Error Continue and On Error Propagate.",
+    "bestWayToPass": [
+      "<strong>Master DataWeave 2.0:</strong> Practice map, filter, reduce, and pluck functions until you can read and write scripts fluently.",
+      "<strong>Build flows in Anypoint Studio:</strong> Create HTTP-triggered flows with database and Salesforce connectors, error handling, and deployment to CloudHub.",
+      "<strong>Know your connectors:</strong> Understand HTTP Listener vs Request, Database operations, and how to configure the Salesforce connector for CRUD.",
+      "<strong>Understand error handling:</strong> Know when to use On Error Continue vs On Error Propagate and how the error type hierarchy works."
+    ]
+  },
   "certificationCard": {
     "code": "MuleSoft Developer I",
     "description": "The entry-level MuleSoft developer exam. You&amp;apos;ll need to build Mule flows in Anypoint Studio, write DataWeave transformations, design APIs with RAML, handle errors, and deploy to CloudHub.",

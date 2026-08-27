@@ -80,17 +80,18 @@ const topCerts = [
 ]
 
 export default function CertificationsIndexPage() {
+  const allCerts = CERTIFICATION_CATEGORIES.flatMap((cat) => cat.items)
   const itemListJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'ItemList',
     name: `All Salesforce Certifications (${RELEASE_CURRENT})`,
     description: indexDescription,
-    numberOfItems: CERTIFICATION_CATEGORIES.length,
-    itemListElement: CERTIFICATION_CATEGORIES.map((cat, i) => ({
+    numberOfItems: allCerts.length,
+    itemListElement: allCerts.map((cert, i) => ({
       '@type': 'ListItem',
       position: i + 1,
-      name: `${cat.name} Certifications`,
-      url: `${baseUrl}/certifications/role/${cat.slug}`,
+      name: cert.name,
+      url: `${baseUrl}${cert.href}`,
     })),
   }
 

@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Process Automation AP exam for?",
+    "personas": [
+      { "label": "Salesforce admins deepening automation skills", "description": "You have admin experience and want to validate advanced Flow Builder expertise, including record-triggered flows, screen flows, and approval processes." },
+      { "label": "Consultants implementing automation", "description": "You design and deploy automation solutions for clients and need the AP credential to demonstrate your implementation capabilities." },
+      { "label": "Developers choosing between Flow and Apex", "description": "You build on the Salesforce Platform and want formal validation that you know when to use declarative automation vs Apex triggers." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Process Automation AP Exam Hard?",
+    "summary": "The Process Automation AP exam is moderately difficult. It goes deep into Flow Builder configuration, error handling, and automation best practices &mdash; surface-level admin knowledge is not enough to pass.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
+      "<strong>Deep Flow Builder knowledge</strong> &mdash; expect questions on before-save vs after-save trade-offs, fault paths, subflows, and collection processing patterns.",
+      "<strong>Order of execution matters</strong> &mdash; you need to know how validation rules, before triggers, before flows, after triggers, and after flows fire in sequence."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can design a flow that handles collections, uses fault paths for error handling, and correctly chooses before-save vs after-save context."
+  },
+  "examFormat": {
+    "heading": "Process Automation AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right flow type for a business requirement, designing error handling with fault paths, and deciding between Flow and Apex for complex automation.",
+    "bestWayToPass": [
+      "<strong>Know all flow types:</strong> Record-Triggered (before/after save), Screen, Scheduled, Auto-Launched, and Platform Event-Triggered &mdash; know when each is appropriate and what triggers each type.",
+      "<strong>Master before-save vs after-save:</strong> Before-save is faster and updates the triggering record without DML. After-save can create or update related records but consumes governor limits.",
+      "<strong>Design with fault paths:</strong> Every flow element that can fail should have a fault connector &mdash; the exam tests how to handle errors gracefully in both screen flows and auto-launched flows.",
+      "<strong>Understand governor limits in flows:</strong> Use collection variables and batch DML patterns &mdash; get all records in one Get element, loop through them, and perform a single DML operation."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers Flow Builder in depth -- record-triggered flows, screen flows, approval processes, and automation best practices -- plus when to reach for Apex triggers over declarative tools.",

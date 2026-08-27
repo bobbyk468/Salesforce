@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Account Engagement Specialist exam for?",
+    "personas": [
+      {
+        "label": "B2B marketing practitioners",
+        "description": "You use Account Engagement (Pardot) daily for email campaigns, forms, and lead nurturing and want to certify your hands-on skills."
+      },
+      {
+        "label": "Marketing coordinators and specialists",
+        "description": "You configure automation rules, dynamic lists, and Engagement Studio programs and want formal recognition of your Pardot proficiency."
+      },
+      {
+        "label": "Salesforce admins supporting marketing teams",
+        "description": "You manage the Pardot-Salesforce integration and want to validate your knowledge of prospect sync, scoring, and lead management."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Account Engagement Specialist Exam Hard?",
+    "summary": "The Account Engagement Specialist exam is moderately hard. It has the highest passing score among Marketing Cloud certifications at 72%, and it tests detailed, hands-on configuration knowledge of Pardot features including automation rules, scoring and grading, forms, and the Salesforce connector sync.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>72% passing score</strong> — the highest in the Marketing Cloud certification family. You need to answer roughly 43 out of 60 questions correctly.",
+      "<strong>Configuration-heavy</strong> — expect questions that test specific feature behavior, such as how completion actions differ from automation rules, or how field sync conflicts are resolved.",
+      "<strong>Scoring and grading depth</strong> — you must know scoring categories, custom scoring rules, grading profiles, and how each aligns with lead qualification."
+    ],
+    "passRateGuidance": "Use Pardot daily for at least 6 months before booking. Build Engagement Studio programs, configure scoring models, and troubleshoot sync errors in a sandbox. The 72% pass mark leaves little room for guessing."
+  },
+  "examFormat": {
+    "heading": "Account Engagement Specialist Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 45-55% of questions are scenario-based. Common patterns include choosing between completion actions and automation rules for a given requirement, designing a scoring and grading model, or troubleshooting Pardot-Salesforce sync behavior.",
+    "bestWayToPass": [
+      "<strong>Know the automation hierarchy:</strong> Understand when to use completion actions (one-time, asset-specific), automation rules (continuous, criteria-based), and Engagement Studio (multi-step nurture programs).",
+      "<strong>Master scoring vs grading:</strong> Scoring measures engagement (activity-based), grading measures fit (attribute-based). Know scoring categories for multi-product tracking and grading profiles for ideal customer matching.",
+      "<strong>Study Pardot-Salesforce sync:</strong> Understand field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), the connector user&apos;s permissions, and how prospects map to leads and contacts.",
+      "<strong>Practice forms and progressive profiling:</strong> Know the difference between Pardot Forms and Form Handlers, how progressive profiling works on repeat visits, and how completion actions trigger follow-up automations."
+    ]
+  },
   "certificationCard": {
     "code": "Pardot Specialist",
     "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync.",

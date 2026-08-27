@@ -33,6 +33,36 @@
       "text": "."
     }
   ],
+  "whoIsThisFor": {
+    "heading": "Who is the Slack Developer exam for?",
+    "personas": [
+      { "label": "Slack App Developers", "description": "Developers building custom Slack apps and integrations using the Bolt framework, Block Kit, and the Slack Web API." },
+      { "label": "Integration Engineers", "description": "Engineers connecting Slack to external systems via Events API, webhooks, OAuth, and slash commands for automated workflows." },
+      { "label": "Platform Developers", "description": "Developers extending Slack with interactive Block Kit UIs, modals, App Home tabs, and custom workflow steps for enterprise users." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Slack Developer Exam Hard?",
+    "summary": "The Slack Developer exam is moderately hard. It tests hands-on coding knowledge — Bolt framework patterns, Block Kit payloads, OAuth flows, and event handling — so reading documentation without actually building Slack apps leaves significant gaps.",
+    "bullets": [
+      "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which requires familiarity with API methods and framework patterns.",
+      "<strong>~68% passing score</strong> — you need approximately 41 correct answers out of 60 to pass, a slightly higher bar than the Slack Admin or Consultant exams.",
+      "<strong>Coding knowledge is required</strong> — questions test Bolt framework architecture, Block Kit JSON structure, OAuth scopes, and event subscription configuration.",
+      "<strong>Build before you book</strong> — candidates who have built at least one Slack app with Block Kit interactions, slash commands, and event listeners are best prepared."
+    ],
+    "passRateGuidance": "Book when you have built a working Slack app using the Bolt framework with Block Kit interactions, slash commands, event subscriptions, and OAuth installation flow."
+  },
+  "examFormat": {
+    "heading": "Slack Developer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Scenario questions describe an app requirement and ask you to identify the correct API method, Block Kit layout, event subscription, or OAuth scope to implement it.",
+    "bestWayToPass": [
+      "<strong>Bolt framework:</strong> Know app initialization, event listeners, action handlers, and the OAuth 2.0 installation flow for multi-workspace app distribution.",
+      "<strong>Block Kit:</strong> Study block types (section, actions, input, context) and element types (button, static_select, datepicker, plain_text_input) and their JSON payload structure.",
+      "<strong>Events and commands:</strong> Understand the 3-second acknowledgement rule, event subscription configuration, and how to handle slash command and interaction payloads.",
+      "<strong>Security best practices:</strong> Master request signature verification (HMAC-SHA256), secure token storage, and the principle of least-privilege when requesting OAuth scopes."
+    ]
+  },
   "certificationCard": {
     "code": "Slack Developer",
     "description": "This exam tests building custom Slack apps using the Bolt framework, Block Kit UI components, Events API, slash commands, and OAuth-based app distribution across workspaces.",

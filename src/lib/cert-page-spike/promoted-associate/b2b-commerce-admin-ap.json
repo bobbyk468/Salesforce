@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the B2B Commerce Administrator AP exam for?",
+    "personas": [
+      {
+        "label": "Salesforce admins managing B2B storefronts",
+        "description": "You administer B2B Commerce stores on Experience Cloud and want to validate your storefront configuration and catalog management skills."
+      },
+      {
+        "label": "Implementation partners",
+        "description": "You configure buyer groups, pricing, and checkout flows for clients and need the credential to demonstrate B2B Commerce expertise."
+      },
+      {
+        "label": "Operations leads",
+        "description": "You own the day-to-day catalog, entitlement, and order configuration for a B2B Commerce storefront and want formal recognition of that skill set."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the B2B Commerce Administrator AP Exam Hard?",
+    "summary": "The B2B Commerce Admin AP is moderately challenging. The 75% passing score is higher than most Accredited Professional exams, and the content blends B2B Commerce-specific configuration with Experience Cloud and core CRM data model concepts that many candidates underestimate.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>75% passing score</strong> &mdash; higher than most AP exams, leaving little room for guesswork.",
+      "<strong>Cross-product knowledge</strong> &mdash; questions span B2B Commerce, Experience Cloud, and the core Salesforce data model, so studying one area alone won&apos;t be enough.",
+      "<strong>Hands-on experience matters</strong> &mdash; configuring at least one B2B Commerce store from scratch is the strongest preparation."
+    ],
+    "passRateGuidance": "Set up a full B2B Commerce store in a developer org &mdash; including buyer groups, entitlement policies, and checkout configuration &mdash; before booking the exam."
+  },
+  "examFormat": {
+    "heading": "B2B Commerce Administrator AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Most questions describe a business requirement and ask which configuration option meets it. Expect scenarios around store setup, buyer group entitlements, catalog pricing, and checkout flow configuration.",
+    "bestWayToPass": [
+      "<strong>Master the B2B Commerce data model:</strong> Understand how Buyer Accounts, Buyer Groups, Entitlement Policies, and Price Books relate to each other and to standard Salesforce objects.",
+      "<strong>Configure a complete store:</strong> Walk through the Commerce Setup Assistant, set up catalogs and products, configure buyer groups, and build a checkout flow in a hands-on org.",
+      "<strong>Study checkout configuration deeply:</strong> Know how to add and reorder checkout steps, configure payment gateways, enable purchase orders, and integrate tax calculation.",
+      "<strong>Review CRM integration points:</strong> Understand how B2B Commerce orders map to standard Order records and how buyer data flows between Experience Cloud and Salesforce CRM."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers B2B Commerce store administration — configuring storefronts, catalogs, buyer groups, pricing, and checkout flows on the Salesforce platform.",

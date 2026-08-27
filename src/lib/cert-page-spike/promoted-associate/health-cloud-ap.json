@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Health Cloud Accredited Professional exam for?",
+    "personas": [
+      { "label": "Healthcare implementation consultants", "description": "You deliver Health Cloud projects for providers, payers, or life sciences organisations and need the credential to validate your expertise." },
+      { "label": "Salesforce admins in healthcare", "description": "You manage a Health Cloud org and want to deepen your knowledge of care plans, patient engagement, and clinical data models." },
+      { "label": "Health IT partners and architects", "description": "You design interoperability solutions involving FHIR, EHR integration, and Salesforce Health Cloud for healthcare clients." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Health Cloud Accredited Professional Exam Hard?",
+    "summary": "The Health Cloud AP exam is moderately difficult. It tests both Salesforce platform knowledge and healthcare-specific concepts like care plan management, FHIR interoperability, and the Health Cloud data model. Candidates without healthcare industry experience will find the clinical terminology and regulatory context challenging.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
+      "<strong>Industry-specific terminology</strong> — you must understand care plans, care teams, clinical encounters, and HIPAA compliance context.",
+      "<strong>Integration knowledge required</strong> — questions on FHIR R4, EHR connectivity, and data mapping between clinical systems and Salesforce are common."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and ensure you can explain the Health Cloud data model (patients, care plans, service points) before booking. Hands-on experience with at least one Health Cloud implementation is strongly recommended."
+  },
+  "examFormat": {
+    "heading": "Health Cloud Accredited Professional Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring care plans for a provider organisation, designing patient engagement workflows, and selecting the correct integration approach for EHR data exchange.",
+    "bestWayToPass": [
+      "<strong>Master the Health Cloud data model:</strong> Know patient, care plan, care team, and clinical encounter objects and how they relate to standard Salesforce objects.",
+      "<strong>Understand care plan configuration:</strong> Study care plan templates, problems, goals, tasks, and how care coordinators manage patient journeys.",
+      "<strong>Learn FHIR and interoperability basics:</strong> You don&apos;t need to code FHIR APIs, but you must understand FHIR R4 resources and how Health Cloud maps clinical data.",
+      "<strong>Study regulatory context:</strong> Know how HIPAA compliance, data sharing rules, and consent management affect Health Cloud configuration decisions."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers Health Cloud&apos;s care plan management, patient engagement, and FHIR-based EHR integration for providers, payers, and life sciences orgs. Expect questions on care coordination workflows, appointment scheduling, and population health analytics.",

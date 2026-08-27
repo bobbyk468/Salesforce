@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Sales Foundations exam for?",
+    "personas": [
+      { "label": "New sales reps using Salesforce", "description": "You&apos;re early in your sales career and want to validate your understanding of Sales Cloud, pipeline management, and customer-centric selling." },
+      { "label": "Sales managers seeking CRM fluency", "description": "You manage a sales team on Salesforce and want formal validation of your knowledge of forecasting, activity management, and sales reporting." },
+      { "label": "Business professionals entering sales ops", "description": "You&apos;re moving into a sales operations or enablement role and need to demonstrate fluency in Salesforce sales processes and best practices." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Sales Foundations Exam Hard?",
+    "summary": "The Sales Foundations exam is moderate in difficulty. It blends Salesforce Sales Cloud knowledge with general sales methodology concepts like customer-centric selling, discovery, and value propositions.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
+      "<strong>Methodology + platform mix</strong> &mdash; questions test both sales concepts (discovery, value propositions, team selling) and Salesforce features (leads, opportunities, forecasting).",
+      "<strong>Pipeline and forecasting emphasis</strong> &mdash; expect several questions on how Opportunity Stages feed Forecast Categories and how managers use Collaborative Forecasting."
+    ],
+    "passRateGuidance": "Score 75%+ on two practice exams and make sure you can explain the Lead-to-Opportunity conversion process and how Forecast Categories map to Opportunity Stages."
+  },
+  "examFormat": {
+    "heading": "Sales Foundations Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include choosing the right Sales Cloud feature for a rep&apos;s daily workflow, identifying the correct lead assignment approach, and selecting the right report type for a VP&apos;s pipeline review.",
+    "bestWayToPass": [
+      "<strong>Master the lead lifecycle:</strong> Know how leads are captured, qualified, assigned via assignment rules, and converted into Accounts, Contacts, and Opportunities.",
+      "<strong>Understand Collaborative Forecasting:</strong> Know how Forecast Categories (Pipeline, Best Case, Commit, Closed) roll up from rep to manager level and how adjustments work.",
+      "<strong>Know customer-centric selling:</strong> Understand discovery techniques, value proposition framing, and ethical selling practices &mdash; these are tested alongside platform features.",
+      "<strong>Study sales productivity tools:</strong> Know how Einstein Activity Capture, Salesforce Inbox, and the Mobile App reduce manual data entry and support rep productivity."
+    ]
+  },
   "certificationCard": {
     "code": "Sales Foundations",
     "description": "This entry-level exam tests core Sales Cloud skills: managing leads and opportunities, running pipeline reports, using forecasting tools, and applying customer-centric selling practices.",

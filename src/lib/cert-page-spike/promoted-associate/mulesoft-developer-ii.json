@@ -1,5 +1,44 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the MuleSoft Developer II exam for?",
+    "personas": [
+      {
+        "label": "Experienced MuleSoft developers",
+        "description": "You&apos;ve passed Developer I and want to validate your ability to build production-grade Mule applications independently."
+      },
+      {
+        "label": "DevOps-focused integration engineers",
+        "description": "You manage CI/CD pipelines for Mule apps and want to certify your Maven, MUnit, and CloudHub deployment expertise."
+      },
+      {
+        "label": "Lead developers",
+        "description": "You design advanced integration patterns and want the credential to back your architectural decisions on MuleSoft projects."
+      }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the MuleSoft Developer II Exam Hard?",
+    "summary": "MuleSoft Developer II is a hard exam. It assumes you already hold Developer I knowledge and tests advanced topics like batch processing, custom policies, CI/CD pipeline design, and production deployment strategies that require real project experience.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>~70% passing score</strong> — the same threshold as Developer I, but the content is significantly more complex.",
+      "<strong>Advanced DataWeave</strong> — expect pattern matching, custom modules, recursive functions, and complex nested transformations.",
+      "<strong>Production experience matters</strong> — candidates with at least 6–12 months of hands-on Mule development in a production environment pass at significantly higher rates."
+    ],
+    "passRateGuidance": "Complete at least one production MuleSoft project with CI/CD before booking. Score 85%+ on practice exams since the real exam questions are more nuanced."
+  },
+  "examFormat": {
+    "heading": "MuleSoft Developer II Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50–60% of questions are scenario-based. Common patterns include designing batch processing jobs for high-volume data, choosing the right API security policy combination, configuring CI/CD pipelines with Maven, and troubleshooting production deployment issues.",
+    "bestWayToPass": [
+      "<strong>Go deep on DataWeave:</strong> Practice pattern matching, custom modules, and recursive transformations — the exam tests advanced syntax beyond basic map and filter.",
+      "<strong>Build CI/CD pipelines:</strong> Configure Maven-based automated deployments to CloudHub and write MUnit tests with at least 80% coverage.",
+      "<strong>Master batch processing:</strong> Know Batch Job phases, Batch Aggregator commit sizes, and how to handle failed records in high-volume data scenarios.",
+      "<strong>Learn API security policies:</strong> Practice applying OAuth 2.0, JWT validation, rate limiting, and custom policies through API Manager."
+    ]
+  },
   "certificationCard": {
     "code": "MuleSoft Developer II",
     "description": "The advanced MuleSoft developer exam. Expect deep questions on DataWeave modules, batch processing, API security policies, CI/CD pipelines with Maven, and production deployment strategies.",

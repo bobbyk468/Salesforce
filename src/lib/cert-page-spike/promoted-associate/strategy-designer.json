@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Strategy Designer exam for?",
+    "personas": [
+      { "label": "UX strategists and service designers", "description": "You work at the strategy level &mdash; journey mapping, stakeholder alignment, and experience vision &mdash; and want to validate your ability to apply design thinking on Salesforce projects." },
+      { "label": "Consultants leading discovery workshops", "description": "You facilitate design workshops, conduct user research, and frame business problems for Salesforce implementation teams." },
+      { "label": "Product owners bridging design and business", "description": "You define experience strategy and connect design decisions to business outcomes on the Salesforce Platform." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Strategy Designer Exam Hard?",
+    "summary": "The Strategy Designer exam is moderate in difficulty. It tests strategic design thinking rather than hands-on configuration &mdash; the challenge is applying design frameworks (design thinking, service blueprints, journey mapping) to Salesforce project scenarios.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
+      "<strong>Design thinking application</strong> &mdash; expect questions that present a project scenario and ask which design thinking phase, research method, or mapping artefact is appropriate.",
+      "<strong>Business value framing</strong> &mdash; you need to connect design decisions to business metrics and present recommendations using business language rather than design terminology."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can write a How Might We statement, distinguish journey maps from service blueprints, and frame design recommendations in business terms."
+  },
+  "examFormat": {
+    "heading": "Strategy Designer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right research method for a discovery phase, selecting the correct mapping tool (journey map vs service blueprint vs ecosystem map), and framing a design recommendation for executive stakeholders.",
+    "bestWayToPass": [
+      "<strong>Master design thinking phases:</strong> Know what artefacts each phase produces &mdash; empathy maps and interview notes (Empathise), problem statements and HMW questions (Define), concept sketches (Ideate), testable prototypes (Prototype), and usability findings (Test).",
+      "<strong>Know journey mapping vs service blueprints:</strong> Journey maps visualise the user&apos;s emotional arc across touchpoints. Service blueprints add backstage processes and supporting systems. Know when to use each.",
+      "<strong>Frame design in business terms:</strong> The exam tests whether you can connect UX improvements to business outcomes like reduced support volume, improved conversion rates, or shorter onboarding time.",
+      "<strong>Understand Agile UX integration:</strong> Know dual-track Agile (discovery vs delivery), Design Sprints, and Lean UX &mdash; the exam tests how to integrate UX research into agile delivery without creating a waterfall handoff."
+    ]
+  },
   "certificationCard": {
     "code": "Strategy Designer",
     "description": "This exam covers applying design thinking and human-centered research to shape experience strategies on the Salesforce Platform, from stakeholder alignment through journey mapping and prototyping.",

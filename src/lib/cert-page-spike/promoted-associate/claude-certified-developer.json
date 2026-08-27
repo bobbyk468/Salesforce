@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Claude Certified Developer exam for?",
+    "personas": [
+      { "label": "Backend and Full-Stack Developers", "description": "Engineers who build production features on the Claude API — calling the Messages endpoint, handling streaming responses, wiring up tool use, and writing evaluation harnesses." },
+      { "label": "AI/ML Engineers Adopting Claude", "description": "Developers moving from other LLM providers who need to prove they understand Anthropic&apos;s SDK, prompt-injection defenses, and the tool-calling lifecycle end-to-end." },
+      { "label": "Technical Leads Shipping AI Features", "description": "Senior developers responsible for code quality and reliability in Claude-powered products who want a credential that validates production-grade integration skills." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Claude Certified Developer Exam Hard?",
+    "summary": "The CCDV-F is a hands-on developer exam, not a theory test. One-third of the questions live in the Applications and Integration domain, which means you need real experience calling the Claude API, parsing structured output, handling errors, and managing context windows. Candidates who have shipped a working Claude-powered feature — even a side project — generally find the exam straightforward; those who have only read the docs without building anything tend to struggle.",
+    "bullets": [
+      "<strong>53 multiple-choice questions</strong> in 120 minutes — about 2 minutes 15 seconds per question, with enough time to reason through code-scenario questions.",
+      "<strong>720/1000 passing score</strong> — consistent performance across all five domains matters more than acing a single section.",
+      "<strong>Applications and Integration dominates at 33%</strong> — expect code snippets where changing one API parameter alters the output, and scenarios testing streaming, rate limits, and structured JSON parsing.",
+      "<strong>Hands-on building is the best preparation</strong> — candidates who have built and debugged a real Claude integration report the exam feels like a review of problems they already solved."
+    ],
+    "passRateGuidance": "If you can build a working tool-use loop, debug a 529 response, and write an eval suite for your prompts, you are ready to book."
+  },
+  "examFormat": {
+    "heading": "Claude Certified Developer Exam Format Explained",
+    "intro": "The exam is proctored online. Here is the format:",
+    "scenarioPercent": "Most questions present a realistic development scenario — a code snippet, an API response, or a system-design decision — and ask you to identify the correct behavior, the best fix, or the right architectural choice. Rote memorization of API parameters is not enough; the exam tests whether you understand why each parameter matters.",
+    "bestWayToPass": [
+      "<strong>Build a working project before you study:</strong> A Slack bot, a CLI tool, or a web app that calls the Claude API end-to-end — the debugging experience teaches more than any guide.",
+      "<strong>Master the tool-use loop:</strong> Define tools with JSON schemas, handle Claude&apos;s tool-call responses, return results, and manage multi-turn agent conversations including error cases.",
+      "<strong>Write at least one eval suite:</strong> Create input-output test pairs, run them against your prompt automatically, change the prompt, rerun, and compare — this is exactly what the evaluation domain tests.",
+      "<strong>Read docs.anthropic.com cover to cover:</strong> The prompt engineering guide, tool use guide, and API reference are the exam&apos;s source of truth — know documented best practices vs. common antipatterns."
+    ]
+  },
   "certificationCard": {
     "code": "CCDV-F",
     "description": "The developer-track credential from Anthropic. Unlike theory-heavy certifications, the CCDV-F measures whether you can actually ship AI-powered features — calling the Messages API, routing between models, chaining tools, streaming responses, handling errors gracefully, and writing evaluation harnesses that catch regressions before users do.",

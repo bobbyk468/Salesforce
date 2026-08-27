@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Identity and Access Management Architect exam for?",
+    "personas": [
+      { "label": "Identity Architects", "description": "Security professionals who design SSO, OAuth, and SAML configurations for enterprise Salesforce integrations with corporate identity providers." },
+      { "label": "Integration Specialists", "description": "Developers and architects who build server-to-server and user-facing authentication flows between Salesforce and external applications." },
+      { "label": "Security Engineers", "description": "Engineers responsible for MFA enforcement, Connected App policies, and identity federation across multi-org or multi-cloud Salesforce environments." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Identity and Access Management Architect Exam Hard?",
+    "summary": "The IAM Architect exam is demanding because it requires precise knowledge of authentication protocols &mdash; SAML 2.0, OAuth 2.0, and their many variations. You must match the correct flow to a specific integration scenario and understand the security implications of each choice. Memorizing flow names is not enough; the exam tests whether you know which flow to recommend when given specific constraints like no browser access, machine-to-machine communication, or mobile-first requirements.",
+    "bullets": [
+      "<strong>60 questions</strong> in 120 minutes &mdash; protocol-specific questions require exact knowledge of flow mechanics and configuration steps.",
+      "<strong>~68% passing score</strong> &mdash; about 41 correct answers, with multiple OAuth flow options that look similar but serve different use cases.",
+      "<strong>Protocol precision</strong> &mdash; questions test the difference between JWT Bearer, Client Credentials, Web Server, and Device flows at a configuration level.",
+      "<strong>SSO architecture</strong> &mdash; expect questions on SP-initiated vs. IdP-initiated flows, Federation ID mapping, certificate management, and multi-IdP routing."
+    ],
+    "passRateGuidance": "Book the exam when you can diagram every OAuth 2.0 flow from memory, configure a SAML SSO setup end to end, and explain when Salesforce should act as IdP vs. SP."
+  },
+  "examFormat": {
+    "heading": "Identity and Access Management Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Most questions describe an integration or authentication scenario and ask you to select the correct OAuth flow, SSO configuration, or identity architecture to meet the requirements.",
+    "bestWayToPass": [
+      "<strong>Map every OAuth flow to its use case:</strong> Web Server for interactive login, JWT Bearer for server-to-server, Client Credentials for machine-to-machine, Device for browserless clients, and PKCE for mobile apps.",
+      "<strong>Configure SAML from both sides:</strong> Know how to set up Salesforce as both a Service Provider and an Identity Provider, including certificate exchange, assertion attributes, and Federation ID mapping.",
+      "<strong>Study Connected App security:</strong> Understand OAuth scopes, IP restrictions, session policies, and how certificate-based authentication eliminates shared secrets.",
+      "<strong>Know MFA enforcement rules:</strong> Understand how MFA interacts with SSO (IdP-provided vs. Salesforce-enforced), which methods are supported, and how session security levels affect high-assurance access."
+    ]
+  },
   "certificationCard": {
     "code": "Identity & Access Mgmt",
     "description": "This exam tests SSO architecture, OAuth 2.0 flows, SAML configuration, and Connected App security on the Salesforce Platform. You&apos;ll need to match authentication patterns to integration scenarios and configure MFA, My Domain, and identity federation.",

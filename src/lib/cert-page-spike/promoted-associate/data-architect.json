@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Data Architect exam for?",
+    "personas": [
+      { "label": "Data Engineers", "description": "Professionals who manage large-scale data pipelines, ETL processes, and data quality initiatives on the Salesforce Platform." },
+      { "label": "Enterprise Architects", "description": "Architects responsible for master data management strategies, data governance, and cross-system data consistency." },
+      { "label": "Senior Developers", "description": "Developers who design data models, write Bulk API integrations, and optimize SOQL queries for high-volume orgs." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Data Architect Exam Hard?",
+    "summary": "The Data Architect exam is one of the more demanding architect-level certifications because it combines data modeling theory with practical large data volume (LDV) problem solving. Questions often describe a scenario with tens of millions of records and ask you to choose between skinny tables, custom indexes, Big Objects, or archiving strategies based on query patterns and business requirements.",
+    "bullets": [
+      "<strong>60 questions</strong> in 120 minutes &mdash; scenario questions require careful reading and elimination of plausible distractors.",
+      "<strong>~68% passing score</strong> &mdash; roughly 41 correct answers, leaving little margin on questions that test nuanced LDV trade-offs.",
+      "<strong>LDV complexity</strong> &mdash; the exam presents high-volume data scenarios where the correct answer depends on query patterns, not just record count.",
+      "<strong>MDM and migration depth</strong> &mdash; expect questions on external ID upsert strategies, duplicate management, and ETL tool selection for complex migrations."
+    ],
+    "passRateGuidance": "Book the exam when you can explain skinny tables vs. custom indexes from memory, diagram a multi-system migration load order, and choose the right MDM pattern for a given scenario."
+  },
+  "examFormat": {
+    "heading": "Data Architect Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "Most questions present a data architecture scenario &mdash; a company with specific record volumes, query patterns, and integration requirements &mdash; and ask you to select the optimal strategy.",
+    "bestWayToPass": [
+      "<strong>Know your LDV toolkit:</strong> Skinny tables, custom indexes, Async SOQL, Big Objects, and archiving strategies &mdash; know exactly when each applies and what it costs.",
+      "<strong>Master the migration sequence:</strong> Understand parent-before-child load order, external ID upsert, Bulk API 2.0 limits, and rollback strategies for failed loads.",
+      "<strong>Study MDM patterns:</strong> Registry, Consolidation, and Coexistence &mdash; the exam tests which pattern fits a given enterprise data landscape.",
+      "<strong>Review data governance tools:</strong> Validation Rules, Duplicate Rules, Matching Rules, and Field History Tracking appear in questions about maintaining data quality at scale."
+    ]
+  },
   "expertInsight": "Data Architect catches people off guard because the passing score is only 58% — but the questions are genuinely hard. The exam loves presenting a scenario with 50M+ records and asking you to pick between skinny tables, custom indexes, SOSL, Big Objects, or an archiving strategy. The trick is that the 'right' answer often depends on the query pattern described, not just the data volume. I spent the most study time on MDM patterns and external IDs for upsert operations — those come up in almost every migration scenario. Don't overlook Platform Events and Change Data Capture for real-time sync questions either.",
   "certificationCard": {
     "code": "Data Architect",

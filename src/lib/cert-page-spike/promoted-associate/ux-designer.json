@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the UX Designer exam for?",
+    "personas": [
+      { "label": "UX designers working on Salesforce projects", "description": "You design user experiences for Salesforce implementations and want to validate your skills in research, wireframing, prototyping, and accessibility." },
+      { "label": "Admins and consultants with design responsibilities", "description": "You configure Lightning page layouts, Experience Cloud sites, and Dynamic Forms and want formal UX design credentials to complement your platform skills." },
+      { "label": "Product designers transitioning to enterprise platforms", "description": "You have UX design experience outside Salesforce and want to apply human-centered design methods within the Lightning Design System and Experience Cloud." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the UX Designer Exam Hard?",
+    "summary": "The UX Designer exam is moderate in difficulty. It tests UX principles and research methods applied to Salesforce &mdash; the challenge is knowing both design theory (WCAG, design thinking) and Salesforce-specific tooling (SLDS, Lightning App Builder, Dynamic Forms).",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
+      "<strong>Design thinking phases</strong> &mdash; expect questions that describe a UX activity and ask which design thinking phase (Empathise, Define, Ideate, Prototype, Test) it belongs to.",
+      "<strong>Accessibility standards</strong> &mdash; you need to know WCAG 2.1 AA requirements including colour contrast ratios (4.5:1 for normal text), keyboard navigation, and ARIA labels."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can map UX activities to design thinking phases and explain the four WCAG principles (Perceivable, Operable, Understandable, Robust)."
+  },
+  "examFormat": {
+    "heading": "UX Designer Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 45-55% of questions are scenario-based. Common patterns include choosing the right research method for a given design question, identifying which WCAG principle applies to an accessibility scenario, and selecting the correct Salesforce UX tool for a page design requirement.",
+    "bestWayToPass": [
+      "<strong>Know the design thinking phases:</strong> Empathise (user research), Define (problem statement), Ideate (brainstorm), Prototype (build representations), Test (validate with users) &mdash; and which artefacts each phase produces.",
+      "<strong>Master WCAG 2.1 AA standards:</strong> Know the POUR principles (Perceivable, Operable, Understandable, Robust), colour contrast ratios, and how the Lightning Design System provides accessible components.",
+      "<strong>Understand Salesforce UX tooling:</strong> Lightning App Builder for page composition, Dynamic Forms for conditional field visibility, Dynamic Actions for contextual button display, and Compact Layouts for record highlights.",
+      "<strong>Study research methods:</strong> Know when to use qualitative methods (interviews, usability testing, contextual inquiry) vs quantitative methods (surveys, analytics, task completion rates), and what card sorting and tree testing validate."
+    ]
+  },
   "certificationCard": {
     "code": "UX Designer",
     "description": "This exam covers applying UX research, wireframing, prototyping, and accessibility standards (WCAG 2.1) to design usable experiences within Lightning Experience and Experience Cloud.",

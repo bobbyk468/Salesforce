@@ -1,5 +1,35 @@
 {
   "template": "associate",
+  "whoIsThisFor": {
+    "heading": "Who is the Contact Center AP exam for?",
+    "personas": [
+      { "label": "Service Cloud implementers", "description": "You implement Service Cloud solutions and want to validate your expertise in Omni-Channel routing, voice integration, and digital engagement channels." },
+      { "label": "Contact center managers", "description": "You manage a contact center running on Salesforce and want formal validation of your knowledge of routing strategies, agent workspace configuration, and KPI reporting." },
+      { "label": "Partners delivering contact center projects", "description": "You design and deploy contact center solutions for clients and need the AP credential to demonstrate implementation readiness." }
+    ]
+  },
+  "examDifficulty": {
+    "heading": "Is the Contact Center AP Exam Hard?",
+    "summary": "The Contact Center AP exam is moderately difficult. It covers a wide range of contact center technologies &mdash; Omni-Channel routing, Service Cloud Voice, Einstein Bots, and digital engagement &mdash; requiring both conceptual understanding and configuration knowledge.",
+    "bullets": [
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
+      "<strong>Multi-channel routing complexity</strong> &mdash; expect questions on how voice, chat, and case channels share agent capacity through Omni-Channel and how skills-based routing differs from queue-based routing.",
+      "<strong>Voice integration depth</strong> &mdash; you need to know how Service Cloud Voice integrates with Amazon Connect or BYOT partners, how real-time transcription works, and how to configure after-call work."
+    ],
+    "passRateGuidance": "Score 75%+ on practice exams and make sure you can explain Omni-Channel capacity rules, the difference between queue-based and skills-based routing, and how Einstein Bots escalate to human agents."
+  },
+  "examFormat": {
+    "heading": "Contact Center AP Exam Format Explained",
+    "intro": "The exam is proctored online or in-person. Here is the format:",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include designing an Omni-Channel routing strategy for a multi-channel contact center, configuring Service Cloud Voice for a telephony integration, and setting up Einstein Bots for self-service deflection.",
+    "bestWayToPass": [
+      "<strong>Master Omni-Channel routing:</strong> Know how Routing Configurations, Presence Configurations, and Service Channels work together to route work items to agents based on capacity and skills.",
+      "<strong>Understand Service Cloud Voice:</strong> Know Amazon Connect integration, real-time transcription, call controls in the agent console, and how to configure after-call work status.",
+      "<strong>Know Einstein Bots configuration:</strong> Understand bot dialogs, intents, entities, slot-filling, and how escalation from bot to human agent preserves conversation context.",
+      "<strong>Study contact center KPIs:</strong> Average Handle Time, First Contact Resolution, CSAT, Queue Wait Time, and how Omni-Channel Supervisor provides real-time visibility into agent and queue performance."
+    ]
+  },
   "certificationCard": {
     "code": "AP",
     "description": "This exam covers Salesforce Contact Center implementation — Omni-Channel routing, Service Cloud Voice, Einstein Bots, digital engagement channels, and agent workspace configuration.",
