@@ -50,6 +50,51 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       '<strong>Review Einstein use cases:</strong> Know when Salesforce AI supports scoring, recommendations, summaries, generated content, and guided user actions.',
     ],
   },
+  differentiation: {
+    heading: 'AI Associate Traps & Readiness Checklist',
+    intro:
+      'AI Associate looks approachable, but candidates miss questions when they memorize AI buzzwords without connecting them to Salesforce data, trust, and CRM use cases.',
+    commonTraps: [
+      {
+        trap: 'Assuming every AI use case is generative AI',
+        fix: 'Predictive AI forecasts or recommends from historical data. Generative AI creates text, summaries, or responses from prompts and grounding.',
+      },
+      {
+        trap: 'Treating responsible AI as generic ethics vocabulary',
+        fix: 'Map each principle to a CRM decision: bias checks, human review, transparent AI use, privacy controls, and safe customer-data handling.',
+      },
+      {
+        trap: 'Ignoring data quality',
+        fix: 'Duplicates, missing fields, stale records, and biased historical data are all direct causes of poor AI output in Salesforce scenarios.',
+      },
+      {
+        trap: 'Confusing grounding with model training',
+        fix: 'Grounding gives an AI prompt relevant CRM context. It is not the same as retraining the model on your Salesforce data.',
+      },
+    ],
+    readinessBenchmarks: [
+      'You can explain predictive AI, generative AI, prompt, grounding, hallucination, bias, and model drift in plain English.',
+      'You can identify the Trusted AI principle behind a business scenario without relying on keyword matching.',
+      'You know why clean CRM data matters before enabling AI features.',
+      'You score 75%+ on timed practice sets and finish comfortably within 70 minutes.',
+    ],
+    whoShouldSkip: [
+      'You already work deeply with Agentforce configuration and want a more implementation-focused exam.',
+      'You need an admin job credential first; ADM-201 carries stronger role-recognition for entry-level admin positions.',
+    ],
+    adjacentCerts: [
+      {
+        href: '/certifications/agentforce-specialist',
+        label: 'Agentforce Specialist',
+        guidance: 'Better if you configure agents, topics, actions, and prompt templates.',
+      },
+      {
+        href: '/certifications/administrator',
+        label: 'Salesforce Administrator',
+        guidance: 'Better if your goal is a first Salesforce admin role rather than AI literacy.',
+      },
+    ],
+  },
   certificationCard: {
     code: 'AI Associate',
     description:

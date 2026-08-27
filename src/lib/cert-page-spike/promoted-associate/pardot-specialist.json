@@ -39,6 +39,50 @@
       "<strong>Practice forms and progressive profiling:</strong> Know the difference between Pardot Forms and Form Handlers, how progressive profiling works on repeat visits, and how completion actions trigger follow-up automations."
     ]
   },
+  "differentiation": {
+    "heading": "Account Engagement Specialist Traps & Readiness Checklist",
+    "intro": "This is where many Pardot candidates lose marks: the questions look like normal marketing scenarios, but the right answer depends on exact Account Engagement feature behavior.",
+    "commonTraps": [
+      {
+        "trap": "Treating completion actions, automation rules, and Engagement Studio as interchangeable",
+        "fix": "Use completion actions for asset-specific one-time responses, automation rules for continuous criteria matching, and Engagement Studio for timed nurture journeys with branching."
+      },
+      {
+        "trap": "Mixing up scoring and grading",
+        "fix": "Scoring measures engagement. Grading measures profile fit. Exam scenarios often include both signals and ask which one should drive routing or sales follow-up."
+      },
+      {
+        "trap": "Ignoring connector sync precedence",
+        "fix": "Know field sync behavior, connector user permissions, and when Salesforce, Account Engagement, or most recently updated values win."
+      },
+      {
+        "trap": "Choosing Pardot Forms when a Form Handler is required",
+        "fix": "Use Pardot Forms for native hosted capture and progressive profiling; use Form Handlers when an existing external form must stay in place."
+      }
+    ],
+    "readinessBenchmarks": [
+      "You can explain the difference between a dynamic list, segmentation list, suppression list, and automation rule without notes.",
+      "You have built at least one Engagement Studio program with wait steps, rules, and completion actions.",
+      "You can diagnose a prospect sync issue from field values, CRM ownership, and connector permissions.",
+      "You score 78%+ on timed practice sets because the official 72% pass mark leaves less room for guessing."
+    ],
+    "whoShouldSkip": [
+      "You have never configured Account Engagement assets or the Salesforce connector hands-on.",
+      "Your work is mostly Journey Builder, Automation Studio, or Email Studio; start with Marketing Cloud Email Specialist instead."
+    ],
+    "adjacentCerts": [
+      {
+        "href": "/certifications/pardot-consultant",
+        "label": "Account Engagement Consultant",
+        "guidance": "Better if you design full B2B marketing architecture and implementation strategy."
+      },
+      {
+        "href": "/certifications/email-specialist",
+        "label": "Marketing Cloud Email Specialist",
+        "guidance": "Better if your day-to-day work is Email Studio, deliverability, AMPscript, and subscriber data."
+      }
+    ]
+  },
   "certificationCard": {
     "code": "Pardot Specialist",
     "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync.",

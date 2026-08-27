@@ -46,6 +46,50 @@
       "<strong>Understand email authentication:</strong> Know what SPF, DKIM, and DMARC each do, how the Sender Authentication Package bundles them, and how IP warming protects sender reputation."
     ]
   },
+  "differentiation": {
+    "heading": "Email Specialist Traps & Readiness Checklist",
+    "intro": "The Email Specialist exam rewards candidates who know how Marketing Cloud behaves in real sends, not just what each feature is called.",
+    "commonTraps": [
+      {
+        "trap": "Confusing All Subscribers, Publication Lists, Suppression Lists, and Data Extensions",
+        "fix": "Remember that All Subscribers controls global status, Publication Lists manage topic-level opt-ins, Suppression Lists exclude, and Data Extensions store relational audience data."
+      },
+      {
+        "trap": "Choosing Journey Builder for every automation scenario",
+        "fix": "Journey Builder is behavior and lifecycle orchestration. Automation Studio is better for scheduled imports, SQL activities, extracts, and operational batch processes."
+      },
+      {
+        "trap": "Reading AMPscript by keyword instead of output",
+        "fix": "Practice predicting the result of Lookup(), LookupRows(), AttributeValue(), IIF(), and empty-value handling in short snippets."
+      },
+      {
+        "trap": "Treating deliverability as a vocabulary topic",
+        "fix": "Know the practical purpose of SAP, SPF, DKIM, DMARC, IP warming, soft bounces, hard bounces, and subscriber reputation."
+      }
+    ],
+    "readinessBenchmarks": [
+      "You can design the right list or data-extension model for promotional, transactional, and preference-center scenarios.",
+      "You can read basic AMPscript snippets and explain the output without running the code.",
+      "You know when to use Journey Builder, Automation Studio, Email Studio, and Contact Builder.",
+      "You score 75%+ on timed practice exams and can explain every deliverability miss."
+    ],
+    "whoShouldSkip": [
+      "You have never worked inside Marketing Cloud Engagement or Email Studio.",
+      "Your focus is B2B Account Engagement/Pardot rather than Marketing Cloud Engagement."
+    ],
+    "adjacentCerts": [
+      {
+        "href": "/certifications/marketing-cloud-engagement-admin",
+        "label": "Marketing Cloud Administrator",
+        "guidance": "Better if you own setup, permissions, data extensions, and business-unit configuration."
+      },
+      {
+        "href": "/certifications/pardot-specialist",
+        "label": "Account Engagement Specialist",
+        "guidance": "Better if your marketing stack is Pardot forms, scoring, grading, and Salesforce connector sync."
+      }
+    ]
+  },
   "certificationCard": {
     "code": "Email Specialist",
     "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability.",

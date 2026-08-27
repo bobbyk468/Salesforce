@@ -142,6 +142,19 @@ export default function SalesforceCertificationSalaryPage() {
         <p className="text-xs text-gray-600 mt-3">Salary ranges reflect United States market data. UK, Australia, and European markets typically run 20–35% lower in absolute terms. Consultant/contractor day rates can be significantly higher than employment salaries.</p>
       </section>
 
+      <section className="rounded-xl border border-emerald-100 bg-emerald-50/50 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Estimate Your Certification ROI</h2>
+        <p className="text-sm text-gray-700 mb-4">
+          Salary uplift depends on experience, geography, and role scope. To compare the exam fee, study time, likely salary uplift, and payback period by track, use the Salesforce certification ROI calculator.
+        </p>
+        <Link
+          href="/salesforce-certification-roi-calculator"
+          className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-700 transition-colors"
+        >
+          Open ROI Calculator <ArrowRight className="h-4 w-4" />
+        </Link>
+      </section>
+
       {/* Regional salary comparison */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-1">Salesforce Salary by Region</h2>
@@ -258,6 +271,29 @@ export default function SalesforceCertificationSalaryPage() {
           </div>
         </div>
         <p className="text-xs text-gray-600 pt-3">Salary uplift estimates are approximate and market/experience-dependent. Your mileage will vary based on employer, location, and existing experience.</p>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Salary Methodology &amp; Caveats</h2>
+        <div className="space-y-3 text-sm text-gray-700">
+          <p>
+            These ranges are directional benchmarks for certified Salesforce professionals, not guaranteed compensation. We use public salary-survey ranges, common hiring-market patterns, job-description demand, and certification difficulty/role alignment to estimate practical bands.
+          </p>
+          <p>
+            The biggest drivers are hands-on implementation experience, geography, cloud specialization, consulting vs in-house role type, and whether the certification matches the job responsibilities. A credential improves hiring signal, but it does not replace project evidence.
+          </p>
+          <p>
+            For cost-side planning, compare this salary guide with the{' '}
+            <Link href="/salesforce-certification-cost" className="text-salesforce-blue font-medium hover:underline">
+              Salesforce certification cost guide
+            </Link>{' '}
+            and the{' '}
+            <Link href="/salesforce-certification-roi-calculator" className="text-salesforce-blue font-medium hover:underline">
+              certification ROI calculator
+            </Link>
+            .
+          </p>
+        </div>
       </section>
 
       {/* Start */}

@@ -37,6 +37,8 @@ export type RichSectionBlock = {
 export type SharedCertCardAndContent = {
   /** First-hand exam observation rendered as an ExpertInsightCallout. Targets Google's E-E-A-T "Experience" signal. */
   expertInsight?: string
+  /** Page-specific trap/readiness section used to reduce template similarity on priority cert pages. */
+  differentiation?: CertDifferentiation
   certificationCard: {
     code: string
     description: string
@@ -81,6 +83,16 @@ export type ExamFormat = {
   intro: string
   scenarioPercent?: string
   bestWayToPass: string[]
+}
+
+/** Page-specific exam traps and readiness signals for money-page differentiation. */
+export type CertDifferentiation = {
+  heading: string
+  intro?: string
+  commonTraps: { trap: string; fix: string }[]
+  readinessBenchmarks: string[]
+  whoShouldSkip?: string[]
+  adjacentCerts?: { href: string; label: string; guidance: string }[]
 }
 
 /** AI Associate stack: intro paragraph component, key concepts before scenarios, FullQuestionBank CTA. */

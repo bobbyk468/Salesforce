@@ -314,6 +314,64 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
             </details>
 
+            <section id="adm201-traps" className="mt-8 rounded-xl border border-amber-100 bg-amber-50/40 p-5 sm:p-6">
+              <p className="text-xs font-semibold uppercase tracking-wide text-amber-700 mb-2">Exam reviewer notes</p>
+              <h2 className="text-lg font-bold text-gray-900 mb-3">ADM-201 Common Traps &amp; Readiness Checklist</h2>
+              <p className="text-sm text-gray-700 mb-5">
+                ADM-201 is broad, so the highest-risk questions are not obscure facts. They are scenario questions where two Salesforce features sound plausible and only one matches the business constraint.
+              </p>
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-5">
+                <div className="rounded-lg border border-white bg-white/80 p-4">
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">Common traps to avoid</h3>
+                  <div className="space-y-3 text-sm text-gray-700">
+                    <div>
+                      <p className="font-medium text-gray-900">Profiles vs permission sets vs roles</p>
+                      <p className="text-gray-600">Profiles and permission sets control object/field/app permissions. Roles affect record visibility through hierarchy, not what a user can do.</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">OWD, sharing rules, and manual sharing</p>
+                      <p className="text-gray-600">Start with the private/public baseline, then add access through role hierarchy, sharing rules, teams, queues, or manual sharing.</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">Choosing old automation tools</p>
+                      <p className="text-gray-600">Flow is the modern default. Workflow Rules and Process Builder may appear as distractors when a record-triggered Flow is the better answer.</p>
+                    </div>
+                    <div>
+                      <p className="font-medium text-gray-900">Dashboard running user mistakes</p>
+                      <p className="text-gray-600">A dashboard shows data based on the running user unless it is dynamic. That detail changes the correct answer in reporting scenarios.</p>
+                    </div>
+                  </div>
+                </div>
+                <div className="rounded-lg border border-white bg-white/80 p-4">
+                  <h3 className="text-base font-semibold text-gray-900 mb-3">Ready to book when...</h3>
+                  <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+                    <li>You score 75%+ on three timed mock exams without pausing to check notes.</li>
+                    <li>You can explain why each wrong answer is wrong, especially in security and automation questions.</li>
+                    <li>You have configured users, profiles, permission sets, sharing rules, reports, dashboards, and flows in a dev org.</li>
+                    <li>You can finish 65 practice questions inside 105 minutes with at least 10 minutes left to review flagged items.</li>
+                  </ul>
+                  <div className="mt-4 pt-4 border-t border-amber-100 text-sm text-gray-700">
+                    <p className="font-semibold text-gray-900 mb-2">Compare before your next cert:</p>
+                    <p>
+                      After ADM-201, most candidates choose{' '}
+                      <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
+                        App Builder
+                      </Link>
+                      ,{' '}
+                      <Link href="/certifications/advanced-administrator" className="text-salesforce-blue font-medium hover:underline">
+                        Advanced Administrator
+                      </Link>
+                      , or a consultant path such as{' '}
+                      <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
+                        Sales Cloud Consultant
+                      </Link>
+                      .
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </section>
+
             <div id="exam-prep">
               <ExamPrepContent slug={slug} />
             </div>
@@ -461,6 +519,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               sections={[
                 { id: 'is-adm-201-hard', title: 'Is ADM-201 Hard?' },
                 { id: 'exam-format', title: 'Exam Format Explained' },
+                { id: 'adm201-traps', title: 'Common Traps' },
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
                 { id: 'scenario-tips', title: 'How to Pass' },

@@ -121,6 +121,32 @@ export default function CertificationsIndexPage() {
 
       <ContentPageAuthor />
 
+      <section className="mb-10 rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-5 sm:p-6">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">Certification Decision Tools</h2>
+        <p className="text-sm text-gray-700 mb-5">
+          Compare cost, salary, ROI, and first-cert options before choosing your next exam.
+        </p>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {[
+            { href: '/salesforce-certification-roi-calculator', title: 'ROI Calculator', desc: 'Estimate payback period by exam fee, study time, and salary uplift.' },
+            { href: '/salesforce-certification-salary', title: 'Salary Guide', desc: 'Compare admin, developer, consultant, architect, and Marketing Cloud salaries.' },
+            { href: '/salesforce-certification-cost', title: 'Exam Cost Guide', desc: 'Check exam fees, retake fees, AP pricing, and foundational credential costs.' },
+            { href: '/salesforce-admin-certification-201', title: 'Admin Certification 201', desc: 'Query-specific guide for candidates searching ADM-201 and Salesforce admin cert.' },
+            { href: '/marketing-cloud-certification-path', title: 'Marketing Cloud Path', desc: 'Choose between Email Specialist, Account Engagement, admin, developer, and consultant tracks.' },
+            { href: '/pardot-certification', title: 'Pardot Certification', desc: 'Compare Account Engagement Specialist vs Consultant before booking.' },
+          ].map((tool) => (
+            <Link
+              key={tool.href}
+              href={tool.href}
+              className="rounded-xl border border-white bg-white p-4 shadow-sm hover:border-salesforce-blue/40 hover:shadow-md transition-all group"
+            >
+              <p className="font-semibold text-gray-900 group-hover:text-salesforce-blue transition-colors">{tool.title}</p>
+              <p className="mt-1 text-sm text-gray-600">{tool.desc}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
       {/* Most Popular Certifications */}
       <section className="mb-10">
         <h2 className="text-2xl font-bold text-gray-900 mb-5">Most Popular Salesforce Certifications</h2>

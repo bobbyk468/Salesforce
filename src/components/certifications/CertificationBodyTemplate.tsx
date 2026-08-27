@@ -42,6 +42,7 @@ import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import { WhoIsThisForSection, ExamDifficultySection, ExamFormatSection } from '@/components/CertAdminStyleSections'
+import CertDifferentiationSection from '@/components/CertDifferentiationSection'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -224,6 +225,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
 
         {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
         {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
+        {body.differentiation && <CertDifferentiationSection data={body.differentiation} />}
 
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
 
@@ -336,6 +338,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
 
         {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
         {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
+        {body.differentiation && <CertDifferentiationSection data={body.differentiation} />}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}

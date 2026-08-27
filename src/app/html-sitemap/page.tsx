@@ -32,6 +32,8 @@ const corePages = [
   { name: 'All Salesforce Certifications List', href: '/salesforce-certifications-list' },
   { name: 'Certification Path', href: '/certification-path' },
   { name: 'Salesforce Certification Cost', href: '/salesforce-certification-cost' },
+  { name: 'Salesforce Certification ROI Calculator', href: '/salesforce-certification-roi-calculator' },
+  { name: 'Editorial Policy & Exam Data Review', href: '/editorial-policy' },
   { name: 'Salesforce Associate Certification Cost', href: '/salesforce-associate-certification-cost' },
   { name: 'Salesforce Admin Certification 201 Guide', href: '/salesforce-admin-certification-201' },
   { name: 'Pardot Certification Guide', href: '/pardot-certification' },

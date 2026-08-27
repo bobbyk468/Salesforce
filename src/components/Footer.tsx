@@ -63,6 +63,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/editorial-policy" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Editorial Policy
+                </Link>
+              </li>
+              <li>
                 <Link href="/certifications/administrator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Administrator practice questions
                 </Link>
@@ -177,6 +182,11 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
+                <Link href="/salesforce-certification-roi-calculator" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                  Certification ROI calculator
+                </Link>
+              </li>
+              <li>
                 <Link href="/become-cta" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   How to become a CTA
                 </Link>
@@ -201,6 +211,9 @@ export default function Footer() {
             </Link>
             <Link href="/privacy" className="text-gray-300 hover:text-salesforce-light transition-colors">
               Privacy Policy
+            </Link>
+            <Link href="/editorial-policy" className="text-gray-300 hover:text-salesforce-light transition-colors">
+              Editorial Policy
             </Link>
           </div>
         </div>
