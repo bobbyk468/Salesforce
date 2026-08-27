@@ -101,6 +101,29 @@ const roiRows = [
   },
 ]
 
+const scenarios = [
+  {
+    profile: 'Career switcher targeting first Salesforce admin role',
+    bestCert: 'Administrator (ADM-201)',
+    reasoning: 'The credential maps directly to entry admin job descriptions and proves core platform knowledge. The exam fee is small compared with the salary gap between non-Salesforce support roles and Salesforce admin roles.',
+  },
+  {
+    profile: 'Existing admin trying to move into higher-value implementation work',
+    bestCert: 'App Builder or Sales/Service Cloud Consultant',
+    reasoning: 'The ROI comes from expanding from org maintenance into solution design, automation, and implementation ownership. The certification should match the cloud you actually support.',
+  },
+  {
+    profile: 'Developer with general software experience',
+    bestCert: 'Platform Developer I, then Platform Developer II',
+    reasoning: 'PD1 creates Salesforce-specific credibility; PD2 differentiates senior developers who can design maintainable Apex, testing, integration, and advanced platform solutions.',
+  },
+  {
+    profile: 'Marketing operations professional',
+    bestCert: 'Email Specialist or Pardot Specialist',
+    reasoning: 'The highest ROI comes from matching the exact marketing platform you use. Email Studio/Journey Builder candidates should not start with Pardot, and Account Engagement users should not start with Email Specialist by default.',
+  },
+]
+
 export default function SalesforceCertificationRoiCalculatorPage() {
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -186,6 +209,29 @@ export default function SalesforceCertificationRoiCalculatorPage() {
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Estimate study time honestly. Eight weeks of focused study has an opportunity cost even if the exam fee is low.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Prioritize certs with job-description demand in your target geography.</li>
         </ul>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">ROI Scenarios by Candidate Type</h2>
+        <div className="space-y-5 text-sm text-gray-700">
+          {scenarios.map((scenario) => (
+            <div key={scenario.profile} className="border-b border-gray-100 pb-5 last:border-0 last:pb-0">
+              <h3 className="font-semibold text-gray-900 mb-1">{scenario.profile}</h3>
+              <p className="mb-1"><strong className="text-gray-900">Best certification:</strong> {scenario.bestCert}</p>
+              <p>{scenario.reasoning}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Methodology: What This Calculator Includes</h2>
+        <p className="text-sm text-gray-700 mb-3">
+          This page estimates ROI using public exam fee tiers, typical retake-risk assumptions, realistic study windows, and directional salary-uplift ranges from Salesforce ecosystem hiring patterns. It is designed for certification planning, not compensation negotiation.
+        </p>
+        <p className="text-sm text-gray-700">
+          The most important adjustment is experience. A certification without project evidence may help you get screened, but the largest salary gains happen when the credential confirms skills you can already demonstrate in interviews, portfolio examples, or client work.
+        </p>
       </section>
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">

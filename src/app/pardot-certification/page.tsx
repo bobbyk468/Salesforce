@@ -29,6 +29,31 @@ const faqItems = [
   { question: 'Is Pardot Specialist or Pardot Consultant harder?', answer: 'Pardot Consultant is harder because it tests implementation judgment, business requirements, integrations, and multi-system marketing automation scenarios.' },
 ]
 
+const comparisonRows = [
+  {
+    label: 'Best first exam',
+    specialist: 'Pardot Specialist is the better first exam for hands-on marketers, admins, and marketing operations users.',
+    consultant: 'Pardot Consultant is better after you have implementation experience and can translate business requirements into Account Engagement architecture.',
+  },
+  {
+    label: 'Core focus',
+    specialist: 'Feature behavior: prospects, lists, forms, automation rules, Engagement Studio, scoring, grading, and email reporting.',
+    consultant: 'Solution design: lead lifecycle, connector strategy, campaign influence, governance, migration choices, and stakeholder requirements.',
+  },
+  {
+    label: 'Difficulty',
+    specialist: 'Moderate, but the 72% passing score leaves limited room for guessing.',
+    consultant: 'Harder because scenarios are broader and often include tradeoffs across Salesforce, sales process, and marketing automation.',
+  },
+]
+
+const studyMilestones = [
+  'Build a test form, form handler, landing page, and completion action so you understand when each fires.',
+  'Create automation rules, dynamic lists, segmentation lists, and suppression lists; then explain the difference without notes.',
+  'Configure scoring and grading examples and know which one measures engagement versus fit.',
+  'Review Salesforce connector sync behavior, field precedence, prospect assignment, and lead/contact matching.',
+]
+
 export default function PardotCertificationPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -54,6 +79,32 @@ export default function PardotCertificationPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Pardot Certification Path</h2>
         <p className="text-sm text-gray-700">Pardot Specialist &rarr; Pardot Consultant &rarr; Marketing Cloud Consultant or Business Analyst, depending on whether you want a marketing operations path or implementation consulting path.</p>
+      </section>
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Pardot Specialist vs Pardot Consultant</h2>
+        <div className="space-y-4 text-sm text-gray-700">
+          {comparisonRows.map((row) => (
+            <div key={row.label} className="grid gap-3 md:grid-cols-[150px_1fr_1fr] border-b border-gray-100 pb-4 last:border-0 last:pb-0">
+              <p className="font-semibold text-gray-900">{row.label}</p>
+              <p><strong className="text-gray-900">Specialist:</strong> {row.specialist}</p>
+              <p><strong className="text-gray-900">Consultant:</strong> {row.consultant}</p>
+            </div>
+          ))}
+        </div>
+        <p className="text-sm text-gray-700 mt-4 pt-4 border-t border-gray-100">
+          If you mainly operate campaigns, choose Specialist first. If you gather requirements, design lead lifecycle architecture, and advise clients on how Account Engagement connects with Salesforce, move toward Consultant.
+        </p>
+      </section>
+      <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Hands-On Prep Checklist</h2>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          {studyMilestones.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-sm text-gray-700 mt-4">
+          Avoid dumps for this track. Pardot questions often hinge on exact feature behavior, so memorized answers break quickly when the scenario changes.
+        </p>
       </section>
       <RelatedGuides links={getRelatedGuides('pardot-certification')} />
     </div>

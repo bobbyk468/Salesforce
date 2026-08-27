@@ -33,6 +33,32 @@ const sections = [
   ['Questions', '60'], ['Time limit', '105 minutes'], ['Passing score', '68%'], ['Exam fee', '$200']
 ]
 
+const priorityTopics = [
+  {
+    topic: 'Security and access',
+    guidance: 'Know profiles, permission sets, roles, org-wide defaults, sharing rules, teams, queues, and field-level security. Most missed ADM-201 questions come from mixing up what controls record visibility versus what controls object or field permissions.',
+  },
+  {
+    topic: 'Object model and app configuration',
+    guidance: 'Practice standard objects, custom objects, lookup versus master-detail relationships, record types, page layouts, Lightning record pages, business processes, and compact layouts in a dev org.',
+  },
+  {
+    topic: 'Automation and Flow',
+    guidance: 'Use Flow as the default automation answer unless the scenario clearly asks for approval routing, assignment rules, escalation rules, or another feature-specific tool.',
+  },
+  {
+    topic: 'Reports, dashboards, and data quality',
+    guidance: 'Understand report formats, dashboard running users, dynamic dashboards, import tools, duplicate management, validation rules, and when to use Data Loader instead of Data Import Wizard.',
+  },
+]
+
+const readinessChecks = [
+  'You can explain the difference between profile, permission set, role, sharing rule, and field-level security without checking notes.',
+  'You can build a record-triggered Flow, a validation rule, a report, and a dashboard in a Salesforce dev org.',
+  'You score at least 75% on three timed practice sets and can explain every wrong answer.',
+  'You can finish a 60-question practice exam in under 95 minutes, leaving time to review flagged questions.',
+]
+
 export default function SalesforceAdminCertification201Page() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -54,6 +80,31 @@ export default function SalesforceAdminCertification201Page() {
           <li>Use <Link href="/adm-201-study-guide" className="text-salesforce-blue hover:underline">the ADM-201 study guide</Link> for section-level preparation.</li>
           <li>Take the <Link href="/certifications/administrator" className="text-salesforce-blue hover:underline">free ADM-201 practice exam</Link> until you score 75% or higher consistently.</li>
         </ol>
+      </section>
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What Salesforce Admin Certification 201 Actually Tests</h2>
+        <p className="text-sm text-gray-700 mb-4">
+          Searchers often use &ldquo;Salesforce Admin Certification 201&rdquo; when they mean the Salesforce Certified Platform Administrator exam. The exam is not a memory test of menu names. It checks whether you can choose the right Salesforce admin feature for a business requirement, especially when two answers sound close.
+        </p>
+        <div className="space-y-4 text-sm text-gray-700">
+          {priorityTopics.map((item) => (
+            <div key={item.topic}>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.topic}</h3>
+              <p>{item.guidance}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+      <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">When Are You Ready to Book ADM-201?</h2>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          {readinessChecks.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-sm text-gray-700 mt-4 pt-4 border-t border-amber-100">
+          If you are still guessing on security or Flow scenarios, keep practicing before paying the exam fee. If your weak area is only low-weight productivity/collaboration topics, you may be closer than you think.
+        </p>
       </section>
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Free ADM-201 Practice Exam</h2>

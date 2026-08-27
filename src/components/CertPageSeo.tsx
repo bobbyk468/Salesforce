@@ -8,7 +8,6 @@ import {
   getCertFaq,
   getCertFaqHeading,
   getCertFaqJsonLd,
-  getCertHowToJsonLd,
   getCertWebPageJsonLd,
   getExamWeightageTableJsonLd,
   SLUG_TO_EXAM_CODE,
@@ -32,7 +31,6 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const faqs = getCertFaq(slug, certTitle)
   const breadcrumbJsonLd = getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName)
   const faqJsonLd = getCertFaqJsonLd(slug, certTitle)
-  const howToJsonLd = getCertHowToJsonLd(slug, certTitle)
   const webPageJsonLd = getCertWebPageJsonLd(slug, certTitle, roleSlug, roleName)
   const pageUrl = `${siteBaseUrl}/certifications/${slug}`
   const articleHeadline = `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''} Study Guide and Practice Questions`
@@ -40,22 +38,6 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   // Use RELEASE_DATE for dateModified — signals freshness when content is refreshed for a new release.
   const datePublished = '2024-10-01T00:00:00Z'
   const dateModified = `${RELEASE_DATE}T00:00:00Z`
-
-  const courseJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Course',
-    name: `${certTitle}${SLUG_TO_EXAM_CODE[slug] ? ` (${SLUG_TO_EXAM_CODE[slug]})` : ''}`,
-    description: `Prepare for ${certTitle} with section-wise exam weightage, study plan, and sample practice questions.`,
-    provider: { '@type': 'Organization', name: 'Trailblaze Prep' },
-    copyrightHolder: { '@type': 'Organization', name: 'Trailblaze Prep' },
-    copyrightYear: new Date().getFullYear(),
-    license: 'https://creativecommons.org/licenses/by-nc-nd/4.0/',
-    hasCourseInstance: {
-      '@type': 'CourseInstance',
-      name: `${certTitle} Certification Exam`,
-      courseMode: 'online',
-    },
-  }
 
   const articleJsonLd = {
     '@context': 'https://schema.org',
@@ -95,25 +77,6 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
     },
   }
 
-  const learningResourceJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'LearningResource',
-    name: `${certTitle} Practice Questions and Study Guide`,
-    description: `Free ${certTitle} practice questions with ${RELEASE_CURRENT} exam weightage, study plan, and key concepts to help you pass.`,
-    url: pageUrl,
-    learningResourceType: ['practice problem', 'study guide'],
-    educationalLevel: 'professional',
-    teaches: certTitle,
-    inLanguage: 'en',
-    isAccessibleForFree: true,
-    provider: {
-      '@type': 'Organization',
-      name: 'Trailblaze Prep',
-      url: siteBaseUrl,
-    },
-    dateModified,
-  }
-
   const tableJsonLd = getExamWeightageTableJsonLd(slug, certTitle)
 
   const occupationData = getOccupationData(slug)
@@ -140,23 +103,11 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
       />
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleJsonLd) }}
       />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(credentialJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
       />
       {tableJsonLd && (
         <script

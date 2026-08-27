@@ -3,9 +3,6 @@ import {
   getBreadcrumbListJsonLd,
   getArticleJsonLd,
   getFaqPageJsonLd,
-  getCourseJsonLd,
-  getLearningResourceJsonLd,
-  getHowToJsonLd,
   type BreadcrumbItem,
   type FaqItem,
 } from '@/lib/schema-data'
@@ -16,8 +13,6 @@ export interface ContentPageSchemasProps {
   path: string
   breadcrumbItems: BreadcrumbItem[]
   faqItems?: FaqItem[]
-  /** Optional: custom HowTo name (defaults to "How to prepare using this guide") */
-  howToName?: string
   /** Optional: URL of the authoritative page this content is about (e.g. study guide URL for exam-tips pages).
    *  Sets mainEntityOfPage on the Article schema — tells Google which page is the canonical authority. */
   mainEntityUrl?: string
@@ -26,8 +21,9 @@ export interface ContentPageSchemasProps {
 }
 
 /**
- * Renders all JSON-LD schema scripts for content pages (study guides, exam tips, vs pages, etc.)
- * to match cert pages with ~6 valid Rich Results items.
+ * Renders lean JSON-LD for content pages.
+ * Keep this intentionally small: over-marking every page as Article + Course + HowTo +
+ * LearningResource bloats HTML and weakens schema precision at scale.
  */
 export default function ContentPageSchemas({
   headline,
@@ -35,7 +31,6 @@ export default function ContentPageSchemas({
   path,
   breadcrumbItems,
   faqItems,
-  howToName,
   mainEntityUrl,
   aboutEntities,
 }: ContentPageSchemasProps) {
@@ -47,13 +42,6 @@ export default function ContentPageSchemas({
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(breadcrumbItems)
   const articleJsonLd = getArticleJsonLd({ headline, description, path, mainEntityUrl, about: aboutEntities })
-  const courseJsonLd = getCourseJsonLd({ name: headline, description, path })
-  const learningResourceJsonLd = getLearningResourceJsonLd({ name: headline, description, path })
-  const howToJsonLd = getHowToJsonLd({
-    name: howToName ?? `How to prepare using this guide: ${headline}`,
-    description,
-    path,
-  })
 
   return (
     <>
@@ -77,18 +65,6 @@ export default function ContentPageSchemas({
           }}
         />
       )}
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(courseJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(learningResourceJsonLd) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(howToJsonLd) }}
-      />
     </>
   )
 }

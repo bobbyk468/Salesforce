@@ -117,7 +117,7 @@ export function getWebPageJsonLd({
   name,
   description,
   path,
-  breadcrumbItems,
+  breadcrumbItems: _breadcrumbItems,
 }: {
   name: string
   description: string
@@ -132,13 +132,6 @@ export function getWebPageJsonLd({
     description,
     url,
     publisher: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
-  }
-  if (breadcrumbItems && breadcrumbItems.length > 0) {
-    const items = breadcrumbItems.map((b) => ({
-      name: b.name,
-      url: b.url.startsWith('http') ? b.url : `${baseUrl}${b.url}`,
-    }))
-    page.breadcrumb = getBreadcrumbListJsonLd(items)
   }
   return page
 }

@@ -50,6 +50,28 @@ const options = [
   { name: 'Agentforce Specialist', href: '/certifications/agentforce-specialist', cost: '$200 tier', bestFor: 'Candidates moving from AI literacy into practical Agentforce implementation topics.' },
 ]
 
+const costFactors = [
+  {
+    heading: 'Exam fee is only part of the cost',
+    body: 'Associate-level credentials are usually cheaper than standard Salesforce certifications, but retakes, study time, practice resources, and the opportunity cost of choosing the wrong first exam matter more than the base fee.',
+  },
+  {
+    heading: 'Foundational does not always mean best for jobs',
+    body: 'A foundations credential can help beginners learn the vocabulary, but Administrator (ADM-201), App Builder, Developer I, and consultant certs usually carry stronger hiring signal for role-specific job postings.',
+  },
+  {
+    heading: 'Check current availability before booking',
+    body: 'Salesforce occasionally retires or renames entry-level credentials as the product portfolio changes. Use the official registration flow as the final source for current fee, delivery options, and exam availability.',
+  },
+]
+
+const nextSteps = [
+  'If you want an admin job, move from Platform Foundations to Administrator (ADM-201).',
+  'If you want AI/Agentforce work, compare AI Associate with Agentforce Specialist before paying.',
+  'If you already use Salesforce at work, a role-based certification may be a better ROI than another entry credential.',
+  'If budget is tight, choose the first exam that directly supports your next job application, not the cheapest badge.',
+]
+
 export default function SalesforceAssociateCertificationCostPage() {
   return (
     <div className="max-w-4xl mx-auto px-4 py-12">
@@ -85,6 +107,30 @@ export default function SalesforceAssociateCertificationCostPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Path</h2>
         <p className="text-sm text-gray-700 mb-3">If your goal is employability, treat associate certification as a stepping stone, not the finish line.</p>
         <p className="text-sm text-gray-700"><strong>Best path for most beginners:</strong> Platform Foundations &rarr; Administrator (ADM-201) &rarr; App Builder or a consultant/specialist track.</p>
+      </section>
+
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What the Associate Cost Really Means</h2>
+        <div className="space-y-4 text-sm text-gray-700">
+          {costFactors.map((item) => (
+            <div key={item.heading}>
+              <h3 className="font-semibold text-gray-900 mb-1">{item.heading}</h3>
+              <p>{item.body}</p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <section className="rounded-xl border border-amber-100 bg-amber-50/40 p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Best Next Step After an Associate Cert</h2>
+        <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
+          {nextSteps.map((item) => (
+            <li key={item}>{item}</li>
+          ))}
+        </ul>
+        <p className="text-sm text-gray-700 mt-4">
+          Compare the low entry fee against career signal. A $75 credential can be useful, but a $200 role-based credential may create more interview value if it matches your target job.
+        </p>
       </section>
 
       <RelatedGuides links={getRelatedGuides('salesforce-associate-certification-cost')} />

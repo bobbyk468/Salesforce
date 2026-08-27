@@ -2708,8 +2708,8 @@ export function getCertFaqHeading(slug: string): string {
 export function getCertWebPageJsonLd(
   slug: string,
   certTitle: string,
-  roleSlug?: string,
-  roleName?: string
+  _roleSlug?: string,
+  _roleName?: string
 ) {
   const title = getCertMetaTitle(slug)
   const description = getCertMetaDescription(slug)
@@ -2727,7 +2727,6 @@ export function getCertWebPageJsonLd(
       url: `${baseUrl}/team`,
     },
     publisher: { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
-    breadcrumb: getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName),
   }
 }
 
