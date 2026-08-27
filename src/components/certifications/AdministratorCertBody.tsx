@@ -38,6 +38,7 @@ import CertMockScoreGuide from '@/components/CertMockScoreGuide'
 import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
+import CertQuizSchema from '@/components/CertQuizSchema'
 import {
   ADM_201_SECTION_SUBTOPICS,
   ADMINISTRATOR_SLUG,
@@ -440,6 +441,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           <CertMockScoreGuide slug={slug} />
           <CertPracticeVsDumps />
 
+          <CertQuizSchema certTitle={slugToDisplayName(slug)} slug={slug} questions={administratorSampleQuestions} />
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
               introText={getPracticeQuestionsIntro(administratorSampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}

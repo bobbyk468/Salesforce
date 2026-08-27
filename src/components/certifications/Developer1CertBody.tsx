@@ -22,6 +22,7 @@ import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
+import CertQuizSchema from '@/components/CertQuizSchema'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -518,6 +519,7 @@ private class CalloutServiceTest {
           <CertMockScoreGuide slug={slug} />
           <CertPracticeVsDumps />
 
+          <CertQuizSchema certTitle={slugToDisplayName(slug)} slug={slug} questions={sampleQuestions} />
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}

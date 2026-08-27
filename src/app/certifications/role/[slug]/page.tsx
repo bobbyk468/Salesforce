@@ -15,17 +15,17 @@ export async function generateStaticParams() {
 }
 
 const ROLE_TITLES: Record<string, string> = {
-  architect:              `Salesforce Architect Certification Path (${RELEASE_CURRENT})`,
-  consultant:             `Salesforce Consultant Cert Path: Free Practice (${RELEASE_CURRENT})`,
-  marketing:              `Salesforce Marketing Cloud Certs: Free Practice (${RELEASE_CURRENT})`,
-  associate:              `Salesforce Associate Certifications: Free Practice (${RELEASE_CURRENT})`,
-  administrator:          `Salesforce Admin Certification: ADM-201 + More (${RELEASE_CURRENT})`,
-  developer:              `Salesforce Developer Certification (${RELEASE_CURRENT})`,
-  tableau:                `Salesforce Tableau Certification Guide (${RELEASE_CURRENT})`,
-  'accredited-professional': `Salesforce Accredited Professional Certs (${RELEASE_CURRENT})`,
-  sales:                  `Salesforce Sales Certification Guide (${RELEASE_CURRENT})`,
-  designer:               `Salesforce Designer Certifications (${RELEASE_CURRENT})`,
-  claude:                 `Claude Certification Guide: All 4 Exams (${RELEASE_CURRENT})`,
+  architect:              `Salesforce Architect Career Path & Salary (${RELEASE_CURRENT})`,
+  consultant:             `Salesforce Consultant Career Path & Salary (${RELEASE_CURRENT})`,
+  marketing:              `Marketing Cloud Career Path & Salary (${RELEASE_CURRENT})`,
+  associate:              `Salesforce Associate Career Path & Salary (${RELEASE_CURRENT})`,
+  administrator:          `Salesforce Admin Career Path & Salary Guide (${RELEASE_CURRENT})`,
+  developer:              `Salesforce Developer Career Path & Salary (${RELEASE_CURRENT})`,
+  tableau:                `Tableau Career Path & Salary Guide (${RELEASE_CURRENT})`,
+  'accredited-professional': `Accredited Professional Career & Salary (${RELEASE_CURRENT})`,
+  sales:                  `Salesforce Sales Career Path & Salary (${RELEASE_CURRENT})`,
+  designer:               `Salesforce Designer Career Path & Salary (${RELEASE_CURRENT})`,
+  claude:                 `Claude AI Career Path & Salary Guide (${RELEASE_CURRENT})`,
 }
 
 type FaqItem = { question: string; answer: string }
@@ -315,27 +315,27 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
 
 const ROLE_DESCRIPTIONS: Record<string, string> = {
   architect:
-    'Salesforce Architect cert path to CTA: Application, System, Integration, Data Architect. Free practice — no sign-up. Start now.',
+    'Salesforce Architect salary ($130K–$200K+), career path to CTA, daily responsibilities, and which architect cert to take first. Role overview and roadmap.',
   consultant:
-    'Certified Salesforce Consultant: all exams — Sales Cloud, Service Cloud, Experience Cloud + more. Free practice, no sign-up. Start now.',
+    'Salesforce Consultant salary ($80K–$145K), career path, daily responsibilities, and which consultant cert to start with. Role guide and roadmap.',
   marketing:
-    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist and more. Free practice questions and study guides.',
+    'Marketing Cloud career guide: salary ($65K–$125K), daily responsibilities, career path from Email Specialist to Consultant. Role overview and roadmap.',
   associate:
-    'Salesforce Associate certifications: Platform Foundations and AI Associate options, exam format, fees, study guides, and free practice questions.',
+    'Salesforce Associate roles: entry salary ($50K–$70K), career path, skills needed, and which associate cert to start with. Role overview and roadmap.',
   'accredited-professional':
-    'Salesforce Accredited Professional certs: Field Service, B2B Commerce, Health Cloud + more. Free practice & study guides. Start free now.',
+    'Salesforce Accredited Professional salary ($95K–$155K), career path, industry specializations, and which AP credential to target. Role guide.',
   administrator:
-    'Salesforce Administrator certification: ADM-201, Advanced Admin (ADM-211), App Builder (DEV-402) + more. Free practice & study guides. Start free now.',
+    'Salesforce Admin salary ($65K–$130K), career path, daily responsibilities, and which admin cert to take first. Career guide and roadmap.',
   developer:
-    'Salesforce Developer certification: PD1, PD2, JavaScript Developer, MuleSoft, OmniStudio + more. Free practice & study guides. Start free now.',
+    'Salesforce Developer salary ($85K–$155K), career path, daily responsibilities, and which developer cert to start with. Career guide and roadmap.',
   tableau:
-    'Salesforce Tableau certification: Tableau Architect, Consultant, Data Analyst, Desktop Foundations + more. Free practice & study guides. Start free now.',
+    'Tableau career guide: salary ($75K–$135K), daily responsibilities, career path from Desktop Specialist to Architect. Role overview and roadmap.',
   sales:
-    'Salesforce Sales certification: Sales Cloud Consultant and Certified Sales Foundations. Free practice & study guides. Start free now.',
+    'Salesforce Sales role salary ($75K–$135K), career path, daily responsibilities, and which sales cert to pursue first. Career guide and roadmap.',
   designer:
-    'Salesforce Designer certifications: Platform Strategy Designer and UX Designer. Free practice & study guides. Start free now.',
+    'Salesforce Designer salary ($75K–$135K), career path, daily responsibilities, and certification options. Role overview and roadmap.',
   claude:
-    'Claude certifications by Anthropic: Associate, Developer, Architect Foundations and Professional. Free practice questions and study guides. Start free now.',
+    'Claude AI career guide: salary ($80K–$225K), career path, daily responsibilities, and which Claude cert to take first. Role overview and roadmap.',
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {

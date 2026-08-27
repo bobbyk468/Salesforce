@@ -43,6 +43,7 @@ import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import { WhoIsThisForSection, ExamDifficultySection, ExamFormatSection } from '@/components/CertAdminStyleSections'
 import CertDifferentiationSection from '@/components/CertDifferentiationSection'
+import CertQuizSchema from '@/components/CertQuizSchema'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
@@ -242,6 +243,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <CertMockScoreGuide slug={slug} />
         <CertPracticeVsDumps />
 
+        <CertQuizSchema certTitle={title} slug={slug} questions={body.sampleQuestions} />
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
           introText={getPracticeQuestionsIntro(
@@ -353,6 +355,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         <CertMockScoreGuide slug={slug} />
         <CertPracticeVsDumps />
 
+        <CertQuizSchema certTitle={title} slug={slug} questions={body.sampleQuestions} />
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
           introText={getPracticeQuestionsIntro(body.sampleQuestions.length, body.practiceIntroSuffix)}

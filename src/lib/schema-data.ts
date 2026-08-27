@@ -62,11 +62,13 @@ export function getArticleJsonLd({
       {
         '@type': 'Person',
         name: 'Krishna Mohan',
-        url: `${baseUrl}/team`,
+        url: `${baseUrl}/about`,
+        jobTitle: '5x Salesforce Certified Developer',
         sameAs: [
           'https://www.linkedin.com/in/krishna-mohan-879b94100/',
-          'https://www.salesforce.com/trailblazer/krishnamohan',
+          'https://trailblazer.me/id/krishnamohan',
         ],
+        knowsAbout: ['Salesforce Administration', 'Salesforce Development', 'Platform App Builder', 'Sales Cloud', 'Apex'],
       },
     ],
     publisher: {
@@ -251,8 +253,13 @@ export function getComparisonHubJsonLd({
       {
         '@type': 'Person',
         name: 'Krishna Mohan',
-        url: `${baseUrl}/team`,
-        sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+        url: `${baseUrl}/about`,
+        jobTitle: '5x Salesforce Certified Developer',
+        sameAs: [
+          'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+          'https://trailblazer.me/id/krishnamohan',
+        ],
+        knowsAbout: ['Salesforce Administration', 'Salesforce Development', 'Platform App Builder', 'Sales Cloud', 'Apex'],
       },
     ],
     publisher: {

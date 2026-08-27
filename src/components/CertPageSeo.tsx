@@ -51,7 +51,17 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
     ],
     author: [
       { '@type': 'Organization', name: 'Trailblaze Prep', url: siteBaseUrl },
-      { '@type': 'Person', name: 'Krishna Mohan', url: `${siteBaseUrl}/team`, sameAs: 'https://www.linkedin.com/in/krishna-mohan-879b94100/' },
+      {
+        '@type': 'Person',
+        name: 'Krishna Mohan',
+        url: `${siteBaseUrl}/about`,
+        sameAs: [
+          'https://www.linkedin.com/in/krishna-mohan-879b94100/',
+          'https://trailblazer.me/id/krishnamohan',
+        ],
+        jobTitle: '5x Salesforce Certified Developer',
+        knowsAbout: ['Salesforce Administration', 'Salesforce Development', 'Platform App Builder', 'Sales Cloud', 'Apex'],
+      },
     ],
     publisher: {
       '@type': 'Organization',
