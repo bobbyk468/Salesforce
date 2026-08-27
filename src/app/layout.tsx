@@ -28,10 +28,9 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
-// Homepage/default title kept concise to avoid SERP truncation.
-const defaultTitle = `Free Salesforce Cert Practice Tests | ${SITE_NAME}`
+const defaultTitle = `Free Salesforce Practice Exams (${RELEASE_CURRENT}) | ${SITE_NAME}`
 const defaultDescription =
-  `Free Salesforce certification prep: ${RELEASE_CURRENT} exam weightage, practice questions, and study guides for Admin, Developer, Consultant & Architect.`
+  `Free Salesforce certification prep: ${RELEASE_CURRENT} exam weightage, 4,200+ practice questions, and study guides for Admin, Developer, Consultant & Architect.`
 
 export const metadata: Metadata = {
   // Hardcode metadataBase for stability (per Gemini recommendation)

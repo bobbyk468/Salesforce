@@ -37,7 +37,7 @@ export default function ContentPageAuthor() {
             </a>
           </p>
           <p className="text-xs text-gray-500 mt-0.5">
-            5&times; Salesforce Certified &middot; Updated for {RELEASE_CURRENT}
+            5&times; Salesforce Certified &middot; 12+ years in data engineering &amp; Salesforce &middot; Updated for {RELEASE_CURRENT}
           </p>
           <div className="flex flex-wrap gap-1.5 mt-2">
             {CERTS.map((c) => (
