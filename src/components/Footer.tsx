@@ -115,7 +115,7 @@ export default function Footer() {
                 </Link>
               </li>
               <li>
-                <Link href="/service-cloud-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
+                <Link href="/service-cloud-consultant-study-guide" className="text-gray-300 hover:text-salesforce-light transition-colors duration-200">
                   Service Cloud study guide
                 </Link>
               </li>

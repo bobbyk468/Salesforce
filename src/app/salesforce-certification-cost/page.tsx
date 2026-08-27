@@ -40,11 +40,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How much does a Salesforce certification cost?',
-    answer: 'Most Salesforce certifications cost $200 for the exam and $100 for a retake. Foundations certs (Platform Foundations, MuleSoft Integration Foundations) cost $75. AP certs cost $100. Domain Architect exams cost $400, and the Certified Technical Architect (CTA) review board costs $6,000.',
+    answer: 'Most Salesforce certifications cost $200 for the exam and $100 for a retake. Foundations certs (Platform Foundations, MuleSoft Integration Foundations) cost $75. Accredited Professional (AP) certs cost $150 and typically do not have a discounted retake. Domain Architect exams cost $400, and the Certified Technical Architect (CTA) path is priced separately.',
   },
   {
     question: 'What is the Salesforce certification retake fee?',
-    answer: 'Retake fees are approximately 50% of the exam fee. Most $200 certs have a $100 retake fee. Foundations certs ($75 exam) have a $37.50 retake fee. AP certs ($100 exam) have a $50 retake. There is a 1-day wait for the first retake and a 14-day wait for subsequent attempts.',
+    answer: 'Retake fees are approximately 50% of the exam fee for most standard credentials. Most $200 certs have a $100 retake fee. Foundations certs ($75 exam) have a $37.50 retake fee. AP certs are $150 and typically require the same fee for each attempt. There is a 1-day wait for the first retake and a 14-day wait for subsequent attempts.',
   },
   {
     question: 'How many times can you retake a Salesforce certification?',
@@ -70,8 +70,8 @@ const priceTiers = [
   },
   {
     tier: 'Accredited Professional (AP)',
-    fee: '$100',
-    retake: '$50',
+    fee: '$150',
+    retake: '$150',
     note: 'Product-specific credentials (B2B Commerce, Health Cloud, Manufacturing Cloud, and more)',
     certs: [
       { name: 'B2B Commerce Admin AP', href: '/certifications/b2b-commerce-admin-ap' },
@@ -214,9 +214,9 @@ export default function SalesforceCertificationCostPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Accredited Professional (AP)</td>
-                <td className="py-2.5 pr-4 font-semibold">$100</td>
-                <td className="py-2.5 pr-4">~₹8,300</td>
-                <td className="py-2.5">$50</td>
+                <td className="py-2.5 pr-4 font-semibold">$150</td>
+                <td className="py-2.5 pr-4">~₹12,500</td>
+                <td className="py-2.5">$150</td>
               </tr>
               <tr>
                 <td className="py-2.5 pr-4">Core Certifications</td>
@@ -322,7 +322,7 @@ export default function SalesforceCertificationCostPage() {
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Start with lower-cost tiers:</strong> Foundations certs ($75) and AP certs ($100) build prerequisite knowledge at a lower entry cost before moving to $200 exams.</span>
+            <span><strong>Start with lower-cost tiers:</strong> Foundations certs ($75) are the lowest-cost entry point. AP certs ($150) are useful when you already work with a specific Salesforce product cloud.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />

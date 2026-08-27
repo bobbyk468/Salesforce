@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   const studyGuideUrls: MetadataRoute.Sitemap = allDirs
-    .filter((d) => d.name.endsWith('-study-guide'))
+    .filter((d) => d.name.endsWith('-study-guide') && d.name !== 'service-cloud-study-guide')
     .map((d) => ({
       url: `${baseUrl}/${d.name}`,
       lastModified: new Date(RELEASE_DATE),
@@ -122,6 +122,10 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: `${baseUrl}/salesforce-admin-vs-developer-career`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-passing-score`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-salary`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/salesforce-associate-certification-cost`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/salesforce-admin-certification-201`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.85 },
+    { url: `${baseUrl}/pardot-certification`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
+    { url: `${baseUrl}/marketing-cloud-certification-path`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
     { url: `${baseUrl}/developer-certification-path`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/admin-certification-path`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.85 },
     { url: `${baseUrl}/salesforce-certifications-list`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.85 },

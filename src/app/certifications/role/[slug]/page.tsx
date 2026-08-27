@@ -37,6 +37,17 @@ interface RoleCareerData {
   careerPath: string
   topSkills: string[]
 }
+interface RoleDecisionItem {
+  audience: string
+  certification: string
+  href: string
+  why: string
+}
+interface RoleResourceLink {
+  label: string
+  href: string
+  note: string
+}
 
 const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
   administrator: {
@@ -192,6 +203,72 @@ const ROLE_CAREER_DATA: Record<string, RoleCareerData> = {
   },
 }
 
+const ROLE_DECISION_DATA: Record<string, RoleDecisionItem[]> = {
+  administrator: [
+    { audience: 'New to Salesforce admin work', certification: 'Administrator (ADM-201)', href: '/certifications/administrator', why: 'Best first credential for user setup, security, automation, reports, and platform operations.' },
+    { audience: 'Already passed ADM-201', certification: 'Advanced Administrator', href: '/certifications/advanced-administrator', why: 'Deepens security, automation, data management, and troubleshooting skills for senior admin roles.' },
+    { audience: 'Declarative builder path', certification: 'Platform App Builder', href: '/certifications/app-builder', why: 'Validates app design, data model decisions, automation, and UX configuration without Apex.' },
+  ],
+  developer: [
+    { audience: 'First developer cert', certification: 'Platform Developer I (PD1)', href: '/certifications/developer-1', why: 'Core Apex, SOQL, LWC, testing, and platform fundamentals for Salesforce developers.' },
+    { audience: 'Experienced Salesforce developer', certification: 'Platform Developer II', href: '/certifications/developer-2', why: 'Advanced Apex patterns, integrations, performance, and enterprise development practices.' },
+    { audience: 'Frontend-heavy developer', certification: 'JavaScript Developer I', href: '/certifications/javascript-developer-i', why: 'Useful when you build LWC-heavy interfaces and want broader JavaScript validation.' },
+  ],
+  marketing: [
+    { audience: 'Starting in Marketing Cloud Engagement', certification: 'Email Specialist', href: '/certifications/email-specialist', why: 'Best first SFMC credential for Email Studio, Journey Builder, segmentation, and deliverability.' },
+    { audience: 'Account Engagement / Pardot user', certification: 'Pardot Specialist', href: '/certifications/pardot-specialist', why: 'Targets lead nurturing, scoring, grading, automation rules, and B2B marketing operations.' },
+    { audience: 'Implementation consultant', certification: 'Marketing Cloud Consultant', href: '/certifications/marketing-cloud-consultant', why: 'Scenario-heavy credential for solution design, governance, integration, and client delivery.' },
+  ],
+  associate: [
+    { audience: 'Cheapest broad Salesforce start', certification: 'Platform Foundations', href: '/certifications/platform-foundations', why: 'Low-cost entry point for CRM, app building, flow, security, and platform vocabulary.' },
+    { audience: 'AI-focused beginner', certification: 'AI Associate', href: '/certifications/ai-associate', why: 'Good conceptual AI credential, but check the page for current retirement/replacement guidance.' },
+    { audience: 'Next practical step after associate', certification: 'Administrator (ADM-201)', href: '/certifications/administrator', why: 'Turns platform awareness into a job-relevant admin credential with stronger search demand.' },
+  ],
+  consultant: [
+    { audience: 'CRM implementation consultant', certification: 'Sales Cloud Consultant', href: '/certifications/sales-cloud', why: 'Best fit for lead-to-cash, opportunity management, forecasting, and sales process design.' },
+    { audience: 'Support/contact center consultant', certification: 'Service Cloud Consultant', href: '/certifications/service-cloud', why: 'Targets case management, Omni-Channel, Knowledge, entitlements, and service operations.' },
+    { audience: 'Portal/community consultant', certification: 'Experience Cloud Consultant', href: '/certifications/experience-cloud', why: 'Useful for partner portals, customer communities, external identity, and self-service sites.' },
+  ],
+  architect: [
+    { audience: 'Integration-heavy background', certification: 'Integration Architect', href: '/certifications/integration-architect', why: 'Strong first architect cert for APIs, middleware, eventing, identity, and integration trade-offs.' },
+    { audience: 'Data/modeling background', certification: 'Data Architect', href: '/certifications/data-architect', why: 'Best for LDV, MDM, data modeling, migration, governance, and enterprise data strategy.' },
+    { audience: 'CTA path planning', certification: 'Application Architect', href: '/certifications/application-architect', why: 'A practical milestone toward CTA that bundles multiple domain architect credentials.' },
+  ],
+}
+
+const ROLE_RESOURCE_LINKS: Record<string, RoleResourceLink[]> = {
+  administrator: [
+    { label: 'Salesforce Admin Certification 201 Guide', href: '/salesforce-admin-certification-201', note: 'Targets ADM-201 search intent, cost, format, and first-cert questions.' },
+    { label: 'ADM-201 Study Guide', href: '/adm-201-study-guide', note: 'Full study plan and section-by-section preparation.' },
+    { label: 'Admin vs App Builder', href: '/adm-201-vs-app-builder', note: 'Decision page for the most common second-cert question.' },
+  ],
+  marketing: [
+    { label: 'Marketing Cloud Certification Path', href: '/marketing-cloud-certification-path', note: 'Role path for Email Specialist, Consultant, Pardot, and SFMC developer tracks.' },
+    { label: 'Pardot Certification Guide', href: '/pardot-certification', note: 'Dedicated Account Engagement / Pardot certification intent page.' },
+    { label: 'Marketing Cloud Admin vs Developer', href: '/marketing-cloud-admin-vs-developer', note: 'Decision page for SFMC technical vs admin paths.' },
+  ],
+  associate: [
+    { label: 'Salesforce Associate Certification Cost', href: '/salesforce-associate-certification-cost', note: 'Cost, format, and next-step guidance for associate-level certs.' },
+    { label: 'Platform Foundations vs AI Associate', href: '/platform-foundations-vs-ai-associate', note: 'Compares the two entry-level options.' },
+    { label: 'Which Salesforce Certification First?', href: '/which-salesforce-certification-first', note: 'Decision guide for beginners choosing a first credential.' },
+  ],
+  developer: [
+    { label: 'PD1 Study Guide', href: '/pd1-study-guide', note: 'Core guide for Platform Developer I.' },
+    { label: 'PD1 vs PD2', href: '/pd1-vs-pd2', note: 'Clarifies progression and readiness.' },
+    { label: 'JavaScript Developer I vs PD1', href: '/javascript-developer-i-vs-pd1', note: 'Helps developers choose the right first technical credential.' },
+  ],
+  consultant: [
+    { label: 'Sales Cloud vs Service Cloud', href: '/sales-cloud-vs-service-cloud', note: 'Compares the two highest-demand consultant certs.' },
+    { label: 'Service Cloud Consultant Study Guide', href: '/service-cloud-consultant-study-guide', note: 'Canonical guide for Service Cloud Consultant prep.' },
+    { label: 'How to Become a Salesforce Consultant', href: '/how-to-become-salesforce-consultant', note: 'Career path and certification sequencing.' },
+  ],
+  architect: [
+    { label: 'Architect Certification Path', href: '/architect-certification-path', note: 'Full roadmap toward Application Architect, System Architect, and CTA.' },
+    { label: 'System vs Application Architect', href: '/system-architect-vs-application-architect', note: 'Helps candidates choose the next architect milestone.' },
+    { label: 'Become a Salesforce CTA', href: '/become-cta', note: 'Long-term CTA roadmap and board-review guidance.' },
+  ],
+}
+
 const ROLE_FAQS: Record<string, FaqItem[]> = {
   administrator: [
     { question: 'What is the first Salesforce certification for an administrator?', answer: 'The Salesforce Administrator (ADM-201) is the recommended first certification for anyone on the admin track. It covers the full platform — security model, automation, data management, reports, and dashboards. All other admin certifications (Advanced Administrator, App Builder) build on ADM-201 knowledge.' },
@@ -317,6 +394,13 @@ export default async function RoleCertificationsPage({ params }: Props) {
   ]
   const roleFaqs = ROLE_FAQS[slug] ?? []
   const careerData = ROLE_CAREER_DATA[slug] ?? null
+  const decisionItems = ROLE_DECISION_DATA[slug] ?? category.items.slice(0, 3).map((item) => ({
+    audience: 'Most candidates in this role',
+    certification: item.name,
+    href: item.href,
+    why: 'Start here if this credential matches your current product, role, or project work.',
+  }))
+  const resourceLinks = ROLE_RESOURCE_LINKS[slug] ?? []
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -351,6 +435,46 @@ export default async function RoleCertificationsPage({ params }: Props) {
           Each certification has its own study guide, exam weightage, and practice questions. Start with the one that matches your goal. Each cert page has exam weightage and practice questions.
         </p>
       </div>
+
+      <section className="rounded-2xl border border-salesforce-blue/20 bg-gradient-to-br from-salesforce-blue/5 to-white p-6 mb-8">
+        <h2 className="text-2xl font-bold text-gray-900 mb-2">
+          Which {category.name} certification should you take first?
+        </h2>
+        <p className="text-sm text-gray-600 mb-5">
+          Use this quick decision table before opening every exam page. Google searchers usually want a next step, not just a catalog.
+        </p>
+        <div className="grid md:grid-cols-3 gap-4">
+          {decisionItems.map((item) => (
+            <Link
+              key={`${item.audience}-${item.href}`}
+              href={item.href}
+              className="rounded-xl border border-gray-100 bg-white p-4 shadow-sm hover:border-salesforce-blue/50 hover:shadow-md transition-all"
+            >
+              <p className="text-xs font-semibold uppercase tracking-wide text-salesforce-blue mb-2">{item.audience}</p>
+              <p className="font-bold text-gray-900 mb-2">{item.certification}</p>
+              <p className="text-sm text-gray-600">{item.why}</p>
+            </Link>
+          ))}
+        </div>
+      </section>
+
+      {resourceLinks.length > 0 && (
+        <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+          <h2 className="text-xl font-bold text-gray-900 mb-4">High-Intent {category.name} Resources</h2>
+          <div className="grid md:grid-cols-3 gap-4">
+            {resourceLinks.map((resource) => (
+              <Link
+                key={resource.href}
+                href={resource.href}
+                className="rounded-lg bg-gray-50 border border-gray-100 p-4 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/30 transition-colors"
+              >
+                <p className="font-semibold text-gray-900 mb-1">{resource.label}</p>
+                <p className="text-sm text-gray-600">{resource.note}</p>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         {category.items.map((item) => (

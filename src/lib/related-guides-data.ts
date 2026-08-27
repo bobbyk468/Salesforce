@@ -81,6 +81,26 @@ export function getRelatedGuides(currentSlug: string): { href: string; anchorTex
       { href: '/salesforce-certification-voucher', anchorText: 'Vouchers & discounts' },
       { href: '/how-to-study-for-salesforce-certification', anchorText: 'How to study for certification' },
     ],
+    'salesforce-associate-certification-cost': [
+      { href: '/certifications/role/associate', anchorText: 'Associate certification options' },
+      { href: '/certifications/platform-foundations', anchorText: 'Platform Foundations practice exam' },
+      { href: '/salesforce-certification-cost', anchorText: 'Full Salesforce certification cost guide' },
+    ],
+    'salesforce-admin-certification-201': [
+      { href: '/certifications/administrator', anchorText: 'Free ADM-201 practice exam' },
+      { href: '/adm-201-study-guide', anchorText: 'ADM-201 study guide' },
+      { href: '/adm-201-exam-tips', anchorText: 'ADM-201 exam tips' },
+    ],
+    'pardot-certification': [
+      { href: '/certifications/pardot-specialist', anchorText: 'Pardot Specialist practice exam' },
+      { href: '/pardot-specialist-study-guide', anchorText: 'Pardot Specialist study guide' },
+      { href: '/pardot-specialist-vs-pardot-consultant', anchorText: 'Pardot Specialist vs Consultant' },
+    ],
+    'marketing-cloud-certification-path': [
+      { href: '/certifications/role/marketing', anchorText: 'All Marketing Cloud certifications' },
+      { href: '/certifications/email-specialist', anchorText: 'Email Specialist practice exam' },
+      { href: '/marketing-cloud-admin-vs-developer', anchorText: 'Marketing Cloud Admin vs Developer' },
+    ],
     'marketing-cloud-admin-vs-developer': [
       { href: '/pardot-consultant-vs-marketing-cloud-consultant', anchorText: 'Pardot vs Marketing Cloud Consultant' },
       { href: '/pardot-specialist-vs-pardot-consultant', anchorText: 'Pardot Specialist vs Consultant' },

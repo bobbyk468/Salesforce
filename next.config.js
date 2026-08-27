@@ -101,6 +101,12 @@ const nextConfig = {
         destination: '/pd2-exam-tips',
         permanent: true,
       },
+      // Consolidate duplicate Service Cloud study-guide intent into one canonical URL.
+      {
+        source: '/service-cloud-study-guide',
+        destination: '/service-cloud-consultant-study-guide',
+        permanent: true,
+      },
     ]
   },
   async headers() {
