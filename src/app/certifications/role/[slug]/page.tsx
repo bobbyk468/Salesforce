@@ -17,8 +17,8 @@ export async function generateStaticParams() {
 const ROLE_TITLES: Record<string, string> = {
   architect:              `Salesforce Architect Certification Path (${RELEASE_CURRENT})`,
   consultant:             `Salesforce Consultant Cert Path: Free Practice (${RELEASE_CURRENT})`,
-  marketing:              `Salesforce Marketing Cloud Certification (${RELEASE_CURRENT})`,
-  associate:              `Salesforce Associate Certification (${RELEASE_CURRENT})`,
+  marketing:              `Salesforce Marketing Cloud Certs: Free Practice (${RELEASE_CURRENT})`,
+  associate:              `Salesforce Associate Certifications: Free Practice (${RELEASE_CURRENT})`,
   administrator:          `Salesforce Admin Certification: ADM-201 + More (${RELEASE_CURRENT})`,
   developer:              `Salesforce Developer Certification (${RELEASE_CURRENT})`,
   tableau:                `Salesforce Tableau Certification Guide (${RELEASE_CURRENT})`,
@@ -242,9 +242,9 @@ const ROLE_DESCRIPTIONS: Record<string, string> = {
   consultant:
     'Certified Salesforce Consultant: all exams — Sales Cloud, Service Cloud, Experience Cloud + more. Free practice, no sign-up. Start now.',
   marketing:
-    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist + more. Free practice & study guides. Start free now.',
+    'Salesforce Marketing Cloud certifications: Email Specialist, Marketing Cloud Consultant, Pardot Specialist and more. Free practice questions and study guides.',
   associate:
-    'Salesforce Associate certification: Platform Foundations ($75) and AI Associate ($200). Free practice & study guides. Start free now.',
+    'Salesforce Associate certifications: Platform Foundations and AI Associate options, exam format, fees, study guides, and free practice questions.',
   'accredited-professional':
     'Salesforce Accredited Professional certs: Field Service, B2B Commerce, Health Cloud + more. Free practice & study guides. Start free now.',
   administrator:

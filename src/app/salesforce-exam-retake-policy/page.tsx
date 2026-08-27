@@ -7,8 +7,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Exam Retake Policy (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce certification retake policy 2026: waiting periods, retake costs, how many attempts allowed, and what to do differently after failing.`
+const pageTitle = `Salesforce Exam Retake Policy: Cost & Wait Time (${RELEASE_CURRENT})`
+const pageDescription = `Failed a Salesforce exam? See retake cost, wait time, attempt rules, score reports, and how to prepare before booking your next attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

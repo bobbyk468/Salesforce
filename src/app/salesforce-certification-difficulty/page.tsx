@@ -5,8 +5,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Certification Difficulty Ranking (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce cert difficulty ranked: easiest to hardest. Passing score, questions, fee, tips for every tier from AI Associate to CTA.`
+const pageTitle = `Salesforce Certs: Easiest to Hardest (${RELEASE_CURRENT})`
+const pageDescription = `Compare Salesforce cert difficulty from beginner to CTA: questions, passing score, fees, study time, and which exam to take first.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

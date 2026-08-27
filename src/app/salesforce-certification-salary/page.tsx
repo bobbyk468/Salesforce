@@ -7,10 +7,10 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = `Salesforce Certification Salary (${RELEASE_CURRENT}) | Pay by Cert`
+const pageTitle = `Salesforce Certification Salary Guide (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce certification salary data for ${RELEASE_CURRENT}: ADM-201, PD1, Sales Cloud, Service Cloud, architect tracks. See which certs pay the most.`
+  `Compare Salesforce salaries by certification: Administrator, Developer, Consultant, Marketing Cloud, and Architect tracks, with top-paying certs.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

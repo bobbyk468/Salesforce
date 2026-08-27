@@ -7,8 +7,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Salesforce Certification Validity & Expiry (${RELEASE_CURRENT})`
-const pageDescription = `Do Salesforce certifications expire? How long are they valid? How to keep them active with maintenance modules in 2026 — complete guide.`
+const pageTitle = `Do Salesforce Certifications Expire? (${RELEASE_CURRENT})`
+const pageDescription = `Learn how long Salesforce certifications stay valid, what Inactive means, free maintenance modules, reactivation steps, and how to keep credentials Active.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

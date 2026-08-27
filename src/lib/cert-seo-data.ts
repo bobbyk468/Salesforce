@@ -614,9 +614,9 @@ function getCertMetaTitle(slug: string): string {
   // Gemini-inspired CTR overrides for highest opportunity pages.
   const ctrTitleOverrides: Record<string, string> = {
     'app-builder': `Platform App Builder: DEV-402 Free Practice (${TITLE_YEAR})`,
-    administrator: `Free ADM-201 Practice Exam ${RELEASE_YEAR}`,
+    administrator: `Free Salesforce Admin Practice Exam (ADM-201) ${RELEASE_YEAR}`,
     'advanced-administrator': `Free ADM-211 Advanced Admin Practice Exam ${RELEASE_YEAR}`,
-    'email-specialist': `Free Email Specialist (CRT-550) Practice Exam ${RELEASE_YEAR}`,
+    'email-specialist': `Free SFMC Email Specialist Practice Exam ${RELEASE_YEAR}`,
     'mulesoft-hyperautomation-developer': `Free MuleSoft Hyperautomation Practice Exam ${RELEASE_YEAR}`,
     'sharing-visibility-architect': `Free Sharing & Visibility Arch Practice Exam ${RELEASE_YEAR}`,
     'identity-access-management-architect': `Free Identity & Access Arch Practice Exam ${RELEASE_YEAR}`,
@@ -626,10 +626,10 @@ function getCertMetaTitle(slug: string): string {
     'developer-2': `Free Platform Developer II (PD2) Practice Exam ${RELEASE_YEAR}`,
     'cpq-administrator': `CPQ Admin Certification: Free Practice (${TITLE_YEAR})`,
     'pardot-consultant': `Free Pardot Consultant (CRT-302) Practice Exam ${RELEASE_YEAR}`,
-    'pardot-specialist': `Free Pardot Specialist Practice Exam ${RELEASE_YEAR}`,
+    'pardot-specialist': `Free Pardot Specialist Certification Practice ${RELEASE_YEAR}`,
     'experience-cloud': `Free Experience Cloud (CRT-271) Practice Exam ${RELEASE_YEAR}`,
     'mulesoft-integration-foundations': `Free MuleSoft Foundations Practice Exam ${RELEASE_YEAR}`,
-    'developer-1': `Free Platform Developer I (PD1) Practice Exam ${RELEASE_YEAR}`,
+    'developer-1': `Free Salesforce PD1 Practice Exam ${RELEASE_YEAR}`,
     'slack-developer': `Free Slack Developer Practice Exam ${RELEASE_YEAR}`,
     'tableau-data-analyst': `Free Tableau Data Analyst Practice Exam ${RELEASE_YEAR}`,
     'technical-architect-review-board': `Free CTA Review Board Practice Exam ${RELEASE_YEAR}`,
@@ -642,7 +642,7 @@ function getCertMetaTitle(slug: string): string {
     'administrator-practice-test': `Free ADM-201 Mock Practice Exam ${RELEASE_YEAR}`,
     'advanced-field-service-ap': `Free Advanced Field Service AP Practice Exam ${RELEASE_YEAR}`,
     'agentforce-specialist': `Free Agentforce Specialist Practice Exam ${RELEASE_YEAR}`,
-    'ai-associate': `Free AI Associate Practice Exam ${RELEASE_YEAR}`,
+    'ai-associate': `Salesforce AI Associate Certification Guide ${RELEASE_YEAR}`,
     'b2b-commerce-admin-ap': `Free B2B Commerce Admin AP Practice Exam ${RELEASE_YEAR}`,
     'b2b-commerce-developer-ap': `Free B2B Commerce Dev AP Practice Exam ${RELEASE_YEAR}`,
     'b2b-solution-architect': `Free B2B Solution Architect Practice Exam ${RELEASE_YEAR}`,
@@ -848,7 +848,7 @@ export function getCertMetaDescription(slug: string): string {
     'app-builder':
       `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free — 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
     administrator:
-      `Free ADM-201 practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free Salesforce Admin (ADM-201) practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'marketing-cloud-consultant':
       `Marketing Cloud Consultant: Free practice exam — no sign-up. 60 questions, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
     'business-analyst':
@@ -858,7 +858,7 @@ export function getCertMetaDescription(slug: string): string {
     'advanced-administrator':
       `Free ADM-211 Advanced Admin practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'email-specialist':
-      `Free Email Specialist (CRT-550) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free SFMC Email Specialist practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'mulesoft-hyperautomation-developer':
       `Free MuleSoft Hyperautomation practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'sharing-visibility-architect':
@@ -872,7 +872,7 @@ export function getCertMetaDescription(slug: string): string {
     'pardot-consultant':
       `Free Pardot Consultant (CRT-302) practice exam: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'pardot-specialist':
-      `Free Pardot Specialist practice exam: 60 questions, ~72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+      `Free Pardot Specialist certification practice: 60 questions, 72% passing score, 90 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'experience-cloud':
       `Free Experience Cloud (CRT-271) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'slack-developer':
@@ -910,7 +910,7 @@ export function getCertMetaDescription(slug: string): string {
     'cpq-billing-ap': `CPQ & Billing AP exam prep: covers configure-price-quote, subscription billing, amendments & renewals. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
     'crm-analytics-einstein-discovery-consultant': `Free CRM Analytics practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'data-360-consultant': `Free Data 360 Consultant practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
-    'developer-1': `Free Platform Developer I (PD1) practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
+    'developer-1': `Free Salesforce PD1 practice exam: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'dev-lifecycle-deployment-architect': `Free Dev Lifecycle Arch practice exam: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR} — no sign-up.`,
     'education-cloud-consultant': `Free Education Cloud Consult practice exam: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
     'email-specialist-practice-test': `Free Email Specialist mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR} — no sign-up.`,
