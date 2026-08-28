@@ -31,6 +31,11 @@ import { parseMarkdown, renderMarkdownSegments } from '@/lib/cert-page-spike/mar
 import AdministratorCertBody from '@/components/certifications/AdministratorCertBody'
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
+import EinsteinTrustLayerDiagram from '@/components/certifications/EinsteinTrustLayerDiagram'
+import MCPIntegrationDiagram from '@/components/certifications/MCPIntegrationDiagram'
+import AgenticOrchestrationDiagram from '@/components/certifications/AgenticOrchestrationDiagram'
+import PromptStructureDiagram from '@/components/certifications/PromptStructureDiagram'
+import ToolCallingDiagram from '@/components/certifications/ToolCallingDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -228,6 +233,11 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
 
         {slug === 'agentforce-specialist' ? <AgentforceArchitectureDiagram /> : null}
+        {slug === 'ai-associate' ? <EinsteinTrustLayerDiagram /> : null}
+        {slug === 'claude-certified-architect-foundations' ? <MCPIntegrationDiagram /> : null}
+        {slug === 'claude-certified-architect-professional' ? <AgenticOrchestrationDiagram /> : null}
+        {slug === 'claude-certified-associate' ? <PromptStructureDiagram /> : null}
+        {slug === 'claude-certified-developer' ? <ToolCallingDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
