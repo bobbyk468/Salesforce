@@ -1,11 +1,21 @@
 {
   "template": "associate",
+  "expertInsight": "Application Architect isn't a single exam — it's a credential Salesforce auto-awards once you pass four component certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There's no separate 'Application Architect' test to schedule. If you've already earned App Builder and PD1, you're halfway there; Data Architect and Sharing & Visibility Architect are the two remaining, harder components.",
   "whoIsThisFor": {
     "heading": "Who is the Application Architect exam for?",
     "personas": [
-      { "label": "Platform Developers", "description": "Developers with deep Apex and LWC experience who are ready to make data model, security, and design-pattern decisions at the architecture level." },
-      { "label": "Senior Admins", "description": "Experienced administrators who design role hierarchies, sharing models, and complex declarative solutions for enterprise orgs." },
-      { "label": "Solution Consultants", "description": "Consultants who architect end-to-end Salesforce implementations and need to validate their platform-side design expertise." }
+      {
+        "label": "Platform Developers",
+        "description": "Developers with deep Apex and LWC experience who are ready to make data model, security, and design-pattern decisions at the architecture level."
+      },
+      {
+        "label": "Senior Admins",
+        "description": "Experienced administrators who design role hierarchies, sharing models, and complex declarative solutions for enterprise orgs."
+      },
+      {
+        "label": "Solution Consultants",
+        "description": "Consultants who architect end-to-end Salesforce implementations and need to validate their platform-side design expertise."
+      }
     ]
   },
   "examDifficulty": {
@@ -32,7 +42,7 @@
   },
   "certificationCard": {
     "code": "Application Architect",
-    "description": "This exam tests your ability to design data models, role hierarchies, and sharing configurations using native Salesforce features — the architectural decisions that shape how an org scales.",
+    "description": "This page covers the Application Architect credential — earned by passing four component exams (Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect), not a single test. Practice questions here focus on the Data Architect and Sharing and Visibility domains: data model design, role hierarchies, and sharing configurations using native Salesforce features.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

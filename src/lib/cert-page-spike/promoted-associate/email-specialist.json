@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Salesforce Marketing Cloud was rebranded to Marketing Cloud Engagement in 2022 to distinguish it from Marketing Cloud Account Engagement (formerly Pardot). The certification is still called 'Email Specialist' on Webassessor and Trailhead, and that's the name candidates search for — this guide uses it for that reason, but expect the product itself to say Marketing Cloud Engagement throughout.",
   "introLead": [
     {
       "type": "text",

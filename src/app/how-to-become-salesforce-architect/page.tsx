@@ -43,11 +43,11 @@ const faqItems = [
   },
   {
     question: 'What certifications are required for Salesforce Application Architect?',
-    answer: 'The Application Architect credential requires passing all four of these certifications: Data Architect, Sharing and Visibility Architect, Integration Architect, and Dev Lifecycle and Deployment Architect. Once all four are passed, Salesforce automatically awards the Application Architect credential. No separate Application Architect exam exists.',
+    answer: 'The Application Architect credential requires passing all four of these certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the Application Architect credential. No separate Application Architect exam exists.',
   },
   {
     question: 'What certifications are required for Salesforce System Architect?',
-    answer: 'The System Architect credential requires: Identity and Access Management Architect, Heroku Architect, Integration Architect (shared with Application Architect), and Dev Lifecycle and Deployment Architect (also shared). Both Integration Architect and Dev Lifecycle Architect are prerequisites for both Application and System Architect, so they overlap.',
+    answer: 'The System Architect credential requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect, plus a final proctored System Architect exam. Platform Developer I is the only exam shared with Application Architect.',
   },
   {
     question: 'What is the CTA Board Review?',
@@ -77,16 +77,16 @@ const stages = [
   {
     stage: 'App Architect',
     time: '1–2 years',
-    title: 'Application Architect (4 Certs)',
-    description: 'Pursue the four Application Architect certifications in parallel or sequentially. Integration Architect and Data Architect are the most commonly started first — both have deep alignment with senior developer experience. Sharing and Visibility Architect and Dev Lifecycle and Deployment Architect round out the credential.',
-    certs: ['Data Architect', 'Sharing and Visibility Architect', 'Integration Architect', 'Dev Lifecycle and Deployment Architect'],
+    title: 'Application Architect (4 Certs, Auto-Awarded)',
+    description: 'Pursue the four Application Architect component exams in parallel or sequentially — Platform App Builder and Platform Developer I (already covered in the Foundation stage above) plus Data Architect and Sharing and Visibility Architect. Once all four are passed, Salesforce automatically awards the credential; there is no separate Application Architect exam.',
+    certs: ['Platform App Builder (already completed)', 'Platform Developer I (already completed)', 'Data Architect', 'Sharing and Visibility Architect'],
   },
   {
     stage: 'Sys Architect',
     time: '1–2 years',
-    title: 'System Architect (4 Certs)',
-    description: 'System Architect tests broader platform knowledge: identity and access management (SSO, OAuth, SAML), Heroku architecture, and the two shared credentials (Integration Architect, Dev Lifecycle). IAM Architect and Heroku Architect are the two new certifications required above Application Architect.',
-    certs: ['Identity and Access Management Architect', 'Heroku Architect', 'Integration Architect (already completed)', 'Dev Lifecycle and Deployment Architect (already completed)'],
+    title: 'System Architect (4 Certs + Final Exam)',
+    description: 'System Architect tests infrastructure and integration knowledge: API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only exam shared with Application Architect, so Integration Architect, IAM Architect, and Dev Lifecycle Architect are new — followed by a final proctored System Architect exam covering the whole domain.',
+    certs: ['Platform Developer I (already completed)', 'Integration Architect', 'Identity and Access Management Architect', 'Dev Lifecycle and Deployment Architect', 'System Architect exam (final)'],
   },
   {
     stage: 'CTA',

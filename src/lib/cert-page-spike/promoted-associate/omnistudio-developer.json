@@ -178,7 +178,12 @@
         "LWC only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript provides declarative, step-by-step guided experiences without code."
+      "explanation": "OmniScript provides declarative, step-by-step guided experiences without code.",
+      "whyWrong": [
+        "Apex is a backend Salesforce Core language, not a guided-experience builder tool.",
+        "Visualforce is a legacy Salesforce Core UI framework, not an OmniStudio tool.",
+        "LWC alone isn't OmniStudio's guided-experience tool — OmniScript is purpose-built for that."
+      ]
     },
     {
       "question": "What is DataRaptor used for in OmniStudio?",
@@ -189,7 +194,12 @@
         "CPQ configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio."
+      "explanation": "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio.",
+      "whyWrong": [
+        "DataRaptor isn't used for sending emails — that's outside its scope.",
+        "DataRaptor doesn't send Slack messages — it handles data extract/load/transform.",
+        "DataRaptor isn't a CPQ configuration tool."
+      ]
     },
     {
       "question": "Which component displays a compact, card-based view of record data?",
@@ -200,7 +210,12 @@
         "Integration Procedure"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexCards display compact, card-based views of data with declarative layout."
+      "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
+      "whyWrong": [
+        "OmniScript builds guided flows, not compact card views.",
+        "DataRaptor moves and transforms data — it doesn't render a card-based UI.",
+        "Integration Procedure orchestrates backend logic — it isn't a visual card component."
+      ]
     },
     {
       "question": "What is an Integration Procedure in OmniStudio?",
@@ -211,7 +226,12 @@
         "A dashboard"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration Procedures orchestrate server-side logic, APIs, and DataRaptors."
+      "explanation": "Integration Procedures orchestrate server-side logic, APIs, and DataRaptors.",
+      "whyWrong": [
+        "A report is a Salesforce analytics artifact, not an orchestration flow.",
+        "An email template is unrelated to backend orchestration logic.",
+        "A dashboard visualizes data — it isn't an orchestration mechanism."
+      ]
     },
     {
       "question": "Which industry solution commonly uses OmniStudio?",
@@ -222,7 +242,12 @@
         "Education only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniStudio is used across Financial Services, Insurance, and other industries for digital experiences."
+      "explanation": "OmniStudio is used across Financial Services, Insurance, and other industries for digital experiences.",
+      "whyWrong": [
+        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more.",
+        "Manufacturing isn't the typical highlighted use case for OmniStudio.",
+        "Education isn't the typical highlighted use case for OmniStudio."
+      ]
     },
     {
       "question": "What is DET (DataRaptor Extract) used for?",
@@ -233,7 +258,12 @@
         "To send emails"
       ],
       "correctAnswer": 1,
-      "explanation": "DET extracts data from Salesforce or external sources."
+      "explanation": "DET extracts data from Salesforce or external sources.",
+      "whyWrong": [
+        "DET is specifically for extraction, not the loading step.",
+        "DET is the extract step, not the transform step (that's DTT).",
+        "DET isn't for sending emails — it's a data extraction tool."
+      ]
     },
     {
       "question": "Which OmniScript element type defines a step?",
@@ -244,7 +274,12 @@
         "Integration Procedure only"
       ],
       "correctAnswer": 1,
-      "explanation": "Step and Type elements define OmniScript structure."
+      "explanation": "Step and Type elements define OmniScript structure.",
+      "whyWrong": [
+        "DataRaptor is a separate OmniStudio tool, not an OmniScript element type.",
+        "FlexCard is a separate OmniStudio component, not an OmniScript element type.",
+        "Integration Procedure is a separate OmniStudio tool, not an OmniScript element type."
+      ]
     },
     {
       "question": "What does FlexCard data source support?",
@@ -255,7 +290,12 @@
         "Email only"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexCards can use Apex, DataRaptor, or Integration Procedure."
+      "explanation": "FlexCards can use Apex, DataRaptor, or Integration Procedure.",
+      "whyWrong": [
+        "FlexCard data sources include far more than 'no data' implies.",
+        "OmniScript alone doesn't capture the range of sources FlexCards can pull from (Apex, DataRaptor, Integration Procedure).",
+        "Email isn't a valid FlexCard data source."
+      ]
     },
     {
       "question": "Which OmniStudio feature supports conditional navigation?",
@@ -266,7 +306,12 @@
         "Linear only"
       ],
       "correctAnswer": 1,
-      "explanation": "Conditional branching controls OmniScript flow."
+      "explanation": "Conditional branching controls OmniScript flow.",
+      "whyWrong": [
+        "OmniStudio does support conditional navigation — 'no support' is incorrect.",
+        "OmniScript navigation isn't limited to static, unconditional paths.",
+        "OmniScript supports branching logic, not just strictly linear flows."
+      ]
     },
     {
       "question": "What is the purpose of an Integration Procedure output?",
@@ -277,7 +322,12 @@
         "To log only"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration Procedure outputs return data to callers."
+      "explanation": "Integration Procedure outputs return data to callers.",
+      "whyWrong": [
+        "Integration Procedure output returns data — it doesn't replace input logic.",
+        "Deleting data isn't the purpose of an Integration Procedure output.",
+        "Logging isn't the primary purpose of an Integration Procedure's output — returning data to the caller is."
+      ]
     },
     {
       "question": "Which deployment tool is used for OmniStudio?",
@@ -288,7 +338,12 @@
         "Workbench only"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio."
+      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio.",
+      "whyWrong": [
+        "Change Sets are a Salesforce Core deployment mechanism, not the OmniStudio-specific approach.",
+        "Data Loader moves records, not OmniStudio metadata.",
+        "Workbench is a generic Salesforce tool, not the OmniStudio-specific deployment approach."
+      ]
     },
     {
       "question": "What does OmniScript Save behavior control?",
@@ -299,7 +354,12 @@
         "Only validation"
       ],
       "correctAnswer": 1,
-      "explanation": "Save behavior controls state persistence."
+      "explanation": "Save behavior controls state persistence.",
+      "whyWrong": [
+        "OmniScript Save behavior does control something specific — persistence of state — so 'nothing' is incorrect.",
+        "Save behavior is distinct from navigation logic.",
+        "Save behavior is distinct from validation logic."
+      ]
     },
     {
       "question": "Which OmniStudio component can invoke Apex?",
@@ -310,7 +370,12 @@
         "OmniScript only"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration Procedures can invoke Apex."
+      "explanation": "Integration Procedures can invoke Apex.",
+      "whyWrong": [
+        "DataRaptor moves/transforms data — it doesn't invoke Apex directly the way Integration Procedures can.",
+        "FlexCard displays data — it doesn't invoke Apex directly.",
+        "OmniScript orchestrates the guided experience but relies on Integration Procedures to invoke Apex."
+      ]
     },
     {
       "question": "What is the purpose of FlexCard merge fields?",
@@ -321,7 +386,12 @@
         "To create reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Merge fields display dynamic data in FlexCards."
+      "explanation": "Merge fields display dynamic data in FlexCards.",
+      "whyWrong": [
+        "DataRaptor is a separate tool — merge fields don't replace it.",
+        "Merge fields display data; they don't send emails.",
+        "Merge fields render data on the card; they don't generate reports."
+      ]
     },
     {
       "question": "Which best practice applies to OmniStudio development?",
@@ -332,7 +402,12 @@
         "No reuse"
       ],
       "correctAnswer": 1,
-      "explanation": "Reusable design, error handling, and testing support quality."
+      "explanation": "Reusable design, error handling, and testing support quality.",
+      "whyWrong": [
+        "Ignoring testing increases risk of production failures — the opposite of best practice.",
+        "Building for single use contradicts the reusability best practice.",
+        "Avoiding reuse leads to duplicated, harder-to-maintain solutions — the opposite of best practice."
+      ]
     }
   ]
 }

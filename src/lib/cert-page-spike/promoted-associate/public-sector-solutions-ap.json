@@ -4,26 +4,26 @@
     "heading": "Who is the Public Sector Solutions Accredited Professional exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Public Sector Solutions features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Government implementers",
+        "description": "You configure Public Sector Solutions' licensing, permitting, and grants management objects and want to validate your setup skills."
       },
       {
         "label": "Consultants and admins",
-        "description": "You support Salesforce projects where Public Sector, Government, and Implementation decisions affect the final design."
+        "description": "You advise government agencies on case management, inspection workflows, and citizen-facing Experience Cloud portals built on Public Sector Solutions."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for Salesforce industry specialist roles."
+        "description": "You want a focused credential that differentiates you in the government and public sector implementation space."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Public Sector Solutions Accredited Professional Exam Hard?",
-    "summary": "The Public Sector Solutions Accredited Professional exam is moderate. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "The Public Sector Solutions AP exam is moderately difficult because it tests government-specific workflows — licensing and permitting lifecycles, grants management, and inspection processes — that don't overlap with general Salesforce configuration.",
     "bullets": [
       "<strong>60 questions</strong> in 90 min.",
       "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Public Sector, Government, or Implementation.",
+      "<strong>Government workflows</strong> &mdash; expect questions on licensing/permitting application lifecycles and how grants management tracks funding from application through disbursement.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported Public Sector Solutions in a real org are better prepared than candidates who only memorize notes."
     ],
     "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."

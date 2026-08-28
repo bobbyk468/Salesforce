@@ -4,26 +4,26 @@
     "heading": "Who is the Advanced Field Service Accredited Professional exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Field Service features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Field Service leads",
+        "description": "You configure Scheduling Policies, Optimization work rules, and complex multi-resource work orders and want to prove you can tune them for real dispatch constraints."
       },
       {
         "label": "Consultants and admins",
-        "description": "You support Salesforce projects where Advanced Field Service, Scheduling, and Optimization decisions affect the final design."
+        "description": "You advise on when to escalate from standard Field Service scheduling into Advanced Scheduling and global optimization for large mobile workforces."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for Salesforce industry specialist roles."
+        "description": "You want a focused credential that validates deep Field Service scheduling expertise beyond the core Field Service Consultant certification."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Advanced Field Service Accredited Professional Exam Hard?",
-    "summary": "The Advanced Field Service Accredited Professional exam is moderate. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "The Advanced Field Service AP exam is moderately difficult specifically because it drills into scheduling and optimization edge cases — travel time modes, resource preferences, and work rule conflicts — that don't come up in the base Field Service exam.",
     "bullets": [
       "<strong>60 questions</strong> in 90 min.",
       "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Advanced Field Service, Scheduling, or Optimization.",
+      "<strong>Scheduling depth</strong> &mdash; expect questions on Scheduling Policy work rules, objective weighting, and when global optimization should run versus in-day optimization.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported Field Service in a real org are better prepared than candidates who only memorize notes."
     ],
     "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."

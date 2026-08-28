@@ -1,11 +1,21 @@
 {
   "template": "associate",
+  "expertInsight": "System Architect is earned by passing four component exams — Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect — plus a final proctored System Architect exam that tests broad platform knowledge across all four domains. Platform Developer I is the only exam that also counts toward Application Architect; the rest are unique to this credential.",
   "whoIsThisFor": {
     "heading": "Who is the System Architect exam for?",
     "personas": [
-      { "label": "Enterprise Architects", "description": "Architects who design multi-system integration landscapes connecting Salesforce with ERP, middleware, and legacy systems across the enterprise." },
-      { "label": "Integration Specialists", "description": "Developers and architects who build API-led integrations, configure OAuth authentication flows, and design for high-volume data exchange." },
-      { "label": "IT Leaders", "description": "Technical leaders responsible for org strategy, release management, and governance for complex Salesforce deployments spanning multiple business units." }
+      {
+        "label": "Enterprise Architects",
+        "description": "Architects who design multi-system integration landscapes connecting Salesforce with ERP, middleware, and legacy systems across the enterprise."
+      },
+      {
+        "label": "Integration Specialists",
+        "description": "Developers and architects who build API-led integrations, configure OAuth authentication flows, and design for high-volume data exchange."
+      },
+      {
+        "label": "IT Leaders",
+        "description": "Technical leaders responsible for org strategy, release management, and governance for complex Salesforce deployments spanning multiple business units."
+      }
     ]
   },
   "examDifficulty": {
@@ -32,7 +42,7 @@
   },
   "certificationCard": {
     "code": "System Architect",
-    "description": "This exam tests enterprise integration architecture, covering API patterns (sync, async, batch), OAuth authentication flows, middleware design, sandbox strategy, and release management for multi-system Salesforce deployments.",
+    "description": "This page covers the System Architect credential — earned by passing four component exams (Platform Developer I, Integration Architect, IAM Architect, Dev Lifecycle and Deployment Architect) plus a final proctored System Architect exam, not a single test. Practice questions here focus on the Integration Architect domain: API patterns (sync, async, batch), OAuth authentication flows, middleware design, sandbox strategy, and release management for multi-system Salesforce deployments.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

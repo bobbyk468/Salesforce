@@ -4,26 +4,26 @@
     "heading": "Who is the Communications Cloud Accredited Professional exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Communications Cloud features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Telecom implementers",
+        "description": "You configure Communications Cloud's order capture, product catalog, and Digital Commerce for CSPs and want to validate your telecom-specific configuration skills."
       },
       {
         "label": "Consultants and admins",
-        "description": "You support Salesforce projects where Communications Cloud, Telecom, and Discovery decisions affect the final design."
+        "description": "You advise telecom clients on when Communications Cloud's industry data model and Discovery Framework fit better than generic CPQ or Sales Cloud configurations."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for Salesforce industry specialist roles."
+        "description": "You want a focused credential that differentiates you in the competitive telecom/CSP implementation space."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Communications Cloud Accredited Professional Exam Hard?",
-    "summary": "The Communications Cloud Accredited Professional exam is moderate. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "The Communications Cloud AP exam is moderately difficult because it tests telecom-specific concepts — Digital Commerce, Discovery Framework, and Decomposition Rules — that don't overlap with general Salesforce configuration knowledge.",
     "bullets": [
       "<strong>55 questions</strong> in 90 min.",
       "<strong>56% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Communications Cloud, Telecom, or Discovery.",
+      "<strong>Industry data model</strong> &mdash; expect questions on Communications Cloud's product catalog decomposition and how orders flow through Digital Commerce into fulfillment.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported Communications Cloud in a real org are better prepared than candidates who only memorize notes."
     ],
     "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."

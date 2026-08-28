@@ -178,7 +178,12 @@
         "Financial Services only"
       ],
       "correctAnswer": 1,
-      "explanation": "Industries CPQ covers Configure, Price, Quote solutions for Communications, Media, and Energy & Utilities clouds."
+      "explanation": "Industries CPQ covers Configure, Price, Quote solutions for Communications, Media, and Energy & Utilities clouds.",
+      "whyWrong": [
+        "Retail is covered by B2C Commerce, not Industries CPQ's core focus areas.",
+        "Healthcare uses Health Cloud, not Industries CPQ as its primary quoting tool.",
+        "Financial Services uses FSC-specific tools, not the Industries CPQ focus areas listed here."
+      ]
     },
     {
       "question": "What is a key difference between standard CPQ and Industries CPQ?",
@@ -189,7 +194,12 @@
         "Industries CPQ does not support quotes"
       ],
       "correctAnswer": 1,
-      "explanation": "Industries CPQ extends CPQ with industry-specific models for subscriptions, usage-based pricing, and complex product structures."
+      "explanation": "Industries CPQ extends CPQ with industry-specific models for subscriptions, usage-based pricing, and complex product structures.",
+      "whyWrong": [
+        "There is a meaningful difference — Industries CPQ adds industry-specific pricing models standard CPQ doesn't natively support.",
+        "Industries CPQ supports B2B use cases extensively, not just B2C.",
+        "Industries CPQ absolutely supports quoting — that's its core function."
+      ]
     },
     {
       "question": "Which Salesforce product is often used with Industries CPQ for telecom?",
@@ -200,7 +210,12 @@
         "Commerce Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Communications Cloud (part of Industries) works with CPQ for telecom use cases."
+      "explanation": "Communications Cloud (part of Industries) works with CPQ for telecom use cases.",
+      "whyWrong": [
+        "Marketing Cloud isn't the typical pairing for telecom CPQ implementations.",
+        "Heroku is a platform-as-a-service, not a CPQ-paired product for telecom.",
+        "Commerce Cloud is B2C-focused e-commerce, not the typical telecom CPQ pairing."
+      ]
     },
     {
       "question": "What role does a Industries CPQ Developer typically fulfill?",
@@ -211,7 +226,12 @@
         "Data migration only"
       ],
       "correctAnswer": 1,
-      "explanation": "They develop Industries CPQ applications for Communications, Media, and Energy & Utilities."
+      "explanation": "They develop Industries CPQ applications for Communications, Media, and Energy & Utilities.",
+      "whyWrong": [
+        "Email marketing is unrelated to Industries CPQ development work.",
+        "Slack configuration is a separate skill set from CPQ development.",
+        "Industries CPQ developers do far more than data migration — that undersells the role."
+      ]
     },
     {
       "question": "Which type of pricing is commonly modeled in Energy & Utilities CPQ?",
@@ -222,7 +242,12 @@
         "No pricing"
       ],
       "correctAnswer": 1,
-      "explanation": "Energy & Utilities often require usage-based, tiered, and time-of-use pricing models."
+      "explanation": "Energy & Utilities often require usage-based, tiered, and time-of-use pricing models.",
+      "whyWrong": [
+        "Energy & Utilities pricing is rarely one-time only — usage patterns drive most billing models.",
+        "Fixed fee alone doesn't capture the usage-based nature of utility billing.",
+        "Utilities absolutely require pricing models — 'no pricing' is incorrect."
+      ]
     },
     {
       "question": "Which Industries CPQ product model supports subscriptions?",
@@ -233,7 +258,12 @@
         "No modeling"
       ],
       "correctAnswer": 1,
-      "explanation": "Industries CPQ supports subscription and usage-based models."
+      "explanation": "Industries CPQ supports subscription and usage-based models.",
+      "whyWrong": [
+        "Subscription/usage modeling requires more than one-time pricing structures.",
+        "'Fixed only' doesn't support the recurring nature of subscriptions.",
+        "Subscription products require explicit modeling — 'no modeling' is incorrect."
+      ]
     },
     {
       "question": "What does Industries CPQ scripting extend?",
@@ -244,7 +274,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Scripting extends configuration, pricing, and quote logic."
+      "explanation": "Scripting extends configuration, pricing, and quote logic.",
+      "whyWrong": [
+        "Industries CPQ scripting extends core logic, not just the UI layer.",
+        "Reports are a separate Salesforce feature, not what CPQ scripting extends.",
+        "Dashboards visualize data — they aren't what CPQ scripting logic extends."
+      ]
     },
     {
       "question": "Which Communications Cloud object supports CPQ?",
@@ -255,7 +290,12 @@
         "Campaign only"
       ],
       "correctAnswer": 1,
-      "explanation": "Product, offer, and catalog support Communications CPQ."
+      "explanation": "Product, offer, and catalog support Communications CPQ.",
+      "whyWrong": [
+        "Lead is a generic Sales Cloud object, not the Communications Cloud CPQ-specific object.",
+        "Opportunity is generic CRM, not the specific product/offer/catalog structure used here.",
+        "Campaign is a Marketing feature, unrelated to Communications Cloud's catalog objects."
+      ]
     },
     {
       "question": "What does Media Cloud CPQ support?",
@@ -266,7 +306,12 @@
         "Only social"
       ],
       "correctAnswer": 1,
-      "explanation": "Media Cloud CPQ supports ad inventory and rights pricing."
+      "explanation": "Media Cloud CPQ supports ad inventory and rights pricing.",
+      "whyWrong": [
+        "Media Cloud CPQ covers far more than print media alone.",
+        "Media Cloud CPQ isn't limited to email — it covers ad inventory and campaign pricing broadly.",
+        "Media Cloud CPQ isn't restricted to social media — it spans multiple ad channels."
+      ]
     },
     {
       "question": "Which integration is common for Industries CPQ?",
@@ -277,7 +322,12 @@
         "Service Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Industries CPQ integrates with billing and ERP."
+      "explanation": "Industries CPQ integrates with billing and ERP.",
+      "whyWrong": [
+        "Slack isn't a typical downstream integration target for CPQ billing data.",
+        "Marketing Cloud isn't the typical integration point for CPQ back-office processes.",
+        "Service Cloud isn't the primary integration for billing/ERP CPQ workflows."
+      ]
     },
     {
       "question": "What does Industries CPQ customization involve?",
@@ -288,7 +338,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Customization involves product model and pricing rules."
+      "explanation": "Customization involves product model and pricing rules.",
+      "whyWrong": [
+        "Customization goes beyond the UI — it includes underlying product and pricing logic.",
+        "Reports are a separate concern from CPQ product/pricing customization.",
+        "Dashboards visualize results; they aren't part of CPQ customization itself."
+      ]
     },
     {
       "question": "Which pricing type does Energy & Utilities CPQ support?",
@@ -299,7 +354,12 @@
         "No pricing"
       ],
       "correctAnswer": 1,
-      "explanation": "Energy & Utilities supports time-of-use and tiered pricing."
+      "explanation": "Energy & Utilities supports time-of-use and tiered pricing.",
+      "whyWrong": [
+        "Fixed-only pricing doesn't reflect the variable nature of utility rate structures.",
+        "Utilities frequently use recurring billing, not one-time charges.",
+        "Utilities require sophisticated pricing models — 'no pricing' is incorrect."
+      ]
     },
     {
       "question": "What is the purpose of Industries CPQ product modeling?",
@@ -310,7 +370,12 @@
         "To create reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Product modeling represents industry-specific products."
+      "explanation": "Product modeling represents industry-specific products.",
+      "whyWrong": [
+        "Industries CPQ modeling complements rather than replaces core CPQ.",
+        "Sending emails is unrelated to product modeling.",
+        "Product modeling is broader than reporting — it defines the product structure itself."
+      ]
     },
     {
       "question": "Which best practice applies to Industries CPQ development?",
@@ -321,7 +386,12 @@
         "Single product only"
       ],
       "correctAnswer": 1,
-      "explanation": "Align with industry processes and test flows."
+      "explanation": "Align with industry processes and test flows.",
+      "whyWrong": [
+        "Ignoring industry context defeats the purpose of an industry-specific CPQ tool.",
+        "Testing configuration flows is essential, not optional, for CPQ implementations.",
+        "Real implementations involve multiple related products and bundles, not a single product."
+      ]
     },
     {
       "question": "What does Industries CPQ Developer need to understand?",
@@ -332,7 +402,12 @@
         "Only reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Developers need industry CPQ data model and scripting knowledge."
+      "explanation": "Developers need industry CPQ data model and scripting knowledge.",
+      "whyWrong": [
+        "Industries CPQ developers need more than just Apex — they need the full data model and pricing context.",
+        "UI knowledge alone is insufficient without understanding the underlying data model.",
+        "Reports are a small part of the skill set, not the core requirement."
+      ]
     }
   ]
 }

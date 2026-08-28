@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Salesforce renamed Pardot to Marketing Cloud Account Engagement (MCAE) in 2022, but the certification exam and the search terms candidates use are still 'Pardot Specialist.' I keep the legacy name in this guide because that's what shows up in Trailhead, Webassessor, and your résumé — but every screen you'll see in the actual product now says Account Engagement, not Pardot.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Specialist exam for?",
     "personas": [

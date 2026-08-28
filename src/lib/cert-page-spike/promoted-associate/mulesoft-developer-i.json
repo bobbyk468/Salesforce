@@ -178,7 +178,12 @@
         "To configure CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform is MuleSoft's unified platform for designing, building, and managing APIs and integrations."
+      "explanation": "Anypoint Platform is MuleSoft's unified platform for designing, building, and managing APIs and integrations.",
+      "whyWrong": [
+        "Apex execution is a Salesforce Core concept, unrelated to Anypoint Platform's integration focus.",
+        "Marketing emails are handled by Marketing Cloud, not Anypoint Platform.",
+        "CPQ configuration is unrelated to Anypoint Platform's integration and API management purpose."
+      ]
     },
     {
       "question": "Which Mule runtime component processes messages in a flow?",
@@ -189,7 +194,12 @@
         "Visualforce"
       ],
       "correctAnswer": 1,
-      "explanation": "In Mule, a Flow contains the sequence of components that process messages."
+      "explanation": "In Mule, a Flow contains the sequence of components that process messages.",
+      "whyWrong": [
+        "Apex Class is a Salesforce Core concept, not a Mule runtime component.",
+        "Trigger is a Salesforce Core automation concept, unrelated to Mule flows.",
+        "Visualforce is a Salesforce Core UI framework, unrelated to Mule message processing."
+      ]
     },
     {
       "question": "What does API-led connectivity emphasize?",
@@ -200,7 +210,12 @@
         "Only Experience APIs"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity uses System, Process, and Experience API layers for reusable, composable integrations."
+      "explanation": "API-led connectivity uses System, Process, and Experience API layers for reusable, composable integrations.",
+      "whyWrong": [
+        "API-led connectivity explicitly uses multiple layers, not just System APIs alone.",
+        "API-led connectivity requires APIs by definition — 'no APIs' contradicts the concept.",
+        "API-led connectivity uses System, Process, AND Experience layers together, not Experience APIs alone."
+      ]
     },
     {
       "question": "Which format is commonly used for API specifications in MuleSoft?",
@@ -211,7 +226,12 @@
         "Visualforce"
       ],
       "correctAnswer": 1,
-      "explanation": "RAML and OpenAPI (OAS) are used to design and document APIs in Anypoint."
+      "explanation": "RAML and OpenAPI (OAS) are used to design and document APIs in Anypoint.",
+      "whyWrong": [
+        "Apex is a Salesforce Core language, unrelated to API specification formats.",
+        "AMPscript is a Marketing Cloud personalization language, unrelated to API specs.",
+        "Visualforce is a Salesforce UI framework, unrelated to API specification formats."
+      ]
     },
     {
       "question": "What is a Connector in Mule?",
@@ -222,7 +242,12 @@
         "An email template"
       ],
       "correctAnswer": 1,
-      "explanation": "Connectors are pre-built modules that provide connectivity to systems like Salesforce, SAP, HTTP, etc."
+      "explanation": "Connectors are pre-built modules that provide connectivity to systems like Salesforce, SAP, HTTP, etc.",
+      "whyWrong": [
+        "A Connector is reusable integration logic, not a data storage mechanism.",
+        "Connectors are unrelated to Slack-specific channels.",
+        "Connectors integrate systems generally — they aren't email templates."
+      ]
     },
     {
       "question": "What is DataWeave used for in Mule applications?",
@@ -233,7 +258,12 @@
         "CPQ configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "DataWeave is MuleSoft's transformation language for data mapping and querying."
+      "explanation": "DataWeave is MuleSoft's transformation language for data mapping and querying.",
+      "whyWrong": [
+        "DataWeave does more than run database queries — it's a general-purpose transformation language.",
+        "DataWeave isn't used for sending emails — that's outside its scope.",
+        "DataWeave has nothing to do with CPQ configuration."
+      ]
     },
     {
       "question": "Which Mule component handles errors in a flow?",
@@ -244,7 +274,12 @@
         "Set Variable"
       ],
       "correctAnswer": 1,
-      "explanation": "Error Handlers manage exceptions using try, on-error-continue, or on-error-propagate."
+      "explanation": "Error Handlers manage exceptions using try, on-error-continue, or on-error-propagate.",
+      "whyWrong": [
+        "Logger only records messages — it doesn't handle or recover from errors.",
+        "Transform Message only converts data format — it doesn't manage error flow.",
+        "Set Variable stores a value — it has no error-handling capability."
+      ]
     },
     {
       "question": "What is the purpose of an API specification (RAML/OAS)?",
@@ -255,7 +290,12 @@
         "To configure CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "API specs define the contract and enable design-first development."
+      "explanation": "API specs define the contract and enable design-first development.",
+      "whyWrong": [
+        "Apex execution is unrelated to defining an API's contract.",
+        "Sending emails is unrelated to API specification purposes.",
+        "CPQ configuration is unrelated to API specification purposes."
+      ]
     },
     {
       "question": "Which deployment target is used for cloud-hosted Mule applications?",
@@ -266,7 +306,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "CloudHub is MuleSoft's cloud runtime for deploying Mule applications."
+      "explanation": "CloudHub is MuleSoft's cloud runtime for deploying Mule applications.",
+      "whyWrong": [
+        "On-premises deployment is the opposite of cloud-hosted — CloudHub is Mule's cloud offering.",
+        "Salesforce itself isn't a Mule deployment target.",
+        "Slack isn't a deployment target for Mule applications."
+      ]
     },
     {
       "question": "What does the HTTP Listener connector do?",
@@ -277,7 +322,12 @@
         "Queries databases"
       ],
       "correctAnswer": 1,
-      "explanation": "The HTTP Listener receives incoming requests and triggers Mule flows."
+      "explanation": "The HTTP Listener receives incoming requests and triggers Mule flows.",
+      "whyWrong": [
+        "HTTP Listener specifically receives incoming requests — it doesn't send outbound requests.",
+        "HTTP Listener triggers flows on incoming requests; it doesn't transform data itself.",
+        "HTTP Listener isn't used to query databases directly."
+      ]
     },
     {
       "question": "Which layer in API-led connectivity exposes system-of-record data?",
@@ -288,7 +338,12 @@
         "No layers"
       ],
       "correctAnswer": 1,
-      "explanation": "System APIs abstract and expose data from underlying systems."
+      "explanation": "System APIs abstract and expose data from underlying systems.",
+      "whyWrong": [
+        "Experience API is the top, consumer-facing layer — not where system-of-record data is exposed.",
+        "Process API orchestrates logic across System APIs — it isn't the layer that directly exposes system-of-record data.",
+        "API-led connectivity explicitly uses layered architecture, so 'no layers' is incorrect."
+      ]
     },
     {
       "question": "What is the purpose of Mocking in Anypoint Platform?",
@@ -299,7 +354,12 @@
         "To configure CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "Mocking allows frontend and consumer development before backend is ready."
+      "explanation": "Mocking allows frontend and consumer development before backend is ready.",
+      "whyWrong": [
+        "Mocking is meant to support testing, not to delete APIs.",
+        "Mocking simulates API responses — it isn't for sending emails.",
+        "Mocking is unrelated to CPQ configuration."
+      ]
     },
     {
       "question": "Which Mule variable scope is available across the entire flow?",
@@ -310,7 +370,12 @@
         "No variables"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow variables persist for the lifetime of the flow execution."
+      "explanation": "Flow variables persist for the lifetime of the flow execution.",
+      "whyWrong": [
+        "'Target' isn't a Mule variable scope name — flowVars is the scope available across the whole flow.",
+        "Session scope has different persistence semantics than flow-wide variables.",
+        "Mule does support variable scoping — 'no variables' is incorrect."
+      ]
     },
     {
       "question": "What does client credentials grant provide in OAuth?",
@@ -321,7 +386,12 @@
         "Email credentials"
       ],
       "correctAnswer": 1,
-      "explanation": "Client credentials grant is for machine-to-machine, app-level authentication."
+      "explanation": "Client credentials grant is for machine-to-machine, app-level authentication.",
+      "whyWrong": [
+        "Client credentials grant is specifically for machine-to-machine auth, not user password exchange.",
+        "Client credentials grant isn't tied to Slack specifically — it's a general OAuth 2.0 concept.",
+        "Client credentials grant isn't about email credentials — it's an OAuth authentication flow."
+      ]
     },
     {
       "question": "Which Anypoint component manages API policies?",
@@ -332,7 +402,12 @@
         "Runtime Manager only"
       ],
       "correctAnswer": 1,
-      "explanation": "API Manager handles policies, client management, and analytics."
+      "explanation": "API Manager handles policies, client management, and analytics.",
+      "whyWrong": [
+        "Anypoint Studio is the design/development IDE, not the policy management tool.",
+        "Design Center is for designing APIs, not managing runtime policies.",
+        "Runtime Manager deploys and monitors applications; API Manager specifically manages API policies."
+      ]
     }
   ]
 }

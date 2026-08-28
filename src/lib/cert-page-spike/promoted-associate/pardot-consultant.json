@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Pardot is now officially Marketing Cloud Account Engagement (MCAE) — Salesforce made the rename in 2022. The exam code (CRT-302) and 'Pardot Consultant' title haven't changed, so that's still what you'll search for and what shows up on your credential. Just don't be thrown when every screenshot in Trailhead or the product itself says Account Engagement instead of Pardot.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Consultant exam for?",
     "personas": [

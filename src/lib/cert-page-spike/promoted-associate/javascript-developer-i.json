@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the JavaScript Developer I exam for?",
     "personas": [
-      { "label": "Front-end developers entering Salesforce", "description": "You have strong JavaScript fundamentals and want to build Lightning Web Components on the Salesforce Platform." },
-      { "label": "Salesforce developers broadening skills", "description": "You already work with Apex and want to validate your modern JavaScript and LWC expertise for full-stack Salesforce development." },
-      { "label": "Web developers transitioning to enterprise", "description": "You have experience with React, Angular, or Vue and want to apply your component-based skills within the Salesforce ecosystem." }
+      {
+        "label": "Front-end developers entering Salesforce",
+        "description": "You have strong JavaScript fundamentals and want to build Lightning Web Components on the Salesforce Platform."
+      },
+      {
+        "label": "Salesforce developers broadening skills",
+        "description": "You already work with Apex and want to validate your modern JavaScript and LWC expertise for full-stack Salesforce development."
+      },
+      {
+        "label": "Web developers transitioning to enterprise",
+        "description": "You have experience with React, Angular, or Vue and want to apply your component-based skills within the Salesforce ecosystem."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "var declarations"
       ],
       "correctAnswer": 1,
-      "explanation": "Promises and async/await are the modern JavaScript approach for handling asynchronous operations."
+      "explanation": "Promises and async/await are the modern JavaScript approach for handling asynchronous operations.",
+      "whyWrong": [
+        "Callbacks alone are an older async pattern; Promises/async-await are the modern standard tested on this exam.",
+        "Synchronous loops block the main thread — the opposite of what's needed for async handling.",
+        "var is a variable declaration keyword, unrelated to asynchronous operations."
+      ]
     },
     {
       "question": "What is the primary use of Lightning Web Components (LWC) in the Salesforce ecosystem?",
@@ -180,7 +194,12 @@
         "Data modeling"
       ],
       "correctAnswer": 1,
-      "explanation": "LWC is the standard for building performant, reusable UI components on the Salesforce Lightning Platform."
+      "explanation": "LWC is the standard for building performant, reusable UI components on the Salesforce Lightning Platform.",
+      "whyWrong": [
+        "LWC runs on the client (browser) side, not as backend Apex logic.",
+        "Email templates are unrelated to LWC's purpose as a UI component framework.",
+        "Data modeling is a separate concern from building UI components."
+      ]
     },
     {
       "question": "Which keyword creates a block-scoped variable in JavaScript?",
@@ -191,7 +210,12 @@
         "global"
       ],
       "correctAnswer": 1,
-      "explanation": "let (and const) create block-scoped variables; var is function-scoped."
+      "explanation": "let (and const) create block-scoped variables; var is function-scoped.",
+      "whyWrong": [
+        "var is function-scoped, not block-scoped — this is precisely why let/const were introduced.",
+        "function declares a function, not a variable.",
+        "'global' is not a JavaScript variable declaration keyword."
+      ]
     },
     {
       "question": "What does the shadow DOM provide in web components?",
@@ -202,7 +226,12 @@
         "API keys"
       ],
       "correctAnswer": 1,
-      "explanation": "Shadow DOM provides style and markup encapsulation so component internals don't leak out."
+      "explanation": "Shadow DOM provides style and markup encapsulation so component internals don't leak out.",
+      "whyWrong": [
+        "Shadow DOM is a client-side browser feature, unrelated to server-side rendering.",
+        "Shadow DOM doesn't manage database access.",
+        "Shadow DOM has nothing to do with API keys or security credentials."
+      ]
     },
     {
       "question": "Which LWC decorator makes a property available to the component's template?",
@@ -213,7 +242,12 @@
         "@invocable"
       ],
       "correctAnswer": 0,
-      "explanation": "@api exposes a public property that can be set by a parent component."
+      "explanation": "@api exposes a public property that can be set by a parent component.",
+      "whyWrong": [
+        "@track is used for reactive private property tracking, not for exposing properties to the template/parent.",
+        "@wire is used for provisioning data from Salesforce, not for exposing properties externally.",
+        "@invocable is not an LWC decorator — it's unrelated to component properties."
+      ]
     },
     {
       "question": "Which LWC wire adapter is used to get a record by Id?",
@@ -224,7 +258,12 @@
         "createRecord"
       ],
       "correctAnswer": 1,
-      "explanation": "getRecord wire adapter fetches a record by Id with specified fields."
+      "explanation": "getRecord wire adapter fetches a record by Id with specified fields.",
+      "whyWrong": [
+        "getListUi retrieves a list of records, not a single record by Id.",
+        "getObjectInfo retrieves object metadata, not record field data.",
+        "createRecord creates a new record — it doesn't retrieve an existing one."
+      ]
     },
     {
       "question": "What does the spread operator (...) do in JavaScript?",
@@ -235,7 +274,12 @@
         "Handles errors"
       ],
       "correctAnswer": 1,
-      "explanation": "The spread operator expands arrays or copies/merges object properties."
+      "explanation": "The spread operator expands arrays or copies/merges object properties.",
+      "whyWrong": [
+        "The spread operator doesn't delete properties — rest/destructuring with omission handles that differently.",
+        "The spread operator doesn't create classes.",
+        "The spread operator doesn't handle errors — that's the role of try/catch."
+      ]
     },
     {
       "question": "Which LWC lifecycle hook runs when the component is inserted into the DOM?",
@@ -246,7 +290,12 @@
         "errorCallback"
       ],
       "correctAnswer": 1,
-      "explanation": "connectedCallback runs when the component is added to the DOM."
+      "explanation": "connectedCallback runs when the component is added to the DOM.",
+      "whyWrong": [
+        "disconnectedCallback fires when a component is removed from the DOM, not inserted.",
+        "renderedCallback fires after every render, not specifically on initial DOM insertion.",
+        "errorCallback fires when a descendant component throws an error, unrelated to DOM insertion."
+      ]
     },
     {
       "question": "What is the purpose of @wire in LWC?",
@@ -257,7 +306,12 @@
         "To handle events"
       ],
       "correctAnswer": 1,
-      "explanation": "@wire reactively fetches data when parameters change."
+      "explanation": "@wire reactively fetches data when parameters change.",
+      "whyWrong": [
+        "@wire itself doesn't track state — that's the role of @track or reactive properties.",
+        "@wire is for provisioning data, not for exposing properties to templates (that's @api).",
+        "@wire doesn't directly handle DOM events — that's done with event listeners."
+      ]
     },
     {
       "question": "Which JavaScript method creates a new array from another without mutating the original?",
@@ -268,7 +322,12 @@
         "pop"
       ],
       "correctAnswer": 1,
-      "explanation": "map and slice return new arrays; they don't mutate the original."
+      "explanation": "map and slice return new arrays; they don't mutate the original.",
+      "whyWrong": [
+        "push mutates the original array by adding to it.",
+        "splice mutates the original array in place.",
+        "pop mutates the original array by removing its last element."
+      ]
     },
     {
       "question": "What does event.target refer to in a DOM event handler?",
@@ -279,7 +338,12 @@
         "The window"
       ],
       "correctAnswer": 1,
-      "explanation": "event.target is the element that triggered the event."
+      "explanation": "event.target is the element that triggered the event.",
+      "whyWrong": [
+        "event.target is not the parent element — that would require traversing the DOM tree separately.",
+        "event.target refers to the specific element that fired the event, not the whole document.",
+        "event.target is not the window object — window is the global browsing context."
+      ]
     },
     {
       "question": "Which Aura component attribute type is similar to @api in LWC?",
@@ -290,7 +354,12 @@
         "aura:method"
       ],
       "correctAnswer": 1,
-      "explanation": "aura:attribute with public/global access exposes data like @api."
+      "explanation": "aura:attribute with public/global access exposes data like @api.",
+      "whyWrong": [
+        "aura:handler registers event handling logic, not a component-facing property.",
+        "aura:registerEvent is used to declare that a component can fire an event, not to expose a property.",
+        "aura:method exposes a callable method, not a data property equivalent to @api."
+      ]
     },
     {
       "question": "What is a JavaScript module?",
@@ -301,7 +370,12 @@
         "A variable only"
       ],
       "correctAnswer": 1,
-      "explanation": "Modules export bindings and provide encapsulation via import/export."
+      "explanation": "Modules export bindings and provide encapsulation via import/export.",
+      "whyWrong": [
+        "A JavaScript module can contain more than a single class — it's a broader unit of code organization.",
+        "A module isn't limited to functions alone — it can export any bindings.",
+        "A module isn't limited to a single variable — it can export multiple bindings."
+      ]
     },
     {
       "question": "Which LWC method is used to navigate programmatically?",
@@ -312,7 +386,12 @@
         "NavigationMixin is not used"
       ],
       "correctAnswer": 1,
-      "explanation": "NavigationMixin.GeneratePage enables programmatic navigation in LWC."
+      "explanation": "NavigationMixin.GeneratePage enables programmatic navigation in LWC.",
+      "whyWrong": [
+        "window.location causes a full page reload, which isn't the LWC-recommended navigation approach.",
+        "history.push is a browser history API concept, not the LWC-specific navigation method.",
+        "NavigationMixin is in fact the standard way LWC handles programmatic navigation — this option incorrectly denies its use."
+      ]
     },
     {
       "question": "What does const prevent in JavaScript?",
@@ -323,7 +402,12 @@
         "Block scope"
       ],
       "correctAnswer": 1,
-      "explanation": "const prevents reassignment; object/array contents can still be mutated."
+      "explanation": "const prevents reassignment; object/array contents can still be mutated.",
+      "whyWrong": [
+        "const doesn't prevent variable declaration — it's a way of declaring variables.",
+        "const does not prevent mutation of the contents of objects/arrays, only reassignment of the binding itself.",
+        "const has nothing to do with block scope — that behavior comes from let and const equally, not from preventing scope."
+      ]
     }
   ]
 }

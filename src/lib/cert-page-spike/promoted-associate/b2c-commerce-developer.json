@@ -178,7 +178,12 @@
         "Script Framework Runtime API"
       ],
       "correctAnswer": 1,
-      "explanation": "Storefront Reference Architecture (SFRA) is the standard reference implementation for B2C Commerce storefronts."
+      "explanation": "Storefront Reference Architecture (SFRA) is the standard reference implementation for B2C Commerce storefronts.",
+      "whyWrong": [
+        "'Salesforce Retail Application' isn't a real B2C Commerce term.",
+        "'Secure File Resource Access' isn't a recognized B2C Commerce acronym.",
+        "'Script Framework Runtime API' isn't the correct expansion of SFRA."
+      ]
     },
     {
       "question": "Which API is used for headless or custom front-end integrations with B2C Commerce?",
@@ -189,7 +194,12 @@
         "Apex"
       ],
       "correctAnswer": 1,
-      "explanation": "OCAPI/SCAPI (Shop API) is used for headless and custom integrations with B2C Commerce."
+      "explanation": "OCAPI/SCAPI (Shop API) is used for headless and custom integrations with B2C Commerce.",
+      "whyWrong": [
+        "REST alone doesn't describe B2C Commerce's specific headless API — OCAPI/SCAPI are the named implementations.",
+        "SOAP isn't used for B2C Commerce headless integrations.",
+        "Apex is a Salesforce Core/Platform language, not used for B2C Commerce storefront integration."
+      ]
     },
     {
       "question": "What is a cartridge in B2C Commerce?",
@@ -200,7 +210,12 @@
         "A shipping box"
       ],
       "correctAnswer": 1,
-      "explanation": "Cartridges contain scripts, templates, and assets that extend or customize the storefront."
+      "explanation": "Cartridges contain scripts, templates, and assets that extend or customize the storefront.",
+      "whyWrong": [
+        "Cartridges are code modules, not physical products — B2C Commerce cartridges contain pipelines, scripts, and templates.",
+        "Cartridges have nothing to do with payment processing.",
+        "Cartridges are a software concept unrelated to physical shipping."
+      ]
     },
     {
       "question": "Which scripting language is primarily used in B2C Commerce storefront development?",
@@ -211,7 +226,12 @@
         "Ruby"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce uses JavaScript (Node.js) and ISML (template language) for storefront logic and rendering."
+      "explanation": "B2C Commerce uses JavaScript (Node.js) and ISML (template language) for storefront logic and rendering.",
+      "whyWrong": [
+        "Apex is used in Salesforce Core, not B2C Commerce storefronts.",
+        "Python isn't used for B2C Commerce storefront scripting.",
+        "Ruby isn't part of the B2C Commerce technology stack."
+      ]
     },
     {
       "question": "What is the purpose of the Business Manager in B2C Commerce?",
@@ -222,7 +242,12 @@
         "To configure Sales Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Business Manager is the admin console for managing B2C Commerce sites, catalogs, and operations."
+      "explanation": "Business Manager is the admin console for managing B2C Commerce sites, catalogs, and operations.",
+      "whyWrong": [
+        "Business Manager is an admin console, not a code editor.",
+        "Deploying to Heroku is unrelated to Business Manager's purpose.",
+        "Business Manager doesn't configure Sales Cloud — it's a separate B2C Commerce product."
+      ]
     },
     {
       "question": "What is a pipeline in B2C Commerce?",
@@ -233,7 +258,12 @@
         "A report"
       ],
       "correctAnswer": 1,
-      "explanation": "Pipelines process requests through sequential script steps."
+      "explanation": "Pipelines process requests through sequential script steps.",
+      "whyWrong": [
+        "A pipeline is workflow logic, not a database.",
+        "Pipelines process requests, not emails.",
+        "Pipelines aren't reporting tools."
+      ]
     },
     {
       "question": "Which B2C Commerce template language renders HTML?",
@@ -244,7 +274,12 @@
         "LWC"
       ],
       "correctAnswer": 1,
-      "explanation": "ISML is the template language for B2C Commerce storefronts."
+      "explanation": "ISML is the template language for B2C Commerce storefronts.",
+      "whyWrong": [
+        "AMPscript is a Marketing Cloud personalization language, unrelated to B2C Commerce templates.",
+        "Visualforce is a Salesforce Core UI framework, not used in B2C Commerce.",
+        "LWC is used in Salesforce Core/Experience Cloud, not B2C Commerce storefronts."
+      ]
     },
     {
       "question": "What does OCAPI support?",
@@ -255,7 +290,12 @@
         "Only admin"
       ],
       "correctAnswer": 1,
-      "explanation": "OCAPI enables headless and custom storefront development."
+      "explanation": "OCAPI enables headless and custom storefront development.",
+      "whyWrong": [
+        "OCAPI supports both reads and writes, not reads only.",
+        "OCAPI supports far more than headless/mobile use cases — 'only writes' misrepresents its scope.",
+        "OCAPI is used by storefronts and integrations generally, not restricted to admin use."
+      ]
     },
     {
       "question": "Which B2C Commerce object represents a product?",
@@ -266,7 +306,12 @@
         "Lead"
       ],
       "correctAnswer": 1,
-      "explanation": "Product and Product Variant represent catalog items."
+      "explanation": "Product and Product Variant represent catalog items.",
+      "whyWrong": [
+        "Account is a Salesforce Core CRM object, not a B2C Commerce catalog object.",
+        "Opportunity is a Sales Cloud object, unrelated to B2C Commerce product data.",
+        "Lead is a Sales Cloud object, unrelated to B2C Commerce catalog structure."
+      ]
     },
     {
       "question": "What is the purpose of a custom cartridge?",
@@ -277,7 +322,12 @@
         "To send emails only"
       ],
       "correctAnswer": 1,
-      "explanation": "Custom cartridges extend or override storefront behavior."
+      "explanation": "Custom cartridges extend or override storefront behavior.",
+      "whyWrong": [
+        "Custom cartridges extend SFRA rather than replacing it entirely — the base cartridge is still required.",
+        "Custom cartridges can contain full storefront logic, not just reports.",
+        "Cartridges handle far more than email sending — that's a Marketing Cloud concern."
+      ]
     },
     {
       "question": "Which B2C Commerce feature supports A/B testing?",
@@ -288,7 +338,12 @@
         "Manual only"
       ],
       "correctAnswer": 1,
-      "explanation": "Business Manager supports experiments for A/B testing."
+      "explanation": "Business Manager supports experiments for A/B testing.",
+      "whyWrong": [
+        "B2C Commerce does support A/B testing natively — 'no support' is incorrect.",
+        "A/B testing is configured through Business Manager tools, not raw code only.",
+        "A/B testing isn't limited to manual processes — Business Manager automates variant delivery."
+      ]
     },
     {
       "question": "What does the Script Debugger support?",
@@ -299,7 +354,12 @@
         "Only builds"
       ],
       "correctAnswer": 1,
-      "explanation": "Script Debugger supports breakpoints and variable inspection."
+      "explanation": "Script Debugger supports breakpoints and variable inspection.",
+      "whyWrong": [
+        "The Script Debugger provides much more than log viewing — it supports live debugging.",
+        "The debugger is for runtime script inspection, not deployment.",
+        "The debugger doesn't manage builds — it's a runtime diagnostic tool."
+      ]
     },
     {
       "question": "Which deployment method is used for B2C Commerce code?",
@@ -310,7 +370,12 @@
         "Workbench only"
       ],
       "correctAnswer": 1,
-      "explanation": "Code deploys via Business Manager or CI/CD pipelines."
+      "explanation": "Code deploys via Business Manager or CI/CD pipelines.",
+      "whyWrong": [
+        "Change Sets are a Salesforce Core deployment mechanism, not used for B2C Commerce code.",
+        "Data Loader moves records, not B2C Commerce code artifacts.",
+        "Workbench is a Salesforce Core tool, unrelated to B2C Commerce code deployment."
+      ]
     },
     {
       "question": "What is the purpose of the hook mechanism in B2C Commerce?",
@@ -321,7 +386,12 @@
         "To create only"
       ],
       "correctAnswer": 1,
-      "explanation": "Hooks allow extension without modifying base cartridges."
+      "explanation": "Hooks allow extension without modifying base cartridges.",
+      "whyWrong": [
+        "Hooks extend behavior at defined extension points — they don't replace the entire pipeline system.",
+        "Hooks aren't limited to deleting functionality — they can add or modify behavior too.",
+        "Hooks aren't limited to creation-only actions — they can intercept many lifecycle events."
+      ]
     },
     {
       "question": "Which best practice applies to B2C Commerce performance?",
@@ -332,7 +402,12 @@
         "No optimization"
       ],
       "correctAnswer": 1,
-      "explanation": "Caching and optimization support storefront performance."
+      "explanation": "Caching and optimization support storefront performance.",
+      "whyWrong": [
+        "Ignoring caching would hurt performance, not help it — this is the opposite of best practice.",
+        "'No caching' is the opposite of the recommended performance approach.",
+        "'No optimization' contradicts the actual best practice of optimizing ISML and API usage."
+      ]
     }
   ]
 }

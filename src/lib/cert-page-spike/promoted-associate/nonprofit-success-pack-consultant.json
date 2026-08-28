@@ -1,5 +1,6 @@
 {
   "template": "associate",
+  "expertInsight": "Salesforce is transitioning nonprofits from the legacy Nonprofit Success Pack (NPSP) managed package to the new Nonprofit Cloud, built natively on Data Cloud and Flow. NPSP implementations are still widely deployed and this exam remains active, but if you're starting a new nonprofit project or credential in 2026, check the Nonprofit Cloud certification page first — new engagements increasingly default to that architecture.",
   "whoIsThisFor": {
     "heading": "Who is the Nonprofit Success Pack Consultant exam for?",
     "personas": [
@@ -116,6 +117,10 @@
     "heading": "Next Consultant Certifications",
     "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
     "links": [
+      {
+        "href": "/certifications/nonprofit-cloud",
+        "label": "Nonprofit Cloud Consultant"
+      },
       {
         "href": "/certifications/sales-cloud",
         "label": "Sales Cloud Consultant"

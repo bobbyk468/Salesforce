@@ -178,7 +178,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Hyperautomation combines RPA, integration (e.g., MuleSoft), AI, and process automation for end-to-end automation."
+      "explanation": "Hyperautomation combines RPA, integration (e.g., MuleSoft), AI, and process automation for end-to-end automation.",
+      "whyWrong": [
+        "Hyperautomation is broader than RPA alone — it combines RPA with integration, AI, and process automation.",
+        "Hyperautomation involves more than email-based workflows.",
+        "Hyperautomation spans systems well beyond Slack alone."
+      ]
     },
     {
       "question": "Which MuleSoft product supports automation and integration in hyperautomation solutions?",
@@ -189,7 +194,12 @@
         "Commerce Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform and Mule provide the integration layer for connecting systems in hyperautomation."
+      "explanation": "Anypoint Platform and Mule provide the integration layer for connecting systems in hyperautomation.",
+      "whyWrong": [
+        "Email Studio is a Marketing Cloud tool, not an automation/integration platform.",
+        "CPQ is a pricing tool, not the integration backbone for hyperautomation.",
+        "Commerce Cloud is an e-commerce platform, not the integration layer used here."
+      ]
     },
     {
       "question": "What is the role of a MuleSoft Hyperautomation Developer?",
@@ -200,7 +210,12 @@
         "Only reporting"
       ],
       "correctAnswer": 1,
-      "explanation": "They develop hyperautomation solutions that span Salesforce and MuleSoft products."
+      "explanation": "They develop hyperautomation solutions that span Salesforce and MuleSoft products.",
+      "whyWrong": [
+        "The role spans much more than UI design — it includes cross-platform automation development.",
+        "Data entry is a manual task, not the developer's core role.",
+        "The role includes far more than reporting — it covers building automation solutions."
+      ]
     },
     {
       "question": "Which capability is often part of a hyperautomation architecture?",
@@ -211,7 +226,12 @@
         "Single system only"
       ],
       "correctAnswer": 1,
-      "explanation": "Hyperautomation uses APIs, workflows, and event-driven integration to connect and automate processes."
+      "explanation": "Hyperautomation uses APIs, workflows, and event-driven integration to connect and automate processes.",
+      "whyWrong": [
+        "Static spreadsheets represent manual, non-automated processes — the opposite of hyperautomation.",
+        "Manual processes are what hyperautomation aims to eliminate, not what it's built from.",
+        "Hyperautomation architectures span multiple systems, not a single isolated one."
+      ]
     },
     {
       "question": "What benefit does hyperautomation aim to deliver?",
@@ -222,7 +242,12 @@
         "Slower delivery"
       ],
       "correctAnswer": 1,
-      "explanation": "Hyperautomation aims to automate end-to-end processes and reduce manual effort across the enterprise."
+      "explanation": "Hyperautomation aims to automate end-to-end processes and reduce manual effort across the enterprise.",
+      "whyWrong": [
+        "Hyperautomation aims to reduce manual work, not increase it.",
+        "Hyperautomation typically increases the number of automated integrations, not decreases them.",
+        "The goal of hyperautomation is faster, not slower, delivery through automation."
+      ]
     },
     {
       "question": "What role does RPA play in hyperautomation?",
@@ -233,7 +258,12 @@
         "Replacing MuleSoft only"
       ],
       "correctAnswer": 1,
-      "explanation": "RPA automates repetitive tasks and works alongside API integration."
+      "explanation": "RPA automates repetitive tasks and works alongside API integration.",
+      "whyWrong": [
+        "RPA plays a specific, defined role — 'no role' misrepresents its function.",
+        "RPA complements APIs by automating tasks that don't have API access, not replacing them.",
+        "RPA specifically works alongside MuleSoft integrations rather than replacing MuleSoft's role."
+      ]
     },
     {
       "question": "Which MuleSoft capability supports event-driven automation?",
@@ -244,7 +274,12 @@
         "Only batch"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint MQ and event-driven flows support event-based automation."
+      "explanation": "Anypoint MQ and event-driven flows support event-based automation.",
+      "whyWrong": [
+        "Event-driven automation is not limited to REST — it uses messaging/eventing tools instead.",
+        "Event-driven patterns are distinct from SOAP-based synchronous calls.",
+        "Event-driven automation specifically avoids batch-only processing — it reacts to events in near real time."
+      ]
     },
     {
       "question": "What does end-to-end process automation require?",
@@ -255,7 +290,12 @@
         "Email only"
       ],
       "correctAnswer": 1,
-      "explanation": "End-to-end automation requires orchestration across systems."
+      "explanation": "End-to-end automation requires orchestration across systems.",
+      "whyWrong": [
+        "End-to-end automation spans multiple systems, not just one.",
+        "Manual steps are what end-to-end automation aims to eliminate.",
+        "Email-only workflows don't represent full end-to-end process orchestration."
+      ]
     },
     {
       "question": "Which Salesforce product can be part of hyperautomation?",
@@ -266,7 +306,12 @@
         "Tableau only"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow, Process Builder, and Platform Events support automation."
+      "explanation": "Flow, Process Builder, and Platform Events support automation.",
+      "whyWrong": [
+        "Marketing Cloud alone doesn't capture the Salesforce automation tools (Flow, Process Builder, Platform Events) relevant here.",
+        "Slack alone isn't the Salesforce automation product referenced in this context.",
+        "Tableau is an analytics tool, not a process automation product."
+      ]
     },
     {
       "question": "What is the purpose of workflow orchestration in hyperautomation?",
@@ -277,7 +322,12 @@
         "To create reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "Orchestration coordinates steps and handles exceptions."
+      "explanation": "Orchestration coordinates steps and handles exceptions.",
+      "whyWrong": [
+        "Workflow orchestration coordinates systems — it doesn't replace the APIs it orchestrates.",
+        "Orchestration is about coordinating processes, not just sending emails.",
+        "Orchestration coordinates multi-system workflows, not simply generating reports."
+      ]
     },
     {
       "question": "Which best practice applies to hyperautomation development?",
@@ -288,7 +338,12 @@
         "Manual only"
       ],
       "correctAnswer": 1,
-      "explanation": "Resilience, logging, and human-in-the-loop support reliability."
+      "explanation": "Resilience, logging, and human-in-the-loop support reliability.",
+      "whyWrong": [
+        "Ignoring error handling creates fragile automations — the opposite of best practice.",
+        "Skipping logging removes visibility needed to diagnose automation failures.",
+        "Manual-only processes defeat the purpose of building automation in the first place."
+      ]
     },
     {
       "question": "What does AI add to hyperautomation?",
@@ -299,7 +354,12 @@
         "Only APIs"
       ],
       "correctAnswer": 1,
-      "explanation": "AI enables intelligent decisions and document processing."
+      "explanation": "AI enables intelligent decisions and document processing.",
+      "whyWrong": [
+        "AI adds real capability to hyperautomation — 'nothing' misrepresents its contribution.",
+        "AI's contribution goes beyond RPA alone — it adds intelligence like prediction and decisioning.",
+        "AI's role extends beyond APIs — it contributes analytical and decision-making capabilities."
+      ]
     },
     {
       "question": "Which deployment model supports hyperautomation?",
@@ -310,7 +370,12 @@
         "No deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "CloudHub and hybrid support Mule-based hyperautomation."
+      "explanation": "CloudHub and hybrid support Mule-based hyperautomation.",
+      "whyWrong": [
+        "On-prem-only doesn't reflect the flexible deployment options hyperautomation solutions typically use.",
+        "Hyperautomation spans more than just the Salesforce platform — it includes MuleSoft and RPA tooling.",
+        "Deployment options do exist for hyperautomation solutions — 'no deployment' is incorrect."
+      ]
     },
     {
       "question": "What is the benefit of combining RPA and API integration?",
@@ -321,7 +386,12 @@
         "Replace RPA"
       ],
       "correctAnswer": 1,
-      "explanation": "RPA handles legacy UI; APIs handle modern integrations."
+      "explanation": "RPA handles legacy UI; APIs handle modern integrations.",
+      "whyWrong": [
+        "Combining RPA and APIs provides real, tangible benefits — 'no benefit' is incorrect.",
+        "The combination is meant to complement APIs, not replace them.",
+        "The combination is meant to complement RPA, not replace it."
+      ]
     },
     {
       "question": "Which MuleSoft product supports design and deployment?",
@@ -332,7 +402,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Studio, Flow Designer, and CloudHub support design and deployment."
+      "explanation": "Anypoint Studio, Flow Designer, and CloudHub support design and deployment.",
+      "whyWrong": [
+        "Email tooling doesn't align with MuleSoft's design and deployment product set.",
+        "Slack isn't a MuleSoft design/deployment product.",
+        "CPQ is unrelated to MuleSoft's design and deployment tooling."
+      ]
     }
   ]
 }

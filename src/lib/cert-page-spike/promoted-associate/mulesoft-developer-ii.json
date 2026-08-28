@@ -178,7 +178,12 @@
         "UI design"
       ],
       "correctAnswer": 1,
-      "explanation": "MuleSoft Developer II validates ability to work on production-ready Mule applications and DevOps practices."
+      "explanation": "MuleSoft Developer II validates ability to work on production-ready Mule applications and DevOps practices.",
+      "whyWrong": [
+        "Developer II goes beyond basic APIs — it targets production-grade, DevOps-ready development.",
+        "Email development is unrelated to MuleSoft Developer II's integration focus.",
+        "UI design is unrelated to MuleSoft Developer II's backend integration focus."
+      ]
     },
     {
       "question": "Which MuleSoft capability is used for complex data transformations?",
@@ -189,7 +194,12 @@
         "Visualforce"
       ],
       "correctAnswer": 1,
-      "explanation": "DataWeave is MuleSoft's transformation language for mapping and transforming data."
+      "explanation": "DataWeave is MuleSoft's transformation language for mapping and transforming data.",
+      "whyWrong": [
+        "Apex is a Salesforce Core language, unrelated to MuleSoft data transformation.",
+        "AMPscript is a Marketing Cloud personalization language, unrelated to MuleSoft.",
+        "Visualforce is a Salesforce UI framework, unrelated to MuleSoft transformations."
+      ]
     },
     {
       "question": "What is a best practice for error handling in Mule flows?",
@@ -200,7 +210,12 @@
         "Use only try/catch in Apex"
       ],
       "correctAnswer": 1,
-      "explanation": "Error handling scope and global error handlers provide consistent error handling and recovery."
+      "explanation": "Error handling scope and global error handlers provide consistent error handling and recovery.",
+      "whyWrong": [
+        "Ignoring errors is the opposite of a best practice — it leads to unhandled failures in production.",
+        "Deleting the flow doesn't address error handling at all.",
+        "Apex try/catch is a Salesforce Core concept, not how Mule flows handle errors."
+      ]
     },
     {
       "question": "Which deployment target is commonly used for Mule applications in production?",
@@ -211,7 +226,12 @@
         "CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "CloudHub and Runtime Manager (on-prem / hybrid) are used to deploy and manage Mule applications."
+      "explanation": "CloudHub and Runtime Manager (on-prem / hybrid) are used to deploy and manage Mule applications.",
+      "whyWrong": [
+        "Email Studio is a Marketing Cloud tool, unrelated to Mule application deployment.",
+        "Slack isn't a deployment target for Mule applications.",
+        "CPQ is a pricing/quoting tool, unrelated to Mule deployment targets."
+      ]
     },
     {
       "question": "What does reusable asset mean in API-led connectivity?",
@@ -222,7 +242,12 @@
         "Single consumer only"
       ],
       "correctAnswer": 1,
-      "explanation": "Reusable assets are APIs and integrations designed for reuse across the organization."
+      "explanation": "Reusable assets are APIs and integrations designed for reuse across the organization.",
+      "whyWrong": [
+        "Reusable assets are designed for repeated use, not one-time use.",
+        "Reusable APIs are software artifacts, not physical hardware.",
+        "Reusable assets are meant to serve multiple consumers, not just one."
+      ]
     },
     {
       "question": "Which on-error strategy continues flow execution after an error?",
@@ -233,7 +258,12 @@
         "on-error-delete"
       ],
       "correctAnswer": 1,
-      "explanation": "on-error-continue allows flow to continue after handling the error."
+      "explanation": "on-error-continue allows flow to continue after handling the error.",
+      "whyWrong": [
+        "on-error-propagate stops flow execution and passes the error up — the opposite of continuing.",
+        "Having no error strategy leaves failures unhandled, which isn't a valid Mule pattern.",
+        "'on-error-delete' isn't a real Mule error-handling strategy."
+      ]
     },
     {
       "question": "What is the purpose of batch processing in Mule?",
@@ -244,7 +274,12 @@
         "To create APIs only"
       ],
       "correctAnswer": 1,
-      "explanation": "Batch processing handles large datasets in manageable chunks."
+      "explanation": "Batch processing handles large datasets in manageable chunks.",
+      "whyWrong": [
+        "Batch processing complements flows — it doesn't replace them.",
+        "Batch processing works with structured data, not specifically emails.",
+        "Batch processing is about data volume, not API creation."
+      ]
     },
     {
       "question": "Which DataWeave function transforms an array?",
@@ -255,7 +290,12 @@
         "set only"
       ],
       "correctAnswer": 1,
-      "explanation": "map, filter, pluck, and reduce transform arrays in DataWeave."
+      "explanation": "map, filter, pluck, and reduce transform arrays in DataWeave.",
+      "whyWrong": [
+        "map alone doesn't cover the full range of array transformation functions DataWeave provides.",
+        "get is not a DataWeave array transformation function.",
+        "set is not a DataWeave array transformation function."
+      ]
     },
     {
       "question": "What does API versioning support in MuleSoft?",
@@ -266,7 +306,12 @@
         "Deprecation only"
       ],
       "correctAnswer": 1,
-      "explanation": "Versioning supports backward compatibility and migration."
+      "explanation": "Versioning supports backward compatibility and migration.",
+      "whyWrong": [
+        "Versioning specifically supports backward compatibility, so 'no support' is incorrect.",
+        "Versioning is designed to avoid forcing breaking changes on all clients at once.",
+        "Versioning supports gradual migration, not deprecation as its sole purpose."
+      ]
     },
     {
       "question": "Which Mule component supports scheduled execution?",
@@ -277,7 +322,12 @@
         "Logger only"
       ],
       "correctAnswer": 1,
-      "explanation": "Scheduler triggers flows on a schedule."
+      "explanation": "Scheduler triggers flows on a schedule.",
+      "whyWrong": [
+        "HTTP Listener responds to incoming requests, not scheduled triggers.",
+        "'On Error' handles exceptions, not scheduled execution.",
+        "Logger records messages — it doesn't trigger scheduled execution."
+      ]
     },
     {
       "question": "What is the purpose of a custom policy in API Manager?",
@@ -288,7 +338,12 @@
         "To create only"
       ],
       "correctAnswer": 1,
-      "explanation": "Custom policies enforce custom logic on API requests."
+      "explanation": "Custom policies enforce custom logic on API requests.",
+      "whyWrong": [
+        "Custom policies extend API Manager's capabilities — they don't replace APIs themselves.",
+        "Policies enforce behavior; they aren't a deletion mechanism.",
+        "Policies aren't limited to creation actions — they enforce ongoing rules like rate limiting and validation."
+      ]
     },
     {
       "question": "Which Mule scope supports transactions?",
@@ -299,7 +354,12 @@
         "No scope"
       ],
       "correctAnswer": 1,
-      "explanation": "Transactional scope ensures atomic processing."
+      "explanation": "Transactional scope ensures atomic processing.",
+      "whyWrong": [
+        "'Try' scope handles errors but doesn't provide transactional guarantees across multiple operations.",
+        "Transactions can span more than a single flow's local processing.",
+        "Mule does support transactional scope — 'no scope' is incorrect."
+      ]
     },
     {
       "question": "What does idempotency support in integration?",
@@ -310,7 +370,12 @@
         "Slower only"
       ],
       "correctAnswer": 1,
-      "explanation": "Idempotency prevents duplicate processing on retries."
+      "explanation": "Idempotency prevents duplicate processing on retries.",
+      "whyWrong": [
+        "Idempotency specifically addresses duplicate processing — 'no support' misstates its purpose.",
+        "Idempotency is about correctness (avoiding duplicates), not raw execution speed.",
+        "Idempotency is about correctness, not intentionally slowing down processing."
+      ]
     },
     {
       "question": "Which deployment strategy supports zero-downtime on CloudHub?",
@@ -321,7 +386,12 @@
         "Manual only"
       ],
       "correctAnswer": 1,
-      "explanation": "Blue-green and rolling deployments support zero-downtime."
+      "explanation": "Blue-green and rolling deployments support zero-downtime.",
+      "whyWrong": [
+        "Having no deployment strategy risks downtime, which contradicts the goal of zero-downtime releases.",
+        "A full restart causes downtime — the opposite of the zero-downtime goal.",
+        "Manual-only deployment doesn't inherently provide zero-downtime guarantees."
+      ]
     },
     {
       "question": "What is the purpose of MUnit?",
@@ -332,7 +402,12 @@
         "To monitor only"
       ],
       "correctAnswer": 1,
-      "explanation": "MUnit is the testing framework for Mule applications."
+      "explanation": "MUnit is the testing framework for Mule applications.",
+      "whyWrong": [
+        "MUnit is a testing framework, not a replacement for Mule itself.",
+        "MUnit specifically supports testing, not deployment.",
+        "MUnit is for testing, not ongoing monitoring of running applications."
+      ]
     }
   ]
 }
