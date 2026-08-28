@@ -49,6 +49,12 @@ export type SharedCertCardAndContent = {
       cost: string
     }
     topics: string[]
+    /**
+     * Set only for "pyramid" credentials (e.g. Application Architect, System Architect) that are
+     * earned by passing multiple component exams rather than a single test. When present, the
+     * card shows this list instead of the single-exam stat grid.
+     */
+    componentExams?: { name: string; href: string; cost: string }[]
   }
   keyConcepts: {
     h2: string

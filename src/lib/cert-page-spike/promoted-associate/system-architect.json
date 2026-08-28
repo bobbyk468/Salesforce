@@ -60,6 +60,33 @@
       "Best Practices",
       "Middleware",
       "APIs"
+    ],
+    "componentExams": [
+      {
+        "name": "Platform Developer I (PD1)",
+        "href": "/certifications/developer-1",
+        "cost": "$200"
+      },
+      {
+        "name": "Integration Architect",
+        "href": "/certifications/integration-architect",
+        "cost": "$400"
+      },
+      {
+        "name": "Identity & Access Management Architect",
+        "href": "/certifications/identity-access-management-architect",
+        "cost": "$400"
+      },
+      {
+        "name": "Dev Lifecycle & Deployment Architect",
+        "href": "/certifications/dev-lifecycle-deployment-architect",
+        "cost": "$400"
+      },
+      {
+        "name": "System Architect Exam (final)",
+        "href": "/system-architect-exam-tips",
+        "cost": "$200"
+      }
     ]
   },
   "keyConcepts": {

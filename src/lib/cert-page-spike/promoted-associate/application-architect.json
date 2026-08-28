@@ -60,6 +60,28 @@
       "Integration",
       "Security",
       "Scalability"
+    ],
+    "componentExams": [
+      {
+        "name": "Platform App Builder",
+        "href": "/certifications/app-builder",
+        "cost": "$200"
+      },
+      {
+        "name": "Platform Developer I (PD1)",
+        "href": "/certifications/developer-1",
+        "cost": "$200"
+      },
+      {
+        "name": "Data Architect",
+        "href": "/certifications/data-architect",
+        "cost": "$400"
+      },
+      {
+        "name": "Sharing & Visibility Architect",
+        "href": "/certifications/sharing-visibility-architect",
+        "cost": "$400"
+      }
     ]
   },
   "keyConcepts": {

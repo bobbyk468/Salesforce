@@ -255,14 +255,12 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'application-architect': {
     slug: 'application-architect',
-    recommendedPrerequisite: 'advanced-administrator',
-    notes: 'Recommended background: Admin or App Builder + Dev experience',
+    notes: 'Auto-awarded credential — earned by passing App Builder, PD1, Data Architect, and Sharing & Visibility Architect. See the component-exam list on the page instead of a single prerequisite.',
   },
 
   'system-architect': {
     slug: 'system-architect',
-    recommendedPrerequisite: 'advanced-administrator',
-    notes: 'Advanced-level system design certification',
+    notes: 'Earned by passing PD1, Integration Architect, IAM Architect, and Dev Lifecycle Architect, plus a final proctored exam. See the component-exam list on the page instead of a single prerequisite.',
   },
 
   'technical-architect': {

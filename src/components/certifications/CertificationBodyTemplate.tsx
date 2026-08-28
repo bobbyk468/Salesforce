@@ -212,6 +212,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           examSections={examSections}
           h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}
+          componentExams={card.componentExams}
         />
 
         <div id="exam-prep">
@@ -316,6 +317,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
           examSections={examSections}
           h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}
+          componentExams={card.componentExams}
         />
 
         <div id="exam-prep">
