@@ -65,6 +65,21 @@ import LeadScoringGradingDiagram from '@/components/certifications/LeadScoringGr
 import LeadToCashArchitectureDiagram from '@/components/certifications/LeadToCashArchitectureDiagram'
 import EnterpriseGridRolloutDiagram from '@/components/certifications/EnterpriseGridRolloutDiagram'
 import TableauDeploymentDiagram from '@/components/certifications/TableauDeploymentDiagram'
+import ApplicationArchitectPyramidDiagram from '@/components/certifications/ApplicationArchitectPyramidDiagram'
+import SystemArchitectPyramidDiagram from '@/components/certifications/SystemArchitectPyramidDiagram'
+import B2BMultiCloudDiagram from '@/components/certifications/B2BMultiCloudDiagram'
+import B2CScalabilityDiagram from '@/components/certifications/B2CScalabilityDiagram'
+import B2CSolutionIntegrationDiagram from '@/components/certifications/B2CSolutionIntegrationDiagram'
+import LDVMitigationDiagram from '@/components/certifications/LDVMitigationDiagram'
+import CICDBranchingDiagram from '@/components/certifications/CICDBranchingDiagram'
+import HerokuConnectSyncDiagram from '@/components/certifications/HerokuConnectSyncDiagram'
+import OAuthSAMLSequenceDiagram from '@/components/certifications/OAuthSAMLSequenceDiagram'
+import IntegrationPatternsMatrixDiagram from '@/components/certifications/IntegrationPatternsMatrixDiagram'
+import AnypointNetworkDiagram from '@/components/certifications/AnypointNetworkDiagram'
+import RecordAccessCalculationDiagram from '@/components/certifications/RecordAccessCalculationDiagram'
+import TableauHADRDiagram from '@/components/certifications/TableauHADRDiagram'
+import CTABoardStructureDiagram from '@/components/certifications/CTABoardStructureDiagram'
+import CTAEvaluationStructureDiagram from '@/components/certifications/CTAEvaluationStructureDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -295,6 +310,23 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'revenue-cloud-consultant' ? <LeadToCashArchitectureDiagram /> : null}
         {slug === 'slack-consultant' ? <EnterpriseGridRolloutDiagram /> : null}
         {slug === 'tableau-consultant' ? <TableauDeploymentDiagram /> : null}
+        {slug === 'application-architect' ? <ApplicationArchitectPyramidDiagram /> : null}
+        {slug === 'system-architect' ? <SystemArchitectPyramidDiagram /> : null}
+        {slug === 'b2b-solution-architect' ? <B2BMultiCloudDiagram /> : null}
+        {slug === 'b2c-commerce-architect' ? <B2CScalabilityDiagram /> : null}
+        {slug === 'b2c-solution-architect' ? <B2CSolutionIntegrationDiagram /> : null}
+        {slug === 'data-architect' ? <LDVMitigationDiagram /> : null}
+        {slug === 'dev-lifecycle-deployment-architect' ? <CICDBranchingDiagram /> : null}
+        {slug === 'heroku-architect' ? <HerokuConnectSyncDiagram /> : null}
+        {slug === 'identity-access-management-architect' ? <OAuthSAMLSequenceDiagram /> : null}
+        {slug === 'integration-architect' ? <IntegrationPatternsMatrixDiagram /> : null}
+        {slug === 'mulesoft-integration-architect' ? <APILedConnectivityDiagram /> : null}
+        {slug === 'mulesoft-platform-architect' ? <AnypointNetworkDiagram /> : null}
+        {slug === 'sharing-visibility-architect' ? <RecordAccessCalculationDiagram /> : null}
+        {slug === 'tableau-architect' ? <TableauHADRDiagram /> : null}
+        {slug === 'technical-architect' ? <CTABoardStructureDiagram /> : null}
+        {slug === 'technical-architect-evaluation' ? <CTAEvaluationStructureDiagram /> : null}
+        {slug === 'technical-architect-review-board' ? <CTABoardStructureDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
