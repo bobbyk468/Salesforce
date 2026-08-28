@@ -74,7 +74,7 @@ export default function MulesoftDeveloperIVsIIPage() {
         </h1>
         <p className="text-lg text-gray-600">
           MuleSoft certification follows a structured progression: Developer I is the entry point and
-          Developer II validates advanced integration architecture skills. Here&apos;s exactly what separates
+          Developer II validates advanced integration architecture skills. Here’s exactly what separates
           the two exams and what you need to know to progress.
         </p>
       </header>

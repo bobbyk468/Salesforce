@@ -173,7 +173,7 @@ export default function AdvancedAdministratorExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Change Data Capture vs Platform Events — Choosing the Right Tool</p>
-            <p className="text-sm text-gray-700">Change Data Capture (CDC) streams granular record changes (create/update/delete/undelete) from Salesforce to external systems that subscribe via the API. Platform Events are custom event messages published and subscribed to within and outside Salesforce for event-driven architecture. Candidates answer &ldquo;stream Salesforce record changes to a data warehouse&rdquo; questions with Platform Events (wrong — that&apos;s CDC) and &ldquo;trigger async workflows on new order events&rdquo; with CDC (wrong — that&apos;s Platform Events).</p>
+            <p className="text-sm text-gray-700">Change Data Capture (CDC) streams granular record changes (create/update/delete/undelete) from Salesforce to external systems that subscribe via the API. Platform Events are custom event messages published and subscribed to within and outside Salesforce for event-driven architecture. Candidates answer &ldquo;stream Salesforce record changes to a data warehouse&rdquo; questions with Platform Events (wrong — that’s CDC) and &ldquo;trigger async workflows on new order events&rdquo; with CDC (wrong — that’s Platform Events).</p>
           </div>
         </div>
       </section>

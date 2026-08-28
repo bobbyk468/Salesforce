@@ -9,7 +9,7 @@
       },
       {
         "label": "Career changers exploring CRM",
-        "description": "You&apos;re transitioning into the Salesforce ecosystem and want a low-risk first certification before tackling ADM-201 or Developer I."
+        "description": "You’re transitioning into the Salesforce ecosystem and want a low-risk first certification before tackling ADM-201 or Developer I."
       },
       {
         "label": "Business users seeking formal validation",
@@ -26,7 +26,7 @@
       "<strong>Broad but shallow</strong> &mdash; questions span Customer 360, data modelling, security basics, reports, and the Salesforce ecosystem, but none go deep into configuration.",
       "<strong>Terminology traps</strong> &mdash; many answers sound plausible because they use real Salesforce terms in slightly wrong contexts. Focus on what each Cloud product actually does."
     ],
-    "passRateGuidance": "If you can score 80%+ on two full practice exams and clearly distinguish Sales Cloud from Service Cloud from Marketing Cloud, you&apos;re ready to book."
+    "passRateGuidance": "If you can score 80%+ on two full practice exams and clearly distinguish Sales Cloud from Service Cloud from Marketing Cloud, you’re ready to book."
   },
   "examFormat": {
     "heading": "Platform Foundations Exam Format Explained",
@@ -39,7 +39,7 @@
       "<strong>Know AppExchange and Trailhead:</strong> Understand managed vs unmanaged packages, how to evaluate an AppExchange listing, and the role of Trailhead in the Salesforce learning ecosystem."
     ]
   },
-  "expertInsight": "Platform Foundations is positioned as entry-level, but don&apos;t underestimate it — the 62% passing score is low, yet the questions cover a surprisingly wide surface area. You&apos;ll see questions on AppExchange, Trailhead, the Salesforce ecosystem, basic data modelling, and even some light security concepts. The trap is that many answers sound plausible because they use real Salesforce terminology in slightly wrong contexts. Focus on understanding what each Cloud product actually does (Sales Cloud vs. Service Cloud vs. Marketing Cloud) and the difference between standard and custom objects. If you&apos;re already studying for Admin, this exam is excellent warm-up.",
+  "expertInsight": "Platform Foundations is positioned as entry-level, but don’t underestimate it — the 62% passing score is low, yet the questions cover a surprisingly wide surface area. You’ll see questions on AppExchange, Trailhead, the Salesforce ecosystem, basic data modelling, and even some light security concepts. The trap is that many answers sound plausible because they use real Salesforce terminology in slightly wrong contexts. Focus on understanding what each Cloud product actually does (Sales Cloud vs. Service Cloud vs. Marketing Cloud) and the difference between standard and custom objects. If you’re already studying for Admin, this exam is excellent warm-up.",
   "certificationCard": {
     "code": "Associate",
     "description": "An entry-level exam for people with up to 6 months of Salesforce experience, covering Customer 360 basics -- navigation, objects and records, reports, security fundamentals, and the Salesforce ecosystem.",

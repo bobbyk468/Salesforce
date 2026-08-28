@@ -75,7 +75,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
           B2B vs B2C Solution Architect ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Two Salesforce architect-level credentials covering fundamentally different commerce ecosystems. Here&apos;s how to choose the right one for your career.
+          Two Salesforce architect-level credentials covering fundamentally different commerce ecosystems. Here’s how to choose the right one for your career.
         </p>
       </div>
 

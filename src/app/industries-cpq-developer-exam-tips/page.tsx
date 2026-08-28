@@ -92,7 +92,7 @@ export default function IndustriesCPQDeveloperExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Industries CPQ Developer Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue management</strong> — Industries CPQ product hierarchy (Offerings, Products, Product Components), attribute-based configuration, product specifications, and how the catalogue differs from standard Salesforce CPQ&apos;s bundle model.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Product catalogue management</strong> — Industries CPQ product hierarchy (Offerings, Products, Product Components), attribute-based configuration, product specifications, and how the catalogue differs from standard Salesforce CPQ’s bundle model.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Pricing and promotions</strong> — Price lists, price list entries, promotion types, eligibility rules, and how promotions override standard pricing. Understanding the Industries CPQ pricing engine sequence is critical.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Guided selling and OmniStudio integration</strong> — How Industries CPQ uses OmniScripts and FlexCards for the guided selling experience, Integration Procedures for catalogue data retrieval, and DataRaptors for order submission.</li>
         </ul>
@@ -129,14 +129,14 @@ export default function IndustriesCPQDeveloperExamTipsPage() {
           always prefer the Industries CPQ native approach.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product hierarchy questions: Industries CPQ uses Offerings (top-level products like &apos;Broadband 100Mbps&apos;), Products (components of offerings), and Product Specifications (attribute definitions). An Offering can contain multiple Products with variable quantities and attribute values.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product hierarchy questions: Industries CPQ uses Offerings (top-level products like ’Broadband 100Mbps’), Products (components of offerings), and Product Specifications (attribute definitions). An Offering can contain multiple Products with variable quantities and attribute values.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For promotion questions: promotions have Eligibility Rules that define who qualifies (existing customer, new customer, account type). Promotion Offers define what the customer gets (discount, free add-on). Promotions override Price List Entries — know the sequence.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For OmniStudio integration questions: the guided selling flow is built in OmniScript. Product catalogue data is fetched via Integration Procedures calling Industries CPQ APIs. When a requirement involves displaying product options dynamically based on customer eligibility, the answer involves an Integration Procedure with eligibility filtering — not a direct SOQL DataRaptor.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks before booking

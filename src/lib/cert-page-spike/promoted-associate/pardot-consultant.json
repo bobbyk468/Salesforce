@@ -25,18 +25,18 @@
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
       "<strong>68% passing score</strong> — slightly higher than some consultant exams, reflecting the depth of B2B marketing automation knowledge required.",
       "<strong>Solution design focus</strong> — expect scenario questions asking you to design scoring models, multi-path Engagement Studio programs, and Salesforce sync architectures for specific business requirements.",
-      "<strong>CRM alignment tested</strong> — you must understand Pardot-Salesforce campaign alignment, the connector user&apos;s permissions, and how B2B Marketing Analytics extends attribution reporting."
+      "<strong>CRM alignment tested</strong> — you must understand Pardot-Salesforce campaign alignment, the connector user’s permissions, and how B2B Marketing Analytics extends attribution reporting."
     ],
     "passRateGuidance": "Complete at least two full Pardot implementations covering scoring, Engagement Studio, and Salesforce sync before booking. Score 80%+ on practice exams to account for the higher passing threshold."
   },
   "examFormat": {
     "heading": "Account Engagement Consultant Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 55-65% of questions are scenario-based. You&apos;ll be given a B2B marketing requirement and asked to design a scoring model, recommend an Engagement Studio program structure, or configure the Salesforce sync architecture.",
+    "scenarioPercent": "About 55-65% of questions are scenario-based. You’ll be given a B2B marketing requirement and asked to design a scoring model, recommend an Engagement Studio program structure, or configure the Salesforce sync architecture.",
     "bestWayToPass": [
-      "<strong>Master scoring and grading design:</strong> Know how to configure scoring categories, custom scoring rules, and grading profiles that align with a client&apos;s sales qualification criteria.",
+      "<strong>Master scoring and grading design:</strong> Know how to configure scoring categories, custom scoring rules, and grading profiles that align with a client’s sales qualification criteria.",
       "<strong>Design Engagement Studio programs:</strong> Practice building multi-branch nurture programs with conditional logic, re-engagement paths, and entry/exit criteria for complex B2B scenarios.",
-      "<strong>Understand Salesforce sync deeply:</strong> Know the connector user&apos;s required permissions, field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), and how to troubleshoot sync errors.",
+      "<strong>Understand Salesforce sync deeply:</strong> Know the connector user’s required permissions, field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), and how to troubleshoot sync errors.",
       "<strong>Study campaign attribution:</strong> Know the difference between Pardot first-touch campaigns and Salesforce multi-touch campaigns, and how Connected Campaigns and B2B Marketing Analytics extend reporting."
     ]
   },

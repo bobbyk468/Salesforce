@@ -33,7 +33,7 @@
     "intro": "The exam is proctored online. Here is the format:",
     "scenarioPercent": "Almost every question describes a production system with specific constraints — latency requirements, compliance needs, team structure, failure modes — and asks which architectural decision best addresses the scenario. The exam tests tradeoff reasoning, not implementation syntax.",
     "bestWayToPass": [
-      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline — this directly maps to the exam&apos;s largest domain.",
+      "<strong>Build a multi-agent workflow end-to-end:</strong> Implement a coordinator that delegates to subagents, pass context between them, handle failures, and monitor the pipeline — this directly maps to the exam’s largest domain.",
       "<strong>Stand up an MCP server with real tools:</strong> Expose a database lookup and a file reader, connect them to Claude Code, and debug tool-selection errors by refining your schemas.",
       "<strong>Configure Claude Code on a real codebase:</strong> Write CLAUDE.md files at different directory levels, create custom slash commands, and set up hooks — the exam tests the configuration hierarchy and conflict-resolution rules.",
       "<strong>Study failure modes, not just happy paths:</strong> What happens when a tool call fails mid-pipeline, when the context window fills up, or when an agent loops indefinitely? Catalog these scenarios and write recovery strategies for each."
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAR-F",
-    "description": "Anthropic&apos;s architecture-level credential for engineers who design AI systems rather than just build them. The CCAR-F tests your ability to decompose problems into agent workflows, wire up MCP servers that external tools can talk through, configure Claude Code for team-wide consistency, and make the tradeoffs that keep multi-agent pipelines reliable under real production load.",
+    "description": "Anthropic’s architecture-level credential for engineers who design AI systems rather than just build them. The CCAR-F tests your ability to decompose problems into agent workflows, wire up MCP servers that external tools can talk through, configure Claude Code for team-wide consistency, and make the tradeoffs that keep multi-agent pipelines reliable under real production load.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -103,7 +103,7 @@
       },
       {
         "heading": "Study Failure Modes, Not Just Happy Paths",
-        "body": "What happens when the third tool call in a five-step pipeline fails? What if the model hallucinates a tool name that doesn&apos;t exist? What if the context window fills up mid-conversation? The exam loves these edge cases. Catalog five or six failure scenarios and write down the recovery strategy for each."
+        "body": "What happens when the third tool call in a five-step pipeline fails? What if the model hallucinates a tool name that doesn’t exist? What if the context window fills up mid-conversation? The exam loves these edge cases. Catalog five or six failure scenarios and write down the recovery strategy for each."
       }
     ]
   },
@@ -225,7 +225,7 @@
       "options": [
         "Pass the entire raw conversation history from the research agent",
         "Have the research agent produce a structured summary of findings — key facts, sources, and open questions — and pass only that summary plus the writing task instructions to the writing agent",
-        "Give the writing agent access to the research agent&apos;s tools so it can re-research everything",
+        "Give the writing agent access to the research agent’s tools so it can re-research everything",
         "Store the research output in a database and give the writing agent a SQL tool to query it"
       ],
       "correctAnswer": 1,
@@ -272,8 +272,8 @@
       "question": "A customer onboarding pipeline uses Claude to verify documents, check compliance, and generate welcome materials. The compliance check occasionally produces false positives that block legitimate customers. What is the best architectural improvement?",
       "options": [
         "Remove the compliance check entirely to improve throughput",
-        "Add a confidence score to the compliance agent&apos;s output; auto-approve high-confidence passes, auto-reject clear violations, and route borderline cases to a human reviewer with the agent&apos;s reasoning attached",
-        "Lower the model&apos;s temperature to zero so it never flags false positives",
+        "Add a confidence score to the compliance agent’s output; auto-approve high-confidence passes, auto-reject clear violations, and route borderline cases to a human reviewer with the agent’s reasoning attached",
+        "Lower the model’s temperature to zero so it never flags false positives",
         "Run the compliance check twice and use the more lenient result"
       ],
       "correctAnswer": 1,
@@ -304,7 +304,7 @@
       "question": "A multi-agent system processes insurance claims. The coordinator agent spawns subagents for claim intake, policy lookup, and payout calculation. The policy-lookup subagent occasionally returns stale data because the policy database was recently updated. What architectural change addresses this?",
       "options": [
         "Cache all policy data at startup so the subagent never queries the database",
-        "Ensure the policy-lookup tool always queries the database at request time rather than relying on cached data, and add a staleness check that compares the record&apos;s last-modified timestamp against the claim&apos;s submission date",
+        "Ensure the policy-lookup tool always queries the database at request time rather than relying on cached data, and add a staleness check that compares the record’s last-modified timestamp against the claim’s submission date",
         "Replace the subagent with a hardcoded lookup table",
         "Run the entire pipeline twice and compare results"
       ],

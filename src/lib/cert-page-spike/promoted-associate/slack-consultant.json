@@ -19,7 +19,7 @@
   },
   "examDifficulty": {
     "heading": "Is the Slack Consultant Exam Hard?",
-    "summary": "The Slack Consultant exam is moderately difficult. It blends technical Slack knowledge with consulting skills — solution design, change management, and adoption strategy — so product knowledge alone won&apos;t carry you. You also need experience advising clients on collaboration workflows.",
+    "summary": "The Slack Consultant exam is moderately difficult. It blends technical Slack knowledge with consulting skills — solution design, change management, and adoption strategy — so product knowledge alone won’t carry you. You also need experience advising clients on collaboration workflows.",
     "bullets": [
       "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which is adequate for analyzing consulting scenarios.",
       "<strong>~65% passing score</strong> — you need approximately 39 correct answers out of 60 to pass.",
@@ -31,7 +31,7 @@
   "examFormat": {
     "heading": "Slack Consultant Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe a client&apos;s collaboration challenges and ask you to recommend the right Slack solution — channel structure, integration approach, or adoption tactic.",
+    "scenarioPercent": "Scenario questions describe a client’s collaboration challenges and ask you to recommend the right Slack solution — channel structure, integration approach, or adoption tactic.",
     "bestWayToPass": [
       "<strong>Salesforce-Slack integration:</strong> Know record alerts, record search from Slack, and how Salesforce Flows trigger Slack messages for sales and service workflows.",
       "<strong>Change management:</strong> Study phased rollout strategies, executive sponsorship, Champions programs, and how to measure adoption success with Slack analytics.",

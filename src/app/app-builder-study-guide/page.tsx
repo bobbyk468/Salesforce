@@ -95,7 +95,7 @@ export default function AppBuilderStudyGuidePage() {
         </h1>
         <p className="text-lg text-gray-600">
           The Salesforce Platform App Builder certification validates your ability to design, build, and deploy custom
-          applications using Salesforce&apos;s declarative tools. This study guide covers every exam section with the
+          applications using Salesforce’s declarative tools. This study guide covers every exam section with the
           Flow Builder patterns, data model decisions, and deployment procedures you need to pass.
         </p>
       </header>
@@ -288,7 +288,7 @@ export default function AppBuilderStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What to Take After App Builder</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Once you&apos;ve passed App Builder, you can either deepen your admin track or specialise by cloud:
+          Once you’ve passed App Builder, you can either deepen your admin track or specialise by cloud:
         </p>
         <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
           <li>

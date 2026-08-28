@@ -136,7 +136,7 @@ export default function DevLifecycleDeploymentArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Dev Lifecycle Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Dev Lifecycle questions describe an organisation&apos;s development setup and ask which environment strategy,
+          Dev Lifecycle questions describe an organisation’s development setup and ask which environment strategy,
           deployment method, or release process is correct. The key is identifying the scale of the team and
           the frequency of releases.
         </p>

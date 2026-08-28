@@ -31,7 +31,7 @@
   "examFormat": {
     "heading": "Order Management Administrator AP Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Expect scenario questions describing an omnichannel retailer&apos;s order fulfillment challenge and asking which Order Management configuration solves it. Common themes include fulfillment routing, partial fulfillment across locations, return processing, and Commerce Cloud integration.",
+    "scenarioPercent": "Expect scenario questions describing an omnichannel retailer’s order fulfillment challenge and asking which Order Management configuration solves it. Common themes include fulfillment routing, partial fulfillment across locations, return processing, and Commerce Cloud integration.",
     "bestWayToPass": [
       "<strong>Master the OM data model:</strong> Know how Order Summary, Order Product Summary, Fulfillment Order, and Order Delivery Group relate to each other and to standard Salesforce Order objects.",
       "<strong>Study fulfillment routing:</strong> Understand how routing rule sets select fulfillment locations based on inventory availability, proximity, and business rules, and how partial fulfillment splits orders across locations.",

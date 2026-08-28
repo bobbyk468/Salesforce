@@ -13,13 +13,13 @@
       },
       {
         "label": "IT directors and technical leads",
-        "description": "You define the organization&apos;s integration platform roadmap and need to demonstrate mastery of Anypoint Platform at enterprise scale."
+        "description": "You define the organization’s integration platform roadmap and need to demonstrate mastery of Anypoint Platform at enterprise scale."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Platform Architect Exam Hard?",
-    "summary": "MuleSoft Platform Architect is one of MuleSoft&apos;s most challenging exams. It requires deep understanding of deployment models (CloudHub, Runtime Fabric, on-premise), VPC and VPN networking, high availability design, and capacity planning — topics that demand real-world infrastructure experience.",
+    "summary": "MuleSoft Platform Architect is one of MuleSoft’s most challenging exams. It requires deep understanding of deployment models (CloudHub, Runtime Fabric, on-premise), VPC and VPN networking, high availability design, and capacity planning — topics that demand real-world infrastructure experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
       "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
@@ -33,7 +33,7 @@
     "intro": "The exam is proctored online or in-person. Here is the format:",
     "scenarioPercent": "About 55–65% of questions are scenario-based. Common patterns include choosing between CloudHub and Runtime Fabric for a given set of requirements, designing VPC and VPN configurations for hybrid connectivity, and sizing workers for throughput and high availability.",
     "bestWayToPass": [
-      "<strong>Compare deployment models:</strong> Know the trade-offs between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premise — and when each model fits a customer&apos;s data residency, security, and cost requirements.",
+      "<strong>Compare deployment models:</strong> Know the trade-offs between CloudHub 1.0, CloudHub 2.0, Runtime Fabric, and on-premise — and when each model fits a customer’s data residency, security, and cost requirements.",
       "<strong>Master networking:</strong> Understand VPC peering, VPN site-to-site tunnels, Dedicated Load Balancers, and TLS termination for CloudHub and Runtime Fabric deployments.",
       "<strong>Design for HA and DR:</strong> Practice multi-worker configurations, persistent queues, multi-region deployments, and RTO/RPO planning for different integration tiers.",
       "<strong>Learn capacity planning:</strong> Know worker sizing (vCore allocations), how to calculate required capacity from throughput and concurrency, and how auto-scaling works in CloudHub 2.0 and Runtime Fabric."

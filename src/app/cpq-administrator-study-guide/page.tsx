@@ -185,7 +185,7 @@ export default function CpqAdministratorStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Memorise the pricing cascade:</strong> List Price → Partner Discount → Partner Price → Additional Discount → Customer Price → Additional Discount → Net Price. Knowing each step&apos;s name and what affects it is tested directly.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Memorise the pricing cascade:</strong> List Price → Partner Discount → Partner Price → Additional Discount → Customer Price → Additional Discount → Net Price. Knowing each step’s name and what affects it is tested directly.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Know the four product rule types:</strong> Validation (enforces rules on save), Selection (auto-selects/deselects options), Alert (warns the user), Filter (hides options). Exam scenarios describe a business requirement and ask which rule type to use.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Subscription pricing renewal logic:</strong> Understand co-termination (aligning subscription end dates), proration, and how renewal pricing is inherited from the contracted price vs list price.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Bundle hierarchy:</strong> Product (bundle) → Features (groups) → Options (child products). Features have Min/Max selection settings. Options have Required and Optional flags. Build one in your sandbox before the exam.</span></li>
@@ -194,7 +194,7 @@ export default function CpqAdministratorStudyGuidePage() {
 
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. CPQ has many interconnected concepts — if you can correctly configure a bundle with pricing rules and a contract renewal in your sandbox, you are ready for the exam. Products &amp; Pricebooks (30%) alone is nearly a third of the exam, so master it first.</p>
       </div>
 

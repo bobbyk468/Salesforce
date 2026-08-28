@@ -119,7 +119,7 @@ export default function SalesforceFreeCertificationPage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">Trailhead vs Certifications: What&apos;s Free?</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Trailhead vs Certifications: What’s Free?</h2>
         <div className="overflow-x-auto">
           <table className="w-full text-sm">
             <thead>

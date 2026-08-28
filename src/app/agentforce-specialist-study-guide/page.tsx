@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between agent topics and agent actions?',
-    answer: 'Topics define the scope and context of an agent conversation — what subjects the agent can discuss and how it should behave. Each topic has a name, description, and instructions (the natural language guidance that shapes the agent&apos;s reasoning). Actions are the specific capabilities available within a topic — these are Flows, Apex methods, or Prompt Templates that the agent invokes to retrieve data, run logic, or generate responses. Topics frame the conversation; actions execute specific tasks.',
+    answer: 'Topics define the scope and context of an agent conversation — what subjects the agent can discuss and how it should behave. Each topic has a name, description, and instructions (the natural language guidance that shapes the agent’s reasoning). Actions are the specific capabilities available within a topic — these are Flows, Apex methods, or Prompt Templates that the agent invokes to retrieve data, run logic, or generate responses. Topics frame the conversation; actions execute specific tasks.',
   },
 ]
 
@@ -195,7 +195,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Concepts &amp; Architecture (17%):</strong> Study the Agentforce reasoning engine, Trust Layer, Zero Retention policy, and how Agentforce differs from Einstein Copilot. Complete Trailhead&apos;s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
+          <p><strong>Week 1 — Concepts &amp; Architecture (17%):</strong> Study the Agentforce reasoning engine, Trust Layer, Zero Retention policy, and how Agentforce differs from Einstein Copilot. Complete Trailhead’s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
           <p><strong>Week 2 — Agent Design Principles (22%):</strong> Study the agent types (Service Agent, SDR Agent, custom), use case selection, topic scope planning, and action selection (Flow vs Apex vs Prompt Template). Practice: design on paper a multi-topic agent for a customer service scenario before building it.</p>
           <p><strong>Week 3 &amp; 4 — Agent Building (35%):</strong> Build at least 2 complete agents with multiple topics and multiple action types. For each agent: write topic instructions, add a Flow action and a Prompt Template action, configure input/output variables, and set guardrails. This is the most time-intensive week and the most critical for passing.</p>
           <p><strong>Week 5 — Testing and Deployment (14% + 12%):</strong> Practice the Conversation Preview workflow — deliberately break an agent (wrong action inputs, vague instructions) and then diagnose and fix the issue. Study channel deployment options and escalation configuration.</p>
@@ -208,7 +208,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Action type selection questions:</strong> If the requirement involves data retrieval or updates and no custom code is needed, a Flow action is correct. If complex logic or governor-limit-sensitive operations are needed, Apex action. If the requirement involves generating a natural language response using record data (e.g., summarising a case), a Prompt Template action is the answer. Match the action type to the requirement&apos;s complexity and output type.</span>
+            <span><strong>Action type selection questions:</strong> If the requirement involves data retrieval or updates and no custom code is needed, a Flow action is correct. If complex logic or governor-limit-sensitive operations are needed, Apex action. If the requirement involves generating a natural language response using record data (e.g., summarising a case), a Prompt Template action is the answer. Match the action type to the requirement’s complexity and output type.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />

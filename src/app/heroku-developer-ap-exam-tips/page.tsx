@@ -134,13 +134,13 @@ export default function HerokuDeveloperApExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Heroku Developer AP Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a Heroku deployment or integration scenario and ask which Heroku feature,
-          command, or configuration achieves it. Think in terms of Heroku&apos;s container model — every
+          command, or configuration achieves it. Think in terms of Heroku’s container model — every
           app component runs in ephemeral dynos.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dyno type questions: web dynos respond to HTTP requests — they are the only dyno type that receives web traffic. Worker dynos run background jobs (processing a queue, sending emails). One-off dynos run a single command and exit (database migration, admin task). When a scenario says &apos;run a database migration during deployment&apos;, use a one-off dyno (heroku run) — not a web dyno or worker dyno.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Heroku Connect questions: Heroku Connect sync direction options are: (1) Salesforce to Heroku only (read-only mirror), (2) Heroku to Salesforce only (Heroku app writes to Salesforce), (3) Bidirectional (both can update, conflicts resolved by timestamp). When a scenario says &apos;a Heroku app needs to update customer records in Salesforce in real time&apos;, configure a bidirectional or Heroku-to-Salesforce sync — not a read-only connection.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scaling questions: horizontal scaling (adding more web dynos) handles more concurrent users. Vertical scaling (using a larger dyno type) handles more memory-intensive workloads. Autoscaling automatically adds web dynos when response time increases above a threshold. When a scenario says &apos;the app slows down during peak traffic hours due to memory exhaustion&apos;, vertical scaling (larger dyno) is more appropriate than horizontal scaling (more small dynos).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dyno type questions: web dynos respond to HTTP requests — they are the only dyno type that receives web traffic. Worker dynos run background jobs (processing a queue, sending emails). One-off dynos run a single command and exit (database migration, admin task). When a scenario says ’run a database migration during deployment’, use a one-off dyno (heroku run) — not a web dyno or worker dyno.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Heroku Connect questions: Heroku Connect sync direction options are: (1) Salesforce to Heroku only (read-only mirror), (2) Heroku to Salesforce only (Heroku app writes to Salesforce), (3) Bidirectional (both can update, conflicts resolved by timestamp). When a scenario says ’a Heroku app needs to update customer records in Salesforce in real time’, configure a bidirectional or Heroku-to-Salesforce sync — not a read-only connection.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scaling questions: horizontal scaling (adding more web dynos) handles more concurrent users. Vertical scaling (using a larger dyno type) handles more memory-intensive workloads. Autoscaling automatically adds web dynos when response time increases above a threshold. When a scenario says ’the app slows down during peak traffic hours due to memory exhaustion’, vertical scaling (larger dyno) is more appropriate than horizontal scaling (more small dynos).</li>
         </ul>
       </section>
 
@@ -169,7 +169,7 @@ export default function HerokuDeveloperApExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Config Vars vs .env — Environment Variables Are Not in Code</p>
-            <p className="text-sm text-gray-700">Config Vars are Heroku&apos;s secure environment variable store — set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git — the exam expects Config Vars for all secrets and environment-specific settings.</p>
+            <p className="text-sm text-gray-700">Config Vars are Heroku’s secure environment variable store — set via the dashboard or CLI and injected at runtime. They should never be hardcoded in application code or checked into version control. Candidates put API keys in .env files and push them to Git — the exam expects Config Vars for all secrets and environment-specific settings.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Release Phase — Run Migrations Before New Code Goes Live</p>

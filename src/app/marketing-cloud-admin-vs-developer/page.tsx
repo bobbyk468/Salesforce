@@ -54,11 +54,11 @@ const faqItems = [
   },
   {
     question: 'Is Marketing Cloud Developer harder than MC Admin?',
-    answer: 'Marketing Cloud Developer is generally harder for candidates without marketing technology coding experience. It requires proficiency in AMPscript (SFMC&apos;s scripting language for personalisation), SSJS for complex server-side logic, REST/SOAP API for external system integration, and Guide Template Language (GTL) for dynamic content. Admin is harder for pure developers who lack marketing operations knowledge — it tests configuration, deliverability, and data management topics that require platform familiarity.',
+    answer: 'Marketing Cloud Developer is generally harder for candidates without marketing technology coding experience. It requires proficiency in AMPscript (SFMC’s scripting language for personalisation), SSJS for complex server-side logic, REST/SOAP API for external system integration, and Guide Template Language (GTL) for dynamic content. Admin is harder for pure developers who lack marketing operations knowledge — it tests configuration, deliverability, and data management topics that require platform familiarity.',
   },
   {
     question: 'What is AMPscript and is it tested heavily in MC Developer?',
-    answer: 'AMPscript is Salesforce Marketing Cloud&apos;s proprietary scripting language used in email content, landing pages, and SMS messages to create dynamic, personalised content. It is the most heavily tested technical skill in the Marketing Cloud Developer exam — expect questions on AMPscript syntax, lookuprows functions, IF/ELSE logic, FOR loops for iterating rows, and SET/OUTPUT block patterns for rendering personalised content in emails.',
+    answer: 'AMPscript is Salesforce Marketing Cloud’s proprietary scripting language used in email content, landing pages, and SMS messages to create dynamic, personalised content. It is the most heavily tested technical skill in the Marketing Cloud Developer exam — expect questions on AMPscript syntax, lookuprows functions, IF/ELSE logic, FOR loops for iterating rows, and SET/OUTPUT block patterns for rendering personalised content in emails.',
   },
 ]
 
@@ -76,7 +76,7 @@ export default function MarketingCloudAdminVsDeveloperPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Both Marketing Cloud certifications validate SFMC expertise, but Admin focuses on platform configuration
-          and operations while Developer tests custom code and API skills. Here&apos;s how to choose.
+          and operations while Developer tests custom code and API skills. Here’s how to choose.
         </p>
       </header>
 

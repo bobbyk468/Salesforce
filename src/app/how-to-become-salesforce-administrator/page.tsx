@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'Can I learn Salesforce for free?',
-    answer: 'Yes — the core Salesforce training resources are free. Trailhead (trailhead.salesforce.com) is Salesforce&apos;s official free learning platform with hundreds of modules and guided projects. A Salesforce Developer Edition org is also free and gives you a full Salesforce environment to practice in. The only cost is the $200 ADM-201 exam fee (retakes are $100).',
+    answer: 'Yes — the core Salesforce training resources are free. Trailhead (trailhead.salesforce.com) is Salesforce’s official free learning platform with hundreds of modules and guided projects. A Salesforce Developer Edition org is also free and gives you a full Salesforce environment to practice in. The only cost is the $200 ADM-201 exam fee (retakes are $100).',
   },
   {
     question: 'What comes after Salesforce Administrator?',
@@ -119,7 +119,7 @@ export default function HowToBecomeSalesforceAdministratorPage() {
             <div className="flex-shrink-0 w-8 h-8 rounded-full bg-salesforce-blue text-white flex items-center justify-center font-bold text-sm">2</div>
             <div>
               <p className="font-semibold text-gray-900 mb-1">Complete Salesforce Trailhead Admin Trails (Free)</p>
-              <p>Trailhead (trailhead.salesforce.com) is Salesforce&apos;s official learning platform — free, gamified, and comprehensive. Start with the &ldquo;Admin Beginner&rdquo; trail, then &ldquo;Admin Intermediate.&rdquo; Complete the &ldquo;Prepare for Your Salesforce Administrator Credential&rdquo; trail. These modules are directly aligned to the ADM-201 exam and include hands-on challenges in a Trailhead Playground org.</p>
+              <p>Trailhead (trailhead.salesforce.com) is Salesforce’s official learning platform — free, gamified, and comprehensive. Start with the &ldquo;Admin Beginner&rdquo; trail, then &ldquo;Admin Intermediate.&rdquo; Complete the &ldquo;Prepare for Your Salesforce Administrator Credential&rdquo; trail. These modules are directly aligned to the ADM-201 exam and include hands-on challenges in a Trailhead Playground org.</p>
             </div>
           </div>
           <div className="flex gap-4">

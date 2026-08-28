@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "Dev Lifecycle & Deployment",
-    "description": "This exam covers sandbox strategy, source-driven development, CI/CD pipelines, and package-based deployment on the Salesforce Platform. You&apos;ll need to choose between change sets and unlocked packages and design a release management process.",
+    "description": "This exam covers sandbox strategy, source-driven development, CI/CD pipelines, and package-based deployment on the Salesforce Platform. You’ll need to choose between change sets and unlocked packages and design a release management process.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

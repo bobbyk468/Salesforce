@@ -145,7 +145,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For send classification questions: transactional sends bypass unsubscribe rules because they are legally required communications (receipts, password resets). Commercial sends must honour the unsubscribe opt-out. Misclassifying a commercial send as transactional violates CAN-SPAM — always identify the business purpose before choosing classification.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation sequencing questions: Import Activity must complete before a Query Activity that references the newly imported data extension. Data Extract and File Transfer activities work together to export data to SFTP — File Transfer moves the extract to an external location; running File Transfer alone without Data Extract first produces nothing. Order matters in automation flows.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data extension vs list questions: Lists are legacy and simpler but less powerful. Data extensions support multiple fields per subscriber, SQL queries, and are preferred for complex data models. When a scenario mentions &quot;custom attributes&quot;, multi-field subscriber data, or SQL queries, the answer is almost always a data extension, not a list.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data extension vs list questions: Lists are legacy and simpler but less powerful. Data extensions support multiple fields per subscriber, SQL queries, and are preferred for complex data models. When a scenario mentions "custom attributes", multi-field subscriber data, or SQL queries, the answer is almost always a data extension, not a list.</li>
         </ul>
       </section>
 
@@ -158,7 +158,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Build at least one complete automation in a Marketing Cloud sandbox — an import, query, and
           scheduled send workflow — before taking this exam. Candidates who have only studied
-          conceptually consistently fail Automation Studio scenario questions because the tool&apos;s
+          conceptually consistently fail Automation Studio scenario questions because the tool’s
           activity logic (what runs in what order, and why) only becomes clear through hands-on use.
         </p>
       </section>
@@ -169,7 +169,7 @@ export default function MarketingCloudEngagementAdminExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Role-Based Access in Marketing Cloud — Roles vs Permissions</p>
-            <p className="text-sm text-gray-700">Marketing Cloud uses Roles (Administrator, Analyst, Content Creator, Viewer) that bundle permissions. You can also apply individual permissions on top of or restricted from a role. Candidates assume roles are all-or-nothing — the exam expects nuanced role + individual permission configuration when a user needs most of a role&apos;s access but not all.</p>
+            <p className="text-sm text-gray-700">Marketing Cloud uses Roles (Administrator, Analyst, Content Creator, Viewer) that bundle permissions. You can also apply individual permissions on top of or restricted from a role. Candidates assume roles are all-or-nothing — the exam expects nuanced role + individual permission configuration when a user needs most of a role’s access but not all.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. IP Warming — New Sending IPs Need Gradual Volume Ramp</p>

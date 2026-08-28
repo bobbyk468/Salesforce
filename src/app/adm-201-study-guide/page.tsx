@@ -212,7 +212,7 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week ADM-201 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Configuration and Security (20%):</strong> Org setup, user management, profiles, permission sets, OWD, role hierarchy, sharing rules, and field-level security. Use Trailhead&apos;s &ldquo;Salesforce Platform Basics&rdquo; and &ldquo;Data Security&rdquo; modules. Practice: configure a new user with a custom profile, then restrict access to a specific object using FLS.</p>
+          <p><strong>Week 1 — Configuration and Security (20%):</strong> Org setup, user management, profiles, permission sets, OWD, role hierarchy, sharing rules, and field-level security. Use Trailhead’s &ldquo;Salesforce Platform Basics&rdquo; and &ldquo;Data Security&rdquo; modules. Practice: configure a new user with a custom profile, then restrict access to a specific object using FLS.</p>
           <p><strong>Week 2 — Object Manager and App Builder (20%):</strong> Custom objects, field types (formula, roll-up summary), record types, page layouts, validation rules, and Lightning App Builder components. Practice: build a custom object with a roll-up summary field and a master-detail relationship. Assign different page layouts per record type.</p>
           <p><strong>Week 3 — Automation and Process (16%):</strong> Flow Builder (record-triggered, screen flows), approval processes, and the order of execution. Practice: build a record-triggered flow that creates a follow-up task when an Opportunity reaches Closed Won. Configure a two-step approval process.</p>
           <p><strong>Week 4 — Data Management and Analytics (14%):</strong> Import Wizard vs Data Loader, deduplication, report types (summary, matrix, joined), dashboard components, and scheduled reports. Practice: build a matrix report for pipeline by stage and owner. Create a dashboard with a funnel chart.</p>
@@ -224,7 +224,7 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After ADM-201?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Once you&apos;ve passed ADM-201, most admins either deepen platform skills or specialise by cloud:
+          Once you’ve passed ADM-201, most admins either deepen platform skills or specialise by cloud:
         </p>
         <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
           <li>

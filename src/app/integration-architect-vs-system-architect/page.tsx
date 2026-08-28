@@ -74,7 +74,7 @@ export default function IntegrationArchitectVsSystemArchitectPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Integration Architect is a specialist credential in the CTA pathway. System Architect is the credential
-          that completes the System Architect track. Here&apos;s how they relate and what each exam covers.
+          that completes the System Architect track. Here’s how they relate and what each exam covers.
         </p>
       </header>
 

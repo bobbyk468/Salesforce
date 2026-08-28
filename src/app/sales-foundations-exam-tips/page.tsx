@@ -78,7 +78,7 @@ export default function SalesFoundationsExamTipsPage() {
           Salesforce Sales Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Sales Foundations exam is Salesforce&apos;s entry-level Sales Cloud certification. It tests
+          The Sales Foundations exam is Salesforce’s entry-level Sales Cloud certification. It tests
           fundamental knowledge of using Salesforce for sales — the lead-to-cash process, pipeline
           management, and activity tracking that every sales professional needs.
         </p>
@@ -125,13 +125,13 @@ export default function SalesFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Sales Foundations Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
           Questions describe a sales scenario and ask which Salesforce feature, object, or action
-          the sales rep or manager should use. Think from the sales rep&apos;s perspective — what does
+          the sales rep or manager should use. Think from the sales rep’s perspective — what does
           Salesforce natively provide to manage the sales process?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead conversion questions: converting a lead creates a Contact, Account (if not matched), and optionally an Opportunity. The lead&apos;s company becomes the Account name. Lead fields can be mapped to Contact, Account, and Opportunity fields during conversion. After conversion, the original Lead record still exists in a converted state — it is not deleted.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For forecast questions: the four forecast categories are Closed (deals won), Commit (high confidence deals), Best Case (deals the rep hopes to close), and Pipeline (all other open deals). The sales manager&apos;s forecast roll-up aggregates their team&apos;s individual forecasts. When a question asks about &apos;deals the rep is confident about&apos;, the answer is the Commit category.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For activity questions: tasks are to-do items with a due date (call this customer by Friday). Events are calendar appointments with a start and end time (demo call at 2pm). Logging a call creates a completed activity (task with &apos;Completed&apos; status). When a question asks &apos;how does a rep record that they spoke to a customer&apos;, the answer is Log a Call (creates a completed task).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead conversion questions: converting a lead creates a Contact, Account (if not matched), and optionally an Opportunity. The lead’s company becomes the Account name. Lead fields can be mapped to Contact, Account, and Opportunity fields during conversion. After conversion, the original Lead record still exists in a converted state — it is not deleted.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For forecast questions: the four forecast categories are Closed (deals won), Commit (high confidence deals), Best Case (deals the rep hopes to close), and Pipeline (all other open deals). The sales manager’s forecast roll-up aggregates their team’s individual forecasts. When a question asks about ’deals the rep is confident about’, the answer is the Commit category.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For activity questions: tasks are to-do items with a due date (call this customer by Friday). Events are calendar appointments with a start and end time (demo call at 2pm). Logging a call creates a completed activity (task with ’Completed’ status). When a question asks ’how does a rep record that they spoke to a customer’, the answer is Log a Call (creates a completed task).</li>
         </ul>
       </section>
 
@@ -143,7 +143,7 @@ export default function SalesFoundationsExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           Sales Foundations is designed for sales professionals who use Salesforce daily — not
-          administrators or developers. The best preparation is hands-on use of Salesforce&apos;s Sales
+          administrators or developers. The best preparation is hands-on use of Salesforce’s Sales
           Cloud features. If you have 3+ months of daily Salesforce use as a sales rep, you
           likely already know most of what is tested.
         </p>

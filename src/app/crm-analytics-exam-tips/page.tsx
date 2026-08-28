@@ -57,11 +57,11 @@ const faqItems = [
   },
   {
     question: 'What is SAQL and how important is it for this exam?',
-    answer: 'SAQL (Salesforce Analytics Query Language) is CRM Analytics&apos; proprietary query language for dashboard steps. It is similar to SQL but has unique CRM Analytics syntax for groupby, order, limit, and custom calculations. The exam includes questions where you must read SAQL and identify what it returns, or identify the correct SAQL for a given data requirement.',
+    answer: 'SAQL (Salesforce Analytics Query Language) is CRM Analytics’ proprietary query language for dashboard steps. It is similar to SQL but has unique CRM Analytics syntax for groupby, order, limit, and custom calculations. The exam includes questions where you must read SAQL and identify what it returns, or identify the correct SAQL for a given data requirement.',
   },
   {
     question: 'What is Einstein Discovery and what does the exam test about it?',
-    answer: 'Einstein Discovery is CRM Analytics&apos; automated machine learning feature that finds patterns in data and generates predictions and recommendations. The exam tests how to set up a story (now called a model), interpret key influencers, understand prediction scores, and embed Einstein Discovery predictions back into Salesforce records using writeback.',
+    answer: 'Einstein Discovery is CRM Analytics’ automated machine learning feature that finds patterns in data and generates predictions and recommendations. The exam tests how to set up a story (now called a model), interpret key influencers, understand prediction scores, and embed Einstein Discovery predictions back into Salesforce records using writeback.',
   },
   {
     question: 'What concepts do most CRM Analytics candidates get wrong?',
@@ -143,7 +143,7 @@ export default function CRMAnalyticsExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: row-level security in CRM Analytics uses security predicates — SAQL conditions applied to every dataset query that restrict which rows a user can see. Predicates reference user attributes (user ID, role, profile). For dynamic security based on user hierarchy, use the row-level security dataset with a join in the predicate.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dataflow vs. recipe questions: Dataflows are JSON-configured ETL processes (more flexible, code-like configuration). Recipes are visually configured in a UI (more accessible for non-developers). For complex multi-dataset joins, Dataflows may be required; for standard preparation tasks, Recipes are preferred as best practice.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SAQL questions: read the question&apos;s output requirement first. SAQL group by determines the grain; foreach determines which measures to compute; order by and limit control the result set. When a step needs a calculated field (e.g., win rate = closed won / total), it requires a custom SAQL step — not a standard step type.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For SAQL questions: read the question’s output requirement first. SAQL group by determines the grain; foreach determines which measures to compute; order by and limit control the result set. When a step needs a calculated field (e.g., win rate = closed won / total), it requires a custom SAQL step — not a standard step type.</li>
         </ul>
       </section>
 
@@ -171,7 +171,7 @@ export default function CRMAnalyticsExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. XMD (Extended Metadata) — Formatting Is Not Stored in the Dataset</p>
-            <p className="text-sm text-gray-700">XMD controls display properties: field labels, formatting (currency, percent), colours, and display order in lenses and dashboards. It is separate from the dataset schema. Candidates modify dataset schemas to change display formatting — the exam expects XMD modifications for presentation changes. Changing a field&apos;s label in XMD does not change the underlying field name in SAQL.</p>
+            <p className="text-sm text-gray-700">XMD controls display properties: field labels, formatting (currency, percent), colours, and display order in lenses and dashboards. It is separate from the dataset schema. Candidates modify dataset schemas to change display formatting — the exam expects XMD modifications for presentation changes. Changing a field’s label in XMD does not change the underlying field name in SAQL.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. SAQL vs Equals Filters — When to Use Each in Step Configuration</p>

@@ -74,7 +74,7 @@ export default function DataCloudVsCrmAnalyticsPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Both certifications involve data — but they serve very different purposes. Data Cloud unifies customer data
-          for AI and activation. CRM Analytics builds BI dashboards and predictions. Here&apos;s how to choose.
+          for AI and activation. CRM Analytics builds BI dashboards and predictions. Here’s how to choose.
         </p>
       </header>
 

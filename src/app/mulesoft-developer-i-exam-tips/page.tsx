@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is DataWeave and how important is it for the exam?',
-    answer: 'DataWeave is MuleSoft&apos;s data transformation language — the primary way to map, filter, and reshape data in Mule 4 flows. It is tested heavily across multiple sections. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
+    answer: 'DataWeave is MuleSoft’s data transformation language — the primary way to map, filter, and reshape data in Mule 4 flows. It is tested heavily across multiple sections. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
   },
   {
     question: 'What is the difference between MuleSoft Developer I and Developer II?',
@@ -105,7 +105,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What MuleSoft Developer I Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Mule 4 application design</strong> — Flows vs. subflows, event processors (choice, scatter-gather, for-each, parallel-for-each), message structure (payload, attributes, variables), and how data flows through a Mule application.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataWeave 2.0</strong> — Reading and writing DataWeave scripts to transform JSON, XML, and CSV. Key functions: map, filter, mapObject, pluck, groupBy, flatten, and type coercion. Understanding DataWeave&apos;s functional programming model is essential.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>DataWeave 2.0</strong> — Reading and writing DataWeave scripts to transform JSON, XML, and CSV. Key functions: map, filter, mapObject, pluck, groupBy, flatten, and type coercion. Understanding DataWeave’s functional programming model is essential.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Connectors and error handling</strong> — HTTP Request connector, Database connector, File connector, error types (connectivity, expression, security), On Error Continue vs. On Error Propagate, and retry strategies.</li>
         </ul>
       </section>
@@ -168,7 +168,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. DataWeave Type System — Coercion, Null Safety, and Default Operator</p>
-            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — candidates expect an error and miss null-safety logic. The default operator (??) provides a fallback value when an expression is null. payload.field default &apos;N/A&apos; prevents null propagation. Forgetting null safety in transformation scenarios is the most common DataWeave mistake on the exam.</p>
+            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — candidates expect an error and miss null-safety logic. The default operator (??) provides a fallback value when an expression is null. payload.field default ’N/A’ prevents null propagation. Forgetting null safety in transformation scenarios is the most common DataWeave mistake on the exam.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Error Handling Scope — Try, On Error Continue vs On Error Propagate</p>

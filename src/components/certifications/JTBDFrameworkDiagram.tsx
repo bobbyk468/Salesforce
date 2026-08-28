@@ -5,7 +5,7 @@ export default function JTBDFrameworkDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Jobs to be Done (JTBD) framework (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         JTBD reframes design around what a user is trying to <strong>accomplish</strong>, not the product feature
-        itself: &quot;When [situation], I want to [motivation], so I can [expected outcome].&quot;
+        itself: "When [situation], I want to [motivation], so I can [expected outcome]."
       </p>
       <svg role="img" aria-labelledby="jtbd-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 140" xmlns="http://www.w3.org/2000/svg">
         <title id="jtbd-title">JTBD statement structure: situation, motivation, expected outcome, feeding into a design solution</title>

@@ -31,7 +31,7 @@
   "examFormat": {
     "heading": "Marketing Cloud Personalization Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. You&apos;ll be asked to choose between server-side and client-side campaigns, configure a recommendation strategy for a specific page type, or design a triggered campaign based on segment entry.",
+    "scenarioPercent": "About 50-60% of questions are scenario-based. You’ll be asked to choose between server-side and client-side campaigns, configure a recommendation strategy for a specific page type, or design a triggered campaign based on segment entry.",
     "bestWayToPass": [
       "<strong>Understand the web SDK:</strong> Know how the Evergage beacon is deployed, how sitemap configurations map page types, and how events flow to the Personalization platform.",
       "<strong>Master Einstein Recipes:</strong> Know the difference between Collaborative Filtering, Content Affinity, and User Trending, and how to combine them in a Strategy with boosters and exclusions.",

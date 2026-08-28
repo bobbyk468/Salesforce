@@ -61,7 +61,7 @@ const faqItems = [
   },
   {
     question: 'What is a data extension in Marketing Cloud and why does it matter?',
-    answer: 'A data extension is Marketing Cloud&apos;s primary data storage object — essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
+    answer: 'A data extension is Marketing Cloud’s primary data storage object — essentially a table that stores subscriber data for targeting and personalisation. Data extensions replace the legacy All Subscribers list for most use cases. Understanding when to use data extensions vs. lists, and how to relate data extensions to All Subscribers, is a core concept for all Marketing Cloud certifications.',
   },
   {
     question: 'What concepts do most Marketing Cloud Engagement Foundations candidates get wrong?',
@@ -84,7 +84,7 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
           Salesforce Marketing Cloud Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Marketing Cloud Engagement Foundations exam is Salesforce&apos;s entry-level Marketing Cloud
+          The Marketing Cloud Engagement Foundations exam is Salesforce’s entry-level Marketing Cloud
           certification. It tests basic Email Studio skills, subscriber management, and how Marketing
           Cloud organises and sends email campaigns.
         </p>
@@ -141,14 +141,14 @@ export default function MarketingCloudEngagementFoundationsExamTipsPage() {
           (AMPscript at scale is for Email Specialist, not Foundations).
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber status questions: Active = can receive emails. Held = had a bounce, temporarily suppressed. Unsubscribed = opted out of all emails from this business unit. Bounced = permanent hard bounce, removed from sends. When a subscriber clicks &apos;unsubscribe&apos;, their status becomes Unsubscribed — not Bounced.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For content questions: Content Builder is the modern content creation tool. Classic Email Studio templates are the legacy approach. Content Builder reusable blocks allow a single piece of content to be used in multiple emails — changes to the block update all emails. When a question says &apos;manage content centrally&apos;, Content Builder reusable blocks is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscriber status questions: Active = can receive emails. Held = had a bounce, temporarily suppressed. Unsubscribed = opted out of all emails from this business unit. Bounced = permanent hard bounce, removed from sends. When a subscriber clicks ’unsubscribe’, their status becomes Unsubscribed — not Bounced.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For content questions: Content Builder is the modern content creation tool. Classic Email Studio templates are the legacy approach. Content Builder reusable blocks allow a single piece of content to be used in multiple emails — changes to the block update all emails. When a question says ’manage content centrally’, Content Builder reusable blocks is the answer.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For compliance questions: CAN-SPAM requires a physical postal address in every commercial email, a clear unsubscribe mechanism, and honouring opt-outs within 10 business days. Marketing Cloud handles compliance through Send Classifications — every email send must have a Send Classification that defines the from address and unsubscribe profile.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks before booking

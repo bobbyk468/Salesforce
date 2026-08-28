@@ -106,7 +106,7 @@ export default function AppBuilderExamTipsPage() {
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The DEV-402 has 60 questions in 105 minutes. Passing score is 63%. Aim for 76%+ on full mocks before booking.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Highest-weight sections: Data Modelling &amp; Management (24%) and Process Automation &amp; Logic (27%) — cover these first.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice declaratively in a Developer Edition org. The exam rewards hands-on understanding of when and why to use each feature.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite — take it first if you haven&apos;t already.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The ADM-201 (Salesforce Administrator) is a recommended prerequisite — take it first if you haven’t already.</li>
         </ul>
       </section>
 
@@ -158,7 +158,7 @@ export default function AppBuilderExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
           Use this minimum benchmark before scheduling your DEV-402 exam:
         </p>
@@ -183,7 +183,7 @@ export default function AppBuilderExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Master-Detail vs Lookup: The Sharing and Roll-Up Difference</p>
-            <p className="text-sm text-gray-700">Master-Detail relationships roll up summary fields (Count, Sum, Min, Max) from child to parent automatically — Lookup relationships cannot. More critically, Master-Detail OWD is inherited: if a Master record is Private, child records follow that access level regardless of the child object&apos;s own OWD. Lookup child records do NOT inherit OWD. Exam scenarios ask you to choose between them — if the scenario mentions roll-up summaries or shared security, choose Master-Detail.</p>
+            <p className="text-sm text-gray-700">Master-Detail relationships roll up summary fields (Count, Sum, Min, Max) from child to parent automatically — Lookup relationships cannot. More critically, Master-Detail OWD is inherited: if a Master record is Private, child records follow that access level regardless of the child object’s own OWD. Lookup child records do NOT inherit OWD. Exam scenarios ask you to choose between them — if the scenario mentions roll-up summaries or shared security, choose Master-Detail.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Lightning App Builder Visibility Rules vs Profile-Based Assignment</p>
@@ -247,7 +247,7 @@ export default function AppBuilderExamTipsPage() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          After you&apos;re consistently scoring 75%+ on App Builder mocks, the most common next steps are{' '}
+          After you’re consistently scoring 75%+ on App Builder mocks, the most common next steps are{' '}
           <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">
             Advanced Administrator
           </Link>

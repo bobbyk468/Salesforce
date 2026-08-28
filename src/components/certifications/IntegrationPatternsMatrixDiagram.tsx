@@ -11,7 +11,7 @@ export default function IntegrationPatternsMatrixDiagram() {
     <figure id="integration-patterns-matrix-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Integration pattern decision matrix (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Integration Architect scenarios reduce to matching the requirement&apos;s latency and fan-out needs to the
+        Integration Architect scenarios reduce to matching the requirement’s latency and fan-out needs to the
         correct pattern.
       </p>
       <svg role="img" aria-labelledby="ipm-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 620 200" xmlns="http://www.w3.org/2000/svg">

@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is AMPscript and how is it used in Marketing Cloud?',
-    answer: 'AMPscript is Marketing Cloud&apos;s proprietary scripting language for dynamic content in emails, SMS, landing pages, and Cloud Pages. It uses functions like Lookup(), LookupRows(), RetrieveSalesforceObjects(), and SetValue() to personalise content based on subscriber data. Understanding AMPscript syntax and function signatures is essential for this exam.',
+    answer: 'AMPscript is Marketing Cloud’s proprietary scripting language for dynamic content in emails, SMS, landing pages, and Cloud Pages. It uses functions like Lookup(), LookupRows(), RetrieveSalesforceObjects(), and SetValue() to personalise content based on subscriber data. Understanding AMPscript syntax and function signatures is essential for this exam.',
   },
   {
     question: 'What SQL knowledge is needed for Marketing Cloud Developer?',

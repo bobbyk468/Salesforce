@@ -174,7 +174,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Auditing and Monitoring (15%)
             </p>
-            <p><strong>Setup Audit Trail:</strong> tracks the last 180 days of setup changes — who changed what, when. Essential for compliance and troubleshooting. <strong>Field History Tracking:</strong> tracks changes to up to 20 fields per object, retained for 18 months (Field Audit Trail extends this). <strong>Event Monitoring (Shield):</strong> detailed logs of user activity — API calls, login events, report exports, field access. Know the difference between Setup Audit Trail (setup changes) and Event Monitoring (user activity). <strong>Health Check:</strong> Salesforce&apos;s built-in security review tool — scores your org against security best practices. Know what makes a high vs low Health Check score.</p>
+            <p><strong>Setup Audit Trail:</strong> tracks the last 180 days of setup changes — who changed what, when. Essential for compliance and troubleshooting. <strong>Field History Tracking:</strong> tracks changes to up to 20 fields per object, retained for 18 months (Field Audit Trail extends this). <strong>Event Monitoring (Shield):</strong> detailed logs of user activity — API calls, login events, report exports, field access. Know the difference between Setup Audit Trail (setup changes) and Event Monitoring (user activity). <strong>Health Check:</strong> Salesforce’s built-in security review tool — scores your org against security best practices. Know what makes a high vs low Health Check score.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -188,7 +188,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Analytics, Reports and Dashboards (10%)
             </p>
-            <p><strong>Joined Reports:</strong> combine data from up to 5 report types in a single report — each block has its own filters and groupings. Useful for comparing data from different objects side by side. <strong>Cross-filters:</strong> filter a report to show records with or without related records (e.g., accounts with no open opportunities). <strong>Bucket fields:</strong> group report values into named categories without creating formula fields. <strong>Historical Trending:</strong> track record changes over time (up to 3 months) — useful for pipeline movement analysis. <strong>Dynamic Dashboards:</strong> display data based on the logged-in viewer&apos;s context (each user sees their own data) vs a fixed running user.</p>
+            <p><strong>Joined Reports:</strong> combine data from up to 5 report types in a single report — each block has its own filters and groupings. Useful for comparing data from different objects side by side. <strong>Cross-filters:</strong> filter a report to show records with or without related records (e.g., accounts with no open opportunities). <strong>Bucket fields:</strong> group report values into named categories without creating formula fields. <strong>Historical Trending:</strong> track record changes over time (up to 3 months) — useful for pipeline movement analysis. <strong>Dynamic Dashboards:</strong> display data based on the logged-in viewer’s context (each user sees their own data) vs a fixed running user.</p>
           </div>
         </div>
       </section>
@@ -196,9 +196,9 @@ export default function AdvancedAdministratorStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Advanced Administrator Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Advanced Security (20%):</strong> Study session-based permission sets, permission set groups, and Salesforce Shield (Field Audit Trail, Event Monitoring, Platform Encryption). Enable Health Check in a Developer Edition org and review your score. Understand each Shield product&apos;s use case and regulatory context.</p>
+          <p><strong>Week 1 — Advanced Security (20%):</strong> Study session-based permission sets, permission set groups, and Salesforce Shield (Field Audit Trail, Event Monitoring, Platform Encryption). Enable Health Check in a Developer Edition org and review your score. Understand each Shield product’s use case and regulatory context.</p>
           <p><strong>Week 2 — Advanced Objects &amp; Platform Features (15%):</strong> Study External Objects (Salesforce Connect, OData), Big Objects (use cases, query limitations), Custom Metadata Types vs Custom Settings (what makes CMT deployable), and Platform Events (publish/subscribe event model). Practice: create a Custom Metadata Type and deploy it via changeset.</p>
-          <p><strong>Week 3 — Auditing &amp; Monitoring (15%):</strong> Learn Setup Audit Trail, Field History Tracking limits, and Event Monitoring. Complete Trailhead&apos;s &ldquo;Audit Trail, Login History, and Setup&rdquo; module. Understand what each monitoring tool captures and for how long.</p>
+          <p><strong>Week 3 — Auditing &amp; Monitoring (15%):</strong> Learn Setup Audit Trail, Field History Tracking limits, and Event Monitoring. Complete Trailhead’s &ldquo;Audit Trail, Login History, and Setup&rdquo; module. Understand what each monitoring tool captures and for how long.</p>
           <p><strong>Week 4 — Sales Cloud (14%): </strong> Deep dive into ETM — create a territory model, configure assignment rules, and associate opportunities. Study Opportunity Splits and Collaborative Forecasting with overrides. Practice: set up ETM from scratch in a Developer Edition org with Agentforce and Sales Cloud enabled.</p>
           <p><strong>Week 5 — Service Cloud &amp; Data Management (14% + 12%):</strong> Study Omni-Channel routing configurations (queue-based vs skills-based), entitlement processes and milestone actions. Review advanced data management: deduplication rules for large orgs, mass transfer scenarios, Data Loader scheduling.</p>
           <p><strong>Week 6:</strong> Advanced analytics practice (joined reports, cross-filters, historical trending) + full timed mock exams. Score 75%+ consistently before booking.</p>
@@ -224,7 +224,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks (60 Q / 105 min) before booking
@@ -272,7 +272,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
         </div>
         <p className="text-xs text-gray-600 mt-4">
           <Link href="/administrator-vs-advanced-administrator" className="text-salesforce-blue underline">
-            ADM-201 vs Advanced Administrator — what&apos;s different? →
+            ADM-201 vs Advanced Administrator — what’s different? →
           </Link>
         </p>
       </section>

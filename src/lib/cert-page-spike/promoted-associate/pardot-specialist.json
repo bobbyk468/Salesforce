@@ -36,7 +36,7 @@
     "bestWayToPass": [
       "<strong>Know the automation hierarchy:</strong> Understand when to use completion actions (one-time, asset-specific), automation rules (continuous, criteria-based), and Engagement Studio (multi-step nurture programs).",
       "<strong>Master scoring vs grading:</strong> Scoring measures engagement (activity-based), grading measures fit (attribute-based). Know scoring categories for multi-product tracking and grading profiles for ideal customer matching.",
-      "<strong>Study Pardot-Salesforce sync:</strong> Understand field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), the connector user&apos;s permissions, and how prospects map to leads and contacts.",
+      "<strong>Study Pardot-Salesforce sync:</strong> Understand field sync behavior settings (Pardot wins, Salesforce wins, Most Recently Updated), the connector user’s permissions, and how prospects map to leads and contacts.",
       "<strong>Practice forms and progressive profiling:</strong> Know the difference between Pardot Forms and Form Handlers, how progressive profiling works on repeat visits, and how completion actions trigger follow-up automations."
     ]
   },

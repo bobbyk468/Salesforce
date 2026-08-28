@@ -165,7 +165,7 @@ export default function TableauDataAnalystStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Tableau fundamentals — connect to data (Excel, CSV, database), understand data types, rows vs columns, and Tableau&apos;s shelves (Rows, Columns, Marks, Filters).' },
+            { week: 'Week 1', focus: 'Tableau fundamentals — connect to data (Excel, CSV, database), understand data types, rows vs columns, and Tableau’s shelves (Rows, Columns, Marks, Filters).' },
             { week: 'Week 2', focus: 'Chart types — build bar charts, line charts, scatter plots, maps (geographic roles), heat maps, treemaps, and bullet charts. Know when to use each for specific data relationships.' },
             { week: 'Week 3', focus: 'Calculated fields — string, date, number, and logical calculations. Aggregate vs row-level calculations. IF/CASE/IIF/IFNULL functions. ZN() for null handling.' },
             { week: 'Week 4', focus: 'LOD expressions — FIXED, INCLUDE, EXCLUDE. Work through 10+ LOD examples. Practice business scenarios: "total sales per customer regardless of region filter" → FIXED LOD.' },

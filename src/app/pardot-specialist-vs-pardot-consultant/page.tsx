@@ -75,7 +75,7 @@ export default function PardotSpecialistVsPardotConsultantPage() {
           Pardot Specialist vs Pardot Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both Pardot certifications test the same platform — but at very different levels. Here&apos;s which to take first and when to go for the Consultant credential.
+          Both Pardot certifications test the same platform — but at very different levels. Here’s which to take first and when to go for the Consultant credential.
         </p>
       </div>
 

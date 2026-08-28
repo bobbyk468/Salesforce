@@ -146,13 +146,13 @@ export default function PardotConsultantExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation tool selection questions: Completion actions fire immediately when an asset interaction occurs (real-time, individual). Automation rules run continuously against all prospects matching criteria (retroactive, batch-style). Segmentation rules run once at creation (static snapshot). Engagement Studio orchestrates multi-step sequences with delays and branching. Match the right tool to the requirement: retroactive = automation rule; new-interaction-only = completion action; complex multi-step nurture = Engagement Studio.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scoring questions: Default score profile assigns +1 for email open, +5 for link click, +50 for form submit, +100 for request a demo form. Scores decay over time with inactivity. Scores can be manually adjusted. When a prospect&apos;s score drops or is manually reset, it does not affect grade. Score and grade are completely independent — a prospect can have a high score (very engaged) but a low grade (wrong industry/company size).</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For scoring questions: Default score profile assigns +1 for email open, +5 for link click, +50 for form submit, +100 for request a demo form. Scores decay over time with inactivity. Scores can be manually adjusted. When a prospect’s score drops or is manually reset, it does not affect grade. Score and grade are completely independent — a prospect can have a high score (very engaged) but a low grade (wrong industry/company size).</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: Always check what triggers the sync — field edits in Pardot, form submissions, manual sync triggers, and connector user activity. The connector user in Salesforce must have the Pardot Connector permission set and API access. When a prospect is converted from Lead to Contact in Salesforce, Pardot automatically re-links to the Contact record if the email address matches.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks before booking
@@ -161,7 +161,7 @@ export default function PardotConsultantExamTipsPage() {
           Build at least one complete Engagement Studio program in a Pardot sandbox before booking —
           include a branching path based on email open, a score threshold check, and a CRM assignment
           action. Candidates who have only studied theory consistently misidentify which automation
-          tool to use in scenario questions because the tools&apos; distinctions only become clear
+          tool to use in scenario questions because the tools’ distinctions only become clear
           through hands-on configuration.
         </p>
       </section>

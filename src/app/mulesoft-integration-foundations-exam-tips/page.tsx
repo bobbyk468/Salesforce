@@ -115,7 +115,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">3-Week MuleSoft Integration Foundations Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p><strong>Week 1:</strong> Integration fundamentals and API-led connectivity. Understand why point-to-point integration creates spaghetti architecture and how API-led connectivity solves it with reusable, composable layers. Memorise the three layers: System APIs (unlock data from systems of record), Process APIs (orchestrate and transform), Experience APIs (tailor data to the consumer channel).</p>
-          <p><strong>Week 2:</strong> Anypoint Platform tools. Design Center (API design in RAML or OpenAPI), Anypoint Exchange (asset marketplace for APIs and connectors), Anypoint Studio (local IDE for building Mule apps), API Manager (security policies, rate limits, SLA tiers, client app management), Runtime Manager (deploy and monitor Mule apps, view logs and metrics). DataWeave is MuleSoft&apos;s data transformation language — know what it does, not how to write it.</p>
+          <p><strong>Week 2:</strong> Anypoint Platform tools. Design Center (API design in RAML or OpenAPI), Anypoint Exchange (asset marketplace for APIs and connectors), Anypoint Studio (local IDE for building Mule apps), API Manager (security policies, rate limits, SLA tiers, client app management), Runtime Manager (deploy and monitor Mule apps, view logs and metrics). DataWeave is MuleSoft’s data transformation language — know what it does, not how to write it.</p>
           <p><strong>Week 3:</strong> Core concepts and terminology. Mule Events (payload + attributes + variables), Connectors (pre-built, reusable components for systems like Salesforce, SAP, databases), the business value of composable integration (reuse, self-service, reduced IT backlog). Practice with full 40-question mock exams targeting 80%+ before booking.</p>
         </div>
       </section>
@@ -145,7 +145,7 @@ export default function MuleSoftIntegrationFoundationsExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The official passing score is 70% (28/40 questions). Reaching 80%+ on practice sets means you have a 10-point buffer
-          and are well above the threshold. Given the exam&apos;s conceptual focus, candidates with strong API-led connectivity
+          and are well above the threshold. Given the exam’s conceptual focus, candidates with strong API-led connectivity
           understanding typically pass in 2–3 weeks of focused study.
         </p>
       </section>

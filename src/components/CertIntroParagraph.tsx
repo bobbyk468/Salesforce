@@ -58,7 +58,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
         <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
           certification path
         </Link>{' '}
-        to understand where this certification fits. Below you&apos;ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
+        to understand where this certification fits. Below you’ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
       </p>
     )
   }
@@ -69,7 +69,7 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
       <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
         certification path
       </Link>{' '}
-      to understand where this certification fits in your career. Below you&apos;ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
+      to understand where this certification fits in your career. Below you’ll find exam weightage, study tips, and practice questions.{studyGuideLink && <> See our{studyGuideLink}</>}{extraLinks}
     </p>
   )
 }

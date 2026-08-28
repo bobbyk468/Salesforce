@@ -55,7 +55,7 @@ const faqItems = [
   },
   {
     question: 'What is TotalConnect and why is it important for the MCI AP exam?',
-    answer: 'TotalConnect is MCI&apos;s data integration layer that connects to hundreds of marketing platforms and ad channels. It has native connectors (Google Analytics, Facebook Ads, Salesforce CRM, Marketing Cloud), custom API connectors, and file upload connectors (CSV, FTP). The exam tests how to configure data stream connections, set up scheduling for automated data pulls, and troubleshoot connection failures.',
+    answer: 'TotalConnect is MCI’s data integration layer that connects to hundreds of marketing platforms and ad channels. It has native connectors (Google Analytics, Facebook Ads, Salesforce CRM, Marketing Cloud), custom API connectors, and file upload connectors (CSV, FTP). The exam tests how to configure data stream connections, set up scheduling for automated data pulls, and troubleshoot connection failures.',
   },
   {
     question: 'What is data harmonisation in Marketing Cloud Intelligence?',
@@ -138,9 +138,9 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
           what KPIs matter) helps interpret scenarios accurately.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data stream questions: when a data stream shows missing data, check: (1) the connection credentials are valid, (2) the API permissions include the required data, (3) the date range of the data pull covers the expected period, (4) the field mappings are correctly configured. When a stream shows &apos;No Data&apos; after a connection change, the most common cause is a permission scope issue on the connected account credentials.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For harmonisation questions: cross-channel metrics require mapping each source&apos;s field name to one MCI metric. If Facebook uses &apos;Link Clicks&apos; and Google uses &apos;Clicks&apos; for the same concept, map both to a single &apos;Clicks&apos; metric in MCI. Calculated metrics combine metrics with formulas: CTR = Clicks / Impressions × 100. ROAS = Revenue / Cost. When a scenario says &apos;create a single clicks metric across all ad platforms&apos;, configure a harmonised metric mapping — not separate widgets for each platform.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI alert questions: Einstein Insights automatically detects anomalies in your metrics (a sudden drop in CTR, an unusual spike in cost). KPI Goals set target values for tracking progress. When a scenario says &apos;alert the marketing team when ROAS drops below 3x&apos;, configure a KPI Goal with an alert threshold — not a scheduled report or custom Flow.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data stream questions: when a data stream shows missing data, check: (1) the connection credentials are valid, (2) the API permissions include the required data, (3) the date range of the data pull covers the expected period, (4) the field mappings are correctly configured. When a stream shows ’No Data’ after a connection change, the most common cause is a permission scope issue on the connected account credentials.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For harmonisation questions: cross-channel metrics require mapping each source’s field name to one MCI metric. If Facebook uses ’Link Clicks’ and Google uses ’Clicks’ for the same concept, map both to a single ’Clicks’ metric in MCI. Calculated metrics combine metrics with formulas: CTR = Clicks / Impressions × 100. ROAS = Revenue / Cost. When a scenario says ’create a single clicks metric across all ad platforms’, configure a harmonised metric mapping — not separate widgets for each platform.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI alert questions: Einstein Insights automatically detects anomalies in your metrics (a sudden drop in CTR, an unusual spike in cost). KPI Goals set target values for tracking progress. When a scenario says ’alert the marketing team when ROAS drops below 3x’, configure a KPI Goal with an alert threshold — not a scheduled report or custom Flow.</li>
         </ul>
       </section>
 
@@ -168,7 +168,7 @@ export default function MarketingCloudIntelligenceApExamTipsPage() {
             <p className="text-sm text-gray-700">Streams are the data connectors that ingest raw marketing performance data from ad platforms, email tools, and CRMs into Marketing Cloud Intelligence. Workspaces are the analysis environments where data is combined, visualised, and reported. Candidates try to configure analytics in the Stream setup — Streams are only for ingestion; all analysis happens in Workspaces.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data — Why Metrics Don&apos;t Match Source Platforms</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Harmonised vs Raw Data — Why Metrics Don’t Match Source Platforms</p>
             <p className="text-sm text-gray-700">Marketing Cloud Intelligence harmonises metrics from disparate platforms into a common schema (e.g., mapping "clicks" from Google Ads, Meta Ads, and Marketing Cloud into one unified "Clicks" metric). Raw data from each platform may use different field names and definitions. Candidates expect raw platform numbers to appear unchanged — the exam expects understanding of the harmonisation layer and why numbers may differ slightly from native platform reports.</p>
           </div>
           <div>

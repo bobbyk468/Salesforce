@@ -84,7 +84,7 @@ export default function PlatformFoundationsExamTipsPage() {
           Salesforce Platform Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Platform Foundations exam is Salesforce&apos;s entry-level platform certification. It tests fundamental
+          The Platform Foundations exam is Salesforce’s entry-level platform certification. It tests fundamental
           knowledge of the Salesforce platform: objects, fields, security, and automation basics.
           These tips focus on the core concepts that every Salesforce professional needs to know.
         </p>
@@ -141,9 +141,9 @@ export default function PlatformFoundationsExamTipsPage() {
           or advanced configuration that would be out of scope for a foundations exam.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For field type questions: Text fields store alphanumeric data. Number fields store numeric values. Lookup fields create a relationship to another object. Master-Detail fields create a tighter parent-child relationship where the child can&apos;t exist without the parent. Formula fields calculate values from other fields — they are read-only.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For field type questions: Text fields store alphanumeric data. Number fields store numeric values. Lookup fields create a relationship to another object. Master-Detail fields create a tighter parent-child relationship where the child can’t exist without the parent. Formula fields calculate values from other fields — they are read-only.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For security questions: profiles control which objects and fields a user can access. Permission sets add additional access on top of profiles. OWDs (Organisation-Wide Defaults) set the baseline sharing level for each object. Sharing rules open up access beyond OWDs. You can never use these to restrict access below what a profile grants.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: validation rules prevent saving invalid data. Formula fields calculate read-only values. Flow automates processes (screen flow for guided users, auto-launched for background logic). When a scenario says &apos;when a record is saved, automatically update a field&apos;, the answer is an auto-launched Flow triggered on record save — not a manual process.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For automation questions: validation rules prevent saving invalid data. Formula fields calculate read-only values. Flow automates processes (screen flow for guided users, auto-launched for background logic). When a scenario says ’when a record is saved, automatically update a field’, the answer is an auto-launched Flow triggered on record save — not a manual process.</li>
         </ul>
       </section>
 
@@ -176,7 +176,7 @@ export default function PlatformFoundationsExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. App Launcher vs Navigation Bar vs Home Page — Three Separate Customisation Areas</p>
-            <p className="text-sm text-gray-700">The App Launcher shows all apps available to a user (customised via profiles and permission sets). The Navigation Bar (within a Lightning App) defines the tabs visible in a specific app. The Home Page displays components relevant to the user&apos;s role. Candidates customise the App Launcher when they mean the Navigation Bar — the exam distinguishes these as separate customisation surfaces.</p>
+            <p className="text-sm text-gray-700">The App Launcher shows all apps available to a user (customised via profiles and permission sets). The Navigation Bar (within a Lightning App) defines the tabs visible in a specific app. The Home Page displays components relevant to the user’s role. Candidates customise the App Launcher when they mean the Navigation Bar — the exam distinguishes these as separate customisation surfaces.</p>
           </div>
         </div>
       </section>

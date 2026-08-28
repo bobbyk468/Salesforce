@@ -9,7 +9,7 @@
       },
       {
         "label": "AI/ML Engineers Adopting Claude",
-        "description": "Developers moving from other LLM providers who need to prove they understand Anthropic&apos;s SDK, prompt-injection defenses, and the tool-calling lifecycle end-to-end."
+        "description": "Developers moving from other LLM providers who need to prove they understand Anthropic’s SDK, prompt-injection defenses, and the tool-calling lifecycle end-to-end."
       },
       {
         "label": "Technical Leads Shipping AI Features",
@@ -34,9 +34,9 @@
     "scenarioPercent": "Most questions present a realistic development scenario — a code snippet, an API response, or a system-design decision — and ask you to identify the correct behavior, the best fix, or the right architectural choice. Rote memorization of API parameters is not enough; the exam tests whether you understand why each parameter matters.",
     "bestWayToPass": [
       "<strong>Build a working project before you study:</strong> A Slack bot, a CLI tool, or a web app that calls the Claude API end-to-end — the debugging experience teaches more than any guide.",
-      "<strong>Master the tool-use loop:</strong> Define tools with JSON schemas, handle Claude&apos;s tool-call responses, return results, and manage multi-turn agent conversations including error cases.",
+      "<strong>Master the tool-use loop:</strong> Define tools with JSON schemas, handle Claude’s tool-call responses, return results, and manage multi-turn agent conversations including error cases.",
       "<strong>Write at least one eval suite:</strong> Create input-output test pairs, run them against your prompt automatically, change the prompt, rerun, and compare — this is exactly what the evaluation domain tests.",
-      "<strong>Read docs.anthropic.com cover to cover:</strong> The prompt engineering guide, tool use guide, and API reference are the exam&apos;s source of truth — know documented best practices vs. common antipatterns."
+      "<strong>Read docs.anthropic.com cover to cover:</strong> The prompt engineering guide, tool use guide, and API reference are the exam’s source of truth — know documented best practices vs. common antipatterns."
     ]
   },
   "certificationCard": {
@@ -65,7 +65,7 @@
       },
       {
         "heading": "Prompt Engineering for Production Systems",
-        "body": "This isn&apos;t the same as casual prompting. The CCDV-F tests techniques that matter in code: XML-tagged input sections so Claude can parse structured data, system prompts that enforce output schemas, few-shot examples embedded programmatically, and chain-of-thought reasoning triggered by instruction rather than hope. You also need to handle prompt injection defenses — making sure user-supplied text can&apos;t override your system instructions."
+        "body": "This isn’t the same as casual prompting. The CCDV-F tests techniques that matter in code: XML-tagged input sections so Claude can parse structured data, system prompts that enforce output schemas, few-shot examples embedded programmatically, and chain-of-thought reasoning triggered by instruction rather than hope. You also need to handle prompt injection defenses — making sure user-supplied text can’t override your system instructions."
       },
       {
         "heading": "Working with the SDK and Authentication",
@@ -83,7 +83,7 @@
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Developer Exam",
-    "intro": "The CCDV-F is a hands-on certification. If you have built something real with the Claude API — even a side project — you already have most of what you need. If you haven&apos;t, build one before you sit the exam.",
+    "intro": "The CCDV-F is a hands-on certification. If you have built something real with the Claude API — even a side project — you already have most of what you need. If you haven’t, build one before you sit the exam.",
     "blocks": [
       {
         "heading": "Build a Working Project Before You Study",
@@ -103,7 +103,7 @@
       },
       {
         "heading": "Read the Official Documentation",
-        "body": "Anthropic&apos;s docs at docs.anthropic.com are the exam&apos;s source of truth. Read the prompt engineering guide, the tool use guide, and the API reference at least once. The exam does not test obscure trivia, but it does test whether you know the documented best practices vs. common antipatterns."
+        "body": "Anthropic’s docs at docs.anthropic.com are the exam’s source of truth. Read the prompt engineering guide, the tool use guide, and the API reference at least once. The exam does not test obscure trivia, but it does test whether you know the documented best practices vs. common antipatterns."
       }
     ]
   },

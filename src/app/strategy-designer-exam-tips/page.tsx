@@ -142,7 +142,7 @@ export default function StrategyDesignerExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For design phase questions: Empathise = research before designing. Define = frame the problem correctly (How Might We statements). Ideate = generate many solutions without judging. Prototype = build low-fidelity mockups quickly. Test = validate with real users. When asked which phase to apply to a scenario, identify what is needed: understanding, problem definition, generation, or validation.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For value mapping questions: a Value Map connects customer jobs (what customers are trying to do), pains (negative outcomes), and gains (positive outcomes) to the product&apos;s pain relievers and gain creators. When a scenario asks how to demonstrate business value, the answer is a value proposition canvas or value map — not a business case document.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For value mapping questions: a Value Map connects customer jobs (what customers are trying to do), pains (negative outcomes), and gains (positive outcomes) to the product’s pain relievers and gain creators. When a scenario asks how to demonstrate business value, the answer is a value proposition canvas or value map — not a business case document.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For facilitation questions: design workshops should include diverse stakeholders (business, technology, users). Affinity mapping groups insights from research. Dot voting prioritises ideas democratically. When a workshop has conflicting stakeholder views, the correct next step is co-creation — not making a unilateral recommendation.</li>
         </ul>
       </section>
@@ -157,7 +157,7 @@ export default function StrategyDesignerExamTipsPage() {
           Strategy Designer is unique among Salesforce certifications because it tests design thinking and
           business strategy rather than product configuration. Candidates with backgrounds in consulting,
           product management, or human-centred design perform better. Study the IDEO design thinking
-          framework and Salesforce&apos;s own design principles alongside the official exam guide.
+          framework and Salesforce’s own design principles alongside the official exam guide.
         </p>
       </section>
 
@@ -168,11 +168,11 @@ export default function StrategyDesignerExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Futures Thinking vs Current-State Analysis — Speculative vs Descriptive</p>
-            <p className="text-sm text-gray-700">Futures Thinking projects potential future scenarios based on emerging trends and signals — it is speculative and explores "what could be." Current-state analysis (journey mapping, user research) documents what exists today. Strategy Design work starts with current state but must include futures framing to avoid solving only today&apos;s problems. Candidates present only current-state research as their strategy answer — the exam expects futures framing alongside research.</p>
+            <p className="text-sm text-gray-700">Futures Thinking projects potential future scenarios based on emerging trends and signals — it is speculative and explores "what could be." Current-state analysis (journey mapping, user research) documents what exists today. Strategy Design work starts with current state but must include futures framing to avoid solving only today’s problems. Candidates present only current-state research as their strategy answer — the exam expects futures framing alongside research.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Jobs To Be Done vs User Stories — Motivation vs Task</p>
-            <p className="text-sm text-gray-700">Jobs To Be Done (JTBD) captures the fundamental motivation behind a user&apos;s behaviour: "When I [situation], I want to [motivation], so I can [outcome]." User Stories capture task-level requirements: "As a [role], I want [feature], so that [benefit]." JTBD is broader and more durable — features change but motivations stay constant. Candidates use User Stories for strategy framing — the exam expects JTBD for understanding root motivations before defining solutions.</p>
+            <p className="text-sm text-gray-700">Jobs To Be Done (JTBD) captures the fundamental motivation behind a user’s behaviour: "When I [situation], I want to [motivation], so I can [outcome]." User Stories capture task-level requirements: "As a [role], I want [feature], so that [benefit]." JTBD is broader and more durable — features change but motivations stay constant. Candidates use User Stories for strategy framing — the exam expects JTBD for understanding root motivations before defining solutions.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Hypothesis vs Assumption vs Insight — Research Rigour Distinctions</p>

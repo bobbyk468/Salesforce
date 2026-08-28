@@ -26,13 +26,13 @@
     "bestWayToPass": [
       "<strong>Master the Health Cloud data model:</strong> Know patient, care plan, care team, and clinical encounter objects and how they relate to standard Salesforce objects.",
       "<strong>Understand care plan configuration:</strong> Study care plan templates, problems, goals, tasks, and how care coordinators manage patient journeys.",
-      "<strong>Learn FHIR and interoperability basics:</strong> You don&apos;t need to code FHIR APIs, but you must understand FHIR R4 resources and how Health Cloud maps clinical data.",
+      "<strong>Learn FHIR and interoperability basics:</strong> You don’t need to code FHIR APIs, but you must understand FHIR R4 resources and how Health Cloud maps clinical data.",
       "<strong>Study regulatory context:</strong> Know how HIPAA compliance, data sharing rules, and consent management affect Health Cloud configuration decisions."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Health Cloud&apos;s care plan management, patient engagement, and FHIR-based EHR integration for providers, payers, and life sciences orgs. Expect questions on care coordination workflows, appointment scheduling, and population health analytics.",
+    "description": "This exam covers Health Cloud’s care plan management, patient engagement, and FHIR-based EHR integration for providers, payers, and life sciences orgs. Expect questions on care coordination workflows, appointment scheduling, and population health analytics.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

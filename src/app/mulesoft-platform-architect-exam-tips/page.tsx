@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is a Centre for Enablement (C4E) and why does the exam test it?',
-    answer: 'A Centre for Enablement (C4E) is MuleSoft&apos;s recommended organisational model for scaling API-led integration across an enterprise. The C4E provides reusable assets, templates, and governance standards so that development teams can build integrations without starting from scratch. The exam tests how to design, establish, and grow a C4E.',
+    answer: 'A Centre for Enablement (C4E) is MuleSoft’s recommended organisational model for scaling API-led integration across an enterprise. The C4E provides reusable assets, templates, and governance standards so that development teams can build integrations without starting from scratch. The exam tests how to design, establish, and grow a C4E.',
   },
   {
     question: 'What deployment models does MuleSoft Platform Architect test?',
@@ -142,7 +142,7 @@ export default function MuleSoftPlatformArchitectExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For deployment questions: CloudHub 1.0 = fully managed, least control, fastest setup. CloudHub 2.0 = managed with private spaces for compliance, better isolation. Runtime Fabric = self-managed Kubernetes, maximum control, highest overhead. On-premises = for data sovereignty requirements where cloud is not permitted. Match the deployment to the stated compliance/control/cost requirements.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: a C4E provides templates, best practices, and reusable APIs to accelerate development. It is a team of enablers — not a bottleneck team that builds all integrations. The C4E creates the tools and standards; other teams use them autonomously. When a scenario says &apos;how to scale MuleSoft adoption without creating a central IT bottleneck&apos;, C4E is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: a C4E provides templates, best practices, and reusable APIs to accelerate development. It is a team of enablers — not a bottleneck team that builds all integrations. The C4E creates the tools and standards; other teams use them autonomously. When a scenario says ’how to scale MuleSoft adoption without creating a central IT bottleneck’, C4E is the answer.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For API governance questions: Anypoint Governance checks APIs against rulesets automatically (RAML linting, security standards). API Manager policies enforce security at runtime. Business groups and environments control who can manage which APIs. When a question asks how to enforce API security standards across all teams, Anypoint Governance rulesets + API Manager policies is the answer.</li>
         </ul>
       </section>

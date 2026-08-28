@@ -73,7 +73,7 @@ export default function AgentforceSpecialistVsAiAssociatePage() {
           Agentforce Specialist vs AI Associate: Which Salesforce AI Cert to Take First?
         </h1>
         <p className="text-lg text-gray-600">
-          Salesforce&apos;s two AI certifications serve different audiences and skill levels. AI Associate is the
+          Salesforce’s two AI certifications serve different audiences and skill levels. AI Associate is the
           entry-level AI literacy cert for the whole Salesforce ecosystem. Agentforce Specialist is the
           hands-on specialist cert for professionals building autonomous AI agents. Here is how they compare
           and how to choose the right path for your career in 2026.

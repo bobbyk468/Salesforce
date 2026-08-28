@@ -20,7 +20,7 @@
     "personas": [
       {
         "label": "New MuleSoft team members",
-        "description": "You&apos;re joining a MuleSoft project and want to demonstrate baseline knowledge of API-led connectivity and Anypoint Platform."
+        "description": "You’re joining a MuleSoft project and want to demonstrate baseline knowledge of API-led connectivity and Anypoint Platform."
       },
       {
         "label": "Business analysts on integration projects",
@@ -28,7 +28,7 @@
       },
       {
         "label": "IT professionals exploring MuleSoft",
-        "description": "You&apos;re evaluating MuleSoft for your organization and want an entry-level credential to build foundational knowledge before pursuing developer or architect certifications."
+        "description": "You’re evaluating MuleSoft for your organization and want an entry-level credential to build foundational knowledge before pursuing developer or architect certifications."
       }
     ]
   },

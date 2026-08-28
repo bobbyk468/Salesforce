@@ -61,7 +61,7 @@ const faqItems = [
   },
   {
     question: 'What responsible AI concepts does the AI Associate exam test?',
-    answer: 'The exam tests Salesforce&apos;s Trusted AI principles: accuracy, safety, honesty, empowerment, sustainability, and inclusivity. It also tests common AI risks: bias in training data, hallucination in generative AI, privacy concerns with personal data, and the importance of human oversight. Understanding these principles at a conceptual level is required.',
+    answer: 'The exam tests Salesforce’s Trusted AI principles: accuracy, safety, honesty, empowerment, sustainability, and inclusivity. It also tests common AI risks: bias in training data, hallucination in generative AI, privacy concerns with personal data, and the importance of human oversight. Understanding these principles at a conceptual level is required.',
   },
   {
     question: 'What concepts do most AI Associate candidates get wrong?',
@@ -84,7 +84,7 @@ export default function AIAssociateExamTipsPage() {
           Salesforce AI Associate Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The AI Associate exam is Salesforce&apos;s entry-level AI certification. It tests foundational knowledge
+          The AI Associate exam is Salesforce’s entry-level AI certification. It tests foundational knowledge
           of AI concepts, Salesforce Einstein features, and responsible AI — no coding required. These tips
           focus on the AI fundamentals and Salesforce-specific AI features that dominate the exam.
         </p>
@@ -154,7 +154,7 @@ export default function AIAssociateExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The AI Associate is one of Salesforce&apos;s most accessible certifications — most candidates with
+          The AI Associate is one of Salesforce’s most accessible certifications — most candidates with
           2–3 weeks of focused study can pass. Complete the Trailhead AI Associate trail and the official
           Salesforce AI Fundamentals module. The exam is particularly suitable as a first certification
           for those new to Salesforce or AI.
@@ -175,7 +175,7 @@ export default function AIAssociateExamTipsPage() {
             <p className="text-sm text-gray-700">Candidates confuse Einstein Prediction Builder (custom prediction models on Salesforce data), Einstein Discovery (statistical insights and recommendations), Einstein Copilot (conversational AI assistant), and Agentforce (autonomous AI agents). Each sits in a different product context. Exam scenarios describe a use case and expect you to identify the correct Einstein feature — memorise which feature belongs to which cloud.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Salesforce&apos;s Five Ethical AI Principles</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Salesforce’s Five Ethical AI Principles</p>
             <p className="text-sm text-gray-700">The five Salesforce Trusted AI principles are: Responsible (prevent harm), Accountable (humans stay in control), Transparent (explainability), Empowering (augments humans, not replaces), and Inclusive (fair, unbiased outcomes). Exam scenarios describe an AI behaviour and ask which principle is violated. Map the behaviour to the correct principle — &ldquo;black box decision&rdquo; = Transparent; &ldquo;automated without override&rdquo; = Accountable.</p>
           </div>
         </div>

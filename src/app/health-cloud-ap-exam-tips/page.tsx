@@ -51,7 +51,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight Health Cloud AP exam sections?',
-    answer: 'Patient and Member Management (30%) and Care Plan Configuration (25%) together account for 55% of the exam. Understanding Health Cloud&apos;s person account model, care team setup, care plan templates, and how to configure clinical data management for healthcare organisations are the most tested areas.',
+    answer: 'Patient and Member Management (30%) and Care Plan Configuration (25%) together account for 55% of the exam. Understanding Health Cloud’s person account model, care team setup, care plan templates, and how to configure clinical data management for healthcare organisations are the most tested areas.',
   },
   {
     question: 'What is a care plan in Health Cloud and how does the exam test it?',
@@ -101,9 +101,9 @@ export default function HealthCloudApExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: What Health Cloud AP Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Patient and member management</strong> — Health Cloud&apos;s person account model for patients and members, household accounts for family units, care team setup (primary care provider, care coordinator, specialist roles), and how to manage clinical relationships and referrals within Health Cloud.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Patient and member management</strong> — Health Cloud’s person account model for patients and members, household accounts for family units, care team setup (primary care provider, care coordinator, specialist roles), and how to manage clinical relationships and referrals within Health Cloud.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Care plan configuration</strong> — Creating and using care plan templates for common conditions, setting goals with target values and dates, assigning tasks to care team members, tracking care plan progress and goal achievement, and using care gaps to identify patients who need outreach.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Provider network and data model</strong> — Configuring provider networks and provider specialties, managing provider-patient relationships, Health Cloud&apos;s clinical data model for social determinants of health, and HIPAA-compliant access controls for protected health information (PHI).</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Provider network and data model</strong> — Configuring provider networks and provider specialties, managing provider-patient relationships, Health Cloud’s clinical data model for social determinants of health, and HIPAA-compliant access controls for protected health information (PHI).</li>
         </ul>
       </section>
 
@@ -138,9 +138,9 @@ export default function HealthCloudApExamTipsPage() {
           Salesforce objects like custom cases or custom relationship objects.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care coordination questions: a care team is the group of clinical and non-clinical staff coordinating a patient&apos;s care. Each care team member has a role (Primary Care Physician, Care Coordinator, Specialist). When a scenario says &apos;who is responsible for coordinating this patient&apos;s care&apos;, find the Care Coordinator role on the care team — not just any team member.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care plan questions: care gaps identify patients who have not received a recommended clinical service (e.g., annual wellness visit). Care plan tasks are assigned to care team members with due dates. Goals have target values (e.g., blood pressure below 120/80). When a scenario says &apos;automatically identify patients who haven&apos;t had their screening&apos;, the answer is care gaps.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Health Cloud uses person accounts (individual patients) and household accounts (family groups). Clinical data (diagnoses, medications, allergies) is stored in health-specific objects linked to the person account. When a question asks about storing a patient&apos;s medication list, the answer is the Health Cloud Medication object — not a custom field on Contact.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care coordination questions: a care team is the group of clinical and non-clinical staff coordinating a patient’s care. Each care team member has a role (Primary Care Physician, Care Coordinator, Specialist). When a scenario says ’who is responsible for coordinating this patient’s care’, find the Care Coordinator role on the care team — not just any team member.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For care plan questions: care gaps identify patients who have not received a recommended clinical service (e.g., annual wellness visit). Care plan tasks are assigned to care team members with due dates. Goals have target values (e.g., blood pressure below 120/80). When a scenario says ’automatically identify patients who haven’t had their screening’, the answer is care gaps.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: Health Cloud uses person accounts (individual patients) and household accounts (family groups). Clinical data (diagnoses, medications, allergies) is stored in health-specific objects linked to the person account. When a question asks about storing a patient’s medication list, the answer is the Health Cloud Medication object — not a custom field on Contact.</li>
         </ul>
       </section>
 

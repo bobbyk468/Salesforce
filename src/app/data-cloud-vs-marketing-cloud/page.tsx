@@ -40,7 +40,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Salesforce Data Cloud and Marketing Cloud?',
-    answer: 'Data Cloud is Salesforce&apos;s customer data platform (CDP) — it unifies customer data from multiple sources (CRM, web, mobile, data warehouses) into a single customer profile with identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is an email and digital marketing execution platform for sending campaigns, journeys, and automated messaging. Data Cloud feeds unified audience segments INTO Marketing Cloud for activation; Marketing Cloud is the channel for execution.',
+    answer: 'Data Cloud is Salesforce’s customer data platform (CDP) — it unifies customer data from multiple sources (CRM, web, mobile, data warehouses) into a single customer profile with identity resolution and real-time data streaming. Marketing Cloud (Marketing Cloud Engagement / SFMC) is an email and digital marketing execution platform for sending campaigns, journeys, and automated messaging. Data Cloud feeds unified audience segments INTO Marketing Cloud for activation; Marketing Cloud is the channel for execution.',
   },
   {
     question: 'Are Data Cloud and Marketing Cloud certifications related?',

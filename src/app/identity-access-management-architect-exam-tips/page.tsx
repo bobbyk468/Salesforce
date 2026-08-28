@@ -148,13 +148,13 @@ export default function IamArchitectExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           76%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          IAM Architect has a steep learning curve for candidates who haven&apos;t configured SSO or OAuth in a real environment.
+          IAM Architect has a steep learning curve for candidates who haven’t configured SSO or OAuth in a real environment.
           Build a Connected App, configure SSO with an identity provider, and test each OAuth flow in a sandbox
           before sitting the exam.
         </p>
@@ -175,7 +175,7 @@ export default function IamArchitectExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Delegated Authentication vs SSO — Custom Login vs Federated Identity</p>
-            <p className="text-sm text-gray-700">Delegated Authentication calls a custom web service endpoint to validate Salesforce login credentials against an external system (legacy LDAP integration). SAML/OIDC SSO federates identity by trusting an external IdP&apos;s assertion without re-validating credentials. Delegated Auth is legacy and should not be recommended for new implementations — the exam expects SAML or OIDC SSO for modern identity federation.</p>
+            <p className="text-sm text-gray-700">Delegated Authentication calls a custom web service endpoint to validate Salesforce login credentials against an external system (legacy LDAP integration). SAML/OIDC SSO federates identity by trusting an external IdP’s assertion without re-validating credentials. Delegated Auth is legacy and should not be recommended for new implementations — the exam expects SAML or OIDC SSO for modern identity federation.</p>
           </div>
         </div>
       </section>

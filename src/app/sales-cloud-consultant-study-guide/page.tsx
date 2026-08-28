@@ -161,7 +161,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Sales Practices (25%)
             </p>
-            <p>This is not a purely technical section — it tests your understanding of sales business processes and how to translate them into Salesforce. Know common sales methodologies (MEDDIC, Challenger, solution selling) and how they map to Sales Cloud features. Questions ask: given this business requirement (e.g., &ldquo;sales managers need to see only their team&apos;s pipeline&rdquo;), which Sales Cloud feature or configuration achieves it? <strong>Common mistake:</strong> jumping to a technical solution without understanding the business need first.</p>
+            <p>This is not a purely technical section — it tests your understanding of sales business processes and how to translate them into Salesforce. Know common sales methodologies (MEDDIC, Challenger, solution selling) and how they map to Sales Cloud features. Questions ask: given this business requirement (e.g., &ldquo;sales managers need to see only their team’s pipeline&rdquo;), which Sales Cloud feature or configuration achieves it? <strong>Common mistake:</strong> jumping to a technical solution without understanding the business need first.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -274,7 +274,7 @@ export default function SalesCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Where to Go After Sales Cloud Consultant</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Once you&apos;ve passed Sales Cloud Consultant, you&apos;re well-positioned for other high-value consultant credentials:
+          Once you’ve passed Sales Cloud Consultant, you’re well-positioned for other high-value consultant credentials:
         </p>
         <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
           <li>

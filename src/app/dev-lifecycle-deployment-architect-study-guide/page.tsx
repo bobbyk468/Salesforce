@@ -189,8 +189,8 @@ export default function DevLifecycleDeploymentArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. DLDA is conceptual and scenario-driven — questions describe a team&apos;s development situation and ask for the best environment strategy, deployment tool, or CI/CD design. Hands-on experience with Salesforce CLI and Git significantly improves performance.</p>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. DLDA is conceptual and scenario-driven — questions describe a team’s development situation and ask for the best environment strategy, deployment tool, or CI/CD design. Hands-on experience with Salesforce CLI and Git significantly improves performance.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

@@ -69,7 +69,7 @@ export default function OmnistudioDeveloperVsConsultantPage() {
           OmniStudio Developer vs Consultant: Which Certification Should You Take?
         </h1>
         <p className="text-lg text-gray-600">
-          Both OmniStudio certifications validate expertise in Salesforce&apos;s Industry Cloud toolset, but they serve
+          Both OmniStudio certifications validate expertise in Salesforce’s Industry Cloud toolset, but they serve
           different roles. Consultant focuses on configuration and design; Developer adds code-level customisation skills.
         </p>
       </header>

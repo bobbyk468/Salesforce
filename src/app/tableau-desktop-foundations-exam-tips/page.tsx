@@ -78,7 +78,7 @@ export default function TableauDesktopFoundationsExamTipsPage() {
           Tableau Desktop Foundations Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Tableau Desktop Foundations exam is Tableau&apos;s entry-level certification. It tests basic Tableau
+          The Tableau Desktop Foundations exam is Tableau’s entry-level certification. It tests basic Tableau
           skills — connecting data, building charts, using filters. These tips focus on the fundamental
           concepts and chart-building skills that define this accessible certification.
         </p>
@@ -129,9 +129,9 @@ export default function TableauDesktopFoundationsExamTipsPage() {
           this is a foundations exam, not an advanced one.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For chart type questions: bar chart = compare categories. Line chart = show trends over time. Scatter plot = show relationship between two measures. Map = show geographic data. Pie chart = show part-to-whole (use sparingly). When a question says &apos;compare sales across regions&apos;, bar chart is the standard answer.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For filter type questions: dimension filters filter by category value (show only USA). Measure filters filter by aggregated value (show only where SUM(Sales) &gt; $1,000). Context filters make a dimension filter a &apos;top filter&apos; for downstream filters — they run first. The order of filter application matters.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For calculation questions: IF/THEN calculated fields create category labels from numeric or text fields. String functions (LEFT, RIGHT, CONTAINS, MID) manipulate text. Date functions (DATETRUNC, DATEDIFF, DATEPART) work with date fields. When a question says &apos;classify sales as High/Medium/Low based on amount&apos;, the answer is an IF/THEN calculated field.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For chart type questions: bar chart = compare categories. Line chart = show trends over time. Scatter plot = show relationship between two measures. Map = show geographic data. Pie chart = show part-to-whole (use sparingly). When a question says ’compare sales across regions’, bar chart is the standard answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For filter type questions: dimension filters filter by category value (show only USA). Measure filters filter by aggregated value (show only where SUM(Sales) &gt; $1,000). Context filters make a dimension filter a ’top filter’ for downstream filters — they run first. The order of filter application matters.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For calculation questions: IF/THEN calculated fields create category labels from numeric or text fields. String functions (LEFT, RIGHT, CONTAINS, MID) manipulate text. Date functions (DATETRUNC, DATEDIFF, DATEPART) work with date fields. When a question says ’classify sales as High/Medium/Low based on amount’, the answer is an IF/THEN calculated field.</li>
         </ul>
       </section>
 
@@ -144,7 +144,7 @@ export default function TableauDesktopFoundationsExamTipsPage() {
         <p className="text-sm text-gray-700 mt-3">
           Tableau Desktop Foundations is the most accessible Tableau certification. Most candidates with
           1–2 months of hands-on Tableau Desktop practice can pass. Download Tableau Public (free) and
-          build 5–10 basic dashboards using Tableau&apos;s sample datasets. Hands-on practice is essential —
+          build 5–10 basic dashboards using Tableau’s sample datasets. Hands-on practice is essential —
           Tableau skills cannot be learned purely from reading.
         </p>
       </section>

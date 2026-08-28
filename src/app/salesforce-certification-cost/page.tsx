@@ -318,7 +318,7 @@ export default function SalesforceCertificationCostPage() {
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />
-            <span><strong>Trailhead GO / employer vouchers:</strong> Some employers and Salesforce partner programmes cover exam fees. Check your company&apos;s L&D budget before paying out of pocket.</span>
+            <span><strong>Trailhead GO / employer vouchers:</strong> Some employers and Salesforce partner programmes cover exam fees. Check your company’s L&D budget before paying out of pocket.</span>
           </li>
           <li className="flex gap-2">
             <CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />

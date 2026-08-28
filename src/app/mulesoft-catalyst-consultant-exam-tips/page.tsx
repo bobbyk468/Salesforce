@@ -48,7 +48,7 @@ const faqItems = [
   },
   {
     question: 'What is the MuleSoft Catalyst methodology?',
-    answer: 'MuleSoft Catalyst is MuleSoft&apos;s prescriptive methodology for implementing API-led integration programmes. It provides playbooks, templates, and best practices for establishing an IT operating model, building a Centre for Enablement (C4E), scaling API adoption, and measuring the business value of integration. The exam tests how to apply Catalyst methodology in enterprise scenarios.',
+    answer: 'MuleSoft Catalyst is MuleSoft’s prescriptive methodology for implementing API-led integration programmes. It provides playbooks, templates, and best practices for establishing an IT operating model, building a Centre for Enablement (C4E), scaling API adoption, and measuring the business value of integration. The exam tests how to apply Catalyst methodology in enterprise scenarios.',
   },
   {
     question: 'What are the highest-weight MuleSoft Catalyst Consultant exam sections?',
@@ -93,7 +93,7 @@ export default function MuleSoftCatalystConsultantExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: MuleSoft Catalyst Consultant Focus Areas</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>IT operating model design</strong> — Designing the organisational structure for integration delivery: centralised vs. federated models, defining the Centre for Enablement (C4E) team structure, establishing roles (Integration Architect, API Developer, C4E Lead), and creating the governance model for API lifecycle management across the enterprise.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API programme management</strong> — Building an API product strategy, creating an API roadmap, establishing API reuse metrics, managing the API lifecycle from design to retirement, and using Anypoint Exchange as the asset repository for the organisation&apos;s integration portfolio.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>API programme management</strong> — Building an API product strategy, creating an API roadmap, establishing API reuse metrics, managing the API lifecycle from design to retirement, and using Anypoint Exchange as the asset repository for the organisation’s integration portfolio.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Catalyst methodology and playbooks</strong> — The Catalyst programme phases (Discover, Design, Deliver, Measure), using Catalyst playbooks for common scenarios (establishing a C4E, onboarding a new line of business), measuring integration ROI, and driving API adoption across the enterprise using the Catalyst framework.</li>
         </ul>
       </section>
@@ -129,14 +129,14 @@ export default function MuleSoftCatalystConsultantExamTipsPage() {
           not the individual API or Mule application level.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: the C4E is an enablement team — it creates templates, best practices, and reusable APIs that other teams use. It is not a centralised delivery team that builds all integrations. When a scenario asks &apos;how do you scale MuleSoft adoption without IT becoming a bottleneck&apos;, the C4E model (provide tools and standards; let business units build) is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For C4E questions: the C4E is an enablement team — it creates templates, best practices, and reusable APIs that other teams use. It is not a centralised delivery team that builds all integrations. When a scenario asks ’how do you scale MuleSoft adoption without IT becoming a bottleneck’, the C4E model (provide tools and standards; let business units build) is the answer.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For operating model questions: centralised models give control and consistency but create bottlenecks. Federated models give speed and autonomy but risk inconsistency. A hybrid model with a C4E providing standards and oversight, while business units deliver their own integrations, is the Catalyst-recommended approach for large enterprises.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For programme phase questions: Discover = understand the current state, assess pain points, define the vision. Design = design the target operating model and API strategy. Deliver = implement the foundational APIs and C4E. Measure = track adoption metrics, API reuse, and business value delivered. When a question asks what happens in each phase, map it to these four stages.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks before booking
@@ -145,7 +145,7 @@ export default function MuleSoftCatalystConsultantExamTipsPage() {
           MuleSoft Catalyst Consultant is unusual because it primarily tests organisational methodology
           rather than technical skills. Candidates with experience delivering MuleSoft programmes at
           the programme management level (not just development) are the target audience. Study the
-          official MuleSoft Catalyst playbooks available on MuleSoft&apos;s website before the exam.
+          official MuleSoft Catalyst playbooks available on MuleSoft’s website before the exam.
         </p>
       </section>
 
@@ -160,7 +160,7 @@ export default function MuleSoftCatalystConsultantExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. C4E (Center for Enablement) — Not Just a Governance Committee</p>
-            <p className="text-sm text-gray-700">The Center for Enablement (C4E) is MuleSoft&apos;s operating model for scaling integration across an organisation: it curates reusable APIs, enforces standards, and enables citizen integrators. It is not just an IT governance body — its primary goal is to increase the consumption of published APIs across business teams. Candidates describe the C4E as a review board — the exam expects enablement and API reuse promotion as the primary mandate.</p>
+            <p className="text-sm text-gray-700">The Center for Enablement (C4E) is MuleSoft’s operating model for scaling integration across an organisation: it curates reusable APIs, enforces standards, and enables citizen integrators. It is not just an IT governance body — its primary goal is to increase the consumption of published APIs across business teams. Candidates describe the C4E as a review board — the exam expects enablement and API reuse promotion as the primary mandate.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. API Lifecycle Stages — Design → Build → Publish → Manage → Retire</p>

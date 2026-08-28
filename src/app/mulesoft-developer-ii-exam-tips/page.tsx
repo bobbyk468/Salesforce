@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is API-led connectivity and why is it tested so heavily?',
-    answer: 'API-led connectivity is MuleSoft&apos;s recommended integration architecture pattern. It organises integrations into three layers: System APIs (connect to core systems like SAP, Salesforce), Process APIs (orchestrate business logic combining system APIs), and Experience APIs (tailored for specific consumer channels like mobile or web). The exam tests when to place logic at each layer.',
+    answer: 'API-led connectivity is MuleSoft’s recommended integration architecture pattern. It organises integrations into three layers: System APIs (connect to core systems like SAP, Salesforce), Process APIs (orchestrate business logic combining system APIs), and Experience APIs (tailored for specific consumer channels like mobile or web). The exam tests when to place logic at each layer.',
   },
   {
     question: 'Do I need MuleSoft Developer I before Developer II?',

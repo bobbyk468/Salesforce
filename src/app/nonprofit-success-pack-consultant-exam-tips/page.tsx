@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight NPSP Consultant exam sections?',
-    answer: 'Opportunity Management (25%) and Household Account Model (22%) together account for 47% of the exam. NPSP&apos;s unique approach to donations (via Opportunities), the household account model, soft credits, and gift entry are the most heavily tested areas.',
+    answer: 'Opportunity Management (25%) and Household Account Model (22%) together account for 47% of the exam. NPSP’s unique approach to donations (via Opportunities), the household account model, soft credits, and gift entry are the most heavily tested areas.',
   },
   {
     question: 'What is the NPSP household account model?',
@@ -129,7 +129,7 @@ export default function NPSPConsultantExamTipsPage() {
             <span className="font-medium text-gray-900">Reporting and Data Management</span>
             <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Opportunities + Household Model + Engagement = 67%. NPSP&apos;s unique objects and models differ significantly from standard Salesforce.</p>
+          <p className="text-xs text-gray-600 pt-1">Opportunities + Household Model + Engagement = 67%. NPSP’s unique objects and models differ significantly from standard Salesforce.</p>
         </div>
       </section>
 

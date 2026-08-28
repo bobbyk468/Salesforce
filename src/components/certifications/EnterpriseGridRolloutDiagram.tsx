@@ -15,7 +15,7 @@ export default function EnterpriseGridRolloutDiagram() {
         discovery, design, a small pilot, phased org-wide rollout with champions, then ongoing optimization.
       </p>
       <svg role="img" aria-labelledby="egr-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 780 130" xmlns="http://www.w3.org/2000/svg">
-        <title id="egr-title">Five rollout phases: Discover, Design, Pilot, Rollout, Optimize, each building on the previous phase&apos;s feedback</title>
+        <title id="egr-title">Five rollout phases: Discover, Design, Pilot, Rollout, Optimize, each building on the previous phase’s feedback</title>
         <defs><marker id="egrArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b5cab" /></marker></defs>
         {phases.map((p, i) => (
           <g key={p.t}>

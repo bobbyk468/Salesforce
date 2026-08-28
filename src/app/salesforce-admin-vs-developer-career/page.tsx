@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'Can I switch from Salesforce Admin to Developer?',
-    answer: 'Yes. Many Salesforce Developers start as Admins. The transition path: earn Platform Developer I certification after Administrator, build hands-on Apex and LWC projects in a sandbox, and seek roles that blend admin and developer work (e.g. &quot;Salesforce Consultant&quot; or &quot;Platform Developer&quot; at smaller firms). Strong admin knowledge makes you a better developer — you understand what you are building for.',
+    answer: 'Yes. Many Salesforce Developers start as Admins. The transition path: earn Platform Developer I certification after Administrator, build hands-on Apex and LWC projects in a sandbox, and seek roles that blend admin and developer work (e.g. "Salesforce Consultant" or "Platform Developer" at smaller firms). Strong admin knowledge makes you a better developer — you understand what you are building for.',
   },
   {
     question: 'Which certifications do I need for Admin vs Developer careers?',
@@ -172,7 +172,7 @@ export default function SalesforceAdminVsDeveloperCareerPage() {
 
       <div className="bg-salesforce-blue/5 border border-salesforce-blue/20 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-3">Hybrid Roles</h2>
-        <p className="text-sm text-gray-700 mb-2">Many roles blend admin and developer work — &quot;Salesforce Consultant,&quot; &quot;Technical Consultant,&quot; or &quot;Platform Developer&quot; at consultancies and mid-size firms. These roles often require both Administrator and Platform Developer I certifications. Starting as an Admin and adding PD1 is a common path into these hybrid positions.</p>
+        <p className="text-sm text-gray-700 mb-2">Many roles blend admin and developer work — "Salesforce Consultant," "Technical Consultant," or "Platform Developer" at consultancies and mid-size firms. These roles often require both Administrator and Platform Developer I certifications. Starting as an Admin and adding PD1 is a common path into these hybrid positions.</p>
         <Link href="/certification-path" className="text-sm font-semibold text-salesforce-blue hover:underline">View Certification Paths →</Link>
       </div>
 

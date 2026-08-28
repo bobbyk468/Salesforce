@@ -132,7 +132,7 @@ export default function Adm201ExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
           Use this minimum benchmark before scheduling your exam:
         </p>
@@ -152,10 +152,10 @@ export default function Adm201ExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. OWD vs Profiles vs Roles — Three Layers, One Wrong Answer</p>
-            <p className="text-sm text-gray-700">Organisation-Wide Defaults (OWD) sets the baseline access floor for all records. Profiles control object and field permissions — what objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from candidates applying the right rule to the wrong layer: using roles to restrict access (you can&apos;t — roles only open access upward) or forgetting that profiles cannot override OWD to restrict access.</p>
+            <p className="text-sm text-gray-700">Organisation-Wide Defaults (OWD) sets the baseline access floor for all records. Profiles control object and field permissions — what objects a user can see at all. Roles expand record-level access above the OWD floor. Most wrong answers come from candidates applying the right rule to the wrong layer: using roles to restrict access (you can’t — roles only open access upward) or forgetting that profiles cannot override OWD to restrict access.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Flow vs Process Builder — Know the Exam&apos;s Recommended Tool</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Flow vs Process Builder — Know the Exam’s Recommended Tool</p>
             <p className="text-sm text-gray-700">Salesforce has deprecated Process Builder and Workflow Rules in favour of Record-Triggered Flows. Exam scenarios now expect Flow as the answer when the question describes record-based automation. Candidates who still default to &ldquo;use Process Builder&rdquo; lose those marks. Know the four Flow types: Record-Triggered, Scheduled, Screen, and Auto-Launched, and when each is appropriate.</p>
           </div>
           <div>
@@ -226,7 +226,7 @@ export default function Adm201ExamTipsPage() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          When you&apos;re consistently scoring 75%+ on ADM-201 mocks, your next move is to either deepen admin skills with{' '}
+          When you’re consistently scoring 75%+ on ADM-201 mocks, your next move is to either deepen admin skills with{' '}
           <Link href="/certifications/advanced-administrator" className="text-salesforce-blue underline">
             Advanced Administrator
           </Link>

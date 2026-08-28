@@ -5,7 +5,7 @@ export default function TableauHADRDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">High Availability / Disaster Recovery topology (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         HA distributes VizQL and Backgrounder processes across <strong>multiple nodes</strong> behind a gateway, so a
-        single node failure doesn&apos;t take the cluster down. DR requires a separate, geographically distinct
+        single node failure doesn’t take the cluster down. DR requires a separate, geographically distinct
         environment restored from regular repository backups.
       </p>
       <svg role="img" aria-labelledby="thadr-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 720 180" xmlns="http://www.w3.org/2000/svg">

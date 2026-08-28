@@ -195,7 +195,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
 
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong> before scheduling — the passing score is ~70%, higher than most Salesforce exams. Building Mule Applications (25%) and DataWeave (22%) together account for nearly half the exam. Make sure you can write and read basic DataWeave transformations without reference documentation.</p>
       </div>
 

@@ -168,7 +168,7 @@ export default function Pd2ExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
           PD2 has a lower first-attempt pass rate than PD1. Use this minimum benchmark:
         </p>

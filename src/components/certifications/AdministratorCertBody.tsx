@@ -163,7 +163,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                   <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
                   <p className="text-sm text-emerald-700">
-                    Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you&apos;re consistently scoring above 75% in practice, you&apos;re likely ready to book your exam.
+                    Most candidates report passing after scoring <strong>75%+</strong> on at least 3 full-length mock exams. If you’re consistently scoring above 75% in practice, you’re likely ready to book your exam.
                   </p>
                 </div>
               </div>
@@ -220,7 +220,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
                 <h3 className="text-base font-semibold text-gray-900 mb-2">Is ADM-201 Harder Than Platform App Builder?</h3>
                 <p className="text-sm text-gray-700">
-                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you&apos;re well-positioned for{' '}
+                  ADM-201 is generally considered <strong>slightly easier</strong> than Platform App Builder (DEV-402) because it covers foundational admin topics without deep customization. App Builder goes deeper into data modeling, Lightning components, and business logic. However, ADM-201 is <em>broader</em> — you need to know a little about many topics. If you pass ADM-201 comfortably, you’re well-positioned for{' '}
                   <Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">
                     the Platform App Builder exam
                   </Link>.
@@ -355,7 +355,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Read Every Question for the Key Constraint</p>
-                <p>Watch for qualifiers like &apos;declarative only,&apos; &apos;minimum configuration,&apos; or &apos;without code.&apos; These constraints eliminate most distractors and point to the correct answer.</p>
+                <p>Watch for qualifiers like ’declarative only,’ ’minimum configuration,’ or ’without code.’ These constraints eliminate most distractors and point to the correct answer.</p>
               </div>
             </div>
           </div>

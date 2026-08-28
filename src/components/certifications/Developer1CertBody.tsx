@@ -395,7 +395,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               <div className="bg-emerald-50 border border-emerald-200 rounded-lg p-4">
                 <p className="text-sm font-semibold text-emerald-800 mb-1">Pass Rate Guidance</p>
                 <p className="text-sm text-emerald-700">
-                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you&apos;re scoring below 70% on mocks, focus on governor limits and bulkification — those two topics cover over 30% of the exam combined.
+                  Candidates who pass PD1 typically score <strong>78%+</strong> on at least 3 full-length mock exams before booking. If you’re scoring below 70% on mocks, focus on governor limits and bulkification — those two topics cover over 30% of the exam combined.
                 </p>
               </div>
             </div>
@@ -440,11 +440,11 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">SOQL: Relationships, Aggregates &amp; SOSL</h3>
-                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG() — require GROUP BY. SOSL searches multiple objects simultaneously: <code className="bg-gray-100 px-1 rounded">FIND &apos;term&apos; IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL for cross-object searches; use SOQL when you know the object.</p>
+                <p>Child-to-parent query: <code className="bg-gray-100 px-1 rounded">SELECT Id, Account.Name FROM Contact</code> (dot notation). Parent-to-child: <code className="bg-gray-100 px-1 rounded">SELECT Id, (SELECT Id FROM Contacts) FROM Account</code> (subquery). Aggregate functions: COUNT(), SUM(), AVG() — require GROUP BY. SOSL searches multiple objects simultaneously: <code className="bg-gray-100 px-1 rounded">FIND ’term’ IN ALL FIELDS RETURNING Account, Contact</code>. Use SOSL for cross-object searches; use SOQL when you know the object.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Process Automation: Flow vs. Apex Triggers</h3>
-                <p>The exam tests when to use declarative automation (Flow) vs. programmatic automation (Apex Triggers). Use <strong>Flow</strong> for standard CRUD operations, approval automation, and complex UI flows without code. Use <strong>Apex Triggers</strong> when you need cross-object logic beyond Flow&apos;s capabilities, governor limit control, or callout scheduling. Both can fire on the same record — the Order of Execution determines which runs first (Flow runs before After Triggers in record-triggered contexts). Key PD1 topic: if Flow can do it declaratively, prefer Flow; if it needs Apex Classes, Limits, or Database class methods, use Apex.</p>
+                <p>The exam tests when to use declarative automation (Flow) vs. programmatic automation (Apex Triggers). Use <strong>Flow</strong> for standard CRUD operations, approval automation, and complex UI flows without code. Use <strong>Apex Triggers</strong> when you need cross-object logic beyond Flow’s capabilities, governor limit control, or callout scheduling. Both can fire on the same record — the Order of Execution determines which runs first (Flow runs before After Triggers in record-triggered contexts). Key PD1 topic: if Flow can do it declaratively, prefer Flow; if it needs Apex Classes, Limits, or Database class methods, use Apex.</p>
               </div>
               <div>
                 <h3 className="font-semibold text-gray-900 mb-1">Testing Framework: SeeAllData, Test.startTest &amp; HttpCalloutMock</h3>
@@ -566,11 +566,11 @@ private class CalloutServiceTest {
             <div className="space-y-4 text-sm text-gray-700">
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Governor Limit Questions — the Pattern to Recognise</p>
-                <p>The exam will show you Apex code and ask &ldquo;what is wrong with this code?&rdquo; The answer is almost always SOQL or DML inside a for loop. Look for <code className="bg-gray-100 px-1 rounded">for (Account a : accounts) &#123; insert contact; &#125;</code> — that&apos;s DML in a loop, and it will hit the 150 DML statement limit. The fix: collect records in a List inside the loop, then call <code className="bg-gray-100 px-1 rounded">insert contactList;</code> after the loop. For SOQL: use Maps populated with a single query before the loop, not a query inside the loop.</p>
+                <p>The exam will show you Apex code and ask &ldquo;what is wrong with this code?&rdquo; The answer is almost always SOQL or DML inside a for loop. Look for <code className="bg-gray-100 px-1 rounded">for (Account a : accounts) &#123; insert contact; &#125;</code> — that’s DML in a loop, and it will hit the 150 DML statement limit. The fix: collect records in a List inside the loop, then call <code className="bg-gray-100 px-1 rounded">insert contactList;</code> after the loop. For SOQL: use Maps populated with a single query before the loop, not a query inside the loop.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Testing Questions — the Three Rules to Memorise</p>
-                <p>(1) Minimum 75% code coverage across the entire org (not per class) to deploy. (2) Test data must be created in the test method — do not rely on org data (<code className="bg-gray-100 px-1 rounded">@isTest(SeeAllData=false)</code> is the default). (3) HTTP callout tests require a mock implementation — use <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. Questions often say &ldquo;a developer&apos;s test class fails when calling an external API&rdquo; — the answer is always to implement <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>.</p>
+                <p>(1) Minimum 75% code coverage across the entire org (not per class) to deploy. (2) Test data must be created in the test method — do not rely on org data (<code className="bg-gray-100 px-1 rounded">@isTest(SeeAllData=false)</code> is the default). (3) HTTP callout tests require a mock implementation — use <code className="bg-gray-100 px-1 rounded">Test.setMock(HttpCalloutMock.class, mockImpl)</code>. Questions often say &ldquo;a developer’s test class fails when calling an external API&rdquo; — the answer is always to implement <code className="bg-gray-100 px-1 rounded">HttpCalloutMock</code>.</p>
               </div>
               <div>
                 <p className="font-semibold text-gray-900 mb-1">Async Apex Selection — Which Method for Which Scenario</p>

@@ -140,8 +140,8 @@ export default function BusinessAnalystExamTipsPage() {
           The correct answer follows the BA methodology — discovery before solutioning, stakeholders before systems.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />When stakeholder conflict appears: facilitate, document, and escalate — never unilaterally choose a stakeholder&apos;s preference.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For user story questions: valid user stories follow &quot;As a [role], I want [feature], so that [benefit]&quot; with measurable acceptance criteria.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />When stakeholder conflict appears: facilitate, document, and escalate — never unilaterally choose a stakeholder’s preference.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For user story questions: valid user stories follow "As a [role], I want [feature], so that [benefit]" with measurable acceptance criteria.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Note the 72% passing threshold — it is higher than most Salesforce exams. You need stronger preparation than for Administrator-track certs.</li>
         </ul>
       </section>
@@ -161,7 +161,7 @@ export default function BusinessAnalystExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Process Mapping vs User Stories — Different Artefacts for Different Purposes</p>
-            <p className="text-sm text-gray-700">Process maps (swim lane diagrams, flow charts) document current-state workflows across people and systems. User stories document future-state requirements from the user&apos;s perspective ("As a [role], I want [capability] so that [benefit]"). Candidates write user stories when asked for a process map and vice versa. The exam tests when each is the appropriate analysis output — process map for AS-IS documentation; user stories for development backlog requirements.</p>
+            <p className="text-sm text-gray-700">Process maps (swim lane diagrams, flow charts) document current-state workflows across people and systems. User stories document future-state requirements from the user’s perspective ("As a [role], I want [capability] so that [benefit]"). Candidates write user stories when asked for a process map and vice versa. The exam tests when each is the appropriate analysis output — process map for AS-IS documentation; user stories for development backlog requirements.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Acceptance Criteria vs Definition of Done — Two Different Quality Gates</p>

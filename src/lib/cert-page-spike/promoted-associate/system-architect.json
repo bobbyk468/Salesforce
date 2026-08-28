@@ -35,7 +35,7 @@
     "scenarioPercent": "Questions describe enterprise integration and deployment scenarios, asking you to select the right combination of architecture pattern, authentication flow, and governance approach.",
     "bestWayToPass": [
       "<strong>Master integration patterns:</strong> Know request-reply, fire-and-forget, batch ETL, and Change Data Capture &mdash; and the exact criteria for choosing each (latency, volume, error handling).",
-      "<strong>Study API-led connectivity:</strong> Understand MuleSoft&apos;s System, Process, and Experience API layers and when native Salesforce integration is sufficient vs. when middleware is warranted.",
+      "<strong>Study API-led connectivity:</strong> Understand MuleSoft’s System, Process, and Experience API layers and when native Salesforce integration is sufficient vs. when middleware is warranted.",
       "<strong>Review identity and SSO:</strong> SAML 2.0 SP-initiated vs. IdP-initiated flows, OAuth 2.0 JWT Bearer and Client Credentials flows, and My Domain requirements appear frequently.",
       "<strong>Know sandbox and release strategy:</strong> Match sandbox types to development phases, compare change sets vs. CLI vs. unlocked packages, and design deployment sequencing for complex orgs."
     ]

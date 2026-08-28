@@ -5,7 +5,7 @@ export default function CTAEvaluationStructureDiagram() {
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Architect Evaluation exam structure (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
         The Evaluation blends <strong>multiple-choice technical knowledge</strong> questions with a{' '}
-        <strong>written solution design</strong> component addressing a scenario&apos;s requirements, constraints,
+        <strong>written solution design</strong> component addressing a scenario’s requirements, constraints,
         and trade-offs — passing this is the prerequisite for attempting the live Review Board.
       </p>
       <svg role="img" aria-labelledby="ces-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 180" xmlns="http://www.w3.org/2000/svg">

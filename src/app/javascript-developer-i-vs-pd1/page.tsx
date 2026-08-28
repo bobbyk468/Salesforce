@@ -75,7 +75,7 @@ export default function JavascriptDeveloperIVsPd1Page() {
           JavaScript Developer I vs Platform Developer I ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Two Salesforce developer certifications — one focused on JavaScript language skills, one on Salesforce platform development. Here&apos;s how to choose.
+          Two Salesforce developer certifications — one focused on JavaScript language skills, one on Salesforce platform development. Here’s how to choose.
         </p>
       </div>
 

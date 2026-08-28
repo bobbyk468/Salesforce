@@ -72,7 +72,7 @@ export default function AboutPage() {
           We are not affiliated with, endorsed by, or sponsored by Salesforce, Inc.
         </p>
         <p className="text-gray-700">
-          <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc. &quot;{SITE_NAME}&quot; is not affiliated with or endorsed by Salesforce&apos;s Trailblazer program.
+          <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc. "{SITE_NAME}" is not affiliated with or endorsed by Salesforce’s Trailblazer program.
         </p>
         <p className="text-gray-700">
           We help you see how each exam is weighted by section, get clear exam tips and prerequisites, and practice with sample questions before the real exam.

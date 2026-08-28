@@ -181,7 +181,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>SAML = SSO for enterprise users; OAuth = API access:</strong> When a scenario says &quot;employees need to log into Salesforce using their corporate credentials,&quot; the answer is SAML SSO. When a scenario says &quot;an application needs to access Salesforce data on behalf of a user,&quot; the answer is OAuth 2.0.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>SAML = SSO for enterprise users; OAuth = API access:</strong> When a scenario says "employees need to log into Salesforce using their corporate credentials," the answer is SAML SSO. When a scenario says "an application needs to access Salesforce data on behalf of a user," the answer is OAuth 2.0.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>JWT Bearer for server-to-server:</strong> Any scenario involving background jobs, integration middleware, or automated processes accessing Salesforce APIs — without a user present — should use JWT Bearer Token flow. Never Username-Password flow for production systems.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>JIT for large user populations:</strong> If a scenario involves many external users who should be automatically provisioned, JIT is the correct answer over manual user creation or pre-provisioning scripts. JIT can create and update users with every login.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>My Domain is required:</strong> SSO, connected apps with OAuth, and Lightning features all require My Domain. Any question about enabling SSO for an org assumes My Domain is configured first.</span></li>
@@ -190,7 +190,7 @@ export default function IdentityAccessManagementArchitectStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. IAM Architect is protocol-heavy — many candidates who know Salesforce well struggle because they haven&apos;t worked with SAML and OAuth deeply. Hands-on SSO configuration is the best preparation. If you can configure SSO end-to-end from scratch, you are ready.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. IAM Architect is protocol-heavy — many candidates who know Salesforce well struggle because they haven’t worked with SAML and OAuth deeply. Hands-on SSO configuration is the best preparation. If you can configure SSO end-to-end from scratch, you are ready.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

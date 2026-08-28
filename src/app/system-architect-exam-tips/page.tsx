@@ -143,7 +143,7 @@ export default function SystemArchitectExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="text-sm text-gray-700 mb-2">
           The System Architect exam tests broad architectural judgement under time pressure:
         </p>

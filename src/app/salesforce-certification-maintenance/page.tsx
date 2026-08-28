@@ -66,7 +66,7 @@ export default function SalesforceCertificationMaintenancePage() {
         <span className="shrink-0 mt-0.5 text-sm font-bold text-red-600 uppercase tracking-wide">Breaking</span>
         <div>
           <p className="text-sm font-semibold text-red-800">
-            Summer &apos;26 maintenance modules are now live on Trailhead — released August 2026.
+            Summer ’26 maintenance modules are now live on Trailhead — released August 2026.
           </p>
           <p className="text-sm text-red-700 mt-0.5">
             Deadline to complete: <strong>April 16, 2027.</strong> Log in to{' '}
@@ -155,9 +155,9 @@ export default function SalesforceCertificationMaintenancePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Salesforce Release Schedule ({RELEASE_CURRENT})</h2>
         <div className="space-y-3">
           {[
-            { release: 'Spring &apos;26', period: 'Jan–Feb 2026', maintenance: 'Feb–Mar 2026', status: 'Complete' },
-            { release: 'Summer &apos;26', period: 'May–Jun 2026', maintenance: 'Jun–Jul 2026', status: 'Current' },
-            { release: 'Winter &apos;27', period: 'Sep–Oct 2026', maintenance: 'Oct–Nov 2026', status: 'Upcoming' },
+            { release: 'Spring ’26', period: 'Jan–Feb 2026', maintenance: 'Feb–Mar 2026', status: 'Complete' },
+            { release: 'Summer ’26', period: 'May–Jun 2026', maintenance: 'Jun–Jul 2026', status: 'Current' },
+            { release: 'Winter ’27', period: 'Sep–Oct 2026', maintenance: 'Oct–Nov 2026', status: 'Upcoming' },
           ].map((row) => (
             <div key={row.release} className="flex flex-wrap items-center justify-between gap-3 py-3 border-b border-gray-100 last:border-0 text-sm">
               <span className="font-semibold text-gray-900">{row.release}</span>

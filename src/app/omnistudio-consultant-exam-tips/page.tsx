@@ -142,7 +142,7 @@ export default function OmniStudioConsultantExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For tool selection: FlexCard = display data contextually on a record page (no user input). OmniScript = step-by-step guided process with user input and decision branching. Integration Procedure = server-side logic with no UI. DataRaptor = direct Salesforce read/write. Memorise these distinctions.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For multi-step flow questions: OmniScript steps can branch based on user input. Reusable sub-scripts can be embedded inside parent OmniScripts. When a requirement says &apos;reuse this interaction in multiple processes&apos;, the answer is a sub-OmniScript — not duplicating the steps in each parent script.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For multi-step flow questions: OmniScript steps can branch based on user input. Reusable sub-scripts can be embedded inside parent OmniScripts. When a requirement says ’reuse this interaction in multiple processes’, the answer is a sub-OmniScript — not duplicating the steps in each parent script.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data retrieval questions: use DataRaptor Extract for simple Salesforce reads. Use Integration Procedure with DataRaptor Extract action for complex reads that aggregate data. Use Integration Procedure with HTTP Action for external REST API calls. The question will describe the data source — match it to the correct tool.</li>
         </ul>
       </section>
@@ -155,8 +155,8 @@ export default function OmniStudioConsultantExamTipsPage() {
         </p>
         <p className="text-sm text-gray-700 mt-3">
           The OmniStudio Consultant exam rewards solution design thinking. Candidates who have configured
-          OmniStudio components and understand the &apos;why&apos; behind each tool&apos;s design perform better
-          than those who only know the &apos;how&apos;. Pair technical knowledge with requirements analysis practice.
+          OmniStudio components and understand the ’why’ behind each tool’s design perform better
+          than those who only know the ’how’. Pair technical knowledge with requirements analysis practice.
         </p>
       </section>
 

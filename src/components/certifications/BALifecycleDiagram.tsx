@@ -12,8 +12,8 @@ export default function BALifecycleDiagram() {
     <figure id="ba-lifecycle-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Business Analyst discovery-to-deployment lifecycle (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Every BA exam scenario maps to one of five stages. A Requirements Traceability Matrix ties each stage&apos;s
-        artifacts back to the original business requirement, so nothing is built — or tested — that wasn&apos;t asked for.
+        Every BA exam scenario maps to one of five stages. A Requirements Traceability Matrix ties each stage’s
+        artifacts back to the original business requirement, so nothing is built — or tested — that wasn’t asked for.
       </p>
       <svg role="img" aria-labelledby="ba-title" className="w-full max-w-4xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 780 140" xmlns="http://www.w3.org/2000/svg">
         <title id="ba-title">Five-stage BA lifecycle: Discovery, Requirements, Design, Build and Test, Deploy and Validate, connected left to right</title>

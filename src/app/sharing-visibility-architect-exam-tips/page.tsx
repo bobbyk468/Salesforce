@@ -136,7 +136,7 @@ export default function SharingVisibilityArchitectExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Sharing Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Sharing &amp; Visibility questions describe an organisation&apos;s access requirements and ask which configuration
+          Sharing &amp; Visibility questions describe an organisation’s access requirements and ask which configuration
           satisfies them. Always start from the most restrictive baseline and open access incrementally.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
@@ -171,7 +171,7 @@ export default function SharingVisibilityArchitectExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. With Sharing vs Without Sharing vs Inherited Sharing in Apex</p>
-            <p className="text-sm text-gray-700">Apex classes declared "with sharing" enforce the running user&apos;s sharing rules. "Without sharing" bypasses sharing (runs as admin). "Inherited sharing" passes the sharing context from the calling class. Candidates use "without sharing" for all utility classes to avoid access issues — the exam expects "with sharing" for user-facing operations and "without sharing" only for system-level operations with a documented security justification.</p>
+            <p className="text-sm text-gray-700">Apex classes declared "with sharing" enforce the running user’s sharing rules. "Without sharing" bypasses sharing (runs as admin). "Inherited sharing" passes the sharing context from the calling class. Candidates use "without sharing" for all utility classes to avoid access issues — the exam expects "with sharing" for user-facing operations and "without sharing" only for system-level operations with a documented security justification.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Territory Management vs Role Hierarchy — Two Separate Sharing Mechanisms</p>

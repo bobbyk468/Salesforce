@@ -75,7 +75,7 @@ export default function FieldServiceVsServiceCloudConsultantPage() {
           Field Service Consultant vs Service Cloud Consultant ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Both are service-focused Salesforce certifications, but they cover very different ground. Here&apos;s how to decide which to take and in what order.
+          Both are service-focused Salesforce certifications, but they cover very different ground. Here’s how to decide which to take and in what order.
         </p>
       </div>
 

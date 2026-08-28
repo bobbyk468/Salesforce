@@ -13,8 +13,8 @@ export default function ReleaseNoteBadge() {
       <div className="flex items-start gap-3">
         <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900">What&apos;s New in Summer &apos;26</h3>
-          <p className="mt-1 text-sm text-gray-600">Major improvements from Spring &apos;26</p>
+          <h3 className="text-lg font-bold text-gray-900">What’s New in Summer ’26</h3>
+          <p className="mt-1 text-sm text-gray-600">Major improvements from Spring ’26</p>
         </div>
       </div>
 

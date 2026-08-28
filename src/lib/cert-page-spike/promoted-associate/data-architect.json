@@ -42,7 +42,7 @@
   "expertInsight": "Data Architect catches people off guard because the passing score is only 58% — but the questions are genuinely hard. The exam loves presenting a scenario with 50M+ records and asking you to pick between skinny tables, custom indexes, SOSL, Big Objects, or an archiving strategy. The trick is that the 'right' answer often depends on the query pattern described, not just the data volume. I spent the most study time on MDM patterns and external IDs for upsert operations — those come up in almost every migration scenario. Don't overlook Platform Events and Change Data Capture for real-time sync questions either.",
   "certificationCard": {
     "code": "Data Architect",
-    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You&apos;ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs.",
+    "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You’ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

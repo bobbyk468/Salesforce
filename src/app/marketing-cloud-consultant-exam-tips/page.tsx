@@ -135,7 +135,7 @@ export default function MarketingCloudConsultantExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle Scenario-Based Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Most Marketing Cloud Consultant questions describe a client&apos;s marketing operations and ask for the right
+          Most Marketing Cloud Consultant questions describe a client’s marketing operations and ask for the right
           architectural or configuration recommendation.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
@@ -168,7 +168,7 @@ export default function MarketingCloudConsultantExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Sender Authentication Package (SAP) vs Default Branding Domain</p>
-            <p className="text-sm text-gray-700">A Sender Authentication Package authenticates a specific sending domain (From address) for email deliverability — it aligns the envelope sender, header From, and link domains. Without SAP, Marketing Cloud uses Salesforce&apos;s shared authentication domain, which reduces deliverability. Candidates configure SAP as optional — the exam treats SAP configuration as essential for enterprise email deliverability.</p>
+            <p className="text-sm text-gray-700">A Sender Authentication Package authenticates a specific sending domain (From address) for email deliverability — it aligns the envelope sender, header From, and link domains. Without SAP, Marketing Cloud uses Salesforce’s shared authentication domain, which reduces deliverability. Candidates configure SAP as optional — the exam treats SAP configuration as essential for enterprise email deliverability.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Suppression Lists vs Publication Lists vs Exclusion Lists</p>

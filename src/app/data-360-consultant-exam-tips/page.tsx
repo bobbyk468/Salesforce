@@ -57,7 +57,7 @@ const faqItems = [
   },
   {
     question: 'What is identity resolution in Data Cloud and why is it tested heavily?',
-    answer: 'Identity resolution is Data Cloud&apos;s process of linking data from multiple sources to a single unified customer profile (Unified Individual). It uses match rules and reconciliation rules to merge duplicate records across data streams. Identity resolution quality directly affects segmentation accuracy — understanding how match rules work is one of the most tested topics.',
+    answer: 'Identity resolution is Data Cloud’s process of linking data from multiple sources to a single unified customer profile (Unified Individual). It uses match rules and reconciliation rules to merge duplicate records across data streams. Identity resolution quality directly affects segmentation accuracy — understanding how match rules work is one of the most tested topics.',
   },
   {
     question: 'What prerequisites help with the Data Cloud Consultant exam?',
@@ -154,7 +154,7 @@ export default function DataCloudConsultantExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Data Cloud is one of Salesforce&apos;s fastest-evolving products. Focus on the current official exam
+          Data Cloud is one of Salesforce’s fastest-evolving products. Focus on the current official exam
           guide and Trailhead Data Cloud Consultant trail — content from 2024 or earlier may be outdated.
           Hands-on experience configuring Data Cloud in a sandbox or free trial org is strongly recommended
           before booking.

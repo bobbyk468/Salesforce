@@ -72,7 +72,7 @@ export default function SalesforceCertificationValidityPage() {
           Salesforce Certification Validity &amp; Expiry ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Salesforce certifications do not expire — but they require maintenance. Here&apos;s exactly how certification validity works and how to keep yours Active.
+          Salesforce certifications do not expire — but they require maintenance. Here’s exactly how certification validity works and how to keep yours Active.
         </p>
       </div>
 
@@ -159,7 +159,7 @@ export default function SalesforceCertificationValidityPage() {
             </tbody>
           </table>
         </div>
-        <p className="text-xs text-gray-600 mt-3">Salesforce&apos;s maintenance model is one of the most candidate-friendly in enterprise technology certification.</p>
+        <p className="text-xs text-gray-600 mt-3">Salesforce’s maintenance model is one of the most candidate-friendly in enterprise technology certification.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

@@ -239,7 +239,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
             <h2 className="font-bold text-lg">Contact Us</h2>
           </div>
           <p className="text-white text-sm mt-1">
-            Questions? We&apos;ll reply to <span className="font-medium">{CONTACT_EMAIL}</span>
+            Questions? We’ll reply to <span className="font-medium">{CONTACT_EMAIL}</span>
           </p>
         </div>
         <div className="p-4">
@@ -249,7 +249,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
                 <CheckCircle className="h-8 w-8 text-green-600" />
               </div>
               <p className="font-semibold text-gray-900">Message sent!</p>
-              <p className="text-sm text-gray-600 mt-1">We&apos;ll get back to you soon.</p>
+              <p className="text-sm text-gray-600 mt-1">We’ll get back to you soon.</p>
               <button
                 type="button"
                 onClick={() => setIsSubmitted(false)}

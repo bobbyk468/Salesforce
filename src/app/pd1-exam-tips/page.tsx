@@ -83,7 +83,7 @@ export default function Pd1ExamTipsPage() {
           PD1 Exam Tips ({RELEASE_CURRENT}): How to Pass Platform Developer I First Attempt
         </h1>
         <p className="text-lg text-gray-600">
-          Platform Developer I (PD1) is Salesforce&apos;s most code-intensive associate-level cert. These tips focus on
+          Platform Developer I (PD1) is Salesforce’s most code-intensive associate-level cert. These tips focus on
           the areas that trip up candidates most: governor limits, bulkification, and the 75% code coverage requirement.
         </p>
       </header>

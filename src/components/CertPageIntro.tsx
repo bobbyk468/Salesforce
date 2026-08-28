@@ -78,7 +78,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
         <li><strong>Sample practice questions</strong> — With clear explanations.</li>
       </ul>
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
-        Content is written for this certification only. Use it to match your study to the official outline and to see when you&apos;re ready to book the exam.
+        Content is written for this certification only. Use it to match your study to the official outline and to see when you’re ready to book the exam.
       </p>
 
       <p className="text-gray-700 leading-relaxed mb-4 text-sm sm:text-base">
@@ -116,7 +116,7 @@ export default function CertPageIntro({ slug }: CertPageIntroProps) {
           {' '}— Aligned with {RELEASE_CURRENT} (vs {RELEASE_PREVIOUS}).
         </p>
         <div>
-          <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">What&apos;s new in {RELEASE_CURRENT}</p>
+          <p className="text-xs sm:text-sm font-semibold text-gray-800 mb-2">What’s new in {RELEASE_CURRENT}</p>
           <ul className="text-xs sm:text-sm text-gray-700 space-y-1.5 list-disc list-inside pl-2">
             {WHATS_NEW_CURRENT_RELEASE.map((item, i) => (
               <li key={i}>{item}</li>

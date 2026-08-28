@@ -63,7 +63,7 @@ const faqItems = [
   },
   {
     question: 'What is the quote-to-cash process in Salesforce?',
-    answer: 'Quote-to-cash is the end-to-end B2B sales process: Opportunity (qualify the deal) → Quote (CPQ configuration and pricing) → Order (convert quote to order) → Contract (generate and manage contract) → Billing (invoice the customer) → Revenue Recognition (recognise revenue per ASC 606). Salesforce&apos;s B2B Solution Architect exam tests how to design this process across CPQ, Revenue Cloud, and ERP integrations.',
+    answer: 'Quote-to-cash is the end-to-end B2B sales process: Opportunity (qualify the deal) → Quote (CPQ configuration and pricing) → Order (convert quote to order) → Contract (generate and manage contract) → Billing (invoice the customer) → Revenue Recognition (recognise revenue per ASC 606). Salesforce’s B2B Solution Architect exam tests how to design this process across CPQ, Revenue Cloud, and ERP integrations.',
   },
   {
     question: 'What is B2B Commerce Cloud?',
@@ -188,7 +188,7 @@ export default function B2bSolutionArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. B2B Solution Architect is entirely scenario-based and requires genuine multi-cloud project experience. Reading Trailhead alone is insufficient — you need to have architected and implemented solutions involving at least 3 of the B2B clouds tested.</p>
       </div>
 

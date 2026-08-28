@@ -47,15 +47,15 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How hard is the Financial Services Cloud Accredited Professional exam?',
-    answer: 'Financial Services Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on FSC implementation experience. It tests FSC&apos;s specialised data model: household and individual accounts, financial accounts, financial goals, action plans, and referrals. Candidates with real FSC project experience typically pass in 3–4 weeks of focused study. Those without FSC hands-on experience find the financial services data model and referral management workflows the hardest sections.',
+    answer: 'Financial Services Cloud AP is a Pass/Fail accredited professional exam (40 questions, 60 minutes, $150) designed for practitioners with hands-on FSC implementation experience. It tests FSC’s specialised data model: household and individual accounts, financial accounts, financial goals, action plans, and referrals. Candidates with real FSC project experience typically pass in 3–4 weeks of focused study. Those without FSC hands-on experience find the financial services data model and referral management workflows the hardest sections.',
   },
   {
     question: 'What are the highest-weight FSC AP exam sections?',
-    answer: 'FSC Data Model and Client Management (30%) and Financial Account Management (25%) together account for 55% of the exam. Understanding FSC&apos;s person account model, household accounts, financial accounts (bank accounts, investment portfolios, insurance policies), and the relationship between clients and their financial holdings are the most tested areas.',
+    answer: 'FSC Data Model and Client Management (30%) and Financial Account Management (25%) together account for 55% of the exam. Understanding FSC’s person account model, household accounts, financial accounts (bank accounts, investment portfolios, insurance policies), and the relationship between clients and their financial holdings are the most tested areas.',
   },
   {
     question: 'What is the FSC household model and why is it important for the exam?',
-    answer: 'FSC uses a household account model where multiple clients (person accounts) are grouped into a household (account). Financial advisors can view all household members&apos; financial accounts, life events, and relationship maps from a single household view. This is fundamental to FSC — the exam tests how to configure household relationships, manage primary household contacts, and use the household rollup summaries.',
+    answer: 'FSC uses a household account model where multiple clients (person accounts) are grouped into a household (account). Financial advisors can view all household members’ financial accounts, life events, and relationship maps from a single household view. This is fundamental to FSC — the exam tests how to configure household relationships, manage primary household contacts, and use the household rollup summaries.',
   },
   {
     question: 'What financial industry knowledge helps with the FSC AP exam?',
@@ -138,9 +138,9 @@ export default function FinancialServicesCloudApExamTipsPage() {
           custom objects or opportunities for financial accounts.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For household questions: when a married couple are both clients, create them as two person accounts linked to one household account. The household account shows the combined financial picture for the advisor. The primary household contact is the main point of contact. When a scenario says &apos;show the advisor a combined view of both spouses&apos; investments&apos;, the answer is the household rollup view.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For household questions: when a married couple are both clients, create them as two person accounts linked to one household account. The household account shows the combined financial picture for the advisor. The primary household contact is the main point of contact. When a scenario says ’show the advisor a combined view of both spouses’ investments’, the answer is the household rollup view.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For life event questions: life events trigger action plans for advisor follow-up. When a client has a baby, gets married, or retires, FSC can automatically create tasks for the advisor to schedule a financial review. Life events are linked to the client (person account) and can trigger reminders based on the event date.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For financial account questions: a Financial Account in FSC is a top-level account (like a brokerage account). Financial Holdings are the individual assets within that account (individual stocks, bonds, funds). Financial Account Roles define who has ownership or beneficiary rights. When a scenario asks about &apos;tracking individual securities within a portfolio&apos;, the answer is Financial Holdings — not Financial Accounts.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For financial account questions: a Financial Account in FSC is a top-level account (like a brokerage account). Financial Holdings are the individual assets within that account (individual stocks, bonds, funds). Financial Account Roles define who has ownership or beneficiary rights. When a scenario asks about ’tracking individual securities within a portfolio’, the answer is Financial Holdings — not Financial Accounts.</li>
         </ul>
       </section>
 

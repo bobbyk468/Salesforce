@@ -19,14 +19,14 @@
   },
   "examDifficulty": {
     "heading": "Is the Claude Certified Associate Exam Hard?",
-    "summary": "The CCAO-F is Anthropic&apos;s most accessible exam, but don&apos;t mistake entry-level for easy. It tests practical judgment — spotting hallucinations, choosing the right Claude model for a task, and knowing when data sensitivity demands enterprise-grade controls — which means candidates who only skim the surface tend to stumble on the response-quality and governance sections.",
+    "summary": "The CCAO-F is Anthropic’s most accessible exam, but don’t mistake entry-level for easy. It tests practical judgment — spotting hallucinations, choosing the right Claude model for a task, and knowing when data sensitivity demands enterprise-grade controls — which means candidates who only skim the surface tend to stumble on the response-quality and governance sections.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes — roughly two minutes per question, which is comfortable for most candidates.",
       "<strong>720/1000 passing score</strong> — you need consistent accuracy across all seven domains, not just strength in one area.",
       "<strong>Response Quality carries the most weight at 21%</strong> — identifying hallucinations, omissions, and fabricated citations is the single biggest differentiator between passing and failing.",
       "<strong>No coding required</strong> — the exam is designed for non-technical professionals, but two weeks of daily hands-on Claude usage is the minimum preparation most successful candidates report."
     ],
-    "passRateGuidance": "If you can consistently spot errors in Claude&apos;s output and explain why one prompting approach outperforms another, you are ready to book."
+    "passRateGuidance": "If you can consistently spot errors in Claude’s output and explain why one prompting approach outperforms another, you are ready to book."
   },
   "examFormat": {
     "heading": "Claude Certified Associate Exam Format Explained",
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAO-F",
-    "description": "Anthropic&apos;s entry-level credential for non-technical professionals. The CCAO-F tests whether you can write well-structured prompts, spot errors in AI-generated responses, pick the right Claude model for a task, set up Projects with knowledge sources, and handle sensitive data responsibly — all without writing a single line of code.",
+    "description": "Anthropic’s entry-level credential for non-technical professionals. The CCAO-F tests whether you can write well-structured prompts, spot errors in AI-generated responses, pick the right Claude model for a task, set up Projects with knowledge sources, and handle sensitive data responsibly — all without writing a single line of code.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -75,7 +75,7 @@
       },
       {
         "heading": "Setting Up Projects and Knowledge Sources",
-        "body": "A Project in Claude is a reusable workspace where you pin instructions and upload reference documents. When you ask a question inside a Project, Claude sees those instructions and files alongside your prompt. The exam tests configuration judgment: when to create a separate Project vs. a single conversation, how uploaded documents shape Claude&apos;s responses, and what happens when Project instructions conflict with a user&apos;s in-chat request."
+        "body": "A Project in Claude is a reusable workspace where you pin instructions and upload reference documents. When you ask a question inside a Project, Claude sees those instructions and files alongside your prompt. The exam tests configuration judgment: when to create a separate Project vs. a single conversation, how uploaded documents shape Claude’s responses, and what happens when Project instructions conflict with a user’s in-chat request."
       },
       {
         "heading": "Data Sensitivity and Responsible Use",
@@ -85,7 +85,7 @@
   },
   "scenarioTips": {
     "h2": "How to Pass the Claude Certified Associate Exam",
-    "intro": "Every CCAO-F question tells a short story — a team, a task, and a constraint — then asks what you would do. There is no code, no API syntax, and no prerequisite. Prepare by practicing with Claude daily, paying attention to when it works well and when it doesn&apos;t.",
+    "intro": "Every CCAO-F question tells a short story — a team, a task, and a constraint — then asks what you would do. There is no code, no API syntax, and no prerequisite. Prepare by practicing with Claude daily, paying attention to when it works well and when it doesn’t.",
     "blocks": [
       {
         "heading": "Treat Prompts Like Mini-Briefs",
@@ -93,11 +93,11 @@
       },
       {
         "heading": "Build Your Error-Spotting Instinct",
-        "body": "The response-evaluation domain carries the most weight. Before the exam, give Claude tasks where you already know the right answer — financial calculations, factual summaries, data comparisons — and force yourself to verify every claim. That habit makes the exam&apos;s quality-judgment questions straightforward."
+        "body": "The response-evaluation domain carries the most weight. Before the exam, give Claude tasks where you already know the right answer — financial calculations, factual summaries, data comparisons — and force yourself to verify every claim. That habit makes the exam’s quality-judgment questions straightforward."
       },
       {
         "heading": "Map Each Product to a Use Case",
-        "body": "Don&apos;t memorize feature lists. Instead, build a mental decision tree: one person, occasional use → Claude.ai. Consistent brand voice across a team → a shared Project with custom instructions. Automated pipeline feeding a database → the API. A developer fixing code → Claude Code. The exam rewards use-case thinking, not product trivia."
+        "body": "Don’t memorize feature lists. Instead, build a mental decision tree: one person, occasional use → Claude.ai. Consistent brand voice across a team → a shared Project with custom instructions. Automated pipeline feeding a database → the API. A developer fixing code → Claude Code. The exam rewards use-case thinking, not product trivia."
       },
       {
         "heading": "Know the Governance Boundaries",
@@ -105,7 +105,7 @@
       },
       {
         "heading": "Practice Across Real Workflows",
-        "body": "Use Claude for your actual daily tasks for at least two weeks before sitting the exam. Draft emails, summarize documents, compare options, build slide outlines, and review Claude&apos;s work critically. That hands-on muscle memory is worth more than any study guide."
+        "body": "Use Claude for your actual daily tasks for at least two weeks before sitting the exam. Draft emails, summarize documents, compare options, build slide outlines, and review Claude’s work critically. That hands-on muscle memory is worth more than any study guide."
       }
     ]
   },

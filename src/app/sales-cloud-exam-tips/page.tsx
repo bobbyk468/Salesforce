@@ -140,7 +140,7 @@ export default function SalesCloudExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle Scenario-Based Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Sales Cloud Consultant questions describe a client&apos;s sales process and ask you to recommend a solution.
+          Sales Cloud Consultant questions describe a client’s sales process and ask you to recommend a solution.
           The correct answer is always the simplest configuration that meets all stated requirements.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">

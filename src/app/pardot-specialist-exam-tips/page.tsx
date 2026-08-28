@@ -142,7 +142,7 @@ export default function PardotSpecialistExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For lead scoring questions: understand the difference between score (implicit behaviour) and grade (explicit fit) — and when to use each to trigger sales alerts.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Engagement Studio: know when to use a Wait step vs a Rule step vs an Action step, and the order in which Pardot evaluates them.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: understand that Pardot syncs with the assigned user&apos;s CRM permissions — connector user setup is a common exam topic.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For Salesforce sync questions: understand that Pardot syncs with the assigned user’s CRM permissions — connector user setup is a common exam topic.</li>
         </ul>
       </section>
 

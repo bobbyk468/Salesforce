@@ -282,7 +282,7 @@ function ContactPageContent() {
             <div className="lg:col-span-1">
               <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
               <p className="text-gray-600 mb-8">
-                Questions about our materials or pricing? Just want to say hello? We&apos;re here to help.
+                Questions about our materials or pricing? Just want to say hello? We’re here to help.
               </p>
               <div className="mb-8 space-y-3 text-sm leading-6 text-gray-700">
                 <p>
@@ -389,9 +389,9 @@ function ContactPageContent() {
                     {examParam && (
                       <p className="text-sm text-gray-600 mb-6">
                         {isQuestionBankFlow(examParam) ? (
-                          <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice + personalized study plan. Add your message below and we&apos;ll respond with pricing and access details.</>
+                          <>Exam: <strong>{examParam}</strong>. Access duration: 30, 60, or 90 days. Includes: Full mocks + section-wise practice + personalized study plan. Add your message below and we’ll respond with pricing and access details.</>
                         ) : (
-                          <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we&apos;ll get back to you.</>
+                          <>Questions about <strong>{examParam}</strong>? The exam/certification field below is pre-filled—add your message and we’ll get back to you.</>
                         )}
                       </p>
                     )}

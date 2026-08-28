@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Tableau Architect exam format?',
-    answer: 'The Tableau Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 75% passing score, and a $600 fee. It is Tableau&apos;s expert-level certification testing enterprise Tableau Server and Tableau Cloud architecture, deployment design, security, performance tuning, and governance at scale.',
+    answer: 'The Tableau Architect exam has 60 multiple-choice questions, a 120-minute time limit, a 75% passing score, and a $600 fee. It is Tableau’s expert-level certification testing enterprise Tableau Server and Tableau Cloud architecture, deployment design, security, performance tuning, and governance at scale.',
   },
   {
     question: 'What are the highest-weight Tableau Architect exam sections?',
@@ -78,7 +78,7 @@ export default function TableauArchitectExamTipsPage() {
           Tableau Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
         </h1>
         <p className="text-lg text-gray-600">
-          The Tableau Architect exam is Tableau&apos;s expert-level certification for enterprise deployment
+          The Tableau Architect exam is Tableau’s expert-level certification for enterprise deployment
           architects. These tips focus on the Tableau Server topology, security architecture, and
           performance optimisation that define this advanced exam.
         </p>
@@ -131,7 +131,7 @@ export default function TableauArchitectExamTipsPage() {
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For topology questions: add VizQL nodes for more concurrent user sessions. Add Backgrounder nodes for faster extract refreshes. Add Data Engine nodes for better Hyper extract performance. The correct node to add depends on which bottleneck the question describes — match the symptom to the correct process.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For RLS questions: database security (passing user identity to the database) is the most scalable approach for large datasets. VizQL-based user filters (filtering on [TableauUserName()] in the workbook) are simpler to implement but harder to audit at scale. Virtual connections in Tableau Cloud provide centralised, governed data access with built-in RLS.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For authentication questions: SAML delegates authentication to an Identity Provider (IdP) — users log in via their corporate SSO. OpenID Connect uses OAuth 2.0 flows for identity. Kerberos allows single sign-on in Windows domain environments. When a question says &apos;use corporate SSO credentials for Tableau&apos;, SAML is the answer.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For authentication questions: SAML delegates authentication to an Identity Provider (IdP) — users log in via their corporate SSO. OpenID Connect uses OAuth 2.0 flows for identity. Kerberos allows single sign-on in Windows domain environments. When a question says ’use corporate SSO credentials for Tableau’, SAML is the answer.</li>
         </ul>
       </section>
 
@@ -156,7 +156,7 @@ export default function TableauArchitectExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Extracts vs Live Connections — Performance vs Currency Trade-Off</p>
-            <p className="text-sm text-gray-700">Extracts are snapshots of data stored in Tableau&apos;s columnar format (.hyper files) — fast query performance but data is only as fresh as the last refresh. Live connections query the source database directly — always current but performance depends on source database speed. Candidates use Live connections for all scenarios to ensure data freshness — the exam expects Extracts when performance is the priority and query load on the source must be minimised.</p>
+            <p className="text-sm text-gray-700">Extracts are snapshots of data stored in Tableau’s columnar format (.hyper files) — fast query performance but data is only as fresh as the last refresh. Live connections query the source database directly — always current but performance depends on source database speed. Candidates use Live connections for all scenarios to ensure data freshness — the exam expects Extracts when performance is the priority and query load on the source must be minimised.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Row-Level Security — Data Source Filters vs User Attribute Functions</p>

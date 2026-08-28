@@ -59,7 +59,7 @@ export default function TermsPage() {
         </p>
         <p>
           <strong>Trademark notice:</strong> Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc.
-          &quot;Trailblaze Prep&quot; is not affiliated with or endorsed by Salesforce&apos;s Trailblazer program or Trailhead.
+          "Trailblaze Prep" is not affiliated with or endorsed by Salesforce’s Trailblazer program or Trailhead.
           We use certification names only to describe the exams we help you prepare for.
         </p>
         <p>

@@ -62,7 +62,7 @@ const faqItems = [
   },
   {
     question: 'What Apex governor limits are tested on PD1?',
-    answer: 'The most commonly tested governor limits are: 100 SOQL queries per synchronous transaction, 150 DML statements per transaction, 50,000 records returned by a single SOQL query, 10 callouts per transaction, and 60,000ms total CPU time. Bulkification is the exam&apos;s primary governor limit scenario — you need to explain why SOQL/DML inside for-loops is wrong and how to fix it.',
+    answer: 'The most commonly tested governor limits are: 100 SOQL queries per synchronous transaction, 150 DML statements per transaction, 50,000 records returned by a single SOQL query, 10 callouts per transaction, and 60,000ms total CPU time. Bulkification is the exam’s primary governor limit scenario — you need to explain why SOQL/DML inside for-loops is wrong and how to fix it.',
   },
 ]
 
@@ -188,7 +188,7 @@ export default function Pd1StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Salesforce Fundamentals (7%)
             </p>
-            <p>MVC pattern (Model = objects/fields, View = Visualforce/LWC, Controller = Apex), declarative vs programmatic development, when to choose each. Object relationships (master-detail, lookup, many-to-many via junction object), sharing model basics (OWD, role hierarchy, sharing rules, with sharing / without sharing in Apex). Know that <code>with sharing</code> enforces the running user&apos;s sharing rules; <code>without sharing</code> ignores them (admin context).</p>
+            <p>MVC pattern (Model = objects/fields, View = Visualforce/LWC, Controller = Apex), declarative vs programmatic development, when to choose each. Object relationships (master-detail, lookup, many-to-many via junction object), sharing model basics (OWD, role hierarchy, sharing rules, with sharing / without sharing in Apex). Know that <code>with sharing</code> enforces the running user’s sharing rules; <code>without sharing</code> ignores them (admin context).</p>
           </div>
         </div>
       </section>
@@ -262,14 +262,14 @@ export default function Pd1StudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>LWC questions:</strong> If a parent component needs to pass data to a child, use @api. If a child needs to notify a parent, fire a custom event with this.dispatchEvent(new CustomEvent(&apos;eventname&apos;, &#123; detail: data &#125;)). If you need to call Apex imperatively, import the method and call it in connectedCallback() or a click handler.</span>
+            <span><strong>LWC questions:</strong> If a parent component needs to pass data to a child, use @api. If a child needs to notify a parent, fire a custom event with this.dispatchEvent(new CustomEvent(’eventname’, &#123; detail: data &#125;)). If you need to call Apex imperatively, import the method and call it in connectedCallback() or a click handler.</span>
           </li>
         </ul>
       </section>
 
       {/* Mock benchmark */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           78%+ on 3 timed full mocks (60 Q / 110 min) before booking

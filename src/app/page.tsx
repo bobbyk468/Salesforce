@@ -465,7 +465,7 @@ export default function Home() {
                 <TrendingUp className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">{RELEASE_CURRENT} ready</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Updated within 30 days of every Salesforce release. We track the changelog so you don&apos;t have to.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Updated within 30 days of every Salesforce release. We track the changelog so you don’t have to.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">

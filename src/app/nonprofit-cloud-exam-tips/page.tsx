@@ -53,7 +53,7 @@ const faqItems = [
   },
   {
     question: 'What is the difference between Nonprofit Cloud (NPC) and NPSP?',
-    answer: 'NPSP (Nonprofit Success Pack) is the legacy managed package for nonprofits. Nonprofit Cloud (NPC) is Salesforce&apos;s next-generation nonprofit platform built natively on Salesforce — it replaces NPSP with a more modern data model and deeper integration with Salesforce core features. The Nonprofit Cloud Consultant exam focuses on NPC; the NPSP Consultant exam focuses on the legacy NPSP package.',
+    answer: 'NPSP (Nonprofit Success Pack) is the legacy managed package for nonprofits. Nonprofit Cloud (NPC) is Salesforce’s next-generation nonprofit platform built natively on Salesforce — it replaces NPSP with a more modern data model and deeper integration with Salesforce core features. The Nonprofit Cloud Consultant exam focuses on NPC; the NPSP Consultant exam focuses on the legacy NPSP package.',
   },
   {
     question: 'What are the highest-weight Nonprofit Cloud Consultant exam sections?',
@@ -104,9 +104,9 @@ export default function NonprofitCloudExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">TL;DR: What Nonprofit Cloud Consultant Tests</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Fundraising and gift management</strong> — Gift transactions, gift commitments (recurring giving), payment schedules, soft credits, campaign management, and how NPC&apos;s fundraising data model relates to contacts, accounts, and opportunities.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Fundraising and gift management</strong> — Gift transactions, gift commitments (recurring giving), payment schedules, soft credits, campaign management, and how NPC’s fundraising data model relates to contacts, accounts, and opportunities.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Programme management</strong> — Programme delivery tracking, service delivery records, beneficiary management, and outcome measurement. Understanding how programme data supports impact reporting for grant reporting and donor communications.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>NPC data model and configuration</strong> — NPC&apos;s household model, relationship management between constituents, how NPC differs from NPSP, Salesforce Flows for nonprofit automation, and the Nonprofit Cloud setup and configuration process.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>NPC data model and configuration</strong> — NPC’s household model, relationship management between constituents, how NPC differs from NPSP, Salesforce Flows for nonprofit automation, and the Nonprofit Cloud setup and configuration process.</li>
         </ul>
       </section>
 
@@ -141,8 +141,8 @@ export default function NonprofitCloudExamTipsPage() {
           not NPSP patterns or custom Salesforce objects.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For gift management questions: in NPC, a Gift Transaction records a single gift event. A Gift Commitment tracks recurring giving pledges with a payment schedule. Soft Credits attribute a gift to multiple people (e.g., a couple). Know which object handles each scenario — they are different from NPSP&apos;s opportunity-based approach.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For programme questions: Service Deliveries record when a beneficiary received a service. Programme Engagements link a Contact to a Programme with a stage and start/end date. Outcome data flows from Service Delivery records to impact dashboards. Map the nonprofit&apos;s workflow to these objects.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For gift management questions: in NPC, a Gift Transaction records a single gift event. A Gift Commitment tracks recurring giving pledges with a payment schedule. Soft Credits attribute a gift to multiple people (e.g., a couple). Know which object handles each scenario — they are different from NPSP’s opportunity-based approach.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For programme questions: Service Deliveries record when a beneficiary received a service. Programme Engagements link a Contact to a Programme with a stage and start/end date. Outcome data flows from Service Delivery records to impact dashboards. Map the nonprofit’s workflow to these objects.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For NPC vs. NPSP questions: NPC uses a different data model — Gift Transaction (not Opportunity for donations), Programme Engagement (not custom objects). When a question describes a scenario that could be solved by either, the NPC approach is always the correct answer for this exam.</li>
         </ul>
       </section>
@@ -154,7 +154,7 @@ export default function NonprofitCloudExamTipsPage() {
           75%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Nonprofit Cloud (NPC) is Salesforce&apos;s newest nonprofit platform and exam content reflects the
+          Nonprofit Cloud (NPC) is Salesforce’s newest nonprofit platform and exam content reflects the
           current NPC release. Candidates familiar with NPSP should study the NPC data model differences
           carefully — NPC uses different objects and terminology for many familiar nonprofit functions.
           Focus on the official Trailhead Nonprofit Cloud trail for current content.
@@ -168,7 +168,7 @@ export default function NonprofitCloudExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. NPSP Household Account Model — Contacts Are Primary, Accounts Are Secondary</p>
-            <p className="text-sm text-gray-700">Salesforce Nonprofit Success Pack (NPSP) inverts the standard B2B model: the Contact (donor/constituent) is the primary record, and the Household Account is auto-created to hold household-level relationships and giving. Candidates answer relationship questions using standard B2B Account-Contact logic — the exam expects NPSP&apos;s Household model where Contacts drive the relationship.</p>
+            <p className="text-sm text-gray-700">Salesforce Nonprofit Success Pack (NPSP) inverts the standard B2B model: the Contact (donor/constituent) is the primary record, and the Household Account is auto-created to hold household-level relationships and giving. Candidates answer relationship questions using standard B2B Account-Contact logic — the exam expects NPSP’s Household model where Contacts drive the relationship.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Soft Credits vs Hard Credits — Recognition vs Liability</p>

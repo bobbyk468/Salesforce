@@ -151,7 +151,7 @@ export default function SalesforceCertificationVoucherPage() {
 
       <div className="bg-gray-50 border border-gray-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-gray-900 mb-2">What About Third-Party Voucher Sites?</h2>
-        <p className="text-sm text-gray-700">Be cautious of third-party websites claiming to sell Salesforce exam vouchers at steep discounts. Salesforce exams are administered through Webassessor (Kryterion) — voucher codes must be valid Salesforce-issued codes. Unofficial voucher sellers are either scams or operating in violation of Salesforce&apos;s terms of service. The legitimate discount sources are the ones listed above.</p>
+        <p className="text-sm text-gray-700">Be cautious of third-party websites claiming to sell Salesforce exam vouchers at steep discounts. Salesforce exams are administered through Webassessor (Kryterion) — voucher codes must be valid Salesforce-issued codes. Unofficial voucher sellers are either scams or operating in violation of Salesforce’s terms of service. The legitimate discount sources are the ones listed above.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

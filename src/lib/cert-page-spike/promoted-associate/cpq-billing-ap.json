@@ -33,7 +33,7 @@
     "intro": "The exam is proctored online or in-person. Here is the format:",
     "scenarioPercent": "Expect scenario questions that follow a deal through the full lifecycle &mdash; from quote configuration to invoice generation and revenue recognition. Common patterns describe a billing requirement (monthly subscription billed in advance, usage-based overage) and ask which Billing configuration meets it.",
     "bestWayToPass": [
-      "<strong>Trace the full object chain:</strong> Know how Quote &rarr; Quote Line &rarr; Order &rarr; Order Product &rarr; Invoice &rarr; Invoice Line connects, and what triggers each object&apos;s creation.",
+      "<strong>Trace the full object chain:</strong> Know how Quote &rarr; Quote Line &rarr; Order &rarr; Order Product &rarr; Invoice &rarr; Invoice Line connects, and what triggers each object’s creation.",
       "<strong>Study Billing rules deeply:</strong> Understand Bill Now vs. Bill in Advance vs. Bill in Arrears, billing frequency options, and how invoice consolidation groups charges by account.",
       "<strong>Know usage-based billing:</strong> Understand how Usage Summaries aggregate consumption data, how Usage Rate Cards define pricing tiers, and how overage billing is calculated.",
       "<strong>Review revenue recognition:</strong> Study how Revenue Schedules distribute revenue across accounting periods, the difference between ratable and event-based recognition, and how ASC 606 compliance is configured."

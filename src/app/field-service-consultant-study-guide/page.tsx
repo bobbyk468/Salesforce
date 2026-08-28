@@ -190,15 +190,15 @@ export default function FieldServiceConsultantStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Know the FSL object model cold:</strong> Work Order → Work Order Line Items → Service Appointments → Service Resources. Understand which object stores skills (Service Resource), which stores location (Service Territory Member), and which stores the job details (Work Order).</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Scheduling policy vs scheduling rule:</strong> A policy is a named collection of rules. Each rule has a type (Required, Preferred, Excluded), a weight, and a scope. Required rules must be satisfied; preferred rules improve score. Exam scenarios describe a business need — identify which rule type applies.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Optimization types:</strong> Global Optimization runs on all unscheduled appointments in a territory. Single Resource Optimization runs on one technician&apos;s schedule. In-Day Optimization re-optimises the current day in real time. Know when a dispatcher would choose each.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Preferred resource vs required skill:</strong> A preferred resource on an account or work order influences scheduling but doesn&apos;t block it. A required skill on a Work Order blocks scheduling — only technicians with that skill level or higher are candidates.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Optimization types:</strong> Global Optimization runs on all unscheduled appointments in a territory. Single Resource Optimization runs on one technician’s schedule. In-Day Optimization re-optimises the current day in real time. Know when a dispatcher would choose each.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Preferred resource vs required skill:</strong> A preferred resource on an account or work order influences scheduling but doesn’t block it. A required skill on a Work Order blocks scheduling — only technicians with that skill level or higher are candidates.</span></li>
         </ul>
       </div>
 
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Field Service is one of the more hands-on exams — if you&apos;ve never used the Gantt dispatcher console or run an optimization, set up a sandbox first. The top two sections (Managing a Field Service Business 19% + Defining Field Service 16%) together account for 35% of the exam.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Field Service is one of the more hands-on exams — if you’ve never used the Gantt dispatcher console or run an optimization, set up a sandbox first. The top two sections (Managing a Field Service Business 19% + Defining Field Service 16%) together account for 35% of the exam.</p>
       </div>
 
       {/* Top 10 Review */}

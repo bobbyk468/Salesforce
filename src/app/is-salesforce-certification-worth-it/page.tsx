@@ -38,7 +38,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'Does Salesforce certification increase salary?',
-    answer: 'Yes — consistently. Salesforce&apos;s own research and third-party salary surveys show certified professionals earn 20–30% more than non-certified peers in equivalent roles. Entry-level ADM-201 certified admins earn $60,000–$80,000 vs $45,000–$60,000 without certification. Senior developers and architects with multiple certifications earn $130,000–$180,000+. The ROI on a $200 exam fee against a $15,000–$30,000 salary increase makes certification one of the highest-return professional investments available.',
+    answer: 'Yes — consistently. Salesforce’s own research and third-party salary surveys show certified professionals earn 20–30% more than non-certified peers in equivalent roles. Entry-level ADM-201 certified admins earn $60,000–$80,000 vs $45,000–$60,000 without certification. Senior developers and architects with multiple certifications earn $130,000–$180,000+. The ROI on a $200 exam fee against a $15,000–$30,000 salary increase makes certification one of the highest-return professional investments available.',
   },
   {
     question: 'How many Salesforce certifications do you need?',
@@ -73,7 +73,7 @@ export default function IsSalesforceCertificationWorthItPage() {
           Is Salesforce Certification Worth It? ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          An honest answer — salary data, job market demand, real costs, and who should (and shouldn&apos;t) invest in Salesforce certification.
+          An honest answer — salary data, job market demand, real costs, and who should (and shouldn’t) invest in Salesforce certification.
         </p>
       </div>
 

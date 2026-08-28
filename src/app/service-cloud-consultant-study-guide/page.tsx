@@ -59,11 +59,11 @@ const faqItems = [
   },
   {
     question: 'What is Omni-Channel in Service Cloud and why is it tested heavily?',
-    answer: 'Omni-Channel is Salesforce&apos;s unified routing engine that distributes work (cases, chats, leads, custom objects) to agents based on their availability, capacity, and skills. The exam tests: routing models (queue-based routing — first-in-first-out to a queue; skills-based routing — match work to agents with the right skill set; external routing — route through third-party CTI), agent capacity (size-based vs tab-based), and presence statuses. Omni-Channel is one of the most commonly failed topics because it has many configuration nuances.',
+    answer: 'Omni-Channel is Salesforce’s unified routing engine that distributes work (cases, chats, leads, custom objects) to agents based on their availability, capacity, and skills. The exam tests: routing models (queue-based routing — first-in-first-out to a queue; skills-based routing — match work to agents with the right skill set; external routing — route through third-party CTI), agent capacity (size-based vs tab-based), and presence statuses. Omni-Channel is one of the most commonly failed topics because it has many configuration nuances.',
   },
   {
     question: 'How does entitlement management work in Service Cloud?',
-    answer: 'Entitlements define the level of support a customer is entitled to (e.g., 24/7 phone support, 4-hour response SLA). An Entitlement Process defines the series of time-dependent milestones that must be completed for each case. Milestones are checkpoints (e.g., &quot;First Response within 2 hours&quot;) that trigger escalation actions if breached. The exam tests: entitlement templates (auto-assign entitlements to cases), milestone actions (notifications and escalation), and how entitlements relate to Accounts, Contacts, and Assets.',
+    answer: 'Entitlements define the level of support a customer is entitled to (e.g., 24/7 phone support, 4-hour response SLA). An Entitlement Process defines the series of time-dependent milestones that must be completed for each case. Milestones are checkpoints (e.g., "First Response within 2 hours") that trigger escalation actions if breached. The exam tests: entitlement templates (auto-assign entitlements to cases), milestone actions (notifications and escalation), and how entitlements relate to Accounts, Contacts, and Assets.',
   },
 ]
 
@@ -168,7 +168,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Knowledge Management (18%)
             </p>
-            <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard — single Knowledge object, custom fields per record type; replaces Classic Knowledge&apos;s article types). <strong>Data Categories</strong> — hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
+            <p>Salesforce Knowledge is the built-in knowledge base for agent and customer self-service. Key topics: <strong>Lightning Knowledge</strong> (the current standard — single Knowledge object, custom fields per record type; replaces Classic Knowledge’s article types). <strong>Data Categories</strong> — hierarchical categories that control article visibility (which customer communities see which articles, which agents see which internal articles). <strong>Article lifecycle:</strong> draft → In Review → Published → Archived. <strong>Knowledge search:</strong> how articles surface in the Service Console search, in Experience Cloud portals, and in Einstein Search. Know the difference between Lightning Knowledge (record types replace article types) and Classic Knowledge (deprecated but still tested for migrations).</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -211,11 +211,11 @@ export default function ServiceCloudConsultantStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Omni-Channel routing questions:</strong> When a scenario requires work to go to the next available agent in a queue (no skill matching), the answer is queue-based routing. When cases must be matched to agents with specific skills (e.g., Spanish-speaking agents for Spanish cases), the answer is skills-based routing. When the routing system is third-party telephony (a call centre ACD), the answer is external routing. Agents must have a Presence Status that includes the relevant service channel — if a status doesn&apos;t include the channel, agents in that status won&apos;t receive that type of work.</span>
+            <span><strong>Omni-Channel routing questions:</strong> When a scenario requires work to go to the next available agent in a queue (no skill matching), the answer is queue-based routing. When cases must be matched to agents with specific skills (e.g., Spanish-speaking agents for Spanish cases), the answer is skills-based routing. When the routing system is third-party telephony (a call centre ACD), the answer is external routing. Agents must have a Presence Status that includes the relevant service channel — if a status doesn’t include the channel, agents in that status won’t receive that type of work.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Knowledge visibility questions:</strong> Data Categories control which articles are visible to which audiences — internal (agent-only), partner, and customer (public). If a scenario says certain articles should only be visible to premium customers, the answer involves Data Category visibility settings on the Experience Cloud site. If articles should only be visible to agents (not customers), the answer is setting the article&apos;s channel to &ldquo;Internal App&rdquo; only.</span>
+            <span><strong>Knowledge visibility questions:</strong> Data Categories control which articles are visible to which audiences — internal (agent-only), partner, and customer (public). If a scenario says certain articles should only be visible to premium customers, the answer involves Data Category visibility settings on the Experience Cloud site. If articles should only be visible to agents (not customers), the answer is setting the article’s channel to &ldquo;Internal App&rdquo; only.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -285,7 +285,7 @@ export default function ServiceCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After Service Cloud Consultant?</h2>
         <p className="text-sm text-gray-700 mb-3">
-          After you&apos;ve passed Service Cloud, you can either deepen your service specialism or round out a broader consultant profile:
+          After you’ve passed Service Cloud, you can either deepen your service specialism or round out a broader consultant profile:
         </p>
         <ul className="space-y-2 text-sm text-gray-700 list-disc list-inside">
           <li>

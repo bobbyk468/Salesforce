@@ -74,7 +74,7 @@ export default function CpqAdminVsCpqBillingApPage() {
         </h1>
         <p className="text-lg text-gray-600">
           Both CPQ certifications validate Revenue Cloud skills, but they differ in scope, depth, exam format, and cost.
-          Here&apos;s how to choose the right credential for your role and timeline.
+          Here’s how to choose the right credential for your role and timeline.
         </p>
       </header>
 

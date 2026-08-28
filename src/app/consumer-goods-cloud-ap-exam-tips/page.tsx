@@ -126,7 +126,7 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
             <span className="font-medium text-gray-900">Mobile and Platform Configuration</span>
             <span className="font-bold text-salesforce-blue ml-4">13%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60% — understanding the field rep&apos;s in-store workflow is essential.</p>
+          <p className="text-xs text-gray-600 pt-1">AP format: 40 questions, 60 minutes, Pass/Fail, $150. Retail Execution + KPI = 60% — understanding the field rep’s in-store workflow is essential.</p>
         </div>
       </section>
 
@@ -138,9 +138,9 @@ export default function ConsumerGoodsCloudApExamTipsPage() {
           what do they need to see and do during a store visit?
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For visit planning questions: visit plans define which stores a rep visits and how frequently. Activity types define what the rep does during each visit (shelf check, order capture, competitor pricing). When a scenario says &apos;the rep must photograph the shelf and count the number of facings for each SKU&apos;, configure a Photo Capture activity type and a Numeric KPI assessment task — not a custom note or attachment field.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI questions: KPIs are measured outcomes from visit assessments. An out-of-stock KPI measures whether a product is available on the shelf (Pass/Fail). A share of shelf KPI measures the percentage of shelf space (numeric). When a manager asks &apos;which of my reps&apos; stores have the most out-of-stocks&apos;, the answer is a KPI dashboard summarising the out-of-stock assessment results across all visits.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For account hierarchy questions: national accounts (Walmart HQ) have regional offices and individual stores below them. Trade promotions are managed at the national account level but measured at the store level. When a scenario says &apos;apply a promotional price to all 500 Walmart stores nationwide&apos;, configure the promotion at the national account level — not store by store.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For visit planning questions: visit plans define which stores a rep visits and how frequently. Activity types define what the rep does during each visit (shelf check, order capture, competitor pricing). When a scenario says ’the rep must photograph the shelf and count the number of facings for each SKU’, configure a Photo Capture activity type and a Numeric KPI assessment task — not a custom note or attachment field.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For KPI questions: KPIs are measured outcomes from visit assessments. An out-of-stock KPI measures whether a product is available on the shelf (Pass/Fail). A share of shelf KPI measures the percentage of shelf space (numeric). When a manager asks ’which of my reps’ stores have the most out-of-stocks’, the answer is a KPI dashboard summarising the out-of-stock assessment results across all visits.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For account hierarchy questions: national accounts (Walmart HQ) have regional offices and individual stores below them. Trade promotions are managed at the national account level but measured at the store level. When a scenario says ’apply a promotional price to all 500 Walmart stores nationwide’, configure the promotion at the national account level — not store by store.</li>
         </ul>
       </section>
 

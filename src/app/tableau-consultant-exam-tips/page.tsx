@@ -44,7 +44,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Tableau Business Intelligence Analyst exam format?',
-    answer: 'The Tableau Business Intelligence Analyst exam has 45 multiple-choice questions, a 60-minute time limit, a 72% passing score, and a $250 fee. It tests Tableau Desktop skills: connecting to data, building visualisations, using calculations, and creating dashboards. It is Tableau&apos;s practitioner-level certification.',
+    answer: 'The Tableau Business Intelligence Analyst exam has 45 multiple-choice questions, a 60-minute time limit, a 72% passing score, and a $250 fee. It tests Tableau Desktop skills: connecting to data, building visualisations, using calculations, and creating dashboards. It is Tableau’s practitioner-level certification.',
   },
   {
     question: 'What are the highest-weight Tableau BI Analyst exam sections?',
@@ -52,7 +52,7 @@ const faqItems = [
   },
   {
     question: 'What are LOD expressions and why are they important for this exam?',
-    answer: 'LOD (Level of Detail) expressions are Tableau&apos;s most powerful calculation type — they let you compute values at a different granularity than the current view. FIXED computes at a specified dimension regardless of filters. INCLUDE adds dimensions to the current level. EXCLUDE removes dimensions from the current level. LOD questions appear on every Tableau exam and require hands-on practice to understand.',
+    answer: 'LOD (Level of Detail) expressions are Tableau’s most powerful calculation type — they let you compute values at a different granularity than the current view. FIXED computes at a specified dimension regardless of filters. INCLUDE adds dimensions to the current level. EXCLUDE removes dimensions from the current level. LOD questions appear on every Tableau exam and require hands-on practice to understand.',
   },
   {
     question: 'What is the difference between a join and a blend in Tableau?',
@@ -129,9 +129,9 @@ export default function TableauConsultantExamTipsPage() {
           needs to be at a different level than the view, an LOD expression is the answer.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LOD questions: FIXED {'{'}dimension{'}'} : {'{'}measure{'}'} ignores the view&apos;s dimensions and computes at the specified level. If the question asks for &apos;average sales per customer regardless of the chart&apos;s date granularity&apos;, the answer is a FIXED LOD expression. INCLUDE adds a dimension; EXCLUDE removes one.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LOD questions: FIXED {'{'}dimension{'}'} : {'{'}measure{'}'} ignores the view’s dimensions and computes at the specified level. If the question asks for ’average sales per customer regardless of the chart’s date granularity’, the answer is a FIXED LOD expression. INCLUDE adds a dimension; EXCLUDE removes one.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For table calculation questions: table calculations are applied after the aggregation — they compute on the result set, not the raw data. Running SUM, RANK, and PERCENT OF TOTAL are table calculations. They are scope-dependent (compute using the Table, Pane, or Cell) — the compute scope determines the result.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dashboard action questions: Filter Actions pass values from one sheet to filter another. Highlight Actions highlight matching marks across sheets. URL Actions open a web page with dynamic values in the URL. When a requirement says &apos;clicking a bar should filter the other chart&apos;, the answer is a Filter Action.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For dashboard action questions: Filter Actions pass values from one sheet to filter another. Highlight Actions highlight matching marks across sheets. URL Actions open a web page with dynamic values in the URL. When a requirement says ’clicking a bar should filter the other chart’, the answer is a Filter Action.</li>
         </ul>
       </section>
 

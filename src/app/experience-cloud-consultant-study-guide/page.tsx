@@ -161,14 +161,14 @@ export default function ExperienceCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Sharing, Visibility and Licencing (20%)
             </p>
-            <p>The most complex section. External users (Contacts or Person Accounts in Salesforce) have a different sharing model from internal users: <strong>Sharing Sets</strong> grant access to records based on a field relationship (e.g., a Contact sees all Cases where Cases.Contact = the logged-in user&apos;s Contact record). <strong>High-Volume Portal Users (HVPUs)</strong> are a special external user type for large-scale deployments — they have no role in the role hierarchy, no manual sharing, no peer record access. They can only see records via sharing sets or owned records. <strong>Licence types:</strong> Customer Community (basic external access — Cases, Knowledge), Customer Community Plus (full sharing model, reports, dashboards), Partner Community (full CRM access for partner users). Know which licence supports which features — choosing the wrong licence is a common implementation mistake.</p>
+            <p>The most complex section. External users (Contacts or Person Accounts in Salesforce) have a different sharing model from internal users: <strong>Sharing Sets</strong> grant access to records based on a field relationship (e.g., a Contact sees all Cases where Cases.Contact = the logged-in user’s Contact record). <strong>High-Volume Portal Users (HVPUs)</strong> are a special external user type for large-scale deployments — they have no role in the role hierarchy, no manual sharing, no peer record access. They can only see records via sharing sets or owned records. <strong>Licence types:</strong> Customer Community (basic external access — Cases, Knowledge), Customer Community Plus (full sharing model, reports, dashboards), Partner Community (full CRM access for partner users). Know which licence supports which features — choosing the wrong licence is a common implementation mistake.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Community Setup and Configuration (18%)
             </p>
-            <p>Experience Cloud site creation: choosing the right template (Customer Service for support portals, Partner Central for partner management, Help Centre for knowledge, Build Your Own LWR for custom builds). Workspaces in Experience Builder: Builder (visual page editing), Content, Moderation, Administration, Analytics. Key settings: enabling self-registration, enabling Topics (for community discussions), enabling Reputation (gamification), and configuring the site&apos;s domain. Know what each Workspace controls — the exam tests which workspace contains which settings.</p>
+            <p>Experience Cloud site creation: choosing the right template (Customer Service for support portals, Partner Central for partner management, Help Centre for knowledge, Build Your Own LWR for custom builds). Workspaces in Experience Builder: Builder (visual page editing), Content, Moderation, Administration, Analytics. Key settings: enabling self-registration, enabling Topics (for community discussions), enabling Reputation (gamification), and configuring the site’s domain. Know what each Workspace controls — the exam tests which workspace contains which settings.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -211,7 +211,7 @@ export default function ExperienceCloudConsultantStudyGuidePage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Sharing questions:</strong> When a scenario describes external users needing to see a specific set of records related to their Account or Contact, the answer is usually a <strong>Sharing Set</strong>. When the scenario involves peer-to-peer sharing between portal users (one user seeing another user&apos;s records), that requires Customer Community Plus (not Customer Community). HVPUs cannot see other users&apos; records at all — if the scenario mentions millions of portal users, the answer likely involves HVPUs with sharing sets only.</span>
+            <span><strong>Sharing questions:</strong> When a scenario describes external users needing to see a specific set of records related to their Account or Contact, the answer is usually a <strong>Sharing Set</strong>. When the scenario involves peer-to-peer sharing between portal users (one user seeing another user’s records), that requires Customer Community Plus (not Customer Community). HVPUs cannot see other users’ records at all — if the scenario mentions millions of portal users, the answer likely involves HVPUs with sharing sets only.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />

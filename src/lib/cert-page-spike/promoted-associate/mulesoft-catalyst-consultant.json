@@ -26,12 +26,12 @@
       "<strong>Methodology focus</strong> — the exam tests the four Catalyst pillars (Organization, Technology, Delivery, Engagement) and the Land-Expand-Engage maturity model rather than deep technical implementation.",
       "<strong>Business context</strong> — candidates must know how to measure integration ROI, present value to executives, and design C4E operating models."
     ],
-    "passRateGuidance": "Complete MuleSoft&apos;s Catalyst methodology training and gain experience on at least one Catalyst-style engagement before booking. Score 80%+ on practice exams to account for methodology-specific nuances."
+    "passRateGuidance": "Complete MuleSoft’s Catalyst methodology training and gain experience on at least one Catalyst-style engagement before booking. Score 80%+ on practice exams to account for methodology-specific nuances."
   },
   "examFormat": {
     "heading": "MuleSoft Catalyst Consultant Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 45–55% of questions are scenario-based. Common patterns include assessing an organization&apos;s integration maturity, recommending the next Catalyst phase, designing a C4E operating model, and calculating API reuse metrics to justify platform investment.",
+    "scenarioPercent": "About 45–55% of questions are scenario-based. Common patterns include assessing an organization’s integration maturity, recommending the next Catalyst phase, designing a C4E operating model, and calculating API reuse metrics to justify platform investment.",
     "bestWayToPass": [
       "<strong>Learn the four Catalyst pillars:</strong> Know Organization (C4E, governance), Technology (platform architecture, reuse), Delivery (agile sprints, definition of done), and Engagement (stakeholder alignment, value communication) in detail.",
       "<strong>Master the Land-Expand-Engage model:</strong> Understand what success looks like in each phase and how to guide an organization from pilot to self-sustaining API economy.",

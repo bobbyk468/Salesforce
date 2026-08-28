@@ -71,7 +71,7 @@ export default function MulesoftDeveloperIVsIntegrationFoundationsPage() {
           MuleSoft Developer I vs Integration Foundations ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          Two MuleSoft certifications at very different levels. One is conceptual and entry-level, the other is hands-on and professional. Here&apos;s which to choose.
+          Two MuleSoft certifications at very different levels. One is conceptual and entry-level, the other is hands-on and professional. Here’s which to choose.
         </p>
       </div>
 

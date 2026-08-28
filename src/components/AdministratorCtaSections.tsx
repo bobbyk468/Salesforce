@@ -14,7 +14,7 @@ export default function AdministratorCtaSections() {
           Most candidates book the exam after scoring <strong>75%+</strong> on full mocks.
         </p>
         <p className="text-gray-600 text-sm max-w-md mx-auto mb-1">
-          If you&apos;re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
+          If you’re planning to test this quarter, aim to complete full mocks at least <strong>10–14 days</strong> before your exam date.
         </p>
         <p className="text-gray-600 text-xs max-w-md mx-auto mb-4">
           Want to ensure you pass on your first try? Request our full 60-question mock exams, a personalized study plan, and pricing details by filling out the contact form. You can also reach out to{' '}
@@ -30,10 +30,10 @@ export default function AdministratorCtaSections() {
 
       <section id="practice-vs-dumps" className="mt-12 sm:mt-16 rounded-xl border border-gray-100 bg-white p-5 sm:p-6" aria-labelledby="dumps-comparison-heading">
         <h2 id="dumps-comparison-heading" className="text-lg font-bold text-gray-900 mb-3">
-          ADM-201 Practice Questions vs Exam Dumps — What&apos;s the Difference?
+          ADM-201 Practice Questions vs Exam Dumps — What’s the Difference?
         </h2>
         <p className="text-sm text-gray-700 mb-4">
-          Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here&apos;s why original practice questions are a better investment:
+          Many candidates search for &ldquo;ADM-201 dumps&rdquo; hoping for a shortcut. Here’s why original practice questions are a better investment:
         </p>
         <div className="overflow-x-auto">
           <table className="w-full text-sm text-left border-collapse">

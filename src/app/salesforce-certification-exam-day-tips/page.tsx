@@ -143,7 +143,7 @@ export default function SalesforceCertificationExamDayTipsPage() {
           </div>
           <div className="bg-gray-50 rounded-xl p-4">
             <p className="font-semibold text-gray-900 mb-2">Multiple-Select Questions</p>
-            <p>Questions asking you to &quot;select TWO&quot; or &quot;select THREE&quot; answers require all selected answers to be correct to earn the point. There is no partial credit. If you are unsure, eliminate obviously wrong answers and select from the remaining options.</p>
+            <p>Questions asking you to "select TWO" or "select THREE" answers require all selected answers to be correct to earn the point. There is no partial credit. If you are unsure, eliminate obviously wrong answers and select from the remaining options.</p>
           </div>
         </div>
       </div>

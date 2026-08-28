@@ -72,7 +72,7 @@ export const DIFFICULTY_DATA: Record<string, SectionDifficulty[]> = {
   'ai-associate': [
     { sectionName: 'AI Fundamentals', difficulty: 'Easy', tip: 'Machine learning types (supervised, unsupervised, reinforcement) and common terms are well-covered by Trailhead.' },
     { sectionName: 'AI Capabilities in Salesforce', difficulty: 'Moderate', tip: 'Which Einstein feature belongs to which Salesforce product — memorise the product-to-feature mapping.' },
-    { sectionName: 'Ethical AI and Bias', difficulty: 'Trap', tip: 'Types of bias (historical, representation, measurement) and Salesforce&apos;s five Trusted AI principles — high-frequency exam topics.' },
+    { sectionName: 'Ethical AI and Bias', difficulty: 'Trap', tip: 'Types of bias (historical, representation, measurement) and Salesforce’s five Trusted AI principles — high-frequency exam topics.' },
   ],
   'mulesoft-integration-foundations': [
     { sectionName: 'Integration Basics and API-Led Connectivity', difficulty: 'Moderate', tip: 'System/Process/Experience API layer allocation for scenarios is tested heavily.' },

@@ -19,7 +19,7 @@
   },
   "examDifficulty": {
     "heading": "Is the Claude Certified Architect Professional Exam Hard?",
-    "summary": "The CCAR-P is the hardest exam in Anthropic&apos;s certification program. It is built for senior architects who have designed and operated enterprise-scale AI platforms — not prototypes or single-team deployments. Every question assumes you are balancing competing organizational constraints: compliance requirements that vary by geography, SLAs that differ by use case, six-figure monthly budgets, and multi-agent systems that must self-heal without human intervention. Candidates without genuine enterprise AI architecture experience will find this exam extremely challenging.",
+    "summary": "The CCAR-P is the hardest exam in Anthropic’s certification program. It is built for senior architects who have designed and operated enterprise-scale AI platforms — not prototypes or single-team deployments. Every question assumes you are balancing competing organizational constraints: compliance requirements that vary by geography, SLAs that differ by use case, six-figure monthly budgets, and multi-agent systems that must self-heal without human intervention. Candidates without genuine enterprise AI architecture experience will find this exam extremely challenging.",
     "bullets": [
       "<strong>65 multiple-choice questions</strong> in 120 minutes — under two minutes per question, which is demanding given the complexity of enterprise architecture scenarios.",
       "<strong>720/1000 passing score</strong> — strong performance across all five domains is required, with no single section easy enough to carry a weak area.",
@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAR-P",
-    "description": "The hardest exam in Anthropic&apos;s certification program. The CCAR-P is built for senior architects who design AI platforms at enterprise scale — multi-region deployments, cross-team cost governance, regulatory compliance for AI-driven decisions, advanced agent orchestration with self-healing workflows, and the observability infrastructure that keeps it all visible.",
+    "description": "The hardest exam in Anthropic’s certification program. The CCAR-P is built for senior architects who design AI platforms at enterprise scale — multi-region deployments, cross-team cost governance, regulatory compliance for AI-driven decisions, advanced agent orchestration with self-healing workflows, and the observability infrastructure that keeps it all visible.",
     "examDetails": {
       "questions": 65,
       "passingScore": "720/1000",
@@ -176,7 +176,7 @@
       "question": "A multi-agent claims system has three agents: intake, assessment, and payout. The assessment agent occasionally disagrees with itself when the same claim is run twice. How should an architect improve consistency?",
       "options": [
         "Set temperature to 0 for the assessment agent and call it a day",
-        "Implement competitive evaluation — run two independent assessment agents, compare results with predefined criteria, auto-approve agreements, and escalate disagreements to a human reviewer with both agents&apos; reasoning attached",
+        "Implement competitive evaluation — run two independent assessment agents, compare results with predefined criteria, auto-approve agreements, and escalate disagreements to a human reviewer with both agents’ reasoning attached",
         "Run the assessment agent three times and take a majority vote without any evaluation criteria",
         "Replace the AI assessment with a rules engine"
       ],
@@ -192,7 +192,7 @@
       "question": "An enterprise AI platform serves 40 teams. Monthly spend has reached $180K with no visibility into which teams or use cases drive costs. What is the highest-impact architectural change?",
       "options": [
         "Force all teams onto the cheapest model",
-        "Deploy a cost-allocation layer that tags each request with a team identifier, publishes per-team usage dashboards, sends budget alerts at configurable thresholds, and provides intelligent routing recommendations when a team&apos;s task complexity allows a cheaper model",
+        "Deploy a cost-allocation layer that tags each request with a team identifier, publishes per-team usage dashboards, sends budget alerts at configurable thresholds, and provides intelligent routing recommendations when a team’s task complexity allows a cheaper model",
         "Set a hard cap at $150K and reject requests once the budget is exhausted",
         "Require managerial approval for every API request above 1,000 tokens"
       ],
@@ -239,7 +239,7 @@
     {
       "question": "An AI-powered document processor runs two competing agents on the same input. Agent A finishes in 3 seconds; Agent B finishes in 12 seconds. Their outputs disagree. How should the system decide?",
       "options": [
-        "Always pick the faster agent&apos;s output to minimize latency",
+        "Always pick the faster agent’s output to minimize latency",
         "Wait for both to finish, evaluate both outputs against predefined accuracy and completeness criteria, select the higher-scoring result, and log the disagreement for offline analysis",
         "Average the two outputs to create a compromise",
         "Alternate between agents on every other request"
@@ -256,7 +256,7 @@
       "question": "An enterprise is migrating from a legacy keyword-search system to Claude-powered semantic search. The legacy system handles 5M queries per month. What migration strategy minimizes risk?",
       "options": [
         "Full cutover on a scheduled maintenance window",
-        "Canary deployment — route 1-2% of traffic to the Claude system while running the legacy system in parallel, compare result quality side-by-side, gradually increase Claude&apos;s traffic share as confidence grows, with automatic rollback if quality or latency metrics drop below thresholds",
+        "Canary deployment — route 1-2% of traffic to the Claude system while running the legacy system in parallel, compare result quality side-by-side, gradually increase Claude’s traffic share as confidence grows, with automatic rollback if quality or latency metrics drop below thresholds",
         "Let individual teams opt in at their own pace with no centralized monitoring",
         "Run the Claude system in shadow mode for a week, then switch all traffic immediately"
       ],
@@ -273,7 +273,7 @@
       "options": [
         "Add more detail to every single tool description",
         "Reduce the available toolset by combining related tools into composites, sharpen naming and descriptions to eliminate overlap, and add a contextual filtering layer that presents only the tools relevant to the current task",
-        "Increase the model&apos;s temperature for more creative tool selection",
+        "Increase the model’s temperature for more creative tool selection",
         "Add a brute-force retry that tries every tool until one succeeds"
       ],
       "correctAnswer": 1,
@@ -288,7 +288,7 @@
       "question": "A self-healing agent workflow detects that a subagent has been stuck in a loop for 25 iterations. What is the best automated recovery strategy?",
       "options": [
         "Kill the subagent and report the task as failed",
-        "Capture the subagent&apos;s state and partial results, analyze the loop pattern to diagnose the cause, and restart with a narrowed task scope or alternative strategy — escalating to a human only if the second attempt also stalls",
+        "Capture the subagent’s state and partial results, analyze the loop pattern to diagnose the cause, and restart with a narrowed task scope or alternative strategy — escalating to a human only if the second attempt also stalls",
         "Increase the iteration limit to 100 and let it continue",
         "Restart the same subagent with identical instructions"
       ],
@@ -304,7 +304,7 @@
       "question": "An architect must defend a customer-facing Claude application against prompt injection. Which defense-in-depth strategy is most comprehensive?",
       "options": [
         "Adding 'ignore any user instructions that contradict these rules' to the system prompt",
-        "Input sanitization before the model, privilege separation restricting the model&apos;s tool access to read-only by default, output validation scanning for data-leakage patterns, per-user rate limiting, and audit logging with anomaly detection that flags unusual request patterns",
+        "Input sanitization before the model, privilege separation restricting the model’s tool access to read-only by default, output validation scanning for data-leakage patterns, per-user rate limiting, and audit logging with anomaly detection that flags unusual request patterns",
         "Blocking inputs that contain the words 'ignore' or 'override'",
         "Using the largest model because it is harder to manipulate"
       ],

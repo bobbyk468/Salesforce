@@ -187,7 +187,7 @@ export default function PardotSpecialistStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Pardot Specialist is very hands-on — many questions describe a specific Pardot configuration scenario and ask what happens next. Hands-on Pardot experience (ideally a Pardot sandbox or trial) is the most effective preparation beyond reading Trailhead.</p>
       </div>
 

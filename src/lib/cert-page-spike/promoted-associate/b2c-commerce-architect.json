@@ -31,7 +31,7 @@
   "examFormat": {
     "heading": "B2C Commerce Architect Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "The majority of questions are scenario-based. Expect long scenarios describing a global retailer&apos;s requirements (multi-brand, multi-locale, high traffic) and asking you to select the architecture that best meets performance, scalability, and maintainability goals.",
+    "scenarioPercent": "The majority of questions are scenario-based. Expect long scenarios describing a global retailer’s requirements (multi-brand, multi-locale, high traffic) and asking you to select the architecture that best meets performance, scalability, and maintainability goals.",
     "bestWayToPass": [
       "<strong>Know the SFRA vs. headless trade-offs:</strong> Understand when SFRA is the right choice vs. PWA Kit or a custom headless front-end, and how each affects performance, SEO, and development cost.",
       "<strong>Master CDN and caching strategy:</strong> Study the caching hierarchy (browser, CDN, application), page cache configuration, and how to handle dynamic content alongside cached pages.",

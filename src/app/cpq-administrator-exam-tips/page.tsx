@@ -141,13 +141,13 @@ export default function CPQAdministratorExamTipsPage() {
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For product rule questions: understand the four types — Validation (prevents invalid selections), Selection (auto-adds/removes options), Alert (shows warnings), Filter (hides options). Match the rule type to the business requirement described.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: pricing rules fire before or after the standard price waterfall. &apos;Before Calculate&apos; rules modify unit price fields; &apos;After Calculate&apos; rules override the result. Discount schedules apply to line quantity — know the slab/range vs. percent-of-total types.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For pricing questions: pricing rules fire before or after the standard price waterfall. ’Before Calculate’ rules modify unit price fields; ’After Calculate’ rules override the result. Discount schedules apply to line quantity — know the slab/range vs. percent-of-total types.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For subscription questions: subscription products have a Subscription Type and Subscription Term. Renewals create new Opportunities and Quotes automatically when Renewal Forecast is enabled. Know the difference between Evergreen and Termed subscriptions.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You&apos;re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
           75%+ on 3 timed full mocks before booking

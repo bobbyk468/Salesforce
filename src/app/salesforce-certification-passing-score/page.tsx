@@ -118,7 +118,7 @@ export default function SalesforceCertificationPassingScorePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Use This When Studying</h2>
         <ol className="space-y-3 text-sm text-gray-700 list-decimal list-inside">
           <li><strong>Target 75%+ on practice exams.</strong> This gives you a buffer above the typical ~65% threshold for most professional exams.</li>
-          <li><strong>Do not rely on &quot;just passing.&quot;</strong> Exam difficulty varies by sitting; a 66% on one practice run may not translate to a pass on the real exam.</li>
+          <li><strong>Do not rely on "just passing."</strong> Exam difficulty varies by sitting; a 66% on one practice run may not translate to a pass on the real exam.</li>
           <li><strong>Take multiple full mock exams.</strong> Consistently hitting 75%+ across 2–3 full mocks is a strong readiness indicator.</li>
           <li><strong>Review every wrong answer.</strong> Understanding why you missed questions matters more than the raw percentage.</li>
         </ol>

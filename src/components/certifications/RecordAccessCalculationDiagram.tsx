@@ -4,7 +4,7 @@ export default function RecordAccessCalculationDiagram() {
     <figure id="record-access-calc-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
       <figcaption className="text-base font-semibold text-gray-900 mb-1">Record access calculation flowchart (exam mental model)</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        A user&apos;s access to a record is the union of every path shown below. If any one path grants access, the
+        A user’s access to a record is the union of every path shown below. If any one path grants access, the
         record is visible — this is why architects trace all four sources when diagnosing a visibility issue.
       </p>
       <svg role="img" aria-labelledby="rac-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">

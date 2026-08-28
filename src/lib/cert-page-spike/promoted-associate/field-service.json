@@ -22,7 +22,7 @@
     "summary": "The Field Service Consultant exam is moderately to highly difficult. The scheduling engine, dispatcher console, and mobile app configuration create a large surface area that requires hands-on experience to master.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>63% passing score</strong> &mdash; you can miss up to 22 questions, but the low pass mark reflects the exam&apos;s complexity.",
+      "<strong>63% passing score</strong> &mdash; you can miss up to 22 questions, but the low pass mark reflects the exam’s complexity.",
       "<strong>Scheduling policy configuration</strong> &mdash; expect scenario questions on work rules, service objectives, and how the optimization engine assigns appointments based on skills, territory, and travel time.",
       "<strong>Mobile app and offline behavior</strong> &mdash; you need to know which records are available offline, how data syncs when connectivity is restored, and how mobile flows guide technician workflows."
     ],

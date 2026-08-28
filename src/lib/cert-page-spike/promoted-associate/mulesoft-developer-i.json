@@ -9,7 +9,7 @@
       },
       {
         "label": "Java and backend developers",
-        "description": "You&apos;re transitioning into integration development and want a credential that proves your Mule 4 and DataWeave proficiency."
+        "description": "You’re transitioning into integration development and want a credential that proves your Mule 4 and DataWeave proficiency."
       },
       {
         "label": "Salesforce developers",
@@ -19,7 +19,7 @@
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Developer I Exam Hard?",
-    "summary": "MuleSoft Developer I is moderately challenging. The exam requires hands-on familiarity with Anypoint Studio, DataWeave 2.0 syntax, and Mule flow design — textbook knowledge alone won&apos;t be enough to pass.",
+    "summary": "MuleSoft Developer I is moderately challenging. The exam requires hands-on familiarity with Anypoint Studio, DataWeave 2.0 syntax, and Mule flow design — textbook knowledge alone won’t be enough to pass.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
       "<strong>~70% passing score</strong> — roughly 42 correct answers needed to pass.",

@@ -94,10 +94,10 @@ export default function DataCloudConsultantStudyGuidePage() {
           Salesforce Data Cloud Consultant Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
         </h1>
         <p className="text-lg text-gray-600">
-          The Data Cloud Consultant certification validates your ability to implement Salesforce&apos;s customer data
+          The Data Cloud Consultant certification validates your ability to implement Salesforce’s customer data
           platform (CDP) — ingesting data from multiple sources, resolving customer identities, building
           audience segments, and activating unified profiles to marketing and service channels. This guide
-          covers every exam section at the depth needed to pass one of Salesforce&apos;s most technically demanding certifications.
+          covers every exam section at the depth needed to pass one of Salesforce’s most technically demanding certifications.
         </p>
       </header>
 
@@ -126,7 +126,7 @@ export default function DataCloudConsultantStudyGuidePage() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          62% passing score — lower than most Salesforce exams, reflecting the exam&apos;s technical depth. Retake fee: $100. SQL and data modelling experience strongly recommended.
+          62% passing score — lower than most Salesforce exams, reflecting the exam’s technical depth. Retake fee: $100. SQL and data modelling experience strongly recommended.
         </p>
       </section>
 
@@ -188,7 +188,7 @@ export default function DataCloudConsultantStudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Data Cloud Consultant Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Data Cloud Architecture &amp; Setup (20%):</strong> Study the overall Data Cloud architecture, enable Data Cloud in a Developer Edition org, configure permission sets, and explore the Data Cloud setup wizard. Understand data spaces and how they isolate data. Complete Trailhead&apos;s &ldquo;Salesforce Data Cloud Basics&rdquo; trail.</p>
+          <p><strong>Week 1 — Data Cloud Architecture &amp; Setup (20%):</strong> Study the overall Data Cloud architecture, enable Data Cloud in a Developer Edition org, configure permission sets, and explore the Data Cloud setup wizard. Understand data spaces and how they isolate data. Complete Trailhead’s &ldquo;Salesforce Data Cloud Basics&rdquo; trail.</p>
           <p><strong>Week 2 — Data Ingestion &amp; Modeling (28%):</strong> Create data streams (start with a Salesforce CRM connector stream, then add a batch file stream). Understand the DLO → DMO mapping workflow. Map DLO fields to standard DMO fields (especially to Individual and Contact Point DMOs). This week is the most important — data modelling is the foundation of everything else.</p>
           <p><strong>Week 3 — Identity Resolution (part of 25%):</strong> Configure a Ruleset with exact-match rules (email) and fuzzy-match rules (name + address). Run the identity resolution process and inspect the resulting Unified Individual records. Understand how to diagnose over-merging (too aggressive fuzzy matching) vs under-merging (too restrictive rules).</p>
           <p><strong>Week 4 — Calculated Insights &amp; Segmentation (part of 25%):</strong> Write Calculated Insight SQL queries — start with simple COUNT and SUM aggregations, then practice date-based calculations (DATEDIFF, DATEADD). Build segments using Calculated Insights as criteria. Practice publishing a segment and inspecting the activation output.</p>
@@ -222,7 +222,7 @@ export default function DataCloudConsultantStudyGuidePage() {
           70%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Set the mock benchmark higher than the 62% passing score because the real exam&apos;s scenario
+          Set the mock benchmark higher than the 62% passing score because the real exam’s scenario
           questions are harder than most practice banks. Candidates who pass mocks at exactly 62%
           frequently fail the real exam. The most common failure point is data modelling — candidates
           who have not configured DLO-to-DMO mappings hands-on consistently misidentify the correct

@@ -74,7 +74,7 @@ export default function PrivacyPage() {
         <p className="text-sm bg-gray-50 p-4 rounded-lg border border-gray-200">
           <strong>Trademark notice:</strong> This site is not affiliated with Salesforce, Inc.
           Salesforce, Trailblazer, Trailhead, and other Salesforce marks are trademarks of salesforce.com, inc.
-          &quot;Trailblaze Prep&quot; is independent and not endorsed by or affiliated with Salesforce&apos;s Trailblazer program.
+          "Trailblaze Prep" is independent and not endorsed by or affiliated with Salesforce’s Trailblazer program.
         </p>
         <p>
           For questions about this policy, contact us at the email in the footer.

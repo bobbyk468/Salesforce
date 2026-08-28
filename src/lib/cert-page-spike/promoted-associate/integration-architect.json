@@ -57,7 +57,7 @@
   ],
   "certificationCard": {
     "code": "Integration Architect",
-    "description": "This exam tests designing integration solutions between Salesforce and external systems using REST, SOAP, Bulk, and Streaming APIs. You&apos;ll need to select the right integration pattern, middleware approach, and error-handling strategy for complex enterprise scenarios.",
+    "description": "This exam tests designing integration solutions between Salesforce and external systems using REST, SOAP, Bulk, and Streaming APIs. You’ll need to select the right integration pattern, middleware approach, and error-handling strategy for complex enterprise scenarios.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~68%",

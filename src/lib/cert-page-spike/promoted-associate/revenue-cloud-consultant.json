@@ -31,7 +31,7 @@
   "examFormat": {
     "heading": "Revenue Cloud Consultant Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Most questions are scenario-based, describing a SaaS company&apos;s quoting, billing, or revenue recognition requirement and asking which Revenue Cloud configuration meets it. Expect multi-step scenarios that span the full quote-to-cash lifecycle.",
+    "scenarioPercent": "Most questions are scenario-based, describing a SaaS company’s quoting, billing, or revenue recognition requirement and asking which Revenue Cloud configuration meets it. Expect multi-step scenarios that span the full quote-to-cash lifecycle.",
     "bestWayToPass": [
       "<strong>Master the CPQ-to-Billing object flow:</strong> Know how Quote &rarr; Order &rarr; Contract &rarr; Subscription &rarr; Invoice connects, and what triggers each transition in the lifecycle.",
       "<strong>Study amendment and renewal logic:</strong> Understand how mid-term amendments generate proration credits, how co-termination aligns subscription end dates, and how renewal quotes are auto-populated.",

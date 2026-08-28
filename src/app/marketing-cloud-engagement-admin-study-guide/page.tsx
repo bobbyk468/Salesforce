@@ -187,7 +187,7 @@ export default function MarketingCloudEngagementAdminStudyGuidePage() {
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You&apos;re Ready</h2>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
         <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Marketing Cloud Admin is very configuration-specific — questions describe exact Marketing Cloud settings and ask what each does. Hands-on experience in a Marketing Cloud trial account is essential for the Account Administration and Data Management sections.</p>
       </div>
 

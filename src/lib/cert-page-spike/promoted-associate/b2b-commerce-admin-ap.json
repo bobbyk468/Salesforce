@@ -23,7 +23,7 @@
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
       "<strong>75% passing score</strong> &mdash; higher than most AP exams, leaving little room for guesswork.",
-      "<strong>Cross-product knowledge</strong> &mdash; questions span B2B Commerce, Experience Cloud, and the core Salesforce data model, so studying one area alone won&apos;t be enough.",
+      "<strong>Cross-product knowledge</strong> &mdash; questions span B2B Commerce, Experience Cloud, and the core Salesforce data model, so studying one area alone won’t be enough.",
       "<strong>Hands-on experience matters</strong> &mdash; configuring at least one B2B Commerce store from scratch is the strongest preparation."
     ],
     "passRateGuidance": "Set up a full B2B Commerce store in a developer org &mdash; including buyer groups, entitlement policies, and checkout configuration &mdash; before booking the exam."
