@@ -174,7 +174,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns."
+      "explanation": "Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns.",
+      "whyWrong": [
+        "'Only coding' undersells the architect role, which spans global site design using standard patterns, not just code.",
+        "'Only reporting' misrepresents the role, which is about architecture design, not reporting.",
+        "'Only Slack' is unrelated to what a B2C Commerce Architect does."
+      ]
     },
     {
       "question": "What does B2C stand for?",
@@ -185,7 +190,12 @@
         "Brand to Consumer"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C stands for Business to Consumer."
+      "explanation": "B2C stands for Business to Consumer.",
+      "whyWrong": [
+        "'Back to Customer' isn't the actual expansion of B2C.",
+        "'Build to Order' is a manufacturing term, not what B2C stands for.",
+        "'Brand to Consumer' isn't the actual expansion of B2C."
+      ]
     },
     {
       "question": "Which Salesforce product does B2C Commerce Architect focus on?",
@@ -196,7 +206,12 @@
         "Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce Architect focuses on B2C Commerce for B2C storefronts."
+      "explanation": "B2C Commerce Architect focuses on B2C Commerce for B2C storefronts.",
+      "whyWrong": [
+        "Marketing Cloud is a different product, unrelated to the B2C Commerce Architect's core storefront focus.",
+        "Service Cloud is a different product, unrelated to B2C storefront architecture.",
+        "Slack is unrelated to B2C Commerce storefront architecture."
+      ]
     },
     {
       "question": "What is a key consideration for global B2C sites?",
@@ -207,7 +222,12 @@
         "Only shipping"
       ],
       "correctAnswer": 1,
-      "explanation": "Multiple brands, channels, and locales are key considerations."
+      "explanation": "Multiple brands, channels, and locales are key considerations.",
+      "whyWrong": [
+        "'Only language' undersells the broader set of considerations (brands, channels, locales) for global sites.",
+        "'Only currency' undersells the broader multi-brand, multi-channel, multi-locale considerations.",
+        "'Only shipping' undersells the broader considerations beyond just logistics."
+      ]
     },
     {
       "question": "Which role typically pursues B2C Commerce Architect?",
@@ -218,7 +238,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing B2C commerce solutions pursue this credential."
+      "explanation": "Architects and senior consultants designing B2C commerce solutions pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical audience for this architecture-focused credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior consultants."
+      ]
     },
     {
       "question": "What does multi-brand B2C architecture support?",
@@ -229,7 +254,12 @@
         "No branding"
       ],
       "correctAnswer": 1,
-      "explanation": "Multi-brand supports multiple brands with shared or separate catalogs."
+      "explanation": "Multi-brand supports multiple brands with shared or separate catalogs.",
+      "whyWrong": [
+        "'Single brand only' is the opposite of what multi-brand architecture supports.",
+        "'B2B only' misrepresents the topic, which is specifically about B2C multi-brand architecture.",
+        "'No branding' contradicts the fact that multi-brand support is a real, well-defined capability."
+      ]
     },
     {
       "question": "Which B2C Commerce design pattern supports scalability?",
@@ -240,7 +270,12 @@
         "No patterns"
       ],
       "correctAnswer": 1,
-      "explanation": "SFRA, cartridges, and headless support scalability."
+      "explanation": "SFRA, cartridges, and headless support scalability.",
+      "whyWrong": [
+        "'Monolith only' is the opposite of the scalable, modern patterns (SFRA, headless) this question asks about.",
+        "'Static only' doesn't reflect the dynamic, scalable architecture patterns being described.",
+        "'No patterns' contradicts the existence of well-documented scalability patterns like SFRA and headless."
+      ]
     },
     {
       "question": "What does locale support in B2C Commerce include?",
@@ -251,7 +286,12 @@
         "No locale"
       ],
       "correctAnswer": 1,
-      "explanation": "Locale includes language, currency, and regional preferences."
+      "explanation": "Locale includes language, currency, and regional preferences.",
+      "whyWrong": [
+        "'Language only' undersells locale support, which also includes currency and regional preferences.",
+        "'Currency only' undersells locale support, which also includes language and regional preferences.",
+        "'No locale' contradicts the fact that locale support is a real, documented capability."
+      ]
     },
     {
       "question": "Which B2C Commerce channel can be designed?",
@@ -262,7 +302,12 @@
         "No channels"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce supports web, mobile, and omnichannel."
+      "explanation": "B2C Commerce supports web, mobile, and omnichannel.",
+      "whyWrong": [
+        "'Web only' undersells the omnichannel capability, which spans mobile too.",
+        "'Mobile only' undersells the omnichannel capability, which spans web too.",
+        "'No channels' contradicts the fact that multiple channels can be designed for."
+      ]
     },
     {
       "question": "What is the purpose of B2C Commerce architecture?",
@@ -273,7 +318,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Architecture supports global, scalable B2C experiences."
+      "explanation": "Architecture supports global, scalable B2C experiences.",
+      "whyWrong": [
+        "'Only coding' undersells the broader purpose of B2C architecture, which is global, scalable, maintainable experiences.",
+        "'Only reports' misrepresents the purpose, which is about experience architecture, not reporting.",
+        "'Only dashboards' misrepresents the purpose, which is about experience architecture, not dashboards."
+      ]
     },
     {
       "question": "Which integration does B2C Commerce Architect consider?",
@@ -284,7 +334,12 @@
         "Service Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects consider Order Management and Marketing Cloud integration."
+      "explanation": "Architects consider Order Management and Marketing Cloud integration.",
+      "whyWrong": [
+        "Slack alone is unrelated to the order management, marketing, and payment integrations a B2C architect considers.",
+        "Marketing Cloud alone undersells the broader integration landscape, which includes order management and payment too.",
+        "Service Cloud alone undersells the broader integration landscape being described."
+      ]
     },
     {
       "question": "What does standard design patterns mean for B2C?",
@@ -295,7 +350,12 @@
         "Ad-hoc only"
       ],
       "correctAnswer": 1,
-      "explanation": "Standard patterns cover catalog, cart, and checkout."
+      "explanation": "Standard patterns cover catalog, cart, and checkout.",
+      "whyWrong": [
+        "'Proprietary only' contradicts the use of proven, standard design patterns.",
+        "'No patterns' contradicts the fact that standard, proven patterns exist for catalog, cart, and checkout.",
+        "'Ad-hoc only' is the opposite of what standard design patterns provide."
+      ]
     },
     {
       "question": "Which best practice applies to B2C Commerce architecture?",
@@ -306,7 +366,12 @@
         "No SEO"
       ],
       "correctAnswer": 1,
-      "explanation": "Performance, SEO, and mobile-first support B2C."
+      "explanation": "Performance, SEO, and mobile-first support B2C.",
+      "whyWrong": [
+        "Ignoring performance contradicts a core best practice for commerce site architecture.",
+        "'Desktop only' contradicts the mobile-first best practice for modern commerce sites.",
+        "'No SEO' contradicts the fact that SEO is a real, important best practice for commerce architecture."
+      ]
     },
     {
       "question": "What does global site design encompass?",
@@ -317,7 +382,12 @@
         "No fulfillment"
       ],
       "correctAnswer": 1,
-      "explanation": "Global design encompasses multi-locale and fulfillment."
+      "explanation": "Global design encompasses multi-locale and fulfillment.",
+      "whyWrong": [
+        "'Single locale only' is the opposite of what global site design encompasses.",
+        "'Single currency only' is the opposite of the multi-currency scope global design covers.",
+        "'No fulfillment' contradicts the fact that regional fulfillment is part of global site design."
+      ]
     },
     {
       "question": "Which B2C Commerce capability supports headless?",
@@ -328,7 +398,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "OCAPI/SCAPI enables headless B2C Commerce."
+      "explanation": "OCAPI/SCAPI enables headless B2C Commerce.",
+      "whyWrong": [
+        "'Full-stack only' undersells the specific headless capability (OCAPI/SCAPI) being asked about.",
+        "'No headless' contradicts the fact that B2C Commerce explicitly supports headless via OCAPI/SCAPI.",
+        "Slack is unrelated to headless storefront capability."
+      ]
     }
   ]
 }

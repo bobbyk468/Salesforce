@@ -176,7 +176,12 @@
         "Only a coding challenge"
       ],
       "correctAnswer": 1,
-      "explanation": "The Review Board is a live scenario where you present and defend your architecture before a board of Certified Technical Architects."
+      "explanation": "The Review Board is a live scenario where you present and defend your architecture before a board of Certified Technical Architects.",
+      "whyWrong": [
+        "'Only multiple-choice questions' misrepresents the Review Board, which is a live scenario presentation and defense, not a written test.",
+        "'Only a written document' undersells the Review Board's core live presentation and defense format.",
+        "'Only a coding challenge' misrepresents the Review Board's focus on architecture design, not coding."
+      ]
     },
     {
       "question": "What is typically required before attempting the Architect Review Board?",
@@ -187,7 +192,12 @@
         "No prerequisites"
       ],
       "correctAnswer": 1,
-      "explanation": "You must pass the Architect Evaluation and meet the CTA program requirements before scheduling the Review Board."
+      "explanation": "You must pass the Architect Evaluation and meet the CTA program requirements before scheduling the Review Board.",
+      "whyWrong": [
+        "'Only Application Architect' undersells the actual prerequisite, which includes passing the Architect Evaluation and broader program requirements.",
+        "'Only System Architect' undersells the actual prerequisite requirements for the Review Board.",
+        "'No prerequisites' contradicts the fact that real prerequisites (passing the Evaluation) exist before attempting the Review Board."
+      ]
     },
     {
       "question": "Which skills are most critical for the Review Board?",
@@ -198,7 +208,12 @@
         "Only documentation"
       ],
       "correctAnswer": 1,
-      "explanation": "The board evaluates how you communicate your design, justify trade-offs, and respond to challenging questions."
+      "explanation": "The board evaluates how you communicate your design, justify trade-offs, and respond to challenging questions.",
+      "whyWrong": [
+        "'Only coding speed' misrepresents the critical skills, which are about communication and defending trade-offs, not coding.",
+        "'Only slide design' undersells the critical skills, which are about live communication and handling scrutiny, not visual design.",
+        "'Only documentation' undersells the critical live-presentation and Q&A-handling skills the board actually evaluates."
+      ]
     },
     {
       "question": "How should you structure your solution presentation for the Review Board?",
@@ -209,7 +224,12 @@
         "Skip the scenario"
       ],
       "correctAnswer": 1,
-      "explanation": "Structure: requirements → constraints → design → components → trade-offs. Be clear and concise."
+      "explanation": "Structure: requirements → constraints → design → components → trade-offs. Be clear and concise.",
+      "whyWrong": [
+        "Reading slides verbatim fails to demonstrate the understanding and communication skills the board evaluates.",
+        "Focusing only on diagrams skips the requirements/constraints context the board needs to follow the reasoning.",
+        "Skipping the scenario context leaves the board without the foundation needed to evaluate the design decisions."
+      ]
     },
     {
       "question": "When the board challenges a design choice, what is the best approach?",
@@ -220,7 +240,12 @@
         "Change your design immediately"
       ],
       "correctAnswer": 1,
-      "explanation": "Acknowledge, explain rationale, and discuss alternatives. Show you've considered trade-offs."
+      "explanation": "Acknowledge, explain rationale, and discuss alternatives. Show you've considered trade-offs.",
+      "whyWrong": [
+        "Defending aggressively without acknowledging valid concerns reflects poor communication under scrutiny, not effective board conduct.",
+        "Ignoring the board's question fails to engage with legitimate scrutiny, which is a core part of the evaluation.",
+        "Changing your design immediately without discussion suggests the original reasoning wasn't well-founded, undermining credibility."
+      ]
     },
     {
       "question": "What should your architecture diagram include for the board?",
@@ -231,7 +256,12 @@
         "Only text"
       ],
       "correctAnswer": 1,
-      "explanation": "Diagrams should show systems, flows, integrations, and security boundaries for clarity."
+      "explanation": "Diagrams should show systems, flows, integrations, and security boundaries for clarity.",
+      "whyWrong": [
+        "Only a logo doesn't convey the actual system architecture the board needs to evaluate.",
+        "Only screenshots don't convey the structural relationships (data flows, integration points) the board needs to see.",
+        "Only text doesn't effectively communicate architecture — a diagram is expected to show structure visually."
+      ]
     },
     {
       "question": "Why is it important to state assumptions explicitly in your design?",
@@ -242,7 +272,12 @@
         "Only for documentation"
       ],
       "correctAnswer": 1,
-      "explanation": "Explicit assumptions help the board understand your constraints and show thorough analysis."
+      "explanation": "Explicit assumptions help the board understand your constraints and show thorough analysis.",
+      "whyWrong": [
+        "'Not important' contradicts the fact that stating assumptions is a recognized best practice for CTA presentations.",
+        "'Only for compliance' undersells the broader communication value of stating assumptions clearly.",
+        "'Only for documentation' undersells the live communication value of stating assumptions during the presentation itself."
+      ]
     },
     {
       "question": "Which non-functional requirement is often overlooked in CTA scenarios?",
@@ -253,7 +288,12 @@
         "Font sizes"
       ],
       "correctAnswer": 1,
-      "explanation": "Scalability, security, and maintainability are critical; candidates sometimes focus only on functionality."
+      "explanation": "Scalability, security, and maintainability are critical; candidates sometimes focus only on functionality.",
+      "whyWrong": [
+        "Colors are a superficial detail, not a substantive non-functional requirement.",
+        "Naming conventions are a minor implementation detail, not a substantive non-functional requirement.",
+        "Font sizes are a superficial detail, unrelated to the substantive non-functional requirements the board evaluates."
+      ]
     },
     {
       "question": "How do you handle a question you don't know the answer to during the board?",
@@ -264,7 +304,12 @@
         "Say nothing"
       ],
       "correctAnswer": 1,
-      "explanation": "Honesty and a structured response (gap + research plan + related knowledge) demonstrate professionalism."
+      "explanation": "Honesty and a structured response (gap + research plan + related knowledge) demonstrate professionalism.",
+      "whyWrong": [
+        "Guessing when uncertain risks providing incorrect information, which undermines credibility more than acknowledging a gap.",
+        "Changing the subject avoids the question rather than demonstrating honest, structured thinking under pressure.",
+        "Saying nothing fails to demonstrate the reasoning process the board wants to see, even without a complete answer."
+      ]
     },
     {
       "question": "What role do personas play in your solution design for the board?",
@@ -275,7 +320,12 @@
         "Only for reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Personas inform UX, licensing, and security—all areas the board evaluates."
+      "explanation": "Personas inform UX, licensing, and security—all areas the board evaluates.",
+      "whyWrong": [
+        "'No role' contradicts the fact that personas genuinely drive real design decisions like licensing and security.",
+        "'Only for UI' undersells personas' broader influence on licensing and security model decisions.",
+        "'Only for reports' undersells personas' broader influence on the overall solution design."
+      ]
     },
     {
       "question": "When presenting integration architecture, what should you emphasize?",
@@ -286,7 +336,12 @@
         "Only endpoints"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration design should address consistency, errors, security, and scale."
+      "explanation": "Integration design should address consistency, errors, security, and scale.",
+      "whyWrong": [
+        "'Only APIs' undersells the broader integration concerns (data consistency, error handling, security) the board expects to be addressed.",
+        "'Only middleware' undersells the broader integration concerns beyond just the middleware layer.",
+        "'Only endpoints' undersells the broader integration concerns beyond just endpoint definitions."
+      ]
     },
     {
       "question": "What is the purpose of the 'Ask Me Anything' (AMA) section in CTA prep?",
@@ -297,7 +352,12 @@
         "Only for slides"
       ],
       "correctAnswer": 1,
-      "explanation": "AMA simulates board questioning and builds confidence for unpredictable follow-ups."
+      "explanation": "AMA simulates board questioning and builds confidence for unpredictable follow-ups.",
+      "whyWrong": [
+        "'No purpose' contradicts the fact that AMA practice has a specific, real value for board preparation.",
+        "'Only for timing' undersells AMA practice's actual purpose, which is broad question-handling readiness, not just pacing.",
+        "'Only for slides' undersells AMA practice's actual purpose, which is verbal Q&A readiness, not visual materials."
+      ]
     },
     {
       "question": "Which deliverable is typically required before the Review Board presentation?",
@@ -308,7 +368,12 @@
         "Only a video"
       ],
       "correctAnswer": 1,
-      "explanation": "A written artifact documents your design for the board to review before or during the session."
+      "explanation": "A written artifact documents your design for the board to review before or during the session.",
+      "whyWrong": [
+        "'None' contradicts the fact that a real deliverable (written solution/artifact) is typically required beforehand.",
+        "'Only slides' undersells the required deliverable, which is a more substantive written solution document.",
+        "'Only a video' misrepresents the required deliverable format, which is a written document/artifact."
+      ]
     },
     {
       "question": "How should you justify choosing a declarative solution over code?",
@@ -319,7 +384,12 @@
         "Only for admins"
       ],
       "correctAnswer": 1,
-      "explanation": "Declarative solutions offer maintainability and governance; justify when they meet requirements."
+      "explanation": "Declarative solutions offer maintainability and governance; justify when they meet requirements.",
+      "whyWrong": [
+        "'Always choose code' contradicts the actual best practice, which is choosing declarative when it fits the requirements.",
+        "'Never justify' contradicts the fact that justifying your choice is exactly what the board expects.",
+        "'Only for admins' misrepresents the justification, which applies broadly to solution design, not just admin-specific scenarios."
+      ]
     },
     {
       "question": "What does 'defending your architecture' mean in the Review Board context?",
@@ -330,7 +400,12 @@
         "Agreeing with everything"
       ],
       "correctAnswer": 1,
-      "explanation": "Defending means clearly explaining your rationale and responding thoughtfully to challenges."
+      "explanation": "Defending means clearly explaining your rationale and responding thoughtfully to challenges.",
+      "whyWrong": [
+        "Arguing without substantive reasoning doesn't reflect the constructive defense the board expects.",
+        "Reading slides doesn't demonstrate the live reasoning and trade-off discussion 'defending your architecture' requires.",
+        "Agreeing with everything without pushback fails to demonstrate the confident, reasoned defense the board is evaluating."
+      ]
     },
     {
       "question": "Which practice helps manage time during the Review Board presentation?",
@@ -341,7 +416,12 @@
         "Going over time"
       ],
       "correctAnswer": 1,
-      "explanation": "Rehearsal and timeboxing help you stay on track and leave room for discussion."
+      "explanation": "Rehearsal and timeboxing help you stay on track and leave room for discussion.",
+      "whyWrong": [
+        "Rushing through the presentation risks skipping important context and reasoning the board needs to hear.",
+        "Skipping sections leaves gaps in the design story that weaken the overall presentation.",
+        "Going over time can cut into Q&A and reflects poor time-management, the opposite of the practice being recommended."
+      ]
     }
   ]
 }

@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Tableau Architect exam for?",
     "personas": [
-      { "label": "Enterprise Architects", "description": "Professionals designing large-scale Tableau deployments with multi-node server topology, high availability, and disaster recovery." },
-      { "label": "Tableau Server Admins Moving Up", "description": "Experienced administrators who want to validate their skills in architecture design, security planning, and governance frameworks." },
-      { "label": "BI Platform Leads", "description": "Leaders responsible for Tableau platform scalability, performance optimization, content management, and enterprise data governance." }
+      {
+        "label": "Enterprise Architects",
+        "description": "Professionals designing large-scale Tableau deployments with multi-node server topology, high availability, and disaster recovery."
+      },
+      {
+        "label": "Tableau Server Admins Moving Up",
+        "description": "Experienced administrators who want to validate their skills in architecture design, security planning, and governance frameworks."
+      },
+      {
+        "label": "BI Platform Leads",
+        "description": "Leaders responsible for Tableau platform scalability, performance optimization, content management, and enterprise data governance."
+      }
     ]
   },
   "examDifficulty": {
@@ -161,7 +170,12 @@
         "Marketing automation"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Architects design and govern enterprise Tableau analytics solutions, including architecture, governance, and scalability."
+      "explanation": "Tableau Architects design and govern enterprise Tableau analytics solutions, including architecture, governance, and scalability.",
+      "whyWrong": [
+        "Creating individual dashboards is a narrower analyst task, not the enterprise-scale governance focus of an architect.",
+        "Managing Salesforce CRM data is unrelated to Tableau's own architecture and governance concerns.",
+        "Marketing automation is unrelated to Tableau architecture."
+      ]
     },
     {
       "question": "Which Tableau deployment consideration is critical for an architect?",
@@ -172,7 +186,12 @@
         "User count only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects must consider server topology, scalability, high availability, and security for enterprise Tableau deployments."
+      "explanation": "Architects must consider server topology, scalability, high availability, and security for enterprise Tableau deployments.",
+      "whyWrong": [
+        "Color schemes are a design detail, not a deployment-scale architectural consideration.",
+        "Dashboard count alone doesn't capture the full scalability/HA/security considerations an architect must address.",
+        "User count alone doesn't capture the full topology/scalability/security considerations of deployment architecture."
+      ]
     },
     {
       "question": "What role does Tableau's VizQL engine play in architecture decisions?",
@@ -183,7 +202,12 @@
         "Manages licensing"
       ],
       "correctAnswer": 1,
-      "explanation": "VizQL translates visual design into database queries. Architects must understand its impact on data source design and query performance."
+      "explanation": "VizQL translates visual design into database queries. Architects must understand its impact on data source design and query performance.",
+      "whyWrong": [
+        "VizQL doesn't just render static images — it dynamically generates optimized queries from user interactions.",
+        "VizQL isn't the authentication mechanism — that's a separate concern (SSO/SAML).",
+        "VizQL isn't a licensing management tool — that's unrelated to its query-generation role."
+      ]
     },
     {
       "question": "Which authentication method supports single sign-on (SSO) for Tableau Server?",
@@ -194,7 +218,12 @@
         "OAuth 1.0 only"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Server supports SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing for SSO and enterprise identity integration."
+      "explanation": "Tableau Server supports SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing for SSO and enterprise identity integration.",
+      "whyWrong": [
+        "Local authentication alone doesn't provide the SSO capability the question asks about.",
+        "LDAP alone is a directory protocol, not itself an SSO mechanism the way SAML/Kerberos/OIDC are.",
+        "OAuth 1.0 is an older, less common protocol — modern Tableau SSO relies on SAML 2.0, Kerberos, and OpenID Connect."
+      ]
     },
     {
       "question": "What is the purpose of Tableau's repository database?",
@@ -205,7 +234,12 @@
         "Manages extracts only"
       ],
       "correctAnswer": 1,
-      "explanation": "The repository stores metadata, permissions, schedules, and extract information. Architects plan for its backup and scalability."
+      "explanation": "The repository stores metadata, permissions, schedules, and extract information. Architects plan for its backup and scalability.",
+      "whyWrong": [
+        "'Stores user data' alone undersells the repository's broader role, which includes metadata, permissions, and extract info.",
+        "'Stores only workbooks' undersells the repository's broader scope beyond just workbook files.",
+        "'Manages extracts only' undersells the repository's broader role beyond just extract metadata."
+      ]
     },
     {
       "question": "Which factor affects Tableau Server scalability the most?",
@@ -216,7 +250,12 @@
         "Font sizes"
       ],
       "correctAnswer": 1,
-      "explanation": "Scalability depends on concurrent users, background jobs (extracts, subscriptions), and underlying data source performance."
+      "explanation": "Scalability depends on concurrent users, background jobs (extracts, subscriptions), and underlying data source performance.",
+      "whyWrong": [
+        "Dashboard color themes are a visual design detail, not a scalability factor.",
+        "Number of workbooks alone doesn't capture the concurrent-load and performance factors that most affect scalability.",
+        "Font sizes are a visual design detail, unrelated to server scalability."
+      ]
     },
     {
       "question": "What is a Tableau data server used for?",
@@ -227,7 +266,12 @@
         "Managing licenses"
       ],
       "correctAnswer": 1,
-      "explanation": "Data servers let you publish and reuse data sources across workbooks, improving consistency and governance."
+      "explanation": "Data servers let you publish and reuse data sources across workbooks, improving consistency and governance.",
+      "whyWrong": [
+        "Serving generic web content isn't the data server's specific purpose — that's about centralizing published data sources.",
+        "Hosting Tableau Server itself is a different infrastructure concern, not what a data server specifically provides.",
+        "Managing licenses is unrelated to the data server's data-source centralization purpose."
+      ]
     },
     {
       "question": "Which governance practice helps control Tableau content proliferation?",
@@ -238,7 +282,12 @@
         "Limiting users to one workbook"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified data sources, project structure, and ownership policies help govern content at scale."
+      "explanation": "Certified data sources, project structure, and ownership policies help govern content at scale.",
+      "whyWrong": [
+        "Disabling all sharing would hurt collaboration, the opposite of a sound content-governance practice.",
+        "Removing all extracts would hurt performance, not help control content proliferation.",
+        "Limiting users to one workbook is an impractical, overly restrictive approach, not the actual recommended governance practice."
+      ]
     },
     {
       "question": "What does Tableau's backgrounder process handle?",
@@ -249,7 +298,12 @@
         "License validation only"
       ],
       "correctAnswer": 1,
-      "explanation": "The backgrounder process runs extract refreshes, subscriptions, and other scheduled tasks. Architects size it for job load."
+      "explanation": "The backgrounder process runs extract refreshes, subscriptions, and other scheduled tasks. Architects size it for job load.",
+      "whyWrong": [
+        "User sessions are a different concern, not what the backgrounder process specifically handles.",
+        "VizQL rendering happens in real-time during interaction, not as a background scheduled job.",
+        "License validation is a separate administrative function, not what the backgrounder specifically handles."
+      ]
     },
     {
       "question": "Which high-availability configuration uses multiple Tableau Server nodes?",
@@ -260,7 +314,12 @@
         "Cloud-only deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Distributed deployment spreads services across nodes for high availability and load distribution."
+      "explanation": "Distributed deployment spreads services across nodes for high availability and load distribution.",
+      "whyWrong": [
+        "A single-node deployment is the opposite of the multi-node HA configuration being described.",
+        "A development server is a non-production environment, not the HA configuration being asked about.",
+        "Cloud-only deployment describes Tableau Cloud, not the on-premises multi-node HA configuration being described."
+      ]
     },
     {
       "question": "What is the benefit of Tableau extracts (.tde/.hyper) for performance?",
@@ -271,7 +330,12 @@
         "They manage licensing"
       ],
       "correctAnswer": 1,
-      "explanation": "Extracts pre-aggregate and compress data, offloading work from source systems and speeding up queries."
+      "explanation": "Extracts pre-aggregate and compress data, offloading work from source systems and speeding up queries.",
+      "whyWrong": [
+        "Extracts don't reduce the number of colors — that's unrelated to their performance purpose.",
+        "Extracts don't only store images — they store optimized, compressed data for query performance.",
+        "Extracts aren't a licensing management tool — that's unrelated to their performance purpose."
+      ]
     },
     {
       "question": "Which security layer controls who can view or edit Tableau content?",
@@ -282,7 +346,12 @@
         "Repository only"
       ],
       "correctAnswer": 1,
-      "explanation": "Project and workbook permissions plus row-level security control access to Tableau content."
+      "explanation": "Project and workbook permissions plus row-level security control access to Tableau content.",
+      "whyWrong": [
+        "Data source permissions alone don't cover the full security layering (project, workbook, row-level) the question describes.",
+        "VizQL alone is the query engine, not itself a security/access-control layer.",
+        "The repository alone stores metadata — it isn't itself the permission-enforcement layer for content viewing."
+      ]
     },
     {
       "question": "What is a best practice for Tableau Server disaster recovery?",
@@ -293,7 +362,12 @@
         "Single-node only"
       ],
       "correctAnswer": 1,
-      "explanation": "Regular repository backups and tested restore procedures are essential for disaster recovery."
+      "explanation": "Regular repository backups and tested restore procedures are essential for disaster recovery.",
+      "whyWrong": [
+        "'No backups needed' contradicts the fundamental disaster-recovery best practice of regular backups.",
+        "Backing up only workbooks misses the repository data essential for full recovery.",
+        "'Single-node only' contradicts the resilience goal disaster recovery planning is meant to achieve."
+      ]
     },
     {
       "question": "Which Tableau Cloud consideration differs from on-premises Server?",
@@ -304,7 +378,12 @@
         "No governance"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Cloud is fully managed with built-in HA; architects focus on connectivity and data source design."
+      "explanation": "Tableau Cloud is fully managed with built-in HA; architects focus on connectivity and data source design.",
+      "whyWrong": [
+        "'No difference' contradicts the real, documented differences between Tableau Cloud and Server.",
+        "'No authentication' contradicts the fact that Tableau Cloud has its own authentication considerations.",
+        "'No governance' contradicts the fact that governance still applies differently in a cloud-managed context."
+      ]
     },
     {
       "question": "What does incremental refresh do for Tableau extracts?",
@@ -315,7 +394,12 @@
         "Changes colors only"
       ],
       "correctAnswer": 1,
-      "explanation": "Incremental refresh updates only new or changed rows, improving refresh performance for large datasets."
+      "explanation": "Incremental refresh updates only new or changed rows, improving refresh performance for large datasets.",
+      "whyWrong": [
+        "Refreshing all data every time is the opposite of what incremental refresh is designed to avoid.",
+        "Incremental refresh doesn't delete old data — it adds/updates based on a key.",
+        "Incremental refresh doesn't change colors — that's unrelated to its data-refresh function."
+      ]
     }
   ]
 }

@@ -175,7 +175,12 @@
         "Only documentation"
       ],
       "correctAnswer": 1,
-      "explanation": "The Architect Evaluation is a scenario-based exam that tests your ability to design solutions and answer technical architecture questions."
+      "explanation": "The Architect Evaluation is a scenario-based exam that tests your ability to design solutions and answer technical architecture questions.",
+      "whyWrong": [
+        "'Only coding skills' misrepresents the Evaluation, which assesses architecture design and technical knowledge broadly, not coding ability.",
+        "'Only presentation skills' undersells the Evaluation, which also tests scenario-based design and technical knowledge.",
+        "'Only documentation' undersells the Evaluation's actual scope, which includes technical knowledge testing too."
+      ]
     },
     {
       "question": "Which certifications are typically required before taking the Architect Evaluation?",
@@ -186,7 +191,12 @@
         "Sales Cloud Consultant only"
       ],
       "correctAnswer": 1,
-      "explanation": "Application Architect and System Architect (or equivalent) are typical prerequisites for the CTA path."
+      "explanation": "Application Architect and System Architect (or equivalent) are typical prerequisites for the CTA path.",
+      "whyWrong": [
+        "'None' contradicts the fact that specific prerequisite credentials are typically required.",
+        "Platform Developer II alone doesn't provide the broad architectural foundation required.",
+        "Sales Cloud Consultant alone doesn't provide the broad architectural foundation required."
+      ]
     },
     {
       "question": "What is a key deliverable of the Architect Evaluation?",
@@ -197,7 +207,12 @@
         "A multiple-choice exam only"
       ],
       "correctAnswer": 1,
-      "explanation": "The evaluation requires designing a solution that addresses the scenario's requirements, constraints, and trade-offs."
+      "explanation": "The evaluation requires designing a solution that addresses the scenario's requirements, constraints, and trade-offs.",
+      "whyWrong": [
+        "A written essay alone doesn't capture the structured solution design deliverable the Evaluation requires.",
+        "A live coding session doesn't reflect the Evaluation's actual focus on solution design, not implementation.",
+        "A multiple-choice exam alone doesn't capture the scenario-based solution design deliverable required."
+      ]
     },
     {
       "question": "When designing a multi-org integration, which pattern supports data consistency?",
@@ -208,7 +223,12 @@
         "Batch file transfer only"
       ],
       "correctAnswer": 1,
-      "explanation": "Event-driven architecture with a central bus (e.g., Platform Events, MuleSoft) supports loose coupling and consistency."
+      "explanation": "Event-driven architecture with a central bus (e.g., Platform Events, MuleSoft) supports loose coupling and consistency.",
+      "whyWrong": [
+        "Point-to-point integration doesn't scale well for multi-org consistency — that's what event-driven architecture with a central bus addresses.",
+        "Synchronous REST alone doesn't provide the consistency mechanism a centralized event bus offers for multi-org scenarios.",
+        "Batch file transfer introduces latency and doesn't support the real-time consistency needs typically addressed by event-driven patterns."
+      ]
     },
     {
       "question": "What is the primary benefit of using a canonical data model in integration?",
@@ -219,7 +239,12 @@
         "Fewer APIs"
       ],
       "correctAnswer": 1,
-      "explanation": "Canonical models reduce coupling and simplify transformations between multiple source and target systems."
+      "explanation": "Canonical models reduce coupling and simplify transformations between multiple source and target systems.",
+      "whyWrong": [
+        "Faster coding isn't the benefit of a canonical data model — that benefit is about integration maintainability, not coding speed.",
+        "Lower cost alone undersells the canonical data model's core benefit around mapping simplification.",
+        "Fewer APIs isn't the specific benefit — a canonical model reduces mapping complexity, not necessarily the API count."
+      ]
     },
     {
       "question": "Which security consideration is critical when designing a customer-facing Community?",
@@ -230,7 +255,12 @@
         "Theme selection only"
       ],
       "correctAnswer": 1,
-      "explanation": "Guest access, sharing, and profile-based visibility must be designed to protect data while enabling the right access."
+      "explanation": "Guest access, sharing, and profile-based visibility must be designed to protect data while enabling the right access.",
+      "whyWrong": [
+        "Colors are a visual design detail, not a security consideration for guest user access.",
+        "License count alone doesn't address the specific data visibility/sharing concerns critical for guest access design.",
+        "Theme selection is a visual design detail, unrelated to data security for guest users."
+      ]
     },
     {
       "question": "When should you recommend Heroku vs Salesforce Platform for an application?",
@@ -241,7 +271,12 @@
         "No difference"
       ],
       "correctAnswer": 1,
-      "explanation": "Heroku suits polyglot and high-scale; Platform suits CRM-centric, declarative, and Salesforce-native apps."
+      "explanation": "Heroku suits polyglot and high-scale; Platform suits CRM-centric, declarative, and Salesforce-native apps.",
+      "whyWrong": [
+        "'Always Heroku' oversimplifies the decision, which depends on workload characteristics, not a blanket rule.",
+        "'Always Platform' oversimplifies the decision, which depends on workload characteristics, not a blanket rule.",
+        "'No difference' contradicts the real, meaningful differences in fit between Heroku and the Salesforce Platform."
+      ]
     },
     {
       "question": "What role does the Role Hierarchy play in record-level security?",
@@ -252,7 +287,12 @@
         "Only for dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Role hierarchy grants upward visibility: users see records owned by roles below them."
+      "explanation": "Role hierarchy grants upward visibility: users see records owned by roles below them.",
+      "whyWrong": [
+        "'No role' contradicts the fact that role hierarchy has a defined, real impact on record-level security.",
+        "'Only for reports' undersells role hierarchy's broader record-access impact beyond just reports.",
+        "'Only for dashboards' undersells role hierarchy's broader record-access impact beyond just dashboards."
+      ]
     },
     {
       "question": "Which pattern supports high-volume, asynchronous integration with external systems?",
@@ -263,7 +303,12 @@
         "Process Builder only"
       ],
       "correctAnswer": 1,
-      "explanation": "CDC, Platform Events, and queues support asynchronous, scalable integration without blocking transactions."
+      "explanation": "CDC, Platform Events, and queues support asynchronous, scalable integration without blocking transactions.",
+      "whyWrong": [
+        "Synchronous callouts don't support the high-volume, asynchronous scenario the question specifically describes.",
+        "Workflow rules aren't designed for external system integration at volume.",
+        "Process Builder isn't designed for high-volume, asynchronous external integration."
+      ]
     },
     {
       "question": "What is a key trade-off when using a large data volume (LDV) strategy with Big Objects?",
@@ -274,7 +319,12 @@
         "Performance only"
       ],
       "correctAnswer": 1,
-      "explanation": "Big Objects are append-only and optimized for analytics; they trade flexible querying for scale and retention."
+      "explanation": "Big Objects are append-only and optimized for analytics; they trade flexible querying for scale and retention.",
+      "whyWrong": [
+        "'No trade-offs' contradicts the fact that Big Objects involve real trade-offs between query flexibility and analytics optimization.",
+        "'Cost only' undersells the broader trade-off, which is specifically about query flexibility versus storage/retention design.",
+        "'Performance only' undersells the broader trade-off, which spans storage and retention considerations too."
+      ]
     },
     {
       "question": "When designing for multi-currency, what must an architect consider?",
@@ -285,7 +335,12 @@
         "Only one currency"
       ],
       "correctAnswer": 1,
-      "explanation": "ACM, conversion dates, and reporting currency affect accuracy and compliance in multi-currency orgs."
+      "explanation": "ACM, conversion dates, and reporting currency affect accuracy and compliance in multi-currency orgs.",
+      "whyWrong": [
+        "'Only display' undersells multi-currency design, which requires backend conversion date and reporting currency configuration.",
+        "'Only manual entry' contradicts the fact that Advanced Currency Management automates conversion handling.",
+        "'Only one currency' is the opposite of what multi-currency design specifically requires."
+      ]
     },
     {
       "question": "Which governance practice reduces technical debt in a Salesforce org?",
@@ -296,7 +351,12 @@
         "Only training"
       ],
       "correctAnswer": 1,
-      "explanation": "Release management, code review, and org standards help maintain quality and reduce debt over time."
+      "explanation": "Release management, code review, and org standards help maintain quality and reduce debt over time.",
+      "whyWrong": [
+        "'No governance' contradicts the fact that release management and standards are real governance practices that reduce technical debt.",
+        "'Only documentation' undersells governance, which spans release management and code review, not just documentation.",
+        "'Only training' undersells governance, which spans structural practices beyond just training."
+      ]
     },
     {
       "question": "What does the Sharing Calculator help an architect with?",
@@ -307,7 +367,12 @@
         "Storage only"
       ],
       "correctAnswer": 1,
-      "explanation": "The Sharing Calculator estimates row-level security load and helps optimize sharing design."
+      "explanation": "The Sharing Calculator estimates row-level security load and helps optimize sharing design.",
+      "whyWrong": [
+        "License costs are a separate concern, not what the Sharing Calculator specifically estimates.",
+        "User count alone doesn't capture the share-row and rule-complexity estimation the Sharing Calculator provides.",
+        "Storage alone is unrelated to the Sharing Calculator's specific purpose around sharing rule impact."
+      ]
     },
     {
       "question": "When should an architect recommend a custom LWC over a Flow screen?",
@@ -318,7 +383,12 @@
         "Always Flow"
       ],
       "correctAnswer": 1,
-      "explanation": "LWC suits complex, reusable UI; Flow suits simpler, declarative screens and guided processes."
+      "explanation": "LWC suits complex, reusable UI; Flow suits simpler, declarative screens and guided processes.",
+      "whyWrong": [
+        "'Never' contradicts the fact that custom LWC is genuinely the right choice for certain complex scenarios.",
+        "'Always LWC' oversimplifies the decision, which depends on complexity, not a blanket rule.",
+        "'Always Flow' oversimplifies the decision — Flow isn't always sufficient for complex UI or heavy logic needs."
+      ]
     },
     {
       "question": "Which integration pattern supports real-time, transactional sync between Salesforce and an ERP?",
@@ -329,7 +399,12 @@
         "No real-time option"
       ],
       "correctAnswer": 1,
-      "explanation": "Synchronous APIs or event-driven flows with immediate handlers support real-time transactional sync."
+      "explanation": "Synchronous APIs or event-driven flows with immediate handlers support real-time transactional sync.",
+      "whyWrong": [
+        "'Batch only' undersells the real-time integration patterns (synchronous API, event-driven) that support transactional ERP sync.",
+        "'File-based only' doesn't support the real-time, transactional sync the question specifically asks about.",
+        "'No real-time option' contradicts the fact that real-time integration patterns genuinely exist for this scenario."
+      ]
     },
     {
       "question": "What is the purpose of a Solution Architecture Document (SAD)?",
@@ -340,7 +415,12 @@
         "Only for admins"
       ],
       "correctAnswer": 1,
-      "explanation": "A SAD captures architecture decisions, rationale, and implementation approach for alignment and handoff."
+      "explanation": "A SAD captures architecture decisions, rationale, and implementation approach for alignment and handoff.",
+      "whyWrong": [
+        "'Marketing only' misrepresents the SAD's audience and purpose, which is broader technical/business documentation.",
+        "'Only for developers' undersells the SAD's broader audience, which includes business and other stakeholders.",
+        "'Only for admins' undersells the SAD's broader audience beyond just admins."
+      ]
     }
   ]
 }

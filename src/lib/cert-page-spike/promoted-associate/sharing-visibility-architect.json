@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Sharing and Visibility Architect exam for?",
     "personas": [
-      { "label": "Security-Focused Admins", "description": "Administrators who design and troubleshoot complex sharing models, OWD configurations, and record access for large orgs with multiple user populations." },
-      { "label": "Platform Architects", "description": "Architects who need to prove deep expertise in Salesforce&apos;s layered security model as part of the Application Architect or CTA path." },
-      { "label": "Compliance Specialists", "description": "Professionals responsible for ensuring record-level data access meets regulatory and internal audit requirements across internal and external users." }
+      {
+        "label": "Security-Focused Admins",
+        "description": "Administrators who design and troubleshoot complex sharing models, OWD configurations, and record access for large orgs with multiple user populations."
+      },
+      {
+        "label": "Platform Architects",
+        "description": "Architects who need to prove deep expertise in Salesforce&apos;s layered security model as part of the Application Architect or CTA path."
+      },
+      {
+        "label": "Compliance Specialists",
+        "description": "Professionals responsible for ensuring record-level data access meets regulatory and internal audit requirements across internal and external users."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "They design solutions that meet sharing and visibility security requirements."
+      "explanation": "They design solutions that meet sharing and visibility security requirements.",
+      "whyWrong": [
+        "'Only reports' undersells the role, which is about sharing/visibility security architecture, not reporting.",
+        "Email is unrelated to the Sharing and Visibility Architect's core focus.",
+        "Slack is unrelated to the Sharing and Visibility Architect's core focus."
+      ]
     },
     {
       "question": "Which layer determines the baseline record access in Salesforce?",
@@ -180,7 +194,12 @@
         "Profiles only"
       ],
       "correctAnswer": 1,
-      "explanation": "OWD defines the baseline access level for each object (Private, Public Read Only, etc.)."
+      "explanation": "OWD defines the baseline access level for each object (Private, Public Read Only, etc.).",
+      "whyWrong": [
+        "Sharing rules extend access beyond the baseline — they aren't themselves the baseline.",
+        "Permission sets grant additional feature/object access — they don't determine the baseline record-level access.",
+        "Profiles control broader access/settings but the specific baseline record access layer is OWD."
+      ]
     },
     {
       "question": "What is the purpose of a Sharing Rule?",
@@ -191,7 +210,12 @@
         "To send emails"
       ],
       "correctAnswer": 1,
-      "explanation": "Sharing rules open access to records that OWD would otherwise restrict."
+      "explanation": "Sharing rules open access to records that OWD would otherwise restrict.",
+      "whyWrong": [
+        "'To restrict access' is the opposite of a Sharing Rule's purpose, which is to extend access.",
+        "Sharing Rules don't delete records — that's an unrelated data operation.",
+        "Sharing Rules don't send emails — that's unrelated to their access-extension purpose."
+      ]
     },
     {
       "question": "Which sharing mechanism is used for criteria-based sharing?",
@@ -202,7 +226,12 @@
         "Only OWD"
       ],
       "correctAnswer": 1,
-      "explanation": "Criteria-Based Sharing Rules grant access based on record field values."
+      "explanation": "Criteria-Based Sharing Rules grant access based on record field values.",
+      "whyWrong": [
+        "'Only role hierarchy' misattributes criteria-based sharing to a different sharing mechanism.",
+        "'Only manual share' misattributes criteria-based sharing to a different, one-off sharing mechanism.",
+        "'Only OWD' misattributes criteria-based sharing to the baseline access setting, not the rule mechanism itself."
+      ]
     },
     {
       "question": "What does 'visibility' mean in the context of this certification?",
@@ -213,7 +242,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Visibility is what data a user can see, governed by sharing and permissions."
+      "explanation": "Visibility is what data a user can see, governed by sharing and permissions.",
+      "whyWrong": [
+        "'Only UI' misrepresents visibility, which is about data access determined by sharing/OWD/permissions, not interface design.",
+        "'Only reports' undersells visibility, which is a broader data-access concept beyond just reports.",
+        "'Only dashboards' undersells visibility, which is a broader data-access concept beyond just dashboards."
+      ]
     },
     {
       "question": "What does the role hierarchy contribute to sharing?",
@@ -224,7 +258,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Role hierarchy grants access to records owned by users below."
+      "explanation": "Role hierarchy grants access to records owned by users below.",
+      "whyWrong": [
+        "'Nothing' contradicts the fact that role hierarchy has a real, defined contribution to record access.",
+        "'Only reports' undersells role hierarchy's actual contribution to inherited record access.",
+        "'Only dashboards' undersells role hierarchy's actual contribution to inherited record access."
+      ]
     },
     {
       "question": "Which sharing rule type uses ownership?",
@@ -235,7 +274,12 @@
         "OWD only"
       ],
       "correctAnswer": 1,
-      "explanation": "Owner-based sharing rules grant access by role, group, or territory."
+      "explanation": "Owner-based sharing rules grant access by role, group, or territory.",
+      "whyWrong": [
+        "'Criteria-based only' misattributes ownership-based sharing to the other sharing rule type.",
+        "'Manual only' misattributes rule-based ownership sharing to a different, one-off sharing mechanism.",
+        "'OWD only' misattributes ownership-based sharing rules to the baseline access setting, not the rule type itself."
+      ]
     },
     {
       "question": "What is manual sharing used for?",
@@ -246,7 +290,12 @@
         "No access"
       ],
       "correctAnswer": 1,
-      "explanation": "Manual sharing grants one-off access to specific records."
+      "explanation": "Manual sharing grants one-off access to specific records.",
+      "whyWrong": [
+        "Manual sharing doesn't replace sharing rules — it complements them for exceptional cases.",
+        "'All access' misrepresents manual sharing, which grants specific, targeted access, not blanket access.",
+        "'No access' is the opposite of what manual sharing grants."
+      ]
     },
     {
       "question": "Which consideration applies when designing for large numbers of sharing rules?",
@@ -257,7 +306,12 @@
         "Only OWD"
       ],
       "correctAnswer": 1,
-      "explanation": "Many rules and complex criteria can affect performance."
+      "explanation": "Many rules and complex criteria can affect performance.",
+      "whyWrong": [
+        "'No limit' contradicts the fact that sharing rule count and complexity have real performance implications.",
+        "'Only security' undersells the actual consideration, which is specifically about performance impact.",
+        "'Only OWD' misattributes the performance consideration to a different, unrelated setting."
+      ]
     },
     {
       "question": "What does Grant Access Using Hierarchies control?",
@@ -268,7 +322,12 @@
         "Only permission sets"
       ],
       "correctAnswer": 1,
-      "explanation": "This setting controls role hierarchy-based record access."
+      "explanation": "This setting controls role hierarchy-based record access.",
+      "whyWrong": [
+        "'Only profiles' misattributes this hierarchy access setting to a different access-control feature.",
+        "'Only OWD' misattributes this hierarchy-specific setting to the baseline access configuration.",
+        "'Only permission sets' misattributes this hierarchy-specific setting to a different access-control feature."
+      ]
     },
     {
       "question": "Which object supports Territory Management sharing?",
@@ -279,7 +338,12 @@
         "Lead only"
       ],
       "correctAnswer": 1,
-      "explanation": "Territory and Territory Model enable territory-based sharing."
+      "explanation": "Territory and Territory Model enable territory-based sharing.",
+      "whyWrong": [
+        "Account alone doesn't support the territory-specific sharing structure being asked about.",
+        "Opportunity alone doesn't itself define the territory model — that's a separate structure.",
+        "Lead alone doesn't support Territory Management's sharing structure."
+      ]
     },
     {
       "question": "What is the purpose of a Permission Set Group?",
@@ -290,7 +354,12 @@
         "To create OWD"
       ],
       "correctAnswer": 1,
-      "explanation": "Permission Set Groups bundle permission sets for easier assignment."
+      "explanation": "Permission Set Groups bundle permission sets for easier assignment.",
+      "whyWrong": [
+        "Permission Set Groups don't replace profiles — every user still needs one profile.",
+        "Permission Set Groups don't replace sharing rules — those are a separate record-access mechanism.",
+        "Permission Set Groups don't create OWD settings — that's a separate baseline configuration."
+      ]
     },
     {
       "question": "Which data access pattern can impact performance?",
@@ -301,7 +370,12 @@
         "Only manual share"
       ],
       "correctAnswer": 1,
-      "explanation": "Recalculation, report filters, and limits affect performance."
+      "explanation": "Recalculation, report filters, and limits affect performance.",
+      "whyWrong": [
+        "'No impact' contradicts the fact that sharing rule recalculation genuinely affects performance.",
+        "'Only OWD' undersells the broader set of access patterns (sharing recalculation, report filters, list views) that impact performance.",
+        "'Only manual share' undersells the broader set of access patterns that impact performance."
+      ]
     },
     {
       "question": "What does Public Read Only OWD mean?",
@@ -312,7 +386,12 @@
         "Private"
       ],
       "correctAnswer": 1,
-      "explanation": "Public Read Only allows read for all; only owners can edit."
+      "explanation": "Public Read Only allows read for all; only owners can edit.",
+      "whyWrong": [
+        "'No access' is the opposite of what Public Read Only grants.",
+        "'All can edit' misrepresents Public Read Only, which specifically restricts editing to owners.",
+        "'Private' is the opposite, most restrictive OWD setting, not what Public Read Only means."
+      ]
     },
     {
       "question": "Which best practice supports maintainable sharing design?",
@@ -323,7 +402,12 @@
         "No documentation"
       ],
       "correctAnswer": 1,
-      "explanation": "Fewer rules, clear criteria, and documentation support maintainability."
+      "explanation": "Fewer rules, clear criteria, and documentation support maintainability.",
+      "whyWrong": [
+        "'Unlimited rules' contradicts the best practice of minimizing rule count for maintainability.",
+        "'Manual share only' undersells the broader best practice, which includes rule design and documentation.",
+        "'No documentation' contradicts the fact that documenting design is a core best practice."
+      ]
     }
   ]
 }

@@ -174,7 +174,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products."
+      "explanation": "Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is business-value-focused cross-cloud design, not just writing code.",
+        "'Only reporting' misrepresents the role, which spans full solution architecture, not just reports.",
+        "'Only Slack' is unrelated to what a B2B Solution Architect actually does."
+      ]
     },
     {
       "question": "What does B2B stand for?",
@@ -185,7 +190,12 @@
         "Brand to Brand"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B stands for Business to Business."
+      "explanation": "B2B stands for Business to Business.",
+      "whyWrong": [
+        "'Back to Back' isn't a real acronym expansion for B2B.",
+        "'Build to Order' is a manufacturing term, not what B2B stands for.",
+        "'Brand to Brand' isn't the actual expansion of B2B."
+      ]
     },
     {
       "question": "Which Salesforce products are often part of B2B solutions?",
@@ -196,7 +206,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B solutions often include B2B Commerce, CPQ, Order Management, and more."
+      "explanation": "B2B solutions often include B2B Commerce, CPQ, Order Management, and more.",
+      "whyWrong": [
+        "'Only Marketing Cloud' undersells the broader set of products (Commerce, CPQ, Order Management) typically involved in B2B solutions.",
+        "'Only Service Cloud' undersells the broader multi-product B2B landscape.",
+        "'Only Slack' is unrelated to the core B2B commerce/CPQ/order management products involved."
+      ]
     },
     {
       "question": "What does 'multi-cloud' mean in this context?",
@@ -207,7 +222,12 @@
         "Only MuleSoft"
       ],
       "correctAnswer": 1,
-      "explanation": "Multi-cloud means multiple Salesforce products working together."
+      "explanation": "Multi-cloud means multiple Salesforce products working together.",
+      "whyWrong": [
+        "'Only one product' is the opposite of what multi-cloud means.",
+        "'Only Heroku' narrows multi-cloud incorrectly to a single specific product.",
+        "'Only MuleSoft' narrows multi-cloud incorrectly to a single specific product."
+      ]
     },
     {
       "question": "Which role typically pursues B2B Solution Architect?",
@@ -218,7 +238,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing B2B solutions pursue this credential."
+      "explanation": "Architects and senior consultants designing B2B solutions pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical role pursuing this architecture-focused credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior consultants."
+      ]
     },
     {
       "question": "What does B2B Commerce catalog management involve?",
@@ -229,7 +254,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Catalog management covers products, categories, and pricing."
+      "explanation": "Catalog management covers products, categories, and pricing.",
+      "whyWrong": [
+        "Email is unrelated to B2B Commerce catalog management, which concerns products, categories, and pricing.",
+        "Slack is unrelated to catalog management.",
+        "CPQ alone doesn't cover the full catalog management scope, which includes categories and buyer-specific pricing."
+      ]
     },
     {
       "question": "Which B2B Commerce feature supports buyer-specific pricing?",
@@ -240,7 +270,12 @@
         "No pricing"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B Commerce supports customer-specific and contract pricing."
+      "explanation": "B2B Commerce supports customer-specific and contract pricing.",
+      "whyWrong": [
+        "A standard Price Book alone doesn't support the buyer-specific/contract pricing this feature is about.",
+        "List price alone is the default, not the buyer-specific pricing feature described.",
+        "'No pricing' contradicts the fact that a real feature exists for this exact scenario."
+      ]
     },
     {
       "question": "What does checkout customization in B2B involve?",
@@ -251,7 +286,12 @@
         "Reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "Checkout includes payment, shipping, and approval workflows."
+      "explanation": "Checkout includes payment, shipping, and approval workflows.",
+      "whyWrong": [
+        "'Only default flow' is the opposite of customization — the question asks what checkout customization involves.",
+        "Email alone doesn't cover the payment/shipping/approval workflow scope of checkout customization.",
+        "Reports alone are unrelated to checkout process customization."
+      ]
     },
     {
       "question": "Which integration connects B2B Commerce to ERP?",
@@ -262,7 +302,12 @@
         "Service Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Order Management and APIs connect B2B Commerce to ERP."
+      "explanation": "Order Management and APIs connect B2B Commerce to ERP.",
+      "whyWrong": [
+        "Slack is unrelated to ERP integration for B2B Commerce.",
+        "Marketing Cloud alone is unrelated to the ERP integration pathways described.",
+        "Service Cloud alone is unrelated to ERP integration for commerce order data."
+      ]
     },
     {
       "question": "What is a buyer account in B2B Commerce?",
@@ -273,7 +318,12 @@
         "A campaign"
       ],
       "correctAnswer": 1,
-      "explanation": "Buyer accounts represent purchasing organizations."
+      "explanation": "Buyer accounts represent purchasing organizations.",
+      "whyWrong": [
+        "A Lead is a Sales Cloud prospecting record, not the account making storefront purchases.",
+        "A Contact alone represents an individual, not the purchasing company/account itself.",
+        "A Campaign tracks marketing initiatives, unrelated to the buyer account concept."
+      ]
     },
     {
       "question": "Which B2B Commerce feature supports approval workflows?",
@@ -284,7 +334,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Cart approval rules support multi-step approval workflows."
+      "explanation": "Cart approval rules support multi-step approval workflows.",
+      "whyWrong": [
+        "'No approvals' contradicts the fact that this feature specifically supports approval workflows.",
+        "Email alone isn't the mechanism that enforces cart approval rules.",
+        "CPQ alone isn't the B2B Commerce-specific approval workflow feature being described."
+      ]
     },
     {
       "question": "What does B2B solution design typically include?",
@@ -295,7 +350,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Solution design covers catalog, pricing, checkout, and integration."
+      "explanation": "Solution design covers catalog, pricing, checkout, and integration.",
+      "whyWrong": [
+        "'Only UI' undersells B2B solution design, which spans catalog, pricing, checkout, and integration architecture broadly.",
+        "'Only reports' undersells the broader architectural scope of B2B solution design.",
+        "'Only dashboards' undersells the broader architectural scope of B2B solution design."
+      ]
     },
     {
       "question": "Which Salesforce product handles B2B storefront experience?",
@@ -306,7 +366,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B Commerce runs on Experience Cloud for storefront."
+      "explanation": "B2B Commerce runs on Experience Cloud for storefront.",
+      "whyWrong": [
+        "Service Cloud alone doesn't handle the storefront experience — that's Commerce on Experience Cloud.",
+        "Marketing Cloud alone doesn't provide the storefront experience itself.",
+        "Slack alone is unrelated to storefront experience delivery."
+      ]
     },
     {
       "question": "What is the purpose of B2B Commerce order orchestration?",
@@ -317,7 +382,12 @@
         "Only reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Order orchestration handles fulfillment and shipping."
+      "explanation": "Order orchestration handles fulfillment and shipping.",
+      "whyWrong": [
+        "'Only capture' undersells order orchestration, which spans fulfillment, inventory, and shipping too.",
+        "CPQ alone handles pricing/quoting, not the fulfillment/inventory/shipping coordination order orchestration provides.",
+        "Reports alone don't perform order orchestration — they display data after the fact."
+      ]
     },
     {
       "question": "Which best practice applies to B2B multi-cloud design?",
@@ -328,7 +398,12 @@
         "No testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Align catalog, pricing, and order flow across products."
+      "explanation": "Align catalog, pricing, and order flow across products.",
+      "whyWrong": [
+        "Focusing on a single product ignores the cross-product alignment this multi-cloud best practice calls for.",
+        "Ignoring integration contradicts the core best practice of aligning systems together.",
+        "Skipping testing contradicts sound architecture practice for a multi-cloud design."
+      ]
     }
   ]
 }

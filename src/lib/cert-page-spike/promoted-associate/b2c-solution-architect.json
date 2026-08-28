@@ -173,7 +173,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer."
+      "explanation": "Certified B2C Solution Architects have knowledge, skills, and experience architecting and driving multi-cloud solutions that deliver business value for the customer.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is business-value-focused cross-cloud design, not just writing code.",
+        "'Only reporting' misrepresents the role, which spans full solution architecture, not just reports.",
+        "'Only Slack' is unrelated to what a B2C Solution Architect does."
+      ]
     },
     {
       "question": "What does B2C stand for?",
@@ -184,7 +189,12 @@
         "Brand to Consumer"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C stands for Business to Consumer."
+      "explanation": "B2C stands for Business to Consumer.",
+      "whyWrong": [
+        "'Back to Customer' isn't the actual expansion of B2C.",
+        "'Build to Order' is a manufacturing term, not what B2C stands for.",
+        "'Brand to Consumer' isn't the actual expansion of B2C."
+      ]
     },
     {
       "question": "Which Salesforce products are often part of B2C solutions?",
@@ -195,7 +205,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C solutions often include B2C Commerce, Marketing Cloud, Service Cloud, and more."
+      "explanation": "B2C solutions often include B2C Commerce, Marketing Cloud, Service Cloud, and more.",
+      "whyWrong": [
+        "'Only Marketing Cloud' undersells the broader set of products (Commerce, Service Cloud) typically involved.",
+        "'Only Service Cloud' undersells the broader multi-product B2C landscape.",
+        "'Only Slack' is unrelated to the core products involved in B2C solutions."
+      ]
     },
     {
       "question": "What does 'drive multi-cloud solutions' mean?",
@@ -206,7 +221,12 @@
         "Only MuleSoft"
       ],
       "correctAnswer": 1,
-      "explanation": "It means leading and architecting solutions across multiple Salesforce products."
+      "explanation": "It means leading and architecting solutions across multiple Salesforce products.",
+      "whyWrong": [
+        "'Only one product' is the opposite of what driving multi-cloud solutions means.",
+        "'Only Heroku' narrows the concept incorrectly to a single specific product.",
+        "'Only MuleSoft' narrows the concept incorrectly to a single specific product."
+      ]
     },
     {
       "question": "Which role typically pursues B2C Solution Architect?",
@@ -217,7 +237,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing B2C solutions pursue this credential."
+      "explanation": "Architects and senior consultants designing B2C solutions pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical role pursuing this architecture-focused credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior consultants."
+      ]
     },
     {
       "question": "What does B2C Commerce storefront provide?",
@@ -228,7 +253,12 @@
         "Partner portal only"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce provides consumer-facing e-commerce storefronts."
+      "explanation": "B2C Commerce provides consumer-facing e-commerce storefronts.",
+      "whyWrong": [
+        "'B2B only' misrepresents the topic, which is specifically about the B2C consumer-facing storefront.",
+        "A service portal is a different Experience Cloud use case, not the e-commerce storefront being described.",
+        "A partner portal is a different Experience Cloud use case, unrelated to consumer e-commerce."
+      ]
     },
     {
       "question": "Which integration connects B2C Commerce to Marketing Cloud?",
@@ -239,7 +269,12 @@
         "Service Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C integrates with Marketing Cloud for personalization and email."
+      "explanation": "B2C integrates with Marketing Cloud for personalization and email.",
+      "whyWrong": [
+        "'No integration' contradicts the fact that real, documented Marketing Cloud integrations exist.",
+        "Slack alone is unrelated to the Marketing Cloud/CDP integration being described.",
+        "Service Cloud alone is unrelated to this specific Commerce-to-Marketing-Cloud integration."
+      ]
     },
     {
       "question": "What does headless commerce enable for B2C?",
@@ -250,7 +285,12 @@
         "Only backend"
       ],
       "correctAnswer": 1,
-      "explanation": "Headless commerce separates front-end from commerce APIs."
+      "explanation": "Headless commerce separates front-end from commerce APIs.",
+      "whyWrong": [
+        "'Only full-stack' misrepresents headless, which specifically decouples the front-end from a monolithic stack.",
+        "'Only monolith' is the opposite of what headless architecture enables.",
+        "'Only backend' undersells headless, which is specifically about flexible front-end delivery."
+      ]
     },
     {
       "question": "Which B2C Commerce feature supports product recommendations?",
@@ -261,7 +301,12 @@
         "Static only"
       ],
       "correctAnswer": 1,
-      "explanation": "Einstein and rules support product recommendations."
+      "explanation": "Einstein and rules support product recommendations.",
+      "whyWrong": [
+        "'Manual only' contradicts the fact that automated recommendation features exist.",
+        "'No recommendations' contradicts the existence of real personalization features.",
+        "'Static only' contradicts the dynamic, AI-driven nature of Einstein Personalization."
+      ]
     },
     {
       "question": "What is the purpose of B2C Commerce order management integration?",
@@ -272,7 +317,12 @@
         "Only email"
       ],
       "correctAnswer": 1,
-      "explanation": "Order management integration handles fulfillment and sync."
+      "explanation": "Order management integration handles fulfillment and sync.",
+      "whyWrong": [
+        "'Only capture' undersells order management integration, which spans fulfillment and inventory sync too.",
+        "'Only display' is unrelated to the backend fulfillment/inventory purpose of order management integration.",
+        "'Only email' is unrelated to order management integration's fulfillment purpose."
+      ]
     },
     {
       "question": "Which consideration applies to B2C multi-cloud architecture?",
@@ -283,7 +333,12 @@
         "No consistency"
       ],
       "correctAnswer": 1,
-      "explanation": "Multi-cloud requires data flow, identity, and experience consistency."
+      "explanation": "Multi-cloud requires data flow, identity, and experience consistency.",
+      "whyWrong": [
+        "Focusing on a single product ignores the cross-cloud identity/data consistency this consideration calls for.",
+        "Ignoring identity contradicts the core consideration of maintaining consistent customer identity across clouds.",
+        "'No consistency' contradicts the actual goal of experience consistency across a multi-cloud architecture."
+      ]
     },
     {
       "question": "What does B2C Solution Architect drive?",
@@ -294,7 +349,12 @@
         "Only reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects drive end-to-end B2C solution design."
+      "explanation": "Architects drive end-to-end B2C solution design.",
+      "whyWrong": [
+        "'Only development' undersells the role, which drives end-to-end solution design, not just development.",
+        "'Only UI' undersells the broader cross-cloud design scope of the role.",
+        "'Only reports' undersells the broader cross-cloud design scope of the role."
+      ]
     },
     {
       "question": "Which B2C Commerce deployment model supports scalability?",
@@ -305,7 +365,12 @@
         "No scaling"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce cloud supports auto-scaling."
+      "explanation": "B2C Commerce cloud supports auto-scaling.",
+      "whyWrong": [
+        "'Single instance only' is the opposite of the cloud-hosted, auto-scaling deployment model that supports scalability.",
+        "'On-prem only' contradicts the cloud-hosted, scalable deployment model B2C Commerce actually uses.",
+        "'No scaling' contradicts the fact that auto-scaling is a real deployment capability."
+      ]
     },
     {
       "question": "What is the role of Service Cloud in B2C solutions?",
@@ -316,7 +381,12 @@
         "Commerce only"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Cloud supports post-purchase service and support."
+      "explanation": "Service Cloud supports post-purchase service and support.",
+      "whyWrong": [
+        "'No role' contradicts the fact that Service Cloud plays a defined role in B2C solutions.",
+        "'Marketing only' undersells Service Cloud's actual role, which is customer service and case management.",
+        "'Commerce only' misattributes Service Cloud's role, which is about service and support, not commerce."
+      ]
     },
     {
       "question": "Which best practice applies to B2C solution design?",
@@ -327,7 +397,12 @@
         "No mobile"
       ],
       "correctAnswer": 1,
-      "explanation": "Design for customer journey, performance, and mobile."
+      "explanation": "Design for customer journey, performance, and mobile.",
+      "whyWrong": [
+        "Ignoring performance contradicts a core best practice for B2C solution design.",
+        "'Desktop only' contradicts the mobile-first best practice for B2C design.",
+        "'No mobile' contradicts the fact that mobile-first is a real, important best practice."
+      ]
     }
   ]
 }

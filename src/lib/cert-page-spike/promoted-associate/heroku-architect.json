@@ -174,7 +174,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku."
+      "explanation": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which spans architecture, deployment, and team/workflow management, not just code.",
+        "'Only reporting' misrepresents the role, which is about architecture and operations, not reporting.",
+        "'Only Slack' is unrelated to what a Heroku Architect actually does."
+      ]
     },
     {
       "question": "What is Heroku?",
@@ -185,7 +190,12 @@
         "A database only"
       ],
       "correctAnswer": 1,
-      "explanation": "Heroku is a cloud platform (PaaS) for building and running apps."
+      "explanation": "Heroku is a cloud platform (PaaS) for building and running apps.",
+      "whyWrong": [
+        "Heroku isn't a CRM — it's a platform-as-a-service for running applications.",
+        "Heroku isn't primarily an email tool — that's unrelated to its core PaaS function.",
+        "Heroku is more than just a database — it's a full platform for building and running apps."
+      ]
     },
     {
       "question": "What is a key activity for a Heroku Architect?",
@@ -196,7 +206,12 @@
         "Only lists"
       ],
       "correctAnswer": 1,
-      "explanation": "They architect scalable solutions and manage deployment workflows."
+      "explanation": "They architect scalable solutions and manage deployment workflows.",
+      "whyWrong": [
+        "'Only coding' undersells the key activity, which includes architecture and workflow management, not just writing code.",
+        "'Only reporting' misrepresents the key activity, which is about architecture and deployment, not reporting.",
+        "'Only lists' is unrelated to the actual key activity being described."
+      ]
     },
     {
       "question": "Which role typically pursues Heroku Architect?",
@@ -207,7 +222,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior developers working with Heroku pursue this credential."
+      "explanation": "Architects and senior developers working with Heroku pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical audience for this platform architecture credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior developers."
+      ]
     },
     {
       "question": "What does 'build-workflows' mean in Heroku context?",
@@ -218,7 +238,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Build-workflows include CI/CD, pipelines, and release management on Heroku."
+      "explanation": "Build-workflows include CI/CD, pipelines, and release management on Heroku.",
+      "whyWrong": [
+        "'Only CI' undersells build-workflows, which include CD and release management too.",
+        "'Only CD' undersells build-workflows, which include CI and release management too.",
+        "'Only testing' undersells build-workflows, which is broader than testing alone."
+      ]
     },
     {
       "question": "What is a Heroku Dyno?",
@@ -229,7 +254,12 @@
         "A storage bucket"
       ],
       "correctAnswer": 1,
-      "explanation": "Dynos are containers that run app processes on Heroku."
+      "explanation": "Dynos are containers that run app processes on Heroku.",
+      "whyWrong": [
+        "A Dyno isn't a database — that's a separate Heroku Postgres service.",
+        "A Dyno isn't an email service — that's unrelated to its function.",
+        "A Dyno isn't a storage bucket — it's a lightweight compute container."
+      ]
     },
     {
       "question": "Which Heroku feature supports horizontal scaling?",
@@ -240,7 +270,12 @@
         "Vertical only"
       ],
       "correctAnswer": 1,
-      "explanation": "Heroku supports scaling web and worker dynos horizontally."
+      "explanation": "Heroku supports scaling web and worker dynos horizontally.",
+      "whyWrong": [
+        "'Single dyno only' is the opposite of what horizontal scaling provides.",
+        "'No scaling' contradicts the fact that dyno scaling is a real, core Heroku capability.",
+        "'Vertical only' misrepresents dyno scaling, which is specifically about horizontal (multiple dyno) scaling."
+      ]
     },
     {
       "question": "What does Heroku Postgres provide?",
@@ -251,7 +286,12 @@
         "External only"
       ],
       "correctAnswer": 1,
-      "explanation": "Heroku Postgres is a managed database add-on."
+      "explanation": "Heroku Postgres is a managed database add-on.",
+      "whyWrong": [
+        "'Only backups' undersells Heroku Postgres, which is a full managed relational database service, not just backups.",
+        "'No database' contradicts the fact that Heroku Postgres is a real managed database offering.",
+        "'External only' misrepresents Heroku Postgres as an external-only service when it's a native Heroku offering."
+      ]
     },
     {
       "question": "Which Heroku feature manages environment-specific configuration?",
@@ -262,7 +302,12 @@
         "Only releases"
       ],
       "correctAnswer": 1,
-      "explanation": "Config Vars store environment-specific configuration."
+      "explanation": "Config Vars store environment-specific configuration.",
+      "whyWrong": [
+        "Hardcoded values are the opposite of what Config Vars are designed to replace.",
+        "'Only buildpacks' misattributes environment configuration to a different Heroku feature.",
+        "'Only releases' misattributes environment configuration to a different Heroku feature."
+      ]
     },
     {
       "question": "What is a Heroku buildpack?",
@@ -273,7 +318,12 @@
         "A dyno type"
       ],
       "correctAnswer": 1,
-      "explanation": "Buildpacks compile and prepare apps for the dyno environment."
+      "explanation": "Buildpacks compile and prepare apps for the dyno environment.",
+      "whyWrong": [
+        "A buildpack isn't a database — that's a separate Heroku Postgres service.",
+        "A buildpack isn't just an add-on — it's core to how an app is compiled and prepared for execution.",
+        "A buildpack isn't a dyno type — dynos run the app after buildpacks prepare it."
+      ]
     },
     {
       "question": "Which Heroku feature supports zero-downtime deployments?",
@@ -284,7 +334,12 @@
         "Single dyno only"
       ],
       "correctAnswer": 1,
-      "explanation": "Preboot and release phase enable zero-downtime deployments."
+      "explanation": "Preboot and release phase enable zero-downtime deployments.",
+      "whyWrong": [
+        "'No support' contradicts the fact that Heroku explicitly supports zero-downtime deployment mechanisms.",
+        "'Manual only' contradicts the fact that preboot and release phase are automated features.",
+        "'Single dyno only' misrepresents the multi-dyno mechanism that enables zero-downtime deploys."
+      ]
     },
     {
       "question": "What does Heroku Pipelines support?",
@@ -295,7 +350,12 @@
         "No staging"
       ],
       "correctAnswer": 1,
-      "explanation": "Pipelines support multi-stage deployment workflows."
+      "explanation": "Pipelines support multi-stage deployment workflows.",
+      "whyWrong": [
+        "'Only staging' undersells Pipelines, which support the full dev-to-production workflow, not just staging.",
+        "'Production only' undersells Pipelines, which manage the full multi-stage workflow, not just production.",
+        "'No staging' contradicts the fact that Pipelines explicitly support staging as part of the workflow."
+      ]
     },
     {
       "question": "Which Heroku add-on category supports background jobs?",
@@ -306,7 +366,12 @@
         "Storage only"
       ],
       "correctAnswer": 1,
-      "explanation": "Worker dynos and queues support background job processing."
+      "explanation": "Worker dynos and queues support background job processing.",
+      "whyWrong": [
+        "Database add-ons don't provide background job/queue functionality — that's a separate category.",
+        "Email add-ons are unrelated to background job processing.",
+        "Storage add-ons are unrelated to background job processing."
+      ]
     },
     {
       "question": "What is the purpose of Heroku Review Apps?",
@@ -317,7 +382,12 @@
         "No automation"
       ],
       "correctAnswer": 1,
-      "explanation": "Review Apps create ephemeral apps for PR review."
+      "explanation": "Review Apps create ephemeral apps for PR review.",
+      "whyWrong": [
+        "Production apps aren't the ephemeral review apps described — those are for PR review specifically.",
+        "'Staging only' misrepresents Review Apps, which are created automatically for pull requests, not just staging.",
+        "'No automation' contradicts the fact that Review Apps are specifically an automated feature."
+      ]
     },
     {
       "question": "Which best practice applies to Heroku architecture?",
@@ -328,7 +398,12 @@
         "No logging"
       ],
       "correctAnswer": 1,
-      "explanation": "Stateless processes and 12-factor methodology support scalability."
+      "explanation": "Stateless processes and 12-factor methodology support scalability.",
+      "whyWrong": [
+        "Ignoring scaling contradicts a core best practice for cloud-native Heroku architecture.",
+        "'Single dyno only' contradicts the scalable, multi-dyno design best practice recommends.",
+        "'No logging' contradicts the fact that logging is part of sound 12-factor app design."
+      ]
     }
   ]
 }

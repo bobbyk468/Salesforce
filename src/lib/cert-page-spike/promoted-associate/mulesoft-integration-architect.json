@@ -174,7 +174,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations."
+      "explanation": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is about stakeholder collaboration and requirements translation, not just code.",
+        "'Only reporting' misrepresents the role, which is about integration design, not reporting.",
+        "'Only Slack' is unrelated to what a MuleSoft Integration Architect does."
+      ]
     },
     {
       "question": "What is a key activity for a MuleSoft Integration Architect?",
@@ -185,7 +190,12 @@
         "Only lists"
       ],
       "correctAnswer": 1,
-      "explanation": "They translate requirements into integration interfaces and implementations."
+      "explanation": "They translate requirements into integration interfaces and implementations.",
+      "whyWrong": [
+        "'Only coding' undersells the key activity, which is requirements translation, not just writing code.",
+        "'Only reporting' misrepresents the key activity, which is architecture design, not reporting.",
+        "'Only lists' is unrelated to the actual key activity being described."
+      ]
     },
     {
       "question": "Which stakeholders do MuleSoft Integration Architects work with?",
@@ -196,7 +206,12 @@
         "Only developers"
       ],
       "correctAnswer": 1,
-      "explanation": "They work with technical and non-technical stakeholders."
+      "explanation": "They work with technical and non-technical stakeholders.",
+      "whyWrong": [
+        "'Only technical' undersells the stakeholder scope, which includes non-technical stakeholders too.",
+        "'Only non-technical' undersells the stakeholder scope, which includes technical stakeholders too.",
+        "'Only developers' undersells the broader stakeholder scope beyond just developers."
+      ]
     },
     {
       "question": "Which role typically pursues MuleSoft Integration Architect?",
@@ -207,7 +222,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing integration solutions pursue this credential."
+      "explanation": "Architects and senior consultants designing integration solutions pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical audience for this integration architecture credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior consultants."
+      ]
     },
     {
       "question": "What does 'integration interfaces' mean?",
@@ -218,7 +238,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration interfaces are APIs, contracts, and data flows between systems."
+      "explanation": "Integration interfaces are APIs, contracts, and data flows between systems.",
+      "whyWrong": [
+        "'Only UI' misrepresents integration interfaces, which are about APIs and data flows, not visual interfaces.",
+        "'Only reports' is unrelated to what integration interfaces actually define.",
+        "'Only dashboards' is unrelated to what integration interfaces actually define."
+      ]
     },
     {
       "question": "Which design approach supports integration architecture?",
@@ -229,7 +254,12 @@
         "No design"
       ],
       "correctAnswer": 1,
-      "explanation": "Contract-first and API-led support sound architecture."
+      "explanation": "Contract-first and API-led support sound architecture.",
+      "whyWrong": [
+        "'Ad-hoc only' is the opposite of the structured, design-first approach that supports good integration architecture.",
+        "'Code-first only' is the opposite of the contract-first approach commonly recommended for integration design.",
+        "'No design' contradicts the fact that structured design approaches are the actual best practice."
+      ]
     },
     {
       "question": "What does non-functional requirements include?",
@@ -240,7 +270,12 @@
         "Only data"
       ],
       "correctAnswer": 1,
-      "explanation": "Non-functional requirements cover performance, security, etc."
+      "explanation": "Non-functional requirements cover performance, security, etc.",
+      "whyWrong": [
+        "'Only features' misses the point — non-functional requirements are specifically about qualities like performance and security, not features.",
+        "'Only UI' is unrelated to non-functional requirements, which concern qualities like performance and reliability.",
+        "'Only data' undersells non-functional requirements, which span performance, security, and more."
+      ]
     },
     {
       "question": "Which MuleSoft tool supports API design?",
@@ -251,7 +286,12 @@
         "No design"
       ],
       "correctAnswer": 1,
-      "explanation": "Design Center and RAML/OAS support API design."
+      "explanation": "Design Center and RAML/OAS support API design.",
+      "whyWrong": [
+        "Mule runtime executes integrations — it isn't the design tool for API specification.",
+        "CloudHub is a deployment platform, not the design tool for API specification.",
+        "'No design' contradicts the fact that dedicated design tools (Design Center) exist."
+      ]
     },
     {
       "question": "What is the purpose of integration patterns?",
@@ -262,7 +302,12 @@
         "To create only"
       ],
       "correctAnswer": 1,
-      "explanation": "Patterns address common integration scenarios."
+      "explanation": "Patterns address common integration scenarios.",
+      "whyWrong": [
+        "Integration patterns don't replace APIs — they define common approaches to using them.",
+        "'To delete only' misrepresents integration patterns' purpose, which is addressing common scenarios, not deletion.",
+        "'To create only' undersells integration patterns' broader purpose beyond just creation."
+      ]
     },
     {
       "question": "Which stakeholder provides functional requirements?",
@@ -273,7 +318,12 @@
         "Only operations"
       ],
       "correctAnswer": 1,
-      "explanation": "Business and domain experts provide functional requirements."
+      "explanation": "Business and domain experts provide functional requirements.",
+      "whyWrong": [
+        "Developers implement based on requirements — they aren't the primary source of functional requirements themselves.",
+        "'Only architects' misattributes functional requirements gathering to architects rather than business stakeholders.",
+        "'Only operations' misattributes functional requirements to the wrong stakeholder group."
+      ]
     },
     {
       "question": "What does implementation encompass?",
@@ -284,7 +334,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Implementation includes flows, connectors, and deployment."
+      "explanation": "Implementation includes flows, connectors, and deployment.",
+      "whyWrong": [
+        "'Only design' undersells implementation, which includes building flows and deploying, not just design.",
+        "'Only documentation' undersells implementation, which is about building and deploying, not just documenting.",
+        "'Only testing' undersells implementation, which spans building and deployment, not just testing."
+      ]
     },
     {
       "question": "Which consideration applies to integration security?",
@@ -295,7 +350,12 @@
         "No auth"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration security covers auth, encryption, and authorization."
+      "explanation": "Integration security covers auth, encryption, and authorization.",
+      "whyWrong": [
+        "Ignoring security contradicts the core consideration needed for integration architecture.",
+        "'Only HTTPS' undersells the broader set of security considerations (auth, encryption, authorization) needed.",
+        "'No auth' contradicts the fact that authentication is a core integration security consideration."
+      ]
     },
     {
       "question": "What is the benefit of translating requirements to interfaces?",
@@ -306,7 +366,12 @@
         "Slower delivery"
       ],
       "correctAnswer": 1,
-      "explanation": "Clear interfaces reduce integration errors."
+      "explanation": "Clear interfaces reduce integration errors.",
+      "whyWrong": [
+        "'No benefit' contradicts the real, documented benefit of translating requirements into clear interfaces.",
+        "'More errors' is the opposite of the benefit (reduced errors) that clear translation provides.",
+        "'Slower delivery' is the opposite of the benefit clear requirements translation typically provides."
+      ]
     },
     {
       "question": "What does RAML define in MuleSoft?",
@@ -317,7 +382,12 @@
         "Only security"
       ],
       "correctAnswer": 1,
-      "explanation": "RAML (RESTful API Modeling Language) defines the API contract and structure."
+      "explanation": "RAML (RESTful API Modeling Language) defines the API contract and structure.",
+      "whyWrong": [
+        "'Only runtime config' undersells RAML, which defines the full API contract, not just runtime settings.",
+        "'Only deployment' misrepresents RAML's purpose, which is API contract definition, not deployment.",
+        "'Only security' undersells RAML, which defines the broader API contract beyond just security."
+      ]
     },
     {
       "question": "What does an Integration Architect ensure?",
@@ -328,7 +398,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects ensure requirements become maintainable interfaces."
+      "explanation": "Architects ensure requirements become maintainable interfaces.",
+      "whyWrong": [
+        "'Only code' undersells what an architect ensures, which is sound, maintainable interfaces broadly, not just code.",
+        "'Only deployment' undersells the broader design assurance an architect provides beyond deployment.",
+        "'Only testing' undersells the broader design assurance an architect provides beyond testing."
+      ]
     }
   ]
 }

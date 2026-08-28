@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Data Architect exam for?",
     "personas": [
-      { "label": "Data Engineers", "description": "Professionals who manage large-scale data pipelines, ETL processes, and data quality initiatives on the Salesforce Platform." },
-      { "label": "Enterprise Architects", "description": "Architects responsible for master data management strategies, data governance, and cross-system data consistency." },
-      { "label": "Senior Developers", "description": "Developers who design data models, write Bulk API integrations, and optimize SOQL queries for high-volume orgs." }
+      {
+        "label": "Data Engineers",
+        "description": "Professionals who manage large-scale data pipelines, ETL processes, and data quality initiatives on the Salesforce Platform."
+      },
+      {
+        "label": "Enterprise Architects",
+        "description": "Architects responsible for master data management strategies, data governance, and cross-system data consistency."
+      },
+      {
+        "label": "Senior Developers",
+        "description": "Developers who design data models, write Bulk API integrations, and optimize SOQL queries for high-volume orgs."
+      }
     ]
   },
   "examDifficulty": {
@@ -170,7 +179,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform Data Architects design scalable, high-performing data solutions on the Salesforce Platform."
+      "explanation": "Platform Data Architects design scalable, high-performing data solutions on the Salesforce Platform.",
+      "whyWrong": [
+        "'Only UI' undersells the Data Architect's actual focus, which is scalable enterprise data management, not interface design.",
+        "Email is unrelated to the Data Architect's core data management focus.",
+        "Slack is unrelated to the Data Architect's core data management focus."
+      ]
     },
     {
       "question": "Which consideration is critical when designing for large data volumes?",
@@ -181,7 +195,12 @@
         "Only reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Large data volumes require attention to governor limits, indexing, and query optimization."
+      "explanation": "Large data volumes require attention to governor limits, indexing, and query optimization.",
+      "whyWrong": [
+        "'Only field count' oversimplifies LDV design, which centers on governor limits, indexing, and query optimization, not just field count.",
+        "'Only page layout' is a UI concern, unrelated to large data volume performance design.",
+        "'Only reports' is a display concern, unrelated to the underlying data volume performance strategy."
+      ]
     },
     {
       "question": "What is the purpose of skinny tables in Salesforce?",
@@ -192,7 +211,12 @@
         "To configure CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "Skinny tables are denormalized tables that can improve report performance."
+      "explanation": "Skinny tables are denormalized tables that can improve report performance.",
+      "whyWrong": [
+        "Skinny tables aren't for storing images — that's unrelated to their reporting-performance purpose.",
+        "Skinny tables aren't for sending emails — that's unrelated to their function.",
+        "Skinny tables aren't for CPQ configuration — that's unrelated to their function."
+      ]
     },
     {
       "question": "Which relationship type should be used when the child must always belong to a parent?",
@@ -203,7 +227,12 @@
         "Indirect Lookup"
       ],
       "correctAnswer": 1,
-      "explanation": "Master-Detail enforces ownership and cascade delete; child cannot exist without parent."
+      "explanation": "Master-Detail enforces ownership and cascade delete; child cannot exist without parent.",
+      "whyWrong": [
+        "Lookup relationships allow the child to exist without a parent — the opposite of what's needed here.",
+        "External Lookup connects to external system data, not a strict parent-child requirement.",
+        "Indirect Lookup is used for external objects matching on specific fields, not enforcing a required parent."
+      ]
     },
     {
       "question": "What does data archiving strategy involve?",
@@ -214,7 +243,12 @@
         "Only export"
       ],
       "correctAnswer": 1,
-      "explanation": "Archiving involves moving historical data while preserving access and compliance."
+      "explanation": "Archiving involves moving historical data while preserving access and compliance.",
+      "whyWrong": [
+        "'Only backup' undersells archiving strategy, which also considers ongoing access patterns, not just backup.",
+        "'Only delete' misrepresents archiving, which is about retaining accessible historical data, not deleting it outright.",
+        "'Only export' undersells archiving strategy, which is broader than simple export."
+      ]
     },
     {
       "question": "What is a Big Object in Salesforce?",
@@ -225,7 +259,12 @@
         "A dashboard"
       ],
       "correctAnswer": 1,
-      "explanation": "Big Objects store high-volume historical data with optimized query patterns."
+      "explanation": "Big Objects store high-volume historical data with optimized query patterns.",
+      "whyWrong": [
+        "A standard object doesn't have Big Object's specific high-volume, append-only optimization.",
+        "A report type is a display configuration, not a data storage mechanism like Big Objects.",
+        "A dashboard visualizes data — it isn't itself a storage mechanism."
+      ]
     },
     {
       "question": "Which indexing strategy improves SOQL performance?",
@@ -236,7 +275,12 @@
         "Only on formula fields"
       ],
       "correctAnswer": 1,
-      "explanation": "Custom indexes on filtered fields improve query performance."
+      "explanation": "Custom indexes on filtered fields improve query performance.",
+      "whyWrong": [
+        "'No indexing' contradicts the fact that indexing strategy directly improves SOQL performance.",
+        "Indexing every field is impractical and doesn't reflect the targeted, selective indexing approach that's actually recommended.",
+        "Limiting indexing only to formula fields ignores the broader set of frequently-filtered fields that benefit from indexing."
+      ]
     },
     {
       "question": "What does data migration planning include?",
@@ -247,7 +291,12 @@
         "Only backup"
       ],
       "correctAnswer": 1,
-      "explanation": "Migration includes ETL, validation, and rollback planning."
+      "explanation": "Migration includes ETL, validation, and rollback planning.",
+      "whyWrong": [
+        "'Only export' undersells migration planning, which includes transformation, validation, and rollback too.",
+        "'Only import' undersells migration planning, which includes the full ETL and validation process, not just import.",
+        "'Only backup' misrepresents migration planning, which is about moving and transforming data, not backing it up."
+      ]
     },
     {
       "question": "Which relationship type allows a child to exist without a parent?",
@@ -258,7 +307,12 @@
         "External Lookup"
       ],
       "correctAnswer": 1,
-      "explanation": "Lookup allows optional parent; child can exist independently."
+      "explanation": "Lookup allows optional parent; child can exist independently.",
+      "whyWrong": [
+        "Master-Detail relationships require the parent to exist — the opposite of what's being asked.",
+        "Junction objects use two master-detail relationships, so children still require parents in that structure.",
+        "External Lookup connects to external system records, which is a different scenario from a standard child-without-parent case."
+      ]
     },
     {
       "question": "What is the purpose of a soft delete strategy?",
@@ -269,7 +323,12 @@
         "To archive only"
       ],
       "correctAnswer": 1,
-      "explanation": "Soft delete preserves data with a deleted flag for compliance."
+      "explanation": "Soft delete preserves data with a deleted flag for compliance.",
+      "whyWrong": [
+        "Permanently removing data is the opposite of a soft delete, which retains records.",
+        "'To export data only' misrepresents the purpose of soft delete, which is about retention, not export.",
+        "'To archive only' undersells soft delete's specific purpose around compliance and recovery."
+      ]
     },
     {
       "question": "Which governor limit affects bulk SOQL in triggers?",
@@ -280,7 +339,12 @@
         "50 queries"
       ],
       "correctAnswer": 1,
-      "explanation": "Synchronous limit is 100 SOQL queries per transaction."
+      "explanation": "Synchronous limit is 100 SOQL queries per transaction.",
+      "whyWrong": [
+        "'No limit' contradicts the fact that Salesforce enforces a specific SOQL governor limit.",
+        "'Unlimited' contradicts the fact that a specific limit (100 for synchronous) exists.",
+        "'50 queries' understates the actual synchronous SOQL limit of 100."
+      ]
     },
     {
       "question": "What does master data management (MDM) address?",
@@ -291,7 +355,12 @@
         "Only migration"
       ],
       "correctAnswer": 1,
-      "explanation": "MDM ensures consistent, clean master data across systems."
+      "explanation": "MDM ensures consistent, clean master data across systems.",
+      "whyWrong": [
+        "'Only reporting' undersells MDM, which is about data quality and single source of truth, not just reporting.",
+        "'Only archiving' misrepresents MDM's actual focus on deduplication and data quality.",
+        "'Only migration' misrepresents MDM's actual focus on ongoing data quality, not just migration."
+      ]
     },
     {
       "question": "Which data type supports high-volume, append-only use cases?",
@@ -302,7 +371,12 @@
         "External object"
       ],
       "correctAnswer": 1,
-      "explanation": "Big Objects are designed for append-only, high-volume data."
+      "explanation": "Big Objects are designed for append-only, high-volume data.",
+      "whyWrong": [
+        "A standard object doesn't have the append-only, high-volume optimization Big Objects provide.",
+        "A custom object with triggers doesn't scale the same way as the purpose-built Big Object architecture.",
+        "External objects connect to external data — they aren't the native high-volume append-only storage type being asked about."
+      ]
     },
     {
       "question": "What is the benefit of using External Objects?",
@@ -313,7 +387,12 @@
         "To create reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "External Objects enable querying external systems in real time."
+      "explanation": "External Objects enable querying external systems in real time.",
+      "whyWrong": [
+        "External Objects don't replace custom objects — they serve a different purpose (querying without replication).",
+        "External Objects aren't specifically an archiving mechanism — that's a different, distinct use case.",
+        "External Objects aren't a reporting tool — their benefit is querying live external data without replication."
+      ]
     },
     {
       "question": "Which consideration applies when designing for data volume growth?",
@@ -324,7 +403,12 @@
         "Only export"
       ],
       "correctAnswer": 1,
-      "explanation": "Data growth requires archiving, indexing, and selective queries."
+      "explanation": "Data growth requires archiving, indexing, and selective queries.",
+      "whyWrong": [
+        "Ignoring limits contradicts the core consideration needed when designing for data volume growth.",
+        "'Only backup' undersells the broader set of considerations (archiving, indexing, query selectivity) needed for growth planning.",
+        "'Only export' undersells the broader set of considerations needed for data volume growth planning."
+      ]
     }
   ]
 }

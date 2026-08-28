@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Development Lifecycle and Deployment Architect exam for?",
     "personas": [
-      { "label": "DevOps Engineers", "description": "Engineers who build and maintain CI/CD pipelines, automate Salesforce deployments, and manage source-driven development workflows." },
-      { "label": "Release Managers", "description": "Professionals who coordinate sandbox strategies, manage deployment sequences, and govern the promotion path from development to production." },
-      { "label": "Platform Architects", "description": "Architects who design org strategy, package architecture, and release governance for enterprise-scale Salesforce implementations." }
+      {
+        "label": "DevOps Engineers",
+        "description": "Engineers who build and maintain CI/CD pipelines, automate Salesforce deployments, and manage source-driven development workflows."
+      },
+      {
+        "label": "Release Managers",
+        "description": "Professionals who coordinate sandbox strategies, manage deployment sequences, and govern the promotion path from development to production."
+      },
+      {
+        "label": "Platform Architects",
+        "description": "Architects who design org strategy, package architecture, and release governance for enterprise-scale Salesforce implementations."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "They assess environments and implement management solutions for deployment."
+      "explanation": "They assess environments and implement management solutions for deployment.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is about assessing environments and deployment strategy, not just writing code.",
+        "Email is unrelated to the architect's core deployment management focus.",
+        "Slack is unrelated to the architect's core deployment management focus."
+      ]
     },
     {
       "question": "Which tool is used for source-driven deployments in Salesforce?",
@@ -180,7 +194,12 @@
         "Only Workbench"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce CLI and source tracking (e.g., Salesforce DX) support source-driven deployments."
+      "explanation": "Salesforce CLI and source tracking (e.g., Salesforce DX) support source-driven deployments.",
+      "whyWrong": [
+        "Change Sets are a UI-based deployment tool, not the source-driven CLI approach the question asks about.",
+        "Data Loader moves records, not metadata/source code for deployments.",
+        "Workbench is a data/metadata utility tool, not the primary source-driven deployment tool described."
+      ]
     },
     {
       "question": "What is the purpose of Change Sets?",
@@ -191,7 +210,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Change Sets move metadata between orgs in deployment pipelines."
+      "explanation": "Change Sets move metadata between orgs in deployment pipelines.",
+      "whyWrong": [
+        "'Only backup' misrepresents Change Sets' actual purpose, which is moving metadata between orgs, not backup.",
+        "'Only reports' is unrelated to what Change Sets do.",
+        "'Only dashboards' is unrelated to what Change Sets do."
+      ]
     },
     {
       "question": "Which environment is typically used for production-like testing?",
@@ -202,7 +226,12 @@
         "Scratch org only"
       ],
       "correctAnswer": 1,
-      "explanation": "Full Copy or Partial Copy sandboxes provide production-like environments for testing."
+      "explanation": "Full Copy or Partial Copy sandboxes provide production-like environments for testing.",
+      "whyWrong": [
+        "A Developer org lacks the production-scale data and configuration needed for realistic testing.",
+        "Testing directly in Production defeats the purpose of a safe pre-production testing environment.",
+        "A Scratch org is typically used for short-lived development, not production-like data testing."
+      ]
     },
     {
       "question": "What does CI/CD mean in the context of Salesforce deployment?",
@@ -213,7 +242,12 @@
         "Only deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "CI/CD automates build, test, and release for Salesforce metadata."
+      "explanation": "CI/CD automates build, test, and release for Salesforce metadata.",
+      "whyWrong": [
+        "'Only manual' is the opposite of what CI/CD automation represents.",
+        "'Only integration' undersells CI/CD, which covers both integration and deployment automation.",
+        "'Only deployment' undersells CI/CD, which spans both continuous integration and deployment."
+      ]
     },
     {
       "question": "What is a scratch org used for?",
@@ -224,7 +258,12 @@
         "Data load only"
       ],
       "correctAnswer": 1,
-      "explanation": "Scratch orgs are temporary, configurable orgs for dev and testing."
+      "explanation": "Scratch orgs are temporary, configurable orgs for dev and testing.",
+      "whyWrong": [
+        "Production deployment is the opposite of a scratch org's temporary development/testing purpose.",
+        "A Full Copy sandbox is a different, more persistent environment type than a scratch org.",
+        "'Data load only' misrepresents a scratch org's actual purpose as a temporary dev/test environment."
+      ]
     },
     {
       "question": "Which source control system integrates with Salesforce DX?",
@@ -235,7 +274,12 @@
         "Only TFVC"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce DX is designed to work with Git and related tools."
+      "explanation": "Salesforce DX is designed to work with Git and related tools.",
+      "whyWrong": [
+        "'None' contradicts the fact that Salesforce DX explicitly integrates with source control systems like Git.",
+        "SVN isn't the source control system commonly integrated with Salesforce DX — Git is.",
+        "TFVC isn't the source control system commonly integrated with Salesforce DX — Git is."
+      ]
     },
     {
       "question": "What does destructive change handling require?",
@@ -246,7 +290,12 @@
         "Only update"
       ],
       "correctAnswer": 1,
-      "explanation": "destructiveChanges.xml specifies metadata to be removed."
+      "explanation": "destructiveChanges.xml specifies metadata to be removed.",
+      "whyWrong": [
+        "'No handling' contradicts the fact that destructive changes require specific handling via a manifest file.",
+        "'Only add' misrepresents destructive change handling, which is specifically about removing metadata, not adding it.",
+        "'Only update' misrepresents destructive change handling, which is about removal, not updates."
+      ]
     },
     {
       "question": "Which sandbox type best supports integration testing?",
@@ -257,7 +306,12 @@
         "Production only"
       ],
       "correctAnswer": 1,
-      "explanation": "Partial/Full Copy sandboxes provide data for integration testing."
+      "explanation": "Partial/Full Copy sandboxes provide data for integration testing.",
+      "whyWrong": [
+        "A Developer sandbox is too small in scope for realistic integration testing with production-like data.",
+        "A Scratch org is typically for short-lived development, not full-scale integration testing.",
+        "Testing directly in Production defeats the purpose of a safe pre-production testing environment."
+      ]
     },
     {
       "question": "What is the purpose of a release branch in CI/CD?",
@@ -268,7 +322,12 @@
         "Only for testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Release branches isolate and promote release-specific changes."
+      "explanation": "Release branches isolate and promote release-specific changes.",
+      "whyWrong": [
+        "'To replace main' misrepresents a release branch's purpose, which is to isolate changes, not replace the main branch.",
+        "'Only for development' undersells a release branch's specific promotion-to-production purpose.",
+        "'Only for testing' undersells a release branch's broader isolation-and-promotion purpose."
+      ]
     },
     {
       "question": "Which governance practice supports deployment quality?",
@@ -279,7 +338,12 @@
         "No approval"
       ],
       "correctAnswer": 1,
-      "explanation": "Peer review, tests, and approval gates ensure quality."
+      "explanation": "Peer review, tests, and approval gates ensure quality.",
+      "whyWrong": [
+        "'No governance' contradicts the fact that peer review and approval gates are real governance practices.",
+        "'Manual only' undersells the automated testing and approval-gate components of good governance.",
+        "'No approval' contradicts the fact that approval gates are a core governance practice."
+      ]
     },
     {
       "question": "What does sf project deploy start do?",
@@ -290,7 +354,12 @@
         "Only creates scratch org"
       ],
       "correctAnswer": 1,
-      "explanation": "sf project deploy start deploys source to target org."
+      "explanation": "sf project deploy start deploys source to target org.",
+      "whyWrong": [
+        "'Nothing' contradicts the fact that this command has a specific, real deployment function.",
+        "'Only retrieves' misrepresents the command's actual purpose, which is deploying (not retrieving).",
+        "'Only creates scratch org' misattributes this deployment command to an unrelated org-creation function."
+      ]
     },
     {
       "question": "Which deployment tool supports unlocked packages?",
@@ -301,7 +370,12 @@
         "Workbench only"
       ],
       "correctAnswer": 1,
-      "explanation": "Salesforce CLI supports unlocked package development."
+      "explanation": "Salesforce CLI supports unlocked package development.",
+      "whyWrong": [
+        "Change Sets alone don't support unlocked packages — that's a Salesforce CLI capability.",
+        "Data Loader is for data records, unrelated to deploying unlocked packages.",
+        "Workbench is a data/metadata utility, not the tool that supports unlocked package deployment."
+      ]
     },
     {
       "question": "What is the benefit of metadata API for deployment?",
@@ -312,7 +386,12 @@
         "UI only"
       ],
       "correctAnswer": 1,
-      "explanation": "Metadata API enables programmatic deployment and retrieval."
+      "explanation": "Metadata API enables programmatic deployment and retrieval.",
+      "whyWrong": [
+        "'No benefit' contradicts the real, documented benefits of the Metadata API for deployment.",
+        "'Manual only' is the opposite of the programmatic, scriptable nature the Metadata API provides.",
+        "'UI only' is the opposite of the API-driven, scriptable nature of the Metadata API."
+      ]
     },
     {
       "question": "Which best practice applies to release management?",
@@ -323,7 +402,12 @@
         "Single environment only"
       ],
       "correctAnswer": 1,
-      "explanation": "Promote through sandboxes and validate before production."
+      "explanation": "Promote through sandboxes and validate before production.",
+      "whyWrong": [
+        "Deploying directly to production skips the validation and testing sandbox promotion path best practice recommends.",
+        "'No testing' contradicts the core best practice of validating changes before production.",
+        "'Single environment only' contradicts the multi-stage sandbox promotion path this best practice recommends."
+      ]
     }
   ]
 }

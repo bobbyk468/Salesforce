@@ -174,7 +174,12 @@
         "Only Slack"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy."
+      "explanation": "Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is about owning platform strategy, not just writing code.",
+        "'Only reporting' misrepresents the role, which is about strategic platform ownership, not reporting.",
+        "'Only Slack' is unrelated to what a MuleSoft Platform Architect does."
+      ]
     },
     {
       "question": "What is Anypoint Platform?",
@@ -185,7 +190,12 @@
         "A database only"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations."
+      "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations.",
+      "whyWrong": [
+        "Anypoint Platform isn't a CRM — it's an API/integration management platform.",
+        "Anypoint Platform isn't primarily an email tool — that's unrelated to its core function.",
+        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform."
+      ]
     },
     {
       "question": "What is a key activity for a MuleSoft Platform Architect?",
@@ -196,7 +206,12 @@
         "Only lists"
       ],
       "correctAnswer": 1,
-      "explanation": "They define and own Anypoint Platform strategy."
+      "explanation": "They define and own Anypoint Platform strategy.",
+      "whyWrong": [
+        "'Only coding' undersells the key activity, which is strategic platform ownership, not just writing code.",
+        "'Only reporting' misrepresents the key activity, which is strategy ownership, not reporting.",
+        "'Only lists' is unrelated to the actual key activity being described."
+      ]
     },
     {
       "question": "Which role typically pursues MuleSoft Platform Architect?",
@@ -207,7 +222,12 @@
         "Designers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants defining integration strategy pursue this credential."
+      "explanation": "Architects and senior consultants defining integration strategy pursue this credential.",
+      "whyWrong": [
+        "Marketers aren't the typical audience for this platform strategy credential.",
+        "Sales roles aren't the typical audience for this technical architecture credential.",
+        "Designers aren't the typical audience — this targets architects and senior consultants."
+      ]
     },
     {
       "question": "What does 'platform strategy' mean in MuleSoft context?",
@@ -218,7 +238,12 @@
         "Only CloudHub"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform strategy includes API-led connectivity, governance, and integration architecture."
+      "explanation": "Platform strategy includes API-led connectivity, governance, and integration architecture.",
+      "whyWrong": [
+        "'Only APIs' undersells platform strategy, which spans governance and broader integration architecture too.",
+        "'Only Mule runtime' undersells platform strategy, which is broader than just the runtime engine.",
+        "'Only CloudHub' undersells platform strategy, which spans more than just the cloud deployment option."
+      ]
     },
     {
       "question": "What does Anypoint Platform governance include?",
@@ -229,7 +254,12 @@
         "Only runtime"
       ],
       "correctAnswer": 1,
-      "explanation": "Governance covers policies, standards, and lifecycle."
+      "explanation": "Governance covers policies, standards, and lifecycle.",
+      "whyWrong": [
+        "'Only deployment' undersells governance, which spans design standards and lifecycle management too.",
+        "'Only design' undersells governance, which spans policies and lifecycle management too.",
+        "'Only runtime' undersells governance, which spans design and lifecycle stages, not just runtime."
+      ]
     },
     {
       "question": "Which deployment option does Anypoint Platform support?",
@@ -240,7 +270,12 @@
         "No deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint supports cloud, on-prem, and hybrid deployment."
+      "explanation": "Anypoint supports cloud, on-prem, and hybrid deployment.",
+      "whyWrong": [
+        "'CloudHub only' undersells the broader deployment flexibility (on-prem, hybrid) Anypoint Platform supports.",
+        "'On-prem only' undersells the broader deployment flexibility (CloudHub, hybrid) Anypoint Platform supports.",
+        "'No deployment' contradicts the fact that Anypoint Platform explicitly supports multiple deployment options."
+      ]
     },
     {
       "question": "What is the purpose of API design standards?",
@@ -251,7 +286,12 @@
         "To create only"
       ],
       "correctAnswer": 1,
-      "explanation": "Design standards ensure consistency and reusability."
+      "explanation": "Design standards ensure consistency and reusability.",
+      "whyWrong": [
+        "API design standards don't replace APIs — they guide how APIs are built.",
+        "'To delete only' misrepresents design standards' purpose, which is consistency, not deletion.",
+        "'To create only' undersells design standards' broader purpose of consistency and maintainability."
+      ]
     },
     {
       "question": "Which capability does Runtime Manager provide?",
@@ -262,7 +302,12 @@
         "No management"
       ],
       "correctAnswer": 1,
-      "explanation": "Runtime Manager deploys and manages Mule applications."
+      "explanation": "Runtime Manager deploys and manages Mule applications.",
+      "whyWrong": [
+        "'Design only' undersells Runtime Manager, which handles deployment and ongoing management, not just design.",
+        "'API design only' misattributes design-time functionality to Runtime Manager, which is an operational tool.",
+        "'No management' contradicts the fact that Runtime Manager's core purpose is managing running applications."
+      ]
     },
     {
       "question": "What does integration architecture encompass?",
@@ -273,7 +318,12 @@
         "Only CloudHub"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration architecture includes API layers."
+      "explanation": "Integration architecture includes API layers.",
+      "whyWrong": [
+        "'Only APIs' undersells integration architecture, which is structured across specific layers (System/Process/Experience).",
+        "'Only Mule' undersells integration architecture, which is a broader architectural concept beyond the runtime engine.",
+        "'Only CloudHub' undersells integration architecture, which is broader than just the deployment platform."
+      ]
     },
     {
       "question": "Which role defines platform strategy?",
@@ -284,7 +334,12 @@
         "Marketers only"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform Architects define platform strategy."
+      "explanation": "Platform Architects define platform strategy.",
+      "whyWrong": [
+        "Developers implement the strategy but don't typically define platform strategy at the organizational level.",
+        "Sales roles don't define technical platform strategy.",
+        "Marketers don't define technical platform strategy."
+      ]
     },
     {
       "question": "What is the benefit of API-led connectivity?",
@@ -295,7 +350,12 @@
         "Slower delivery"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity promotes reusability and agility."
+      "explanation": "API-led connectivity promotes reusability and agility.",
+      "whyWrong": [
+        "'No benefit' contradicts the real, documented benefits of API-led connectivity.",
+        "'More complexity' is the opposite of the reduced point-to-point complexity API-led connectivity provides.",
+        "'Slower delivery' is the opposite of the agility benefit API-led connectivity typically provides."
+      ]
     },
     {
       "question": "Which Anypoint component manages API lifecycle?",
@@ -306,7 +366,12 @@
         "Runtime only"
       ],
       "correctAnswer": 1,
-      "explanation": "Design Center, Exchange, and API Manager manage lifecycle."
+      "explanation": "Design Center, Exchange, and API Manager manage lifecycle.",
+      "whyWrong": [
+        "'Mule only' undersells the broader set of Anypoint components (Design Center, Exchange, API Manager) involved in lifecycle management.",
+        "'CloudHub only' undersells the broader set of components involved in API lifecycle management.",
+        "'Runtime only' undersells the broader set of components involved in API lifecycle management."
+      ]
     },
     {
       "question": "What does a Platform Architect own?",
@@ -317,7 +382,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform Architects own strategy, governance, and standards."
+      "explanation": "Platform Architects own strategy, governance, and standards.",
+      "whyWrong": [
+        "'Only code' undersells what a Platform Architect owns, which is strategy and governance, not just code.",
+        "'Only deployment' undersells the broader strategic ownership a Platform Architect has beyond deployment.",
+        "'Only testing' undersells the broader strategic ownership a Platform Architect has beyond testing."
+      ]
     },
     {
       "question": "Which best practice applies to platform strategy?",
@@ -328,7 +398,12 @@
         "Ad-hoc only"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy should align with business and enable self-service."
+      "explanation": "Strategy should align with business and enable self-service.",
+      "whyWrong": [
+        "Ignoring governance contradicts the core best practice of aligning platform strategy with organizational needs.",
+        "'No alignment' contradicts the fact that business alignment is a core best practice for platform strategy.",
+        "'Ad-hoc only' contradicts the structured, self-service-enabling approach platform strategy best practice recommends."
+      ]
     }
   ]
 }

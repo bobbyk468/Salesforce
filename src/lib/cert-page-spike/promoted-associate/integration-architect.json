@@ -4,9 +4,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Integration Architect exam for?",
     "personas": [
-      { "label": "Senior developers", "description": "You design integration solutions and want to validate your API architecture and middleware expertise." },
-      { "label": "Aspiring architects", "description": "You are pursuing the Application Architect or CTA path and need Integration Architect as a prerequisite." },
-      { "label": "Integration consultants", "description": "You deliver complex multi-system integrations with Salesforce and need the credential to demonstrate architecture skills." }
+      {
+        "label": "Senior developers",
+        "description": "You design integration solutions and want to validate your API architecture and middleware expertise."
+      },
+      {
+        "label": "Aspiring architects",
+        "description": "You are pursuing the Application Architect or CTA path and need Integration Architect as a prerequisite."
+      },
+      {
+        "label": "Integration consultants",
+        "description": "You deliver complex multi-system integrations with Salesforce and need the credential to demonstrate architecture skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -185,7 +194,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Platform Integration Architects design solutions that meet end-to-end integration requirements."
+      "explanation": "Platform Integration Architects design solutions that meet end-to-end integration requirements.",
+      "whyWrong": [
+        "'Only UI' undersells the role, which is about scalable integration architecture, not interface design.",
+        "Email is unrelated to the Integration Architect's core focus.",
+        "Slack is unrelated to the Integration Architect's core focus."
+      ]
     },
     {
       "question": "Which integration pattern is used for real-time, request-response integration?",
@@ -196,7 +210,12 @@
         "Only file transfer"
       ],
       "correctAnswer": 1,
-      "explanation": "Synchronous REST/SOAP is used for real-time request-response integration."
+      "explanation": "Synchronous REST/SOAP is used for real-time request-response integration.",
+      "whyWrong": [
+        "'Batch only' describes a different pattern (scheduled bulk processing), not real-time request-response.",
+        "'Only ETL' describes a data pipeline pattern, not real-time synchronous integration.",
+        "'Only file transfer' describes an asynchronous batch pattern, not real-time request-response."
+      ]
     },
     {
       "question": "What is the purpose of Middleware (e.g., MuleSoft) in integration architecture?",
@@ -207,7 +226,12 @@
         "To configure CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Middleware orchestrates, transforms, and connects multiple systems."
+      "explanation": "Middleware orchestrates, transforms, and connects multiple systems.",
+      "whyWrong": [
+        "Middleware doesn't replace Salesforce — it connects Salesforce to other systems.",
+        "'To send emails only' undersells middleware's broader orchestration and transformation role.",
+        "'To configure CPQ only' is unrelated to middleware's actual orchestration purpose."
+      ]
     },
     {
       "question": "Which consideration is critical for integration security?",
@@ -218,7 +242,12 @@
         "Only IP allowlist"
       ],
       "correctAnswer": 1,
-      "explanation": "Authentication, encryption, and least privilege are key for integration security."
+      "explanation": "Authentication, encryption, and least privilege are key for integration security.",
+      "whyWrong": [
+        "'Only passwords' undersells the broader security considerations (OAuth, certificates, encryption, least privilege).",
+        "'Only HTTPS' undersells the broader set of security considerations beyond just transport encryption.",
+        "'Only IP allowlist' undersells the broader set of security considerations for integration."
+      ]
     },
     {
       "question": "What does 'loosely coupled' integration mean?",
@@ -229,7 +258,12 @@
         "Same database only"
       ],
       "correctAnswer": 1,
-      "explanation": "Loosely coupled systems reduce dependency and improve maintainability."
+      "explanation": "Loosely coupled systems reduce dependency and improve maintainability.",
+      "whyWrong": [
+        "'No integration' contradicts the fact that loosely coupled systems still integrate, just with minimal dependency.",
+        "'Tight dependency' is the opposite of what loosely coupled means.",
+        "'Same database only' misrepresents loose coupling, which is about minimal dependency, not shared databases."
+      ]
     },
     {
       "question": "When should asynchronous integration be chosen over synchronous?",
@@ -240,7 +274,12 @@
         "Only for batch"
       ],
       "correctAnswer": 1,
-      "explanation": "Asynchronous is preferred when real-time response isn't required and decoupling matters."
+      "explanation": "Asynchronous is preferred when real-time response isn't required and decoupling matters.",
+      "whyWrong": [
+        "'Never' contradicts the fact that asynchronous integration is a valid, commonly used pattern.",
+        "'Always' overstates when async should be used — it depends on specific requirements.",
+        "'Only for batch' undersells async's broader applicability beyond just batch scenarios."
+      ]
     },
     {
       "question": "What does API versioning support?",
@@ -251,7 +290,12 @@
         "Deprecation only"
       ],
       "correctAnswer": 1,
-      "explanation": "Versioning allows evolution while maintaining backward compatibility."
+      "explanation": "Versioning allows evolution while maintaining backward compatibility.",
+      "whyWrong": [
+        "'No changes' contradicts the fact that versioning exists specifically to manage change.",
+        "'Breaking changes only' misrepresents versioning's purpose, which is to support compatibility, not force breaking changes.",
+        "'Deprecation only' undersells versioning's broader purpose of supporting gradual migration, not just deprecation."
+      ]
     },
     {
       "question": "Which error handling strategy supports resilience in integrations?",
@@ -262,7 +306,12 @@
         "Only logging"
       ],
       "correctAnswer": 1,
-      "explanation": "Retries, DLQs, and graceful degradation improve integration resilience."
+      "explanation": "Retries, DLQs, and graceful degradation improve integration resilience.",
+      "whyWrong": [
+        "'Fail immediately' is the opposite of the resilience-focused retry/degradation strategy being asked about.",
+        "'No retries' contradicts the fact that retries are a core part of resilient error handling.",
+        "'Only logging' undersells resilience strategy, which includes active recovery mechanisms, not just passive logging."
+      ]
     },
     {
       "question": "What is the purpose of an integration bus or event-driven architecture?",
@@ -273,7 +322,12 @@
         "To batch only"
       ],
       "correctAnswer": 1,
-      "explanation": "Event-driven architecture decouples systems through events/messages."
+      "explanation": "Event-driven architecture decouples systems through events/messages.",
+      "whyWrong": [
+        "An integration bus doesn't replace APIs — it works alongside them for decoupled communication.",
+        "'To sync only' undersells the broader decoupling purpose of event-driven architecture.",
+        "'To batch only' undersells the broader decoupling purpose of event-driven architecture."
+      ]
     },
     {
       "question": "Which security standard is used for delegated user authorization?",
@@ -284,7 +338,12 @@
         "No standard"
       ],
       "correctAnswer": 1,
-      "explanation": "OAuth 2.0 authorization code flow supports user-delegated access."
+      "explanation": "OAuth 2.0 authorization code flow supports user-delegated access.",
+      "whyWrong": [
+        "Basic auth doesn't provide the delegated, scoped authorization OAuth 2.0 offers.",
+        "API keys alone don't provide the delegated user authorization OAuth 2.0's authorization code flow does.",
+        "'No standard' contradicts the fact that OAuth 2.0 is a well-established standard for this purpose."
+      ]
     },
     {
       "question": "What does idempotency ensure in integration?",
@@ -295,7 +354,12 @@
         "Only logging"
       ],
       "correctAnswer": 1,
-      "explanation": "Idempotency prevents duplicate processing from retries."
+      "explanation": "Idempotency prevents duplicate processing from retries.",
+      "whyWrong": [
+        "'Faster execution' misrepresents idempotency, which is about consistent results on retry, not speed.",
+        "'No retries' contradicts the fact that idempotency specifically supports safe retries.",
+        "'Only logging' undersells idempotency, which is a behavioral guarantee, not just a logging practice."
+      ]
     },
     {
       "question": "Which consideration applies when designing for high-volume integration?",
@@ -306,7 +370,12 @@
         "No batching"
       ],
       "correctAnswer": 1,
-      "explanation": "High volume requires batching, rate limiting, and async scaling."
+      "explanation": "High volume requires batching, rate limiting, and async scaling.",
+      "whyWrong": [
+        "Ignoring limits contradicts the core consideration needed for high-volume integration design.",
+        "'Synchronous only' contradicts the fact that async/queuing is often needed for high-volume scenarios.",
+        "'No batching' contradicts the fact that batching is a key consideration for high-volume integration."
+      ]
     },
     {
       "question": "What is the benefit of contract-first API design?",
@@ -317,7 +386,12 @@
         "Tight coupling"
       ],
       "correctAnswer": 1,
-      "explanation": "Contract-first enables parallel development and fewer integration bugs."
+      "explanation": "Contract-first enables parallel development and fewer integration bugs.",
+      "whyWrong": [
+        "'No benefit' contradicts the real, documented benefits of contract-first API design.",
+        "'Slower development' is the opposite of the parallel-development benefit contract-first design provides.",
+        "'Tight coupling' is the opposite of what contract-first design helps avoid."
+      ]
     },
     {
       "question": "Which pattern is used when multiple systems need the same data?",
@@ -328,7 +402,12 @@
         "Batch only"
       ],
       "correctAnswer": 1,
-      "explanation": "Publish-subscribe allows one producer to serve multiple consumers."
+      "explanation": "Publish-subscribe allows one producer to serve multiple consumers.",
+      "whyWrong": [
+        "'Point-to-point only' is the opposite pattern from publish-subscribe/fan-out for shared data needs.",
+        "'Request-response only' doesn't address the multi-consumer scenario the question describes.",
+        "'Batch only' doesn't address the multi-consumer scenario the question describes."
+      ]
     },
     {
       "question": "What does integration governance include?",
@@ -339,7 +418,12 @@
         "Only deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Governance covers standards, security, monitoring, and change control."
+      "explanation": "Governance covers standards, security, monitoring, and change control.",
+      "whyWrong": [
+        "'Only documentation' undersells governance, which spans standards, security, and monitoring, not just documentation.",
+        "'Only coding' misrepresents governance, which is about broader oversight practices, not code itself.",
+        "'Only deployment' undersells governance, which spans the full integration lifecycle, not just deployment."
+      ]
     }
   ]
 }
