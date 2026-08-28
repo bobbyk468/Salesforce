@@ -34,7 +34,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
 
   const studyGuideUrls: MetadataRoute.Sitemap = allDirs
-    .filter((d) => d.name.endsWith('-study-guide') && d.name !== 'service-cloud-study-guide')
+    .filter((d) => d.name.endsWith('-study-guide'))
     .map((d) => ({
       url: `${baseUrl}/${d.name}`,
       lastModified: new Date(RELEASE_DATE),
@@ -74,6 +74,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     { url: baseUrl, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 1 },
     { url: `${baseUrl}/certifications`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.9 },
     { url: `${baseUrl}/certification-path`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.85 },
+    { url: `${baseUrl}/certification-comparison`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/become-cta`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.85 },
     { url: `${baseUrl}/adm-201-vs-app-builder`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'weekly', priority: 0.8 },
     { url: `${baseUrl}/salesforce-certification-cost`, lastModified: new Date(RELEASE_DATE), changeFrequency: 'monthly', priority: 0.8 },
