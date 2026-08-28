@@ -209,12 +209,22 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'Master-Detail relationships create a cascade delete behavior where child records are automatically deleted when the parent is deleted.',
+      whyWrong: [
+        'Lookup Relationship keeps child records intact when the parent is deleted — no cascade delete behavior.',
+        'External Lookup links to data outside Salesforce and has no cascade delete behavior on internal records.',
+        'Hierarchical Relationship is a special lookup limited to the User object — it does not cascade delete.',
+      ],
     },
     {
       question: 'What is the maximum number of roll-up summary fields that can be created on a master object?',
       options: ['10', '25', '40', 'Unlimited'],
       correctAnswer: 1,
       explanation: 'Each object can have a maximum of 25 roll-up summary fields.',
+      whyWrong: [
+        '10 understates the actual platform limit of 25 roll-up summary fields per object.',
+        '40 overstates the actual platform limit — the real cap is 25.',
+        'The limit isn’t unlimited — Salesforce enforces a specific cap of 25 to protect performance.',
+      ],
     },
     {
       question:
@@ -223,6 +233,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'Page Layout Assignment allows you to assign different page layouts to different record types and profiles.',
+      whyWrong: [
+        'Profile Assignment alone controls object/field access, not which page layout displays per record type.',
+        'Record Type Assignment controls which record types a profile can use, but the layout itself is set via Page Layout Assignment.',
+        'Permission Set grants additional access — it doesn’t control which page layout is shown for a record type.',
+      ],
     },
     {
       question:
@@ -231,6 +246,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'Flow (Record-Triggered Flow) is the recommended tool for automating field updates when records are created or edited.',
+      whyWrong: [
+        'Workflow Rule can update fields, but it is deprecated in favor of Flow for new automation.',
+        'Approval Process routes records for approval — it isn’t designed for straightforward criteria-based field updates.',
+        '"All of the above" is wrong because Salesforce’s current guidance is to build new field-update automation in Flow, not treat all three as equally recommended.',
+      ],
     },
     {
       question: 'What is the purpose of a Junction Object?',
@@ -243,6 +263,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'A Junction Object is a custom object with two master-detail relationships used to create a many-to-many relationship between two objects.',
+      whyWrong: [
+        'A single master-detail or lookup relationship already handles a one-to-many relationship — no junction object is needed for that.',
+        'Storing historical data is a different concept (e.g., field history tracking), unrelated to junction objects.',
+        'Linking external systems is handled by external objects/integration tools, not a junction object, which connects two internal Salesforce objects.',
+      ],
     },
     {
       question: 'What is the maximum number of master-detail relationships allowed on a custom object?',
@@ -250,6 +275,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'A custom object can have a maximum of 2 master-detail relationships. This limit ensures data integrity and prevents overly complex data models.',
+      whyWrong: [
+        'A single master-detail relationship is allowed, but the actual platform maximum is higher than 1.',
+        '3 exceeds the actual platform limit for master-detail relationships on a custom object.',
+        'The limit is not unlimited — Salesforce caps master-detail relationships specifically to preserve sharing and cascade-delete integrity.',
+      ],
     },
     {
       question:
@@ -258,6 +288,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 0,
       explanation:
         'The Related List component displays related records (child records) on a record page, such as Contacts on an Account page or Opportunities on an Account page.',
+      whyWrong: [
+        'Related Record shows a single linked record\'s fields, not a list of multiple related child records.',
+        'Record Detail displays the current record\'s own fields, not related child records.',
+        'List View shows a filtered list of records on a tab or app page, not related records embedded within a specific record page.',
+      ],
     },
     {
       question:
@@ -266,6 +301,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 0,
       explanation:
         'Formula fields automatically calculate values based on other fields, expressions, or functions. They are read-only and recalculate whenever referenced fields change.',
+      whyWrong: [
+        'Auto Number generates a sequential unique value on record creation — it doesn’t calculate values from other fields.',
+        'A plain Text field stores manually entered or set text — it has no built-in calculation capability.',
+        'A plain Number field stores a value directly — it can’t automatically derive that value from other fields.',
+      ],
     },
     {
       question: 'What is the purpose of a Record Type?',
@@ -278,6 +318,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         'Record Types allow you to offer different business processes, picklist values, and page layouts to different users for the same object.',
+      whyWrong: [
+        'Assigning page layouts to users is a downstream effect of Record Types, but layout assignment alone isn’t the core purpose Record Types serve.',
+        'Field-level security is controlled separately via profiles/permission sets, not Record Types.',
+        'Automating record creation is handled by Flow or other automation tools, not Record Types.',
+      ],
     },
     {
       question: 'Which automation tool can be used to create records in related objects automatically?',
@@ -285,6 +330,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 2,
       explanation:
         'Flow (Record-Triggered Flow) is the recommended tool for creating records in related objects. Process Builder can also do this but is being deprecated.',
+      whyWrong: [
+        'Workflow Rule cannot create records at all — it\'s limited to field updates, email alerts, tasks, and outbound messages.',
+        'Process Builder can create related records, but it is deprecated in favor of Flow for new automation.',
+        '"All of the above" is wrong because Workflow Rule specifically cannot create records — it doesn\'t belong in this group.',
+      ],
     },
     {
       question:
@@ -293,6 +343,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 0,
       explanation:
         'Field-Level Security (FLS) controls whether users can view or edit specific fields, regardless of record-level access.',
+      whyWrong: [
+        'Sharing Rules control record-level access (which records users can see), not field-level visibility.',
+        'Record Types control business process and picklist variation, not field visibility by profile.',
+        'Page Layouts control which fields are displayed and their arrangement, but they don\'t enforce security — a field can still be exposed via API even if hidden from a layout.',
+      ],
     },
     {
       question: 'What is the difference between a Lookup and Master-Detail relationship?',
@@ -305,6 +360,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         "Master-Detail relationships support cascade delete (deleting parent deletes children) and roll-up summary fields. Lookup relationships are more flexible but don't support these features.",
+      whyWrong: [
+        "This reverses the actual behavior — Master-Detail supports cascade delete, not Lookup.",
+        "There is a real, meaningful difference between the two relationship types — this option denies it entirely.",
+        "Lookup relationships can be used on both standard and custom objects — they aren't restricted to standard objects only.",
+      ],
     },
     {
       question: 'Which Lightning App Builder component allows users to navigate between related records?',
@@ -312,6 +372,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 1,
       explanation:
         "The Related Record component displays a single related record and allows navigation to that record's detail page.",
+      whyWrong: [
+        "Related List displays multiple child records in a list, not a single navigable related record.",
+        "Record Detail shows the current record's own fields, not a related record to navigate to.",
+        "'Navigation Menu' isn't a Lightning App Builder record-page component — it's a separate Experience Cloud/app-level navigation feature.",
+      ],
     },
     {
       question:
@@ -320,6 +385,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       correctAnswer: 3,
       explanation:
         'Duplicate Rules work with Matching Rules to prevent or alert users about duplicate records. Matching Rules define what constitutes a duplicate, and Duplicate Rules define what action to take.',
+      whyWrong: [
+        'Validation Rules alone don\'t detect duplicates — they enforce data-quality logic on individual field values, not cross-record matching.',
+        'Duplicate Rules alone need Matching Rules to define what counts as a duplicate — one without the other is incomplete.',
+        'Matching Rules alone only identify potential duplicates — they need Duplicate Rules to define the action (block, alert, report) taken when a match is found.',
+      ],
     },
     {
       question:
@@ -327,6 +397,11 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
       options: ['Related List', 'Related Record', 'Filter', 'List View'],
       correctAnswer: 2,
       explanation: 'The Filter component lets users filter records on a record page using predefined criteria.',
+      whyWrong: [
+        'Related List displays associated child records — it doesn\'t provide filtering controls itself.',
+        'Related Record shows a linked record\'s details — it isn\'t a filtering mechanism.',
+        'List View filters a list of records on a tab or app page, not records displayed within a specific record page layout.',
+      ],
     },
   ],
 }

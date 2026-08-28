@@ -5,9 +5,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Service Cloud Consultant exam for?",
     "personas": [
-      { "label": "Support leads", "description": "You manage a service team and want to validate your Salesforce Service Cloud configuration skills." },
-      { "label": "Admins moving into consulting", "description": "You have ADM-201 and want to specialise in service operations and case management." },
-      { "label": "Implementation consultants", "description": "You deliver Service Cloud projects and need the credential to back your hands-on expertise." }
+      {
+        "label": "Support leads",
+        "description": "You manage a service team and want to validate your Salesforce Service Cloud configuration skills."
+      },
+      {
+        "label": "Admins moving into consulting",
+        "description": "You have ADM-201 and want to specialise in service operations and case management."
+      },
+      {
+        "label": "Implementation consultants",
+        "description": "You deliver Service Cloud projects and need the credential to back your hands-on expertise."
+      }
     ]
   },
   "examDifficulty": {
@@ -149,7 +158,12 @@
         "Process Builder"
       ],
       "correctAnswer": 1,
-      "explanation": "Omni-Channel routes work items to agents in real-time based on their skills, availability, and current workload capacity."
+      "explanation": "Omni-Channel routes work items to agents in real-time based on their skills, availability, and current workload capacity.",
+      "whyWrong": [
+        "Case Assignment Rules route based on criteria you define, but they don't account for real-time agent availability and skill matching the way Omni-Channel does.",
+        "Workflow Rules can update fields or send alerts, but they don't perform live, skill-based case routing.",
+        "Process Builder can trigger actions on case changes, but real-time skill/availability-based routing is Omni-Channel's specific function."
+      ]
     },
     {
       "question": "What is the purpose of Service Level Agreements (SLAs) in Service Cloud?",
@@ -160,7 +174,12 @@
         "To manage knowledge articles"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Level Agreements (SLAs) define the response and resolution times that your support team commits to for different types of cases."
+      "explanation": "Service Level Agreements (SLAs) define the response and resolution times that your support team commits to for different types of cases.",
+      "whyWrong": [
+        "Customer satisfaction is measured separately (e.g., CSAT surveys), not what SLAs define.",
+        "Agent productivity is a different metric tracked through reporting, not the purpose of SLAs.",
+        "Managing knowledge articles is a separate Knowledge Base function, unrelated to SLA response/resolution targets."
+      ]
     },
     {
       "question": "Which feature allows customers to find answers to common questions without contacting support?",
@@ -171,7 +190,12 @@
         "Email-to-Case"
       ],
       "correctAnswer": 1,
-      "explanation": "Knowledge Base allows you to create and publish articles that customers can search and read to find answers to common questions."
+      "explanation": "Knowledge Base allows you to create and publish articles that customers can search and read to find answers to common questions.",
+      "whyWrong": [
+        "Case Comments are internal/external notes on an existing case — they don't help customers self-serve before contacting support.",
+        "Chatter is an internal collaboration tool, not a customer-facing self-service answer repository.",
+        "Email-to-Case creates cases from inbound emails — it doesn't help customers find answers on their own."
+      ]
     },
     {
       "question": "A company wants to capture customer cases from their website. Which Service Cloud feature should be used?",
@@ -182,7 +206,12 @@
         "Social Customer Service"
       ],
       "correctAnswer": 1,
-      "explanation": "Web-to-Case allows you to capture cases from your company's website using a form that creates cases directly in Salesforce."
+      "explanation": "Web-to-Case allows you to capture cases from your company's website using a form that creates cases directly in Salesforce.",
+      "whyWrong": [
+        "Email-to-Case captures cases from inbound emails, not directly from a website form.",
+        "Live Agent is a real-time chat feature, not a website case-capture form mechanism.",
+        "Social Customer Service captures cases from social media channels, not a company website form."
+      ]
     },
     {
       "question": "What is the benefit of using Macros in Service Cloud?",
@@ -193,7 +222,12 @@
         "Automated customer notifications"
       ],
       "correctAnswer": 2,
-      "explanation": "Macros allow agents to complete repetitive tasks with a single click, such as sending an email, updating a field, and adding a comment."
+      "explanation": "Macros allow agents to complete repetitive tasks with a single click, such as sending an email, updating a field, and adding a comment.",
+      "whyWrong": [
+        "Macros don't create cases automatically — they execute a sequence of actions a user triggers manually.",
+        "Macros aren't a batch-processing engine for many cases at once — they execute a defined sequence for the case currently open.",
+        "Macros don't send automated customer notifications on their own — that's a separate automation/email feature."
+      ]
     },
     {
       "question": "What is the purpose of Entitlements in Service Cloud?",
@@ -204,7 +238,12 @@
         "To manage knowledge articles"
       ],
       "correctAnswer": 1,
-      "explanation": "Entitlements define the support coverage a customer receives, including service level agreements (SLAs) and support hours, and can be associated with cases."
+      "explanation": "Entitlements define the support coverage a customer receives, including service level agreements (SLAs) and support hours, and can be associated with cases.",
+      "whyWrong": [
+        "Customer satisfaction is tracked via separate survey tools, not Entitlements.",
+        "Agent productivity is a reporting metric, not what Entitlements define.",
+        "Knowledge article management is a separate Knowledge Base function, unrelated to Entitlements."
+      ]
     },
     {
       "question": "A company wants to route cases to agents based on their expertise in specific products. Which feature should be configured?",
@@ -215,7 +254,12 @@
         "Process Builder"
       ],
       "correctAnswer": 1,
-      "explanation": "Omni-Channel with Skills-Based Routing routes cases to agents based on their skills, ensuring cases are handled by the most qualified agents."
+      "explanation": "Omni-Channel with Skills-Based Routing routes cases to agents based on their skills, ensuring cases are handled by the most qualified agents.",
+      "whyWrong": [
+        "Case Assignment Rules route by defined criteria but don't inherently match cases to agent expertise the way Skills-Based Routing does.",
+        "Workflow Rules automate field updates/alerts — they don't perform expertise-based case routing.",
+        "Process Builder can trigger actions on case changes, but expertise-based routing is the specific function of Omni-Channel Skills-Based Routing."
+      ]
     },
     {
       "question": "Which feature allows customers to submit cases through a community portal?",
@@ -226,7 +270,12 @@
         "Chatter"
       ],
       "correctAnswer": 2,
-      "explanation": "Community Case Creation allows customers to submit cases directly through Experience Cloud (Community) portals, providing self-service support capabilities."
+      "explanation": "Community Case Creation allows customers to submit cases directly through Experience Cloud (Community) portals, providing self-service support capabilities.",
+      "whyWrong": [
+        "Email-to-Case captures cases from inbound email, not a community portal submission.",
+        "Web-to-Case captures cases from a public website form, which is a different channel from an authenticated community portal.",
+        "Chatter is an internal/external collaboration feed, not a case-submission mechanism for community members."
+      ]
     },
     {
       "question": "What is the benefit of using Case Feed in Service Cloud?",
@@ -237,7 +286,12 @@
         "Automated case assignment"
       ],
       "correctAnswer": 1,
-      "explanation": "Case Feed provides a collaborative interface where agents can add comments, posts, attach files, and collaborate on resolving cases."
+      "explanation": "Case Feed provides a collaborative interface where agents can add comments, posts, attach files, and collaborate on resolving cases.",
+      "whyWrong": [
+        "Case Feed doesn't create cases automatically — a case must already exist for its feed to display activity.",
+        "Case Feed doesn't integrate with external systems on its own — that's a separate integration capability.",
+        "Case Feed doesn't automatically assign cases — that's handled by assignment rules or Omni-Channel."
+      ]
     },
     {
       "question": "A company wants to track the time agents spend on cases. Which feature should be used?",
@@ -248,7 +302,12 @@
         "Time Tracking"
       ],
       "correctAnswer": 2,
-      "explanation": "Case Milestones track key events in a case lifecycle and can be used with Entitlements to measure performance against SLAs."
+      "explanation": "Case Milestones track key events in a case lifecycle and can be used with Entitlements to measure performance against SLAs.",
+      "whyWrong": [
+        "Case Comments are notes on a case, not a time-tracking mechanism.",
+        "Case Feed displays case activity/collaboration — it isn't specifically a time-tracking tool.",
+        "'Case Milestones' tracks SLA compliance timing/deadlines, but the specific feature for logging agent time spent is Time Tracking, not Milestones."
+      ]
     },
     {
       "question": "Which feature allows agents to see suggested knowledge articles while working on a case?",
@@ -259,7 +318,12 @@
         "Macros"
       ],
       "correctAnswer": 1,
-      "explanation": "Einstein Article Recommendations use AI to suggest relevant knowledge articles to agents based on the case details, helping them resolve cases faster."
+      "explanation": "Einstein Article Recommendations use AI to suggest relevant knowledge articles to agents based on the case details, helping them resolve cases faster.",
+      "whyWrong": [
+        "Knowledge Base is the article repository itself, but the specific feature that proactively suggests articles while working a case is Einstein Article Recommendations.",
+        "Case Feed displays case activity and collaboration — it doesn't surface suggested knowledge articles.",
+        "Macros execute predefined action sequences — they don't recommend knowledge articles."
+      ]
     },
     {
       "question": "What is the purpose of Service Contracts in Service Cloud?",
@@ -270,7 +334,12 @@
         "To manage knowledge articles"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Contracts define the support coverage and entitlements for customers, including contract terms, start/end dates, and associated entitlements."
+      "explanation": "Service Contracts define the support coverage and entitlements for customers, including contract terms, start/end dates, and associated entitlements.",
+      "whyWrong": [
+        "Customer satisfaction is tracked via separate survey tools, not Service Contracts.",
+        "Agent productivity is a reporting metric, not what Service Contracts define.",
+        "Knowledge article management is a separate Knowledge Base function, unrelated to Service Contracts."
+      ]
     },
     {
       "question": "A company wants to allow customers to chat with support agents in real-time. Which feature should be implemented?",
@@ -281,7 +350,12 @@
         "Social Customer Service"
       ],
       "correctAnswer": 2,
-      "explanation": "Live Agent Chat allows customers to chat with support agents in real-time through a chat widget on your website or community portal."
+      "explanation": "Live Agent Chat allows customers to chat with support agents in real-time through a chat widget on your website or community portal.",
+      "whyWrong": [
+        "Email-to-Case handles asynchronous email-based cases, not real-time chat.",
+        "Web-to-Case captures case submissions via a form, not live two-way conversation.",
+        "Social Customer Service manages cases from social media, not a dedicated real-time chat widget."
+      ]
     },
     {
       "question": "Which feature allows agents to see all their work items (cases, chats, etc.) in a single interface?",
@@ -292,7 +366,12 @@
         "Knowledge Base"
       ],
       "correctAnswer": 2,
-      "explanation": "Service Console provides a unified interface where agents can see all their work items, cases, knowledge articles, and customer information in one place."
+      "explanation": "Service Console provides a unified interface where agents can see all their work items, cases, knowledge articles, and customer information in one place.",
+      "whyWrong": [
+        "Case Feed shows activity on a single case, not a unified view across all of an agent's work items.",
+        "Omni-Channel routes work to agents based on capacity/skills, but the specific unified work interface itself is the Service Console.",
+        "Knowledge Base is the article repository, unrelated to a unified agent work interface."
+      ]
     },
     {
       "question": "Which feature defines support entitlements and service level agreements (SLAs) for cases?",
@@ -303,7 +382,12 @@
         "Knowledge Base"
       ],
       "correctAnswer": 1,
-      "explanation": "Entitlements define what support a customer receives; Milestones track SLA timers (e.g., first response, resolution) against those entitlements."
+      "explanation": "Entitlements define what support a customer receives; Milestones track SLA timers (e.g., first response, resolution) against those entitlements.",
+      "whyWrong": [
+        "Case Assignment Rules route cases based on criteria — they don't define support-tier SLAs.",
+        "Omni-Channel routes work in real time — it doesn't define entitlement/SLA terms themselves.",
+        "Knowledge Base manages articles, unrelated to defining entitlements and SLA milestones."
+      ]
     }
   ]
 }
