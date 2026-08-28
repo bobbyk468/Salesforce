@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Claude Certified Architect Foundations exam for?",
     "personas": [
-      { "label": "Platform Engineers", "description": "Engineers who design multi-agent systems, configure MCP servers, and build the infrastructure that other developers ship Claude-powered features on top of." },
-      { "label": "DevOps and Infrastructure Leads", "description": "Team leads responsible for integrating Claude Code into CI/CD pipelines, managing CLAUDE.md configuration hierarchies, and enforcing quality gates on AI-generated code changes." },
-      { "label": "Senior Developers Moving Into Architecture", "description": "Experienced developers who have built Claude integrations and now need to prove they can design reliable, multi-agent workflows with proper orchestration, failure handling, and context management." }
+      {
+        "label": "Platform Engineers",
+        "description": "Engineers who design multi-agent systems, configure MCP servers, and build the infrastructure that other developers ship Claude-powered features on top of."
+      },
+      {
+        "label": "DevOps and Infrastructure Leads",
+        "description": "Team leads responsible for integrating Claude Code into CI/CD pipelines, managing CLAUDE.md configuration hierarchies, and enforcing quality gates on AI-generated code changes."
+      },
+      {
+        "label": "Senior Developers Moving Into Architecture",
+        "description": "Experienced developers who have built Claude integrations and now need to prove they can design reliable, multi-agent workflows with proper orchestration, failure handling, and context management."
+      }
     ]
   },
   "examDifficulty": {
@@ -113,14 +122,38 @@
     ]
   },
   "tocSections": [
-    { "id": "exam-prep", "title": "Exam Prep Content" },
-    { "id": "key-concepts", "title": "Key Concepts" },
-    { "id": "scenario-tips", "title": "How to Pass" },
-    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
-    { "id": "practice-questions", "title": "Practice Questions" },
-    { "id": "more-questions", "title": "Get More Questions" },
-    { "id": "related-certs", "title": "Related Certifications" },
-    { "id": "faq", "title": "Exam FAQs" }
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
   ],
   "sampleQuestions": [
     {
@@ -132,7 +165,12 @@
         "A rule-based system with no AI involvement"
       ],
       "correctAnswer": 1,
-      "explanation": "Hub-and-spoke orchestration lets each subagent specialize — one excels at extraction, another at risk scoring, another at legal drafting. The coordinator manages sequencing and error handling, and human review before finalization provides accountability for high-stakes legal output."
+      "explanation": "Hub-and-spoke orchestration lets each subagent specialize — one excels at extraction, another at risk scoring, another at legal drafting. The coordinator manages sequencing and error handling, and human review before finalization provides accountability for high-stakes legal output.",
+      "whyWrong": [
+        "A single prompt handling read/flag/rewrite in one pass loses the separation of concerns needed for auditability and risk isolation on a legal task.",
+        "Three agents voting independently wastes work by having each reprocess the full contract, and voting isn't a meaningful signal for legal risk assessment.",
+        "A rule-based system with no AI can't handle the natural-language nuance of contract clauses that this task requires."
+      ]
     },
     {
       "question": "An MCP server exposes a tool that executes SQL queries against a production database. What is the most critical architectural safeguard?",
@@ -143,7 +181,12 @@
         "Adding a disclaimer in the tool description that says 'be careful'"
       ],
       "correctAnswer": 1,
-      "explanation": "When an AI agent has database access, defense in depth is mandatory: read-only roles prevent accidental writes, parameterized queries block injection, authentication ensures only authorized agents connect, and audit logs create accountability. A disclaimer in the tool description provides no actual protection."
+      "explanation": "When an AI agent has database access, defense in depth is mandatory: read-only roles prevent accidental writes, parameterized queries block injection, authentication ensures only authorized agents connect, and audit logs create accountability. A disclaimer in the tool description provides no actual protection.",
+      "whyWrong": [
+        "Transport speed has nothing to do with the security risk of an AI-driven tool executing arbitrary SQL against production.",
+        "Caching results doesn't prevent injection or unauthorized writes — it's a performance optimization, not a safeguard.",
+        "A text disclaimer in a tool description has no enforcement power — it doesn't stop the model or a malicious actor from executing harmful queries."
+      ]
     },
     {
       "question": "A repo has a root-level CLAUDE.md that says 'always use TypeScript strict mode' and a subdirectory CLAUDE.md that says 'JavaScript is acceptable in this folder.' Which instruction does Claude Code follow when editing a file in the subdirectory?",
@@ -154,7 +197,12 @@
         "Claude Code prompts the user to resolve the conflict"
       ],
       "correctAnswer": 1,
-      "explanation": "Claude Code uses a specificity hierarchy: directory-level CLAUDE.md overrides repo-root for files in that directory, just as a .eslintrc in a subdirectory overrides the root config. More specific instructions take precedence over more general ones."
+      "explanation": "Claude Code uses a specificity hierarchy: directory-level CLAUDE.md overrides repo-root for files in that directory, just as a .eslintrc in a subdirectory overrides the root config. More specific instructions take precedence over more general ones.",
+      "whyWrong": [
+        "This reverses Claude Code's actual resolution order — more specific (directory-level) instructions take precedence over general (root-level) ones, not the other way around.",
+        "Claude Code doesn't discard project-level instructions in favor of user-level config — both are considered, with specificity as the tiebreaker.",
+        "Claude Code doesn't interrupt execution to ask the user to resolve CLAUDE.md conflicts — it resolves them deterministically by specificity."
+      ]
     },
     {
       "question": "An agentic loop has made 20 tool calls without completing its task. What is the best architectural response?",
@@ -165,7 +213,12 @@
         "Lower the temperature to make the agent more deterministic"
       ],
       "correctAnswer": 1,
-      "explanation": "Circuit breakers are essential for production agents. Capturing state enables debugging, and escalation or a refined retry prevents repeated failure. Unlimited loops waste tokens and risk cascading errors, while a blind restart discards useful partial progress."
+      "explanation": "Circuit breakers are essential for production agents. Capturing state enables debugging, and escalation or a refined retry prevents repeated failure. Unlimited loops waste tokens and risk cascading errors, while a blind restart discards useful partial progress.",
+      "whyWrong": [
+        "Letting an unbounded loop continue risks runaway cost and never guarantees completion — 20 calls with no progress is a signal to intervene, not wait.",
+        "Restarting from scratch with identical instructions doesn't address why the loop stalled in the first place — it just repeats the same failure.",
+        "Lowering temperature affects output randomness, not the underlying reason a tool-calling loop is stuck."
+      ]
     },
     {
       "question": "You are handing off context from a research agent to a writing agent. Which method preserves quality while keeping token costs manageable?",
@@ -176,7 +229,12 @@
         "Store the research output in a database and give the writing agent a SQL tool to query it"
       ],
       "correctAnswer": 1,
-      "explanation": "Raw conversation histories contain dead ends, tool noise, and irrelevant exploration that bloat the context window. A curated summary gives the writing agent exactly the information it needs, at a fraction of the token cost, and produces more focused output."
+      "explanation": "Raw conversation histories contain dead ends, tool noise, and irrelevant exploration that bloat the context window. A curated summary gives the writing agent exactly the information it needs, at a fraction of the token cost, and produces more focused output.",
+      "whyWrong": [
+        "Passing the entire raw history defeats the purpose of hand-off — it re-introduces the token cost and noise a summary is meant to eliminate.",
+        "Giving the writing agent the research agent's tools duplicates work and cost by re-running research that's already done.",
+        "Storing output in a database with a SQL tool adds unnecessary infrastructure complexity for what is fundamentally a text hand-off problem."
+      ]
     },
     {
       "question": "When designing a system prompt for a production application that processes thousands of requests per day, what is the most important structural consideration?",
@@ -187,7 +245,12 @@
         "Change the system prompt randomly for each request to increase variety"
       ],
       "correctAnswer": 1,
-      "explanation": "Production system prompts are infrastructure. Structured sections make behavior predictable across thousands of invocations and allow targeted updates (change the output format without touching the role definition). Unstructured or variable prompts produce inconsistent results at scale."
+      "explanation": "Production system prompts are infrastructure. Structured sections make behavior predictable across thousands of invocations and allow targeted updates (change the output format without touching the role definition). Unstructured or variable prompts produce inconsistent results at scale.",
+      "whyWrong": [
+        "An artificially short system prompt sacrifices the clarity and constraints needed for consistent behavior at production scale — token savings aren't worth the reliability loss.",
+        "Casual conversational phrasing undermines the precision a production system prompt needs for consistent, predictable behavior.",
+        "Randomizing the system prompt per request destroys consistency, which is the opposite of what a production system needs."
+      ]
     },
     {
       "question": "An architect needs to choose between stdio and SSE transport for an MCP server. Which scenario clearly favors SSE?",
@@ -198,7 +261,12 @@
         "A one-off script that runs once and exits"
       ],
       "correctAnswer": 1,
-      "explanation": "SSE transport is designed for remote, multi-client deployments. A cloud-hosted service serving multiple concurrent clients needs HTTP-based transport. Stdio is simpler and better for local, single-client scenarios like IDE plugins or CI scripts."
+      "explanation": "SSE transport is designed for remote, multi-client deployments. A cloud-hosted service serving multiple concurrent clients needs HTTP-based transport. Stdio is simpler and better for local, single-client scenarios like IDE plugins or CI scripts.",
+      "whyWrong": [
+        "stdio is designed for exactly this — a single local process talking to one client — the opposite of the multi-client cloud scenario described.",
+        "A simple CI file-reading utility is a single-consumer, ephemeral use case that fits stdio, not the shared multi-client service SSE is built for.",
+        "A one-off script that runs once and exits doesn't need persistent multi-client transport at all."
+      ]
     },
     {
       "question": "A customer onboarding pipeline uses Claude to verify documents, check compliance, and generate welcome materials. The compliance check occasionally produces false positives that block legitimate customers. What is the best architectural improvement?",
@@ -209,7 +277,12 @@
         "Run the compliance check twice and use the more lenient result"
       ],
       "correctAnswer": 1,
-      "explanation": "A confidence-tiered approach handles the tradeoff between automation speed and accuracy. Clear cases are processed instantly, while uncertain cases get human review. Attaching the agent's reasoning helps the reviewer decide quickly, maintaining throughput without sacrificing compliance quality."
+      "explanation": "A confidence-tiered approach handles the tradeoff between automation speed and accuracy. Clear cases are processed instantly, while uncertain cases get human review. Attaching the agent's reasoning helps the reviewer decide quickly, maintaining throughput without sacrificing compliance quality.",
+      "whyWrong": [
+        "Removing the compliance check entirely eliminates the safety control the pipeline needs — trading correctness for throughput isn't an architectural fix.",
+        "Setting temperature to zero doesn't correct false positives — it only makes output more deterministic, not more accurate.",
+        "Running the check twice and picking the more lenient result systematically biases toward false negatives, which is worse for compliance, not better."
+      ]
     },
     {
       "question": "What is the primary benefit of using Claude Code hooks in a development workflow?",
@@ -220,7 +293,12 @@
         "Hooks let Claude Code bypass code review entirely"
       ],
       "correctAnswer": 1,
-      "explanation": "Hooks integrate Claude Code into existing development quality standards by attaching automated checks to events like file edits or commits. This ensures AI-generated changes pass the same gates as human changes, without requiring manual intervention."
+      "explanation": "Hooks integrate Claude Code into existing development quality standards by attaching automated checks to events like file edits or commits. This ensures AI-generated changes pass the same gates as human changes, without requiring manual intervention.",
+      "whyWrong": [
+        "Hooks don't make Claude Code skip steps for speed — they add automated validation steps, if anything increasing rigor.",
+        "Hooks are optional automation triggers, not a requirement for basic file I/O — Claude Code can read files without any hooks configured.",
+        "Hooks enforce quality gates like tests and linting — they don't let the agent bypass review, they add review."
+      ]
     },
     {
       "question": "A multi-agent system processes insurance claims. The coordinator agent spawns subagents for claim intake, policy lookup, and payout calculation. The policy-lookup subagent occasionally returns stale data because the policy database was recently updated. What architectural change addresses this?",
@@ -231,7 +309,12 @@
         "Run the entire pipeline twice and compare results"
       ],
       "correctAnswer": 1,
-      "explanation": "Stale data in a claims pipeline creates compliance risk. The fix is architectural: the tool must query live data (not cache), and a staleness check catches edge cases where a policy was updated between claim submission and processing. This is a standard pattern for data-sensitive agent workflows."
+      "explanation": "Stale data in a claims pipeline creates compliance risk. The fix is architectural: the tool must query live data (not cache), and a staleness check catches edge cases where a policy was updated between claim submission and processing. This is a standard pattern for data-sensitive agent workflows.",
+      "whyWrong": [
+        "Caching all policy data at startup guarantees staleness by design — the whole problem is that policies change after the subagent starts.",
+        "A hardcoded lookup table can't reflect the same 'recently updated' data problem — it would be even more stale than a cache.",
+        "Running the entire pipeline twice and comparing results doesn't address the root cause (stale source data) and doubles cost without fixing anything."
+      ]
     }
   ]
 }

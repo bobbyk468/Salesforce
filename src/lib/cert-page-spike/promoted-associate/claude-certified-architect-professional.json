@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Claude Certified Architect Professional exam for?",
     "personas": [
-      { "label": "Enterprise AI Architects", "description": "Senior architects who design AI platforms serving multiple teams across geographies, handling multi-region deployments, regulatory compliance, and cross-team cost governance." },
-      { "label": "Security and Compliance Architects", "description": "Architects responsible for end-to-end security design in AI systems — data classification, prompt-injection defense layers, credential management for tool-calling agents, and audit trails for SOC 2, GDPR, and HIPAA." },
-      { "label": "Platform Engineering Directors", "description": "Technical leaders who own the AI infrastructure budget, set model-routing policies, design observability stacks for multi-agent pipelines, and build self-healing workflows that operate without human intervention." }
+      {
+        "label": "Enterprise AI Architects",
+        "description": "Senior architects who design AI platforms serving multiple teams across geographies, handling multi-region deployments, regulatory compliance, and cross-team cost governance."
+      },
+      {
+        "label": "Security and Compliance Architects",
+        "description": "Architects responsible for end-to-end security design in AI systems — data classification, prompt-injection defense layers, credential management for tool-calling agents, and audit trails for SOC 2, GDPR, and HIPAA."
+      },
+      {
+        "label": "Platform Engineering Directors",
+        "description": "Technical leaders who own the AI infrastructure budget, set model-routing policies, design observability stacks for multi-agent pipelines, and build self-healing workflows that operate without human intervention."
+      }
     ]
   },
   "examDifficulty": {
@@ -113,14 +122,38 @@
     ]
   },
   "tocSections": [
-    { "id": "exam-prep", "title": "Exam Prep Content" },
-    { "id": "key-concepts", "title": "Key Concepts" },
-    { "id": "scenario-tips", "title": "How to Pass" },
-    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
-    { "id": "practice-questions", "title": "Practice Questions" },
-    { "id": "more-questions", "title": "Get More Questions" },
-    { "id": "related-certs", "title": "Related Certifications" },
-    { "id": "faq", "title": "Exam FAQs" }
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
   ],
   "sampleQuestions": [
     {
@@ -132,7 +165,12 @@
         "Direct API calls from the customer-facing web app with no middleware"
       ],
       "correctAnswer": 1,
-      "explanation": "Enterprise-scale regulated processing demands distributed architecture for throughput, model routing for cost and capability matching, regional nodes for data residency compliance, encryption for data protection, and audit trails for SOC 2. No single-endpoint or monolithic approach meets all these constraints at this volume."
+      "explanation": "Enterprise-scale regulated processing demands distributed architecture for throughput, model routing for cost and capability matching, regional nodes for data residency compliance, encryption for data protection, and audit trails for SOC 2. No single-endpoint or monolithic approach meets all these constraints at this volume.",
+      "whyWrong": [
+        "A single centralized endpoint processing sequentially can't meet regional data-residency requirements and creates a scaling bottleneck at 80,000 applications/month.",
+        "One monolithic agent handling every step from intake to underwriting doesn't allow model-tier cost optimization or the auditability regulators expect.",
+        "Direct client-to-API calls with no middleware bypass the encryption, logging, and residency controls SOC 2 and data-residency compliance require."
+      ]
     },
     {
       "question": "A multi-agent claims system has three agents: intake, assessment, and payout. The assessment agent occasionally disagrees with itself when the same claim is run twice. How should an architect improve consistency?",
@@ -143,7 +181,12 @@
         "Replace the AI assessment with a rules engine"
       ],
       "correctAnswer": 1,
-      "explanation": "Competitive evaluation with defined criteria catches inconsistency systematically. Auto-approving agreements keeps throughput high, while human escalation on disagreements provides accuracy where it matters most. Temperature alone does not eliminate variability, and a majority vote without evaluation criteria masks rather than addresses the root cause."
+      "explanation": "Competitive evaluation with defined criteria catches inconsistency systematically. Auto-approving agreements keeps throughput high, while human escalation on disagreements provides accuracy where it matters most. Temperature alone does not eliminate variability, and a majority vote without evaluation criteria masks rather than addresses the root cause.",
+      "whyWrong": [
+        "Temperature 0 reduces randomness but doesn't resolve genuine disagreements in judgment-based assessment — it only masks the inconsistency without adding a verification mechanism.",
+        "Majority vote across three runs of the same agent with no evaluation criteria just amplifies whatever bias the agent already has — it doesn't add real independent verification.",
+        "Replacing AI assessment with a rules engine loses the reasoning capability needed for claims assessment nuance, which is a regression, not a consistency fix."
+      ]
     },
     {
       "question": "An enterprise AI platform serves 40 teams. Monthly spend has reached $180K with no visibility into which teams or use cases drive costs. What is the highest-impact architectural change?",
@@ -154,7 +197,12 @@
         "Require managerial approval for every API request above 1,000 tokens"
       ],
       "correctAnswer": 1,
-      "explanation": "Visibility drives optimization. Per-team attribution lets teams own their costs, dashboards create accountability, budget alerts prevent surprises, and routing recommendations reduce spend without forcing capability cuts. Hard caps and approval flows introduce availability and throughput risks that enterprise platforms cannot accept."
+      "explanation": "Visibility drives optimization. Per-team attribution lets teams own their costs, dashboards create accountability, budget alerts prevent surprises, and routing recommendations reduce spend without forcing capability cuts. Hard caps and approval flows introduce availability and throughput risks that enterprise platforms cannot accept.",
+      "whyWrong": [
+        "Forcing everyone onto the cheapest model to control cost sacrifices output quality for teams whose tasks genuinely need stronger models — a blunt fix for a visibility problem.",
+        "A hard budget cap that rejects requests once exhausted disrupts business operations rather than addressing the root cause of the lack of visibility.",
+        "Requiring manual approval for every large request doesn't scale to 40 teams and doesn't provide the underlying cost-attribution data needed."
+      ]
     },
     {
       "question": "A healthcare AI system summarizes patient records. HIPAA compliance is mandatory. Which design element is most critical?",
@@ -165,7 +213,12 @@
         "Prompt caching to avoid resending patient information"
       ],
       "correctAnswer": 1,
-      "explanation": "HIPAA compliance for AI is non-negotiable and architectural: encryption protects data in transit and at rest, a BAA establishes legal accountability, log exclusion prevents incidental PHI exposure, de-identification reduces risk surface, and audit trails satisfy regulatory audits. These must be designed in from day one."
+      "explanation": "HIPAA compliance for AI is non-negotiable and architectural: encryption protects data in transit and at rest, a BAA establishes legal accountability, log exclusion prevents incidental PHI exposure, de-identification reduces risk surface, and audit trails satisfy regulatory audits. These must be designed in from day one.",
+      "whyWrong": [
+        "Model choice for quality doesn't address HIPAA's core requirements around data handling, agreements, and audit — it's the wrong lever entirely.",
+        "Batch processing off-peak is a cost optimization, not a compliance control — it does nothing for PHI protection.",
+        "Prompt caching is a performance/cost feature; it doesn't address encryption, BAAs, or PHI logging requirements."
+      ]
     },
     {
       "question": "You need to monitor a production multi-agent pipeline for quality degradation. Which set of metrics is most effective?",
@@ -176,7 +229,12 @@
         "Monthly cost totals"
       ],
       "correctAnswer": 1,
-      "explanation": "AI systems fail differently than traditional software — quality can degrade without any errors being thrown. Task completion rate shows whether work finishes, tool-call ratios reveal integration health, latency percentiles surface slowdowns, quality scores catch output degradation, context utilization warns of approaching limits, and escalation trends indicate whether the system is handling less autonomously over time."
+      "explanation": "AI systems fail differently than traditional software — quality can degrade without any errors being thrown. Task completion rate shows whether work finishes, tool-call ratios reveal integration health, latency percentiles surface slowdowns, quality scores catch output degradation, context utilization warns of approaching limits, and escalation trends indicate whether the system is handling less autonomously over time.",
+      "whyWrong": [
+        "Server-level CPU/memory metrics say nothing about whether the pipeline's actual task outputs are degrading in quality.",
+        "Raw daily API call volume doesn't indicate whether those calls are succeeding, accurate, or fast — it's a volume metric, not a quality metric.",
+        "Monthly cost totals track spend, not the quality-degradation signals (accuracy, latency, escalation rate) the question is asking about."
+      ]
     },
     {
       "question": "An AI-powered document processor runs two competing agents on the same input. Agent A finishes in 3 seconds; Agent B finishes in 12 seconds. Their outputs disagree. How should the system decide?",
@@ -187,7 +245,12 @@
         "Alternate between agents on every other request"
       ],
       "correctAnswer": 1,
-      "explanation": "In competitive evaluation, speed is irrelevant to quality. Both outputs must be evaluated against the same objective criteria. The higher-quality result is used regardless of which agent produced it. Logging disagreements enables continuous improvement of both agents."
+      "explanation": "In competitive evaluation, speed is irrelevant to quality. Both outputs must be evaluated against the same objective criteria. The higher-quality result is used regardless of which agent produced it. Logging disagreements enables continuous improvement of both agents.",
+      "whyWrong": [
+        "Always picking the faster agent ignores accuracy entirely — speed and correctness are independent, and this would systematically favor whichever agent is faster, not whichever is right.",
+        "Averaging two disagreeing textual/structured outputs isn't a meaningful operation and typically doesn't produce a valid combined result.",
+        "Alternating agents on every other request is arbitrary and doesn't resolve which of the two current disagreeing outputs is correct."
+      ]
     },
     {
       "question": "An enterprise is migrating from a legacy keyword-search system to Claude-powered semantic search. The legacy system handles 5M queries per month. What migration strategy minimizes risk?",
@@ -198,7 +261,12 @@
         "Run the Claude system in shadow mode for a week, then switch all traffic immediately"
       ],
       "correctAnswer": 1,
-      "explanation": "Canary deployment with parallel comparison is the safest migration path at scale. Small initial traffic limits blast radius, parallel comparison validates quality against the known-good baseline, gradual rollout builds organizational confidence, and automatic rollback prevents degraded service from reaching all users."
+      "explanation": "Canary deployment with parallel comparison is the safest migration path at scale. Small initial traffic limits blast radius, parallel comparison validates quality against the known-good baseline, gradual rollout builds organizational confidence, and automatic rollback prevents degraded service from reaching all users.",
+      "whyWrong": [
+        "A full cutover during a scheduled window offers no fallback if the new system underperforms at scale — high risk for 5M queries/month.",
+        "Individual teams opting in without centralized monitoring means quality regressions could go undetected across the transition.",
+        "Shadow mode for a week without gradual traffic ramp-up means the first real users see 100% Claude traffic immediately, with no rollback window based on live production behavior."
+      ]
     },
     {
       "question": "A production agent has access to 12 MCP tools and frequently selects the wrong one on its first attempt before self-correcting. What architectural change most improves first-attempt accuracy?",
@@ -209,7 +277,12 @@
         "Add a brute-force retry that tries every tool until one succeeds"
       ],
       "correctAnswer": 1,
-      "explanation": "Tool-selection accuracy drops as the number of similar tools grows. The architectural fix is three-pronged: compositing reduces the total count, clearer naming eliminates confusion between similar tools, and contextual filtering ensures the agent sees only what is relevant. This improves accuracy and reduces wasted tool calls."
+      "explanation": "Tool-selection accuracy drops as the number of similar tools grows. The architectural fix is three-pronged: compositing reduces the total count, clearer naming eliminates confusion between similar tools, and contextual filtering ensures the agent sees only what is relevant. This improves accuracy and reduces wasted tool calls.",
+      "whyWrong": [
+        "Simply adding more detail to every tool description without removing overlap adds more, not less, ambiguity for the model to disambiguate between similar options.",
+        "Increasing temperature adds randomness to tool selection, which would make first-attempt accuracy worse, not better.",
+        "A brute-force try-everything retry treats the symptom, not the cause, and wastes calls, latency, and cost on tools the model shouldn't have considered in the first place."
+      ]
     },
     {
       "question": "A self-healing agent workflow detects that a subagent has been stuck in a loop for 25 iterations. What is the best automated recovery strategy?",
@@ -220,7 +293,12 @@
         "Restart the same subagent with identical instructions"
       ],
       "correctAnswer": 1,
-      "explanation": "Self-healing workflows preserve progress rather than discarding it. State capture enables diagnosis, loop-pattern analysis reveals whether the strategy is fundamentally wrong or just needs adjustment, and a refined retry addresses the root cause. Human escalation is the fallback, not the first response. Simply killing the task or restarting with the same instructions wastes the work already done."
+      "explanation": "Self-healing workflows preserve progress rather than discarding it. State capture enables diagnosis, loop-pattern analysis reveals whether the strategy is fundamentally wrong or just needs adjustment, and a refined retry addresses the root cause. Human escalation is the fallback, not the first response. Simply killing the task or restarting with the same instructions wastes the work already done.",
+      "whyWrong": [
+        "Killing the subagent and reporting failure discards 25 iterations of potentially useful partial progress instead of trying a narrower recovery first.",
+        "Raising the iteration limit to 100 just delays the same failure mode longer and burns more cost without diagnosing why it's looping.",
+        "Restarting with identical instructions reproduces the exact same conditions that caused the loop in the first place — it won't behave differently."
+      ]
     },
     {
       "question": "An architect must defend a customer-facing Claude application against prompt injection. Which defense-in-depth strategy is most comprehensive?",
@@ -231,7 +309,12 @@
         "Using the largest model because it is harder to manipulate"
       ],
       "correctAnswer": 1,
-      "explanation": "Defense in depth layers independent controls: sanitization catches known patterns, privilege separation limits damage from successful attacks, output validation prevents data exfiltration, rate limiting slows brute-force probing, and anomaly detection identifies novel attack vectors. No single layer — including a system-prompt instruction — is sufficient on its own."
+      "explanation": "Defense in depth layers independent controls: sanitization catches known patterns, privilege separation limits damage from successful attacks, output validation prevents data exfiltration, rate limiting slows brute-force probing, and anomaly detection identifies novel attack vectors. No single layer — including a system-prompt instruction — is sufficient on its own.",
+      "whyWrong": [
+        "A single instruction telling the model to ignore contradicting user input is easily bypassed by more creative injection phrasing — it's not a structural defense.",
+        "Blocklisting specific words like 'ignore' or 'override' is trivially evaded by rephrasing and doesn't address the underlying architecture risk.",
+        "Model size doesn't provide meaningful resistance to prompt injection — injection exploits instruction-following behavior present at every model size."
+      ]
     }
   ]
 }

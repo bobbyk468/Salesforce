@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Claude Certified Developer exam for?",
     "personas": [
-      { "label": "Backend and Full-Stack Developers", "description": "Engineers who build production features on the Claude API — calling the Messages endpoint, handling streaming responses, wiring up tool use, and writing evaluation harnesses." },
-      { "label": "AI/ML Engineers Adopting Claude", "description": "Developers moving from other LLM providers who need to prove they understand Anthropic&apos;s SDK, prompt-injection defenses, and the tool-calling lifecycle end-to-end." },
-      { "label": "Technical Leads Shipping AI Features", "description": "Senior developers responsible for code quality and reliability in Claude-powered products who want a credential that validates production-grade integration skills." }
+      {
+        "label": "Backend and Full-Stack Developers",
+        "description": "Engineers who build production features on the Claude API — calling the Messages endpoint, handling streaming responses, wiring up tool use, and writing evaluation harnesses."
+      },
+      {
+        "label": "AI/ML Engineers Adopting Claude",
+        "description": "Developers moving from other LLM providers who need to prove they understand Anthropic&apos;s SDK, prompt-injection defenses, and the tool-calling lifecycle end-to-end."
+      },
+      {
+        "label": "Technical Leads Shipping AI Features",
+        "description": "Senior developers responsible for code quality and reliability in Claude-powered products who want a credential that validates production-grade integration skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -113,14 +122,38 @@
     ]
   },
   "tocSections": [
-    { "id": "exam-prep", "title": "Exam Prep Content" },
-    { "id": "key-concepts", "title": "Key Concepts" },
-    { "id": "scenario-tips", "title": "How to Pass" },
-    { "id": "difficulty-heatmap", "title": "Difficulty Heatmap" },
-    { "id": "practice-questions", "title": "Practice Questions" },
-    { "id": "more-questions", "title": "Get More Questions" },
-    { "id": "related-certs", "title": "Related Certifications" },
-    { "id": "faq", "title": "Exam FAQs" }
+    {
+      "id": "exam-prep",
+      "title": "Exam Prep Content"
+    },
+    {
+      "id": "key-concepts",
+      "title": "Key Concepts"
+    },
+    {
+      "id": "scenario-tips",
+      "title": "How to Pass"
+    },
+    {
+      "id": "difficulty-heatmap",
+      "title": "Difficulty Heatmap"
+    },
+    {
+      "id": "practice-questions",
+      "title": "Practice Questions"
+    },
+    {
+      "id": "more-questions",
+      "title": "Get More Questions"
+    },
+    {
+      "id": "related-certs",
+      "title": "Related Certifications"
+    },
+    {
+      "id": "faq",
+      "title": "Exam FAQs"
+    }
   ],
   "sampleQuestions": [
     {
@@ -132,7 +165,12 @@
         "Using a fine-tuned model trained on your order data"
       ],
       "correctAnswer": 1,
-      "explanation": "Tool use lets Claude call external functions when it needs data it doesn't have. You define the tool schema, Claude decides when to call it, and your code executes the actual database query and returns the result."
+      "explanation": "Tool use lets Claude call external functions when it needs data it doesn't have. You define the tool schema, Claude decides when to call it, and your code executes the actual database query and returns the result.",
+      "whyWrong": [
+        "Raising temperature makes output more random, not more able to retrieve real data — it doesn't connect Claude to your database at all.",
+        "Pasting an entire database into the system prompt doesn't scale, exposes excessive data per request, and can't reflect real-time updates.",
+        "A fine-tuned model bakes static training data into weights — it can't look up a specific, current order status from a live database."
+      ]
     },
     {
       "question": "Your API call returns a 529 status code. What does this indicate and what should you do?",
@@ -143,7 +181,12 @@
         "Your account has been suspended — contact support"
       ],
       "correctAnswer": 2,
-      "explanation": "A 529 means the API is temporarily overloaded. The correct response is exponential backoff with retries. This is different from a 429 (rate limit), which means your account specifically is sending too many requests."
+      "explanation": "A 529 means the API is temporarily overloaded. The correct response is exponential backoff with retries. This is different from a 429 (rate limit), which means your account specifically is sending too many requests.",
+      "whyWrong": [
+        "An invalid API key returns a 401 authentication error, not a 529.",
+        "A malformed request payload returns a 400-level client error, not a 529 overload signal.",
+        "Account suspension would return an authorization error, not the specific 'server overloaded' signal a 529 represents."
+      ]
     },
     {
       "question": "What is the primary risk of including user-supplied text directly in the system prompt without sanitization?",
@@ -154,7 +197,12 @@
         "User text in system prompts causes Claude to switch languages automatically"
       ],
       "correctAnswer": 1,
-      "explanation": "Prompt injection occurs when untrusted user input is placed where Claude treats it as instructions. User-supplied text should go in user messages, not system prompts, and system prompts should include explicit instructions to ignore any override attempts in user input."
+      "explanation": "Prompt injection occurs when untrusted user input is placed where Claude treats it as instructions. User-supplied text should go in user messages, not system prompts, and system prompts should include explicit instructions to ignore any override attempts in user input.",
+      "whyWrong": [
+        "System prompt billing rates aren't a thing — token cost doesn't vary based on where in the request the text appears.",
+        "The system prompt doesn't have a fixed 100-token limit — the real risk is behavioral override, not a length constraint.",
+        "Claude doesn't switch languages based on unsanitized user text in a system prompt — that's not the actual risk this scenario describes."
+      ]
     },
     {
       "question": "You want Claude to always return a specific JSON structure with fields 'summary', 'sentiment', and 'confidence'. What is the most reliable approach?",
@@ -165,7 +213,12 @@
         "Use a regular expression to extract JSON from any response"
       ],
       "correctAnswer": 1,
-      "explanation": "Reliable structured output requires a clear schema definition in the system prompt, low temperature for consistency, and defensive parsing in your code. Relying on a polite request or regex extraction is fragile in production."
+      "explanation": "Reliable structured output requires a clear schema definition in the system prompt, low temperature for consistency, and defensive parsing in your code. Relying on a polite request or regex extraction is fragile in production.",
+      "whyWrong": [
+        "Politely asking in the user message provides no structural guarantee — Claude may still deviate from the exact format.",
+        "Sizing max_tokens to a guessed character count doesn't enforce JSON structure or field names at all.",
+        "Regex extraction is a brittle workaround for unreliable output rather than a way to make the output itself reliable in the first place."
+      ]
     },
     {
       "question": "When should you use streaming responses instead of waiting for the complete response?",
@@ -176,7 +229,12 @@
         "Never — streaming adds unnecessary complexity"
       ],
       "correctAnswer": 1,
-      "explanation": "Streaming is most valuable in user-facing applications where perceived latency matters. Users see the first tokens within milliseconds instead of waiting seconds for a complete response. For background batch jobs, the added complexity of handling streaming events may not be worth it."
+      "explanation": "Streaming is most valuable in user-facing applications where perceived latency matters. Users see the first tokens within milliseconds instead of waiting seconds for a complete response. For background batch jobs, the added complexity of handling streaming events may not be worth it.",
+      "whyWrong": [
+        "Streaming isn't strictly better in every case — it adds complexity that's unnecessary for backend batch processing with no live UI.",
+        "There's no scenario where streaming is gated to exactly 100 tokens — that's not how the streaming API works.",
+        "Streaming is a legitimate, commonly used feature — dismissing it as 'never' needed ignores its real UX benefits for interactive applications."
+      ]
     },
     {
       "question": "Your Claude-powered feature worked well with claude-sonnet-4-20250514 but produces worse results after switching to a newer model version. What is the recommended approach?",
@@ -187,7 +245,12 @@
         "File a bug report and wait for Anthropic to fix the model"
       ],
       "correctAnswer": 1,
-      "explanation": "Model updates can shift behavior in ways that affect specific use cases. An eval suite catches regressions before they reach users. If some evals fail, the prompt may need adjustment for the new model's strengths — blind rollback or blind deployment both carry risk."
+      "explanation": "Model updates can shift behavior in ways that affect specific use cases. An eval suite catches regressions before they reach users. If some evals fail, the prompt may need adjustment for the new model's strengths — blind rollback or blind deployment both carry risk.",
+      "whyWrong": [
+        "Reverting permanently and never updating means missing future model improvements and eventually using a deprecated model.",
+        "Assuming a newer model is strictly better without testing risks silently shipping the exact regression this scenario describes.",
+        "Filing a bug report and waiting doesn't solve the immediate problem — evaluating and adjusting your own prompts is the actionable fix."
+      ]
     },
     {
       "question": "What happens when a conversation exceeds the model's context window?",
@@ -198,7 +261,12 @@
         "The API automatically charges for additional context capacity"
       ],
       "correctAnswer": 1,
-      "explanation": "The API does not silently truncate or auto-summarize. When a request exceeds the context window, it fails. Your application must manage conversation length — common strategies include summarizing older turns, dropping system-less messages, or starting a new conversation with a summary."
+      "explanation": "The API does not silently truncate or auto-summarize. When a request exceeds the context window, it fails. Your application must manage conversation length — common strategies include summarizing older turns, dropping system-less messages, or starting a new conversation with a summary.",
+      "whyWrong": [
+        "Claude does not automatically summarize older messages on its own when context overflows — the application must handle this.",
+        "The API returns an error rather than silently dropping old messages — silent truncation is not the actual API behavior.",
+        "There's no automatic additional charge triggered by exceeding context — the API simply errors, requiring the application to manage context size."
+      ]
     },
     {
       "question": "You need to process 10,000 support tickets through Claude for classification. Which approach is most appropriate?",
@@ -209,7 +277,12 @@
         "Copy and paste each ticket into Claude.ai manually"
       ],
       "correctAnswer": 1,
-      "explanation": "The Batches API is designed for high-volume, non-interactive workloads. It processes requests asynchronously, handles queuing internally, and offers a 50% cost reduction compared to real-time API calls. Single-call approaches fail on context limits, and synchronous loops are slow and fragile."
+      "explanation": "The Batches API is designed for high-volume, non-interactive workloads. It processes requests asynchronously, handles queuing internally, and offers a 50% cost reduction compared to real-time API calls. Single-call approaches fail on context limits, and synchronous loops are slow and fragile.",
+      "whyWrong": [
+        "A single massive prompt with 10,000 tickets would blow past context and token limits and isn't how ticket-level classification should work.",
+        "Processing synchronously one at a time with no error handling is slow, fragile, and forgoes the batch discount entirely.",
+        "Manually pasting each of 10,000 tickets into Claude.ai isn't remotely feasible at this scale."
+      ]
     },
     {
       "question": "A developer stores their Anthropic API key directly in the source code and pushes it to a public GitHub repository. What are the immediate risks?",
@@ -220,7 +293,12 @@
         "GitHub blocks all commits containing API keys"
       ],
       "correctAnswer": 1,
-      "explanation": "Leaked API keys are exploited within minutes — automated scanners constantly search public repositories. The key should be stored in environment variables or a secrets manager, and the compromised key should be rotated immediately via the Anthropic console."
+      "explanation": "Leaked API keys are exploited within minutes — automated scanners constantly search public repositories. The key should be stored in environment variables or a secrets manager, and the compromised key should be rotated immediately via the Anthropic console.",
+      "whyWrong": [
+        "Storing API keys in source code and pushing to a public repo is a well-documented, serious security anti-pattern, not standard practice.",
+        "Keys don't automatically expire when pushed to GitHub — they remain valid until manually revoked.",
+        "GitHub does not universally block commits containing API keys — secret scanning can flag some patterns after the fact, but it isn't a guaranteed preventative block."
+      ]
     },
     {
       "question": "When defining a tool for Claude, what makes a good tool description?",
@@ -231,7 +309,12 @@
         "Leave the description empty and let Claude figure out the tool's purpose from its name"
       ],
       "correctAnswer": 1,
-      "explanation": "Claude relies on tool descriptions to decide when a tool is relevant and how to call it correctly. A thorough description with parameter semantics and usage guidance produces better tool-selection accuracy than a terse or missing description."
+      "explanation": "Claude relies on tool descriptions to decide when a tool is relevant and how to call it correctly. A thorough description with parameter semantics and usage guidance produces better tool-selection accuracy than a terse or missing description.",
+      "whyWrong": [
+        "An extremely short, one-word description gives Claude no basis for deciding when or how to use the tool correctly.",
+        "Tool descriptions are written in natural language, not a programming language the model 'executes' — that's not how tool definitions work.",
+        "Leaving the description empty removes the exact information Claude relies on to decide whether and how to call the tool."
+      ]
     }
   ]
 }
