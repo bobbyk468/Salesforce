@@ -80,6 +80,18 @@ import RecordAccessCalculationDiagram from '@/components/certifications/RecordAc
 import TableauHADRDiagram from '@/components/certifications/TableauHADRDiagram'
 import CTABoardStructureDiagram from '@/components/certifications/CTABoardStructureDiagram'
 import CTAEvaluationStructureDiagram from '@/components/certifications/CTAEvaluationStructureDiagram'
+import EmailDeliverabilityDiagram from '@/components/certifications/EmailDeliverabilityDiagram'
+import ReplyMailManagementDiagram from '@/components/certifications/ReplyMailManagementDiagram'
+import AMPscriptExecutionDiagram from '@/components/certifications/AMPscriptExecutionDiagram'
+import MCCapabilitiesMapDiagram from '@/components/certifications/MCCapabilitiesMapDiagram'
+import PardotFormLifecycleDiagram from '@/components/certifications/PardotFormLifecycleDiagram'
+import DataToDashboardDiagram from '@/components/certifications/DataToDashboardDiagram'
+import ChartTypesReferenceDiagram from '@/components/certifications/ChartTypesReferenceDiagram'
+import TSMArchitectureDiagram from '@/components/certifications/TSMArchitectureDiagram'
+import WhatIsSalesforceDiagram from '@/components/certifications/WhatIsSalesforceDiagram'
+import SalesMethodologyDiagram from '@/components/certifications/SalesMethodologyDiagram'
+import JTBDFrameworkDiagram from '@/components/certifications/JTBDFrameworkDiagram'
+import SLDSHooksDiagram from '@/components/certifications/SLDSHooksDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -327,6 +339,18 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'technical-architect' ? <CTABoardStructureDiagram /> : null}
         {slug === 'technical-architect-evaluation' ? <CTAEvaluationStructureDiagram /> : null}
         {slug === 'technical-architect-review-board' ? <CTABoardStructureDiagram /> : null}
+        {slug === 'email-specialist' ? <EmailDeliverabilityDiagram /> : null}
+        {slug === 'marketing-cloud-engagement-admin' ? <ReplyMailManagementDiagram /> : null}
+        {slug === 'marketing-cloud-engagement-developer' ? <AMPscriptExecutionDiagram /> : null}
+        {slug === 'marketing-cloud-engagement-foundations' ? <MCCapabilitiesMapDiagram /> : null}
+        {slug === 'pardot-specialist' ? <PardotFormLifecycleDiagram /> : null}
+        {slug === 'tableau-data-analyst' ? <DataToDashboardDiagram /> : null}
+        {slug === 'tableau-desktop-foundations' ? <ChartTypesReferenceDiagram /> : null}
+        {slug === 'tableau-server-administrator' ? <TSMArchitectureDiagram /> : null}
+        {slug === 'platform-foundations' ? <WhatIsSalesforceDiagram /> : null}
+        {slug === 'sales-foundations' ? <SalesMethodologyDiagram /> : null}
+        {slug === 'strategy-designer' ? <JTBDFrameworkDiagram /> : null}
+        {slug === 'ux-designer' ? <SLDSHooksDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
