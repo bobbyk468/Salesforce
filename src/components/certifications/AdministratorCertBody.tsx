@@ -20,7 +20,7 @@ const AdministratorCtaSections = dynamic(() => import('@/components/Administrato
     <div className="mt-12 min-h-[340px] w-full" aria-hidden="true" />
   ),
 })
-import CertPageSeo from '@/components/CertPageSeo'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -407,7 +407,7 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </ul>
             </section>
 
-            {/* FAQ section - rendered after H1 for proper SEO structure */}
+            <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
           </div>
 
           {/* Sidebar - Table of Contents */}

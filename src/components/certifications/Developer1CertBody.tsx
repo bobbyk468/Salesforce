@@ -3,7 +3,7 @@ import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
-import CertPageSeo from '@/components/CertPageSeo'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -641,7 +641,7 @@ private class CalloutServiceTest {
             </p>
           </section>
 
-          {/* FAQ section - rendered after H1 for proper SEO structure */}
+          <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
         </div>
 
         {/* Sidebar - Table of Contents */}

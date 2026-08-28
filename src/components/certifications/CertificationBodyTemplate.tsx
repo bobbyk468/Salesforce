@@ -3,7 +3,7 @@ import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
-import CertPageSeo from '@/components/CertPageSeo'
+import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -370,6 +370,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
 
         <FullQuestionBankCta slug={slug} certTitle={title} />
 
+        <CertPageFaq slug={slug} certTitle={title} />
+
         {body.nextCertsAfter ? (
           <section
             className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
@@ -488,6 +490,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
             {body.moreQuestionsBlock.ctaLabel}
           </a>
         </div>
+
+        <CertPageFaq slug={slug} certTitle={title} />
 
         <div id="related-certs">
           <RelatedCertifications currentSlug={slug} />
