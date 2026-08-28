@@ -45,6 +45,15 @@ import QuoteToCashDiagram from '@/components/certifications/QuoteToCashDiagram'
 import ExperienceLicenseDiagram from '@/components/certifications/ExperienceLicenseDiagram'
 import FieldServiceDataModelDiagram from '@/components/certifications/FieldServiceDataModelDiagram'
 import SlackWorkspaceOrgDiagram from '@/components/certifications/SlackWorkspaceOrgDiagram'
+import AsyncApexDiagram from '@/components/certifications/AsyncApexDiagram'
+import SFRAArchitectureDiagram from '@/components/certifications/SFRAArchitectureDiagram'
+import CPQVsOmniStudioDiagram from '@/components/certifications/CPQVsOmniStudioDiagram'
+import LWCExecutionDiagram from '@/components/certifications/LWCExecutionDiagram'
+import APILedConnectivityDiagram from '@/components/certifications/APILedConnectivityDiagram'
+import DataWeaveTransformDiagram from '@/components/certifications/DataWeaveTransformDiagram'
+import RPAvsComposerDiagram from '@/components/certifications/RPAvsComposerDiagram'
+import FlexCardOmniScriptDiagram from '@/components/certifications/FlexCardOmniScriptDiagram'
+import BoltSDKDiagram from '@/components/certifications/BoltSDKDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -255,6 +264,15 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'experience-cloud' ? <ExperienceLicenseDiagram /> : null}
         {slug === 'field-service' ? <FieldServiceDataModelDiagram /> : null}
         {slug === 'slack-administrator' ? <SlackWorkspaceOrgDiagram /> : null}
+        {slug === 'developer-2' ? <AsyncApexDiagram /> : null}
+        {slug === 'b2c-commerce-developer' ? <SFRAArchitectureDiagram /> : null}
+        {slug === 'industries-cpq-developer' ? <CPQVsOmniStudioDiagram /> : null}
+        {slug === 'javascript-developer-i' ? <LWCExecutionDiagram /> : null}
+        {slug === 'mulesoft-developer-i' ? <APILedConnectivityDiagram /> : null}
+        {slug === 'mulesoft-developer-ii' ? <DataWeaveTransformDiagram /> : null}
+        {slug === 'mulesoft-hyperautomation-developer' ? <RPAvsComposerDiagram /> : null}
+        {slug === 'omnistudio-developer' ? <FlexCardOmniScriptDiagram /> : null}
+        {slug === 'slack-developer' ? <BoltSDKDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
