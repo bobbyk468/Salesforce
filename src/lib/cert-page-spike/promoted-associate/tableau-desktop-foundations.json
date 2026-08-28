@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Tableau Desktop Foundations exam for?",
     "personas": [
-      { "label": "Tableau Beginners", "description": "People learning Tableau Desktop who want an entry-level credential to validate their core data visualization skills." },
-      { "label": "Business Users", "description": "Professionals transitioning from Excel and spreadsheet reporting to interactive Tableau dashboards for data analysis." },
-      { "label": "Students &amp; Career Changers", "description": "Individuals building a foundation in analytics and visualization as a stepping stone to advanced Tableau certifications." }
+      {
+        "label": "Tableau Beginners",
+        "description": "People learning Tableau Desktop who want an entry-level credential to validate their core data visualization skills."
+      },
+      {
+        "label": "Business Users",
+        "description": "Professionals transitioning from Excel and spreadsheet reporting to interactive Tableau dashboards for data analysis."
+      },
+      {
+        "label": "Students &amp; Career Changers",
+        "description": "Individuals building a foundation in analytics and visualization as a stepping stone to advanced Tableau certifications."
+      }
     ]
   },
   "examDifficulty": {
@@ -161,7 +170,12 @@
         "Salesforce CRM configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards in Tableau Desktop."
+      "explanation": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards in Tableau Desktop.",
+      "whyWrong": [
+        "'Server administration only' misrepresents Foundations, which is about core Desktop skills, not server administration.",
+        "Marketing automation is unrelated to Tableau Desktop Foundations.",
+        "Salesforce CRM configuration is unrelated to Tableau Desktop Foundations."
+      ]
     },
     {
       "question": "Which is a fundamental Tableau Desktop concept?",
@@ -172,7 +186,12 @@
         "Email templates"
       ],
       "correctAnswer": 1,
-      "explanation": "Dimensions, measures, and the shelf (Rows, Columns, Marks) are fundamental to building views in Tableau Desktop."
+      "explanation": "Dimensions, measures, and the shelf (Rows, Columns, Marks) are fundamental to building views in Tableau Desktop.",
+      "whyWrong": [
+        "'Only colors' undersells the fundamental concepts, which include dimensions, measures, and shelves broadly.",
+        "Apex programming is a Salesforce Core language, unrelated to Tableau Desktop concepts.",
+        "Email templates are unrelated to Tableau Desktop's core visualization concepts."
+      ]
     },
     {
       "question": "What do the Rows and Columns shelves do in Tableau?",
@@ -183,7 +202,12 @@
         "Change colors"
       ],
       "correctAnswer": 1,
-      "explanation": "Rows and Columns define the layout of the visualization. Fields create headers, axes, and panes."
+      "explanation": "Rows and Columns define the layout of the visualization. Fields create headers, axes, and panes.",
+      "whyWrong": [
+        "'Store data only' misrepresents the Rows/Columns shelves, which define view structure, not data storage.",
+        "'Apply filters only' undersells the Rows/Columns shelves' broader structural role beyond filtering.",
+        "'Change colors' misattributes the Rows/Columns shelves' function to a different visual property (that's the Marks card)."
+      ]
     },
     {
       "question": "Which data type appears as a dimension (blue pill) by default in Tableau?",
@@ -194,7 +218,12 @@
         "Only booleans"
       ],
       "correctAnswer": 1,
-      "explanation": "Text, dates, and booleans default to dimensions. Numeric fields often default to measures."
+      "explanation": "Text, dates, and booleans default to dimensions. Numeric fields often default to measures.",
+      "whyWrong": [
+        "'Only numbers' is the opposite of what typically becomes a dimension — numbers are usually measures.",
+        "'Only dates' undersells the broader set of data types (text, booleans too) that appear as dimensions.",
+        "'Only booleans' undersells the broader set of data types (text, dates too) that appear as dimensions."
+      ]
     },
     {
       "question": "What does the Marks card control in Tableau?",
@@ -205,7 +234,12 @@
         "Calculations only"
       ],
       "correctAnswer": 1,
-      "explanation": "The Marks card controls how data points are encoded: color, size, label, tooltip, and more."
+      "explanation": "The Marks card controls how data points are encoded: color, size, label, tooltip, and more.",
+      "whyWrong": [
+        "Data connection is a separate step, not what the Marks card itself controls.",
+        "'Filters only' undersells the Marks card's broader control over color, size, text, and detail.",
+        "'Calculations only' misattributes the Marks card's function to a different Tableau capability."
+      ]
     },
     {
       "question": "Which Tableau feature lets you connect to Excel or CSV files?",
@@ -216,7 +250,12 @@
         "Only JSON"
       ],
       "correctAnswer": 1,
-      "explanation": "Connect to a File lets you use Excel, CSV, and other file-based data sources."
+      "explanation": "Connect to a File lets you use Excel, CSV, and other file-based data sources.",
+      "whyWrong": [
+        "'Only databases' undersells the file-connection capability, which covers Excel, CSV, PDF, and more.",
+        "'Only PDF' undersells the broader set of file types Tableau can connect to.",
+        "'Only JSON' undersells the broader set of file types Tableau can connect to."
+      ]
     },
     {
       "question": "What is a filter in Tableau used for?",
@@ -227,7 +266,12 @@
         "Connecting to servers"
       ],
       "correctAnswer": 1,
-      "explanation": "Filters restrict the data displayed in a view based on field values or conditions."
+      "explanation": "Filters restrict the data displayed in a view based on field values or conditions.",
+      "whyWrong": [
+        "'Changing colors only' misattributes filtering's actual purpose, which is limiting displayed data.",
+        "Filters don't delete data — they limit what's displayed, not what's stored.",
+        "'Connecting to servers' misattributes filtering's function to a different, unrelated data-connection concept."
+      ]
     },
     {
       "question": "Which chart type uses bars to compare categories?",
@@ -238,7 +282,12 @@
         "Map"
       ],
       "correctAnswer": 1,
-      "explanation": "Bar charts compare values across categories using horizontal or vertical bars."
+      "explanation": "Bar charts compare values across categories using horizontal or vertical bars.",
+      "whyWrong": [
+        "A line chart shows trends over time, not category comparison via bars.",
+        "A pie chart shows part-to-whole composition, not the bar-based category comparison being asked about.",
+        "A map shows geographic data, not the bar-based category comparison being asked about."
+      ]
     },
     {
       "question": "What does 'aggregate' mean in Tableau?",
@@ -249,7 +298,12 @@
         "Connect tables"
       ],
       "correctAnswer": 1,
-      "explanation": "Aggregation summarizes measures (SUM, AVG, etc.) at the granularity defined by dimensions in the view."
+      "explanation": "Aggregation summarizes measures (SUM, AVG, etc.) at the granularity defined by dimensions in the view.",
+      "whyWrong": [
+        "'Combine colors' misattributes aggregation's function to an unrelated visual property.",
+        "Aggregation doesn't delete data — it summarizes values, not removes them.",
+        "'Connect tables' misattributes aggregation's function to a data-connection concept, which is unrelated."
+      ]
     },
     {
       "question": "How do you create a dashboard in Tableau Desktop?",
@@ -260,7 +314,12 @@
         "Only from CSV"
       ],
       "correctAnswer": 1,
-      "explanation": "The Dashboard tab lets you add worksheets, images, text, and objects to create a unified view."
+      "explanation": "The Dashboard tab lets you add worksheets, images, text, and objects to create a unified view.",
+      "whyWrong": [
+        "'Only in Server' contradicts the fact that dashboards are built directly in Tableau Desktop.",
+        "'Dashboards are automatic' contradicts the fact that building a dashboard requires deliberate use of the Dashboard tab.",
+        "'Only from CSV' incorrectly ties dashboard creation to a specific data source type, which isn't a requirement."
+      ]
     },
     {
       "question": "What is the difference between discrete and continuous in Tableau?",
@@ -271,7 +330,12 @@
         "Only for dates"
       ],
       "correctAnswer": 1,
-      "explanation": "Discrete fields create headers and categories; continuous fields create axes. Pill color indicates type."
+      "explanation": "Discrete fields create headers and categories; continuous fields create axes. Pill color indicates type.",
+      "whyWrong": [
+        "'No difference' contradicts the fact that discrete and continuous have distinct, defined behaviors (headers vs. axes).",
+        "'Only for colors' undersells the broader header-versus-axis distinction discrete/continuous represents.",
+        "'Only for dates' undersells the broader applicability of the discrete/continuous distinction beyond just dates."
+      ]
     },
     {
       "question": "Which Tableau feature shows a summary when you hover over a mark?",
@@ -282,7 +346,12 @@
         "Parameters"
       ],
       "correctAnswer": 1,
-      "explanation": "Tooltips display contextual information when users hover over marks in the view."
+      "explanation": "Tooltips display contextual information when users hover over marks in the view.",
+      "whyWrong": [
+        "Filters limit displayed data — they don't show a hover summary.",
+        "Legends explain color/size encoding — they don't show a hover summary of a specific mark.",
+        "Parameters are input controls — they don't show a hover summary of a mark."
+      ]
     },
     {
       "question": "What does the Show Me panel in Tableau do?",
@@ -293,7 +362,12 @@
         "Applies filters only"
       ],
       "correctAnswer": 1,
-      "explanation": "Show Me suggests visualization types based on the fields you have selected."
+      "explanation": "Show Me suggests visualization types based on the fields you have selected.",
+      "whyWrong": [
+        "'Manages licenses' misattributes Show Me's function to an unrelated administrative feature.",
+        "'Connects to data only' misattributes Show Me's function, which is chart recommendation, not data connection.",
+        "'Applies filters only' misattributes Show Me's function to a different, unrelated feature."
+      ]
     },
     {
       "question": "How do you sort a bar chart in Tableau?",
@@ -304,7 +378,12 @@
         "Only for dimensions"
       ],
       "correctAnswer": 1,
-      "explanation": "Use the sort icon on the axis or the field's sort option to order bars by value or manually."
+      "explanation": "Use the sort icon on the axis or the field's sort option to order bars by value or manually.",
+      "whyWrong": [
+        "'Cannot sort' contradicts the fact that sorting is a standard, available Tableau feature.",
+        "Sorting isn't limited to dashboards — it's available directly on worksheets too.",
+        "Sorting isn't limited to dimensions — measures can be involved in sort order too."
+      ]
     },
     {
       "question": "What is a Tableau worksheet?",
@@ -315,7 +394,12 @@
         "A filter only"
       ],
       "correctAnswer": 1,
-      "explanation": "A worksheet is a single view—one chart, map, or table. Dashboards combine multiple worksheets."
+      "explanation": "A worksheet is a single view—one chart, map, or table. Dashboards combine multiple worksheets.",
+      "whyWrong": [
+        "A data source is the underlying connection, not the visualization itself.",
+        "A dashboard combines multiple worksheets — a single worksheet is a smaller, individual component.",
+        "A filter limits displayed data — it isn't itself a visualization."
+      ]
     }
   ]
 }

@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Tableau Server Administrator exam for?",
     "personas": [
-      { "label": "IT Administrators", "description": "Professionals responsible for deploying, configuring, and maintaining Tableau Server or Tableau Cloud environments for their organization." },
-      { "label": "System Administrators", "description": "Admins managing user provisioning, authentication (SAML, LDAP, Active Directory), and security policies for Tableau Server." },
-      { "label": "Operations Teams", "description": "Teams monitoring server health, managing extract refresh schedules, troubleshooting failures, and performing backup and recovery." }
+      {
+        "label": "IT Administrators",
+        "description": "Professionals responsible for deploying, configuring, and maintaining Tableau Server or Tableau Cloud environments for their organization."
+      },
+      {
+        "label": "System Administrators",
+        "description": "Admins managing user provisioning, authentication (SAML, LDAP, Active Directory), and security policies for Tableau Server."
+      },
+      {
+        "label": "Operations Teams",
+        "description": "Teams monitoring server health, managing extract refresh schedules, troubleshooting failures, and performing backup and recovery."
+      }
     ]
   },
   "examDifficulty": {
@@ -165,7 +174,12 @@
         "Marketing automation"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud environments."
+      "explanation": "Tableau Server Administrators deploy, configure, and manage Tableau Server and Tableau Cloud environments.",
+      "whyWrong": [
+        "'Creating dashboards only' undersells the role, which is about server deployment and management, not dashboard authoring.",
+        "Managing Salesforce CRM is unrelated to Tableau Server administration.",
+        "Marketing automation is unrelated to Tableau Server administration."
+      ]
     },
     {
       "question": "Which area is critical for a Tableau Server Administrator?",
@@ -176,7 +190,12 @@
         "CPQ configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "Administrators focus on installation, security, user/site management, and performance tuning of Tableau Server."
+      "explanation": "Administrators focus on installation, security, user/site management, and performance tuning of Tableau Server.",
+      "whyWrong": [
+        "'Only visualization design' undersells the role, which spans installation, security, and performance, not design.",
+        "Email campaigns are unrelated to Tableau Server administration.",
+        "CPQ configuration is unrelated to Tableau Server administration."
+      ]
     },
     {
       "question": "Which Tableau Server feature is used to control access at the project and workbook level?",
@@ -187,7 +206,12 @@
         "Ask Data"
       ],
       "correctAnswer": 1,
-      "explanation": "Permissions and project-level locking help administrators enforce consistent access controls for workbooks, views, and data sources."
+      "explanation": "Permissions and project-level locking help administrators enforce consistent access controls for workbooks, views, and data sources.",
+      "whyWrong": [
+        "Data Source Filters control row-level data visibility within a workbook, not project/workbook-level access control.",
+        "Subscriptions deliver scheduled content — they don't control access permissions.",
+        "Ask Data is a natural-language query feature, unrelated to access control."
+      ]
     },
     {
       "question": "A Tableau Server environment shows slow dashboard loads during peak hours. What should an administrator review first?",
@@ -198,7 +222,12 @@
         "Email subscription frequency only"
       ],
       "correctAnswer": 1,
-      "explanation": "Performance tuning starts with server process configuration and host resource bottlenecks (CPU, memory, queue depth) before cosmetic dashboard changes."
+      "explanation": "Performance tuning starts with server process configuration and host resource bottlenecks (CPU, memory, queue depth) before cosmetic dashboard changes.",
+      "whyWrong": [
+        "Workbook color palette is a design detail, unrelated to server performance during peak load.",
+        "Dashboard title naming convention is a cosmetic detail, unrelated to performance troubleshooting.",
+        "Email subscription frequency alone doesn't address the underlying server process/resource issue causing slow loads."
+      ]
     },
     {
       "question": "What is the best practice when integrating Tableau Server authentication with enterprise identity systems?",
@@ -209,7 +238,12 @@
         "Share one admin account across teams"
       ],
       "correctAnswer": 2,
-      "explanation": "Enterprise deployments typically use SAML/OpenID with strict certificate validation and time synchronization to avoid authentication failures."
+      "explanation": "Enterprise deployments typically use SAML/OpenID with strict certificate validation and time synchronization to avoid authentication failures.",
+      "whyWrong": [
+        "Using local users for everyone bypasses enterprise identity management, the opposite of best practice.",
+        "Disabling SSL for faster login introduces a serious security risk and isn't a recommended practice.",
+        "Sharing one admin account across teams is a poor security practice, not the identity integration best practice being asked about."
+      ]
     },
     {
       "question": "Which admin activity most directly supports long-term Tableau Server stability?",
@@ -220,7 +254,12 @@
         "Publishing all workbooks to one project"
       ],
       "correctAnswer": 2,
-      "explanation": "Proactive monitoring of jobs, storage, and backup/restore workflows helps prevent outages and data freshness issues."
+      "explanation": "Proactive monitoring of jobs, storage, and backup/restore workflows helps prevent outages and data freshness issues.",
+      "whyWrong": [
+        "Changing dashboard fonts weekly has no bearing on server stability.",
+        "Ignoring failed extract refreshes would degrade reliability, the opposite of supporting stability.",
+        "Publishing all workbooks to a single project doesn't support stability — it's a content organization anti-pattern."
+      ]
     },
     {
       "question": "What does the Tableau Services Manager (TSM) do?",
@@ -231,7 +270,12 @@
         "Handles licensing only"
       ],
       "correctAnswer": 1,
-      "explanation": "TSM is the command-line and web interface for managing Tableau Server deployment and configuration."
+      "explanation": "TSM is the command-line and web interface for managing Tableau Server deployment and configuration.",
+      "whyWrong": [
+        "TSM doesn't create dashboards — that's a content-authoring task, not a server management function.",
+        "TSM manages more than just data sources — its scope includes installation and configuration broadly.",
+        "TSM handles more than just licensing — that's just one part of its broader configuration role."
+      ]
     },
     {
       "question": "Which Tableau Server process handles interactive view requests?",
@@ -242,7 +286,12 @@
         "Gateway only"
       ],
       "correctAnswer": 1,
-      "explanation": "VizQL Server processes interactive view requests and queries. Sizing it affects responsiveness."
+      "explanation": "VizQL Server processes interactive view requests and queries. Sizing it affects responsiveness.",
+      "whyWrong": [
+        "Backgrounder handles background jobs (extracts, subscriptions), not interactive view rendering.",
+        "Data Server centralizes published data sources — it doesn't handle interactive view requests directly.",
+        "Gateway routes requests — it isn't itself the process handling interactive VizQL rendering."
+      ]
     },
     {
       "question": "What is a Tableau Server site used for?",
@@ -253,7 +302,12 @@
         "Only for development"
       ],
       "correctAnswer": 1,
-      "explanation": "Sites provide logical separation for multi-tenant or departmental deployments."
+      "explanation": "Sites provide logical separation for multi-tenant or departmental deployments.",
+      "whyWrong": [
+        "A single workbook doesn't represent a site's broader isolation scope, which spans users and permissions org-wide.",
+        "Sites aren't limited to testing use — they're a production content/user isolation mechanism.",
+        "Sites aren't limited to development use — they're a production content/user isolation mechanism."
+      ]
     },
     {
       "question": "How do you add users to Tableau Server?",
@@ -264,7 +318,12 @@
         "Only via CSV"
       ],
       "correctAnswer": 1,
-      "explanation": "Users can be added via TSM, the Server UI, or through identity provider sync."
+      "explanation": "Users can be added via TSM, the Server UI, or through identity provider sync.",
+      "whyWrong": [
+        "'Only manually' undersells the broader set of user-provisioning methods (TSM, UI, identity sync) available.",
+        "'Only via API' undersells the broader set of user-provisioning methods beyond just API access.",
+        "'Only via CSV' undersells the broader set of user-provisioning methods beyond just CSV import."
+      ]
     },
     {
       "question": "What is the purpose of Tableau Server's gateway?",
@@ -275,7 +334,12 @@
         "Manages extracts only"
       ],
       "correctAnswer": 1,
-      "explanation": "The gateway receives requests and routes them to the appropriate services."
+      "explanation": "The gateway receives requests and routes them to the appropriate services.",
+      "whyWrong": [
+        "The gateway doesn't render views itself — that's VizQL Server's job; the gateway routes requests.",
+        "The gateway doesn't store data — that's a database/repository function.",
+        "The gateway doesn't manage extracts — that's a separate backgrounder function."
+      ]
     },
     {
       "question": "Which log should you check first for failed extract refreshes?",
@@ -286,7 +350,12 @@
         "Repository logs only"
       ],
       "correctAnswer": 1,
-      "explanation": "Backgrounder runs extract refreshes; its logs show failures and errors."
+      "explanation": "Backgrounder runs extract refreshes; its logs show failures and errors.",
+      "whyWrong": [
+        "VizQL logs relate to view rendering, not extract refresh failures.",
+        "Gateway logs relate to request routing, not extract refresh failures specifically.",
+        "Repository logs relate to metadata storage, not the specific extract refresh process."
+      ]
     },
     {
       "question": "What does Tableau Cloud's managed infrastructure mean for admins?",
@@ -297,7 +366,12 @@
         "No difference from on-prem"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Cloud is fully managed; admins focus on sites, users, permissions, and content."
+      "explanation": "Tableau Cloud is fully managed; admins focus on sites, users, permissions, and content.",
+      "whyWrong": [
+        "'No admin needed' contradicts the fact that admins still manage sites, users, and governance in Tableau Cloud.",
+        "'Admins manage everything' overstates the admin's role — Tableau manages the underlying infrastructure in Cloud.",
+        "'No difference from on-prem' contradicts the real infrastructure management differences between Cloud and Server."
+      ]
     },
     {
       "question": "Which Tableau Server feature helps prevent workbook overwrites?",
@@ -308,7 +382,12 @@
         "Only version history"
       ],
       "correctAnswer": 1,
-      "explanation": "Lock Permissions prevent users from changing project settings; combined with ownership for content control."
+      "explanation": "Lock Permissions prevent users from changing project settings; combined with ownership for content control.",
+      "whyWrong": [
+        "'No such feature' contradicts the fact that Lock Permissions is a real, documented Tableau Server feature.",
+        "'Only manual backup' misattributes overwrite prevention to an unrelated backup process.",
+        "'Only version history' undersells the specific project-level lock mechanism, which is distinct from version history."
+      ]
     },
     {
       "question": "What should an administrator do before upgrading Tableau Server?",
@@ -319,7 +398,12 @@
         "Only backup workbooks"
       ],
       "correctAnswer": 1,
-      "explanation": "Repository backup, staging tests, and release notes review are essential before upgrades."
+      "explanation": "Repository backup, staging tests, and release notes review are essential before upgrades.",
+      "whyWrong": [
+        "Upgrading immediately without preparation risks unplanned downtime and issues.",
+        "'Nothing' contradicts the fact that real precautions (backup, testing) are recommended before upgrading.",
+        "Backing up only workbooks misses the repository data essential for full recovery if something goes wrong."
+      ]
     }
   ]
 }

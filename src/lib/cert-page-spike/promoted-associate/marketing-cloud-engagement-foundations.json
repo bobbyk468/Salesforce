@@ -172,7 +172,12 @@
         "Sales only"
       ],
       "correctAnswer": 1,
-      "explanation": "It is designed for individuals with foundational understanding and up to 6 months of Marketing Cloud Engagement experience."
+      "explanation": "It is designed for individuals with foundational understanding and up to 6 months of Marketing Cloud Engagement experience.",
+      "whyWrong": [
+        "'Developers only' is too narrow — this foundational certification targets general platform users, not developers specifically.",
+        "'Architects only' is too narrow — this is an entry-level, foundational credential, not an architect-level one.",
+        "'Sales only' is too narrow — this certification is for anyone with foundational Marketing Cloud experience, not a specific role."
+      ]
     },
     {
       "question": "Which Marketing Cloud product is used for email campaigns?",
@@ -183,7 +188,12 @@
         "Commerce Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Email Studio is used for building and sending email campaigns."
+      "explanation": "Email Studio is used for building and sending email campaigns.",
+      "whyWrong": [
+        "Slack is a collaboration tool, unrelated to email campaign sending.",
+        "Heroku is a PaaS platform, unrelated to email campaigns.",
+        "Commerce Cloud is an e-commerce platform, unrelated to email campaigns."
+      ]
     },
     {
       "question": "What is a Subscriber in Marketing Cloud?",
@@ -194,7 +204,12 @@
         "An admin"
       ],
       "correctAnswer": 1,
-      "explanation": "A subscriber is a contact or recipient in Marketing Cloud."
+      "explanation": "A subscriber is a contact or recipient in Marketing Cloud.",
+      "whyWrong": [
+        "A report displays data — it isn't itself a person who receives communications.",
+        "A dashboard visualizes data — it isn't a recipient of marketing communications.",
+        "An admin manages the platform — that's a role, not the recipient concept being described."
+      ]
     },
     {
       "question": "Which concept is central to Marketing Cloud data?",
@@ -205,7 +220,12 @@
         "Only journeys"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Extensions and subscriber management are central to Marketing Cloud data."
+      "explanation": "Data Extensions and subscriber management are central to Marketing Cloud data.",
+      "whyWrong": [
+        "'Only reports' undersells the central data concept, which is about Data Extensions and subscriber management broadly.",
+        "'Only emails' undersells the central data concept, which spans data structure, not just the email channel.",
+        "'Only journeys' undersells the central data concept, which is broader than just journey orchestration."
+      ]
     },
     {
       "question": "What does Journey Builder allow marketers to do?",
@@ -216,7 +236,12 @@
         "Only manage lists"
       ],
       "correctAnswer": 1,
-      "explanation": "Journey Builder creates multi-step, automated customer journeys."
+      "explanation": "Journey Builder creates multi-step, automated customer journeys.",
+      "whyWrong": [
+        "'Only send one email' is the opposite of Journey Builder's multi-step orchestration capability.",
+        "'Only run reports' misattributes Journey Builder's purpose to a different reporting function.",
+        "'Only manage lists' misattributes Journey Builder's purpose to a different data management function."
+      ]
     },
     {
       "question": "What is a Data Extension in Marketing Cloud?",
@@ -227,7 +252,12 @@
         "A journey"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Extensions store contact and marketing data for sends and journeys."
+      "explanation": "Data Extensions store contact and marketing data for sends and journeys.",
+      "whyWrong": [
+        "A report alone displays data — it isn't the underlying storage table.",
+        "An email template is a content asset, not a data storage structure.",
+        "A journey orchestrates communication — it isn't itself a data storage structure."
+      ]
     },
     {
       "question": "Which Marketing Cloud product sends scheduled emails?",
@@ -238,7 +268,12 @@
         "Heroku"
       ],
       "correctAnswer": 1,
-      "explanation": "Email Studio and Automation Studio send scheduled emails."
+      "explanation": "Email Studio and Automation Studio send scheduled emails.",
+      "whyWrong": [
+        "'Journey Builder only' misattributes scheduled email sending to a different tool focused on multi-step journeys.",
+        "Slack is a collaboration tool, unrelated to scheduled email sending.",
+        "Heroku is a PaaS platform, unrelated to scheduled email sending."
+      ]
     },
     {
       "question": "What does a Send Definition define?",
@@ -249,7 +284,12 @@
         "Only audience"
       ],
       "correctAnswer": 1,
-      "explanation": "Send Definition defines audience, content, and timing."
+      "explanation": "Send Definition defines audience, content, and timing.",
+      "whyWrong": [
+        "'Only subject' undersells a Send Definition, which covers audience and timing too.",
+        "'Only content' undersells a Send Definition, which also covers audience and timing.",
+        "'Only audience' undersells a Send Definition, which also covers content and timing."
+      ]
     },
     {
       "question": "Which concept tracks email engagement?",
@@ -260,7 +300,12 @@
         "Only clicks"
       ],
       "correctAnswer": 1,
-      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes."
+      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes.",
+      "whyWrong": [
+        "'Only sends' undersells engagement tracking, which covers opens, clicks, bounces, and unsubscribes.",
+        "'Only opens' undersells engagement tracking, which covers clicks, bounces, and unsubscribes too.",
+        "'Only clicks' undersells engagement tracking, which covers opens, bounces, and unsubscribes too."
+      ]
     },
     {
       "question": "What is the purpose of a List in Marketing Cloud?",
@@ -271,7 +316,12 @@
         "To create reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "Lists group subscribers for sends in simple use cases."
+      "explanation": "Lists group subscribers for sends in simple use cases.",
+      "whyWrong": [
+        "Lists don't replace Data Extensions — they serve a simpler, complementary purpose.",
+        "'To create journeys only' misattributes a List's purpose to a different tool (Journey Builder).",
+        "'To create reports only' misattributes a List's purpose to a different function (reporting)."
+      ]
     },
     {
       "question": "Which entry source can start a Journey Builder journey?",
@@ -282,7 +332,12 @@
         "Push only"
       ],
       "correctAnswer": 1,
-      "explanation": "Entry sources include data extension, API, form, or campaign."
+      "explanation": "Entry sources include data extension, API, form, or campaign.",
+      "whyWrong": [
+        "'Email only' undersells the broader set of entry sources (API, form, campaign) that can start a journey.",
+        "'SMS only' undersells the broader set of entry sources beyond a single channel.",
+        "'Push only' undersells the broader set of entry sources beyond a single channel."
+      ]
     },
     {
       "question": "What does Marketing Cloud Engagement encompass?",
@@ -293,7 +348,12 @@
         "Only social"
       ],
       "correctAnswer": 1,
-      "explanation": "Engagement encompasses email, mobile, and digital."
+      "explanation": "Engagement encompasses email, mobile, and digital.",
+      "whyWrong": [
+        "'Only email' undersells Marketing Cloud Engagement's broader mobile and digital engagement capabilities.",
+        "'Only SMS' undersells the broader set of channels Marketing Cloud Engagement encompasses.",
+        "'Only social' undersells the broader set of channels Marketing Cloud Engagement encompasses."
+      ]
     },
     {
       "question": "Which report type shows email performance?",
@@ -304,7 +364,12 @@
         "Only bounces"
       ],
       "correctAnswer": 1,
-      "explanation": "Tracking and send summary reports show email performance."
+      "explanation": "Tracking and send summary reports show email performance.",
+      "whyWrong": [
+        "'Only sends' undersells the tracking report, which covers opens, clicks, and more, not just send counts.",
+        "'Only opens' undersells the tracking report, which covers broader engagement metrics.",
+        "'Only bounces' undersells the tracking report, which covers broader engagement metrics."
+      ]
     },
     {
       "question": "What is a Subscriber Key?",
@@ -315,7 +380,12 @@
         "A list name"
       ],
       "correctAnswer": 1,
-      "explanation": "Subscriber Key uniquely identifies a subscriber."
+      "explanation": "Subscriber Key uniquely identifies a subscriber.",
+      "whyWrong": [
+        "A password is a security credential, unrelated to a subscriber's unique identifier.",
+        "An email address alone doesn't capture the broader unique-identifier concept a Subscriber Key represents.",
+        "A list name is a grouping label, not a unique subscriber identifier."
+      ]
     },
     {
       "question": "Which best practice applies to Marketing Cloud Engagement?",
@@ -326,7 +396,12 @@
         "No segmentation"
       ],
       "correctAnswer": 1,
-      "explanation": "List hygiene, segmentation, and deliverability support success."
+      "explanation": "List hygiene, segmentation, and deliverability support success.",
+      "whyWrong": [
+        "Sending to all without hygiene/segmentation is the opposite of the recommended best practice.",
+        "'No hygiene' contradicts the fact that list hygiene is a core best practice.",
+        "'No segmentation' contradicts the fact that segmentation is a core best practice."
+      ]
     }
   ]
 }

@@ -20,9 +20,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Email Specialist exam for?",
     "personas": [
-      { "label": "Marketing Cloud email practitioners", "description": "You build and send email campaigns in Marketing Cloud and want to validate your skills in subscriber management, AMPscript, and deliverability." },
-      { "label": "Digital marketers moving to Salesforce", "description": "You have email marketing experience with other platforms and want to prove your Marketing Cloud Email Studio expertise." },
-      { "label": "Marketing ops professionals", "description": "You manage data extensions, automation workflows, and deliverability settings and need a credential to demonstrate your technical email marketing skills." }
+      {
+        "label": "Marketing Cloud email practitioners",
+        "description": "You build and send email campaigns in Marketing Cloud and want to validate your skills in subscriber management, AMPscript, and deliverability."
+      },
+      {
+        "label": "Digital marketers moving to Salesforce",
+        "description": "You have email marketing experience with other platforms and want to prove your Marketing Cloud Email Studio expertise."
+      },
+      {
+        "label": "Marketing ops professionals",
+        "description": "You manage data extensions, automation workflows, and deliverability settings and need a credential to demonstrate your technical email marketing skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -226,7 +235,12 @@
         "Text Block"
       ],
       "correctAnswer": 1,
-      "explanation": "AMPscript is Marketing Cloud's scripting language that allows you to create dynamic, personalized email content based on subscriber attributes and data."
+      "explanation": "AMPscript is Marketing Cloud's scripting language that allows you to create dynamic, personalized email content based on subscriber attributes and data.",
+      "whyWrong": [
+        "Static Content is fixed and doesn't personalize per subscriber.",
+        "An HTML Block is a static layout element, not a dynamic personalization mechanism.",
+        "A Text Block is fixed text, not dynamic personalized content."
+      ]
     },
     {
       "question": "What is a Data Extension used for in Marketing Cloud?",
@@ -237,7 +251,12 @@
         "To track email opens"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Extensions are tables that store subscriber data, custom data, and relational data used for segmentation and personalization."
+      "explanation": "Data Extensions are tables that store subscriber data, custom data, and relational data used for segmentation and personalization.",
+      "whyWrong": [
+        "Data Extensions aren't for creating email templates — that's Content Builder's role.",
+        "Scheduling sends is an Automation Studio/Journey Builder function, not what a Data Extension does.",
+        "Tracking opens is a reporting function, not the storage purpose of a Data Extension."
+      ]
     },
     {
       "question": "Which feature should be used to send emails at the optimal time for each subscriber?",
@@ -248,7 +267,12 @@
         "Automation Studio"
       ],
       "correctAnswer": 1,
-      "explanation": "Send Time Optimization uses Einstein AI to determine and send emails at the best time for each individual subscriber."
+      "explanation": "Send Time Optimization uses Einstein AI to determine and send emails at the best time for each individual subscriber.",
+      "whyWrong": [
+        "Triggered Send fires on a specific event, not specifically at an AI-optimized time per subscriber.",
+        "Journey Builder orchestrates multi-step journeys — it isn't specifically the send-time optimization feature.",
+        "Automation Studio handles scheduled batch processes, not per-subscriber optimal send timing."
+      ]
     },
     {
       "question": "What metric measures the percentage of emails that were successfully delivered?",
@@ -259,7 +283,12 @@
         "Bounce Rate"
       ],
       "correctAnswer": 2,
-      "explanation": "Delivery Rate measures the percentage of emails that were successfully delivered to subscribers' inboxes."
+      "explanation": "Delivery Rate measures the percentage of emails that were successfully delivered to subscribers' inboxes.",
+      "whyWrong": [
+        "Open Rate measures how many delivered emails were opened, not delivery success itself.",
+        "Click Rate measures link engagement, not delivery success.",
+        "Bounce Rate measures failed deliveries, which is the inverse of the metric being asked about."
+      ]
     },
     {
       "question": "Which list type in Marketing Cloud automatically removes unsubscribed and bounced subscribers?",
@@ -270,7 +299,12 @@
         "Auto-Suppression List"
       ],
       "correctAnswer": 2,
-      "explanation": "The All Subscribers list automatically manages subscriber status, removing unsubscribed and bounced subscribers from sends."
+      "explanation": "The All Subscribers list automatically manages subscriber status, removing unsubscribed and bounced subscribers from sends.",
+      "whyWrong": [
+        "A Publication List is a general subscription list, not the specific auto-removal mechanism described.",
+        "A Suppression List is manually maintained to exclude addresses — it doesn't automatically populate from bounces/unsubscribes the way Auto-Suppression does.",
+        "The All Subscribers List includes everyone regardless of status — it's the opposite of automatic removal."
+      ]
     },
     {
       "question": "What is a Triggered Send in Marketing Cloud Email Studio?",
@@ -281,7 +315,12 @@
         "An A/B split test send"
       ],
       "correctAnswer": 1,
-      "explanation": "Triggered Sends fire individually in real time when a defined event occurs, such as a form submission or purchase — common for transactional and confirmation emails."
+      "explanation": "Triggered Sends fire individually in real time when a defined event occurs, such as a form submission or purchase — common for transactional and confirmation emails.",
+      "whyWrong": [
+        "A batch send to everyone at once isn't a Triggered Send — that's a standard bulk send.",
+        "A scheduled one-time send is time-based, not triggered by a specific action or API call.",
+        "An A/B split test send compares content variants — it isn't the event-triggered mechanism being described."
+      ]
     },
     {
       "question": "What does the Sender Policy Framework (SPF) DNS record do for email deliverability?",
@@ -292,7 +331,12 @@
         "Defines the maximum send volume per hour"
       ],
       "correctAnswer": 1,
-      "explanation": "SPF publishes authorised sending IPs in DNS. Receiving servers check SPF to verify the sender — failing SPF increases spam folder placement risk."
+      "explanation": "SPF publishes authorised sending IPs in DNS. Receiving servers check SPF to verify the sender — failing SPF increases spam folder placement risk.",
+      "whyWrong": [
+        "SPF doesn't encrypt email content — that's a different (unrelated) security function.",
+        "SPF doesn't add unsubscribe headers — that's a separate compliance feature.",
+        "SPF doesn't define send volume limits — that's an unrelated sending configuration."
+      ]
     },
     {
       "question": "What is the Sender Authentication Package (SAP) in Marketing Cloud?",
@@ -303,7 +347,12 @@
         "An analytics dashboard for email performance"
       ],
       "correctAnswer": 1,
-      "explanation": "SAP establishes your brand's sending identity in Marketing Cloud with a dedicated IP, authenticated custom domain, and reply mail management to protect sender reputation."
+      "explanation": "SAP establishes your brand's sending identity in Marketing Cloud with a dedicated IP, authenticated custom domain, and reply mail management to protect sender reputation.",
+      "whyWrong": [
+        "SAP isn't a spam-filtering rule set — that's a different deliverability concern.",
+        "SAP isn't a segmentation tool — its purpose is deliverability infrastructure, not audience targeting.",
+        "SAP isn't an analytics dashboard — its purpose is sending infrastructure, not reporting."
+      ]
     },
     {
       "question": "In Marketing Cloud, what is the primary purpose of a Suppression List?",
@@ -314,7 +363,12 @@
         "To schedule automated re-engagement campaigns"
       ],
       "correctAnswer": 1,
-      "explanation": "Suppression Lists prevent specific addresses from receiving emails regardless of their presence in the send audience — used for opt-outs, complaints, and domain blocks."
+      "explanation": "Suppression Lists prevent specific addresses from receiving emails regardless of their presence in the send audience — used for opt-outs, complaints, and domain blocks.",
+      "whyWrong": [
+        "Adding new subscribers is the opposite of a Suppression List's exclusion purpose.",
+        "Suppression Lists don't track bounces across all sends — that's a separate reporting function.",
+        "Suppression Lists aren't for scheduling re-engagement campaigns — that's a different automation feature."
+      ]
     },
     {
       "question": "Which Marketing Cloud feature lets you test two email versions on a subset of subscribers before sending the winner to the rest?",
@@ -325,7 +379,12 @@
         "Automation Studio schedule"
       ],
       "correctAnswer": 1,
-      "explanation": "A/B Testing sends version A to one portion and version B to another, then automatically sends the winning version (by open rate, click rate, or manual choice) to the remainder."
+      "explanation": "A/B Testing sends version A to one portion and version B to another, then automatically sends the winning version (by open rate, click rate, or manual choice) to the remainder.",
+      "whyWrong": [
+        "A Journey Builder split activity branches an audience by criteria — it isn't specifically the A/B content comparison tool.",
+        "A Triggered Send fires based on an event — it isn't the content-comparison testing mechanism.",
+        "An Automation Studio schedule handles timing — it isn't the content-comparison testing tool."
+      ]
     },
     {
       "question": "What is the main use case for Journey Builder in Marketing Cloud?",
@@ -336,7 +395,12 @@
         "Running batch data extracts"
       ],
       "correctAnswer": 1,
-      "explanation": "Journey Builder orchestrates personalised, cross-channel experiences triggered by subscriber events — going beyond single-send campaigns to full lifecycle automation."
+      "explanation": "Journey Builder orchestrates personalised, cross-channel experiences triggered by subscriber events — going beyond single-send campaigns to full lifecycle automation.",
+      "whyWrong": [
+        "Creating HTML templates is a Content Builder function, not Journey Builder's core orchestration purpose.",
+        "Managing subscriber imports is a Contact Builder/Automation Studio function, not Journey Builder's main use case.",
+        "Running batch data extracts is an Automation Studio function, not Journey Builder's core purpose."
+      ]
     },
     {
       "question": "What happens in Marketing Cloud when an email receives a hard bounce?",
@@ -347,7 +411,12 @@
         "The send is paused until the bounce is manually reviewed"
       ],
       "correctAnswer": 1,
-      "explanation": "Hard bounces indicate a permanent delivery failure (invalid address). Marketing Cloud automatically marks the subscriber as Bounced and prevents further sends to protect IP reputation."
+      "explanation": "Hard bounces indicate a permanent delivery failure (invalid address). Marketing Cloud automatically marks the subscriber as Bounced and prevents further sends to protect IP reputation.",
+      "whyWrong": [
+        "A hard bounce isn't retried — that would risk sender reputation, the opposite of the actual safeguard.",
+        "A hard bounce doesn't trigger an SMS notification — that's unrelated to the bounce-handling mechanism.",
+        "A hard bounce isn't manually reviewed before pausing — it's automatically handled to protect reputation immediately."
+      ]
     },
     {
       "question": "What does DKIM (DomainKeys Identified Mail) add to outgoing emails?",
@@ -358,7 +427,12 @@
         "A link to the sender's unsubscribe preference centre"
       ],
       "correctAnswer": 1,
-      "explanation": "DKIM signs outgoing emails with a private key — receiving servers verify the signature using the domain's public key published in DNS, confirming authenticity."
+      "explanation": "DKIM signs outgoing emails with a private key — receiving servers verify the signature using the domain's public key published in DNS, confirming authenticity.",
+      "whyWrong": [
+        "DKIM isn't a visible footer disclaimer — it's a technical, invisible cryptographic mechanism.",
+        "DKIM doesn't encrypt the email body — it verifies authenticity, not content confidentiality.",
+        "DKIM isn't an unsubscribe link — that's an unrelated compliance feature."
+      ]
     },
     {
       "question": "Which AMPscript function retrieves a single field value from a Data Extension based on matching criteria?",
@@ -369,7 +443,12 @@
         "AttributeValue()"
       ],
       "correctAnswer": 1,
-      "explanation": "Lookup() returns a single column value from a Data Extension row that matches the specified key-value pair — the most common AMPscript function for personalisation."
+      "explanation": "Lookup() returns a single column value from a Data Extension row that matches the specified key-value pair — the most common AMPscript function for personalisation.",
+      "whyWrong": [
+        "LookupRows() retrieves multiple rows, not a single field value.",
+        "RetrieveSalesforceObjects() queries Salesforce CRM data, not Data Extension fields.",
+        "AttributeValue() retrieves subscriber attribute data, not a Data Extension field lookup."
+      ]
     },
     {
       "question": "What is the purpose of a Data Filter in Marketing Cloud?",
@@ -380,7 +459,12 @@
         "To encrypt subscriber data at rest"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Filters apply rule-based criteria to a Data Extension or list to create a filtered subset of subscribers — used for targeted segmentation without writing SQL."
+      "explanation": "Data Filters apply rule-based criteria to a Data Extension or list to create a filtered subset of subscribers — used for targeted segmentation without writing SQL.",
+      "whyWrong": [
+        "Importing subscribers from CSV is a separate data-loading function, not what a Data Filter does.",
+        "Scheduling sends is an Automation Studio/Journey Builder function, not a Data Filter's purpose.",
+        "Encrypting data at rest is a security function, unrelated to Data Filter's segmentation purpose."
+      ]
     }
   ]
 }

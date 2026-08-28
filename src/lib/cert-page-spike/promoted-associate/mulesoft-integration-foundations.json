@@ -187,7 +187,12 @@
         "Marketers only"
       ],
       "correctAnswer": 1,
-      "explanation": "It is designed for individuals who know core integration and API-led connectivity and can work as informed team members."
+      "explanation": "It is designed for individuals who know core integration and API-led connectivity and can work as informed team members.",
+      "whyWrong": [
+        "'Senior architects only' is too narrow — this is a foundational, entry-level credential, not an architect-level one.",
+        "'Developers only' is too narrow — this credential targets any project team member, not just developers.",
+        "'Marketers only' is too narrow — this credential is about integration terminology, unrelated to marketing."
+      ]
     },
     {
       "question": "What is API-led connectivity?",
@@ -198,7 +203,12 @@
         "Only file transfer"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity organizes APIs in System, Process, and Experience layers."
+      "explanation": "API-led connectivity organizes APIs in System, Process, and Experience layers.",
+      "whyWrong": [
+        "'Only REST' undersells API-led connectivity, which is a broader layered architectural approach, not a single protocol.",
+        "'Only SOAP' undersells API-led connectivity, which is a broader layered architectural approach, not a single protocol.",
+        "'Only file transfer' undersells API-led connectivity, which is about API layering, not file-based integration."
+      ]
     },
     {
       "question": "Which layer in API-led connectivity exposes data from systems of record?",
@@ -209,7 +219,12 @@
         "No layers"
       ],
       "correctAnswer": 1,
-      "explanation": "System APIs expose data from systems of record."
+      "explanation": "System APIs expose data from systems of record.",
+      "whyWrong": [
+        "Experience API is the consumer-facing layer, not the one exposing data from systems of record.",
+        "Process API orchestrates logic across System APIs — it isn't the layer directly exposing systems of record.",
+        "'No layers' contradicts the fact that API-led connectivity explicitly uses a layered architecture."
+      ]
     },
     {
       "question": "What is Anypoint Platform?",
@@ -220,7 +235,12 @@
         "A database"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations."
+      "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations.",
+      "whyWrong": [
+        "Anypoint Platform isn't a CRM — it's an integration/API management platform.",
+        "Anypoint Platform isn't primarily an email tool — that's unrelated to its core function.",
+        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform."
+      ]
     },
     {
       "question": "Which term describes a reusable, composable integration asset?",
@@ -231,7 +251,12 @@
         "Silo"
       ],
       "correctAnswer": 1,
-      "explanation": "APIs and connectors are reusable, composable integration assets."
+      "explanation": "APIs and connectors are reusable, composable integration assets.",
+      "whyWrong": [
+        "A monolith describes a single unified system, the opposite of a reusable, composable asset.",
+        "A legacy system describes an older system, not the composable integration asset concept being described.",
+        "A silo describes an isolated system, the opposite of the reusable, composable concept being described."
+      ]
     },
     {
       "question": "Which API-led connectivity layer orchestrates calls to multiple System APIs and prepares data for Experience APIs?",
@@ -242,7 +267,12 @@
         "Gateway API"
       ],
       "correctAnswer": 2,
-      "explanation": "Process APIs combine and transform data from multiple System APIs before passing it to Experience APIs for consumption."
+      "explanation": "Process APIs combine and transform data from multiple System APIs before passing it to Experience APIs for consumption.",
+      "whyWrong": [
+        "System API exposes data from systems of record — it doesn't orchestrate calls to other System APIs.",
+        "Experience API tailors data for a specific consumer — it doesn't orchestrate calls to System APIs.",
+        "'Gateway API' isn't a standard API-led connectivity layer name — Process API is the orchestration layer."
+      ]
     },
     {
       "question": "What does the Experience API layer provide?",
@@ -253,7 +283,12 @@
         "API usage monitoring"
       ],
       "correctAnswer": 1,
-      "explanation": "Experience APIs expose data in a format optimised for a specific consumer — mobile app, web portal, or third-party partner."
+      "explanation": "Experience APIs expose data in a format optimised for a specific consumer — mobile app, web portal, or third-party partner.",
+      "whyWrong": [
+        "Direct backend database connections bypass the API layering Experience API is specifically designed to abstract.",
+        "Caching is a performance feature, not what defines the Experience API layer's purpose.",
+        "API usage monitoring is a governance function, not what defines the Experience API layer's purpose."
+      ]
     },
     {
       "question": "What is DataWeave used for in MuleSoft?",
@@ -264,7 +299,12 @@
         "Runtime performance monitoring"
       ],
       "correctAnswer": 1,
-      "explanation": "DataWeave is MuleSoft's functional data transformation language used to convert and map data formats within integration flows."
+      "explanation": "DataWeave is MuleSoft's functional data transformation language used to convert and map data formats within integration flows.",
+      "whyWrong": [
+        "Database schema design is a data modeling task, not DataWeave's transformation purpose.",
+        "API security policy enforcement is a governance function, unrelated to DataWeave's data transformation role.",
+        "Runtime performance monitoring is an operational function, unrelated to DataWeave's transformation purpose."
+      ]
     },
     {
       "question": "Which Anypoint Platform component applies security policies and manages client application access to APIs?",
@@ -275,7 +315,12 @@
         "Design Center"
       ],
       "correctAnswer": 1,
-      "explanation": "API Manager allows teams to apply SLA tiers, rate limiting, OAuth policies, and client application management to deployed APIs."
+      "explanation": "API Manager allows teams to apply SLA tiers, rate limiting, OAuth policies, and client application management to deployed APIs.",
+      "whyWrong": [
+        "Runtime Manager deploys and monitors applications — it isn't the security-policy enforcement component.",
+        "Anypoint Exchange is an asset marketplace, not a security-policy enforcement tool.",
+        "Design Center is for designing APIs — it isn't the runtime security-policy enforcement component."
+      ]
     },
     {
       "question": "What is Anypoint Exchange?",
@@ -286,7 +331,12 @@
         "A log monitoring dashboard"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Exchange is MuleSoft's asset marketplace where teams share and consume APIs, connectors, and pre-built integration templates."
+      "explanation": "Anypoint Exchange is MuleSoft's asset marketplace where teams share and consume APIs, connectors, and pre-built integration templates.",
+      "whyWrong": [
+        "Anypoint Exchange isn't an email marketing tool — that's unrelated to its asset-marketplace purpose.",
+        "Anypoint Exchange isn't a Mule runtime environment — that's a separate execution component.",
+        "Anypoint Exchange isn't a log monitoring dashboard — that's a separate operational tool."
+      ]
     },
     {
       "question": "What is a Mule Event in the context of a Mule application?",
@@ -297,7 +347,12 @@
         "An API audit log entry"
       ],
       "correctAnswer": 1,
-      "explanation": "A Mule Event carries the message payload, message attributes (metadata), and flow variables through the integration flow."
+      "explanation": "A Mule Event carries the message payload, message attributes (metadata), and flow variables through the integration flow.",
+      "whyWrong": [
+        "An error alert is a notification, not the data-flow structure a Mule Event represents.",
+        "A scheduled deployment trigger is unrelated to what a Mule Event represents.",
+        "An API audit log entry is a record of activity, not the data-flow structure a Mule Event represents."
+      ]
     },
     {
       "question": "Which Anypoint Platform tool allows teams to design APIs using RAML or OpenAPI Specification before building them?",
@@ -308,7 +363,12 @@
         "API Manager"
       ],
       "correctAnswer": 1,
-      "explanation": "Design Center's API Designer provides a visual and code editor for creating API specifications in RAML or OAS (OpenAPI)."
+      "explanation": "Design Center's API Designer provides a visual and code editor for creating API specifications in RAML or OAS (OpenAPI).",
+      "whyWrong": [
+        "Runtime Manager deploys and monitors running applications — it isn't the pre-build API design tool.",
+        "Anypoint Studio is the IDE for building Mule applications, not specifically the RAML/OAS design tool.",
+        "API Manager applies policies to deployed APIs — it isn't the pre-build design tool."
+      ]
     },
     {
       "question": "What is the primary purpose of MuleSoft Connectors?",
@@ -319,7 +379,12 @@
         "Executing DataWeave transformations"
       ],
       "correctAnswer": 1,
-      "explanation": "Connectors provide out-of-the-box connectivity to systems like Salesforce, SAP, databases, and message queues — eliminating repetitive custom integration code."
+      "explanation": "Connectors provide out-of-the-box connectivity to systems like Salesforce, SAP, databases, and message queues — eliminating repetitive custom integration code.",
+      "whyWrong": [
+        "Writing custom code from scratch is the opposite of what reusable Connectors provide.",
+        "Monitoring API performance dashboards is a separate operational function, unrelated to Connectors' integration purpose.",
+        "Executing DataWeave transformations is a separate data-transformation function, unrelated to Connectors' system-connection purpose."
+      ]
     },
     {
       "question": "Which Anypoint Platform tool monitors deployed Mule application health, performance, and logs in real time?",
@@ -330,7 +395,12 @@
         "Exchange"
       ],
       "correctAnswer": 2,
-      "explanation": "Runtime Manager provides visibility into deployed Mule apps including deployment status, CPU/memory metrics, and log streaming."
+      "explanation": "Runtime Manager provides visibility into deployed Mule apps including deployment status, CPU/memory metrics, and log streaming.",
+      "whyWrong": [
+        "Design Center is for designing APIs, not monitoring deployed application health.",
+        "Anypoint Studio is the development IDE, not the real-time monitoring tool.",
+        "Exchange is an asset marketplace, not the real-time monitoring tool being described."
+      ]
     },
     {
       "question": "What is the core business value of adopting API-led connectivity over point-to-point integration?",
@@ -341,7 +411,12 @@
         "Fewer API management tools required"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity enables teams to self-serve reusable APIs, reduces duplicated effort, and reduces integration sprawl across the enterprise."
+      "explanation": "API-led connectivity enables teams to self-serve reusable APIs, reduces duplicated effort, and reduces integration sprawl across the enterprise.",
+      "whyWrong": [
+        "Reduced licensing costs alone doesn't capture the full business value, which centers on reusability and reduced complexity.",
+        "Faster initial implementation alone undersells the broader long-term value of reusability and cross-team self-service.",
+        "Fewer API management tools required isn't the core business value — the value is about reusability and complexity reduction."
+      ]
     }
   ]
 }

@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Strategy Designer exam for?",
     "personas": [
-      { "label": "UX strategists and service designers", "description": "You work at the strategy level &mdash; journey mapping, stakeholder alignment, and experience vision &mdash; and want to validate your ability to apply design thinking on Salesforce projects." },
-      { "label": "Consultants leading discovery workshops", "description": "You facilitate design workshops, conduct user research, and frame business problems for Salesforce implementation teams." },
-      { "label": "Product owners bridging design and business", "description": "You define experience strategy and connect design decisions to business outcomes on the Salesforce Platform." }
+      {
+        "label": "UX strategists and service designers",
+        "description": "You work at the strategy level &mdash; journey mapping, stakeholder alignment, and experience vision &mdash; and want to validate your ability to apply design thinking on Salesforce projects."
+      },
+      {
+        "label": "Consultants leading discovery workshops",
+        "description": "You facilitate design workshops, conduct user research, and frame business problems for Salesforce implementation teams."
+      },
+      {
+        "label": "Product owners bridging design and business",
+        "description": "You define experience strategy and connect design decisions to business outcomes on the Salesforce Platform."
+      }
     ]
   },
   "examDifficulty": {
@@ -165,7 +174,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy Designers use design methods to create experience strategies that drive business outcomes."
+      "explanation": "Strategy Designers use design methods to create experience strategies that drive business outcomes.",
+      "whyWrong": [
+        "'Only coding' undersells the role, which is about design methods and strategy, not implementation code.",
+        "Email is unrelated to the Strategy Designer's core design-strategy focus.",
+        "Slack is unrelated to the Strategy Designer's core design-strategy focus."
+      ]
     },
     {
       "question": "Which design discipline do Strategy Designers typically use?",
@@ -176,7 +190,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "They use design thinking, research, and strategy to define experience direction."
+      "explanation": "They use design thinking, research, and strategy to define experience direction.",
+      "whyWrong": [
+        "'Only visual design' undersells the discipline, which spans research and strategy, not just visuals.",
+        "'Only development' misattributes the discipline to implementation, not design strategy.",
+        "'Only testing' misattributes the discipline to a narrower validation activity, not the broader strategic discipline."
+      ]
     },
     {
       "question": "What does 'experience strategy' mean in this context?",
@@ -187,7 +206,12 @@
         "Only data model"
       ],
       "correctAnswer": 1,
-      "explanation": "Experience strategy is the plan for user interactions and outcomes."
+      "explanation": "Experience strategy is the plan for user interactions and outcomes.",
+      "whyWrong": [
+        "'Only UI mockups' undersells experience strategy, which is about the broader interaction plan, not just visual mockups.",
+        "'Only technical architecture' misattributes experience strategy to a technical concern, not the user-experience plan.",
+        "'Only data model' misattributes experience strategy to a technical concern, not the user-experience plan."
+      ]
     },
     {
       "question": "Which Salesforce capability do Strategy Designers often align with?",
@@ -198,7 +222,12 @@
         "Only Heroku"
       ],
       "correctAnswer": 1,
-      "explanation": "They align strategy with Experience Cloud and platform capabilities."
+      "explanation": "They align strategy with Experience Cloud and platform capabilities.",
+      "whyWrong": [
+        "'Only Apex' narrows the alignment incorrectly to a single programming language.",
+        "'Only Marketing Cloud' undersells the broader set of platform capabilities Strategy Designers align with.",
+        "'Only Heroku' undersells the broader set of platform capabilities Strategy Designers align with."
+      ]
     },
     {
       "question": "What outcome should a Strategy Designer drive?",
@@ -209,7 +238,12 @@
         "Only reports"
       ],
       "correctAnswer": 1,
-      "explanation": "They drive business outcomes through human-centered experience strategies."
+      "explanation": "They drive business outcomes through human-centered experience strategies.",
+      "whyWrong": [
+        "'Only documentation' undersells the outcome, which is business results through experience strategy, not documentation itself.",
+        "'Only code' misattributes the outcome to implementation, not strategic business results.",
+        "'Only reports' misattributes the outcome to reporting, not strategic business results."
+      ]
     },
     {
       "question": "What does design thinking emphasize?",
@@ -220,7 +254,12 @@
         "Only deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Design thinking uses empathize, define, ideate, prototype, and test."
+      "explanation": "Design thinking uses empathize, define, ideate, prototype, and test.",
+      "whyWrong": [
+        "'Only coding' misrepresents design thinking, which is a strategic process, not implementation.",
+        "'Only documentation' undersells design thinking, which is an active process (empathize, ideate, test), not just writing.",
+        "'Only deployment' misattributes design thinking to implementation, not the strategic design process."
+      ]
     },
     {
       "question": "Which deliverable communicates experience strategy to stakeholders?",
@@ -231,7 +270,12 @@
         "Only prototypes"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy documents and journey maps communicate experience direction."
+      "explanation": "Strategy documents and journey maps communicate experience direction.",
+      "whyWrong": [
+        "Code alone doesn't communicate experience strategy to stakeholders — that's a technical artifact, not a strategic communication tool.",
+        "'Only wireframes' undersells the broader set of strategic deliverables (strategy documents, journey maps) beyond wireframes alone.",
+        "'Only prototypes' undersells the broader set of strategic deliverables beyond prototypes alone."
+      ]
     },
     {
       "question": "What does stakeholder alignment achieve?",
@@ -242,7 +286,12 @@
         "Only design alignment"
       ],
       "correctAnswer": 1,
-      "explanation": "Stakeholder alignment ensures shared goals and success criteria."
+      "explanation": "Stakeholder alignment ensures shared goals and success criteria.",
+      "whyWrong": [
+        "'No alignment' contradicts the fact that stakeholder alignment specifically produces shared understanding.",
+        "'Only technical alignment' undersells the broader shared understanding of goals and priorities stakeholder alignment achieves.",
+        "'Only design alignment' undersells the broader shared understanding of goals and priorities stakeholder alignment achieves."
+      ]
     },
     {
       "question": "Which research method helps Strategy Designers understand user needs?",
@@ -253,7 +302,12 @@
         "Only code review"
       ],
       "correctAnswer": 1,
-      "explanation": "Interviews, observation, and empathy mapping reveal user needs."
+      "explanation": "Interviews, observation, and empathy mapping reveal user needs.",
+      "whyWrong": [
+        "'Only surveys' undersells the broader qualitative research methods (interviews, observation) used.",
+        "'Only analytics' undersells the broader qualitative research methods used to understand user needs.",
+        "'Only code review' is entirely unrelated to user research methods."
+      ]
     },
     {
       "question": "What is the purpose of an experience vision?",
@@ -264,7 +318,12 @@
         "To deploy"
       ],
       "correctAnswer": 1,
-      "explanation": "Experience vision articulates the target future state."
+      "explanation": "Experience vision articulates the target future state.",
+      "whyWrong": [
+        "An experience vision doesn't replace strategy — it articulates the target future state as part of it.",
+        "'To write code' misattributes an experience vision's purpose to implementation, not strategic articulation.",
+        "'To deploy' misattributes an experience vision's purpose to implementation, not strategic articulation."
+      ]
     },
     {
       "question": "Which platform capability should Strategy Designers understand?",
@@ -275,7 +334,12 @@
         "Only MuleSoft"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy Designers align with platform capabilities."
+      "explanation": "Strategy Designers align with platform capabilities.",
+      "whyWrong": [
+        "'Only Apex' narrows platform capability understanding incorrectly to a single programming language.",
+        "'Only Heroku' undersells the broader set of platform capabilities Strategy Designers should understand.",
+        "'Only MuleSoft' undersells the broader set of platform capabilities Strategy Designers should understand."
+      ]
     },
     {
       "question": "What does opportunity framing support?",
@@ -286,7 +350,12 @@
         "Only deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Opportunity framing defines the problem and opportunity."
+      "explanation": "Opportunity framing defines the problem and opportunity.",
+      "whyWrong": [
+        "'Only coding' misattributes opportunity framing to implementation, not problem definition.",
+        "'Only testing' misattributes opportunity framing to validation, not problem definition.",
+        "'Only deployment' misattributes opportunity framing to implementation, not problem definition."
+      ]
     },
     {
       "question": "Which outcome should an experience strategy prioritize?",
@@ -297,7 +366,12 @@
         "Only speed"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy should balance user value and business outcomes."
+      "explanation": "Strategy should balance user value and business outcomes.",
+      "whyWrong": [
+        "'Only technology' undersells the outcome focus, which should prioritize user value and business outcomes, not technology itself.",
+        "'Only cost' undersells the outcome focus, which should prioritize user and business value, not cost alone.",
+        "'Only speed' undersells the outcome focus, which should prioritize user and business value, not speed alone."
+      ]
     },
     {
       "question": "What is the benefit of involving users early in strategy?",
@@ -308,7 +382,12 @@
         "Higher cost only"
       ],
       "correctAnswer": 1,
-      "explanation": "Early user involvement validates assumptions and needs."
+      "explanation": "Early user involvement validates assumptions and needs.",
+      "whyWrong": [
+        "'No benefit' contradicts the real, documented benefit of early user involvement.",
+        "'Slower only' undersells the actual benefit (validated assumptions), which outweighs a speed trade-off.",
+        "'Higher cost only' undersells the actual benefit (validated assumptions), which outweighs a cost trade-off."
+      ]
     },
     {
       "question": "Which best practice applies to Strategy Designer deliverables?",
@@ -319,7 +398,12 @@
         "No alignment"
       ],
       "correctAnswer": 1,
-      "explanation": "Deliverables should be clear, actionable, and aligned."
+      "explanation": "Deliverables should be clear, actionable, and aligned.",
+      "whyWrong": [
+        "'Technical only' undersells the best practice, which requires clarity and business/user alignment, not just technical accuracy.",
+        "'Vague only' is the opposite of the clear, actionable best practice.",
+        "'No alignment' contradicts the fact that alignment with goals is a core best practice for deliverables."
+      ]
     }
   ]
 }

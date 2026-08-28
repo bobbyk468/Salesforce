@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Sales Foundations exam for?",
     "personas": [
-      { "label": "New sales reps using Salesforce", "description": "You&apos;re early in your sales career and want to validate your understanding of Sales Cloud, pipeline management, and customer-centric selling." },
-      { "label": "Sales managers seeking CRM fluency", "description": "You manage a sales team on Salesforce and want formal validation of your knowledge of forecasting, activity management, and sales reporting." },
-      { "label": "Business professionals entering sales ops", "description": "You&apos;re moving into a sales operations or enablement role and need to demonstrate fluency in Salesforce sales processes and best practices." }
+      {
+        "label": "New sales reps using Salesforce",
+        "description": "You&apos;re early in your sales career and want to validate your understanding of Sales Cloud, pipeline management, and customer-centric selling."
+      },
+      {
+        "label": "Sales managers seeking CRM fluency",
+        "description": "You manage a sales team on Salesforce and want formal validation of your knowledge of forecasting, activity management, and sales reporting."
+      },
+      {
+        "label": "Business professionals entering sales ops",
+        "description": "You&apos;re moving into a sales operations or enablement role and need to demonstrate fluency in Salesforce sales processes and best practices."
+      }
     ]
   },
   "examDifficulty": {
@@ -161,7 +170,12 @@
         "Marketers only"
       ],
       "correctAnswer": 1,
-      "explanation": "The certification is designed for individuals who exemplify sales excellence using a customer-centric methodology."
+      "explanation": "The certification is designed for individuals who exemplify sales excellence using a customer-centric methodology.",
+      "whyWrong": [
+        "'Developers only' is too narrow — this credential targets sales professionals broadly, not developers.",
+        "'Admins only' is too narrow — this credential is about sales methodology, not administration.",
+        "'Marketers only' is too narrow — this credential targets sales roles specifically, not marketing."
+      ]
     },
     {
       "question": "Which Salesforce product do Sales Professionals typically use daily?",
@@ -172,7 +186,12 @@
         "Heroku only"
       ],
       "correctAnswer": 1,
-      "explanation": "Sales professionals use Sales Cloud (or Revenue Cloud) for pipeline, activities, and forecasting."
+      "explanation": "Sales professionals use Sales Cloud (or Revenue Cloud) for pipeline, activities, and forecasting.",
+      "whyWrong": [
+        "Marketing Cloud alone is a marketing tool, not the sales pipeline/activity tool sales professionals use daily.",
+        "Slack alone is a collaboration tool, not the core sales pipeline management product.",
+        "Heroku alone is a PaaS platform, unrelated to daily sales pipeline work."
+      ]
     },
     {
       "question": "What does a customer-centric sales methodology emphasize?",
@@ -183,7 +202,12 @@
         "Volume only"
       ],
       "correctAnswer": 1,
-      "explanation": "Customer-centric selling focuses on customer problems and value-aligned solutions."
+      "explanation": "Customer-centric selling focuses on customer problems and value-aligned solutions.",
+      "whyWrong": [
+        "'Product features only' misses the customer-centric emphasis on understanding problems, not just features.",
+        "'Discounts only' misrepresents the value-focused approach, which isn't primarily about price.",
+        "'Volume only' misrepresents the value-focused, customer-centric approach central to this methodology."
+      ]
     },
     {
       "question": "Which activity is key for sales excellence?",
@@ -194,7 +218,12 @@
         "Only demos"
       ],
       "correctAnswer": 1,
-      "explanation": "Research, product knowledge, and team selling are key to sales success."
+      "explanation": "Research, product knowledge, and team selling are key to sales success.",
+      "whyWrong": [
+        "'Only cold calling' undersells the broader set of activities (research, team selling) key to sales excellence.",
+        "'Only email' undersells the broader set of key activities beyond a single channel.",
+        "'Only demos' undersells the broader set of key activities beyond a single tactic."
+      ]
     },
     {
       "question": "What role do Sales Professionals play in the organization?",
@@ -205,7 +234,12 @@
         "Only implementation"
       ],
       "correctAnswer": 1,
-      "explanation": "Sales professionals drive revenue by connecting solutions to customer problems."
+      "explanation": "Sales professionals drive revenue by connecting solutions to customer problems.",
+      "whyWrong": [
+        "'Only support' undersells the sales role, which is specifically about generating revenue, not support.",
+        "'Only marketing' misattributes the sales role to a different function.",
+        "'Only implementation' misattributes the sales role to a different function."
+      ]
     },
     {
       "question": "What does pipeline management involve?",
@@ -216,7 +250,12 @@
         "Only implementation"
       ],
       "correctAnswer": 1,
-      "explanation": "Pipeline management tracks opportunities and forecasts revenue."
+      "explanation": "Pipeline management tracks opportunities and forecasts revenue.",
+      "whyWrong": [
+        "'Only support' misattributes pipeline management to an unrelated function.",
+        "'Only marketing' misattributes pipeline management to an unrelated function.",
+        "'Only implementation' misattributes pipeline management to an unrelated function."
+      ]
     },
     {
       "question": "Which Salesforce object represents a potential deal?",
@@ -227,7 +266,12 @@
         "Lead"
       ],
       "correctAnswer": 1,
-      "explanation": "Opportunity represents a potential sale or deal."
+      "explanation": "Opportunity represents a potential sale or deal.",
+      "whyWrong": [
+        "Account represents a company, not itself the potential deal.",
+        "Contact represents a person, not the potential deal itself.",
+        "Lead represents an early unqualified prospect, not yet the specific deal an Opportunity represents."
+      ]
     },
     {
       "question": "What does discovery mean in sales?",
@@ -238,7 +282,12 @@
         "Only follow-up"
       ],
       "correctAnswer": 1,
-      "explanation": "Discovery is understanding customer needs and challenges."
+      "explanation": "Discovery is understanding customer needs and challenges.",
+      "whyWrong": [
+        "'Only demos' undersells discovery, which is about understanding needs before any product demonstration.",
+        "'Only closing' misattributes discovery, which happens earlier in the sales process, not at closing.",
+        "'Only follow-up' misattributes discovery, which happens earlier in the sales cycle, not during follow-up."
+      ]
     },
     {
       "question": "Which activity supports sales forecasting?",
@@ -249,7 +298,12 @@
         "Only meetings"
       ],
       "correctAnswer": 1,
-      "explanation": "Forecasting relies on pipeline data and stage discipline."
+      "explanation": "Forecasting relies on pipeline data and stage discipline.",
+      "whyWrong": [
+        "'Only cold calling' undersells the broader data hygiene practices that support accurate forecasting.",
+        "'Only email' undersells the broader data hygiene practices that support accurate forecasting.",
+        "'Only meetings' undersells the broader data hygiene practices that support accurate forecasting."
+      ]
     },
     {
       "question": "What is a value proposition?",
@@ -260,7 +314,12 @@
         "A price list"
       ],
       "correctAnswer": 1,
-      "explanation": "Value proposition articulates benefit and value to the customer."
+      "explanation": "Value proposition articulates benefit and value to the customer.",
+      "whyWrong": [
+        "A discount is a pricing tactic, not the value-and-benefit statement a value proposition represents.",
+        "A product feature alone doesn't articulate customer benefit — that's what a value proposition specifically does.",
+        "A price list is a pricing document, not a statement of customer value."
+      ]
     },
     {
       "question": "Which Sales Cloud feature supports team selling?",
@@ -271,7 +330,12 @@
         "Only leads"
       ],
       "correctAnswer": 1,
-      "explanation": "Opportunity and account teams support collaborative selling."
+      "explanation": "Opportunity and account teams support collaborative selling.",
+      "whyWrong": [
+        "'Solo only' is the opposite of what team-selling features support.",
+        "'No teams' contradicts the fact that Sales Cloud has real team-selling features.",
+        "'Only leads' misattributes team selling to a different, unrelated object."
+      ]
     },
     {
       "question": "What does activity management support?",
@@ -282,7 +346,12 @@
         "Only forecasts"
       ],
       "correctAnswer": 1,
-      "explanation": "Activity management tracks calls, meetings, and tasks."
+      "explanation": "Activity management tracks calls, meetings, and tasks.",
+      "whyWrong": [
+        "'Only reporting' undersells activity management, which is about tracking actions for pipeline hygiene, not just reporting.",
+        "'Only dashboards' misattributes activity management to a different, unrelated feature.",
+        "'Only forecasts' misattributes activity management to a different, unrelated function."
+      ]
     },
     {
       "question": "Which best practice supports sales adoption?",
@@ -293,7 +362,12 @@
         "Only admin"
       ],
       "correctAnswer": 1,
-      "explanation": "Training, champions, and incentives drive adoption."
+      "explanation": "Training, champions, and incentives drive adoption.",
+      "whyWrong": [
+        "'No training' contradicts the fact that training is a core adoption best practice.",
+        "'Only documentation' undersells the broader set of adoption practices (training, champions, incentives).",
+        "'Only admin' undersells the broader set of adoption practices beyond just admin-focused activities."
+      ]
     },
     {
       "question": "What role does the Lead object play in sales?",
@@ -304,7 +378,12 @@
         "Only for accounts"
       ],
       "correctAnswer": 1,
-      "explanation": "Leads capture and qualify prospects before conversion."
+      "explanation": "Leads capture and qualify prospects before conversion.",
+      "whyWrong": [
+        "Leads don't replace Opportunities — they serve a distinct, earlier-stage qualification purpose.",
+        "'Only for contacts' misattributes the Lead object's purpose to a different, related object.",
+        "'Only for accounts' misattributes the Lead object's purpose to a different, related object."
+      ]
     },
     {
       "question": "Which ethical consideration applies to sales?",
@@ -315,7 +394,12 @@
         "Only closing"
       ],
       "correctAnswer": 1,
-      "explanation": "Ethics include honesty, transparency, and customer-first approach."
+      "explanation": "Ethics include honesty, transparency, and customer-first approach.",
+      "whyWrong": [
+        "'No ethics' contradicts the fact that ethical considerations are explicitly part of sound sales practice.",
+        "'Only quotas' undersells the broader ethical considerations (honesty, transparency) beyond just hitting numbers.",
+        "'Only closing' undersells the broader ethical considerations that apply throughout the sales process, not just at close."
+      ]
     }
   ]
 }
