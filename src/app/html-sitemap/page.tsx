@@ -249,6 +249,19 @@ export default function HtmlSitemapPage() {
         Use this page to navigate all key site URLs and certification guides.
       </p>
 
+      <section className="mb-10 rounded-xl border border-gray-100 bg-white p-5 text-gray-700">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">How This Sitemap Is Organized</h2>
+        <p className="mb-3">
+          This HTML sitemap groups Trailblaze Prep pages by search intent. Core pages help you compare Salesforce
+          certification costs, role paths, and exam difficulty. Study-guide pages go deeper on individual exams,
+          while exam-tip pages focus on common traps and last-week revision.
+        </p>
+        <p>
+          For the fastest route, start with a role hub if you know your career direction. Use the individual study
+          guides when you have chosen an exam and need section weightage, source references, and practice questions.
+        </p>
+      </section>
+
       <section className="mb-10">
         <h2 className="text-xl font-semibold text-gray-900 mb-3">Core Pages</h2>
         <ul className="space-y-2">
@@ -257,6 +270,7 @@ export default function HtmlSitemapPage() {
               <Link href={page.href} className="text-salesforce-blue underline">
                 {page.name}
               </Link>
+              .
             </li>
           ))}
         </ul>
@@ -278,6 +292,7 @@ export default function HtmlSitemapPage() {
                     <Link href={item.href} className="text-gray-700 hover:text-salesforce-blue hover:underline">
                       {item.name}
                     </Link>
+                    .
                   </li>
                 ))}
               </ul>

@@ -101,6 +101,35 @@ export default function BecomeCtaPage() {
         </div>
       </div>
 
+      <section className="mb-10 rounded-xl border border-gray-100 bg-white p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">What This CTA Roadmap Is For</h2>
+        <div className="space-y-3 text-sm leading-6 text-gray-700">
+          <p>
+            The Salesforce Certified Technical Architect path is not a single exam path. It is a long progression through
+            platform fundamentals, developer depth, domain architect credentials, solution design practice, and finally the
+            CTA evaluation and review board. This page gives you the sequence so you can see where each certification fits.
+          </p>
+          <p>
+            If you are early in your career, use the first two phases to build a realistic foundation. If you are already
+            leading implementations, use the architect phases to identify missing domains such as identity, integration, data,
+            sharing, deployment lifecycle, and application architecture. The goal is to prevent random certification chasing
+            and turn the CTA journey into a staged plan.
+          </p>
+          <p>
+            A useful rule of thumb: do not treat the next box as a checklist item until you have used that skill on a real
+            project. CTA reviewers expect trade-off thinking, not certificate collecting. The strongest candidates can explain
+            why they chose a sharing model, integration pattern, identity flow, data strategy, and deployment approach under
+            business constraints.
+          </p>
+          <p>
+            For most learners, the right immediate move is not the CTA board itself. It is choosing the next credential that
+            expands your current blind spot, then pairing that study with implementation practice. Admins usually need developer
+            and data-model depth. Developers often need sharing, identity, and stakeholder communication. Consultants usually
+            need architecture vocabulary and sharper non-functional requirement discovery.
+          </p>
+        </div>
+      </section>
+
       {/* Flowchart: boxes connected left-to-right (first → second), phases stacked top to bottom */}
       <div className="flex flex-col items-stretch max-w-6xl mx-auto overflow-x-auto">
         {CTA_JOURNEY_PHASES.map((phase, phaseIndex) => (

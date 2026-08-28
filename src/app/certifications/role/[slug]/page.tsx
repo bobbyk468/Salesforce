@@ -436,6 +436,32 @@ export default async function RoleCertificationsPage({ params }: Props) {
         </p>
       </div>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use This {category.name} Certification Hub</h2>
+        <div className="space-y-3 text-sm leading-6 text-gray-700">
+          <p>
+            This page is designed as a role-level decision guide, not just a directory. Start by choosing the certification
+            that matches your current work: daily configuration, implementation consulting, custom development, architecture,
+            marketing operations, analytics, or industry-cloud delivery. Then open the certification page to review exam
+            weightage, format, official source references, and free practice questions.
+          </p>
+          <p>
+            If two certifications look similar, use the decision cards below before committing study time. They point to the
+            best first exam for common candidate profiles and connect this role hub to deeper study guides, comparison pages,
+            exam tips, and certification-path resources. That internal path helps you move from broad research to a specific
+            exam plan without bouncing between unrelated pages.
+          </p>
+          {slug === 'accredited-professional' && (
+            <p>
+              Accredited Professional credentials are different from core Salesforce certifications because they usually
+              validate product or industry-cloud implementation depth. Use them after you already understand the relevant
+              platform, consultant, or admin baseline. The best AP choice is normally the one tied to your current delivery
+              work, such as Health Cloud, Financial Services Cloud, Field Service, Communications Cloud, CPQ, or Commerce.
+            </p>
+          )}
+        </div>
+      </section>
+
       <section className="rounded-2xl border border-salesforce-blue/20 bg-gradient-to-br from-salesforce-blue/5 to-white p-6 mb-8">
         <h2 className="text-2xl font-bold text-gray-900 mb-2">
           Which {category.name} certification should you take first?

@@ -1,4 +1,3 @@
-import { Award, Clock, Target, BookOpen } from 'lucide-react'
 import type { ExamSection } from '@/lib/exam-weightage-data'
 import DifficultyBadge from '@/components/DifficultyBadge'
 import PrerequisiteAlert from '@/components/PrerequisiteAlert'
@@ -38,73 +37,66 @@ export default function CertificationCard({
   headingLevel = 'h1',
 }: CertificationCardProps) {
   return (
-    <div className="bg-gradient-to-br from-white via-blue-50/30 to-white rounded-xl sm:rounded-2xl shadow-lg overflow-hidden border border-blue-100/50 cert-card backdrop-blur-sm [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
+    <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-blue-100 cert-card [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
       {/* Header: heading with exam name and primary keyword for SEO */}
-      <div className="gradient-bg p-5 sm:p-6 lg:p-8 text-white">
-        <div className="flex items-center gap-2 sm:gap-3 mb-3 sm:mb-4 flex-wrap">
-          <Award className="h-7 w-7 sm:h-8 sm:w-8 flex-shrink-0" aria-label="Certification badge icon" />
-          <span className="bg-white/20 backdrop-blur-sm px-3 sm:px-4 py-1 sm:py-1.5 rounded-full text-xs sm:text-sm font-medium border border-white/30">
+      <div className="gradient-bg p-6 text-white">
+        <div className="flex items-center gap-3 mb-4 flex-wrap">
+          <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
             {code}
           </span>
-          <div className="flex-shrink-0">
-            <DifficultyBadge slug={slug} size="sm" />
-          </div>
+          <DifficultyBadge slug={slug} size="sm" />
         </div>
         {headingLevel === 'h1' ? (
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
+          <h1 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
         ) : (
-          <h2 className="text-xl sm:text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h2>
+          <h2 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h2>
         )}
       </div>
 
       {/* Content */}
-      <div className="p-5 sm:p-6 lg:p-8">
-        <p className="text-gray-600 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">{description}</p>
+      <div className="p-6">
+        <p className="text-gray-600 mb-6 leading-relaxed">{description}</p>
 
         {/* Prerequisite Alert */}
-        <PrerequisiteAlert slug={slug} className="mb-6 sm:mb-8" />
+        <PrerequisiteAlert slug={slug} className="mb-6" />
 
         {/* Exam Details */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
-          <div className="bg-gradient-to-br from-blue-50 via-white to-blue-50/50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-blue-200/60 hover:shadow-lg hover:border-blue-300 transition-all duration-200 hover:scale-105">
-            <BookOpen className="h-5 w-5 sm:h-6 sm:w-6 text-salesforce-blue mx-auto mb-2" aria-label="Number of exam questions" />
-            <div className="text-xl sm:text-2xl font-bold text-gray-900">{examDetails.questions}</div>
-            <div className="text-xs sm:text-sm text-gray-600 mt-1 font-medium">Questions</div>
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
+          <div className="bg-blue-50 rounded-lg p-4 text-center border border-blue-100">
+            <div className="text-2xl font-bold text-gray-900">{examDetails.questions}</div>
+            <div className="text-sm text-gray-600 mt-1 font-medium">Questions</div>
           </div>
-          <div className="bg-gradient-to-br from-emerald-50 via-white to-emerald-50/50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-emerald-200/60 hover:shadow-lg hover:border-emerald-300 transition-all duration-200 hover:scale-105">
-            <Target className="h-5 w-5 sm:h-6 sm:w-6 text-emerald-600 mx-auto mb-2" aria-label="Passing score percentage" />
-            <div className="text-xl sm:text-2xl font-bold text-gray-900">{examDetails.passingScore}</div>
-            <div className="text-xs sm:text-sm text-gray-600 mt-1 font-medium">Passing Score</div>
+          <div className="bg-emerald-50 rounded-lg p-4 text-center border border-emerald-100">
+            <div className="text-2xl font-bold text-gray-900">{examDetails.passingScore}</div>
+            <div className="text-sm text-gray-600 mt-1 font-medium">Passing Score</div>
           </div>
-          <div className="bg-gradient-to-br from-amber-50 via-white to-amber-50/50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-amber-200/60 hover:shadow-lg hover:border-amber-300 transition-all duration-200 hover:scale-105">
-            <Clock className="h-5 w-5 sm:h-6 sm:w-6 text-amber-600 mx-auto mb-2" aria-label="Exam duration" />
-            <div className="text-xl sm:text-2xl font-bold text-gray-900">{examDetails.duration}</div>
-            <div className="text-xs sm:text-sm text-gray-600 mt-1 font-medium">Duration</div>
+          <div className="bg-amber-50 rounded-lg p-4 text-center border border-amber-100">
+            <div className="text-2xl font-bold text-gray-900">{examDetails.duration}</div>
+            <div className="text-sm text-gray-600 mt-1 font-medium">Duration</div>
           </div>
-          <div className="bg-gradient-to-br from-purple-50 via-white to-purple-50/50 rounded-lg sm:rounded-xl p-3 sm:p-4 text-center border border-purple-200/60 hover:shadow-lg hover:border-purple-300 transition-all duration-200 hover:scale-105">
-            <Award className="h-5 w-5 sm:h-6 sm:w-6 text-purple-600 mx-auto mb-2" aria-label="Exam fee cost" />
-            <div className="text-xl sm:text-2xl font-bold text-gray-900">{examDetails.cost}</div>
-            <div className="text-xs sm:text-sm text-gray-600 mt-1 font-medium">Exam Fee</div>
+          <div className="bg-violet-50 rounded-lg p-4 text-center border border-violet-100">
+            <div className="text-2xl font-bold text-gray-900">{examDetails.cost}</div>
+            <div className="text-sm text-gray-600 mt-1 font-medium">Exam Fee</div>
           </div>
         </div>
 
         {/* Exam weightage by section */}
         {examSections && examSections.length > 0 && (
-          <div id="exam-weightage" className="mb-6 sm:mb-8">
-            <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-4 sm:mb-5">{examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
-            <div className="space-y-3 sm:space-y-4">
+          <div id="exam-weightage" className="mb-6">
+            <h2 className="text-lg font-semibold text-gray-900 mb-4">{examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
+            <div className="space-y-3">
               {examSections.map((section, i) => (
-                <div key={i} className="flex items-center gap-3 sm:gap-4">
+                <div key={i} className="flex items-center gap-3">
                   <div className="flex-1 min-w-0">
-                    <div className="flex justify-between items-center text-xs sm:text-sm mb-1.5 sm:mb-2">
+                    <div className="flex justify-between items-center text-sm mb-1.5">
                       <span className="text-gray-700 font-medium truncate pr-2">{section.name}</span>
-                      <span className="text-salesforce-dark font-bold flex-shrink-0 bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
+                      <span className="text-salesforce-dark font-bold bg-salesforce-blue/10 px-2 py-0.5 rounded-md">
                         {section.percentage}%
                       </span>
                     </div>
-                    <div className="h-2 sm:h-2.5 bg-gray-100 rounded-full overflow-hidden shadow-inner">
+                    <div className="h-2 bg-gray-100 rounded-full overflow-hidden">
                       <div
-                        className="h-full bg-gradient-to-r from-salesforce-blue via-salesforce-light to-salesforce-blue rounded-full progress-bar shadow-sm"
+                        className="h-full bg-salesforce-blue rounded-full progress-bar"
                         style={{ width: `${section.percentage}%` }}
                       />
                     </div>
@@ -117,12 +109,12 @@ export default function CertificationCard({
 
         {/* Topics */}
         <div>
-          <h2 className="text-base sm:text-lg font-semibold text-gray-900 mb-3 sm:mb-4">Exam Topics</h2>
-          <div className="flex flex-wrap gap-2 sm:gap-3">
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">Exam Topics</h2>
+          <div className="flex flex-wrap gap-2">
             {topics.map((topic) => (
               <span
                 key={topic}
-                className="bg-gradient-to-r from-salesforce-blue/10 to-salesforce-light/10 text-salesforce-blue px-3 sm:px-4 py-1.5 sm:py-2 rounded-full text-xs sm:text-sm font-medium border border-salesforce-blue/20 hover:bg-salesforce-blue/20 transition-colors duration-200"
+                className="bg-salesforce-blue/10 text-salesforce-blue px-3 py-1.5 rounded-full text-sm font-medium border border-salesforce-blue/20"
               >
                 {topic}
               </span>

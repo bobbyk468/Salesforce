@@ -1,12 +1,9 @@
 import Link from 'next/link'
 import { Metadata } from 'next'
 import { MapPin, Layers, ChevronRight } from 'lucide-react'
-import { CERTIFICATION_PATHS } from '@/lib/certification-path-data'
 import type { PathStage } from '@/lib/certification-path-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import CertificationPathContent from '@/components/CertificationPathContent'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import { OverviewCertRoadmap } from '@/components/CertRoadmapSvg'
 
 const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: string }> = {
   foundational: { bg: 'bg-emerald-50', border: 'border-emerald-200', label: 'Foundational' },
@@ -43,6 +40,13 @@ export const metadata: Metadata = {
 }
 
 const pathBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Certification Paths', url: '/certification-path' }]
+
+const pathSummaries = [
+  { id: 'admin', name: 'Administrator Path', href: '/admin-certification-path', text: 'Start with ADM-201, then choose App Builder, Advanced Administrator, or a consultant track.' },
+  { id: 'developer', name: 'Developer Path', href: '/developer-certification-path', text: 'Start with PD1, then move toward JavaScript Developer I, PD2, and Integration Architect.' },
+  { id: 'consultant', name: 'Consultant Path', href: '/consultant-certification-path', text: 'Choose Sales Cloud, Service Cloud, Experience Cloud, Marketing Cloud, Revenue Cloud, or Field Service.' },
+  { id: 'architect', name: 'Architect Path', href: '/architect-certification-path', text: 'Build toward Application Architect, System Architect, and eventually CTA readiness.' },
+]
 
 const faqItems = [
   {
@@ -89,7 +93,31 @@ export default function CertificationPathPage() {
 
       <ContentPageAuthor />
 
-      <OverviewCertRoadmap />
+      <section className="mb-10 rounded-xl border border-gray-100 bg-white p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Choose the Right Salesforce Certification Path</h2>
+        <div className="space-y-3 text-sm leading-6 text-gray-700">
+          <p>
+            The best Salesforce certification path depends on the work you want to do next, not only on exam difficulty.
+            Administrators should build platform fundamentals first, developers should validate Apex and Lightning skills,
+            consultants should specialize by cloud, and architects should sequence credentials around real enterprise project
+            experience.
+          </p>
+          <p>
+            Use this page as the map, then open the role-specific path pages for a tighter plan. Each path links into
+            individual certification pages with exam weightage, format, difficulty guidance, official source references, and
+            practice questions so your next step is based on role fit and readiness rather than guesswork.
+          </p>
+        </div>
+      </section>
+
+      <section className="mb-12 grid gap-4 md:grid-cols-2">
+        {pathSummaries.map((path) => (
+          <Link key={path.id} href={path.href} className="rounded-xl border border-gray-100 bg-white p-5 hover:border-salesforce-blue">
+            <h2 className="text-xl font-bold text-gray-900 mb-2">{path.name}</h2>
+            <p className="text-sm text-gray-600">{path.text}</p>
+          </Link>
+        ))}
+      </section>
 
       {/* Legend */}
       <div className="mb-12 p-4 rounded-xl bg-white border border-gray-100 shadow-sm">
@@ -109,7 +137,19 @@ export default function CertificationPathPage() {
         </div>
       </div>
 
-      <CertificationPathContent paths={CERTIFICATION_PATHS} />
+      <section className="mb-12 rounded-xl border border-gray-100 bg-white p-6">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Recommended Starting Points</h2>
+        <p className="text-gray-700 mb-4">
+          New to Salesforce? Start with Platform Foundations or ADM-201. Already coding? Start with PD1.
+          Already implementing clouds for clients? Choose the consultant exam that matches your project work.
+        </p>
+        <div className="grid gap-3 sm:grid-cols-2">
+          <Link href="/certifications/platform-foundations" className="text-salesforce-dark font-medium hover:underline">Platform Foundations</Link>
+          <Link href="/certifications/administrator" className="text-salesforce-dark font-medium hover:underline">Platform Administrator (ADM-201)</Link>
+          <Link href="/certifications/developer-1" className="text-salesforce-dark font-medium hover:underline">Platform Developer I (PD1)</Link>
+          <Link href="/certifications/app-builder" className="text-salesforce-dark font-medium hover:underline">Platform App Builder</Link>
+        </div>
+      </section>
 
       {/* Quick nav */}
       <nav className="mt-16 p-6 rounded-2xl bg-white border border-gray-100 shadow-sm">
@@ -121,14 +161,14 @@ export default function CertificationPathPage() {
           >
             Become a CTA (full journey)
           </Link>
-          {CERTIFICATION_PATHS.map((path) => (
-            <a
+          {pathSummaries.map((path) => (
+            <Link
               key={path.id}
-              href={`#${path.id}`}
-              className="px-4 py-2 rounded-lg bg-gray-50 text-gray-700 text-sm font-medium hover:bg-salesforce-blue/10 hover:text-salesforce-blue transition-colors"
+              href={path.href}
+              className="px-4 py-2 rounded-lg bg-gray-50 text-gray-700 text-sm font-medium hover:bg-salesforce-blue/10"
             >
               {path.name}
-            </a>
+            </Link>
           ))}
         </div>
       </nav>

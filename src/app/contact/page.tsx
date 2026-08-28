@@ -284,6 +284,17 @@ function ContactPageContent() {
               <p className="text-gray-600 mb-8">
                 Questions about our materials or pricing? Just want to say hello? We&apos;re here to help.
               </p>
+              <div className="mb-8 space-y-3 text-sm leading-6 text-gray-700">
+                <p>
+                  Use this page for questions about certification coverage, full mock exam access, exam-specific study
+                  plans, or corrections to published exam details. If your message is about one certification, include the
+                  exam name or code so we can route the reply faster.
+                </p>
+                <p>
+                  We review support messages manually. Most replies include the relevant certification page, recommended next
+                  resource, and any pricing or access details needed for full practice materials.
+                </p>
+              </div>
 
               <div className="space-y-6">
                 <div className="flex items-start">

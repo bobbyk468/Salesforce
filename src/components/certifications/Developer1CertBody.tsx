@@ -3,7 +3,7 @@ import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
-import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageSeo from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -15,14 +15,10 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 import dynamic from 'next/dynamic'
-import DifficultyHeatmap from '@/components/DifficultyHeatmap'
-import CertDifficultySection from '@/components/CertDifficultySection'
-import CertMockScoreGuide from '@/components/CertMockScoreGuide'
-import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
+import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
-import CertQuizSchema from '@/components/CertQuizSchema'
+import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
@@ -203,6 +199,7 @@ const sampleQuestions = [
 
 export default function Developer1CertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
+  const initialQuestions = getInitialPracticeQuestions(sampleQuestions)
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
@@ -514,31 +511,15 @@ private class CalloutServiceTest {
 
           
 
-          <DifficultyHeatmap slug={slug} />
-          <CertDifficultySection slug={slug} />
-          <CertMockScoreGuide slug={slug} />
-          <CertPracticeVsDumps />
-
-          <CertQuizSchema certTitle={slugToDisplayName(slug)} slug={slug} questions={sampleQuestions} />
+          <CertReadinessSummary slug={slug} />
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
             introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
-            questions={sampleQuestions}
+            questions={initialQuestions}
           />
 
 
                     <FullQuestionBankCta slug={slug} certTitle={slugToDisplayName(slug)} />
-
-                    <section className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6" aria-labelledby="next-certs-heading">
-            <h2 id="next-certs-heading" className="text-base font-semibold text-gray-900 mb-3">Next Certifications After Developer</h2>
-            <p className="text-sm text-gray-700 mb-2">After this certification, common next steps in the developer track:</p>
-            <ul className="space-y-2 text-sm">
-              <li><Link href="/certifications/developer-2" className="text-salesforce-blue font-medium hover:underline">Platform Developer II</Link></li>
-              <li><Link href="/certifications/app-builder" className="text-salesforce-blue font-medium hover:underline">Platform App Builder</Link></li>
-              <li><Link href="/certifications/javascript-developer-i" className="text-salesforce-blue font-medium hover:underline">JavaScript Developer I</Link></li>
-              <li><Link href="/certifications/role/developer" className="text-salesforce-blue font-medium hover:underline">Developer certification path</Link></li>
-            </ul>
-          </section>
 
           <div id="related-certs">
             <RelatedCertifications currentSlug={slug} />
@@ -582,12 +563,7 @@ private class CalloutServiceTest {
             </p>
           </section>
 
-          <CertTestimonialsSection slug={slug} />
-
           {/* FAQ section - rendered after H1 for proper SEO structure */}
-          <div id="faq">
-            <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
-          </div>
         </div>
 
         {/* Sidebar - Table of Contents */}
@@ -600,12 +576,9 @@ private class CalloutServiceTest {
               { id: 'key-concepts', title: 'Key Concepts' },
               { id: 'apex-code-patterns', title: 'Apex Code Patterns' },
               { id: 'scenario-tips', title: 'How to Pass PD1' },
-              { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
               { id: 'practice-questions', title: 'Practice Questions' },
               { id: 'more-questions', title: 'Get More Questions' },
               { id: 'related-certs', title: 'Related Certifications' },
-              { id: 'student-reviews', title: 'Student Reviews' },
-              { id: 'faq', title: 'Exam FAQs' },
             ]}
           />
         </aside>

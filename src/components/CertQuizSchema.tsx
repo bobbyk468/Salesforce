@@ -22,7 +22,7 @@ export default function CertQuizSchema({ certTitle, slug, questions }: CertQuizS
     educationalLevel: 'professional',
     assesses: certTitle,
     url: `${siteBaseUrl}/certifications/${slug}#practice-questions`,
-    hasPart: questions.slice(0, 10).map((q, i) => ({
+    hasPart: questions.slice(0, 3).map((q, i) => ({
       '@type': 'Question',
       name: q.question,
       position: i + 1,
@@ -30,12 +30,6 @@ export default function CertQuizSchema({ certTitle, slug, questions }: CertQuizS
         '@type': 'Answer',
         text: q.options[q.correctAnswer],
       },
-      suggestedAnswer: q.options
-        .filter((_, idx) => idx !== q.correctAnswer)
-        .map((opt) => ({
-          '@type': 'Answer',
-          text: opt,
-        })),
     })),
   }
 

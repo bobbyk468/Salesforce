@@ -28,7 +28,7 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
-const defaultTitle = `Free Salesforce Practice Exams (${RELEASE_CURRENT}) | ${SITE_NAME}`
+const defaultTitle = `Free Salesforce Practice Tests ${RELEASE_CURRENT} | ${SITE_NAME}`
 const defaultDescription =
   `Free Salesforce certification prep: ${RELEASE_CURRENT} exam weightage, 4,200+ practice questions, and study guides for Admin, Developer, Consultant & Architect.`
 

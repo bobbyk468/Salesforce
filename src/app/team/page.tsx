@@ -98,6 +98,23 @@ export default function TeamPage() {
         Content is written and reviewed by Salesforce-certified practitioners with real implementation and exam experience.
       </p>
 
+      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
+        <h2 className="text-xl font-semibold text-gray-900 mb-3">Why Editorial Review Matters</h2>
+        <div className="space-y-3 text-sm leading-6 text-gray-700">
+          <p>
+            Certification pages can become misleading quickly when exam names, section weightage, passing scores, fees, or
+            release terminology changes. Trailblaze Prep treats those details as trust signals, not decoration. The review
+            process checks exam logistics against official Salesforce sources and keeps practical guidance separate from
+            speculative advice.
+          </p>
+          <p>
+            We also avoid leaked questions and braindumps. The goal is to help candidates understand the concepts behind the
+            exam, practise scenario-style reasoning, and choose the right certification path without putting their credential
+            or employer trust at risk.
+          </p>
+        </div>
+      </section>
+
       {/* Author card */}
       <div className="rounded-2xl border border-blue-100 bg-gradient-to-br from-blue-50/50 to-white p-6 sm:p-8 mb-10">
         <div className="flex items-start gap-5">

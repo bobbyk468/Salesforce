@@ -3,7 +3,7 @@ import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
-import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageSeo from '@/components/CertPageSeo'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -32,25 +32,20 @@ import AdministratorCertBody from '@/components/certifications/AdministratorCert
 import Developer1CertBody from '@/components/certifications/Developer1CertBody'
 import AgentforceArchitectureDiagram from '@/components/certifications/AgentforceArchitectureDiagram'
 import dynamic from 'next/dynamic'
-import DifficultyHeatmap from '@/components/DifficultyHeatmap'
-import CertDifficultySection from '@/components/CertDifficultySection'
-import CertMockScoreGuide from '@/components/CertMockScoreGuide'
-import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
+import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import CertTestimonialsSection from '@/components/CertTestimonialsSection'
 import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import { WhoIsThisForSection, ExamDifficultySection, ExamFormatSection } from '@/components/CertAdminStyleSections'
 import CertDifferentiationSection from '@/components/CertDifferentiationSection'
-import CertQuizSchema from '@/components/CertQuizSchema'
+import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
 import type { ReactNode } from 'react'
 
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
   {
-    // ssr: true (default) — server renders questions so Googlebot sees content immediately.
-    // "Check Answer" interactivity activates after client hydration (progressive enhancement).
+    ssr: false,
     loading: () => (
       <div id="practice-questions" className="mt-12 min-h-[440px] w-full" aria-hidden="true" />
     ),
@@ -174,6 +169,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
   const examSections = getExamWeightage(slug)
   const title = slugToDisplayName(slug)
   const card = body.certificationCard
+  const initialQuestions = getInitialPracticeQuestions(body.sampleQuestions)
 
   return (
     <>
@@ -238,19 +234,14 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           blocks={body.scenarioTips.blocks}
         />
 
-        <DifficultyHeatmap slug={slug} />
-        <CertDifficultySection slug={slug} />
-        <CertMockScoreGuide slug={slug} />
-        <CertPracticeVsDumps />
-
-        <CertQuizSchema certTitle={title} slug={slug} questions={body.sampleQuestions} />
+        <CertReadinessSummary slug={slug} />
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
           introText={getPracticeQuestionsIntro(
             body.sampleQuestions.length,
             body.practiceQuestionsIntroSuffix,
           )}
-          questions={body.sampleQuestions}
+          questions={initialQuestions}
         />
 
         <FullQuestionBankCta slug={slug} certTitle={title} />
@@ -279,12 +270,6 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <div id="related-certs">
           <RelatedCertifications currentSlug={slug} />
         </div>
-
-        <CertTestimonialsSection slug={slug} />
-
-        <div id="faq">
-          <CertPageFaq slug={slug} certTitle={title} />
-        </div>
       </CertificationPageShell>
     </>
   )
@@ -294,6 +279,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
   const examSections = getExamWeightage(slug)
   const title = slugToDisplayName(slug)
   const card = body.certificationCard
+  const initialQuestions = getInitialPracticeQuestions(body.sampleQuestions)
 
   return (
     <>
@@ -350,16 +336,11 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
 
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
 
-        <DifficultyHeatmap slug={slug} />
-        <CertDifficultySection slug={slug} />
-        <CertMockScoreGuide slug={slug} />
-        <CertPracticeVsDumps />
-
-        <CertQuizSchema certTitle={title} slug={slug} questions={body.sampleQuestions} />
+        <CertReadinessSummary slug={slug} />
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
           introText={getPracticeQuestionsIntro(body.sampleQuestions.length, body.practiceIntroSuffix)}
-          questions={body.sampleQuestions}
+          questions={initialQuestions}
         />
 
         <div id="more-questions" className="mt-12 bg-salesforce-blue/10 rounded-xl p-6 sm:p-8 text-center">
@@ -385,8 +366,6 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
           <RelatedCertifications currentSlug={slug} />
         </div>
 
-        <CertTestimonialsSection slug={slug} />
-
         <section
           className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
           aria-labelledby={body.afterCertSection.id}
@@ -407,10 +386,6 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
             ))}
           </ul>
         </section>
-
-        <div id="faq">
-          <CertPageFaq slug={slug} certTitle={title} />
-        </div>
       </CertificationPageShell>
     </>
   )

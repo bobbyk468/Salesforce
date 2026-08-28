@@ -1,4 +1,3 @@
-import { Fragment } from 'react'
 import Link from 'next/link'
 import dynamic from 'next/dynamic'
 import CertificationCard from '@/components/CertificationCard'
@@ -21,42 +20,30 @@ const AdministratorCtaSections = dynamic(() => import('@/components/Administrato
     <div className="mt-12 min-h-[340px] w-full" aria-hidden="true" />
   ),
 })
-import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import CertPageSeo from '@/components/CertPageSeo'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import RelatedCertifications from '@/components/RelatedCertifications'
 import CertTableOfContents from '@/components/CertTableOfContents'
-import PrintChecklistButton from '@/components/PrintChecklistButton'
 import { getCertExamWeightageHeading, getCertPracticeQuestionsHeading, getPracticeQuestionsIntro, slugToDisplayName } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
-import DifficultyHeatmap from '@/components/DifficultyHeatmap'
-import CertDifficultySection from '@/components/CertDifficultySection'
-import CertMockScoreGuide from '@/components/CertMockScoreGuide'
-import CertPracticeVsDumps from '@/components/CertPracticeVsDumps'
+import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import CertTestimonialsSection from '@/components/CertTestimonialsSection'
-import CertQuizSchema from '@/components/CertQuizSchema'
+import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
 import {
-  ADM_201_SECTION_SUBTOPICS,
   ADMINISTRATOR_SLUG,
   administratorSampleQuestions,
 } from '@/lib/cert-page-spike/administrator-data'
 
 export default function AdministratorCertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
+  const initialQuestions = getInitialPracticeQuestions(administratorSampleQuestions)
 
   return (
-    <div className="relative min-h-screen bg-pattern">
-      {/* Background decorative elements */}
-      <div className="hidden lg:block fixed inset-0 overflow-hidden pointer-events-none z-0 motion-reduce:hidden" aria-hidden="true">
-        <div className="absolute top-0 left-1/4 w-96 h-96 bg-salesforce-blue/5 rounded-full blur-3xl animate-pulse"></div>
-        <div className="absolute bottom-0 right-1/4 w-96 h-96 bg-salesforce-light/5 rounded-full blur-3xl animate-pulse" style={{ animationDelay: '1s' }}></div>
-        <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-indigo-50/3 rounded-full blur-3xl"></div>
-      </div>
-      
+    <div className="min-h-screen bg-pattern">
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
         <CertIntroParagraph slug={slug} />
@@ -153,70 +140,6 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               examWeightageHeading={getCertExamWeightageHeading(slug)}
               headingLevel="h2"
             />
-
-            <div className="print-checklist-only mt-8 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
-              <details id="syllabus-checklist" className="rounded-xl border border-gray-200 bg-white overflow-hidden">
-                <summary className="px-5 py-4 cursor-pointer font-semibold text-gray-900 bg-gray-50 hover:bg-gray-100 transition-colors list-none flex items-center justify-between gap-2 no-print">
-                  <span>ADM-201 exam syllabus checklist</span>
-                  <span className="text-gray-600 text-sm font-normal">(expand to view or print)</span>
-                </summary>
-                <div className="px-5 py-4 border-t border-gray-100">
-                  <p className="text-sm text-gray-600 mb-3 no-print">Use this table to track your study. Sections are from the official exam outline with approximate weight. Key areas per section: setup & configuration, Object Manager & Lightning App Builder, automation (Flow, Process Builder), data & analytics, Sales & Service Cloud, productivity & collaboration.</p>
-                  <p className="hidden print:block text-sm font-semibold text-gray-900 mb-2">ADM-201 exam syllabus checklist</p>
-                  <div className="overflow-x-auto">
-                    <table className="w-full text-sm text-left border-collapse">
-                      <thead>
-                        <tr className="border-b border-gray-200">
-                          <th scope="col" className="py-2 pr-4 font-semibold text-gray-900">Section</th>
-                          <th scope="col" className="py-2 w-20 font-semibold text-gray-900 text-right">Weight</th>
-                        </tr>
-                      </thead>
-                      <tbody>
-                        {(examSections ?? []).map((section, i) => (
-                          <Fragment key={i}>
-                            <tr className="border-b border-gray-100">
-                              <td className="py-2.5 pr-4 text-gray-800">{section.name}</td>
-                              <td className="py-2.5 text-right font-medium text-gray-700">{section.percentage}%</td>
-                            </tr>
-                            {ADM_201_SECTION_SUBTOPICS[section.name] && (
-                              <tr className="border-b border-gray-50 bg-gray-50/50">
-                                <td colSpan={2} className="py-2 pr-4 pl-4 text-xs font-medium text-gray-700">
-                                  Key subtopics:{' '}{ADM_201_SECTION_SUBTOPICS[section.name].join(' • ')}
-                                </td>
-                              </tr>
-                            )}
-                          </Fragment>
-                        ))}
-                      </tbody>
-                    </table>
-                  </div>
-                  <div className="mt-3 no-print">
-                    <PrintChecklistButton />
-                  </div>
-                </div>
-              </details>
-            </div>
-
-            <details className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_420px]">
-              <summary className="cursor-pointer list-none text-lg font-bold text-gray-900 lg:hidden">
-                Suggested study timeline (4–6 weeks)
-              </summary>
-              <div className="hidden group-open:block lg:block">
-                <h2 id="study-timeline-heading" className="hidden lg:block text-lg font-bold text-gray-900 mb-3">
-                  Suggested study timeline (4–6 weeks)
-                </h2>
-                <p className="text-sm text-gray-600 mb-3">
-                  If you have an exam date in mind, use this as a guide. Focus on high-weight sections first.
-                </p>
-                <ul className="text-sm text-gray-700 space-y-2 list-disc list-inside">
-                  <li><strong>Weeks 1–2:</strong> Configuration and Setup, Object Manager and Lightning App Builder (40% combined)</li>
-                  <li><strong>Weeks 2–3:</strong> Workflow and Process Automation, Data and Analytics Management (30%)</li>
-                  <li><strong>Weeks 3–4:</strong> Sales and Marketing, Service and Support Applications (23%)</li>
-                  <li><strong>Weeks 4–5:</strong> Productivity and Collaboration (7%); review weak areas</li>
-                  <li><strong>Week 5–6:</strong> Full practice tests and final review</li>
-                </ul>
-              </div>
-            </details>
 
             {/* Is ADM-201 Hard? + Pass rate guidance (targets high-volume search query + builds trust) */}
             <details id="is-adm-201-hard" className="group mt-8 rounded-xl border border-gray-100 bg-white p-5 sm:p-6 [content-visibility:auto] [contain-intrinsic-size:1px_520px]">
@@ -436,16 +359,11 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
 
           
 
-          <DifficultyHeatmap slug={slug} />
-          <CertDifficultySection slug={slug} />
-          <CertMockScoreGuide slug={slug} />
-          <CertPracticeVsDumps />
-
-          <CertQuizSchema certTitle={slugToDisplayName(slug)} slug={slug} questions={administratorSampleQuestions} />
+          <CertReadinessSummary slug={slug} />
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
               introText={getPracticeQuestionsIntro(administratorSampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
-              questions={administratorSampleQuestions}
+              questions={initialQuestions}
               extraQuestionsKey="administrator"
             />
 
@@ -483,36 +401,10 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   </Link>
                   <span className="text-gray-600 ml-2">Side-by-side comparison of difficulty, overlap, and career value to help you choose the right order.</span>
                 </li>
-                <li>
-                  <p className="text-gray-700">
-                    After you pass ADM-201, the most common next steps are{' '}
-                    <Link href="/certifications/sales-cloud" className="text-salesforce-blue font-medium hover:underline">
-                      Sales Cloud Consultant
-                    </Link>
-                    ,{' '}
-                    <Link href="/certifications/service-cloud" className="text-salesforce-blue font-medium hover:underline">
-                      Service Cloud Consultant
-                    </Link>
-                    , and{' '}
-                    <Link href="/certifications/experience-cloud" className="text-salesforce-blue font-medium hover:underline">
-                      Experience Cloud Consultant
-                    </Link>
-                    {' '}depending on whether your org is sales-, service-, or portal-focused. If you work in marketing operations, consider the{' '}
-                    <Link href="/certifications/marketing-cloud-consultant" className="text-salesforce-blue font-medium hover:underline">
-                      Marketing Cloud Consultant
-                    </Link>
-                    {' '}path next.
-                  </p>
-                </li>
               </ul>
             </section>
 
-            <CertTestimonialsSection slug={slug} />
-
             {/* FAQ section - rendered after H1 for proper SEO structure */}
-            <div id="faq">
-              <CertPageFaq slug={slug} certTitle={slugToDisplayName(slug)} />
-            </div>
           </div>
 
           {/* Sidebar - Table of Contents */}
@@ -525,14 +417,9 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                 { id: 'exam-prep', title: 'Exam Prep Content' },
                 { id: 'key-concepts', title: 'Key Concepts' },
                 { id: 'scenario-tips', title: 'How to Pass' },
-                { id: 'difficulty-heatmap', title: 'Difficulty Heatmap' },
-              { id: 'practice-questions', title: 'Practice Questions' },
+                { id: 'practice-questions', title: 'Practice Questions' },
                 { id: 'more-questions', title: 'Get More Questions' },
-                { id: 'practice-vs-dumps', title: 'Questions vs Dumps' },
-                { id: 'platform-admin-vs-other', title: 'Cert Comparisons' },
                 { id: 'related-certs', title: 'Related Certifications' },
-                { id: 'student-reviews', title: 'Student Reviews' },
-                { id: 'faq', title: 'Exam FAQs' },
               ]}
             />
           </aside>

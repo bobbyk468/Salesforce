@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import { getRelatedCerts, getStrategicInternalLinks } from '@/lib/certifications-data'
 import { SLUG_TO_EXAM_TIPS, SLUG_TO_STUDY_GUIDE, slugToDisplayName } from '@/lib/cert-seo-data'
 
@@ -18,7 +17,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   const related = getRelatedCerts(currentSlug).filter(
     (item) => !strategicLinks.some((strategic) => strategic.href === item.href)
   )
-  const linksToRender = [...strategicLinks, ...related]
+  const linksToRender = [...strategicLinks, ...related].slice(0, 5)
 
   const certName = slugToDisplayName(currentSlug)
   const studyResources = [
@@ -35,7 +34,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   if (linksToRender.length === 0 && studyResources.length === 0) return null
 
   return (
-    <section className="mt-12 sm:mt-16 rounded-xl sm:rounded-2xl border border-purple-100/50 bg-gradient-to-br from-purple-50/40 via-white to-indigo-50/30 p-5 sm:p-6 lg:p-8 shadow-md backdrop-blur-sm [content-visibility:auto] [contain-intrinsic-size:auto_200px]" aria-labelledby="related-certs-heading">
+    <section className="mt-12 rounded-xl border border-purple-100 bg-white p-6 [content-visibility:auto] [contain-intrinsic-size:auto_200px]" aria-labelledby="related-certs-heading">
       {studyResources.length > 0 && (
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">
@@ -46,10 +45,9 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 text-salesforce-blue font-medium hover:text-salesforce-dark hover:underline"
+                  className="inline-flex items-center gap-1 text-salesforce-blue font-medium hover:underline"
                 >
                   {item.anchorText}
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </li>
             ))}
@@ -69,10 +67,9 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
               <li key={item.href}>
                 <Link
                   href={item.href}
-                  className="inline-flex items-center gap-1 text-salesforce-blue font-medium hover:text-salesforce-dark hover:underline"
+                  className="inline-flex items-center gap-1 text-salesforce-blue font-medium hover:underline"
                 >
                   {item.anchorText}
-                  <ArrowRight className="h-4 w-4" />
                 </Link>
               </li>
             ))}

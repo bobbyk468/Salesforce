@@ -1,4 +1,3 @@
-import { ExternalLink } from 'lucide-react'
 import { SLUG_TO_EXAM_GUIDE_URL, EXAM_PRICING_URL } from '@/lib/cert-seo-data'
 import { RELEASE_DATE, RELEASE_DATE_DISPLAY } from '@/lib/release-data'
 
@@ -23,7 +22,7 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
               rel="noopener noreferrer"
               className="inline-flex items-center gap-0.5 text-salesforce-blue hover:underline"
             >
-              Exam guide <ExternalLink className="h-3 w-3" aria-hidden="true" />
+              Exam guide
             </a>
             {showSalesforcePricing && <span className="mx-1.5">&middot;</span>}
           </>
@@ -35,7 +34,7 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
             rel="noopener noreferrer"
             className="inline-flex items-center gap-0.5 text-salesforce-blue hover:underline"
           >
-            Salesforce exam pricing <ExternalLink className="h-3 w-3" aria-hidden="true" />
+            Salesforce exam pricing
           </a>
         )}
         <span className="mx-1.5">&middot;</span>

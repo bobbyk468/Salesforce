@@ -53,7 +53,23 @@ export default function PrivacyPage() {
           We respect your privacy. When you contact us, we use your details only to respond.
         </p>
         <p>
+          Trailblaze Prep is a certification preparation website. Most pages can be read without creating an account,
+          submitting personal information, or sharing payment details with us. If you choose to contact us, the information
+          you provide may include your name, email address, exam interest, and the message you send. We use that information
+          to answer your question, provide study-material guidance, or follow up on a request you initiated.
+        </p>
+        <p>
           We do not sell your data. We may use cookies for site use. We do not use them for ad tracking without your consent.
+        </p>
+        <p>
+          We may review aggregated site analytics to understand which certification pages, study guides, and practice-question
+          resources are useful to visitors. Those analytics help us improve navigation, page speed, and content accuracy. They
+          are not used to publish personal profiles or identify individual candidates.
+        </p>
+        <p>
+          If you ask us to correct, update, or remove contact information you previously submitted, we will make reasonable
+          efforts to honor that request. We keep contact records only as long as needed to respond, manage support history, or
+          satisfy basic operational requirements.
         </p>
         <p className="text-sm bg-gray-50 p-4 rounded-lg border border-gray-200">
           <strong>Trademark notice:</strong> This site is not affiliated with Salesforce, Inc.

@@ -1,6 +1,5 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
@@ -80,7 +79,8 @@ function feeBadgeClass(fee: string) {
   return 'text-red-700 bg-red-50'
 }
 
-export default function SalesforceListPage() {const totalCerts = CERTIFICATION_CATEGORIES.reduce((acc, cat) => acc + cat.items.length, 0)
+export default function SalesforceListPage() {
+  const totalCerts = CERTIFICATION_CATEGORIES.reduce((acc, cat) => acc + cat.items.length, 0)
 
   return (
     <div className="max-w-5xl mx-auto px-4 py-12">
@@ -101,6 +101,20 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
 
       <ContentPageAuthor />
 
+      <section className="mb-10 rounded-xl border border-gray-100 bg-white p-5 text-gray-700">
+        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Use This Certification List</h2>
+        <p className="mb-3">
+          Treat this page as a map, not a ranking. Start by choosing the role track closest to your current job goal:
+          Administrator for platform setup, Developer for Apex and Lightning work, Consultant for cloud implementation,
+          and Architect for long-term solution design.
+        </p>
+        <p>
+          If you are new to Salesforce, compare the Associate, Administrator, and Platform App Builder options first.
+          If you already work on Salesforce projects, use the role groups below to find the next credential that matches
+          your product area, exam budget, and practical experience.
+        </p>
+      </section>
+
       {/* Summary stats */}
       <section className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
@@ -116,7 +130,7 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
         ))}
       </section>
 
-      {/* Role-grouped cert table */}
+      {/* Role-grouped cert list */}
       <div className="space-y-10">
         {CERTIFICATION_CATEGORIES.map((category) => {
           const badgeClass = roleBadgeColor[category.slug] || 'bg-gray-100 text-gray-700'
@@ -137,45 +151,23 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
                 </Link>
               </div>
 
-              <div className="rounded-xl border border-gray-100 bg-white overflow-hidden">
-                <table className="w-full text-sm">
-                  <thead>
-                    <tr className="border-b border-gray-100 bg-gray-50">
-                      <th scope="col" className="text-left py-2.5 px-4 font-semibold text-gray-600 w-full">Certification</th>
-                      <th scope="col" className="text-right py-2.5 px-4 font-semibold text-gray-600 whitespace-nowrap">Exam Fee</th>
-                      <th scope="col" className="py-2.5 px-4 w-8" aria-label="Link" />
-                    </tr>
-                  </thead>
-                  <tbody className="divide-y divide-gray-50">
-                    {category.items.map((item) => {
-                      const slug = item.href.replace('/certifications/', '').replace(/\/$/, '')
-                      const fee = getExamCost(slug)
-                      return (
-                        <tr key={item.href} className="hover:bg-salesforce-blue/5 transition-colors">
-                          <td className="py-2.5 px-4">
-                            <Link
-                              href={item.href}
-                              className="font-medium text-gray-800 hover:text-salesforce-blue transition-colors"
-                            >
-                              {item.name}
-                            </Link>
-                          </td>
-                          <td className="py-2.5 px-4 text-right">
-                            <span className={`inline-block text-xs font-semibold px-2 py-0.5 rounded-full ${feeBadgeClass(fee)}`}>
-                              {fee}
-                            </span>
-                          </td>
-                          <td className="py-2.5 px-4">
-                            <Link href={item.href} aria-label={`Study guide for ${item.name}`}>
-                              <ArrowRight className="h-4 w-4 text-gray-600 hover:text-salesforce-blue transition-colors" />
-                            </Link>
-                          </td>
-                        </tr>
-                      )
-                    })}
-                  </tbody>
-                </table>
-              </div>
+              <ul className="rounded-xl border border-gray-100 bg-white divide-y divide-gray-50">
+                {category.items.map((item) => {
+                  const slug = item.href.replace('/certifications/', '').replace(/\/$/, '')
+                  const fee = getExamCost(slug)
+                  return (
+                    <li key={item.href} className="flex items-center gap-3 px-4 py-3 text-sm">
+                      <Link href={item.href} className="font-medium text-gray-800 hover:text-salesforce-blue">
+                        {item.name}
+                      </Link>
+                      <span className={`ml-auto text-xs font-semibold px-2 py-0.5 rounded-full ${feeBadgeClass(fee)}`}>
+                        {fee}
+                      </span>
+                      <span className="sr-only">.</span>
+                    </li>
+                  )
+                })}
+              </ul>
             </section>
           )
         })}
@@ -192,8 +184,7 @@ export default function SalesforceListPage() {const totalCerts = CERTIFICATION_C
             href="/certification-path"
             className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors"
           >
-            Plan Your Certification Path
-            <ArrowRight className="h-4 w-4" />
+            Plan Your Certification Path →
           </Link>
           <Link
             href="/salesforce-certification-cost"

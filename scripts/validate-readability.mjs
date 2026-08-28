@@ -20,7 +20,16 @@ async function fetchSitemapUrls() {
   const res = await fetch(`${baseUrl}/sitemap.xml`)
   if (!res.ok) throw new Error(`Sitemap fetch failed: ${res.status}`)
   const xml = await res.text()
-  return [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim())
+  const rawUrls = [...xml.matchAll(/<loc>([^<]+)<\/loc>/g)].map((m) => m[1].trim())
+  const baseOrigin = new URL(baseUrl).origin
+  return rawUrls.map((u) => {
+    try {
+      const path = new URL(u).pathname
+      return `${baseOrigin}${path}`
+    } catch {
+      return u
+    }
+  })
 }
 
 function stripScriptsAndStyles(html) {
