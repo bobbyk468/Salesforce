@@ -54,6 +54,17 @@ import DataWeaveTransformDiagram from '@/components/certifications/DataWeaveTran
 import RPAvsComposerDiagram from '@/components/certifications/RPAvsComposerDiagram'
 import FlexCardOmniScriptDiagram from '@/components/certifications/FlexCardOmniScriptDiagram'
 import BoltSDKDiagram from '@/components/certifications/BoltSDKDiagram'
+import EinsteinDiscoveryLifecycleDiagram from '@/components/certifications/EinsteinDiscoveryLifecycleDiagram'
+import IdentityResolutionDiagram from '@/components/certifications/IdentityResolutionDiagram'
+import EducationDataModelDiagram from '@/components/certifications/EducationDataModelDiagram'
+import MCStudioDecisionDiagram from '@/components/certifications/MCStudioDecisionDiagram'
+import C4EFrameworkDiagram from '@/components/certifications/C4EFrameworkDiagram'
+import NPSPMigrationDiagram from '@/components/certifications/NPSPMigrationDiagram'
+import OmniScriptUXPatternDiagram from '@/components/certifications/OmniScriptUXPatternDiagram'
+import LeadScoringGradingDiagram from '@/components/certifications/LeadScoringGradingDiagram'
+import LeadToCashArchitectureDiagram from '@/components/certifications/LeadToCashArchitectureDiagram'
+import EnterpriseGridRolloutDiagram from '@/components/certifications/EnterpriseGridRolloutDiagram'
+import TableauDeploymentDiagram from '@/components/certifications/TableauDeploymentDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -273,6 +284,17 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'mulesoft-hyperautomation-developer' ? <RPAvsComposerDiagram /> : null}
         {slug === 'omnistudio-developer' ? <FlexCardOmniScriptDiagram /> : null}
         {slug === 'slack-developer' ? <BoltSDKDiagram /> : null}
+        {slug === 'crm-analytics-einstein-discovery-consultant' ? <EinsteinDiscoveryLifecycleDiagram /> : null}
+        {slug === 'data-360-consultant' ? <IdentityResolutionDiagram /> : null}
+        {slug === 'education-cloud-consultant' ? <EducationDataModelDiagram /> : null}
+        {slug === 'marketing-cloud-consultant' ? <MCStudioDecisionDiagram /> : null}
+        {slug === 'mulesoft-catalyst-consultant' ? <C4EFrameworkDiagram /> : null}
+        {slug === 'nonprofit-success-pack-consultant' ? <NPSPMigrationDiagram /> : null}
+        {slug === 'omnistudio-consultant' ? <OmniScriptUXPatternDiagram /> : null}
+        {slug === 'pardot-consultant' ? <LeadScoringGradingDiagram /> : null}
+        {slug === 'revenue-cloud-consultant' ? <LeadToCashArchitectureDiagram /> : null}
+        {slug === 'slack-consultant' ? <EnterpriseGridRolloutDiagram /> : null}
+        {slug === 'tableau-consultant' ? <TableauDeploymentDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
