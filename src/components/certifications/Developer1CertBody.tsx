@@ -40,7 +40,12 @@ const sampleQuestions = [
       "isInsert, isUpdate"
     ],
     correctAnswer: 0,
-    explanation: "The 'after insert' and 'after update' trigger events fire after the record is saved to the database, which is required when you need to access the record Id or related records."
+    explanation: "The 'after insert' and 'after update' trigger events fire after the record is saved to the database, which is required when you need to access the record Id or related records.",
+    whyWrong: [
+      "'before insert, before update' fires prior to save, when the record doesn't yet have an Id — insufficient for logic needing the saved record or related records.",
+      "'after insert, before update' mixes timing incorrectly for this scenario's need to run after both operations.",
+      "'isInsert, isUpdate' are trigger context variables, not trigger event names — this option misidentifies the concept being asked about."
+    ]
   },
   {
     question: "What is the governor limit for the maximum number of SOQL queries in a single transaction?",
@@ -51,7 +56,12 @@ const sampleQuestions = [
       "200 queries"
     ],
     correctAnswer: 1,
-    explanation: "The synchronous governor limit for SOQL queries is 100 per transaction. For asynchronous contexts, the limit is 200."
+    explanation: "The synchronous governor limit for SOQL queries is 100 per transaction. For asynchronous contexts, the limit is 200.",
+    whyWrong: [
+      "50 understates the actual synchronous SOQL limit of 100.",
+      "150 overstates the actual synchronous SOQL limit of 100.",
+      "200 is the asynchronous limit, not the synchronous limit this question asks about."
+    ]
   },
   {
     question: "Which annotation is used to expose an Apex method as a REST web service?",
@@ -62,7 +72,12 @@ const sampleQuestions = [
       "@AuraEnabled"
     ],
     correctAnswer: 0,
-    explanation: "The @RestResource annotation is used at the class level to expose an Apex class as a REST resource. Individual methods use @HttpGet, @HttpPost, etc."
+    explanation: "The @RestResource annotation is used at the class level to expose an Apex class as a REST resource. Individual methods use @HttpGet, @HttpPost, etc.",
+    whyWrong: [
+      "@HttpGet is a method-level annotation for REST verbs, not the class-level annotation that exposes the class itself as a REST resource.",
+      "@RemoteAction exposes Apex to Visualforce remoting, unrelated to REST web services.",
+      "@AuraEnabled exposes methods to Lightning components, not REST API consumers."
+    ]
   },
   {
     question: "A developer writes a SOQL query: SELECT Id, Name FROM Account WHERE Name LIKE '%tech%'. What will this query return?",
@@ -73,7 +88,12 @@ const sampleQuestions = [
       "Accounts where Name equals 'tech'"
     ],
     correctAnswer: 2,
-    explanation: "The % wildcard matches any number of characters. Using %tech% matches any Account where the Name contains 'tech' anywhere in the string."
+    explanation: "The % wildcard matches any number of characters. Using %tech% matches any Account where the Name contains 'tech' anywhere in the string.",
+    whyWrong: [
+      "'starts with' would require the pattern 'tech%' (no leading wildcard), not '%tech%'.",
+      "'ends with' would require the pattern '%tech' (no trailing wildcard), not '%tech%'.",
+      "'equals' would require no wildcards at all — LIKE with wildcards never means exact equality."
+    ]
   },
   {
     question: "Which method should be used to perform DML operations inside a for loop safely?",
@@ -84,7 +104,12 @@ const sampleQuestions = [
       "Use @future method"
     ],
     correctAnswer: 2,
-    explanation: "To avoid hitting governor limits, you should always collect records in a list during the loop and perform DML operations outside the loop (bulk processing)."
+    explanation: "To avoid hitting governor limits, you should always collect records in a list during the loop and perform DML operations outside the loop (bulk processing).",
+    whyWrong: [
+      "Database.insert() alone doesn't address the loop-placement issue — DML inside a loop is the problem regardless of which insert method is used.",
+      "A plain insert statement inside a loop has the same governor-limit risk as any DML call inside a loop.",
+      "@future methods don't solve bulkification — they move work asynchronously but don't fix DML-in-a-loop patterns."
+    ]
   },
   {
     question: "What is the minimum code coverage required for Apex classes and triggers to be deployed to production?",
@@ -95,7 +120,12 @@ const sampleQuestions = [
       "100%"
     ],
     correctAnswer: 1,
-    explanation: "Salesforce requires at least 75% code coverage for Apex classes and triggers to be deployed to production. This ensures code quality and reliability."
+    explanation: "Salesforce requires at least 75% code coverage for Apex classes and triggers to be deployed to production. This ensures code quality and reliability.",
+    whyWrong: [
+      "60% is below Salesforce's actual required threshold of 75%.",
+      "80% overstates the actual required minimum, though it's often recommended as a safety margin.",
+      "100% is not required by Salesforce, though desirable in some rigorous engineering practices."
+    ]
   },
   {
     question: "Which annotation is used to make an Apex method available to Lightning Web Components?",
@@ -106,7 +136,12 @@ const sampleQuestions = [
       "@InvocableMethod"
     ],
     correctAnswer: 0,
-    explanation: "The @AuraEnabled annotation makes an Apex method available to Lightning Web Components (LWC) and Aura components, allowing them to call server-side logic."
+    explanation: "The @AuraEnabled annotation makes an Apex method available to Lightning Web Components (LWC) and Aura components, allowing them to call server-side logic.",
+    whyWrong: [
+      "@RemoteAction exposes methods to Visualforce remoting, not modern LWC/Aura components.",
+      "@RestResource exposes a class as a REST API endpoint, unrelated to LWC method calls.",
+      "@InvocableMethod exposes Apex to Flow and Process Builder, not LWC."
+    ]
   },
   {
     question: "A developer wants to create a trigger that processes records in bulk. What is the best practice?",
@@ -117,7 +152,12 @@ const sampleQuestions = [
       "Use synchronous methods only"
     ],
     correctAnswer: 1,
-    explanation: "Best practice is to collect records in a list during iteration and process them in bulk outside the loop to avoid hitting governor limits."
+    explanation: "Best practice is to collect records in a list during iteration and process them in bulk outside the loop to avoid hitting governor limits.",
+    whyWrong: [
+      "Processing one record at a time in a loop is the anti-pattern that causes governor limit issues, not the best practice.",
+      "@future methods don't solve bulkification — they simply defer execution asynchronously.",
+      "'Synchronous methods only' doesn't address the bulk-processing requirement at all."
+    ]
   },
   {
     question: "What is the governor limit for DML statements in a single transaction?",
@@ -128,7 +168,12 @@ const sampleQuestions = [
       "Unlimited"
     ],
     correctAnswer: 1,
-    explanation: "The synchronous governor limit for DML statements (insert, update, delete, upsert, etc.) is 150 per transaction."
+    explanation: "The synchronous governor limit for DML statements (insert, update, delete, upsert, etc.) is 150 per transaction.",
+    whyWrong: [
+      "100 DML statements understates the actual synchronous limit of 150.",
+      "200 DML statements overstates the actual synchronous limit of 150.",
+      "The DML statement limit is not unlimited — Salesforce enforces a specific cap to protect the multi-tenant platform."
+    ]
   },
   {
     question: "Which method is used to handle partial success in DML operations?",
@@ -139,7 +184,12 @@ const sampleQuestions = [
       "All of the above"
     ],
     correctAnswer: 0,
-    explanation: "Database.insert() returns a Database.SaveResult array, allowing you to handle partial success. The insert statement throws an exception if any record fails."
+    explanation: "Database.insert() returns a Database.SaveResult array, allowing you to handle partial success. The insert statement throws an exception if any record fails.",
+    whyWrong: [
+      "A plain insert statement throws an exception on any failure — it doesn't support partial success handling.",
+      "'Database.insert() with allOrNone parameter' set to true behaves like the plain insert statement (all-or-nothing); it's the default false setting on Database.insert() that enables partial success.",
+      "'All of the above' is incorrect since the plain insert statement specifically does NOT support partial success."
+    ]
   },
   {
     question: "What is the purpose of Test.runAs() in Apex test classes?",
@@ -150,7 +200,12 @@ const sampleQuestions = [
       "To test triggers"
     ],
     correctAnswer: 0,
-    explanation: "Test.runAs() allows you to execute test code in the context of a specific user, enabling you to test with different user permissions and sharing rules."
+    explanation: "Test.runAs() allows you to execute test code in the context of a specific user, enabling you to test with different user permissions and sharing rules.",
+    whyWrong: [
+      "Test.runAs() doesn't test asynchronous code — that's unrelated to its purpose of switching user context.",
+      "Test.runAs() isn't specific to batch class testing — it applies to any Apex test scenario needing a different user context.",
+      "Test.runAs() isn't specific to trigger testing — it's a general user-context testing mechanism usable anywhere."
+    ]
   },
   {
     question: "Which exception type should be thrown when validation fails in Apex?",
@@ -161,7 +216,12 @@ const sampleQuestions = [
       "Custom exception class"
     ],
     correctAnswer: 1,
-    explanation: "DmlException is thrown when DML operations fail. For custom validation errors, you can throw DmlException with a custom message."
+    explanation: "DmlException is thrown when DML operations fail. For custom validation errors, you can throw DmlException with a custom message.",
+    whyWrong: [
+      "A generic Exception doesn't carry the DML-specific context that DmlException provides for failed database operations.",
+      "AuraHandledException is specifically for surfacing errors to Lightning components, not general DML failure handling.",
+      "A custom exception class can be used, but DmlException is the standard, built-in type specifically for DML failures."
+    ]
   },
   {
     question: "A developer wants to query related records in a single SOQL query. Which clause should be used?",
@@ -172,7 +232,12 @@ const sampleQuestions = [
       "Subquery"
     ],
     correctAnswer: 2,
-    explanation: "SOQL uses relationship queries (dot notation) to query related records, such as 'SELECT Id, Account.Name FROM Contact' to get the Account name for each Contact."
+    explanation: "SOQL uses relationship queries (dot notation) to query related records, such as 'SELECT Id, Account.Name FROM Contact' to get the Account name for each Contact.",
+    whyWrong: [
+      "JOIN is not valid SOQL syntax — SOQL uses relationship dot-notation instead of SQL-style joins.",
+      "INNER JOIN is SQL syntax, not valid SOQL — Salesforce's query language doesn't support this keyword.",
+      "A subquery (parent-to-child) is a different SOQL technique for retrieving child records, not the dot-notation syntax used for the parent-to-child scenario described here."
+    ]
   },
   {
     question: "What is the purpose of the @TestVisible annotation?",
@@ -183,7 +248,12 @@ const sampleQuestions = [
       "To enable test coverage"
     ],
     correctAnswer: 1,
-    explanation: "@TestVisible allows test classes to access private methods and variables, enabling better test coverage without making them public."
+    explanation: "@TestVisible allows test classes to access private methods and variables, enabling better test coverage without making them public.",
+    whyWrong: [
+      "'To make a method available to test classes' is too broad — @TestVisible specifically exposes private members, not general method availability.",
+      "@TestVisible doesn't mark a class as a test class — that's unrelated to its actual purpose.",
+      "@TestVisible doesn't enable test coverage tracking — that's a platform-level, automatic measurement, not something this annotation controls."
+    ]
   },
   {
     question: "Which governor limit applies to the number of records processed in a single transaction?",
@@ -194,7 +264,12 @@ const sampleQuestions = [
       "200,000 records"
     ],
     correctAnswer: 3,
-    explanation: "The governor limit for the number of records processed in a single transaction is 200,000 records for synchronous contexts and 1,000,000 for asynchronous contexts."
+    explanation: "The governor limit for the number of records processed in a single transaction is 200,000 records for synchronous contexts and 1,000,000 for asynchronous contexts.",
+    whyWrong: [
+      "10,000 records understates the actual synchronous governor limit of 200,000.",
+      "50,000 records understates the actual synchronous governor limit of 200,000.",
+      "100,000 records understates the actual synchronous governor limit of 200,000."
+    ]
   },
 ]
 
