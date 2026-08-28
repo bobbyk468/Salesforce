@@ -1,5 +1,6 @@
 'use client'
 
+import { useEffect, useState } from 'react'
 import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
 
 function Tooltip({ text }: { text: string }) {
@@ -15,10 +16,24 @@ function Tooltip({ text }: { text: string }) {
 }
 
 export default function FloatingContactButtons() {
+  const [pastHero, setPastHero] = useState(false)
+
+  useEffect(() => {
+    const sync = () => setPastHero(window.scrollY > 420)
+    sync()
+    window.addEventListener('scroll', sync, { passive: true })
+    return () => window.removeEventListener('scroll', sync)
+  }, [])
+
   return (
     <>
-      {/* WhatsApp */}
-      <div className="fixed z-50 group" style={{ bottom: '9.5rem', right: '1.5rem' }}>
+      {/* WhatsApp — hidden on desktop (lg+) since the docked ContactSidebar already
+          offers WhatsApp/email; on mobile, held back until the hero has scrolled
+          out of view so it doesn't cover the hero CTA and stats. */}
+      <div
+        className={`fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        style={{ bottom: '9.5rem', right: '1.5rem' }}
+      >
         <Tooltip text="Chat with us on WhatsApp" />
         <a
           href={WHATSAPP_LINK}
@@ -35,7 +50,10 @@ export default function FloatingContactButtons() {
       </div>
 
       {/* Email */}
-      <div className="fixed z-50 group" style={{ bottom: '5.5rem', right: '1.5rem' }}>
+      <div
+        className={`fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+        style={{ bottom: '5.5rem', right: '1.5rem' }}
+      >
         <Tooltip text="Email us your question" />
         <a
           href={`mailto:${CONTACT_EMAIL}?subject=Salesforce%20Certification%20Question`}

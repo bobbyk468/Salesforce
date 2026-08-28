@@ -41,6 +41,7 @@ export default function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([])
   const [input, setInput] = useState('')
   const [loading, setLoading] = useState(false)
+  const [pastHero, setPastHero] = useState(false)
   const endRef = useRef<HTMLDivElement>(null)
   const inputRef = useRef<HTMLInputElement>(null)
   const abortRef = useRef<AbortController | null>(null)
@@ -48,6 +49,17 @@ export default function ChatBot() {
   useEffect(() => {
     if (open && messages.length === 0) setMessages([WELCOME])
   }, [open, messages.length])
+
+  useEffect(() => {
+    const sync = () => setPastHero(window.scrollY > 420 || window.innerWidth >= 1024)
+    sync()
+    window.addEventListener('scroll', sync, { passive: true })
+    window.addEventListener('resize', sync)
+    return () => {
+      window.removeEventListener('scroll', sync)
+      window.removeEventListener('resize', sync)
+    }
+  }, [])
 
   useEffect(() => {
     endRef.current?.scrollIntoView({ behavior: 'smooth' })
@@ -165,8 +177,11 @@ export default function ChatBot() {
 
   return (
     <>
-      {/* Floating toggle button */}
-      <div className="fixed bottom-6 right-6 z-50 group">
+      {/* Floating toggle button — held back on mobile until the hero has scrolled
+          out of view so it doesn't cover the hero CTA and stats. */}
+      <div
+        className={`fixed bottom-6 right-6 z-50 group transition-opacity duration-200 ${pastHero || open ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
+      >
         {!open && (
           <div className="absolute right-full mr-3 top-1/2 -translate-y-1/2 pointer-events-none">
             <div className="relative bg-gray-900 text-white text-xs font-medium rounded-lg px-3 py-2 whitespace-nowrap opacity-0 group-hover:opacity-100 transition-opacity duration-200">
