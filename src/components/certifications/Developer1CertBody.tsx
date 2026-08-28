@@ -18,6 +18,7 @@ import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
+import ExecutionContextDiagram from '@/components/certifications/ExecutionContextDiagram'
 import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
 const PracticeQuestionsSection = dynamic(
   () => import('@/components/PracticeQuestionsSection'),
@@ -478,6 +479,8 @@ private class CalloutServiceTest {
               </div>
             </div>
           </div>
+
+          <ExecutionContextDiagram />
 
           {/* How to Pass Scenario Strategy */}
           <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">

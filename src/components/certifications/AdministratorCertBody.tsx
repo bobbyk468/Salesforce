@@ -32,6 +32,7 @@ import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import OrderOfExecutionDiagram from '@/components/certifications/OrderOfExecutionDiagram'
 import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
 import {
   ADMINISTRATOR_SLUG,
@@ -326,6 +327,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               </div>
             </div>
           </div>
+
+          <OrderOfExecutionDiagram />
 
           {/* How to Pass Scenario Strategy */}
           <div id="scenario-tips" className="mt-12 rounded-xl border border-gray-100 bg-white p-6">

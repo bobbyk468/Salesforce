@@ -36,6 +36,9 @@ import MCPIntegrationDiagram from '@/components/certifications/MCPIntegrationDia
 import AgenticOrchestrationDiagram from '@/components/certifications/AgenticOrchestrationDiagram'
 import PromptStructureDiagram from '@/components/certifications/PromptStructureDiagram'
 import ToolCallingDiagram from '@/components/certifications/ToolCallingDiagram'
+import FlowVsApexDiagram from '@/components/certifications/FlowVsApexDiagram'
+import SalesProcessFlowDiagram from '@/components/certifications/SalesProcessFlowDiagram'
+import OmniChannelRoutingDiagram from '@/components/certifications/OmniChannelRoutingDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -238,6 +241,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'claude-certified-architect-professional' ? <AgenticOrchestrationDiagram /> : null}
         {slug === 'claude-certified-associate' ? <PromptStructureDiagram /> : null}
         {slug === 'claude-certified-developer' ? <ToolCallingDiagram /> : null}
+        {slug === 'sales-cloud' ? <SalesProcessFlowDiagram /> : null}
+        {slug === 'service-cloud' ? <OmniChannelRoutingDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
@@ -347,6 +352,8 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         />
 
         <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
+
+        {slug === 'app-builder' ? <FlowVsApexDiagram /> : null}
 
         <CertReadinessSummary slug={slug} />
         <PracticeQuestionsSection
