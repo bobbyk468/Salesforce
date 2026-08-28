@@ -6,6 +6,7 @@ import { getCategoryBySlug, CERTIFICATION_CATEGORIES } from '@/lib/certification
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RoleAggregationSchemas from '@/components/RoleAggregationSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import CareerRoadmapDiagram from '@/components/CareerRoadmapDiagram'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 type Props = { params: Promise<{ slug: string }> }
@@ -545,6 +546,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
               <p className="text-sm font-semibold text-gray-900 mb-2">Typical Career Path</p>
               <p className="text-sm text-gray-700 bg-gray-50 rounded-lg px-4 py-3">{careerData.careerPath}</p>
             </div>
+            <CareerRoadmapDiagram roleName={category.name} path={careerData.careerPath} />
             <div>
               <p className="text-sm font-semibold text-gray-900 mb-2">Top Skills Required</p>
               <div className="flex flex-wrap gap-2">
