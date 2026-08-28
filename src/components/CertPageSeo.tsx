@@ -62,7 +62,7 @@ export function CertPageFaq({ slug, certTitle }: CertPageSeoProps) {
   const faqHeading = getCertFaqHeading(slug)
   
   return (
-    <section className="mt-12 rounded-xl border border-gray-100 bg-gray-50/50 p-6" aria-labelledby="cert-faq-heading">
+    <section id="faq" className="mt-12 rounded-xl border border-gray-100 bg-gray-50/50 p-6 scroll-mt-24" aria-labelledby="cert-faq-heading">
       <h2 id="cert-faq-heading" className="text-xl font-bold text-gray-900 mb-4">
         {faqHeading}
       </h2>
