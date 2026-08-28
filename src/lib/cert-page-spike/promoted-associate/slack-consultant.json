@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Slack Consultant exam for?",
     "personas": [
-      { "label": "Implementation Consultants", "description": "Professionals planning and executing Slack deployments for enterprise clients, including solution design, rollout strategy, and integration." },
-      { "label": "Change Management Specialists", "description": "Specialists driving organizational adoption of Slack through phased rollouts, executive sponsorship, and Champions programs." },
-      { "label": "Salesforce Consultants", "description": "Consultants expanding into Slack-Salesforce integration, designing workflows that connect CRM records with Slack collaboration channels." }
+      {
+        "label": "Implementation Consultants",
+        "description": "Professionals planning and executing Slack deployments for enterprise clients, including solution design, rollout strategy, and integration."
+      },
+      {
+        "label": "Change Management Specialists",
+        "description": "Specialists driving organizational adoption of Slack through phased rollouts, executive sponsorship, and Champions programs."
+      },
+      {
+        "label": "Salesforce Consultants",
+        "description": "Consultants expanding into Slack-Salesforce integration, designing workflows that connect CRM records with Slack collaboration channels."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "UI design only"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack Consultants help clients maximize Slack through solution design, change management, and user adoption."
+      "explanation": "Slack Consultants help clients maximize Slack through solution design, change management, and user adoption.",
+      "whyWrong": [
+        "Email is unrelated to the Slack consultant's collaboration-focused role.",
+        "CPQ is a pricing tool, entirely unrelated to Slack consulting.",
+        "UI design alone undersells the role, which spans change management and adoption, not just interface design."
+      ]
     },
     {
       "question": "Which area does a Slack Consultant typically address?",
@@ -180,7 +194,12 @@
         "Only integrations"
       ],
       "correctAnswer": 1,
-      "explanation": "They focus on transforming collaboration via design, change management, and adoption."
+      "explanation": "They focus on transforming collaboration via design, change management, and adoption.",
+      "whyWrong": [
+        "'Only technical setup' undersells the role, which spans change management and adoption, not just configuration.",
+        "'Only reporting' undersells the broader collaboration transformation focus of the role.",
+        "'Only integrations' undersells the broader change management and adoption focus of the role."
+      ]
     },
     {
       "question": "What is change management in the context of Slack?",
@@ -191,7 +210,12 @@
         "CPQ configuration only"
       ],
       "correctAnswer": 1,
-      "explanation": "Change management helps organizations adopt new collaboration practices with Slack."
+      "explanation": "Change management helps organizations adopt new collaboration practices with Slack.",
+      "whyWrong": [
+        "Change management isn't about adopting Slack's specific ways of working (a description mismatch, not what the term generally means).",
+        "Change management isn't limited to internal channels — this option doesn't actually describe change management at all.",
+        "Change management isn't specifically about Slack Connect — that's a distinct product feature."
+      ]
     },
     {
       "question": "Which Slack feature supports external collaboration?",
@@ -202,7 +226,12 @@
         "Slack Connect is not a feature"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack Connect enables secure collaboration with external partners via shared channels."
+      "explanation": "Slack Connect enables secure collaboration with external partners via shared channels.",
+      "whyWrong": [
+        "'Only internal channels' is the opposite of Slack Connect's specific external-collaboration purpose.",
+        "Email is a different communication channel, unrelated to Slack Connect.",
+        "Slack Connect is in fact a real, well-documented feature — this option denies its existence."
+      ]
     },
     {
       "question": "What should a Slack Consultant recommend for user adoption?",
@@ -213,7 +242,12 @@
         "Only admin settings"
       ],
       "correctAnswer": 1,
-      "explanation": "Training, champions, and governance are key to driving Slack adoption."
+      "explanation": "Training, champions, and governance are key to driving Slack adoption.",
+      "whyWrong": [
+        "'No training' contradicts the adoption best practice, which explicitly includes training as a component.",
+        "'Only technical docs' undersells the human-centered elements (champions, governance) needed for adoption.",
+        "'Only admin settings' undersells the broader training and champion program elements needed for adoption."
+      ]
     },
     {
       "question": "What is solution design in the context of Slack consulting?",
@@ -224,7 +258,12 @@
         "CPQ configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "Solution design includes channel structure, workflows, and integrations aligned to client goals."
+      "explanation": "Solution design includes channel structure, workflows, and integrations aligned to client goals.",
+      "whyWrong": [
+        "'Code development only' misrepresents solution design, which is about structure and workflow design, not coding.",
+        "'Email setup only' is unrelated to Slack solution design.",
+        "'CPQ configuration' is entirely unrelated to Slack solution design."
+      ]
     },
     {
       "question": "Which Salesforce integration is relevant for Slack Consultants?",
@@ -235,7 +274,12 @@
         "Tableau only"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack for Salesforce and CRM integration enable contextual collaboration."
+      "explanation": "Slack for Salesforce and CRM integration enable contextual collaboration.",
+      "whyWrong": [
+        "'Slack for Salesforce only' undersells the broader CRM integration and contextual collaboration scope.",
+        "Marketing Cloud alone is unrelated to the Slack-Salesforce integration being described.",
+        "Tableau alone is unrelated to the Slack-Salesforce integration being described."
+      ]
     },
     {
       "question": "What does governance mean for Slack implementations?",
@@ -246,7 +290,12 @@
         "Only notifications"
       ],
       "correctAnswer": 1,
-      "explanation": "Governance covers policies for channels, retention, security, and apps."
+      "explanation": "Governance covers policies for channels, retention, security, and apps.",
+      "whyWrong": [
+        "'No rules' contradicts the actual purpose of governance, which is defining policies.",
+        "'Only emoji policies' trivializes governance, which covers much broader areas like retention and security.",
+        "'Only notifications' undersells governance, which spans channels, retention, security, and app usage."
+      ]
     },
     {
       "question": "Which metric helps measure Slack adoption success?",
@@ -257,7 +306,12 @@
         "CPQ quote count"
       ],
       "correctAnswer": 1,
-      "explanation": "Adoption metrics include active users, engagement, and participation."
+      "explanation": "Adoption metrics include active users, engagement, and participation.",
+      "whyWrong": [
+        "Message count alone doesn't capture the full picture of adoption (active users, engagement breadth).",
+        "Email opens are unrelated to Slack adoption — that's an email marketing metric.",
+        "CPQ quote count is entirely unrelated to Slack adoption metrics."
+      ]
     },
     {
       "question": "What is a Slack champion program?",
@@ -268,7 +322,12 @@
         "An integration"
       ],
       "correctAnswer": 1,
-      "explanation": "Champions are power users who promote adoption and help peers."
+      "explanation": "Champions are power users who promote adoption and help peers.",
+      "whyWrong": [
+        "A champion program isn't a paid tier — it's a people-driven adoption strategy.",
+        "A champion program isn't a channel type — it's an adoption strategy involving power users.",
+        "A champion program isn't an integration — it's a people-driven initiative."
+      ]
     },
     {
       "question": "Which consideration is important when designing Slack channel structure?",
@@ -279,7 +338,12 @@
         "Only private channels"
       ],
       "correctAnswer": 1,
-      "explanation": "Channel structure should reflect teams, projects, and communication needs."
+      "explanation": "Channel structure should reflect teams, projects, and communication needs.",
+      "whyWrong": [
+        "Ignoring team structure contradicts sound channel design practice, which should reflect how teams actually work.",
+        "Focusing only on public channels ignores legitimate private channel use cases in a good structure.",
+        "Focusing only on private channels ignores legitimate public channel use cases in a good structure."
+      ]
     },
     {
       "question": "What does change management aim to achieve for Slack rollout?",
@@ -290,7 +354,12 @@
         "Only admin training"
       ],
       "correctAnswer": 1,
-      "explanation": "Change management ensures smooth transition and sustained adoption."
+      "explanation": "Change management ensures smooth transition and sustained adoption.",
+      "whyWrong": [
+        "'No training' contradicts change management's actual goal, which includes enabling users through training.",
+        "'Only technical setup' undersells change management's broader adoption-focused goal.",
+        "'Only admin training' undersells change management's goal, which targets all users, not just admins."
+      ]
     },
     {
       "question": "Which Workflow Builder use case supports consultants?",
@@ -301,7 +370,12 @@
         "Only integrations"
       ],
       "correctAnswer": 1,
-      "explanation": "Workflow Builder automates approvals, onboarding, and repetitive tasks."
+      "explanation": "Workflow Builder automates approvals, onboarding, and repetitive tasks.",
+      "whyWrong": [
+        "'Only code' undersells Workflow Builder's declarative, no-code automation capability.",
+        "'Only reports' misrepresents Workflow Builder's purpose, which is process automation, not reporting.",
+        "'Only integrations' undersells Workflow Builder's broader automation use cases beyond integrations alone."
+      ]
     },
     {
       "question": "What is the purpose of a Slack adoption roadmap?",
@@ -312,7 +386,12 @@
         "To avoid governance"
       ],
       "correctAnswer": 1,
-      "explanation": "An adoption roadmap phases rollout and optimization for success."
+      "explanation": "An adoption roadmap phases rollout and optimization for success.",
+      "whyWrong": [
+        "Skipping phases contradicts the roadmap's actual purpose, which is to sequence rollout deliberately.",
+        "Deploying everything at once is the opposite of a phased roadmap approach.",
+        "Avoiding governance contradicts sound rollout practice, which should include governance planning."
+      ]
     },
     {
       "question": "Which best practice applies to Slack consulting engagements?",
@@ -323,7 +402,12 @@
         "Only technical configuration"
       ],
       "correctAnswer": 1,
-      "explanation": "Best practice: discover needs, design for users, and measure outcomes."
+      "explanation": "Best practice: discover needs, design for users, and measure outcomes.",
+      "whyWrong": [
+        "Ignoring stakeholder input contradicts sound consulting practice, which should start with discovery.",
+        "'No training needed' contradicts standard consulting best practice, which includes user enablement.",
+        "Focusing only on technical configuration ignores the user-centered design and outcome measurement this best practice calls for."
+      ]
     }
   ]
 }

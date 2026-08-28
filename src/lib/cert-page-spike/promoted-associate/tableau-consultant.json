@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Tableau Consultant exam for?",
     "personas": [
-      { "label": "Analytics Consultants", "description": "Professionals who implement Tableau solutions for clients, covering requirements gathering, data modeling, and visualization design." },
-      { "label": "BI Implementation Leads", "description": "Team leads responsible for designing and delivering Tableau deployments including data source strategy, governance, and user training." },
-      { "label": "Solution Architects", "description": "Technical advisors who recommend Tableau Server vs. Cloud, live vs. extract connections, and published data source strategies for organizations." }
+      {
+        "label": "Analytics Consultants",
+        "description": "Professionals who implement Tableau solutions for clients, covering requirements gathering, data modeling, and visualization design."
+      },
+      {
+        "label": "BI Implementation Leads",
+        "description": "Team leads responsible for designing and delivering Tableau deployments including data source strategy, governance, and user training."
+      },
+      {
+        "label": "Solution Architects",
+        "description": "Technical advisors who recommend Tableau Server vs. Cloud, live vs. extract connections, and published data source strategies for organizations."
+      }
     ]
   },
   "examDifficulty": {
@@ -161,7 +170,12 @@
         "Email marketing"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Consultants implement Tableau solutions and advise stakeholders on analytics design, governance, and best practices."
+      "explanation": "Tableau Consultants implement Tableau solutions and advise stakeholders on analytics design, governance, and best practices.",
+      "whyWrong": [
+        "Selling licenses is a sales function, not the consultant's implementation and advisory role.",
+        "Managing Salesforce CRM is a separate function, unrelated to Tableau consulting specifically.",
+        "Email marketing is entirely unrelated to Tableau consulting."
+      ]
     },
     {
       "question": "Which skill is essential for a Tableau Consultant?",
@@ -172,7 +186,12 @@
         "Marketing automation"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants need requirements gathering, data modeling, visualization design, and stakeholder communication skills."
+      "explanation": "Consultants need requirements gathering, data modeling, visualization design, and stakeholder communication skills.",
+      "whyWrong": [
+        "'Only dashboard design' undersells the broader skill set spanning requirements, data modeling, and communication.",
+        "Server administration alone is a narrower technical skill, not the full consulting skill set.",
+        "Marketing automation is unrelated to the Tableau consultant's analytics-focused role."
+      ]
     },
     {
       "question": "What is the difference between dimensions and measures in Tableau?",
@@ -183,7 +202,12 @@
         "Dimensions are always numbers"
       ],
       "correctAnswer": 1,
-      "explanation": "Dimensions create headers and categories; measures are aggregated. Understanding this is core to Tableau data modeling."
+      "explanation": "Dimensions create headers and categories; measures are aggregated. Understanding this is core to Tableau data modeling.",
+      "whyWrong": [
+        "There is a real, well-defined difference — this option denies a fundamental Tableau concept.",
+        "Measures aren't always dates — this reverses the actual distinction.",
+        "Dimensions aren't always numbers — dimensions are categorical, which is the opposite of this claim."
+      ]
     },
     {
       "question": "Which chart type is best for showing trends over time?",
@@ -194,7 +218,12 @@
         "Scatter plot"
       ],
       "correctAnswer": 1,
-      "explanation": "Line charts effectively show trends and patterns over continuous time."
+      "explanation": "Line charts effectively show trends and patterns over continuous time.",
+      "whyWrong": [
+        "A pie chart shows part-to-whole composition at a point in time, not trends over time.",
+        "A treemap shows hierarchical proportions, not chronological trends.",
+        "A scatter plot shows correlation between two variables, not trends over a time axis."
+      ]
     },
     {
       "question": "What does LOD (Level of Detail) expression control in Tableau?",
@@ -205,7 +234,12 @@
         "Font size"
       ],
       "correctAnswer": 1,
-      "explanation": "LOD expressions let you compute at a different granularity than the view level."
+      "explanation": "LOD expressions let you compute at a different granularity than the view level.",
+      "whyWrong": [
+        "'Colors only' misrepresents what LOD expressions control — they define calculation granularity, not visual color.",
+        "'Filters only' undersells LOD's purpose, which is about the level of aggregation, not just filtering.",
+        "'Font size' is entirely unrelated to LOD expressions."
+      ]
     },
     {
       "question": "When should you use a Tableau extract versus a live connection?",
@@ -216,7 +250,12 @@
         "Only for small datasets"
       ],
       "correctAnswer": 1,
-      "explanation": "Extracts improve performance; live connections support real-time requirements. Consultants choose based on use case."
+      "explanation": "Extracts improve performance; live connections support real-time requirements. Consultants choose based on use case.",
+      "whyWrong": [
+        "Always using live connections ignores legitimate performance benefits of extracts for many use cases.",
+        "Always using extracts ignores cases where real-time data is genuinely required.",
+        "This isn't limited to small datasets — the live-vs-extract decision applies at any data size based on performance and freshness needs."
+      ]
     },
     {
       "question": "What is the purpose of Tableau's dual axis?",
@@ -227,7 +266,12 @@
         "Changes colors only"
       ],
       "correctAnswer": 1,
-      "explanation": "Dual axis lets you overlay two measures with different scales for comparison."
+      "explanation": "Dual axis lets you overlay two measures with different scales for comparison.",
+      "whyWrong": [
+        "A dual axis doesn't just combine two worksheets — it plots two measures on the same visualization.",
+        "A dual axis doesn't remove axes — it adds a second one for comparison.",
+        "A dual axis isn't just a color change — it fundamentally changes how two measures are plotted together."
+      ]
     },
     {
       "question": "Which Tableau filter type applies before data is aggregated?",
@@ -238,7 +282,12 @@
         "There is no order"
       ],
       "correctAnswer": 1,
-      "explanation": "Data source and extract filters run first; dimension filters apply before aggregation. Measure filters apply after."
+      "explanation": "Data source and extract filters run first; dimension filters apply before aggregation. Measure filters apply after.",
+      "whyWrong": [
+        "A context filter is a specific filter category, not the general answer to which filters apply earliest.",
+        "Not all filters apply after aggregation — extract and data source filters specifically apply earliest, before aggregation.",
+        "There is a defined filter order in Tableau — 'there is no order' is incorrect."
+      ]
     },
     {
       "question": "What is a Tableau parameter used for?",
@@ -249,7 +298,12 @@
         "Managing licenses"
       ],
       "correctAnswer": 1,
-      "explanation": "Parameters allow interactive control over calculations, filters, and reference lines."
+      "explanation": "Parameters allow interactive control over calculations, filters, and reference lines.",
+      "whyWrong": [
+        "Parameters aren't limited to color changes — they drive dynamic values across calculations and filters.",
+        "Parameters don't store passwords — that's unrelated to their purpose.",
+        "Parameters don't manage licensing — that's an administrative function, unrelated to parameters."
+      ]
     },
     {
       "question": "Which visualization best shows part-to-whole relationships?",
@@ -260,7 +314,12 @@
         "Scatter plot"
       ],
       "correctAnswer": 2,
-      "explanation": "Pie charts and treemaps show proportions of a whole. Consultants choose based on number of categories."
+      "explanation": "Pie charts and treemaps show proportions of a whole. Consultants choose based on number of categories.",
+      "whyWrong": [
+        "A line chart shows trends over time, not part-to-whole composition.",
+        "A bar chart compares categories, not proportional composition as directly as pie/treemap.",
+        "A scatter plot shows correlation, not part-to-whole composition."
+      ]
     },
     {
       "question": "What does Tableau's 'Show Me' panel help with?",
@@ -271,7 +330,12 @@
         "Licensing"
       ],
       "correctAnswer": 1,
-      "explanation": "Show Me suggests appropriate chart types based on the fields you select."
+      "explanation": "Show Me suggests appropriate chart types based on the fields you select.",
+      "whyWrong": [
+        "'Show Me' isn't related to user login — that's an authentication feature.",
+        "'Show Me' isn't a server settings tool — it's a chart-recommendation panel.",
+        "'Show Me' isn't a licensing tool — it's unrelated to license management."
+      ]
     },
     {
       "question": "When gathering requirements for a dashboard, what should a consultant prioritize?",
@@ -282,7 +346,12 @@
         "Font choices"
       ],
       "correctAnswer": 1,
-      "explanation": "Requirements should cover metrics, users, refresh needs, and data sources to design effective solutions."
+      "explanation": "Requirements should cover metrics, users, refresh needs, and data sources to design effective solutions.",
+      "whyWrong": [
+        "Colors are a design detail — they shouldn't be prioritized above understanding metrics, roles, and data sources during requirements gathering.",
+        "Sheet count alone doesn't reflect the substantive requirements (metrics, roles, refresh needs) that matter most.",
+        "Font choices are a minor design detail, not a requirements-gathering priority."
+      ]
     },
     {
       "question": "What is the benefit of calculated fields in Tableau?",
@@ -293,7 +362,12 @@
         "They manage extracts only"
       ],
       "correctAnswer": 1,
-      "explanation": "Calculated fields extend your data model for analysis without modifying source systems."
+      "explanation": "Calculated fields extend your data model for analysis without modifying source systems.",
+      "whyWrong": [
+        "Calculated fields do more than change colors — they compute new values from existing data.",
+        "Calculated fields don't delete data — they derive new metrics/dimensions.",
+        "Calculated fields aren't specifically an extract-management tool — that's a separate Tableau concept."
+      ]
     },
     {
       "question": "Which Tableau feature supports collaborative design and governance?",
@@ -304,7 +378,12 @@
         "No collaboration"
       ],
       "correctAnswer": 1,
-      "explanation": "Tableau Server and Cloud enable projects, permissions, and certified content for team collaboration."
+      "explanation": "Tableau Server and Cloud enable projects, permissions, and certified content for team collaboration.",
+      "whyWrong": [
+        "Local files alone don't provide the collaborative governance capabilities Tableau Server/Cloud offers.",
+        "Email is unrelated to collaborative dashboard governance.",
+        "'No collaboration' contradicts the fact that Tableau Server/Cloud is specifically built for collaborative governance."
+      ]
     },
     {
       "question": "What is a Tableau story used for?",
@@ -315,7 +394,12 @@
         "Managing licenses"
       ],
       "correctAnswer": 1,
-      "explanation": "Stories combine worksheets and text to present a narrative and guide analysis."
+      "explanation": "Stories combine worksheets and text to present a narrative and guide analysis.",
+      "whyWrong": [
+        "A story isn't limited to a single worksheet — it sequences multiple dashboards/visualizations into a narrative.",
+        "A story isn't a data storage mechanism — that's unrelated to its narrative purpose.",
+        "A story isn't a licensing management tool — that's unrelated to its narrative purpose."
+      ]
     }
   ]
 }

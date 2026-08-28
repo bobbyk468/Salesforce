@@ -178,7 +178,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniStudio Consultants design and implement OmniStudio solutions that are sustainable, scalable, and meet business requirements."
+      "explanation": "OmniStudio Consultants design and implement OmniStudio solutions that are sustainable, scalable, and meet business requirements.",
+      "whyWrong": [
+        "Email is unrelated to the consultant's core focus on sustainable OmniStudio solution design.",
+        "Slack is unrelated to the consultant's core focus.",
+        "CPQ alone is too narrow — OmniStudio spans broader industry solution design, not just pricing/quoting."
+      ]
     },
     {
       "question": "Which OmniStudio tool is used for guided, step-by-step experiences?",
@@ -189,7 +194,12 @@
         "Integration Procedure only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript provides guided, step-by-step digital experiences."
+      "explanation": "OmniScript provides guided, step-by-step digital experiences.",
+      "whyWrong": [
+        "DataRaptor moves/transforms data — it isn't the guided-experience UI tool.",
+        "FlexCard displays compact data views — it isn't the step-by-step guided experience tool.",
+        "Integration Procedure orchestrates backend logic — it isn't the front-end guided experience tool."
+      ]
     },
     {
       "question": "What should an OmniStudio Consultant ensure for long-term success?",
@@ -200,7 +210,12 @@
         "Single use only"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants ensure solutions are sustainable, scalable, and contribute to long-term success."
+      "explanation": "Consultants ensure solutions are sustainable, scalable, and contribute to long-term success.",
+      "whyWrong": [
+        "'Only speed' undersells the consultant's responsibility, which includes long-term sustainability, not just fast delivery.",
+        "'No documentation' contradicts sound consulting practice, which requires proper documentation for maintainability.",
+        "'Single use only' contradicts the sustainable, reusable design principle a consultant should ensure."
+      ]
     },
     {
       "question": "Which industries commonly use OmniStudio?",
@@ -211,7 +226,12 @@
         "Education only"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniStudio is used in Financial Services, Insurance, and other industries for digital flows."
+      "explanation": "OmniStudio is used in Financial Services, Insurance, and other industries for digital flows.",
+      "whyWrong": [
+        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more.",
+        "Manufacturing isn't the typical highlighted industry for OmniStudio.",
+        "Education isn't the typical highlighted industry for OmniStudio."
+      ]
     },
     {
       "question": "What is a FlexCard used for?",
@@ -222,7 +242,12 @@
         "Slack messages"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexCards display compact, card-based views of data with declarative layout."
+      "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
+      "whyWrong": [
+        "'Only reports' undersells FlexCard's purpose, which is displaying compact record views, not full reporting.",
+        "Email templates are unrelated to FlexCard's data display function.",
+        "Slack messages are unrelated to FlexCard's purpose."
+      ]
     },
     {
       "question": "What is a DataRaptor used for in OmniStudio?",
@@ -233,7 +258,12 @@
         "To manage users"
       ],
       "correctAnswer": 1,
-      "explanation": "DataRaptors handle data extract, load, and transform operations."
+      "explanation": "DataRaptors handle data extract, load, and transform operations.",
+      "whyWrong": [
+        "'To send emails only' misrepresents DataRaptor's purpose, which is data extraction/transformation, not email.",
+        "'To create reports only' misrepresents DataRaptor's purpose, which is ETL-style data operations.",
+        "'To manage users' is unrelated to DataRaptor's data-transformation function."
+      ]
     },
     {
       "question": "Which OmniStudio component invokes Apex or external services?",
@@ -244,7 +274,12 @@
         "DataRaptor only"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration Procedures call Apex and external systems."
+      "explanation": "Integration Procedures call Apex and external systems.",
+      "whyWrong": [
+        "FlexCard displays data — it doesn't itself invoke Apex or external services.",
+        "OmniScript orchestrates the guided flow but relies on Integration Procedures to invoke Apex/external services.",
+        "DataRaptor moves/transforms data — it doesn't invoke Apex directly the way Integration Procedures can."
+      ]
     },
     {
       "question": "What does OmniScript validation support?",
@@ -255,7 +290,12 @@
         "Only custom"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript supports required, custom, and conditional validation."
+      "explanation": "OmniScript supports required, custom, and conditional validation.",
+      "whyWrong": [
+        "'No validation' contradicts OmniScript's actual support for validation rules.",
+        "'Only required' undersells the validation options, which include custom and conditional rules too.",
+        "'Only custom' undersells the validation options, which also include required-field and conditional rules."
+      ]
     },
     {
       "question": "Which deployment method is used for OmniStudio artifacts?",
@@ -266,7 +306,12 @@
         "No deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio artifacts."
+      "explanation": "FlexDeploy and source-driven deployment manage OmniStudio artifacts.",
+      "whyWrong": [
+        "Standard Change Sets aren't the OmniStudio-specific deployment approach — FlexDeploy or source-driven tooling is.",
+        "Manual copying isn't a reliable, repeatable deployment method for OmniStudio artifacts.",
+        "'No deployment' contradicts the fact that OmniStudio artifacts do have supported deployment methods."
+      ]
     },
     {
       "question": "What is the purpose of OmniScript elements?",
@@ -277,7 +322,12 @@
         "To send emails"
       ],
       "correctAnswer": 1,
-      "explanation": "Elements define the structure and behavior of OmniScript steps."
+      "explanation": "Elements define the structure and behavior of OmniScript steps.",
+      "whyWrong": [
+        "OmniScript elements don't replace DataRaptors — they're a different, complementary structural concept.",
+        "'To create FlexCards only' undersells elements' purpose, which is defining the OmniScript flow itself.",
+        "'To send emails' is unrelated to what OmniScript elements structurally define."
+      ]
     },
     {
       "question": "Which OmniStudio feature supports conditional display?",
@@ -288,7 +338,12 @@
         "Only visibility"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript supports conditional visibility and branching."
+      "explanation": "OmniScript supports conditional visibility and branching.",
+      "whyWrong": [
+        "'No conditional logic' directly contradicts the feature being asked about, which is conditional display support.",
+        "'Only branching' undersells the feature, which also includes visibility control based on conditions.",
+        "'Only visibility' undersells the feature, which also includes branching logic."
+      ]
     },
     {
       "question": "What does an OmniStudio Consultant ensure for scalability?",
@@ -299,7 +354,12 @@
         "No reuse"
       ],
       "correctAnswer": 1,
-      "explanation": "Reusable design and efficient DataRaptors support scalability."
+      "explanation": "Reusable design and efficient DataRaptors support scalability.",
+      "whyWrong": [
+        "Ignoring performance contradicts a consultant's responsibility to design for scalability.",
+        "'Single use only' contradicts the reusability best practice a consultant should ensure.",
+        "'No reuse' contradicts the scalability best practice of building reusable components."
+      ]
     },
     {
       "question": "Which OmniStudio artifact can be embedded in Lightning pages?",
@@ -310,7 +370,12 @@
         "None"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript and FlexCards can be embedded in Lightning pages."
+      "explanation": "OmniScript and FlexCards can be embedded in Lightning pages.",
+      "whyWrong": [
+        "DataRaptor alone isn't a UI artifact embeddable on a Lightning page — OmniScript and FlexCards are.",
+        "Integration Procedure alone runs server-side logic — it isn't itself embedded as a visual Lightning page component.",
+        "'None' is incorrect since OmniScript and FlexCards can in fact be embedded in Lightning pages."
+      ]
     },
     {
       "question": "What is the benefit of OmniScript over custom Apex UI?",
@@ -321,7 +386,12 @@
         "Less flexible"
       ],
       "correctAnswer": 1,
-      "explanation": "OmniScript is declarative and faster to build for guided flows."
+      "explanation": "OmniScript is declarative and faster to build for guided flows.",
+      "whyWrong": [
+        "'No benefit' contradicts the documented advantages OmniScript provides over custom-coded UI.",
+        "'More complex' contradicts OmniScript's actual benefit of being declarative and simpler to build.",
+        "'Less flexible' contradicts one of OmniScript's real advantages for guided-flow use cases."
+      ]
     },
     {
       "question": "Which industry use case is common for OmniStudio?",
@@ -332,7 +402,12 @@
         "Education only"
       ],
       "correctAnswer": 1,
-      "explanation": "Financial Services uses OmniStudio for quote-to-cash and onboarding."
+      "explanation": "Financial Services uses OmniStudio for quote-to-cash and onboarding.",
+      "whyWrong": [
+        "Retail isn't the typical industry example for this specific use case pattern.",
+        "Manufacturing isn't the typical industry example for this specific use case pattern.",
+        "Education isn't the typical industry example for this specific use case pattern — Financial Services is."
+      ]
     }
   ]
 }

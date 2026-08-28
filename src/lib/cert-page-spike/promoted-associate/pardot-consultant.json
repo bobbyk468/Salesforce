@@ -175,7 +175,12 @@
         "Use Automation Rules"
       ],
       "correctAnswer": 2,
-      "explanation": "Using both Scoring (implicit data/behavior) and Grading (explicit data/profile fit) together provides a complete picture of lead quality."
+      "explanation": "Using both Scoring (implicit data/behavior) and Grading (explicit data/profile fit) together provides a complete picture of lead quality.",
+      "whyWrong": [
+        "Scoring alone only captures explicit engagement signals — it misses the implicit fit data grading provides.",
+        "Grading alone only captures explicit profile-fit data — it misses the implicit behavioral signals scoring provides.",
+        "Automation Rules handle simple if-then logic — they don't themselves constitute a scoring/grading strategy."
+      ]
     },
     {
       "question": "What is the recommended approach for syncing Pardot prospects to Salesforce Leads vs Contacts?",
@@ -186,7 +191,12 @@
         "Manual assignment only"
       ],
       "correctAnswer": 2,
-      "explanation": "The Salesforce connector settings allow you to configure whether prospects sync to Leads or Contacts based on matching rules and business requirements."
+      "explanation": "The Salesforce connector settings allow you to configure whether prospects sync to Leads or Contacts based on matching rules and business requirements.",
+      "whyWrong": [
+        "Always syncing to Leads ignores cases where a prospect should become a Contact (e.g., existing customers).",
+        "Always syncing to Contacts ignores cases where a prospect should become a new Lead.",
+        "Manual assignment doesn't scale and ignores the native connector sync configuration options available."
+      ]
     },
     {
       "question": "A company has multiple business units. How should Pardot be configured?",
@@ -197,7 +207,12 @@
         "Use campaigns for separation"
       ],
       "correctAnswer": 1,
-      "explanation": "Multiple Business Units allow separate prospect databases, user permissions, and branding while sharing a single Salesforce org."
+      "explanation": "Multiple Business Units allow separate prospect databases, user permissions, and branding while sharing a single Salesforce org.",
+      "whyWrong": [
+        "A single Business Unit with tags doesn't provide the same level of true data separation multiple Business Units offer.",
+        "Separate Pardot accounts add unnecessary complexity and licensing overhead compared to native Business Units.",
+        "Campaigns are for tracking marketing initiatives — they don't provide the account-level separation multiple business units need."
+      ]
     },
     {
       "question": "What is the best practice for implementing progressive profiling?",
@@ -208,7 +223,12 @@
         "Use hidden fields"
       ],
       "correctAnswer": 1,
-      "explanation": "Pardot's progressive profiling feature automatically shows different fields to returning visitors based on what data you already have."
+      "explanation": "Pardot's progressive profiling feature automatically shows different fields to returning visitors based on what data you already have.",
+      "whyWrong": [
+        "Dependent fields control picklist options — they aren't the specific progressive profiling mechanism.",
+        "Creating multiple forms adds unnecessary complexity compared to using the built-in progressive profiling feature.",
+        "Hidden fields serve a different purpose (passing static values) — they don't implement progressive profiling."
+      ]
     },
     {
       "question": "How should connected campaigns be used?",
@@ -219,7 +239,12 @@
         "To track email engagement"
       ],
       "correctAnswer": 1,
-      "explanation": "Connected Campaigns allows bidirectional sync between Pardot and Salesforce campaigns, enabling unified reporting and ROI tracking."
+      "explanation": "Connected Campaigns allows bidirectional sync between Pardot and Salesforce campaigns, enabling unified reporting and ROI tracking.",
+      "whyWrong": [
+        "Connected campaigns don't replace Pardot campaigns — they specifically sync Pardot and Salesforce campaign data.",
+        "'For reporting purposes only' undersells connected campaigns, which enable bidirectional sync, not just reporting.",
+        "'To track email engagement' is a narrower function unrelated to campaign syncing specifically."
+      ]
     },
     {
       "question": "What is the purpose of Engagement Studio programs?",
@@ -230,7 +255,12 @@
         "To manage lists only"
       ],
       "correctAnswer": 1,
-      "explanation": "Engagement Studio automates nurture and behavior-based programs."
+      "explanation": "Engagement Studio automates nurture and behavior-based programs.",
+      "whyWrong": [
+        "'To replace forms' misrepresents Engagement Studio's purpose — forms still serve a separate data-capture role.",
+        "'To create reports only' undersells Engagement Studio, which is about automated multi-step programs, not reporting.",
+        "'To manage lists only' undersells Engagement Studio's broader automation capability beyond list management."
+      ]
     },
     {
       "question": "Which Pardot feature supports A/B testing for landing pages?",
@@ -241,7 +271,12 @@
         "Lists only"
       ],
       "correctAnswer": 1,
-      "explanation": "Landing pages support A/B testing with multiple variants."
+      "explanation": "Landing pages support A/B testing with multiple variants.",
+      "whyWrong": [
+        "Forms alone don't include the A/B variant testing capability being described.",
+        "Email alone doesn't specifically address landing page A/B testing.",
+        "Lists alone are unrelated to landing page A/B testing."
+      ]
     },
     {
       "question": "How should automation rules differ from Engagement Studio?",
@@ -252,7 +287,12 @@
         "Automation rules only"
       ],
       "correctAnswer": 1,
-      "explanation": "Automation rules are if-then; Engagement Studio supports complex flows."
+      "explanation": "Automation rules are if-then; Engagement Studio supports complex flows.",
+      "whyWrong": [
+        "They aren't the same — automation rules and Engagement Studio serve different automation purposes.",
+        "Engagement Studio isn't inherently 'simpler' — it's built for more complex, multi-step programs than simple if-then rules.",
+        "'Automation rules only' ignores Engagement Studio's distinct, complementary role."
+      ]
     },
     {
       "question": "What does the Pardot-Salesforce connector sync?",
@@ -263,7 +303,12 @@
         "Only forms"
       ],
       "correctAnswer": 1,
-      "explanation": "The connector syncs prospects, leads, contacts, opportunities, and campaigns."
+      "explanation": "The connector syncs prospects, leads, contacts, opportunities, and campaigns.",
+      "whyWrong": [
+        "'Only emails' undersells what the connector syncs — it includes broader CRM object data too.",
+        "'Only campaigns' undersells the connector's full sync scope across multiple object types.",
+        "'Only forms' undersells the connector's full sync scope, which spans prospects, leads, contacts, and more."
+      ]
     },
     {
       "question": "Which best practice applies to form design in Pardot?",
@@ -274,7 +319,12 @@
         "One form only"
       ],
       "correctAnswer": 1,
-      "explanation": "Fewer fields, progressive profiling, and lifecycle alignment improve conversion."
+      "explanation": "Fewer fields, progressive profiling, and lifecycle alignment improve conversion.",
+      "whyWrong": [
+        "Using as many fields as possible increases friction and contradicts the actual best practice of minimizing fields.",
+        "'No validation needed' contradicts sound form design practice, which includes data validation.",
+        "A single form for every use case ignores the value of progressive profiling and lifecycle-stage-specific forms."
+      ]
     },
     {
       "question": "What is the purpose of dynamic content in Pardot emails?",
@@ -285,7 +335,12 @@
         "To manage lists"
       ],
       "correctAnswer": 1,
-      "explanation": "Dynamic content personalizes emails by audience or attributes."
+      "explanation": "Dynamic content personalizes emails by audience or attributes.",
+      "whyWrong": [
+        "Sending identical content to everyone is the opposite of what dynamic content is designed to avoid.",
+        "'To create reports' misrepresents dynamic content's purpose, which is personalization, not reporting.",
+        "'To manage lists' misrepresents dynamic content's purpose, which is content personalization, not list management."
+      ]
     },
     {
       "question": "Which Pardot report helps measure marketing ROI?",
@@ -296,7 +351,12 @@
         "Only form report"
       ],
       "correctAnswer": 1,
-      "explanation": "Campaign ROI and opportunity influence reports measure marketing impact."
+      "explanation": "Campaign ROI and opportunity influence reports measure marketing impact.",
+      "whyWrong": [
+        "A prospect-only report doesn't capture the campaign/opportunity-level ROI data needed to measure marketing impact.",
+        "A list report shows list membership, not ROI or conversion metrics.",
+        "A form report shows submission data, not the broader campaign ROI and opportunity influence needed to measure marketing ROI."
+      ]
     },
     {
       "question": "What does lifecycle stage represent in Pardot?",
@@ -307,7 +367,12 @@
         "Only visit count"
       ],
       "correctAnswer": 1,
-      "explanation": "Lifecycle stage tracks where the prospect is in the buyer journey."
+      "explanation": "Lifecycle stage tracks where the prospect is in the buyer journey.",
+      "whyWrong": [
+        "'Only email status' undersells lifecycle stage, which reflects the prospect's overall buyer-journey position, not just email engagement.",
+        "'Only form submission' undersells lifecycle stage, which is a broader journey-position concept.",
+        "'Only visit count' undersells lifecycle stage, which reflects overall journey position, not a single engagement metric."
+      ]
     },
     {
       "question": "How should a consultant approach Pardot implementation?",
@@ -318,7 +383,12 @@
         "Only training"
       ],
       "correctAnswer": 1,
-      "explanation": "Implementation should include discovery, design, configuration, and training."
+      "explanation": "Implementation should include discovery, design, configuration, and training.",
+      "whyWrong": [
+        "'Configure only' skips the discovery and design phases essential to a proper implementation approach.",
+        "'No discovery needed' contradicts sound consulting practice, which starts with requirements discovery.",
+        "'Only training' skips the discovery, design, and configuration phases that precede training."
+      ]
     },
     {
       "question": "Which Pardot asset can trigger automation when a prospect views it?",
@@ -329,7 +399,12 @@
         "Reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "Landing pages, forms, and custom redirects can trigger automation on view."
+      "explanation": "Landing pages, forms, and custom redirects can trigger automation on view.",
+      "whyWrong": [
+        "Email alone doesn't cover the broader set of trackable assets (landing pages, forms, redirects) that can trigger automation.",
+        "Lists alone don't trigger automation based on prospect viewing behavior.",
+        "Reports alone don't trigger automation — they display data after the fact."
+      ]
     }
   ]
 }

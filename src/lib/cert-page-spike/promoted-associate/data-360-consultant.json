@@ -4,9 +4,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Data Cloud Consultant exam for?",
     "personas": [
-      { "label": "Data architects", "description": "You design data models and want to validate your Salesforce Data Cloud and CDP expertise." },
-      { "label": "CRM analysts", "description": "You work with customer data unification and want to prove your identity resolution and segmentation skills." },
-      { "label": "Implementation consultants", "description": "You deliver Data Cloud projects and need the credential to demonstrate hands-on proficiency." }
+      {
+        "label": "Data architects",
+        "description": "You design data models and want to validate your Salesforce Data Cloud and CDP expertise."
+      },
+      {
+        "label": "CRM analysts",
+        "description": "You work with customer data unification and want to prove your identity resolution and segmentation skills."
+      },
+      {
+        "label": "Implementation consultants",
+        "description": "You deliver Data Cloud projects and need the credential to demonstrate hands-on proficiency."
+      }
     ]
   },
   "examDifficulty": {
@@ -170,7 +179,12 @@
         "A CPQ pricing engine for enterprise contracts"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud unifies data from multiple sources (Salesforce orgs, external systems, web, mobile) to create a single, actionable customer profile that drives segmentation, activation, and AI."
+      "explanation": "Data Cloud unifies data from multiple sources (Salesforce orgs, external systems, web, mobile) to create a single, actionable customer profile that drives segmentation, activation, and AI.",
+      "whyWrong": [
+        "Data Cloud isn't a backup tool — it's built for real-time unified customer profiles, not just backup storage.",
+        "Data Cloud isn't an email marketing platform — that's Marketing Cloud's function.",
+        "Data Cloud isn't a CPQ pricing engine — that's an entirely separate product category."
+      ]
     },
     {
       "question": "What is a Data Stream in Salesforce Data Cloud?",
@@ -181,7 +195,12 @@
         "A Marketing Cloud Journey that triggers based on Data Cloud segment membership"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Streams are the ingestion layer — each Data Stream connects to a data source and maps incoming data to Data Cloud Data Model Objects (DMOs)."
+      "explanation": "Data Streams are the ingestion layer — each Data Stream connects to a data source and maps incoming data to Data Cloud Data Model Objects (DMOs).",
+      "whyWrong": [
+        "A Data Stream doesn't itself provide analytics dashboards — that's a separate downstream capability, not the ingestion connection.",
+        "A scheduled Apex export job moves data out of Data Cloud, which is the opposite direction of what a Data Stream does (ingestion in).",
+        "A Marketing Cloud Journey reacts to segments after they exist — it isn't the ingestion connection itself."
+      ]
     },
     {
       "question": "What are Data Model Objects (DMOs) in Data Cloud?",
@@ -192,7 +211,12 @@
         "Report types created for cross-object reporting in CRM Analytics"
       ],
       "correctAnswer": 1,
-      "explanation": "DMOs are the structured tables in Data Cloud's canonical data model. Key DMOs include Individual (unified person record), Contact Point Email, Contact Point Phone, and various Engagement types."
+      "explanation": "DMOs are the structured tables in Data Cloud's canonical data model. Key DMOs include Individual (unified person record), Contact Point Email, Contact Point Phone, and various Engagement types.",
+      "whyWrong": [
+        "Custom Lead fields are a Salesforce Core concept, unrelated to Data Cloud's standardized DMO structure.",
+        "External objects connect to remote systems via a different mechanism — DMOs are Data Cloud's own standardized data model tables.",
+        "CRM Analytics report types are a separate reporting concept, unrelated to Data Cloud's DMOs."
+      ]
     },
     {
       "question": "What does Identity Resolution do in Salesforce Data Cloud?",
@@ -203,7 +227,12 @@
         "Assigns unique Salesforce record IDs to Data Cloud profiles for CRM synchronisation"
       ],
       "correctAnswer": 1,
-      "explanation": "Identity Resolution applies matching and reconciliation rules to stitch together records from different sources into a single Unified Profile — resolving duplicate customer identities across channels."
+      "explanation": "Identity Resolution applies matching and reconciliation rules to stitch together records from different sources into a single Unified Profile — resolving duplicate customer identities across channels.",
+      "whyWrong": [
+        "OAuth 2.0 authentication is a separate technical mechanism, unrelated to matching person records across sources.",
+        "GDPR consent validation is a separate compliance function, not what Identity Resolution itself does.",
+        "Assigning Salesforce record IDs is a CRM-specific concept, distinct from Data Cloud's cross-source identity matching."
+      ]
     },
     {
       "question": "What is a Unified Profile in Data Cloud?",
@@ -214,7 +243,12 @@
         "A Marketing Cloud subscriber profile enriched with Salesforce CRM data"
       ],
       "correctAnswer": 1,
-      "explanation": "After Identity Resolution links source records, a Unified Profile is created — providing a 360-degree view of the customer used for segmentation, activation, and AI grounding."
+      "explanation": "After Identity Resolution links source records, a Unified Profile is created — providing a 360-degree view of the customer used for segmentation, activation, and AI grounding.",
+      "whyWrong": [
+        "A Person Account is a specific Salesforce CRM record type, not the same as a Data Cloud Unified Profile concept.",
+        "A custom report type displays existing data — it doesn't itself create a consolidated unified view.",
+        "A Marketing Cloud subscriber profile is scoped to marketing data, not the full cross-source Unified Profile Data Cloud builds."
+      ]
     },
     {
       "question": "What is a Segment in Data Cloud?",
@@ -225,7 +259,12 @@
         "A Marketing Cloud List used to manage email subscription preferences"
       ],
       "correctAnswer": 1,
-      "explanation": "Segments filter Unified Profiles by attribute criteria (e.g., purchase history, location, engagement) and are evaluated on a defined refresh schedule. Segments are the basis for activation."
+      "explanation": "Segments filter Unified Profiles by attribute criteria (e.g., purchase history, location, engagement) and are evaluated on a defined refresh schedule. Segments are the basis for activation.",
+      "whyWrong": [
+        "A permission set group controls access, not audience targeting — that's a different concept from a Segment.",
+        "A scheduled export job moves data out, unrelated to defining a dynamic targeted audience.",
+        "A Marketing Cloud List manages subscription preferences — a Data Cloud Segment is a broader dynamic audience construct."
+      ]
     },
     {
       "question": "What is Activation in Salesforce Data Cloud?",
@@ -236,7 +275,12 @@
         "Granting users permission to view and edit Data Cloud segments"
       ],
       "correctAnswer": 1,
-      "explanation": "Activation sends segment membership data and selected profile attributes to downstream systems so they can be used for campaigns, ad targeting, and personalisation."
+      "explanation": "Activation sends segment membership data and selected profile attributes to downstream systems so they can be used for campaigns, ad targeting, and personalisation.",
+      "whyWrong": [
+        "Enabling Data Cloud is a one-time setup step, not the ongoing activation of segments to destinations.",
+        "Running Identity Resolution creates Unified Profiles — that's a separate step that happens before activation.",
+        "Granting segment view/edit permissions is an access-control concept, unrelated to publishing segments to destination systems."
+      ]
     },
     {
       "question": "What is a Calculated Insight in Data Cloud?",
@@ -247,7 +291,12 @@
         "A CRM Analytics widget that displays aggregated Data Cloud segment counts"
       ],
       "correctAnswer": 1,
-      "explanation": "Calculated Insights are SQL-based aggregations that enrich Unified Profiles with computed metrics — enabling segmentation and activation based on derived attributes like CLV or churn score."
+      "explanation": "Calculated Insights are SQL-based aggregations that enrich Unified Profiles with computed metrics — enabling segmentation and activation based on derived attributes like CLV or churn score.",
+      "whyWrong": [
+        "A Salesforce report metric updated by Apex is a CRM Core concept, not the same as a Data Cloud SQL-derived attribute.",
+        "An Einstein prediction score surfaced via formula field is a different mechanism from a Calculated Insight computed within Data Cloud.",
+        "A CRM Analytics widget displays data — it doesn't itself compute the underlying derived metric."
+      ]
     },
     {
       "question": "Which consent mechanism does Data Cloud support for GDPR and CCPA compliance?",
@@ -258,7 +307,12 @@
         "A Salesforce Shield encryption key that masks personal data for non-admin users"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud honours consent through the Individual object's privacy attributes. Opt-outs and deletion requests propagate to prevent the use of suppressed profiles in segments and activations."
+      "explanation": "Data Cloud honours consent through the Individual object's privacy attributes. Opt-outs and deletion requests propagate to prevent the use of suppressed profiles in segments and activations.",
+      "whyWrong": [
+        "Manual deletion by an admin isn't a systematic, API-driven consent mechanism.",
+        "An Email Opt-Out field syncing daily is a narrower, marketing-specific mechanism, not the platform-wide consent API Data Cloud provides.",
+        "Shield encryption protects data at rest — it doesn't manage opt-out/deletion consent requests."
+      ]
     },
     {
       "question": "What is the role of a Data Cloud Consultant on an implementation project?",
@@ -269,7 +323,12 @@
         "Administering the Salesforce org's sharing model and permission sets for Data Cloud users"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud Consultants lead the full data platform implementation — from source mapping and ingestion through to identity resolution, segmentation, activation, and governance advisory."
+      "explanation": "Data Cloud Consultants lead the full data platform implementation — from source mapping and ingestion through to identity resolution, segmentation, activation, and governance advisory.",
+      "whyWrong": [
+        "Writing Apex triggers for ingestion is a developer task, not the consultant's typical implementation-and-advisory role.",
+        "Managing Marketing Cloud campaigns is a narrower marketing execution task, not the broader Data Cloud consulting role described.",
+        "Administering sharing/permission sets is a general Salesforce admin task, not specific to Data Cloud consulting."
+      ]
     },
     {
       "question": "What is a Data Action in Salesforce Data Cloud?",
@@ -280,7 +339,12 @@
         "A custom validation rule that prevents incorrectly formatted records from being ingested"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Actions respond to segment entry or exit events, enabling real-time orchestration — for example, creating a Salesforce Task when a customer enters a high-churn-risk segment."
+      "explanation": "Data Actions respond to segment entry or exit events, enabling real-time orchestration — for example, creating a Salesforce Task when a customer enters a high-churn-risk segment.",
+      "whyWrong": [
+        "An ingestion-completion Flow trigger is a different event type from a segment-membership-change Data Action.",
+        "A batch export job moves data out on a schedule — it isn't the same as a real-time segment-membership-based trigger.",
+        "A validation rule blocks bad data on entry — that's unrelated to triggering downstream processes on segment changes."
+      ]
     },
     {
       "question": "What distinguishes Salesforce Data Cloud from a traditional data warehouse?",
@@ -291,7 +355,12 @@
         "Data Cloud requires all data to be pre-processed in an ETL tool before ingestion, unlike data warehouses that accept raw data"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud is a customer data platform (CDP) — built for real-time profile unification, segmentation, and activation. Traditional data warehouses store and query data but lack native identity resolution, activation, and Salesforce CRM integration."
+      "explanation": "Data Cloud is a customer data platform (CDP) — built for real-time profile unification, segmentation, and activation. Traditional data warehouses store and query data but lack native identity resolution, activation, and Salesforce CRM integration.",
+      "whyWrong": [
+        "Data Cloud has purpose-built capabilities well beyond a plain relational SQL database — this option denies its actual differentiators.",
+        "Data Cloud explicitly does handle structured data — this option incorrectly restricts it to unstructured data only.",
+        "Data Cloud can ingest raw data directly — it doesn't require pre-processing through a separate ETL tool first."
+      ]
     },
     {
       "question": "Which Data Cloud object represents a unified person record across all sources?",
@@ -302,7 +371,12 @@
         "Segment"
       ],
       "correctAnswer": 1,
-      "explanation": "The Individual DMO is the unified person record that Identity Resolution creates by stitching together data from multiple sources."
+      "explanation": "The Individual DMO is the unified person record that Identity Resolution creates by stitching together data from multiple sources.",
+      "whyWrong": [
+        "Account is a Salesforce CRM object, not the Data Cloud unified-person object.",
+        "Contact Point Email is one specific contact channel, not the full unified person record.",
+        "Segment is a dynamic audience grouping, not the underlying unified person record itself."
+      ]
     },
     {
       "question": "What is the purpose of a Data Cloud Data Stream?",
@@ -313,7 +387,12 @@
         "To run Calculated Insights"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Streams define the connection to a source (e.g., Salesforce, external API) and the mapping to Data Cloud objects."
+      "explanation": "Data Streams define the connection to a source (e.g., Salesforce, external API) and the mapping to Data Cloud objects.",
+      "whyWrong": [
+        "Exporting segments is a downstream activation step, not what a Data Stream does at ingestion.",
+        "Creating activation destinations is a separate configuration step from ingesting and mapping data via a Data Stream.",
+        "Running Calculated Insights happens after data is already ingested — it's not the Data Stream's function."
+      ]
     },
     {
       "question": "How does Data Cloud support Einstein and Agentforce?",
@@ -324,7 +403,12 @@
         "Only for Marketing Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Data Cloud grounding lets Einstein and Agentforce access unified customer profiles for accurate, data-backed AI responses."
+      "explanation": "Data Cloud grounding lets Einstein and Agentforce access unified customer profiles for accurate, data-backed AI responses.",
+      "whyWrong": [
+        "Data Cloud explicitly does support Einstein/Agentforce — 'it does not' denies a core integration point.",
+        "Grounding isn't limited to batch exports — it's used for real-time AI context.",
+        "Grounding isn't Marketing-Cloud-only — it supports AI features across the Salesforce platform, including Agentforce."
+      ]
     }
   ]
 }

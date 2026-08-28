@@ -178,7 +178,12 @@
         "Only service"
       ],
       "correctAnswer": 1,
-      "explanation": "Product-to-Cash (P2C) covers the full cycle from quote through contract, order, billing, and revenue recognition."
+      "explanation": "Product-to-Cash (P2C) covers the full cycle from quote through contract, order, billing, and revenue recognition.",
+      "whyWrong": [
+        "'Only marketing' misrepresents Product-to-Cash, which spans the full quote-to-cash operational lifecycle, not marketing activities.",
+        "'Only sales' undersells the lifecycle, which extends beyond sales into billing and revenue recognition.",
+        "'Only service' is unrelated to the Product-to-Cash lifecycle, which is a sales/finance process."
+      ]
     },
     {
       "question": "Which role does a Revenue Cloud Consultant typically fulfill?",
@@ -189,7 +194,12 @@
         "UI design only"
       ],
       "correctAnswer": 1,
-      "explanation": "They have hands-on experience designing and implementing Revenue Cloud and extensive P2C knowledge."
+      "explanation": "They have hands-on experience designing and implementing Revenue Cloud and extensive P2C knowledge.",
+      "whyWrong": [
+        "Email marketing alone is a Marketing Cloud function, not the broader Revenue Cloud consulting role.",
+        "Slack configuration is a separate specialization, unrelated to Revenue Cloud implementation.",
+        "UI design alone undersells the role, which requires deep P2C process knowledge."
+      ]
     },
     {
       "question": "What does Revenue Cloud typically include?",
@@ -200,7 +210,12 @@
         "Only Service Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Revenue Cloud encompasses CPQ, Billing, Revenue Recognition, and the P2C lifecycle."
+      "explanation": "Revenue Cloud encompasses CPQ, Billing, Revenue Recognition, and the P2C lifecycle.",
+      "whyWrong": [
+        "'Only CPQ' undersells Revenue Cloud's scope, which also includes Billing and Revenue Recognition.",
+        "Marketing Cloud is a separate product, unrelated to Revenue Cloud's quote-to-cash focus.",
+        "Service Cloud is a separate product, unrelated to Revenue Cloud's quote-to-cash focus."
+      ]
     },
     {
       "question": "Which Salesforce product handles subscription billing?",
@@ -211,7 +226,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Revenue Cloud Billing handles subscription and usage-based billing."
+      "explanation": "Revenue Cloud Billing handles subscription and usage-based billing.",
+      "whyWrong": [
+        "Sales Cloud manages the sales pipeline but doesn't itself handle subscription billing.",
+        "Marketing Cloud is unrelated to subscription billing functionality.",
+        "Slack is unrelated to subscription billing functionality."
+      ]
     },
     {
       "question": "What is revenue recognition in the context of Revenue Cloud?",
@@ -222,7 +242,12 @@
         "Only orders"
       ],
       "correctAnswer": 1,
-      "explanation": "Revenue recognition allocates revenue to periods according to accounting standards (e.g., ASC 606)."
+      "explanation": "Revenue recognition allocates revenue to periods according to accounting standards (e.g., ASC 606).",
+      "whyWrong": [
+        "'Only invoicing' undersells revenue recognition, which is about allocating revenue to accounting periods, not generating invoices.",
+        "'Only quotes' is unrelated to the accounting-period allocation revenue recognition addresses.",
+        "'Only orders' is unrelated to the accounting-period allocation revenue recognition addresses."
+      ]
     },
     {
       "question": "What does CPQ (Configure, Price, Quote) handle?",
@@ -233,7 +258,12 @@
         "Only contracts"
       ],
       "correctAnswer": 1,
-      "explanation": "CPQ handles configuration, pricing, and quote generation."
+      "explanation": "CPQ handles configuration, pricing, and quote generation.",
+      "whyWrong": [
+        "'Only billing' misrepresents CPQ, which handles the configure-price-quote process, separate from billing.",
+        "'Only orders' undersells CPQ's actual scope, which is product configuration and quoting, not order fulfillment.",
+        "'Only contracts' undersells CPQ's actual scope, which centers on configuration, pricing, and quoting."
+      ]
     },
     {
       "question": "Which Revenue Cloud object represents a signed agreement?",
@@ -244,7 +274,12 @@
         "Order only"
       ],
       "correctAnswer": 1,
-      "explanation": "Contract represents the signed agreement and drives billing/revenue."
+      "explanation": "Contract represents the signed agreement and drives billing/revenue.",
+      "whyWrong": [
+        "A Quote is a proposed deal, not yet a signed agreement — that's what a Contract represents.",
+        "Opportunity tracks the sales deal in progress, not the signed agreement itself.",
+        "Order represents fulfillment execution, not the signed contractual agreement."
+      ]
     },
     {
       "question": "What is usage-based billing?",
@@ -255,7 +290,12 @@
         "Quote only"
       ],
       "correctAnswer": 1,
-      "explanation": "Usage-based billing charges based on consumption metrics."
+      "explanation": "Usage-based billing charges based on consumption metrics.",
+      "whyWrong": [
+        "'Fixed fee only' is the opposite of what usage-based billing means.",
+        "'One-time only' contradicts the ongoing, consumption-based nature of usage-based billing.",
+        "'Quote only' is unrelated to the billing model being described — a quote precedes billing, it isn't the billing model itself."
+      ]
     },
     {
       "question": "Which standard governs revenue recognition for subscriptions?",
@@ -266,7 +306,12 @@
         "No standard"
       ],
       "correctAnswer": 1,
-      "explanation": "ASC 606 and IFRS 15 govern revenue recognition."
+      "explanation": "ASC 606 and IFRS 15 govern revenue recognition.",
+      "whyWrong": [
+        "SOX governs financial controls broadly, but the specific subscription revenue recognition standard is ASC 606/IFRS 15.",
+        "GDPR is a data privacy regulation, unrelated to revenue recognition accounting standards.",
+        "There is a specific governing standard (ASC 606/IFRS 15) — 'no standard' is incorrect."
+      ]
     },
     {
       "question": "What does the P2C lifecycle begin with?",
@@ -277,7 +322,12 @@
         "Contract only"
       ],
       "correctAnswer": 1,
-      "explanation": "P2C begins with configuration and quote, then contract, order, billing, and revenue."
+      "explanation": "P2C begins with configuration and quote, then contract, order, billing, and revenue.",
+      "whyWrong": [
+        "Billing happens after configuration and quoting, not at the start of the P2C lifecycle.",
+        "Revenue recognition happens after the sale is booked, not at the beginning of the lifecycle.",
+        "A signed contract typically follows the initial configuration and quoting stage, not the very start."
+      ]
     },
     {
       "question": "Which Revenue Cloud feature supports amendment handling?",
@@ -288,7 +338,12 @@
         "Invoice only"
       ],
       "correctAnswer": 1,
-      "explanation": "Contract amendments support add, change, and renew scenarios."
+      "explanation": "Contract amendments support add, change, and renew scenarios.",
+      "whyWrong": [
+        "A Quote alone doesn't handle post-sale amendment scenarios like renewals or changes.",
+        "An Order alone doesn't handle contract-level amendment scenarios.",
+        "An Invoice alone is a billing document, not the mechanism for handling contract amendments."
+      ]
     },
     {
       "question": "What is the purpose of a Price Book in CPQ?",
@@ -299,7 +354,12 @@
         "To send invoices"
       ],
       "correctAnswer": 1,
-      "explanation": "Price Books define products and list prices for CPQ quotes."
+      "explanation": "Price Books define products and list prices for CPQ quotes.",
+      "whyWrong": [
+        "A Price Book isn't for storing contact information — that's a CRM concept unrelated to CPQ pricing.",
+        "A Price Book defines pricing for quoting — creating orders is a separate downstream process.",
+        "A Price Book isn't an invoicing tool — invoicing happens later in the P2C lifecycle."
+      ]
     },
     {
       "question": "Which integration is common for Revenue Cloud?",
@@ -310,7 +370,12 @@
         "Tableau only"
       ],
       "correctAnswer": 1,
-      "explanation": "Revenue Cloud integrates with ERP and accounting systems."
+      "explanation": "Revenue Cloud integrates with ERP and accounting systems.",
+      "whyWrong": [
+        "Marketing Cloud alone undersells the integration landscape, which spans ERP and accounting systems too.",
+        "Slack alone is unrelated to the typical ERP/billing/accounting integrations for Revenue Cloud.",
+        "Tableau alone is a reporting tool, not a typical operational integration point for Revenue Cloud."
+      ]
     },
     {
       "question": "What does a Revenue Cloud Consultant need to understand?",
@@ -321,7 +386,12 @@
         "Only Billing"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants need P2C process, accounting, and product knowledge."
+      "explanation": "Consultants need P2C process, accounting, and product knowledge.",
+      "whyWrong": [
+        "'Only UI' undersells the consultant's needed knowledge, which spans business process and accounting implications.",
+        "'Only CPQ' undersells the broader P2C and accounting knowledge required beyond just quoting.",
+        "'Only Billing' undersells the broader P2C and product-capability knowledge required beyond just billing."
+      ]
     },
     {
       "question": "Which best practice applies to Revenue Cloud implementation?",
@@ -332,7 +402,12 @@
         "Single product only"
       ],
       "correctAnswer": 1,
-      "explanation": "Align with accounting, test revenue scenarios, and validate reporting."
+      "explanation": "Align with accounting, test revenue scenarios, and validate reporting.",
+      "whyWrong": [
+        "Ignoring accounting policies contradicts sound implementation practice for a finance-adjacent product.",
+        "'No testing' contradicts standard implementation best practice, which requires validating revenue scenarios.",
+        "Focusing on a single product ignores the cross-functional accounting alignment this best practice calls for."
+      ]
     }
   ]
 }

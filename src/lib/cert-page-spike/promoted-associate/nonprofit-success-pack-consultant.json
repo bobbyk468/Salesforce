@@ -183,7 +183,12 @@
         "A CPQ product"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP is a managed package that provides donation management, households, and nonprofit-specific features on Salesforce."
+      "explanation": "NPSP is a managed package that provides donation management, households, and nonprofit-specific features on Salesforce.",
+      "whyWrong": [
+        "NPSP isn't a retail CRM product — it's a nonprofit-specific managed package.",
+        "NPSP isn't a Marketing Cloud product — it's built on Salesforce Core for nonprofit operations.",
+        "NPSP isn't a CPQ product — it has nothing to do with pricing/quoting."
+      ]
     },
     {
       "question": "How does NPSP differ from Nonprofit Cloud (NPC)?",
@@ -194,7 +199,12 @@
         "NPSP is for B2B only"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP is the managed package; Nonprofit Cloud is the broader industry solution that can include NPSP."
+      "explanation": "NPSP is the managed package; Nonprofit Cloud is the broader industry solution that can include NPSP.",
+      "whyWrong": [
+        "They aren't identical — NPSP is a managed package, while Nonprofit Cloud is the newer, broader industry solution.",
+        "NPC isn't limited to K-12 — it's a general nonprofit industry solution.",
+        "NPSP isn't limited to B2B use cases — it's built specifically for nonprofit donation/constituent management."
+      ]
     },
     {
       "question": "Which role does an NPSP Consultant typically fulfill?",
@@ -205,7 +215,12 @@
         "UI design only"
       ],
       "correctAnswer": 1,
-      "explanation": "They design and implement NPSP and nonprofit package solutions in a customer-facing role."
+      "explanation": "They design and implement NPSP and nonprofit package solutions in a customer-facing role.",
+      "whyWrong": [
+        "Email marketing alone is a Marketing Cloud function, not the broader NPSP consulting role.",
+        "Slack configuration is a separate specialization, unrelated to NPSP implementation.",
+        "UI design alone undersells the role, which spans data model and nonprofit process configuration."
+      ]
     },
     {
       "question": "What is a Household in NPSP?",
@@ -216,7 +231,12 @@
         "A campaign"
       ],
       "correctAnswer": 1,
-      "explanation": "Households group related contacts for household-level giving and communication."
+      "explanation": "Households group related contacts for household-level giving and communication.",
+      "whyWrong": [
+        "A report displays data — it doesn't itself group related contacts into a giving unit.",
+        "An email list is a marketing concept, unrelated to the Household grouping structure.",
+        "A campaign tracks marketing/fundraising initiatives, not a household grouping of related contacts."
+      ]
     },
     {
       "question": "Which NPSP feature supports recurring donations?",
@@ -227,7 +247,12 @@
         "Leads only"
       ],
       "correctAnswer": 1,
-      "explanation": "The Recurring Donations object creates installment opportunities based on the donation schedule."
+      "explanation": "The Recurring Donations object creates installment opportunities based on the donation schedule.",
+      "whyWrong": [
+        "'Only one-time gifts' is the opposite of what supports recurring donations.",
+        "Campaigns track marketing/fundraising initiatives, not the specific recurring-payment structure.",
+        "Leads are a Sales Cloud concept, unrelated to recurring donation tracking."
+      ]
     },
     {
       "question": "What is the Gift Entry feature in NPSP?",
@@ -238,7 +263,12 @@
         "A campaign"
       ],
       "correctAnswer": 1,
-      "explanation": "Gift Entry provides a streamlined interface for donation entry."
+      "explanation": "Gift Entry provides a streamlined interface for donation entry.",
+      "whyWrong": [
+        "A report displays existing data — it isn't itself the donation entry interface.",
+        "An email template is unrelated to donation data entry.",
+        "A campaign tracks fundraising initiatives, not the transactional entry process for gifts."
+      ]
     },
     {
       "question": "Which NPSP setting controls soft credit behavior?",
@@ -249,7 +279,12 @@
         "Opportunity only"
       ],
       "correctAnswer": 1,
-      "explanation": "Household settings control soft credit allocation."
+      "explanation": "Household settings control soft credit allocation.",
+      "whyWrong": [
+        "'No setting' contradicts the fact that NPSP has specific configurable household/soft-credit settings.",
+        "Campaign settings are a different configuration area, unrelated to soft credit allocation.",
+        "Opportunity settings alone don't control the household-level soft credit behavior described."
+      ]
     },
     {
       "question": "What does NPSP data model support for nonprofits?",
@@ -260,7 +295,12 @@
         "Campaigns only"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP supports donations, households, affiliations, and engagements."
+      "explanation": "NPSP supports donations, households, affiliations, and engagements.",
+      "whyWrong": [
+        "Standard objects alone don't capture NPSP's nonprofit-specific extensions like households and affiliations.",
+        "Leads alone don't reflect the donation/household/affiliation data model NPSP provides.",
+        "Campaigns alone don't reflect the broader donation/household/engagement data model NPSP supports."
+      ]
     },
     {
       "question": "Which NPSP feature supports payment processing?",
@@ -271,7 +311,12 @@
         "Campaign only"
       ],
       "correctAnswer": 1,
-      "explanation": "Payment object and gateways support payment processing."
+      "explanation": "Payment object and gateways support payment processing.",
+      "whyWrong": [
+        "'Manual only' contradicts the automated payment gateway integration NPSP actually supports.",
+        "Opportunity alone is the donation record, not the payment processing mechanism itself.",
+        "Campaign alone tracks fundraising initiatives, not payment processing."
+      ]
     },
     {
       "question": "What is the purpose of NPSP migration?",
@@ -282,7 +327,12 @@
         "To backup only"
       ],
       "correctAnswer": 1,
-      "explanation": "Migration moves data from legacy or custom implementations."
+      "explanation": "Migration moves data from legacy or custom implementations.",
+      "whyWrong": [
+        "Migration doesn't replace NPSP — it moves or restructures data within/into it.",
+        "'To delete only' misrepresents migration's purpose, which is about moving and customizing data.",
+        "'To backup only' misrepresents migration's purpose, which is broader than just backup."
+      ]
     },
     {
       "question": "Which reporting need is common for NPSP?",
@@ -293,7 +343,12 @@
         "Only product sales"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP reporting covers donor retention and gift summary."
+      "explanation": "NPSP reporting covers donor retention and gift summary.",
+      "whyWrong": [
+        "Sales pipeline reporting is a Sales Cloud concept, unrelated to nonprofit-specific reporting needs.",
+        "Support case reporting is a Service Cloud concept, unrelated to donor/fundraising reporting.",
+        "Product sales reporting is a Commerce concept, unrelated to nonprofit donor reporting."
+      ]
     },
     {
       "question": "What does the Engagement Plan support?",
@@ -304,7 +359,12 @@
         "Only events"
       ],
       "correctAnswer": 1,
-      "explanation": "Engagement Plans create stewardship task sequences."
+      "explanation": "Engagement Plans create stewardship task sequences.",
+      "whyWrong": [
+        "'Only marketing' undersells the Engagement Plan, which specifically manages task sequences for donor stewardship.",
+        "'Only email' undersells the Engagement Plan's broader task-sequencing capability.",
+        "'Only events' undersells the Engagement Plan, which covers general stewardship tasks, not just events."
+      ]
     },
     {
       "question": "Which integration is common for NPSP?",
@@ -315,7 +375,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP integrates with payment and fundraising platforms."
+      "explanation": "NPSP integrates with payment and fundraising platforms.",
+      "whyWrong": [
+        "CPQ is unrelated to the typical fundraising/payment/accounting integrations NPSP implementations need.",
+        "Marketing Cloud alone undersells the integration landscape, which includes payment processors and accounting systems too.",
+        "Slack alone is unrelated to NPSP's typical fundraising and accounting integrations."
+      ]
     },
     {
       "question": "What does an NPSP Consultant need to understand?",
@@ -326,7 +391,12 @@
         "Only Marketing Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants need NPSP data model and nonprofit process knowledge."
+      "explanation": "Consultants need NPSP data model and nonprofit process knowledge.",
+      "whyWrong": [
+        "'Only UI' undersells the consultant's needed knowledge, which spans data model and nonprofit process configuration.",
+        "'Only CRM' undersells the nonprofit-specific process knowledge required beyond generic CRM concepts.",
+        "'Only Marketing Cloud' is too narrow — the role requires broader NPSP-specific configuration knowledge."
+      ]
     },
     {
       "question": "Which best practice applies to NPSP implementation?",
@@ -337,7 +407,12 @@
         "Single user only"
       ],
       "correctAnswer": 1,
-      "explanation": "Clean data, process alignment, and training support success."
+      "explanation": "Clean data, process alignment, and training support success.",
+      "whyWrong": [
+        "Ignoring data quality contradicts sound implementation practice, which starts with clean data.",
+        "'No training' contradicts standard implementation best practice, which includes user enablement.",
+        "Focusing on a single user ignores the organization-wide training and process alignment this best practice calls for."
+      ]
     }
   ]
 }

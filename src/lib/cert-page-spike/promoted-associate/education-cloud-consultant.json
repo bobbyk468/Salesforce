@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Education Cloud Consultant exam for?",
     "personas": [
-      { "label": "Higher education CRM consultants", "description": "You implement Salesforce for universities and colleges and need to validate your expertise in EDA, student lifecycle management, and admissions workflows." },
-      { "label": "Salesforce admins at educational institutions", "description": "You manage an Education Cloud org and want to prove your knowledge of the Education Data Architecture, advising tools, and student success features." },
-      { "label": "EdTech implementation partners", "description": "You deliver Education Cloud projects and need the credential to demonstrate competency in configuring student recruitment, enrollment, and advancement solutions." }
+      {
+        "label": "Higher education CRM consultants",
+        "description": "You implement Salesforce for universities and colleges and need to validate your expertise in EDA, student lifecycle management, and admissions workflows."
+      },
+      {
+        "label": "Salesforce admins at educational institutions",
+        "description": "You manage an Education Cloud org and want to prove your knowledge of the Education Data Architecture, advising tools, and student success features."
+      },
+      {
+        "label": "EdTech implementation partners",
+        "description": "You deliver Education Cloud projects and need the credential to demonstrate competency in configuring student recruitment, enrollment, and advancement solutions."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud supports student lifecycle, admissions, advancement, and engagement for schools and universities."
+      "explanation": "Education Cloud supports student lifecycle, admissions, advancement, and engagement for schools and universities.",
+      "whyWrong": [
+        "Retail is a different industry vertical, unrelated to Education Cloud's purpose.",
+        "Manufacturing is a different industry vertical, unrelated to Education Cloud's purpose.",
+        "CPQ is a pricing/quoting product, unrelated to Education Cloud's student lifecycle focus."
+      ]
     },
     {
       "question": "Which role does an Education Cloud Consultant typically fulfill?",
@@ -180,7 +194,12 @@
         "UI design only"
       ],
       "correctAnswer": 1,
-      "explanation": "They implement Education Cloud solutions in a customer-facing consultant role."
+      "explanation": "They implement Education Cloud solutions in a customer-facing consultant role.",
+      "whyWrong": [
+        "Email marketing alone is a Marketing Cloud function, not the broader consulting role.",
+        "Slack configuration is a separate specialization, unrelated to Education Cloud implementation.",
+        "UI design alone undersells the role, which spans data model, processes, and stakeholder alignment."
+      ]
     },
     {
       "question": "What type of organizations typically use Education Cloud?",
@@ -191,7 +210,12 @@
         "Financial services only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud is designed for K-12, higher education, and educational institutions."
+      "explanation": "Education Cloud is designed for K-12, higher education, and educational institutions.",
+      "whyWrong": [
+        "Retail organizations don't typically use Education Cloud — it's purpose-built for educational institutions.",
+        "Manufacturing companies don't typically use Education Cloud.",
+        "Financial services firms don't typically use Education Cloud — it's an education-specific industry solution."
+      ]
     },
     {
       "question": "Which Salesforce product is often used with Education Cloud for learning management?",
@@ -202,7 +226,12 @@
         "Marketing Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud uses Experience Cloud and industry data models for student and program management."
+      "explanation": "Education Cloud uses Experience Cloud and industry data models for student and program management.",
+      "whyWrong": [
+        "CPQ is a pricing/quoting tool, unrelated to learning management pairing with Education Cloud.",
+        "Commerce Cloud is an e-commerce platform, unrelated to learning management.",
+        "Marketing Cloud is for campaign automation, not the Experience Cloud/data-model pairing described here."
+      ]
     },
     {
       "question": "What is a common use case for Education Cloud?",
@@ -213,7 +242,12 @@
         "Email campaigns only"
       ],
       "correctAnswer": 1,
-      "explanation": "Student recruitment, enrollment, and alumni engagement are core Education Cloud use cases."
+      "explanation": "Student recruitment, enrollment, and alumni engagement are core Education Cloud use cases.",
+      "whyWrong": [
+        "Quote generation is a Sales/CPQ concept, unrelated to Education Cloud's student-focused use cases.",
+        "Order management is a Commerce concept, unrelated to student recruitment and enrollment.",
+        "Email campaigns alone are a narrow marketing function, not the broader recruitment/enrollment/alumni use case."
+      ]
     },
     {
       "question": "What does the Admissions lifecycle typically include?",
@@ -224,7 +258,12 @@
         "Only reporting"
       ],
       "correctAnswer": 1,
-      "explanation": "Admissions covers inquiry through application to enrollment."
+      "explanation": "Admissions covers inquiry through application to enrollment.",
+      "whyWrong": [
+        "'Only billing' undersells the admissions lifecycle, which spans the full inquiry-to-enrollment journey, not just payment.",
+        "'Only marketing' undersells the lifecycle — admissions spans much more than marketing activities.",
+        "'Only reporting' undersells the lifecycle — reporting is a byproduct, not the process itself."
+      ]
     },
     {
       "question": "Which Education Cloud object supports program management?",
@@ -235,7 +274,12 @@
         "Lead only"
       ],
       "correctAnswer": 1,
-      "explanation": "Program, Term, and Course support academic program management."
+      "explanation": "Program, Term, and Course support academic program management.",
+      "whyWrong": [
+        "Standard Account object alone doesn't capture the education-specific Program/Term/Course structure.",
+        "Opportunity is a Sales Cloud object, unrelated to academic program structure.",
+        "Lead is a Sales Cloud object, unrelated to program management."
+      ]
     },
     {
       "question": "What is Advancement in the education context?",
@@ -246,7 +290,12 @@
         "Only courses"
       ],
       "correctAnswer": 1,
-      "explanation": "Advancement covers alumni relations and fundraising."
+      "explanation": "Advancement covers alumni relations and fundraising.",
+      "whyWrong": [
+        "'Only admissions' undersells Advancement, which is specifically about post-enrollment alumni/fundraising activity, distinct from admissions.",
+        "'Only enrollment' undersells Advancement — it's specifically about the alumni/donor relationship stage, not enrollment itself.",
+        "'Only courses' is unrelated — Advancement concerns alumni and fundraising, not course management."
+      ]
     },
     {
       "question": "Which Experience Cloud use case applies to Education Cloud?",
@@ -257,7 +306,12 @@
         "Support portal only"
       ],
       "correctAnswer": 1,
-      "explanation": "Student and alumni portals are common Experience Cloud use cases."
+      "explanation": "Student and alumni portals are common Experience Cloud use cases.",
+      "whyWrong": [
+        "B2B storefronts are a Commerce Cloud use case, unrelated to Education Cloud's student/alumni self-service portals.",
+        "Partner portals are a different Experience Cloud use case, not specific to Education Cloud's audience.",
+        "Support portals are a Service Cloud use case, distinct from the student/alumni self-service scenario."
+      ]
     },
     {
       "question": "What does the student lifecycle encompass?",
@@ -268,7 +322,12 @@
         "Only courses"
       ],
       "correctAnswer": 1,
-      "explanation": "Student lifecycle spans prospect through alumni."
+      "explanation": "Student lifecycle spans prospect through alumni.",
+      "whyWrong": [
+        "'Only graduation' undersells the full lifecycle, which spans from prospect through alumni, not just the graduation moment.",
+        "'Only enrollment' undersells the lifecycle, which extends before and after enrollment.",
+        "'Only courses' is unrelated — the student lifecycle spans the person's journey, not course structure."
+      ]
     },
     {
       "question": "Which reporting need is common for Education Cloud?",
@@ -279,7 +338,12 @@
         "Only product sales"
       ],
       "correctAnswer": 1,
-      "explanation": "Enrollment, retention, and advancement reporting are key."
+      "explanation": "Enrollment, retention, and advancement reporting are key.",
+      "whyWrong": [
+        "Sales pipeline reporting is a Sales Cloud concept, unrelated to Education Cloud's enrollment/retention metrics.",
+        "Support case reporting is a Service Cloud concept, unrelated to Education Cloud's typical reporting needs.",
+        "Product sales reporting is a Commerce concept, unrelated to education-specific metrics."
+      ]
     },
     {
       "question": "What is the purpose of Term in Education Cloud?",
@@ -290,7 +354,12 @@
         "To manage campaigns"
       ],
       "correctAnswer": 1,
-      "explanation": "Term represents academic periods for enrollment and scheduling."
+      "explanation": "Term represents academic periods for enrollment and scheduling.",
+      "whyWrong": [
+        "Term doesn't replace Program — they're complementary objects representing different concepts (academic period vs. program of study).",
+        "Term isn't specifically about tracking donations — that's an Advancement concept.",
+        "Term isn't about managing campaigns — that's a Marketing/Sales concept unrelated to academic periods."
+      ]
     },
     {
       "question": "Which integration is common for Education Cloud?",
@@ -301,7 +370,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud integrates with SIS and LMS systems."
+      "explanation": "Education Cloud integrates with SIS and LMS systems.",
+      "whyWrong": [
+        "CPQ alone doesn't capture the SIS/LMS/payment integration landscape typical of Education Cloud implementations.",
+        "Marketing Cloud alone undersells the integration scope, which spans SIS and LMS systems too.",
+        "Slack alone is unrelated to the core academic/payment system integrations typical here."
+      ]
     },
     {
       "question": "What does an Education Cloud Consultant need to understand?",
@@ -312,7 +386,12 @@
         "Only Marketing Cloud"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants need student lifecycle and institutional process knowledge."
+      "explanation": "Consultants need student lifecycle and institutional process knowledge.",
+      "whyWrong": [
+        "'Only UI' undersells the consultant's needed knowledge, which spans process and data model, not just interface design.",
+        "'Only CRM' undersells the industry-specific knowledge required beyond generic CRM concepts.",
+        "'Only Marketing Cloud' is too narrow — the role requires broader institutional and data-model understanding."
+      ]
     },
     {
       "question": "Which best practice applies to Education Cloud implementation?",
@@ -323,7 +402,12 @@
         "Single department only"
       ],
       "correctAnswer": 1,
-      "explanation": "Engage stakeholders and align with institutional workflows."
+      "explanation": "Engage stakeholders and align with institutional workflows.",
+      "whyWrong": [
+        "Ignoring stakeholders contradicts sound implementation practice and risks a solution that doesn't fit institutional needs.",
+        "'No training' contradicts standard implementation best practice, which includes user enablement.",
+        "Focusing on a single department ignores the cross-functional nature of admissions, advancement, and IT collaboration this best practice calls for."
+      ]
     }
   ]
 }

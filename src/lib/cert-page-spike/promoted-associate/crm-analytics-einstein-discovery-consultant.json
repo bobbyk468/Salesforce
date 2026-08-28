@@ -178,7 +178,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "CRM Analytics provides embedded analytics, dashboards, and data exploration on Salesforce and connected data."
+      "explanation": "CRM Analytics provides embedded analytics, dashboards, and data exploration on Salesforce and connected data.",
+      "whyWrong": [
+        "'Only reports' undersells CRM Analytics' capability — it covers full embedded analytics, not just static reports.",
+        "Email is a Marketing Cloud function, unrelated to CRM Analytics' data exploration purpose.",
+        "CPQ is a pricing/quoting product, entirely unrelated to CRM Analytics."
+      ]
     },
     {
       "question": "What does Einstein Discovery provide?",
@@ -189,7 +194,12 @@
         "Static reports only"
       ],
       "correctAnswer": 1,
-      "explanation": "Einstein Discovery delivers AI-powered predictive insights and recommendations."
+      "explanation": "Einstein Discovery delivers AI-powered predictive insights and recommendations.",
+      "whyWrong": [
+        "'Only charts' undersells Einstein Discovery — it produces AI-driven predictive insights, not just visualizations.",
+        "Slack is a collaboration tool, unrelated to Einstein Discovery's predictive analytics function.",
+        "Static reports don't involve AI-driven prediction — that contradicts the core function of Einstein Discovery."
+      ]
     },
     {
       "question": "Which role does a CRM Analytics and Einstein Discovery Consultant typically fulfill?",
@@ -200,7 +210,12 @@
         "UI design only"
       ],
       "correctAnswer": 1,
-      "explanation": "They design and implement CRM Analytics and Einstein Discovery in customer-facing or architect roles."
+      "explanation": "They design and implement CRM Analytics and Einstein Discovery in customer-facing or architect roles.",
+      "whyWrong": [
+        "Email marketing is a Marketing Cloud function, unrelated to this analytics-focused consulting role.",
+        "Slack configuration is a separate specialization, unrelated to CRM Analytics implementation.",
+        "UI design alone undersells the role, which spans data architecture, dashboards, and predictive modeling, not just visual design."
+      ]
     },
     {
       "question": "What is a Lens in CRM Analytics?",
@@ -211,7 +226,12 @@
         "A campaign"
       ],
       "correctAnswer": 1,
-      "explanation": "A Lens defines a dataset or query that can be reused across dashboards and apps."
+      "explanation": "A Lens defines a dataset or query that can be reused across dashboards and apps.",
+      "whyWrong": [
+        "A report type is a different Salesforce reporting concept, not a CRM Analytics-specific term.",
+        "A Lens isn't an email — it's an interactive data exploration view.",
+        "A Lens isn't a campaign — that's a Sales/Marketing Cloud concept unrelated to CRM Analytics."
+      ]
     },
     {
       "question": "Which capability allows users to ask questions in natural language in CRM Analytics?",
@@ -222,7 +242,12 @@
         "Dashboard only"
       ],
       "correctAnswer": 1,
-      "explanation": "Einstein Ask allows users to query data using natural language."
+      "explanation": "Einstein Ask allows users to query data using natural language.",
+      "whyWrong": [
+        "'Only SAQL' undersells the capability — Einstein Ask specifically allows natural language, not just query language.",
+        "Dataflow is the ETL pipeline, unrelated to natural language querying.",
+        "Dashboard is the visualization layer, not the natural-language query capability being described."
+      ]
     },
     {
       "question": "What is a Dataflow in CRM Analytics?",
@@ -233,7 +258,12 @@
         "A dashboard"
       ],
       "correctAnswer": 1,
-      "explanation": "Dataflows define the ETL process for building datasets in CRM Analytics."
+      "explanation": "Dataflows define the ETL process for building datasets in CRM Analytics.",
+      "whyWrong": [
+        "A report type is a different Salesforce concept, not what a Dataflow does.",
+        "A Dataflow isn't an email — it's a data pipeline process.",
+        "A Dataflow isn't a dashboard — dashboards are the visualization layer built on top of the data a Dataflow prepares."
+      ]
     },
     {
       "question": "Which language is used to query data in CRM Analytics?",
@@ -244,7 +274,12 @@
         "AMPscript"
       ],
       "correctAnswer": 1,
-      "explanation": "SAQL is used for querying and transforming data in CRM Analytics."
+      "explanation": "SAQL is used for querying and transforming data in CRM Analytics.",
+      "whyWrong": [
+        "SOQL is the Salesforce Core query language, not what's used for CRM Analytics datasets.",
+        "Apex is a programming language, not a data query language used in CRM Analytics.",
+        "AMPscript is a Marketing Cloud personalization language, unrelated to CRM Analytics querying."
+      ]
     },
     {
       "question": "What does Einstein Discovery Story provide?",
@@ -255,7 +290,12 @@
         "Lenses only"
       ],
       "correctAnswer": 1,
-      "explanation": "Stories deliver narrative insights and recommended actions from predictions."
+      "explanation": "Stories deliver narrative insights and recommended actions from predictions.",
+      "whyWrong": [
+        "Static reports don't involve narrative or predictive recommendations — that contradicts what a Story provides.",
+        "Dataflows are the ETL pipeline, unrelated to narrative insight generation.",
+        "Lenses are exploration views, not narrative predictive stories — that's the specific role of Einstein Discovery Story."
+      ]
     },
     {
       "question": "Which CRM Analytics component displays data in rows and columns?",
@@ -266,7 +306,12 @@
         "Dataflow only"
       ],
       "correctAnswer": 1,
-      "explanation": "Tables and grouped tables display tabular data on dashboards."
+      "explanation": "Tables and grouped tables display tabular data on dashboards.",
+      "whyWrong": [
+        "'Chart only' undersells the component — it specifically displays tabular row/column data, not charts.",
+        "Lens is a broader exploration concept, not the specific grid-display component being asked about.",
+        "Dataflow is the data pipeline, unrelated to how data is visually displayed."
+      ]
     },
     {
       "question": "What is the purpose of bindings in CRM Analytics dashboards?",
@@ -277,7 +322,12 @@
         "To create lenses"
       ],
       "correctAnswer": 1,
-      "explanation": "Bindings link widgets so filters and selections flow between components."
+      "explanation": "Bindings link widgets so filters and selections flow between components.",
+      "whyWrong": [
+        "Bindings have nothing to do with sending emails — that's a separate function entirely.",
+        "Bindings don't run dataflows — that's a separate ETL process.",
+        "Bindings don't create lenses — they connect existing widgets/filters together for interaction."
+      ]
     },
     {
       "question": "Which CRM Analytics object stores data for dashboard consumption?",
@@ -288,7 +338,12 @@
         "Dataflow only"
       ],
       "correctAnswer": 1,
-      "explanation": "Datasets store the data that lenses and dashboards query."
+      "explanation": "Datasets store the data that lenses and dashboards query.",
+      "whyWrong": [
+        "Lens is an exploration view built on top of a dataset — it isn't itself the storage object.",
+        "Report is a different Salesforce Core reporting concept, not the CRM Analytics-specific storage object.",
+        "Dataflow is the pipeline that produces data — the actual storage object for dashboard consumption is the dataset."
+      ]
     },
     {
       "question": "What does Einstein Discovery predict?",
@@ -299,7 +354,12 @@
         "Only SAQL"
       ],
       "correctAnswer": 1,
-      "explanation": "Einstein Discovery predicts outcomes and recommends actions to improve them."
+      "explanation": "Einstein Discovery predicts outcomes and recommends actions to improve them.",
+      "whyWrong": [
+        "'Only charts' undersells Einstein Discovery's predictive capability — it forecasts real-world outcomes, not just visuals.",
+        "'Only data structure' misrepresents its function — Einstein Discovery predicts outcomes, not schema design.",
+        "'Only SAQL' is a query language, unrelated to what Einstein Discovery actually predicts."
+      ]
     },
     {
       "question": "Which governance consideration applies to CRM Analytics?",
@@ -310,7 +370,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Governance includes RLS, permissions, and refresh policies."
+      "explanation": "Governance includes RLS, permissions, and refresh policies.",
+      "whyWrong": [
+        "'None' is incorrect — CRM Analytics has real governance considerations around security and permissions.",
+        "'Only email' misrepresents governance scope — it's much broader than email settings.",
+        "'Only dashboards' undersells governance, which spans security, permissions, and refresh policies, not just dashboards."
+      ]
     },
     {
       "question": "What is a CRM Analytics App?",
@@ -321,7 +386,12 @@
         "A lens only"
       ],
       "correctAnswer": 1,
-      "explanation": "Apps organize dashboards, lenses, and datasets for specific use cases."
+      "explanation": "Apps organize dashboards, lenses, and datasets for specific use cases.",
+      "whyWrong": [
+        "A mobile app is a different concept — a CRM Analytics App is the organizational container within the platform, not a mobile application.",
+        "A dataflow alone is just the data pipeline — an App is the broader container that includes dashboards and lenses too.",
+        "A lens alone is one exploration view — an App organizes multiple lenses, dashboards, and datasets together."
+      ]
     },
     {
       "question": "Which integration allows CRM Analytics to use Salesforce data?",
@@ -332,7 +402,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "The Salesforce connector and Data Sync enable CRM Analytics to consume Salesforce data."
+      "explanation": "The Salesforce connector and Data Sync enable CRM Analytics to consume Salesforce data.",
+      "whyWrong": [
+        "Manual export doesn't reflect the native, automated Salesforce integration CRM Analytics actually uses.",
+        "Email is unrelated to how CRM Analytics ingests Salesforce data.",
+        "Slack is unrelated to CRM Analytics' data integration with Salesforce."
+      ]
     }
   ]
 }
