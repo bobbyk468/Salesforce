@@ -178,7 +178,12 @@
         "Contract Pricing Query"
       ],
       "correctAnswer": 1,
-      "explanation": "CPQ stands for Configure, Price, Quote - the core capabilities for building and managing product quotes."
+      "explanation": "CPQ stands for Configure, Price, Quote - the core capabilities for building and managing product quotes.",
+      "whyWrong": [
+        "'Customer Product Quality' isn't the actual expansion of CPQ.",
+        "'Centralized Purchase Queue' isn't the actual expansion of CPQ.",
+        "'Contract Pricing Query' isn't the actual expansion of CPQ."
+      ]
     },
     {
       "question": "Which object is the primary entry point for building a quote in Salesforce CPQ?",
@@ -189,7 +194,12 @@
         "Order"
       ],
       "correctAnswer": 1,
-      "explanation": "The Quote object is the primary CPQ object used to build, price, and present quotes to customers."
+      "explanation": "The Quote object is the primary CPQ object used to build, price, and present quotes to customers.",
+      "whyWrong": [
+        "Opportunity is where a quote originates from, but the quote-building itself happens on the Quote object.",
+        "Contract is generated after a deal closes, not the entry point for building a quote.",
+        "Order is generated after a quote is finalized, not the entry point for building it."
+      ]
     },
     {
       "question": "What is the purpose of Product Rules in CPQ?",
@@ -200,7 +210,12 @@
         "To track discount approval workflows for the sales manager"
       ],
       "correctAnswer": 1,
-      "explanation": "Product Rules automatically add, remove, or configure products on a quote based on conditions you define — including Alert, Validation, Selection, and Filter rule types."
+      "explanation": "Product Rules automatically add, remove, or configure products on a quote based on conditions you define — including Alert, Validation, Selection, and Filter rule types.",
+      "whyWrong": [
+        "Product Rules don't set list prices globally — that's a separate pricing configuration.",
+        "Assigning products to price books/account groups is a separate configuration task, not what Product Rules do.",
+        "Tracking discount approval workflows is Advanced Approvals' function, not Product Rules'."
+      ]
     },
     {
       "question": "Which CPQ feature applies custom pricing logic to override list prices based on conditions?",
@@ -211,7 +226,12 @@
         "Discount Schedules"
       ],
       "correctAnswer": 0,
-      "explanation": "Price Rules evaluate conditions and inject values into quote line fields — enabling dynamic pricing based on customer segment, product combination, quantity, or contract terms."
+      "explanation": "Price Rules evaluate conditions and inject values into quote line fields — enabling dynamic pricing based on customer segment, product combination, quantity, or contract terms.",
+      "whyWrong": [
+        "Product Options define bundle components, not custom pricing override logic.",
+        "Quote Templates control document layout, not pricing logic.",
+        "Discount Schedules apply tiered discounts but don't provide the broader conditional pricing override logic Price Rules offer."
+      ]
     },
     {
       "question": "What is a Bundle in Salesforce CPQ?",
@@ -222,7 +242,12 @@
         "A quote template that combines multiple document sections"
       ],
       "correctAnswer": 1,
-      "explanation": "A Bundle is a product that contains optional or required child products (product options) that can be configured together. Bundles are used for complex product configurations such as hardware + software + services."
+      "explanation": "A Bundle is a product that contains optional or required child products (product options) that can be configured together. Bundles are used for complex product configurations such as hardware + software + services.",
+      "whyWrong": [
+        "A report type groups data for reporting — it isn't a product bundling structure.",
+        "A discount schedule applies tiered pricing — it isn't the parent/child bundling structure being described.",
+        "A quote template controls document layout — it isn't a product bundling structure."
+      ]
     },
     {
       "question": "What is a Discount Schedule in Salesforce CPQ?",
@@ -233,7 +258,12 @@
         "A Price Rule that overrides list price with a fixed promotional price"
       ],
       "correctAnswer": 1,
-      "explanation": "Discount Schedules apply tier-based discounts as quantity or term increases — for example, 5% off for 1–10 units, 10% off for 11–50 units. They are associated with a product and applied automatically when the quote meets threshold criteria."
+      "explanation": "Discount Schedules apply tier-based discounts as quantity or term increases — for example, 5% off for 1–10 units, 10% off for 11–50 units. They are associated with a product and applied automatically when the quote meets threshold criteria.",
+      "whyWrong": [
+        "An approval process routes discounts for authorization — that's Advanced Approvals, not a Discount Schedule.",
+        "A quote template section displays terms — it doesn't calculate tiered discount pricing itself.",
+        "A Price Rule overriding with a fixed price is a different mechanism from the volume/term-based tiering a Discount Schedule provides."
+      ]
     },
     {
       "question": "What is the Salesforce CPQ Quote Line Editor (QLE)?",
@@ -244,7 +274,12 @@
         "An admin tool for defining the field layout of the Quote object detail page"
       ],
       "correctAnswer": 1,
-      "explanation": "The Quote Line Editor is the central CPQ workspace for sales reps — it presents products, bundles, quantities, pricing, and discount controls in a grid, and recalculates totals in real time as changes are made."
+      "explanation": "The Quote Line Editor is the central CPQ workspace for sales reps — it presents products, bundles, quantities, pricing, and discount controls in a grid, and recalculates totals in real time as changes are made.",
+      "whyWrong": [
+        "An Apex validation class is a different technical mechanism, not the interactive UI grid itself.",
+        "A Visualforce page for PDF branding is a separate customization, not the QLE.",
+        "A field layout admin tool is a separate configuration concern, not the QLE."
+      ]
     },
     {
       "question": "How does Salesforce CPQ handle subscription products at renewal time?",
@@ -255,7 +290,12 @@
         "CPQ sends an email notification to the account manager who must manually clone the original quote"
       ],
       "correctAnswer": 1,
-      "explanation": "When a CPQ Contract is activated, CPQ tracks subscription terms and automatically creates a Renewal Opportunity and Quote at the end of the term — pre-populated with the existing products, enabling seamless renewal management."
+      "explanation": "When a CPQ Contract is activated, CPQ tracks subscription terms and automatically creates a Renewal Opportunity and Quote at the end of the term — pre-populated with the existing products, enabling seamless renewal management.",
+      "whyWrong": [
+        "Manual re-adding at each renewal is the opposite of CPQ's automated renewal generation.",
+        "Renewals are a CPQ function, not exclusively managed in Salesforce Billing.",
+        "CPQ automates renewal generation — it doesn't rely on manual email-triggered cloning."
+      ]
     },
     {
       "question": "What is the purpose of a Quote Template in Salesforce CPQ?",
@@ -266,7 +306,12 @@
         "To define which products are available to a specific sales team based on their profile"
       ],
       "correctAnswer": 1,
-      "explanation": "Quote Templates define the visual structure of the generated CPQ document — including header/footer, product line columns, terms and conditions, and custom branded sections. Multiple templates can be configured for different markets or product lines."
+      "explanation": "Quote Templates define the visual structure of the generated CPQ document — including header/footer, product line columns, terms and conditions, and custom branded sections. Multiple templates can be configured for different markets or product lines.",
+      "whyWrong": [
+        "Quote Templates don't define pricing calculation order — that's a Price Rule concern.",
+        "Quote Templates don't set default field values on Quote creation — that's a separate configuration.",
+        "Quote Templates don't control product availability by sales team — that's a separate access-control concern."
+      ]
     },
     {
       "question": "What is an Advanced Approval in Salesforce CPQ?",
@@ -277,7 +322,12 @@
         "A Quote Template section that displays a signature block for customer approval"
       ],
       "correctAnswer": 1,
-      "explanation": "CPQ Advanced Approvals provides more sophisticated approval routing than standard Salesforce approvals — supporting threshold-based triggers (e.g., discount > 20%), approval chains, delegated approvers, and automatic approval for within-policy quotes."
+      "explanation": "CPQ Advanced Approvals provides more sophisticated approval routing than standard Salesforce approvals — supporting threshold-based triggers (e.g., discount > 20%), approval chains, delegated approvers, and automatic approval for within-policy quotes.",
+      "whyWrong": [
+        "A standard Salesforce Approval Process lacks the CPQ-native discount-threshold routing complexity Advanced Approvals provides.",
+        "Advanced Approvals isn't an Einstein AI prediction feature — it's a rules-based routing framework.",
+        "Advanced Approvals isn't a Quote Template signature section — that's an unrelated document feature."
+      ]
     },
     {
       "question": "What is the relationship between an Opportunity and a CPQ Contract?",
@@ -288,7 +338,12 @@
         "Contracts are only created when Salesforce Billing is installed alongside CPQ"
       ],
       "correctAnswer": 1,
-      "explanation": "CPQ Contracts are created from Closed Won Opportunities to track active subscriptions. The Contract records the products, quantities, start/end dates, and pricing — forming the basis for renewals and amendments."
+      "explanation": "CPQ Contracts are created from Closed Won Opportunities to track active subscriptions. The Contract records the products, quantities, start/end dates, and pricing — forming the basis for renewals and amendments.",
+      "whyWrong": [
+        "Contracts aren't created automatically at Prospecting — that's too early in the sales cycle for a signed agreement.",
+        "CPQ Contracts don't replace Opportunities — they track a separate, later-stage agreement concept.",
+        "Contracts don't require Salesforce Billing specifically — they're a core CPQ capability on their own."
+      ]
     },
     {
       "question": "What is a Lookup Query in Salesforce CPQ Price Rules?",
@@ -299,7 +354,12 @@
         "An API call to an external ERP system to retrieve real-time product costs"
       ],
       "correctAnswer": 1,
-      "explanation": "Lookup Queries allow Price Rules to retrieve values from CPQ's custom Price Lookup Tables — enabling complex pricing scenarios such as matrix pricing based on customer tier and product family without custom code."
+      "explanation": "Lookup Queries allow Price Rules to retrieve values from CPQ's custom Price Lookup Tables — enabling complex pricing scenarios such as matrix pricing based on customer tier and product family without custom code.",
+      "whyWrong": [
+        "A Lookup Query isn't Apex/SOQL code — it's a declarative CPQ feature.",
+        "A Lookup Query isn't a Flow element — it's a CPQ-native Price Rule mechanism.",
+        "A Lookup Query isn't an external API call — it queries an internal custom object table."
+      ]
     },
     {
       "question": "Which CPQ object tracks the products and quantities from a closed-won deal for subscription management?",
@@ -310,7 +370,12 @@
         "Asset"
       ],
       "correctAnswer": 2,
-      "explanation": "Subscription records are created from CPQ Quote Lines when a Contract is activated — tracking each subscribed product, quantity, pricing, and term dates for ongoing lifecycle management and renewal generation."
+      "explanation": "Subscription records are created from CPQ Quote Lines when a Contract is activated — tracking each subscribed product, quantity, pricing, and term dates for ongoing lifecycle management and renewal generation.",
+      "whyWrong": [
+        "Quote Line Group organizes quote lines for display — it isn't the subscription-tracking object.",
+        "Contracted Price stores negotiated pricing — it isn't the subscription-tracking object for closed-won deals.",
+        "A Quote Line Group doesn't track post-sale subscription data the way an Asset does."
+      ]
     },
     {
       "question": "What is an Option Constraint in Salesforce CPQ?",
@@ -321,7 +386,12 @@
         "A Quote Template section"
       ],
       "correctAnswer": 1,
-      "explanation": "Option Constraints control the relationship between product options in a bundle — requiring, excluding, or enabling options based on configuration."
+      "explanation": "Option Constraints control the relationship between product options in a bundle — requiring, excluding, or enabling options based on configuration.",
+      "whyWrong": [
+        "A validation rule enforces data entry rules — it isn't the product-option dependency mechanism.",
+        "A discount approval threshold routes approvals — it isn't a product dependency mechanism.",
+        "A Quote Template section controls document layout — it isn't a product dependency mechanism."
+      ]
     },
     {
       "question": "Which CPQ feature allows different pricing for the same product based on customer segment?",
@@ -332,7 +402,12 @@
         "Discount Schedules only"
       ],
       "correctAnswer": 1,
-      "explanation": "Price Rules and Contracted Pricing allow segment-specific pricing based on account attributes, contract terms, or other criteria."
+      "explanation": "Price Rules and Contracted Pricing allow segment-specific pricing based on account attributes, contract terms, or other criteria.",
+      "whyWrong": [
+        "Quote Templates control document layout, not pricing by customer segment.",
+        "Product Rules alone control product visibility/validation, not segment-based pricing.",
+        "Discount Schedules alone provide volume tiering, not the broader segment-based Contracted Pricing mechanism."
+      ]
     }
   ]
 }

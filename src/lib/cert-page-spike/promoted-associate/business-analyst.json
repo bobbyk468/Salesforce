@@ -4,9 +4,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Salesforce Business Analyst exam for?",
     "personas": [
-      { "label": "Business analysts", "description": "You gather requirements and translate them into Salesforce solutions. This cert validates your BA methodology on the platform." },
-      { "label": "Admins expanding their role", "description": "You already configure Salesforce and want to formalise your requirements-gathering and stakeholder management skills." },
-      { "label": "Project managers", "description": "You manage Salesforce implementations and want to demonstrate your ability to bridge business and technical teams." }
+      {
+        "label": "Business analysts",
+        "description": "You gather requirements and translate them into Salesforce solutions. This cert validates your BA methodology on the platform."
+      },
+      {
+        "label": "Admins expanding their role",
+        "description": "You already configure Salesforce and want to formalise your requirements-gathering and stakeholder management skills."
+      },
+      {
+        "label": "Project managers",
+        "description": "You manage Salesforce implementations and want to demonstrate your ability to bridge business and technical teams."
+      }
     ]
   },
   "examDifficulty": {
@@ -194,7 +203,12 @@
         "Managing server infrastructure"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified Business Analysts understand business needs, capture requirements, and collaborate with stakeholders to develop Salesforce solutions that drive business improvements."
+      "explanation": "Certified Business Analysts understand business needs, capture requirements, and collaborate with stakeholders to develop Salesforce solutions that drive business improvements.",
+      "whyWrong": [
+        "Writing Apex code is a developer task, not the Business Analyst's core requirements-focused role.",
+        "Designing email campaigns is a Marketing function, unrelated to business analysis.",
+        "Managing server infrastructure is an IT operations task, unrelated to business analysis."
+      ]
     },
     {
       "question": "Which technique is commonly used to discover and document business requirements?",
@@ -205,7 +219,12 @@
         "API development"
       ],
       "correctAnswer": 1,
-      "explanation": "Stakeholder interviews and workshops are standard techniques for discovering and documenting business requirements."
+      "explanation": "Stakeholder interviews and workshops are standard techniques for discovering and documenting business requirements.",
+      "whyWrong": [
+        "Unit testing is a developer QA activity, not a requirements-discovery technique.",
+        "Deployment scripts are a technical release artifact, not a requirements-discovery technique.",
+        "API development is a technical implementation task, not a requirements-discovery technique."
+      ]
     },
     {
       "question": "What deliverable does a Business Analyst typically produce before development begins?",
@@ -216,7 +235,12 @@
         "Integration code"
       ],
       "correctAnswer": 1,
-      "explanation": "Business Analysts produce requirements documents and user stories to guide solution development."
+      "explanation": "Business Analysts produce requirements documents and user stories to guide solution development.",
+      "whyWrong": [
+        "A deployed package is a technical release artifact, not the BA's pre-development deliverable.",
+        "Test classes are a developer QA artifact, not the BA's pre-development deliverable.",
+        "Integration code is a technical implementation artifact, not the BA's pre-development deliverable."
+      ]
     },
     {
       "question": "How should a Business Analyst prioritize requirements when conflicts exist?",
@@ -227,7 +251,12 @@
         "Choose the cheapest option"
       ],
       "correctAnswer": 1,
-      "explanation": "Prioritization should align with business objectives and involve stakeholder agreement."
+      "explanation": "Prioritization should align with business objectives and involve stakeholder agreement.",
+      "whyWrong": [
+        "Always choosing the technical option ignores stakeholder needs and business objectives entirely.",
+        "Deferring all decisions to IT abdicates the BA's role in facilitating stakeholder alignment.",
+        "Choosing the cheapest option ignores business objectives and stakeholder needs, which should drive prioritization."
+      ]
     },
     {
       "question": "Which Salesforce artifact helps translate business requirements into implementable features?",
@@ -238,7 +267,12 @@
         "Deployment checklist"
       ],
       "correctAnswer": 2,
-      "explanation": "User stories and acceptance criteria translate business requirements into clear, implementable features for the team."
+      "explanation": "User stories and acceptance criteria translate business requirements into clear, implementable features for the team.",
+      "whyWrong": [
+        "A debug log is a technical troubleshooting artifact, unrelated to translating requirements into features.",
+        "Process Builder is a legacy automation tool, not a requirements-translation artifact.",
+        "A deployment checklist is a release-management artifact, not a requirements-translation artifact."
+      ]
     },
     {
       "question": "What is the standard format for writing a user story in Agile projects?",
@@ -249,7 +283,12 @@
         "\"[Actor] performs [action] to achieve [result]\""
       ],
       "correctAnswer": 1,
-      "explanation": "The standard user story format is \"As a [role], I want [goal] so that [benefit].\" This keeps focus on who needs the feature, what they need, and why — anchoring development decisions to real user outcomes."
+      "explanation": "The standard user story format is \"As a [role], I want [goal] so that [benefit].\" This keeps focus on who needs the feature, what they need, and why — anchoring development decisions to real user outcomes.",
+      "whyWrong": [
+        "'The system shall...' is a traditional requirements-statement format, not the Agile user story format.",
+        "'Given/when/then' describes a Gherkin/BDD acceptance-criteria format, not the standard user story format itself.",
+        "'[Actor] performs [action]...' isn't the standard Agile user story format — that's 'As a [role], I want [goal] so that [benefit]'."
+      ]
     },
     {
       "question": "What is the purpose of Acceptance Criteria in a user story?",
@@ -260,7 +299,12 @@
         "To list the dependencies and risks associated with the user story"
       ],
       "correctAnswer": 1,
-      "explanation": "Acceptance Criteria are the pass/fail conditions for a user story — they define exactly what the product owner will test to confirm the story is complete. Without clear acceptance criteria, teams risk rework due to ambiguous definitions of done."
+      "explanation": "Acceptance Criteria are the pass/fail conditions for a user story — they define exactly what the product owner will test to confirm the story is complete. Without clear acceptance criteria, teams risk rework due to ambiguous definitions of done.",
+      "whyWrong": [
+        "Acceptance criteria don't describe technical implementation — that's a separate development concern.",
+        "Acceptance criteria aren't about performance benchmarks — that's a non-functional requirement, not what acceptance criteria define.",
+        "Acceptance criteria aren't about listing dependencies/risks — that's separate project documentation."
+      ]
     },
     {
       "question": "A Business Analyst is documenting the current workflow of a business process before designing a new solution. What is this activity called?",
@@ -271,7 +315,12 @@
         "Solution validation"
       ],
       "correctAnswer": 2,
-      "explanation": "As-Is process analysis captures the current state of a business process to identify inefficiencies, pain points, and gaps before designing a To-Be (future state) solution — preventing the team from automating broken processes."
+      "explanation": "As-Is process analysis captures the current state of a business process to identify inefficiencies, pain points, and gaps before designing a To-Be (future state) solution — preventing the team from automating broken processes.",
+      "whyWrong": [
+        "Requirements traceability links requirements to test cases — it isn't about documenting current-state workflows.",
+        "Stakeholder mapping identifies stakeholder influence — it isn't about documenting current-state workflows.",
+        "Solution validation confirms the built solution meets needs — it isn't the current-state documentation activity being described."
+      ]
     },
     {
       "question": "Which technique helps a Business Analyst understand the relative importance of stakeholders and their influence on a project?",
@@ -282,7 +331,12 @@
         "Gap Analysis"
       ],
       "correctAnswer": 1,
-      "explanation": "The Power/Interest Grid plots stakeholders by their influence (power) and interest in the project — guiding the BA on how to engage each group: manage closely, keep satisfied, keep informed, or monitor."
+      "explanation": "The Power/Interest Grid plots stakeholders by their influence (power) and interest in the project — guiding the BA on how to engage each group: manage closely, keep satisfied, keep informed, or monitor.",
+      "whyWrong": [
+        "User Story Mapping visualizes story sequencing, not stakeholder influence specifically.",
+        "Process Decomposition breaks down processes into steps, not stakeholder influence.",
+        "Gap Analysis identifies shortfalls between current and desired state, not stakeholder influence specifically."
+      ]
     },
     {
       "question": "What is the purpose of a Requirements Traceability Matrix on a Salesforce project?",
@@ -293,7 +347,12 @@
         "To document the hierarchy of roles and permissions in the org"
       ],
       "correctAnswer": 1,
-      "explanation": "A Traceability Matrix ensures end-to-end coverage: every business requirement maps to at least one user story, and every user story maps to test cases. It prevents requirements from being missed during development or testing."
+      "explanation": "A Traceability Matrix ensures end-to-end coverage: every business requirement maps to at least one user story, and every user story maps to test cases. It prevents requirements from being missed during development or testing.",
+      "whyWrong": [
+        "A traceability matrix isn't about mapping database tables — that's a data architecture concern.",
+        "Tracking deployment history across sandboxes is a release-management concern, not what a traceability matrix does.",
+        "Documenting role/permission hierarchy is a security configuration concern, not what a traceability matrix does."
+      ]
     },
     {
       "question": "A project team discovers the solution being built does not address several original business requirements. Which BA technique identifies this type of shortfall?",
@@ -304,7 +363,12 @@
         "Process Flow Diagram"
       ],
       "correctAnswer": 2,
-      "explanation": "Gap Analysis compares the current state (or planned solution) against the desired future state — identifying gaps where requirements are not addressed. It is typically performed during discovery and at key review points."
+      "explanation": "Gap Analysis compares the current state (or planned solution) against the desired future state — identifying gaps where requirements are not addressed. It is typically performed during discovery and at key review points.",
+      "whyWrong": [
+        "A Risk Register tracks project risks generally, not specifically requirement-to-solution shortfalls.",
+        "A RACI Chart defines roles and responsibilities, not requirement shortfalls.",
+        "A Process Flow Diagram visualizes process steps, not specifically the requirement-to-solution shortfall being described."
+      ]
     },
     {
       "question": "Which type of requirement describes system performance, security, usability, or scalability expectations rather than specific functionality?",
@@ -315,7 +379,12 @@
         "Technical Specifications"
       ],
       "correctAnswer": 1,
-      "explanation": "Non-Functional Requirements (NFRs) define quality attributes — how the system performs rather than what it does. Examples: page load times, concurrent user capacity, data security standards. They are often overlooked but critical for solution success."
+      "explanation": "Non-Functional Requirements (NFRs) define quality attributes — how the system performs rather than what it does. Examples: page load times, concurrent user capacity, data security standards. They are often overlooked but critical for solution success.",
+      "whyWrong": [
+        "Functional Requirements describe specific features/functionality, not performance/security/usability characteristics.",
+        "Business Requirements describe high-level business needs, not the specific technical quality attributes described.",
+        "Technical Specifications describe implementation details, not the broader quality-attribute category being asked about."
+      ]
     },
     {
       "question": "During a discovery workshop, stakeholders from two business units give conflicting requirements for the same field. What is the BA's best first action?",
@@ -326,7 +395,12 @@
         "Choose the simpler option to reduce implementation complexity"
       ],
       "correctAnswer": 1,
-      "explanation": "Conflicting requirements should be documented and resolved through structured stakeholder facilitation — not unilaterally decided by the BA. A dedicated alignment session surfaces the business rationale behind each request and builds consensus."
+      "explanation": "Conflicting requirements should be documented and resolved through structured stakeholder facilitation — not unilaterally decided by the BA. A dedicated alignment session surfaces the business rationale behind each request and builds consensus.",
+      "whyWrong": [
+        "Implementing the senior stakeholder's version without alignment risks alienating the other business unit and doesn't resolve the underlying conflict.",
+        "Escalating immediately to the project manager skips the BA's own facilitation role in resolving stakeholder conflicts.",
+        "Choosing the simpler option ignores the actual business needs driving each stakeholder's requirement."
+      ]
     },
     {
       "question": "What does the DACI framework define in Salesforce project governance?",
@@ -337,7 +411,12 @@
         "The automation logic sequence for approval processes and flows"
       ],
       "correctAnswer": 1,
-      "explanation": "DACI (Driver, Approver, Contributor, Informed) clarifies who is responsible for driving a decision to closure, who has final approval authority, who contributes expertise, and who only needs to be informed of the outcome."
+      "explanation": "DACI (Driver, Approver, Contributor, Informed) clarifies who is responsible for driving a decision to closure, who has final approval authority, who contributes expertise, and who only needs to be informed of the outcome.",
+      "whyWrong": [
+        "DACI isn't about data architecture — that's an unrelated technical concept.",
+        "DACI isn't about deployment steps — that's a release-management concern, not a decision-making framework.",
+        "DACI isn't about automation logic — that's a technical implementation concern, not a governance framework."
+      ]
     },
     {
       "question": "What format do user stories typically follow in Salesforce projects?",
@@ -348,7 +427,12 @@
         "As a [user], I need [permission] to [action]"
       ],
       "correctAnswer": 1,
-      "explanation": "User stories follow the format: As a [role], I want [goal] so that [benefit]. This connects the user, the capability, and the business value."
+      "explanation": "User stories follow the format: As a [role], I want [goal] so that [benefit]. This connects the user, the capability, and the business value.",
+      "whyWrong": [
+        "'As a [system]...' misrepresents the format, which centers on a human role/persona, not a system.",
+        "'As a [admin], I need [field]...' isn't the standard user story format — it's overly specific to one scenario.",
+        "'As a [user], I need [permission]...' isn't the standard user story format — the standard format centers on role/goal/benefit."
+      ]
     }
   ]
 }

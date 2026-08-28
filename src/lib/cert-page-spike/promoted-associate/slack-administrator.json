@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Slack Administrator exam for?",
     "personas": [
-      { "label": "IT Administrators", "description": "Professionals managing Slack workspaces and Enterprise Grid environments, including channel governance, security policies, and compliance." },
-      { "label": "Workspace Owners", "description": "Admins responsible for user provisioning, app approval workflows, retention policies, and Slack Connect configuration." },
-      { "label": "Collaboration Platform Managers", "description": "Managers overseeing enterprise messaging tools who want to validate their Slack administration skills and best practices knowledge." }
+      {
+        "label": "IT Administrators",
+        "description": "Professionals managing Slack workspaces and Enterprise Grid environments, including channel governance, security policies, and compliance."
+      },
+      {
+        "label": "Workspace Owners",
+        "description": "Admins responsible for user provisioning, app approval workflows, retention policies, and Slack Connect configuration."
+      },
+      {
+        "label": "Collaboration Platform Managers",
+        "description": "Managers overseeing enterprise messaging tools who want to validate their Slack administration skills and best practices knowledge."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "Managing Salesforce CRM"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified Slack Administrators have the skills to implement, configure, and manage Slack and can recommend policies, settings, and features to enhance team productivity."
+      "explanation": "Certified Slack Administrators have the skills to implement, configure, and manage Slack and can recommend policies, settings, and features to enhance team productivity.",
+      "whyWrong": [
+        "'Developing Slack apps only' undersells the role, which is about implementation and policy, not app development.",
+        "Designing marketing campaigns is unrelated to Slack administration.",
+        "Managing Salesforce CRM is a separate product, unrelated to Slack administration specifically."
+      ]
     },
     {
       "question": "Where are org-wide Slack settings typically managed?",
@@ -180,7 +194,12 @@
         "In Email Studio"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack org-wide and workspace settings are managed in Slack Admin / Org settings."
+      "explanation": "Slack org-wide and workspace settings are managed in Slack Admin / Org settings.",
+      "whyWrong": [
+        "Per-channel settings don't control org-wide configuration — that's managed centrally.",
+        "Salesforce settings are a different product, unrelated to Slack's own admin configuration.",
+        "Email Studio is a Marketing Cloud tool, entirely unrelated to Slack settings."
+      ]
     },
     {
       "question": "Which Slack feature helps control who can create channels or invite guests?",
@@ -191,7 +210,12 @@
         "Search filters"
       ],
       "correctAnswer": 1,
-      "explanation": "Administration policies and permissions control channel creation, guest invites, and other workspace behavior."
+      "explanation": "Administration policies and permissions control channel creation, guest invites, and other workspace behavior.",
+      "whyWrong": [
+        "Channel bookmarks are a content-organization feature, not an access-control mechanism.",
+        "Emoji reactions are a communication feature, unrelated to channel creation/invite control.",
+        "Search filters are a content-discovery feature, unrelated to channel creation/invite control."
+      ]
     },
     {
       "question": "What does Slack Connect allow administrators to manage?",
@@ -202,7 +226,12 @@
         "CPQ quotes"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack Connect enables secure collaboration with external organizations through shared channels."
+      "explanation": "Slack Connect enables secure collaboration with external organizations through shared channels.",
+      "whyWrong": [
+        "'Only internal channels' is the opposite of Slack Connect's specific external-collaboration purpose.",
+        "Email integration is a different, unrelated Slack feature.",
+        "CPQ quotes are entirely unrelated to Slack Connect's external collaboration purpose."
+      ]
     },
     {
       "question": "Which capability is important for a Slack Administrator to recommend for team productivity?",
@@ -213,7 +242,12 @@
         "Limiting channels to one per team"
       ],
       "correctAnswer": 1,
-      "explanation": "Admins recommend workflow automation, logical channel structure, and settings that enhance team productivity."
+      "explanation": "Admins recommend workflow automation, logical channel structure, and settings that enhance team productivity.",
+      "whyWrong": [
+        "Disabling all integrations would hurt productivity, the opposite of the recommendation being asked about.",
+        "Removing search would hurt productivity, the opposite of a sound recommendation.",
+        "Limiting channels to one per team is an overly restrictive constraint, not a genuine best-practice recommendation."
+      ]
     },
     {
       "question": "What is the purpose of Slack Enterprise Grid?",
@@ -224,7 +258,12 @@
         "A reporting tool"
       ],
       "correctAnswer": 1,
-      "explanation": "Enterprise Grid allows large organizations to connect multiple workspaces under centralized governance."
+      "explanation": "Enterprise Grid allows large organizations to connect multiple workspaces under centralized governance.",
+      "whyWrong": [
+        "A single workspace is the opposite of what Enterprise Grid specifically connects (multiple workspaces).",
+        "Email integration is a different, unrelated Slack feature.",
+        "A reporting tool undersells Enterprise Grid, which is about workspace connectivity and admin control, not just reporting."
+      ]
     },
     {
       "question": "Which Slack feature allows users to create automated workflows without code?",
@@ -235,7 +274,12 @@
         "Search"
       ],
       "correctAnswer": 1,
-      "explanation": "Workflow Builder enables users to create automated workflows for common tasks without coding."
+      "explanation": "Workflow Builder enables users to create automated workflows for common tasks without coding.",
+      "whyWrong": [
+        "Slack Connect is for external collaboration, not no-code workflow automation.",
+        "Channel management alone doesn't provide the automated workflow-building capability being described.",
+        "Search is a content-discovery feature, unrelated to workflow automation."
+      ]
     },
     {
       "question": "What does channel retention control?",
@@ -246,7 +290,12 @@
         "Integrations"
       ],
       "correctAnswer": 1,
-      "explanation": "Retention policies determine how long messages and files are retained in channels for compliance."
+      "explanation": "Retention policies determine how long messages and files are retained in channels for compliance.",
+      "whyWrong": [
+        "'Who can join a channel' is a membership control, not what retention specifically governs.",
+        "Channel names are a labeling detail, unrelated to message retention.",
+        "Integrations are a separate configuration area, unrelated to message retention settings."
+      ]
     },
     {
       "question": "Which Slack setting helps prevent data loss when members leave?",
@@ -257,7 +306,12 @@
         "Notification preferences"
       ],
       "correctAnswer": 1,
-      "explanation": "Retention and eDiscovery policies ensure organizational data is preserved and recoverable."
+      "explanation": "Retention and eDiscovery policies ensure organizational data is preserved and recoverable.",
+      "whyWrong": [
+        "Emoji settings are a cosmetic feature, unrelated to data loss prevention.",
+        "Theme settings are a cosmetic feature, unrelated to data loss prevention.",
+        "Notification preferences are a personal setting, unrelated to data retention/eDiscovery."
+      ]
     },
     {
       "question": "What is a Slack shared channel?",
@@ -268,7 +322,12 @@
         "A channel with integrations"
       ],
       "correctAnswer": 1,
-      "explanation": "Shared channels enable secure collaboration between different organizations' Slack workspaces."
+      "explanation": "Shared channels enable secure collaboration between different organizations' Slack workspaces.",
+      "whyWrong": [
+        "A channel with many members doesn't define what makes it 'shared' — that's about cross-workspace connection.",
+        "A public channel alone doesn't imply cross-workspace sharing — a shared channel specifically spans multiple workspaces.",
+        "A channel with integrations doesn't define what makes it 'shared' — that's about cross-workspace connection, not integrations."
+      ]
     },
     {
       "question": "Which Slack admin capability helps control app installations?",
@@ -279,7 +338,12 @@
         "Message search"
       ],
       "correctAnswer": 1,
-      "explanation": "App management policies let admins control which apps can be installed and used."
+      "explanation": "App management policies let admins control which apps can be installed and used.",
+      "whyWrong": [
+        "Channel creation policies are a separate, distinct admin control from app management specifically.",
+        "User invitation controls are a separate, distinct admin control from app management specifically.",
+        "Message search is a content-discovery feature, unrelated to controlling app installations."
+      ]
     },
     {
       "question": "What does Slack Analytics provide to administrators?",
@@ -290,7 +354,12 @@
         "Sales data"
       ],
       "correctAnswer": 1,
-      "explanation": "Slack Analytics helps admins understand adoption, usage patterns, and engagement."
+      "explanation": "Slack Analytics helps admins understand adoption, usage patterns, and engagement.",
+      "whyWrong": [
+        "'Only message count' undersells Analytics, which provides broader usage and adoption metrics.",
+        "Email statistics are unrelated to Slack's own usage analytics.",
+        "Sales data is unrelated to Slack's own usage analytics."
+      ]
     },
     {
       "question": "Which feature allows Slack admins to manage users at scale?",
@@ -301,7 +370,12 @@
         "Channel invites"
       ],
       "correctAnswer": 1,
-      "explanation": "SCIM and directory sync enable bulk user provisioning and lifecycle management."
+      "explanation": "SCIM and directory sync enable bulk user provisioning and lifecycle management.",
+      "whyWrong": [
+        "Manual addition alone doesn't scale — SCIM/directory sync is specifically built for managing users at scale.",
+        "Email invitations alone don't scale efficiently for large user bases — that's what SCIM provisioning addresses.",
+        "Channel invites manage channel membership, not organization-wide user provisioning at scale."
+      ]
     },
     {
       "question": "What is the purpose of Slack compliance exports?",
@@ -312,7 +386,12 @@
         "To share channels"
       ],
       "correctAnswer": 1,
-      "explanation": "Compliance exports support eDiscovery and regulatory compliance requirements."
+      "explanation": "Compliance exports support eDiscovery and regulatory compliance requirements.",
+      "whyWrong": [
+        "Compliance exports aren't primarily for file backup — their purpose is legal/regulatory data export.",
+        "'To create reports' misattributes compliance exports' purpose to a different, unrelated function.",
+        "'To share channels' misattributes compliance exports' purpose to a different, unrelated function."
+      ]
     },
     {
       "question": "Which Slack Connect feature requires approval from both orgs?",
@@ -323,7 +402,12 @@
         "Adding an emoji"
       ],
       "correctAnswer": 1,
-      "explanation": "Shared channel creation requires approval from admins of both connected organizations."
+      "explanation": "Shared channel creation requires approval from admins of both connected organizations.",
+      "whyWrong": [
+        "Joining a channel is a routine membership action, not one requiring cross-org approval.",
+        "Sending a message doesn't require special cross-org approval once a shared channel exists.",
+        "Adding an emoji is a routine reaction, not an action requiring cross-org approval."
+      ]
     }
   ]
 }

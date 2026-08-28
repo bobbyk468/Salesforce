@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Field Service Consultant exam for?",
     "personas": [
-      { "label": "Service Cloud consultants expanding scope", "description": "You already implement Service Cloud and want to add Field Service expertise for mobile workforce management projects." },
-      { "label": "Field operations managers", "description": "You manage dispatchers and field technicians using Salesforce Field Service and want to validate your configuration and scheduling knowledge." },
-      { "label": "Implementation partners", "description": "You deliver Field Service implementations for clients and need the consultant credential to demonstrate end-to-end solution design expertise." }
+      {
+        "label": "Service Cloud consultants expanding scope",
+        "description": "You already implement Service Cloud and want to add Field Service expertise for mobile workforce management projects."
+      },
+      {
+        "label": "Field operations managers",
+        "description": "You manage dispatchers and field technicians using Salesforce Field Service and want to validate your configuration and scheduling knowledge."
+      },
+      {
+        "label": "Implementation partners",
+        "description": "You deliver Field Service implementations for clients and need the consultant credential to demonstrate end-to-end solution design expertise."
+      }
     ]
   },
   "examDifficulty": {
@@ -169,7 +178,12 @@
         "Operating Hours"
       ],
       "correctAnswer": 0,
-      "explanation": "Service Resource represents a technician or field worker and includes their skills, availability, and territory assignments."
+      "explanation": "Service Resource represents a technician or field worker and includes their skills, availability, and territory assignments.",
+      "whyWrong": [
+        "Service Appointment represents scheduled work, not technician availability itself.",
+        "Service Territory defines a geographic/logical area, not individual technician availability.",
+        "Operating Hours define when a resource/location is generally open, but Service Resource specifically represents the technician's availability record."
+      ]
     },
     {
       "question": "What is the purpose of a Scheduling Policy in Field Service?",
@@ -180,7 +194,12 @@
         "To manage parts inventory"
       ],
       "correctAnswer": 0,
-      "explanation": "Scheduling Policies define work rules (constraints) and objectives that the scheduling optimizer uses when assigning appointments."
+      "explanation": "Scheduling Policies define work rules (constraints) and objectives that the scheduling optimizer uses when assigning appointments.",
+      "whyWrong": [
+        "Assigning resources to territories is a separate configuration, not what a Scheduling Policy defines.",
+        "Tracking service appointments is a record-management function, not what a Scheduling Policy defines.",
+        "Managing parts inventory is a separate Field Service function, unrelated to Scheduling Policy's optimizer rules."
+      ]
     },
     {
       "question": "Which feature allows field technicians to access their schedule and update work orders offline?",
@@ -191,7 +210,12 @@
         "Dispatcher Console"
       ],
       "correctAnswer": 1,
-      "explanation": "The Field Service Mobile App allows technicians to access schedules, update work orders, and capture signatures even without internet connectivity."
+      "explanation": "The Field Service Mobile App allows technicians to access schedules, update work orders, and capture signatures even without internet connectivity.",
+      "whyWrong": [
+        "Service Console is a general Salesforce interface, not the mobile offline-capable app for technicians.",
+        "Lightning Experience is the general desktop interface, not the mobile offline app for field technicians.",
+        "Dispatcher Console is used by dispatchers in the office, not by field technicians in the field."
+      ]
     },
     {
       "question": "What determines which technicians are eligible to be scheduled for a service appointment?",
@@ -202,7 +226,12 @@
         "Role Hierarchy"
       ],
       "correctAnswer": 2,
-      "explanation": "Skill Requirements on the Work Type and Service Territory membership determine which Service Resources are eligible for scheduling."
+      "explanation": "Skill Requirements on the Work Type and Service Territory membership determine which Service Resources are eligible for scheduling.",
+      "whyWrong": [
+        "User Profile alone controls broad access, not the specific scheduling eligibility criteria.",
+        "Permission Sets grant feature access, not specifically scheduling eligibility.",
+        "Role Hierarchy determines record visibility, not specifically technician scheduling eligibility."
+      ]
     },
     {
       "question": "Which component shows dispatchers a visual timeline of scheduled appointments?",
@@ -213,7 +242,12 @@
         "Map View"
       ],
       "correctAnswer": 0,
-      "explanation": "The Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources."
+      "explanation": "The Dispatcher Console Gantt shows a visual timeline of scheduled appointments across service resources.",
+      "whyWrong": [
+        "Calendar View shows a different, less operationally detailed schedule view.",
+        "List View shows tabular data, not the visual timeline dispatchers use.",
+        "Map View shows geographic location, not the visual scheduling timeline being described."
+      ]
     },
     {
       "question": "What is the purpose of Work Type in Field Service?",
@@ -224,7 +258,12 @@
         "To create reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Work Type defines the template for work orders including duration and skill requirements."
+      "explanation": "Work Type defines the template for work orders including duration and skill requirements.",
+      "whyWrong": [
+        "'To track inventory only' misattributes Work Type's purpose to a different Field Service function.",
+        "Assigning territories is a separate configuration, unrelated to Work Type's template purpose.",
+        "Creating reports is a separate function, unrelated to Work Type's template purpose."
+      ]
     },
     {
       "question": "Which object links a Service Appointment to a Work Order?",
@@ -235,7 +274,12 @@
         "Service Territory"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Appointments are child records of Work Orders."
+      "explanation": "Service Appointments are child records of Work Orders.",
+      "whyWrong": [
+        "Service Resource represents the technician, not the object linking appointment to work order.",
+        "Operating Hours define availability windows, not the appointment-to-work-order link.",
+        "Service Territory defines a geographic area, not the appointment-to-work-order link."
+      ]
     },
     {
       "question": "What does the scheduling optimizer consider when assigning appointments?",
@@ -246,7 +290,12 @@
         "Only travel time"
       ],
       "correctAnswer": 1,
-      "explanation": "The optimizer considers skills, availability, travel, and policies."
+      "explanation": "The optimizer considers skills, availability, travel, and policies.",
+      "whyWrong": [
+        "'Only territory' undersells the optimizer's broader consideration of skills, travel time, and policies.",
+        "'Only skills' undersells the optimizer's broader consideration of availability, travel time, and policies.",
+        "'Only travel time' undersells the optimizer's broader consideration of skills, availability, and policies."
+      ]
     },
     {
       "question": "Which feature allows dispatchers to manually drag and drop appointments?",
@@ -257,7 +306,12 @@
         "Reports"
       ],
       "correctAnswer": 1,
-      "explanation": "The Gantt allows manual drag-and-drop scheduling."
+      "explanation": "The Gantt allows manual drag-and-drop scheduling.",
+      "whyWrong": [
+        "List View alone doesn't support drag-and-drop scheduling — that's the Gantt's specific function.",
+        "Map View alone doesn't support drag-and-drop scheduling — that's the Gantt's specific function.",
+        "Reports display data — they don't support interactive drag-and-drop scheduling."
+      ]
     },
     {
       "question": "What is the purpose of Operating Hours in Field Service?",
@@ -268,7 +322,12 @@
         "To create work orders"
       ],
       "correctAnswer": 1,
-      "explanation": "Operating Hours define availability windows for resources and locations."
+      "explanation": "Operating Hours define availability windows for resources and locations.",
+      "whyWrong": [
+        "'To define skills only' undersells Operating Hours, which is about availability windows, not skills.",
+        "'To track parts only' misattributes Operating Hours' purpose to a different Field Service function.",
+        "'To create work orders' misattributes Operating Hours' purpose to a different Field Service function."
+      ]
     },
     {
       "question": "Which object is used to track consumable or returnable parts for work orders?",
@@ -279,7 +338,12 @@
         "Service Territory"
       ],
       "correctAnswer": 1,
-      "explanation": "Product Required and Product Consumed track parts on work orders."
+      "explanation": "Product Required and Product Consumed track parts on work orders.",
+      "whyWrong": [
+        "Service Resource represents the technician, not the parts-tracking object.",
+        "Work Type defines the job template, not the specific parts-tracking object.",
+        "Service Territory defines a geographic area, unrelated to tracking parts."
+      ]
     },
     {
       "question": "What does the Field Service Mobile app support for technicians?",
@@ -290,7 +354,12 @@
         "Dashboards only"
       ],
       "correctAnswer": 1,
-      "explanation": "The mobile app supports offline work, signatures, and photos."
+      "explanation": "The mobile app supports offline work, signatures, and photos.",
+      "whyWrong": [
+        "'Online only' is the opposite of what the mobile app's offline capability provides.",
+        "'Reports only' undersells the mobile app's broader field capabilities (offline, signatures, photos).",
+        "'Dashboards only' undersells the mobile app's broader field capabilities (offline, signatures, photos)."
+      ]
     },
     {
       "question": "Which feature enables automatic scheduling based on optimization rules?",
@@ -301,7 +370,12 @@
         "Map only"
       ],
       "correctAnswer": 1,
-      "explanation": "The optimization service runs with scheduling policies for automatic assignment."
+      "explanation": "The optimization service runs with scheduling policies for automatic assignment.",
+      "whyWrong": [
+        "Manual assignment is the opposite of the automated optimization being asked about.",
+        "Gantt alone is a visualization tool, not the automated scheduling engine itself.",
+        "Map View alone is a visualization tool, not the automated scheduling engine itself."
+      ]
     },
     {
       "question": "What is a Service Territory used for?",
@@ -312,7 +386,12 @@
         "To manage contracts only"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Territories define areas for resource assignment and routing."
+      "explanation": "Service Territories define areas for resource assignment and routing.",
+      "whyWrong": [
+        "'To track parts only' misattributes Service Territory's purpose to a different Field Service function.",
+        "'To create work types only' misattributes Service Territory's purpose to a different Field Service function.",
+        "'To manage contracts only' misattributes Service Territory's purpose to a different Field Service function."
+      ]
     },
     {
       "question": "Which Field Service feature supports contract-based entitlements and SLAs?",
@@ -323,7 +402,12 @@
         "Service Resource only"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Contracts and Entitlements define SLAs and covered services."
+      "explanation": "Service Contracts and Entitlements define SLAs and covered services.",
+      "whyWrong": [
+        "Work Type alone defines job templates, not entitlement/SLA tracking.",
+        "Operating Hours alone define availability windows, not entitlement/SLA tracking.",
+        "Service Resource alone represents technicians, not entitlement/SLA tracking."
+      ]
     }
   ]
 }

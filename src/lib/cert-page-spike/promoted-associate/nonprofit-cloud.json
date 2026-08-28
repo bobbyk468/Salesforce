@@ -178,7 +178,12 @@
         "Standard Account object"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP provides a specialized data model for tracking donations, with features like recurring donations, soft credits, and gift entry."
+      "explanation": "NPSP provides a specialized data model for tracking donations, with features like recurring donations, soft credits, and gift entry.",
+      "whyWrong": [
+        "A standard Opportunity object alone doesn't provide the nonprofit-specific donation tracking structure NPSP adds.",
+        "Generic custom objects would require rebuilding what NPSP already provides natively.",
+        "A standard Account object alone doesn't provide the nonprofit-specific donation data model NPSP adds."
+      ]
     },
     {
       "question": "What is the purpose of Household Accounts in NPSP?",
@@ -189,7 +194,12 @@
         "To track volunteer activities"
       ],
       "correctAnswer": 1,
-      "explanation": "Household Accounts group related individual contacts (family members) together, allowing you to track household giving and communications."
+      "explanation": "Household Accounts group related individual contacts (family members) together, allowing you to track household giving and communications.",
+      "whyWrong": [
+        "Household Accounts aren't for tracking corporate donors — that's a different account type.",
+        "Household Accounts aren't for managing foundation grants — that's a separate NPSP feature.",
+        "Household Accounts aren't for tracking volunteer activities — that's a separate NPSP feature."
+      ]
     },
     {
       "question": "Which feature allows nonprofits to track in-kind donations?",
@@ -200,7 +210,12 @@
         "Campaign"
       ],
       "correctAnswer": 2,
-      "explanation": "NPSP includes In-Kind Gift fields on the Opportunity object to track non-monetary donations like goods and services."
+      "explanation": "NPSP includes In-Kind Gift fields on the Opportunity object to track non-monetary donations like goods and services.",
+      "whyWrong": [
+        "A standard Opportunity alone doesn't have the specific in-kind tracking fields described.",
+        "Gift Entry is the data-entry interface, not itself the in-kind tracking field mechanism.",
+        "Campaign tracks marketing initiatives, not in-kind donation details."
+      ]
     },
     {
       "question": "What is the Engagement Plan feature used for?",
@@ -211,7 +226,12 @@
         "Event management"
       ],
       "correctAnswer": 1,
-      "explanation": "Engagement Plans create templated task sequences for donor stewardship, ensuring consistent follow-up and cultivation activities."
+      "explanation": "Engagement Plans create templated task sequences for donor stewardship, ensuring consistent follow-up and cultivation activities.",
+      "whyWrong": [
+        "Marketing automation is a different, unrelated capability from donor stewardship task templates.",
+        "Email campaigns are a communication channel, not the task-templating feature being described.",
+        "Event management is a separate NPSP-adjacent feature, unrelated to donor stewardship task templates."
+      ]
     },
     {
       "question": "How does NPSP handle recurring donations?",
@@ -222,7 +242,12 @@
         "External payment processor only"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP uses Recurring Donation objects that automatically create installment Opportunities based on the donation schedule."
+      "explanation": "NPSP uses Recurring Donation objects that automatically create installment Opportunities based on the donation schedule.",
+      "whyWrong": [
+        "Standard Salesforce scheduling doesn't natively handle the specific recurring-donation installment structure.",
+        "Manual monthly entry is the opposite of NPSP's automated recurring donation handling.",
+        "An external payment processor alone doesn't provide the internal Salesforce recurring-donation tracking structure."
+      ]
     },
     {
       "question": "What is a Soft Credit in NPSP?",
@@ -233,7 +258,12 @@
         "An in-kind gift"
       ],
       "correctAnswer": 1,
-      "explanation": "Soft credits attribute influence to contacts who helped secure the gift."
+      "explanation": "Soft credits attribute influence to contacts who helped secure the gift.",
+      "whyWrong": [
+        "A refund is an unrelated financial transaction, not what a Soft Credit represents.",
+        "A pledge alone is a different giving commitment type, not the attribution concept a Soft Credit represents.",
+        "An in-kind gift is a non-cash donation type, unrelated to the attribution concept a Soft Credit represents."
+      ]
     },
     {
       "question": "Which NPSP feature supports tribute and memorial giving?",
@@ -244,7 +274,12 @@
         "Household only"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP supports tribute and memorial giving with dedicated fields."
+      "explanation": "NPSP supports tribute and memorial giving with dedicated fields.",
+      "whyWrong": [
+        "A standard Opportunity alone doesn't have the specific tribute/memorial fields NPSP adds.",
+        "Campaign tracks marketing initiatives, not tribute/memorial giving specifics.",
+        "Household alone is a grouping structure, not the tribute/memorial giving feature."
+      ]
     },
     {
       "question": "What does the Affiliations object track?",
@@ -255,7 +290,12 @@
         "Only campaigns"
       ],
       "correctAnswer": 1,
-      "explanation": "Affiliations track contact-to-account relationships."
+      "explanation": "Affiliations track contact-to-account relationships.",
+      "whyWrong": [
+        "'Only donations' undersells Affiliations, which track relationships broadly, not just giving.",
+        "'Only households' undersells Affiliations, which track relationships beyond just household groupings.",
+        "'Only campaigns' undersells Affiliations, which track relationships broadly, not just campaign involvement."
+      ]
     },
     {
       "question": "Which NPSP feature helps manage volunteer hours?",
@@ -266,7 +306,12 @@
         "Household only"
       ],
       "correctAnswer": 1,
-      "explanation": "Volunteer Jobs and Volunteer Hours track volunteer engagement."
+      "explanation": "Volunteer Jobs and Volunteer Hours track volunteer engagement.",
+      "whyWrong": [
+        "Opportunity alone doesn't track volunteer hours specifically — that's a separate NPSP feature.",
+        "Campaign alone doesn't track volunteer hours specifically — that's a separate NPSP feature.",
+        "Household alone doesn't track volunteer hours specifically — that's a separate NPSP feature."
+      ]
     },
     {
       "question": "What is the purpose of Payment records in NPSP?",
@@ -277,7 +322,12 @@
         "To manage households"
       ],
       "correctAnswer": 1,
-      "explanation": "Payment records track individual payments against Opportunities."
+      "explanation": "Payment records track individual payments against Opportunities.",
+      "whyWrong": [
+        "Payment records don't replace Opportunities — they track individual payments against them.",
+        "'To create campaigns' misattributes Payment records' purpose to a different, unrelated function.",
+        "'To manage households' misattributes Payment records' purpose to a different, unrelated function."
+      ]
     },
     {
       "question": "Which feature supports grant management in Nonprofit Cloud?",
@@ -288,7 +338,12 @@
         "Household only"
       ],
       "correctAnswer": 1,
-      "explanation": "Grant management features support applications and reporting."
+      "explanation": "Grant management features support applications and reporting.",
+      "whyWrong": [
+        "A standard Opportunity alone doesn't provide the specific grant-application tracking structure.",
+        "Campaign tracks marketing initiatives, not grant-specific application and reporting data.",
+        "Household is a grouping structure, unrelated to grant management."
+      ]
     },
     {
       "question": "What does the Forecast object support in NPSP?",
@@ -299,7 +354,12 @@
         "Campaign only"
       ],
       "correctAnswer": 1,
-      "explanation": "Forecast supports budget and revenue planning for nonprofits."
+      "explanation": "Forecast supports budget and revenue planning for nonprofits.",
+      "whyWrong": [
+        "Sales forecasting alone is a generic Sales Cloud concept, not the nonprofit-specific fundraising forecast being described.",
+        "Inventory tracking is unrelated to fundraising revenue forecasting.",
+        "Campaign alone tracks marketing initiatives, not the broader fundraising forecast."
+      ]
     },
     {
       "question": "Which reporting need is common for nonprofits?",
@@ -310,7 +370,12 @@
         "Only support cases"
       ],
       "correctAnswer": 1,
-      "explanation": "Nonprofits need donor retention, campaign ROI, and gift reports."
+      "explanation": "Nonprofits need donor retention, campaign ROI, and gift reports.",
+      "whyWrong": [
+        "'Only sales pipeline' misattributes nonprofit reporting to a Sales Cloud concept, not donor/fundraising metrics.",
+        "'Only product sales' misattributes nonprofit reporting to a Commerce concept, not donor/fundraising metrics.",
+        "'Only support cases' misattributes nonprofit reporting to a Service Cloud concept, not donor/fundraising metrics."
+      ]
     },
     {
       "question": "What is the purpose of the Primary Affiliation in NPSP?",
@@ -321,7 +386,12 @@
         "To manage campaigns"
       ],
       "correctAnswer": 1,
-      "explanation": "Primary Affiliation designates the main account for a contact."
+      "explanation": "Primary Affiliation designates the main account for a contact.",
+      "whyWrong": [
+        "Primary Affiliation doesn't replace Household — they serve distinct, complementary purposes.",
+        "'To track donations only' misattributes Primary Affiliation's purpose to a different NPSP function.",
+        "'To manage campaigns' misattributes Primary Affiliation's purpose to a different, unrelated function."
+      ]
     },
     {
       "question": "Which integration is common for Nonprofit Cloud?",
@@ -332,7 +402,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Nonprofits integrate with payment processors and fundraising tools."
+      "explanation": "Nonprofits integrate with payment processors and fundraising tools.",
+      "whyWrong": [
+        "CPQ alone is unrelated to the typical fundraising/payment/accounting integrations Nonprofit Cloud implementations need.",
+        "Marketing Cloud alone undersells the integration landscape, which includes payment processors and accounting systems too.",
+        "Slack alone is unrelated to Nonprofit Cloud's typical fundraising and accounting integrations."
+      ]
     }
   ]
 }

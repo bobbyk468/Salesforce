@@ -206,7 +206,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "System Architects focus on off-platform systems, integration, and securing access between systems."
+      "explanation": "System Architects focus on off-platform systems, integration, and securing access between systems.",
+      "whyWrong": [
+        "'Only on-platform' is the opposite of the System Architect's specific off-platform integration focus.",
+        "Email is unrelated to the System Architect's integration-security focus.",
+        "Slack is unrelated to the System Architect's integration-security focus."
+      ]
     },
     {
       "question": "Which area does a System Architect typically manage?",
@@ -217,7 +222,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "They manage governance and testing for deployment and ongoing modifications."
+      "explanation": "They manage governance and testing for deployment and ongoing modifications.",
+      "whyWrong": [
+        "'Only UI' misrepresents the governance/testing area, which is about deployment process, not interface design.",
+        "'Only reports' undersells governance, which spans deployment and testing broadly, not just reports.",
+        "'Only dashboards' undersells governance, which spans deployment and testing broadly, not just dashboards."
+      ]
     },
     {
       "question": "What does 'off-platform' mean in this context?",
@@ -228,7 +238,12 @@
         "Only LWC"
       ],
       "correctAnswer": 1,
-      "explanation": "Off-platform refers to external systems that integrate with Salesforce."
+      "explanation": "Off-platform refers to external systems that integrate with Salesforce.",
+      "whyWrong": [
+        "'Only Salesforce' is the opposite of what 'off-platform' means — it specifically refers to systems outside Salesforce.",
+        "'Only Apex' narrows the concept incorrectly to a single programming language.",
+        "'Only LWC' narrows the concept incorrectly to a single UI framework."
+      ]
     },
     {
       "question": "Which consideration is critical for integration security?",
@@ -239,7 +254,12 @@
         "Only IP allowlist"
       ],
       "correctAnswer": 1,
-      "explanation": "Authentication, encryption, and secure access are critical for integration security."
+      "explanation": "Authentication, encryption, and secure access are critical for integration security.",
+      "whyWrong": [
+        "'Only passwords' undersells the broader security considerations (authentication, encryption) needed.",
+        "'Only HTTPS' undersells the broader set of security considerations beyond just transport encryption.",
+        "'Only IP allowlist' undersells the broader set of security considerations for integration."
+      ]
     },
     {
       "question": "What role does governance play for a System Architect?",
@@ -250,7 +270,12 @@
         "Only coding standards"
       ],
       "correctAnswer": 1,
-      "explanation": "Governance includes change control, testing, and release management."
+      "explanation": "Governance includes change control, testing, and release management.",
+      "whyWrong": [
+        "'None' contradicts the fact that governance plays a real, defined role for a System Architect.",
+        "'Only documentation' undersells governance, which spans change control and testing, not just documentation.",
+        "'Only coding standards' undersells governance, which spans release management broadly, not just coding standards."
+      ]
     },
     {
       "question": "Which integration pattern is suitable for real-time, request-response sync?",
@@ -261,7 +286,12 @@
         "ETL only"
       ],
       "correctAnswer": 1,
-      "explanation": "REST/API callouts support real-time, synchronous request-response integration."
+      "explanation": "REST/API callouts support real-time, synchronous request-response integration.",
+      "whyWrong": [
+        "Batch processing introduces latency, unsuitable for real-time request-response needs.",
+        "Event-driven patterns are asynchronous, not the real-time request-response pattern being asked about.",
+        "ETL is a scheduled data-movement pattern, not suitable for real-time synchronous sync."
+      ]
     },
     {
       "question": "What is the purpose of middleware in integration architecture?",
@@ -272,7 +302,12 @@
         "To create reports"
       ],
       "correctAnswer": 1,
-      "explanation": "Middleware orchestrates, transforms, and routes integration traffic."
+      "explanation": "Middleware orchestrates, transforms, and routes integration traffic.",
+      "whyWrong": [
+        "Middleware doesn't replace Salesforce — it connects Salesforce to other systems.",
+        "'To send emails only' undersells middleware's broader orchestration and transformation role.",
+        "'To create reports' is unrelated to middleware's actual orchestration purpose."
+      ]
     },
     {
       "question": "Which security mechanism is used for server-to-server API authentication?",
@@ -283,7 +318,12 @@
         "No authentication"
       ],
       "correctAnswer": 1,
-      "explanation": "OAuth 2.0 client credentials and JWT bearer are used for server-to-server auth."
+      "explanation": "OAuth 2.0 client credentials and JWT bearer are used for server-to-server auth.",
+      "whyWrong": [
+        "A user password isn't the mechanism for server-to-server (non-user) authentication.",
+        "A Session ID is a user-session concept, not the server-to-server authentication mechanism being asked about.",
+        "'No authentication' contradicts the fact that real, documented mechanisms exist for this scenario."
+      ]
     },
     {
       "question": "What does release management include for a System Architect?",
@@ -294,7 +334,12 @@
         "Only testing"
       ],
       "correctAnswer": 1,
-      "explanation": "Release management covers sandbox strategy, pipelines, and deployment tools."
+      "explanation": "Release management covers sandbox strategy, pipelines, and deployment tools.",
+      "whyWrong": [
+        "'Only coding' undersells release management, which spans sandbox strategy and CI/CD, not just code.",
+        "'Only documentation' undersells release management, which is about process and pipelines, not just documentation.",
+        "'Only testing' undersells release management, which spans broader deployment concerns beyond just testing."
+      ]
     },
     {
       "question": "Which testing type validates integration behavior?",
@@ -305,7 +350,12 @@
         "Only UAT"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration and E2E tests validate system interaction and data flow."
+      "explanation": "Integration and E2E tests validate system interaction and data flow.",
+      "whyWrong": [
+        "Unit tests alone don't validate cross-system integration behavior — that requires integration/end-to-end testing.",
+        "'No testing' contradicts the fact that testing integration behavior is a real, necessary practice.",
+        "UAT alone is a narrower acceptance-testing phase, not the specific integration validation being asked about."
+      ]
     },
     {
       "question": "What is the benefit of API-led connectivity?",
@@ -316,7 +366,12 @@
         "Only for external use"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity promotes reusable, composable integrations."
+      "explanation": "API-led connectivity promotes reusable, composable integrations.",
+      "whyWrong": [
+        "'No benefits' contradicts the real, documented benefits of API-led connectivity.",
+        "'Only for internal use' undersells API-led connectivity's applicability to both internal and external use cases.",
+        "'Only for external use' undersells API-led connectivity's applicability to both internal and external use cases."
+      ]
     },
     {
       "question": "Which consideration applies when integrating with legacy systems?",
@@ -327,7 +382,12 @@
         "Only real-time"
       ],
       "correctAnswer": 1,
-      "explanation": "Legacy integration requires protocol support, translation, and security."
+      "explanation": "Legacy integration requires protocol support, translation, and security.",
+      "whyWrong": [
+        "Ignoring security contradicts the core consideration needed when integrating legacy systems.",
+        "'No translation needed' contradicts the fact that legacy systems often require data format translation.",
+        "'Only real-time' undersells the broader set of considerations (protocol, translation, security) for legacy integration."
+      ]
     },
     {
       "question": "What does encryption in transit protect?",
@@ -338,7 +398,12 @@
         "No protection"
       ],
       "correctAnswer": 1,
-      "explanation": "Encryption in transit (TLS/HTTPS) protects data during transmission."
+      "explanation": "Encryption in transit (TLS/HTTPS) protects data during transmission.",
+      "whyWrong": [
+        "'Data at rest only' is the opposite of what encryption in transit protects — that's for data moving between systems.",
+        "'Passwords only' undersells encryption in transit, which protects the broader data payload, not just credentials.",
+        "'No protection' contradicts the fact that encryption in transit is a real, necessary protective mechanism."
+      ]
     },
     {
       "question": "Which deployment capability supports zero-downtime releases?",
@@ -349,7 +414,12 @@
         "Manual only"
       ],
       "correctAnswer": 1,
-      "explanation": "Blue-green and canary enable low-risk, low-downtime deployments."
+      "explanation": "Blue-green and canary enable low-risk, low-downtime deployments.",
+      "whyWrong": [
+        "'No capability' contradicts the fact that real deployment strategies exist for zero-downtime releases.",
+        "Direct production deploy without a rollout strategy risks downtime, the opposite of the zero-downtime goal.",
+        "'Manual only' doesn't provide the zero-downtime guarantee blue-green/canary strategies specifically offer."
+      ]
     },
     {
       "question": "What role does an IP allowlist play in integration security?",
@@ -360,7 +430,12 @@
         "Only for reports"
       ],
       "correctAnswer": 1,
-      "explanation": "IP allowlists restrict API and system access to trusted IP ranges."
+      "explanation": "IP allowlists restrict API and system access to trusted IP ranges.",
+      "whyWrong": [
+        "'No role' contradicts the fact that IP allowlisting has a real, defined security function.",
+        "'Only for users' misattributes IP allowlisting's scope, which restricts system/API access broadly, not just user access.",
+        "'Only for reports' misattributes IP allowlisting's scope to an unrelated function."
+      ]
     }
   ]
 }

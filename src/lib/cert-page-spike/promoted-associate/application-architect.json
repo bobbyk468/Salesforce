@@ -201,7 +201,12 @@
         "Slack only"
       ],
       "correctAnswer": 1,
-      "explanation": "Application Architects have deep understanding of native Salesforce features and model role hierarchy, data, and sharing."
+      "explanation": "Application Architects have deep understanding of native Salesforce features and model role hierarchy, data, and sharing.",
+      "whyWrong": [
+        "'Only Apex' narrows the focus incorrectly to a single language, when the role is about broader native-feature architecture.",
+        "Email is unrelated to the Application Architect's data modeling and sharing focus.",
+        "Slack is unrelated to the Application Architect's data modeling and sharing focus."
+      ]
     },
     {
       "question": "Which sharing mechanism is used to open access based on record ownership?",
@@ -212,7 +217,12 @@
         "Only permission sets"
       ],
       "correctAnswer": 1,
-      "explanation": "Sharing rules extend access based on ownership or criteria."
+      "explanation": "Sharing rules extend access based on ownership or criteria.",
+      "whyWrong": [
+        "'Only OWD' misattributes ownership-based access to the baseline setting, not the sharing mechanism itself.",
+        "'Only profiles' misattributes ownership-based sharing to a different access-control feature.",
+        "'Only permission sets' misattributes ownership-based sharing to a different access-control feature."
+      ]
     },
     {
       "question": "What is the role hierarchy used for?",
@@ -223,7 +233,12 @@
         "CPQ only"
       ],
       "correctAnswer": 1,
-      "explanation": "Role hierarchy controls record access inheritance and roll-up for reporting and forecasts."
+      "explanation": "Role hierarchy controls record access inheritance and roll-up for reporting and forecasts.",
+      "whyWrong": [
+        "'Only reporting' undersells role hierarchy, which also inherits record access, not just reporting roll-up.",
+        "Email is unrelated to role hierarchy's access-inheritance purpose.",
+        "CPQ is unrelated to role hierarchy's access-inheritance purpose."
+      ]
     },
     {
       "question": "Which certification is typically a prerequisite for Application Architect?",
@@ -234,7 +249,12 @@
         "Marketing Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Application Architect builds on platform and sharing/visibility knowledge."
+      "explanation": "Application Architect builds on platform and sharing/visibility knowledge.",
+      "whyWrong": [
+        "Email Specialist is unrelated to the architect-track prerequisite knowledge needed.",
+        "Slack alone is unrelated to the architect-track prerequisite knowledge needed.",
+        "Marketing Cloud alone is unrelated to the architect-track prerequisite knowledge needed."
+      ]
     },
     {
       "question": "What does 'modeling data' mean for an Application Architect?",
@@ -245,7 +265,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Modeling data includes object design, relationships, and data volume strategy."
+      "explanation": "Modeling data includes object design, relationships, and data volume strategy.",
+      "whyWrong": [
+        "'Only backups' undersells data modeling, which includes object design and volume strategy, not just backups.",
+        "'Only reports' undersells data modeling, which is about underlying structure, not display.",
+        "'Only dashboards' undersells data modeling, which is about underlying structure, not display."
+      ]
     },
     {
       "question": "What does Organization-Wide Defaults (OWD) control?",
@@ -256,7 +281,12 @@
         "Only roles"
       ],
       "correctAnswer": 1,
-      "explanation": "OWD defines the default sharing model for each object."
+      "explanation": "OWD defines the default sharing model for each object.",
+      "whyWrong": [
+        "'Only profiles' misattributes OWD to a different access-control concept.",
+        "'Only permission sets' misattributes OWD to a different access-control concept.",
+        "'Only roles' misattributes OWD to a different access-control concept — OWD is the baseline setting, not role-based."
+      ]
     },
     {
       "question": "Which mechanism extends access when OWD is Private?",
@@ -267,7 +297,12 @@
         "Profiles only"
       ],
       "correctAnswer": 1,
-      "explanation": "Sharing rules, role hierarchy, and manual sharing extend access beyond OWD."
+      "explanation": "Sharing rules, role hierarchy, and manual sharing extend access beyond OWD.",
+      "whyWrong": [
+        "'OWD only' contradicts the question, which asks what extends access beyond a Private OWD baseline.",
+        "'Permission sets only' undersells the broader set of mechanisms (sharing rules, hierarchy, manual) that extend access.",
+        "'Profiles only' undersells the broader set of mechanisms that extend access when OWD is Private."
+      ]
     },
     {
       "question": "What is the purpose of a criteria-based sharing rule?",
@@ -278,7 +313,12 @@
         "To assign users"
       ],
       "correctAnswer": 1,
-      "explanation": "Criteria-based sharing rules grant access based on field values."
+      "explanation": "Criteria-based sharing rules grant access based on field values.",
+      "whyWrong": [
+        "'To restrict access' is the opposite of what a criteria-based sharing rule does — it extends access.",
+        "Criteria-based sharing rules don't create reports — that's an unrelated function.",
+        "Criteria-based sharing rules don't assign users — that's a separate administrative task."
+      ]
     },
     {
       "question": "Which Salesforce feature supports multi-tenant data isolation?",
@@ -289,7 +329,12 @@
         "Roles only"
       ],
       "correctAnswer": 1,
-      "explanation": "Sharing model and org-level isolation provide multi-tenant security."
+      "explanation": "Sharing model and org-level isolation provide multi-tenant security.",
+      "whyWrong": [
+        "'Only profiles' undersells multi-tenant isolation, which is a broader platform architecture concept.",
+        "'Permission sets only' undersells multi-tenant isolation, which is a broader platform architecture concept.",
+        "'Roles only' undersells multi-tenant isolation, which is a broader platform architecture concept."
+      ]
     },
     {
       "question": "What does the development lifecycle for an Application Architect include?",
@@ -300,7 +345,12 @@
         "Only documentation"
       ],
       "correctAnswer": 1,
-      "explanation": "Lifecycle spans design through deployment with governance."
+      "explanation": "Lifecycle spans design through deployment with governance.",
+      "whyWrong": [
+        "'Only coding' undersells the development lifecycle, which spans design through governance, not just code.",
+        "'Only deployment' undersells the development lifecycle, which spans the full process, not just deployment.",
+        "'Only documentation' undersells the development lifecycle, which spans the full process, not just documentation."
+      ]
     },
     {
       "question": "Which relationship affects record-level security and roll-up?",
@@ -311,7 +361,12 @@
         "External lookup only"
       ],
       "correctAnswer": 1,
-      "explanation": "Master-Detail affects sharing; child inherits parent's access."
+      "explanation": "Master-Detail affects sharing; child inherits parent's access.",
+      "whyWrong": [
+        "Lookup relationships don't inherit sharing from the parent — that's specifically a Master-Detail behavior.",
+        "A Junction object uses master-detail relationships, but the underlying mechanism being asked about is Master-Detail itself.",
+        "External lookup connects to external data — it doesn't provide the internal sharing/roll-up inheritance being described."
+      ]
     },
     {
       "question": "What is the purpose of a delegated admin group?",
@@ -322,7 +377,12 @@
         "To assign permission sets only"
       ],
       "correctAnswer": 1,
-      "explanation": "Delegated admin groups provide scoped admin access."
+      "explanation": "Delegated admin groups provide scoped admin access.",
+      "whyWrong": [
+        "Delegated admin groups don't replace the system admin — they extend limited admin capability to specific users.",
+        "'To create profiles' misattributes delegated admin's purpose to a different administrative task.",
+        "'To assign permission sets only' undersells delegated admin, which can include broader limited admin capabilities."
+      ]
     },
     {
       "question": "Which integration consideration applies to Application Architects?",
@@ -333,7 +393,12 @@
         "Only batch"
       ],
       "correctAnswer": 1,
-      "explanation": "Integration must consider auth, ownership, and sharing."
+      "explanation": "Integration must consider auth, ownership, and sharing.",
+      "whyWrong": [
+        "Ignoring security contradicts the core consideration architects must address for integrated data.",
+        "'Only REST' undersells the broader integration considerations beyond a single protocol.",
+        "'Only batch' undersells the broader integration considerations beyond a single pattern."
+      ]
     },
     {
       "question": "What does visibility mean in the sharing context?",
@@ -344,7 +409,12 @@
         "Only dashboards"
       ],
       "correctAnswer": 1,
-      "explanation": "Visibility determines which records are visible to users."
+      "explanation": "Visibility determines which records are visible to users.",
+      "whyWrong": [
+        "'Only UI' misrepresents visibility, which is about data access via sharing/permissions, not interface design.",
+        "'Only reports' undersells visibility, which is a broader data-access concept beyond just reports.",
+        "'Only dashboards' undersells visibility, which is a broader data-access concept beyond just dashboards."
+      ]
     },
     {
       "question": "Which best practice supports scalable role hierarchy design?",
@@ -355,7 +425,12 @@
         "No hierarchy"
       ],
       "correctAnswer": 1,
-      "explanation": "Flatter hierarchies simplify sharing and maintenance."
+      "explanation": "Flatter hierarchies simplify sharing and maintenance.",
+      "whyWrong": [
+        "'Unlimited depth' is the opposite of the flat-hierarchy best practice for scalability.",
+        "'One role only' is impractical and doesn't reflect real organizational structures needing role hierarchy at all.",
+        "'No hierarchy' contradicts the fact that role hierarchy is a real, necessary structure for most orgs."
+      ]
     }
   ]
 }
