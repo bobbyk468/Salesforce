@@ -39,6 +39,12 @@ import ToolCallingDiagram from '@/components/certifications/ToolCallingDiagram'
 import FlowVsApexDiagram from '@/components/certifications/FlowVsApexDiagram'
 import SalesProcessFlowDiagram from '@/components/certifications/SalesProcessFlowDiagram'
 import OmniChannelRoutingDiagram from '@/components/certifications/OmniChannelRoutingDiagram'
+import SharingModelDiagram from '@/components/certifications/SharingModelDiagram'
+import BALifecycleDiagram from '@/components/certifications/BALifecycleDiagram'
+import QuoteToCashDiagram from '@/components/certifications/QuoteToCashDiagram'
+import ExperienceLicenseDiagram from '@/components/certifications/ExperienceLicenseDiagram'
+import FieldServiceDataModelDiagram from '@/components/certifications/FieldServiceDataModelDiagram'
+import SlackWorkspaceOrgDiagram from '@/components/certifications/SlackWorkspaceOrgDiagram'
 import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
@@ -243,6 +249,12 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'claude-certified-developer' ? <ToolCallingDiagram /> : null}
         {slug === 'sales-cloud' ? <SalesProcessFlowDiagram /> : null}
         {slug === 'service-cloud' ? <OmniChannelRoutingDiagram /> : null}
+        {slug === 'advanced-administrator' ? <SharingModelDiagram /> : null}
+        {slug === 'business-analyst' ? <BALifecycleDiagram /> : null}
+        {slug === 'cpq-administrator' ? <QuoteToCashDiagram /> : null}
+        {slug === 'experience-cloud' ? <ExperienceLicenseDiagram /> : null}
+        {slug === 'field-service' ? <FieldServiceDataModelDiagram /> : null}
+        {slug === 'slack-administrator' ? <SlackWorkspaceOrgDiagram /> : null}
 
         <ScenarioTipsSection
           h2={body.scenarioTips.h2}
