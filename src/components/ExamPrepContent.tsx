@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import { Lightbulb, Target, BookOpen, Zap, Award } from 'lucide-react'
 import { getExamPrepContent } from '@/lib/exam-prep-content-data'
-import { slugToDisplayName } from '@/lib/cert-seo-data'
+import { slugToDisplayName, getExamLogistics } from '@/lib/cert-seo-data'
+import { getExamWeightage } from '@/lib/exam-weightage-data'
 
 interface ExamPrepContentProps {
   slug: string
@@ -11,6 +12,15 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
   const content = getExamPrepContent(slug)
   const certName = slugToDisplayName(slug)
   const showSharedFormatSection = slug !== 'administrator'
+
+  const logistics = getExamLogistics(slug)
+  const weightage = getExamWeightage(slug)
+  const topSections = weightage ? [...weightage].sort((a, b) => b.percentage - a.percentage).slice(0, 2) : []
+  const topSectionShare = topSections.reduce((sum, s) => sum + s.percentage, 0)
+  const topSectionNames =
+    topSections.length === 2
+      ? `${topSections[0].name} and ${topSections[1].name}`
+      : topSections[0]?.name
 
   return (
     <div className="mt-10 sm:mt-12 lg:mt-16 space-y-6 sm:space-y-8">
@@ -106,13 +116,33 @@ export default function ExamPrepContent({ slug }: ExamPrepContentProps) {
           </div>
           <div className="p-4 sm:p-5 lg:p-6 space-y-4">
             <p className="text-xs sm:text-sm text-gray-700 leading-relaxed">
-              Most Salesforce exams test scenario-based decisions. For <strong className="text-gray-900">{certName}</strong>, focus on when to use each feature, not just terms.
+              {logistics ? (
+                <>
+                  The <strong className="text-gray-900">{certName}</strong> exam has {logistics.questions} questions in {logistics.duration}
+                  {logistics.passingScore ? `, passing score ${logistics.passingScore}` : ''}. Most Salesforce exams test scenario-based
+                  decisions — focus on when to use each feature, not just terms.
+                </>
+              ) : (
+                <>
+                  Most Salesforce exams test scenario-based decisions. For <strong className="text-gray-900">{certName}</strong>, focus on
+                  when to use each feature, not just terms.
+                </>
+              )}
             </p>
             <ul className="space-y-2 text-xs sm:text-sm text-gray-700 list-disc list-inside">
+              {topSectionNames ? (
+                <li>
+                  Study <strong className="text-gray-900">{topSectionNames}</strong> first — together they carry {topSectionShare}% of
+                  the exam.
+                </li>
+              ) : (
+                <li>Study high-weight topics first. Then close gaps.</li>
+              )}
               <li>Do timed question sets. Build pacing and confidence.</li>
               <li>Review why wrong answers are wrong. It improves scenario reasoning.</li>
-              <li>Study high-weight topics first. Then close gaps.</li>
-              <li>Book the exam when your mock scores are steady.</li>
+              <li>
+                Book the exam once your mock scores are steady{logistics?.passingScore ? ` above ${logistics.passingScore}` : ''}.
+              </li>
             </ul>
             <div className="text-xs sm:text-sm text-gray-600 border-t border-gray-200 pt-3">
               <span className="font-medium text-gray-800">Next:</span>{' '}

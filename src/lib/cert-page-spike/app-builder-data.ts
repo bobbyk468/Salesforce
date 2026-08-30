@@ -154,7 +154,7 @@ export const appBuilderCertPageBody: AppBuilderSpikeBody = {
         segments: [
           {
             type: 'text',
-            text: 'Want to ensure you pass on your first try? Request our full 60-question mock exams, a personalized study plan, and pricing details by filling out the contact form. You can also reach out to ',
+            text: 'Want to ensure you pass on your first try? Contact us for more information on our full 60-question mock exams and a personalized study plan. You can also reach out to ',
           },
           {
             type: 'link',
