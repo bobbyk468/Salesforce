@@ -5,6 +5,7 @@ import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import { getQuizJsonLd } from '@/lib/schema-data'
+import CodeBlock from '@/components/CodeBlock'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -474,7 +475,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-2">1. Bulk-Safe Trigger with Handler Class</h3>
                 <p className="text-sm text-gray-600 mb-2">One trigger per object, all logic in a handler class. SOQL runs once outside the loop; DML runs once after the loop.</p>
-                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`// AccountTrigger.trigger
+                <CodeBlock code={`// AccountTrigger.trigger
 trigger AccountTrigger on Account (before insert, after insert) {
     AccountTriggerHandler handler = new AccountTriggerHandler();
     if (Trigger.isBefore && Trigger.isInsert) {
@@ -508,12 +509,12 @@ public class AccountTriggerHandler {
         }
         update toUpdate; // Single DML — not inside loop
     }
-}`}</code></pre>
+}`} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-2">2. Database Class with Partial Success &amp; Error Handling</h3>
                 <p className="text-sm text-gray-600 mb-2">Use <code className="bg-gray-100 px-1 rounded text-xs">Database.insert(records, false)</code> to allow partial success; inspect the SaveResult array for errors.</p>
-                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`List<Account> accountsToInsert = new List<Account>();
+                <CodeBlock code={`List<Account> accountsToInsert = new List<Account>();
 accountsToInsert.add(new Account(Name = 'Valid Account'));
 accountsToInsert.add(new Account()); // Missing required field — will fail
 
@@ -529,12 +530,12 @@ for (Database.SaveResult sr : results) {
                        + ' Fields: ' + err.getFields());
         }
     }
-}`}</code></pre>
+}`} />
               </div>
               <div>
                 <h3 className="text-sm font-semibold text-gray-900 mb-2">3. Test Class with HttpCalloutMock</h3>
                 <p className="text-sm text-gray-600 mb-2">HTTP callouts cannot run in tests — implement <code className="bg-gray-100 px-1 rounded text-xs">HttpCalloutMock</code> and register it with <code className="bg-gray-100 px-1 rounded text-xs">Test.setMock()</code>.</p>
-                <pre className="bg-gray-900 text-gray-100 rounded-lg p-4 text-xs overflow-x-auto leading-relaxed"><code>{`// Mock implementation
+                <CodeBlock code={`// Mock implementation
 @isTest
 global class MockHttpCallout implements HttpCalloutMock {
     global HTTPResponse respond(HTTPRequest req) {
@@ -557,7 +558,7 @@ private class CalloutServiceTest {
         Test.stopTest(); // Forces async to complete
         System.assertEquals('success', result, 'Expected success status');
     }
-}`}</code></pre>
+}`} />
               </div>
             </div>
           </div>
