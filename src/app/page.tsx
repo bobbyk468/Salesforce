@@ -1,5 +1,6 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
+import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
 import {
   Shield,
   Code,
@@ -329,44 +330,9 @@ export default function Home() {
               </div>
             </div>
 
-            {/* Right: sample practice question card (desktop only) */}
+            {/* Right: sample practice question card (desktop only) — rotates across cert tracks */}
             <div className="hidden lg:block">
-              <div className="bg-white border border-gray-100 rounded-3xl p-7 relative overflow-hidden shadow-2xl shadow-gray-200/40">
-                <div className="absolute inset-0 bg-gradient-to-br from-blue-50/60 via-white to-blue-50/40 pointer-events-none" aria-hidden="true" />
-                <div className="relative">
-                  <div className="flex justify-between items-center mb-5">
-                    <span className="text-xs font-semibold text-gray-500 uppercase tracking-widest">Sample question &middot; ADM-201</span>
-                    <span className="text-xs font-semibold text-emerald-700 bg-emerald-100 px-3 py-1 rounded-full">Free</span>
-                  </div>
-                  <div className="bg-white border border-gray-100 rounded-xl p-5">
-                    <div className="flex justify-between text-xs text-gray-500 mb-2.5">
-                      <span className="font-mono font-semibold text-salesforce-blue">ADM-201 &middot; Q12</span>
-                      <span>Single-select</span>
-                    </div>
-                    <p className="text-sm font-semibold text-gray-900 leading-snug mb-4">
-                      A Sales Manager wants to receive an email when an Opportunity is updated. Which automation should the admin recommend?
-                    </p>
-                    <div className="space-y-2">
-                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
-                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">A</span>
-                        <span>Approval Process triggered on edit</span>
-                      </div>
-                      <div className="flex gap-2.5 items-start p-3 border border-emerald-200 rounded-xl text-sm text-emerald-900 bg-emerald-50">
-                        <span className="w-5 h-5 rounded-full bg-emerald-500 flex items-center justify-center text-xs font-bold flex-shrink-0 text-white" aria-hidden="true">B</span>
-                        <span>Flow with a Record-Triggered Email Alert</span>
-                      </div>
-                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
-                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">C</span>
-                        <span>Validation Rule with custom error message</span>
-                      </div>
-                      <div className="flex gap-2.5 items-start p-3 border border-gray-100 rounded-xl text-sm text-gray-700">
-                        <span className="w-5 h-5 rounded-full bg-gray-100 flex items-center justify-center text-xs font-bold flex-shrink-0 text-gray-600" aria-hidden="true">D</span>
-                        <span>Sharing Rule based on owner role</span>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
+              <HeroSampleQuestionCard />
             </div>
 
           </div>
