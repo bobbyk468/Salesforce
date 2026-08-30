@@ -86,12 +86,12 @@
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Platform App Builder Foundations Exam",
+    "h2": "How to Pass the Salesforce Platform Foundations Exam",
     "intro": "This associate-level exam tests foundational knowledge of the Salesforce platform. Questions focus on what Salesforce can do, how core features work together, and basic configuration — ideal for those new to the ecosystem.",
     "blocks": [
       {
         "heading": "Understand the Core Data Model",
-        "body": "Know standard vs. custom objects, field types, and relationship types (lookup vs. **master-detail**). Understand how the App Builder uses these building blocks to create business applications."
+        "body": "Know standard vs. custom objects, field types, and relationship types (lookup vs. **master-detail**). Understand how these building blocks come together to create business applications on the platform."
       },
       {
         "heading": "Core Automation Features",

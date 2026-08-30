@@ -1,10 +1,10 @@
 /**
- * Release Note Badge Component
- * Displays "What's New in Summer '26" section on each certification page
- * Highlights major changes from Spring '26 to Summer '26
+ * Freshness badge shown on each certification page — signals that the exam
+ * weightage, practice questions, and study content are current.
  */
 
-import { Sparkles, CheckCircle, Zap, Smartphone, Shield } from 'lucide-react'
+import { Sparkles, CheckCircle, Smartphone, ShieldCheck } from 'lucide-react'
+import { RELEASE_CURRENT } from '@/lib/release-data'
 
 export default function ReleaseNoteBadge() {
   return (
@@ -13,57 +13,45 @@ export default function ReleaseNoteBadge() {
       <div className="flex items-start gap-3">
         <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900">What’s New in Summer ’26</h3>
-          <p className="mt-1 text-sm text-gray-600">Major improvements from Spring ’26</p>
+          <h3 className="text-lg font-bold text-gray-900">Updated for {RELEASE_CURRENT}</h3>
+          <p className="mt-1 text-sm text-gray-600">This page is reviewed every release to stay aligned with the current exam blueprint.</p>
         </div>
       </div>
 
-      {/* Changes Grid */}
+      {/* Highlights Grid */}
       <div className="mt-6 grid gap-4 sm:grid-cols-2">
-        {/* Change 1: Dynamic Routes */}
-        <div className="flex gap-3 rounded-lg bg-white p-4">
-          <Zap className="h-5 w-5 flex-shrink-0 text-blue-600" />
-          <div className="flex-1">
-            <p className="font-semibold text-gray-900">Dynamic Routes</p>
-            <p className="mt-1 text-sm text-gray-600">All 93 certs migrated to [slug] architecture</p>
-          </div>
-        </div>
-
-        {/* Change 2: Mobile Optimized */}
-        <div className="flex gap-3 rounded-lg bg-white p-4">
-          <Smartphone className="h-5 w-5 flex-shrink-0 text-blue-600" />
-          <div className="flex-1">
-            <p className="font-semibold text-gray-900">Mobile First</p>
-            <p className="mt-1 text-sm text-gray-600">Optimized for phones, tablets, desktop</p>
-          </div>
-        </div>
-
-        {/* Change 3: Type Safety */}
-        <div className="flex gap-3 rounded-lg bg-white p-4">
-          <Shield className="h-5 w-5 flex-shrink-0 text-blue-600" />
-          <div className="flex-1">
-            <p className="font-semibold text-gray-900">Type Safety</p>
-            <p className="mt-1 text-sm text-gray-600">Zero TypeScript errors, runtime validation</p>
-          </div>
-        </div>
-
-        {/* Change 4: SEO Improved */}
         <div className="flex gap-3 rounded-lg bg-white p-4">
           <CheckCircle className="h-5 w-5 flex-shrink-0 text-blue-600" />
           <div className="flex-1">
-            <p className="font-semibold text-gray-900">SEO Improved</p>
-            <p className="mt-1 text-sm text-gray-600">Fixed canonicals, better ranking signals</p>
+            <p className="font-semibold text-gray-900">Exam Blueprint Aligned</p>
+            <p className="mt-1 text-sm text-gray-600">Section weightages match the official {RELEASE_CURRENT} exam guide</p>
+          </div>
+        </div>
+
+        <div className="flex gap-3 rounded-lg bg-white p-4">
+          <ShieldCheck className="h-5 w-5 flex-shrink-0 text-blue-600" />
+          <div className="flex-1">
+            <p className="font-semibold text-gray-900">Questions Reviewed</p>
+            <p className="mt-1 text-sm text-gray-600">Practice questions and explanations checked each release cycle</p>
+          </div>
+        </div>
+
+        <div className="flex gap-3 rounded-lg bg-white p-4">
+          <Smartphone className="h-5 w-5 flex-shrink-0 text-blue-600" />
+          <div className="flex-1">
+            <p className="font-semibold text-gray-900">Works on Any Device</p>
+            <p className="mt-1 text-sm text-gray-600">Full practice experience on phone, tablet, or desktop</p>
+          </div>
+        </div>
+
+        <div className="flex gap-3 rounded-lg bg-white p-4">
+          <Sparkles className="h-5 w-5 flex-shrink-0 text-blue-600" />
+          <div className="flex-1">
+            <p className="font-semibold text-gray-900">Free, No Sign-Up</p>
+            <p className="mt-1 text-sm text-gray-600">Start practicing immediately — no account or email required</p>
           </div>
         </div>
       </div>
-
-      {/* Summary */}
-      <div className="mt-6 border-t border-blue-100 pt-4">
-        <p className="text-sm text-gray-700">
-          <span className="font-semibold text-gray-900">100% Migration Complete:</span> All certification content migrated with enhanced architecture. No content changes—same great info, better experience.
-        </p>
-      </div>
-
     </div>
   )
 }

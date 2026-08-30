@@ -49,7 +49,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'How many sections does the ADM-201 exam have?',
-    answer: 'The ADM-201 exam covers 7 sections: Configuration and Setup (20%), Object Manager and Lightning App Builder (20%), Workflow and Process Automation (16%), Data and Analytics Management (14%), Sales and Marketing Applications (12%), Service and Support Applications (11%), and Productivity and Collaboration (7%).',
+    answer: "The ADM-201 exam covers 8 sections: Configuration and Setup (20%), Object Manager and Lightning App Builder (17%), Data and Analytics Management (17%), Workflow and Process Automation (14%), Sales and Marketing Applications (11%), Service and Support Applications (9%), Agentforce (8%), and Productivity and Collaboration (4%).",
   },
   {
     question: 'What is the passing score for ADM-201?',
@@ -61,18 +61,19 @@ const faqItems = [
   },
   {
     question: 'What are the highest-weight ADM-201 exam topics?',
-    answer: 'Configuration and Setup and Object Manager/Lightning App Builder each account for 20% of the ADM-201 exam — together that is 40%. Workflow and Process Automation is next at 16%. Focus your study time on these three sections first.',
+    answer: 'Configuration and Setup (20%), Object Manager/Lightning App Builder (17%), and Data and Analytics Management (17%) together account for 54% of the ADM-201 exam. Focus your study time on these three sections first.',
   },
 ]
 
 const examSections = [
   { name: 'Configuration and Setup', weight: 20, note: 'Company settings, user management, profiles, permission sets, org security, field-level security' },
-  { name: 'Object Manager and Lightning App Builder', weight: 20, note: 'Standard and custom objects, fields, page layouts, compact layouts, Lightning apps, record types' },
-  { name: 'Workflow and Process Automation', weight: 16, note: 'Flow Builder, validation rules, workflow rules, approval processes, process automation best practices' },
-  { name: 'Data and Analytics Management', weight: 14, note: 'Import Wizard, Data Loader, reports, dashboards, list views, sharing rules, OWD settings' },
-  { name: 'Sales and Marketing Applications', weight: 12, note: 'Leads, accounts, contacts, opportunities, products, price books, campaigns, forecasting' },
-  { name: 'Service and Support Applications', weight: 11, note: 'Cases, queues, assignment rules, escalation rules, knowledge, entitlements, service console' },
-  { name: 'Productivity and Collaboration', weight: 7, note: 'Chatter, tasks, events, email templates, activity management, Salesforce mobile app' },
+  { name: 'Object Manager and Lightning App Builder', weight: 17, note: 'Standard and custom objects, fields, page layouts, compact layouts, Lightning apps, record types' },
+  { name: 'Data and Analytics Management', weight: 17, note: 'Import Wizard, Data Loader, reports, dashboards, list views, sharing rules, OWD settings' },
+  { name: 'Workflow and Process Automation', weight: 14, note: 'Flow Builder, validation rules, workflow rules, approval processes, process automation best practices' },
+  { name: 'Sales and Marketing Applications', weight: 11, note: 'Leads, accounts, contacts, opportunities, products, price books, campaigns, forecasting' },
+  { name: 'Service and Support Applications', weight: 9, note: 'Cases, queues, assignment rules, escalation rules, knowledge, entitlements, service console' },
+  { name: "Agentforce (Summer '26)", weight: 8, note: 'Agent Builder basics, when to recommend an Agentforce agent vs Flow, topics and actions' },
+  { name: 'Productivity and Collaboration', weight: 4, note: 'Chatter, tasks, events, email templates, activity management, Salesforce mobile app' },
 ]
 
 export default function Adm201StudyGuidePage() {
@@ -134,7 +135,7 @@ export default function Adm201StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">ADM-201 Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          The top two sections together account for 40% of the exam. Do not neglect the lower-weight sections — 7% is still 4 questions.
+          The top three sections together account for 54% of the exam. Do not neglect the lower-weight sections — 4% is still 2–3 questions.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -166,42 +167,49 @@ export default function Adm201StudyGuidePage() {
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Object Manager and Lightning App Builder (20%)
+              Object Manager and Lightning App Builder (17%)
             </p>
             <p>Custom objects, field types (formula, roll-up summary, lookup, master-detail), validation rules, record types, and page layouts. Know when to use a roll-up summary field vs a formula field vs a report. Lightning App Builder questions test which components can go where (Home, Record, App pages) and how to assign page variants to profiles.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Workflow and Process Automation (16%)
-            </p>
-            <p>Flow Builder is the primary automation tool tested. Know: screen flows vs auto-launched flows, flow triggers (record-triggered, schedule-triggered), the order of execution (before save → validation rules → after save flows), and when to escalate from a flow to Apex. Also expect questions on approval processes: entry criteria, initial submitters, approval steps, and final actions.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Data and Analytics Management (14%)
+              Data and Analytics Management (17%)
             </p>
             <p>Data import (Import Wizard vs Data Loader — use Import Wizard for up to 50k records and standard objects; Data Loader for bulk operations or custom objects), data quality management, deduplication, reports (tabular, summary, matrix, joined) and dashboards (chart types, running user, scheduled refresh). Know sharing rules: criteria-based vs ownership-based, and how they interact with OWD.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Sales and Marketing Applications (12%)
+              Workflow and Process Automation (14%)
+            </p>
+            <p>Flow Builder is the primary automation tool tested. Know: screen flows vs auto-launched flows, flow triggers (record-triggered, schedule-triggered), the order of execution (before save → validation rules → after save flows), and when to escalate from a flow to Apex. Also expect questions on approval processes: entry criteria, initial submitters, approval steps, and final actions.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-salesforce-blue" />
+              Sales and Marketing Applications (11%)
             </p>
             <p>Lead lifecycle (lead status, conversion, mapping fields), opportunity stages and forecasting, products and price books (standard vs custom), campaigns and campaign member statuses, and activity management. Know how lead conversion maps to Accounts, Contacts, and Opportunities — and what does not transfer automatically.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Service and Support Applications (11%)
+              Service and Support Applications (9%)
             </p>
             <p>Case management: case assignment rules, queues, escalation rules, auto-response rules. Salesforce Knowledge (article types, data categories, visibility). Entitlements and milestones. Service Console setup. Know the order in which assignment rules are evaluated and what happens when no rule matches.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Productivity and Collaboration (7%)
+              Agentforce (8%)
+            </p>
+            <p>Added in the Summer '26 blueprint update. Know the basics of Agent Builder, when to recommend an Agentforce agent over a Flow or Apex trigger, and how topics and actions define what an agent can do.</p>
+          </div>
+          <div>
+            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
+              <BookOpen className="h-4 w-4 text-salesforce-blue" />
+              Productivity and Collaboration (4%)
             </p>
             <p>Chatter settings (enable/disable per profile, groups, files), task and event management, email templates (text, HTML, letterhead), and Salesforce mobile app configuration (mobile navigation, compact layouts). Fewer questions but straightforward — do not skip this section.</p>
           </div>
@@ -213,10 +221,10 @@ export default function Adm201StudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week ADM-201 Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
           <p><strong>Week 1 — Configuration and Security (20%):</strong> Org setup, user management, profiles, permission sets, OWD, role hierarchy, sharing rules, and field-level security. Use Trailhead’s &ldquo;Salesforce Platform Basics&rdquo; and &ldquo;Data Security&rdquo; modules. Practice: configure a new user with a custom profile, then restrict access to a specific object using FLS.</p>
-          <p><strong>Week 2 — Object Manager and App Builder (20%):</strong> Custom objects, field types (formula, roll-up summary), record types, page layouts, validation rules, and Lightning App Builder components. Practice: build a custom object with a roll-up summary field and a master-detail relationship. Assign different page layouts per record type.</p>
-          <p><strong>Week 3 — Automation and Process (16%):</strong> Flow Builder (record-triggered, screen flows), approval processes, and the order of execution. Practice: build a record-triggered flow that creates a follow-up task when an Opportunity reaches Closed Won. Configure a two-step approval process.</p>
-          <p><strong>Week 4 — Data Management and Analytics (14%):</strong> Import Wizard vs Data Loader, deduplication, report types (summary, matrix, joined), dashboard components, and scheduled reports. Practice: build a matrix report for pipeline by stage and owner. Create a dashboard with a funnel chart.</p>
-          <p><strong>Week 5 — Sales, Service, and Productivity (30%):</strong> Lead conversion, products and price books, case management (queues, assignment rules, escalation), Salesforce Knowledge, entitlements, and Chatter. Review scenario-based use cases for each.</p>
+          <p><strong>Week 2 — Object Manager and App Builder (17%):</strong> Custom objects, field types (formula, roll-up summary), record types, page layouts, validation rules, and Lightning App Builder components. Practice: build a custom object with a roll-up summary field and a master-detail relationship. Assign different page layouts per record type.</p>
+          <p><strong>Week 3 — Data Management and Analytics (17%):</strong> Import Wizard vs Data Loader, deduplication, report types (summary, matrix, joined), dashboard components, and scheduled reports. Practice: build a matrix report for pipeline by stage and owner. Create a dashboard with a funnel chart.</p>
+          <p><strong>Week 4 — Automation and Process (14%):</strong> Flow Builder (record-triggered, screen flows), approval processes, and the order of execution. Practice: build a record-triggered flow that creates a follow-up task when an Opportunity reaches Closed Won. Configure a two-step approval process.</p>
+          <p><strong>Week 5 — Sales, Service, Agentforce, and Productivity (32%):</strong> Lead conversion, products and price books, case management (queues, assignment rules, escalation), Salesforce Knowledge, entitlements, Agent Builder basics, and Chatter. Review scenario-based use cases for each.</p>
           <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min), weak-area targeted revision. Score 75%+ consistently before booking.</p>
         </div>
       </section>

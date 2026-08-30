@@ -29,6 +29,23 @@ const ROLE_TITLES: Record<string, string> = {
   claude:                 `Claude AI Career Path & Salary Guide (${RELEASE_CURRENT})`,
 }
 
+/** Grammatical person-noun for "What Does a ___ Do Day-to-Day?" — category.name alone reads
+ *  fine for job-title-shaped names (Administrator, Developer) but breaks for track names that
+ *  aren't a role (Marketing, Tableau, Sales, Claude). */
+const ROLE_PERSON_LABEL: Record<string, string> = {
+  architect:              'Salesforce Architect',
+  consultant:             'Salesforce Consultant',
+  marketing:              'Salesforce Marketing Cloud Professional',
+  associate:              'Salesforce Associate',
+  administrator:          'Salesforce Administrator',
+  developer:              'Salesforce Developer',
+  tableau:                'Tableau Professional',
+  'accredited-professional': 'Salesforce Accredited Professional',
+  sales:                  'Salesforce Sales Professional',
+  designer:               'Salesforce Designer',
+  claude:                 'Claude AI Professional',
+}
+
 type FaqItem = { question: string; answer: string }
 interface RoleCareerData {
   salaryRange: string
@@ -561,7 +578,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
 
           {/* Daily Responsibilities */}
           <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">What Does a Salesforce {category.name} Do Day-to-Day?</h2>
+            <h2 className="text-xl font-bold text-gray-900 mb-4">What Does a {ROLE_PERSON_LABEL[slug] ?? `Salesforce ${category.name}`} Do Day-to-Day?</h2>
             <ul className="space-y-2.5">
               {careerData.dailyResponsibilities.map((resp, i) => (
                 <li key={i} className="flex items-start gap-2.5 text-sm text-gray-700">
