@@ -7,6 +7,10 @@ import {
   getCertFaqHeading,
 } from '@/lib/cert-seo-data'
 import { getRoleSlugForCert, getCategoryBySlug } from '@/lib/certifications-data'
+import { getFaqPageJsonLd } from '@/lib/schema-data'
+
+/** Same 2-question slice CertPageFaq renders — schema must match visible content. */
+const VISIBLE_FAQ_COUNT = 2
 
 const siteBaseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -21,12 +25,17 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
   const roleName = roleCategory?.name
   const breadcrumb = getCertBreadcrumb(slug, certTitle, roleSlug, roleName)
   const breadcrumbJsonLd = getCertBreadcrumbJsonLd(slug, certTitle, roleSlug, roleName)
+  const faqJsonLd = getFaqPageJsonLd(getCertFaq(slug, certTitle).slice(0, VISIBLE_FAQ_COUNT))
 
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbJsonLd) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
       {/* Visible breadcrumb */}
       <nav aria-label="Breadcrumb" className="mb-6">
@@ -58,7 +67,7 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
 
 /** FAQ section component - rendered separately after H1 for proper SEO structure */
 export function CertPageFaq({ slug, certTitle }: CertPageSeoProps) {
-  const faqs = getCertFaq(slug, certTitle).slice(0, 2)
+  const faqs = getCertFaq(slug, certTitle).slice(0, VISIBLE_FAQ_COUNT)
   const faqHeading = getCertFaqHeading(slug)
   
   return (
