@@ -402,6 +402,12 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
                   <span className="text-gray-600 ml-2">Proven strategies, common mistakes, and a day-of checklist for the Platform Administrator exam.</span>
                 </li>
                 <li>
+                  <Link href="/certifications/administrator-practice-test" className="text-salesforce-blue font-medium hover:underline">
+                    ADM-201 Timed Practice Test →
+                  </Link>
+                  <span className="text-gray-600 ml-2">A standalone, exam-length practice run once you've worked through the study guide above.</span>
+                </li>
+                <li>
                   <Link href="/admin-certification-path" className="text-salesforce-blue font-medium hover:underline">
                     Salesforce Admin Certification Path →
                   </Link>

@@ -227,6 +227,12 @@ function ScenarioTipsSection({
   )
 }
 
+/** Standalone practice-test companion pages → their full study guide, for the back-link callout below. */
+const PRACTICE_TEST_PARENT: Record<string, { href: string; label: string }> = {
+  'administrator-practice-test': { href: '/certifications/administrator', label: 'ADM-201 Section-by-Section Study Guide' },
+  'email-specialist-practice-test': { href: '/certifications/email-specialist', label: 'Email Specialist Section-by-Section Study Guide' },
+}
+
 function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeBody }) {
   const examSections = getExamWeightage(slug)
   const title = slugToDisplayName(slug)
@@ -249,6 +255,17 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           <CertIntroParagraph slug={slug} />
         </div>
       )}
+      {PRACTICE_TEST_PARENT[slug] ? (
+        <div className="max-w-7xl mx-auto px-4">
+          <p className="text-sm text-gray-600 mb-6 rounded-xl border border-gray-100 bg-gray-50/50 px-4 py-3">
+            This is a standalone timed practice run.{' '}
+            <Link href={PRACTICE_TEST_PARENT[slug].href} className="text-salesforce-blue font-medium hover:underline">
+              ← Back to the {PRACTICE_TEST_PARENT[slug].label}
+            </Link>{' '}
+            for exam weightage, key concepts, and section-by-section explanations.
+          </p>
+        </div>
+      ) : null}
       <div className="max-w-7xl mx-auto px-4">
         <CertTrustBar slug={slug} />
       </div>
