@@ -21,6 +21,7 @@ const AdministratorCtaSections = dynamic(() => import('@/components/Administrato
   ),
 })
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageIntro from '@/components/CertPageIntro'
 
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -47,6 +48,14 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
     <div className="min-h-screen bg-pattern">
       <div data-critical-content className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12 content-wrapper">
         <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(
+              getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, administratorSampleQuestions),
+            ),
+          }}
+        />
         <CertIntroParagraph slug={slug} />
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
         <section data-lcp-hero className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">

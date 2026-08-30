@@ -4,6 +4,7 @@ import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -235,6 +236,12 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
   return (
     <>
       <CertPageSeo slug={slug} certTitle={title} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getQuizJsonLd(`${title} Practice Questions`, body.sampleQuestions)),
+        }}
+      />
       {body.introLead?.length ? (
         <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       ) : (
@@ -410,6 +417,12 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
   return (
     <>
       <CertPageSeo slug={slug} certTitle={title} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify(getQuizJsonLd(`${title} Practice Questions`, body.sampleQuestions)),
+        }}
+      />
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       <div className="max-w-7xl mx-auto px-4">
         <CertTrustBar slug={slug} />

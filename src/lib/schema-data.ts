@@ -382,3 +382,30 @@ export function getRoleDifficultyProfileJsonLd({
     ],
   }
 }
+
+export interface QuizQuestionItem {
+  question: string
+  options: string[]
+  correctAnswer: number
+}
+
+/** Quiz JSON-LD for a certification page's practice questions. Must mirror the questions actually rendered. */
+export function getQuizJsonLd(name: string, questions: QuizQuestionItem[]) {
+  return {
+    '@context': 'https://schema.org',
+    '@type': 'Quiz',
+    name,
+    about: { '@type': 'Thing', name },
+    hasPart: questions.map((q) => ({
+      '@type': 'Question',
+      text: q.question,
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: q.options[q.correctAnswer],
+      },
+      suggestedAnswer: q.options
+        .filter((_, i) => i !== q.correctAnswer)
+        .map((text) => ({ '@type': 'Answer', text })),
+    })),
+  }
+}

@@ -4,6 +4,7 @@ import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
+import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageCta from '@/components/CertPageCta'
 import CertTrustBar from '@/components/CertTrustBar'
 import ExamFeesSection from '@/components/ExamFeesSection'
@@ -279,6 +280,12 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, sampleQuestions)),
+          }}
+        />
         <CertIntroParagraph slug={slug} />
         {/* Quick Knowledge Check — above fold to signal interactive content to Google */}
         <div className="mt-4 mb-2 rounded-xl border border-blue-100 bg-blue-50/50 p-4 sm:p-5">
