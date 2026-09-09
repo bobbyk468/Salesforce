@@ -107,6 +107,32 @@ const nextConfig = {
         destination: '/service-cloud-consultant-study-guide',
         permanent: true,
       },
+      // Consolidate likely legacy short slugs into the canonical long-tail URLs.
+      {
+        source: '/experience-cloud-study-guide',
+        destination: '/experience-cloud-consultant-study-guide',
+        permanent: true,
+      },
+      {
+        source: '/marketing-cloud-admin-study-guide',
+        destination: '/marketing-cloud-engagement-admin-study-guide',
+        permanent: true,
+      },
+      {
+        source: '/marketing-cloud-administrator-study-guide',
+        destination: '/marketing-cloud-engagement-admin-study-guide',
+        permanent: true,
+      },
+      {
+        source: '/marketing-cloud-path',
+        destination: '/marketing-cloud-certification-path',
+        permanent: true,
+      },
+      {
+        source: '/salesforce-marketing-cloud-certification-path',
+        destination: '/marketing-cloud-certification-path',
+        permanent: true,
+      },
     ]
   },
   async headers() {

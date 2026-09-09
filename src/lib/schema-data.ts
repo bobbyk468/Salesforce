@@ -48,6 +48,7 @@ export function getArticleJsonLd({
   const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
+    '@id': `${url}#article`,
     headline,
     description,
     url,
@@ -80,16 +81,21 @@ export function getArticleJsonLd({
     },
   }
 
-  // Use 'about' if provided (for comparison pages), otherwise use mainEntityOfPage
+  // Use 'about' if provided (for comparison pages), otherwise anchor the Article
+  // to a clear page entity. This reinforces the same canonical URL used in metadata.
   if (about && about.length > 0) {
     article.about = about.map(entityUrl => ({
       '@type': 'Thing',
       url: entityUrl.startsWith('http') ? entityUrl : `${baseUrl}${entityUrl}`,
     }))
-  } else if (mainEntityUrl) {
+  } else {
     article.mainEntityOfPage = {
       '@type': 'WebPage',
-      '@id': mainEntityUrl.startsWith('http') ? mainEntityUrl : `${baseUrl}${mainEntityUrl}`,
+      '@id': mainEntityUrl
+        ? mainEntityUrl.startsWith('http')
+          ? mainEntityUrl
+          : `${baseUrl}${mainEntityUrl}`
+        : `${url}#webpage`,
     }
   }
 
@@ -130,6 +136,7 @@ export function getWebPageJsonLd({
   const page: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'WebPage',
+    '@id': `${url}#webpage`,
     name,
     description,
     url,
