@@ -13,10 +13,9 @@ export interface ContentPageSchemasProps {
   path: string
   breadcrumbItems: BreadcrumbItem[]
   faqItems?: FaqItem[]
-  /** Optional: URL of the authoritative page this content is about (e.g. study guide URL for exam-tips pages).
-   *  Sets mainEntityOfPage on the Article schema — tells Google which page is the canonical authority. */
+  /** Optional related URL this content is about (e.g. study guide URL for exam-tips pages). */
   mainEntityUrl?: string
-  /** Optional: array of URLs this page is about (for comparison pages). Sets 'about' on Article schema instead of mainEntityOfPage. */
+  /** Optional array of related URLs this page is about (for comparison pages). */
   aboutEntities?: string[]
 }
 

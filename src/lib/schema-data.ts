@@ -81,22 +81,17 @@ export function getArticleJsonLd({
     },
   }
 
-  // Use 'about' if provided (for comparison pages), otherwise anchor the Article
-  // to a clear page entity. This reinforces the same canonical URL used in metadata.
-  if (about && about.length > 0) {
-    article.about = about.map(entityUrl => ({
+  article.mainEntityOfPage = {
+    '@type': 'WebPage',
+    '@id': `${url}#webpage`,
+  }
+
+  const relatedEntities = [...(about ?? []), ...(mainEntityUrl ? [mainEntityUrl] : [])]
+  if (relatedEntities.length > 0) {
+    article.about = relatedEntities.map(entityUrl => ({
       '@type': 'Thing',
       url: entityUrl.startsWith('http') ? entityUrl : `${baseUrl}${entityUrl}`,
     }))
-  } else {
-    article.mainEntityOfPage = {
-      '@type': 'WebPage',
-      '@id': mainEntityUrl
-        ? mainEntityUrl.startsWith('http')
-          ? mainEntityUrl
-          : `${baseUrl}${mainEntityUrl}`
-        : `${url}#webpage`,
-    }
   }
 
   return article
