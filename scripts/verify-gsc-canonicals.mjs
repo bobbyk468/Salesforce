@@ -1,176 +1,171 @@
 #!/usr/bin/env node
 /**
- * Verify GSC "Duplicate, Google chose different canonical than user" fixes site-wide.
- * Run: node scripts/verify-gsc-canonicals.mjs
+ * Verify GSC canonical/indexability hygiene.
  *
- * Checks:
- * 1. trailingSlash: false in next.config.js
- * 2. All exam-tips pages canonical to cert page
- * 3. All pages have explicit canonical (no missing)
- * 4. Cert pages use getCertMetadata (sets self-referencing canonical)
- * 5. Certification-path and similar hub pages have self-referencing canonical
+ * This script catches the two GSC classes we keep seeing:
+ * - "Duplicate without user-selected canonical": every indexable URL should have exactly
+ *   one self-referencing canonical and schema should anchor Article.mainEntityOfPage to itself.
+ * - "Page with redirect": sitemap/public/index URLs and discovered internal HTML links should
+ *   not point at redirecting same-site URLs.
+ *
+ * Usage:
+ *   node scripts/verify-gsc-canonicals.mjs --base=http://localhost:3007
+ *   node scripts/verify-gsc-canonicals.mjs --base=https://www.trailblazeprep.com
  */
+
 import fs from 'fs'
 import path from 'path'
 import { fileURLToPath } from 'url'
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url))
 const ROOT = path.join(__dirname, '..')
-const SRC = path.join(ROOT, 'src/app')
+const DEFAULT_BASE = process.env.BASE_URL || 'https://www.trailblazeprep.com'
+const baseArg = process.argv.find((arg) => arg.startsWith('--base='))?.split('=')[1]
+const baseUrl = (baseArg || DEFAULT_BASE).replace(/\/$/, '')
+const baseOrigin = new URL(baseUrl).origin
+const canonicalOrigin = 'https://www.trailblazeprep.com'
 
-const SKIP_PATHS = ['test-meta', 'api']
+const INTERNAL_HOSTS = new Set(['www.trailblazeprep.com', 'trailblazeprep.com'])
+const IGNORED_PATH_RE = /^(?:\/_next\/|\/api\/|\/og$)|\.(?:png|jpe?g|webp|avif|svg|ico|css|js|txt|xml|json|webmanifest|pdf)$/i
 
-function collectPages(dir, base = '') {
-  const pages = []
-  if (!fs.existsSync(dir)) return pages
-  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
-    const full = path.join(dir, e.name)
-    const rel = base ? `${base}/${e.name}` : e.name
-    if (e.isDirectory()) {
-      if (e.name.startsWith('_') || SKIP_PATHS.includes(e.name)) continue
-      if (e.name === 'certifications' && base === '') {
-        // Recurse into certifications
-        pages.push(...collectPages(full, 'certifications'))
-      } else if (e.name.includes('[')) {
-        // Dynamic route - skip for now
-      } else {
-        pages.push(...collectPages(full, rel))
-      }
-    } else if (e.name === 'page.tsx') {
-      pages.push(rel === '' ? '/' : '/' + rel.replace(/\\/g, '/').replace(/\/page\.tsx$/, ''))
-    }
+function normalizePath(href) {
+  try {
+    const url = href.startsWith('http') ? new URL(href) : new URL(href, canonicalOrigin)
+    if (!INTERNAL_HOSTS.has(url.hostname)) return null
+    if (IGNORED_PATH_RE.test(url.pathname)) return null
+    return url.pathname === '/' ? '/' : url.pathname.replace(/\/$/, '')
+  } catch {
+    return null
   }
-  return pages
 }
 
-// Get all page paths (simplified - just dirs with page.tsx)
-function getAllPageDirs() {
-  const dirs = []
-  function walk(d, base) {
-    if (!fs.existsSync(d)) return
-    for (const e of fs.readdirSync(d, { withFileTypes: true })) {
-      const full = path.join(d, e.name)
-      const rel = base ? `${base}/${e.name}` : e.name
-      if (e.isDirectory()) {
-        if (e.name.startsWith('_') || SKIP_PATHS.includes(e.name)) continue
-        if (fs.existsSync(path.join(full, 'page.tsx'))) {
-          dirs.push(rel.replace(/\\/g, '/'))
-        }
-        walk(full, rel)
-      }
-    }
-  }
-  walk(SRC, '')
-  return dirs
+function expectedCanonicalForPath(pathname) {
+  return `${canonicalOrigin}${pathname === '/' ? '' : pathname}`
 }
 
-function main() {
+async function fetchText(url, options = {}) {
+  const res = await fetch(url, options)
+  const text = await res.text()
+  return { res, text }
+}
+
+async function fetchSitemapPaths() {
+  const { res, text } = await fetchText(`${baseUrl}/sitemap.xml`)
+  if (!res.ok) throw new Error(`Unable to fetch sitemap.xml: HTTP ${res.status}`)
+  return [...text.matchAll(/<loc>([^<]+)<\/loc>/g)].map((match) => normalizePath(match[1])).filter(Boolean)
+}
+
+function fetchPublicUrlPaths() {
+  const urlsPath = path.join(ROOT, 'public/urls.json')
+  if (!fs.existsSync(urlsPath)) return []
+  const data = JSON.parse(fs.readFileSync(urlsPath, 'utf8'))
+  const urls = Array.isArray(data) ? data : data.urls
+  if (!Array.isArray(urls)) return []
+  return urls.map((url) => normalizePath(url)).filter(Boolean)
+}
+
+function extractCanonical(html) {
+  return [...html.matchAll(/<link\s+[^>]*rel=["']canonical["'][^>]*href=["']([^"']+)["'][^>]*>/gi)].map((match) => match[1])
+}
+
+function extractRobots(html) {
+  return html.match(/<meta\s+[^>]*name=["']robots["'][^>]*content=["']([^"']+)["'][^>]*>/i)?.[1] || ''
+}
+
+function extractInternalLinks(html) {
+  const links = new Set()
+  for (const match of html.matchAll(/\s(?:href|src)=["']([^"'#?]+)(?:[?#][^"']*)?["']/gi)) {
+    const pathname = normalizePath(match[1])
+    if (pathname) links.add(pathname)
+  }
+  return links
+}
+
+function extractJsonLd(html) {
+  const blocks = []
+  for (const match of html.matchAll(/<script[^>]+type=["']application\/ld\+json["'][^>]*>([\s\S]*?)<\/script>/gi)) {
+    try {
+      blocks.push(JSON.parse(match[1].replace(/&quot;/g, '"')))
+    } catch {
+      // Ignore malformed blocks here; schema validation belongs to a dedicated structured-data check.
+    }
+  }
+  return blocks.flatMap((block) => (Array.isArray(block) ? block : [block]))
+}
+
+async function main() {
   const issues = []
-  let checks = 0
+  const sitemapPaths = [...new Set(await fetchSitemapPaths())]
+  const publicUrlPaths = [...new Set(fetchPublicUrlPaths())]
+  const seedPaths = [...new Set([...sitemapPaths, ...publicUrlPaths])]
+  const discoveredPaths = new Set(seedPaths)
 
-  // 1. trailingSlash: false
-  const nextConfig = fs.readFileSync(path.join(ROOT, 'next.config.js'), 'utf8')
-  if (!/trailingSlash:\s*false/.test(nextConfig)) {
-    issues.push({ check: 'trailingSlash', message: 'next.config.js should have trailingSlash: false' })
-  } else {
-    checks++
+  for (const pathname of seedPaths) {
+    const url = `${baseOrigin}${pathname === '/' ? '' : pathname}`
+    const { res, text } = await fetchText(url, { redirect: 'manual' })
+    if (res.status >= 300 && res.status < 400) {
+      issues.push({ type: 'seed-url-redirects', path: pathname, status: res.status, location: res.headers.get('location') })
+      continue
+    }
+    if (!res.ok) {
+      issues.push({ type: 'seed-url-error', path: pathname, status: res.status })
+      continue
+    }
+    if (!res.headers.get('content-type')?.includes('text/html')) continue
+
+    const canonicals = extractCanonical(text)
+    const expectedCanonical = expectedCanonicalForPath(pathname)
+    if (canonicals.length !== 1) {
+      issues.push({ type: 'canonical-count', path: pathname, count: canonicals.length, canonicals })
+    } else if (canonicals[0] !== expectedCanonical) {
+      issues.push({ type: 'canonical-mismatch', path: pathname, expected: expectedCanonical, actual: canonicals[0] })
+    }
+
+    const robots = extractRobots(text)
+    if (/noindex/i.test(robots)) {
+      issues.push({ type: 'seed-url-noindex', path: pathname, robots })
+    }
+
+    for (const item of extractJsonLd(text)) {
+      if (item?.['@type'] !== 'Article') continue
+      const expectedPageId = `${expectedCanonical}#webpage`
+      const actual = item.mainEntityOfPage?.['@id']
+      if (actual && actual !== expectedPageId) {
+        issues.push({ type: 'article-main-entity-mismatch', path: pathname, expected: expectedPageId, actual })
+      }
+    }
+
+    for (const linkedPath of extractInternalLinks(text)) discoveredPaths.add(linkedPath)
   }
 
-  // 2. Exam-tips canonical to cert
-  const examTipsDirs = fs.readdirSync(SRC).filter(
-    (d) => d.endsWith('-exam-tips') || ['adm-201-exam-tips-2026', 'pd1-exam-tips-2026', 'pd2-exam-tips-2026'].includes(d)
-  )
-  for (const dir of examTipsDirs) {
-    const filePath = path.join(SRC, dir, 'page.tsx')
-    if (!fs.existsSync(filePath)) continue
-    const content = fs.readFileSync(filePath, 'utf8')
-    if (!/canonical:\s*`\$\{siteUrl\}\/certifications\//.test(content)) {
-      issues.push({ check: 'exam-tips-canonical', message: `/${dir} should canonical to /certifications/[slug]` })
-    } else {
-      checks++
+  for (const pathname of [...discoveredPaths].sort()) {
+    const url = `${baseOrigin}${pathname === '/' ? '' : pathname}`
+    const res = await fetch(url, { redirect: 'manual' })
+    if (res.status >= 300 && res.status < 400) {
+      issues.push({ type: 'internal-link-redirects', path: pathname, status: res.status, location: res.headers.get('location') })
+    } else if (res.status === 404) {
+      issues.push({ type: 'internal-link-404', path: pathname })
     }
   }
 
-  // 3. Certification path pages - explicit self-referencing canonical
-  const pathPages = ['certification-path', 'admin-certification-path', 'developer-certification-path', 'consultant-certification-path', 'architect-certification-path']
-  for (const dir of pathPages) {
-    const filePath = path.join(SRC, dir, 'page.tsx')
-    if (!fs.existsSync(filePath)) continue
-    const content = fs.readFileSync(filePath, 'utf8')
-    const hasCanonical = /alternates:\s*\{[^}]*canonical[^}]*\}/s.test(content) && content.includes(`/${dir}`)
-    if (!hasCanonical) {
-      issues.push({ check: 'path-canonical', message: `/${dir} should have explicit self-referencing canonical` })
-    } else {
-      checks++
-    }
-  }
-
-  // 4. Cert pages - use getCertMetadata (includes canonical)
-  const certDirs = fs.readdirSync(path.join(SRC, 'certifications')).filter((d) => !d.includes('['))
-  for (const dir of certDirs) {
-    const filePath = path.join(SRC, 'certifications', dir, 'page.tsx')
-    if (!fs.existsSync(filePath)) continue
-    const content = fs.readFileSync(filePath, 'utf8')
-    const hasGetCertMetadata = /getCertMetadata|alternates:\s*\{[^}]*canonical/.test(content)
-    const hasCanonical = /canonical.*certifications/.test(content)
-    if (!hasGetCertMetadata && !hasCanonical) {
-      issues.push({ check: 'cert-canonical', message: `/certifications/${dir} missing canonical` })
-    } else {
-      checks++
-    }
-  }
-
-  // 5. Study guides - must have canonical
-  const studyGuideDirs = fs.readdirSync(SRC).filter((d) => d.endsWith('-study-guide'))
-  for (const dir of studyGuideDirs) {
-    const filePath = path.join(SRC, dir, 'page.tsx')
-    if (!fs.existsSync(filePath)) continue
-    const content = fs.readFileSync(filePath, 'utf8')
-    if (!/alternates:\s*\{[^}]*canonical/.test(content)) {
-      issues.push({ check: 'study-guide-canonical', message: `/${dir} missing explicit canonical` })
-    } else {
-      checks++
-    }
-  }
-
-  // 6. Vs/comparison pages, how-to, salesforce-certification-* - must have canonical
-  const otherDirs = fs.readdirSync(SRC).filter(
-    (d) =>
-      d.includes('-vs-') ||
-      d.startsWith('how-to-') ||
-      d.startsWith('salesforce-certification-') ||
-      d.startsWith('is-') ||
-      d.startsWith('which-') ||
-      ['adm-201-study-guide', 'adm-201-vs-app-builder', 'pd1-study-guide', 'pd2-study-guide', 'pd1-vs-pd2'].includes(d)
-  )
-  for (const dir of otherDirs) {
-    const filePath = path.join(SRC, dir, 'page.tsx')
-    if (!fs.existsSync(filePath)) continue
-    const content = fs.readFileSync(filePath, 'utf8')
-    if (!/alternates:\s*\{[^}]*canonical/.test(content)) {
-      issues.push({ check: 'other-canonical', message: `/${dir} missing explicit canonical` })
-    } else {
-      checks++
-    }
-  }
-
-  // Report
-  console.log('=== GSC Canonical Verification (Site-Wide) ===\n')
-  console.log('Checks: trailingSlash, exam-tips→cert, certification-path, cert pages, study guides\n')
+  console.log('=== GSC Canonical & Redirect Hygiene ===')
+  console.log(`Base: ${baseUrl}`)
+  console.log(`Sitemap URLs: ${sitemapPaths.length}`)
+  console.log(`Public urls.json URLs: ${publicUrlPaths.length}`)
+  console.log(`Discovered internal paths: ${discoveredPaths.size}`)
 
   if (issues.length > 0) {
-    console.log('ISSUES FOUND:')
-    issues.forEach(({ check, message }) => console.log(`  [${check}] ${message}`))
+    console.log('\nISSUES FOUND:')
+    for (const issue of issues.slice(0, 100)) console.log(`- ${JSON.stringify(issue)}`)
+    if (issues.length > 100) console.log(`... and ${issues.length - 100} more`)
     console.log(`\nFAILED: ${issues.length} issue(s)`)
     process.exit(1)
   }
 
-  console.log(`PASSED: All GSC canonical checks verified`)
-  console.log(`  - ${examTipsDirs.length} exam-tips → cert page`)
-  console.log(`  - ${pathPages.length} certification-path pages`)
-  console.log(`  - ${certDirs.length} cert pages`)
-  console.log(`  - ${studyGuideDirs.length} study guides`)
-  console.log(`  - ${otherDirs.length} vs/how-to/other pages`)
+  console.log('\nPASSED: No sitemap/public/internal redirect leaks, no canonical mismatches, no sitemap noindex conflicts, and no Article mainEntityOfPage conflicts.')
 }
 
-main()
+main().catch((error) => {
+  console.error(error.message)
+  process.exit(1)
+})
