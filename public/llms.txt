@@ -49,7 +49,7 @@ Trailblaze Prep is an independent Salesforce certification preparation resource.
 
 - [Salesforce Sales Cloud Consultant](https://www.trailblazeprep.com/certifications/sales-cloud): Sales Cloud implementation and best practices; free practice questions and exam tips
 - [Salesforce Service Cloud Consultant](https://www.trailblazeprep.com/certifications/service-cloud): Service Cloud configuration and consulting; free practice questions and study guide
-- [Salesforce Data Cloud Consultant](https://www.trailblazeprep.com/certifications/data-cloud-consultant): Salesforce Data Cloud (CDP) implementation; free study guide and practice questions
+- [Salesforce Data 360 Consultant](https://www.trailblazeprep.com/certifications/data-360-consultant): Salesforce Data Cloud (CDP) implementation; free study guide and practice questions
 - [Salesforce Experience Cloud Consultant](https://www.trailblazeprep.com/certifications/experience-cloud): Communities and Experience Cloud setup; free practice questions
 - [Salesforce Field Service Consultant](https://www.trailblazeprep.com/certifications/field-service): Field service scheduling and optimization; free study guide
 - [Salesforce CRM Analytics & Einstein Discovery Consultant](https://www.trailblazeprep.com/certifications/crm-analytics-einstein-discovery-consultant): Analytics and AI-powered insights; free practice questions
