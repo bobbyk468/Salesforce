@@ -52,3 +52,17 @@ tbprep_indexed.txt
 tbprep_pending.txt
 submit_google_indexing.py
 pending_indexing_urls.txt
+
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+
+# Tweet images (generated locally; large binary assets not for git)
+scripts/tweet-images/
+
+# GSC/Analytics exports (local data snapshots)
+performance-report/
+
+# Temporary data files
+scripts/sample_pii_data/
