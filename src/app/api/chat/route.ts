@@ -163,7 +163,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
 
-    const apiKey = process.env.GROQ_API_KEY || process.env.STRIPE_SECRET_KEY
+    const apiKey = process.env.GROQ_API_KEY
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Bot is temporarily unavailable. Please try again later.' },

@@ -31,4 +31,4 @@ The preview runs at `http://localhost:8787`. Check a content page, a legacy redi
 
 - The former dynamic Open Graph renderer used Next `ImageResponse`, which hangs under the pinned Next 14/OpenNext Workers runtime. `/og` now redirects to a branded static 1200x630 PNG, retaining all current metadata URLs.
 - The chatbot knowledge base is imported at build time instead of read with Node's filesystem API, which is unavailable on Workers.
-- `STRIPE_SECRET_KEY` remains as a temporary fallback for Vercel compatibility. Configure `GROQ_API_KEY` on Cloudflare; it takes priority.
+- `GROQ_API_KEY` is required for the chatbot. Do not use a Stripe secret for this value.
