@@ -13,7 +13,7 @@ The preview runs at `http://localhost:8787`. Check a content page, a legacy redi
 
 ## Cloudflare setup
 
-1. Create a Workers project connected to this repository. Set `Spring'26` as the production branch unless the branch policy changes.
+1. Create a Workers project connected to this repository. Set `Summer26` as the production branch.
 2. Set the build command to `npm run cf:build` and deploy command to `npx opennextjs-cloudflare deploy`.
 3. Set these encrypted production and preview secrets: `RESEND_API_KEY` and `GROQ_API_KEY`.
 4. Set `NEXT_PUBLIC_SITE_URL=https://www.trailblazeprep.com` and the existing `NEXT_PUBLIC_GA_MEASUREMENT_ID` as build variables.
