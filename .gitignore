@@ -1,5 +1,8 @@
 # Dependencies
 /node_modules
+/.wrangler
+.dev.vars*
+!.dev.vars.example
 /.pnp
 .pnp.js
 
@@ -8,6 +11,7 @@
 
 # Next.js
 /.next/
+/.open-next/
 /out/
 
 # Production

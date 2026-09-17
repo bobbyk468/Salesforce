@@ -1,0 +1,8 @@
+# Local Cloudflare Workers development only. Copy to .dev.vars and add values.
+# Configure the same values as encrypted secrets in Cloudflare before deployment.
+RESEND_API_KEY=
+GROQ_API_KEY=
+
+# Public build variables belong in the Cloudflare Workers Build settings.
+NEXT_PUBLIC_SITE_URL=https://www.trailblazeprep.com
+NEXT_PUBLIC_GA_MEASUREMENT_ID=

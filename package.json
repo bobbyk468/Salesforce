@@ -6,6 +6,10 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
+    "cf:build": "opennextjs-cloudflare build",
+    "cf:preview": "opennextjs-cloudflare build && opennextjs-cloudflare preview",
+    "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
+    "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "next lint",
     "perf:check": "python3 scripts/page_speed_monitor.py",
     "validate:seo": "node scripts/validate-technical-seo.mjs",
@@ -50,6 +54,7 @@
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
+    "@opennextjs/cloudflare": "^1.15.0",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
@@ -58,6 +63,7 @@
     "puppeteer": "^24.40.0",
     "tailwindcss": "^3.4.0",
     "twitter-api-v2": "^1.29.0",
-    "typescript": "^5.4.0"
+    "typescript": "^5.4.0",
+    "wrangler": "^4.133.0"
   }
 }

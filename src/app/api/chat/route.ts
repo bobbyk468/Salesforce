@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
-import { readFileSync, existsSync } from 'fs'
-import { join } from 'path'
+import knowledgeBase from '../../../../bot-data/knowledge-base.json'
 
 // ---------------------------------------------------------------------------
 // BM25 — retrieval at query time with no external deps or API calls
@@ -48,12 +47,9 @@ let _index: BM25State | null = null
 function getIndex(): BM25State | null {
   if (_index) return _index
 
-  const filePath = join(process.cwd(), 'bot-data', 'knowledge-base.json')
-  if (!existsSync(filePath)) return null
-
   try {
-    const raw = readFileSync(filePath, 'utf-8')
-    const kb = JSON.parse(raw) as { chunks: Chunk[] }
+    // JSON is bundled at build time so this works in both Vercel and Workers.
+    const kb = knowledgeBase as { chunks: Chunk[] }
     if (!kb.chunks?.length) return null
 
     const tokenized = kb.chunks.map(c => tokenize(c.title + ' ' + c.content))
@@ -167,7 +163,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
 
-    const apiKey = process.env.STRIPE_SECRET_KEY
+    const apiKey = process.env.GROQ_API_KEY || process.env.STRIPE_SECRET_KEY
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Bot is temporarily unavailable. Please try again later.' },
