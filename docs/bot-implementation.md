@@ -2,7 +2,7 @@
 
 ## Overview
 
-A RAG (Retrieval-Augmented Generation) chatbot that answers Salesforce certification questions using content from trailblazeprep.com and official Salesforce Trailhead pages. Designed to be free at runtime with no per-request API billing for the retrieval layer.
+A RAG (Retrieval-Augmented Generation) chatbot that answers Salesforce certification questions using published Trailblaze Prep content only. Designed to be free at runtime with no per-request API billing for the retrieval layer.
 
 ---
 
@@ -32,7 +32,7 @@ User question
 |---|---|
 | BM25 retrieval | Zero — pure in-process math, no API |
 | LLM inference | Zero — Groq free tier, no credit card required |
-| Hosting | Zero — Vercel free tier handles the API route |
+| Hosting | Cloudflare Workers handles the API route |
 | Knowledge base | Zero — static JSON committed to repo |
 
 ---
@@ -46,7 +46,7 @@ User question
 | `src/app/api/chat/route.ts` | API route: BM25 search + Groq streaming |
 | `src/components/ChatBot.tsx` | Floating chat widget (client component) |
 | `src/app/layout.tsx` | Mounts ChatBot via dynamic import (ssr: false) |
-| `next.config.js` | `outputFileTracingIncludes` ensures Vercel bundles bot-data |
+| `src/app/api/chat/route.ts` | Imports the knowledge base at build time for Worker compatibility |
 
 ---
 
@@ -59,25 +59,19 @@ npm run bot:train
 ```
 
 This will:
-1. Fetch `https://www.trailblazeprep.com/sitemap.xml` and scrape all content pages
-2. Scrape ~50 Trailhead credential overview pages (all major roles)
-3. Scrape the Trailhead Academy offerings page (JS SPA — uses puppeteer)
-4. Chunk all text into ~350-word segments
-5. Write `bot-data/knowledge-base.json`
+1. Read the published URL index from `public/urls.json`
+2. Scrape each Trailblaze Prep content page
+3. Chunk all text into ~350-word segments
+4. Write `bot-data/knowledge-base.json`
 
 ### Training sources
 
-**trailblazeprep.com** — all pages discovered via sitemap.xml:
+**trailblazeprep.com** — all pages in the published URL index:
 - 87 cert pages (exam format, key concepts, practice questions, FAQ)
 - Exam tips pages, comparison pages, certification path pages
 - Certification cost, list, and commercial pages
 
-**Trailhead credential overview pages** — ~50 official Salesforce credential pages:
-- All Admin, Developer, Consultant, Architect, Designer, AI, Tableau, MuleSoft credentials
-- URL pattern: `https://trailhead.salesforce.com/en/credentials/{slug}overview/`
-
-**Trailhead Academy** — certification offerings catalog:
-- `https://trailheadacademy.salesforce.com/all-offerings#f-assetType=Certification`
+The training script does not crawl or ingest external websites. The chatbot only receives Trailblaze Prep text as retrieval context.
 
 ### Retraining cadence
 
@@ -87,7 +81,7 @@ Retrain whenever:
 - Exam content changes (Spring/Summer/Winter release cycles)
 - After major content updates to existing pages
 
-After retraining, commit `bot-data/knowledge-base.json` to git and push — Vercel will pick it up on the next deploy.
+After retraining, commit `bot-data/knowledge-base.json` to git and push — the next Cloudflare deployment will include it.
 
 ---
 
@@ -142,7 +136,7 @@ Sign up at https://console.groq.com
 
 - System prompt constrains the bot to Salesforce certifications only
 - Context (top-5 BM25 chunks) injected into each user message
-- Last 6 conversation turns included for multi-turn coherence
+- No prior conversation content is used as factual evidence
 - `max_tokens: 350`, `temperature: 0.2` — concise, factual responses
 - Response streamed via SSE → client renders tokens progressively
 
@@ -164,19 +158,11 @@ Sign up at https://console.groq.com
 
 ---
 
-## Vercel deployment
+## Cloudflare Workers Deployment
 
-`next.config.js` includes:
+The API route imports `bot-data/knowledge-base.json` at build time, so OpenNext bundles it with the Cloudflare Worker. Do not move the knowledge base to runtime filesystem access because Workers do not provide Node.js filesystem access.
 
-```js
-outputFileTracingIncludes: {
-  '/api/chat': ['./bot-data/**/*'],
-},
-```
-
-This tells Next.js's output file tracing to include the `bot-data/` directory in the `/api/chat` serverless function bundle. Without this, Vercel would not bundle the JSON file and the API route would fail silently.
-
-### Environment variables (set in Vercel dashboard)
+### Environment variables (set as Cloudflare Worker secrets)
 
 | Variable | Value |
 |---|---|
@@ -186,10 +172,9 @@ This tells Next.js's output file tracing to include the `bot-data/` directory in
 
 ## Graceful degradation
 
-If the knowledge base is empty (before first training run):
+If the knowledge base is empty or a question has no matching Trailblaze Prep content:
 - BM25 returns no chunks
-- LLM responds from its general Salesforce training knowledge
-- Response quality is lower but the bot still functions
+- The bot returns a clear site-coverage response without calling the LLM
 
 If `GROQ_API_KEY` is missing:
 - API returns HTTP 503 with a clear error message

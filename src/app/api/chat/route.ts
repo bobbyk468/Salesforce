@@ -51,17 +51,19 @@ function getIndex(): BM25State | null {
   try {
     // JSON is bundled at build time so this works in both Vercel and Workers.
     const kb = knowledgeBase as { chunks: Chunk[] }
-    if (!kb.chunks?.length) return null
+    // The assistant is intentionally limited to Trailblaze Prep content.
+    const websiteChunks = (kb.chunks || []).filter(chunk => chunk.source === 'trailblazeprep')
+    if (!websiteChunks.length) return null
 
-    const tokenized = kb.chunks.map(c => tokenize(c.title + ' ' + c.content))
+    const tokenized = websiteChunks.map(c => tokenize(c.title + ' ' + c.content))
     const df: Record<string, number> = {}
     tokenized.forEach(tokens => {
       new Set(tokens).forEach(t => { df[t] = (df[t] || 0) + 1 })
     })
     const avgdl = tokenized.reduce((s, t) => s + t.length, 0) / tokenized.length
 
-    _index = { chunks: kb.chunks, tokenized, df, avgdl, N: kb.chunks.length }
-    console.log(`[Chat] BM25 index built: ${kb.chunks.length} chunks`)
+    _index = { chunks: websiteChunks, tokenized, df, avgdl, N: websiteChunks.length }
+    console.log(`[Chat] BM25 index built: ${websiteChunks.length} Trailblaze Prep chunks`)
     return _index
   } catch (err) {
     console.error('[Chat] Failed to load knowledge base:', err)
@@ -81,6 +83,9 @@ function bm25Search(query: string, k = 5): Chunk[] {
   const scores = chunks.map((chunk, i) => {
     const tokens = tokenized[i]
     const dl = tokens.length
+    const matchedTerms = [...new Set(queryTokens.filter(qt => tokens.includes(qt)))]
+    const titleTerms = tokenize(chunk.title)
+    const hasTitleMatch = queryTokens.some(qt => titleTerms.includes(qt))
     const score = queryTokens.reduce((sum, qt) => {
       const freq = tokens.filter(t => t === qt).length
       if (!freq) return sum
@@ -88,13 +93,15 @@ function bm25Search(query: string, k = 5): Chunk[] {
       const tf = (freq * (K1 + 1)) / (freq + K1 * (1 - B + B * dl / avgdl))
       return sum + idf * tf
     }, 0)
-    return { chunk, score }
+    return { chunk, score, matchedTerms, hasTitleMatch }
   })
 
   return scores
     .sort((a, b) => b.score - a.score)
     .slice(0, k)
-    .filter(s => s.score > 0)
+    // A generic verb such as "explain" is not enough evidence to send a
+    // question to the model. Require multiple terms or a title-level match.
+    .filter(s => s.score > 0 && (s.matchedTerms.length >= 2 || s.hasTitleMatch))
     .map(s => s.chunk)
 }
 
@@ -128,10 +135,10 @@ function isRateLimited(ip: string): boolean {
 // System prompt
 // ---------------------------------------------------------------------------
 
-const SYSTEM_PROMPT = `You are a helpful Salesforce certification assistant for Trailblaze Prep (trailblazeprep.com).
-You help students prepare for Salesforce certification exams — study strategies, exam formats, which cert to pursue, topic breakdowns, and career paths.
-Answer questions using the provided context. Be concise and accurate.
-If context does not fully cover the question, use your general Salesforce knowledge but say so.
+const SYSTEM_PROMPT = `You are the Trailblaze Prep certification assistant.
+Answer only with facts, recommendations, and figures explicitly supported by the Trailblaze Prep context provided with the question.
+Do not use general Salesforce knowledge, external sources, prior conversation details, or unsupported inference.
+If the context is incomplete, say that Trailblaze Prep does not yet cover that detail, then answer only the portion that the context supports.
 Keep answers under 180 words unless the user asks for detail.
 Do not use markdown headers or bullet symbols. Write in plain, clear sentences.
 Never invent exam questions, passing percentages, or fees — only cite figures found in the context.
@@ -139,6 +146,30 @@ Never invent exam questions, passing percentages, or fees — only cite figures 
 After every answer, on a new line write exactly this (no deviations):
 FOLLOW_UP: <question 1> | <question 2> | <question 3> | <question 4>
 The follow-up questions must be complete, specific questions (12–18 words each) ending with a "?" that a real student would naturally ask next. They should add depth, explore adjacent topics, or clarify a detail from the answer. Always include exactly 3 to 4 questions separated by " | ". Every question must end with a question mark.`
+
+function createSseResponse(content: string): Response {
+  const encoder = new TextEncoder()
+  const payload = JSON.stringify({ choices: [{ delta: { content } }] })
+  const stream = new ReadableStream({
+    start(controller) {
+      controller.enqueue(encoder.encode(`data: ${payload}\n\n`))
+      controller.enqueue(encoder.encode('data: [DONE]\n\n'))
+      controller.close()
+    },
+  })
+
+  return new Response(stream, {
+    headers: {
+      'Content-Type': 'text/event-stream',
+      'Cache-Control': 'no-cache',
+      'X-Accel-Buffering': 'no',
+      Connection: 'keep-alive',
+    },
+  })
+}
+
+const NOT_COVERED_RESPONSE = `I can answer only from Trailblaze Prep content, and this topic is not covered in the current study guides. Try asking about a certification, exam format, study guide, or certification path on Trailblaze Prep.
+FOLLOW_UP: Which Salesforce certification should I start with based on Trailblaze Prep guidance? | What exam format does the Salesforce Administrator study guide describe? | Which Trailblaze Prep study guide covers Platform Developer I preparation? | What certification path does Trailblaze Prep recommend for aspiring architects?`
 
 // ---------------------------------------------------------------------------
 // Route handler
@@ -155,14 +186,17 @@ export async function POST(request: Request) {
     }
 
     const body = await request.json()
-    const { message, history } = body as {
+    const { message } = body as {
       message: string
-      history?: Array<{ role: string; content: string }>
     }
 
     if (!message?.trim()) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
+
+    // BM25 retrieval against the bundled Trailblaze Prep corpus only.
+    const chunks = bm25Search(message, 5)
+    if (!chunks.length) return createSseResponse(NOT_COVERED_RESPONSE)
 
     const apiKey = await getRuntimeSecret('GROQ_API_KEY')
     if (!apiKey) {
@@ -172,15 +206,9 @@ export async function POST(request: Request) {
       )
     }
 
-    // BM25 retrieval — no external API call
-    const chunks = bm25Search(message, 5)
-    const context = chunks.length
-      ? chunks.map(c => `[Source: ${c.title} — ${c.url}]\n${c.content}`).join('\n\n---\n\n')
-      : 'No specific context found — answering from general Salesforce knowledge.'
-
-    const conversationHistory = (history || [])
-      .slice(-6)
-      .map(m => ({ role: m.role as 'user' | 'assistant', content: m.content }))
+    const context = chunks
+      .map(c => `[Trailblaze Prep page: ${c.title}]\n${c.content}`)
+      .join('\n\n---\n\n')
 
     const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
       method: 'POST',
@@ -195,7 +223,6 @@ export async function POST(request: Request) {
         temperature: 0.2,
         messages: [
           { role: 'system', content: SYSTEM_PROMPT },
-          ...conversationHistory,
           {
             role: 'user',
             content: `Context:\n\n${context}\n\n---\n\nQuestion: ${message}`,

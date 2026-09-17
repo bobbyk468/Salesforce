@@ -18,7 +18,7 @@ const SUGGESTED = [
 const WELCOME: Message = {
   role: 'assistant',
   content:
-    'Hi! I\'m your Salesforce certification guide. Ask me about any cert, study tips, exam format, or career path.',
+    'Hi! I answer using Trailblaze Prep study guides. Ask about a certification, exam format, study tips, or career path covered on the site.',
 }
 
 function parseResponse(raw: string): { content: string; followUps: string[] } {

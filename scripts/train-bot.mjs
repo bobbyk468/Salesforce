@@ -2,8 +2,9 @@
 /**
  * Trailblaze Prep Bot — Training Script
  *
- * Crawls trailblazeprep.com + Salesforce Trailhead credential pages,
- * chunks the content, and saves a knowledge base JSON for the chat API.
+ * Crawls Trailblaze Prep pages only, chunks the content, and saves a
+ * knowledge base JSON for the chat API. It deliberately does not ingest
+ * external websites, so bot answers remain grounded in this website.
  *
  * Usage:
  *   node scripts/train-bot.mjs
@@ -15,7 +16,7 @@
  */
 
 import puppeteer from 'puppeteer'
-import { writeFileSync, mkdirSync } from 'fs'
+import { writeFileSync, mkdirSync, readFileSync } from 'fs'
 import { join } from 'path'
 import { fileURLToPath } from 'url'
 import { dirname } from 'path'
@@ -25,72 +26,8 @@ const ROOT = join(__dirname, '..')
 const OUTPUT_DIR = join(ROOT, 'bot-data')
 const OUTPUT_FILE = join(OUTPUT_DIR, 'knowledge-base.json')
 
-const DELAY_TBPREP = 800   // ms between trailblazeprep requests
-const DELAY_TRAILHEAD = 2000 // ms between Trailhead requests (be polite)
+const DELAY_TBPREP = 200 // ms between Trailblaze Prep requests
 const PAGE_TIMEOUT = 45_000
-
-// ---------------------------------------------------------------------------
-// Trailhead credential overview pages
-// URL pattern: https://trailhead.salesforce.com/en/credentials/{slug}/
-// Add any new credentials here when Salesforce releases them.
-// ---------------------------------------------------------------------------
-const TRAILHEAD_CRED_SLUGS = [
-  // Admin
-  'administratoroverview',
-  'advancedadministratoroverview',
-  'appbuilderoverview',
-  'businessanalystoverview',
-  // Developer
-  'platformdeveloperioverview',
-  'platformdeveloperIIoverview',
-  'javascriptdeveloperioverview',
-  'b2ccommercedeveloperoverview',
-  'omnistudiodeveloperoverview',
-  'slackdeveloperoverview',
-  // Consultant
-  'salescloudconsultantoverview',
-  'servicecloudconsultantoverview',
-  'fieldserviceconsultantoverview',
-  'marketingcloudconsultantoverview',
-  'marketingcloudemaailspecialistoverview',
-  'marketingclouddeveloperoverview',
-  'datacloudconsultantoverview',
-  'experiencecloudconsultantoverview',
-  'pardotspecialistoverview',
-  'pardotconsultantoverview',
-  'cpqspecialistoverview',
-  'educationcloudconsultantoverview',
-  'nonprofitcloudconsultantoverview',
-  'omnistudioconsultantoverview',
-  'crmanalyticseinsteinDiscoveryconsultantoverview',
-  'revenuecloudconsultantoverview',
-  // AI & Agentforce
-  'agentforcespecialistoverview',
-  'aiassociateoverview',
-  'aispecialistoverview',
-  // Architect
-  'b2bsolutionarchitectoverview',
-  'b2csolutionarchitectoverview',
-  'systemsarchitectoverview',
-  'applicationarchitectoverview',
-  'integrationarchitectoverview',
-  'sharingandvisibilityarchitectoverview',
-  'dataarchitectoverview',
-  'identityandaccessmanagementarchitectoverview',
-  'developmentlifecycleanddeploymentarchitectoverview',
-  'technicalarchitectoverview',
-  // Designer
-  'strategicdesigneroverview',
-  'uxdesigneroverview',
-  // Tableau
-  'tableaudataanalystoverview',
-  'tableaucertifiedassociateoverview',
-  // MuleSoft
-  'mulesoftdeveloperioverview',
-  'mulesoftdeveloperIIoverview',
-  'mulesoftintegrationarchitectoverview',
-  'mulesoftplatformarchitectoverview',
-]
 
 // ---------------------------------------------------------------------------
 // Helpers
@@ -157,24 +94,13 @@ async function scrapePage(page, url, source) {
   }
 }
 
-async function fetchSitemapUrls(page) {
-  process.stdout.write('Fetching sitemap.xml...\n')
-  try {
-    await page.goto('https://www.trailblazeprep.com/sitemap.xml', {
-      waitUntil: 'networkidle2',
-      timeout: 30_000,
-    })
-    const content = await page.content()
-    const matches = [...content.matchAll(/<loc>(https?:\/\/[^<]+)<\/loc>/g)]
-    const urls = matches.map(m => m[1]).filter(u =>
-      !u.includes('/og?') && !u.includes('/api/') && !u.includes('/_next/')
-    )
-    process.stdout.write(`  Found ${urls.length} URLs\n`)
-    return urls
-  } catch (err) {
-    process.stderr.write(`  Failed to fetch sitemap: ${err.message}\n`)
-    return []
-  }
+function getWebsiteUrls() {
+  const urlIndex = JSON.parse(readFileSync(join(ROOT, 'public', 'urls.json'), 'utf-8'))
+  const urls = (urlIndex.urls || []).filter(url =>
+    !url.includes('/og?') && !url.includes('/api/') && !url.includes('/_next/')
+  )
+  process.stdout.write(`  Found ${urls.length} published Trailblaze Prep URLs\n`)
+  return urls
 }
 
 // ---------------------------------------------------------------------------
@@ -210,87 +136,31 @@ async function main() {
 
   try {
     // -----------------------------------------------------------------------
-    // 1. Trailblaze Prep — all pages from sitemap
+    // Trailblaze Prep — all published pages listed in the repository URL index.
     // -----------------------------------------------------------------------
     process.stdout.write('\n--- Trailblaze Prep (trailblazeprep.com) ---\n')
-    const sitemapPage = await browser.newPage()
-    const sitemapUrls = await fetchSitemapUrls(sitemapPage)
-    await sitemapPage.close()
-
-    const contentPage = await browser.newPage()
-    await contentPage.setUserAgent(
-      'Mozilla/5.0 (compatible; TrailblazePrepBot/1.0; +https://www.trailblazeprep.com)'
-    )
+    const sitemapUrls = getWebsiteUrls()
 
     for (let i = 0; i < sitemapUrls.length; i++) {
       const url = sitemapUrls[i]
       process.stdout.write(`[${i + 1}/${sitemapUrls.length}] ${url}\n`)
-      const data = await scrapePage(contentPage, url, 'trailblazeprep')
-      addChunks(data)
+      // Isolate every navigation. A page that unexpectedly detaches cannot
+      // poison the remaining crawl or prevent the knowledge base from writing.
+      const contentPage = await browser.newPage()
+      try {
+        await contentPage.setUserAgent(
+          'Mozilla/5.0 (compatible; TrailblazePrepBot/1.0; +https://www.trailblazeprep.com)'
+        )
+        const data = await scrapePage(contentPage, url, 'trailblazeprep')
+        addChunks(data)
+      } finally {
+        await contentPage.close().catch(() => {})
+      }
       await sleep(DELAY_TBPREP)
-    }
-    await contentPage.close()
-
-    // -----------------------------------------------------------------------
-    // 2. Trailhead credential overview pages
-    // -----------------------------------------------------------------------
-    process.stdout.write('\n--- Trailhead Credential Pages ---\n')
-    const thPage = await browser.newPage()
-    await thPage.setUserAgent(
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    )
-
-    for (let i = 0; i < TRAILHEAD_CRED_SLUGS.length; i++) {
-      const slug = TRAILHEAD_CRED_SLUGS[i]
-      const url = `https://trailhead.salesforce.com/en/credentials/${slug}/`
-      process.stdout.write(`[${i + 1}/${TRAILHEAD_CRED_SLUGS.length}] ${slug}\n`)
-      const data = await scrapePage(thPage, url, 'trailhead')
-      addChunks(data)
-      await sleep(DELAY_TRAILHEAD)
-    }
-    await thPage.close()
-
-    // -----------------------------------------------------------------------
-    // 3. Trailhead Academy — all offerings page (JS-heavy SPA)
-    // -----------------------------------------------------------------------
-    process.stdout.write('\n--- Trailhead Academy ---\n')
-    const acadPage = await browser.newPage()
-    await acadPage.setUserAgent(
-      'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36'
-    )
-
-    try {
-      process.stdout.write('Loading Trailhead Academy offerings...\n')
-      await acadPage.goto(
-        'https://trailheadacademy.salesforce.com/all-offerings#f-assetType=Certification',
-        { waitUntil: 'networkidle2', timeout: 60_000 }
-      )
-      // Extra wait for SPA rendering
-      await sleep(4000)
-
-      const acadData = await acadPage.evaluate(() => {
-        const title = 'Salesforce Trailhead Academy — Certification Offerings'
-        // Try to find offering cards; fall back to full page text
-        const cards = [...document.querySelectorAll('[class*="card"], [class*="offering"], [class*="result"], li')]
-        const cardText = cards.map(c => c.textContent?.trim()).filter(t => t && t.length > 30).join('\n\n')
-        const fallback = (document.querySelector('main') || document.body).innerText
-        return { title, text: (cardText || fallback).replace(/\s+/g, ' ').trim() }
-      })
-
-      addChunks({
-        url: 'https://trailheadacademy.salesforce.com/all-offerings',
-        source: 'trailheadacademy',
-        title: acadData.title,
-        content: acadData.text,
-      })
-    } catch (err) {
-      process.stderr.write(`  Failed to scrape Trailhead Academy: ${err.message}\n`)
-    } finally {
-      await acadPage.close()
     }
 
   } finally {
-    await browser.close()
+    await browser.close().catch(() => {})
   }
 
   // -------------------------------------------------------------------------
