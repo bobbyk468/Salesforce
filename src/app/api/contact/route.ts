@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import { CONTACT_EMAIL } from '@/lib/constants'
+import { getRuntimeSecret } from '@/lib/runtime-secrets'
 
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX = 5
@@ -43,7 +44,7 @@ export async function POST(request: Request) {
       )
     }
 
-    const apiKey = process.env.RESEND_API_KEY
+    const apiKey = await getRuntimeSecret('RESEND_API_KEY')
     if (!apiKey) {
       // Log for debugging (won't expose the key, just confirms it's missing)
       console.error('[Contact API] RESEND_API_KEY is missing. Available env vars:', Object.keys(process.env).filter(k => k.includes('RESEND')))

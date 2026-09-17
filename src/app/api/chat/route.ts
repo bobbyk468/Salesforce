@@ -1,5 +1,6 @@
 import { NextResponse } from 'next/server'
 import knowledgeBase from '../../../../bot-data/knowledge-base.json'
+import { getRuntimeSecret } from '@/lib/runtime-secrets'
 
 // ---------------------------------------------------------------------------
 // BM25 — retrieval at query time with no external deps or API calls
@@ -163,7 +164,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
 
-    const apiKey = process.env.GROQ_API_KEY
+    const apiKey = await getRuntimeSecret('GROQ_API_KEY')
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Bot is temporarily unavailable. Please try again later.' },
