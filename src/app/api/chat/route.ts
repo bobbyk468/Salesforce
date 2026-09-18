@@ -163,13 +163,7 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
 
-    // Chatbot temporarily disabled — re-enable by restoring Groq integration below
-    return NextResponse.json(
-      { error: 'The assistant is temporarily unavailable. Please check back soon.' },
-      { status: 503 }
-    )
-
-    const apiKey = process.env.GROQ_API_KEY || process.env.STRIPE_SECRET_KEY
+    const apiKey = process.env.GROQ_API_KEY
     if (!apiKey) {
       return NextResponse.json(
         { error: 'Bot is temporarily unavailable. Please try again later.' },
@@ -194,7 +188,7 @@ export async function POST(request: Request) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        model: 'llama-3.3-70b-versatile',
+        model: 'openai/gpt-oss-20b',
         stream: true,
         max_tokens: 350,
         temperature: 0.2,
