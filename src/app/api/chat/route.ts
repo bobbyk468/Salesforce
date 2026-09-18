@@ -163,6 +163,12 @@ export async function POST(request: Request) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
     }
 
+    // Chatbot temporarily disabled — re-enable by restoring Groq integration below
+    return NextResponse.json(
+      { error: 'The assistant is temporarily unavailable. Please check back soon.' },
+      { status: 503 }
+    )
+
     const apiKey = process.env.GROQ_API_KEY || process.env.STRIPE_SECRET_KEY
     if (!apiKey) {
       return NextResponse.json(
@@ -216,9 +222,7 @@ export async function POST(request: Request) {
     return new Response(groqRes.body, {
       headers: {
         'Content-Type': 'text/event-stream',
-        'Cache-Control': 'no-cache',
-        'X-Accel-Buffering': 'no',
-        Connection: 'keep-alive',
+        'Cache-Control': 'no-cache, no-transform',
       },
     })
   } catch (err) {
