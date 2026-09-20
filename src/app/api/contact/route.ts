@@ -62,7 +62,7 @@ export async function POST(request: Request) {
       body: JSON.stringify({
         from: 'Trailblaze Prep <noreply@trailblazeprep.com>',
         to: [CONTACT_EMAIL],
-        replyTo: `${username} <${email}>`,
+        reply_to: `${username} <${email}>`,
         subject: `Contact Form: ${examName ? `[${examName}] ` : ''}${username}`,
         text: `Name: ${username}\nEmail: ${email}\nExam/Certification: ${examName || '(not specified)'}\n\nMessage:\n${content}`,
       }),
