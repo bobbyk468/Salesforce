@@ -1,6 +1,5 @@
 import { NextResponse } from 'next/server'
 import { CONTACT_EMAIL } from '@/lib/constants'
-import { getRuntimeSecret } from '@/lib/runtime-secrets'
 
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX = 5
@@ -44,7 +43,7 @@ export async function POST(request: Request) {
       )
     }
 
-    const apiKey = await getRuntimeSecret('RESEND_API_KEY')
+    const apiKey = process.env.RESEND_API_KEY
     if (!apiKey) {
       // Log for debugging (won't expose the key, just confirms it's missing)
       console.error('[Contact API] RESEND_API_KEY is missing. Available env vars:', Object.keys(process.env).filter(k => k.includes('RESEND')))
@@ -61,7 +60,7 @@ export async function POST(request: Request) {
         Authorization: `Bearer ${apiKey}`,
       },
       body: JSON.stringify({
-        from: 'Trailblaze Prep <onboarding@resend.dev>',
+        from: 'Trailblaze Prep <noreply@trailblazeprep.com>',
         to: [CONTACT_EMAIL],
         reply_to: `${username} <${email}>`,
         subject: `Contact Form: ${examName ? `[${examName}] ` : ''}${username}`,

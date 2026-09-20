@@ -23,15 +23,8 @@ const nextConfig = {
   productionBrowserSourceMaps: false, // avoid shipping .map files; keeps payload smaller
   async redirects() {
     return [
-      // Canonical www (apex → www). GSC may list http(s)://trailblazeprep.com/... as "Page with redirect"
-      // — that is expected; Google indexes https://www.trailblazeprep.com/... instead. Align
-      // NEXT_PUBLIC_SITE_URL in Vercel with www so sitemap.xml / robots host are not all redirects.
-      {
-        source: '/:path*',
-        has: [{ type: 'host', value: 'trailblazeprep.com' }],
-        destination: 'https://www.trailblazeprep.com/:path*',
-        permanent: true,
-      },
+      // apex → www redirect is handled by Cloudflare edge rule, not Next.js.
+      // Removing it here prevents OpenNext/Workers from outputting ":path*" literally.
       // 301 redirects for old cert slugs that were renamed
       // Old slug → current slug (prevents 404s from external links / Ahrefs)
       {
