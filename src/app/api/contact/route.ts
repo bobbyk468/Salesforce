@@ -63,7 +63,7 @@ export async function POST(request: Request) {
         from: 'Trailblaze Prep <noreply@trailblazeprep.com>',
         to: [CONTACT_EMAIL],
         reply_to: `${username} <${email}>`,
-        subject: `Contact Form: ${examName ? `[${examName}] ` : ''}${username}`,
+        subject: `Contact Form: ${examName ? `[${examName}] ` : ''}${username} <${email}>`,
         text: `Name: ${username}\nEmail: ${email}\nExam/Certification: ${examName || '(not specified)'}\n\nMessage:\n${content}\n\n---\nReply directly to: ${email}`,
         html: `<p><strong>Name:</strong> ${username}</p><p><strong>Email:</strong> <a href="mailto:${email}">${email}</a></p><p><strong>Exam/Certification:</strong> ${examName || '(not specified)'}</p><hr><p><strong>Message:</strong></p><p>${content.replace(/\n/g, '<br>')}</p><hr><p style="color:#888;font-size:13px;">Reply directly to: <a href="mailto:${email}">${email}</a></p>`,
       }),
