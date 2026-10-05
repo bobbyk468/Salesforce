@@ -61,6 +61,7 @@ pending_indexing_urls.txt
 __pycache__/
 *.pyc
 *.pyo
+/.venv-seo/
 
 # Tweet images (generated locally; large binary assets not for git)
 scripts/tweet-images/
