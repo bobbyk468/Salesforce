@@ -4,50 +4,49 @@
     "heading": "Who is the Technical Architect Evaluation exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Salesforce architecture features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "CTA candidates preparing to apply",
+        "description": "You hold both architect credentials and need to clear this stage before the review board opens."
       },
       {
-        "label": "Solution designers",
-        "description": "You support Salesforce projects where Solution Design, Security & Identity, and Integration Architecture decisions affect the final design."
+        "label": "Senior architects testing readiness",
+        "description": "You want an honest signal on whether your design and defence skills are board standard."
       },
       {
-        "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+        "label": "Practice leads coaching candidates",
+        "description": "You prepare others for CTA and need to know what this stage actually assesses."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Technical Architect Evaluation Exam Hard?",
-    "summary": "The Technical Architect Evaluation exam is very challenging. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "This is stage one of the CTA assessment, not a standard exam. You work through a scenario with a Salesforce evaluator, produce a design and discuss it. Its job is to confirm you are ready for the review board before you commit to the larger fee.",
     "bullets": [
-      "<strong>60 questions</strong> in Timed.",
-      "<strong>Per exam passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Solution Design, Security & Identity, or Integration Architecture.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Salesforce architecture in a real org are better prepared than candidates who only memorize notes."
+      "<strong>Not a multiple-choice exam.</strong> You are assessed on a scenario-based design and how you explain it.",
+      "<strong>Prerequisites first.</strong> Application Architect and System Architect must both be active.",
+      "<strong>It gates the board.</strong> Passing this stage is what gives you access to the review board.",
+      "<strong>Fee:</strong> third-party sources put this stage at around US$1,500, with the board separate. Confirm current fees with Salesforce."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "You are ready when you can read a scenario, produce a defensible design inside the time given, and explain each choice without notes. If you have never been challenged on a design out loud, practise that before booking."
   },
   "examFormat": {
     "heading": "Technical Architect Evaluation Exam Format Explained",
-    "intro": "The Technical Architect Evaluation is a Salesforce architecture assessment. Use the format below to plan preparation, design-review practice, and readiness checks.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Salesforce architecture.",
+    "intro": "This stage is a scenario-based assessment with an evaluator, not a question paper. Here is what to expect:",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Solution Design, Security & Identity, and Integration Architecture because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Read the scenario twice before designing:</strong> Most lost marks come from solving a slightly different problem from the one described.",
+      "<strong>Work to a structure:</strong> Cover data, security, integration, development lifecycle and licensing every time, so nothing is forgotten under time pressure.",
+      "<strong>Say what you rejected:</strong> Naming the alternative and why you did not take it is what demonstrates judgement.",
+      "<strong>Practise with a timer:</strong> The constraint is time, not knowledge. Produce complete designs under the clock before you book."
     ]
   },
   "practiceQuestionsIntroSuffix": "— practice scenario-style thinking and technical architecture concepts for the Architect Evaluation.",
   "certificationCard": {
     "code": "CTA Step 1",
-    "description": "The Architect Evaluation is the first step toward CTA. It assesses your ability to design secure, scalable, integrated solutions through scenario-based and multiple-choice questions. Passing this qualifies you for the Architect Review Board.",
+    "description": "Stage one of the CTA assessment. You work through an enterprise scenario with a Salesforce evaluator, design a solution and discuss it. Passing opens access to the review board.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "Per exam",
-      "duration": "Timed",
-      "cost": "Part of CTA"
+      "questions": "Scenario-based",
+      "passingScore": "Evaluator decision",
+      "duration": "Timed session",
+      "cost": "~$1,500"
     },
     "topics": [
       "Solution Design",
@@ -62,57 +61,65 @@
     "h2": "CTA Evaluation: Key Concepts for Success",
     "blocks": [
       {
-        "heading": "Scenario-Based Assessment Format",
-        "body": "The Salesforce CTA (Certified [Technical Architect](/certifications/technical-architect)) Review Board is a scenario-based oral examination — not a multiple-choice test. Candidates receive a multi-page business scenario 30 minutes before their 2-hour board session. The scenario describes a fictional company with a complex Salesforce + external system landscape, business requirements, and technical constraints. The candidate must design a complete solution architecture, present it to a panel of 3–4 CTA evaluators, and defend it under challenge. The evaluation tests architectural thinking, communication of trade-offs, adaptability when the scenario changes, and mastery of all Salesforce platform areas."
+        "heading": "What This Stage Is For",
+        "body": "The architect evaluation exists so that neither you nor Salesforce spends the time and cost of a full review board before you are ready. It uses the same raw material as the board, a hypothetical company with goals, systems and constraints, but on a smaller scale and with a single evaluator rather than a panel. Passing it is the gate to booking the board. Treat it as a genuine attempt: the skills it checks, reading requirements accurately and justifying design choices, are the same ones the board will test more harshly."
       },
       {
-        "heading": "Architecture Decision Justification",
-        "body": "Every architecture decision must be justified with three elements: the business requirement it satisfies, the technical reasoning (why this approach over alternatives), and the explicit trade-offs (cost, complexity, maintainability, risk). Evaluators specifically probe whether candidates can articulate why they chose X over Y — not just what they chose. Common decision areas: single org vs. multi-org, declarative vs. code, synchronous vs. async, **AppExchange** vs. custom build, Salesforce-native data store vs. external database. Preparation tip: for each major decision in practice scenarios, explicitly say \"I chose X over Y because...\" and name the specific trade-offs. Vague answers are probed until the candidate either justifies or concedes."
+        "heading": "Reading the Scenario Properly",
+        "body": "Scenarios are written with detail that matters and detail that does not. Pull out the actual requirements, the constraints such as data residency, existing systems or budget, and the things that are merely background. The most common failure in this format is designing for the problem you expected rather than the one in front of you. Write the requirements down as a list and tick them off against your design before you present it, so you can show coverage rather than hope for it."
       },
       {
-        "heading": "Risk & Trade-off Analysis",
-        "body": "CTAs are expected to proactively identify risks in their own designs — evaluators expect candidates to say \"One risk with this approach is...\" before being asked. Risk categories: technical risks (**governor limits**, data volume, API capacity), business risks (adoption, change management, vendor lock-in), operational risks (monitoring, support, upgrades), and security/compliance risks. Mitigation strategies must be specific — not \"we will monitor it\" but \"we will implement a dead letter queue with alerting and a manual reprocessing workflow for failed events.\" Risk scoring (probability × impact) demonstrates mature architectural thinking. The evaluation rewards candidates who are intellectually honest about their design's weaknesses."
+        "heading": "Producing a Defensible Design",
+        "body": "A good answer is complete, not clever. Cover the data model, how records are secured and shared, how systems integrate, how changes are released, and what licences the solution implies. Prefer standard platform capability over custom build, and be explicit when you are choosing custom and why. Keep the design proportionate: an enterprise scenario does not require every Salesforce product, and adding components you cannot justify creates questions you will have to answer."
       },
       {
-        "heading": "Defense of Design Choices",
-        "body": "The Review Board will challenge design choices with \"What if...\" and \"Why not...\" questions to test whether the candidate truly understands the solution or memorized a template. Common challenges: \"What if the integration endpoint goes down for 4 hours during business hours?\", \"What if your MuleSoft solution is over budget — what is the fallback?\", \"Why didn't you use a Platform Event here instead of a REST callout?\" Candidates should respond with: acknowledge the challenge, explain the impact on the current design, and either defend it (with new justification) or adapt it (with a revised approach). Changing a design under challenge is not failure — it demonstrates that the architect can think dynamically."
+        "heading": "Explaining and Defending Choices",
+        "body": "The discussion matters as much as the diagram. For each significant decision, be able to state the requirement it serves, the alternative you considered, and the trade-off you accepted. Acknowledge weaknesses before they are pointed out, which reads as analysis rather than defensiveness. If the evaluator challenges a choice, do not abandon it immediately, but do not dig in against a good argument either. Reasoned adjustment is a positive signal; capitulation and stubbornness are both negative ones."
       },
       {
-        "heading": "Evaluator Rubric & Common Failure Areas",
-        "body": "The CTA Review Board evaluates candidates on: Breadth (covering all required architecture areas), Depth (detailed, specific answers in each area), Communication (clear diagrams, structured verbal explanations), and Adaptability (handling scenario changes and challenges gracefully). Common failure areas: (1) Focusing only on Salesforce and ignoring external systems. (2) Providing generic answers without specific Salesforce feature references. (3) Failing to address security, data architecture, or integration explicitly. (4) Reacting defensively to challenges instead of engaging constructively. (5) Running out of time before covering all scenario requirements. Preparation: complete 10+ full mock Review Board sessions with peer CTAs or coaches, record and review yourself, and practice under time pressure."
+        "heading": "Preparing for This Stage",
+        "body": "Work from full scenarios rather than topic revision. Set a timer, produce a complete design, then present it to someone who will ask why. Build a repeatable running order so coverage is automatic. Record yourself and listen for the places where you talk around a decision rather than making one. Candidates who clear this stage comfortably have usually rehearsed the full cycle, reading, designing and defending, several times before booking."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Technical Architect Evaluation Exam",
-    "intro": "The CTA Evaluation program assesses your readiness for the Review Board through a structured evaluation process. Focus on demonstrating architectural breadth, clear communication, and the ability to handle ambiguous requirements.",
+    "intro": "This stage rewards accuracy and structure more than ambition. Solve exactly the problem described, and show your reasoning as you go.",
     "blocks": [
       {
-        "heading": "Demonstrating Architecture Breadth",
-        "body": "Evaluators look for evidence of experience across all CTA domains: data architecture, integration, security, UX, environment management, and data migration. Build a portfolio of real-world architectural decisions."
+        "heading": "Requirement Coverage",
+        "body": "List the stated requirements and map each to part of your design. Missing one is the most common and most avoidable failure."
       },
       {
         "heading": "Handling Ambiguity",
-        "body": "CTA evaluations present deliberately ambiguous scenarios. Practice asking clarifying questions, stating your assumptions clearly, and designing solutions that are flexible enough to accommodate multiple interpretations."
+        "body": "If something is unclear, state the assumption you are making and carry on. An explicit assumption is acceptable; a silent one is not."
       },
       {
-        "heading": "Whiteboard Communication",
-        "body": "Practice whiteboarding architecture diagrams quickly and clearly. Your diagram should show system boundaries, integration points, data flows, and key design decisions — without being cluttered."
+        "heading": "Clear Diagrams",
+        "body": "A readable diagram you can talk through beats a dense one you cannot. Label the integrations and the data flows."
       },
       {
         "heading": "Justification Framework",
-        "body": "Use a consistent framework: state the requirement, present options, identify trade-offs for each, and recommend with clear rationale. This structured approach demonstrates CTA-level thinking."
+        "body": "Requirement, decision, alternative considered, trade-off accepted. Apply it to every significant choice."
       },
       {
-        "heading": "Prepare with Mock Sessions",
-        "body": "The CTA community regularly runs mock Review Board sessions. Participating in these is the single most effective preparation strategy — treat each mock as the real thing and seek detailed feedback."
+        "heading": "Timed Practice",
+        "body": "Knowledge is rarely the limit. Practise producing a complete design inside the time allowed."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "Where this sits in the CTA path:",
     "links": [
+      {
+        "href": "/certifications/technical-architect-review-board",
+        "label": "Review Board (stage two)"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
+      },
       {
         "href": "/certifications/application-architect",
         "label": "Application Architect"
@@ -120,14 +127,6 @@
       {
         "href": "/certifications/system-architect",
         "label": "System Architect"
-      },
-      {
-        "href": "/certifications/technical-architect",
-        "label": "Technical Architect (CTA)"
-      },
-      {
-        "href": "/architect-certification-path",
-        "label": "Architect certification path"
       }
     ]
   },
@@ -167,259 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does the CTA Architect Evaluation primarily assess?",
+      "question": "What is the main purpose of the architect evaluation stage?",
       "options": [
-        "Scenario-based architecture design and multiple-choice technical knowledge",
-        "Only documentation",
-        "Only coding skills",
-        "Only presentation skills"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The Architect Evaluation is a scenario-based exam that tests your ability to design solutions and answer technical architecture questions.",
-      "whyWrong": [
-        "'Only documentation' undersells the Evaluation's actual scope, which includes technical knowledge testing too.",
-        "'Only coding skills' misrepresents the Evaluation, which assesses architecture design and technical knowledge broadly, not coding ability.",
-        "'Only presentation skills' undersells the Evaluation, which also tests scenario-based design and technical knowledge."
-      ]
-    },
-    {
-      "question": "Which certifications are typically required before taking the Architect Evaluation?",
-      "options": [
-        "Platform Developer II only",
-        "Sales Cloud Consultant only",
-        "None",
-        "Application Architect and System Architect (or equivalent)"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Application Architect and System Architect (or equivalent) are typical prerequisites for the CTA path.",
-      "whyWrong": [
-        "Platform Developer II alone doesn't provide the broad architectural foundation required.",
-        "Sales Cloud Consultant alone doesn't provide the broad architectural foundation required.",
-        "'None' contradicts the fact that specific prerequisite credentials are typically required."
-      ]
-    },
-    {
-      "question": "What is a key deliverable of the Architect Evaluation?",
-      "options": [
-        "A written essay only",
-        "A multiple-choice exam only",
-        "A live coding session",
-        "A solution design addressing the scenario requirements, constraints, and trade-offs"
-      ],
-      "correctAnswer": 3,
-      "explanation": "The evaluation requires designing a solution that addresses the scenario's requirements, constraints, and trade-offs.",
-      "whyWrong": [
-        "A written essay alone doesn't capture the structured solution design deliverable the Evaluation requires.",
-        "A multiple-choice exam alone doesn't capture the scenario-based solution design deliverable required.",
-        "A live coding session doesn't reflect the Evaluation's actual focus on solution design, not implementation."
-      ]
-    },
-    {
-      "question": "When designing a multi-org integration, which pattern supports data consistency?",
-      "options": [
-        "Point-to-point only",
-        "Event-driven architecture with a centralized event bus",
-        "Batch file transfer only",
-        "Synchronous REST only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Event-driven architecture with a central bus (e.g., Platform Events, MuleSoft) supports loose coupling and consistency.",
-      "whyWrong": [
-        "Point-to-point integration doesn't scale well for multi-org consistency — that's what event-driven architecture with a central bus addresses.",
-        "Batch file transfer introduces latency and doesn't support the real-time consistency needs typically addressed by event-driven patterns.",
-        "Synchronous REST alone doesn't provide the consistency mechanism a centralized event bus offers for multi-org scenarios."
-      ]
-    },
-    {
-      "question": "What is the primary benefit of using a canonical data model in integration?",
-      "options": [
-        "Lower cost only",
-        "Reducing point-to-point mappings and simplifying maintenance across systems",
-        "Faster coding",
-        "Fewer APIs"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Canonical models reduce coupling and simplify transformations between multiple source and target systems.",
-      "whyWrong": [
-        "Lower cost alone undersells the canonical data model's core benefit around mapping simplification.",
-        "Faster coding isn't the benefit of a canonical data model — that benefit is about integration maintainability, not coding speed.",
-        "Fewer APIs isn't the specific benefit — a canonical model reduces mapping complexity, not necessarily the API count."
-      ]
-    },
-    {
-      "question": "Which security consideration is critical when designing a customer-facing Community?",
-      "options": [
-        "Theme selection only",
-        "Colors only",
-        "Guest user access, sharing rules, and data visibility per experience",
-        "License count only"
+        "To replace the System Architect credential",
+        "To award the CTA credential",
+        "To confirm a candidate is ready before they book the full review board",
+        "To test Apex coding under time pressure"
       ],
       "correctAnswer": 2,
-      "explanation": "Guest access, sharing, and profile-based visibility must be designed to protect data while enabling the right access.",
+      "explanation": "It is a readiness assessment that gates access to the board, so neither side commits to the larger stage too early.",
       "whyWrong": [
-        "Theme selection is a visual design detail, unrelated to data security for guest users.",
-        "Colors are a visual design detail, not a security consideration for guest user access.",
-        "License count alone doesn't address the specific data visibility/sharing concerns critical for guest access design."
+        "It does not replace any prerequisite credential.",
+        "The credential is awarded after the board, not here.",
+        "There is no coding component."
       ]
     },
     {
-      "question": "When should you recommend Heroku vs Salesforce Platform for an application?",
+      "question": "A scenario states that customer data must remain in the EU. A candidate's design stores it in a US-hosted system without comment. What is the problem?",
       "options": [
-        "Heroku for polyglot, high-throughput, or non-Salesforce-centric workloads; Platform for CRM-centric, declarative-first",
-        "Always Heroku",
-        "No difference",
-        "Always Platform"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Heroku suits polyglot and high-scale; Platform suits CRM-centric, declarative, and Salesforce-native apps.",
-      "whyWrong": [
-        "'Always Heroku' oversimplifies the decision, which depends on workload characteristics, not a blanket rule.",
-        "'No difference' contradicts the real, meaningful differences in fit between Heroku and the Salesforce Platform.",
-        "'Always Platform' oversimplifies the decision, which depends on workload characteristics, not a blanket rule."
-      ]
-    },
-    {
-      "question": "What role does the Role Hierarchy play in record-level security?",
-      "options": [
-        "Only for reports",
-        "Only for dashboards",
-        "No role",
-        "Users can inherit access to records owned by users below them in the hierarchy"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Role hierarchy grants upward visibility: users see records owned by roles below them.",
-      "whyWrong": [
-        "'Only for reports' undersells role hierarchy's broader record-access impact beyond just reports.",
-        "'Only for dashboards' undersells role hierarchy's broader record-access impact beyond just dashboards.",
-        "'No role' contradicts the fact that role hierarchy has a defined, real impact on record-level security."
-      ]
-    },
-    {
-      "question": "Which pattern supports high-volume, asynchronous integration with external systems?",
-      "options": [
-        "Synchronous callouts only",
-        "Process Builder only",
-        "Change Data Capture, Platform Events, or message queues",
-        "Workflow rules only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "CDC, Platform Events, and queues support asynchronous, scalable integration without blocking transactions.",
-      "whyWrong": [
-        "Synchronous callouts don't support the high-volume, asynchronous scenario the question specifically describes.",
-        "Process Builder isn't designed for high-volume, asynchronous external integration.",
-        "Workflow rules aren't designed for external system integration at volume."
-      ]
-    },
-    {
-      "question": "What is a key trade-off when using a large data volume (LDV) strategy with Big Objects?",
-      "options": [
-        "Cost only",
-        "Query flexibility vs. storage and retention; Big Objects are append-only, optimized for analytics",
-        "No trade-offs",
-        "Performance only"
+        "It affects cost but not the assessment",
+        "A stated constraint has been ignored, which undermines the whole design",
+        "It only matters if the evaluator asks about it",
+        "Nothing, as data location is an infrastructure concern"
       ],
       "correctAnswer": 1,
-      "explanation": "Big Objects are append-only and optimized for analytics; they trade flexible querying for scale and retention.",
+      "explanation": "Constraints in the scenario are requirements. Ignoring one, especially a regulatory one, is a serious failure.",
       "whyWrong": [
-        "'Cost only' undersells the broader trade-off, which is specifically about query flexibility versus storage/retention design.",
-        "'No trade-offs' contradicts the fact that Big Objects involve real trade-offs between query flexibility and analytics optimization.",
-        "'Performance only' undersells the broader trade-off, which spans storage and retention considerations too."
+        "It is a compliance failure, not a cost question.",
+        "The candidate is expected to address it unprompted.",
+        "Data residency is an architecture decision, not someone else's problem."
       ]
     },
     {
-      "question": "When designing for multi-currency, what must an architect consider?",
+      "question": "Partway through, a candidate realises a requirement is ambiguous. What is the best approach?",
       "options": [
-        "Only one currency",
-        "Only display",
-        "Advanced Currency Management, conversion dates, and reporting currency",
-        "Only manual entry"
-      ],
-      "correctAnswer": 2,
-      "explanation": "ACM, conversion dates, and reporting currency affect accuracy and compliance in multi-currency orgs.",
-      "whyWrong": [
-        "'Only one currency' is the opposite of what multi-currency design specifically requires.",
-        "'Only display' undersells multi-currency design, which requires backend conversion date and reporting currency configuration.",
-        "'Only manual entry' contradicts the fact that Advanced Currency Management automates conversion handling."
-      ]
-    },
-    {
-      "question": "Which governance practice reduces technical debt in a Salesforce org?",
-      "options": [
-        "Release management, code review, and org-level standards (naming, limits)",
-        "Only documentation",
-        "Only training",
-        "No governance"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Release management, code review, and org standards help maintain quality and reduce debt over time.",
-      "whyWrong": [
-        "'Only documentation' undersells governance, which spans release management and code review, not just documentation.",
-        "'Only training' undersells governance, which spans structural practices beyond just training.",
-        "'No governance' contradicts the fact that release management and standards are real governance practices that reduce technical debt."
-      ]
-    },
-    {
-      "question": "What does the Sharing Calculator help an architect with?",
-      "options": [
-        "Storage only",
-        "License costs",
-        "Estimating share row counts and identifying sharing rule complexity",
-        "User count only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The Sharing Calculator estimates row-level security load and helps optimize sharing design.",
-      "whyWrong": [
-        "Storage alone is unrelated to the Sharing Calculator's specific purpose around sharing rule impact.",
-        "License costs are a separate concern, not what the Sharing Calculator specifically estimates.",
-        "User count alone doesn't capture the share-row and rule-complexity estimation the Sharing Calculator provides."
-      ]
-    },
-    {
-      "question": "When should an architect recommend a custom LWC over a Flow screen?",
-      "options": [
-        "Always Flow",
-        "When complex UI, heavy logic, or reusable components are required",
-        "Never",
-        "Always LWC"
+        "Stop and wait for clarification",
+        "State the assumption being made and design on that basis",
+        "Ignore the requirement entirely",
+        "Design for every possible interpretation"
       ],
       "correctAnswer": 1,
-      "explanation": "LWC suits complex, reusable UI; Flow suits simpler, declarative screens and guided processes.",
+      "explanation": "Making an assumption explicit shows judgement and lets the evaluator follow the reasoning.",
       "whyWrong": [
-        "'Always Flow' oversimplifies the decision — Flow isn't always sufficient for complex UI or heavy logic needs.",
-        "'Never' contradicts the fact that custom LWC is genuinely the right choice for certain complex scenarios.",
-        "'Always LWC' oversimplifies the decision, which depends on complexity, not a blanket rule."
+        "Candidates are expected to proceed, not stall.",
+        "Ignoring a requirement loses coverage.",
+        "Designing for every interpretation produces a bloated, unfocused solution."
       ]
     },
     {
-      "question": "Which integration pattern supports real-time, transactional sync between Salesforce and an ERP?",
+      "question": "Which approach to a design decision demonstrates the judgement being assessed?",
       "options": [
-        "Synchronous API (REST/SOAP) or event-driven with immediate processing",
-        "Batch only",
-        "File-based only",
-        "No real-time option"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Synchronous APIs or event-driven flows with immediate handlers support real-time transactional sync.",
-      "whyWrong": [
-        "'Batch only' undersells the real-time integration patterns (synchronous API, event-driven) that support transactional ERP sync.",
-        "'File-based only' doesn't support the real-time, transactional sync the question specifically asks about.",
-        "'No real-time option' contradicts the fact that real-time integration patterns genuinely exist for this scenario."
-      ]
-    },
-    {
-      "question": "What is the purpose of a Solution Architecture Document (SAD)?",
-      "options": [
-        "Marketing only",
-        "Only for admins",
-        "Only for developers",
-        "Documenting requirements, design decisions, trade-offs, and implementation approach for stakeholders"
+        "Deferring every decision to the client's preference",
+        "Choosing the most technically advanced option available",
+        "Using as many Salesforce products as possible",
+        "Naming the requirement, the option chosen, the alternative rejected and the trade-off"
       ],
       "correctAnswer": 3,
-      "explanation": "A SAD captures architecture decisions, rationale, and implementation approach for alignment and handoff.",
+      "explanation": "The assessment is about reasoning: what you chose, against what, and at what cost.",
       "whyWrong": [
-        "'Marketing only' misrepresents the SAD's audience and purpose, which is broader technical/business documentation.",
-        "'Only for admins' undersells the SAD's broader audience beyond just admins.",
-        "'Only for developers' undersells the SAD's broader audience, which includes business and other stakeholders."
+        "An unexplained client preference is not architecture.",
+        "Advanced is not the same as appropriate.",
+        "Unjustified components invite questions you cannot answer."
+      ]
+    },
+    {
+      "question": "A candidate designs a custom solution for something a standard Salesforce feature already does. How is this likely to be viewed?",
+      "options": [
+        "Neutrally, since both work",
+        "Positively, as it shows technical depth",
+        "Negatively, unless the candidate can justify why the standard feature was unsuitable",
+        "Positively, as custom code is more flexible"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Standard capability is preferred. Custom build needs a reason, such as a requirement the standard feature genuinely cannot meet.",
+      "whyWrong": [
+        "They are not equivalent: custom build carries maintenance cost.",
+        "Depth is shown by judgement, not by building more.",
+        "Flexibility does not outweigh the cost without a reason."
+      ]
+    },
+    {
+      "question": "What must be in place before taking this stage?",
+      "options": [
+        "A completed Trailhead superbadge",
+        "Active Application Architect and System Architect credentials",
+        "Three years of Salesforce employment",
+        "Only the Administrator credential"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both role-based architect credentials are prerequisites for the CTA path.",
+      "whyWrong": [
+        "Superbadges are not a CTA prerequisite.",
+        "There is no employment-length rule.",
+        "Administrator alone is far short of the requirement."
+      ]
+    },
+    {
+      "question": "Why is timed practice more useful than further reading for this stage?",
+      "options": [
+        "The constraint is producing a complete design in the time given, not knowledge",
+        "Reading is discouraged by Salesforce",
+        "The scenario is published in advance",
+        "Timed practice guarantees a pass"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Candidates at this level usually know the platform. What they lack is speed and structure under pressure.",
+      "whyWrong": [
+        "Reading is useful, just not the binding constraint.",
+        "The scenario is not published beforehand.",
+        "Nothing guarantees a pass."
+      ]
+    },
+    {
+      "question": "An evaluator challenges a candidate's integration choice with a reasonable objection. What is the best response?",
+      "options": [
+        "Engage with the objection and adjust if the argument is sound",
+        "Change the requirement to fit the design",
+        "Abandon the choice immediately",
+        "Refuse to discuss it further"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Reasoned adjustment shows judgement. Both instant capitulation and stubbornness read badly.",
+      "whyWrong": [
+        "The requirements are fixed.",
+        "Dropping a decision at the first challenge suggests it was never reasoned.",
+        "Refusing to engage fails the communication element."
+      ]
+    },
+    {
+      "question": "Which set of areas should a complete design cover?",
+      "options": [
+        "Only the integration diagram",
+        "Only the user interface",
+        "Only the data model",
+        "Data, security and sharing, integration, development lifecycle and licensing"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A complete answer addresses all of these, which is why a repeatable structure helps under time pressure.",
+      "whyWrong": [
+        "Integration is one area among several.",
+        "User interface is a small part of an enterprise design.",
+        "A data model alone leaves most of the scenario unanswered."
+      ]
+    },
+    {
+      "question": "How does this stage relate to the review board?",
+      "options": [
+        "It is an alternative route that skips the board",
+        "It is taken after the review board",
+        "They are the same assessment under two names",
+        "Passing it gives access to book the review board"
+      ],
+      "correctAnswer": 3,
+      "explanation": "The evaluation comes first and gates the board, which is the final stage.",
+      "whyWrong": [
+        "There is no route to CTA that skips the board.",
+        "The order is evaluation first, then board.",
+        "They are separate stages with separate fees."
+      ]
+    },
+    {
+      "question": "A candidate produces an excellent design but cannot finish explaining it in the time available. What does this suggest?",
+      "options": [
+        "They need a repeatable presentation structure and timed rehearsal",
+        "Design quality alone will carry the result",
+        "The scenario was unfair",
+        "They should add more detail next time"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Covering the required ground in the time given is part of the skill, and a set running order is how candidates achieve it.",
+      "whyWrong": [
+        "An unexplained design cannot be assessed.",
+        "Time pressure is a deliberate part of the format.",
+        "More detail makes the time problem worse."
+      ]
+    },
+    {
+      "question": "What should a candidate do with the stated requirements before presenting?",
+      "options": [
+        "Check each one against the design and be ready to show where it is met",
+        "Prioritise only the technical ones",
+        "Summarise them back verbatim",
+        "Assume the evaluator remembers them"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Demonstrating coverage requirement by requirement is the most direct way to show the design answers the scenario.",
+      "whyWrong": [
+        "Business requirements matter as much as technical ones.",
+        "Repeating them without mapping shows nothing.",
+        "The candidate must show coverage, not assume it."
+      ]
+    },
+    {
+      "question": "Which is the best description of the material used in this stage?",
+      "options": [
+        "A live Salesforce org to configure",
+        "A hypothetical company with goals, existing systems and constraints",
+        "The candidate's own employer",
+        "A bank of multiple-choice questions"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Both CTA stages are built on hypothetical enterprise scenarios.",
+      "whyWrong": [
+        "There is no hands-on configuration.",
+        "Your own projects are not the basis of the assessment.",
+        "There are no multiple-choice questions."
+      ]
+    },
+    {
+      "question": "A design includes middleware that the scenario does not obviously need. What is the risk?",
+      "options": [
+        "It automatically fails the attempt",
+        "It shortens the discussion",
+        "The candidate must justify it, and cannot, which costs credibility",
+        "None, as middleware is always good practice"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Every component invites a question. Anything you cannot justify weakens the overall defence.",
+      "whyWrong": [
+        "One unjustified component is not an automatic failure, but it does damage.",
+        "It lengthens the discussion, in the wrong way.",
+        "Middleware is a choice with costs, not a default."
+      ]
+    },
+    {
+      "question": "What is the most useful form of rehearsal before this stage?",
+      "options": [
+        "Reviewing other people's diagrams silently",
+        "Re-reading the architect exam guides",
+        "Producing timed designs and presenting them to someone who challenges you",
+        "Memorising Salesforce limits"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The format tests designing and defending under time pressure, which only live practice develops.",
+      "whyWrong": [
+        "Passive review does not build the defence skill.",
+        "Those guides cover the prerequisite exams.",
+        "Limits are assumed knowledge at this level."
       ]
     }
   ]

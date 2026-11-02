@@ -4,49 +4,49 @@
     "heading": "Who is the Technical Architect exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with Salesforce architecture features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Senior Salesforce architects",
+        "description": "You already lead large implementations and want the credential that sits at the top of the Salesforce path."
       },
       {
-        "label": "Solution designers",
-        "description": "You support Salesforce projects where Solution Design, Security, and Integration decisions affect the final design."
+        "label": "Consultancy practice leads",
+        "description": "You design multi-cloud solutions for enterprise clients and defend those designs to their executives."
       },
       {
-        "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+        "label": "Long-term platform specialists",
+        "description": "You hold Application Architect and System Architect and are deciding whether to commit to the board."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Technical Architect Exam Hard?",
-    "summary": "The Technical Architect exam is very challenging. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "Technical Architect is the hardest Salesforce credential, and it is not a multiple-choice exam. You hold both Application Architect and System Architect first, then take a two-stage assessment: a readiness evaluation, then a review board where you present a solution and defend it to judges.",
     "bullets": [
-      "<strong>Board-style assessment</strong> — prepare to explain architecture trade-offs clearly, not just choose a multiple-choice answer.",
-      "<strong>Panel evaluation</strong> — success depends on design quality, communication, trade-off analysis, and defensible recommendations.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Solution Design, Security, or Integration.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Salesforce architecture in a real org are better prepared than candidates who only memorize notes."
+      "<strong>Not a multiple-choice exam.</strong> You design a solution to a scenario and defend it live.",
+      "<strong>Two prerequisites.</strong> Application Architect and System Architect, which are themselves eight exams between them, seven of them unique.",
+      "<strong>Two stages.</strong> An architect evaluation first, then the review board.",
+      "<strong>Expensive.</strong> Third-party sources put the total around US$6,000 across both stages. Confirm current fees with Salesforce before committing."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Most successful candidates have run several large Salesforce programmes and have practised the format repeatedly with mock boards. Preparation is usually measured in months of rehearsal, not weeks of reading."
   },
   "examFormat": {
     "heading": "Technical Architect Exam Format Explained",
-    "intro": "The Technical Architect path is a board-style Salesforce architecture credential. Use the format below to plan preparation, presentation practice, and design-review readiness.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Salesforce architecture.",
+    "intro": "There is no multiple-choice CTA exam. Here is how the credential works:",
+    "scenarioPercent": "Both stages are built around a hypothetical enterprise scenario: a company with existing systems, business goals, constraints and problems. You design the solution, then explain and defend it.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Solution Design, Security, and Integration because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Finish the prerequisites first:</strong> Application Architect and System Architect must both be active before you can apply.",
+      "<strong>Practise defending, not reciting:</strong> Judges interrupt and challenge. Rehearse with people who will push back on your choices.",
+      "<strong>Answer the requirement you were given:</strong> Most failures are elegant designs that solve a different problem from the one in the scenario.",
+      "<strong>Be able to justify every box:</strong> If you put middleware on the diagram, be ready to say why, and what you rejected."
     ]
   },
   "certificationCard": {
     "code": "CTA",
-    "description": "The CTA Review Board evaluates your ability to architect end-to-end enterprise solutions on the Salesforce Platform, defending design trade-offs across security, integration, data, and performance under live questioning.",
+    "description": "Technical Architect is Salesforce's top credential. It is awarded through a two-stage assessment rather than a multiple-choice exam: a readiness evaluation, then a review board where you present and defend an architecture for a hypothetical enterprise scenario.",
     "examDetails": {
-      "questions": "Board exam",
-      "passingScore": "Board review",
-      "duration": "Board",
-      "cost": "$1,500"
+      "questions": "No MCQ exam",
+      "passingScore": "Board decision",
+      "duration": "Two stages",
+      "cost": "~$6,000 total"
     },
     "topics": [
       "Solution Design",
@@ -65,56 +65,56 @@
     "h2": "Salesforce Technical Architect (CTA): Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Architecture Principles & Design Governance",
-        "body": "The Salesforce Certified [Technical Architect](/certifications/technical-architect) (CTA) credential is the highest-level Salesforce certification. CTAs demonstrate mastery of designing end-to-end enterprise solutions across the full Salesforce platform and beyond. Core architecture principles: loose coupling, high cohesion, separation of concerns, idempotency, and graceful degradation. The Salesforce Well-Architected framework (Trusted, Easy, Adaptable) guides all design decisions. Architects document designs with ADRs (Architecture Decision Records), data flow diagrams, and integration sequence diagrams. The CTA exam — a Review Board scenario — tests the ability to justify every architectural decision under challenge, explain trade-offs, and adapt the design when the scenario changes mid-presentation."
+        "heading": "How the Credential Is Structured",
+        "body": "CTA sits on top of the two role-based architect credentials. **Application Architect** is awarded for Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. **System Architect** is awarded for Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. Platform Developer I counts toward both, so there are seven distinct exams to pass before CTA is open to you. After that come the two assessment stages, each with its own fee and its own booking."
       },
       {
-        "heading": "Integration Architecture at Scale",
-        "body": "Enterprise integration patterns for CTA: Request-Reply (synchronous REST/SOAP), Publish-Subscribe (**Platform Events**, **Change Data Capture**, Kafka), Batch (**Bulk API**, ETL jobs), and Event Streaming (CDC + MuleSoft). MuleSoft API-led connectivity is the standard recommendation for complex multi-system integrations. API Management (throttling, **OAuth**, versioning) is part of the design. Data consistency patterns: eventual consistency for async, distributed transaction patterns (Saga, Two-Phase Commit) for scenarios requiring atomicity. **Governor limits** (API daily limits, callout limits, event delivery limits) must be explicitly addressed in the architecture. The Review Board will challenge whether the proposed integration can handle peak load and failure scenarios."
+        "heading": "Stage One: The Architect Evaluation",
+        "body": "The first stage is a readiness assessment with a Salesforce evaluator, built around a scenario. It exists to check that you are ready for the full board before you and Salesforce spend the time and money on it. You work through a scenario, produce a design, and discuss it. Passing this stage is what opens access to the review board. Treat it as a real attempt rather than a rehearsal: the skills it tests, reading a scenario accurately and justifying choices, are exactly the ones the board tests."
       },
       {
-        "heading": "Data Architecture & Large Data Volumes",
-        "body": "Large Data Volume (LDV) design is a major CTA topic. Strategies: selective **SOQL** (always use indexed fields), skinny tables (pre-joined table maintained by Salesforce for performance), custom indexes on **external IDs** and frequently filtered fields, and **Batch Apex** for processing large data sets. Data archival moves aged records out of the main org to reduce query times. Data model normalization vs. denormalization trade-offs must be explicitly justified. Master Data Management prevents duplicates and maintains data quality at scale. External Objects (Salesforce Connect) keep high-volume external data out of Salesforce storage limits. The CTA must articulate specific LDV mitigations in the Review Board scenario."
+        "heading": "Stage Two: The Review Board",
+        "body": "In the review board you are given a scenario in advance, design a complete solution, then present it to a panel of judges who are themselves CTAs. The session covers your presentation and then extended questioning, where judges probe the weak points of your design. They are testing judgement under pressure: whether you understood the requirements, whether your design is justifiable, whether you know its risks, and whether you can adjust when challenged. The decision is the board's, based on how you cover the required areas rather than a percentage score."
       },
       {
-        "heading": "Security Architecture",
-        "body": "CTA-level security design covers: field-level encryption (Shield Platform Encryption) with trade-offs (deterministic vs. probabilistic encryption, search limitations), Customer-Managed Keys (BYOK), Event Monitoring for user behavior analytics, Field Audit Trail for long-term history, and Health Check/Security Center for org posture. Single Sign-On (**SAML** 2.0, **OAuth** 2.0 with **JWT**) integrates with enterprise identity providers (Okta, Azure AD). Connected App security: IP restrictions, OAuth scopes, certificate-based auth. Multi-Org security: data isolation between orgs in a multi-org strategy. The Review Board tests whether the security design meets compliance requirements (HIPAA, PCI, GDPR) without creating implementation or performance problems."
+        "heading": "What the Judges Are Actually Looking For",
+        "body": "Across both stages the same themes recur. **Requirement coverage:** every stated business requirement is addressed, and you can point to where. **Justification:** each significant choice has a reason, and you can name what you rejected and why. **Trade-offs:** you acknowledge the cost of your decisions rather than presenting a design as perfect. **Risk:** you can say what could go wrong and how you would mitigate it. **Communication:** a business audience could follow your explanation. Deep platform knowledge is assumed; it is the reasoning on top of it that is assessed."
       },
       {
-        "heading": "Solution Architecture: Trade-offs & Justification",
-        "body": "The CTA Review Board is not a test of knowledge — it is a test of judgment. Every design decision must be justified with business context, technical constraints, and explicit trade-offs. Common scenarios: single org vs. multi-org strategy (data isolation vs. complexity), declarative vs. code (maintainability vs. flexibility), synchronous vs. asynchronous integration (consistency vs. availability), custom solution vs. **AppExchange** (speed to value vs. lock-in). Architects must anticipate failure modes: what happens when the integration endpoint is down? When the batch job fails at record 50,000? When a key customization hits a governor limit at scale? The Review Board rewards architects who proactively surface risks and design for resilience."
+        "heading": "Preparing Realistically",
+        "body": "Reading about architecture is not preparation for this format. Work from full scenarios, produce complete designs under time limits, and present them to people who will interrupt. Build a repeatable structure for your presentation so you cover data, security, integration, development lifecycle and licensing without having to remember. Record yourself and watch where you waffle. Most people who pass have sat several mock boards with practising CTAs, and most who fail at the board have never been challenged out loud before the day."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Certified Technical Architect Exam",
-    "intro": "The CTA credential is the most prestigious Salesforce certification. The written exam and Review Board test your ability to architect enterprise solutions, justify technical decisions, and communicate trade-offs at an executive level.",
+    "intro": "Preparation for CTA is practice, not revision. These are the areas where candidates most often lose marks.",
     "blocks": [
       {
-        "heading": "Architecture Decision Justification",
-        "body": "Every technical decision must be backed by clear reasoning tied to the client's requirements, constraints, and principles. Practice articulating why you chose one approach over alternatives — this is what the Review Board evaluates."
+        "heading": "Justify Every Decision",
+        "body": "For each component on your diagram, be ready to say why it is there and what you considered instead. An unexplained box is a question waiting to be asked."
       },
       {
-        "heading": "Trade-off Analysis",
-        "body": "CTAs must identify trade-offs: performance vs. simplicity, customization vs. upgradability, cost vs. scalability. Practice presenting these trade-offs clearly and recommending the best option with justification."
+        "heading": "Trade-offs, Not Perfection",
+        "body": "Every design costs something. Name the downside of your choice before a judge does, and explain why you accepted it."
       },
       {
-        "heading": "Risk Identification & Mitigation",
-        "body": "CTA scenarios include risks (data migration risks, integration failure points, security gaps). Know how to identify risks proactively and propose mitigation strategies for each."
+        "heading": "Risk and Mitigation",
+        "body": "Identify what could fail: data volumes, integration outages, adoption, governance. Say how you would handle each."
       },
       {
-        "heading": "Stakeholder Communication",
-        "body": "The Review Board assesses how well you communicate complex technical concepts to diverse audiences: executives, project managers, developers. Practice explaining architecture decisions in plain language."
+        "heading": "Speak to the Business",
+        "body": "Judges assess whether a business audience could follow you. Lead with the outcome, then the mechanism."
       },
       {
-        "heading": "Integration & Data Architecture Depth",
-        "body": "CTAs must have deep knowledge of integration patterns, data modeling, large data volumes, and security. Review all architect-level topics ([Integration Architect](/certifications/integration-architect), Data Architect, IAM Architect) as they are all in scope."
+        "heading": "Practise Out Loud",
+        "body": "Mock boards with people who interrupt are the single most useful preparation. Silent reading does not build this skill."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "The two credentials you need before CTA:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -125,8 +125,12 @@
         "label": "System Architect"
       },
       {
-        "href": "/architect-certification-path",
-        "label": "Architect certification path"
+        "href": "/certifications/technical-architect-evaluation",
+        "label": "Architect Evaluation (stage one)"
+      },
+      {
+        "href": "/certifications/technical-architect-review-board",
+        "label": "Review Board (stage two)"
       }
     ]
   },
@@ -166,244 +170,245 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Salesforce Certified Technical Architect?",
+      "question": "Which two credentials must be active before you can pursue CTA?",
       "options": [
-        "Email only",
-        "Designing and implementing secure, high-performance, integrated technical solutions within a client's landscape",
-        "Slack only",
-        "Only coding"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Technical Architects design and implement secure, high-performance, integrated solutions in a client's landscape.",
-      "whyWrong": [
-        "Email is unrelated to the CTA's core solution-design focus.",
-        "Slack is unrelated to the CTA's core solution-design focus.",
-        "'Only coding' undersells the CTA role, which spans secure, integrated end-to-end solution design, not just code."
-      ]
-    },
-    {
-      "question": "Which certifications are typically required before attempting the CTA board?",
-      "options": [
-        "Email Specialist only",
-        "Application Architect and System Architect (or equivalent)",
-        "None",
-        "Slack only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "CTA board typically requires Application Architect and System Architect (or equivalent) as prerequisites.",
-      "whyWrong": [
-        "Email Specialist alone doesn't provide the broad architectural foundation the CTA board requires.",
-        "'None' contradicts the fact that specific prerequisite credentials are typically required before the CTA board.",
-        "Slack alone doesn't provide the broad architectural foundation the CTA board requires."
-      ]
-    },
-    {
-      "question": "What does the CTA board exam assess?",
-      "options": [
-        "Only multiple choice",
-        "Scenario-based architecture design and presentation",
-        "Only documentation",
-        "Only coding"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The CTA board is a scenario-based design and presentation exam.",
-      "whyWrong": [
-        "'Only multiple choice' undersells the CTA board's actual format, which centers on scenario-based design and presentation.",
-        "'Only documentation' undersells the CTA board, which also requires live presentation and defense.",
-        "'Only coding' misrepresents the CTA board, which assesses architecture design and communication, not coding ability."
-      ]
-    },
-    {
-      "question": "Which aspect is critical in Technical Architecture?",
-      "options": [
-        "Only UI",
-        "Only reports",
-        "Security, performance, scalability, and integration",
-        "Only dashboards"
+        "Administrator and Advanced Administrator",
+        "Sales Cloud Consultant and Service Cloud Consultant",
+        "Application Architect and System Architect",
+        "Platform Developer II and JavaScript Developer I"
       ],
       "correctAnswer": 2,
-      "explanation": "Security, performance, scalability, and integration are core to technical architecture.",
+      "explanation": "CTA requires both role-based architect credentials, which between them cover seven distinct exams.",
       "whyWrong": [
-        "'Only UI' undersells the broader set of technical architecture concerns (security, performance, scalability, integration).",
-        "'Only reports' undersells the broader set of technical architecture concerns.",
-        "'Only dashboards' undersells the broader set of technical architecture concerns."
+        "Administrator credentials do not lead to CTA.",
+        "Consultant credentials are a different track.",
+        "Those are developer-track credentials and are not CTA prerequisites."
       ]
     },
     {
-      "question": "What is meant by 'integrated' in the context of CTA?",
+      "question": "How is the CTA credential assessed?",
       "options": [
-        "Only LWC",
-        "Only Apex",
-        "Salesforce working with other systems (APIs, middleware, data flow)",
-        "Only Salesforce"
+        "By designing a solution to a scenario and defending it to judges",
+        "By completing Trailhead superbadges only",
+        "By submitting a portfolio of past projects",
+        "By a 60-question multiple-choice exam"
       ],
-      "correctAnswer": 2,
-      "explanation": "Integrated means Salesforce and other systems working together via APIs and middleware.",
+      "correctAnswer": 0,
+      "explanation": "CTA uses a scenario-based assessment with a live defence, not a multiple-choice test.",
       "whyWrong": [
-        "'Only LWC' narrows the concept incorrectly to a single UI framework.",
-        "'Only Apex' narrows the concept incorrectly to a single programming language.",
-        "'Only Salesforce' misrepresents 'integrated,' which specifically refers to Salesforce working with other systems."
+        "Superbadges are not how CTA is assessed.",
+        "You present a solution to a given scenario rather than past work.",
+        "There is no multiple-choice CTA exam."
       ]
     },
     {
-      "question": "What does the CTA architecture scenario typically require?",
+      "question": "A candidate's design is technically elegant but does not address two business requirements stated in the scenario. What is the likely outcome?",
       "options": [
-        "Only testing",
-        "Only documentation",
-        "Only coding",
-        "End-to-end solution design covering data, integration, security, and scalability"
+        "It passes, because the design is technically strong",
+        "It is deferred for a written follow-up",
+        "The judges rewrite the requirements",
+        "It fails, because requirement coverage is fundamental"
       ],
       "correctAnswer": 3,
-      "explanation": "CTA scenarios require comprehensive end-to-end solution design.",
+      "explanation": "The board checks that the design answers the scenario. Unaddressed requirements are one of the most common reasons for failing.",
       "whyWrong": [
-        "'Only testing' undersells the CTA scenario, which requires broader design work, not just testing.",
-        "'Only documentation' undersells the CTA scenario, which requires full solution design across multiple dimensions.",
-        "'Only coding' undersells the CTA scenario, which requires end-to-end solution design, not just code."
+        "Technical elegance does not compensate for missing the brief.",
+        "There is no written follow-up to rescue missed requirements.",
+        "The scenario is fixed; the candidate must work to it."
       ]
     },
     {
-      "question": "Which architectural concern is critical for high-volume orgs?",
+      "question": "What is the purpose of the architect evaluation stage?",
       "options": [
-        "Governor limits, data volume, and query optimization",
-        "Only UI",
-        "Only reports",
-        "Only dashboards"
+        "To check readiness before access to the full review board",
+        "To award the CTA credential directly",
+        "To replace the Application Architect credential",
+        "To test coding ability in Apex"
       ],
       "correctAnswer": 0,
-      "explanation": "High volume requires attention to limits, data, and queries.",
+      "explanation": "The evaluation is a readiness assessment that gates access to the review board.",
       "whyWrong": [
-        "'Only UI' misrepresents the critical concern for high-volume orgs, which is governor limits and query optimization, not interface design.",
-        "'Only reports' undersells the broader data-volume performance concerns beyond just reporting.",
-        "'Only dashboards' undersells the broader data-volume performance concerns beyond just dashboards."
+        "The credential is awarded after the review board, not this stage.",
+        "It does not replace any prerequisite credential.",
+        "It assesses architecture judgement, not coding."
       ]
     },
     {
-      "question": "What does 'secure' mean in CTA context?",
+      "question": "During questioning, a judge challenges a candidate's choice of middleware. What is the strongest response?",
       "options": [
-        "Only OWD",
-        "Only sharing",
-        "Only encryption",
-        "Sharing, authentication, encryption, and compliance"
+        "State that it is best practice",
+        "Say the client insisted on it",
+        "Explain why it was chosen, what was rejected, and the trade-off accepted",
+        "Immediately replace it with a direct integration"
       ],
-      "correctAnswer": 3,
-      "explanation": "Secure covers sharing, auth, encryption, and compliance.",
+      "correctAnswer": 2,
+      "explanation": "Judges are assessing reasoning. A justified choice with a named alternative and an acknowledged cost is what they are looking for.",
       "whyWrong": [
-        "'Only OWD' undersells 'secure,' which is a much broader concept than just baseline record access.",
-        "'Only sharing' undersells 'secure,' which spans encryption, authentication, and compliance too.",
-        "'Only encryption' undersells 'secure,' which spans sharing, authentication, and compliance too."
+        "Calling something best practice is not a justification for this scenario.",
+        "Deferring to an unnamed client does not explain the architecture.",
+        "Abandoning a decision under the first challenge suggests it was not reasoned."
       ]
     },
     {
-      "question": "Which presentation skill is important for the CTA board?",
+      "question": "Which best describes what the judges assess?",
       "options": [
-        "Clear communication of trade-offs, risks, and rationale",
-        "Only documentation",
-        "Only slides",
-        "Only coding"
-      ],
-      "correctAnswer": 0,
-      "explanation": "CTAs must clearly communicate trade-offs and rationale.",
-      "whyWrong": [
-        "'Only documentation' undersells the live communication skill the board specifically evaluates.",
-        "'Only slides' undersells the presentation skill being asked about, which is about clear communication, not just visual aids.",
-        "'Only coding' misrepresents the CTA board's focus on communication skills, not coding ability."
-      ]
-    },
-    {
-      "question": "What is the purpose of an architecture decision record?",
-      "options": [
-        "Only for code",
-        "To document decisions, context, and consequences",
-        "To replace design",
-        "Only for testing"
+        "The visual polish of the slides",
+        "Judgement: requirement coverage, justification, trade-offs, risk and communication",
+        "Speed of typing a solution",
+        "Recall of Salesforce feature names"
       ],
       "correctAnswer": 1,
-      "explanation": "ADRs document decisions and their context.",
+      "explanation": "Platform knowledge is assumed. The assessment is about the reasoning applied on top of it.",
       "whyWrong": [
-        "'Only for code' undersells ADRs, which document broader architectural decisions, not just code.",
-        "Architecture decision records don't replace the design process — they document it.",
-        "'Only for testing' undersells ADRs, which document broader architectural decisions, not just testing."
+        "Clear diagrams help, but polish is not the criterion.",
+        "There is no typing element.",
+        "Feature recall is tested by the prerequisite exams, not the board."
       ]
     },
     {
-      "question": "Which integration pattern supports scalability?",
+      "question": "How many distinct exams must be passed before CTA, given the two prerequisite credentials?",
       "options": [
-        "Tight coupling",
-        "Point-to-point only",
-        "Synchronous only",
-        "Event-driven and loosely coupled architectures"
+        "Seven, because Platform Developer I counts toward both",
+        "Eight, with no overlap between the two paths",
+        "Four, one per architect domain",
+        "Two, one for each prerequisite credential"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Each credential needs four exams, and Platform Developer I appears in both, so seven are distinct.",
+      "whyWrong": [
+        "There is an overlap, so it is not eight.",
+        "Four would cover only one of the two credentials.",
+        "Each prerequisite is itself made up of four exams."
+      ]
+    },
+    {
+      "question": "A candidate can explain their design fluently to other architects but loses the business stakeholders in the room. Why does this matter at the board?",
+      "options": [
+        "It only affects the evaluation stage",
+        "It affects the fee, not the result",
+        "It does not matter, as judges are all architects",
+        "Communication to a business audience is part of what is assessed"
       ],
       "correctAnswer": 3,
-      "explanation": "Event-driven and loosely coupled support scalability.",
+      "explanation": "Judges assess whether the solution can be explained to the people who would fund and use it.",
       "whyWrong": [
-        "'Tight coupling' is the opposite of what supports scalability.",
-        "'Point-to-point only' is the opposite pattern from the scalable, event-driven approach being asked about.",
-        "'Synchronous only' doesn't provide the decoupled scalability event-driven architecture offers."
+        "It applies at both stages.",
+        "Fees are unrelated to performance.",
+        "Judges assess communication even though they are technical."
       ]
     },
     {
-      "question": "What does the CTA board evaluate?",
+      "question": "What is the most effective form of CTA preparation?",
       "options": [
-        "Design quality, trade-offs, communication, and completeness",
-        "Only deployment",
-        "Only technical knowledge",
-        "Only coding"
+        "Watching recorded presentations without presenting",
+        "Mock boards where people interrupt and challenge the design",
+        "Memorising governor limits",
+        "Re-reading the architect exam guides"
       ],
-      "correctAnswer": 0,
-      "explanation": "Board evaluates design, trade-offs, and communication.",
+      "correctAnswer": 1,
+      "explanation": "The format tests defending a design live, which can only be practised by doing it under challenge.",
       "whyWrong": [
-        "'Only deployment' undersells the CTA board's broader evaluation criteria.",
-        "'Only technical knowledge' undersells the CTA board's holistic evaluation, which includes communication and trade-off analysis too.",
-        "'Only coding' misrepresents the CTA board's evaluation focus, which is architecture, not coding."
+        "Watching builds familiarity but not the skill being tested.",
+        "Limits are assumed knowledge, not the assessed skill.",
+        "The guides cover the prerequisite exams, not this format."
       ]
     },
     {
-      "question": "Which consideration applies when designing for multiple business units?",
+      "question": "Roughly what should a candidate budget for the two CTA stages?",
       "options": [
-        "Sharing, licensing, and data isolation strategies",
-        "No isolation",
-        "Single org only",
-        "Ignore licensing"
+        "The same as a standard $200 exam",
+        "Around US$6,000 in total, subject to confirmation with Salesforce",
+        "A fixed annual subscription",
+        "Nothing, as it is included with the prerequisites"
       ],
-      "correctAnswer": 0,
-      "explanation": "Multi-BU requires sharing, licensing, and isolation strategy.",
+      "correctAnswer": 1,
+      "explanation": "Third-party sources put the two stages at roughly $6,000 combined. Fees change, so confirm with Salesforce before committing.",
       "whyWrong": [
-        "'No isolation' contradicts the fact that data isolation is a real, necessary consideration for multi-BU design.",
-        "'Single org only' contradicts the multi-business-unit scenario the question specifically describes.",
-        "'Ignore licensing' contradicts the fact that licensing is a real consideration in multi-BU design."
+        "It costs far more than a standard exam.",
+        "It is charged per attempt, not as a subscription.",
+        "The prerequisites are paid for separately and do not include the board."
       ]
     },
     {
-      "question": "What is the benefit of a phased implementation approach?",
+      "question": "A candidate presents a design with no stated risks, saying every requirement is fully met. How is this likely to be received?",
       "options": [
-        "Faster only",
-        "Lower cost only",
-        "Reduced risk, incremental value, and easier rollback",
-        "No benefit"
+        "Well, provided the diagram is detailed",
+        "Poorly, because every design carries trade-offs the board expects you to name",
+        "Well, because confidence is the main criterion",
+        "Neutrally, as risk is assessed separately"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Claiming a design has no downsides suggests the candidate has not analysed it. Naming risks and mitigations is expected.",
+      "whyWrong": [
+        "Diagram detail does not substitute for risk analysis.",
+        "Unsupported confidence is not what is assessed.",
+        "Risk is part of the same assessment, not a separate one."
+      ]
+    },
+    {
+      "question": "Which statement about the review board scenario is correct?",
+      "options": [
+        "It is a live production org to configure",
+        "It is the candidate's own past project",
+        "It is a hypothetical enterprise scenario with requirements and constraints",
+        "It is a set of multiple-choice questions"
       ],
       "correctAnswer": 2,
-      "explanation": "Phased approach reduces risk and enables incremental value.",
+      "explanation": "Candidates design a solution for a hypothetical company described in the scenario.",
       "whyWrong": [
-        "'Faster only' undersells the broader set of benefits (reduced risk, easier rollback) beyond just speed.",
-        "'Lower cost only' undersells the broader set of benefits beyond just cost.",
-        "'No benefit' contradicts the real, documented benefits of a phased implementation approach."
+        "There is no hands-on configuration.",
+        "Past projects are not the basis of the assessment.",
+        "There are no multiple-choice questions at the board."
       ]
     },
     {
-      "question": "Which governance area does a CTA address?",
+      "question": "Why is having a repeatable presentation structure useful at the board?",
       "options": [
-        "Only testing",
-        "Only coding standards",
-        "Release management, change control, and technical debt",
-        "Only documentation"
+        "It guarantees a pass regardless of content",
+        "It replaces the need for a diagram",
+        "It lets you skip the questioning section",
+        "It ensures every required area is covered under time pressure"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A set structure covering data, security, integration, lifecycle and licensing means nothing is forgotten when time is short.",
+      "whyWrong": [
+        "Structure helps delivery, but the content still has to be right.",
+        "Diagrams remain central to the presentation.",
+        "Questioning follows the presentation regardless."
+      ]
+    },
+    {
+      "question": "Which prerequisite exam counts toward both Application Architect and System Architect?",
+      "options": [
+        "Data Architect",
+        "Integration Architect",
+        "Platform Developer I",
+        "Sharing and Visibility Architect"
       ],
       "correctAnswer": 2,
-      "explanation": "Governance covers release, change control, and technical debt.",
+      "explanation": "Platform Developer I appears in both credentials, which is why seven distinct exams cover both.",
       "whyWrong": [
-        "'Only testing' undersells governance, which spans release management and change control, not just testing.",
-        "'Only coding standards' undersells governance, which spans release management and technical debt too.",
-        "'Only documentation' undersells governance, which spans broader practices beyond just documentation."
+        "Data Architect counts toward Application Architect only.",
+        "Integration Architect counts toward System Architect only.",
+        "Sharing and Visibility Architect counts toward Application Architect only."
+      ]
+    },
+    {
+      "question": "A candidate fails the board. What is the usual next step?",
+      "options": [
+        "Prepare and sit the board again, paying the fee for that attempt",
+        "They are awarded a lower credential instead",
+        "They must retake all seven prerequisite exams",
+        "The credential is permanently closed to them"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Candidates can reattempt, paying for each sitting. Sources differ on retake pricing, so check with Salesforce.",
+      "whyWrong": [
+        "There is no consolation credential.",
+        "Active prerequisites do not need retaking.",
+        "A failure does not permanently bar a candidate."
       ]
     }
-  ]
+  ],
+  "expertInsight": "CTA is not an exam you can revise your way through. The judges are not checking whether you know a feature exists; they are checking whether you can choose between two reasonable options under time pressure and say why. The people who fail usually know the platform well but cannot defend a decision, or they design something clever that does not answer the business requirement they were given. Practise out loud, in front of people who will interrupt you."
 }
