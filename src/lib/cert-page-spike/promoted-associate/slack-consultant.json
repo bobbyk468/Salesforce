@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "Implementation Consultants",
-        "description": "Professionals planning and executing Slack deployments for enterprise clients, including solution design, rollout strategy, and integration."
+        "description": "You roll out Slack for companies and design how teams, channels and workflows should be set up."
       },
       {
         "label": "Change Management Specialists",
-        "description": "Specialists driving organizational adoption of Slack through phased rollouts, executive sponsorship, and Champions programs."
+        "description": "You help people switch from email and old tools to Slack, and measure whether it is working."
       },
       {
         "label": "Salesforce Consultants",
-        "description": "Consultants expanding into Slack-Salesforce integration, designing workflows that connect CRM records with Slack collaboration channels."
+        "description": "You connect Slack to Sales Cloud and Service Cloud so teams can work on Salesforce data inside Slack."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Slack Consultant Exam Hard?",
-    "summary": "The Slack Consultant exam is moderately difficult. It blends technical Slack knowledge with consulting skills — solution design, change management, and adoption strategy — so product knowledge alone won’t carry you. You also need experience advising clients on collaboration workflows.",
+    "summary": "It is a moderate exam, but it covers more than features. You need to know how to plan a Slack rollout, set it up securely, connect it to Salesforce, and get people to actually use it.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which is adequate for analyzing consulting scenarios.",
-      "<strong>~65% passing score</strong> — you need approximately 39 correct answers out of 60 to pass.",
-      "<strong>Consulting scenarios dominate</strong> — questions describe client challenges and ask you to recommend the right Slack solution, not just identify a feature.",
-      "<strong>Implementation experience matters</strong> — candidates who have run Slack rollouts or change management programs answer scenario-based questions more confidently."
+      "<strong>60 multiple-choice questions.</strong> Check the official guide for the current time limit.",
+      "<strong>Pass mark:</strong> sources quote 65% to 67%, so check the official exam guide before you book.",
+      "<strong>Wide scope.</strong> Workspace and channel design, Slack Connect, Workflow Builder, Salesforce integration and security.",
+      "<strong>People topics.</strong> Adoption planning, champions and success measures come up often."
     ],
-    "passRateGuidance": "Book when you can confidently design a Slack channel structure for a client, plan a phased rollout with adoption metrics, and configure Salesforce-Slack integration for sales or service workflows."
+    "passRateGuidance": "People who have run at least one Slack rollout, including the training and adoption work, do best. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Slack Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe a client’s collaboration challenges and ask you to recommend the right Slack solution — channel structure, integration approach, or adoption tactic.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a company's situation, such as a merger, a security rule or slow adoption, and ask what the consultant should recommend.",
     "bestWayToPass": [
-      "<strong>Salesforce-Slack integration:</strong> Know record alerts, record search from Slack, and how Salesforce Flows trigger Slack messages for sales and service workflows.",
-      "<strong>Change management:</strong> Study phased rollout strategies, executive sponsorship, Champions programs, and how to measure adoption success with Slack analytics.",
-      "<strong>Use case mapping:</strong> Practice matching business processes (incident response, deal rooms, case swarming) to specific Slack features and channel structures.",
-      "<strong>Governance framework:</strong> Understand channel naming conventions, workspace structure, retention policies, and acceptable use policies for enterprise Slack deployments."
+      "<strong>Learn the structure:</strong> Workspaces, Enterprise Grid, channels, and how Slack Connect works with outside companies.",
+      "<strong>Know Workflow Builder:</strong> Triggers, steps and connectors, and when to use Salesforce Flow instead.",
+      "<strong>Understand the Salesforce link:</strong> The Salesforce apps for Slack and how records and alerts reach channels.",
+      "<strong>Plan for adoption:</strong> Champions, training, clear channel rules and how to measure success."
     ]
   },
   "certificationCard": {
     "code": "Slack Consultant",
-    "description": "This exam tests your ability to plan and execute Slack deployments, covering solution design, Salesforce-Slack integration, change management strategy, and driving user adoption across an organization.",
+    "description": "This exam tests how you plan and run a Slack rollout: workspace and channel design, workflows, Salesforce integration, security and governance, and getting people to use it.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
-      "duration": "105 min",
+      "passingScore": "See official guide",
+      "duration": "See official guide",
       "cost": "$200"
     },
     "topics": [
@@ -66,67 +66,67 @@
     "blocks": [
       {
         "heading": "Salesforce-Slack Integration Architecture",
-        "body": "The Salesforce for Slack integration (native Salesforce app) enables bidirectional workflow between Slack and Salesforce. Key capabilities: Record alerts (configured in Salesforce Flow — send Salesforce record updates to Slack channels), Record creation from Slack (create Leads, Cases, Opportunities directly from a Slack message), Record search (/salesforce search command). The consultant designs which Salesforce objects and records trigger Slack alerts and how to configure the integration for specific sales or service workflows."
+        "body": "Slack and Salesforce work together in several ways. The **Salesforce apps for Slack** let people search, view and update records, and get alerts, without leaving Slack. **Salesforce Flow** can post messages to Slack channels or create channels when something happens, such as a big deal closing. Teams can set up a channel per account or per major case, so everyone working on it talks in one place. **Agentforce** and AI features can also work inside Slack. Choose the simplest option that meets the need, and keep Salesforce as the system of record."
       },
       {
         "heading": "Slack-First Customer Service Design",
-        "body": "Service Cloud + Slack enables agent collaboration. Case notifications route new or escalated cases to Slack channels. Swarming workflows bring subject-matter experts into a Slack channel to resolve complex cases together. Einstein Case Classification surfaces AI-suggested fields to agents before case routing. The consultant designs the service workflow — when to alert in Slack vs email, how to escalate from Slack back to Service Cloud, and how to measure the impact on CSAT and resolution time."
+        "body": "In customer service, Slack is often used for **swarming**: when a case is hard, the agent brings experts into a Slack channel linked to the case to solve it faster. Alerts about high-priority cases or missed service levels can go straight to the right channel. Knowledge shared in those channels can later become articles. The goal is faster answers for customers without agents having to chase people by email."
       },
       {
         "heading": "Automations: Flow + Workflow Builder",
-        "body": "Salesforce Flow can send Slack messages using the Send Slack Message flow action — available in Record-Triggered Flows, Screen Flows, and Scheduled Flows. Slack Workflow Builder steps can call external webhooks (including Salesforce APIs). Combined patterns: Salesforce record triggers a Flow → Flow sends a Slack message → Team responds in Slack → Webhook updates the Salesforce record. The consultant designs the end-to-end automation, identifying which tool handles which step."
+        "body": "**Workflow Builder** lets anyone build simple no-code workflows in Slack, such as a request form that posts to a channel and asks for approval. Workflows start from a **trigger**, like a shortcut, a new channel member or a schedule, and run **steps**, including connectors to other apps. For processes that change Salesforce data or need complex logic, **Salesforce Flow** is usually the better tool, and it can send results to Slack. Workflows should be owned and reviewed so they don't pile up unused."
       },
       {
         "heading": "Data Governance and Compliance",
-        "body": "Data residency: sensitive Salesforce data shared in Slack must comply with data governance policies. DLP (Data Loss Prevention) integrations scan messages for sensitive data (credit card numbers, SSNs) and can block, alert, or redact. eDiscovery integration with Slack Enterprise Grid allows legal holds and exports for compliance. The consultant advises on which Salesforce **record types** can be shared in Slack, what retention policies apply to Slack channels containing Salesforce data, and how to configure compliance controls."
+        "body": "Admins control how long messages and files are kept with **retention policies**. **Legal holds** and **eDiscovery** support legal requests. **Data loss prevention** can spot sensitive data, like card numbers, in messages. **Enterprise Key Management** lets a company control its own encryption keys, and **data residency** keeps data in a chosen region. Use **SSO** for login and **SCIM** to create and remove users automatically from the company's identity system. Set clear rules for who can create channels and invite outside people."
       },
       {
         "heading": "Adoption Strategy and Change Management",
-        "body": "Slack adoption requires change management. Success metrics: daily active users, channels created, external channel usage, Workflow Builder adoption rate. Executive sponsorship: visible executive use of Slack signals cultural approval. Use case library: document and share success stories of effective Slack-Salesforce workflows. Training: role-based Slack training (sales reps vs service agents vs managers). The consultant designs the adoption roadmap — phased rollout, pilot team selection, feedback collection, and measurement against adoption KPIs."
+        "body": "A rollout only succeeds if people use Slack well. Start with clear goals and a few key use cases, like moving project chatter out of email. Recruit **champions** in each team to help others. Agree on **channel naming conventions** and when to use channels versus direct messages. Train people in short sessions focused on their work. Measure success with things like active users, messages in channels compared with DMs, and fewer internal emails, then adjust the plan."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Slack Consultant Exam",
-    "intro": "The Slack Consultant exam tests solution design and implementation planning for Slack deployments. Focus on use case design, workflow automation, Salesforce integration, and driving organizational adoption.",
+    "intro": "Most questions describe a company and its goals or limits. Pick the recommendation that solves the real problem, often a people or process issue rather than a feature gap.",
     "blocks": [
       {
         "heading": "Use Case Design",
-        "body": "Know how to map business processes to Slack use cases: executive communication, project collaboration, customer support channels, incident response, and approval workflows. Match each use case to the right Slack features."
+        "body": "Start with a few high-value use cases tied to business goals, then expand. Don't try to move everything at once."
       },
       {
         "heading": "Workflow Builder",
-        "body": "Know how to build Workflow Builder automations: trigger types (message shortcut, schedule, emoji reaction, channel join), step types (send message, form, add to channel, webhook), and use cases for each."
+        "body": "Use Workflow Builder for simple Slack processes. Use Salesforce Flow when Salesforce data or complex logic is involved."
       },
       {
         "heading": "Salesforce for Slack Integration",
-        "body": "Know how Salesforce for Slack features work: Salesforce record previews, deal rooms, Salesforce Flows triggered from Slack, and Slack alerts from Salesforce record changes. Understand configuration requirements."
+        "body": "Bring records and alerts into the channels where people already work, and keep Salesforce as the source of truth."
       },
       {
         "heading": "Adoption Strategy",
-        "body": "Know how to drive Slack adoption: executive sponsorship, champions program, use case-driven rollout (start with high-value use cases), and how to measure adoption with Slack analytics."
+        "body": "Champions, training, clear channel rules and measured goals. Adoption problems are rarely solved by adding features."
       },
       {
         "heading": "Governance Framework",
-        "body": "Know how to design a Slack governance framework: channel naming conventions, workspace vs. channel structure, acceptable use policies, and how to handle the transition from email to Slack."
+        "body": "Retention, legal hold, DLP, SSO, SCIM, and clear rules for channel creation and external sharing."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Good next steps after Slack Consultant:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/slack-administrator",
+        "label": "Slack Administrator"
+      },
+      {
+        "href": "/certifications/slack-developer",
+        "label": "Slack Developer"
       },
       {
         "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
-      },
-      {
-        "href": "/certifications/experience-cloud",
-        "label": "Experience Cloud Consultant"
+        "label": "Agentforce Service Consultant"
       },
       {
         "href": "/certifications/role/consultant",
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Slack Consultant?",
+      "question": "A company wants to work with an outside agency in shared Slack channels, without giving the agency accounts in its own workspace. What should be used?",
       "options": [
-        "Email only",
-        "Helping clients maximize Slack through solution design, change management, and user adoption",
-        "CPQ only",
-        "UI design only"
+        "A new workspace for the agency",
+        "Guest accounts for every agency employee",
+        "Slack Connect",
+        "A shared email inbox"
       ],
-      "correctAnswer": 1,
-      "explanation": "Slack Consultants help clients maximize Slack through solution design, change management, and user adoption.",
+      "correctAnswer": 2,
+      "explanation": "Slack Connect lets two organisations share channels while each keeps its own workspace and controls.",
       "whyWrong": [
-        "Email is unrelated to the Slack consultant's collaboration-focused role.",
-        "CPQ is a pricing tool, entirely unrelated to Slack consulting.",
-        "UI design alone undersells the role, which spans change management and adoption, not just interface design."
+        "A new workspace splits conversations and adds overhead.",
+        "Guest accounts can work but add admin effort and live in your workspace.",
+        "Email is what the company is trying to move away from."
       ]
     },
     {
-      "question": "Which area does a Slack Consultant typically address?",
+      "question": "Sales reps want an alert in their team channel when an opportunity over $1 million is closed in Salesforce. What is the best approach?",
       "options": [
-        "Only technical setup",
-        "Transforming collaboration through solution design, change management, and adoption",
-        "Only reporting",
-        "Only integrations"
+        "A Salesforce Flow that posts to the Slack channel",
+        "Ask reps to post it by hand",
+        "A daily email report",
+        "A Workflow Builder form"
       ],
-      "correctAnswer": 1,
-      "explanation": "They focus on transforming collaboration via design, change management, and adoption.",
+      "correctAnswer": 0,
+      "explanation": "Flow can react to the record change in Salesforce and post to Slack automatically.",
       "whyWrong": [
-        "'Only technical setup' undersells the role, which spans change management and adoption, not just configuration.",
-        "'Only reporting' undersells the broader collaboration transformation focus of the role.",
-        "'Only integrations' undersells the broader change management and adoption focus of the role."
+        "Manual posts get forgotten.",
+        "A daily email is slower and outside Slack.",
+        "A Workflow Builder form needs someone to fill it in."
       ]
     },
     {
-      "question": "What is change management in the context of Slack?",
+      "question": "Employees often send IT requests by DM, and nothing is tracked. What could a consultant recommend that needs no code?",
       "options": [
-        "Code deployment only",
-        "Helping organizations adopt new ways of working with Slack",
-        "Email templates only",
-        "CPQ configuration only"
+        "Banning DMs",
+        "A custom Slack app built by developers",
+        "A weekly IT meeting",
+        "A Workflow Builder form that posts requests to an IT channel"
       ],
-      "correctAnswer": 1,
-      "explanation": "Change management helps organizations adopt new collaboration practices with Slack.",
+      "correctAnswer": 3,
+      "explanation": "Workflow Builder can collect requests in a form and post them to a channel where IT can track them.",
       "whyWrong": [
-        "Change management isn't about adopting Slack's specific ways of working (a description mismatch, not what the term generally means).",
-        "Change management isn't limited to internal channels — this option doesn't actually describe change management at all.",
-        "Change management isn't specifically about Slack Connect — that's a distinct product feature."
+        "Banning DMs doesn't create a request process.",
+        "A custom app is more than needed.",
+        "Weekly meetings are too slow for requests."
       ]
     },
     {
-      "question": "Which Slack feature supports external collaboration?",
+      "question": "Legal requires that messages in certain channels are kept for seven years. What should be set?",
       "options": [
-        "Only internal channels",
-        "Slack Connect for secure collaboration with external organizations",
-        "Email only",
-        "Slack Connect is not a feature"
+        "A channel naming rule",
+        "Slack Connect",
+        "Retention policies for those channels",
+        "A Workflow Builder step"
       ],
-      "correctAnswer": 1,
-      "explanation": "Slack Connect enables secure collaboration with external partners via shared channels.",
+      "correctAnswer": 2,
+      "explanation": "Retention policies control how long messages and files are kept.",
       "whyWrong": [
-        "'Only internal channels' is the opposite of Slack Connect's specific external-collaboration purpose.",
-        "Email is a different communication channel, unrelated to Slack Connect.",
-        "Slack Connect is in fact a real, well-documented feature — this option denies its existence."
+        "Naming rules don't affect retention.",
+        "Slack Connect shares channels with others.",
+        "Workflows don't control retention."
       ]
     },
     {
-      "question": "What should a Slack Consultant recommend for user adoption?",
+      "question": "When people leave the company, their Slack access should be removed automatically. What should be set up?",
       "options": [
-        "No training",
-        "Training, champions, and governance that support adoption",
-        "Only technical docs",
-        "Only admin settings"
+        "A retention policy",
+        "SCIM provisioning from the identity provider",
+        "Manual removal each month",
+        "A naming convention"
       ],
       "correctAnswer": 1,
-      "explanation": "Training, champions, and governance are key to driving Slack adoption.",
+      "explanation": "SCIM lets the company's identity system create and remove Slack users automatically.",
       "whyWrong": [
-        "'No training' contradicts the adoption best practice, which explicitly includes training as a component.",
-        "'Only technical docs' undersells the human-centered elements (champions, governance) needed for adoption.",
-        "'Only admin settings' undersells the broader training and champion program elements needed for adoption."
+        "Retention policies cover data, not users.",
+        "Manual removal can be missed.",
+        "Naming conventions are for channels."
       ]
     },
     {
-      "question": "What is solution design in the context of Slack consulting?",
+      "question": "Six months after launch, many teams still use email for projects. What should the consultant focus on first?",
       "options": [
-        "Code development only",
-        "Designing channel structure, workflows, and integrations to meet client needs",
-        "Email setup only",
-        "CPQ configuration"
+        "Turning off email for everyone",
+        "Adding more Slack apps",
+        "Buying more licences",
+        "Adoption work: champions, targeted training and clear guidance on when to use channels"
       ],
-      "correctAnswer": 1,
-      "explanation": "Solution design includes channel structure, workflows, and integrations aligned to client goals.",
+      "correctAnswer": 3,
+      "explanation": "Slow adoption is usually a people and process issue. Champions and clear guidance help most.",
       "whyWrong": [
-        "'Code development only' misrepresents solution design, which is about structure and workflow design, not coding.",
-        "'Email setup only' is unrelated to Slack solution design.",
-        "'CPQ configuration' is entirely unrelated to Slack solution design."
+        "Turning off email harms the business.",
+        "More apps don't change habits.",
+        "Licences don't drive use."
       ]
     },
     {
-      "question": "Which Salesforce integration is relevant for Slack Consultants?",
+      "question": "Which measure best shows that teams are working in the open in Slack?",
       "options": [
-        "Slack for Salesforce only",
-        "Slack for Salesforce, CRM integration, and contextual collaboration",
-        "Marketing Cloud only",
-        "Tableau only"
+        "The number of emoji used",
+        "The number of workspaces",
+        "The share of messages in channels compared with direct messages",
+        "The number of apps installed"
       ],
-      "correctAnswer": 1,
-      "explanation": "Slack for Salesforce and CRM integration enable contextual collaboration.",
+      "correctAnswer": 2,
+      "explanation": "More messages in channels means more work is visible and searchable.",
       "whyWrong": [
-        "'Slack for Salesforce only' undersells the broader CRM integration and contextual collaboration scope.",
-        "Marketing Cloud alone is unrelated to the Slack-Salesforce integration being described.",
-        "Tableau alone is unrelated to the Slack-Salesforce integration being described."
+        "Emoji count doesn't show how work happens.",
+        "Workspace count isn't a usage measure.",
+        "App count doesn't show adoption."
       ]
     },
     {
-      "question": "What does governance mean for Slack implementations?",
+      "question": "A support agent is stuck on a complex case and needs help from engineering. What Slack-based approach fits?",
       "options": [
-        "No rules",
-        "Policies for channels, retention, security, and app usage",
-        "Only emoji policies",
-        "Only notifications"
+        "Swarming: open a channel linked to the case and bring in the experts",
+        "Email the engineering team",
+        "Close the case and open a new one",
+        "Wait for the next team meeting"
       ],
-      "correctAnswer": 1,
-      "explanation": "Governance covers policies for channels, retention, security, and apps.",
+      "correctAnswer": 0,
+      "explanation": "Swarming brings the right people together in a channel to solve the case quickly.",
       "whyWrong": [
-        "'No rules' contradicts the actual purpose of governance, which is defining policies.",
-        "'Only emoji policies' trivializes governance, which covers much broader areas like retention and security.",
-        "'Only notifications' undersells governance, which spans channels, retention, security, and app usage."
+        "Email is slower and harder to follow.",
+        "Closing the case loses history.",
+        "Waiting delays the customer."
       ]
     },
     {
-      "question": "Which metric helps measure Slack adoption success?",
+      "question": "People can't find the right channels because names are all different. What should the consultant recommend?",
       "options": [
-        "Only message count",
-        "Active users, engagement, and channel participation",
-        "Email opens only",
-        "CPQ quote count"
+        "A channel naming convention with clear prefixes",
+        "A new workspace",
+        "Deleting most channels",
+        "More DMs"
       ],
-      "correctAnswer": 1,
-      "explanation": "Adoption metrics include active users, engagement, and participation.",
+      "correctAnswer": 0,
+      "explanation": "Naming conventions, such as proj- or team- prefixes, make channels easy to find and understand.",
       "whyWrong": [
-        "Message count alone doesn't capture the full picture of adoption (active users, engagement breadth).",
-        "Email opens are unrelated to Slack adoption — that's an email marketing metric.",
-        "CPQ quote count is entirely unrelated to Slack adoption metrics."
+        "A new workspace doesn't fix naming.",
+        "Deleting channels loses history.",
+        "More DMs make work less visible."
       ]
     },
     {
-      "question": "What is a Slack champion program?",
+      "question": "Messages must be scanned to stop people posting credit card numbers. What should be used?",
       "options": [
-        "A paid tier",
-        "Empowering power users to drive adoption and support peers",
-        "A channel type",
-        "An integration"
+        "Data loss prevention",
+        "A naming convention",
+        "Huddles",
+        "A Workflow Builder form"
       ],
-      "correctAnswer": 1,
-      "explanation": "Champions are power users who promote adoption and help peers.",
+      "correctAnswer": 0,
+      "explanation": "Data loss prevention can detect and act on sensitive data in messages.",
       "whyWrong": [
-        "A champion program isn't a paid tier — it's a people-driven adoption strategy.",
-        "A champion program isn't a channel type — it's an adoption strategy involving power users.",
-        "A champion program isn't an integration — it's a people-driven initiative."
+        "Naming conventions don't scan content.",
+        "Huddles are for audio and video calls.",
+        "Forms collect input, they don't scan messages."
       ]
     },
     {
-      "question": "Which consideration is important when designing Slack channel structure?",
+      "question": "A company has many business units, each needing its own workspace but with shared company-wide channels. What fits?",
       "options": [
-        "Ignore team structure",
-        "Team structure, projects, and communication patterns",
-        "Only public channels",
-        "Only private channels"
+        "One single channel for everyone",
+        "Enterprise Grid with several workspaces in one organisation",
+        "Slack Connect between the business units",
+        "Separate unconnected workspaces"
       ],
       "correctAnswer": 1,
-      "explanation": "Channel structure should reflect teams, projects, and communication needs.",
+      "explanation": "Enterprise Grid lets one company run several connected workspaces with shared channels and central controls.",
       "whyWrong": [
-        "Ignoring team structure contradicts sound channel design practice, which should reflect how teams actually work.",
-        "Focusing only on public channels ignores legitimate private channel use cases in a good structure.",
-        "Focusing only on private channels ignores legitimate public channel use cases in a good structure."
+        "One channel for everyone is unworkable.",
+        "Slack Connect is for outside organisations.",
+        "Unconnected workspaces can't share channels easily."
       ]
     },
     {
-      "question": "What does change management aim to achieve for Slack rollout?",
+      "question": "A process needs to update several Salesforce records with complex rules when someone approves a request in Slack. What is the better tool?",
       "options": [
-        "No training",
-        "Smooth transition and sustained adoption of new collaboration practices",
-        "Only technical setup",
-        "Only admin training"
+        "A pinned message",
+        "Workflow Builder alone",
+        "A Slack reminder",
+        "Salesforce Flow, with Slack used for the approval message"
       ],
-      "correctAnswer": 1,
-      "explanation": "Change management ensures smooth transition and sustained adoption.",
+      "correctAnswer": 3,
+      "explanation": "Flow handles complex Salesforce logic, and it can still use Slack for the approval step.",
       "whyWrong": [
-        "'No training' contradicts change management's actual goal, which includes enabling users through training.",
-        "'Only technical setup' undersells change management's broader adoption-focused goal.",
-        "'Only admin training' undersells change management's goal, which targets all users, not just admins."
+        "Pinned messages don't automate anything.",
+        "Workflow Builder is best for simple Slack-side processes.",
+        "Reminders don't update records."
       ]
     },
     {
-      "question": "Which Workflow Builder use case supports consultants?",
+      "question": "A company wants to control its own encryption keys for Slack data. What should be used?",
       "options": [
-        "Only code",
-        "Automating approvals, onboarding, and repetitive tasks",
-        "Only reports",
-        "Only integrations"
+        "Slack Connect",
+        "Enterprise Key Management",
+        "Retention policies",
+        "SCIM"
       ],
       "correctAnswer": 1,
-      "explanation": "Workflow Builder automates approvals, onboarding, and repetitive tasks.",
+      "explanation": "Enterprise Key Management lets the company manage the keys used to encrypt its Slack data.",
       "whyWrong": [
-        "'Only code' undersells Workflow Builder's declarative, no-code automation capability.",
-        "'Only reports' misrepresents Workflow Builder's purpose, which is process automation, not reporting.",
-        "'Only integrations' undersells Workflow Builder's broader automation use cases beyond integrations alone."
+        "Slack Connect shares channels.",
+        "Retention controls how long data is kept.",
+        "SCIM manages user accounts."
       ]
     },
     {
-      "question": "What is the purpose of a Slack adoption roadmap?",
+      "question": "Where should a Slack rollout start?",
       "options": [
-        "To skip phases",
-        "To phase rollout, training, and optimization over time",
-        "To deploy everything at once",
-        "To avoid governance"
+        "Turning off email",
+        "Clear goals and a few high-value use cases",
+        "Installing as many apps as possible",
+        "Moving every tool into Slack on day one"
       ],
       "correctAnswer": 1,
-      "explanation": "An adoption roadmap phases rollout and optimization for success.",
+      "explanation": "Starting with goals and a few use cases gives quick wins and something to measure.",
       "whyWrong": [
-        "Skipping phases contradicts the roadmap's actual purpose, which is to sequence rollout deliberately.",
-        "Deploying everything at once is the opposite of a phased roadmap approach.",
-        "Avoiding governance contradicts sound rollout practice, which should include governance planning."
+        "Turning off email is disruptive and unnecessary.",
+        "Lots of apps add noise.",
+        "Moving everything at once overwhelms people."
       ]
     },
     {
-      "question": "Which best practice applies to Slack consulting engagements?",
+      "question": "Sales reps want to look up and update Salesforce opportunities without leaving Slack. What should be set up?",
       "options": [
-        "Ignore stakeholder input",
-        "Discover needs, design for users, and measure outcomes",
-        "No training needed",
-        "Only technical configuration"
+        "A Workflow Builder form for each opportunity",
+        "A Slack reminder",
+        "The Salesforce app for Slack",
+        "A daily export to a channel"
       ],
-      "correctAnswer": 1,
-      "explanation": "Best practice: discover needs, design for users, and measure outcomes.",
+      "correctAnswer": 2,
+      "explanation": "The Salesforce app for Slack lets people search, view and update records from Slack.",
       "whyWrong": [
-        "Ignoring stakeholder input contradicts sound consulting practice, which should start with discovery.",
-        "'No training needed' contradicts standard consulting best practice, which includes user enablement.",
-        "Focusing only on technical configuration ignores the user-centered design and outcome measurement this best practice calls for."
+        "A form per opportunity is impractical.",
+        "Reminders don't show records.",
+        "A daily export is out of date and read-only."
       ]
     }
   ]

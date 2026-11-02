@@ -5,46 +5,46 @@
     "personas": [
       {
         "label": "UX strategists and service designers",
-        "description": "You work at the strategy level &mdash; journey mapping, stakeholder alignment, and experience vision &mdash; and want to validate your ability to apply design thinking on Salesforce projects."
+        "description": "You run research and design work on Salesforce projects and want a credential that shows it."
       },
       {
         "label": "Consultants leading discovery workshops",
-        "description": "You facilitate design workshops, conduct user research, and frame business problems for Salesforce implementation teams."
+        "description": "You lead discovery with clients and turn what you learn into a clear direction for the solution."
       },
       {
         "label": "Product owners bridging design and business",
-        "description": "You define experience strategy and connect design decisions to business outcomes on the Salesforce Platform."
+        "description": "You need to connect user needs to business goals and help teams decide what to build first."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Strategy Designer Exam Hard?",
-    "summary": "The Strategy Designer exam is moderate in difficulty. It tests strategic design thinking rather than hands-on configuration &mdash; the challenge is applying design frameworks (design thinking, service blueprints, journey mapping) to Salesforce project scenarios.",
+    "summary": "It is a moderate exam, but it isn't about Salesforce features. It tests how you research users, frame the right problem, run workshops and connect design work to business value. People from a pure admin or developer background often find it unfamiliar.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
-      "<strong>Design thinking application</strong> &mdash; expect questions that present a project scenario and ask which design thinking phase, research method, or mapping artefact is appropriate.",
-      "<strong>Business value framing</strong> &mdash; you need to connect design decisions to business metrics and present recommendations using business language rather than design terminology."
+      "<strong>70% to pass</strong>, per Salesforce's Trailhead prep module. That is 42 correct answers.",
+      "<strong>Method focus.</strong> Research, synthesis, problem framing, facilitation and measuring value.",
+      "<strong>Judgement questions.</strong> Many questions ask what you should do next in a project, not what a tool does."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and make sure you can write a How Might We statement, distinguish journey maps from service blueprints, and frame design recommendations in business terms."
+    "passRateGuidance": "People who have run discovery and research on real projects do best. Before you book, aim for 80% or more on practice tests, since the pass mark is higher than most."
   },
   "examFormat": {
     "heading": "Strategy Designer Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right research method for a discovery phase, selecting the correct mapping tool (journey map vs service blueprint vs ecosystem map), and framing a design recommendation for executive stakeholders.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a moment in a project, such as a vague client request, conflicting stakeholders or research results that don't match the brief, and ask what the designer should do.",
     "bestWayToPass": [
-      "<strong>Master design thinking phases:</strong> Know what artefacts each phase produces &mdash; empathy maps and interview notes (Empathise), problem statements and HMW questions (Define), concept sketches (Ideate), testable prototypes (Prototype), and usability findings (Test).",
-      "<strong>Know journey mapping vs service blueprints:</strong> Journey maps visualise the user’s emotional arc across touchpoints. Service blueprints add backstage processes and supporting systems. Know when to use each.",
-      "<strong>Frame design in business terms:</strong> The exam tests whether you can connect UX improvements to business outcomes like reduced support volume, improved conversion rates, or shorter onboarding time.",
-      "<strong>Understand Agile UX integration:</strong> Know dual-track Agile (discovery vs delivery), Design Sprints, and Lean UX &mdash; the exam tests how to integrate UX research into agile delivery without creating a waterfall handoff."
+      "<strong>Know your research methods:</strong> Interviews, observation, surveys and analytics, and when each fits.",
+      "<strong>Practise synthesis:</strong> Affinity mapping, personas, journey maps and service blueprints.",
+      "<strong>Frame problems well:</strong> Turn findings into clear problem statements and How Might We questions.",
+      "<strong>Tie work to value:</strong> Link design decisions to business goals and measures of success."
     ]
   },
   "certificationCard": {
     "code": "Strategy Designer",
-    "description": "This exam covers applying design thinking and human-centered research to shape experience strategies on the Salesforce Platform, from stakeholder alignment through journey mapping and prototyping.",
+    "description": "This exam tests how you shape the direction of a Salesforce solution through research, problem framing, facilitation and business value, before and during design.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "70%",
       "duration": "105 min",
       "cost": "$200"
     },
@@ -66,67 +66,71 @@
     "blocks": [
       {
         "heading": "Human-Centered Design Strategy",
-        "body": "The [Strategy Designer](/certifications/strategy-designer) cert focuses on applying **design thinking** at the strategic level — not just UI design but organisational and service design. Design thinking phases: Empathise (deep user research, stakeholder interviews, observation), Define (synthesise insights into a clear problem statement — How Might We framing), Ideate (divergent brainstorming, then convergent selection), Prototype (lo-fi representations to test concepts), Test (validate with users and iterate). The exam tests which phase a given activity belongs to and what artefacts are produced at each stage."
+        "body": "Human-centred design starts with the people who will use a solution. Before suggesting features, learn about their goals, tasks and frustrations. **Research methods** include interviews, watching people at work (contextual inquiry), surveys and looking at usage data. Pick the method that fits the question: interviews and observation for why people do things, surveys and data for how many. Plan research with a clear goal, recruit the right participants, and avoid leading questions."
       },
       {
         "heading": "Service Design and Journey Mapping",
-        "body": "Service Blueprints map the end-to-end service experience from the customer's viewpoint (frontstage) through the supporting processes (backstage) to the enabling systems and infrastructure. They reveal moments of truth — where the service experience is won or lost. User **journey maps** visualise the emotional arc of a user experience across touchpoints and channels. Ecosystem Maps show the full web of stakeholders and their relationships. The exam tests how to choose and apply the right mapping tool for a given design challenge."
+        "body": "After research comes **synthesis**: making sense of what you learned. **Affinity mapping** groups notes into themes. **Personas** summarise types of users and their needs. **Journey maps** show the steps a person goes through, what they feel and where it goes wrong. **Service blueprints** add what happens behind the scenes: the staff, systems and processes that support each step. These tools help teams see the whole experience, not just one screen."
       },
       {
         "heading": "Business Value Framing",
-        "body": "[Strategy Designer](/certifications/strategy-designer)s must connect design decisions to business outcomes. Value Proposition Design: the Job-to-be-Done framework identifies what customers are trying to accomplish, what pains they experience, and what gains they seek — the value proposition relieves pains and creates gains. ROI of UX: reduced support volume, improved conversion rates, reduced onboarding time. Stakeholder alignment: presenting design concepts to executive sponsors using business language, not design terminology. The exam tests how to frame design decisions in terms of business metrics and stakeholder concerns."
+        "body": "Good design has to make sense for the business too. Link each proposed change to a **business goal**, such as faster case resolution or higher conversion, and agree how success will be measured. Map **stakeholders** and understand what each cares about. Use simple prioritisation, like value versus effort, to decide what to do first. A clear **experience vision** gives everyone a shared picture of where the solution is heading and why."
       },
       {
         "heading": "Agile UX: Design Sprints and Dual-Track",
-        "body": "Dual-track **Agile** separates discovery (what to build) from delivery (how to build it). Discovery track: continuous research, prototype testing, and backlog refinement. Delivery track: sprint development of validated features. Design Sprints (Google Ventures model): 5-day intensive to solve a design challenge from definition to user-tested prototype. Lean UX: minimise waste by building the smallest testable increment. The exam tests how to integrate UX research into agile delivery without creating a waterfall design handoff."
+        "body": "Design work fits into agile delivery. **Design sprints** take a team from problem to tested prototype in a few days. In **dual-track** agile, a discovery track explores and tests ideas while a delivery track builds what has been validated. **Prototypes** can be rough sketches or clickable mock-ups, as long as they let you test ideas with users early. Testing early saves time, because changing a sketch is much cheaper than changing built software."
       },
       {
         "heading": "Ethics, Inclusion, and Responsible Design",
-        "body": "[Strategy Designer](/certifications/strategy-designer)s bear responsibility for the impact of the solutions they recommend. Inclusive design: design for the full spectrum of human diversity — ability, age, culture, language. Dark patterns in UX: manipulative design that tricks users into unintended actions — the strategy designer advocates against these. AI ethics in Salesforce products: fairness, transparency, accountability, and human control (Einstein's Trusted AI principles apply here). The exam tests how to identify design decisions that could cause harm and how to advocate for more equitable alternatives."
+        "body": "Design choices affect people, so think about who might be left out or harmed. **Inclusive design** means involving a wide range of users, including people with disabilities, and following accessibility standards. Be open about how data is collected and used. Watch for bias in research, such as only talking to the easiest users to reach. With AI features, think about trust, transparency and what happens when the AI gets it wrong."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Strategy Designer Exam",
-    "intro": "The Strategy Designer exam tests design thinking and human-centered design applied to Salesforce projects. Focus on research methods, journey mapping, problem framing, and how to facilitate design workshops.",
+    "intro": "Most questions ask what to do next. The right answer usually moves the team toward a better understanding of the problem before jumping to a solution.",
     "blocks": [
       {
         "heading": "Design Thinking Process",
-        "body": "Know the five-stage **design thinking** process: Empathize, Define, Ideate, Prototype, Test. Understand when to apply each stage and how to move between stages iteratively based on research findings."
+        "body": "Understand, define, ideate, prototype and test. It is a loop, so going back to research is often the right move."
       },
       {
         "heading": "Research Methods",
-        "body": "Know quantitative vs. qualitative research methods: surveys, interviews, contextual inquiry, diary studies, and usability testing. Know how to select the right method based on the research question."
+        "body": "Interviews and observation for why. Surveys and analytics for how many. Pick the method that fits the question."
       },
       {
         "heading": "Journey Mapping",
-        "body": "Know how to create current-state and future-state **journey maps**: identifying touchpoints, emotions, pain points, and opportunities. Understand the difference between journey maps, service blueprints, and experience maps."
+        "body": "Map the steps, feelings and pain points. Add a service blueprint to show the people and systems behind each step."
       },
       {
         "heading": "Problem Framing & HMW Statements",
-        "body": "Know how to write 'How Might We' (HMW) statements that reframe problems as opportunities. Understand how to use the POV (Point of View) statement to align on the design challenge."
+        "body": "Turn findings into a clear problem statement, then How Might We questions that open up ideas without fixing a solution."
       },
       {
         "heading": "Facilitation Techniques",
-        "body": "Know how to facilitate design workshops: affinity mapping, dot voting, crazy 8s ideation, and how to use the Lightning Decision Jam framework to move from problem to solution efficiently."
+        "body": "Plan workshop goals and activities, give everyone a voice, and end with clear decisions and next steps."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Designer Certifications",
-    "intro": "After this designer certification, consider the other designer cert or Experience Cloud:",
+    "intro": "Good next steps after Platform Strategy Designer:",
     "links": [
-      {
-        "href": "/certifications/strategy-designer",
-        "label": "Platform Strategy Designer"
-      },
       {
         "href": "/certifications/ux-designer",
         "label": "User Experience Designer"
       },
       {
+        "href": "/certifications/business-analyst",
+        "label": "Business Analyst"
+      },
+      {
         "href": "/certifications/experience-cloud",
         "label": "Experience Cloud Consultant"
+      },
+      {
+        "href": "/certifications/role/consultant",
+        "label": "Consultant certification path"
       }
     ]
   },
@@ -166,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Platform Strategy Designer?",
+      "question": "A client asks for a new dashboard because 'sales reps aren't hitting targets'. What should the strategy designer do first?",
       "options": [
-        "Only coding",
-        "Using design methods to create compelling experience strategies that drive business outcomes on the Salesforce Platform",
-        "Email only",
-        "Slack only"
+        "Ask the developers what is easiest to build",
+        "Build the dashboard straight away",
+        "Research why reps are missing targets before agreeing on a solution",
+        "Copy a dashboard from another client"
       ],
-      "correctAnswer": 1,
-      "explanation": "Strategy Designers use design methods to create experience strategies that drive business outcomes.",
+      "correctAnswer": 2,
+      "explanation": "The request is a solution. Research shows whether a dashboard would actually solve the real problem.",
       "whyWrong": [
-        "'Only coding' undersells the role, which is about design methods and strategy, not implementation code.",
-        "Email is unrelated to the Strategy Designer's core design-strategy focus.",
-        "Slack is unrelated to the Strategy Designer's core design-strategy focus."
+        "Ease of build doesn't tell you what users need.",
+        "Building first risks solving the wrong problem.",
+        "Another client's context is different."
       ]
     },
     {
-      "question": "Which design discipline do Strategy Designers typically use?",
+      "question": "The team needs to understand why service agents keep switching between screens during calls. Which research method fits best?",
       "options": [
-        "Only visual design",
-        "Design thinking, research, and strategy to define experience direction",
-        "Only development",
-        "Only testing"
+        "Looking at the org's licence count",
+        "A competitor review",
+        "Watching agents at work (contextual inquiry)",
+        "A large online survey"
       ],
-      "correctAnswer": 1,
-      "explanation": "They use design thinking, research, and strategy to define experience direction.",
+      "correctAnswer": 2,
+      "explanation": "Observing agents in their real setting shows what they actually do and why.",
       "whyWrong": [
-        "'Only visual design' undersells the discipline, which spans research and strategy, not just visuals.",
-        "'Only development' misattributes the discipline to implementation, not design strategy.",
-        "'Only testing' misattributes the discipline to a narrower validation activity, not the broader strategic discipline."
+        "Licence count says nothing about behaviour.",
+        "Competitors don't explain your agents' behaviour.",
+        "Surveys tell you how many, but miss the detail of how and why."
       ]
     },
     {
-      "question": "What does 'experience strategy' mean in this context?",
+      "question": "After 15 interviews, the team has hundreds of sticky notes. What should they do next?",
       "options": [
-        "Only UI mockups",
-        "A plan for how users will interact with products and achieve outcomes",
-        "Only technical architecture",
-        "Only data model"
+        "Group the notes into themes with affinity mapping",
+        "Start building features from the first note",
+        "Throw away notes that don't match the brief",
+        "Run 15 more interviews straight away"
       ],
-      "correctAnswer": 1,
-      "explanation": "Experience strategy is the plan for user interactions and outcomes.",
+      "correctAnswer": 0,
+      "explanation": "Affinity mapping turns raw notes into themes the team can act on.",
       "whyWrong": [
-        "'Only UI mockups' undersells experience strategy, which is about the broader interaction plan, not just visual mockups.",
-        "'Only technical architecture' misattributes experience strategy to a technical concern, not the user-experience plan.",
-        "'Only data model' misattributes experience strategy to a technical concern, not the user-experience plan."
+        "Acting on one note ignores the bigger picture.",
+        "Discarding inconvenient notes adds bias.",
+        "More interviews before synthesis just adds more notes."
       ]
     },
     {
-      "question": "Which Salesforce capability do Strategy Designers often align with?",
+      "question": "Which artefact shows the steps a customer takes, how they feel at each step, and where problems happen?",
       "options": [
-        "Only Apex",
-        "Experience Cloud, Sales, Service, and platform features",
-        "Only Marketing Cloud",
-        "Only Heroku"
+        "A data model diagram",
+        "A journey map",
+        "A release schedule",
+        "A test plan"
       ],
       "correctAnswer": 1,
-      "explanation": "They align strategy with Experience Cloud and platform capabilities.",
+      "explanation": "Journey maps show steps, emotions and pain points across an experience.",
       "whyWrong": [
-        "'Only Apex' narrows the alignment incorrectly to a single programming language.",
-        "'Only Marketing Cloud' undersells the broader set of platform capabilities Strategy Designers align with.",
-        "'Only Heroku' undersells the broader set of platform capabilities Strategy Designers align with."
+        "A data model shows objects and fields.",
+        "A release schedule shows delivery dates.",
+        "A test plan lists tests."
       ]
     },
     {
-      "question": "What outcome should a Strategy Designer drive?",
+      "question": "The team wants to show both the customer's steps and the staff, systems and processes behind each step. What should they create?",
       "options": [
-        "Only documentation",
-        "Business outcomes through compelling, human-centered experience strategies",
-        "Only code",
-        "Only reports"
+        "A service blueprint",
+        "A mood board",
+        "A persona",
+        "A wireframe"
       ],
-      "correctAnswer": 1,
-      "explanation": "They drive business outcomes through human-centered experience strategies.",
+      "correctAnswer": 0,
+      "explanation": "Service blueprints add the behind-the-scenes layers to a journey.",
       "whyWrong": [
-        "'Only documentation' undersells the outcome, which is business results through experience strategy, not documentation itself.",
-        "'Only code' misattributes the outcome to implementation, not strategic business results.",
-        "'Only reports' misattributes the outcome to reporting, not strategic business results."
+        "A mood board shows visual style.",
+        "A persona describes a type of user.",
+        "A wireframe shows one screen's layout."
       ]
     },
     {
-      "question": "What does design thinking emphasize?",
+      "question": "Which is the best example of a How Might We question?",
       "options": [
-        "Only coding",
-        "Empathize, define, ideate, prototype, and test",
-        "Only documentation",
-        "Only deployment"
+        "Why are agents so slow?",
+        "How might we help new agents find answers without asking a colleague?",
+        "How might we build a new Lightning page?",
+        "Can we add three fields to the case layout?"
       ],
       "correctAnswer": 1,
-      "explanation": "Design thinking uses empathize, define, ideate, prototype, and test.",
+      "explanation": "A good How Might We question frames the need and leaves room for many ideas.",
       "whyWrong": [
-        "'Only coding' misrepresents design thinking, which is a strategic process, not implementation.",
-        "'Only documentation' undersells design thinking, which is an active process (empathize, ideate, test), not just writing.",
-        "'Only deployment' misattributes design thinking to implementation, not the strategic design process."
+        "It blames users and doesn't open up ideas.",
+        "It names a solution, not a need.",
+        "It is a yes or no question about a specific change."
       ]
     },
     {
-      "question": "Which deliverable communicates experience strategy to stakeholders?",
+      "question": "Two senior stakeholders want opposite things from the project. What should the strategy designer do?",
       "options": [
-        "Code only",
-        "Strategy document, journey maps, and vision artifacts",
-        "Only wireframes",
-        "Only prototypes"
+        "Do what the louder stakeholder wants",
+        "Bring them together around shared goals and the research findings",
+        "Build both versions",
+        "Ignore both and decide alone"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy documents and journey maps communicate experience direction.",
+      "explanation": "Aligning stakeholders on goals and evidence helps reach a decision both can support.",
       "whyWrong": [
-        "Code alone doesn't communicate experience strategy to stakeholders — that's a technical artifact, not a strategic communication tool.",
-        "'Only wireframes' undersells the broader set of strategic deliverables (strategy documents, journey maps) beyond wireframes alone.",
-        "'Only prototypes' undersells the broader set of strategic deliverables beyond prototypes alone."
+        "Following the loudest voice ignores evidence.",
+        "Building both wastes effort.",
+        "Deciding alone loses support for the project."
       ]
     },
     {
-      "question": "What does stakeholder alignment achieve?",
+      "question": "The team has 20 ideas and time for 5. How should they choose?",
       "options": [
-        "No alignment",
-        "Shared understanding of goals, priorities, and success criteria",
-        "Only technical alignment",
-        "Only design alignment"
+        "Pick the most technically complex",
+        "Pick the first five suggested",
+        "Pick the ideas the team finds most fun",
+        "Prioritise by value to users and the business against effort"
       ],
-      "correctAnswer": 1,
-      "explanation": "Stakeholder alignment ensures shared goals and success criteria.",
+      "correctAnswer": 3,
+      "explanation": "A value versus effort view helps pick the ideas with the best return.",
       "whyWrong": [
-        "'No alignment' contradicts the fact that stakeholder alignment specifically produces shared understanding.",
-        "'Only technical alignment' undersells the broader shared understanding of goals and priorities stakeholder alignment achieves.",
-        "'Only design alignment' undersells the broader shared understanding of goals and priorities stakeholder alignment achieves."
+        "Complexity isn't a goal.",
+        "Order of suggestion is random.",
+        "Fun doesn't mean valuable."
       ]
     },
     {
-      "question": "Which research method helps Strategy Designers understand user needs?",
+      "question": "The team wants to test a new case flow idea with agents next week, before any building. What should they make?",
       "options": [
-        "Only surveys",
-        "Interviews, observation, and empathy mapping",
-        "Only analytics",
-        "Only code review"
+        "A release note",
+        "A full production build",
+        "A simple prototype to test with real agents",
+        "A 50-page specification"
       ],
-      "correctAnswer": 1,
-      "explanation": "Interviews, observation, and empathy mapping reveal user needs.",
+      "correctAnswer": 2,
+      "explanation": "Early prototypes let you learn from users quickly and cheaply.",
       "whyWrong": [
-        "'Only surveys' undersells the broader qualitative research methods (interviews, observation) used.",
-        "'Only analytics' undersells the broader qualitative research methods used to understand user needs.",
-        "'Only code review' is entirely unrelated to user research methods."
+        "Release notes come after building.",
+        "A full build is slow and costly to change.",
+        "A long spec can't be tested with users."
       ]
     },
     {
-      "question": "What is the purpose of an experience vision?",
+      "question": "In dual-track agile, what does the discovery track do?",
       "options": [
-        "To replace strategy",
-        "To articulate the target future state for users and the business",
-        "To write code",
-        "To deploy"
+        "Explores and tests ideas so the delivery track builds validated work",
+        "Runs only at the end of the project",
+        "Writes all the code",
+        "Handles production support"
       ],
-      "correctAnswer": 1,
-      "explanation": "Experience vision articulates the target future state.",
+      "correctAnswer": 0,
+      "explanation": "Discovery runs alongside delivery, testing ideas before they are built.",
       "whyWrong": [
-        "An experience vision doesn't replace strategy — it articulates the target future state as part of it.",
-        "'To write code' misattributes an experience vision's purpose to implementation, not strategic articulation.",
-        "'To deploy' misattributes an experience vision's purpose to implementation, not strategic articulation."
+        "Discovery runs throughout, not just at the end.",
+        "Delivery writes the code.",
+        "Support is separate."
       ]
     },
     {
-      "question": "Which platform capability should Strategy Designers understand?",
+      "question": "How should the team show that a redesign was worth it?",
       "options": [
-        "Only Apex",
-        "Experience Cloud, Sales, Service, and automation capabilities",
-        "Only Heroku",
-        "Only MuleSoft"
+        "Ask the project team if they like it",
+        "Agree success measures linked to business goals before launch, then track them",
+        "Measure how long the project took",
+        "Count the number of new screens"
       ],
       "correctAnswer": 1,
-      "explanation": "Strategy Designers align with platform capabilities.",
+      "explanation": "Measures tied to goals, set before launch, show whether the change made a difference.",
       "whyWrong": [
-        "'Only Apex' narrows platform capability understanding incorrectly to a single programming language.",
-        "'Only Heroku' undersells the broader set of platform capabilities Strategy Designers should understand.",
-        "'Only MuleSoft' undersells the broader set of platform capabilities Strategy Designers should understand."
+        "The team's opinion isn't evidence of impact.",
+        "Project length doesn't measure value.",
+        "Screen count isn't value."
       ]
     },
     {
-      "question": "What does opportunity framing support?",
+      "question": "Research so far has only included office staff, but the solution will also be used by field workers. What is the risk?",
       "options": [
-        "Only coding",
-        "Defining the problem space and opportunity for design",
-        "Only testing",
-        "Only deployment"
+        "There is no risk",
+        "The project will cost less",
+        "The design may not meet field workers' needs because they weren't included",
+        "Field workers will adapt to anything"
       ],
-      "correctAnswer": 1,
-      "explanation": "Opportunity framing defines the problem and opportunity.",
+      "correctAnswer": 2,
+      "explanation": "Leaving out a user group is a common bias that leads to designs that don't work for them.",
       "whyWrong": [
-        "'Only coding' misattributes opportunity framing to implementation, not problem definition.",
-        "'Only testing' misattributes opportunity framing to validation, not problem definition.",
-        "'Only deployment' misattributes opportunity framing to implementation, not problem definition."
+        "Missing a key group is a real risk.",
+        "Cost isn't the issue here.",
+        "Assuming people will adapt usually fails."
       ]
     },
     {
-      "question": "Which outcome should an experience strategy prioritize?",
+      "question": "What is the main purpose of an experience vision?",
       "options": [
-        "Only technology",
-        "User value and business outcomes",
-        "Only cost",
-        "Only speed"
+        "To replace research",
+        "To list every field on every page",
+        "To set the project budget",
+        "To give everyone a shared picture of the future experience and why it matters"
       ],
-      "correctAnswer": 1,
-      "explanation": "Strategy should balance user value and business outcomes.",
+      "correctAnswer": 3,
+      "explanation": "An experience vision aligns the team and stakeholders on direction.",
       "whyWrong": [
-        "'Only technology' undersells the outcome focus, which should prioritize user value and business outcomes, not technology itself.",
-        "'Only cost' undersells the outcome focus, which should prioritize user and business value, not cost alone.",
-        "'Only speed' undersells the outcome focus, which should prioritize user and business value, not speed alone."
+        "A vision comes from research, it doesn't replace it.",
+        "Field lists are detailed design.",
+        "Budget is set separately."
       ]
     },
     {
-      "question": "What is the benefit of involving users early in strategy?",
+      "question": "A workshop with 12 stakeholders keeps being dominated by two people. What should the facilitator do?",
       "options": [
-        "No benefit",
-        "Validation of assumptions and alignment with real needs",
-        "Slower only",
-        "Higher cost only"
+        "Use activities like silent idea writing so everyone contributes",
+        "Remove the quieter people",
+        "Let the two people continue",
+        "End the workshop early"
       ],
-      "correctAnswer": 1,
-      "explanation": "Early user involvement validates assumptions and needs.",
+      "correctAnswer": 0,
+      "explanation": "Structured activities give everyone a voice and reduce the effect of dominant people.",
       "whyWrong": [
-        "'No benefit' contradicts the real, documented benefit of early user involvement.",
-        "'Slower only' undersells the actual benefit (validated assumptions), which outweighs a speed trade-off.",
-        "'Higher cost only' undersells the actual benefit (validated assumptions), which outweighs a cost trade-off."
+        "Removing people is the opposite of the goal.",
+        "Letting it continue loses everyone else's input.",
+        "Ending early wastes the session."
       ]
     },
     {
-      "question": "Which best practice applies to Strategy Designer deliverables?",
+      "question": "A new AI feature will suggest replies to customers. What should the strategy designer consider?",
       "options": [
-        "Technical only",
-        "Clear, actionable, and aligned with business and user goals",
-        "Vague only",
-        "No alignment"
+        "Nothing, because AI is always right",
+        "Only how fast it runs",
+        "Only the colour of the suggestion box",
+        "Trust, transparency, and what happens when the AI is wrong"
       ],
-      "correctAnswer": 1,
-      "explanation": "Deliverables should be clear, actionable, and aligned.",
+      "correctAnswer": 3,
+      "explanation": "Responsible design for AI includes clear disclosure, human oversight and handling mistakes.",
       "whyWrong": [
-        "'Technical only' undersells the best practice, which requires clarity and business/user alignment, not just technical accuracy.",
-        "'Vague only' is the opposite of the clear, actionable best practice.",
-        "'No alignment' contradicts the fact that alignment with goals is a core best practice for deliverables."
+        "AI can be wrong, so plan for it.",
+        "Speed matters but isn't the main concern.",
+        "Visual style is a detail."
       ]
     }
   ]

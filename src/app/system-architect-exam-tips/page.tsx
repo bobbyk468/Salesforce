@@ -8,7 +8,6 @@ import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
-import ExamPricingCard from '@/components/ExamPricingCard'
 
 
 
@@ -94,11 +93,6 @@ export default function SystemArchitectExamTipsPage() {
 
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="system-architect-study-guide" certName="System Architect" />
-      <ExamPricingCard
-        certSlug="system-architect"
-        certName="System Architect"
-        certPageSlug="system-architect"
-      />
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">

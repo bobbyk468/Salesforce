@@ -9,7 +9,7 @@
       },
       {
         "label": "Consultants and admins",
-        "description": "You already hold Field Service Consultant or have built Field Service, and want to prove deeper skills."
+        "description": "You already hold the Agentforce Field Service Consultant credential or have built Field Service, and want to prove deeper skills."
       },
       {
         "label": "Career builders",
@@ -19,7 +19,7 @@
   },
   "examDifficulty": {
     "heading": "Is the Advanced Field Service Accredited Professional Exam Hard?",
-    "summary": "It goes deeper than the Field Service Consultant exam. Most questions are about scheduling: how policies, work rules and objectives shape the schedule, and which optimisation option fits a situation.",
+    "summary": "It goes deeper than the Agentforce Field Service Consultant exam. Most questions are about scheduling: how policies, work rules and objectives shape the schedule, and which optimisation option fits a situation.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
       "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
@@ -114,11 +114,11 @@
     "links": [
       {
         "href": "/certifications/field-service",
-        "label": "Field Service Consultant"
+        "label": "Agentforce Field Service Consultant"
       },
       {
         "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "label": "Agentforce Service Consultant"
       },
       {
         "href": "/certifications/contact-center-ap",
