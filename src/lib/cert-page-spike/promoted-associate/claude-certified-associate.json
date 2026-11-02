@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAO-F",
-    "description": "Anthropic’s entry-level credential for non-technical professionals. The CCAO-F tests whether you can write well-structured prompts, spot errors in AI-generated responses, pick the right Claude model for a task, set up Projects with knowledge sources, and handle sensitive data responsibly — all without writing a single line of code.",
+    "description": "Independent learning notes and practice questions about Claude Certified Associate – Foundations. Credential availability and exam details have not been verified with Anthropic.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -63,23 +63,23 @@
     "blocks": [
       {
         "heading": "Writing Prompts That Get Reliable Results",
-        "body": "At its core the CCAO-F is a prompting exam. You need to know how to give Claude a clear role, provide enough background, and specify the format you want back. The exam distinguishes between asking for a single answer (zero-shot), showing Claude an example first (few-shot), and walking it through reasoning steps (chain-of-thought). Questions describe a workplace task — drafting a quarterly summary, comparing vendor proposals, turning meeting notes into action items — and ask which prompting pattern produces the most dependable output."
+        "body": "You need to know how to give Claude a clear role, provide enough background, and specify the format you want back. Questions describe a workplace task — drafting a quarterly summary, comparing vendor proposals, turning meeting notes into action items — and ask which prompting pattern produces the most dependable output."
       },
       {
         "heading": "Catching Mistakes in AI Output",
-        "body": "More than a fifth of CCAO-F questions ask you to judge a response Claude already gave. You may see a paragraph with a fabricated statistic, a summary that quietly drops a key point, or a recommendation that sounds right but contradicts the source document. Your job is to decide whether the output is usable, fixable, or needs to be regenerated from scratch. Practice spotting invented citations, confident but wrong numbers, and subtle omissions — these are the traps the exam sets."
+        "body": "You may see a paragraph with a fabricated statistic, a summary that quietly drops a key point, or a recommendation that sounds right but contradicts the source document. Your job is to decide whether the output is usable, fixable, or needs to be regenerated from scratch."
       },
       {
         "heading": "Choosing the Right Claude Product and Model",
-        "body": "Claude ships as a web and desktop app (Claude.ai), a terminal-based coding agent (Claude Code), a REST API for custom applications, and an enterprise tier with team controls. Each model tier trades speed for depth: Haiku is fast and cheap for high-volume sorting; Sonnet balances capability with throughput; Opus handles the hardest reasoning and creative work. Exam scenarios give you a team, a task, and a constraint (budget, latency, data sensitivity) and ask which combination fits."
+        "body": "Claude ships as a web and desktop app (Claude.ai), a terminal-based coding agent (Claude Code), a REST API for custom applications, and an enterprise tier with team controls. Each model tier trades speed for depth: Haiku is fast and cheap for high-volume sorting; Sonnet balances capability with throughput; Opus handles the hardest reasoning and creative work."
       },
       {
         "heading": "Setting Up Projects and Knowledge Sources",
-        "body": "A Project in Claude is a reusable workspace where you pin instructions and upload reference documents. When you ask a question inside a Project, Claude sees those instructions and files alongside your prompt. The exam tests configuration judgment: when to create a separate Project vs. a single conversation, how uploaded documents shape Claude’s responses, and what happens when Project instructions conflict with a user’s in-chat request."
+        "body": "A Project in Claude is a reusable workspace where you pin instructions and upload reference documents. a single conversation, how uploaded documents shape Claude’s responses, and what happens when Project instructions conflict with a user’s in-chat request."
       },
       {
         "heading": "Data Sensitivity and Responsible Use",
-        "body": "Governance questions cut across every domain. You need to classify information by sensitivity before sharing it with any AI tool, know the difference between consumer-tier and enterprise-tier data handling, and recognize when a human must review output before it goes to a customer. The exam also tests edge cases: what to do when Claude refuses a legitimate request, how to handle personally identifiable information in prompts, and when an organization should create a usage policy rather than rely on default guardrails."
+        "body": "Governance questions cut across every domain. You need to classify information by sensitivity before sharing it with any AI tool, know the difference between consumer-tier and enterprise-tier data handling, and recognize when a human must review output before it goes to a customer."
       }
     ]
   },
@@ -317,6 +317,12 @@
         "A single occasional user has no need for the engineering investment of a custom API integration.",
         "Wanting zero maintenance and the simplest setup points away from building custom API infrastructure, not toward it."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified."
     }
   ]
 }

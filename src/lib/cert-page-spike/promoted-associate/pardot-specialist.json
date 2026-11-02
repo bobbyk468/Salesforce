@@ -1,6 +1,6 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce renamed Pardot to Marketing Cloud Account Engagement (MCAE) in 2022, but the certification exam and the search terms candidates use are still 'Pardot Specialist.' I keep the legacy name in this guide because that's what shows up in Trailhead, Webassessor, and your résumé — but every screen you'll see in the actual product now says Account Engagement, not Pardot.",
+  "expertInsight": "Salesforce's current credential name is Salesforce Certified Marketing Cloud Account Engagement Specialist. This page uses “Pardot Specialist” as a legacy search label; current Salesforce materials call the product Account Engagement.",
   "whoIsThisFor": {
     "heading": "Who is the Account Engagement Specialist exam for?",
     "personas": [
@@ -20,19 +20,19 @@
   },
   "examDifficulty": {
     "heading": "Is the Account Engagement Specialist Exam Hard?",
-    "summary": "The Account Engagement Specialist exam is moderately hard. It has the highest passing score among Marketing Cloud certifications at 72%, and it tests detailed, hands-on configuration knowledge of Pardot features including automation rules, scoring and grading, forms, and the Salesforce connector sync.",
+    "summary": "The official exam guide covers visitors and prospects, administration, forms and landing pages, lead management, email marketing, and Engagement Studio.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>72% passing score</strong> — the highest in the Marketing Cloud certification family. You need to answer roughly 43 out of 60 questions correctly.",
-      "<strong>Configuration-heavy</strong> — expect questions that test specific feature behavior, such as how completion actions differ from automation rules, or how field sync conflicts are resolved.",
-      "<strong>Scoring and grading depth</strong> — you must know scoring categories, custom scoring rules, grading profiles, and how each aligns with lead qualification."
+      "<strong>60 multiple-choice/multiple-select questions</strong> and up to five unscored questions in 90 minutes.",
+      "<strong>72% passing score.</strong>",
+      "<strong>Exam objectives:</strong> Visitors and Prospects (8%), Administration (11%), Forms, Form Handlers and Landing Pages (20%), Lead Management (24%), Email Marketing (20%), and Engagement Studio (17%).",
+      "<strong>Preparation:</strong> Review how scoring, grading, automation, prospect records, and Salesforce integration work against the official objectives."
     ],
-    "passRateGuidance": "Use Pardot daily for at least 6 months before booking. Build Engagement Studio programs, configure scoring models, and troubleshoot sync errors in a sandbox. The 72% pass mark leaves little room for guessing."
+    "passRateGuidance": "Use hands-on practice to review the official objectives, build a sample Engagement Studio program, and explain scoring, grading, and prospect sync behavior."
   },
   "examFormat": {
     "heading": "Account Engagement Specialist Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 45-55% of questions are scenario-based. Common patterns include choosing between completion actions and automation rules for a given requirement, designing a scoring and grading model, or troubleshooting Pardot-Salesforce sync behavior.",
+    "scenarioPercent": "The official guide does not publish a percentage of scenario-based questions. Practice applying its objectives to prospect, automation, forms, and Salesforce integration situations.",
     "bestWayToPass": [
       "<strong>Know the automation hierarchy:</strong> Understand when to use completion actions (one-time, asset-specific), automation rules (continuous, criteria-based), and Engagement Studio (multi-step nurture programs).",
       "<strong>Master scoring vs grading:</strong> Scoring measures engagement (activity-based), grading measures fit (attribute-based). Know scoring categories for multi-product tracking and grading profiles for ideal customer matching.",
@@ -42,7 +42,7 @@
   },
   "differentiation": {
     "heading": "Account Engagement Specialist Traps & Readiness Checklist",
-    "intro": "This is where many Pardot candidates lose marks: the questions look like normal marketing scenarios, but the right answer depends on exact Account Engagement feature behavior.",
+    "intro": "These topics involve exact Account Engagement feature behavior as well as general marketing concepts.",
     "commonTraps": [
       {
         "trap": "Treating completion actions, automation rules, and Engagement Studio as interchangeable",
@@ -50,7 +50,7 @@
       },
       {
         "trap": "Mixing up scoring and grading",
-        "fix": "Scoring measures engagement. Grading measures profile fit. Exam scenarios often include both signals and ask which one should drive routing or sales follow-up."
+        "fix": "Scoring measures engagement. Grading measures profile fit. Both signals can inform routing and sales follow-up decisions."
       },
       {
         "trap": "Ignoring connector sync precedence",
@@ -65,7 +65,7 @@
       "You can explain the difference between a dynamic list, segmentation list, suppression list, and automation rule without notes.",
       "You have built at least one Engagement Studio program with wait steps, rules, and completion actions.",
       "You can diagnose a prospect sync issue from field values, CRM ownership, and connector permissions.",
-      "You score 78%+ on timed practice sets because the official 72% pass mark leaves less room for guessing."
+      "You can explain the official objectives and review why each practice answer is correct."
     ],
     "whoShouldSkip": [
       "You have never configured Account Engagement assets or the Salesforce connector hands-on.",
@@ -85,7 +85,7 @@
     ]
   },
   "certificationCard": {
-    "code": "Pardot Specialist",
+    "code": "Marketing Cloud Account Engagement Specialist",
     "description": "This exam tests hands-on configuration of Account Engagement (Pardot) -- automation rules, scoring and grading, forms, Engagement Studio programs, email sends, and Salesforce connector sync.",
     "examDetails": {
       "questions": 60,
@@ -94,16 +94,12 @@
       "cost": "$200"
     },
     "topics": [
-      "Visitors & Prospects",
-      "Scoring & Grading",
-      "Lead Nurturing",
-      "Forms & Landing Pages",
-      "Email Marketing",
-      "Automation Rules",
-      "Engagement Studio",
-      "Reports & Analytics",
-      "Salesforce Integration",
-      "Account-Based Marketing"
+      "Visitors and Prospects (8%)",
+      "Administration (11%)",
+      "Account Engagement Forms, Form Handlers and Landing Pages (20%)",
+      "Lead Management (24%)",
+      "Email Marketing (20%)",
+      "Engagement Studio (17%)"
     ]
   },
   "keyConcepts": {
@@ -111,7 +107,7 @@
     "blocks": [
       {
         "heading": "Scoring vs Grading: Interest vs Fit",
-        "body": "**Scoring** is activity-based — it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based — it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The exam frequently asks you to distinguish which mechanism applies to a given scenario."
+        "body": "**Scoring** is activity-based — it measures how interested a prospect is by tracking form submissions, email opens, page views, and file downloads. **Grading** is attribute-based — it measures how well a prospect fits your ideal customer profile (job title, company size, industry). Sales teams should prioritise prospects with both a high score (interest) and a high grade (fit). The official exam outline includes both scoring and grading under Lead Management."
       },
       {
         "heading": "Automation Hierarchy: Completion Actions vs Automation Rules vs Engagement Studio",
@@ -119,7 +115,7 @@
       },
       {
         "heading": "Pardot-Salesforce Sync: Field Sync Behaviour",
-        "body": "When Pardot and Salesforce hold different values for the same field, the field sync behaviour setting controls the outcome: Pardot wins, Salesforce wins, or Most Recently Updated wins. Each field can be configured independently. Understanding sync conflicts and resolution is a high-frequency exam topic — especially in scenarios where CRM data should take precedence over marketing data (or vice versa)."
+        "body": "When Account Engagement and Salesforce hold different values for the same field, the field sync behaviour setting controls the outcome: Account Engagement wins, Salesforce wins, or Most Recently Updated wins. Each field can be configured independently. Practice tracing sync outcomes when CRM or marketing data should take precedence."
       },
       {
         "heading": "Prospects and Visitors: Identification and Tracking",
@@ -283,7 +279,7 @@
         "An email is automatically sent to the prospect's account manager"
       ],
       "correctAnswer": 1,
-      "explanation": "Automation Rules evaluate all prospects continuously (or on a schedule) against defined criteria and execute configured actions when matches are found — such as changing scores, assigning prospects, or triggering notifications.",
+      "explanation": "Automation Rules continually check updated prospects against their criteria and apply configured actions when a prospect matches. A prospect can match again only when Repeat Rule is enabled.",
       "whyWrong": [
         "Automation Rules don't delete prospects — that's not their function.",
         "Automation Rules don't automatically sync to Salesforce — that's a separate connector function.",
@@ -449,6 +445,21 @@
         "This reverses the actual definitions — grading is attribute-based (fit), scoring is activity-based (interest), not the other way around.",
         "'Only scoring exists' contradicts the fact that grading is a separate, real Pardot feature."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "This guide covers Marketing Cloud Account Engagement work across prospects, lead qualification, forms, email, automation, and reporting. Its 15 sample questions check prospect records, scoring versus grading, and forms versus form handlers. Compare the practice set with Salesforce's"
+    },
+    {
+      "type": "link",
+      "href": "https://help.salesforce.com/s/articleView?id=005298953&language=en_US&type=1",
+      "label": "Account Engagement Specialist exam guide"
+    },
+    {
+      "type": "text",
+      "text": "."
     }
   ]
 }

@@ -1,6 +1,5 @@
 {
   "template": "associate",
-  "expertInsight": "The live exam leans heavily on Agentforce Studio configuration — expect 8–10 questions on agent topic classification, channel setup, and escalation rules. Trailhead modules alone won't cover the nuances; you need hands-on time in a scratch org building actual agents. The hardest questions involved multi-channel routing scenarios where you had to choose between Agent, Bot, and Flow.",
   "whoIsThisFor": {
     "heading": "Who is the Agentforce Specialist exam for?",
     "personas": [
@@ -20,54 +19,53 @@
   },
   "examDifficulty": {
     "heading": "Is the Agentforce Specialist Exam Hard?",
-    "summary": "Agentforce Specialist is moderately hard. The 73% passing score is notably higher than most Salesforce exams, and the content covers relatively new AI agent concepts that many candidates have limited hands-on exposure to.",
+    "summary": "The exam covers current Agentforce capabilities and assumes familiarity with Salesforce platform configuration. The official guide describes a typical candidate as having about one year of relevant experience; this is background guidance, not an exam prerequisite.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>73% passing score</strong> — higher than ADM-201 (68%) and most consultant exams.",
-      "<strong>Rapidly evolving content</strong> — the Agentforce platform is still maturing, so some exam questions cover features with limited community documentation.",
-      "<strong>Hands-on required</strong> — Trailhead modules alone are not sufficient; you need scratch org experience with Agent Builder."
+      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 105 minutes.",
+      "<strong>72% passing score.</strong>",
+      "<strong>No prerequisite certification is required.</strong> Salesforce lists Platform Administrator and Platform App Builder as recommended, not required.",
+      "The official audience description recommends practical experience with Agentforce Agent Builder, Prompt Builder, Data 360, Testing Center, and sandbox-to-production deployment."
     ],
-    "passRateGuidance": "Build at least 2-3 agents in a scratch org before booking. Score 80%+ on practice exams to leave margin for the unfamiliar questions."
+    "passRateGuidance": "Use the official exam outline to identify gaps, then practice building, testing, and deploying agents in a suitable hands-on environment."
   },
   "examFormat": {
     "heading": "Agentforce Specialist Exam Format Explained",
     "intro": "The exam is proctored and delivered online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include choosing the right agent type for a business requirement, configuring topic classification, and designing escalation flows between AI agents and human support.",
     "bestWayToPass": [
       "<strong>Get hands-on with Agent Builder:</strong> Build agents with multiple topics, configure channel routing, and test escalation paths in a scratch org.",
-      "<strong>Understand Einstein Trust Layer:</strong> Know how data masking, toxicity detection, and grounding work — these concepts appear frequently.",
+      "<strong>Understand the Trust Layer:</strong> Review the security and privacy features identified in the official exam outline.",
       "<strong>Study agent lifecycle:</strong> Topic classification, action mapping, guardrails, and how agents decide when to escalate to humans.",
-      "<strong>Review Prompt Builder:</strong> Understand prompt templates, grounding with CRM data, and how to test prompt effectiveness."
+      "<strong>Review Prompt Builder:</strong> Understand prompt-template types, grounding, lifecycle, and effective-prompt practices."
     ]
   },
   "certificationCard": {
     "code": "Agentforce",
     "description": "This exam covers configuring and optimizing AI agents in Agentforce, including topic classification, prompt templates, guardrails, Data Cloud grounding, and multi-channel deployment.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~65%",
+      "questions": "60 multiple-choice + up to 5 unscored",
+      "passingScore": "72%",
       "duration": "105 min",
       "cost": "$200"
     },
     "topics": [
-      "Agentforce Configuration",
-      "Prompt Builder",
-      "AI Agents",
-      "Data Cloud Integration",
-      "Service Cloud",
-      "Conversation Flows",
-      "Platform Configuration",
-      "Optimization",
-      "Best Practices",
-      "Troubleshooting"
+      "Prompt Engineering (20%)",
+      "Data 360 Fundamentals (20%)",
+      "AI Agents (35%)",
+      "Testing, Deployment, and Maintenance (10%)",
+      "Governance and Observability (10%)",
+      "Multi-Agent Orchestration (5%)"
     ]
   },
   "keyConcepts": {
     "h2": "Agentforce Specialist: Key Concepts for the Exam",
     "blocks": [
       {
+        "heading": "Official credential and exam details",
+        "body": "The [Salesforce Certified Agentforce Specialist Exam Guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) lists 60 multiple-choice questions and up to five unscored questions, 105 minutes, a 72% passing score, and no prerequisite. It lists Platform Administrator and Platform App Builder as recommended certifications, not requirements. The [Salesforce credential page](https://trailhead.salesforce.com/credentials/agentforcespecialist) describes the credential as managing and optimizing Agentforce. Check the current [Salesforce certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1) before registration."
+      },
+      {
         "heading": "Topics and Actions — the Core Configuration Unit",
-        "body": "An agent is built from Topics and Actions. Each Topic defines an area of expertise — including the description (used by the LLM to route requests), instructions, and available actions. Actions are the discrete tasks the agent can perform: Flows, **Apex** methods, external service calls, prompt templates, or standard actions like escalate to human. Exam questions often present a requirement and ask which action type or topic configuration is correct."
+        "body": "Topics and actions are among the building blocks identified in the official exam outline. Review standard and custom topics and actions, agent security context, and how the selected agent architecture fits a stated business use case."
       },
       {
         "heading": "Guardrails and Agent Instructions",
@@ -75,11 +73,11 @@
       },
       {
         "heading": "Einstein Trust Layer for Agentforce",
-        "body": "The Einstein Trust Layer protects customer data when Agentforce sends prompts to external LLMs. It masks PII automatically, enforces zero data retention by model providers, and logs all AI activity for audit. This is a compliance-critical concept — the exam tests knowledge of what the Trust Layer does and why it matters in an Agentforce deployment."
+        "body": "The Einstein Trust Layer provides security and privacy services for Agentforce, but data masking must not be treated as automatic: Salesforce documents that pattern-based and field-based LLM masking is disabled for agents. Salesforce documents zero data retention for information sent to third-party LLM providers; audit and feedback handling depends on the supported service and configuration. See Salesforce Help: [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5), [Data Masking Limitations in Agentforce](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US), and [Agentforce (Default) Considerations](https://help.salesforce.com/s/articleView?id=ai.agent_default_considerations.htm&language=en_US&type=5)."
       },
       {
         "heading": "Data Cloud Grounding",
-        "body": "Data Cloud provides Agentforce with unified customer profiles — enabling grounded responses based on real customer data. Without Data Cloud, an agent can only access data through explicit actions. With Data Cloud, the agent has broader context available at query time. Know when Data Cloud integration is required vs optional for a given agent scenario."
+        "body": "Agentforce agents are integrated with Salesforce CRM data, with access controlled by the applicable agent and user permissions. Data 360 and Agentforce Data Libraries provide additional grounding options for configured sources such as knowledge articles and fields, uploaded files, or web sources; they are not a universal prerequisite for every agent data access path. Choose the grounding source based on the information needed and confirm the agent has the required permissions. See Salesforce Help: [The Building Blocks of Agents](https://help.salesforce.com/s/articleView?id=ai.copilot_building_blocks.htm&language=en_US) and [Ground Agentforce in Data](https://help.salesforce.com/s/articleView?id=ai.agent_parent_data.htm&language=en_US&type=5)."
       },
       {
         "heading": "Channels and Escalation",
@@ -97,7 +95,7 @@
       },
       {
         "heading": "Einstein Trust Layer Questions",
-        "body": "The Trust Layer question pattern: a scenario says &ldquo;the company must ensure customer PII is never sent to external AI models.&rdquo; The answer is always the Einstein Trust Layer — specifically its data masking capability. What the Trust Layer does: masks PII before sending prompts to the LLM, enforces zero data retention by LLM providers, and provides full audit logs. What it does NOT do: prevent hallucinations, guarantee factual accuracy, or act as a human reviewer. Questions that say &ldquo;ensure the AI response is always accurate&rdquo; are not answered by the Trust Layer."
+        "body": "Do not assume that Agentforce's Einstein Trust Layer masks PII before every agent request. Salesforce documents pattern-based and field-based data masking as disabled for agents. For data sent to third-party LLM providers, Salesforce documents zero data retention; agent type, selected services, and configuration still matter. See the official [Agentforce masking limitations](https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US) and [Trust and Agentforce](https://help.salesforce.com/s/articleView?id=sf.copilot_trust.htm&language=en_US&type=5). Trust Layer services do not guarantee that a generated answer is factually correct."
       },
       {
         "heading": "Prompt Templates and Grounding",
@@ -109,7 +107,7 @@
       },
       {
         "heading": "Exam Strategy",
-        "body": "The [Agentforce Specialist](/certifications/agentforce-specialist) exam is relatively new and evolves with each Salesforce release. Prioritise the official **Trailhead** Agentforce Specialist Trailmix as your primary study resource — it is the most current and aligned to the actual exam outline. Passing score is approximately 65% (39/60 questions). Aim for 75%+ on full mock exams before booking. Candidates with hands-on Agentforce sandbox experience (building and testing actual agents with Topics and Actions) consistently report higher first-attempt pass rates."
+        "body": "Use the [official Salesforce exam guide](https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1) as the source of truth for current objectives and format. A focused preparation routine is to map each objective to a hands-on exercise, then review gaps against the guide."
       }
     ]
   },

@@ -19,19 +19,17 @@
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Developer I Exam Hard?",
-    "summary": "MuleSoft Developer I is moderately challenging. The exam requires hands-on familiarity with Anypoint Studio, DataWeave 2.0 syntax, and Mule flow design — textbook knowledge alone won’t be enough to pass.",
+    "summary": "The Salesforce Certified MuleSoft Developer exam covers basic Mule 4 projects, Anypoint Platform and Studio, integrations, DataWeave, event flow, error handling, and batch processing.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>~70% passing score</strong> — roughly 42 correct answers needed to pass.",
-      "<strong>DataWeave syntax</strong> — reading and writing transformation scripts is the biggest hurdle for candidates without hands-on practice.",
-      "<strong>Hands-on building required</strong> — candidates who have built and deployed at least 3–5 Mule applications in Anypoint Studio perform significantly better."
+      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 120 minutes.",
+      "<strong>70% passing score.</strong>",
+      "The official guide describes experience with basic Mule 4 projects under guidance and supervision; it does not specify a minimum number of projects or a required prior certification."
     ],
-    "passRateGuidance": "Build several Mule apps end-to-end in Anypoint Studio before booking. Score 80%+ on practice exams to leave a buffer for DataWeave questions."
+    "passRateGuidance": "Use the official objective list to plan practice in Anypoint Studio, DataWeave, integration design, error handling, and deployment."
   },
   "examFormat": {
     "heading": "MuleSoft Developer I Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40–50% of questions present a scenario requiring you to choose the correct Mule component, DataWeave function, or error handling approach. Common patterns include selecting the right connector for a use case, writing DataWeave expressions, and choosing between On Error Continue and On Error Propagate.",
     "bestWayToPass": [
       "<strong>Master DataWeave 2.0:</strong> Practice map, filter, reduce, and pluck functions until you can read and write scripts fluently.",
       "<strong>Build flows in Anypoint Studio:</strong> Create HTTP-triggered flows with database and Salesforce connectors, error handling, and deployment to CloudHub.",
@@ -40,30 +38,36 @@
     ]
   },
   "certificationCard": {
-    "code": "MuleSoft Developer I",
-    "description": "The entry-level MuleSoft developer exam. You&amp;apos;ll need to build Mule flows in Anypoint Studio, write DataWeave transformations, design APIs with RAML, handle errors, and deploy to CloudHub.",
+    "code": "Salesforce Certified MuleSoft Developer",
+    "description": "This credential validates skills to design, build, test, debug, deploy, and manage basic APIs and integrations using Mule 4 and Anypoint Platform.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~70%",
+      "questions": "60 multiple-choice + up to 5 unscored",
+      "passingScore": "70%",
       "duration": "120 min",
       "cost": "$200"
     },
     "topics": [
-      "Anypoint Platform",
-      "Mule Runtime",
-      "Flows",
-      "Connectors",
-      "DataWeave",
-      "API Design",
-      "RAML/OAS",
-      "Testing",
-      "Deployment",
-      "Security"
+      "Creating Application Networks (7%)",
+      "Designing APIs (8%)",
+      "Accessing and Modifying Mule Events (10%)",
+      "Structuring Mule Applications (10%)",
+      "Building API Implementation Interfaces (7%)",
+      "Using Connectors (10%)",
+      "Processing Records (10%)",
+      "Transforming Data (10%)",
+      "Routing Events (8%)",
+      "Handling Errors (8%)",
+      "Debugging and Troubleshooting (5%)",
+      "Deploying and Managing APIs and Integrations (7%)"
     ]
   },
   "keyConcepts": {
     "h2": "MuleSoft Developer I: Key Concepts for the Exam",
     "blocks": [
+      {
+        "heading": "Official credential and exam details",
+        "body": "Salesforce currently lists the credential as [Salesforce Certified MuleSoft Developer](https://trailhead.salesforce.com/credentials/mulesoftdeveloperi). The available [official exam guide](https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1) lists 60 multiple-choice questions and up to five unscored questions, 120 minutes, a 70% passing score, USD 200 registration, USD 100 retake, and no prerequisite; however, its stated exam alignment is Spring ’24. Confirm the current outline before booking, and check [Salesforce certification pricing](https://help.salesforce.com/s/articleView?id=005298916&language=en_US&type=1). The credential is a prerequisite for MuleSoft Developer II."
+      },
       {
         "heading": "Anypoint Platform and Development Lifecycle",
         "body": "**Anypoint Platform** is MuleSoft's integration platform — Design, Develop, Deploy, Manage. **Anypoint Studio** is the Eclipse-based IDE for Mule application development. Anypoint Exchange is the asset repository for APIs, connectors, templates, and examples. **CloudHub** is the iPaaS (integration Platform as a Service) for deploying Mule apps. The developer lifecycle: design the API spec in API Designer → publish to Exchange → implement in Studio → deploy to CloudHub → manage in Runtime Manager."
@@ -362,17 +366,17 @@
       ]
     },
     {
-      "question": "Which Mule variable scope is available across the entire flow?",
+      "question": "In Mule 4, how do you reference a flow variable from a DataWeave expression?",
       "options": [
         "Target only",
-        "Flow variables (flowVars)",
+        "Use vars followed by the variable name, such as vars.myVar",
         "Session only",
         "No variables"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow variables persist for the lifetime of the flow execution.",
+      "explanation": "Mule 4 accesses event variables with the vars keyword; flowVars is Mule 3 terminology.",
       "whyWrong": [
-        "'Target' isn't a Mule variable scope name — flowVars is the scope available across the whole flow.",
+        "Target is an operation setting for storing a value in a variable, not the Mule 4 expression syntax for reading it.",
         "Session scope has different persistence semantics than flow-wide variables.",
         "Mule does support variable scoping — 'no variables' is incorrect."
       ]

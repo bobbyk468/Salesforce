@@ -19,47 +19,43 @@
   },
   "examDifficulty": {
     "heading": "Is the Data Architect Exam Hard?",
-    "summary": "The Data Architect exam is one of the more demanding architect-level certifications because it combines data modeling theory with practical large data volume (LDV) problem solving. Questions often describe a scenario with tens of millions of records and ask you to choose between skinny tables, custom indexes, Big Objects, or archiving strategies based on query patterns and business requirements.",
+    "summary": "The Platform Data Architect exam covers data modeling, master data management, Salesforce data management, governance, large data volumes, and migration. Preparation should include the official objectives and the design trade-offs relevant to each domain.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 minutes &mdash; scenario questions require careful reading and elimination of plausible distractors.",
-      "<strong>~68% passing score</strong> &mdash; roughly 41 correct answers, leaving little margin on questions that test nuanced LDV trade-offs.",
-      "<strong>LDV complexity</strong> &mdash; the exam presents high-volume data scenarios where the correct answer depends on query patterns, not just record count.",
-      "<strong>MDM and migration depth</strong> &mdash; expect questions on external ID upsert strategies, duplicate management, and ETL tool selection for complex migrations."
+      "<strong>60 scored questions</strong> plus up to five unscored questions.",
+      "<strong>105 minutes</strong> and a <strong>58% passing score</strong>, according to Salesforce's exam guide.",
+      "<strong>Six weighted domains</strong> cover data modeling, MDM, Salesforce data management, governance, large data volumes, and migration.",
+      "<strong>Exam fee</strong>: US$400; retake fee: US$200, plus applicable taxes. Prerequisite: none."
     ],
     "passRateGuidance": "Book the exam when you can explain skinny tables vs. custom indexes from memory, diagram a multi-system migration load order, and choose the right MDM pattern for a given scenario."
   },
   "examFormat": {
     "heading": "Data Architect Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Most questions present a data architecture scenario &mdash; a company with specific record volumes, query patterns, and integration requirements &mdash; and ask you to select the optimal strategy.",
+    "scenarioPercent": "Use the published exam objectives to guide preparation across the six weighted domains; practice explaining the trade-offs among appropriate data architecture options.",
     "bestWayToPass": [
       "<strong>Know your LDV toolkit:</strong> Skinny tables, custom indexes, Async SOQL, Big Objects, and archiving strategies &mdash; know exactly when each applies and what it costs.",
       "<strong>Master the migration sequence:</strong> Understand parent-before-child load order, external ID upsert, Bulk API 2.0 limits, and rollback strategies for failed loads.",
-      "<strong>Study MDM patterns:</strong> Registry, Consolidation, and Coexistence &mdash; the exam tests which pattern fits a given enterprise data landscape.",
-      "<strong>Review data governance tools:</strong> Validation Rules, Duplicate Rules, Matching Rules, and Field History Tracking appear in questions about maintaining data quality at scale."
+      "<strong>Study MDM patterns:</strong> Compare approaches for golden records, attribute survivorship, data consolidation, and traceability.",
+      "<strong>Review data governance:</strong> Consider privacy, classification, protection, stewardship, and enterprise governance requirements."
     ]
   },
-  "expertInsight": "Data Architect catches people off guard because the passing score is only 58% — but the questions are genuinely hard. The exam loves presenting a scenario with 50M+ records and asking you to pick between skinny tables, custom indexes, SOSL, Big Objects, or an archiving strategy. The trick is that the 'right' answer often depends on the query pattern described, not just the data volume. I spent the most study time on MDM patterns and external IDs for upsert operations — those come up in almost every migration scenario. Don't overlook Platform Events and Change Data Capture for real-time sync questions either.",
+  "expertInsight": "Use Salesforce's published exam objectives as the study scope. For large-data-volume and migration topics, compare design options against the stated access patterns, operational needs, and data-management requirements; do not assume one technique fits every scenario.",
   "certificationCard": {
     "code": "Data Architect",
     "description": "This exam tests data modeling, large data volume strategies, and migration architecture on the Salesforce Platform. You’ll need to know when to use Big Objects, skinny tables, custom indexes, and MDM patterns for enterprise-scale orgs.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "58%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [
-      "Data Modeling",
-      "Large Data Volumes",
-      "Governor Limits",
-      "Big Objects",
-      "Indexing",
-      "Archiving",
-      "Migration",
-      "Integration",
-      "Performance",
-      "Governance"
+      "Data Modeling/Database Design (25%)",
+      "Master Data Management (5%)",
+      "Salesforce Data Management (25%)",
+      "Data Governance (10%)",
+      "Large Data Volume Considerations (20%)",
+      "Data Migration (15%)"
     ]
   },
   "keyConcepts": {
@@ -67,23 +63,23 @@
     "blocks": [
       {
         "heading": "Data Modeling: Objects, Relationships, and Big Objects",
-        "body": "Beyond standard objects, Data Architects design custom objects with appropriate relationship types. External Objects connect to data stored outside Salesforce via OData connectors. Big Objects store billions of records but have limited **SOQL** support (no GROUP BY, aggregate queries) &mdash; used for archival. **Platform Events** are schema-defined and support publish/subscribe. The exam tests when to use each object type and the implications for querying, sharing, and storage."
+        "body": "Compare standard and custom objects, external objects, and big objects against the required data model and access patterns. Big Object SOQL queries are constrained by the big object's index fields. Platform Events provide a schema-defined event mechanism. These topics align with the published data-model and large-data-volume objectives."
       },
       {
         "heading": "Master Data Management and Deduplication",
-        "body": "MDM strategies define the golden record &mdash; the authoritative version of a data entity. Salesforce Matching Rules define how duplicates are identified (fuzzy vs exact matching on fields). **Duplicate Rules** control what happens when a match is found &mdash; alert, block, allow with warning, or report. **External IDs** support upsert operations &mdash; the system matches on external ID to update existing records or insert new ones. The exam tests MDM patterns and duplicate prevention configuration for large-scale data integrations."
+        "body": "MDM design considers golden records, attribute survivorship, consolidation of source data, and traceability. Salesforce Matching Rules identify possible duplicates; Duplicate Rules specify how matching records are handled. External IDs can support upsert and cross-system record matching. These topics align with the published MDM objectives."
       },
       {
         "heading": "Data Migration: Bulk API and Integration Patterns",
-        "body": "**Bulk API** 2.0 processes up to 100 million records per batch job &mdash; preferred for large-scale data loads. Data Loader uses Bulk API for loads over 200 records. For complex migrations, ETL (Extract, Transform, Load) tools (MuleSoft, Informatica) prepare data before loading. Heroku Connect provides bi-directional sync between Heroku Postgres and Salesforce. The exam tests which migration tool matches the data volume, transformation complexity, and latency requirements of each scenario."
+        "body": "Bulk API 2.0 is an asynchronous option for ingesting and querying large data sets; it manages ingest batches automatically. Data Loader supports SOAP, Bulk API, and Bulk API 2.0, with the API selected through its settings rather than a fixed 200-record automatic threshold. Choose a loading approach based on data volume, transformations, latency, and operational requirements."
       },
       {
         "heading": "Data Quality and Governance",
-        "body": "**Validation Rules** enforce data quality at the point of entry &mdash; they run on all **DML** paths (UI, API, Data Loader). Field History Tracking captures changes to up to 20 fields per object and retains data for 18 months. Setup Audit Trail tracks admin configuration changes for 180 days. Data Quality dashboards using [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) can surface completeness, accuracy, and consistency metrics. The exam tests which governance mechanism addresses a specific data quality requirement."
+        "body": "Data governance covers identifying, classifying, and protecting personal and sensitive information, as well as enterprise governance practices. Validation Rules, Duplicate Rules, Matching Rules, and field-history features are platform tools to evaluate against the organization's data-quality, privacy, and audit requirements."
       },
       {
         "heading": "Large Data Volumes: Performance and Archiving",
-        "body": "Large Data Volume (LDV) considerations: indexed fields in WHERE clauses improve **SOQL** performance (standard fields are indexed; custom fields can be requested). Avoid non-selective queries. Skinny Tables pre-join frequently queried field combinations for reporting performance. Async SOQL runs long-running queries asynchronously. Data archiving to Big Objects or external systems reduces active data volume. The exam tests LDV performance patterns and when to recommend archiving, skinny tables, or query optimisation."
+        "body": "Large Data Volume (LDV) design weighs model scalability and query performance against archiving, purging, and virtualized data options. Salesforce's query optimizer decides whether an index is useful for a query; custom indexes and skinny tables address different performance needs. Use Salesforce's current platform guidance when assessing a specific workload."
       }
     ]
   },
@@ -409,6 +405,21 @@
         "'Only backup' undersells the broader set of considerations (archiving, indexing, query selectivity) needed for growth planning.",
         "'Only export' undersells the broader set of considerations needed for data volume growth planning."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Platform Data Architect covers data modeling, MDM, Salesforce data management, governance, large data volumes, and migration. Use this sample practice set alongside Salesforce's"
+    },
+    {
+      "type": "link",
+      "href": "https://help.salesforce.com/s/articleView?id=005298972&language=en_US&type=1",
+      "label": "Platform Data Architect exam guide"
+    },
+    {
+      "type": "text",
+      "text": "."
     }
   ]
 }

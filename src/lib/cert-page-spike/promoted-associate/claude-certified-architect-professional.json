@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAR-P",
-    "description": "The hardest exam in Anthropic’s certification program. The CCAR-P is built for senior architects who design AI platforms at enterprise scale — multi-region deployments, cross-team cost governance, regulatory compliance for AI-driven decisions, advanced agent orchestration with self-healing workflows, and the observability infrastructure that keeps it all visible.",
+    "description": "Independent learning notes and practice questions about Claude Certified Architect – Professional. Credential availability and exam details have not been verified with Anthropic.",
     "examDetails": {
       "questions": 65,
       "passingScore": "720/1000",
@@ -61,23 +61,23 @@
     "blocks": [
       {
         "heading": "Architecting AI Platforms for Enterprise Scale",
-        "body": "The CCAR-P assumes you are designing systems that serve thousands of users across multiple teams and geographies. You need to make decisions about multi-region deployment topology, high-availability patterns, disaster recovery for AI services, and capacity planning for token-based workloads. The exam gives you a company with competing constraints — one team needs real-time chat, another needs batch processing, a third has strict data-residency rules — and asks how you design the platform so every team is served without architectural sprawl."
+        "body": "You need to make decisions about multi-region deployment topology, high-availability patterns, disaster recovery for AI services, and capacity planning for token-based workloads."
       },
       {
         "heading": "Advanced Agent Orchestration",
-        "body": "Beyond the coordinator-and-subagent patterns in CCAR-F, the Professional exam tests dynamic orchestration. You may need to spawn agents on the fly based on incoming workload, run competing agents against the same input and pick the best result, manage shared memory across long-running agent sessions, or design hierarchical teams where a senior agent delegates to a squad of specialists. The exam also covers self-healing workflows — systems that detect when an agent is stuck, diagnose the cause, and restart with a refined strategy, all without human involvement."
+        "body": "You may need to spawn agents on the fly based on incoming workload, run competing agents against the same input and pick the best result, manage shared memory across long-running agent sessions, or design hierarchical teams where a senior agent delegates to a squad of specialists."
       },
       {
         "heading": "Security Architecture for AI-Driven Decisions",
-        "body": "Enterprise AI touches regulated data and makes decisions that affect real people. The exam tests end-to-end security design: classifying data before it enters any AI pipeline, layered prompt-injection defense (input filtering, privilege separation, output scanning, anomaly detection), secure credential management for tool-calling agents, network isolation for MCP servers in production, and audit trails that satisfy SOC 2, GDPR, and HIPAA requirements. Expect scenario questions where you must choose between architectures that trade off capability for compliance."
+        "body": "Enterprise AI touches regulated data and makes decisions that affect real people. Expect scenario questions where you must choose between architectures that trade off capability for compliance."
       },
       {
         "heading": "Observability and Incident Response",
-        "body": "AI systems degrade silently — outputs get worse without throwing errors. The exam tests your ability to design monitoring that catches this: distributed tracing across multi-agent pipelines, dashboards that track AI-specific metrics (task completion rate, tool-call success ratio, output quality scores, context utilization), alerting on quality regressions, and incident-response playbooks for when a model update changes behavior unexpectedly. You also need to understand chaos engineering applied to AI — deliberately testing what happens when a tool is unavailable, a model returns nonsense, or context corruption occurs mid-conversation."
+        "body": "AI systems degrade silently — outputs get worse without throwing errors. You also need to understand chaos engineering applied to AI — deliberately testing what happens when a tool is unavailable, a model returns nonsense, or context corruption occurs mid-conversation."
       },
       {
         "heading": "Cost Governance at Scale",
-        "body": "When AI costs reach six figures per month, governance becomes an architecture concern. The exam tests intelligent model routing (sending cheap tasks to Haiku and reserving Opus for complex reasoning), prompt-caching strategies that maximize cache-hit rates across shared system prompts, batch processing for non-urgent workloads, per-team usage tracking and budget alerts, and annual cost forecasting. Expect questions that ask you to evaluate a current architecture and recommend the optimization that produces the highest cost reduction without degrading quality."
+        "body": "When AI costs reach six figures per month, governance becomes an architecture concern. Expect questions that ask you to evaluate a current architecture and recommend the optimization that produces the highest cost reduction without degrading quality."
       }
     ]
   },
@@ -315,6 +315,12 @@
         "Blocklisting specific words like 'ignore' or 'override' is trivially evaded by rephrasing and doesn't address the underlying architecture risk.",
         "Model size doesn't provide meaningful resistance to prompt injection — injection exploits instruction-following behavior present at every model size."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified."
     }
   ]
 }

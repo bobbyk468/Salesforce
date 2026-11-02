@@ -1,15 +1,24 @@
 {
   "template": "associate",
-  "expertInsight": "Salesforce Marketing Cloud was rebranded to Marketing Cloud Engagement in 2022 to distinguish it from Marketing Cloud Account Engagement (formerly Pardot). The certification is still called 'Email Specialist' on Webassessor and Trailhead, and that's the name candidates search for — this guide uses it for that reason, but expect the product itself to say Marketing Cloud Engagement throughout.",
+  "expertInsight": "Salesforce's current credential name is Salesforce Certified Marketing Cloud Engagement Specialist. The exam guide covers email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
   "introLead": [
     {
       "type": "text",
-      "text": "Looking for exam strategy before you start practising? Read our"
+      "text": "This free guide focuses on Marketing Cloud email content, subscriber data, delivery, automation, and reporting. Its 15 sample questions check personalization, Data Extensions, send timing, delivery metrics, and related core concepts. Compare the scope with Salesforce's"
+    },
+    {
+      "type": "link",
+      "href": "https://trailhead.salesforce.com/credentials/marketingcloudengagementspecialist",
+      "label": "Marketing Cloud Engagement Specialist exam guide"
+    },
+    {
+      "type": "text",
+      "text": ". For a study schedule, see our"
     },
     {
       "type": "link",
       "href": "/email-specialist-exam-tips",
-      "label": "Marketing Cloud Email Specialist exam tips and 4-week study plan"
+      "label": "exam tips and four-week study plan"
     },
     {
       "type": "text",
@@ -36,19 +45,19 @@
   },
   "examDifficulty": {
     "heading": "Is the Email Specialist Exam Hard?",
-    "summary": "The Email Specialist exam is moderately difficult. It tests deep knowledge of Marketing Cloud email features, from AMPscript personalization to deliverability protocols, which goes well beyond basic email campaign management.",
+    "summary": "The official exam guide covers email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>67% passing score</strong> &mdash; you can miss up to 20 questions.",
-      "<strong>AMPscript code reading</strong> &mdash; expect questions that show AMPscript snippets and ask what they output or which function to use for a given personalization requirement.",
-      "<strong>Deliverability depth</strong> &mdash; you need to know SPF, DKIM, DMARC, the Sender Authentication Package, and how hard vs soft bounces affect sender reputation."
+      "<strong>60 multiple-choice questions</strong> and up to five unscored questions in 90 minutes.",
+      "<strong>67% passing score.</strong>",
+      "<strong>Core scope:</strong> Email best practices, content creation and delivery, marketing automation, subscriber and data management, and insights and analytics.",
+      "<strong>Preparation:</strong> Salesforce recommends basic understanding of AMPscript, GTL, SSJS, HTML, and CSS; in-depth development knowledge is not required."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and make sure you can distinguish Journey Builder from Automation Studio use cases and read basic AMPscript Lookup() and IIF() functions."
+    "passRateGuidance": "Use timed practice to identify gaps, then review the official objectives and explain why each answer is correct."
   },
   "examFormat": {
     "heading": "Email Specialist Exam Format Explained",
     "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right subscriber list type for a segmentation requirement, selecting the correct AMPscript function for personalization, and diagnosing a deliverability issue.",
+    "scenarioPercent": "The official guide does not publish a percentage of scenario-based questions. Practice applying the stated objectives to realistic email, data, automation, and reporting requirements.",
     "bestWayToPass": [
       "<strong>Know the subscriber data model:</strong> All Subscribers, Publication Lists, Suppression Lists, Data Extensions, and how global unsubscribes override everything else.",
       "<strong>Learn core AMPscript functions:</strong> Lookup(), LookupRows(), AttributeValue(), and IIF() cover most exam scenarios &mdash; practice reading code snippets and predicting output.",
@@ -58,7 +67,7 @@
   },
   "differentiation": {
     "heading": "Email Specialist Traps & Readiness Checklist",
-    "intro": "The Email Specialist exam rewards candidates who know how Marketing Cloud behaves in real sends, not just what each feature is called.",
+    "intro": "Preparation should cover how Marketing Cloud behaves in real sends, not just what each feature is called.",
     "commonTraps": [
       {
         "trap": "Confusing All Subscribers, Publication Lists, Suppression Lists, and Data Extensions",
@@ -81,7 +90,7 @@
       "You can design the right list or data-extension model for promotional, transactional, and preference-center scenarios.",
       "You can read basic AMPscript snippets and explain the output without running the code.",
       "You know when to use Journey Builder, Automation Studio, Email Studio, and Contact Builder.",
-      "You score 75%+ on timed practice exams and can explain every deliverability miss."
+      "You can explain the official objectives and review why each practice answer is correct."
     ],
     "whoShouldSkip": [
       "You have never worked inside Marketing Cloud Engagement or Email Studio.",
@@ -101,25 +110,20 @@
     ]
   },
   "certificationCard": {
-    "code": "Email Specialist",
+    "code": "Marketing Cloud Engagement Specialist",
     "description": "The Marketing Cloud Email Specialist certification validates your skills in email marketing, including content creation, data management, and email deliverability.",
     "examDetails": {
       "questions": 60,
       "passingScore": "67%",
-      "duration": "105 min",
+      "duration": "90 min",
       "cost": "$200"
     },
     "topics": [
-      "Email Marketing Best Practices",
-      "Content Creation",
-      "AMPscript",
-      "Data Management",
-      "Subscriber Management",
-      "Email Deliverability",
-      "Tracking & Reporting",
-      "Automation",
-      "Testing",
-      "Compliance"
+      "Email Marketing Best Practices (10%)",
+      "Content Creation and Delivery (24%)",
+      "Marketing Automation (26%)",
+      "Subscriber and Data Management (26%)",
+      "Insights and Analytics (14%)"
     ]
   },
   "keyConcepts": {
@@ -157,7 +161,7 @@
       },
       {
         "heading": "AMPscript for Personalization",
-        "body": "Know core **AMPscript** functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Questions often present AMPscript snippets and ask what they output."
+        "body": "Know core **AMPscript** functions: Lookup, LookupRows, AttributeValue, Format, IIf, and how to use FOR loops for dynamic content blocks. Practice reading short snippets and predicting their output."
       },
       {
         "heading": "Journey Builder vs. Automation Studio",
@@ -227,7 +231,7 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which content type allows for dynamic, personalized content based on subscriber data?",
+      "question": "Which scripting language can personalize Marketing Cloud email content using subscriber data?",
       "options": [
         "Static Content",
         "AMPscript",
@@ -235,7 +239,7 @@
         "Text Block"
       ],
       "correctAnswer": 1,
-      "explanation": "AMPscript is Marketing Cloud's scripting language that allows you to create dynamic, personalized email content based on subscriber attributes and data.",
+      "explanation": "AMPscript is Marketing Cloud Engagement's scripting language for creating dynamic, personalized email content from subscriber attributes and data.",
       "whyWrong": [
         "Static Content is fixed and doesn't personalize per subscriber.",
         "An HTML Block is a static layout element, not a dynamic personalization mechanism.",
@@ -267,7 +271,7 @@
         "Automation Studio"
       ],
       "correctAnswer": 1,
-      "explanation": "Send Time Optimization uses Einstein AI to determine and send emails at the best time for each individual subscriber.",
+      "explanation": "Einstein Send Time Optimization uses engagement data to predict an optimal send time for each contact. When data is insufficient, it uses a generalized option configured by the administrator.",
       "whyWrong": [
         "Triggered Send fires on a specific event, not specifically at an AI-optimized time per subscriber.",
         "Journey Builder orchestrates multi-step journeys — it isn't specifically the send-time optimization feature.",
@@ -283,7 +287,7 @@
         "Bounce Rate"
       ],
       "correctAnswer": 2,
-      "explanation": "Delivery Rate measures the percentage of emails that were successfully delivered to subscribers' inboxes.",
+      "explanation": "Delivery Rate measures the percentage of sent emails reported as successfully delivered; it does not establish inbox placement.",
       "whyWrong": [
         "Open Rate measures how many delivered emails were opened, not delivery success itself.",
         "Click Rate measures link engagement, not delivery success.",
@@ -291,7 +295,7 @@
       ]
     },
     {
-      "question": "Which list type in Marketing Cloud automatically removes unsubscribed and bounced subscribers?",
+      "question": "Which Marketing Cloud list stores subscriber status used to suppress standard sends to unsubscribed subscribers?",
       "options": [
         "Publication List",
         "Suppression List",
@@ -299,11 +303,11 @@
         "Auto-Suppression List"
       ],
       "correctAnswer": 2,
-      "explanation": "The All Subscribers list automatically manages subscriber status, removing unsubscribed and bounced subscribers from sends.",
+      "explanation": "All Subscribers is the account's main subscriber record list. An Unsubscribed status there prevents standard sends; the subscriber record remains in the list.",
       "whyWrong": [
         "A Publication List is a general subscription list, not the specific auto-removal mechanism described.",
         "A Suppression List is manually maintained to exclude addresses — it doesn't automatically populate from bounces/unsubscribes the way Auto-Suppression does.",
-        "The All Subscribers List includes everyone regardless of status — it's the opposite of automatic removal."
+        "All Subscribers contains subscriber records with different statuses; its status controls send eligibility rather than removing the record."
       ]
     },
     {

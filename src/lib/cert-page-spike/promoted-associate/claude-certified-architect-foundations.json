@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "CCAR-F",
-    "description": "Anthropic’s architecture-level credential for engineers who design AI systems rather than just build them. The CCAR-F tests your ability to decompose problems into agent workflows, wire up MCP servers that external tools can talk through, configure Claude Code for team-wide consistency, and make the tradeoffs that keep multi-agent pipelines reliable under real production load.",
+    "description": "Independent learning notes and practice questions about Claude Certified Architect – Foundations. Credential availability and exam details have not been verified with Anthropic.",
     "examDetails": {
       "questions": 60,
       "passingScore": "720/1000",
@@ -61,23 +61,23 @@
     "blocks": [
       {
         "heading": "Designing Multi-Agent Systems",
-        "body": "Over a quarter of the exam asks you to architect systems where multiple agents collaborate on a task. You need to decide when a single agent with several tools is enough and when to split work across specialized subagents coordinated by a hub. The exam presents scenarios — a compliance review pipeline, an automated onboarding flow, a research-and-write workflow — and asks which orchestration pattern fits, where failures will surface, and how to add human checkpoints without bottlenecking throughput."
+        "body": "You need to decide when a single agent with several tools is enough and when to split work across specialized subagents coordinated by a hub."
       },
       {
         "heading": "MCP Servers and Tool Boundaries",
-        "body": "The Model Context Protocol gives Claude a standardized way to reach databases, APIs, file systems, and other services. The exam tests your judgment on designing those integrations: what belongs inside one MCP server vs. split across two, when to use stdio transport (local, single-client) vs. SSE (remote, multi-client), how to write tool schemas tight enough that Claude rarely mis-invokes them, and what security controls to put between the model and your production systems."
+        "body": "The Model Context Protocol gives Claude a standardized way to reach databases, APIs, file systems, and other services. split across two, when to use stdio transport (local, single-client) vs. SSE (remote, multi-client), how to write tool schemas tight enough that Claude rarely mis-invokes them, and what security controls to put between the model and your production systems."
       },
       {
         "heading": "Claude Code for Teams and CI/CD",
-        "body": "Claude Code is a terminal-based coding agent. The CCAR-F goes beyond using it and into configuring it at the team level. You need to understand how CLAUDE.md files layer — user-level defaults, repo-root project context, directory-level overrides — and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
+        "body": "Claude Code is a terminal-based coding agent. You need to understand how CLAUDE.md files layer — user-level defaults, repo-root project context, directory-level overrides — and how to write custom slash commands, set permission hooks, and plug Claude Code into continuous integration pipelines so it can review pull requests, run migrations, or enforce style guides automatically."
       },
       {
         "heading": "Prompt Architecture for Complex Applications",
-        "body": "At the architect level, prompts are system components, not one-off instructions. The exam tests multi-section system prompts that define roles, constraints, output formats, and escalation rules all in one document. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting — how much of the window to reserve for instructions vs. user content vs. tool results."
+        "body": "At the architect level, prompts are system components, not one-off instructions. You need to know how to enforce JSON output via tool-use schemas, build few-shot examples that handle edge cases, and design validation-and-retry loops that feed parsing errors back to Claude so it self-corrects. Expect questions on context-window budgeting — how much of the window to reserve for instructions vs. user content vs. tool results."
       },
       {
         "heading": "Keeping Systems Reliable as They Scale",
-        "body": "The final domain covers what goes wrong when an agent runs in production. You need iteration limits that stop runaway loops, circuit breakers that pause work and escalate rather than silently failing, context-management strategies for conversations that approach the window limit, and handoff patterns that pass curated summaries between agents instead of dumping entire histories. The exam also tests graceful degradation — what should happen when a tool is down, a model returns garbage, or context is exhausted."
+        "body": "The final domain covers what goes wrong when an agent runs in production. You need iteration limits that stop runaway loops, circuit breakers that pause work and escalate rather than silently failing, context-management strategies for conversations that approach the window limit, and handoff patterns that pass curated summaries between agents instead of dumping entire histories."
       }
     ]
   },
@@ -315,6 +315,12 @@
         "A hardcoded lookup table can't reflect the same 'recently updated' data problem — it would be even more stale than a cache.",
         "Running the entire pipeline twice and comparing results doesn't address the root cause (stale source data) and doubles cost without fixing anything."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified."
     }
   ]
 }
