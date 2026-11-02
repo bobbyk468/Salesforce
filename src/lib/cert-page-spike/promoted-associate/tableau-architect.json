@@ -21,8 +21,8 @@
     "heading": "Is the Tableau Architect Exam Hard?",
     "summary": "The Tableau Architect exam is one of the harder Tableau certifications. It tests deep knowledge of Tableau Server topology, multi-node clustering, row-level security, and enterprise governance — surface-level familiarity with Tableau administration is not enough to pass.",
     "bullets": [
-      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, but architecture scenarios often require careful analysis.",
-      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>45 questions</strong> in 105 minutes — roughly two minutes per question, but architecture scenarios often require careful analysis.",
+      "<strong>63% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
       "<strong>Enterprise-scale depth required</strong> — questions test server process distribution, HA configuration, RLS implementation patterns, and content governance at scale.",
       "<strong>Hands-on architecture experience is critical</strong> — candidates who have designed or managed multi-node Tableau Server environments with security layers and governance frameworks are best prepared."
     ],
@@ -43,9 +43,9 @@
     "code": "Tableau Architect",
     "description": "Tableau Architects design and govern enterprise Tableau analytics solutions. They define architecture, governance, scalability, and best practices for Tableau Server and Tableau Cloud.",
     "examDetails": {
-      "questions": 45,
-      "passingScore": "~70%",
-      "duration": "90 min",
+      "questions": 59,
+      "passingScore": "63%",
+      "duration": "105 min",
       "cost": "$250"
     },
     "topics": [

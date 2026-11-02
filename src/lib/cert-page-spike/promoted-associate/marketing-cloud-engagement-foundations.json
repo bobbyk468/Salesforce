@@ -21,8 +21,8 @@
     "heading": "Is the Marketing Cloud Engagement Foundations Exam Hard?",
     "summary": "The Engagement Foundations exam is one of the easier Salesforce certifications. It is designed for people with up to 6 months of Marketing Cloud experience and tests basic platform navigation, email sends, subscriber management, and core reporting metrics. This is a great starting point if you are new to Marketing Cloud.",
     "bullets": [
-      "<strong>40 multiple-choice questions</strong> in 75 minutes.",
-      "<strong>~65% passing score</strong> — you need to answer roughly 26 out of 40 questions correctly.",
+      "<strong>40 multiple-choice questions</strong> in 70 minutes.",
+      "<strong>~62% passing score</strong> — you need to answer roughly 26 out of 40 questions correctly.",
       "<strong>Entry-level content</strong> — no coding, no advanced data architecture. The focus is on navigating Email Studio, understanding subscriber lists vs Data Extensions, and basic Journey Builder workflows.",
       "<strong>Lower cost barrier</strong> — at $75, this exam is significantly cheaper than role-based certifications."
     ],
@@ -44,8 +44,8 @@
     "description": "An entry-level exam for anyone new to Marketing Cloud Engagement. It covers Email Studio basics, subscriber lists vs. Data Extensions, simple Journey Builder workflows, and core reporting metrics.",
     "examDetails": {
       "questions": 40,
-      "passingScore": "~65%",
-      "duration": "75 min",
+      "passingScore": "~62%",
+      "duration": "70 min",
       "cost": "$75"
     },
     "topics": [

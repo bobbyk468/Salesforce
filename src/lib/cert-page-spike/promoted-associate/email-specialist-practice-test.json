@@ -21,7 +21,7 @@
     "heading": "Is the Email Specialist Exam Hard?",
     "summary": "This practice-test page supports Email Specialist readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
-      "<strong>60 questions</strong> in 90 min.",
+      "<strong>60 questions</strong> in 105 min.",
       "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
       "<strong>Scenario-based choices</strong> — expect questions that test when to use Email Studio & Content, Data Extensions & Subscribers, or Send Management.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported Email Specialist in a real org are better prepared than candidates who only memorize notes."
@@ -45,7 +45,7 @@
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
-      "duration": "90 min",
+      "duration": "105 min",
       "cost": "Practice only"
     },
     "topics": [

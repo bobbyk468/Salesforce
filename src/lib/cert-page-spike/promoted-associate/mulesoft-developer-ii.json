@@ -22,7 +22,7 @@
     "summary": "MuleSoft Developer II is a hard exam. It assumes you already hold Developer I knowledge and tests advanced topics like batch processing, custom policies, CI/CD pipeline design, and production deployment strategies that require real project experience.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>~70% passing score</strong> — the same threshold as Developer I, but the content is significantly more complex.",
+      "<strong>70% passing score</strong> — the same threshold as Developer I, but the content is significantly more complex.",
       "<strong>Advanced DataWeave</strong> — expect pattern matching, custom modules, recursive functions, and complex nested transformations.",
       "<strong>Production experience matters</strong> — candidates with at least 6–12 months of hands-on Mule development in a production environment pass at significantly higher rates."
     ],
@@ -44,7 +44,7 @@
     "description": "The advanced MuleSoft developer exam. Expect deep questions on DataWeave modules, batch processing, API security policies, CI/CD pipelines with Maven, and production deployment strategies.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~70%",
+      "passingScore": "70%",
       "duration": "120 min",
       "cost": "$200"
     },

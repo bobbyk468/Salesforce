@@ -21,8 +21,8 @@
     "heading": "Is the B2C Solution Architect Exam Hard?",
     "summary": "The B2C Solution Architect exam is hard. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 min.",
-      "<strong>~68% passing score</strong> — build a margin above the minimum before booking.",
+      "<strong>60 questions</strong> in 105 min.",
+      "<strong>~63% passing score</strong> — build a margin above the minimum before booking.",
       "<strong>Scenario-based choices</strong> — expect questions that test when to use B2C Commerce, Multi-Cloud, or Solution Design.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported B2C Commerce in a real org are better prepared than candidates who only memorize notes."
     ],
@@ -44,8 +44,8 @@
     "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management for seamless customer journeys.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "~63%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [

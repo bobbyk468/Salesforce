@@ -22,7 +22,7 @@
     "summary": "This practice-test page supports ADM-201 readiness. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
     "bullets": [
       "<strong>60 questions</strong> in 105 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
+      "<strong>68% passing score</strong> — build a margin above the minimum before booking.",
       "<strong>Scenario-based choices</strong> — expect questions that test when to use Configuration & Setup, Object Manager & Fields, or Reports & Dashboards.",
       "<strong>Hands-on context matters</strong> — candidates who have configured or supported Administrator in a real org are better prepared than candidates who only memorize notes."
     ],
@@ -44,7 +44,7 @@
     "description": "Official-style practice test for the Platform Administrator (ADM-201) certification. Use this to gauge readiness and practice under exam-like conditions before taking the real exam.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "68%",
       "duration": "105 min",
       "cost": "Practice only"
     },

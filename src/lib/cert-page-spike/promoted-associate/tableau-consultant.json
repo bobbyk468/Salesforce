@@ -21,8 +21,8 @@
     "heading": "Is the Tableau Consultant Exam Hard?",
     "summary": "The Tableau Consultant exam is moderately difficult. It blends technical Tableau product knowledge with consulting and advisory competencies, so strong product skills alone are not enough — you also need experience translating business requirements into Tableau solutions.",
     "bullets": [
-      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which gives adequate time for scenario analysis.",
-      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
+      "<strong>45 questions</strong> in 105 minutes — roughly two minutes per question, which gives adequate time for scenario analysis.",
+      "<strong>63% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
       "<strong>Consulting scenarios dominate</strong> — questions describe client requirements and ask you to recommend the best Tableau approach, not just identify a feature.",
       "<strong>Implementation experience is essential</strong> — candidates with real project experience advising clients on Tableau deployments perform significantly better."
     ],
@@ -43,9 +43,9 @@
     "code": "Tableau Consultant",
     "description": "Tableau Consultants implement Tableau solutions and advise organizations on analytics strategy, dashboard design, and data visualization best practices.",
     "examDetails": {
-      "questions": 45,
-      "passingScore": "~70%",
-      "duration": "90 min",
+      "questions": 60,
+      "passingScore": "63%",
+      "duration": "105 min",
       "cost": "$250"
     },
     "topics": [

@@ -22,7 +22,7 @@
     "summary": "The JavaScript Developer I exam is moderately difficult. It is a JavaScript-first exam that happens to run on Salesforce &mdash; strong ES6+ fundamentals matter more than platform-specific knowledge, which catches many Salesforce-only developers off guard.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~68% passing score</strong> &mdash; you can miss roughly 19 questions, but code-reading questions take time so pacing matters.",
+      "<strong>65% passing score</strong> &mdash; you can miss roughly 19 questions, but code-reading questions take time so pacing matters.",
       "<strong>Heavy on ES6+ and async patterns</strong> &mdash; closures, promises, async/await, the event loop, and prototype chain questions dominate the first half of the exam.",
       "<strong>LWC lifecycle knowledge required</strong> &mdash; expect scenario questions on connectedCallback vs renderedCallback, @wire vs imperative Apex calls, and Shadow DOM event propagation."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam tests core JavaScript (ES6+), async programming, and Lightning Web Components on the Salesforce Platform. Expect code-reading questions on closures, promises, the event loop, and LWC lifecycle hooks — strong JS fundamentals matter more than Salesforce-specific knowledge.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
+      "passingScore": "65%",
       "duration": "105 min",
       "cost": "$200"
     },
