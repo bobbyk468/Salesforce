@@ -1,49 +1,49 @@
 {
   "template": "associate",
-  "expertInsight": "Integration Architect is one of the harder architect-level exams because it spans so many integration patterns — REST, SOAP, Platform Events, Change Data Capture, Heroku Connect, MuleSoft, and outbound messaging all show up. The questions I found hardest involved choosing between near-real-time and batch patterns when the scenario description is deliberately ambiguous about latency requirements. Pay close attention to governor limits on callouts (100 per transaction, 120-second timeout) and the order-of-execution implications when mixing triggers with @future or Queueable. Canvas apps and Connected Apps for SSO came up more than I expected.",
+  "expertInsight": "This exam is hard because it covers so many ways to connect systems: REST, SOAP, Bulk API, Platform Events, Change Data Capture, outbound messages, MuleSoft and Heroku Connect. The questions that slowed me down were the ones where the scenario was vague about timing. If the question doesn't say the user needs an answer right away, it usually isn't asking for a synchronous callout. Know the callout limits by heart (100 callouts per transaction, 120 seconds total). Also know what happens when a trigger hands work off to @future or Queueable. I got more questions on Connected Apps, OAuth and Canvas than I expected, so don't skip them.",
   "whoIsThisFor": {
     "heading": "Who is the Integration Architect exam for?",
     "personas": [
       {
         "label": "Senior developers",
-        "description": "You design integration solutions and want to validate your API architecture and middleware expertise."
+        "description": "You already build callouts and APIs, and you want proof that you can design the whole integration, not just code one part of it."
       },
       {
         "label": "Aspiring architects",
-        "description": "You are pursuing the Application Architect or CTA path and need Integration Architect as a prerequisite."
+        "description": "Platform Integration Architect is one of the four exams you need for System Architect, which in turn leads toward Technical Architect (CTA)."
       },
       {
         "label": "Integration consultants",
-        "description": "You deliver complex multi-system integrations with Salesforce and need the credential to demonstrate architecture skills."
+        "description": "You connect Salesforce to ERPs, billing tools and data platforms for clients, and you want a credential that shows it."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Integration Architect Exam Hard?",
-    "summary": "Integration Architect is considered one of the harder architect-level exams. It spans a wide range of integration patterns and requires deep understanding of both Salesforce APIs and external middleware.",
+    "summary": "Yes. Most people rate it as one of the harder architect exams. You need to know the Salesforce APIs well, and you also need to know when not to use them and reach for middleware instead.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>67% passing score</strong> — moderate threshold, but questions require deep architectural reasoning.",
-      "<strong>Broad pattern coverage</strong> — REST, SOAP, Platform Events, Change Data Capture, Heroku Connect, MuleSoft, and outbound messaging all appear.",
-      "<strong>Governor limit awareness</strong> — callout limits (100 per transaction, 120-second timeout) and async processing are frequently tested."
+      "<strong>67% to pass.</strong> That is about 41 correct answers out of 60. Most questions are scenarios, so you can't pass on memory alone.",
+      "<strong>Many patterns tested.</strong> Expect REST, SOAP, Bulk API, Platform Events, Change Data Capture, outbound messages and MuleSoft.",
+      "<strong>Limits matter.</strong> Callout limits (100 per transaction, 120 seconds total) and async Apex come up often."
     ],
-    "passRateGuidance": "Candidates with 3+ years of integration project experience perform best. Score 75%+ on practice exams and be comfortable whiteboarding integration architectures before booking."
+    "passRateGuidance": "People with a few years of real integration work tend to do best. Before you book, aim for 75% or more on practice tests, and make sure you can sketch an integration on a whiteboard and explain why you chose each piece."
   },
   "examFormat": {
     "heading": "Integration Architect Exam Format Explained",
-    "intro": "The exam is proctored online or at a test centre. Here is the format:",
-    "scenarioPercent": "Roughly 60-70% of questions are scenario-based. The most common pattern is describing a data sync requirement between Salesforce and an external system and asking you to choose the optimal integration pattern (real-time vs. near-real-time vs. batch, push vs. pull).",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "About two thirds of the questions are short business scenarios. A typical one describes data that needs to move between Salesforce and another system, then asks which approach fits best: real time, near real time or batch, and push or pull.",
     "bestWayToPass": [
-      "<strong>Master integration patterns:</strong> Know when to use REST vs. SOAP, Platform Events vs. CDC, synchronous vs. asynchronous, and push vs. pull for each scenario type.",
-      "<strong>Understand governor limits for callouts:</strong> 100 callout limit per transaction, 120-second timeout, and how to design around them with @future and Queueable.",
-      "<strong>Study Canvas and Connected Apps:</strong> These show up more than expected — know SSO flows, OAuth scopes, and Canvas app lifecycle.",
-      "<strong>Review middleware options:</strong> Understand when to use MuleSoft, Heroku Connect, or native Salesforce APIs for different integration complexity levels."
+      "<strong>Learn the patterns first:</strong> For each scenario, ask three things. Does the user wait for an answer? How much data is there? Which system starts the exchange? Those answers point to the pattern.",
+      "<strong>Know the callout limits:</strong> 100 callouts per transaction and 120 seconds in total. Know when to move work into @future or Queueable Apex to stay under them.",
+      "<strong>Don't skip Connected Apps:</strong> Know the main OAuth flows, what scopes do, and how Canvas apps load an outside app inside Salesforce.",
+      "<strong>Know when to add middleware:</strong> A single, simple connection can go direct. Many systems, heavy data changes or reuse across teams usually means MuleSoft or another middleware tool."
     ]
   },
   "introLead": [
     {
       "type": "text",
-      "text": "The Integration Architect certification is part of the Application Architect path. It is recommended to also review the"
+      "text": "Platform Integration Architect checks that you can design how Salesforce connects to other systems, from start to finish. It is one of the four exams you need for System Architect. See the"
     },
     {
       "type": "link",
@@ -52,16 +52,16 @@
     },
     {
       "type": "text",
-      "text": "certification guide."
+      "text": "guide for the full path."
     }
   ],
   "certificationCard": {
     "code": "Integration Architect",
-    "description": "This exam tests designing integration solutions between Salesforce and external systems using REST, SOAP, Bulk, and Streaming APIs. You’ll need to select the right integration pattern, middleware approach, and error-handling strategy for complex enterprise scenarios.",
+    "description": "This exam tests how you design connections between Salesforce and other systems using the REST, SOAP, Bulk and streaming APIs. You pick the right pattern, decide whether middleware is needed, and plan what happens when something fails.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "67%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [
@@ -82,55 +82,55 @@
     "blocks": [
       {
         "heading": "Integration Patterns: When to Use Each",
-        "body": "Salesforce documents specific integration patterns that map directly to exam scenarios. Remote Process Invocation &mdash; Request/Reply: synchronous callout from Salesforce to an external system, waiting for a response (e.g., real-time address validation during record save). Remote Process Invocation &mdash; Fire and Forget: Salesforce sends a message and does not wait for a response &mdash; typically via **Platform Events** or outbound messages. Batch Data Synchronization: scheduled bulk data movement between systems using **Bulk API** or ETL tools (MuleSoft, Informatica). Data Virtualization: querying external data in real time without storing it in Salesforce, using External Objects and OData connectors. UI Update Based on Data Changes: Streaming API or Change Data Capture pushes record changes to a subscribed UI in near real time. The exam presents a business scenario (latency tolerance, data volume, error-handling needs) and asks which pattern fits &mdash; knowing the trade-offs between sync and async, and between push and pull, is essential."
+        "body": "Salesforce publishes a short list of integration patterns, and most exam questions map to one of them. **Request and Reply:** Salesforce calls another system and waits for the answer, for example checking an address while a user saves a record. **Fire and Forget:** Salesforce sends a message and moves on without waiting. Platform Events and outbound messages work this way. **Batch Data Synchronization:** large amounts of data move on a schedule, usually with Bulk API or an ETL tool such as MuleSoft or Informatica. **Data Virtualization:** Salesforce shows outside data without storing it, using External Objects and Salesforce Connect. **UI Update Based on Data Changes:** Change Data Capture or the streaming API pushes changes to a screen as they happen. To pick the right one, look at three things in the question: how fast the answer is needed, how much data there is, and what should happen if the call fails."
       },
       {
         "heading": "Salesforce APIs: REST, SOAP, Bulk, Streaming, and Connect",
-        "body": "Each Salesforce API serves a different integration scenario. **REST API**: lightweight JSON-based CRUD for real-time integrations &mdash; supports both inbound (external system calls Salesforce) and outbound (Apex HTTP callouts). **SOAP API**: XML/WSDL-based, used by legacy enterprise systems that require formal contracts. **Bulk API** 2.0: processes millions of records asynchronously in CSV format &mdash; the go-to for data migration and large scheduled syncs. **Streaming API** (PushTopic, Generic Streaming): server-push via CometD/Bayeux for near-real-time notifications. **Change Data Capture** (CDC): publishes field-level change events for subscribed objects. **Composite API**: bundles multiple REST requests into a single call, reducing round trips. **Connect API**: pre-built REST endpoints for Chatter, Communities, and CRM-specific operations. The exam tests which API to recommend for a given data volume, latency, and directionality requirement &mdash; and the governor limits that constrain each (100 callouts per transaction, 6 MB response size, API call daily limits)."
+        "body": "Each API fits a different job. **REST API** uses JSON and is the default for small, real-time reads and writes, both into Salesforce and out through Apex callouts. **SOAP API** uses XML and a WSDL, and you mostly see it with older enterprise systems that want a strict contract. **Bulk API 2.0** handles millions of records in the background and is the usual choice for data migration and large nightly loads. **Change Data Capture** sends an event every time a record changes, with only the fields that changed. **Composite API** groups several REST calls into one request, which saves round trips. **Connect API** gives ready-made endpoints for things like Chatter and Experience Cloud. The exam asks which API fits a given amount of data, speed and direction, and which limits apply. Remember 100 callouts per transaction, a 6 MB heap limit for synchronous Apex and the daily API call allowance for your org."
       },
       {
         "heading": "Error Handling, Idempotency, and Recovery",
-        "body": "Production integrations fail &mdash; the exam tests how you design for it. Retry with exponential backoff: failed callouts retry at increasing intervals (1s, 2s, 4s, 8s) to avoid overwhelming the target system. Idempotency: ensuring that replaying a message produces the same result without duplicating records &mdash; typically using external IDs or unique request identifiers. Dead-letter queues: messages that fail after all retries are routed to a holding queue for manual review or reprocessing. Circuit breaker pattern: after repeated failures, the integration stops calling the target and falls back to a cached response or queued retry. Outbound message retry: Salesforce retries outbound messages for up to 24 hours. **Platform Events**: replay ID lets subscribers resume from the last successfully processed event after a disconnection (events retained for 72 hours). The exam presents failure scenarios and asks which combination of retry logic, idempotency checks, and error-routing mechanisms produces a resilient integration."
+        "body": "Integrations fail, and the exam wants to see that you planned for it. **Retry with backoff:** wait a little longer before each retry (1s, 2s, 4s, 8s) so you don't flood a system that is already struggling. **Idempotency:** sending the same message twice should not create two records. The usual fix is an external ID or a unique request ID that the receiving system checks. **Dead-letter queue:** messages that still fail after every retry go to a holding area where someone can look at them. **Circuit breaker:** after several failures in a row, stop calling the other system for a while and queue the work instead. Two Salesforce details come up often. Outbound messages are retried for up to 24 hours. Platform Event subscribers can use the replay ID to pick up where they left off, and events are kept for 72 hours."
       },
       {
         "heading": "Platform Events, CDC, and Event-Driven Architecture",
-        "body": "**Platform Events** are the backbone of event-driven integration on Salesforce. They follow a publish-subscribe model &mdash; Apex, Flow, or external systems publish events, and Apex triggers, Flow, or external CometD subscribers consume them. Events are durable: retained for 72 hours with a replay ID for subscriber recovery. High-volume Platform Events support up to tens of thousands of events per hour. Change Data Capture (CDC) is a specialised event channel &mdash; Salesforce automatically publishes events when records are created, updated, deleted, or undeleted, including the specific field changes. CDC events contain the change delta (only modified fields), the change type, and the user who made the change. External subscribers use the CometD long-polling protocol or the Pub/Sub API (gRPC-based, recommended for new integrations). The exam tests when to use Platform Events vs. CDC vs. outbound messages, how to handle event replay for reliability, and the limits on event publishing and delivery."
+        "body": "**Platform Events** let one system announce that something happened while other systems listen. Apex, Flow or an outside system can publish an event. Apex triggers, Flow or outside subscribers can react to it. The publisher doesn't need to know who is listening, which is why this is called loose coupling. Events are kept for 72 hours, and each one has a replay ID so a subscriber that went offline can catch up. **Change Data Capture (CDC)** is a special kind of event that Salesforce sends for you whenever a record is created, updated, deleted or undeleted. Each CDC event tells you what changed, the type of change and who made it. Outside systems can subscribe with CometD or with the newer Pub/Sub API, which uses gRPC and is the better choice for new work. On the exam, use Platform Events when you control the message, CDC when you just need to mirror record changes, and outbound messages for simple, no-code notifications."
       },
       {
         "heading": "Middleware, MuleSoft, and API Governance",
-        "body": "Enterprise integrations rarely connect systems point-to-point &mdash; middleware orchestrates the data flow. MuleSoft Anypoint Platform uses API-led connectivity with three layers: System APIs (connect to backend systems), Process APIs (orchestrate business logic across systems), and Experience APIs (serve specific consumer channels). Anypoint Exchange is the API catalog for reuse and discovery. API gateways enforce rate limiting, authentication, and traffic policies. Named Credentials in Salesforce store endpoint URLs and authentication details (OAuth, password, JWT) so that Apex callouts never contain hardcoded secrets &mdash; the exam heavily favours Named Credentials over manual auth headers. External Services let admins register an OpenAPI spec and invoke the external API declaratively from Flow without code. The exam tests when to use middleware vs. direct API integration, how to design the API layer hierarchy, and how to manage API versioning, deprecation, and consumer migration across the integration landscape."
+        "body": "Once more than two or three systems are involved, connecting each one directly to the others turns into a mess. Middleware sits in the middle and handles the routing and data mapping. MuleSoft splits APIs into three layers. **System APIs** talk to the back-end systems. **Process APIs** combine data and apply business rules. **Experience APIs** shape the data for a specific app or channel. Anypoint Exchange is where teams publish APIs so others can reuse them, and an API gateway enforces rate limits and security. On the Salesforce side, **Named Credentials** hold the endpoint URL and the login details, so your Apex code never contains a password or token. When a question shows hard-coded auth headers, the answer is almost always Named Credentials. **External Services** let an admin import an OpenAPI spec and call that API from Flow with no code. Expect questions on when middleware is worth the cost and how to retire an old API version without breaking the systems that use it."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Integration Architect Exam",
-    "intro": "The Integration Architect exam tests your ability to design and implement integration solutions between Salesforce and external systems. Focus on selecting the right integration pattern, API type, and middleware approach for complex scenarios.",
+    "intro": "Almost every question is a design choice. Read the scenario, find the details about timing, volume and failure, and let those pick the answer for you.",
     "blocks": [
       {
         "heading": "Integration Pattern Selection",
-        "body": "Know Remote Process Invocation (sync & async), Batch Data Synchronization, Data Virtualization, UI Update, and Event-Driven patterns. Match each to the business scenario presented in the question."
+        "body": "If the user is waiting on screen, think Request and Reply. If nobody is waiting, think Fire and Forget or batch. If the data shouldn't be copied into Salesforce at all, think Data Virtualization."
       },
       {
         "heading": "REST vs. SOAP vs. Bulk API",
-        "body": "**REST API** for CRUD operations and real-time integrations; **SOAP API** for older enterprise systems requiring WSDL; **Bulk API** for high-volume data loads; **Streaming API** for real-time push notifications. Know when each is appropriate."
+        "body": "**REST API** for small, quick reads and writes. **SOAP API** when the other system needs a WSDL. **Bulk API** once you are into tens of thousands of records or more. Streaming and CDC when the other side needs to hear about changes as they happen."
       },
       {
         "heading": "Platform Events & Change Data Capture",
-        "body": "**Platform Events** decouple publisher/subscriber and support event-driven integration. CDC pushes field-level change records to subscribers. Know how to configure each and handle event replay for reliability."
+        "body": "**Platform Events** when you design the message yourself and want publisher and subscriber kept apart. **CDC** when you just need to copy record changes somewhere else. In both cases, know how the replay ID lets a subscriber catch up after it was offline."
       },
       {
         "heading": "Middleware & MuleSoft",
-        "body": "Understand API-led connectivity (System, Process, Experience layers), how MuleSoft Anypoint Platform fits in the integration architecture, and when to use middleware vs. point-to-point integrations."
+        "body": "One simple connection can go direct. Several systems, a lot of data mapping, or APIs that other teams will reuse point to middleware. Know the three MuleSoft layers: System, Process and Experience."
       },
       {
         "heading": "Security in Integrations",
-        "body": "Know how to use **Named Credentials** for secure outbound connections, **OAuth** flows for external system authentication, and how to implement IP restrictions and mutual TLS for sensitive integrations."
+        "body": "Use **Named Credentials** for every outbound call. Pick the **OAuth** flow that fits: JWT bearer for server-to-server, web server flow when a person logs in. Add IP restrictions or mutual TLS when the data is sensitive."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "After Integration Architect, most people work toward System Architect and then CTA:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -186,243 +186,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Platform Integration Architect?",
+      "question": "When a sales rep saves an Account, the address must be checked by an outside address service. The rep should see an error straight away if the address is wrong. Which pattern fits best?",
       "options": [
-        "Only UI",
-        "Designing sound, scalable technical solutions that meet end-to-end integration requirements",
-        "Email only",
-        "Slack only"
+        "Fire and Forget using a Platform Event",
+        "Batch Data Synchronization running every night",
+        "Request and Reply using a synchronous callout",
+        "Data Virtualization using External Objects"
       ],
-      "correctAnswer": 1,
-      "explanation": "Platform Integration Architects design solutions that meet end-to-end integration requirements.",
+      "correctAnswer": 2,
+      "explanation": "The rep is waiting and needs the result before the save finishes. That is Request and Reply: Salesforce calls the service and waits for the answer.",
       "whyWrong": [
-        "'Only UI' undersells the role, which is about scalable integration architecture, not interface design.",
-        "Email is unrelated to the Integration Architect's core focus.",
-        "Slack is unrelated to the Integration Architect's core focus."
+        "A Platform Event doesn't wait for a reply, so the rep wouldn't see the error while saving.",
+        "A nightly batch runs hours later. The rep would already have moved on.",
+        "External Objects show outside data inside Salesforce. They don't check data the user is typing in."
       ]
     },
     {
-      "question": "Which integration pattern is used for real-time, request-response integration?",
+      "question": "A company needs to load 8 million order records from an old ERP into Salesforce during a one-time migration. Which API should the architect recommend?",
       "options": [
-        "Batch only",
-        "Synchronous API (REST/SOAP)",
-        "Only ETL",
-        "Only file transfer"
+        "Bulk API 2.0",
+        "REST API with one call per record",
+        "Composite API",
+        "SOAP API with synchronous calls"
       ],
-      "correctAnswer": 1,
-      "explanation": "Synchronous REST/SOAP is used for real-time request-response integration.",
+      "correctAnswer": 0,
+      "explanation": "Bulk API 2.0 is built for very large loads. It processes records in the background in large chunks and uses far fewer API calls.",
       "whyWrong": [
-        "'Batch only' describes a different pattern (scheduled bulk processing), not real-time request-response.",
-        "'Only ETL' describes a data pipeline pattern, not real-time synchronous integration.",
-        "'Only file transfer' describes an asynchronous batch pattern, not real-time request-response."
+        "One REST call per record would use 8 million API calls and blow through the org's daily limit.",
+        "Composite API groups a few requests together, but it is meant for small related changes, not millions of rows.",
+        "Synchronous SOAP calls have the same volume problem as REST and would be very slow."
       ]
     },
     {
-      "question": "What is the purpose of Middleware (e.g., MuleSoft) in integration architecture?",
+      "question": "A developer has written an Apex callout with the API username and password typed into the code as an Authorization header. What should the architect recommend instead?",
       "options": [
-        "To replace Salesforce",
-        "To orchestrate, transform, and connect systems",
-        "To send emails only",
-        "To configure CPQ only"
+        "Store the password in a Custom Setting and read it in the code",
+        "Use a Named Credential to hold the endpoint and authentication",
+        "Encrypt the password and keep it in a Custom Label",
+        "Ask the other system to drop authentication for Salesforce IP addresses"
       ],
       "correctAnswer": 1,
-      "explanation": "Middleware orchestrates, transforms, and connects multiple systems.",
+      "explanation": "A Named Credential keeps the URL and login details out of the code. Salesforce adds the authentication for you, and admins can change it without a deployment.",
       "whyWrong": [
-        "Middleware doesn't replace Salesforce — it connects Salesforce to other systems.",
-        "'To send emails only' undersells middleware's broader orchestration and transformation role.",
-        "'To configure CPQ only' is unrelated to middleware's actual orchestration purpose."
+        "A Custom Setting is still readable by admins and code, and you still have to build the auth header by hand.",
+        "Custom Labels are not meant for secrets, and anyone with setup access can read them.",
+        "Removing authentication makes the other system less secure. IP checks can be added on top of login, not used instead of it."
       ]
     },
     {
-      "question": "Which consideration is critical for integration security?",
+      "question": "Every time an Opportunity is updated, a data warehouse needs a copy of only the fields that changed. The team does not want to write custom code to send these changes. What is the best fit?",
       "options": [
-        "Only passwords",
-        "Authentication (OAuth, certificates), encryption, and least privilege",
-        "Only HTTPS",
-        "Only IP allowlist"
+        "An Apex trigger that makes a REST callout on each update",
+        "A scheduled report emailed to the warehouse team",
+        "A custom Platform Event published from Flow",
+        "Change Data Capture on the Opportunity object"
       ],
-      "correctAnswer": 1,
-      "explanation": "Authentication, encryption, and least privilege are key for integration security.",
+      "correctAnswer": 3,
+      "explanation": "Change Data Capture sends an event for each change automatically, and the event holds only the changed fields. The warehouse just subscribes.",
       "whyWrong": [
-        "'Only passwords' undersells the broader security considerations (OAuth, certificates, encryption, least privilege).",
-        "'Only HTTPS' undersells the broader set of security considerations beyond just transport encryption.",
-        "'Only IP allowlist' undersells the broader set of security considerations for integration."
+        "A trigger with callouts is custom code, and it can hit callout limits during bulk updates.",
+        "A scheduled report is not a real integration and doesn't capture each individual change.",
+        "A custom Platform Event works, but you would have to build and publish it yourself. CDC does this for you."
       ]
     },
     {
-      "question": "What does 'loosely coupled' integration mean?",
+      "question": "An external billing system sometimes sends the same invoice message twice after a network timeout. Duplicate invoices are being created in Salesforce. What should the architect do?",
       "options": [
-        "No integration",
-        "Systems communicate with minimal dependency so changes in one system don't break others",
-        "Tight dependency",
-        "Same database only"
+        "Turn off retries in the billing system",
+        "Upsert using an external ID taken from the invoice number",
+        "Add a nightly job that deletes duplicate invoices",
+        "Increase the API timeout to 10 minutes"
       ],
       "correctAnswer": 1,
-      "explanation": "Loosely coupled systems reduce dependency and improve maintainability.",
+      "explanation": "An upsert on an external ID updates the record if it already exists, so a repeated message doesn't create a second invoice. This makes the integration idempotent.",
       "whyWrong": [
-        "'No integration' contradicts the fact that loosely coupled systems still integrate, just with minimal dependency.",
-        "'Tight dependency' is the opposite of what loosely coupled means.",
-        "'Same database only' misrepresents loose coupling, which is about minimal dependency, not shared databases."
+        "Turning off retries means real failures are never recovered.",
+        "A cleanup job leaves duplicates in place for hours and fixes the symptom, not the cause.",
+        "A longer timeout might reduce retries, but it won't stop them. Duplicates can still happen."
       ]
     },
     {
-      "question": "When should asynchronous integration be chosen over synchronous?",
+      "question": "An external subscriber to Salesforce Platform Events was offline for 6 hours during maintenance. How can it get the events it missed?",
       "options": [
-        "Never",
-        "When real-time response is not required and decoupling or scalability is needed",
-        "Always",
-        "Only for batch"
+        "It can't. Events are lost if no one is listening",
+        "Ask Salesforce support to resend them",
+        "Rebuild the missed data with a full nightly export",
+        "Reconnect using the replay ID of the last event it processed"
       ],
-      "correctAnswer": 1,
-      "explanation": "Asynchronous is preferred when real-time response isn't required and decoupling matters.",
+      "correctAnswer": 3,
+      "explanation": "Platform Events are kept for 72 hours. A subscriber can pass the last replay ID it handled and receive everything published after that point.",
       "whyWrong": [
-        "'Never' contradicts the fact that asynchronous integration is a valid, commonly used pattern.",
-        "'Always' overstates when async should be used — it depends on specific requirements.",
-        "'Only for batch' undersells async's broader applicability beyond just batch scenarios."
+        "Events are not lost straight away. They are kept for 72 hours so subscribers can catch up.",
+        "Support doesn't resend events. The replay ID is the built-in way to do this.",
+        "A full export is slow and unnecessary when the events are still available to replay."
       ]
     },
     {
-      "question": "What does API versioning support?",
+      "question": "A company is connecting Salesforce to an ERP, a warehouse system, a billing tool and a customer portal. Several teams will reuse the same customer and order data. What should the architect recommend?",
       "options": [
-        "No changes",
-        "Backward compatibility and gradual client migration",
-        "Breaking changes only",
-        "Deprecation only"
+        "Middleware with reusable APIs, such as MuleSoft's API-led layers",
+        "Direct point-to-point connections between every pair of systems",
+        "Nightly CSV files on a shared FTP server",
+        "Let each team build its own Apex callouts"
       ],
-      "correctAnswer": 1,
-      "explanation": "Versioning allows evolution while maintaining backward compatibility.",
+      "correctAnswer": 0,
+      "explanation": "With many systems and shared data, middleware keeps the connections in one place. Reusable System and Process APIs stop each team rebuilding the same thing.",
       "whyWrong": [
-        "'No changes' contradicts the fact that versioning exists specifically to manage change.",
-        "'Breaking changes only' misrepresents versioning's purpose, which is to support compatibility, not force breaking changes.",
-        "'Deprecation only' undersells versioning's broader purpose of supporting gradual migration, not just deprecation."
+        "Point-to-point links grow quickly with each new system and become hard to change.",
+        "Nightly files are slow, error-prone and don't give teams reusable services.",
+        "Separate callouts per team mean duplicated logic and no central place to manage security or changes."
       ]
     },
     {
-      "question": "Which error handling strategy supports resilience in integrations?",
+      "question": "A partner's server needs to call the Salesforce REST API every 15 minutes with no person logging in. Which OAuth flow fits best?",
       "options": [
-        "Fail immediately",
-        "Retries with exponential backoff, dead letter queues, and graceful degradation",
-        "No retries",
-        "Only logging"
+        "Web server (authorization code) flow",
+        "User-agent flow",
+        "JWT bearer flow",
+        "Username and password flow"
       ],
-      "correctAnswer": 1,
-      "explanation": "Retries, DLQs, and graceful degradation improve integration resilience.",
+      "correctAnswer": 2,
+      "explanation": "The JWT bearer flow is meant for server-to-server access. The partner signs a token with a certificate and gets access without anyone typing a password.",
       "whyWrong": [
-        "'Fail immediately' is the opposite of the resilience-focused retry/degradation strategy being asked about.",
-        "'No retries' contradicts the fact that retries are a core part of resilient error handling.",
-        "'Only logging' undersells resilience strategy, which includes active recovery mechanisms, not just passive logging."
+        "The web server flow needs a person to log in and approve access in a browser.",
+        "The user-agent flow is for apps running in a browser or on a device, with a user present.",
+        "The username and password flow stores a real password on the server and is not recommended."
       ]
     },
     {
-      "question": "What is the purpose of an integration bus or event-driven architecture?",
+      "question": "A trigger starts one Queueable job that makes a callout for every record in the transaction. During a data load, a single transaction can include 500 records. What is the main risk?",
       "options": [
-        "To replace APIs",
-        "To decouple producers and consumers via events or messages",
-        "To sync only",
-        "To batch only"
+        "The trigger will run twice for each record",
+        "The transaction will hit the limit of 100 callouts",
+        "Callouts from triggers are always blocked by Salesforce",
+        "The records will be saved without an ID"
       ],
       "correctAnswer": 1,
-      "explanation": "Event-driven architecture decouples systems through events/messages.",
+      "explanation": "Apex allows 100 callouts per transaction, and the Queueable job runs as one transaction. 500 callouts would fail. Group the records into fewer calls or split the work across several jobs or batch Apex.",
       "whyWrong": [
-        "An integration bus doesn't replace APIs — it works alongside them for decoupled communication.",
-        "'To sync only' undersells the broader decoupling purpose of event-driven architecture.",
-        "'To batch only' undersells the broader decoupling purpose of event-driven architecture."
+        "Triggers can re-run in some cases, but that is not the main risk in this scenario.",
+        "Callouts from a Queueable job started by a trigger are allowed. That is the usual way to call out after a record change.",
+        "Records get IDs when they are inserted. Callouts don't affect that."
       ]
     },
     {
-      "question": "Which security standard is used for delegated user authorization?",
+      "question": "Service agents need to see a customer's recent shipments, which live in a logistics system. The data changes constantly and must not be copied into Salesforce. Which approach fits?",
       "options": [
-        "Basic auth only",
-        "OAuth 2.0 authorization code flow",
-        "API key only",
-        "No standard"
+        "Copy the shipments into a custom object every hour",
+        "Send shipment updates by outbound message",
+        "Load shipment history with Bulk API each night",
+        "Salesforce Connect with External Objects"
       ],
-      "correctAnswer": 1,
-      "explanation": "OAuth 2.0 authorization code flow supports user-delegated access.",
+      "correctAnswer": 3,
+      "explanation": "Salesforce Connect reads the data from the logistics system when the agent opens the page. Nothing is stored in Salesforce, and the data is always current.",
       "whyWrong": [
-        "Basic auth doesn't provide the delegated, scoped authorization OAuth 2.0 offers.",
-        "API keys alone don't provide the delegated user authorization OAuth 2.0's authorization code flow does.",
-        "'No standard' contradicts the fact that OAuth 2.0 is a well-established standard for this purpose."
+        "An hourly copy stores the data in Salesforce, which the scenario rules out, and it can be an hour out of date.",
+        "Outbound messages send data out of Salesforce. They don't bring outside data in.",
+        "A nightly Bulk load copies the data and is up to a day old."
       ]
     },
     {
-      "question": "What does idempotency ensure in integration?",
+      "question": "An admin wants to call an outside currency rate API from a Flow without writing any Apex. The API has an OpenAPI spec. What should they use?",
       "options": [
-        "Faster execution",
-        "Duplicate requests produce the same result without side effects",
-        "No retries",
-        "Only logging"
+        "External Services",
+        "Outbound messages",
+        "A Canvas app",
+        "Change Data Capture"
       ],
-      "correctAnswer": 1,
-      "explanation": "Idempotency prevents duplicate processing from retries.",
+      "correctAnswer": 0,
+      "explanation": "External Services reads the OpenAPI spec and creates actions that Flow can call directly. No code is needed.",
       "whyWrong": [
-        "'Faster execution' misrepresents idempotency, which is about consistent results on retry, not speed.",
-        "'No retries' contradicts the fact that idempotency specifically supports safe retries.",
-        "'Only logging' undersells idempotency, which is a behavioral guarantee, not just a logging practice."
+        "Outbound messages send a fixed SOAP message out of Salesforce. They can't read a response back into a Flow.",
+        "A Canvas app shows an outside web app inside Salesforce. It doesn't give Flow a callable action.",
+        "CDC publishes changes to Salesforce records. It doesn't call outside APIs."
       ]
     },
     {
-      "question": "Which consideration applies when designing for high-volume integration?",
+      "question": "When a Case is closed, a ticket must be closed in an outside help desk tool. The user doesn't need to wait for this, and the team wants a declarative option with built-in retries. What fits?",
       "options": [
-        "Ignore limits",
-        "Batching, rate limiting, and scalability (queues, async)",
-        "Synchronous only",
-        "No batching"
+        "A synchronous Apex callout in a before-update trigger",
+        "A nightly batch job",
+        "An outbound message from a record-triggered Flow",
+        "A Lightning component that calls the help desk from the browser"
       ],
-      "correctAnswer": 1,
-      "explanation": "High volume requires batching, rate limiting, and async scaling.",
+      "correctAnswer": 2,
+      "explanation": "Outbound messages are no-code, don't make the user wait, and Salesforce retries them for up to 24 hours if the other system is down.",
       "whyWrong": [
-        "Ignoring limits contradicts the core consideration needed for high-volume integration design.",
-        "'Synchronous only' contradicts the fact that async/queuing is often needed for high-volume scenarios.",
-        "'No batching' contradicts the fact that batching is a key consideration for high-volume integration."
+        "Triggers can't make synchronous callouts, and this would make the user wait anyway.",
+        "A nightly job delays the update by up to a day for no reason.",
+        "A browser call only runs when someone has the page open, and it puts the integration logic on the user's screen."
       ]
     },
     {
-      "question": "What is the benefit of contract-first API design?",
+      "question": "An outside order system is having an outage, and every call to it times out after 10 seconds. Salesforce keeps calling it and users are stuck waiting. Which design helps most?",
       "options": [
-        "No benefit",
-        "Clear contract, parallel development, and reduced integration errors",
-        "Slower development",
-        "Tight coupling"
+        "Raise the timeout to 120 seconds",
+        "Retry each call right away in a loop",
+        "Remove error handling so the calls fail faster",
+        "A circuit breaker that stops calls for a while and queues the work"
       ],
-      "correctAnswer": 1,
-      "explanation": "Contract-first enables parallel development and fewer integration bugs.",
+      "correctAnswer": 3,
+      "explanation": "A circuit breaker notices repeated failures and stops calling the broken system for a set time. Work is queued and sent once the system is back.",
       "whyWrong": [
-        "'No benefit' contradicts the real, documented benefits of contract-first API design.",
-        "'Slower development' is the opposite of the parallel-development benefit contract-first design provides.",
-        "'Tight coupling' is the opposite of what contract-first design helps avoid."
+        "A longer timeout makes users wait even longer and doesn't fix the outage.",
+        "Instant retries add load to a system that is already down and use up callout limits.",
+        "Removing error handling means failed work is lost with no record of it."
       ]
     },
     {
-      "question": "Which pattern is used when multiple systems need the same data?",
+      "question": "Version 1 of a company's customer API is being replaced by version 2, which changes some field names. Five other systems use version 1. What is the safest plan?",
       "options": [
-        "Point-to-point only",
-        "Publish-subscribe or fan-out",
-        "Request-response only",
-        "Batch only"
+        "Switch everyone to version 2 on the same day",
+        "Run both versions side by side, announce a retirement date, and help each consumer move",
+        "Change version 1 in place so it returns the new field names",
+        "Keep version 1 forever and never release version 2"
       ],
       "correctAnswer": 1,
-      "explanation": "Publish-subscribe allows one producer to serve multiple consumers.",
+      "explanation": "Running both versions for a while gives each consumer time to update and test. A clear retirement date keeps the move on track.",
       "whyWrong": [
-        "'Point-to-point only' is the opposite pattern from publish-subscribe/fan-out for shared data needs.",
-        "'Request-response only' doesn't address the multi-consumer scenario the question describes.",
-        "'Batch only' doesn't address the multi-consumer scenario the question describes."
+        "A same-day switch means any consumer that isn't ready will break.",
+        "Changing version 1 in place breaks every system that relies on the old field names.",
+        "Never moving on leaves the team stuck maintaining old code and blocks improvements."
       ]
     },
     {
-      "question": "What does integration governance include?",
+      "question": "An external app needs to create an Account, a Contact and an Opportunity together. If any one fails, none should be saved. The team wants as few API calls as possible. What should they use?",
       "options": [
-        "Only documentation",
-        "Standards, security, monitoring, and change control",
-        "Only coding",
-        "Only deployment"
+        "Three separate REST API calls",
+        "Bulk API 2.0 with three jobs",
+        "Composite API with allOrNone set to true",
+        "Three outbound messages"
       ],
-      "correctAnswer": 1,
-      "explanation": "Governance covers standards, security, monitoring, and change control.",
+      "correctAnswer": 2,
+      "explanation": "The Composite API sends all three requests in one call. With allOrNone set to true, everything is rolled back if one part fails.",
       "whyWrong": [
-        "'Only documentation' undersells governance, which spans standards, security, and monitoring, not just documentation.",
-        "'Only coding' misrepresents governance, which is about broader oversight practices, not code itself.",
-        "'Only deployment' undersells governance, which spans the full integration lifecycle, not just deployment."
+        "Three separate calls use more API calls, and if the third fails the first two are already saved.",
+        "Bulk API is for large volumes and runs in the background. It is far too heavy for three related records.",
+        "Outbound messages send data out of Salesforce. They can't be used by an outside app to create records."
       ]
     }
   ]

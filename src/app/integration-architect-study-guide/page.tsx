@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'integration-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, ~68% pass Free practice questions.`
+const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, 67% to pass. Free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce Integration Architect certification?',
-    answer: 'The Salesforce Integration Architect certification validates ability to design and architect enterprise integration solutions on the Salesforce platform. The exam covers integration patterns (REST, SOAP, streaming, event-driven), error handling, scalability, and governance. It has 60 questions, 110-minute time limit, ~68% passing score, and a $400 fee. It is part of the Application Architect credential path.',
+    answer: 'The Salesforce Integration Architect certification validates ability to design and architect enterprise integration solutions on the Salesforce platform. The exam covers integration patterns (REST, SOAP, streaming, event-driven), error handling, scalability, and governance. It has 60 questions, a 105-minute time limit, a 67% passing score and a $400 fee. It is one of the four exams you need for System Architect.',
   },
   {
     question: 'What are the prerequisites for Integration Architect?',
@@ -110,8 +110,8 @@ export default function IntegrationArchitectStudyGuidePage() {
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '110 min' },
-          { label: 'Passing Score', value: '~68%' },
+          { label: 'Time Limit', value: '105 min' },
+          { label: 'Passing Score', value: '67%' },
           { label: 'Exam Fee', value: '$400' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
@@ -190,7 +190,7 @@ export default function IntegrationArchitectStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Practice-Test Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Integration Architect tests architecture judgement, not just feature knowledge. If you can explain <em>why</em> you chose a pattern (not just what the pattern is), you are ready. The ~68% passing score is higher than most professional certs.</p>
+        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Integration Architect tests architecture judgement, not just feature knowledge. If you can explain <em>why</em> you chose a pattern (not just what the pattern is), you are ready. The 67% passing score is higher than most professional certs.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

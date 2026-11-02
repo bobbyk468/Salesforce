@@ -101,7 +101,7 @@ const tiers = [
     certs: [
       { name: 'Platform Developer II (PD2)', fee: '$200', questions: '60', passing: '~65%', note: 'Advanced Apex patterns, integration, performance. Requires PD1.' },
       { name: 'Field Service Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'FSL managed package is complex. Requires Service Cloud foundation.' },
-      { name: 'Integration Architect', fee: '$400', questions: '60', passing: '~68%', note: 'API design, middleware, async patterns. Deep technical knowledge.' },
+      { name: 'Integration Architect', fee: '$400', questions: '60', passing: '67%', note: 'API design, middleware, async patterns. Deep technical knowledge.' },
       { name: 'Data Architect', fee: '$400', questions: '60', passing: '~68%', note: 'MDM, data modelling, large data volumes, ETL strategy.' },
       { name: 'MuleSoft Developer II', fee: '$200', questions: '60', passing: '70%', note: 'Custom policies, advanced DataWeave, batch. Requires Dev I.' },
       { name: 'Revenue Cloud Consultant', fee: '$200', questions: '60', passing: '~65%', note: 'Billing + CPQ overlap. Complex quote-to-cash knowledge needed.' },
