@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Marketing analytics professionals",
-        "description": "You build dashboards and analyze cross-channel marketing data and want to validate your Intelligence (Datorama) implementation skills."
+        "description": "You report on campaign and media performance and want to prove you can set up Marketing Cloud Intelligence well."
       },
       {
         "label": "Data-driven marketing consultants",
-        "description": "You implement Marketing Cloud Intelligence for clients and need the AP credential to demonstrate your delivery expertise."
+        "description": "You help clients pull marketing data from many platforms into one place."
       },
       {
         "label": "BI specialists moving into marketing analytics",
-        "description": "You have experience with analytics platforms and want to specialize in Salesforce’s marketing measurement and attribution tooling."
+        "description": "You know dashboards and data models and want to apply them to marketing data."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Marketing Cloud Intelligence Exam Hard?",
-    "summary": "The Marketing Cloud Intelligence AP exam is moderately difficult. It is heavily focused on data ingestion, harmonization, and dashboard creation within the Intelligence (Datorama) platform. Candidates who lack hands-on experience connecting data streams and building unified marketing reports will find the exam challenging.",
+    "summary": "It is a moderate exam. The hardest part is the data side: bringing in data from many platforms, mapping it to the data model and making the numbers add up correctly. Dashboard questions are usually easier.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — standard for AP-level exams.",
-      "<strong>Data harmonization focus</strong> — you must understand how to map fields from multiple advertising and marketing platforms into a unified data model.",
-      "<strong>Dashboard design tested</strong> — expect questions on widget types, cross-widget filtering, date controls, and how to share reports with external stakeholders."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Data focus.</strong> Data streams, mapping, harmonisation and how measurements are aggregated.",
+      "<strong>Reporting.</strong> Dashboards, widgets, filters and calculated measurements."
     ],
-    "passRateGuidance": "Connect at least 3-4 data streams from different platforms and build a unified cross-channel dashboard before booking. Practice creating custom calculated metrics and configuring anomaly detection alerts."
+    "passRateGuidance": "People who have connected several ad platforms and built a cross-channel dashboard do best. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Marketing Cloud Intelligence Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring a new data stream from a marketing platform, resolving field mapping conflicts during harmonization, and designing a dashboard for a specific stakeholder audience.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a data problem, such as the same campaign named differently on two platforms or totals that look too high, and ask how to fix it.",
     "bestWayToPass": [
-      "<strong>Master data stream configuration:</strong> Know how to connect native connectors (Google Ads, Facebook Ads, Marketing Cloud), API-based streams, and file-based imports.",
-      "<strong>Understand the unified data model:</strong> Learn how dimensions (Campaign, Ad Set, Ad) and metrics (Impressions, Clicks, Spend) are harmonized across sources.",
-      "<strong>Practice dashboard building:</strong> Create boards with multiple widget types, configure global filters and date controls, and share dashboards via public URL or embedded iFrame.",
-      "<strong>Study custom metrics and attribution:</strong> Know how to create calculated KPIs in Model Builder and understand first-touch, last-touch, and multi-touch attribution models."
+      "<strong>Learn data streams:</strong> How data comes in through connectors or files, and how often.",
+      "<strong>Understand mapping:</strong> Each source field is mapped to a dimension or measurement in the data model.",
+      "<strong>Master harmonisation:</strong> Making data from different platforms line up, for example by a shared campaign key.",
+      "<strong>Know aggregation:</strong> Why some measures should be summed and others should not."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Marketing Cloud Intelligence (Datorama) implementation: connecting data streams, harmonizing cross-channel metrics, building dashboards, and configuring calculated KPIs.",
+    "description": "This exam tests how you set up Marketing Cloud Intelligence: bringing in marketing data, mapping and harmonising it, building calculated measures, and creating dashboards.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -61,71 +61,71 @@
     "blocks": [
       {
         "heading": "Intelligence Platform Architecture",
-        "body": "Marketing Cloud Intelligence (formerly Datorama) is the marketing analytics and reporting platform. Core concepts: Workspaces contain all data, dashboards, and configuration. Data Streams are the connections bringing data in (API connectors, file uploads, Marketing Cloud connector). The Unified Data Model harmonises data from multiple sources into a common dimension hierarchy: Campaign &rarr; Ad Set &rarr; Ad. All data is mapped to this model for cross-channel reporting."
+        "body": "Marketing Cloud Intelligence brings marketing data from many sources, such as ad platforms, web analytics, email and CRM, into one place for reporting. Data is organised in **workspaces**, which can hold different brands or clients. Inside, a shared **data model** gives every source the same structure, with **dimensions** (things you describe, like campaign, channel or date) and **measurements** (things you count, like spend, clicks or conversions). Once data fits the model, it can be compared across channels in one dashboard."
       },
       {
         "heading": "Data Streams and Harmonisation",
-        "body": "Data Streams ingest data from: Marketing Cloud Connector (email, journeys, social), API connectors (Facebook Ads, Google Ads, Salesforce CRM), file-based streams (CSV, FTP), custom streams. Each stream maps source fields to Intelligence dimensions (Campaign, Ad, Date) and metrics (Impressions, Clicks, Spend, Conversions). Harmonisation rules standardise naming and categorisation across sources. The exam tests how to configure a new data stream and resolve mapping conflicts."
+        "body": "Each source comes in through a **data stream**, using a built-in connector or a file upload. During setup you **map** each source field to a dimension or measurement in the model. **Harmonisation** makes data from different sources line up. For example, if Google Ads and Meta use different campaign names, you can use a shared key or naming pattern so both link to the same campaign. Classification rules can create new dimensions from patterns in names, such as reading the product line from a campaign name."
       },
       {
         "heading": "Insights, KPIs, and Custom Metrics",
-        "body": "Intelligence uses pre-built KPIs (Cost Per Click, Click-Through Rate, ROAS) and supports custom calculated metrics. Fusion Widgets combine metrics from different streams in a single chart. Anomaly Detection flags unusual metric movements. Goals allow planned vs actual comparison for budgets and KPIs. The exam tests how to create custom metrics using formulas, how fusion widgets work, and how to configure goal tracking."
+        "body": "Beyond raw data, teams need numbers like cost per acquisition or return on ad spend. **Calculated measurements** are formulas built from other measurements. **Calculated dimensions** group or relabel values. **Aggregation** matters: spend and clicks can be added up, but rates like click-through rate must be recalculated from their parts, not summed. Getting aggregation wrong is a common reason totals look strange. Insights features can flag unusual changes in key numbers."
       },
       {
         "heading": "Dashboards and Data Visualisation",
-        "body": "Dashboards display widgets (charts, tables, scorecards, media widgets) in configurable layouts. Global Date Controls apply a shared date range to all widgets. Audience and dimension filters narrow dashboard scope. Widget-level filters override global filters. Sharing dashboards with external users uses the Public URL or embedded iFrame. The exam tests how to build a dashboard, configure cross-widget filtering, and share reports with stakeholders."
+        "body": "**Dashboards** are made of pages and **widgets**, such as charts, tables and single-number tiles. **Filters** let users narrow by date, channel or campaign. Good dashboards start with the question the viewer needs answered and show only what helps answer it. Share dashboards with the right users, and schedule them to be emailed if people need regular updates. Pivot-style tables help analysts explore data before deciding what goes on a dashboard."
       },
       {
         "heading": "API Integration and Automation",
-        "body": "Intelligence **REST API** allows external systems to push data, retrieve insights, and manage streams programmatically. Scheduled exports can push Intelligence data to external data warehouses. Zapier integration enables no-code triggers from Intelligence events. The exam tests basic API concepts — authentication, stream management via API, and how to automate data flows between Intelligence and other marketing systems."
+        "body": "Data streams can run on a **schedule**, so dashboards stay current without manual uploads. When a built-in connector doesn't exist, data can be sent through files or APIs. Marketing Cloud Intelligence data can also be shared with other tools, such as Salesforce or a data warehouse. Monitor data stream runs and set alerts so failed loads are noticed quickly, since a missed load leaves gaps in reports."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Intelligence Accredited Professional Exam",
-    "intro": "The Marketing Cloud Intelligence (Datorama) AP exam tests data ingestion, model building, and dashboard creation in the Intelligence platform. Focus on the harmonization framework and how to connect and unify multi-source marketing data.",
+    "intro": "Most questions start with a data problem. Ask whether it comes from how data was brought in, how it was mapped, or how it is being added up.",
     "blocks": [
       {
         "heading": "Data Streams & Connectors",
-        "body": "Know how to connect data sources using native connectors (Google Analytics, Facebook Ads, Marketing Cloud), API connectors, and file-based imports (CSV). Understand scheduled refresh and incremental load options."
+        "body": "Use built-in connectors where possible. Set a schedule so data stays current."
       },
       {
         "heading": "Data Model & Harmonization",
-        "body": "Understand the Intelligence data model: Streams, Total Metrics, Dimensions, and how to harmonize disparate data by mapping vendor-specific fields to a unified dimension (e.g., mapping 'Campaign' across platforms)."
+        "body": "Map every field to the right dimension or measurement. Use shared keys to link the same campaign across sources."
       },
       {
         "heading": "Model Builder",
-        "body": "Know how to use the Model Builder to create calculated metrics (formulas), cross-stream joins, and custom dimensions. Understand the difference between Stream metrics and Total metrics."
+        "body": "Build calculated measurements for KPIs like cost per acquisition. Recalculate rates from their parts."
       },
       {
         "heading": "Dashboard Design",
-        "body": "Know how to create boards, widgets (bar charts, line charts, scorecards, pivot tables), and how to configure filters and date controls. Understand how to share dashboards with internal and external stakeholders."
+        "body": "Start from the viewer's question. Use filters instead of building many near-identical pages."
       },
       {
         "heading": "Einstein Integration",
-        "body": "Know how Einstein features in Intelligence (Einstein Insights, Anomaly Detection) analyze marketing performance data and how to configure alerts for KPI deviations."
+        "body": "Use automated insights to spot sudden changes in performance that need attention."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Marketing Cloud Intelligence:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/data-360-consultant",
+        "label": "Data 360 Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Consultant"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/tableau-data-analyst",
+        "label": "Tableau Data Analyst"
       }
     ]
   },
@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Marketing Cloud Intelligence AP validate?",
+      "question": "The same campaign appears as 'Spring_Sale_US' in Google Ads and 'US Spring Sale' in Meta. The team wants one combined row. What should be done?",
       "options": [
-        "Only basics",
-        "Skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers",
-        "Only reporting",
-        "Only Slack"
+        "Harmonise the sources with a shared campaign key or naming pattern",
+        "Rename the campaigns by hand every week",
+        "Report on each platform separately",
+        "Delete one of the data streams"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Marketing Cloud Intelligence Professionals have demonstrated skills and knowledge in technical implementation to effectively deliver Marketing Cloud Intelligence projects for customers."
+      "correctAnswer": 0,
+      "explanation": "Harmonisation links data from different sources to the same campaign, so it can be combined.",
+      "whyWrong": [
+        "Manual renaming is slow and breaks easily.",
+        "Separate reports don't give the combined view.",
+        "Deleting a stream loses data."
+      ]
     },
     {
-      "question": "What is Marketing Cloud Intelligence?",
+      "question": "A dashboard shows click-through rate summed across campaigns, giving 340%. What is wrong?",
       "options": [
-        "Only reports",
-        "Analytics and intelligence capabilities within Marketing Cloud (e.g., CDP, analytics)",
-        "Only email",
-        "Only journeys"
+        "There are too many widgets",
+        "The rate is being summed instead of recalculated from clicks and impressions",
+        "The data stream is late",
+        "The filter is on the wrong date"
       ],
       "correctAnswer": 1,
-      "explanation": "Marketing Cloud Intelligence includes analytics and intelligence capabilities."
+      "explanation": "Rates must be calculated from their parts after adding up clicks and impressions, not summed directly.",
+      "whyWrong": [
+        "Widget count doesn't affect the maths.",
+        "Late data wouldn't create a rate over 100%.",
+        "Date filters don't cause summed rates."
+      ]
     },
     {
-      "question": "What is a key activity for a Marketing Cloud Intelligence Professional?",
+      "question": "When setting up a new data stream, what must be done with each source field?",
       "options": [
-        "Only coding",
-        "Technical implementation of Marketing Cloud Intelligence solutions",
-        "Only reporting",
-        "Only lists"
+        "Map it to a dimension or measurement in the data model",
+        "Leave it unmapped",
+        "Add it to a dashboard first",
+        "Rename it in the source system"
       ],
-      "correctAnswer": 1,
-      "explanation": "They implement Marketing Cloud Intelligence solutions technically."
+      "correctAnswer": 0,
+      "explanation": "Mapping puts each field in the right place in the shared model, so it can be used and compared.",
+      "whyWrong": [
+        "Unmapped fields can't be used in reports.",
+        "Data must be mapped before it can be shown.",
+        "Source names don't need changing."
+      ]
     },
     {
-      "question": "Which role typically pursues Marketing Cloud Intelligence AP?",
+      "question": "Which of these is a measurement rather than a dimension?",
       "options": [
-        "Sales only",
-        "Partners and implementers working with Marketing Cloud Intelligence",
-        "Designers only",
-        "Marketers only"
+        "Spend",
+        "Campaign name",
+        "Country",
+        "Channel"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with Marketing Cloud Intelligence pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Measurements are numbers you add up or calculate, like spend. Dimensions describe the data, like campaign or channel.",
+      "whyWrong": [
+        "Campaign name is a dimension.",
+        "Country is a dimension.",
+        "Channel is a dimension."
+      ]
     },
     {
-      "question": "What does 'deliver projects' mean in this context?",
+      "question": "The team needs cost per acquisition for each channel. What should they create?",
       "options": [
-        "Only shipping",
-        "Implementing and delivering Marketing Cloud Intelligence solutions for customers",
-        "Only reporting",
-        "Only dashboards"
+        "A new data stream",
+        "A calculated measurement of spend divided by conversions",
+        "A filter",
+        "A new workspace"
       ],
       "correctAnswer": 1,
-      "explanation": "It means implementing and delivering solutions for customers."
+      "explanation": "Calculated measurements build KPIs from existing measurements.",
+      "whyWrong": [
+        "A new stream brings in data, it doesn't calculate KPIs.",
+        "Filters narrow data, they don't create measures.",
+        "A workspace organises data, it doesn't calculate."
+      ]
     },
     {
-      "question": "What does CDP (Customer Data Platform) provide for Marketing Cloud?",
+      "question": "Campaign names follow a pattern like 'BRAND_PRODUCT_COUNTRY'. The team wants a Product dimension. What should they use?",
       "options": [
-        "Only email",
-        "Unified customer data for activation and analytics",
-        "Only journeys",
-        "Only SMS"
+        "Ask each team to add a product field",
+        "A new workspace",
+        "Create a dashboard filter",
+        "A classification or pattern rule that extracts the product from the name"
       ],
-      "correctAnswer": 1,
-      "explanation": "CDP unifies customer data for activation and analytics."
+      "correctAnswer": 3,
+      "explanation": "Rules can read values from naming patterns and create new dimensions automatically.",
+      "whyWrong": [
+        "Adding fields everywhere is slow and needs every platform to change.",
+        "A workspace doesn't create dimensions.",
+        "A filter can't create a dimension."
+      ]
     },
     {
-      "question": "Which Marketing Cloud Intelligence capability supports analytics?",
+      "question": "Dashboards are out of date because someone forgot to upload last week's file. What should be changed?",
       "options": [
-        "Slack only",
-        "Datorama, analytics studios, and reporting",
-        "Email only",
-        "Journey Builder only"
+        "Add more widgets",
+        "Upload files less often",
+        "Schedule the data stream to run automatically",
+        "Delete the dashboard"
       ],
-      "correctAnswer": 1,
-      "explanation": "Datorama and analytics studios support analytics."
+      "correctAnswer": 2,
+      "explanation": "Scheduled data streams keep data current without relying on manual uploads.",
+      "whyWrong": [
+        "Widgets don't load data.",
+        "Less often makes it worse.",
+        "Deleting the dashboard doesn't fix the data."
+      ]
     },
     {
-      "question": "What does technical implementation of Marketing Cloud Intelligence include?",
+      "question": "An agency manages marketing data for three separate clients who must not see each other's data. How should this be organised?",
       "options": [
-        "Only design",
-        "Data connections, transformations, and activation setup",
-        "Only reports",
-        "Only dashboards"
+        "Separate widgets for each client",
+        "One dashboard with a client filter",
+        "One data stream for all clients",
+        "Separate workspaces for each client"
       ],
-      "correctAnswer": 1,
-      "explanation": "Implementation includes connections, transformations, and activation."
+      "correctAnswer": 3,
+      "explanation": "Workspaces keep each client's data and setup separate.",
+      "whyWrong": [
+        "Widgets don't separate access.",
+        "A filter doesn't stop people seeing other clients' data.",
+        "One stream mixes all the data."
+      ]
     },
     {
-      "question": "Which data source can feed Marketing Cloud Intelligence?",
+      "question": "A data stream failed overnight and nobody noticed for a week. What should be set up?",
       "options": [
-        "Slack only",
-        "CRM, advertising, and engagement data",
-        "Email only",
-        "No data"
+        "A new KPI",
+        "More filters",
+        "A larger dashboard",
+        "Monitoring and alerts on data stream runs"
       ],
-      "correctAnswer": 1,
-      "explanation": "CRM, advertising, and engagement data feed intelligence."
+      "correctAnswer": 3,
+      "explanation": "Alerts on failed runs let the team fix problems before reports are affected.",
+      "whyWrong": [
+        "A KPI doesn't monitor loads.",
+        "Filters don't detect failures.",
+        "Dashboard size doesn't detect failures."
+      ]
     },
     {
-      "question": "What is the purpose of Marketing Cloud Intelligence?",
+      "question": "A dashboard viewer only wants to see last month's results for the email channel. What should they use?",
       "options": [
-        "Only reporting",
-        "Unified analytics and intelligence across marketing touchpoints",
-        "Only email",
-        "Only journeys"
+        "A new data stream",
+        "A new calculated measurement",
+        "Filters for date and channel",
+        "A new workspace"
       ],
-      "correctAnswer": 1,
-      "explanation": "Intelligence unifies analytics across touchpoints."
+      "correctAnswer": 2,
+      "explanation": "Filters let users narrow the dashboard without changing the data or building new pages.",
+      "whyWrong": [
+        "A new stream isn't needed to view existing data.",
+        "A calculated measurement creates a new number, it doesn't narrow data.",
+        "A workspace is far more than needed."
+      ]
     },
     {
-      "question": "Which integration supports Marketing Cloud Intelligence?",
+      "question": "A connector doesn't exist for a small ad platform the client uses. How can its data be brought in?",
       "options": [
-        "Manual only",
-        "Salesforce, advertising platforms, and data warehouses",
-        "Slack only",
-        "Service Cloud only"
+        "By copying it into a widget",
+        "Through a file upload or API data stream",
+        "It can't be used",
+        "By typing it into a dashboard"
       ],
       "correctAnswer": 1,
-      "explanation": "Intelligence integrates with Salesforce and ad platforms."
+      "explanation": "File and API-based streams can bring in data from sources without a built-in connector.",
+      "whyWrong": [
+        "Widgets display data.",
+        "Data can still be brought in another way.",
+        "Dashboards display data, they don't store it."
+      ]
     },
     {
-      "question": "What does delivering Marketing Cloud Intelligence projects require?",
+      "question": "What is the main reason to bring all marketing data into one data model?",
       "options": [
-        "Only design",
-        "Technical setup, data modeling, and activation",
-        "Only coding",
-        "Only reports"
+        "So results can be compared across channels and platforms",
+        "So each platform's reports look different",
+        "So dashboards load more slowly",
+        "So data stays in separate tools"
       ],
-      "correctAnswer": 1,
-      "explanation": "Delivery requires technical setup and activation."
+      "correctAnswer": 0,
+      "explanation": "A shared model makes data from different sources comparable in one place.",
+      "whyWrong": [
+        "The aim is consistency, not difference.",
+        "Speed isn't the reason.",
+        "Keeping data separate defeats the purpose."
+      ]
     },
     {
-      "question": "Which best practice applies to Marketing Cloud Intelligence?",
+      "question": "Total conversions look doubled after adding a second data stream that also reports conversions. What is the likely cause?",
       "options": [
-        "Ignore data",
-        "Data quality, governance, and attribution modeling",
-        "No governance",
-        "Static only"
+        "The workspace is too small",
+        "The dashboard has too many pages",
+        "The same conversions are counted in both sources and need de-duplication or a single source of truth",
+        "The filter is wrong"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data quality and governance support intelligence."
+      "correctAnswer": 2,
+      "explanation": "When two sources report the same events, adding them together double-counts. Decide which source to trust or de-duplicate.",
+      "whyWrong": [
+        "Workspace size isn't a factor.",
+        "Page count doesn't double numbers.",
+        "A filter wouldn't double the total."
+      ]
     },
     {
-      "question": "What is the benefit of Marketing Cloud Intelligence?",
+      "question": "Leaders want an automatic heads-up when cost per click jumps unexpectedly. What helps?",
       "options": [
-        "No benefit",
-        "Unified view and actionable insights across marketing",
-        "Siloed only",
-        "Manual only"
+        "Removing the KPI",
+        "Adding more data streams",
+        "Automated insights or alerts on that KPI",
+        "Checking the dashboard once a quarter"
       ],
-      "correctAnswer": 1,
-      "explanation": "Intelligence provides unified insights."
+      "correctAnswer": 2,
+      "explanation": "Insights and alerts flag unusual changes so the team can act quickly.",
+      "whyWrong": [
+        "Removing the KPI hides the problem.",
+        "More streams don't spot changes.",
+        "Quarterly checks are too slow."
+      ]
     },
     {
-      "question": "What is attribution modeling in Marketing Cloud Intelligence?",
+      "question": "What should a well-designed dashboard start from?",
       "options": [
-        "A report type only",
-        "Assigning credit for conversions to marketing touchpoints (first-touch, last-touch, multi-touch)",
-        "An email metric",
-        "A journey type"
+        "The colour scheme",
+        "The question the viewer needs to answer",
+        "Every available widget",
+        "The largest data stream"
       ],
       "correctAnswer": 1,
-      "explanation": "Attribution modeling assigns conversion credit across touchpoints for optimization."
+      "explanation": "Good dashboards are built around the decisions viewers need to make.",
+      "whyWrong": [
+        "Colours come after content.",
+        "Too many widgets make dashboards hard to read.",
+        "Data size doesn't decide what to show."
+      ]
     }
   ]
 }

@@ -3,36 +3,45 @@
   "whoIsThisFor": {
     "heading": "Who is the Financial Services Cloud Accredited Professional exam for?",
     "personas": [
-      { "label": "Banking and wealth management consultants", "description": "You implement Salesforce for financial institutions and need to prove your expertise in the FSC data model, households, and advisor workflows." },
-      { "label": "Salesforce admins at financial firms", "description": "You administer a Financial Services Cloud org and want to validate your knowledge of financial accounts, relationship management, and compliance features." },
-      { "label": "Insurance and fintech implementation partners", "description": "You deliver FSC projects for insurance carriers or fintech companies and need the credential for client-facing engagements." }
+      {
+        "label": "Banking and wealth management consultants",
+        "description": "You set up Financial Services Cloud for banks, advisers or wealth firms and want to prove you know its data model."
+      },
+      {
+        "label": "Salesforce admins at financial firms",
+        "description": "You run FSC day to day and want to understand households, financial accounts and rollups properly."
+      },
+      {
+        "label": "Insurance and fintech implementation partners",
+        "description": "You deliver FSC projects and need a credential clients recognise."
+      }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Financial Services Cloud Accredited Professional Exam Hard?",
-    "summary": "The Financial Services Cloud AP exam is moderately difficult. It requires strong knowledge of the FSC data model, household structures, and financial services workflows. Candidates without exposure to banking, wealth management, or insurance processes will find the domain-specific questions challenging.",
+    "summary": "It is a moderate exam, but FSC's data model is quite different from standard Salesforce. Once you understand how people, households and financial accounts link together, most questions get easier.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Household and relationship model complexity</strong> — you must understand individual accounts, household rollups, financial account roles, and relationship maps.",
-      "<strong>Compliance knowledge expected</strong> — KYC workflows, audit trail requirements, and data privacy considerations are tested throughout the exam."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Data model focus.</strong> Person accounts, households, financial accounts, roles and relationships.",
+      "<strong>Industry features.</strong> Rollups, referrals, action plans, interaction summaries and compliant data sharing."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and make sure you can explain the FSC household model and financial account relationships before booking. Experience with at least one FSC implementation in banking, wealth, or insurance is highly beneficial."
+    "passRateGuidance": "Set up a household with several members and financial accounts in a trial org, and check how the totals roll up. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Financial Services Cloud Accredited Professional Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include designing a household structure for a wealth management firm, configuring action plans for client onboarding, and selecting the right rollup approach for assets under management.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a client or adviser need, such as showing a family's total assets or passing a referral to a mortgage specialist, and ask which FSC feature fits.",
     "bestWayToPass": [
-      "<strong>Master the FSC data model:</strong> Know individual accounts, household accounts, financial accounts, financial account roles, and how rollups aggregate data at the household level.",
-      "<strong>Understand action plans:</strong> Study how action plan templates automate client lifecycle tasks like onboarding, annual reviews, and compliance checks.",
-      "<strong>Learn relationship management:</strong> Know how relationship maps, relationship groups, and referral management work for advisor-client engagement.",
-      "<strong>Study compliance workflows:</strong> Understand KYC processes, document checklist items, consent management, and how Salesforce Shield supports regulatory requirements."
+      "<strong>Draw the data model:</strong> Person account, household, account-contact relationship, financial account and financial account role.",
+      "<strong>Understand rollups:</strong> How balances roll up from financial accounts to people and households.",
+      "<strong>Learn the adviser tools:</strong> Referrals, action plans, goals and interaction summaries.",
+      "<strong>Know the privacy features:</strong> Compliant data sharing and how it limits who sees client data."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests the Financial Services Cloud data model — households, financial accounts, and relationship management for banking, wealth management, and insurance. Expect questions on action plans, rollup summaries, and KYC compliance workflows.",
+    "description": "This exam tests how you set up Financial Services Cloud: the client and household data model, financial accounts and rollups, referrals, action plans and compliance features.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -53,71 +62,71 @@
     "blocks": [
       {
         "heading": "FSC Data Model: Households, Individuals, and Financial Accounts",
-        "body": "Financial Services Cloud extends Salesforce with an industry-specific data model. Key objects: Individual Account (a person account representing a client), Household Account (groups related individuals), Financial Account (a bank account, investment account, or policy), Financial Account Role (relationship between a person and a financial account — primary owner, joint owner, beneficiary). Assets & Liabilities track client net worth components. The consultant must understand the Household model — how contacts relate to household accounts and how rollups aggregate financial data at the household level."
+        "body": "Individual clients are usually **person accounts**. A **household** is an account that groups people who manage money together, such as a family. People join a household through **account-contact relationships**, with one marked as the primary member. **Financial accounts** hold bank accounts, investments, loans and so on. **Financial account roles** link each financial account to the people involved, such as primary owner or joint owner. **Financial holdings** record what is inside an investment account, and **assets and liabilities** record things like a house or a mortgage held elsewhere."
       },
       {
         "heading": "Relationship Management and Referrals",
-        "body": "Relationship Map visually displays a client's relationships — family members, business associates, advisors. Relationship Groups define formal groupings (household, trust, business entity). Referral Management tracks leads referred between advisors or from clients. The consultant configures the Relationship Map to reflect the organisation's coverage model. FSC uses RecordType-specific **page layouts** for each account type (Individual, Household, Business). The exam tests how to configure Relationship Groups and Referral workflows for a given financial services firm's client coverage model."
+        "body": "Advisers need to see who is connected to whom. **Relationship groups** (such as households) group clients. **Contact-contact relationships** link people, like a client and their accountant. **Account-account relationships** link businesses, like a company and its subsidiary. **Referrals** let staff pass a lead to the right expert, for example a teller passing a mortgage lead to a lender. **Intelligent need-based referrals** route referrals to the right person or queue based on the client's need, and referral scoring helps prioritise them."
       },
       {
         "heading": "Action Plans for Client Lifecycle Management",
-        "body": "Action Plans define repeatable task sequences — used for new account onboarding, annual reviews, loan processing, and compliance checks. Action Plan Templates define the task sequence, assigned roles, due date offsets, and dependencies between tasks. When an Action Plan is created from a template, tasks are generated automatically and assigned to the appropriate team members. The consultant designs Action Plan Templates for the firm's key client lifecycle processes, configuring task dependencies and SLA-based due dates."
+        "body": "**Action plans** are reusable checklists of tasks, built from **action plan templates**. They make sure common processes, like opening an account or onboarding a new client, are done the same way every time. Each task can have a due date based on the plan's start date and can be assigned to a role or user. Action plans can be attached to accounts, opportunities and other records, and progress can be tracked as tasks are completed."
       },
       {
         "heading": "Rollup Summaries and Financial Aggregations",
-        "body": "FSC uses custom rollup logic to aggregate financial data at the Household level. Financial Account balances roll up to the Household to show total assets under management (AUM). Customisable Rollups (part of NPSP, also used in FSC) allow administrators to configure rollup calculations without code — defining which field, which object, and which criteria trigger the rollup. The consultant configures rollups to match the firm's reporting requirements — ensuring Household-level financial summaries are accurate and up-to-date."
+        "body": "Advisers want to see totals, such as a client's total assets or a household's total deposits. FSC **rollups** add up balances from financial accounts to the people who own them and then to their households. Settings control whether joint accounts count for the primary owner only or for all owners. **Rollup by lookup (RBL)** rules define which fields and records are added up. Rollups can be recalculated in bulk after data loads. Without them, advisers would have to add up accounts by hand."
       },
       {
         "heading": "Compliance, KYC, and Document Management",
-        "body": "Financial services firms have strict regulatory requirements. Know Your Customer (KYC) processes verify client identity — typically capturing ID documents, verifying addresses, and screening against watchlists. FSC supports compliance workflows with custom objects for KYC documentation. Document checklist items track which required documents have been collected. Integration with e-signature tools (DocuSign, Adobe Sign) enables digital document execution. The consultant designs the compliance workflow to satisfy regulatory requirements while maintaining a positive client experience."
+        "body": "Financial firms must control who sees client data. **Compliant data sharing** lets you share financial accounts, opportunities and interactions only with the people who should see them, based on roles in a deal or client team, rather than opening up whole objects. **Interaction summaries** record meetings with clients and can be marked confidential. Firms also track identity checks for **Know Your Customer** rules and store required documents with clear review dates. Field audit history and event monitoring help show regulators who did what."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Financial Services Cloud Accredited Professional Exam",
-    "intro": "The Financial Services Cloud AP exam tests FSC implementation for banking, insurance, and wealth management. Focus on the FSC data model, financial account tracking, advisor experience, and compliance requirements.",
+    "intro": "Most questions start with a client situation. Work out which records represent the people and money involved, then which feature acts on them.",
     "blocks": [
       {
         "heading": "FSC Data Model Extensions",
-        "body": "Know FSC-specific objects: Financial Account (checking, savings, investment), Financial Account Transaction, Financial Goal, Life Event, and how they extend the standard Account/Contact model for financial services."
+        "body": "Use the standard FSC objects first. Financial account, role, holding, goal and asset or liability cover most needs."
       },
       {
         "heading": "Client 360 & Relationship Manager",
-        "body": "Know how to configure the FSC client view: Relationship Map (household members, referral networks), Financial Accounts, Goals, and Life Events. Understand how advisors use this 360-degree view to serve clients."
+        "body": "The client profile shows financial accounts, goals and relationships in one place, with rollup totals."
       },
       {
         "heading": "Household & Relationship Management",
-        "body": "Know how FSC models households: primary household member, financial account roles (owner, beneficiary), and how household-level rollup fields aggregate assets under management (AUM) across the household."
+        "body": "Households group people through account-contact relationships. One member is primary."
       },
       {
         "heading": "Insurance-Specific Features",
-        "body": "Know FSC features for insurance: Policy objects, Claim Management, Producer Management, and how Independent Agents differ from Employees in the FSC data model."
+        "body": "Insurance policies, coverages and claims can be tracked for clients alongside their other financial accounts."
       },
       {
         "heading": "Compliance & Audit Trail",
-        "body": "Know how FSC addresses compliance requirements: audit logging, consent management, and how Salesforce Shield (Field Audit Trail, Event Monitoring) helps meet regulatory obligations for financial data."
+        "body": "Compliant data sharing limits access by role. Confidential interaction summaries hide meeting notes from others."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Financial Services Cloud:",
     "links": [
       {
         "href": "/certifications/sales-cloud",
         "label": "Sales Cloud Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/omnistudio-consultant",
+        "label": "OmniStudio Consultant"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/sharing-visibility-architect",
+        "label": "Sharing and Visibility Architect"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/data-360-consultant",
+        "label": "Data 360 Consultant"
       }
     ]
   },
@@ -157,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Financial Services Cloud AP validate?",
+      "question": "A married couple and their adult son share some bank accounts. How should they be represented in FSC?",
       "options": [
-        "Only basics",
-        "Skills and knowledge to implement Salesforce Financial Services Cloud",
-        "Only reporting",
-        "Only Slack"
+        "One Opportunity with three contacts",
+        "One person account for the whole family",
+        "Three person accounts linked to a household through account-contact relationships",
+        "Three Leads"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Financial Services Cloud Professionals have demonstrated the skills and knowledge to implement the Salesforce Financial Services Cloud."
+      "correctAnswer": 2,
+      "explanation": "Each person is a person account, and the household groups them while keeping each one's details separate.",
+      "whyWrong": [
+        "An Opportunity is a deal, not a family.",
+        "One account for three people loses individual details.",
+        "Leads are for prospects, not clients."
+      ]
     },
     {
-      "question": "Which industry does Financial Services Cloud serve?",
+      "question": "A joint savings account is owned by two clients. What links the account to both people?",
       "options": [
-        "Retail only",
-        "Financial services (e.g., banking, wealth management, insurance)",
-        "Manufacturing only",
-        "Education only"
+        "Financial account roles for each owner",
+        "A contact-contact relationship only",
+        "An action plan",
+        "Two copies of the financial account"
       ],
-      "correctAnswer": 1,
-      "explanation": "Financial Services Cloud serves financial services industries."
+      "correctAnswer": 0,
+      "explanation": "Financial account roles connect one financial account to each person, with their role such as joint owner.",
+      "whyWrong": [
+        "Contact relationships link people, not accounts.",
+        "Action plans are task lists.",
+        "Copies would double-count the balance."
+      ]
     },
     {
-      "question": "What is a key use case for Financial Services Cloud?",
+      "question": "An adviser wants to see the total of all deposits for a family in one number. What feature provides this?",
       "options": [
-        "Only email",
-        "Wealth management, banking, and insurance workflows",
-        "Only CPQ",
-        "Only Slack"
+        "Rollups from financial accounts to the household",
+        "A custom formula on each person",
+        "A report emailed weekly",
+        "A manual sum in a spreadsheet"
       ],
-      "correctAnswer": 1,
-      "explanation": "Wealth management, banking, and insurance workflows are key use cases."
+      "correctAnswer": 0,
+      "explanation": "FSC rollups add up balances from financial accounts to people and their household.",
+      "whyWrong": [
+        "Formulas can't sum across related financial accounts.",
+        "A weekly email is not live data.",
+        "Spreadsheets go out of date."
+      ]
     },
     {
-      "question": "Which role typically pursues Financial Services Cloud AP?",
+      "question": "A bank teller learns a client wants a mortgage. How should the lead reach a mortgage specialist?",
       "options": [
-        "Marketers",
-        "Partners and implementers in financial services",
-        "Sales only",
-        "Designers only"
+        "Create an action plan",
+        "Send a Chatter post to the whole bank",
+        "Update the client's address",
+        "Create a referral that is routed to the mortgage team"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers in financial services pursue this credential."
+      "correctAnswer": 3,
+      "explanation": "Referrals pass leads to the right expert, and need-based routing sends them to the right person or queue.",
+      "whyWrong": [
+        "Action plans are checklists, not referrals.",
+        "A broad post may be missed and isn't tracked.",
+        "Updating the address doesn't pass the lead."
+      ]
     },
     {
-      "question": "What does implementation of Financial Services Cloud often involve?",
+      "question": "Every new client must go through the same 12 onboarding steps. What should be used?",
       "options": [
-        "Only UI",
-        "Industry data model, workflows, and compliance considerations",
-        "Only reports",
-        "Only dashboards"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Implementation involves industry data model, workflows, and compliance."
-    },
-    {
-      "question": "What is wealth management in Financial Services Cloud?",
-      "options": [
-        "Only banking",
-        "Managing client relationships, assets, and financial planning",
-        "Only insurance",
-        "Only marketing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Wealth management covers client assets and financial planning."
-    },
-    {
-      "question": "Which data model objects are specific to Financial Services Cloud?",
-      "options": [
-        "Standard objects only",
-        "Financial Account, Goals, and industry-specific objects",
-        "Only Contact",
-        "Only Account"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Financial Account, Goals, and related objects support wealth management."
-    },
-    {
-      "question": "Why is compliance critical for Financial Services Cloud?",
-      "options": [
-        "Not critical",
-        "Financial services are regulated (e.g., KYC, suitability); data and processes must comply",
-        "Only for marketing",
-        "Only for sales"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Regulations like KYC and suitability require compliance."
-    },
-    {
-      "question": "What does household mean in Financial Services Cloud?",
-      "options": [
-        "Single account only",
-        "A group of related clients (e.g., family) sharing financial relationships",
-        "Only contact",
-        "Only opportunity"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Households group related clients for wealth management."
-    },
-    {
-      "question": "Which use case does Financial Services Cloud support for banking?",
-      "options": [
-        "Retail only",
-        "Consumer banking, commercial banking, and lending workflows",
-        "Manufacturing only",
-        "Education only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Banking use cases include consumer, commercial, and lending."
-    },
-    {
-      "question": "What is a Financial Goal in Financial Services Cloud?",
-      "options": [
+        "A financial goal",
         "A report",
-        "A client's financial objective (e.g., retirement, education) to track progress",
-        "A case type",
-        "An email template"
+        "A new household per step",
+        "An action plan template applied to each new client"
       ],
-      "correctAnswer": 1,
-      "explanation": "Financial Goals track client objectives and progress."
+      "correctAnswer": 3,
+      "explanation": "Action plan templates create the same set of tasks each time, with due dates and owners.",
+      "whyWrong": [
+        "Goals track a client's savings targets.",
+        "Reports show data.",
+        "Households group people."
+      ]
     },
     {
-      "question": "Which industry segment uses Financial Services Cloud for insurance?",
+      "question": "A client's investment account holds shares in several funds. Where are the individual funds recorded?",
       "options": [
-        "Retail only",
-        "Insurance carriers for policy and claims workflows",
-        "Manufacturing only",
-        "Education only"
+        "As interaction summaries",
+        "As referrals",
+        "As separate households",
+        "Financial holdings on the financial account"
       ],
-      "correctAnswer": 1,
-      "explanation": "Insurance carriers use FSC for policy and claims."
+      "correctAnswer": 3,
+      "explanation": "Financial holdings record the securities or funds within an investment account.",
+      "whyWrong": [
+        "Interaction summaries record meetings.",
+        "Referrals pass leads.",
+        "Households group people."
+      ]
     },
     {
-      "question": "What does 'scope' mean for Financial Services Cloud implementation?",
+      "question": "A client owns a house and has a mortgage with another bank. How can the adviser record these?",
       "options": [
-        "Only coding",
-        "Gathering requirements and defining solution scope",
-        "Only deployment",
-        "Only training"
+        "As Cases",
+        "As financial holdings",
+        "As assets and liabilities",
+        "As Leads"
       ],
-      "correctAnswer": 1,
-      "explanation": "Scope = requirements gathering and solution definition."
+      "correctAnswer": 2,
+      "explanation": "Assets and liabilities record things owned or owed that aren't financial accounts at the firm.",
+      "whyWrong": [
+        "Cases are for service issues.",
+        "Holdings are investments inside an account.",
+        "Leads are prospects."
+      ]
     },
     {
-      "question": "Which Salesforce product does Financial Services Cloud extend?",
+      "question": "Only the advisers on a client's deal team should see that client's opportunities, without opening the object to everyone. What fits?",
       "options": [
-        "Commerce Cloud",
-        "Sales Cloud and Service Cloud with financial services data model",
-        "Marketing Cloud only",
-        "Slack only"
+        "Giving everyone View All",
+        "Compliant data sharing based on the team roles",
+        "Removing the opportunities",
+        "Setting OWD to Public Read/Write"
       ],
       "correctAnswer": 1,
-      "explanation": "FSC extends Sales Cloud and Service Cloud."
+      "explanation": "Compliant data sharing grants access based on roles in the relationship or deal, which meets privacy needs.",
+      "whyWrong": [
+        "View All also shows everything.",
+        "Removing data isn't a solution.",
+        "Public access shows the data to everyone."
+      ]
     },
     {
-      "question": "What is KYC in financial services context?",
+      "question": "An adviser records notes from a sensitive meeting that other staff must not see. What should they use?",
       "options": [
-        "A report type",
-        "Know Your Customer—verifying client identity for compliance",
-        "A workflow only",
-        "An email template"
+        "A confidential interaction summary",
+        "A field on the Account visible to all",
+        "A public Chatter post",
+        "An email to the whole branch"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Interaction summaries record meetings and can be marked confidential to limit who can see them.",
+      "whyWrong": [
+        "A field visible to all defeats the point.",
+        "A public post is visible to many people.",
+        "Emailing the branch spreads the notes."
+      ]
+    },
+    {
+      "question": "A client's accountant should be linked to the client so advisers can see the connection. What should be used?",
+      "options": [
+        "A household",
+        "A financial holding",
+        "A contact-contact relationship",
+        "A financial account role"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Contact-contact relationships link people, such as a client and their adviser or accountant.",
+      "whyWrong": [
+        "Households are for people managing money together.",
+        "Holdings are investments.",
+        "Financial account roles link people to accounts."
+      ]
+    },
+    {
+      "question": "After loading 50,000 financial accounts, household totals look wrong. What should the admin do?",
+      "options": [
+        "Delete the households",
+        "Run a bulk rollup recalculation",
+        "Change the page layout",
+        "Ask advisers to edit each account"
       ],
       "correctAnswer": 1,
-      "explanation": "KYC is the process of verifying client identity for regulatory compliance."
+      "explanation": "Bulk recalculation updates rollup totals after large data loads.",
+      "whyWrong": [
+        "Deleting households loses data.",
+        "Layouts don't affect totals.",
+        "Editing accounts one by one isn't practical."
+      ]
+    },
+    {
+      "question": "A client wants to save for their child's university fees over ten years. Which FSC record tracks this?",
+      "options": [
+        "A liability",
+        "A financial goal",
+        "An action plan",
+        "A referral"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Financial goals track targets like education or retirement savings and progress toward them.",
+      "whyWrong": [
+        "Liabilities record money owed.",
+        "Action plans list tasks.",
+        "Referrals pass leads."
+      ]
+    },
+    {
+      "question": "A subsidiary company should be linked to its parent company in FSC. What should be used?",
+      "options": [
+        "A household",
+        "An account-account relationship",
+        "A contact-contact relationship",
+        "A financial account role"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Account-account relationships link businesses, such as a parent and subsidiary.",
+      "whyWrong": [
+        "Households group individuals.",
+        "Contact relationships link people.",
+        "Roles link people to financial accounts."
+      ]
+    },
+    {
+      "question": "The firm must show it checked each client's identity under Know Your Customer rules. What should be recorded?",
+      "options": [
+        "Identity checks and documents with dates and outcomes on the client record",
+        "Nothing, KYC is outside Salesforce",
+        "A financial goal",
+        "A Chatter post saying checked"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Recording identity checks and documents with dates gives a clear audit trail for KYC.",
+      "whyWrong": [
+        "Firms need evidence, wherever the check is done.",
+        "Goals are savings targets.",
+        "A post isn't a reliable record."
+      ]
+    },
+    {
+      "question": "Which statement about households in FSC is correct?",
+      "options": [
+        "A household can only have one member",
+        "Households replace financial accounts",
+        "A household groups people, and one member is marked as primary",
+        "A household is a type of Lead"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Households group people through account-contact relationships, with a primary member.",
+      "whyWrong": [
+        "Households usually have several members.",
+        "Financial accounts are still needed to hold balances.",
+        "Households are accounts, not leads."
+      ]
     }
   ]
 }

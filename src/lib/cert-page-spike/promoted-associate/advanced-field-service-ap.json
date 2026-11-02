@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Field Service leads",
-        "description": "You configure Scheduling Policies, Optimization work rules, and complex multi-resource work orders and want to prove you can tune them for real dispatch constraints."
+        "description": "You run Field Service for a company with many technicians and want to show you can set up scheduling and optimisation well."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise on when to escalate from standard Field Service scheduling into Advanced Scheduling and global optimization for large mobile workforces."
+        "description": "You already hold Field Service Consultant or have built Field Service, and want to prove deeper skills."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that validates deep Field Service scheduling expertise beyond the core Field Service Consultant certification."
+        "description": "You specialise in Field Service projects and want a credential beyond the consultant exam."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Advanced Field Service Accredited Professional Exam Hard?",
-    "summary": "The Advanced Field Service AP exam is moderately difficult specifically because it drills into scheduling and optimization edge cases — travel time modes, resource preferences, and work rule conflicts — that don't come up in the base Field Service exam.",
+    "summary": "It goes deeper than the Field Service Consultant exam. Most questions are about scheduling: how policies, work rules and objectives shape the schedule, and which optimisation option fits a situation.",
     "bullets": [
-      "<strong>60 questions</strong> in 90 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scheduling depth</strong> &mdash; expect questions on Scheduling Policy work rules, objective weighting, and when global optimization should run versus in-day optimization.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Field Service in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Scheduling depth.</strong> Scheduling policies, work rules, service objectives and the types of optimisation.",
+      "<strong>Real setups.</strong> Crews, multi-day work, shifts, inventory and the mobile app all come up."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "People who have tuned scheduling in a live Field Service org do best. Before you book, aim for 75% or more on practice tests and make sure you can explain why a given appointment was or wasn't scheduled."
   },
   "examFormat": {
     "heading": "Advanced Field Service Accredited Professional Exam Format Explained",
-    "intro": "The Advanced Field Service Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Field Service.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a scheduling or field problem, such as too much travel time or jobs needing two technicians, and ask what to change.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Advanced Field Service, Scheduling, and Optimization because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Know scheduling policies inside out:</strong> Work rules filter out technicians. Service objectives rank the ones that are left.",
+      "<strong>Learn the optimisation types:</strong> Global, in-day and resource schedule optimisation, and when to run each.",
+      "<strong>Understand crews and multi-day work:</strong> How jobs needing several people or several days are scheduled.",
+      "<strong>Know the mobile app:</strong> Offline use, data priming and what technicians can do in the field."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers advanced Field Service Lightning configuration, including scheduling optimization policies, complex work order scenarios, asset maintenance plans, inventory management, and mobile technician workflows.",
+    "description": "This exam tests advanced Field Service setup: scheduling policies and optimisation, complex appointments, crews, inventory, maintenance plans and the mobile app.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -62,71 +62,71 @@
     "blocks": [
       {
         "heading": "Scheduling & Optimization Engine",
-        "body": "The Field Service Scheduling Optimization Engine (Enhanced Scheduling and Optimization, or ESO) automatically schedules and optimizes work orders across a workforce. Scheduling Policies define rules, objectives, and constraints — balance travel time, skill matching, SLA compliance, and customer time preferences. Work Rules include availability, skills, territories, and travel limits. Optimization Objectives specify what to optimize (minimize travel, maximize utilization). Drip Feed Scheduling releases appointments incrementally to field workers. The Advanced FSL exam tests deep configuration of scheduling policies and understanding of how ESO decisions are made — know which rule types govern which behavior."
+        "body": "A **scheduling policy** tells the system how to choose a technician. **Work rules** are hard filters: the technician must have the right skills, work in the right territory and be available. **Service objectives** are soft goals that rank the remaining options, such as least travel, earliest arrival or preferred technician. You can weight objectives to show what matters most. **Optimisation** reruns scheduling across many appointments to improve the whole plan. **Global optimisation** usually runs overnight for the coming days. **In-day optimisation** fixes today's schedule after changes. **Resource schedule optimisation** improves one technician's day."
       },
       {
         "heading": "Work Orders, Work Types & Service Appointments",
-        "body": "Work Orders are the central record for field service jobs. Work Types define templates — they set default skills, estimated duration, and required products. Service Appointments are the scheduled instances linked to Work Orders (or Account, Asset, Opportunity, or Work Order Line Items). Appointment Bundles group multiple appointments for efficient scheduling. Service Resources are workers or crews. Resource Absences block scheduling during PTO or non-working periods. Service Territories define geographic or operational coverage areas, with Operating Hours. The exam tests complex scenarios with multi-visit work orders, bundled appointments, and nested territories."
+        "body": "A **work order** describes the job. A **work type** is a template that sets duration, required skills and whether a service appointment is created automatically. The **service appointment** is what gets scheduled on the calendar. Complex jobs can need **dependencies** between appointments, such as job B must start after job A ends. Long jobs can be scheduled as **multi-day work**. Jobs needing several people can use **service crews**, or several resources assigned to one appointment."
       },
       {
         "heading": "Asset Management & Maintenance Plans",
-        "body": "Assets represent physical equipment or products owned by customers. Asset Relationships model complex asset hierarchies (parent-child, component-of). Maintenance Plans define recurring service schedules — set work type, frequency, and generation horizon. Work Order Generation automatically creates future work orders from the maintenance plan. Asset Warranties track coverage periods and terms. Service Contracts define the scope and duration of a service agreement. **Entitlements** within Service Cloud FSL determine response time SLAs. Advanced FSL exam questions often involve configuring proactive maintenance and linking warranty coverage to auto-generated work orders."
+        "body": "**Assets** are the products installed at a customer's site. **Maintenance plans** create work orders on a schedule, for example a check every six months, for one or many assets. You can set how far ahead work orders are generated and whether they are grouped. Asset history shows every visit and part used, which helps spot repeat failures. Warranty terms and entitlements can show what service the customer is owed."
       },
       {
         "heading": "Inventory & Parts Management",
-        "body": "Products Required on Work Order Line Items specify the parts needed for a job. Field technicians consume parts from their truck stock (Location Type: Vehicle). Return Orders handle defective or unused parts returned to a depot. Inventory Transfers move parts between locations (warehouse to van, van to van). Serialized Products track individual items; non-serialized track quantities. Price Books set part costs. The exam tests end-to-end parts flows: requesting parts, transferring from depot to van, consuming on job, and returning unused items. Know the difference between a Product Consumed (used on site) and a Product Requested (pre-job planning)."
+        "body": "**Locations** include warehouses and technicians' vans. **Product items** record how much of each part is at a location. Technicians use **product requests** to ask for parts, and **product transfers** move parts between locations. When a part is used on a job, it is logged as **product consumed**, which lowers stock. Required parts can be set on a work type, so the scheduler can favour technicians who already carry them."
       },
       {
         "heading": "Mobile Worker Experience & Offline",
-        "body": "The Salesforce Field Service mobile app provides technicians with work order details, navigation, inventory, and signature capture. Offline mode caches assigned appointments and allows data entry without network connectivity — changes sync when connectivity is restored. Flow for Field Service delivers guided on-site workflows through the mobile app. The Gantt chart in the dispatcher console visualizes all scheduled work across the workforce. Global Actions add quick actions to the mobile app. The exam tests the configuration of mobile settings, what data is available offline, and how to build guided mobile workflows using Flow."
+        "body": "The **Field Service mobile app** lets technicians see their schedule, update work orders, capture signatures and log parts and time. It works **offline**: data is downloaded (primed) to the device ahead of time, and changes sync when the connection returns. Admins choose what data is primed so the app stays fast. Mobile flows and app extensions add custom steps, such as safety checklists. Technicians can also update their status, which keeps the dispatcher console accurate."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Advanced Field Service Accredited Professional Exam",
-    "intro": "The Advanced Field Service AP exam tests deep expertise in complex Field Service configurations: optimization engine, advanced scheduling policies, and resource management at scale.",
+    "intro": "Most questions are about why the schedule looks the way it does, or how to set up a tricky job. Separate the hard rules from the soft goals.",
     "blocks": [
       {
         "heading": "Optimization Engine Architecture",
-        "body": "Know how the Field Service Optimization engine works: the relationship between Scheduling Policies, Work Rules (Service Objectives and Constraints), and how the optimizer balances competing objectives."
+        "body": "Global optimisation for the next few days, usually overnight. In-day optimisation to repair today. Resource schedule optimisation for one person's day."
       },
       {
         "heading": "Complex Scheduling Scenarios",
-        "body": "Know how to configure scheduling for complex scenarios: multi-day work orders, crew management (multi-resource), preferred technician logic, and skills-based routing with proficiency levels."
+        "body": "Jobs in a fixed order use dependencies. Long jobs use multi-day work. Jobs needing several people use crews or multiple resources."
       },
       {
         "heading": "Resource Capacity Planning",
-        "body": "Understand how to use the Optimization engine's global optimization to plan capacity, manage overtime, and handle emergency work insertion. Know how service territories and operating hours define scheduling windows."
+        "body": "Capacity-based resources, such as contractors, are scheduled by hours or jobs per period, not by exact slots."
       },
       {
         "heading": "Field Service Analytics",
-        "body": "Know how to build Field Service analytics: first-time fix rate, travel time efficiency, SLA compliance, technician utilization, and how to use [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) for advanced field service reporting."
+        "body": "Track first-time fix rate, travel time, utilisation and on-time arrival to see where scheduling can improve."
       },
       {
         "heading": "Mobile App Advanced Configuration",
-        "body": "Know how to configure advanced mobile features: offline data synchronization, custom mobile flows, barcode scanning for parts lookup, and how to configure the mobile app for different technician roles."
+        "body": "Control offline priming, add mobile flows for checklists, and keep technician status updated for dispatchers."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Advanced Field Service:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/field-service",
+        "label": "Field Service Consultant"
       },
       {
         "href": "/certifications/service-cloud",
         "label": "Service Cloud Consultant"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/contact-center-ap",
+        "label": "Contact Center AP"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/sharing-visibility-architect",
+        "label": "Sharing and Visibility Architect"
       }
     ]
   },
@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Advanced Field Service AP validate?",
+      "question": "A technician without the right certification keeps being suggested for electrical jobs. What should be changed?",
       "options": [
-        "Only basics",
-        "Designing, configuring, building, and implementing Advanced Field Service",
-        "Only reporting",
-        "Only Slack"
+        "Increase the job's duration",
+        "Add a service objective for preferred technician",
+        "Add a required skill to the work type and make sure the policy has a skill work rule",
+        "Turn off optimisation"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Advanced Field Service Professionals have demonstrated skills in designing, configuring, building, and implementing Advanced Field Service."
+      "correctAnswer": 2,
+      "explanation": "Work rules are hard filters. A skill work rule removes technicians who don't have the required skill.",
+      "whyWrong": [
+        "Duration doesn't affect skills.",
+        "Objectives only rank candidates. They can't rule someone out.",
+        "Turning off optimisation doesn't stop wrong suggestions."
+      ]
     },
     {
-      "question": "Which product does Advanced Field Service extend?",
+      "question": "The business wants schedules that cut down on driving time, while still meeting all the rules. What should be adjusted?",
       "options": [
-        "Marketing Cloud",
-        "Service Cloud and Field Service",
-        "Commerce Cloud",
-        "Slack"
+        "The weight of the minimise travel service objective",
+        "The number of work types",
+        "The page layout",
+        "The assets' serial numbers"
       ],
-      "correctAnswer": 1,
-      "explanation": "Advanced Field Service extends Service Cloud and Field Service capabilities."
+      "correctAnswer": 0,
+      "explanation": "Service objectives rank options. Giving more weight to minimise travel makes the scheduler prefer shorter trips.",
+      "whyWrong": [
+        "Work type count doesn't shape travel.",
+        "Layouts don't affect scheduling.",
+        "Serial numbers have no effect on travel."
+      ]
     },
     {
-      "question": "What is a key capability of Advanced Field Service?",
+      "question": "Several technicians called in sick this morning and today's schedule is now full of gaps and conflicts. Which optimisation fits?",
       "options": [
-        "Email only",
-        "Scheduling, optimization, and mobile workforce management",
-        "CPQ only",
-        "Reporting only"
+        "Resource schedule optimisation for one technician",
+        "No optimisation, just wait",
+        "Global optimisation for the next two weeks",
+        "In-day optimisation"
       ],
-      "correctAnswer": 1,
-      "explanation": "Scheduling, optimization, and mobile workforce management are key capabilities."
+      "correctAnswer": 3,
+      "explanation": "In-day optimisation is meant to repair today's schedule after changes like absences or emergencies.",
+      "whyWrong": [
+        "Fixing one technician doesn't solve the wider problem.",
+        "Waiting leaves customers without visits.",
+        "Global optimisation looks further ahead and usually runs overnight."
+      ]
     },
     {
-      "question": "Which role typically pursues Advanced Field Service AP?",
+      "question": "A job needs two technicians to work together at the same time. What is a good way to schedule it?",
       "options": [
-        "Marketers",
-        "Partners and implementers working with Field Service",
-        "Sales only",
-        "Developers only"
+        "Make the job twice as long",
+        "Create one appointment and hope two people turn up",
+        "Use a service crew, or assign several resources to the appointment",
+        "Schedule it twice on different days"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with Field Service pursue this credential."
+      "correctAnswer": 2,
+      "explanation": "Crews and multiple-resource scheduling let one appointment be served by more than one person at once.",
+      "whyWrong": [
+        "A longer job is still one person.",
+        "Hoping doesn't schedule anyone.",
+        "Two different days means they aren't working together."
+      ]
     },
     {
-      "question": "What does AP stand for in Accredited Professional?",
+      "question": "Installing a pump must finish before the electrical connection job can start. How should this be set up?",
       "options": [
-        "Application",
-        "Accredited Professional",
-        "Advanced Platform",
-        "Automation Process"
+        "A note in the description",
+        "One very long appointment",
+        "A dependency between the two service appointments",
+        "Two unrelated appointments"
       ],
-      "correctAnswer": 1,
-      "explanation": "AP stands for Accredited Professional—product/industry credentials for partners."
+      "correctAnswer": 2,
+      "explanation": "Appointment dependencies tell the scheduler that one job must finish before the other starts.",
+      "whyWrong": [
+        "A note doesn't affect scheduling.",
+        "One long job can't use two different skill sets well.",
+        "Unrelated appointments might be scheduled in the wrong order."
+      ]
     },
     {
-      "question": "What is scheduling optimization in Field Service?",
+      "question": "A building's lifts must be inspected every 3 months. How should the work orders be created?",
       "options": [
-        "Manual assignment only",
-        "Automated assignment of work orders to technicians based on skills, location, and availability",
-        "Email scheduling only",
-        "Report scheduling only"
+        "Creating them by hand each quarter",
+        "A maintenance plan for the lift assets",
+        "A report emailed to the team",
+        "A Case for each inspection"
       ],
       "correctAnswer": 1,
-      "explanation": "Optimization assigns work to the right technician based on criteria."
+      "explanation": "Maintenance plans create work orders on a schedule for the assets they cover.",
+      "whyWrong": [
+        "Manual creation is easy to forget.",
+        "A report doesn't create the work.",
+        "Cases are for issues, and still need manual creation."
+      ]
     },
     {
-      "question": "Which object represents a work order in Field Service?",
+      "question": "A technician uses a spare part on a job. How should this be recorded so stock stays correct?",
       "options": [
-        "Case only",
-        "Service Appointment and Work Order",
-        "Task only",
-        "Event only"
+        "Log it as a product consumed on the work order",
+        "Delete the product item",
+        "Add the part to the work type's required products",
+        "Create a product request"
       ],
-      "correctAnswer": 1,
-      "explanation": "Work Order and Service Appointment track field service work."
+      "correctAnswer": 0,
+      "explanation": "Product consumed records the part used and reduces the stock at the technician's location.",
+      "whyWrong": [
+        "Deleting the product item removes all stock records.",
+        "Required products describe what a job needs, they don't record usage.",
+        "A product request asks for more stock, it doesn't record what was used."
+      ]
     },
     {
-      "question": "What is mobile workforce management?",
+      "question": "A technician's van is low on a part. How should they ask for more?",
       "options": [
-        "Desktop only",
-        "Enabling technicians to view schedules, update work, and capture data on mobile devices",
-        "Email only",
-        "Reporting only"
+        "Add the part as a required product on the work type",
+        "Log a product consumed with a negative amount",
+        "Create a product transfer back to the warehouse",
+        "Create a product request"
       ],
-      "correctAnswer": 1,
-      "explanation": "Mobile tools let technicians access schedules and update work in the field."
+      "correctAnswer": 3,
+      "explanation": "Product requests are how technicians ask for parts to be sent to their location.",
+      "whyWrong": [
+        "Required products describe what a job needs, they don't order stock.",
+        "Product consumed records parts used, not parts needed.",
+        "A transfer moves parts that are already approved. The request comes first."
+      ]
     },
     {
-      "question": "Which capability helps optimize technician routes?",
+      "question": "Technicians often work in basements with no signal. What must be set up so the mobile app still works?",
       "options": [
-        "Manual routing only",
-        "Scheduling policies and optimization consider travel time and location",
-        "Email only",
-        "Chat only"
+        "Offline data priming for the records they need",
+        "Moving the jobs to a different service territory",
+        "A mobile flow that saves data to a custom object",
+        "Shorter appointment durations"
       ],
-      "correctAnswer": 1,
-      "explanation": "Optimization considers travel time and location for efficient routing."
+      "correctAnswer": 0,
+      "explanation": "The app downloads needed records ahead of time and syncs changes once the connection is back.",
+      "whyWrong": [
+        "Territory changes don't give the device any data offline.",
+        "A flow still needs data on the device, and the data must be primed first.",
+        "Duration has nothing to do with connectivity."
+      ]
     },
     {
-      "question": "What does 'build and implement' mean for Advanced Field Service?",
+      "question": "Technicians must complete a safety checklist before starting each job in the mobile app. What should be added?",
       "options": [
-        "Only coding",
-        "Configuring the solution and deploying it for the customer",
-        "Only reporting",
-        "Only training"
+        "A dashboard",
+        "A new scheduling policy",
+        "A mobile flow launched from the work order",
+        "A new service territory"
       ],
-      "correctAnswer": 1,
-      "explanation": "Build = configure; implement = deploy and go-live."
+      "correctAnswer": 2,
+      "explanation": "Mobile flows add guided steps, like checklists, inside the mobile app.",
+      "whyWrong": [
+        "Dashboards show data, not steps.",
+        "Scheduling policies choose technicians, not job steps.",
+        "Territories group areas, not tasks."
+      ]
     },
     {
-      "question": "What is a work type in Field Service?",
+      "question": "A contractor company should get up to 40 hours of work per week, without exact time slots. How should they be set up?",
       "options": [
-        "A report",
-        "A template defining the skills, duration, and parts needed for a job type",
-        "A case type",
-        "An email template"
+        "As a location",
+        "As a capacity-based resource",
+        "As a regular resource with a fixed shift",
+        "As an asset"
       ],
       "correctAnswer": 1,
-      "explanation": "Work types standardize job definitions for scheduling and resource planning."
+      "explanation": "Capacity-based resources are scheduled by hours or job count per period, which fits contractors.",
+      "whyWrong": [
+        "Locations are places, not people.",
+        "Regular resources are scheduled into exact slots.",
+        "Assets are equipment at customer sites."
+      ]
     },
     {
-      "question": "What is a Service Territory in Field Service?",
+      "question": "A scheduling policy has work rules and service objectives. What is the difference?",
       "options": [
-        "A report",
-        "A geographic or logical area for assigning and optimizing work",
-        "A case type",
-        "An email template"
+        "Objectives remove candidates, rules rank them",
+        "Work rules remove candidates that don't qualify. Objectives rank the ones left.",
+        "Both only apply to mobile users",
+        "They are the same thing"
       ],
       "correctAnswer": 1,
-      "explanation": "Service Territories define areas for work assignment."
+      "explanation": "Rules are pass or fail filters. Objectives score the remaining options.",
+      "whyWrong": [
+        "That has them the wrong way round.",
+        "Both apply to all scheduling.",
+        "They do different jobs in the policy."
+      ]
     },
     {
-      "question": "Why is capacity planning important for Field Service?",
+      "question": "Customers keep booking slots that technicians can't reach in time. What should be checked?",
       "options": [
-        "Not important",
-        "Ensuring enough technician capacity for forecasted work volume",
-        "Only for sales",
-        "Only for marketing"
+        "Travel time settings, such as street-level routing, and the territory set-up",
+        "The work order priority field",
+        "The appointment booking slot length only",
+        "The scheduling policy's preferred resource objective"
       ],
-      "correctAnswer": 1,
-      "explanation": "Capacity planning aligns technician availability with demand."
+      "correctAnswer": 0,
+      "explanation": "Accurate travel time depends on routing settings and territories. Poor estimates lead to impossible slots.",
+      "whyWrong": [
+        "Priority changes order, not travel time.",
+        "Slot length doesn't fix wrong travel estimates.",
+        "Preferring a technician doesn't make travel times accurate."
+      ]
     },
     {
-      "question": "What does resource optimization consider?",
+      "question": "A new hire should only get simple jobs for their first month. How can this be done?",
       "options": [
-        "Only skills",
-        "Skills, location, availability, and business rules",
-        "Only location",
-        "Only time"
+        "Give them no territory",
+        "Give them only the basic skills, with the right skill levels",
+        "Turn off their user account",
+        "Put them in a separate org"
       ],
       "correctAnswer": 1,
-      "explanation": "Optimization uses multiple factors for optimal assignment."
+      "explanation": "Skills and skill levels let the scheduler match only suitable jobs to each person.",
+      "whyWrong": [
+        "No territory means no jobs at all.",
+        "A turned-off user can't work at all.",
+        "A separate org cuts them off from the rest."
+      ]
     },
     {
-      "question": "Which mobile feature helps technicians complete work?",
+      "question": "A manager wants to know how often technicians fix the problem on the first visit. Which measure fits?",
       "options": [
-        "Email only",
-        "Field Service Mobile app for schedules, check-in, and work completion",
-        "Chat only",
-        "Reports only"
+        "Average travel time",
+        "On-time arrival rate",
+        "Resource utilisation",
+        "First-time fix rate"
       ],
-      "correctAnswer": 1,
-      "explanation": "Field Service Mobile provides the technician's field interface."
+      "correctAnswer": 3,
+      "explanation": "First-time fix rate shows how often jobs are finished without a return visit, which is key for service quality.",
+      "whyWrong": [
+        "Travel time measures driving, not fix quality.",
+        "On-time arrival measures punctuality, not whether a return visit was needed.",
+        "Utilisation shows how busy technicians are, not whether jobs were fixed first time."
+      ]
     }
   ]
 }

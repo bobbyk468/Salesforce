@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Loyalty program builders",
-        "description": "You configure loyalty program structures, tier models, points currencies, and promotions in Loyalty Management and want to validate your setup skills."
+        "description": "You design or run a points and tiers programme for a retailer, airline, hotel or similar brand."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise clients on transaction journals, accrual/redemption rules, and voucher configuration for loyalty program launches."
+        "description": "You set up Salesforce Loyalty Management for clients and want to show you know the product."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that differentiates you in the growing loyalty/rewards implementation space."
+        "description": "You know core Salesforce and want to specialise in customer loyalty."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Loyalty Management Accredited Professional Exam Hard?",
-    "summary": "The Loyalty Management AP exam is moderately difficult because it tests program-structure concepts — tier qualification, transaction journals, and promotion rules — that don't map cleanly onto general Salesforce configuration.",
+    "summary": "It is a moderate exam. Most questions are about how points are earned and spent, how members move between tiers, and how program processes apply the rules.",
     "bullets": [
-      "<strong>60 questions</strong> in 90 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Program mechanics</strong> &mdash; expect questions on how accrual and redemption transaction journals interact with tier qualification and promotion eligibility.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Loyalty Management in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Programme design.</strong> Currencies, tiers, benefits, promotions and vouchers.",
+      "<strong>Rules engine.</strong> How transaction journals and program processes award and redeem points."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Build a small programme in a trial org with two tiers and a promotion, then post a few transactions. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Loyalty Management Accredited Professional Exam Format Explained",
-    "intro": "The Loyalty Management Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Loyalty Management.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a loyalty need, such as double points for a weekend or keeping gold status for another year, and ask how to set it up.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Loyalty Management, Loyalty Programs, and Points because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Learn the currencies:</strong> Qualifying points decide tier status. Non-qualifying points are spent on rewards.",
+      "<strong>Understand transaction journals:</strong> Every purchase or activity is posted as a journal, then processed by rules.",
+      "<strong>Know program processes:</strong> They hold the rules for accrual, redemption and tier changes.",
+      "<strong>Practise promotions:</strong> Bonus points, limits and eligibility for a set of members."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers configuring Salesforce Loyalty Management — tiers, points accrual, redemption rules, and partner integrations. Expect questions on program design and end-to-end implementation.",
+    "description": "This exam tests how you set up Salesforce Loyalty Management: programmes, points and tiers, accrual and redemption rules, promotions, vouchers, partners and reporting.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -62,71 +62,71 @@
     "blocks": [
       {
         "heading": "Program Design: Tiers & Points",
-        "body": "Salesforce Loyalty Management structures programs around a **Loyalty Program** with one or more **Tiers** (e.g., Silver, Gold, Platinum) and a Currency (points, miles, cashback). **Tier Groups** define the criteria for tier qualification — spending thresholds, visit counts, or points earned. Tier Period determines how long earned status lasts and when it resets (anniversary, calendar year). The Loyalty Member object tracks each enrolled customer's current tier, points balance, and program history. Qualifying vs. Non-Qualifying Points: qualifying points count toward tier status; non-qualifying points are bonus awards that don't affect tier. The AP exam tests how to configure a tier structure with custom qualification rules and how tier periods interact with reset logic."
+        "body": "A **loyalty program** holds everything about one scheme. **Program currencies** are the points members collect. **Qualifying** points count toward tier status. **Non-qualifying** points can be spent on rewards but don't affect tier. **Tier groups** contain **tiers**, such as Silver, Gold and Platinum, each with thresholds and **benefits** like free delivery or lounge access. Tiers can be reviewed on a set schedule, and rules decide whether members move up, stay, or drop down."
       },
       {
         "heading": "Points Accrual & Redemption Rules",
-        "body": "**Accrual Rules** define how members earn points — by transaction amount, product category, channel, or event. Accrual Rate can be a fixed amount or a percentage of spend. Partner Accruals allow members to earn points at non-Salesforce partner businesses via API. **Redemption Rules** define how points are spent — minimum redemption threshold, redemption value (100 points = $1), and eligible products. Vouchers are generated upon redemption and tracked as Loyalty Vouchers. Point Expiry Rules define when dormant points expire and send pre-expiry notifications. The exam tests how to configure an accrual rule for a partner scenario, how to set a redemption rule with a minimum threshold, and how expiry notifications are triggered."
+        "body": "Every purchase, flight or other activity is recorded as a **transaction journal**. **Program processes** contain the rules that act on journals, for example: give 1 point per dollar spent, or 2 points per dollar for Gold members. Redemption works the same way: a journal for a reward triggers rules that take points away. Points can be set to **expire** after a period, and the **member's ledger** shows every change to their balance, so balances can always be explained."
       },
       {
         "heading": "Promotions & Member Engagement",
-        "body": "Loyalty Promotions offer bonus points or tier benefits for specific activities during a promotional period. Promotion Eligibility Rules restrict which members can participate (by tier, segment, or geography). Benefit Types include points multipliers, free products, and discount vouchers. Promotions are linked to a Loyalty Program and activated for a date range. Member Engagement events (birthday, milestone, referral) trigger automatic point awards or benefit grants. Engagement Attributes store program-specific data on the member profile. The exam tests how to configure a time-limited promotion with eligibility rules, how to award bonus points for a lifecycle event, and how to use member attributes to personalize promotions."
+        "body": "**Promotions** encourage certain behaviour, like double points on a weekend or bonus points for a first purchase in a new category. They can be limited to certain members, products or dates, and capped so they don't cost too much. **Vouchers** give members a discount or reward they can use later. **Badges** and **games** can add fun elements. Members can see their points, tier and vouchers through a member portal built on Experience Cloud."
       },
       {
         "heading": "Partner Integration & Ecosystem",
-        "body": "Loyalty programs often partner with airlines, hotels, retailers, and financial services to allow cross-brand earning and redemption. Partner Accounts represent participating businesses in Salesforce. Partner Accrual/Redemption endpoints expose REST APIs that partners call to post transactions. Loyalty Connect provides a pre-built API gateway for partner integrations. Transaction Journals record every point earn and burn event with full audit trail. The AP exam tests how to configure a partner-facing API for an earn scenario, how transactions are posted and validated, and how to design the security model so that a partner can only post transactions for their own members."
+        "body": "Many programmes let members earn and spend points with **partners**, such as an airline programme that gives points for hotel stays. **Loyalty program partners** are set up with their own terms, and the brand can track how many points each partner has issued or redeemed, which is used for billing between companies. Partners usually send transactions through APIs, and the same journals and rules then apply."
       },
       {
         "heading": "Analytics & Program Reporting",
-        "body": "Key Loyalty KPIs: Active Member Rate, Redemption Rate, Point Liability (total outstanding points × redemption value), Tier Attainment Distribution, and Program ROI. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) Loyalty apps provide pre-built dashboards for program performance, member engagement, and financial liability. Member 360 views surface all loyalty activity alongside CRM data. Churn prediction identifies at-risk members for proactive re-engagement. Cohort analysis tracks how engagement changes as members progress through tiers. The exam tests which CRM Analytics datasets are populated by Loyalty data, how to measure point liability from journal records, and how to configure a member churn alert."
+        "body": "Brands need to know whether the programme pays off. Reports and the **Loyalty Analytics** app show active members, points issued and redeemed, tier movement and promotion results. **Points liability**, the value of unspent points, is an important finance number. Combining loyalty data with purchase and marketing data, for example in **Data Cloud**, helps target the right offers to the right members."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Loyalty Management Accredited Professional Exam",
-    "intro": "The Loyalty Management AP exam tests configuration of Salesforce Loyalty Management for customer loyalty programs. Focus on program setup, tier management, points accrual, and partner integration.",
+    "intro": "Most questions start with a programme rule written in plain words. Work out which currency, tier, process or promotion makes that rule happen.",
     "blocks": [
       {
         "heading": "Loyalty Program Setup",
-        "body": "Know how to configure a loyalty program: **Program Currency** (points, miles), Tier Groups with qualifying criteria (points threshold, transaction count), and Member Portal configuration for self-service member management."
+        "body": "Programme, currencies, tier groups and tiers come first. Benefits attach to tiers."
       },
       {
         "heading": "Accrual & Redemption Rules",
-        "body": "Know how to configure **Transaction Journal** rules: earning rules (fixed points, multipliers, bonus events) and redemption rules (points-to-currency conversion, minimum redemption threshold). Understand how rule conditions restrict eligibility."
+        "body": "Activity is posted as transaction journals. Program processes apply the rules to award or remove points."
       },
       {
         "heading": "Member Enrollment & Lifecycle",
-        "body": "Know how members enroll (self-service, agent-assisted, bulk import), how tier assignment is calculated at the program period end, and how expiry rules manage points and tier status requalification."
+        "body": "Members join, earn, move between tiers and may become inactive. Expiry and tier review rules handle this over time."
       },
       {
         "heading": "Partner Management",
-        "body": "Know how to configure partner programs in Loyalty Management: Partner Accounts, Partner Promotions (earn miles at partner merchants), and how partner transaction data is imported and processed."
+        "body": "Partners send transactions too. Track points issued and redeemed per partner for billing."
       },
       {
         "heading": "Loyalty Analytics",
-        "body": "Know key loyalty KPIs: member acquisition rate, tier distribution, redemption rate, points liability, and how to use [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards to track program health and identify at-risk members."
+        "body": "Watch points liability, redemption rate and tier movement, as well as promotion results."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Loyalty Management:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/data-360-consultant",
+        "label": "Data 360 Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Consultant"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/b2c-commerce-developer",
+        "label": "B2C Commerce Developer"
       }
     ]
   },
@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Loyalty Management AP validate?",
+      "question": "Members should reach Gold status based on points earned from flights, but points from a credit card partner should only be spendable. How should currencies be set up?",
       "options": [
-        "Only basics",
-        "2-3 years experience designing solutions using Loyalty Management and leading implementation within customer organizations",
-        "Only reporting",
-        "Only Slack"
+        "All points as qualifying",
+        "Flight points as qualifying, credit card points as non-qualifying",
+        "All points as non-qualifying",
+        "Use one currency and ignore tiers"
       ],
       "correctAnswer": 1,
-      "explanation": "Accredited Loyalty Management Professionals have 2-3 years' experience designing solutions using Loyalty Management and can lead implementation within customer organizations."
+      "explanation": "Qualifying points count toward tiers. Non-qualifying points can be spent but don't change status.",
+      "whyWrong": [
+        "Making all points qualifying lets credit card spend drive status.",
+        "Making all points non-qualifying means nothing drives tier status.",
+        "Ignoring tiers removes a core part of the programme."
+      ]
     },
     {
-      "question": "Which Salesforce product does Loyalty Management refer to?",
+      "question": "A member buys a $120 jacket in store. How is this recorded before points are given?",
       "options": [
-        "Marketing Cloud only",
-        "Loyalty Management for customer loyalty programs and engagement",
-        "Service Cloud",
-        "Slack"
+        "As a transaction journal that program processes then act on",
+        "As a partner record",
+        "As a voucher",
+        "As a new tier"
       ],
-      "correctAnswer": 1,
-      "explanation": "Loyalty Management is Salesforce's product for loyalty programs."
+      "correctAnswer": 0,
+      "explanation": "Purchases are posted as transaction journals, and the rules in program processes award the points.",
+      "whyWrong": [
+        "Partners are other companies in the programme.",
+        "Vouchers are rewards to use later.",
+        "Tiers are status levels."
+      ]
     },
     {
-      "question": "What is a key activity for a Loyalty Management Professional?",
+      "question": "Gold members should earn 2 points per dollar, while others earn 1. Where is this rule set?",
       "options": [
-        "Only coding",
-        "Designing and leading implementation of loyalty solutions",
-        "Only reporting",
-        "Only email"
+        "In the voucher definition",
+        "In the partner settings",
+        "In a program process rule that checks the member's tier",
+        "In the member's address"
       ],
-      "correctAnswer": 1,
-      "explanation": "They design and lead implementation of loyalty solutions."
+      "correctAnswer": 2,
+      "explanation": "Program processes hold accrual rules and can use conditions like tier.",
+      "whyWrong": [
+        "Vouchers are rewards.",
+        "Partner settings cover partner terms, not tier rates.",
+        "Address doesn't drive earning."
+      ]
     },
     {
-      "question": "Which role typically pursues Loyalty Management AP?",
+      "question": "The brand wants double points on all purchases over one holiday weekend, capped at 500 bonus points per member. What should be used?",
       "options": [
-        "Marketers",
-        "Partners and implementers with 2-3 years loyalty experience",
-        "Sales only",
-        "Designers only"
+        "A new tier",
+        "A manual points adjustment for each member",
+        "A promotion with dates, a multiplier and a limit",
+        "A new currency"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers with loyalty experience pursue this credential."
+      "correctAnswer": 2,
+      "explanation": "Promotions can run for set dates, change how points are earned, and include caps.",
+      "whyWrong": [
+        "Tiers are status levels, not time-limited offers.",
+        "Manual adjustments don't scale.",
+        "A new currency isn't needed for bonus points."
+      ]
     },
     {
-      "question": "What does loyalty program implementation often involve?",
+      "question": "Points should disappear if they aren't used within 24 months. What should be configured?",
       "options": [
-        "Only UI",
-        "Points, tiers, rewards, and engagement flows",
-        "Only reports",
-        "Only dashboards"
+        "Points expiry rules for the currency",
+        "A partner agreement",
+        "A new tier group",
+        "Deleting inactive members"
       ],
-      "correctAnswer": 1,
-      "explanation": "Implementation involves points, tiers, rewards, and engagement flows."
+      "correctAnswer": 0,
+      "explanation": "Expiry rules remove points after a set time, which also helps control points liability.",
+      "whyWrong": [
+        "Partner agreements cover partners.",
+        "Tier groups don't control expiry.",
+        "Deleting members loses their history."
+      ]
     },
     {
-      "question": "What is a loyalty tier?",
+      "question": "A member asks why their balance dropped last month. Where can an agent see every change to the balance?",
       "options": [
-        "A report",
-        "A membership level (e.g., Silver, Gold) with associated benefits",
-        "A workflow only",
-        "An email segment"
+        "The member's points ledger",
+        "The partner list",
+        "The tier definition",
+        "A promotion record"
       ],
-      "correctAnswer": 1,
-      "explanation": "Tiers define membership levels and benefits."
+      "correctAnswer": 0,
+      "explanation": "The ledger records each earning, redemption and expiry, so balances can be explained.",
+      "whyWrong": [
+        "The partner list doesn't show a member's balance.",
+        "Tier definitions describe tiers, not one member's history.",
+        "A promotion shows one offer."
+      ]
     },
     {
-      "question": "What are loyalty points used for?",
+      "question": "Members of a hotel programme should also earn points when they rent cars from a partner company. What should be set up?",
       "options": [
-        "Only tracking",
-        "Earning, redeeming, and tracking customer engagement",
-        "Only reporting",
-        "Only marketing"
+        "A loyalty program partner, with the partner sending transactions",
+        "A new tier",
+        "A manual email process",
+        "A second programme for car rental"
       ],
-      "correctAnswer": 1,
-      "explanation": "Points are earned and redeemed in loyalty programs."
+      "correctAnswer": 0,
+      "explanation": "Partners can be part of a programme, sending transactions that earn points under agreed terms.",
+      "whyWrong": [
+        "Tiers don't add partners.",
+        "Emails aren't an integration.",
+        "A second programme splits the member's points."
+      ]
     },
     {
-      "question": "Which capability does Loyalty Management provide for rewards?",
+      "question": "Finance wants to know the value of all unspent points. What is this called?",
       "options": [
-        "Email only",
-        "Configuring and managing rewards, redemptions, and fulfillment",
-        "Only reports",
-        "Only dashboards"
+        "Enrollment rate",
+        "Points liability",
+        "Redemption rate",
+        "Tier movement"
       ],
       "correctAnswer": 1,
-      "explanation": "Loyalty Management configures rewards and redemptions."
+      "explanation": "Points liability is the value of points members could still redeem, which finance must account for.",
+      "whyWrong": [
+        "Enrollment rate shows sign-ups.",
+        "Redemption rate shows how much is spent.",
+        "Tier movement shows status changes."
+      ]
     },
     {
-      "question": "Why is 2-3 years experience required for Loyalty Management AP?",
+      "question": "Gold members get free delivery. Where is this recorded?",
       "options": [
-        "Arbitrary",
-        "Designing and leading implementation requires depth of experience",
-        "Only for coding",
-        "Only for reporting"
+        "As a points currency",
+        "As a benefit linked to the Gold tier",
+        "As a transaction journal",
+        "As a partner"
       ],
       "correctAnswer": 1,
-      "explanation": "Leading implementation requires proven experience."
+      "explanation": "Benefits attach to tiers so members get them while in that tier.",
+      "whyWrong": [
+        "Currencies are points.",
+        "Journals record activity.",
+        "Partners are other companies."
+      ]
     },
     {
-      "question": "What does 'design solutions' mean for Loyalty Management?",
+      "question": "A member reaches Gold in March. When should the programme check whether they keep Gold?",
       "options": [
-        "Only UI design",
-        "Architecting the loyalty program (tiers, points, rewards, flows)",
-        "Only reports",
-        "Only dashboards"
+        "Never, tiers are permanent",
+        "Only when they call support",
+        "Every time they log in",
+        "At the tier review date set in the tier rules"
       ],
-      "correctAnswer": 1,
-      "explanation": "Design = architecting the program structure."
+      "correctAnswer": 3,
+      "explanation": "Tier rules define when status is reviewed and what is needed to keep it.",
+      "whyWrong": [
+        "Tiers usually need to be re-earned.",
+        "Support calls don't trigger reviews.",
+        "Login checks aren't how tiers work."
+      ]
     },
     {
-      "question": "Which Salesforce product does Loyalty Management integrate with?",
+      "question": "Members should see their points, tier and vouchers online. What is the usual way?",
       "options": [
-        "Slack only",
-        "Sales Cloud, Service Cloud, and Marketing Cloud for customer data",
-        "Commerce Cloud only",
-        "Net Zero only"
+        "A weekly PDF statement only",
+        "Calling the contact centre",
+        "A member portal built on Experience Cloud",
+        "A Chatter group"
       ],
-      "correctAnswer": 1,
-      "explanation": "Loyalty integrates with CRM and Marketing Cloud."
+      "correctAnswer": 2,
+      "explanation": "An Experience Cloud site can show members their loyalty details at any time.",
+      "whyWrong": [
+        "A PDF is out of date between statements.",
+        "Calling support costs more and is slower.",
+        "Chatter groups aren't for member accounts."
+      ]
     },
     {
-      "question": "What is engagement flow in loyalty context?",
+      "question": "After a promotion, the marketing team wants to know if it increased spend. What should they look at?",
       "options": [
-        "Email only",
-        "The journey of earn, redeem, and engage touchpoints",
-        "Only signup",
-        "Only reporting"
+        "The member portal's colours",
+        "The number of tiers",
+        "The expiry rule",
+        "Promotion results in reports or Loyalty Analytics"
       ],
-      "correctAnswer": 1,
-      "explanation": "Engagement flows define the customer journey."
+      "correctAnswer": 3,
+      "explanation": "Reporting on promotion performance shows whether it changed member behaviour.",
+      "whyWrong": [
+        "Portal design is unrelated.",
+        "Tier count doesn't measure the promotion.",
+        "Expiry rules don't measure results."
+      ]
     },
     {
-      "question": "What does 'lead implementation' mean for Loyalty Management AP?",
+      "question": "A member returns a product they earned 120 points on. What should happen?",
       "options": [
-        "Only coding",
-        "Leading the project: scope, design, build, deploy",
-        "Only reporting",
-        "Only training"
+        "Delete the member",
+        "A transaction journal for the return that removes the points",
+        "Move the member down a tier straight away",
+        "Nothing, points stay"
       ],
       "correctAnswer": 1,
-      "explanation": "Lead = own the implementation project."
+      "explanation": "Returns should be posted as journals so rules can reverse the points earned.",
+      "whyWrong": [
+        "Deleting the member is extreme.",
+        "Tier changes follow tier rules, not every return.",
+        "Leaving the points rewards a purchase that didn't stick."
+      ]
     },
     {
-      "question": "Which industry often uses Loyalty Management?",
+      "question": "The brand wants to send members personalised offers based on loyalty, purchase and web data together. What helps most?",
       "options": [
-        "Manufacturing only",
-        "Retail, travel, hospitality, and consumer brands",
-        "Healthcare only",
-        "Education only"
+        "Using only the tier name",
+        "Keeping each data set separate",
+        "Bringing the data together in Data Cloud",
+        "Asking members to fill in a survey"
       ],
-      "correctAnswer": 1,
-      "explanation": "Retail, travel, and hospitality commonly use loyalty."
+      "correctAnswer": 2,
+      "explanation": "Data Cloud combines data from many sources into one profile, which supports better targeting.",
+      "whyWrong": [
+        "Tier alone is too broad.",
+        "Separate data makes personalisation hard.",
+        "Surveys miss real behaviour."
+      ]
     },
     {
-      "question": "What is reward fulfillment?",
+      "question": "A member earns a $10 reward to use on their next order. What should be issued?",
       "options": [
-        "Only points",
-        "Delivering the reward (e.g., discount, gift) to the customer",
-        "Only reporting",
-        "Only marketing"
+        "A partner record",
+        "A tier group",
+        "A new tier",
+        "A voucher"
       ],
-      "correctAnswer": 1,
-      "explanation": "Fulfillment delivers the actual reward to the customer."
+      "correctAnswer": 3,
+      "explanation": "Vouchers hold rewards like discounts that members can use later.",
+      "whyWrong": [
+        "Partners are other companies.",
+        "Tier groups hold tiers.",
+        "Tiers are status levels."
+      ]
     }
   ]
 }

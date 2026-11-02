@@ -3,36 +3,45 @@
   "whoIsThisFor": {
     "heading": "Who is the Process Automation AP exam for?",
     "personas": [
-      { "label": "Salesforce admins deepening automation skills", "description": "You have admin experience and want to validate advanced Flow Builder expertise, including record-triggered flows, screen flows, and approval processes." },
-      { "label": "Consultants implementing automation", "description": "You design and deploy automation solutions for clients and need the AP credential to demonstrate your implementation capabilities." },
-      { "label": "Developers choosing between Flow and Apex", "description": "You build on the Salesforce Platform and want formal validation that you know when to use declarative automation vs Apex triggers." }
+      {
+        "label": "Salesforce admins deepening automation skills",
+        "description": "You build flows every week and want to prove you know how to design them well, not just make them work."
+      },
+      {
+        "label": "Consultants implementing automation",
+        "description": "You move clients off old workflow rules and Process Builder, and design new automation in Flow."
+      },
+      {
+        "label": "Developers choosing between Flow and Apex",
+        "description": "You want a clear sense of when Flow is enough and when code is the better choice."
+      }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Process Automation AP Exam Hard?",
-    "summary": "The Process Automation AP exam is moderately difficult. It goes deep into Flow Builder configuration, error handling, and automation best practices &mdash; surface-level admin knowledge is not enough to pass.",
+    "summary": "It is a moderate exam for anyone who builds flows regularly. The tricky parts are choosing the right flow type and trigger timing, handling errors, and staying within limits when many records change at once.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
-      "<strong>Deep Flow Builder knowledge</strong> &mdash; expect questions on before-save vs after-save trade-offs, fault paths, subflows, and collection processing patterns.",
-      "<strong>Order of execution matters</strong> &mdash; you need to know how validation rules, before triggers, before flows, after triggers, and after flows fire in sequence."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Flow types and timing.</strong> Record-triggered (before or after save), scheduled, screen, autolaunched and platform event flows.",
+      "<strong>Good design.</strong> Fault paths, avoiding queries and updates inside loops, testing and deployment."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and make sure you can design a flow that handles collections, uses fault paths for error handling, and correctly chooses before-save vs after-save context."
+    "passRateGuidance": "Build a few record-triggered flows, including one with a scheduled path and one with a fault path, before the exam. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Process Automation AP Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right flow type for a business requirement, designing error handling with fault paths, and deciding between Flow and Apex for complex automation.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe an automation need, such as updating a field when a record changes or sending a reminder three days later, and ask which flow type or setting fits.",
     "bestWayToPass": [
-      "<strong>Know all flow types:</strong> Record-Triggered (before/after save), Screen, Scheduled, Auto-Launched, and Platform Event-Triggered &mdash; know when each is appropriate and what triggers each type.",
-      "<strong>Master before-save vs after-save:</strong> Before-save is faster and updates the triggering record without DML. After-save can create or update related records but consumes governor limits.",
-      "<strong>Design with fault paths:</strong> Every flow element that can fail should have a fault connector &mdash; the exam tests how to handle errors gracefully in both screen flows and auto-launched flows.",
-      "<strong>Understand governor limits in flows:</strong> Use collection variables and batch DML patterns &mdash; get all records in one Get element, loop through them, and perform a single DML operation."
+      "<strong>Know before-save vs after-save:</strong> Before-save is fastest for updating the same record. After-save is needed for related records, emails and actions.",
+      "<strong>Learn scheduled and async paths:</strong> Run steps later or outside the main transaction.",
+      "<strong>Add fault paths:</strong> Catch errors and do something useful, like logging or notifying an admin.",
+      "<strong>Bulk-safe design:</strong> Never put Get Records, Create, Update or Delete elements inside a loop."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers Flow Builder in depth -- record-triggered flows, screen flows, approval processes, and automation best practices -- plus when to reach for Apex triggers over declarative tools.",
+    "description": "This exam tests how you design automation in Salesforce: choosing the right flow type, handling errors, staying within limits, approvals, and knowing when Apex is the better tool.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -52,71 +61,71 @@
     "blocks": [
       {
         "heading": "Flow Builder: Types & Trigger Contexts",
-        "body": "Flow Builder is the primary automation tool in Salesforce. Flow types: Record-Triggered (fires before/after save on record create/update/delete), **Screen Flow** (guided UI for users), **Scheduled Flow** (batch process at a set time), **Autolaunched Flow** (called programmatically, no UI). Before-Save flows are faster and can update the triggering record without a **DML** statement — cannot create/update other records. After-Save flows can create/update related records but run after the transaction. The AP exam tests deep Flow configuration: complex branching logic, loop handling, fault paths, and the performance differences between Before-Save and After-Save contexts."
+        "body": "**Record-triggered flows** run when a record is created, updated or deleted. **Before-save** flows (fast field updates) change fields on the same record before it is saved, and are very fast. **After-save** flows run after the save and can update related records, send emails and call actions. **Scheduled paths** run part of the flow later, such as three days after a case is opened. **Screen flows** guide users through steps. **Schedule-triggered** flows run at set times over a batch of records. **Autolaunched** flows run from other flows, Apex or buttons. **Platform event-triggered** flows react to events."
       },
       {
         "heading": "Advanced Flow Patterns",
-        "body": "Subflows allow one flow to call another — promotes reusability. Screen Flows can be embedded in Lightning pages, Experience Cloud sites, and utility bars. **Dynamic Forms** and Dynamic Actions in **Lightning App Builder** work alongside Screen Flows for fully conditional UI. Collection variables hold multiple records for batch operations within a flow. Loop elements iterate over collections. Decision elements branch based on conditions. Assignment elements modify variable values. Get Records / Create Records / Update Records / Delete Records elements perform **DML**. The exam tests how to design a flow that processes a collection of related records, handles errors gracefully, and uses a subflow to encapsulate a reusable business logic pattern."
+        "body": "Use **subflows** to reuse common logic in several flows. Use **collections** to work with many records at once: gather records in a loop, then do one Update Records at the end. **Decision** elements branch the flow. **Run asynchronously** paths move slow work, like callouts, out of the main transaction. **Flow Orchestration** coordinates multi-step, multi-person processes, such as onboarding, with stages and steps assigned to different users. Entry conditions should be as tight as possible, so flows only run when they need to."
       },
       {
         "heading": "Approval Processes & Entitlements",
-        "body": "Approval Processes define multi-step human review workflows. Entry Criteria determine which records are eligible. Approver selection: specific user, queue, user field (manager), or related object field. Initial Submission Actions and Recall Actions run automatically when a record enters or exits the process. Step Actions run on approval or rejection at each step. Final Approval / Rejection Actions run at the end of the process. Delegated Approvers allow backups when the primary approver is unavailable. The AP exam tests how to configure a multi-step approval with parallel approvers, how to use dynamic approver assignment based on record fields, and how approval actions interact with other automation (Flows, email alerts)."
+        "body": "**Approval processes** route records, like discounts or expenses, to the right people for sign-off, with actions on approval or rejection. Newer **flow-based approvals** give more flexibility for complex routing. In Service Cloud, **entitlements** and **milestones** track service levels, like first response within four hours, and can trigger actions when time is running out. Choose the tool that matches the need rather than building everything in one flow."
       },
       {
         "heading": "Triggered Automation: Apex Triggers",
-        "body": "When declarative automation is insufficient, **Apex** Triggers provide code-based automation. Triggers fire before/after insert, update, delete, and undelete events. Best practice: one trigger per object, all logic in a handler class (Trigger Handler pattern). Bulkification is mandatory — triggers must handle 200 records at once using collections instead of per-record **DML** or **SOQL**. Context variables: `Trigger.new`, `Trigger.old`, `Trigger.isInsert`, `Trigger.isBefore`. Recursion prevention: use a static Boolean flag to prevent triggers from re-firing. The AP exam tests how to design a bulkified trigger with a handler class, how to prevent recursion, and how to write test classes with sufficient bulk data."
+        "body": "Flow covers most automation, but **Apex** is better when logic is very complex, needs heavy processing of large data sets, or must do things Flow can't. If an object has both triggers and flows, know the **order of execution**: before-save flows run before before triggers, and after-save flows run after after triggers. Too many automations on one object make it hard to know what runs when, so keep automation per object organised, often with one flow per trigger type and clear entry conditions."
       },
       {
         "heading": "Testing, Debugging & Best Practices",
-        "body": "All **Apex** automation (triggers, classes) requires ≥75% code coverage for deployment to production. Test classes use `@isTest` annotation, `Test.startTest()` / `Test.stopTest()` to isolate **governor limits**, and `System.assert` for validation. Flow testing: use the Flow Debug feature in Flow Builder for step-through debugging; unit tests for flows via Apex use `Flow.Interview`. Process Automation audit trail: the Setup Audit Trail records configuration changes. Debug Logs capture detailed execution traces. Automation order of execution matters: **Validation Rules** → Before Triggers → Before Flows → After Triggers → After Flows → Workflow Rules → Processes → After-Save Flows. The exam tests how to diagnose an automation conflict and the correct sequence of execution."
+        "body": "Use **Debug** in Flow Builder to run a flow step by step and see the values. **Flow tests** check that record-triggered flows behave as expected and can be run before deployment. Add **fault paths** to elements that can fail, so the flow logs the error or tells someone instead of showing a generic error. Deploy flows with change sets, the Salesforce CLI or DevOps Center, and activate the right version. Old **workflow rules** and **Process Builder** are retired, and the Migrate to Flow tool helps move them."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Process Automation Accredited Professional Exam",
-    "intro": "The Process Automation AP exam focuses entirely on Flow Builder and automation best practices. Expect detailed scenario questions about flow types, trigger configurations, error handling, and choosing the right automation approach.",
+    "intro": "Most questions give a business rule in plain words. Decide when it should run, what it touches, and what happens if it fails.",
     "blocks": [
       {
         "heading": "Know All Flow Types & Triggers",
-        "body": "Record-Triggered (before/after save, before/after delete), Screen, Scheduled, Auto-Launched, Platform Event-Triggered, and Orchestration flows — know when each is appropriate and what triggers each type."
+        "body": "Record changes: record-triggered. Fixed times: schedule-triggered. Users clicking through steps: screen. Called by something else: autolaunched."
       },
       {
         "heading": "Before-Save vs. After-Save Trade-offs",
-        "body": "Before-save flows are faster (no **DML** operation) and best for updating the triggering record's fields. After-save flows allow related record operations and sending emails but consume DML statements and **governor limits**."
+        "body": "Updating fields on the same record: before-save. Anything else, like related records or emails: after-save."
       },
       {
         "heading": "Error Handling with Fault Paths",
-        "body": "Every flow element that can fail should have a fault connector configured. Use Fault paths to display user-friendly error messages in Screen Flows and to log errors in auto-launched flows."
+        "body": "Add fault paths to data and action elements. Log the error or notify an admin so problems don't go unseen."
       },
       {
         "heading": "Collections & Governor Limits",
-        "body": "Flows count against **DML** and **SOQL** limits. Use collections and loops efficiently — get all records first in one Get element, loop through them, and store results in a collection before a single DML operation."
+        "body": "Gather records in a collection inside the loop, then update them all at once after the loop."
       },
       {
         "heading": "Flow Testing & Deployment",
-        "body": "Use debug mode to trace flow execution. Understand how to write flow test automation in the Flow test suite and how to migrate flows between sandboxes as active or inactive versions."
+        "body": "Use Debug and flow tests before deploying. Activate the right version after deployment."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Process Automation:",
     "links": [
-      {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
-      },
-      {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
-      },
       {
         "href": "/certifications/administrator",
         "label": "Platform Administrator"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/advanced-administrator",
+        "label": "Advanced Administrator"
+      },
+      {
+        "href": "/certifications/app-builder",
+        "label": "Platform App Builder"
+      },
+      {
+        "href": "/certifications/agentforce-specialist",
+        "label": "Agentforce Specialist"
       }
     ]
   },
@@ -156,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Process Automation AP validate?",
+      "question": "When an Opportunity is saved, its Region field should be set from the owner's country. Nothing else changes. Which flow is the best fit?",
       "options": [
-        "Only basics",
-        "Skills and knowledge in designing, configuring, building, and implementing Process Automation",
-        "Only reporting",
-        "Only Slack"
+        "A screen flow",
+        "A before-save record-triggered flow",
+        "An after-save record-triggered flow",
+        "A schedule-triggered flow"
       ],
       "correctAnswer": 1,
-      "explanation": "Accredited Process Automation Professionals have skills and knowledge in designing, configuring, building, and implementing Process Automation."
+      "explanation": "Before-save flows update fields on the same record very quickly, without an extra save.",
+      "whyWrong": [
+        "Screen flows need a user to click through.",
+        "After-save works but adds another update and is slower for this job.",
+        "Scheduled flows run at set times, not on save."
+      ]
     },
     {
-      "question": "Which Salesforce products are often part of Process Automation?",
+      "question": "When a Case is closed, a follow-up Task must be created on the related Account. Which flow fits?",
       "options": [
-        "Only Marketing Cloud",
-        "Flow, Process Builder (legacy), and automation tools on the platform",
-        "Only Service Cloud",
-        "Only Slack"
+        "An after-save record-triggered flow",
+        "A before-save record-triggered flow",
+        "A schedule-triggered flow",
+        "A platform event-triggered flow"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Creating related records needs after-save, because the triggering record must be saved first.",
+      "whyWrong": [
+        "Before-save flows can only change the record that triggered them.",
+        "Scheduled flows don't react to the save.",
+        "No platform event is involved here."
+      ]
+    },
+    {
+      "question": "A reminder email should go to the case owner if a case is still open three days after it was created. What should be used?",
+      "options": [
+        "A scheduled path on a record-triggered flow",
+        "A screen flow",
+        "A manual reminder",
+        "A before-save flow"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Scheduled paths run part of a record-triggered flow at a set time after the trigger, with conditions checked again.",
+      "whyWrong": [
+        "Screen flows need a user.",
+        "Manual reminders are easy to forget.",
+        "Before-save flows run straight away."
+      ]
+    },
+    {
+      "question": "A flow loops over 300 Contacts and runs Update Records inside the loop. It fails during a data load. What is the fix?",
+      "options": [
+        "Add each Contact to a collection in the loop, then update the collection once after the loop",
+        "Split the flow into 300 flows",
+        "Remove the loop",
+        "Add a Pause element"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Updating inside a loop uses one DML statement per record and hits limits. One update after the loop is bulk-safe.",
+      "whyWrong": [
+        "300 flows is impractical and doesn't fix the design.",
+        "The loop is needed to process each Contact.",
+        "Pause doesn't fix DML in loops."
+      ]
+    },
+    {
+      "question": "A flow's Create Records step sometimes fails, and users just see a generic error. What should be added?",
+      "options": [
+        "A fault path that logs the error and notifies an admin",
+        "A Pause element",
+        "A Decision with no outcomes",
+        "A second Create Records step"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Fault paths catch errors so the flow can handle them, such as logging details or sending a notification.",
+      "whyWrong": [
+        "Pause doesn't handle errors.",
+        "An empty decision does nothing.",
+        "Another create step would fail the same way."
+      ]
+    },
+    {
+      "question": "The same address-validation logic is needed in four different flows. What is the best design?",
+      "options": [
+        "Copy the logic into all four flows",
+        "Build it once as a subflow and call it from each flow",
+        "Ask users to check addresses by hand",
+        "Move it into a validation rule"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow and automation tools on the platform are part of Process Automation."
+      "explanation": "Subflows let you build and maintain shared logic in one place.",
+      "whyWrong": [
+        "Copies must all be changed whenever the logic changes.",
+        "Manual checks are unreliable.",
+        "Validation rules can't call outside services or run steps."
+      ]
     },
     {
-      "question": "What is a key activity for a Process Automation Professional?",
+      "question": "A flow must call an outside system after a record is saved, and the user shouldn't wait for it. What should be used?",
       "options": [
-        "Only coding",
-        "Designing, configuring, building, and implementing automation solutions",
-        "Only reporting",
-        "Only lists"
+        "A screen flow",
+        "A validation rule",
+        "A before-save flow",
+        "The run asynchronously path in a record-triggered flow"
       ],
-      "correctAnswer": 1,
-      "explanation": "They design, configure, build, and implement automation solutions."
+      "correctAnswer": 3,
+      "explanation": "The async path runs after the transaction, so callouts don't slow the save.",
+      "whyWrong": [
+        "Screen flows need a user to run them.",
+        "Validation rules can't call outside systems.",
+        "Before-save flows can't make callouts."
+      ]
     },
     {
-      "question": "Which role typically pursues Process Automation AP?",
+      "question": "Every night at 1 a.m., all Opportunities past their close date should be marked as Closed Lost. Which flow fits?",
       "options": [
-        "Marketers",
-        "Partners and implementers working with platform automation",
-        "Sales only",
-        "Designers only"
+        "A screen flow",
+        "A platform event-triggered flow",
+        "A schedule-triggered flow",
+        "A before-save record-triggered flow"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with platform automation pursue this credential."
+      "correctAnswer": 2,
+      "explanation": "Schedule-triggered flows run at set times over a set of records.",
+      "whyWrong": [
+        "Screen flows need a user.",
+        "No event is involved.",
+        "Record-triggered flows need a record change to start."
+      ]
     },
     {
-      "question": "What does Process Automation often automate?",
-      "options": [
-        "Only email",
-        "Business processes, approvals, and record-triggered actions",
-        "Only CPQ",
-        "Only Slack"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Process Automation automates business processes, approvals, and record-triggered actions."
-    },
-    {
-      "question": "What is a Record-Triggered Flow?",
+      "question": "Discounts over 20% need sign-off from the sales manager and then finance. What tool is designed for this?",
       "options": [
         "A report",
-        "A Flow that runs when a record is created or updated",
+        "An approval process or flow-based approval",
+        "A validation rule",
+        "A before-save flow"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Approvals route records to the right people in order, with actions on approve or reject.",
+      "whyWrong": [
+        "Reports show data.",
+        "Validation rules can block saves but can't route for sign-off.",
+        "Before-save flows can't wait for a person's decision."
+      ]
+    },
+    {
+      "question": "New hire onboarding involves IT, HR and the manager, each completing steps in a set order over several days. What fits best?",
+      "options": [
         "A dashboard",
-        "An email template"
+        "A single before-save flow",
+        "Flow Orchestration",
+        "A validation rule"
       ],
-      "correctAnswer": 1,
-      "explanation": "Record-Triggered Flows respond to record create/update events."
+      "correctAnswer": 2,
+      "explanation": "Orchestration coordinates multi-step, multi-person processes with stages and assigned steps.",
+      "whyWrong": [
+        "Dashboards show data.",
+        "A before-save flow runs instantly and can't wait for people.",
+        "Validation rules only check data."
+      ]
     },
     {
-      "question": "Which tool replaced Workflow Rules and Process Builder?",
+      "question": "A support team must respond to Premium customers within four hours, and managers should be warned when time is nearly up. What should be used?",
       "options": [
-        "Apex only",
-        "Flow (the recommended automation tool)",
-        "Validation rules only",
-        "Triggers only"
+        "A Campaign",
+        "A screen flow",
+        "Entitlements with milestones and milestone actions",
+        "A Lead assignment rule"
       ],
-      "correctAnswer": 1,
-      "explanation": "Flow is the recommended replacement for legacy automation."
+      "correctAnswer": 2,
+      "explanation": "Entitlements and milestones track service levels and can trigger warnings and escalations.",
+      "whyWrong": [
+        "Campaigns are for marketing.",
+        "Screen flows need a user.",
+        "Lead rules assign leads."
+      ]
     },
     {
-      "question": "What does an Approval Process do?",
+      "question": "A business rule needs heavy processing of millions of records with complex logic. What should the architect consider?",
       "options": [
-        "Sends email only",
-        "Routes records for multi-step human approval",
-        "Creates reports only",
-        "Updates fields only"
+        "A before-save flow on each record",
+        "Batch Apex instead of Flow",
+        "A screen flow",
+        "More fields"
       ],
       "correctAnswer": 1,
-      "explanation": "Approval Processes route records for approval."
+      "explanation": "Very heavy or complex processing over large data is often better handled in Apex, such as Batch Apex.",
+      "whyWrong": [
+        "Before-save flows run per transaction and aren't built for millions of records at once.",
+        "Screen flows are for user interaction.",
+        "Fields don't process records."
+      ]
     },
     {
-      "question": "When should you use Flow vs Apex for automation?",
+      "question": "An org still has old workflow rules and Process Builder processes. What should be done?",
       "options": [
-        "Always Apex",
-        "Flow for declarative; Apex when Flow cannot meet the requirement",
-        "Always Flow",
-        "Never Flow"
+        "Delete them without replacing them",
+        "Leave them as they are forever",
+        "Rebuild them as validation rules",
+        "Move them to Flow, using the Migrate to Flow tool where it helps"
       ],
-      "correctAnswer": 1,
-      "explanation": "Prefer Flow; use Apex when declarative is insufficient."
+      "correctAnswer": 3,
+      "explanation": "Workflow rules and Process Builder are retired. Flow is the supported tool, and the migration tool helps move them.",
+      "whyWrong": [
+        "Deleting them removes needed automation.",
+        "They are no longer being improved and should be moved.",
+        "Validation rules can't do what they do."
+      ]
     },
     {
-      "question": "What is a Screen Flow?",
+      "question": "Before deploying a record-triggered flow, the team wants to check it behaves correctly for a set of example records. What should they use?",
       "options": [
-        "A report",
-        "A Flow that presents screens to users for input",
-        "A triggered Flow only",
-        "An approval only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Screen Flows display UI for user interaction."
-    },
-    {
-      "question": "What does 'build' mean for Process Automation?",
-      "options": [
-        "Only coding",
-        "Configuring the automation (Flow, approval, etc.)",
-        "Only design",
-        "Only deployment"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Build = configure the automation."
-    },
-    {
-      "question": "Which Flow type runs on a schedule?",
-      "options": [
-        "Record-Triggered only",
-        "Scheduled Flow",
-        "Screen Flow only",
-        "Autolaunched Flow only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Scheduled Flows run on a time-based schedule."
-    },
-    {
-      "question": "What is a Flow trigger context?",
-      "options": [
-        "A report",
-        "When the Flow runs (e.g., before save, after save, scheduled)",
+        "A page layout",
+        "An email template",
         "A dashboard",
-        "An object"
+        "Flow tests and Debug"
       ],
-      "correctAnswer": 1,
-      "explanation": "Trigger context defines when the Flow executes."
+      "correctAnswer": 3,
+      "explanation": "Flow tests and Debug let you check the flow's behaviour before deploying.",
+      "whyWrong": [
+        "Layouts arrange pages.",
+        "Email templates format emails.",
+        "Dashboards show data."
+      ]
     },
     {
-      "question": "Why is Process Automation important on the platform?",
+      "question": "A record-triggered flow runs on every update to Account, even though it only matters when Industry changes. What should be changed?",
       "options": [
-        "Not important",
-        "Enables automation without code; core to many implementations",
-        "Only for admins",
-        "Only for developers"
+        "Add more Decision elements later in the flow",
+        "Turn the flow into a screen flow",
+        "Tighten the entry conditions to run only when Industry changes",
+        "Add a Pause element"
       ],
-      "correctAnswer": 1,
-      "explanation": "Process Automation enables no-code automation."
-    },
-    {
-      "question": "What does implement mean for Process Automation AP?",
-      "options": [
-        "Only coding",
-        "Deploying and testing the automation in the customer org",
-        "Only design",
-        "Only documentation"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Implement = deploy and validate."
+      "correctAnswer": 2,
+      "explanation": "Entry conditions stop the flow from running at all when it isn't needed, which saves processing.",
+      "whyWrong": [
+        "Decisions later still mean the flow starts every time.",
+        "Screen flows need a user.",
+        "Pause doesn't fix unnecessary runs."
+      ]
     }
   ]
 }

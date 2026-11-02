@@ -3,36 +3,45 @@
   "whoIsThisFor": {
     "heading": "Who is the Consumer Goods Cloud TPM Accredited Professional exam for?",
     "personas": [
-      { "label": "Trade promotion management consultants", "description": "You implement TPM solutions for CPG companies and need the credential to validate your expertise in promotion planning, fund management, and settlement workflows." },
-      { "label": "Revenue growth management analysts", "description": "You work with trade promotion data, ROI analysis, and promotional spend optimisation and want to prove your Consumer Goods Cloud TPM skills." },
-      { "label": "CPG implementation partners", "description": "You deliver Consumer Goods Cloud TPM projects for manufacturers and retailers and need the credential for client-facing project work." }
+      {
+        "label": "Trade promotion management consultants",
+        "description": "You set up how consumer goods companies plan, fund and pay for promotions with retailers."
+      },
+      {
+        "label": "Revenue growth management analysts",
+        "description": "You look at which promotions actually make money and want to understand how the system calculates it."
+      },
+      {
+        "label": "CPG implementation partners",
+        "description": "You deliver Consumer Goods Cloud projects and need to show you know the trade promotion side."
+      }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Consumer Goods Cloud TPM Accredited Professional Exam Hard?",
-    "summary": "The Consumer Goods Cloud TPM AP exam is moderately difficult. It tests trade promotion lifecycle management including fund allocation, promotion execution, settlement, and analytics. Candidates without experience in CPG trade spend processes will find the financial concepts and promotion mechanics challenging.",
+    "summary": "It is a moderate exam, but it needs business knowledge as well as Salesforce skills. You have to understand how trade promotions work in the consumer goods industry: funds, tactics, baselines, lift and claims.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Trade promotion lifecycle knowledge</strong> — you must understand fund management, promotion tactics, conditional deals, and how planned spend reconciles against actual claims.",
-      "<strong>Financial settlement concepts</strong> — questions cover deduction matching, proof of performance, auto-settlement rules, and overpayment recovery workflows."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Business terms.</strong> Baseline volume, incremental volume, trade spend, ROI and deductions all come up.",
+      "<strong>The full cycle.</strong> Plan, fund, run, settle and review promotions."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and make sure you can explain the full TPM lifecycle from fund allocation through settlement before booking. Experience with CPG trade promotion processes or ERP integration for promotional spend is strongly recommended."
+    "passRateGuidance": "People who have worked on promotion planning for a consumer goods brand do best. Before you book, aim for 75% or more on practice tests and be able to explain how a promotion's ROI is worked out."
   },
   "examFormat": {
     "heading": "Consumer Goods Cloud TPM Accredited Professional Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include configuring a multi-tactic promotion with conditional payout tiers, designing fund allocation for a national retailer, and troubleshooting settlement discrepancies between planned and actual spend.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a step in the promotion cycle, such as setting a budget, planning a price cut or paying a retailer's claim, and ask how the system handles it.",
     "bestWayToPass": [
-      "<strong>Master fund management:</strong> Know how trade funds are structured, how fund commitments allocate budget to promotions, and how fund utilisation is tracked throughout the promotional cycle.",
-      "<strong>Understand promotion execution:</strong> Study promotion headers, tactics, conditional deal logic, and how the calendar tool prevents overlapping promotions for the same customer.",
-      "<strong>Learn settlement workflows:</strong> Know how claims are matched to promotions, how auto-settlement rules work, and how deductions and proof of performance are processed.",
-      "<strong>Study TPM analytics:</strong> Understand baseline modelling, lift measurement, post-promotion dip analysis, and how CRM Analytics dashboards measure promotional effectiveness and fund ROI."
+      "<strong>Follow one promotion end to end:</strong> Account plan, promotion, tactics, funding, execution, claims and post-event review.",
+      "<strong>Learn the money side:</strong> Funds, budgets, accruals, payments and how claims are matched to promotions.",
+      "<strong>Understand baselines:</strong> Baseline volume is what would sell anyway. Incremental volume is the extra the promotion drives.",
+      "<strong>Know where data comes from:</strong> Shipments from the ERP and sell-out from retailer data."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers trade promotion management in Consumer Goods Cloud — promotion planning, fund allocation, settlement workflows, claims processing, and ROI analytics for CPG retailers.",
+    "description": "This exam tests how you set up and use Consumer Goods Cloud Trade Promotion Management: account planning, promotions and tactics, funds, claims and settlement, and promotion analytics.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -53,71 +62,71 @@
     "blocks": [
       {
         "heading": "Trade Promotion Planning & Fund Management",
-        "body": "**Trade Promotion** Management (TPM) in Consumer Goods Cloud helps CPG companies plan, execute, and settle promotional spend with retail partners. Trade Funds define the budget available for promotions — split by account, territory, or brand. Fund Commitments allocate budget to planned promotions. Promotion Templates define the type of promotional activity (off-invoice discount, lump sum, scan data deal). Volume Planning forecasts the expected sales lift from a promotion. Baseline Volume represents the expected sales without promotion. The AP exam tests how to configure trade funds, allocate fund commitments to promotions, and calculate expected ROI from volume lift vs. promotional spend."
+        "body": "Consumer goods companies pay retailers to promote their products, and this **trade spend** is often one of their biggest costs. Planning starts with an **account plan** for each retailer, showing targets for volume, revenue and spend. Money comes from **funds**, which hold budgets for a period, a customer or a product group. Some funds are fixed amounts. Others grow with sales, for example a few cents per case shipped. Promotions draw on these funds, so the system can show how much is planned, committed and spent."
       },
       {
         "heading": "Promotion Execution & Tactics",
-        "body": "A Trade Promotion consists of a header (account, time period, objectives) and one or more Tactics (specific activities: feature, display, temporary price reduction). Each Tactic has its own funding, targets, and conditions. Conditional Deal Logic applies different payout rates based on achieved performance tiers. Calendar views show overlapping promotions for a customer to prevent conflicts. Promotion Approval workflows route high-value or unusual promotions to managers. The exam tests how to configure a multi-tactic promotion, how conditional deals work, and how the calendar tool prevents promotional cannibalization."
+        "body": "A **promotion** covers a time period, a retailer and a set of products. Inside it, **tactics** describe what will happen, such as a temporary price reduction, an in-store display or a feature in the retailer's flyer. Each tactic has a cost and an expected effect on sales. Promotions move through statuses like planning, approved and completed, and approval rules can check that spend stays within the fund. Templates help teams create common promotion types quickly and consistently."
       },
       {
         "heading": "Settlement & Claims Processing",
-        "body": "Trade Promotion settlements reconcile the planned spend against actual retailer claims. Proof of Performance (POP) — scan data, invoices, photos — is required to validate claims. **Deductions** are amounts the retailer takes off payment; they must be matched to a promotion or flagged as unauthorized. Claim Management workflows route deductions for approval or dispute. Auto-settlement rules can automatically approve claims that match within a tolerance of the plan. Overpayment recovery processes handle situations where the retailer claims more than the agreed amount. The exam tests the settlement lifecycle, how to configure auto-settlement rules, and the deduction-to-promotion matching process."
+        "body": "After a promotion, the retailer asks to be paid, either by sending a **claim** or by taking a **deduction** off the next invoice. Settlement means matching that claim or deduction to the right promotion and tactic, checking the amount, and approving the **payment**. If the claim is higher than what was agreed, the difference needs to be checked before paying. Good settlement keeps trade spend accurate and stops paying twice for the same activity."
       },
       {
         "heading": "Forecasting & Baseline Analytics",
-        "body": "Accurate baselines are critical for measuring promotion ROI. Baseline models use historical scan data to project what sales would have been without the promotion. Lift measurement compares actual sell-out to baseline during the promotional period. Post-promotion dip analysis identifies forward-buying behavior that depresses post-promo sales. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) TPM dashboards provide pre-built analysis for fund utilization, promotional effectiveness, and customer P&L. The exam tests how to configure baseline generation, how to interpret lift analysis, and how to use analytics insights to optimize future promotional spend allocation."
+        "body": "**Baseline volume** is what would have sold without the promotion. **Incremental volume** is the extra volume the promotion drives. The promotion's value is worked out from the incremental profit compared with its cost, giving its **ROI**. Planners use history to forecast how a new promotion will perform, and **post-event analysis** compares the forecast with what really happened. Over time, this shows which tactics and retailers give the best return."
       },
       {
         "heading": "Integration with ERP & Retailer Data",
-        "body": "TPM data flows to and from external systems: ERP (SAP, Oracle) for financial settlement and accrual accounting, retailer portals for scan data feeds, and demand planning systems for volume forecasts. Integration patterns: scheduled batch (daily scan data imports via SFTP), near-real-time (API-based deduction feeds), and event-driven (settlement approval triggers ERP accrual). Data quality is critical — duplicate promotions or mismatched scan data lead to over/under-accruals. The exam tests how to design data integration for a TPM scenario, what data must flow in vs. out of Salesforce TPM, and how to handle data validation errors in incoming scan data feeds."
+        "body": "TPM depends on good data. **Shipments** (sell-in) and invoices usually come from the ERP. **Point-of-sale** data (sell-out) comes from retailers or data providers. Product and account hierarchies are loaded so promotions can be planned at the right level, such as a brand or a retailer group. Payments and deductions often flow back to the ERP for finance. Keeping product and customer IDs consistent across systems is key to matching all this data."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Consumer Goods Trade Promotion Management Accredited Professional Exam",
-    "intro": "The Consumer Goods TPM AP exam tests trade promotion management for CPG companies. Focus on promotion planning, fund management, account planning, and promotion settlement workflows.",
+    "intro": "Most questions place you at one step of the promotion cycle. Work out which record or number matters at that step.",
     "blocks": [
       {
         "heading": "Trade Promotion Planning",
-        "body": "Know how to create and manage promotions: promotion types (display, price reduction, bonus case), promotion calendar management, and how promotions link to customer (retailer) accounts."
+        "body": "Plans start at the account level, with targets for volume, revenue and spend. Promotions and tactics sit under them."
       },
       {
         "heading": "Fund Management",
-        "body": "Know how trade promotion funds are structured: Fixed Amount vs. Percentage of Net Sales (PONS), fund allocation across accounts, and how to track fund consumption vs. budget throughout the promotion cycle."
+        "body": "Funds hold budgets. Fixed funds have a set amount. Variable funds grow with sales. Promotions draw down funds."
       },
       {
         "heading": "Account Planning",
-        "body": "Know how Account Plans define annual volume and spend targets by account. Understand how promotions are created against account plans and how planned spending rolls up to the account plan."
+        "body": "Account plans compare targets with planned promotions, so key account managers can see gaps early."
       },
       {
         "heading": "Promotion Settlement & Claims",
-        "body": "Know the settlement process: deduction matching (linking retailer deductions to promotions), claim approval workflows, and how to handle disputes and short payments in the settlement process."
+        "body": "Match each claim or deduction to the right promotion and tactic before paying. Check differences first."
       },
       {
         "heading": "Analytics for TPM",
-        "body": "Know the key TPM reports: ROI by promotion type, fund utilization rates, compliance rates (actual vs. planned), and post-event analysis. Understand how [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards visualize trade spend effectiveness."
+        "body": "ROI depends on incremental volume, not total volume. Compare forecast with actual after every promotion."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Consumer Goods TPM:",
     "links": [
+      {
+        "href": "/certifications/consumer-goods-cloud-ap",
+        "label": "Consumer Goods Cloud AP"
+      },
+      {
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
+      },
       {
         "href": "/certifications/sales-cloud",
         "label": "Sales Cloud Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
-      },
-      {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
-      },
-      {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/data-360-consultant",
+        "label": "Data 360 Consultant"
       }
     ]
   },
@@ -157,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Consumer Goods Cloud TPM AP validate?",
+      "question": "A promotion sold 12,000 cases. Without it, the product would have sold about 9,000 cases. What is the incremental volume?",
       "options": [
-        "Only basics",
-        "Knowledge, skills, and experience to discover, design, plan, and deliver product value with Consumer Goods Cloud TPM",
-        "Only reporting",
-        "Only Slack"
+        "12,000 cases",
+        "3,000 cases",
+        "21,000 cases",
+        "9,000 cases"
       ],
       "correctAnswer": 1,
-      "explanation": "Accredited Consumer Goods Cloud TPM Professionals have the knowledge, skills, and experience to discover, design, plan, and deliver product value with Consumer Goods Cloud TPM."
+      "explanation": "Incremental volume is the extra volume caused by the promotion: total minus baseline, so 12,000 minus 9,000.",
+      "whyWrong": [
+        "12,000 is total volume, which includes sales that would have happened anyway.",
+        "Adding them together has no meaning here.",
+        "9,000 is the baseline."
+      ]
     },
     {
-      "question": "What does TPM stand for?",
+      "question": "A brand gives each retailer 5 cents for every case shipped, to be spent on promotions. What kind of fund is this?",
       "options": [
-        "Total Product Management",
-        "Trade Promotion Management",
-        "Technical Process Model",
-        "Task Project Manager"
+        "A variable fund that grows with shipments",
+        "A deduction",
+        "A fixed fund with a set amount",
+        "A claim"
       ],
-      "correctAnswer": 1,
-      "explanation": "TPM stands for Trade Promotion Management."
+      "correctAnswer": 0,
+      "explanation": "The amount depends on how many cases are shipped, so the fund grows with volume.",
+      "whyWrong": [
+        "A deduction is money the retailer takes off an invoice.",
+        "A fixed fund has a set amount decided in advance.",
+        "A claim is a retailer's request to be paid."
+      ]
     },
     {
-      "question": "What is Trade Promotion Management used for?",
+      "question": "A retailer runs a temporary price cut and an in-store display during the same two-week promotion. How should these be recorded?",
       "options": [
-        "Only email",
-        "Planning, executing, and measuring trade promotions and incentives",
-        "Only CPQ",
-        "Only Slack"
+        "As two separate account plans",
+        "As two funds",
+        "As two claims",
+        "As two tactics within one promotion"
       ],
-      "correctAnswer": 1,
-      "explanation": "TPM is used for planning, executing, and measuring trade promotions."
+      "correctAnswer": 3,
+      "explanation": "Tactics describe the activities within a promotion, each with its own cost and effect.",
+      "whyWrong": [
+        "Account plans cover the whole year for a retailer.",
+        "Funds pay for tactics, they don't describe them.",
+        "Claims come after the promotion."
+      ]
     },
     {
-      "question": "Which role typically pursues Consumer Goods TPM AP?",
+      "question": "After a promotion, a retailer takes $8,000 off their next invoice. What is this called?",
       "options": [
-        "Marketers",
-        "Partners and implementers in consumer goods trade promotion",
-        "Sales only",
-        "Designers only"
+        "A deduction that must be matched to the promotion",
+        "A tactic",
+        "A baseline",
+        "A fund"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers in consumer goods trade promotion pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Deductions are amounts the retailer takes off an invoice, which must be matched and checked against what was agreed.",
+      "whyWrong": [
+        "A tactic is a planned activity.",
+        "Baseline is a volume measure.",
+        "A fund is a budget."
+      ]
     },
     {
-      "question": "What does 'deliver product value' mean in TPM context?",
+      "question": "A claim is $2,000 higher than the agreed tactic cost. What should happen?",
       "options": [
-        "Only shipping",
-        "Delivering business value through trade promotion programs and analytics",
-        "Only reporting",
-        "Only dashboards"
+        "Raise the fund budget automatically",
+        "Investigate the difference before approving payment",
+        "Delete the promotion",
+        "Pay the full claim straight away"
       ],
       "correctAnswer": 1,
-      "explanation": "It means delivering business value through trade promotion programs and analytics."
+      "explanation": "Differences should be checked before paying, so the company doesn't overpay.",
+      "whyWrong": [
+        "Raising the budget hides the problem.",
+        "Deleting the promotion loses the record.",
+        "Paying without checking risks paying for things that weren't agreed."
+      ]
     },
     {
-      "question": "What does trade promotion planning involve?",
+      "question": "Which number best shows whether a promotion was worth the money?",
       "options": [
-        "Only execution",
-        "Budget allocation, calendar, and promotion design",
-        "Only reporting",
-        "Only dashboards"
+        "Total volume sold",
+        "Number of tactics",
+        "ROI based on incremental profit compared with the promotion's cost",
+        "Length of the promotion"
       ],
-      "correctAnswer": 1,
-      "explanation": "Planning covers budget, calendar, and promotion design."
+      "correctAnswer": 2,
+      "explanation": "ROI looks at the extra profit the promotion created against what it cost.",
+      "whyWrong": [
+        "Total volume includes sales that would have happened anyway.",
+        "More tactics doesn't mean better results.",
+        "Length doesn't measure value."
+      ]
     },
     {
-      "question": "Which Consumer Goods Cloud object supports TPM?",
+      "question": "Where does shipment (sell-in) data usually come from?",
       "options": [
-        "Lead only",
-        "Promotion, plan, and budget objects",
-        "Opportunity only",
-        "Campaign only"
+        "The fund record",
+        "The account plan",
+        "The retailer's flyer",
+        "The company's ERP"
       ],
-      "correctAnswer": 1,
-      "explanation": "Promotion, plan, and budget objects support TPM."
+      "correctAnswer": 3,
+      "explanation": "Shipments and invoices are recorded in the ERP and loaded into TPM.",
+      "whyWrong": [
+        "Funds hold budgets.",
+        "Account plans hold targets.",
+        "The flyer is a promotion activity."
+      ]
     },
     {
-      "question": "What does trade promotion analytics measure?",
+      "question": "Planners want to see how a promotion actually performed against its forecast. What should they run?",
       "options": [
-        "Only spend",
-        "ROI, lift, and promotion effectiveness",
-        "Only volume",
-        "Only discounts"
+        "A fund transfer",
+        "Post-event analysis",
+        "A claim",
+        "A new account plan"
       ],
       "correctAnswer": 1,
-      "explanation": "Analytics measures ROI, lift, and effectiveness."
+      "explanation": "Post-event analysis compares forecast with actual results, which improves future planning.",
+      "whyWrong": [
+        "A fund transfer moves budget.",
+        "A claim is a payment request.",
+        "An account plan sets targets for the future."
+      ]
     },
     {
-      "question": "Which integration supports TPM?",
+      "question": "A key account manager wants to check whether planned promotions will meet the year's volume target for a retailer. Where should they look?",
       "options": [
-        "Slack only",
-        "ERP, syndicated data, and retail systems",
-        "Marketing Cloud only",
-        "Service Cloud only"
+        "The retailer's account plan",
+        "The product's price",
+        "A single claim",
+        "The ERP invoice list"
       ],
-      "correctAnswer": 1,
-      "explanation": "TPM integrates with ERP and syndicated data."
+      "correctAnswer": 0,
+      "explanation": "Account plans compare targets with planned promotions, showing gaps early.",
+      "whyWrong": [
+        "Price alone doesn't show targets.",
+        "One claim shows one payment.",
+        "Invoices show past sales, not plans against targets."
+      ]
     },
     {
-      "question": "What is the purpose of trade promotion management?",
+      "question": "A promotion's planned spend would go over what is left in its fund. What should the process do?",
       "options": [
-        "Only discounts",
-        "Plan, execute, and measure promotions with retailers",
-        "Only reporting",
-        "Only lists"
+        "Ignore the fund",
+        "Delete the fund",
+        "Flag it through approval rules before the promotion is approved",
+        "Approve it automatically"
       ],
-      "correctAnswer": 1,
-      "explanation": "TPM plans, executes, and measures trade promotions."
+      "correctAnswer": 2,
+      "explanation": "Approval rules can check spend against available funds before a promotion goes ahead.",
+      "whyWrong": [
+        "Ignoring funds defeats budget control.",
+        "Deleting the fund loses budget tracking.",
+        "Automatic approval risks overspending."
+      ]
     },
     {
-      "question": "Which industry uses Consumer Goods Cloud TPM?",
+      "question": "Retailer point-of-sale data arrives weekly from a data provider. Why is it useful in TPM?",
       "options": [
-        "Healthcare only",
-        "CPG, retail, and consumer goods",
-        "Financial services only",
-        "Education only"
+        "It creates tactics",
+        "It replaces the ERP",
+        "It shows what consumers actually bought (sell-out) during promotions",
+        "It sets fund budgets"
       ],
-      "correctAnswer": 1,
-      "explanation": "CPG and consumer goods use TPM."
+      "correctAnswer": 2,
+      "explanation": "Sell-out data shows real consumer purchases, which helps measure promotion effect.",
+      "whyWrong": [
+        "Tactics are planned by users.",
+        "The ERP still holds shipments and invoices.",
+        "Budgets are set separately."
+      ]
     },
     {
-      "question": "What does TPM discover phase include?",
+      "question": "Promotions should be planned at the brand level for a retailer group, not item by item. What must be in place?",
       "options": [
-        "Only coding",
-        "Requirements and opportunity assessment",
-        "Only deployment",
-        "Only reporting"
+        "A separate org",
+        "Manual spreadsheets",
+        "Product and account hierarchies",
+        "A new fund for each item"
       ],
-      "correctAnswer": 1,
-      "explanation": "Discover phase includes requirements and assessment."
+      "correctAnswer": 2,
+      "explanation": "Hierarchies let users plan at higher levels, like brand and retailer group, and roll numbers up and down.",
+      "whyWrong": [
+        "A separate org isn't needed.",
+        "Spreadsheets bypass the system.",
+        "A fund per item is the opposite of planning at brand level."
+      ]
     },
     {
-      "question": "Which best practice applies to TPM implementation?",
+      "question": "Teams keep setting up the same kind of promotion from scratch. What would save time and keep them consistent?",
       "options": [
-        "Ignore analytics",
-        "Align with trade calendar and measure ROI",
-        "No measurement",
-        "Single promotion only"
+        "Longer promotions",
+        "Fewer tactics",
+        "More funds",
+        "Promotion templates"
       ],
-      "correctAnswer": 1,
-      "explanation": "Align with trade calendar and measure ROI."
+      "correctAnswer": 3,
+      "explanation": "Templates pre-fill common promotion types, so they are faster to create and set up the same way.",
+      "whyWrong": [
+        "Length doesn't affect setup time.",
+        "Fewer tactics may not match the plan.",
+        "More funds don't speed up setup."
+      ]
     },
     {
-      "question": "What does TPM design phase cover?",
+      "question": "Why must product and customer IDs match across TPM, the ERP and retailer data?",
       "options": [
-        "Only UI",
-        "Promotion structure, workflows, and data model",
-        "Only reports",
-        "Only dashboards"
+        "So shipments, sell-out data and claims can be matched to the right promotions",
+        "So tactics are cheaper",
+        "So funds never run out",
+        "So the website loads faster"
       ],
-      "correctAnswer": 1,
-      "explanation": "Design covers structure, workflows, and data model."
+      "correctAnswer": 0,
+      "explanation": "Consistent IDs let the system tie each piece of data to the right product, customer and promotion.",
+      "whyWrong": [
+        "Costs are set by the tactic, not the ID.",
+        "Matching IDs doesn't add money to funds.",
+        "Website speed is unrelated."
+      ]
     },
     {
-      "question": "What is promotion lift in TPM analytics?",
+      "question": "A promotion lifted volume a lot, but the price cut was so deep that profit fell. What does this show?",
       "options": [
-        "Only spend",
-        "The incremental sales or volume attributed to a promotion vs baseline",
-        "Only discount %",
-        "Only distribution"
+        "Every promotion with lift is profitable",
+        "High volume lift doesn't always mean a good ROI",
+        "Baselines don't matter",
+        "Funds were too small"
       ],
       "correctAnswer": 1,
-      "explanation": "Lift measures incremental performance caused by the promotion."
+      "explanation": "ROI depends on profit, not just volume. A deep discount can drive volume while losing money.",
+      "whyWrong": [
+        "Lift and profit are not the same thing.",
+        "Baselines are needed to measure lift.",
+        "Fund size doesn't explain lost profit."
+      ]
     }
   ]
 }

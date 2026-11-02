@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Government implementers",
-        "description": "You configure Public Sector Solutions' licensing, permitting, and grants management objects and want to validate your setup skills."
+        "description": "You build Salesforce solutions for city, state or national agencies and want to prove you know Public Sector Solutions."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise government agencies on case management, inspection workflows, and citizen-facing Experience Cloud portals built on Public Sector Solutions."
+        "description": "You set up licensing, permits, grants or benefits processes and want a credential that shows it."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that differentiates you in the government and public sector implementation space."
+        "description": "You know core Salesforce and want to specialise in the public sector."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Public Sector Solutions Accredited Professional Exam Hard?",
-    "summary": "The Public Sector Solutions AP exam is moderately difficult because it tests government-specific workflows — licensing and permitting lifecycles, grants management, and inspection processes — that don't overlap with general Salesforce configuration.",
+    "summary": "It is a moderate exam. Public Sector Solutions has ready-made processes for licences, permits, inspections, grants and benefits, each with its own records. Most questions ask which of these fits an agency's need.",
     "bullets": [
-      "<strong>60 questions</strong> in 90 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Government workflows</strong> &mdash; expect questions on licensing/permitting application lifecycles and how grants management tracks funding from application through disbursement.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Public Sector Solutions in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Process areas.</strong> Licensing and permitting, inspections, grants, benefits and case management.",
+      "<strong>Tools.</strong> OmniStudio for forms and guided steps, and Experience Cloud for constituent portals."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Walk through one licence application from submission to approval and inspection in a trial org before the exam. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Public Sector Solutions Accredited Professional Exam Format Explained",
-    "intro": "The Public Sector Solutions Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Public Sector Solutions.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe an agency task, such as issuing a food business licence or paying out a grant, and ask which feature or record handles it.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Public Sector, Government, and Implementation because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Learn each process area:</strong> What records licensing, inspections, grants and benefits use, and how they connect.",
+      "<strong>Follow an application:</strong> From the public form, through review and approval, to the issued licence or award.",
+      "<strong>Know OmniStudio's role:</strong> Intake forms, guided steps and data lookups are often built with it.",
+      "<strong>Think about the constituent:</strong> Self-service portals, status updates and accessible forms."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers implementing Salesforce Public Sector Solutions for government agencies, including grants management, licensing and permitting, case management, and constituent digital services.",
+    "description": "This exam tests how you set up Public Sector Solutions: licensing and permitting, inspections, grants, benefits, case management and constituent self-service.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -61,71 +61,71 @@
     "blocks": [
       {
         "heading": "Case Management for Government",
-        "body": "Public Sector Solutions (PSS) extends Service Cloud for government constituent service. Cases represent constituent inquiries, complaints, or service requests. Case Classification uses a topic taxonomy to route and report on cases by type. **Omni-Channel** routes cases to the correct department or agent based on case type and priority. **Knowledge Articles** provide agents and constituents with self-service answers. Service Level Agreements (SLAs) via **Entitlements** enforce government response time mandates. Case **Escalation Rules** auto-escalate aging cases. The AP exam tests how to configure a government case management workflow, how to use knowledge for constituent self-service, and how to enforce compliance with response time SLAs."
+        "body": "Agencies handle many kinds of cases, such as complaints, investigations and service requests. Public Sector Solutions builds on Service Cloud case management and adds features for government work, such as **interviews**, **investigations** and tracking the people and organisations involved. Cases can be routed to the right team, linked to related records like licences or inspections, and tracked against deadlines. Sensitive cases need tight sharing so only the right staff can see them."
       },
       {
         "heading": "Licensing & Permitting",
-        "body": "PSS provides a pre-built Licensing and Permitting solution for government agencies. Business License Applications capture applicant information and supporting documents. Application Flows guide applicants through multi-step digital submission. Document Checklist Items define the required supporting documents. Inspection Tasks link to license applications for compliance verification. Renewal Workflows automate annual or periodic license renewals. Fee Structures define the application fees and payment integration. The exam tests how to configure a license application form, how document checklists are used in the review process, and how to set up renewal automation with payment collection."
+        "body": "Businesses and people apply for **licences** and **permits**, such as a food business licence or a building permit. A **regulatory authorization type** defines each kind of licence and its rules. An **application** is submitted, often through a public portal form, then reviewed, with checks, fees and approvals. When approved, the licence is issued as a record with an expiry date, and renewals can be handled the same way. Applicants can see the status of their application online."
       },
       {
         "heading": "Grants Management",
-        "body": "PSS Grants Management supports the full grant lifecycle from solicitation to closeout. Funding Opportunities represent open grant competitions. Funding Award records track awarded grants including amount, period, and compliance requirements. Application review workflows route applications through scoring and approval. Budget Tracking monitors expenditures against awarded amounts. Progress Reports capture grantee performance data. Grantee portals (Experience Cloud) allow grantees to submit applications, reports, and amendment requests. The AP exam tests how to configure a grant application workflow, how budget tracking interacts with financial data, and how the grantee portal is provisioned."
+        "body": "Agencies that give out money use **grants management**. A **funding opportunity** describes what is on offer and who can apply. Organisations submit **applications**, which are reviewed and scored by reviewers. Approved applications become **awards**, with a budget and conditions. Money is paid out in **disbursements**, often tied to milestones or reports from the grantee. This keeps a full record of how public money was given and used."
       },
       {
         "heading": "Inspections & Compliance",
-        "body": "Government inspections verify compliance with regulations — building permits, health codes, environmental standards. Inspection Visit records capture inspection dates, findings, and outcomes. Violations are documented with severity levels, corrective action requirements, and deadlines. Reinspection workflows schedule follow-up inspections when violations are found. Mobile inspection apps (Salesforce Field Service mobile or custom **LWC**) provide inspectors with offline access to inspection checklists and violation history. The AP exam tests how to configure an inspection workflow from scheduling through violation resolution, how mobile offline access works for inspectors, and how to generate compliance reports from inspection data."
+        "body": "Inspectors visit sites to check rules are being followed, for example a restaurant's hygiene or a building's safety. Inspections are planned as **visits**, with **assessment tasks** and indicators that the inspector completes, often on a mobile device in the field. Results can be pass, fail or need follow-up. Failed checks can lead to **violations** and enforcement actions, and repeat inspections can be scheduled. Results link back to the business and its licence."
       },
       {
         "heading": "Constituent Engagement & Digital Experience",
-        "body": "PSS uses Experience Cloud to deliver government digital services to constituents — applying for licenses, reporting issues, tracking case status, and accessing benefits. Self-Registration allows new constituents to create accounts. Identity Verification can integrate with government ID systems or Knowledge-Based Authentication. Constituent Profiles aggregate all interactions (cases, licenses, permits, benefits) on a single constituent record. Einstein Bots deflect routine constituent inquiries before routing to agents. Accessibility (WCAG 2.1 AA compliance) is mandatory for government digital services. The AP exam tests how to configure a constituent self-service portal, how to enable case self-service, and how identity verification integrates with the portal registration flow."
+        "body": "Members of the public expect to apply, pay and check status online. **Experience Cloud** portals let constituents submit applications, upload documents and track progress. **OmniStudio** tools often power the forms: **OmniScripts** guide people step by step, and **Integration Procedures** and **Data Mappers** fetch and save data. Forms should be accessible and work on phones. Many agencies run on **Government Cloud**, which meets public sector security standards."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Public Sector Solutions Accredited Professional Exam",
-    "intro": "The Public Sector Solutions AP exam tests Salesforce implementation for government agencies. Focus on grants management, licensing and permitting, case management, and constituent service.",
+    "intro": "Most questions name an agency process. Match it to the right area (licensing, inspections, grants, benefits or cases), then the record that represents it.",
     "blocks": [
       {
         "heading": "Public Sector Data Model",
-        "body": "Know PSS-specific objects: Application (grants, licenses, permits), Inspection, Visit, and how they extend standard Cases and Accounts for government constituent management."
+        "body": "Each process area has its own records: authorization types and applications for licences, funding opportunities and awards for grants, visits and assessments for inspections."
       },
       {
         "heading": "Grants Management",
-        "body": "Know how to configure grants programs: grant application lifecycle (intake → review → award), scoring and review workflows, disbursement tracking, and grantee reporting requirements."
+        "body": "Funding opportunity, application, review, award, then disbursements. Payments can depend on milestones."
       },
       {
         "heading": "Licensing & Permitting",
-        "body": "Know how to configure the licensing lifecycle: application submission (portal or in-person), automated eligibility checks, inspection scheduling (FSL integration), and license issuance with expiry and renewal management."
+        "body": "Define licence types with regulatory authorization types. Applications move through review to an issued licence with an expiry date."
       },
       {
         "heading": "Constituent 360 & Self-Service",
-        "body": "Know how to configure the constituent portal (Experience Cloud) for government: identity verification, application submission, case status tracking, and how constituents manage their permits and licenses online."
+        "body": "Portals let constituents apply, pay and track status. Staff see the full history in one place."
       },
       {
         "heading": "OmniStudio for Government",
-        "body": "Know how PSS uses OmniStudio: OmniScripts for guided application intake, FlexCards for agent desktop views, and Integration Procedures for backend system lookups. Understand the standard PSS OmniStudio components."
+        "body": "OmniScripts for guided public forms. Integration Procedures for fetching data from other systems."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Public Sector Solutions:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/omnistudio-consultant",
+        "label": "OmniStudio Consultant"
       },
       {
         "href": "/certifications/service-cloud",
         "label": "Service Cloud Consultant"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/experience-cloud",
+        "label": "Experience Cloud Consultant"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/nonprofit-cloud",
+        "label": "Nonprofit Cloud Consultant"
       }
     ]
   },
@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Public Sector Solutions AP validate?",
+      "question": "A city wants businesses to apply for a food business licence online and track their application. What should be set up?",
       "options": [
-        "Only basics",
-        "Driving successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that align with a company's vision and business value goals",
-        "Only reporting",
-        "Only Slack"
+        "A licence application process with a public portal form",
+        "An inspection visit only",
+        "A grant funding opportunity",
+        "A Campaign for each business"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Public Sector Solutions Professionals drive successful outcomes by leveraging Public Sector solutions implementation considerations and best practices that best align with a company's vision and business value goals."
+      "correctAnswer": 0,
+      "explanation": "Licensing and permitting handles applications, review and issuing licences, and a portal lets applicants apply and track status.",
+      "whyWrong": [
+        "Inspections check compliance after licensing.",
+        "Grants are for giving out money, not issuing licences.",
+        "Campaigns are for marketing."
+      ]
     },
     {
-      "question": "Which sector does Public Sector Solutions serve?",
+      "question": "Where are the rules and settings for each kind of licence, such as a liquor licence, defined?",
       "options": [
-        "Retail only",
-        "Government, public sector, and civic organizations",
-        "Healthcare only",
-        "Education only"
+        "In a dashboard",
+        "In a regulatory authorization type",
+        "In a Case queue",
+        "In a funding opportunity"
       ],
       "correctAnswer": 1,
-      "explanation": "Public Sector Solutions serves government and public sector organizations."
+      "explanation": "Regulatory authorization types describe each licence or permit type and its rules.",
+      "whyWrong": [
+        "Dashboards show data.",
+        "Queues route work.",
+        "Funding opportunities are for grants."
+      ]
     },
     {
-      "question": "What is a key activity for a Public Sector Solutions Professional?",
+      "question": "An inspector visits a restaurant and must complete a hygiene checklist on a tablet. What should be used?",
       "options": [
-        "Only coding",
-        "Implementing Public Sector solutions with best practices and alignment to business value",
-        "Only reporting",
-        "Only lists"
+        "An inspection visit with assessment tasks",
+        "A licence renewal",
+        "A grant application",
+        "A Chatter post"
       ],
-      "correctAnswer": 1,
-      "explanation": "They implement Public Sector solutions with best practices and alignment to business value."
+      "correctAnswer": 0,
+      "explanation": "Inspections are planned as visits, with assessment tasks the inspector completes in the field.",
+      "whyWrong": [
+        "Renewals extend a licence.",
+        "Grant applications are for funding.",
+        "Chatter isn't an inspection record."
+      ]
     },
     {
-      "question": "Which role typically pursues Public Sector Solutions AP?",
+      "question": "A restaurant fails its hygiene inspection. What should happen next in the system?",
       "options": [
-        "Marketers",
-        "Partners and implementers working with public sector",
-        "Sales only",
-        "Designers only"
+        "Close the business's account",
+        "Record a violation and schedule a follow-up inspection",
+        "Delete the inspection",
+        "Issue a new licence"
       ],
       "correctAnswer": 1,
-      "explanation": "Partners and implementers working with public sector pursue this credential."
+      "explanation": "Failed checks can lead to violations and repeat inspections, linked to the business and its licence.",
+      "whyWrong": [
+        "Closing the account removes the history.",
+        "Deleting it loses the record.",
+        "Failing doesn't earn a new licence."
+      ]
     },
     {
-      "question": "What does 'business value goals' mean in Public Sector context?",
+      "question": "A state agency offers $2 million in community grants. Where should the details of what is on offer and who can apply be recorded?",
       "options": [
-        "Only revenue",
-        "Outcomes that align with agency mission and citizen/customer value",
-        "Only cost",
-        "Only speed"
+        "A funding opportunity",
+        "A benefit enrollment",
+        "An inspection visit",
+        "A regulatory authorization type"
       ],
-      "correctAnswer": 1,
-      "explanation": "It means outcomes that align with agency mission and citizen/customer value."
+      "correctAnswer": 0,
+      "explanation": "Funding opportunities describe the grant, its rules and who can apply.",
+      "whyWrong": [
+        "Benefit enrollments are for individuals receiving benefits.",
+        "Inspections check compliance.",
+        "Authorization types define licences."
+      ]
     },
     {
-      "question": "Which Public Sector consideration is critical?",
+      "question": "A grant has been awarded. Money should be paid in three parts as the grantee reaches milestones. What should be used?",
       "options": [
-        "Only UI",
-        "Compliance, security, and citizen experience",
-        "Only reports",
-        "Only dashboards"
+        "One payment at the start",
+        "A violation",
+        "Disbursements tied to milestones",
+        "A licence renewal"
       ],
-      "correctAnswer": 1,
-      "explanation": "Compliance, security, and citizen experience are critical."
+      "correctAnswer": 2,
+      "explanation": "Disbursements record payments, and can be linked to milestones or reports.",
+      "whyWrong": [
+        "One upfront payment removes control over progress.",
+        "Violations are for failed inspections.",
+        "Renewals are for licences."
+      ]
     },
     {
-      "question": "What does Public Sector Solutions implementation include?",
+      "question": "Grant applications must be scored by a panel of reviewers before decisions are made. What fits?",
       "options": [
-        "Only coding",
-        "Industry-specific data models, workflows, and best practices",
-        "Only reports",
-        "Only emails"
+        "A dashboard",
+        "Application review with assigned reviewers and scoring",
+        "An email inbox",
+        "A licence type"
       ],
       "correctAnswer": 1,
-      "explanation": "Implementation includes industry data models and workflows."
+      "explanation": "Grants management supports reviews where reviewers score applications.",
+      "whyWrong": [
+        "Dashboards show results, they don't run reviews.",
+        "An inbox isn't a structured review.",
+        "Licence types are for licensing."
+      ]
     },
     {
-      "question": "Which Salesforce product supports Public Sector?",
+      "question": "The public intake form has many steps and needs to look up data from another government system. Which tools fit?",
       "options": [
-        "Slack only",
-        "Public Sector Solutions, Experience Cloud, and CRM",
-        "Marketing Cloud only",
-        "Commerce Cloud only"
+        "A Campaign",
+        "A report",
+        "An OmniScript with an Integration Procedure",
+        "A single long text field"
       ],
-      "correctAnswer": 1,
-      "explanation": "Public Sector Solutions and Experience Cloud support government."
+      "correctAnswer": 2,
+      "explanation": "OmniScripts guide people through steps, and Integration Procedures fetch data from other systems.",
+      "whyWrong": [
+        "Campaigns are for marketing.",
+        "Reports show data.",
+        "A text field can't guide or look up data."
+      ]
     },
     {
-      "question": "What is the purpose of Public Sector best practices?",
+      "question": "An investigation into a complaint involves interviews with several people. Which area handles this?",
       "options": [
-        "Only deployment",
-        "Align with government processes, compliance, and citizen value",
-        "Only design",
-        "Only testing"
+        "Case management with investigations and interviews",
+        "Grants management",
+        "Loyalty",
+        "Licensing"
       ],
-      "correctAnswer": 1,
-      "explanation": "Best practices align with government processes and compliance."
+      "correctAnswer": 0,
+      "explanation": "Public sector case management includes features for investigations and interviews.",
+      "whyWrong": [
+        "Grants are for funding.",
+        "Loyalty isn't part of this.",
+        "Licensing issues licences."
+      ]
     },
     {
-      "question": "Which use case is common for Public Sector?",
+      "question": "A licence expires each year. How should renewals be handled?",
       "options": [
-        "Retail only",
-        "Case management, licensing, and citizen services",
-        "Manufacturing only",
-        "CPQ only"
+        "By phone only",
+        "By changing the expiry date by hand each year",
+        "By deleting and recreating the licence",
+        "Through a renewal application linked to the existing licence"
       ],
-      "correctAnswer": 1,
-      "explanation": "Case management, licensing, and citizen services are common."
+      "correctAnswer": 3,
+      "explanation": "Renewals can follow the same application process, linked to the existing licence for a clear history.",
+      "whyWrong": [
+        "Phone-only is slow and hard to track.",
+        "Manual date changes skip checks and fees.",
+        "Deleting loses history."
+      ]
     },
     {
-      "question": "What does agency mission alignment mean?",
+      "question": "An agency needs its Salesforce org to meet public sector security standards. What should it consider?",
       "options": [
-        "Only revenue",
-        "Solutions that support government goals and citizen outcomes",
-        "Only cost",
-        "Only speed"
+        "Public Read/Write sharing",
+        "A shared admin login",
+        "A Developer Edition org",
+        "Government Cloud"
       ],
-      "correctAnswer": 1,
-      "explanation": "Alignment means supporting government goals and citizen outcomes."
+      "correctAnswer": 3,
+      "explanation": "Government Cloud is designed to meet public sector security and compliance standards.",
+      "whyWrong": [
+        "Public sharing exposes data.",
+        "Shared logins break accountability.",
+        "Developer Edition is for testing."
+      ]
     },
     {
-      "question": "Which integration is common for Public Sector?",
+      "question": "A complaint is linked to a business that holds a licence and had a failed inspection. Why link these records?",
       "options": [
-        "Slack only",
-        "Legacy systems, payment, and identity providers",
-        "Marketing Cloud only",
-        "Commerce Cloud only"
+        "To hide the inspection",
+        "To make the complaint disappear",
+        "So staff can see the full history of the business in one place",
+        "To increase the fee"
       ],
-      "correctAnswer": 1,
-      "explanation": "Public Sector integrates with legacy and payment systems."
+      "correctAnswer": 2,
+      "explanation": "Linked records give staff a full view of the business, which helps with decisions.",
+      "whyWrong": [
+        "Linking makes the inspection visible.",
+        "Linking doesn't remove records.",
+        "Fees are set by licence rules."
+      ]
     },
     {
-      "question": "What does Public Sector Solutions Professional need?",
+      "question": "Constituents should be able to upload documents and see their application status on their phone. What matters most?",
       "options": [
-        "Only coding",
-        "Public sector domain knowledge and implementation best practices",
-        "Only reports",
-        "Only dashboards"
+        "Accepting documents by post only",
+        "An accessible, mobile-friendly Experience Cloud portal",
+        "Hiding the status",
+        "Requiring a desktop computer"
       ],
       "correctAnswer": 1,
-      "explanation": "Professionals need domain knowledge and best practices."
+      "explanation": "Portals should work on phones and be accessible to everyone.",
+      "whyWrong": [
+        "Post-only is slow.",
+        "Hiding status leads to more calls.",
+        "Many people only use phones."
+      ]
     },
     {
-      "question": "Which best practice applies to Public Sector implementation?",
+      "question": "Sensitive investigation cases should only be visible to the investigations team. What should be used?",
       "options": [
-        "Ignore compliance",
-        "Compliance, accessibility, and citizen-centric design",
-        "No accessibility",
-        "Single channel only"
+        "A Chatter group",
+        "Public Read Only",
+        "Private sharing settings with access granted to that team",
+        "View All for all users"
       ],
-      "correctAnswer": 1,
-      "explanation": "Compliance, accessibility, and citizen-centric design are key."
+      "correctAnswer": 2,
+      "explanation": "Tight sharing keeps sensitive cases visible only to the right staff.",
+      "whyWrong": [
+        "Chatter groups don't control case access.",
+        "Public Read Only shows them to everyone.",
+        "View All shows everything."
+      ]
     },
     {
-      "question": "What is Section 508 in Public Sector context?",
+      "question": "Which records make up the main grants flow?",
       "options": [
-        "A Salesforce feature",
-        "US federal accessibility law requiring digital content to be accessible",
-        "A report type",
-        "A workflow only"
+        "Campaign and campaign member",
+        "Lead, opportunity and quote",
+        "Visit and assessment task",
+        "Funding opportunity, application, award and disbursements"
       ],
-      "correctAnswer": 1,
-      "explanation": "Section 508 mandates accessibility for federal digital systems—critical for Public Sector."
+      "correctAnswer": 3,
+      "explanation": "Grants move from the opportunity on offer, to applications, to awards, to payments.",
+      "whyWrong": [
+        "That is the marketing flow.",
+        "That is the sales flow.",
+        "Those are for inspections."
+      ]
     }
   ]
 }

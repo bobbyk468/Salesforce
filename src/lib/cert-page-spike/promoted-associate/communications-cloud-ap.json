@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Telecom implementers",
-        "description": "You configure Communications Cloud's order capture, product catalog, and Digital Commerce for CSPs and want to validate your telecom-specific configuration skills."
+        "description": "You build Communications Cloud for mobile, broadband or media providers and want to prove you know the industry setup."
       },
       {
         "label": "Consultants and admins",
-        "description": "You advise telecom clients on when Communications Cloud's industry data model and Discovery Framework fit better than generic CPQ or Sales Cloud configurations."
+        "description": "You work on the product catalog, quoting or ordering side of a telecom project."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that differentiates you in the competitive telecom/CSP implementation space."
+        "description": "You know core Salesforce and want to specialise in the communications industry."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Communications Cloud Accredited Professional Exam Hard?",
-    "summary": "The Communications Cloud AP exam is moderately difficult because it tests telecom-specific concepts — Digital Commerce, Discovery Framework, and Decomposition Rules — that don't overlap with general Salesforce configuration knowledge.",
+    "summary": "The pass mark is low, but the exam isn't easy. Communications Cloud has its own catalog, quoting and ordering tools that work very differently from standard Salesforce products and orders.",
     "bullets": [
-      "<strong>55 questions</strong> in 90 min.",
-      "<strong>56% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Industry data model</strong> &mdash; expect questions on Communications Cloud's product catalog decomposition and how orders flow through Digital Commerce into fulfillment.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Communications Cloud in a real org are better prepared than candidates who only memorize notes."
+      "<strong>55 multiple-choice questions</strong> in 90 minutes.",
+      "<strong>56% to pass</strong>, about 31 correct answers.",
+      "<strong>Industry tools.</strong> Enterprise Product Catalog, Industries CPQ, Industries Order Management and OmniStudio.",
+      "<strong>Telecom processes.</strong> Move, add, change and disconnect orders, contracts and assets come up often."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "People who have configured offers in the product catalog and pushed an order through decomposition do best. Before you book, aim for 70% or more on practice tests."
   },
   "examFormat": {
     "heading": "Communications Cloud Accredited Professional Exam Format Explained",
-    "intro": "The Communications Cloud Accredited Professional exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Communications Cloud.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a telecom task, such as building a bundle, pricing an offer or changing a customer's existing service, and ask which tool or setting handles it.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Communications Cloud, Telecom, and Discovery because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Learn the catalog building blocks:</strong> Products, attributes, offers, bundles, promotions and price lists.",
+      "<strong>Understand rules:</strong> Eligibility, compatibility and context rules decide who can buy what and in which combinations.",
+      "<strong>Follow an order through Industries Order Management:</strong> Decomposition into technical orders, then orchestration of fulfilment steps.",
+      "<strong>Know OmniStudio basics:</strong> OmniScripts, FlexCards, Integration Procedures and Data Mappers."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers implementing Communications Cloud for telecom and media companies — product catalog setup, Industries CPQ, order orchestration, and subscription lifecycle management.",
+    "description": "This exam tests how you set up Communications Cloud for telecom and media providers: the product catalog, quoting, ordering and fulfilment, contracts and assets, and the OmniStudio tools.",
     "examDetails": {
       "questions": 55,
       "passingScore": "56%",
@@ -62,71 +62,71 @@
     "blocks": [
       {
         "heading": "Product Catalog & Offer Management",
-        "body": "Communications Cloud uses TM Forum-aligned data models. The Product Catalog manages the hierarchy: Product Specification → Product Offering → Bundled Offering. Product Attributes define configurable options (plan type, data cap, contract term). Qualification Rules control which offerings are available to a customer based on account type, location, or existing subscriptions. Pricing Tiers apply usage-based or tiered pricing to product offerings. The AP exam tests how to configure a product offering for a telecommunications use case, including bundling mobile, broadband, and TV services into a single offer."
+        "body": "The **Enterprise Product Catalog (EPC)** holds everything the provider sells. **Products** describe a service or device. **Attributes** describe options like speed or colour. **Offers** are what customers can actually buy, often **bundles** of several products, such as broadband plus TV. **Promotions** add time-limited discounts. **Price lists** hold prices and can differ by channel or market. Building offers from reusable products means a change to one product, like a new router, flows to every offer that uses it."
       },
       {
         "heading": "Industries CPQ for Telco",
-        "body": "Industries **CPQ** (Configure, Price, Quote) in Communications Cloud handles complex telco quoting. Configuration Rules enforce product compatibility (e.g., a 5G plan requires a compatible device). Pricing Procedures calculate the total price including promotions, discounts, and one-time vs. recurring charges. Promotions apply time-limited discounts at the order or line level. Decomposition breaks complex product bundles into fulfillable line items for downstream systems. The exam tests how to configure CPQ for a scenario with bundled products, promotional pricing, and device+plan combinations — know the difference between attribute-based configuration and separate product selection."
+        "body": "**Industries CPQ** uses a cart. Agents or customers add offers, choose attributes and see the price straight away. **Rules** keep the cart valid: **eligibility** rules decide whether a customer can see an offer, for example by region, and **compatibility** rules stop invalid combinations, such as two broadband plans on one line. **Context rules** use details about the customer or location to change what is shown. The same cart logic can be used in agent screens and in **Digital Commerce** for online channels, through APIs."
       },
       {
         "heading": "Order Management & Orchestration",
-        "body": "Orders in Communications Cloud follow the TM Forum order lifecycle: Order Received → Feasibility → Order Accepted → Provisioning → Order Completed. Order Orchestration uses Flow Orchestration or a BPM tool to coordinate provisioning steps across fulfillment systems. Fallout Management handles failed provisioning steps — the exam tests retry logic and manual intervention workflows. Change Orders handle service modifications (upgrades, downgrades, add-ons). Cancellation management flows handle both pre-provisioning and post-provisioning cancellations. The exam tests the complete order lifecycle and how to design an orchestration that handles common telco provisioning failure scenarios."
+        "body": "When an order is submitted, **Industries Order Management** breaks the commercial order into the technical pieces needed to deliver it. This is called **decomposition**. An **orchestration plan** then runs the steps in the right order, such as reserve a number, ship a router, then activate the line, calling outside systems as needed. If a step fails, the plan can retry, wait or alert someone. Customers see one order, while the back office handles many technical tasks."
       },
       {
         "heading": "Contract & Subscription Lifecycle",
-        "body": "Contracts in Communications Cloud manage the term commitment for services — start date, end date, and early termination fees. Auto-Renewal rules trigger renewal or renegotiation workflows before contract expiry. Contract amendments modify in-force services and generate change orders. Asset-Based Ordering (ABO) tracks each active service as an asset on the customer account. The Asset Object in Communications Cloud records the current state of a provisioned service. The exam tests how contract terms flow into billing, how ABO manages the lifecycle of a service from provisioning through cancellation, and how to design amendment workflows."
+        "body": "Once an order is fulfilled, the services become **assets** on the customer's account. Later changes are known as **MACD**: move, add, change and disconnect. For example, upgrading a broadband speed is a change to an existing asset, not a brand-new order. **Contracts** record terms like length and early-exit fees, and can be renewed. Keeping assets accurate is important because every future change starts from them."
       },
       {
         "heading": "Partner Ecosystem & Channel Management",
-        "body": "Communications Cloud supports indirect sales through a partner channel — resellers and agents sell services on behalf of the operator. Partner Community provides the sales and ordering interface for channel partners. Partner Accounts and Partner Users manage access and visibility. Revenue sharing and commission tracking are handled through channel management capabilities. The exam tests how to configure a partner order flow, what data the partner can see vs. what is hidden (margin, cost), and how to design the security model so that partners can only access their own customers and orders."
+        "body": "Providers often sell through retail shops, partners and online. Experience Cloud sites can give partners their own sales tools, using the same catalog and cart as internal agents, with partner-specific price lists or offers. **OmniStudio** tools power many of these screens: **OmniScripts** guide users through steps, **FlexCards** show key customer details at a glance, **Integration Procedures** fetch data from several systems in one call, and **Data Mappers** read, change and save data."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Communications Cloud Accredited Professional Exam",
-    "intro": "The Communications Cloud AP exam tests configuration of Vlocity/Industries solutions for communications service providers (CSPs). Focus on product catalog, CPQ, order management, and the CSP-specific data model.",
+    "intro": "Most questions name a telecom task and ask which tool handles it. Learn where each job lives: catalog, cart, order management or assets.",
     "blocks": [
       {
         "heading": "Communications Cloud Data Model",
-        "body": "Know the CSP-specific objects: Account (residential/business), Service Account, Service Point, Subscription, Product (service plans), and how they map to standard Salesforce objects."
+        "body": "Accounts are often split into consumer, billing and service accounts. Assets on the service account show what the customer has."
       },
       {
         "heading": "Industries CPQ for Telecom",
-        "body": "Know how Industries **CPQ** manages telecom product configuration: voice, data, and value-added services as products with attributes (data allowance, speeds). Understand bundled plan configuration."
+        "body": "The cart applies eligibility and compatibility rules. If an offer doesn't appear, check eligibility first."
       },
       {
         "heading": "Order Management for CSPs",
-        "body": "Know the telecom order lifecycle: order capture, decomposition (splitting into work items), fallout management, and order tracking. Understand how service activation triggers downstream provisioning."
+        "body": "Decomposition turns a commercial order into technical orders. Orchestration runs the fulfilment steps."
       },
       {
         "heading": "Customer 360 for Telecom",
-        "body": "Know how to configure the Communications Cloud customer view: account hierarchy for business customers, service account billing, usage data display, and churn prediction with Einstein."
+        "body": "FlexCards give agents a quick view of the customer's services, bills and open orders."
       },
       {
         "heading": "OmniStudio in Communications Cloud",
-        "body": "Know how Communications Cloud uses OmniStudio (FlexCards, OmniScripts) for agent desktop and self-service portal experiences. Understand standard Communication Cloud OmniScripts like 'Add a Line.'"
+        "body": "OmniScripts for guided steps, Integration Procedures for server-side data calls, Data Mappers for reading and writing data."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Communications Cloud:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/omnistudio-consultant",
+        "label": "OmniStudio Consultant"
+      },
+      {
+        "href": "/certifications/omnistudio-developer",
+        "label": "OmniStudio Developer"
+      },
+      {
+        "href": "/certifications/industries-cpq-developer",
+        "label": "Industries CPQ Developer"
       },
       {
         "href": "/certifications/service-cloud",
         "label": "Service Cloud Consultant"
-      },
-      {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
-      },
-      {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
       }
     ]
   },
@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Communications Cloud AP validate?",
+      "question": "A provider wants to sell broadband, a router and TV together as one package at a special price. How should this be set up in the catalog?",
       "options": [
-        "Only basics",
-        "Knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud",
-        "Only reporting",
-        "Only Slack"
+        "As a price list with one product",
+        "As a bundle offer that includes the three products",
+        "As a contract with three line items only",
+        "As three separate orders"
       ],
       "correctAnswer": 1,
-      "explanation": "Accredited Communications Cloud Professionals have knowledge, skills, and experience to discover, design, plan, and deliver business value through Communications Cloud."
+      "explanation": "Bundles let you sell several products together as one offer, with their own pricing.",
+      "whyWrong": [
+        "A price list holds prices. It doesn't group products into a package.",
+        "A contract records terms after the sale. It isn't how products are packaged.",
+        "Three orders lose the package price and are harder for customers."
+      ]
     },
     {
-      "question": "Which industry does Communications Cloud serve?",
+      "question": "A new fibre plan should only be offered to customers in areas where fibre is available. What should be used?",
       "options": [
-        "Retail only",
-        "Telecommunications and media (e.g., telecom operators)",
-        "Manufacturing only",
-        "Healthcare only"
+        "A compatibility rule",
+        "A price list",
+        "An eligibility rule",
+        "A promotion"
       ],
-      "correctAnswer": 1,
-      "explanation": "Communications Cloud serves telecommunications and media industries."
+      "correctAnswer": 2,
+      "explanation": "Eligibility rules decide whether a customer can see an offer, for example based on location.",
+      "whyWrong": [
+        "Compatibility rules stop invalid combinations in the cart, not who can see an offer.",
+        "A price list sets prices, not availability.",
+        "A promotion gives a discount, it doesn't limit availability."
+      ]
     },
     {
-      "question": "What is a key activity for a Communications Cloud Professional?",
+      "question": "Customers must not be able to add two broadband plans to the same line. What enforces this?",
       "options": [
-        "Only coding",
-        "Discovering, designing, planning, and delivering business value",
-        "Only reporting",
-        "Only email"
+        "A Data Mapper",
+        "A compatibility rule",
+        "A FlexCard",
+        "An eligibility rule"
       ],
       "correctAnswer": 1,
-      "explanation": "They discover, design, plan, and deliver business value."
+      "explanation": "Compatibility rules stop combinations that don't make sense in the cart.",
+      "whyWrong": [
+        "A Data Mapper moves data, it doesn't validate the cart.",
+        "A FlexCard displays information.",
+        "Eligibility controls who sees an offer, not combinations."
+      ]
     },
     {
-      "question": "Which role typically pursues Communications Cloud AP?",
+      "question": "A customer orders broadband. The back office needs to reserve a port, ship a router and activate the line. What breaks the order into these technical steps?",
       "options": [
-        "Marketers",
-        "Partners and implementers in telecom/media",
-        "Sales only",
-        "Designers only"
+        "Decomposition in Industries Order Management",
+        "A promotion",
+        "A price list",
+        "An eligibility rule"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers in telecom/media pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Decomposition turns the commercial order into the technical orders needed for fulfilment.",
+      "whyWrong": [
+        "Promotions affect price.",
+        "Price lists hold prices.",
+        "Eligibility rules affect which offers show."
+      ]
     },
     {
-      "question": "What does Communications Cloud often integrate with?",
+      "question": "After decomposition, which feature runs the fulfilment steps in the right order and calls outside systems?",
       "options": [
-        "Only Marketing Cloud",
-        "Industries CPQ, Billing, and telecom systems",
-        "Only Service Cloud",
-        "Only Slack"
+        "Orchestration plans",
+        "Eligibility rules",
+        "Contracts",
+        "FlexCards"
       ],
-      "correctAnswer": 1,
-      "explanation": "It integrates with Industries CPQ, Billing, and telecom systems."
+      "correctAnswer": 0,
+      "explanation": "Orchestration plans run fulfilment tasks in sequence, handle dependencies and call outside systems.",
+      "whyWrong": [
+        "Eligibility rules control what can be sold.",
+        "Contracts record terms.",
+        "FlexCards show data to users."
+      ]
     },
     {
-      "question": "What is Industries CPQ in telecom context?",
+      "question": "A customer wants to upgrade their existing broadband from 100 Mbps to 500 Mbps. How should this be handled?",
       "options": [
-        "Standard CPQ only",
-        "CPQ tailored for telecom (products, bundles, pricing for telecom)",
-        "Marketing Cloud",
-        "Slack"
+        "As a brand-new order for broadband",
+        "By editing the price list",
+        "As a change order on the existing asset",
+        "By deleting the old asset"
       ],
-      "correctAnswer": 1,
-      "explanation": "Industries CPQ extends CPQ for telecom product catalogs."
+      "correctAnswer": 2,
+      "explanation": "Upgrades are changes (the C in MACD) to an existing asset, which keeps history and avoids duplicate services.",
+      "whyWrong": [
+        "A new order would create a second broadband service.",
+        "The price list sets prices for everyone.",
+        "Deleting the asset loses history and breaks billing."
+      ]
     },
     {
-      "question": "Which activity is part of 'discover' for Communications Cloud?",
+      "question": "Which tool guides a service agent step by step through a complex process, such as moving a customer to a new address?",
       "options": [
-        "Only deployment",
-        "Gathering requirements and understanding telecom workflows",
-        "Only coding",
-        "Only reporting"
+        "A compatibility rule",
+        "A price list",
+        "An OmniScript",
+        "A Data Mapper"
       ],
-      "correctAnswer": 1,
-      "explanation": "Discover = requirements gathering and workflow analysis."
+      "correctAnswer": 2,
+      "explanation": "OmniScripts are guided, step-by-step processes for users.",
+      "whyWrong": [
+        "Compatibility rules check the cart.",
+        "Price lists hold prices.",
+        "Data Mappers read and write data, they don't guide users."
+      ]
     },
     {
-      "question": "What does 'deliver business value' mean for Communications Cloud?",
+      "question": "Agents need to see a customer's services, last bill and open orders at a glance on one screen. What fits?",
       "options": [
-        "Only shipping",
-        "Implementing solutions that drive outcomes for telecom customers",
-        "Only reports",
-        "Only dashboards"
+        "An orchestration plan",
+        "A FlexCard",
+        "A promotion",
+        "A decomposition rule"
       ],
       "correctAnswer": 1,
-      "explanation": "Deliver = implement solutions that achieve customer outcomes."
+      "explanation": "FlexCards show key information in a compact, actionable card.",
+      "whyWrong": [
+        "Orchestration runs fulfilment steps.",
+        "Promotions are discounts.",
+        "Decomposition breaks down orders."
+      ]
     },
     {
-      "question": "Which Salesforce product supports telecom billing?",
+      "question": "A screen needs data from billing, network inventory and Salesforce in one fast server-side call. What should be used?",
       "options": [
-        "Marketing Cloud only",
-        "Salesforce Billing and Industries Billing",
-        "Service Cloud only",
-        "Slack only"
+        "An Integration Procedure",
+        "A FlexCard on its own",
+        "A promotion",
+        "A price list"
       ],
-      "correctAnswer": 1,
-      "explanation": "Industries Billing supports telecom billing workflows."
+      "correctAnswer": 0,
+      "explanation": "Integration Procedures run several data actions on the server in one call, which keeps screens fast.",
+      "whyWrong": [
+        "A FlexCard displays data, but it needs a data source like an Integration Procedure.",
+        "Promotions are discounts.",
+        "Price lists hold prices."
+      ]
     },
     {
-      "question": "What is a key consideration when designing Communications Cloud solutions?",
+      "question": "A new router model replaces the old one in 20 different offers. What is the benefit of building offers from reusable products?",
       "options": [
-        "Colors only",
-        "Product catalog complexity, rating, and billing integration",
-        "Only UI",
-        "Only reports"
+        "Customers have to reorder",
+        "Each offer must be edited by hand",
+        "Offers stop working",
+        "Updating the router product once updates every offer that uses it"
       ],
-      "correctAnswer": 1,
-      "explanation": "Catalog, rating, and billing are core telecom design considerations."
+      "correctAnswer": 3,
+      "explanation": "Reusable products mean a change in one place flows to every offer that includes it.",
+      "whyWrong": [
+        "Existing customers don't need to reorder.",
+        "The point of reuse is to avoid editing every offer.",
+        "Offers keep working with the updated product."
+      ]
     },
     {
-      "question": "Why is the telecom industry unique for CRM?",
+      "question": "A three-month 20% discount for new customers should be added to a mobile plan. What should be used?",
       "options": [
-        "It isn't",
-        "Complex products, subscriptions, and regulatory requirements",
-        "Only standard objects",
-        "Only simple pricing"
+        "A new product",
+        "A promotion",
+        "A compatibility rule",
+        "An orchestration plan"
       ],
       "correctAnswer": 1,
-      "explanation": "Telecom has complex products, subscriptions, and regulations."
+      "explanation": "Promotions add time-limited discounts or changes to offers.",
+      "whyWrong": [
+        "A new product isn't needed for a discount.",
+        "Compatibility rules check combinations.",
+        "Orchestration runs fulfilment."
+      ]
     },
     {
-      "question": "What does 'plan' mean in Communications Cloud context?",
+      "question": "Why is it important to keep customer assets accurate in Communications Cloud?",
       "options": [
-        "Only schedules",
-        "Planning the implementation approach and solution roadmap",
-        "Only coding",
-        "Only deployment"
+        "Assets control the website theme",
+        "Assets set the price list",
+        "Assets are only used for reports",
+        "Future moves, changes and disconnects all start from the current assets"
       ],
-      "correctAnswer": 1,
-      "explanation": "Plan = implementation approach and roadmap."
+      "correctAnswer": 3,
+      "explanation": "MACD orders change existing assets. If the assets are wrong, every later change is wrong too.",
+      "whyWrong": [
+        "Assets don't control the website.",
+        "Prices come from price lists.",
+        "They are used in orders, not just reports."
+      ]
     },
     {
-      "question": "What does charging mean in telecom billing?",
+      "question": "A partner shop should sell from the same catalog as internal agents, but with its own prices. What should be set up?",
       "options": [
-        "Only invoicing",
-        "Calculating and applying charges for usage and products based on rating",
-        "Only payment collection",
-        "Only refunds"
+        "A copy of the whole catalog for the partner",
+        "Manual price changes on each order",
+        "A separate org for the partner",
+        "A partner-specific price list used in the partner channel"
       ],
-      "correctAnswer": 1,
-      "explanation": "Charging applies rated amounts to customer accounts; rating calculates the charge."
+      "correctAnswer": 3,
+      "explanation": "Price lists can differ by channel, so partners use the same catalog with their own prices.",
+      "whyWrong": [
+        "Copying the catalog doubles the upkeep.",
+        "Manual changes are slow and error-prone.",
+        "A separate org is far more than needed."
+      ]
     },
     {
-      "question": "What is rating in telecom?",
+      "question": "A fulfilment step fails because the network activation system is down. What should the orchestration plan do?",
       "options": [
-        "A report",
-        "Calculating charges for usage and products",
-        "A workflow only",
-        "An object only"
+        "Retry or pause the step and alert someone, without losing the order",
+        "Mark the order as complete",
+        "Delete the order",
+        "Start a new order"
       ],
-      "correctAnswer": 1,
-      "explanation": "Rating calculates charges for telecom products and usage."
+      "correctAnswer": 0,
+      "explanation": "Orchestration can retry, wait or raise an alert on failed steps, so the order can continue once the problem is fixed.",
+      "whyWrong": [
+        "Marking it complete would leave the customer without service.",
+        "Deleting loses the sale.",
+        "A new order duplicates work."
+      ]
     },
     {
-      "question": "Which industries does Communications Cloud serve beyond telecom?",
+      "question": "Which tool should read data from Salesforce, transform it and save it back as part of an OmniScript?",
       "options": [
-        "None",
-        "Media and other communication-intensive industries",
-        "Retail only",
-        "Manufacturing only"
+        "A promotion",
+        "A price list",
+        "A Data Mapper",
+        "A FlexCard"
       ],
-      "correctAnswer": 1,
-      "explanation": "Communications Cloud also serves media and similar industries."
+      "correctAnswer": 2,
+      "explanation": "Data Mappers (formerly DataRaptors) read, transform and save data for OmniStudio tools.",
+      "whyWrong": [
+        "Promotions are discounts.",
+        "Price lists hold prices.",
+        "FlexCards display data."
+      ]
     }
   ]
 }
