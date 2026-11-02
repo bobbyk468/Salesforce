@@ -4,44 +4,44 @@
     "heading": "Who is the JavaScript Developer I exam for?",
     "personas": [
       {
-        "label": "Front-end developers entering Salesforce",
-        "description": "You have strong JavaScript fundamentals and want to build Lightning Web Components on the Salesforce Platform."
+        "label": "Web developers moving into Salesforce",
+        "description": "Your JavaScript is already good. What you need is the component model, the Apex boundary and the security rules."
       },
       {
-        "label": "Salesforce developers broadening skills",
-        "description": "You already work with Apex and want to validate your modern JavaScript and LWC expertise for full-stack Salesforce development."
+        "label": "Salesforce developers who came from Apex",
+        "description": "This is the exam that exposes self-taught JavaScript. The language half is where the marks go, not the LWC half."
       },
       {
-        "label": "Web developers transitioning to enterprise",
-        "description": "You have experience with React, Angular, or Vue and want to apply your component-based skills within the Salesforce ecosystem."
+        "label": "Anyone who writes Lightning Web Components",
+        "description": "Whether or not you want the credential, the syllabus is a reasonable list of what you should know to write components that behave."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the JavaScript Developer I Exam Hard?",
-    "summary": "The JavaScript Developer I exam is moderately difficult. It is a JavaScript-first exam that happens to run on Salesforce &mdash; strong ES6+ fundamentals matter more than platform-specific knowledge, which catches many Salesforce-only developers off guard.",
+    "summary": "A JavaScript exam that happens to run on Salesforce. Most of it is language fundamentals: scope, closures, prototypes, promises, the event loop, and reading code to say what it prints. The Salesforce content is real but smaller. Platform developers who learned JavaScript as they went tend to find this harder than they expect.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>65% passing score</strong> &mdash; you can miss roughly 19 questions, but code-reading questions take time so pacing matters.",
-      "<strong>Heavy on ES6+ and async patterns</strong> &mdash; closures, promises, async/await, the event loop, and prototype chain questions dominate the first half of the exam.",
-      "<strong>LWC lifecycle knowledge required</strong> &mdash; expect scenario questions on connectedCallback vs renderedCallback, @wire vs imperative Apex calls, and Shadow DOM event propagation."
+      "<strong>60 questions in 105 minutes.</strong> Code-reading questions eat time, so do not spend five minutes on one snippet.",
+      "<strong>65% to pass,</strong> leaving roughly 19 you can get wrong.",
+      "<strong>Execution order is the recurring theme.</strong> Promises are microtasks, setTimeout is a macrotask, and a snippet mixing them is a near certainty.",
+      "<strong>The LWC half is lifecycle and data.</strong> connectedCallback against renderedCallback, wire against imperative Apex, and how events cross the shadow boundary."
     ],
-    "passRateGuidance": "Score 75%+ on 3 timed practice exams before booking &mdash; focus extra time on closures, promise chaining, and LWC lifecycle hooks."
+    "passRateGuidance": "Open a console and predict the output before you run it. Closures in loops, a promise chain with a setTimeout in the middle, this inside a regular function against an arrow function. If you get those right consistently, the exam will not surprise you. If not, that is where to spend your week."
   },
   "examFormat": {
     "heading": "JavaScript Developer I Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include reading a code snippet and predicting console output, choosing the correct LWC decorator for a data-fetching requirement, and identifying the right async pattern for a given use case.",
+    "intro": "Proctored online or at a test centre. The shape of it:",
+    "scenarioPercent": "Close to half the questions involve code. Usually it is a snippet with a question about what it logs, in what order, or why it throws. The rest is choosing the right decorator, lifecycle hook or async pattern for a stated requirement.",
     "bestWayToPass": [
-      "<strong>Drill ES6+ code output questions:</strong> Practice reading arrow functions, destructuring, spread/rest, and template literals &mdash; the exam shows code and asks what it returns or logs.",
-      "<strong>Master the event loop:</strong> Understand the difference between microtasks (promises) and macrotasks (setTimeout) and be able to predict execution order in code snippets.",
-      "<strong>Know LWC decorators cold:</strong> @api for public properties, @wire for reactive data binding, and when to use imperative Apex calls instead of @wire.",
-      "<strong>Understand Shadow DOM boundaries:</strong> Know how events propagate across shadow boundaries (composed:true), how CSS encapsulation works, and what LockerService/Lightning Web Security restricts."
+      "<strong>Write the code, do not read about it.</strong> Every topic on this syllabus can be tested in a browser console in under a minute. Guess the output first, then run it.",
+      "<strong>Learn the event loop properly.</strong> Call stack, microtask queue, macrotask queue. Once you can place a promise callback and a setTimeout callback on the right queue, the ordering questions become mechanical.",
+      "<strong>Know what this binds to in each case.</strong> Method call, standalone function, arrow function, callback passed to another function. Four cases, asked repeatedly.",
+      "<strong>Build one component that calls Apex both ways.</strong> Once with wire, once imperatively from a button. The difference between them stops being abstract."
     ]
   },
   "certificationCard": {
     "code": "JS Developer I",
-    "description": "This exam tests core JavaScript (ES6+), async programming, and Lightning Web Components on the Salesforce Platform. Expect code-reading questions on closures, promises, the event loop, and LWC lifecycle hooks — strong JS fundamentals matter more than Salesforce-specific knowledge.",
+    "description": "Core JavaScript and the Lightning Web Components model: ES6 syntax, scope and closures, prototypes, promises and async/await, the event loop, the web component standards LWC is built on, calling Apex, and Lightning Web Security.",
     "examDetails": {
       "questions": 60,
       "passingScore": "65%",
@@ -65,56 +65,56 @@
     "h2": "JavaScript Developer I: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "JavaScript ES6+ Fundamentals",
-        "body": "The exam tests modern JavaScript syntax. let and const for block-scoped variables (never var). Arrow functions and lexical this binding. Destructuring for arrays and objects. Template literals (backtick strings). Spread/rest operators. Promises for async operations. async/await for readable async code. The exam presents code snippets and asks about scoping, closures, prototype chain, or async behaviour &mdash; understanding ES6+ is the foundation for **LWC** development."
+        "heading": "Scope, Closures and this",
+        "body": "A closure is a function that keeps access to the variables of the scope it was created in, even after that scope has returned. It is the mechanism behind private state, factory functions and most callback bugs. The classic exam case is a loop that creates functions: with var, every function shares one binding and they all see the final value, while let creates a fresh binding each iteration and they see what you expected. Separately, this is decided by how a function is called rather than where it is written. Called as a method, this is the object. Called standalone, it is undefined in strict mode. In an arrow function, there is no own this at all, so it comes from the enclosing scope, which is exactly why arrow functions are used for callbacks that need the surrounding context. Expect a snippet where a method is passed as a callback and loses its binding."
       },
       {
-        "heading": "Web Component Standards (W3C)",
-        "body": "Lightning Web Components are built on Web Component standards: Custom Elements (define new HTML elements), Shadow DOM (encapsulated styles and markup), HTML Templates (declarative rendering). Understanding these standards is tested because **LWC** implements them directly. Shadow DOM encapsulation means CSS from outside cannot affect component internals by default. The exam tests how the Shadow DOM affects event propagation (events do not cross shadow boundaries unless composed:true is set)."
+        "heading": "Prototypes and Classes",
+        "body": "JavaScript inheritance works through a chain of objects. Every object has a prototype, and a property lookup walks up that chain until it finds the property or runs out. Class syntax is a cleaner way of writing the same thing: a class body defines methods on the prototype, extends sets up the chain, and super calls the parent. Two details are examinable. Methods defined in the class body live on the prototype and are shared across instances, whereas properties assigned in the constructor belong to each instance. And instanceof asks whether a prototype appears anywhere in an object's chain, which is why it answers true for an inherited type as well as the exact one."
       },
       {
-        "heading": "Lightning Web Components: Lifecycle and Reactivity",
-        "body": "**LWC** lifecycle hooks: connectedCallback (component added to DOM), disconnectedCallback (removed from DOM), renderedCallback (after every render). @track (now redundant &mdash; all properties are reactive by default), @api (public property, set by parent), @wire (reactive data binding to **Apex** or platform adapters). The exam tests which lifecycle hook to use for a given scenario &mdash; connectedCallback for initial data fetch, renderedCallback for post-render DOM manipulation (with caution)."
+        "heading": "Promises, async/await and Error Handling",
+        "body": "A promise is an object representing a result that has not arrived. It settles once, either resolved or rejected, and then handlers registered with then, catch and finally run. Chaining matters because each then returns a new promise, so returning a value passes it along and returning a promise waits for it. async and await are syntax over the same thing: an async function always returns a promise, and await pauses inside it until the awaited promise settles. For error handling, a rejection travels down a chain until something catches it, and an uncaught rejection is a silent failure you should treat as a bug. The combinators get asked by behaviour: Promise.all rejects as soon as any input rejects, Promise.allSettled always resolves and reports each outcome, and Promise.race settles with whichever finishes first."
       },
       {
-        "heading": "Apex Integration: @wire and Imperative Calls",
-        "body": "@wire automatically calls **Apex** and re-calls when parameters change &mdash; use for read-only data that should refresh reactively. Imperative calls (calling Apex directly like a JS function) are used when you need explicit control &mdash; on button click, or when combining results. @wire uses the getRecord and getFieldValue adapters from lightning/uiRecordApi for record access. The @AuraEnabled(cacheable=true) annotation is required on Apex methods called via @wire. The exam tests which approach to use for a given data-fetching scenario."
+        "heading": "The Event Loop",
+        "body": "JavaScript runs one thing at a time. Synchronous code runs to completion on the call stack. When the stack empties, the runtime drains the microtask queue, which is where promise callbacks go, and only then takes one task from the macrotask queue, which is where setTimeout and setInterval callbacks go. That ordering is the whole answer to most execution-order questions: all synchronous logging first, then promise callbacks, then timer callbacks, even a setTimeout with a delay of zero. It is also why a long synchronous loop freezes the page, since nothing else can run until the stack clears. Knowing this one model well is worth more marks than any other single topic on the exam."
       },
       {
-        "heading": "Security in LWC and LockerService",
-        "body": "Locker Service is Salesforce's security architecture for Lightning components &mdash; it isolates components from each other and restricts access to the DOM. **LWC** uses Lightning Web Security (LWS) &mdash; similar isolation but more permissive for standard APIs. The exam tests what Locker/LWS prevents (direct DOM manipulation of other components, eval(), dangerous APIs). Permission checks should be done server-side in **Apex**, not in the component (UI checks can be bypassed). CRUD and FLS enforcement belongs in the @AuraEnabled Apex method, not the component."
+        "heading": "Lightning Web Components: Lifecycle, Apex and Security",
+        "body": "LWC is built on web component standards, so a component is a custom element with its own shadow tree. The lifecycle hooks have specific moments: constructor runs before the component is in the DOM and must not touch it, connectedCallback runs when it is inserted and is where you start work that does not need rendered markup, renderedCallback runs after every render and so must guard against repeating itself, and disconnectedCallback is where you clean up subscriptions and listeners. For data, the wire service is declarative and reactive: it fetches when its parameters change and is right for reading. Imperative calls are made from JavaScript when you need control over timing, such as on a button click, or when the call changes data. Events travel up: by default an event raised inside a shadow tree does not cross the boundary unless it is created with composed true, which is why custom events are usually handled by the immediate parent. Lightning Web Security replaced LockerService and restricts what component code can reach, including direct DOM access outside the component's own tree."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce JavaScript Developer I Exam",
-    "intro": "The JavaScript Developer I exam tests core JavaScript and modern web concepts applied in the Salesforce context. Treat it as a JavaScript fundamentals exam first — LWC knowledge is important, but strong ES6+ and async programming foundations are what carry candidates through.",
+    "intro": "Treat the language half as the exam and the platform half as a supplement. Nearly everything here is testable in a console in under a minute.",
     "blocks": [
       {
-        "heading": "Master ES6+ Syntax",
-        "body": "Arrow functions, destructuring, spread/rest operators, template literals, modules (import/export), and classes are heavily tested. Know how each differs from ES5 equivalents and common pitfalls."
+        "heading": "Predict, Then Run",
+        "body": "Write snippets, guess the output, then execute. This single habit covers closures, hoisting, this binding and execution order."
       },
       {
-        "heading": "Promises & Async/Await",
-        "body": "Understand the Promise lifecycle (pending, fulfilled, rejected), chaining with .then()/.catch()/.finally(), and how async/await is syntactic sugar over promises. Know how errors propagate and how Promise.all() works."
+        "heading": "The Three Queues",
+        "body": "Call stack, then microtasks, then one macrotask. Promise callbacks beat setTimeout every time, including setTimeout zero."
       },
       {
-        "heading": "Closures, Scope & 'this'",
-        "body": "These classic JavaScript topics appear frequently. Understand lexical scope, how closures capture variables from outer functions, and the four rules that determine what 'this' refers to (default, implicit, explicit, new binding)."
+        "heading": "Four Cases for this",
+        "body": "Method call, standalone call, arrow function, and a method passed as a callback. Know what this is in each."
       },
       {
-        "heading": "LWC Lifecycle & Reactivity",
-        "body": "Know the **LWC** component lifecycle hooks: constructor, connectedCallback, renderedCallback, disconnectedCallback. Understand reactive properties, how @track (legacy) and @api work, and how the wire service fetches data reactively."
+        "heading": "Promise Combinators by Behaviour",
+        "body": "all rejects fast, allSettled never rejects, race settles first. Questions describe the behaviour rather than naming the method."
       },
       {
-        "heading": "The Event Loop & Web APIs",
-        "body": "Understand call stack, event loop, microtask queue (promises), and macrotask queue (setTimeout). Know the fetch API, async patterns for HTTP calls, and how **LWC**'s shadow DOM restricts direct DOM manipulation."
+        "heading": "Lifecycle Hooks by Timing",
+        "body": "connectedCallback for setup without the DOM, renderedCallback after every render so guard it, disconnectedCallback for cleanup."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Developer",
-    "intro": "After this certification, common next steps in the developer track:",
+    "intro": "Where developers usually go next:",
     "links": [
       {
         "href": "/certifications/developer-2",
@@ -125,7 +125,7 @@
         "label": "Platform App Builder"
       },
       {
-        "href": "/certifications/role/developer",
+        "href": "/developer-certification-path",
         "label": "Developer certification path"
       }
     ]

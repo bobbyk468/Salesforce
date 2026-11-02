@@ -4,44 +4,44 @@
     "heading": "Who is the Marketing Cloud Engagement Foundations exam for?",
     "personas": [
       {
-        "label": "Marketing Cloud beginners",
-        "description": "You are new to Marketing Cloud Engagement and want an entry-level credential to validate your foundational knowledge."
+        "label": "People new to Marketing Cloud Engagement",
+        "description": "You have a few weeks or months in the tool and want a credential that proves you can find your way around it."
       },
       {
-        "label": "Digital marketers exploring Salesforce",
-        "description": "You work in email or digital marketing and want to demonstrate that you understand the Marketing Cloud platform basics."
+        "label": "Email marketers moving off another platform",
+        "description": "You know campaigns and deliverability from Mailchimp, Braze or HubSpot and need the Salesforce vocabulary for the same ideas."
       },
       {
-        "label": "Career changers entering the Salesforce ecosystem",
-        "description": "You are building a Salesforce career and want a low-cost, entry-level marketing certification to add to your resume."
+        "label": "Admins who inherited the marketing org",
+        "description": "Someone has to own Marketing Cloud and it turned out to be you. This covers the ground you are expected to know."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Marketing Cloud Engagement Foundations Exam Hard?",
-    "summary": "The Engagement Foundations exam is one of the easier Salesforce certifications. It is designed for people with up to 6 months of Marketing Cloud experience and tests basic platform navigation, email sends, subscriber management, and core reporting metrics. This is a great starting point if you are new to Marketing Cloud.",
+    "summary": "This is one of the gentler Salesforce exams. It is aimed at people with up to six months in Marketing Cloud Engagement and it checks that you can navigate the studios, send an email properly, tell a list apart from a data extension and read a tracking report. There is no coding and no data architecture.",
     "bullets": [
-      "<strong>40 multiple-choice questions</strong> in 70 minutes.",
-      "<strong>~62% passing score</strong> — you need to answer roughly 26 out of 40 questions correctly.",
-      "<strong>Entry-level content</strong> — no coding, no advanced data architecture. The focus is on navigating Email Studio, understanding subscriber lists vs Data Extensions, and basic Journey Builder workflows.",
-      "<strong>Lower cost barrier</strong> — at $75, this exam is significantly cheaper than role-based certifications."
+      "<strong>40 questions in 70 minutes.</strong> Over a minute and a half each, which is comfortable for questions this size.",
+      "<strong>Passing score is around 62%,</strong> so roughly 26 right out of 40.",
+      "<strong>Breadth, not depth.</strong> You need to know what each studio is for rather than how to build anything complicated in it.",
+      "<strong>$75,</strong> which is a quarter of what the role-based exams cost. The cheapest way to find out whether Marketing Cloud suits you."
     ],
-    "passRateGuidance": "Complete the Marketing Cloud Engagement Foundations Trailhead module and spend at least a few weeks using the platform. If you can navigate Email Studio and explain the subscriber data model, you are likely ready."
+    "passRateGuidance": "You are ready when you can log into a Marketing Cloud org and, without clicking around hunting for things, build a data extension, create an email in Content Builder, send it to a segment and then find the open and click numbers afterwards. If any of those four still takes you a while, spend another week in the tool."
   },
   "examFormat": {
     "heading": "Marketing Cloud Engagement Foundations Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 30-40% of questions are scenario-based. They focus on practical tasks like choosing the right audience source for an email send or interpreting basic tracking metrics.",
+    "intro": "Proctored online or at a test centre. The shape of it:",
+    "scenarioPercent": "Somewhere around a third of the questions put you in a situation rather than asking for a definition. Usually it is a choice of audience source for a send, or a tracking number you have to interpret.",
     "bestWayToPass": [
-      "<strong>Learn the core studios:</strong> Know what Email Studio, Mobile Studio, Advertising Studio, Social Studio, and Journey Builder each do at a high level.",
-      "<strong>Understand subscribers vs Data Extensions:</strong> Know the All Subscribers list, Publication Lists, Suppression Lists, and when to use Data Extensions instead of lists.",
-      "<strong>Practice basic email sends:</strong> Walk through the guided send process, understand send classifications, and know how to use test sends.",
-      "<strong>Study tracking metrics:</strong> Know what Delivered, Opened, Clicked, Bounced (hard vs soft), and Unsubscribed mean and how to find these reports in the UI."
+      "<strong>Spend the time in the tool, not in notes.</strong> Marketing Cloud has an unusual interface and the exam assumes you have used it. A free trial or a work org beats any amount of reading.",
+      "<strong>Get lists versus data extensions straight.</strong> This single distinction sits behind more questions than any other topic. Lists are the old subscriber model; data extensions are tables you define, and almost everything modern uses them.",
+      "<strong>Send a real email end to end.</strong> Build it in Content Builder, pick an audience, set a send classification, do a test send, then go and read the tracking. Doing it once teaches you more than five pages about it.",
+      "<strong>Learn what the bounce types mean.</strong> Hard versus soft bounce, and what each one does to the subscriber record, comes up reliably."
     ]
   },
   "certificationCard": {
     "code": "Marketing Associate",
-    "description": "An entry-level exam for anyone new to Marketing Cloud Engagement. It covers Email Studio basics, subscriber lists vs. Data Extensions, simple Journey Builder workflows, and core reporting metrics.",
+    "description": "The entry-level Marketing Cloud Engagement exam. It covers finding your way around the studios, building and sending email from Content Builder, the difference between subscriber lists and data extensions, simple journeys, and reading tracking reports.",
     "examDetails": {
       "questions": 40,
       "passingScore": "~62%",
@@ -63,68 +63,68 @@
     "h2": "Marketing Cloud Engagement Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Email Studio: Content Builder and Templates",
-        "body": "**Content Builder** is the unified content management interface for emails, templates, blocks, and images. Email Templates use drag-and-drop layout blocks or HTML/**AMPscript**. Saved content blocks are reusable components — update once, updated everywhere. Guided Send walks through sending options step by step. The Foundations exam focuses on navigating Marketing Cloud and understanding the core feature set — it is the entry-level certification. Know how to create, preview, and test-send an email from start to finish."
+        "heading": "Email Studio and Content Builder",
+        "body": "Content Builder is where emails, images and reusable blocks live. You build an email from a template, drop content blocks into its regions, and personalise it with AMPscript or personalisation strings that pull from the sending audience. Two things matter for the exam. First, content is shared: a block edited in one place changes everywhere it is used, which is the point of templates but catches people out. Second, a send needs three pieces to exist before it will go anywhere, an email, an audience, and a send classification that carries the sender profile and delivery profile. If a question describes a send that will not launch, a missing one of those three is usually the reason."
       },
       {
-        "heading": "Subscriber and List Management Basics",
-        "body": "**All Subscribers list** is the global subscriber table. Publication Lists let subscribers opt in or out of specific content types. Suppression Lists prevent sends to specific addresses. The Foundations exam tests the difference between these list types and when to use each. Subscriber statuses: Active, Unsubscribed, Bounced, Held. Unsubscribes process globally and cannot be reversed without subscriber consent. Import Wizard loads subscribers from CSV files — field mapping and import type (Add/Update, Overwrite) are tested."
+        "heading": "Lists, Data Extensions and Contact Builder",
+        "body": "Marketing Cloud has two generations of audience storage sitting side by side. Subscriber lists are the original model: a flat set of subscribers, each with a subscriber key, plus profile and preference attributes defined once for the whole account. Data extensions are tables you define yourself, with your own columns and a primary key, and they are where serious work happens because you control the fields and can relate them to each other. Contact Builder is the layer above both, where contacts from every channel are linked together by contact key and where you set up data relationships. For the exam: use a list for a simple newsletter, a data extension when you need fields of your own or more than a handful of attributes."
       },
       {
-        "heading": "Automation Studio Basics",
-        "body": "**Automation Studio** orchestrates multi-step marketing processes. Scheduled automations run on a time-based trigger. File Drop automations trigger when a file is uploaded to an FTP location. Automation activities: Import File (load data), SQL Query (segment data), Data Extract (export data), Send Email, Filter (create filtered DEs). Activities run sequentially within a step; multiple activities in the same step run in parallel. The Foundations exam tests basic automation workflow design and what each activity type does."
+        "heading": "Automation Studio",
+        "body": "Automation Studio runs sequences of activities on a schedule or when a file lands in the FTP folder. The activities you should recognise are imports, SQL queries that write their results into a data extension, file transfers, data extracts, and the send activity itself. The usual pattern in the exam is a nightly automation that imports a file, runs a query to build a segment, then sends to it. Two distinctions are worth holding on to: Automation Studio is batch and scheduled, while Journey Builder reacts to individual contacts over time; and a SQL query here writes into a data extension rather than returning rows to the screen."
       },
       {
-        "heading": "Journey Builder Basics",
-        "body": "**Journey Builder** creates event-triggered, multi-step customer journeys. Entry Sources: Data Extension entry (scheduled or real-time), Salesforce Entry (CRM record trigger), API Event, CloudPage Submit, Audience entry. Activities: Send Email, Send SMS, Wait (fixed time), Decision Split (audience split by criteria), Random Split (percentage-based A/B). Exit Criteria can remove contacts mid-journey. The Foundations exam tests how to design a simple linear journey — entry source, email activity, wait, exit."
+        "heading": "Journey Builder",
+        "body": "A journey is a path a single contact travels. It starts from an entry source, usually a data extension or an API event, and then moves the contact through activities: sends, waits, decision splits, updates. Entry is governed by two settings that questions like to probe, how often the journey re-evaluates its entry source, and whether a contact who has been through before is allowed back in. You should also know the difference between a decision split, which routes on data you already hold, and an engagement split, which routes on whether the contact opened or clicked. Journeys are versioned: once one is running you cannot edit it, you create a new version."
       },
       {
-        "heading": "Tracking and Reporting Basics",
-        "body": "The Tracking workspace shows aggregated send performance across campaigns. Key metrics: Delivered (sent - bounced), Unique Opens (tracked via 1x1 pixel), Unique Clicks (tracked via link rewrite), Bounce Rate (hard = permanent, soft = temporary), Unsubscribe Rate. Reports in the Reports section provide date-range summaries across accounts and BUs. Email Send Reports show per-send performance. The Foundations exam tests which metric answers a given business question and how to locate reports in the Marketing Cloud UI."
+        "heading": "Tracking and Reporting",
+        "body": "Every send produces the same core numbers and you need to read them the way the platform defines them. Sent is how many went out, delivered is sent minus bounces, and opens and clicks are counted against delivered. A hard bounce means the address is permanently bad and the subscriber will be marked undeliverable after it happens; a soft bounce is temporary, a full mailbox or a server refusing for now, and the platform will retry. Unsubscribes come back through the profile centre and land on the All Subscribers record, which is why someone who unsubscribes from one list stops receiving everything unless publication lists are in play. Tracking lives per job in Email Studio, with the cross-channel view in Analytics Builder."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Marketing Cloud Engagement Foundations Exam",
-    "intro": "The Marketing Cloud Engagement Foundations exam tests foundational knowledge of the platform for new users. Focus on understanding the core studios, the subscriber data model, and basic email campaign execution.",
+    "intro": "This exam rewards hands-on familiarity over revision. Most of the questions are things you would know after a month of actually using the platform.",
     "blocks": [
       {
-        "heading": "Core Studios Overview",
-        "body": "Know what each studio does: **Email Studio** (email campaigns), **Mobile Studio** (SMS/push), **Advertising Studio** (digital ads), **Social Studio** (social media), and **Journey Builder** (cross-channel orchestration)."
+        "heading": "Know What Each Studio Does",
+        "body": "Email, Mobile, Advertising, Journey Builder, Automation Studio, Content Builder, Contact Builder, Analytics Builder. One sentence each on what it is for is enough."
       },
       {
-        "heading": "Subscriber Data Model",
-        "body": "Understand All Subscribers, Lists, and **Data Extensions**. Know when lists are appropriate (simple, volume-based segments) vs. data extensions (relational data, complex attributes)."
+        "heading": "Lists Versus Data Extensions",
+        "body": "The most reliable topic on the exam. Know what each one is, what a subscriber key is, and why a data extension is the right answer for anything with custom fields."
       },
       {
-        "heading": "Basic Email Send Process",
-        "body": "Know the steps to send an email: select an audience (list or data extension), choose a send classification, configure tracking, and initiate a send. Understand how to use guided sends vs. the send wizard."
+        "heading": "Walk the Guided Send",
+        "body": "Do a real send, including the test send and the send classification. The exam asks about steps in this process more than once."
       },
       {
-        "heading": "Contact Builder Overview",
-        "body": "Understand **Contact Builder**'s role in unifying subscriber data: Attribute Groups, Relationships, and how data extension data links to the Contact record via Contact Key."
+        "heading": "Bounce and Unsubscribe Behaviour",
+        "body": "Hard versus soft, what happens to the subscriber record, and where an unsubscribe is recorded. Short topic, dependable marks."
       },
       {
-        "heading": "Reporting Fundamentals",
-        "body": "Know the core email metrics: Sent, Delivered, Bounced (hard/soft), Opened, Clicked, Unsubscribed, and Spam Complaints. Understand how to access Tracking reports and what each metric measures."
+        "heading": "Read a Tracking Report",
+        "body": "Know what delivered, open rate, click-through rate and bounce rate are each calculated against. Questions give you numbers and ask what they mean."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Associate",
-    "intro": "After earning an associate credential, many candidates move to role-based certifications:",
+    "intro": "Where people usually go after this one:",
     "links": [
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator (ADM-201)"
+        "href": "/certifications/marketing-cloud-engagement-admin",
+        "label": "Marketing Cloud Administrator"
       },
       {
-        "href": "/certifications/developer-1",
-        "label": "Platform Developer I"
+        "href": "/certifications/email-specialist",
+        "label": "Marketing Cloud Email Specialist"
       },
       {
-        "href": "/certifications/ai-associate",
-        "label": "AI Associate"
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Consultant"
       }
     ]
   },
@@ -164,243 +164,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Who is the Marketing Cloud Engagement Foundations certification designed for?",
+      "question": "A marketer needs to store 20 custom fields about each customer, including purchase history and loyalty tier, to use in email personalisation. What should they use?",
       "options": [
-        "Architects only",
-        "Individuals with foundational understanding of the platform and up to 6 months of Marketing Cloud experience",
-        "Sales only",
-        "Developers only"
+        "A suppression list",
+        "A data extension with columns for each field",
+        "A publication list",
+        "A subscriber list with profile attributes"
       ],
       "correctAnswer": 1,
-      "explanation": "It is designed for individuals with foundational understanding and up to 6 months of Marketing Cloud Engagement experience.",
+      "explanation": "Data extensions let you define your own columns, which is what storing 20 custom fields requires.",
       "whyWrong": [
-        "'Architects only' is too narrow — this is an entry-level, foundational credential, not an architect-level one.",
-        "'Sales only' is too narrow — this certification is for anyone with foundational Marketing Cloud experience, not a specific role.",
-        "'Developers only' is too narrow — this foundational certification targets general platform users, not developers specifically."
+        "Suppression lists hold addresses to exclude from sends.",
+        "Publication lists group subscribers for opt-out purposes; they do not store custom fields.",
+        "Profile attributes are defined once for the whole account and are not suited to this volume of record-specific data."
       ]
     },
     {
-      "question": "Which Marketing Cloud product is used for email campaigns?",
+      "question": "An email send fails to launch. The email and the audience both exist. What is the most likely missing piece?",
       "options": [
-        "Commerce Cloud",
-        "Heroku",
-        "Slack",
-        "Email Studio"
+        "A second data extension",
+        "A journey version",
+        "An Analytics Builder report",
+        "A send classification"
       ],
       "correctAnswer": 3,
-      "explanation": "Email Studio is used for building and sending email campaigns.",
+      "explanation": "A send needs an email, an audience and a send classification, which carries the sender and delivery profiles.",
       "whyWrong": [
-        "Commerce Cloud is an e-commerce platform, unrelated to email campaigns.",
-        "Heroku is a PaaS platform, unrelated to email campaigns.",
-        "Slack is a collaboration tool, unrelated to email campaign sending."
+        "One audience is enough for a send.",
+        "Journeys are a separate feature and are not required for an Email Studio send.",
+        "Reporting happens after a send and cannot prevent one."
       ]
     },
     {
-      "question": "What is a Subscriber in Marketing Cloud?",
+      "question": "What happens to a subscriber record after a hard bounce?",
       "options": [
-        "A contact or recipient who can receive marketing communications",
-        "A report",
-        "An admin",
-        "A dashboard"
+        "The subscriber is added to a publication list",
+        "The address is treated as permanently undeliverable and the subscriber is marked accordingly",
+        "The platform retries the send for several days",
+        "Nothing, because hard bounces are temporary"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A hard bounce means the address does not exist or has permanently rejected mail, so the platform stops sending to it.",
+      "whyWrong": [
+        "Publication lists are for opt-out management, not bounce handling.",
+        "Retrying is what happens after a soft bounce.",
+        "Soft bounces are the temporary kind; hard bounces are permanent."
+      ]
+    },
+    {
+      "question": "A nightly process must import a file from the FTP folder, build a segment from it with SQL, then email that segment. Which tool is designed for this?",
+      "options": [
+        "Journey Builder",
+        "Contact Builder",
+        "Automation Studio",
+        "Content Builder"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Automation Studio chains scheduled or file-triggered activities such as imports, queries and sends.",
+      "whyWrong": [
+        "Journey Builder moves individual contacts along a path rather than running batch jobs.",
+        "Contact Builder manages contact data relationships.",
+        "Content Builder stores email content and assets."
+      ]
+    },
+    {
+      "question": "What is the difference between a decision split and an engagement split in a journey?",
+      "options": [
+        "They are the same feature with different names",
+        "A decision split is faster",
+        "A decision split routes on stored data; an engagement split routes on opens or clicks",
+        "An engagement split can only be used once per journey"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Decision splits read attributes you already hold. Engagement splits react to how the contact behaved with a previous send.",
+      "whyWrong": [
+        "They evaluate genuinely different things.",
+        "Speed is not the distinction between them.",
+        "There is no such single-use restriction."
+      ]
+    },
+    {
+      "question": "A running journey needs a change to one of its email sends. What must the marketer do?",
+      "options": [
+        "Create a new version of the journey",
+        "Pause Automation Studio first",
+        "Edit the running journey in place",
+        "Delete the journey and rebuild it"
       ],
       "correctAnswer": 0,
-      "explanation": "A subscriber is a contact or recipient in Marketing Cloud.",
+      "explanation": "Journeys are versioned, and a running version is locked. Changes go into a new version.",
       "whyWrong": [
-        "A report displays data — it isn't itself a person who receives communications.",
-        "An admin manages the platform — that's a role, not the recipient concept being described.",
-        "A dashboard visualizes data — it isn't a recipient of marketing communications."
+        "Automation Studio is unrelated to editing a journey.",
+        "A running journey cannot be edited directly.",
+        "Deleting loses the history and is unnecessary when versioning exists."
       ]
     },
     {
-      "question": "Which concept is central to Marketing Cloud data?",
+      "question": "A subscriber clicks unsubscribe in an email. What is the default effect?",
       "options": [
-        "Only emails",
-        "Only journeys",
-        "Only reports",
-        "Data Extensions and subscriber management"
+        "They are removed from the account entirely",
+        "Their data extension row is deleted",
+        "They are recorded as unsubscribed on All Subscribers and stop receiving sends from the account",
+        "Only that one email is blocked"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Unless publication lists are in use, an unsubscribe applies at the All Subscribers level across the account.",
+      "whyWrong": [
+        "The record remains; its status changes.",
+        "Unsubscribing does not delete stored data.",
+        "A single-email opt-out is not the default behaviour."
+      ]
+    },
+    {
+      "question": "An email template block is edited in Content Builder. What happens to the emails that use it?",
+      "options": [
+        "The block is duplicated for each email",
+        "Nothing until each email is republished",
+        "Only new emails pick up the change",
+        "They all reflect the change, because content is shared"
       ],
       "correctAnswer": 3,
-      "explanation": "Data Extensions and subscriber management are central to Marketing Cloud data.",
+      "explanation": "Shared content is the point of Content Builder, and it means an edit propagates to everything using that block.",
       "whyWrong": [
-        "'Only emails' undersells the central data concept, which spans data structure, not just the email channel.",
-        "'Only journeys' undersells the central data concept, which is broader than just journey orchestration.",
-        "'Only reports' undersells the central data concept, which is about Data Extensions and subscriber management broadly."
+        "Blocks are referenced, not copied.",
+        "No republishing step is required for shared content.",
+        "Existing emails use the same shared block."
       ]
     },
     {
-      "question": "What does Journey Builder allow marketers to do?",
+      "question": "Which number does the delivered figure on a tracking report represent?",
       "options": [
-        "Only run reports",
-        "Only send one email",
-        "Create multi-step, automated customer journeys",
-        "Only manage lists"
+        "Sent minus bounces",
+        "Sent minus unsubscribes",
+        "The size of the audience before exclusions",
+        "Opens plus clicks"
       ],
-      "correctAnswer": 2,
-      "explanation": "Journey Builder creates multi-step, automated customer journeys.",
+      "correctAnswer": 0,
+      "explanation": "Delivered is what reached the mailbox, which is the sent total less anything that bounced.",
       "whyWrong": [
-        "'Only run reports' misattributes Journey Builder's purpose to a different reporting function.",
-        "'Only send one email' is the opposite of Journey Builder's multi-step orchestration capability.",
-        "'Only manage lists' misattributes Journey Builder's purpose to a different data management function."
+        "Unsubscribes are recorded separately and do not reduce the delivered count.",
+        "Audience size before exclusions is larger than the sent total.",
+        "Opens and clicks are engagement measured against delivered."
       ]
     },
     {
-      "question": "What is a Data Extension in Marketing Cloud?",
+      "question": "What identifies a contact across channels in Marketing Cloud Engagement?",
       "options": [
-        "A journey",
-        "An email template",
-        "A report only",
-        "A table that stores contact and marketing data"
+        "The journey version number",
+        "The record ID",
+        "The email address",
+        "The contact key"
       ],
       "correctAnswer": 3,
-      "explanation": "Data Extensions store contact and marketing data for sends and journeys.",
+      "explanation": "The contact key is the single identifier that ties a person's email, mobile and other channel records together.",
       "whyWrong": [
-        "A journey orchestrates communication — it isn't itself a data storage structure.",
-        "An email template is a content asset, not a data storage structure.",
-        "A report alone displays data — it isn't the underlying storage table."
+        "Journey versions describe a journey, not a person.",
+        "Record IDs belong to core Salesforce, not Marketing Cloud contacts.",
+        "Email addresses change and are not the cross-channel identifier."
       ]
     },
     {
-      "question": "Which Marketing Cloud product sends scheduled emails?",
+      "question": "A marketer wants to let subscribers opt out of a monthly newsletter without losing transactional email. What should they set up?",
       "options": [
-        "Email Studio or Automation Studio",
-        "Journey Builder only",
-        "Heroku",
-        "Slack"
+        "A publication list for the newsletter",
+        "A second contact key for each subscriber",
+        "A separate Marketing Cloud account",
+        "A suppression list of all subscribers"
       ],
       "correctAnswer": 0,
-      "explanation": "Email Studio and Automation Studio send scheduled emails.",
+      "explanation": "Publication lists let subscribers opt out of one category of mail while continuing to receive others.",
       "whyWrong": [
-        "'Journey Builder only' misattributes scheduled email sending to a different tool focused on multi-step journeys.",
-        "Heroku is a PaaS platform, unrelated to scheduled email sending.",
-        "Slack is a collaboration tool, unrelated to scheduled email sending."
+        "Duplicate contact keys would fragment the contact record.",
+        "A separate account is a disproportionate and expensive answer.",
+        "Suppressing everyone would stop all mail, which is the opposite of the goal."
       ]
     },
     {
-      "question": "What does a Send Definition define?",
+      "question": "What does a SQL Query activity in Automation Studio do with its results?",
       "options": [
-        "Audience, content, and send timing",
-        "Only subject",
-        "Only content",
-        "Only audience"
+        "Emails them to the account owner",
+        "Displays them on screen for review",
+        "Writes them into a target data extension",
+        "Creates a new subscriber list automatically"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Queries in Automation Studio are configured with a target data extension and write their output there.",
+      "whyWrong": [
+        "Query results are not emailed by default.",
+        "There is no interactive results grid for a scheduled query activity.",
+        "The target is a data extension, not a list."
+      ]
+    },
+    {
+      "question": "Which is the clearest sign that a journey should re-evaluate its entry source more often?",
+      "options": [
+        "The account has more than one business unit",
+        "New qualifying contacts are arriving throughout the day and should enter promptly",
+        "The journey has too many decision splits",
+        "The emails have low open rates"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Entry source evaluation frequency controls how quickly newly qualifying contacts are picked up.",
+      "whyWrong": [
+        "Business unit structure is unrelated to entry frequency.",
+        "The number of splits has nothing to do with entry evaluation.",
+        "Open rates are a content and audience problem."
+      ]
+    },
+    {
+      "question": "A test send is run before a campaign. What is its purpose?",
+      "options": [
+        "To check rendering and personalisation before the real audience receives it",
+        "To create the tracking report",
+        "To count the audience",
+        "To warm up the sending IP address"
       ],
       "correctAnswer": 0,
-      "explanation": "Send Definition defines audience, content, and timing.",
+      "explanation": "Test sends exist so you can see the email as a subscriber would, with personalisation resolved, before committing.",
       "whyWrong": [
-        "'Only subject' undersells a Send Definition, which covers audience and timing too.",
-        "'Only content' undersells a Send Definition, which also covers audience and timing.",
-        "'Only audience' undersells a Send Definition, which also covers content and timing."
+        "Tracking is produced by the real send.",
+        "Audience counts are visible when the audience is selected.",
+        "IP warming is a deliverability exercise handled separately."
       ]
     },
     {
-      "question": "Which concept tracks email engagement?",
+      "question": "Which statement about soft bounces is correct?",
       "options": [
-        "Only sends",
-        "Only clicks",
-        "Opens, clicks, bounces, and unsubscribes",
-        "Only opens"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes.",
-      "whyWrong": [
-        "'Only sends' undersells engagement tracking, which covers opens, clicks, bounces, and unsubscribes.",
-        "'Only clicks' undersells engagement tracking, which covers opens, bounces, and unsubscribes too.",
-        "'Only opens' undersells engagement tracking, which covers clicks, bounces, and unsubscribes too."
-      ]
-    },
-    {
-      "question": "What is the purpose of a List in Marketing Cloud?",
-      "options": [
-        "To create reports only",
-        "To group subscribers for sends (legacy or simple use cases)",
-        "To create journeys only",
-        "To replace Data Extensions"
+        "They permanently mark the address undeliverable",
+        "They are temporary failures and the platform will retry",
+        "They are counted as delivered",
+        "They trigger an automatic unsubscribe"
       ],
       "correctAnswer": 1,
-      "explanation": "Lists group subscribers for sends in simple use cases.",
+      "explanation": "A soft bounce is a temporary condition such as a full mailbox, so delivery is attempted again.",
       "whyWrong": [
-        "'To create reports only' misattributes a List's purpose to a different function (reporting).",
-        "'To create journeys only' misattributes a List's purpose to a different tool (Journey Builder).",
-        "Lists don't replace Data Extensions — they serve a simpler, complementary purpose."
-      ]
-    },
-    {
-      "question": "Which entry source can start a Journey Builder journey?",
-      "options": [
-        "Push only",
-        "Data extension, API, form, or campaign",
-        "Email only",
-        "SMS only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Entry sources include data extension, API, form, or campaign.",
-      "whyWrong": [
-        "'Push only' undersells the broader set of entry sources beyond a single channel.",
-        "'Email only' undersells the broader set of entry sources (API, form, campaign) that can start a journey.",
-        "'SMS only' undersells the broader set of entry sources beyond a single channel."
-      ]
-    },
-    {
-      "question": "What does Marketing Cloud Engagement encompass?",
-      "options": [
-        "Email, mobile, and digital engagement capabilities",
-        "Only email",
-        "Only SMS",
-        "Only social"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Engagement encompasses email, mobile, and digital.",
-      "whyWrong": [
-        "'Only email' undersells Marketing Cloud Engagement's broader mobile and digital engagement capabilities.",
-        "'Only SMS' undersells the broader set of channels Marketing Cloud Engagement encompasses.",
-        "'Only social' undersells the broader set of channels Marketing Cloud Engagement encompasses."
-      ]
-    },
-    {
-      "question": "Which report type shows email performance?",
-      "options": [
-        "Only opens",
-        "Tracking (opens, clicks, etc.) and send summary",
-        "Only sends",
-        "Only bounces"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Tracking and send summary reports show email performance.",
-      "whyWrong": [
-        "'Only opens' undersells the tracking report, which covers broader engagement metrics.",
-        "'Only sends' undersells the tracking report, which covers opens, clicks, and more, not just send counts.",
-        "'Only bounces' undersells the tracking report, which covers broader engagement metrics."
-      ]
-    },
-    {
-      "question": "What is a Subscriber Key?",
-      "options": [
-        "A list name",
-        "A password",
-        "The unique identifier for a subscriber in Marketing Cloud",
-        "An email address only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Subscriber Key uniquely identifies a subscriber.",
-      "whyWrong": [
-        "A list name is a grouping label, not a unique subscriber identifier.",
-        "A password is a security credential, unrelated to a subscriber's unique identifier.",
-        "An email address alone doesn't capture the broader unique-identifier concept a Subscriber Key represents."
-      ]
-    },
-    {
-      "question": "Which best practice applies to Marketing Cloud Engagement?",
-      "options": [
-        "No segmentation",
-        "No hygiene",
-        "List hygiene, segmentation, and deliverability practices",
-        "Send to all"
-      ],
-      "correctAnswer": 2,
-      "explanation": "List hygiene, segmentation, and deliverability support success.",
-      "whyWrong": [
-        "'No segmentation' contradicts the fact that segmentation is a core best practice.",
-        "'No hygiene' contradicts the fact that list hygiene is a core best practice.",
-        "Sending to all without hygiene/segmentation is the opposite of the recommended best practice."
+        "Permanent failure describes a hard bounce.",
+        "A bounce of any kind is not a delivery.",
+        "Bounces and unsubscribes are separate events."
       ]
     }
   ]

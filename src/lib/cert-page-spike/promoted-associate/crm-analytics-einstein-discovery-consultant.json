@@ -4,44 +4,44 @@
     "heading": "Who is the CRM Analytics Einstein Discovery Consultant exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with CRM Analytics and Einstein Discovery features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "Analysts building in CRM Analytics",
+        "description": "You already make dashboards and now need the data layer: recipes, dataflows, security predicates and how predictions get back into Salesforce."
       },
       {
-        "label": "Consultants and admins",
-        "description": "You support Salesforce projects where CRM Analytics, Einstein Discovery, and Dashboards decisions affect the final design."
+        "label": "Admins asked to own analytics",
+        "description": "Reports and dashboards have hit their limit and CRM Analytics is the next step. This covers what that involves."
       },
       {
-        "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for consultant roles."
+        "label": "Consultants on analytics projects",
+        "description": "You scope and deliver these builds and need to know where the real constraints are, particularly around row-level security."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the CRM Analytics Einstein Discovery Consultant Exam Hard?",
-    "summary": "The CRM Analytics Einstein Discovery Consultant exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "Moderate, with a hard edge in two places. Row-level security through predicates and sharing inheritance is where candidates lose most marks, and Einstein Discovery model quality, bias checking and deployment is the part people have least hands-on experience with. The dashboard and dataset questions are fair.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use CRM Analytics, Einstein Discovery, or Dashboards.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported CRM Analytics and Einstein Discovery in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 questions in 105 minutes.</strong> Some questions show a predicate or a recipe step and ask what it does.",
+      "<strong>Around 65% to pass.</strong>",
+      "<strong>Security is the hard section.</strong> Security predicates, inherited sharing, and what each one can and cannot express.",
+      "<strong>Einstein Discovery is half the exam's name.</strong> Story creation, model metrics, bias, and writing predictions back to records."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Two things tell you whether you are ready. Can you write a security predicate for a requirement such as managers see their team's rows, and say when inherited sharing is the better answer? And can you look at a story's model and say whether it is good enough to deploy, and why? If either is shaky, that is where the marks are."
   },
   "examFormat": {
     "heading": "CRM Analytics Einstein Discovery Consultant Exam Format Explained",
-    "intro": "The CRM Analytics Einstein Discovery Consultant exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for CRM Analytics and Einstein Discovery.",
+    "intro": "Proctored online or at a test centre. The shape of it:",
+    "scenarioPercent": "Most questions are a requirement followed by four approaches, often with more than one that would work. The distinguishing factor is usually maintainability: a recipe over a dataflow, inherited sharing over a hand-written predicate, standard embedding over custom code.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on CRM Analytics, Einstein Discovery, and Dashboards because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Build a recipe, not just a dashboard.</strong> Load data, join it, aggregate it, output a dataset. The transformation questions become obvious once you have done this.",
+      "<strong>Practise security predicates until the syntax is automatic.</strong> They are the most commonly failed topic and they are learnable in an afternoon.",
+      "<strong>Create a story end to end.</strong> Pick a dataset, let Discovery build a model, read the metrics, then deploy the prediction to an object. Doing it once covers a surprising amount of ground.",
+      "<strong>Know when SAQL is actually needed.</strong> Most dashboard work does not require it, and the exam tests whether you know where the line is as much as it tests the syntax."
     ]
   },
   "certificationCard": {
     "code": "Analytics & Discovery",
-    "description": "This exam covers building dashboards, dataflows, and predictive models in CRM Analytics and Einstein Discovery. You’ll need hands-on knowledge of SAQL, dataset security, and deploying AI-driven predictions back to Salesforce records.",
+    "description": "Covers the full CRM Analytics build: getting data in with dataflows and recipes, designing lenses and dashboards, row-level security, and using Einstein Discovery to create stories, evaluate models and write predictions back onto Salesforce records.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -65,72 +65,72 @@
     "h2": "CRM Analytics & Einstein Discovery: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Data Architecture: Datasets & Dataflows",
-        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (formerly Tableau CRM / **Einstein Analytics**) stores data in Datasets — optimized columnar data stores separate from the Salesforce database. Dataflows define how data is extracted from Salesforce objects, joined, aggregated, and loaded into datasets — using a JSON-based recipe. Recipes (Data Prep) provide a visual ETL interface for data transformation. External data can be loaded via CSV upload or connected datasets. Incremental sync keeps datasets fresh with only changed records. The consultant exam tests how to design a dataflow for a multi-object scenario (e.g., joining Accounts, Opportunities, and Cases), how to configure incremental sync, and how to troubleshoot failed dataflow jobs."
+        "heading": "Datasets, Dataflows and Recipes",
+        "body": "Everything in CRM Analytics queries a dataset, which is a columnar snapshot built on a schedule rather than a live view of Salesforce data. You get data in through two tools. Dataflows are the older JSON-defined approach, built from nodes such as sfdcDigest to pull an object, augment to join, flatten to resolve a role hierarchy, and sfdcRegister to output. Recipes are the newer visual tool, built on Data Prep, and they can do everything a dataflow can plus transformations that are painful in JSON: clustering, prediction, formula columns, appends and joins with a preview at every step. For new work, recipes are the expected answer, and the exam leans that way. Two dataflow nodes keep appearing in questions regardless: augment, because joining is so common, and flatten, because it is the only way to turn a hierarchy into something you can filter on."
       },
       {
-        "heading": "Lenses, Dashboards & Stories",
-        "body": "Lenses are explorations of a single dataset — ad-hoc visual analysis. Dashboards assemble multiple charts, tables, and filters into a unified analytical experience. Dashboard JSON defines the full layout and query logic — consultants must be able to read and modify dashboard JSON for advanced customization. SAQL (Salesforce Analytics Query Language) powers advanced queries that the UI cannot express. Binding formulas connect filters and widgets — selection in one widget filters another. Stories are AI-generated narratives that explain key drivers in a dataset. The exam tests how to build a dashboard, use bindings for interactive filtering, and write basic SAQL for a custom query."
+        "heading": "Lenses, Dashboards and Bindings",
+        "body": "A lens is a single exploration of one dataset. A dashboard assembles widgets, and the thing that makes dashboards hard is bindings: the expressions that let one widget drive another. Selection bindings take what the user has clicked and feed it into another query. Results bindings take the output of one query and use it in another, which is how you build a widget whose values depend on a calculation elsewhere. Pages let you split a dashboard into views without building separate dashboards. The design guidance the exam rewards is unexciting and consistent: filter at the dataset or query level rather than fetching everything and hiding it, limit the number of queries per dashboard because each is a round trip, and use faceting so related widgets filter together by default."
       },
       {
-        "heading": "Einstein Discovery Insights & Models",
-        "body": "Einstein Discovery uses statistical machine learning to find patterns in historical data and generate predictive insights. Stories analyze a dataset and identify the top factors that influence a chosen outcome metric. Predictions deploy a Story as a scoring model — each Salesforce record gets a predicted score. Writeback deploys predictions back to Salesforce fields (e.g., Opportunity Win Probability). Improvement Suggestions recommend actions that increase the probability of a positive outcome. Model refresh keeps predictions current as new data accumulates. The consultant exam tests how to create a Story for a business scenario, interpret the top predictors, and configure writeback to update opportunity or case fields."
+        "heading": "Einstein Discovery Stories and Models",
+        "body": "A story is what Discovery produces when you point it at a dataset and name an outcome variable. It analyses the drivers of that outcome and produces insights in four flavours: what happened, why it happened, what will happen, and what to do about it. Behind the insights sits a model, and the exam expects you to be able to judge one. For a numeric outcome you look at R squared and mean absolute error; for a binary outcome you look at the confusion matrix and measures derived from it. The quality checks matter as much as the metrics. Discovery flags variables that leak the answer, such as a field that is only populated after the outcome is known, and it supports bias detection on sensitive variables so you can see whether the model treats groups differently. A model with strong metrics and a leaking variable is worse than useless, and questions test that you would reject it."
       },
       {
-        "heading": "Security: Row-Level & Field-Level Access",
-        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) uses a separate security model from Salesforce record sharing. Dataset Security Predicates filter rows based on the logged-in user — referencing user fields like role, profile, or a custom attribute. Inheritance mode automatically applies Salesforce **sharing rules** to the dataset. User Attributes defined in CRM Analytics can be used in predicates and SAQL. **Field-level security** hides specific columns from certain users or groups. App sharing (Viewer, Editor, Manager) controls who can access and modify dashboards. The exam tests how to design a security predicate for a hierarchical visibility scenario (managers see their team's data, reps see only their own)."
+        "heading": "Deploying Predictions Back to Salesforce",
+        "body": "A model only earns its keep when it reaches the people doing the work. Discovery deploys a prediction definition against a Salesforce object, which puts a prediction, the top drivers behind it, and suggested improvements onto the record, visible through the Einstein Predictions component. Predictions can be scored in real time as a user edits a record, or written in bulk to existing records. They can also be consumed in Flow, which is how you act on a score automatically rather than leaving it on screen. The points that get examined are the mapping step, where the model's variables must be matched to fields on the target object, and the distinction between scoring on demand and writing scores back to the records in bulk."
       },
       {
-        "heading": "Deployment, Administration & Integration",
-        "body": "[CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) apps are deployed using packages (change sets or CLI). Template Apps provide pre-built analytics solutions for Sales, Service, and specific industries. Custom apps extend or replace template apps. Connected objects define the Salesforce data sources for a template app — configuring which objects and fields feed each dataset. Scheduled dataflow runs keep datasets refreshed (up to 24 scheduled runs per day). Admin setup includes enabling CRM Analytics, assigning **permission sets**, and configuring connected objects. Integration with Einstein Discovery requires a CRM Analytics Plus license. The exam tests deployment sequences, template app configuration, and troubleshooting scheduling and data refresh issues."
+        "heading": "Row-Level Security",
+        "body": "This is the section that decides results. A dataset is a flat snapshot and does not inherit Salesforce record access by default, so when a dataset is registered it is visible in full to anyone who can see it. There are two ways to restrict it. A security predicate is a filter expression stored on the dataset and applied to every query, written against dataset columns and user attributes, for example 'OwnerId' == \"$User.Id\". Predicates can express hierarchies by combining a flattened role column with the running user's role. The alternative is inherited sharing, where the dataset is configured to respect the sharing of the underlying Salesforce object, which is simpler to maintain and the right answer when the requirement is just mirror Salesforce sharing. Inherited sharing has limits on the number of records it can handle, which is exactly the trade-off questions probe: use inheritance for straightforward sharing on moderate volumes, write a predicate when the rule is custom or the volume is large."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the CRM Analytics and Einstein Discovery Consultant Exam",
-    "intro": "The CRM Analytics exam tests end-to-end analytics implementation: data preparation, story building, dashboard design, and deployment. Focus on the SAQL query language, recipe transformations, and how to embed analytics in Salesforce.",
+    "intro": "This exam rewards having built something. The dashboard questions are forgiving; the security and model-quality questions are not.",
     "blocks": [
       {
-        "heading": "Dataflow vs. Recipe Architecture",
-        "body": "Dataflows use nodes (digest, augment, flatten, edgemart) for batch data preparation. Recipes use visual, step-by-step transformations with live preview. Know when to use each and how they interact."
+        "heading": "Recipes Over Dataflows",
+        "body": "Recipes are the current tool and the expected answer for new work. Know what they add: formula columns, clustering, prediction, visual previews."
       },
       {
-        "heading": "SAQL Query Language",
-        "body": "SAQL is used in Dashboard JSON and lens queries. Know the key clauses: foreach, group, order, limit, filter, and how to write basic aggregation queries. SAQL knowledge is directly tested."
+        "heading": "Predicate Syntax",
+        "body": "Practise writing predicates for real requirements, including owner-based and role-hierarchy cases. The most commonly failed topic and the most quickly fixed."
       },
       {
-        "heading": "Einstein Discovery Stories",
-        "body": "Know how to build a Story (outcome field, included variables, excluded variables), interpret Story insights (top factors, improvements), and deploy predictions as Prediction Fields back to Salesforce records."
+        "heading": "Inherited Sharing Trade-off",
+        "body": "Simpler to maintain, limited by record volume. Know when to choose it over a predicate and be ready to justify either."
       },
       {
-        "heading": "Dashboard Design & Embedding",
-        "body": "Understand how to configure widgets (chart, number, table, filter), link steps for drill-through navigation, and embed [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) dashboards in Lightning pages and the mobile app."
+        "heading": "Judging a Model",
+        "body": "R squared and mean absolute error for numeric outcomes, the confusion matrix for binary ones. Watch for leaking variables and check bias on sensitive fields."
       },
       {
-        "heading": "Security & Data Access",
-        "body": "Know how to configure row-level security using security predicates, user attributes, and dataset sharing inheritance. Understand how Analytics shares (App sharing) control dashboard access."
+        "heading": "Bindings",
+        "body": "Selection bindings respond to clicks; results bindings use one query's output in another. Build one of each rather than reading about them."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Where analytics work usually leads next:",
     "links": [
+      {
+        "href": "/certifications/data-360-consultant",
+        "label": "Data Cloud Consultant"
+      },
+      {
+        "href": "/certifications/tableau-data-analyst",
+        "label": "Tableau Certified Data Analyst"
+      },
+      {
+        "href": "/certifications/data-architect",
+        "label": "Data Architect"
+      },
       {
         "href": "/certifications/sales-cloud",
         "label": "Sales Cloud Consultant"
-      },
-      {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
-      },
-      {
-        "href": "/certifications/experience-cloud",
-        "label": "Experience Cloud Consultant"
-      },
-      {
-        "href": "/certifications/role/consultant",
-        "label": "Consultant certification path"
       }
     ]
   },
@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is CRM Analytics (formerly Tableau CRM) used for?",
+      "question": "A dataset must show each user only the records they own. Which approach expresses this most directly?",
       "options": [
-        "Embedded analytics, dashboards, and data exploration on Salesforce data",
-        "Email only",
-        "Only reports",
-        "CPQ only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "CRM Analytics provides embedded analytics, dashboards, and data exploration on Salesforce and connected data.",
-      "whyWrong": [
-        "Email is a Marketing Cloud function, unrelated to CRM Analytics' data exploration purpose.",
-        "'Only reports' undersells CRM Analytics' capability — it covers full embedded analytics, not just static reports.",
-        "CPQ is a pricing/quoting product, entirely unrelated to CRM Analytics."
-      ]
-    },
-    {
-      "question": "What does Einstein Discovery provide?",
-      "options": [
-        "Slack only",
-        "Only charts",
-        "Predictive insights and recommendations powered by AI",
-        "Static reports only"
+        "A dashboard filter on owner",
+        "Removing the dataset from all apps",
+        "A security predicate comparing the owner column to the running user's ID",
+        "Field-level security on the source object"
       ],
       "correctAnswer": 2,
-      "explanation": "Einstein Discovery delivers AI-powered predictive insights and recommendations.",
+      "explanation": "Security predicates are applied to every query against the dataset and are designed for exactly this rule.",
       "whyWrong": [
-        "Slack is a collaboration tool, unrelated to Einstein Discovery's predictive analytics function.",
-        "'Only charts' undersells Einstein Discovery — it produces AI-driven predictive insights, not just visualizations.",
-        "Static reports don't involve AI-driven prediction — that contradicts the core function of Einstein Discovery."
+        "A dashboard filter can be removed by the user and is not a security control.",
+        "Hiding the dataset blocks legitimate access rather than filtering rows.",
+        "Field-level security on the source object does not restrict rows in a registered dataset."
       ]
     },
     {
-      "question": "Which role does a CRM Analytics and Einstein Discovery Consultant typically fulfill?",
+      "question": "A requirement is simply that the dataset should respect the sharing already configured on the Salesforce object, and record volume is moderate. What is the best choice?",
       "options": [
-        "Slack configuration",
-        "UI design only",
-        "Email marketing",
-        "Designing and implementing on CRM Analytics and Einstein Discovery in a customer-facing or internal architect role"
+        "Inherited sharing on the dataset",
+        "No restriction, relying on app permissions",
+        "A separate dataset per role",
+        "A hand-written security predicate replicating the sharing rules"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Inherited sharing mirrors Salesforce sharing without you maintaining a parallel rule set, which is why it suits this case.",
+      "whyWrong": [
+        "App-level permissions control who sees the dataset, not which rows.",
+        "Duplicating datasets per role multiplies maintenance and refresh cost.",
+        "Replicating sharing in a predicate is more work to build and to keep correct."
+      ]
+    },
+    {
+      "question": "An Einstein Discovery model shows excellent accuracy, but one of its variables is only populated after the outcome has been decided. What should happen?",
+      "options": [
+        "Deploy it, since the accuracy is high",
+        "Remove that variable and retrain, because it leaks the answer",
+        "Convert it to a text field",
+        "Keep it but document the issue"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A variable known only after the outcome inflates accuracy in training and is useless at prediction time.",
+      "whyWrong": [
+        "High accuracy caused by leakage will not survive contact with real data.",
+        "Changing the field type does not change when the value becomes known.",
+        "Documenting a broken model does not make it safe to deploy."
+      ]
+    },
+    {
+      "question": "Which dataflow node joins columns from one dataset onto another?",
+      "options": [
+        "augment",
+        "sfdcDigest",
+        "sfdcRegister",
+        "flatten"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Augment is the join node, bringing fields from a right dataset onto a left one on a matching key.",
+      "whyWrong": [
+        "sfdcDigest extracts data from a Salesforce object.",
+        "sfdcRegister writes the result out as a dataset.",
+        "Flatten resolves a hierarchy into a column of ancestor values."
+      ]
+    },
+    {
+      "question": "A dashboard must show a chart whose values depend on the result of a separate query rather than on a user click. What is needed?",
+      "options": [
+        "A results binding",
+        "A security predicate",
+        "A new dataset",
+        "A selection binding"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Results bindings feed the output of one query into another, independent of user interaction.",
+      "whyWrong": [
+        "Predicates are a security mechanism.",
+        "A new dataset does not create the dependency between widgets.",
+        "Selection bindings respond to what the user has clicked."
+      ]
+    },
+    {
+      "question": "For new data preparation work in CRM Analytics, which tool is the expected choice?",
+      "options": [
+        "A report snapshot",
+        "An Apex batch job",
+        "A JSON dataflow",
+        "A recipe in Data Prep"
       ],
       "correctAnswer": 3,
-      "explanation": "They design and implement CRM Analytics and Einstein Discovery in customer-facing or architect roles.",
+      "explanation": "Recipes are the current tool and cover everything dataflows do plus transformations that are difficult in JSON.",
       "whyWrong": [
-        "Slack configuration is a separate specialization, unrelated to CRM Analytics implementation.",
-        "UI design alone undersells the role, which spans data architecture, dashboards, and predictive modeling, not just visual design.",
-        "Email marketing is a Marketing Cloud function, unrelated to this analytics-focused consulting role."
+        "Report snapshots are a core Salesforce feature, unrelated to CRM Analytics datasets.",
+        "Apex is not how CRM Analytics datasets are built.",
+        "Dataflows remain supported but are no longer the recommended starting point."
       ]
     },
     {
-      "question": "What is a Lens in CRM Analytics?",
+      "question": "A deployed prediction should trigger an automated follow-up task when the score falls below a threshold. How is this best done?",
       "options": [
-        "An email",
-        "A campaign",
-        "A report type",
-        "A reusable dataset or query that powers dashboards"
+        "Ask users to read the score and act manually",
+        "Add a formula field on the dashboard",
+        "Consume the prediction in Flow and create the task there",
+        "Rebuild the model with a lower threshold"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Predictions can be consumed in Flow, which is how a score drives automated action.",
+      "whyWrong": [
+        "Manual action does not satisfy an automation requirement.",
+        "Dashboards display information and cannot create records.",
+        "Changing the model does not create the follow-up task."
+      ]
+    },
+    {
+      "question": "Which dataflow node is required to filter on a role hierarchy within a dataset?",
+      "options": [
+        "flatten",
+        "augment",
+        "dim2mea",
+        "slice"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Flatten converts a hierarchy into a multi-value column of ancestors, which a predicate or filter can then use.",
+      "whyWrong": [
+        "Augment joins datasets but does not resolve hierarchy paths.",
+        "dim2mea converts a dimension to a measure.",
+        "Slice selects or removes fields."
+      ]
+    },
+    {
+      "question": "Which metrics are appropriate for judging a model that predicts a numeric outcome such as deal amount?",
+      "options": [
+        "Precision and recall",
+        "The confusion matrix",
+        "R squared and mean absolute error",
+        "The number of insights generated"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Numeric outcomes are evaluated with regression measures such as R squared and mean absolute error.",
+      "whyWrong": [
+        "Precision and recall are classification measures.",
+        "Confusion matrices describe classification outcomes.",
+        "Insight count says nothing about model quality."
+      ]
+    },
+    {
+      "question": "Why does a CRM Analytics dashboard get slower as more widgets are added?",
+      "options": [
+        "Widgets are rendered sequentially on the server",
+        "Each query is a separate round trip against the dataset",
+        "Datasets expand with each widget",
+        "Security predicates are re-evaluated per user session only"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Query count is the main driver of dashboard performance, which is why consolidating and faceting helps.",
+      "whyWrong": [
+        "Rendering is not the bottleneck; querying is.",
+        "Datasets are fixed snapshots and do not grow when widgets are added.",
+        "Predicate evaluation is not the cause of the scaling problem described."
+      ]
+    },
+    {
+      "question": "A sensitive variable such as gender is present in a story's dataset. What should be done before deploying?",
+      "options": [
+        "Ignore it, since models are objective",
+        "Delete the dataset",
+        "Run bias detection to see whether outcomes differ by group",
+        "Convert it to a measure"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Discovery supports bias checking on sensitive variables, and checking is the responsible step before deployment.",
+      "whyWrong": [
+        "Models reproduce patterns in their training data, including unfair ones.",
+        "Deleting the dataset discards work that may be legitimate once checked.",
+        "Changing the field type does not address the fairness question."
+      ]
+    },
+    {
+      "question": "What is the relationship between a dataset and live Salesforce data?",
+      "options": [
+        "A dataset is a report type",
+        "A dataset is a snapshot refreshed on a schedule",
+        "A dataset queries Salesforce records in real time",
+        "A dataset is a view over the Salesforce database"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Datasets are built and refreshed by dataflows or recipes, so they reflect data as of the last run.",
+      "whyWrong": [
+        "Report types are a core reporting concept.",
+        "Real-time querying is not how CRM Analytics datasets work.",
+        "There is no live view; the data is copied in."
+      ]
+    },
+    {
+      "question": "A prediction definition is being deployed to the Opportunity object. Which step is essential?",
+      "options": [
+        "Adding a results binding",
+        "Mapping the model's variables to fields on the object",
+        "Writing a security predicate for the model",
+        "Creating a new dataflow"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Variable to field mapping is what lets the model score live records on the target object.",
+      "whyWrong": [
+        "Bindings are a dashboard construct.",
+        "Predicates secure dataset rows and are not part of prediction mapping.",
+        "A dataflow is not required to deploy an existing model."
+      ]
+    },
+    {
+      "question": "When is writing SAQL by hand the appropriate choice?",
+      "options": [
+        "For every dashboard widget",
+        "To replace recipes",
+        "Whenever performance matters",
+        "When a query cannot be expressed through the standard dashboard query builder"
       ],
       "correctAnswer": 3,
-      "explanation": "A Lens defines a dataset or query that can be reused across dashboards and apps.",
+      "explanation": "Most dashboard work needs no SAQL, so hand-written queries are for the cases the builder cannot express.",
       "whyWrong": [
-        "A Lens isn't an email — it's an interactive data exploration view.",
-        "A Lens isn't a campaign — that's a Sales/Marketing Cloud concept unrelated to CRM Analytics.",
-        "A report type is a different Salesforce reporting concept, not a CRM Analytics-specific term."
+        "Routine widgets are better built with the standard tooling and are easier to maintain.",
+        "SAQL queries data; recipes prepare it.",
+        "Hand-written SAQL is not automatically faster."
       ]
     },
     {
-      "question": "Which capability allows users to ask questions in natural language in CRM Analytics?",
+      "question": "A manager must see rows belonging to everyone beneath them in the role hierarchy. Which combination achieves this?",
       "options": [
-        "Only SAQL",
-        "Einstein Ask (natural language to query)",
-        "Dashboard only",
-        "Dataflow only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Einstein Ask allows users to query data using natural language.",
-      "whyWrong": [
-        "'Only SAQL' undersells the capability — Einstein Ask specifically allows natural language, not just query language.",
-        "Dashboard is the visualization layer, not the natural-language query capability being described.",
-        "Dataflow is the ETL pipeline, unrelated to natural language querying."
-      ]
-    },
-    {
-      "question": "What is a Dataflow in CRM Analytics?",
-      "options": [
-        "An email",
-        "A report type",
-        "The ETL pipeline that ingests, transforms, and loads data into datasets",
-        "A dashboard"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Dataflows define the ETL process for building datasets in CRM Analytics.",
-      "whyWrong": [
-        "A Dataflow isn't an email — it's a data pipeline process.",
-        "A report type is a different Salesforce concept, not what a Dataflow does.",
-        "A Dataflow isn't a dashboard — dashboards are the visualization layer built on top of the data a Dataflow prepares."
-      ]
-    },
-    {
-      "question": "Which language is used to query data in CRM Analytics?",
-      "options": [
-        "Apex",
-        "SAQL (Salesforce Analytics Query Language)",
-        "SOQL only",
-        "AMPscript"
-      ],
-      "correctAnswer": 1,
-      "explanation": "SAQL is used for querying and transforming data in CRM Analytics.",
-      "whyWrong": [
-        "Apex is a programming language, not a data query language used in CRM Analytics.",
-        "SOQL is the Salesforce Core query language, not what's used for CRM Analytics datasets.",
-        "AMPscript is a Marketing Cloud personalization language, unrelated to CRM Analytics querying."
-      ]
-    },
-    {
-      "question": "What does Einstein Discovery Story provide?",
-      "options": [
-        "Lenses only",
-        "Static reports only",
-        "Dataflows only",
-        "Narrative insights and recommended actions based on predictive analysis"
+        "Field-level security on the role field",
+        "A dashboard filter on manager name",
+        "Separate dashboards per manager",
+        "A flattened role column plus a predicate referencing the running user's role"
       ],
       "correctAnswer": 3,
-      "explanation": "Stories deliver narrative insights and recommended actions from predictions.",
+      "explanation": "Flattening produces the ancestor path, and the predicate then compares it against the running user.",
       "whyWrong": [
-        "Lenses are exploration views, not narrative predictive stories — that's the specific role of Einstein Discovery Story.",
-        "Static reports don't involve narrative or predictive recommendations — that contradicts what a Story provides.",
-        "Dataflows are the ETL pipeline, unrelated to narrative insight generation."
-      ]
-    },
-    {
-      "question": "Which CRM Analytics component displays data in rows and columns?",
-      "options": [
-        "Dataflow only",
-        "Lens only",
-        "Table or grouped table",
-        "Chart only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Tables and grouped tables display tabular data on dashboards.",
-      "whyWrong": [
-        "Dataflow is the data pipeline, unrelated to how data is visually displayed.",
-        "Lens is a broader exploration concept, not the specific grid-display component being asked about.",
-        "'Chart only' undersells the component — it specifically displays tabular row/column data, not charts."
-      ]
-    },
-    {
-      "question": "What is the purpose of bindings in CRM Analytics dashboards?",
-      "options": [
-        "To create lenses",
-        "To pass filter values between widgets and control interactions",
-        "To send emails",
-        "To run dataflows"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Bindings link widgets so filters and selections flow between components.",
-      "whyWrong": [
-        "Bindings don't create lenses — they connect existing widgets/filters together for interaction.",
-        "Bindings have nothing to do with sending emails — that's a separate function entirely.",
-        "Bindings don't run dataflows — that's a separate ETL process."
-      ]
-    },
-    {
-      "question": "Which CRM Analytics object stores data for dashboard consumption?",
-      "options": [
-        "Lens only",
-        "Dataset",
-        "Dataflow only",
-        "Report"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Datasets store the data that lenses and dashboards query.",
-      "whyWrong": [
-        "Lens is an exploration view built on top of a dataset — it isn't itself the storage object.",
-        "Dataflow is the pipeline that produces data — the actual storage object for dashboard consumption is the dataset.",
-        "Report is a different Salesforce Core reporting concept, not the CRM Analytics-specific storage object."
-      ]
-    },
-    {
-      "question": "What does Einstein Discovery predict?",
-      "options": [
-        "Outcomes (e.g., churn, conversion) and recommends actions",
-        "Only SAQL",
-        "Only data structure",
-        "Only charts"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Einstein Discovery predicts outcomes and recommends actions to improve them.",
-      "whyWrong": [
-        "'Only SAQL' is a query language, unrelated to what Einstein Discovery actually predicts.",
-        "'Only data structure' misrepresents its function — Einstein Discovery predicts outcomes, not schema design.",
-        "'Only charts' undersells Einstein Discovery's predictive capability — it forecasts real-world outcomes, not just visuals."
-      ]
-    },
-    {
-      "question": "Which governance consideration applies to CRM Analytics?",
-      "options": [
-        "Row-level security, dataset permissions, and data refresh policies",
-        "None",
-        "Only dashboards",
-        "Only email"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Governance includes RLS, permissions, and refresh policies.",
-      "whyWrong": [
-        "'None' is incorrect — CRM Analytics has real governance considerations around security and permissions.",
-        "'Only dashboards' undersells governance, which spans security, permissions, and refresh policies, not just dashboards.",
-        "'Only email' misrepresents governance scope — it's much broader than email settings."
-      ]
-    },
-    {
-      "question": "What is a CRM Analytics App?",
-      "options": [
-        "A mobile app only",
-        "A dataflow only",
-        "A container that organizes dashboards, lenses, and datasets for a use case",
-        "A lens only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Apps organize dashboards, lenses, and datasets for specific use cases.",
-      "whyWrong": [
-        "A mobile app is a different concept — a CRM Analytics App is the organizational container within the platform, not a mobile application.",
-        "A dataflow alone is just the data pipeline — an App is the broader container that includes dashboards and lenses too.",
-        "A lens alone is one exploration view — an App organizes multiple lenses, dashboards, and datasets together."
-      ]
-    },
-    {
-      "question": "Which integration allows CRM Analytics to use Salesforce data?",
-      "options": [
-        "Salesforce connector and Data Sync",
-        "Slack only",
-        "Manual export only",
-        "Email only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The Salesforce connector and Data Sync enable CRM Analytics to consume Salesforce data.",
-      "whyWrong": [
-        "Slack is unrelated to CRM Analytics' data integration with Salesforce.",
-        "Manual export doesn't reflect the native, automated Salesforce integration CRM Analytics actually uses.",
-        "Email is unrelated to how CRM Analytics ingests Salesforce data."
+        "Field-level security does not filter rows.",
+        "Dashboard filters are not a security control.",
+        "Building a dashboard per manager does not scale and leaves the data unsecured."
       ]
     }
   ]
