@@ -1,114 +1,110 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Revenue Cloud Consultant exam for?",
+    "heading": "Who is the Agentforce Revenue Management Consultant exam for?",
     "personas": [
       {
-        "label": "Consultants designing quote-to-cash solutions",
-        "description": "You architect end-to-end Revenue Cloud implementations spanning CPQ, Billing, and contract management and want the certification to validate your design expertise."
+        "label": "Product-to-Cash consultants",
+        "description": "You lead discovery and design for an Agentforce Revenue Management implementation, translating business needs into catalog, pricing, contract, order, asset, and invoice-management solutions."
       },
       {
-        "label": "Revenue operations professionals",
-        "description": "You manage the CPQ-to-Billing lifecycle including subscription amendments, renewal automation, and pricing governance and need formal validation of those skills."
+        "label": "Revenue operations and implementation leads",
+        "description": "You coordinate stakeholders, scope, licenses, permissions, build, testing, deployment, and adoption for a revenue lifecycle project."
       },
       {
-        "label": "Finance systems analysts",
-        "description": "You align Salesforce revenue recognition with ASC 606 and IFRS 15 standards and want the credential to demonstrate your ability to bridge finance and technology."
+        "label": "Salesforce solution consultants",
+        "description": "You configure product catalogs and pricing, contracts and orders, asset lifecycle, or invoice management on Salesforce’s current on-core revenue platform."
       }
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Revenue Cloud Consultant Exam Hard?",
-    "summary": "The Revenue Cloud Consultant exam is considered difficult. The ~65% passing score is standard for consultant-level exams, but the content spans CPQ configuration, Billing operations, contract amendments, and revenue recognition under ASC 606 &mdash; a breadth that requires both technical and business process expertise.",
+    "heading": "What Does the Agentforce Revenue Management Consultant Exam Cover?",
+    "summary": "Salesforce describes this credential for consultants with broad Product-to-Cash knowledge and hands-on experience with Agentforce Revenue Management on core. The exam checks platform capability and implementation judgment, from catalog and pricing design through contracts, orders, assets, and invoicing.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> &mdash; standard for consultant exams, but the wide topic range makes consistent scoring harder than a single-product exam.",
-      "<strong>Cross-domain expertise</strong> &mdash; questions test CPQ product rules, Billing invoice generation, contract amendment logic, and ASC 606 revenue schedules, often in the same scenario.",
-      "<strong>Business process fluency required</strong> &mdash; understanding how finance teams think about revenue recognition, proration, and subscription lifecycle is as important as knowing the Salesforce configuration."
+      "<strong>60 multiple-choice questions, plus up to five unscored questions</strong> in 105 minutes.",
+      "<strong>63% passing score</strong>, as listed in Salesforce’s current exam guide.",
+      "<strong>Seven exam objectives</strong>: platform concepts, implementation readiness, catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
+      "<strong>Design and delivery judgment</strong>: map customer requirements to platform capabilities, explain trade-offs, and plan implementation, testing, deployment, and adoption."
     ],
-    "passRateGuidance": "Work through a complete quote-to-revenue scenario covering a multi-year SaaS subscription with a mid-term amendment and renewal in a developer org before booking."
+    "passRateGuidance": "Use Salesforce’s current exam guide to structure study by objective. Practise mapping business requirements to out-of-the-box capabilities, then explain the licenses, configuration, trade-offs, test plan, and adoption steps the solution needs."
   },
   "examFormat": {
-    "heading": "Revenue Cloud Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Most questions are scenario-based, describing a SaaS company’s quoting, billing, or revenue recognition requirement and asking which Revenue Cloud configuration meets it. Expect multi-step scenarios that span the full quote-to-cash lifecycle.",
+    "heading": "Agentforce Revenue Management Consultant Exam Format",
+    "intro": "Salesforce lists 60 multiple-choice questions, up to five unscored questions, and 105 minutes. The current guide organizes tested knowledge into seven objective areas:",
     "bestWayToPass": [
-      "<strong>Master the CPQ-to-Billing object flow:</strong> Know how Quote &rarr; Order &rarr; Contract &rarr; Subscription &rarr; Invoice connects, and what triggers each transition in the lifecycle.",
-      "<strong>Study amendment and renewal logic:</strong> Understand how mid-term amendments generate proration credits, how co-termination aligns subscription end dates, and how renewal quotes are auto-populated.",
-      "<strong>Know revenue recognition configuration:</strong> Study ratable vs. event-based recognition, how Revenue Schedules distribute revenue across Finance Periods, and how to handle ramp deals with non-linear schedules.",
-      "<strong>Understand pricing and discount governance:</strong> Know the CPQ pricing waterfall, how Discount Schedules and Price Rules interact, and how Advanced Approvals route high-discount quotes through approval chains."
+      "<strong>Plan for implementation readiness:</strong> Review licenses, permission sets, feature prerequisites, stakeholder responsibilities, project scope, risk, testing, deployment, and adoption.",
+      "<strong>Design product catalogs:</strong> Know how catalog categories, product classifications, attributes, products, and bundles support customer requirements.",
+      "<strong>Configure products and pricing:</strong> Practise product configuration and validation, pricing procedures, and generating accurate quotes for a stated business case.",
+      "<strong>Connect the post-quote lifecycle:</strong> Study current Salesforce Contracts, Order Management, Asset Management, and Invoice Management capabilities and their role in Product-to-Cash delivery."
     ]
   },
   "certificationCard": {
-    "code": "Revenue Cloud",
-    "description": "This exam tests your ability to configure the full quote-to-cash lifecycle in Revenue Cloud, covering CPQ product bundles, subscription billing, contract amendments, and revenue recognition under ASC 606.",
+    "code": "Agentforce Revenue Management Consultant",
+    "description": "The Salesforce Certified Agentforce Revenue Management Consultant exam validates the ability to scope, design, build, and deploy the Agentforce Revenue Management product on core across the Product-to-Cash lifecycle.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "63%",
       "duration": "105 min",
-      "cost": "$200"
+      "cost": "US$200"
     },
     "topics": [
-      "Revenue Cloud",
-      "CPQ",
-      "Billing",
-      "Revenue Recognition",
-      "Product-to-Cash",
-      "Contracts",
-      "Orders",
-      "Best Practices",
-      "Integration",
-      "Governance"
+      "Agentforce Revenue Management Platform Concepts",
+      "Implementation Readiness",
+      "Catalog Management",
+      "Configure, Price, Quote",
+      "Contracts and Orders",
+      "Asset Management",
+      "Invoice Management"
     ]
   },
   "keyConcepts": {
-    "h2": "Revenue Cloud Consultant: Key Concepts for the Exam",
+    "h2": "Agentforce Revenue Management Consultant: Key Exam Concepts",
     "blocks": [
       {
-        "heading": "CPQ Configuration & Product Rules",
-        "body": "Salesforce Revenue Cloud (CPQ + Billing) starts with product configuration. Product Features group options within a bundle. Configuration Attributes set product-level settings. Product Rules enforce valid configurations: **Validation Rules** (block invalid combos), Selection Rules (auto-add/remove products), Alert Rules (warn users), Filter Rules (hide irrelevant options). Option Constraints define which options are mutually exclusive or required together. Price Rules execute pricing logic at specific stages of the quote calculation. The consultant exam tests how to design a product bundle for a complex SaaS offering, which rule type handles a given scenario, and how to troubleshoot a rule that isn't firing as expected."
+        "heading": "Platform Concepts and Implementation Readiness",
+        "body": "The current exam guide covers Agentforce Revenue Management capabilities, its core data model, constraints, and trade-offs. Implementation readiness includes checking required licenses, permission sets, and feature prerequisites; assigning stakeholder responsibilities; creating scope and project plans; identifying risks; and planning build, test, deployment, and adoption. It also expects basic awareness of Flow, Lightning page components, Context Service, OmniStudio, Business Rules Engine, and APIs."
       },
       {
-        "heading": "Pricing, Discounting & Approvals",
-        "body": "CPQ pricing layers: List Price (Price Book) → Cost + Markup → Contracted Price → Block Pricing (volume tiers) → Percent of Total → Subscription Pricing. Discount Schedules define tier-based discounts. Price Waterfalls show how the final price is calculated step by step. Discount approval thresholds trigger Approval Processes when reps exceed authorized discount limits. Special Pricing Requests allow reps to request non-standard pricing from management. Quote-Level Discounts apply a single percentage across all lines. The consultant exam tests how to configure a tiered discount schedule, how price rules interact with manual discounts, and how approval thresholds are configured to route high-discount quotes."
+        "heading": "Catalog Management and Product Configuration",
+        "body": "Catalog Management organizes product information as a reusable source for selling. Salesforce preparation material covers product categories, classifications, attributes, products, and bundles. In the product-configuration objective, use the Product Configurator to customize product components and attributes, validate a configuration, and select out-of-the-box functionality that meets the stated requirement. See Salesforce’s [Product Catalog Management module](https://trailhead.salesforce.com/content/learn/modules/product-catalog-management-with-revenue-cloud) for product and bundle coverage."
       },
       {
-        "heading": "Subscription Billing & Contract Management",
-        "body": "CPQ Billing manages the billing lifecycle for subscription products. Products with a Subscription Type (Renewable, Evergreen) generate subscription records on order. Billing Frequency and Billing Timing settings determine when invoices are generated (in advance/in arrears). Contract Start/End Dates govern the subscription period. Contract Amendments handle upgrades, downgrades, and add-ons to in-force subscriptions — generating proration credit for the remaining contract period. Renewal Quotes are automatically generated before contract expiry. The consultant exam tests how to configure a subscription product for monthly billing, how proration is calculated on a mid-term amendment, and how renewal automation is configured."
+        "heading": "Pricing and Quote Design",
+        "body": "The Configure, Price, Quote objective asks candidates to use the Product Configurator and configure pricing procedures for customer-specific business cases. A consultant should translate requirements into an accurate quote, explain the selected pricing solution, and identify when an API or customization is needed. Salesforce’s current preparation trail includes Salesforce Pricing, Price Management, Advanced Price Management, and Transaction Management."
       },
       {
-        "heading": "Revenue Recognition & ASC 606",
-        "body": "Revenue Cloud Revenue Recognition aligns with ASC 606 (IFRS 15) — revenue is recognized as performance obligations are satisfied. Revenue Schedules distribute invoice revenue across the service period. Recognition Methods: Ratable (even distribution over term), Event-Based (milestone-triggered), and one-time. Revenue Recognition Rules define the method for each product type. Finance Periods control accounting period boundaries. The Revenue Waterfall report shows deferred vs. recognized revenue by period. Adjustments and Credit Memos create correcting Revenue Recognition Transactions. The consultant exam tests how to configure revenue recognition for a scenario involving a mix of one-time professional services and recurring SaaS subscription revenue."
+        "heading": "Contracts, Orders, and Asset Lifecycle",
+        "body": "The exam guide treats Salesforce Contracts and Order Management as separate objectives and also tests Asset Management. Salesforce preparation material includes digital contract management, order orchestration, and managing assets across the customer relationship. In a solution scenario, identify the out-of-the-box contract, order, or asset capability that fits the required process, then account for its implementation and lifecycle implications."
       },
       {
-        "heading": "Quote-to-Cash Integration & CPQ Object Model",
-        "body": "The CPQ data model: Quote → Quote Lines → Orders → Order Products → Contracts → Subscriptions → Assets. The Generate Order action converts a contracted quote into an Order. The Order Products generate Subscriptions (if configured). Billing picks up Order Products to generate Invoices. Contracts store the term, auto-renew settings, and list of subscription records. The Asset object tracks active products on an account for amendment and renewal. Integration with ERP: invoices and payment data flow to finance systems via API or MuleSoft. The consultant exam tests the full Quote-to-Cash flow, how to troubleshoot a quote that isn't generating the correct order, and how assets feed back into renewal quotes."
+        "heading": "Invoice and Usage Management",
+        "body": "Invoice Management is an explicit current exam objective. The official preparation trail covers billing basics, automating invoices, managing payments and credits, and tracking billing data. It also introduces Usage Management for modeling and tracking usage-based products and preparing usage data for invoicing. Match the capability to the business’s billing and usage requirement rather than assuming a particular legacy object flow."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Revenue Cloud Consultant Exam",
-    "intro": "The Revenue Cloud Consultant exam tests your ability to design end-to-end quote-to-revenue solutions spanning CPQ and Billing. Focus on the contract lifecycle, amendment logic, revenue recognition triggers, and the interaction between CPQ and Billing objects.",
+    "h2": "How to Prepare for the Agentforce Revenue Management Consultant Exam",
+    "intro": "Use the current Salesforce exam objectives to organize preparation around platform concepts, implementation readiness, catalog management, product configuration and pricing, contracts and orders, assets, and invoicing.",
     "blocks": [
       {
-        "heading": "CPQ-to-Billing Object Flow",
-        "body": "Know how a closed Opportunity activates a CPQ Contract, how the Contract generates Subscriptions and Assets, and how Billing Orders are created from Contracts. Understand the object relationship chain thoroughly."
+        "heading": "Start with implementation readiness",
+        "body": "For a customer scenario, identify the licenses, permission sets, prerequisites, stakeholders, scope, risks, and adoption work needed before deciding how to configure the solution."
       },
       {
-        "heading": "Amendment & Renewal Scenarios",
-        "body": "Amendments add, remove, or change products mid-term and create co-terminated subscriptions. Renewals auto-generate from contracts at term end. Know how proration is calculated for each scenario."
+        "heading": "Translate catalog needs into product setup",
+        "body": "Map catalog requirements to product categories, classifications, attributes, products, and bundles. For configuration questions, explain how the Product Configurator customizes and validates product components."
       },
       {
-        "heading": "Revenue Recognition Options",
-        "body": "Understand Salesforce Billing revenue recognition rules: Revenue Schedules, how rev-rec triggers (billing date, order product date), and the accounting period configuration. Know how to handle ramp deals."
+        "heading": "Choose pricing and quote capabilities",
+        "body": "Given customer-specific requirements, decide how to configure pricing procedures and generate an accurate quote. Be ready to state solution trade-offs and when to involve a developer for an API or customization."
       },
       {
-        "heading": "Invoice Generation & Payment Processing",
-        "body": "Know how Invoice Runs generate invoices, how payment methods and terms are configured, and how the dunning process handles failed payments. Understand partial payments and credit notes."
+        "heading": "Trace the post-quote process",
+        "body": "Recognize where Salesforce Contracts, Order Management, Asset Management, and Invoice Management fit the customer’s Product-to-Cash requirements. Account for order fulfillment, post-sale asset lifecycle, invoicing, payments, and credits where relevant."
       },
       {
-        "heading": "Reporting & Forecasting for Revenue",
-        "body": "Know how Revenue Cloud extends Sales Cloud forecasting with subscription revenue, ARR/MRR metrics, and churn reporting. Understand how [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (Tableau CRM) is used for revenue analytics."
+        "heading": "Plan delivery and prove the design",
+        "body": "A complete solution includes stakeholder alignment, a project plan, risk mitigation, testing, deployment, and adoption. Practise explaining why the chosen out-of-the-box capability fits the business requirement and what constraints remain."
       }
     ]
   },
@@ -170,244 +166,286 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the Product-to-Cash lifecycle?",
+      "question": "Which sequence best describes the Product-to-Cash lifecycle covered by Agentforce Revenue Management?",
       "options": [
         "Only marketing",
-        "Quote-to-cash: configure, price, quote, contract, order, billing, revenue recognition",
-        "Only sales",
-        "Only service"
+        "Only sales pipeline management",
+        "Product catalog and configuration, pricing and quote, then contracts, orders, assets, and invoicing",
+        "Only service case management"
       ],
-      "correctAnswer": 1,
-      "explanation": "Product-to-Cash (P2C) covers the full cycle from quote through contract, order, billing, and revenue recognition.",
+      "correctAnswer": 2,
+      "explanation": "Salesforce describes the credential as spanning Product-to-Cash and its guide includes catalog, Configure-Price-Quote, contracts and orders, asset management, and invoice management.",
       "whyWrong": [
-        "'Only marketing' misrepresents Product-to-Cash, which spans the full quote-to-cash operational lifecycle, not marketing activities.",
-        "'Only sales' undersells the lifecycle, which extends beyond sales into billing and revenue recognition.",
-        "'Only service' is unrelated to the Product-to-Cash lifecycle, which is a sales/finance process."
+        "Marketing alone does not cover the Product-to-Cash objectives.",
+        "The exam includes capabilities beyond the sales pipeline.",
+        "Service case management is not the lifecycle described in the current exam objectives."
       ]
     },
     {
-      "question": "Which role does a Revenue Cloud Consultant typically fulfill?",
+      "question": "What does the current Agentforce Revenue Management Consultant credential validate?",
       "options": [
         "Email marketing only",
-        "Designing and implementing Revenue Cloud on core with extensive knowledge of P2C",
-        "Slack configuration only",
-        "UI design only"
+        "Slack workspace administration only",
+        "Visual design of CRM pages only",
+        "Scoping, designing, building, and deploying Agentforce Revenue Management solutions on core across Product-to-Cash"
       ],
-      "correctAnswer": 1,
-      "explanation": "They have hands-on experience designing and implementing Revenue Cloud and extensive P2C knowledge.",
+      "correctAnswer": 3,
+      "explanation": "Salesforce’s current exam guide describes the credential as validating the ability to scope, design, build, and deploy the on-core product across Product-to-Cash.",
       "whyWrong": [
-        "Email marketing alone is a Marketing Cloud function, not the broader Revenue Cloud consulting role.",
-        "Slack configuration is a separate specialization, unrelated to Revenue Cloud implementation.",
-        "UI design alone undersells the role, which requires deep P2C process knowledge."
+        "Email marketing is a separate credential area.",
+        "Slack administration is a separate product specialty.",
+        "Page configuration is one platform capability, not the full consultant role."
       ]
     },
     {
-      "question": "What does Revenue Cloud typically include?",
+      "question": "Which set best matches the current Agentforce Revenue Management exam scope?",
       "options": [
-        "Only CPQ",
-        "CPQ, Billing, Revenue Recognition, and related products",
-        "Only Marketing Cloud",
-        "Only Service Cloud"
+        "Catalog management, product configuration and pricing, contracts and orders, asset management, and invoice management",
+        "Only legacy Salesforce CPQ product rules",
+        "Only Marketing Cloud journeys",
+        "Only Sales Cloud opportunities"
       ],
-      "correctAnswer": 1,
-      "explanation": "Revenue Cloud encompasses CPQ, Billing, Revenue Recognition, and the P2C lifecycle.",
+      "correctAnswer": 0,
+      "explanation": "Salesforce’s current exam guide lists catalog management, Configure-Price-Quote, contracts and orders, asset management, and invoice management as exam objectives.",
       "whyWrong": [
-        "'Only CPQ' undersells Revenue Cloud's scope, which also includes Billing and Revenue Recognition.",
-        "Marketing Cloud is a separate product, unrelated to Revenue Cloud's quote-to-cash focus.",
-        "Service Cloud is a separate product, unrelated to Revenue Cloud's quote-to-cash focus."
+        "The current exam is broader than legacy CPQ product rules.",
+        "Marketing Cloud journeys are outside these listed objectives.",
+        "Opportunities alone do not cover the Product-to-Cash capabilities tested."
       ]
     },
     {
-      "question": "Which Salesforce product handles subscription billing?",
+      "question": "Which capability in Agentforce Revenue Management supports modeling and tracking usage-based products for invoicing?",
       "options": [
-        "Only Sales Cloud",
-        "Revenue Cloud / Billing",
-        "Marketing Cloud only",
-        "Slack only"
+        "Usage Management",
+        "Only Sales Cloud forecasting",
+        "Marketing Cloud Automation Studio",
+        "Chatter"
       ],
-      "correctAnswer": 1,
-      "explanation": "Revenue Cloud Billing handles subscription and usage-based billing.",
+      "correctAnswer": 0,
+      "explanation": "Salesforce’s preparation trail describes Usage Management as modeling, tracking, and managing usage-based products through invoice-ready summaries.",
       "whyWrong": [
-        "Sales Cloud manages the sales pipeline but doesn't itself handle subscription billing.",
-        "Marketing Cloud is unrelated to subscription billing functionality.",
-        "Slack is unrelated to subscription billing functionality."
+        "Sales Cloud forecasting does not model usage measures for invoicing.",
+        "Automation Studio is a Marketing Cloud tool.",
+        "Chatter is a collaboration feature, not a usage billing capability."
       ]
     },
     {
-      "question": "What is revenue recognition in the context of Revenue Cloud?",
+      "question": "Which capability organizes products and bundles using catalog categories and classifications?",
       "options": [
-        "Only invoicing",
-        "Allocating revenue to accounting periods per ASC 606 / IFRS 15",
-        "Only quotes",
-        "Only orders"
+        "Only invoice payment processing",
+        "Product Catalog Management",
+        "Salesforce Setup Audit Trail",
+        "Email Studio"
       ],
       "correctAnswer": 1,
-      "explanation": "Revenue recognition allocates revenue to periods according to accounting standards (e.g., ASC 606).",
+      "explanation": "Salesforce’s Product Catalog Management learning module covers organizing catalogs, products, and bundles with categories and classifications.",
       "whyWrong": [
-        "'Only invoicing' undersells revenue recognition, which is about allocating revenue to accounting periods, not generating invoices.",
-        "'Only quotes' is unrelated to the accounting-period allocation revenue recognition addresses.",
-        "'Only orders' is unrelated to the accounting-period allocation revenue recognition addresses."
+        "Invoice payment processing happens later in the revenue lifecycle.",
+        "Setup Audit Trail records administrative changes and does not manage products.",
+        "Email Studio is part of Marketing Cloud and does not manage the Revenue Management catalog."
       ]
     },
     {
-      "question": "What does CPQ (Configure, Price, Quote) handle?",
+      "question": "In Agentforce Revenue Management, what does the Product Configurator help a consultant do?",
       "options": [
-        "Only billing",
-        "Product configuration, pricing, discounting, and quote generation",
-        "Only orders",
-        "Only contracts"
+        "Configure Salesforce email sends",
+        "Set permission set assignments for users",
+        "Customize product components and attributes, then validate the configuration",
+        "Create dashboards without product data"
       ],
-      "correctAnswer": 1,
-      "explanation": "CPQ handles configuration, pricing, and quote generation.",
+      "correctAnswer": 2,
+      "explanation": "Salesforce’s current exam guide includes using the Product Configurator to customize product components and attributes and validate a product configuration.",
       "whyWrong": [
-        "'Only billing' misrepresents CPQ, which handles the configure-price-quote process, separate from billing.",
-        "'Only orders' undersells CPQ's actual scope, which is product configuration and quoting, not order fulfillment.",
-        "'Only contracts' undersells CPQ's actual scope, which centers on configuration, pricing, and quoting."
+        "Email sends are outside product configuration.",
+        "Permission sets are part of platform readiness, not product configuration.",
+        "Dashboards are not the Product Configurator’s purpose."
       ]
     },
     {
-      "question": "Which Revenue Cloud object represents a signed agreement?",
+      "question": "Which capability should a consultant consider for managing digital customer agreements in the Product-to-Cash process?",
       "options": [
-        "Quote only",
-        "Contract",
-        "Opportunity only",
-        "Order only"
+        "Marketing Cloud Automation Studio",
+        "Setup Audit Trail",
+        "Salesforce Contracts",
+        "Chatter"
       ],
-      "correctAnswer": 1,
-      "explanation": "Contract represents the signed agreement and drives billing/revenue.",
+      "correctAnswer": 2,
+      "explanation": "Salesforce’s preparation trail includes Salesforce Contracts Foundations and digital contract management as part of the revenue management implementation path.",
       "whyWrong": [
-        "A Quote is a proposed deal, not yet a signed agreement — that's what a Contract represents.",
-        "Opportunity tracks the sales deal in progress, not the signed agreement itself.",
-        "Order represents fulfillment execution, not the signed contractual agreement."
+        "Automation Studio is a Marketing Cloud tool.",
+        "Setup Audit Trail records administrative changes; it does not manage customer agreements.",
+        "Chatter is a collaboration feature, not contract management."
       ]
     },
     {
-      "question": "What is usage-based billing?",
+      "question": "Which statement best describes Usage Management in the current Revenue Management preparation material?",
       "options": [
-        "Fixed fee only",
-        "Billing based on consumption or usage metrics",
-        "One-time only",
-        "Quote only"
+        "It creates marketing email journeys",
+        "It models and tracks usage-based products and prepares usage summaries for invoicing",
+        "It assigns Salesforce user roles",
+        "It replaces product catalog management"
       ],
       "correctAnswer": 1,
-      "explanation": "Usage-based billing charges based on consumption metrics.",
+      "explanation": "Salesforce’s preparation trail describes Usage Management as modeling, tracking, and managing usage-based products through invoice-ready summaries.",
       "whyWrong": [
-        "'Fixed fee only' is the opposite of what usage-based billing means.",
-        "'One-time only' contradicts the ongoing, consumption-based nature of usage-based billing.",
-        "'Quote only' is unrelated to the billing model being described — a quote precedes billing, it isn't the billing model itself."
+        "Email journeys are unrelated to Revenue Management usage tracking.",
+        "User roles are part of implementation and access configuration.",
+        "Usage Management complements rather than replaces catalog management."
       ]
     },
     {
-      "question": "Which standard governs revenue recognition for subscriptions?",
+      "question": "A customer needs orders fulfilled through defined orchestration processes after a sale. Which objective area is most relevant?",
       "options": [
-        "SOX only",
-        "ASC 606 / IFRS 15",
-        "GDPR only",
-        "No standard"
+        "Email Marketing Best Practices",
+        "Subscriber Data Management",
+        "Service Cloud Knowledge",
+        "Order Management"
       ],
-      "correctAnswer": 1,
-      "explanation": "ASC 606 and IFRS 15 govern revenue recognition.",
+      "correctAnswer": 3,
+      "explanation": "The current exam guide includes Contracts and Orders, and the preparation trail covers order management and order orchestration for order fulfillment.",
       "whyWrong": [
-        "SOX governs financial controls broadly, but the specific subscription revenue recognition standard is ASC 606/IFRS 15.",
-        "GDPR is a data privacy regulation, unrelated to revenue recognition accounting standards.",
-        "There is a specific governing standard (ASC 606/IFRS 15) — 'no standard' is incorrect."
+        "Email marketing is a separate product domain.",
+        "Subscriber data is a Marketing Cloud concern.",
+        "Knowledge articles are unrelated to order orchestration."
       ]
     },
     {
-      "question": "What does the P2C lifecycle begin with?",
+      "question": "What is a key part of implementation readiness for an Agentforce Revenue Management project?",
       "options": [
-        "Billing",
-        "Configuration and quote",
-        "Revenue recognition only",
-        "Contract only"
+        "Choosing a CPQ price book before gathering requirements",
+        "Confirming licenses, permission sets, prerequisites, scope, stakeholders, and adoption plan",
+        "Assuming every customer uses the same product configuration",
+        "Skipping build and testing to shorten delivery"
       ],
       "correctAnswer": 1,
-      "explanation": "P2C begins with configuration and quote, then contract, order, billing, and revenue.",
+      "explanation": "The current exam guide includes required licenses, permission sets, prerequisite feature toggles, stakeholder roles, scope and project planning, risk mitigation, testing, deployment, and adoption.",
       "whyWrong": [
-        "Billing happens after configuration and quoting, not at the start of the P2C lifecycle.",
-        "Revenue recognition happens after the sale is booked, not at the beginning of the lifecycle.",
-        "A signed contract typically follows the initial configuration and quoting stage, not the very start."
+        "The guide emphasizes readiness and customer requirements rather than assuming an implementation detail.",
+        "Solutions should translate customer requirements into appropriate capabilities.",
+        "The exam guide explicitly includes build, test, deployment, and adoption."
       ]
     },
     {
-      "question": "Which Revenue Cloud feature supports amendment handling?",
+      "question": "Which capability area is used to track products and services a customer has purchased after the sale?",
       "options": [
-        "Quote only",
-        "Contract amendments (add, change, renew)",
-        "Order only",
-        "Invoice only"
+        "Asset Management",
+        "Product Catalog Management only",
+        "Business Rules Engine only",
+        "Email Studio"
       ],
-      "correctAnswer": 1,
-      "explanation": "Contract amendments support add, change, and renew scenarios.",
+      "correctAnswer": 0,
+      "explanation": "Salesforce’s preparation trail includes Asset Lifecycle Management and describes managing assets to support post-sale customer relationships.",
       "whyWrong": [
-        "A Quote alone doesn't handle post-sale amendment scenarios like renewals or changes.",
-        "An Order alone doesn't handle contract-level amendment scenarios.",
-        "An Invoice alone is a billing document, not the mechanism for handling contract amendments."
+        "A catalog organizes products for selling; it does not represent the customer’s purchased asset lifecycle.",
+        "Business Rules Engine supports decision automation but is not the asset lifecycle capability.",
+        "Email Studio is a Marketing Cloud application."
       ]
     },
     {
-      "question": "What is the purpose of a Price Book in CPQ?",
+      "question": "A customer needs accurate quotes for different business cases. Which approach is covered by the current Configure, Price, Quote objective?",
       "options": [
-        "To store contacts",
-        "To define products and prices for quoting",
-        "To create orders only",
-        "To send invoices"
+        "Configure pricing procedures for the customer requirements and generate an accurate quote",
+        "Use only invoice payment settings",
+        "Replace catalog attributes with free-text notes",
+        "Defer pricing decisions until after order fulfillment"
       ],
-      "correctAnswer": 1,
-      "explanation": "Price Books define products and list prices for CPQ quotes.",
+      "correctAnswer": 0,
+      "explanation": "The current exam guide asks candidates to configure pricing procedures for customer-specific business cases and generate accurate pricing quotes.",
       "whyWrong": [
-        "A Price Book isn't for storing contact information — that's a CRM concept unrelated to CPQ pricing.",
-        "A Price Book defines pricing for quoting — creating orders is a separate downstream process.",
-        "A Price Book isn't an invoicing tool — invoicing happens later in the P2C lifecycle."
+        "Invoice management is a later, separate objective.",
+        "The Product Configurator and catalog use structured product information.",
+        "Pricing and quote generation occur before downstream orders and fulfillment."
       ]
     },
     {
-      "question": "Which integration is common for Revenue Cloud?",
+      "question": "When should a consultant identify a need for an API or customization?",
       "options": [
-        "Marketing Cloud only",
-        "ERP, billing systems, and accounting (e.g., NetSuite)",
-        "Slack only",
-        "Tableau only"
+        "For every catalog item, regardless of requirements",
+        "Whenever a user needs a permission set",
+        "To avoid discussing solution trade-offs",
+        "When customer requirements cannot be met by the appropriate out-of-the-box capability and an extension is needed"
       ],
-      "correctAnswer": 1,
-      "explanation": "Revenue Cloud integrates with ERP and accounting systems.",
+      "correctAnswer": 3,
+      "explanation": "The current exam guide expects candidates to identify when APIs or customizations are needed and describe the requirements to a developer.",
       "whyWrong": [
-        "Marketing Cloud alone undersells the integration landscape, which spans ERP and accounting systems too.",
-        "Slack alone is unrelated to the typical ERP/billing/accounting integrations for Revenue Cloud.",
-        "Tableau alone is a reporting tool, not a typical operational integration point for Revenue Cloud."
+        "The guide emphasizes choosing capabilities based on the customer case, not custom development by default.",
+        "Permission sets are part of configuration and access readiness, not by themselves a reason for an API.",
+        "The guide expects consultants to articulate solution trade-offs."
       ]
     },
     {
-      "question": "What does a Revenue Cloud Consultant need to understand?",
+      "question": "What is the purpose of organizing a product catalog with categories, classifications, and attributes?",
       "options": [
-        "Only UI",
-        "P2C business processes, accounting implications, and product capabilities",
-        "Only CPQ",
-        "Only Billing"
+        "To replace order management",
+        "To issue customer payments",
+        "To structure product information so products and bundles can be managed and configured for selling",
+        "To store marketing email engagement metrics"
       ],
-      "correctAnswer": 1,
-      "explanation": "Consultants need P2C process, accounting, and product knowledge.",
+      "correctAnswer": 2,
+      "explanation": "Salesforce’s Product Catalog Management material covers organizing product and bundle information with categories, classifications, and attributes.",
       "whyWrong": [
-        "'Only UI' undersells the consultant's needed knowledge, which spans business process and accounting implications.",
-        "'Only CPQ' undersells the broader P2C and accounting knowledge required beyond just quoting.",
-        "'Only Billing' undersells the broader P2C and product-capability knowledge required beyond just billing."
+        "Order Management is a separate downstream capability.",
+        "Payment and invoice functions are part of Invoice Management.",
+        "Email engagement metrics belong to Marketing Cloud."
       ]
     },
     {
-      "question": "Which best practice applies to Revenue Cloud implementation?",
+      "question": "Which delivery practice is explicitly included in Salesforce’s current Revenue Management consultant exam guide?",
       "options": [
-        "Ignore accounting",
-        "Align with accounting policies, test revenue scenarios, and validate reporting",
-        "No testing",
-        "Single product only"
+        "Skip user acceptance testing after configuration",
+        "Plan and lead discovery, mitigate risks, test, deploy, and drive adoption",
+        "Focus only on writing custom code",
+        "Avoid stakeholder alignment once a quote is generated"
       ],
       "correctAnswer": 1,
-      "explanation": "Align with accounting, test revenue scenarios, and validate reporting.",
+      "explanation": "The current guide includes discovery and design, project planning, risk mitigation, stakeholder alignment, build, testing, deployment, and adoption.",
       "whyWrong": [
-        "Ignoring accounting policies contradicts sound implementation practice for a finance-adjacent product.",
-        "'No testing' contradicts standard implementation best practice, which requires validating revenue scenarios.",
-        "Focusing on a single product ignores the cross-functional accounting alignment this best practice calls for."
+        "The preparation trail includes user acceptance testing, and the guide covers testing.",
+        "The guide expects basic API and customization awareness, not a code-only focus.",
+        "Stakeholder alignment and business value are explicitly part of the consultant role."
       ]
+    }
+  ],
+  "introLead": [
+    {
+      "type": "text",
+      "text": "This page retains “Revenue Cloud Consultant,” the name used in Salesforce’s earlier"
+    },
+    {
+      "type": "link",
+      "href": "https://www.salesforce.com/blog/revenue-cloud-consultant-certification/",
+      "label": "credential announcement"
+    },
+    {
+      "type": "text",
+      "text": ". Salesforce’s current"
+    },
+    {
+      "type": "link",
+      "href": "https://trailhead.salesforce.com/credentials/revenuemanagementconsultant",
+      "label": "credential page"
+    },
+    {
+      "type": "text",
+      "text": " and"
+    },
+    {
+      "type": "link",
+      "href": "https://help.salesforce.com/s/articleView?id=005298978&type=1&language=en_US",
+      "label": "exam guide"
+    },
+    {
+      "type": "text",
+      "text": " identify Revenue Management / Agentforce Revenue Management Consultant and the on-core Product-to-Cash platform. The 15 sample questions introduce the lifecycle, consultant role, platform scope, and product catalog. Follow Salesforce’s"
+    },
+    {
+      "type": "link",
+      "href": "https://trailhead.salesforce.com/content/learn/trails/prepare-for-your-salesforce-revenue-cloud-consultant-exam",
+      "label": "Revenue Management preparation trail"
+    },
+    {
+      "type": "text",
+      "text": " for hands-on coverage."
     }
   ]
 }

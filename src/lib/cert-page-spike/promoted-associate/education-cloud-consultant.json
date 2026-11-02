@@ -1,114 +1,110 @@
 {
   "template": "associate",
   "whoIsThisFor": {
-    "heading": "Who is the Education Cloud Consultant exam for?",
+    "heading": "Who may use these Education Cloud Consultant study notes?",
     "personas": [
       {
         "label": "Higher education CRM consultants",
-        "description": "You implement Salesforce for universities and colleges and need to validate your expertise in EDA, student lifecycle management, and admissions workflows."
+        "description": "You help education institutions translate constituent, learner, admissions, or advancement needs into Salesforce solution designs."
       },
       {
         "label": "Salesforce admins at educational institutions",
-        "description": "You manage an Education Cloud org and want to prove your knowledge of the Education Data Architecture, advising tools, and student success features."
+        "description": "You support Salesforce solutions at an education institution and want structured notes on implementation and product-design concepts."
       },
       {
         "label": "EdTech implementation partners",
-        "description": "You deliver Education Cloud projects and need the credential to demonstrate competency in configuring student recruitment, enrollment, and advancement solutions."
+        "description": "You work with education customers on requirements, product choices, integrations, governance, and adoption."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Education Cloud Consultant Exam Hard?",
-    "summary": "The Education Cloud Consultant exam is moderately to significantly difficult. It covers the Education Data Architecture (EDA), student lifecycle management, advising workflows, and integration with SIS/LMS systems. Candidates need both Salesforce platform skills and understanding of higher education processes.",
+    "summary": "Salesforce’s published exam guide names this credential Salesforce Certified Education Cloud Consultant. The guide’s registration and exam dates have passed; Salesforce lists retirement effective February 1, 2027. Use the outline below as a historical guide reference, not as an active exam syllabus.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>EDA data model is central</strong> — you must understand affiliations, course connections, program plans, and how EDA replaces the standard account/contact model.",
-      "<strong>Cross-functional knowledge required</strong> — questions span admissions, advising, advancement (fundraising), and IT integration scenarios."
+      "<strong>Published format:</strong> 60 multiple-choice questions and up to five unscored questions in 105 minutes; the published passing score is 67%.",
+      "<strong>Published fees:</strong> US$200 registration and US$100 retake; JPY 30,000 for each, plus applicable local tax.",
+      "<strong>Prerequisite:</strong> Salesforce Certified Platform Administrator Certification.",
+      "<strong>Availability:</strong> registration ended July 24, 2026; the last exam date was August 31, 2026."
     ],
-    "passRateGuidance": "Score 75%+ on practice exams and ensure you can diagram the EDA object model before booking. Prior experience with a higher education Salesforce implementation or familiarity with university admissions and advising processes is strongly recommended."
+    "passRateGuidance": "No practice score guarantees an exam result. The exam is no longer available for registration or delivery; use Salesforce’s current product documentation and Trailhead learning resources for ongoing Education/Agentforce Education study."
   },
   "examFormat": {
     "heading": "Education Cloud Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include designing an admissions pipeline for a university, configuring Student Success Hub alerts for at-risk students, and selecting the right integration approach for SIS data.",
+    "intro": "The published exam guide lists the format below. Registration and exam delivery have ended.",
+    "scenarioPercent": "Salesforce does not publish a scenario-question percentage. The historical guide’s domains include requirements-based solution design, configuration, implementation strategy, integration/data management, and analytics.",
     "bestWayToPass": [
-      "<strong>Master the EDA data model:</strong> Know accounts (institutions, departments, households), contacts (students, faculty), affiliations, course connections, and program plans inside and out.",
-      "<strong>Understand the student lifecycle:</strong> Study how prospects move through recruitment, admissions, enrollment, retention, and alumni engagement in Education Cloud.",
-      "<strong>Learn Student Success Hub:</strong> Know how to configure alerts, advising appointments, success plans, and case management for student support workflows.",
-      "<strong>Study integration patterns:</strong> Understand how Education Cloud integrates with SIS (Banner, PeopleSoft) and LMS (Canvas, Blackboard) systems, and which system is the record of truth for academic data."
+      "<strong>Start with requirements:</strong> Identify users, business processes, constraints, data ownership, outcomes, and existing systems before recommending a solution.",
+      "<strong>Compare product and data-model choices:</strong> Distinguish the Education Cloud platform solution from Education Data Architecture managed-package deployments; verify model-specific behavior in current documentation.",
+      "<strong>Plan implementation:</strong> Account for governance, change management, staffing, testing, deployment, adoption, and maintainability.",
+      "<strong>Assess integration and data:</strong> Document source-of-truth ownership, exchange direction, migration quality, error handling, and volume considerations."
     ]
   },
   "certificationCard": {
-    "code": "Education Cloud",
-    "description": "This exam tests configuring Education Data Architecture (EDA), student lifecycle management, and advising workflows for schools and universities. Expect questions on admissions pipelines, course enrollment, and SIS/LMS integration.",
+    "code": "Salesforce Certified Education Cloud Consultant",
+    "description": "Historical exam reference for Salesforce’s education implementation consultant credential. Salesforce now calls the product Agentforce Education; the exam guide’s domain outline aligns to Winter ’24 and is not a current exam syllabus.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "67%",
       "duration": "105 min",
-      "cost": "$200"
+      "cost": "$200 (published registration fee)"
     },
     "topics": [
-      "Education Cloud",
-      "Student Lifecycle",
-      "Admissions",
-      "Advancement",
-      "Experience Cloud",
-      "Data Model",
-      "Reporting",
-      "Integration",
-      "Best Practices",
-      "Industry"
+      "Domain Expertise (18%)",
+      "Education Cloud Configuration (22%)",
+      "Implementation Strategies and Best Practices (18%)",
+      "Solution Design (19%)",
+      "Integration and Data Management (16%)",
+      "Analytics (7%)"
     ]
   },
   "keyConcepts": {
-    "h2": "Education Cloud Consultant: Key Concepts for the Exam",
+    "h2": "Education Consultant: Product and Data-Model Study Notes",
     "blocks": [
       {
         "heading": "EDA: Education Data Architecture Core Objects",
-        "body": "Education Cloud is built on EDA (Education Data Architecture), an open-source data model from Salesforce.org. Core objects: Contact (represents students, faculty, and staff), Account (educational institution, department, household), Term (academic period — semester, quarter), Course (a subject offering), Course Connection (a student's enrollment in a course for a term), Program Plan (degree plan with requirements). Affiliations connect contacts to multiple accounts (a student affiliated with their major department, a dormitory, and the institution). The consultant configures EDA to match the institution's academic structure."
+        "body": "Education Data Architecture (EDA) is a Salesforce for Education managed-package data model. Salesforce distinguishes it from the Education Cloud platform solution, now called Agentforce Education. Identify which product and model an institution uses before applying object and relationship assumptions; verify the relevant model in its current documentation."
       },
       {
         "heading": "Student Success Hub: Alerts, Cases, and Appointments",
-        "body": "Student Success Hub (SSH) is the advising and student success platform in Education Cloud. Key features: Alerts flag students at risk (attendance drops, grade thresholds, hold flags). Cases manage student issues requiring follow-up. Appointments enable students to book advising sessions (integrates with calendar systems). Success Plans create personalised student action plans with milestones. Advising notes capture interaction history. The consultant configures SSH to match the institution's student success model — defining which alert triggers are enabled, how cases are routed to advisors, and what appointment types are available."
+        "body": "Student success solutions should be designed around the institution’s goals, staff responsibilities, access policies, data sources, and intervention workflows. Confirm which licensed product features are available and how they behave before specifying alerts, cases, appointments, or plans."
       },
       {
         "heading": "Recruiting and Admissions",
-        "body": "Education Cloud supports the full student recruitment lifecycle. Inquiry captures prospective student interest. Application tracks the admissions application and review process. Prospect/Lead management assigns recruiter territories and tracks outreach activities. Program Interest records which academic programmes a prospect is interested in. The consultant configures the recruiting pipeline stages, application workflow (application submitted &rarr; under review &rarr; decision made &rarr; enrolled), and integration with external application management systems (Common App, Slate)."
+        "body": "Recruitment and admissions solutions can support the learner journey from initial interest through application and enrollment. Map the institution’s real process, required records, portal experience, staff handoffs, and external application-system interfaces before selecting configuration."
       },
       {
         "heading": "Experience Cloud for Students and Faculty",
-        "body": "Education Cloud leverages Experience Cloud to build self-service portals for students and faculty. Student portals: course registration, financial aid status, advising appointment booking, campus services requests. Faculty portals: course rosters, grade submission, office hours management. Community engagement: peer discussion groups, club pages, alumni networks. The consultant configures the Experience Cloud site using appropriate templates, sharing settings (Sharing Sets for student record access), and **Knowledge articles** for self-service resolution of common questions."
+        "body": "Salesforce Help describes an online learner portal powered by Experience Cloud. Portal scope, record access, and available interactions depend on the institution’s products, licenses, configuration, and security requirements; validate those details in current documentation."
       },
       {
         "heading": "Integration with SIS and LMS Systems",
-        "body": "Educational institutions typically have existing systems of record: SIS (Student Information System — PeopleSoft, Banner, Colleague) for official academic records and LMS (Learning Management System — Canvas, Blackboard, Moodle) for course delivery. Education Cloud Salesforce serves as the engagement CRM layer — not the system of record for academic transcripts. Integration patterns: SIS sync pushes enrollment status, grades, and course connections into Salesforce. LMS integration surfaces course activity data for success coaching. The consultant designs the integration architecture — what data flows in each direction, at what frequency, and which system is the golden record for each data element."
+        "body": "For SIS, LMS, and other integrations, establish source-of-truth ownership per data element, exchange direction and timing, reconciliation and error handling, privacy/access requirements, and migration constraints. Do not assume a single system-of-record pattern for every institution."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Education Cloud Consultant Exam",
-    "intro": "The Education Cloud Consultant exam tests implementation of Salesforce for higher education institutions. Focus on the Education Data Architecture (EDA), student lifecycle management, and how Education Cloud extends standard Salesforce.",
+    "h2": "Solution Design Practice Prompts",
+    "intro": "These prompts organize selected themes from the published guide’s domains. They are not predictions about the content of a current exam.",
     "blocks": [
       {
         "heading": "Education Data Architecture (EDA)",
-        "body": "EDA replaces the standard Account/Contact model with an education-specific model: Accounts as educational institutions, Contacts as students/faculty, and Affiliations linking them. Know how EDA's Household and Administrative account types differ."
+        "body": "First establish whether the scenario uses the EDA managed package or the Education Cloud platform solution. Then confirm the applicable account model and relationships in the documentation for that product."
       },
       {
         "heading": "Student Lifecycle Management",
-        "body": "Understand how Admissions Connect, Student Success Hub, and Recruitment and Admissions features map to the student journey from prospect through alumni. Know which features are in Education Cloud vs. standard Salesforce."
+        "body": "Trace the user and institutional journey from recruitment and admissions to student success and alumni engagement. Verify product boundaries and required staff handoffs for the selected deployment."
       },
       {
         "heading": "Program Enrollment & Course Management",
-        "body": "Know the EDA objects: Programs, Courses, Course Offerings, and Course Enrollments. Understand how students enroll in course offerings and how academic records are maintained."
+        "body": "Use the institution’s requirements to identify academic program, course, and enrollment data needs; verify object names and relationships against the selected data model."
       },
       {
         "heading": "Advisor & Success Hub Configuration",
-        "body": "Know how to configure the Success Hub for advisors with student alerts, appointments, and care plans. Understand how Advisor Link enables student-initiated advising appointments."
+        "body": "For advising workflows, identify the goal, signal source, assigned staff, access rules, follow-up process, and currently licensed features."
       },
       {
         "heading": "Reporting for Education",
-        "body": "Understand common education reporting needs: enrollment funnels, retention rates, advising caseloads, and alumni engagement. Know how to build reports using EDA-specific report types."
+        "body": "Connect reporting needs to decision-makers and data quality. Compare available reports and analytics options, noting governance and data-volume constraints."
       }
     ]
   },
@@ -145,7 +141,7 @@
     },
     {
       "id": "scenario-tips",
-      "title": "How to Pass"
+      "title": "Solution Design Study Prompts"
     },
     {
       "id": "difficulty-heatmap",
@@ -173,11 +169,11 @@
       "question": "What is Education Cloud used for?",
       "options": [
         "Retail only",
-        "Managing student lifecycle, admissions, and advancement for educational institutions",
         "Manufacturing only",
-        "CPQ only"
+        "CPQ only",
+        "Managing student lifecycle, admissions, and advancement for educational institutions"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Education Cloud supports student lifecycle, admissions, advancement, and engagement for schools and universities.",
       "whyWrong": [
         "Retail is a different industry vertical, unrelated to Education Cloud's purpose.",
@@ -189,11 +185,11 @@
       "question": "Which role does an Education Cloud Consultant typically fulfill?",
       "options": [
         "Email marketing only",
-        "Implementing Salesforce Education Cloud solutions in a customer-facing role",
         "Slack configuration only",
+        "Implementing Salesforce Education Cloud solutions in a customer-facing role",
         "UI design only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "They implement Education Cloud solutions in a customer-facing consultant role.",
       "whyWrong": [
         "Email marketing alone is a Marketing Cloud function, not the broader consulting role.",
@@ -202,46 +198,46 @@
       ]
     },
     {
-      "question": "What type of organizations typically use Education Cloud?",
+      "question": "Which education settings are named in the consultant exam guide?",
       "options": [
         "Retail only",
-        "K-12 schools, higher education, and educational nonprofits",
+        "K-12 and higher education institutions",
         "Manufacturing only",
         "Financial services only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud is designed for K-12, higher education, and educational institutions.",
+      "explanation": "The official consultant exam guide explicitly includes K-12 customers and describes higher education implementation experience.",
       "whyWrong": [
         "Retail organizations don't typically use Education Cloud — it's purpose-built for educational institutions.",
         "Manufacturing companies don't typically use Education Cloud.",
-        "Financial services firms don't typically use Education Cloud — it's an education-specific industry solution."
+        "Financial services firms are outside the education settings named in the guide."
       ]
     },
     {
-      "question": "Which Salesforce product is often used with Education Cloud for learning management?",
+      "question": "Which Salesforce technology powers an Education Cloud online learner portal?",
       "options": [
         "CPQ only",
-        "Experience Cloud and industry-specific data models",
+        "Experience Cloud",
         "Commerce Cloud only",
         "Marketing Cloud only"
       ],
       "correctAnswer": 1,
-      "explanation": "Education Cloud uses Experience Cloud and industry data models for student and program management.",
+      "explanation": "Salesforce Help states that Education Cloud includes an online learner portal powered by Experience Cloud.",
       "whyWrong": [
-        "CPQ is a pricing/quoting tool, unrelated to learning management pairing with Education Cloud.",
-        "Commerce Cloud is an e-commerce platform, unrelated to learning management.",
-        "Marketing Cloud is for campaign automation, not the Experience Cloud/data-model pairing described here."
+        "CPQ is not the portal technology identified in Salesforce’s Education Cloud overview.",
+        "Commerce Cloud is not the portal technology identified in Salesforce’s Education Cloud overview.",
+        "Marketing Cloud is not the portal technology identified in Salesforce’s Education Cloud overview."
       ]
     },
     {
       "question": "What is a common use case for Education Cloud?",
       "options": [
-        "Quote generation",
         "Student recruitment, enrollment, and alumni engagement",
+        "Quote generation",
         "Order management",
         "Email campaigns only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Student recruitment, enrollment, and alumni engagement are core Education Cloud use cases.",
       "whyWrong": [
         "Quote generation is a Sales/CPQ concept, unrelated to Education Cloud's student-focused use cases.",
@@ -253,11 +249,11 @@
       "question": "What does the Admissions lifecycle typically include?",
       "options": [
         "Only billing",
-        "Inquiry, application, acceptance, and enrollment",
         "Only marketing",
+        "Inquiry, application, acceptance, and enrollment",
         "Only reporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Admissions covers inquiry through application to enrollment.",
       "whyWrong": [
         "'Only billing' undersells the admissions lifecycle, which spans the full inquiry-to-enrollment journey, not just payment.",
@@ -269,11 +265,11 @@
       "question": "Which Education Cloud object supports program management?",
       "options": [
         "Standard Account only",
-        "Program, Term, and Course objects",
         "Opportunity only",
-        "Lead only"
+        "Lead only",
+        "Program, Term, and Course objects"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Program, Term, and Course support academic program management.",
       "whyWrong": [
         "Standard Account object alone doesn't capture the education-specific Program/Term/Course structure.",
@@ -284,12 +280,12 @@
     {
       "question": "What is Advancement in the education context?",
       "options": [
-        "Only admissions",
         "Alumni relations, fundraising, and donor engagement",
+        "Only admissions",
         "Only enrollment",
         "Only courses"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Advancement covers alumni relations and fundraising.",
       "whyWrong": [
         "'Only admissions' undersells Advancement, which is specifically about post-enrollment alumni/fundraising activity, distinct from admissions.",
@@ -301,11 +297,11 @@
       "question": "Which Experience Cloud use case applies to Education Cloud?",
       "options": [
         "B2B storefront only",
-        "Student and alumni portals for self-service",
         "Partner portal only",
+        "Student and alumni portals for self-service",
         "Support portal only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Student and alumni portals are common Experience Cloud use cases.",
       "whyWrong": [
         "B2B storefronts are a Commerce Cloud use case, unrelated to Education Cloud's student/alumni self-service portals.",
@@ -333,11 +329,11 @@
       "question": "Which reporting need is common for Education Cloud?",
       "options": [
         "Only sales pipeline",
-        "Enrollment, retention, and advancement metrics",
         "Only support cases",
+        "Enrollment, retention, and advancement metrics",
         "Only product sales"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Enrollment, retention, and advancement reporting are key.",
       "whyWrong": [
         "Sales pipeline reporting is a Sales Cloud concept, unrelated to Education Cloud's enrollment/retention metrics.",
@@ -348,12 +344,12 @@
     {
       "question": "What is the purpose of Term in Education Cloud?",
       "options": [
-        "To replace Program",
         "To represent academic periods (e.g., semesters, quarters)",
+        "To replace Program",
         "To track donations only",
         "To manage campaigns"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Term represents academic periods for enrollment and scheduling.",
       "whyWrong": [
         "Term doesn't replace Program — they're complementary objects representing different concepts (academic period vs. program of study).",
@@ -364,12 +360,12 @@
     {
       "question": "Which integration is common for Education Cloud?",
       "options": [
-        "CPQ only",
         "Student information systems (SIS), learning management, and payment",
+        "CPQ only",
         "Marketing Cloud only",
         "Slack only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Education Cloud integrates with SIS and LMS systems.",
       "whyWrong": [
         "CPQ alone doesn't capture the SIS/LMS/payment integration landscape typical of Education Cloud implementations.",
@@ -397,11 +393,11 @@
       "question": "Which best practice applies to Education Cloud implementation?",
       "options": [
         "Ignore stakeholders",
-        "Engage admissions, advancement, and IT; align with institutional workflows",
         "No training",
-        "Single department only"
+        "Single department only",
+        "Engage admissions, advancement, and IT; align with institutional workflows"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Engage stakeholders and align with institutional workflows.",
       "whyWrong": [
         "Ignoring stakeholders contradicts sound implementation practice and risks a solution that doesn't fit institutional needs.",

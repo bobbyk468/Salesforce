@@ -18,47 +18,45 @@
     ]
   },
   "examDifficulty": {
-    "heading": "Is the Field Service Consultant Exam Hard?",
-    "summary": "The Field Service Consultant exam is moderately to highly difficult. The scheduling engine, dispatcher console, and mobile app configuration create a large surface area that requires hands-on experience to master.",
+    "heading": "How to Prepare for the Exam",
+    "summary": "The official outline assigns the largest weight to Managing Scheduling and Optimization (28%) and Managing Work Orders (23%). Use the published domains to plan a balanced review.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>63% passing score</strong> &mdash; you can miss up to 22 questions, but the low pass mark reflects the exam’s complexity.",
-      "<strong>Scheduling policy configuration</strong> &mdash; expect scenario questions on work rules, service objectives, and how the optimization engine assigns appointments based on skills, territory, and travel time.",
-      "<strong>Mobile app and offline behavior</strong> &mdash; you need to know which records are available offline, how data syncs when connectivity is restored, and how mobile flows guide technician workflows."
+      "<strong>Exam format:</strong> 60 multiple-choice/multiple-select questions and up to five unscored questions in 105 minutes.",
+      "<strong>Passing score:</strong> 63%; No pass-rate figure is stated in the exam guide reviewed.",
+      "<strong>Prerequisites:</strong> Salesforce Certified Platform Administrator and Salesforce Certified Agentforce Service Consultant.",
+      "<strong>Exam objectives:</strong> scheduling and optimization, work orders, resources, mobility, inventory, assets, maintenance plans, and permissions/sharing."
     ],
-    "passRateGuidance": "Score 70%+ on practice exams and make sure you can configure a scheduling policy with work rules and service objectives, and explain the Work Order to Service Appointment data flow."
+    "passRateGuidance": "Use practice questions diagnostically, then verify concepts against the official exam outline and Salesforce Help. Practice scores are not an official threshold or a guarantee of exam results."
   },
   "examFormat": {
-    "heading": "Field Service Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 55-65% of questions are scenario-based. Common patterns include designing a scheduling policy for a multi-territory workforce, configuring the dispatcher console for a dispatch centre, and setting up inventory tracking for van stock.",
+    "heading": "Exam Format and Study Approach",
+    "intro": "The Salesforce exam guide specifies 60 scored multiple-choice/multiple-select questions, up to five unscored questions, and 105 minutes. The registration fee is US$200 plus applicable taxes; retake fee is US$100 plus applicable taxes.",
     "bestWayToPass": [
-      "<strong>Master the data model:</strong> Know the hierarchy from Work Order to Work Order Line Items to Service Appointments, and how Service Resources, Territories, and Operating Hours connect.",
-      "<strong>Understand scheduling policies:</strong> Know the difference between work rules (constraints like skills and territory) and service objectives (goals like minimize travel), and how they combine in a Scheduling Policy.",
-      "<strong>Know the dispatcher console:</strong> Gantt view for timeline scheduling, map view for geographic context, drag-and-drop assignment, and how absence management blocks resource availability.",
-      "<strong>Study mobile app configuration:</strong> Offline record access, mobile flows for inspection checklists, Products Required vs Products Consumed for parts tracking, and signature capture."
+      "Read each scenario for the business requirement, affected record, current lifecycle state, and constraints before selecting a configuration.",
+      "Separate resource qualification (skills and territory membership) from scheduling objectives (the desired outcome among eligible choices).",
+      "Trace work from Work Order and Work Order Line Items to associated Service Appointments; distinguish planned products from consumed products.",
+      "Compare scheduling-service and optimization-service choices only after identifying scope, timing, and dispatch requirements.",
+      "Review every published exam domain, including mobility, assets, maintenance plans, and permissions/sharing."
     ]
   },
   "certificationCard": {
-    "code": "Field Service",
-    "description": "The Field Service Consultant certification validates your expertise in implementing Salesforce Field Service solutions for mobile workforce management.",
+    "code": "Agentforce Field Service and Operations Consultant",
+    "description": "The Salesforce Certified Agentforce Field Service and Operations Consultant credential validates the ability to design and deploy Field Service and Operations solutions for customer business processes.",
     "examDetails": {
-      "questions": 60,
+      "questions": "60 scored + up to 5 unscored",
       "passingScore": "63%",
       "duration": "105 min",
-      "cost": "$200"
+      "cost": "US$200 + applicable taxes"
     },
     "topics": [
-      "Field Service Setup",
-      "Service Resources",
-      "Service Territories",
-      "Scheduling & Optimization",
-      "Dispatcher Console",
-      "Mobile App",
-      "Work Orders",
-      "Parts Management",
-      "Contracts & SLAs",
-      "Reporting"
+      "Managing Resources (16%)",
+      "Managing Work Orders (23%)",
+      "Managing Scheduling and Optimization (28%)",
+      "Configuring Mobility (10%)",
+      "Managing Inventory (8%)",
+      "Managing Assets (5%)",
+      "Configuring Maintenance Plans (5%)",
+      "Permissions and Sharing (5%)"
     ]
   },
   "keyConcepts": {
@@ -74,11 +72,11 @@
       },
       {
         "heading": "Service Territories, Resources, and Skills",
-        "body": "Service Territories define the geographic areas where resources operate — Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order — resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. The exam tests which combination of territory, resource, and skill configuration matches a given routing scenario."
+        "body": "Service Territories define the geographic areas where resources operate — Primary territory (where the resource primarily works) and Secondary/Relocation territories for expanded coverage. Service Resources are linked to Salesforce users (Employee type) or equipment (Equipment type). Skills define the competencies required for a Work Order — resources must have matching skills for skills-based routing. Operating Hours define when territories and resources are available. For a routing scenario, check the resource’s active territory membership, required skills and skill levels, and applicable operating hours."
       },
       {
         "heading": "Mobile App and Offline Capabilities",
-        "body": "The Field Service Mobile app (iOS and Android) allows field technicians to view and complete work orders, update service appointment status, log parts used, and capture signatures. Offline mode allows continued working when network connectivity is unavailable — changes sync when connectivity is restored. Mobile flows guide technicians through inspection checklists and multi-step processes. Inventory management: technicians can view van stock (Products Required), consume parts (Products Consumed), and request restocking. The exam tests mobile configuration options and offline data sync behaviour."
+        "body": "Field Service Mobile supports technician workflows on mobile devices; available records and behavior depend on configured mobile settings and data access. When assessing an offline requirement, distinguish the mobile app capability from the specific data, actions, and sync configuration available to the user. Do not assume every record or flow is available offline."
       },
       {
         "heading": "Parts and Inventory Management",
@@ -87,28 +85,20 @@
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Salesforce Field Service Consultant Exam",
-    "intro": "The Field Service exam tests implementation of field service operations: scheduling, dispatch, mobile workers, and inventory. Focus on the Work Order data model, scheduling policy configuration, and the Field Service mobile app.",
+    "h2": "Original Scenario Review",
+    "intro": "These original examples are study aids, not reported exam items. Use official documentation to confirm product behavior and local configuration details.",
     "blocks": [
       {
-        "heading": "Work Order Data Model",
-        "body": "Know the hierarchy: Work Order → Work Order Line Items → Service Appointments. Understand how Service Resources, Service Territories, and Operating Hours define scheduling availability."
+        "heading": "Resource eligibility versus preference",
+        "body": "A job is in a service territory but the expected technician is not considered. Check active Service Territory Members, required skills and skill levels, and operating hours before treating an account or Work Order resource preference as a hard eligibility rule."
       },
       {
-        "heading": "Scheduling Policies & Optimization",
-        "body": "**Scheduling Policies** define how Salesforce Scheduler and the **Optimization engine** assign appointments. Know the rule types (Work Rule, Service Objective), how they interact, and how to configure Scheduling Policy goals."
+        "heading": "Appointment lifecycle versus schedule policy",
+        "body": "A dispatcher cannot schedule an appointment with the expected policy. First check the appointment status, required fields, and whether the selected scheduling service supports the requested operation. A policy objective cannot repair an invalid lifecycle state."
       },
       {
-        "heading": "Dispatcher Console",
-        "body": "Know how dispatchers use the Gantt view, map view, and appointment list to manage appointments. Understand how to manually schedule, unschedule, and reassign appointments, and how to use absence management."
-      },
-      {
-        "heading": "Mobile App Configuration",
-        "body": "Know how to configure the Field Service mobile app: which records are accessible offline, how to configure the mobile flow, Required Skills, and how mobile workers complete Work Order Line Items and capture signatures."
-      },
-      {
-        "heading": "Inventory Management",
-        "body": "Understand how Product Items (serialized/non-serialized), Product Requests, and Product Consumed track parts consumption. Know how Return Orders handle reverse logistics and how inventory levels roll up by location."
+        "heading": "Planned versus actual parts",
+        "body": "A Work Order lists parts expected before dispatch, but the technician uses a different quantity. Distinguish Products Required from Products Consumed; then verify the relevant inventory location and whether returned parts require a Return Order."
       }
     ]
   },
@@ -145,7 +135,7 @@
     },
     {
       "id": "scenario-tips",
-      "title": "How to Pass"
+      "title": "Scenario Review"
     },
     {
       "id": "difficulty-heatmap",
@@ -170,15 +160,15 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which object is used to represent a technician's availability for scheduling?",
+      "question": "Which record represents a technician or other worker that can be assigned field service work?",
       "options": [
-        "Service Resource",
         "Service Appointment",
         "Service Territory",
-        "Operating Hours"
+        "Operating Hours",
+        "Service Resource"
       ],
-      "correctAnswer": 0,
-      "explanation": "Service Resource represents a technician or field worker and includes their skills, availability, and territory assignments.",
+      "correctAnswer": 3,
+      "explanation": "A Service Resource represents a person or other resource used in field operations. Availability is affected by related configuration and is not simply a property of the record alone.",
       "whyWrong": [
         "Service Appointment represents scheduled work, not technician availability itself.",
         "Service Territory defines a geographic/logical area, not individual technician availability.",
@@ -188,12 +178,12 @@
     {
       "question": "What is the purpose of a Scheduling Policy in Field Service?",
       "options": [
-        "To define work rules and objectives for the optimizer",
         "To assign resources to territories",
         "To track service appointments",
+        "To define work rules and objectives for the optimizer",
         "To manage parts inventory"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Scheduling Policies define work rules (constraints) and objectives that the scheduling optimizer uses when assigning appointments.",
       "whyWrong": [
         "Assigning resources to territories is a separate configuration, not what a Scheduling Policy defines.",
@@ -222,10 +212,10 @@
       "options": [
         "User Profile",
         "Permission Sets",
-        "Skill Requirements and Territory Membership",
-        "Role Hierarchy"
+        "Role Hierarchy",
+        "Skill Requirements and Territory Membership"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 3,
       "explanation": "Skill Requirements on the Work Type and Service Territory membership determine which Service Resources are eligible for scheduling.",
       "whyWrong": [
         "User Profile alone controls broad access, not the specific scheduling eligibility criteria.",
@@ -253,11 +243,11 @@
       "question": "What is the purpose of Work Type in Field Service?",
       "options": [
         "To track inventory only",
-        "To define the template for work orders including duration, skills, and parts",
         "To assign territories",
+        "To define the template for work orders including duration, skills, and parts",
         "To create reports"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Work Type defines the template for work orders including duration and skill requirements.",
       "whyWrong": [
         "'To track inventory only' misattributes Work Type's purpose to a different Field Service function.",
@@ -300,12 +290,12 @@
     {
       "question": "Which feature allows dispatchers to manually drag and drop appointments?",
       "options": [
-        "List View only",
         "Dispatcher Console Gantt",
+        "List View only",
         "Map View only",
         "Reports"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "The Gantt allows manual drag-and-drop scheduling.",
       "whyWrong": [
         "List View alone doesn't support drag-and-drop scheduling — that's the Gantt's specific function.",
@@ -317,11 +307,11 @@
       "question": "What is the purpose of Operating Hours in Field Service?",
       "options": [
         "To define skills only",
-        "To define when resources and locations are available",
         "To track parts only",
+        "To define when resources and locations are available",
         "To create work orders"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Operating Hours define availability windows for resources and locations.",
       "whyWrong": [
         "'To define skills only' undersells Operating Hours, which is about availability windows, not skills.",
@@ -333,11 +323,11 @@
       "question": "Which object is used to track consumable or returnable parts for work orders?",
       "options": [
         "Service Resource",
-        "Product Required or Product Consumed",
         "Work Type",
+        "Product Required or Product Consumed",
         "Service Territory"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Product Required and Product Consumed track parts on work orders.",
       "whyWrong": [
         "Service Resource represents the technician, not the parts-tracking object.",
@@ -348,12 +338,12 @@
     {
       "question": "What does the Field Service Mobile app support for technicians?",
       "options": [
-        "Online only",
         "Offline access, capture signatures, and photo attachments",
+        "Online only",
         "Reports only",
         "Dashboards only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "The mobile app supports offline work, signatures, and photos.",
       "whyWrong": [
         "'Online only' is the opposite of what the mobile app's offline capability provides.",
@@ -364,12 +354,12 @@
     {
       "question": "Which feature enables automatic scheduling based on optimization rules?",
       "options": [
-        "Manual assignment only",
         "Optimization service with scheduling policies",
+        "Manual assignment only",
         "Gantt only",
         "Map only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "The optimization service runs with scheduling policies for automatic assignment.",
       "whyWrong": [
         "Manual assignment is the opposite of the automated optimization being asked about.",
@@ -397,11 +387,11 @@
       "question": "Which Field Service feature supports contract-based entitlements and SLAs?",
       "options": [
         "Work Type only",
-        "Service Contracts and Entitlements",
         "Operating Hours only",
-        "Service Resource only"
+        "Service Resource only",
+        "Service Contracts and Entitlements"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Service Contracts and Entitlements define SLAs and covered services.",
       "whyWrong": [
         "Work Type alone defines job templates, not entitlement/SLA tracking.",
@@ -409,5 +399,6 @@
         "Service Resource alone represents technicians, not entitlement/SLA tracking."
       ]
     }
-  ]
+  ],
+  "practiceQuestionsIntroSuffix": " These are original practice items for learning, not actual or recalled Salesforce exam questions; answers apply to the stated scenarios and should be checked against current Salesforce Help."
 }
