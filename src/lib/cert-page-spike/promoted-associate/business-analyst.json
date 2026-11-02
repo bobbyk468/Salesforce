@@ -6,38 +6,38 @@
     "personas": [
       {
         "label": "Business analysts",
-        "description": "You gather requirements and translate them into Salesforce solutions. This cert validates your BA methodology on the platform."
+        "description": "You gather requirements on Salesforce projects and want the credential that names the role."
       },
       {
         "label": "Admins expanding their role",
-        "description": "You already configure Salesforce and want to formalise your requirements-gathering and stakeholder management skills."
+        "description": "You already configure Salesforce and are being asked to run discovery and write user stories."
       },
       {
         "label": "Project managers",
-        "description": "You manage Salesforce implementations and want to demonstrate your ability to bridge business and technical teams."
+        "description": "You run Salesforce delivery and want to understand what good requirements look like."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Business Analyst Exam Hard?",
-    "summary": "The Business Analyst exam is moderately challenging. The 72% passing score is one of the highest for consultant-level exams, and the content splits evenly between BA methodology and Salesforce platform knowledge.",
+    "summary": "It is a moderate exam with an unusually high pass mark. Roughly half of it is business analysis method, such as running discovery and writing user stories, and half is Salesforce knowledge, such as knowing what the platform can do before you promise it.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>72% passing score</strong> — higher than most consultant exams. You can only miss about 17 questions.",
-      "<strong>Heavy on methodology</strong> — expect questions on elicitation techniques, user stories, acceptance criteria, and backlog prioritisation.",
-      "<strong>Salesforce-specific</strong> — you must know when to recommend declarative vs. programmatic solutions and translate requirements into data model decisions."
+      "<strong>72% to pass</strong>, about 44 correct answers out of 60. That is higher than most consultant exams, so there is little room for error. Confirm it in the official exam guide before you book.",
+      "<strong>Method as well as product.</strong> Elicitation techniques, process mapping and user stories carry real weight.",
+      "<strong>Salesforce judgement.</strong> You need to know when configuration will do and when something needs building."
     ],
-    "passRateGuidance": "Spend equal study time on Agile/Scrum methodology and Salesforce platform capabilities. Score 80%+ on practice exams before booking."
+    "passRateGuidance": "You are ready when you can run a discovery session in your head: who you would talk to, which technique you would use, what you would produce, and how you would get it agreed. Aim for 80% or more on practice tests, given the 72% bar."
   },
   "examFormat": {
     "heading": "Business Analyst Exam Format Explained",
-    "intro": "The exam is proctored and delivered online or in-person. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include choosing the right elicitation technique for a stakeholder situation, prioritising competing requirements, and recommending declarative vs. custom development for a given business need.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a moment in a project, such as stakeholders who disagree or a requirement that keeps changing, and ask what the analyst should do next.",
     "bestWayToPass": [
-      "<strong>Master elicitation techniques:</strong> Know when to use interviews, workshops, surveys, observation, and document analysis — the exam tests which technique fits which situation.",
-      "<strong>Study user story formats:</strong> Understand the As a/I want/So that format, acceptance criteria, and how to decompose epics into stories.",
-      "<strong>Know declarative vs. programmatic boundaries:</strong> For every Salesforce feature, know when it requires code vs. clicks — this is the most tested platform topic.",
-      "<strong>Understand Agile ceremonies:</strong> Sprint planning, backlog refinement, retrospectives, and the BA role in each."
+      "<strong>Know which technique fits which situation:</strong> Interviews, workshops, observation, surveys and document analysis each suit different problems.",
+      "<strong>Write user stories properly:</strong> Role, goal and benefit, with acceptance criteria that can actually be tested.",
+      "<strong>Map processes before solutions:</strong> Current state first, then future state, with the gaps named.",
+      "<strong>Learn the Salesforce limits that matter:</strong> Enough to know when a requirement is cheap, expensive or impossible."
     ]
   },
   "introLead": [
@@ -66,10 +66,10 @@
   ],
   "certificationCard": {
     "code": "Business Analyst",
-    "description": "This exam covers the BA lifecycle on Salesforce projects — requirements discovery, user story writing, stakeholder facilitation, process mapping, and UAT planning.",
+    "description": "This exam covers the business analyst's work on Salesforce projects: discovering and documenting requirements, writing user stories, mapping processes, managing stakeholders and supporting testing and adoption.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "72%",
       "duration": "105 min",
       "cost": "$200"
     },
@@ -90,72 +90,72 @@
     "h2": "Business Analyst: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Requirements Lifecycle: Discovery → Analysis → Documentation → Validation",
-        "body": "The BA follows a defined requirements lifecycle: Discover requirements through interviews, workshops, and observation. Analyse them for conflicts, gaps, and feasibility. Document them as **User Stories** with acceptance criteria. Validate them with stakeholders through review sessions and UAT. The exam frequently tests which phase a given activity belongs to and what output is expected."
+        "heading": "Discovery and Elicitation",
+        "body": "Requirements have to be drawn out, not collected. **Interviews** suit depth with one person and sensitive topics. **Workshops** suit getting a group to agree, and are efficient when decisions need several people in the room. **Observation**, watching someone do the job, catches the steps people forget to mention. **Surveys** reach many people for simple questions but cannot probe. **Document analysis** and reviewing the existing system show what is really happening today. Choose by what you need: depth, agreement, breadth or evidence. Prepare questions in advance, record decisions, and send back what you heard so people can correct it."
       },
       {
         "heading": "User Stories and Acceptance Criteria",
-        "body": "A user story follows the format \"As a [role], I want [goal] so that [benefit].\" Acceptance Criteria define the pass/fail conditions that confirm the story is done. Together, they are the primary deliverable connecting business requirements to development. The exam tests how to write effective **User Stories** and how acceptance criteria differ from test cases."
+        "body": "A **user story** names the role, the goal and the benefit: as a sales rep, I want to see a customer's open cases on the opportunity, so that I know about problems before a renewal call. The benefit matters because it is what gets the story prioritised or dropped. **Acceptance criteria** say how you will know it works, in terms a tester can check. Good stories are small enough to build in one iteration, independent of each other where possible, and negotiable in how they are implemented. A story that describes a screen layout rather than a need has usually jumped to a solution too early."
       },
       {
-        "heading": "Stakeholder Management: Power/Interest Grid and DACI",
-        "body": "The Power/Interest Grid maps stakeholders by influence and interest — determining whether to manage closely, keep satisfied, keep informed, or monitor. The DACI framework clarifies decision-making: Driver (facilitates closure), Approver (final decision), Contributor (provides input), Informed (kept updated). The exam tests both — especially DACI as a governance tool for resolving conflicting requirements."
+        "heading": "Stakeholders and Getting Decisions Made",
+        "body": "Projects stall on people, not features. Map stakeholders by how much **influence** they hold and how much **interest** they have, and plan how often to involve each group. Name a decision-maker for each area before you need one, so disagreements have somewhere to go. When stakeholders want different things, take it back to the business goal and the evidence from discovery rather than seniority. Keep a **RAID** style record of risks, assumptions, issues and dependencies, and make assumptions explicit, because an unspoken assumption is the usual cause of a late surprise."
       },
       {
-        "heading": "Process Modeling: As-Is vs To-Be and Gap Analysis",
-        "body": "As-Is analysis documents the current state of a business process — capturing pain points, workarounds, and inefficiencies. To-Be analysis defines the desired future state. Gap Analysis identifies the delta between them and informs the solution scope. Process maps use swimlanes to show which role performs which step. The exam tests when each technique is appropriate and what artefact is produced."
+        "heading": "Process Mapping and Gap Analysis",
+        "body": "Map the **current state** before designing anything, because the described process and the real one usually differ. Then map the **future state**, and the difference between them is your **gap analysis**, which becomes the backlog. Keep maps at a level people can read: swimlanes showing who does what are usually enough. Note where work leaves Salesforce for email or spreadsheets, since those are where errors and delays live. A map also protects you later, when someone asks why a step was removed."
       },
       {
-        "heading": "Functional vs Non-Functional Requirements",
-        "body": "Functional Requirements describe what the system does (e.g., \"Sales reps can create a quote from an opportunity\"). Non-Functional Requirements (NFRs) describe how the system performs — page load times, concurrent user capacity, security standards. NFRs are often missed during discovery but become critical during architecture decisions and testing. The exam tests the distinction and when each type surfaces in a project."
+        "heading": "Requirements, Testing and Adoption",
+        "body": "Separate **functional** requirements, what the system must do, from **non-functional** ones such as performance, security, accessibility and volume, which are easy to forget and expensive to retrofit. Keep **traceability** from a business need through to the story and the test, so you can show that each requirement was delivered. Plan **user acceptance testing** with real users against the acceptance criteria, not a demo given by the project team. Then plan adoption: training, communication and a measure of whether people are actually using it, because an unused solution has not solved the problem."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Business Analyst Exam",
-    "intro": "The Business Analyst exam focuses on requirements elicitation, analysis, and translation into Salesforce solutions. Unlike technical exams, success depends on process methodology: user stories, stakeholder management, and UAT practices.",
+    "intro": "Most questions ask what the analyst should do next. The right answer usually moves toward better understanding or a recorded agreement, rather than jumping to build something.",
     "blocks": [
       {
-        "heading": "User Stories & Acceptance Criteria",
-        "body": "Know how to write **User Stories** (As a [persona], I want [goal], so that [reason]) and define acceptance criteria that are testable, specific, and verifiable. Questions test whether criteria are complete and unambiguous."
+        "heading": "Choosing an Elicitation Technique",
+        "body": "Depth and sensitivity: interview. Agreement across a group: workshop. What people actually do: observation. Breadth on simple questions: survey."
       },
       {
-        "heading": "Requirements Elicitation Techniques",
-        "body": "Know the trade-offs of interviews, workshops, surveys, observation, and prototyping. Questions ask which technique is most appropriate for a given scenario — workshops work well for cross-functional alignment, interviews for individual expertise."
+        "heading": "User Stories",
+        "body": "Role, goal, benefit, plus acceptance criteria a tester can check. If it describes a screen rather than a need, it is a solution in disguise."
       },
       {
-        "heading": "Process Mapping & UPN",
-        "body": "Understand Universal Process Notation (UPN) and how to map current-state vs. future-state processes. Know how swimlane diagrams document cross-functional workflows and identify handoffs and pain points."
+        "heading": "Process Mapping",
+        "body": "Current state first, then future state, then the gap. Swimlanes show who does what, and where work leaves the system."
       },
       {
-        "heading": "UAT Strategy",
-        "body": "User Acceptance Testing involves real end users, realistic data, and verification that business requirements (not just technical specs) are satisfied. Know how to plan, execute, and sign off on UAT."
+        "heading": "Testing",
+        "body": "User acceptance testing is run by users against the acceptance criteria. A project-team demo is not UAT."
       },
       {
-        "heading": "Stakeholder Management",
-        "body": "Identify stakeholder types (decision-makers, influencers, end users), know when to escalate vs. resolve scope conflicts, and understand how to manage competing priorities and scope creep."
+        "heading": "Stakeholders",
+        "body": "Map influence against interest, name decision-makers early, and settle disagreements with the business goal and discovery evidence."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Good next steps after Business Analyst:",
     "links": [
       {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      },
+      {
         "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "label": "Agentforce Sales Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/strategy-designer",
+        "label": "Platform Strategy Designer"
       },
       {
-        "href": "/certifications/experience-cloud",
-        "label": "Experience Cloud Consultant"
-      },
-      {
-        "href": "/certifications/role/consultant",
-        "label": "Consultant certification path"
+        "href": "/certifications/ux-designer",
+        "label": "User Experience Designer"
       }
     ]
   },

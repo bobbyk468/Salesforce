@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "New sales reps using Salesforce",
-        "description": "You’re early in your sales career and want to validate your understanding of Sales Cloud, pipeline management, and customer-centric selling."
+        "description": "You work deals in Salesforce every day and want a credential that shows you know the tool."
       },
       {
-        "label": "Sales managers seeking CRM fluency",
-        "description": "You manage a sales team on Salesforce and want formal validation of your knowledge of forecasting, activity management, and sales reporting."
+        "label": "Sales managers",
+        "description": "You run a team on Salesforce and want to understand the pipeline and forecast properly."
       },
       {
-        "label": "Business professionals entering sales ops",
-        "description": "You’re moving into a sales operations or enablement role and need to demonstrate fluency in Salesforce sales processes and best practices."
+        "label": "People moving into sales operations",
+        "description": "You support a sales team and need a grounding in how the process fits together."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Sales Foundations Exam Hard?",
-    "summary": "The Sales Foundations exam is moderate in difficulty. It blends Salesforce Sales Cloud knowledge with general sales methodology concepts like customer-centric selling, discovery, and value propositions.",
+    "summary": "This is an entry-level exam. It mixes Salesforce basics with everyday selling: how a deal moves from lead to closed, what the pipeline shows, and which tool helps at each step. There is nothing to configure and no code.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; you can miss up to 21 questions.",
-      "<strong>Methodology + platform mix</strong> &mdash; questions test both sales concepts (discovery, value propositions, team selling) and Salesforce features (leads, opportunities, forecasting).",
-      "<strong>Pipeline and forecasting emphasis</strong> &mdash; expect several questions on how Opportunity Stages feed Forecast Categories and how managers use Collaborative Forecasting."
+      "<strong>40 multiple-choice questions</strong> in 70 minutes.",
+      "<strong>62% to pass</strong>, about 25 correct answers out of 40. Confirm it in the official exam guide before you book.",
+      "<strong>Process plus platform.</strong> Expect both selling concepts and the Salesforce feature that supports them.",
+      "<strong>Pipeline and forecasting</strong> come up often, so know what each stage and forecast category means."
     ],
-    "passRateGuidance": "Score 75%+ on two practice exams and make sure you can explain the Lead-to-Opportunity conversion process and how Forecast Categories map to Opportunity Stages."
+    "passRateGuidance": "You are ready when you can take a deal from lead to closed in Salesforce without help, and explain what the pipeline report is telling you. Aim for 80% or more on practice tests."
   },
   "examFormat": {
     "heading": "Sales Foundations Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 40-50% of questions are scenario-based. Common patterns include choosing the right Sales Cloud feature for a rep’s daily workflow, identifying the correct lead assignment approach, and selecting the right report type for a VP’s pipeline review.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Many questions describe something a rep needs to do, such as logging a call or chasing a stalled deal, and ask which Salesforce feature to use.",
     "bestWayToPass": [
-      "<strong>Master the lead lifecycle:</strong> Know how leads are captured, qualified, assigned via assignment rules, and converted into Accounts, Contacts, and Opportunities.",
-      "<strong>Understand Collaborative Forecasting:</strong> Know how Forecast Categories (Pipeline, Best Case, Commit, Closed) roll up from rep to manager level and how adjustments work.",
-      "<strong>Know customer-centric selling:</strong> Understand discovery techniques, value proposition framing, and ethical selling practices &mdash; these are tested alongside platform features.",
-      "<strong>Study sales productivity tools:</strong> Know how Einstein Activity Capture, Salesforce Inbox, and the Mobile App reduce manual data entry and support rep productivity."
+      "<strong>Follow one deal end to end:</strong> Lead, qualification, conversion, opportunity, products, close. Know what each record is for.",
+      "<strong>Learn the pipeline vocabulary:</strong> Stage, probability, close date, amount and forecast category.",
+      "<strong>Know the productivity tools:</strong> Tasks and events, email logging, mobile and the Kanban view.",
+      "<strong>Read a report:</strong> Understand what a pipeline report and a simple dashboard are telling you."
     ]
   },
   "certificationCard": {
     "code": "Sales Foundations",
-    "description": "This entry-level exam tests core Sales Cloud skills: managing leads and opportunities, running pipeline reports, using forecasting tools, and applying customer-centric selling practices.",
+    "description": "An entry-level exam covering the day-to-day of selling in Salesforce: leads and opportunities, the pipeline, forecasting, activity tracking, and the reports that show how the team is doing.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~65%",
-      "duration": "90 min",
+      "questions": 40,
+      "passingScore": "62%",
+      "duration": "70 min",
       "cost": "$200"
     },
     "topics": [
@@ -65,56 +65,56 @@
     "h2": "Sales Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Salesforce Platform Basics for Sales",
-        "body": "The Sales Foundations certification validates fundamental Salesforce platform knowledge in a sales context. Key objects: Lead (unqualified prospect), Account (company or individual), Contact (person at an Account), Opportunity (potential deal), Activity (tasks and events). The Lead Conversion process creates an Account, Contact, and optionally an Opportunity in a single action — data from the Lead is mapped to the new records. Campaigns track marketing efforts and link to Leads and Contacts as Campaign Members. The exam tests basic navigation, record creation, activity logging, and the Lead-to-Opportunity conversion flow."
+        "heading": "Leads, Accounts, Contacts and Opportunities",
+        "body": "A **Lead** is someone who might become a customer but has not been qualified yet. When they look real, you **convert** the lead, which creates an **Account** (the company), a **Contact** (the person) and usually an **Opportunity** (the potential deal). Converting is one-way, so do it when the lead is genuinely qualified. An Account can have many Contacts and many Opportunities over time, which is how repeat business is tracked. Knowing which record holds which information is the foundation of everything else in this exam."
       },
       {
-        "heading": "Leads, Opportunities & Pipeline Management",
-        "body": "Lead Status (New → Working → Converted/Dead) tracks qualification progress. Lead **Assignment Rules** automatically route new leads to the right rep or queue based on criteria (geography, industry, source). Opportunity Stages reflect the sales process steps — tied to Probability % for forecasting. Close Date, Amount, and Stage drive the opportunity pipeline view. Opportunity Contact Roles define each contact's role in the deal (Decision Maker, Evaluator, Economic Buyer). Path provides stage guidance with key fields and coach notes at each stage. The exam tests how to configure lead assignment, how opportunity stages feed forecasting, and what Opportunity Contact Roles represent."
+        "heading": "The Pipeline: Stages, Amount and Close Date",
+        "body": "An **Opportunity** carries a **stage** showing how far along it is, an **amount**, and a **close date**. Each stage has a **probability**, and the pipeline is the collection of open opportunities across stages. A **forecast category** groups stages into buckets such as Pipeline, Best Case, Commit and Closed, which is how managers judge what will land this quarter. Keeping the close date honest matters more than it looks: a pipeline full of overdue close dates tells a manager nothing. Reps move deals through stages as real progress happens, not to look busy."
       },
       {
-        "heading": "Forecasting & Collaboration",
-        "body": "Collaborative Forecasting in Salesforce CRM aggregates rep-level opportunity data into manager and VP-level rollups. Forecast Types can be based on Opportunity Amount, Quantity, or a custom field. Forecast Categories (Pipeline, Best Case, Commit, Closed) reflect the rep's confidence level. Managers can adjust forecasts above or below their team's submitted amounts. Forecast quotas set individual targets. Chatter (collaboration feed) lets reps and managers discuss opportunities inline. Account Teams define which internal team members have access to an account and its opportunities. The exam tests how to read a collaborative forecast, how adjustments flow up the hierarchy, and what Forecast Categories mean."
+        "heading": "Working the Deal: Activities and Productivity",
+        "body": "**Tasks** are things to do and **events** are meetings in the calendar, and both can be linked to a lead, contact, account or opportunity so the history stays with the record. Emails can be logged automatically so conversations are visible to the team. The **Kanban** view lets reps drag opportunities between stages. **Path** shows the guidance and required fields for the current stage. The Salesforce **mobile app** covers the same work away from a desk. **Chatter** lets a rep ask a question on the record itself, so the answer is kept with the deal rather than lost in email."
       },
       {
-        "heading": "Productivity Tools: Email, Calendar & Mobile",
-        "body": "Salesforce Inbox integrates Outlook/Gmail with Salesforce — log emails to records, view related CRM data in the email client, and schedule meetings with calendar sync. Einstein Activity Capture automatically logs emails and calendar events to related Salesforce records, reducing manual data entry. Salesforce Mobile App lets reps access accounts, opportunities, and tasks on the go. Mobile Quick Actions (Log a Call, New Event) are customizable per object. Einstein Relationship Insights surfaces web and LinkedIn data about contacts and accounts. The exam tests how to configure Einstein Activity Capture, how **email-to-case** differs from email logging, and which productivity features are available on the mobile app without additional configuration."
+        "heading": "Products, Quotes and Teams",
+        "body": "An opportunity can have **products** added from a **price book**, which sets what was sold and at what price, and that is where the amount usually comes from. A **quote** can be generated from those products and sent to the customer. When several people work one deal, an **opportunity team** records who is involved and what their role is. Larger deals may need an **approval** before a discount is given. None of this needs configuration knowledge for this exam: you need to recognise what each feature is for."
       },
       {
-        "heading": "Reports, Dashboards & Sales Analytics",
-        "body": "Sales reports and dashboards provide visibility into pipeline health, quota attainment, and activity metrics. Key sales reports: Opportunities by Stage, Pipeline by Rep, Activities by Type, Lead Conversion Rate, Won/Lost Analysis. Summary reports group opportunities by stage or rep for subtotals. Matrix reports cross-reference rep by quarter for attainment tracking. Dashboards surface key metrics: Pipeline Value, Win Rate, Average Deal Size, Sales Cycle Length. [CRM Analytics](/certifications/crm-analytics-einstein-discovery-consultant) (**Einstein Analytics**) Sales Wave provides advanced pre-built dashboards. Report subscriptions deliver scheduled reports via email. The exam tests how to build a pipeline summary report, how to configure a dashboard for a VP of Sales, and how to share reports with the appropriate audience."
+        "heading": "Reports, Dashboards and Forecasts",
+        "body": "A **report** lists or summarises records, such as all open opportunities closing this quarter. A **dashboard** shows several reports as charts on one screen, which is how managers see the team at a glance. **Forecasting** rolls opportunity amounts up through the team so a manager can see what is expected to close, using the forecast categories. **List views** give a quick filtered list on a tab, which most reps use daily. For the exam, know which of these answers a given question: a single filtered list, a summary, a visual overview, or a projection of what will close."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Sales Foundations Exam",
-    "intro": "The Sales Foundations exam tests foundational knowledge of Sales Cloud features for new Salesforce users and sales professionals. Focus on the core sales process, account and opportunity management, and daily rep workflows.",
+    "intro": "Most questions describe a rep's day and ask which feature fits. Match the task to the record or tool built for it.",
     "blocks": [
       {
-        "heading": "Leads & Lead Management",
-        "body": "Know the Lead lifecycle: capture, qualify, assign (**assignment rules**), and convert. Understand what data transfers to Account, Contact, and Opportunity during conversion and what does not."
-      },
-      {
-        "heading": "Account & Contact Management",
-        "body": "Know how to create and manage accounts (company) and contacts (individuals). Understand account hierarchy for parent/child relationships and how to track relationships between contacts across accounts."
+        "heading": "Leads and Conversion",
+        "body": "Leads are unqualified. Converting creates an Account, a Contact and usually an Opportunity, and cannot be undone."
       },
       {
         "heading": "Opportunity Management",
-        "body": "Know the Opportunity stages, sales process configuration, and how Stage-to-Stage movement drives pipeline reporting. Understand key opportunity fields: Amount, Close Date, Probability, and Forecast Category."
+        "body": "Stage, amount and close date drive the pipeline. Forecast categories group stages into what managers commit to."
       },
       {
         "heading": "Activity Management",
-        "body": "Know how to log calls, create tasks, and schedule events from Salesforce. Understand how Activity Timeline shows the history of interactions and how Einstein Activity Capture syncs emails and calendar events."
+        "body": "Tasks for to-dos, events for meetings, both linked to the record so the history stays in one place."
       },
       {
-        "heading": "Reports & Dashboards for Sales",
-        "body": "Know the standard Sales Cloud reports: Pipeline report, Activities report, and Forecast summary. Understand how managers use dashboards to monitor team performance and how reps track their individual pipeline."
+        "heading": "Reports and Dashboards",
+        "body": "Reports list and summarise, dashboards visualise several reports, list views give a quick filtered list."
+      },
+      {
+        "heading": "Teams and Quotes",
+        "body": "Opportunity teams record who is working a deal. Products and price books set what is being sold, and quotes go to the customer."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications",
-    "intro": "After Sales Foundations, the usual next step is Platform Administrator, then consultant certs:",
+    "intro": "Good next steps after Sales Foundations:",
     "links": [
       {
         "href": "/certifications/administrator",
@@ -122,7 +122,15 @@
       },
       {
         "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "label": "Agentforce Sales Consultant"
+      },
+      {
+        "href": "/certifications/platform-foundations",
+        "label": "Platform Foundations"
+      },
+      {
+        "href": "/certifications/cpq-administrator",
+        "label": "CPQ Administrator"
       }
     ]
   },
@@ -162,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the Certified Sales Foundations certification designed for?",
+      "question": "A rep has a business card from a conference for someone who has shown mild interest but has not been qualified. Which record should they create?",
       "options": [
-        "Marketers only",
-        "Admins only",
-        "Individuals who exemplify sales excellence using a customer-centric methodology",
-        "Developers only"
+        "An Opportunity",
+        "A Lead",
+        "An Account",
+        "A Quote"
       ],
-      "correctAnswer": 2,
-      "explanation": "The certification is designed for individuals who exemplify sales excellence using a customer-centric methodology.",
+      "correctAnswer": 1,
+      "explanation": "Leads hold people who might become customers but have not been qualified yet.",
       "whyWrong": [
-        "'Marketers only' is too narrow — this credential targets sales roles specifically, not marketing.",
-        "'Admins only' is too narrow — this credential is about sales methodology, not administration.",
-        "'Developers only' is too narrow — this credential targets sales professionals broadly, not developers."
+        "An Opportunity is a specific potential deal, which does not exist yet.",
+        "Accounts represent companies you already do business with or are actively working.",
+        "A Quote is a priced proposal, which is much further along."
       ]
     },
     {
-      "question": "Which Salesforce product do Sales Professionals typically use daily?",
+      "question": "A lead has been qualified and there is a real deal to pursue. What does converting the lead create?",
       "options": [
-        "Sales Cloud (or Revenue Cloud) for pipeline and activities",
-        "Marketing Cloud only",
-        "Slack only",
-        "Heroku only"
+        "A Quote and a Contract",
+        "An Account, a Contact and usually an Opportunity",
+        "Only an Account",
+        "A Case and a Task"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Conversion turns the lead into the company, the person and the potential deal.",
+      "whyWrong": [
+        "Quotes and contracts come later, after there is an opportunity.",
+        "The contact and the opportunity are created as well.",
+        "Cases are for service issues, not sales."
+      ]
+    },
+    {
+      "question": "Which three fields most directly define where a deal sits in the pipeline?",
+      "options": [
+        "Stage, amount and close date",
+        "Lead source, industry and rating",
+        "Billing address, phone and website",
+        "Case origin, priority and status"
       ],
       "correctAnswer": 0,
-      "explanation": "Sales professionals use Sales Cloud (or Revenue Cloud) for pipeline, activities, and forecasting.",
+      "explanation": "Stage shows progress, amount shows value, and close date shows when it is expected to land.",
       "whyWrong": [
-        "Marketing Cloud alone is a marketing tool, not the sales pipeline/activity tool sales professionals use daily.",
-        "Slack alone is a collaboration tool, not the core sales pipeline management product.",
-        "Heroku alone is a PaaS platform, unrelated to daily sales pipeline work."
+        "Those describe where the lead came from and what the company is like.",
+        "Those are company details, not deal progress.",
+        "Those belong to Cases in service, not opportunities."
       ]
     },
     {
-      "question": "What does a customer-centric sales methodology emphasize?",
+      "question": "A manager wants to know what is likely to close this quarter, not just everything that is open. Which feature gives that?",
       "options": [
-        "Discounts only",
-        "Understanding customer problems and delivering value-aligned solutions",
-        "Volume only",
-        "Product features only"
+        "The activity timeline",
+        "A list view of all accounts",
+        "Forecasting with forecast categories",
+        "The lead queue"
       ],
-      "correctAnswer": 1,
-      "explanation": "Customer-centric selling focuses on customer problems and value-aligned solutions.",
+      "correctAnswer": 2,
+      "explanation": "Forecasting rolls opportunity amounts up by category, separating what is committed from what is merely in the pipeline.",
       "whyWrong": [
-        "'Discounts only' misrepresents the value-focused approach, which isn't primarily about price.",
-        "'Volume only' misrepresents the value-focused, customer-centric approach central to this methodology.",
-        "'Product features only' misses the customer-centric emphasis on understanding problems, not just features."
+        "The activity timeline shows what has happened on a record.",
+        "A list of accounts says nothing about expected revenue.",
+        "Lead queues hold unworked leads."
       ]
     },
     {
-      "question": "Which activity is key for sales excellence?",
+      "question": "A rep needs to record a phone call they just made to a contact, so the history stays with the record. What should they use?",
       "options": [
-        "Only demos",
-        "Research, product knowledge, and team selling to drive success",
-        "Only email",
-        "Only cold calling"
+        "Log an activity against the contact",
+        "Create a new Lead",
+        "Write it in a personal notebook",
+        "Change the opportunity stage"
       ],
-      "correctAnswer": 1,
-      "explanation": "Research, product knowledge, and team selling are key to sales success.",
+      "correctAnswer": 0,
+      "explanation": "Activities such as logged calls and tasks attach to the record, so anyone looking at it later sees the history.",
       "whyWrong": [
-        "'Only demos' undersells the broader set of key activities beyond a single tactic.",
-        "'Only email' undersells the broader set of key activities beyond a single channel.",
-        "'Only cold calling' undersells the broader set of activities (research, team selling) key to sales excellence."
+        "The person is already a contact, so a new lead would duplicate them.",
+        "A private note is invisible to the team.",
+        "Stage reflects deal progress, not a phone call."
       ]
     },
     {
-      "question": "What role do Sales Professionals play in the organization?",
+      "question": "Which view lets a rep drag opportunities from one stage to the next?",
       "options": [
-        "Only implementation",
-        "Bringing in revenue by sharing valuable product and service solutions that address customer problems",
-        "Only support",
-        "Only marketing"
+        "A report",
+        "The setup menu",
+        "The Kanban view",
+        "A dashboard"
       ],
-      "correctAnswer": 1,
-      "explanation": "Sales professionals drive revenue by connecting solutions to customer problems.",
+      "correctAnswer": 2,
+      "explanation": "Kanban shows opportunities as cards by stage, and reps can drag them as deals progress.",
       "whyWrong": [
-        "'Only implementation' misattributes the sales role to a different function.",
-        "'Only support' undersells the sales role, which is specifically about generating revenue, not support.",
-        "'Only marketing' misattributes the sales role to a different function."
+        "Reports list and summarise but are not used to move deals.",
+        "Setup is for administrators.",
+        "Dashboards display charts, they do not update records."
       ]
     },
     {
-      "question": "What does pipeline management involve?",
+      "question": "What is the relationship between an Account and a Contact?",
       "options": [
-        "Only marketing",
-        "Only implementation",
-        "Only support",
-        "Tracking opportunities through stages and forecasting"
+        "They are two words for the same record",
+        "Accounts are only used in service, Contacts only in sales",
+        "A Contact contains many Accounts",
+        "An Account is the company and Contacts are the people at it"
       ],
       "correctAnswer": 3,
-      "explanation": "Pipeline management tracks opportunities and forecasts revenue.",
+      "explanation": "The company is the Account and the people who work there are its Contacts.",
       "whyWrong": [
-        "'Only marketing' misattributes pipeline management to an unrelated function.",
-        "'Only implementation' misattributes pipeline management to an unrelated function.",
-        "'Only support' misattributes pipeline management to an unrelated function."
+        "They hold different information and serve different purposes.",
+        "Both are used across sales and service.",
+        "It is the other way round: an account has many contacts."
       ]
     },
     {
-      "question": "Which Salesforce object represents a potential deal?",
+      "question": "A rep wants to add what is being sold, with prices, to a deal. What should they use?",
       "options": [
-        "Account",
-        "Opportunity",
-        "Contact",
-        "Lead"
+        "A Chatter post",
+        "A task on the account",
+        "A new lead per product",
+        "Products from a price book, added to the opportunity"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Products come from a price book and are added to the opportunity, which usually sets the amount.",
+      "whyWrong": [
+        "Chatter is for conversation.",
+        "Tasks are to-dos, not line items.",
+        "Leads are unqualified people, not products."
+      ]
+    },
+    {
+      "question": "Three colleagues are working the same large deal and the business wants that recorded. What fits?",
+      "options": [
+        "An opportunity team with roles",
+        "A case for each colleague",
+        "Three separate opportunities",
+        "Converting the lead three times"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Opportunity teams record everyone involved in a deal and what their role is.",
+      "whyWrong": [
+        "Cases are for customer issues.",
+        "Three opportunities would triple the forecast for one deal.",
+        "A lead can only be converted once."
+      ]
+    },
+    {
+      "question": "A manager wants one screen showing pipeline by stage, deals closing this month and team performance. What should be built?",
+      "options": [
+        "A quote",
+        "A dashboard made of several reports",
+        "A single list view",
+        "A price book"
       ],
       "correctAnswer": 1,
-      "explanation": "Opportunity represents a potential sale or deal.",
+      "explanation": "Dashboards place several reports as charts on one screen for an at-a-glance view.",
       "whyWrong": [
-        "Account represents a company, not itself the potential deal.",
-        "Contact represents a person, not the potential deal itself.",
-        "Lead represents an early unqualified prospect, not yet the specific deal an Opportunity represents."
+        "Quotes are proposals for customers.",
+        "A list view shows one filtered list of records.",
+        "Price books hold product prices."
       ]
     },
     {
-      "question": "What does discovery mean in sales?",
+      "question": "Why does an accurate close date matter?",
       "options": [
-        "Only follow-up",
-        "Only demos",
-        "Understanding customer needs, challenges, and goals",
-        "Only closing"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Discovery is understanding customer needs and challenges.",
-      "whyWrong": [
-        "'Only follow-up' misattributes discovery, which happens earlier in the sales cycle, not during follow-up.",
-        "'Only demos' undersells discovery, which is about understanding needs before any product demonstration.",
-        "'Only closing' misattributes discovery, which happens earlier in the sales process, not at closing."
-      ]
-    },
-    {
-      "question": "Which activity supports sales forecasting?",
-      "options": [
-        "Only cold calling",
-        "Only email",
-        "Accurate pipeline data, stage updates, and close dates",
-        "Only meetings"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Forecasting relies on pipeline data and stage discipline.",
-      "whyWrong": [
-        "'Only cold calling' undersells the broader data hygiene practices that support accurate forecasting.",
-        "'Only email' undersells the broader data hygiene practices that support accurate forecasting.",
-        "'Only meetings' undersells the broader data hygiene practices that support accurate forecasting."
-      ]
-    },
-    {
-      "question": "What is a value proposition?",
-      "options": [
-        "A discount",
-        "A product feature only",
-        "A price list",
-        "A clear statement of the benefit and value delivered to the customer"
+        "It assigns the account owner",
+        "It changes the product price",
+        "It creates a case automatically",
+        "Forecasts and pipeline reports depend on it to show what lands when"
       ],
       "correctAnswer": 3,
-      "explanation": "Value proposition articulates benefit and value to the customer.",
+      "explanation": "Close dates drive the time-based view of the pipeline, so wrong dates make forecasts meaningless.",
       "whyWrong": [
-        "A discount is a pricing tactic, not the value-and-benefit statement a value proposition represents.",
-        "A product feature alone doesn't articulate customer benefit — that's what a value proposition specifically does.",
-        "A price list is a pricing document, not a statement of customer value."
+        "Ownership is set separately.",
+        "Prices come from the price book.",
+        "Cases are created in service processes."
       ]
     },
     {
-      "question": "Which Sales Cloud feature supports team selling?",
+      "question": "A rep asks a product question and wants the answer kept with the deal for others to see. What fits best?",
       "options": [
-        "No teams",
-        "Solo only",
-        "Only leads",
-        "Opportunity teams and account teams"
+        "Chatter on the opportunity record",
+        "A personal task",
+        "Editing the account name",
+        "A private email"
       ],
-      "correctAnswer": 3,
-      "explanation": "Opportunity and account teams support collaborative selling.",
+      "correctAnswer": 0,
+      "explanation": "Chatter keeps the conversation attached to the record, so the next person sees it.",
       "whyWrong": [
-        "'No teams' contradicts the fact that Sales Cloud has real team-selling features.",
-        "'Solo only' is the opposite of what team-selling features support.",
-        "'Only leads' misattributes team selling to a different, unrelated object."
+        "A task is a to-do, not a discussion.",
+        "Renaming the account loses data and answers nothing.",
+        "Email is invisible to colleagues unless logged."
       ]
     },
     {
-      "question": "What does activity management support?",
+      "question": "What does a forecast category do?",
       "options": [
-        "Only reporting",
-        "Only forecasts",
-        "Tracking calls, meetings, and tasks for pipeline hygiene",
-        "Only dashboards"
+        "Controls login access",
+        "Groups opportunity stages into buckets such as Commit and Best Case",
+        "Decides who owns the account",
+        "Sets the product price"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Forecast categories group stages so managers can separate confident revenue from early pipeline.",
+      "whyWrong": [
+        "Access is controlled by the administrator.",
+        "Ownership is a separate field.",
+        "Prices come from price books."
+      ]
+    },
+    {
+      "question": "A rep needs their deals and contacts while visiting a customer, away from their laptop. What should they use?",
+      "options": [
+        "Nothing is available off a desktop",
+        "A personal spreadsheet",
+        "The Salesforce mobile app",
+        "A printed report from last month"
       ],
       "correctAnswer": 2,
-      "explanation": "Activity management tracks calls, meetings, and tasks.",
+      "explanation": "The mobile app gives access to the same records and lets the rep log activity on the spot.",
       "whyWrong": [
-        "'Only reporting' undersells activity management, which is about tracking actions for pipeline hygiene, not just reporting.",
-        "'Only forecasts' misattributes activity management to a different, unrelated function.",
-        "'Only dashboards' misattributes activity management to a different, unrelated feature."
+        "Salesforce is available on mobile.",
+        "A spreadsheet is not shared and quickly drifts from the real data.",
+        "A printout goes out of date and cannot be updated."
       ]
     },
     {
-      "question": "Which best practice supports sales adoption?",
+      "question": "Which is the best description of a pipeline report?",
       "options": [
-        "Training, Champions, and aligned incentives",
-        "Only admin",
-        "No training",
-        "Only documentation"
+        "A directory of employees",
+        "A record of past invoices",
+        "A view of open opportunities, usually grouped by stage",
+        "A list of closed cases"
       ],
-      "correctAnswer": 0,
-      "explanation": "Training, champions, and incentives drive adoption.",
+      "correctAnswer": 2,
+      "explanation": "The pipeline is the set of open deals, and a pipeline report groups them so you can see where they sit.",
       "whyWrong": [
-        "'Only admin' undersells the broader set of adoption practices beyond just admin-focused activities.",
-        "'No training' contradicts the fact that training is a core adoption best practice.",
-        "'Only documentation' undersells the broader set of adoption practices (training, champions, incentives)."
-      ]
-    },
-    {
-      "question": "What role does the Lead object play in sales?",
-      "options": [
-        "To capture and qualify potential prospects before conversion",
-        "Only for contacts",
-        "Only for accounts",
-        "To replace Opportunity"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Leads capture and qualify prospects before conversion.",
-      "whyWrong": [
-        "'Only for contacts' misattributes the Lead object's purpose to a different, related object.",
-        "'Only for accounts' misattributes the Lead object's purpose to a different, related object.",
-        "Leads don't replace Opportunities — they serve a distinct, earlier-stage qualification purpose."
-      ]
-    },
-    {
-      "question": "Which ethical consideration applies to sales?",
-      "options": [
-        "Honesty, transparency, and customer-first approach",
-        "No ethics",
-        "Only closing",
-        "Only quotas"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Ethics include honesty, transparency, and customer-first approach.",
-      "whyWrong": [
-        "'No ethics' contradicts the fact that ethical considerations are explicitly part of sound sales practice.",
-        "'Only closing' undersells the broader ethical considerations that apply throughout the sales process, not just at close.",
-        "'Only quotas' undersells the broader ethical considerations (honesty, transparency) beyond just hitting numbers."
+        "Employee records are not the sales pipeline.",
+        "Invoices are billing records, usually in another system.",
+        "Cases belong to service."
       ]
     }
   ]

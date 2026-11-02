@@ -4,44 +4,44 @@
     "heading": "Who is the OmniStudio Developer exam for?",
     "personas": [
       {
-        "label": "Hands-on practitioners",
-        "description": "You work with OmniStudio features and want to prove you can apply them in realistic implementation scenarios."
+        "label": "OmniStudio developers",
+        "description": "You build OmniScripts, FlexCards and Integration Procedures on industry cloud projects."
       },
       {
-        "label": "Developers",
-        "description": "You support Salesforce projects where OmniScript, DataRaptor, and FlexCards decisions affect the final design."
+        "label": "Salesforce developers moving to industries",
+        "description": "You know Apex and Lightning Web Components and now work on Communications, Health or Public Sector builds."
       },
       {
-        "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for developer roles."
+        "label": "Technical consultants",
+        "description": "You decide when an OmniStudio tool is the right answer and when custom code is."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the OmniStudio Developer Exam Hard?",
-    "summary": "The OmniStudio Developer exam is moderately difficult. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "It is a moderate exam, but OmniStudio works unlike the rest of Salesforce. The tools are configured rather than coded, and the questions test whether you know which tool does which job and how data moves between them.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 min.",
-      "<strong>~65% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use OmniScript, DataRaptor, or FlexCards.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported OmniStudio in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>Tool choice.</strong> Most questions come down to picking the right one of four tools for a job.",
+      "<strong>Hands-on helps.</strong> If you have built and debugged an OmniScript that calls an Integration Procedure, much of this is familiar."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "Build one OmniScript that reads data with a Data Mapper, calls an Integration Procedure and saves the result. Before you book, aim for 75% or more on practice tests and be able to explain where each piece of data comes from."
   },
   "examFormat": {
     "heading": "OmniStudio Developer Exam Format Explained",
-    "intro": "The OmniStudio Developer exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for OmniStudio.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe something a user needs to do on screen, or data that must be fetched or saved, and ask which OmniStudio component handles it.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on OmniScript, DataRaptor, and FlexCards because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Learn the four tools:</strong> OmniScript for guided steps, FlexCard for displaying information, Data Mapper for reading and writing Salesforce data, Integration Procedure for server-side work.",
+      "<strong>Follow the data:</strong> Know how values pass into a component, between steps, and back out again.",
+      "<strong>Know when to go server-side:</strong> Anything heavy or involving several systems belongs in an Integration Procedure, not in the script.",
+      "<strong>Practise debugging:</strong> Use preview and the debug panel to see what data each element actually receives."
     ]
   },
   "certificationCard": {
     "code": "OmniStudio Developer",
-    "description": "This exam tests hands-on development with OmniStudio declarative tools -- building OmniScripts, DataRaptors, FlexCards, and Integration Procedures, plus extending them with custom LWC components.",
+    "description": "This exam tests hands-on building with OmniStudio: OmniScripts, FlexCards, Data Mappers and Integration Procedures, plus how they fit together and how to extend them with custom components.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -65,72 +65,72 @@
     "h2": "OmniStudio Developer: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Custom LWC Integration with OmniStudio",
-        "body": "[OmniStudio Developer](/certifications/omnistudio-developer) extends the platform with custom Lightning Web Components (**LWC**) embedded within OmniScripts and FlexCards. Custom LWC elements in OmniScripts receive and pass data via the OmniScript SDK methods (omniApplyCallResp, omniUpdateDataJson). Custom FlexCard actions can trigger custom LWC components. The developer creates reusable custom components that follow OmniStudio data contracts — understanding the JSON data model that flows through OmniStudio is critical. The exam tests how to integrate custom LWC with OmniScript data binding."
+        "heading": "The Four Tools and What Each Is For",
+        "body": "**OmniScript** guides a user through steps on screen, collecting input and showing results, which suits processes like opening an account or changing a plan. **FlexCard** displays a compact, actionable summary of a record or customer, often as the entry point to an OmniScript. **Data Mapper** (previously DataRaptor) reads, transforms and writes Salesforce data: Extract reads records, Load writes them, Transform reshapes data without touching the database, and Turbo Extract is a faster read with fewer options. **Integration Procedure** runs server-side logic, calling several sources and combining the results in one round trip. Most exam questions reduce to choosing between these four."
       },
       {
-        "heading": "DataRaptor Architecture: Extract, Load, Transform",
-        "body": "DataRaptor Extract queries Salesforce data using **SOQL** within a structured configuration — supports parent-child relationships and field mapping. DataRaptor Load creates or updates records using a structured JSON input — supports multi-object transactions (parent + children in one call). DataRaptor Transform maps and reshapes JSON data between two structures — no Salesforce **DML** involved. Turbo Extract is a simplified, high-performance version of Extract that runs a direct SOQL query. The developer exam tests DataRaptor configuration for complex data transformation scenarios and when each type is appropriate."
+        "heading": "Data Mappers: Extract, Load and Transform",
+        "body": "A **Data Mapper Extract** queries Salesforce objects and returns structured JSON, with filters and field mappings defined in configuration. A **Load** takes JSON and writes it to Salesforce objects, creating or updating records, and can handle parent and child records together. A **Transform** changes the shape of data, for example flattening a nested structure or renaming keys, without reading or writing records. **Turbo Extract** is a faster, more limited read for simple single-object cases. Formulas can be applied inside a Data Mapper for small calculations. Keeping these in configuration rather than Apex is what allows admins to change them later."
       },
       {
-        "heading": "Integration Procedures: Advanced Patterns",
-        "body": "Advanced IP design: chaining Integration Procedures (calling a sub-IP from a parent IP), conditional branching (If Block, Filter Block), and looping (Loop Block to iterate over arrays). Error handling: Set Error action captures exceptions from HTTP actions or **Apex**. Response mapping transforms the action response into the IP's output structure. Combining multiple data sources in one IP — e.g., call DataRaptor Extract for Salesforce data, HTTP Action for external pricing API, then Transform to merge results. The developer designs IPs that are efficient, maintainable, and handle errors gracefully."
+        "heading": "Integration Procedures and Performance",
+        "body": "An **Integration Procedure** runs on the server and is the right place for anything involving more than one call. Its elements include Data Mapper actions, HTTP actions to outside systems, Remote Actions to call Apex, and Response actions to shape the output. Two settings matter for speed. **Chainable** lets a long procedure continue in a separate transaction so it does not hit limits. Running elements **in parallel** lets independent calls happen at once instead of one after another. The main performance lesson for the exam is to do the work in one server-side procedure rather than making an OmniScript call out many times."
       },
       {
-        "heading": "Debugging OmniStudio Components",
-        "body": "OmniScript debug mode activates the step-by-step data viewer — showing the JSON data model at each step. DataRaptor preview allows testing Extract, Load, and Transform configurations with sample inputs without running through a full OmniScript. Integration Procedure test console sends test payloads and inspects responses. FlexCard preview shows the rendered card with sample data. Browser developer tools (Network tab, Console) help debug HTTP Action calls and **LWC** component errors. The developer uses these tools systematically to isolate issues — checking data, mapping, and API calls independently."
+        "heading": "OmniScript Structure and Custom Components",
+        "body": "An OmniScript is built from **elements** grouped into **steps**. Input elements collect data, display elements show it, action elements fetch or save it, and **conditional views** show or hide elements based on what the user has entered. Data flows through the script's JSON, and each element reads from and writes to a named key, which is why naming matters. When the standard elements cannot do something, a **custom Lightning Web Component** can be embedded in the script and exchange data with it. OmniStudio components can also be placed on Lightning pages, in Experience Cloud sites, and called from FlexCards."
       },
       {
-        "heading": "OmniStudio Deployment and Packaging",
-        "body": "OmniStudio components are deployed as metadata via Salesforce CLI (sfdx or sf commands). OmniScript and FlexCard definitions export as JSON — they can be version-controlled in Git. DataRaptors and Integration Procedures also export as JSON. Import/Export in the OmniStudio UI allows moving components between orgs. For managed packages (ISV deployment), OmniStudio components follow standard Salesforce packaging rules. The developer understands the deployment sequence — DataRaptors and IPs must be deployed before the OmniScripts that reference them."
+        "heading": "Debugging, Deployment and Versioning",
+        "body": "OmniStudio components are **versioned**: you activate a version, and to change it you create a new one rather than editing the active one. Preview mode and the debug panel show the JSON at each step, which is the fastest way to find out why an element received nothing. For moving between orgs, components are exported and imported as datapacks, and should be included in your release process like any other metadata. Watch for references to records by ID, which differ between orgs and are a common cause of a component working in one environment and failing in another."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce OmniStudio Developer Exam",
-    "intro": "The OmniStudio Developer exam tests technical development of OmniStudio components: FlexCards, OmniScripts, DataRaptors, and Integration Procedures. Focus on configuration logic and custom development extensions.",
+    "intro": "Most questions name a task and expect you to pick the tool. Ask whether the work happens on screen or on the server, and whether it reads, writes or reshapes data.",
     "blocks": [
       {
         "heading": "OmniScript Design",
-        "body": "Know how to configure OmniScript elements: Text/Number/Date inputs, Select (picklist/multi-select), File Upload, Validation, Set Values, and Navigate. Understand Step navigation, conditional visibility, and error handling patterns."
+        "body": "Guided, multi-step user journeys. Use conditional views to show only what applies, and keep heavy work out of the script."
       },
       {
-        "heading": "DataRaptor Transforms",
-        "body": "Know the four DataRaptor types: Extract (reads Salesforce data), Load (writes to Salesforce), Transform (reformats data without CRM access), and Turbo Extract (simplified read). Know input/output JSON mapping configuration."
+        "heading": "Data Mappers",
+        "body": "Extract reads, Load writes, Transform reshapes, Turbo Extract is a fast simple read. Keep them configurable rather than coding equivalents in Apex."
       },
       {
         "heading": "Integration Procedures",
-        "body": "Know how to build Integration Procedures for server-side data orchestration: HTTP Action (external API calls), DataRaptor Turbo Action, Loop Action, Conditional Action, and Set Values. Understand how they differ from DataRaptors."
+        "body": "Server-side work combining several sources in one call. Use chainable for long processing and parallel elements for independent calls."
       },
       {
-        "heading": "FlexCard Development",
-        "body": "Know how to configure FlexCard elements (field blocks, action blocks, state management) and how to embed FlexCards in Lightning pages and OmniScripts. Understand datasource configuration and card state transitions."
+        "heading": "FlexCards",
+        "body": "Compact summaries that display data and launch actions, often the entry point into an OmniScript."
       },
       {
         "heading": "Custom LWC in OmniStudio",
-        "body": "Know how to create custom **LWC** components that extend OmniStudio: OmniscriptBaseMixin for accessing OmniScript context, custom components in FlexCards, and how to register custom components as OmniStudio elements."
+        "body": "Embed a custom component when standard elements cannot do the job, and pass data in and out through the script's JSON."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Developer",
-    "intro": "After this certification, common next steps in the developer track:",
+    "intro": "Good next steps after OmniStudio Developer:",
     "links": [
+      {
+        "href": "/certifications/omnistudio-consultant",
+        "label": "OmniStudio Consultant"
+      },
+      {
+        "href": "/certifications/industries-cpq-developer",
+        "label": "Industries CPQ Developer"
+      },
       {
         "href": "/certifications/developer-2",
         "label": "Platform Developer II"
       },
       {
-        "href": "/certifications/app-builder",
-        "label": "Platform App Builder"
-      },
-      {
-        "href": "/certifications/javascript-developer-i",
-        "label": "JavaScript Developer I"
-      },
-      {
-        "href": "/certifications/role/developer",
-        "label": "Developer certification path"
+        "href": "/certifications/communications-cloud-ap",
+        "label": "Communications Cloud AP"
       }
     ]
   },

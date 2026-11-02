@@ -19,48 +19,48 @@
     "heading": "Who is the Tableau Data Analyst exam for?",
     "personas": [
       {
-        "label": "BI Analysts",
-        "description": "Professionals building dashboards, reports, and interactive visualizations with Tableau Desktop for business stakeholders."
+        "label": "BI analysts",
+        "description": "You build dashboards people rely on and want a credential that proves the skill."
       },
       {
-        "label": "Data Analysts",
-        "description": "Analysts transitioning from spreadsheet-based reporting to Tableau’s visual analytics platform for deeper insights."
+        "label": "Data analysts",
+        "description": "You answer business questions with data and use Tableau as your main tool."
       },
       {
-        "label": "Self-Service Analytics Users",
-        "description": "Business users who create their own Tableau workbooks and want a credential to validate their data visualization skills."
+        "label": "Self-service analytics users",
+        "description": "You already build views for your own team and want to go deeper than the basics."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Tableau Data Analyst Exam Hard?",
-    "summary": "The Tableau Data Analyst exam is moderately difficult. It tests practical Tableau Desktop skills — not just feature awareness — so you need hands-on experience building visualizations, writing calculations, and configuring dashboard interactivity.",
+    "summary": "This is a step up from Desktop Foundations. It tests whether you can actually get an answer out of data: calculations that work at the right level of detail, filters applied in the right order, and charts that suit the question being asked.",
     "bullets": [
-      "<strong>45 questions</strong> in 90 minutes — roughly two minutes per question, which is comfortable for most candidates.",
-      "<strong>~70% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
-      "<strong>LOD expressions are heavily tested</strong> — FIXED, INCLUDE, and EXCLUDE calculations require practice beyond reading documentation.",
-      "<strong>Hands-on Tableau Desktop experience helps most</strong> — candidates who have built real workbooks with calculated fields and dashboard actions pass at higher rates."
+      "<strong>60 questions</strong> in 105 minutes.",
+      "<strong>65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>Level of detail expressions are the hard part.</strong> FIXED, INCLUDE and EXCLUDE come up repeatedly.",
+      "<strong>Hands-on matters.</strong> Reading about calculations is not enough. You need to have been surprised by one and worked out why."
     ],
-    "passRateGuidance": "Book when you can confidently build LOD expressions, table calculations, and multi-sheet dashboards with filter actions without referencing documentation."
+    "passRateGuidance": "You are ready when you can explain why a FIXED calculation ignores a filter, and when a table calculation is the better choice. Aim for 75% or more on practice tests, and build the examples yourself rather than reading them."
   },
   "examFormat": {
     "heading": "Tableau Data Analyst Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions present a business question and ask you to choose the correct chart type, calculation method, or filter configuration to answer it.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions pose a business question and ask which chart, calculation or filter answers it, or show a result that looks wrong and ask why.",
     "bestWayToPass": [
-      "<strong>Practice LOD expressions:</strong> Build FIXED, INCLUDE, and EXCLUDE calculations in Tableau Desktop until they feel intuitive — this topic appears frequently.",
-      "<strong>Memorize filter order:</strong> Know the filter order of operations (Extract, Data Source, Context, Dimension, Measure, Table Calculation) and when context filters change the outcome.",
-      "<strong>Chart selection logic:</strong> Know when to use bar, line, scatter, heat map, treemap, and dual-axis charts for different analytical questions.",
-      "<strong>Build interactive dashboards:</strong> Practice configuring Filter Actions, Highlight Actions, and URL Actions in multi-sheet dashboards."
+      "<strong>Learn the order of operations:</strong> Knowing when each filter type is applied explains most surprising numbers in Tableau.",
+      "<strong>Practise level of detail expressions:</strong> FIXED ignores the view's dimensions, INCLUDE adds one, EXCLUDE removes one.",
+      "<strong>Know calculations from table calculations:</strong> One works on the source data, the other on what is already in the view.",
+      "<strong>Use parameters:</strong> Let the viewer switch a measure, a threshold or a date range without editing the workbook."
     ]
   },
   "certificationCard": {
     "code": "Tableau Data Analyst",
-    "description": "Tableau Data Analysts analyze data and build actionable insights using Tableau. They connect to data, create calculations, and design visualizations that drive business decisions.",
+    "description": "This exam tests practical analysis in Tableau: connecting and preparing data, writing calculations including level of detail expressions, choosing the right chart, and building dashboards that answer a business question.",
     "examDetails": {
-      "questions": 45,
-      "passingScore": "~70%",
-      "duration": "90 min",
+      "questions": 60,
+      "passingScore": "65%",
+      "duration": "105 min",
       "cost": "$250"
     },
     "topics": [
@@ -76,64 +76,72 @@
     "h2": "Tableau Data Analyst: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "LOD Expressions (Level of Detail)",
-        "body": "**LOD expressions** compute aggregates at a different granularity than the current view. FIXED computes at the specified dimension, ignoring view-level dimensions. INCLUDE adds dimensions to the view level (finer detail). EXCLUDE removes dimensions (coarser). LOD questions appear frequently — understand which to use for per-customer averages, cohort analysis, and ratio calculations."
+        "heading": "Level of Detail Expressions",
+        "body": "Normally a calculation works at whatever level the view shows. **Level of detail (LOD) expressions** let you break that rule. **FIXED** computes at the dimensions you name and ignores the ones in the view, so `{FIXED [Customer]: SUM([Sales])}` gives each customer's total even in a view broken down by month. **INCLUDE** adds a dimension that is not in the view, which is how you average a value computed at a finer grain. **EXCLUDE** removes a dimension that is in the view, which is how you compare a row against its category total. The common exam trap is that FIXED is computed before dimension filters, so a FIXED total can ignore a filter unless that filter is promoted to a context filter."
       },
       {
-        "heading": "Context Filters",
-        "body": "By default, Tableau applies filters in this order: extract, data source, context, dimension, measure. Adding a filter to context makes it run first, creating a temporary sub-table. Use context filters when you need a Top N filter to count only within a filtered subset — without context, Top N runs on the full dataset before other filters apply."
+        "heading": "Order of Operations and Filter Types",
+        "body": "Tableau applies filters in a fixed order, and knowing it explains most unexpected numbers. **Extract filters** come first, then **data source filters**, then **context filters**, then **dimension filters**, then **measure filters**, and **table calculation filters** last. FIXED expressions are computed after context filters but before dimension filters, which is why making a filter a **context filter** changes a FIXED result. A **Top N filter** is also affected: it is applied after context, so putting a dimension filter into context changes which members reach the Top N. When a question shows a number that looks wrong, the answer is usually somewhere in this order."
       },
       {
-        "heading": "Parameters and Dynamic Analysis",
-        "body": "Parameters are workbook variables that users control via an input widget (slider, dropdown, etc.). They do not filter data by themselves — pair them with **calculated fields** to create dynamic filters, custom bins, or switchable measures. Parameter Actions (Tableau 2019.2+) allow clicking a mark to set a parameter value."
+        "heading": "Calculations and Table Calculations",
+        "body": "A regular **calculated field** works on the underlying rows before aggregation. A **table calculation** works on the data already in the view, which is why running totals, percent of total, rank, difference and moving average are table calculations. Table calculations depend on how they are **addressed and partitioned**: which direction they compute along and which group they restart in. Getting that wrong gives a running total that resets in the wrong place. Use a regular calculation when the logic belongs to the data, and a table calculation when it depends on what is displayed."
       },
       {
-        "heading": "Table Calculations vs LOD Expressions",
-        "body": "**table calculations** (RUNNING_SUM, WINDOW_AVG, RANK, LAST) operate on the data already returned to the view — they cannot change which rows are in the view. **LOD expressions** run at query time and can affect which rows return. Use table calculations for running totals, percent of total, and period-over-period; use LOD for controlling granularity independently of the view."
+        "heading": "Parameters, Sets and Groups",
+        "body": "A **parameter** is a value the viewer chooses, such as a sales threshold or which measure to show, and it can be used in calculations, filters and titles. Parameters do not filter on their own: you use them in a calculated field, then filter on that field. A **set** is a saved selection of members, which can be fixed or computed by a rule, and sets can be combined to compare groups. A **group** combines members into one, such as rolling small categories into Other. **Bins** turn a continuous measure into ranges for a histogram. Knowing which of these to reach for is a frequent exam question."
       },
       {
-        "heading": "Live vs Extract Performance",
-        "body": "Choose Live when data must be current to the minute (financial dashboards, operations). Choose Extract (.hyper) when query performance is critical and a scheduled refresh cadence is acceptable. **extracts** can be filtered at creation time to reduce size. Embedded credentials are required for scheduled extract refreshes on **Tableau Server** or Cloud."
+        "heading": "Connections, Performance and Dashboards",
+        "body": "A **live connection** queries the source each time, while an **extract** copies data into Tableau's fast format and can be filtered or aggregated to keep it small. Extracts help with slow sources and allow offline work, at the cost of being as current as the last refresh. For performance, reduce the data before it reaches the view, avoid very wide crosstabs, and limit the number of filters shown on a dashboard. For dashboards, use **actions** so a selection in one sheet filters or highlights another, choose a layout that works at the size people will actually view it, and keep each dashboard focused on one question."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Tableau Data Analyst Exam",
-    "intro": "The Tableau Data Analyst exam tests hands-on skills in building visualizations and analyzing data in Tableau Desktop. Focus on calculated fields, LOD expressions, chart selection, and dashboard interactivity.",
+    "intro": "Most questions give you a business question or a surprising number. Work out the level the calculation should run at, and where the filters sit in the order of operations.",
     "blocks": [
       {
-        "heading": "Chart Selection Logic",
-        "body": "Know which chart type communicates each data story: bar (comparison), line (trend), scatter (correlation), heat map (density/pattern), map (geographic), and when to use combined or dual-axis charts."
+        "heading": "Choosing a Chart",
+        "body": "Comparison across categories: bar. Change over time: line. Relationship between two measures: scatter. Part of a whole, used sparingly: pie or treemap."
       },
       {
-        "heading": "Calculated Fields & LOD Expressions",
-        "body": "Know how to write basic **calculated fields** and the three LOD expression types: FIXED (independent of view), INCLUDE (adds granularity), and EXCLUDE (removes granularity). **LOD expressions** are heavily tested."
+        "heading": "LOD Expressions",
+        "body": "FIXED ignores the view's dimensions, INCLUDE adds one, EXCLUDE removes one. FIXED is computed before dimension filters."
       },
       {
-        "heading": "Filters & Filter Order",
-        "body": "Understand the filter order of operations: Extract → Data Source → Context → Dimension → Measure → Table Calculation. Know how context filters change which data other filters act on."
+        "heading": "Filter Order",
+        "body": "Extract, data source, context, dimension, measure, then table calculation filters. Promote a filter to context when a FIXED value must respect it."
       },
       {
         "heading": "Dashboard Interactivity",
-        "body": "Know how to configure actions: Filter Actions (clicking to filter), Highlight Actions, and URL Actions. Understand how to design dashboards for mobile using device-specific layouts."
+        "body": "Filter and highlight actions connect sheets. Parameters let viewers change a measure or threshold without editing anything."
       },
       {
-        "heading": "Data Preparation in Tableau Prep",
-        "body": "Know basic **Tableau Prep** operations: cleaning steps (data type changes, null handling, rename), aggregation steps, join/union steps, and how to output flows to **extracts** or published data sources."
+        "heading": "Performance",
+        "body": "Use an extract for slow sources, filter and aggregate it at creation, and keep views focused rather than enormous."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Tableau Certifications",
-    "intro": "After this Tableau certification, consider other Tableau credentials or CRM Analytics:",
+    "intro": "Good next steps after Tableau Data Analyst:",
     "links": [
       {
         "href": "/certifications/tableau-consultant",
         "label": "Tableau Consultant"
       },
       {
-        "href": "/certifications/tableau-desktop-foundations",
-        "label": "Tableau Desktop Foundations"
+        "href": "/certifications/tableau-architect",
+        "label": "Tableau Architect"
+      },
+      {
+        "href": "/certifications/tableau-server-administrator",
+        "label": "Tableau Server Administrator"
+      },
+      {
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
       }
     ]
   },
