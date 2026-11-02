@@ -14,21 +14,19 @@ export default function PrerequisiteAlert({
 }: PrerequisiteAlertProps) {
   const prereq = getCertPrerequisites(slug)
 
-  if (!prereq || (!prereq.requiredPrerequisite && !prereq.recommendedPrerequisite)) {
+  if (!prereq || (!prereq.requiredPrerequisite && !prereq.requiredPrerequisites?.length && !prereq.recommendedPrerequisite)) {
     return null
   }
 
-  const requiredCertSlug = prereq.requiredPrerequisite
+  const requiredCertSlugs = prereq.requiredPrerequisites ?? (prereq.requiredPrerequisite ? [prereq.requiredPrerequisite] : [])
   const recommendedCertSlug = prereq.recommendedPrerequisite
 
-  // Get cert info for required prerequisite
-  const requiredCert = requiredCertSlug
-    ? {
-        slug: requiredCertSlug,
-        title: slugToDisplayName(requiredCertSlug),
-        code: SLUG_TO_EXAM_CODE[requiredCertSlug] || '',
-      }
-    : null
+  // Get cert info for every required prerequisite.
+  const requiredCerts = requiredCertSlugs.map((requiredCertSlug) => ({
+    slug: requiredCertSlug,
+    title: slugToDisplayName(requiredCertSlug),
+    code: SLUG_TO_EXAM_CODE[requiredCertSlug] || '',
+  }))
 
   // Get cert info for recommended prerequisite
   const recommendedCert = recommendedCertSlug
@@ -39,7 +37,7 @@ export default function PrerequisiteAlert({
       }
     : null
 
-  const isRequired = !!requiredCert
+  const isRequired = requiredCerts.length > 0
   const icon = isRequired ? AlertCircle : CheckCircle2
   const Icon = icon
 
@@ -67,7 +65,7 @@ export default function PrerequisiteAlert({
             }`}
           >
             {isRequired
-              ? 'Required Prerequisite'
+              ? requiredCerts.length > 1 ? 'Required Prerequisites' : 'Required Prerequisite'
               : 'Recommended Prerequisites'}
           </p>
           <p
@@ -76,13 +74,16 @@ export default function PrerequisiteAlert({
             }`}
           >
             {isRequired
-              ? 'You must complete this certification before attempting this one.'
+              ? requiredCerts.length > 1
+                ? 'You must complete all of these certifications before attempting this one.'
+                : 'You must complete this certification before attempting this one.'
               : 'We recommend completing this certification first to prepare you better.'}
           </p>
 
           <div className="flex flex-col gap-2">
-            {requiredCert && (
+            {requiredCerts.map((requiredCert) => (
               <Link
+                key={requiredCert.slug}
                 href={`/certifications/${requiredCert.slug}`}
                 className={`inline-flex items-center gap-2 text-xs md:text-sm font-medium px-3 py-2 rounded-lg transition-all duration-200 ${
                   isRequired
@@ -95,7 +96,7 @@ export default function PrerequisiteAlert({
                   <span className="text-xs">({requiredCert.code})</span>
                 )}
               </Link>
-            )}
+            ))}
             {recommendedCert && (
               <Link
                 href={`/certifications/${recommendedCert.slug}`}

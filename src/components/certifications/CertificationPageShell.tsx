@@ -27,8 +27,8 @@ export default function CertificationPageShell({
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
-        <div className="lg:col-span-3">{children}</div>
-        <aside className="lg:col-span-1">
+        <div className="min-w-0 lg:col-span-3">{children}</div>
+        <aside className="min-w-0 lg:col-span-1">
           <CertTableOfContents sections={tocSections} />
         </aside>
       </div>

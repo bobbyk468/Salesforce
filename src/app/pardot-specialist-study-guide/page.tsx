@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
@@ -45,17 +45,18 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Lead Management', weight: 21, note: 'Prospect lifecycle: visitor → prospect → lead/contact. Scoring model: default scores for page views, email opens, form submissions, custom scoring actions. Grading model: A–F grades based on prospect profile match (industry, company size, title). Automation rules for lead assignment, segmentation, and nurturing. Completion actions on forms, emails, and file downloads.' },
-  { name: 'Email Marketing', weight: 22, note: 'Pardot email types: list emails, autoresponders, one-to-one emails, Engagement Studio emails. Email builder: drag-and-drop vs HTML. Variable tags for personalisation (first name, custom fields). Sender options: general, specific user, assigned user. A/B testing, send schedule, and rendering across clients. Email deliverability: SPF, DKIM, dedicated IP, opt-out compliance.' },
-  { name: 'Forms, Landing Pages & Automation', weight: 20, note: 'Pardot forms vs form handlers (for existing external forms): field mapping, thank-you content, conditional completion actions. Progressive profiling: showing new fields to returning visitors. Landing pages: using the landing page builder, tracking code, connected campaigns. Automation rules: rule conditions (ANY/ALL), repeatable vs one-time. Segmentation rules: static list criteria.' },
-  { name: 'Administration & Setup', weight: 24, note: 'Salesforce-Pardot connector: enabling, syncing behaviour, sync frequency, field mappings, connected campaigns. Business Units: purpose, cross-business unit reporting limitations. User roles: Administrator, Marketing, Sales, and their capabilities. Pardot settings: account limits, domain setup, tracking code implementation. Campaign and tag organisation. Prospect import and field standards.' },
-  { name: 'Engagement Studio & Reporting', weight: 13, note: 'Engagement Studio: drip programs logic — action steps (send email, add to list, assign), trigger steps (email open, form submit, link click), rule steps (grade, score, field criteria). Wait steps and timing logic. Pausing and restarting programs. Reporting: prospect lifecycle report, email performance report, campaign ROI report, form and landing page reports. B2B Marketing Analytics connector.' },
+  { name: 'Visitors and Prospects', weight: 8, note: 'Review the official objectives for visitor and prospect records and lifecycle concepts.' },
+  { name: 'Administration', weight: 11, note: 'Review the administration and setup objectives in the current official exam guide.' },
+  { name: 'Account Engagement Forms, Form Handlers and Landing Pages', weight: 20, note: 'Compare hosted forms and form handlers, landing pages, and associated objectives.' },
+  { name: 'Lead Management', weight: 24, note: 'Review prospect management, scoring, grading, automation, and the listed exam objectives.' },
+  { name: 'Email Marketing', weight: 20, note: 'Review email creation, configuration, and marketing objectives.' },
+  { name: 'Engagement Studio', weight: 17, note: 'Review program steps, behavior, and reporting objectives.' },
 ]
 
 const faqItems = [
   {
     question: 'What is the Salesforce Pardot Specialist certification?',
-    answer: 'The Salesforce Pardot Specialist (now officially Marketing Cloud Account Engagement Specialist) certification validates skills in using Pardot for B2B marketing automation — including lead scoring and grading, email marketing, forms and landing pages, Engagement Studio, and Salesforce integration. The exam has 60 questions, 90-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'The Salesforce Certified Marketing Cloud Account Engagement Specialist credential covers Account Engagement concepts including lead management, email marketing, forms, and Engagement Studio. The exam has 60 multiple-choice/multiple-select questions and up to five unscored questions, 90 minutes, a 72% passing score, and a $200 registration fee. No prerequisite is required; course attendance is highly recommended.',
   },
   {
     question: 'What is the difference between Pardot scoring and grading?',
@@ -71,7 +72,7 @@ const faqItems = [
   },
   {
     question: 'Is ADM-201 required before Pardot Specialist?',
-    answer: 'ADM-201 is not a formal prerequisite, but it is helpful because Pardot integrates with Salesforce CRM. The Pardot Specialist exam focuses on Pardot features, not core Salesforce admin knowledge. However, understanding Salesforce campaigns, leads, contacts, and the Pardot connector sync behaviour requires some CRM familiarity. Many marketing professionals without ADM-201 pass Pardot Specialist successfully with Trailhead and hands-on Pardot experience.',
+    answer: 'No formal prerequisite is required for this exam. Salesforce highly recommends course attendance; review the official exam guide for the listed audience description and preparation resources.',
   },
 ]
 
@@ -91,7 +92,7 @@ export default function PardotSpecialistStudyGuidePage() {
           <span>Study Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          Salesforce Pardot Specialist Study Guide ({RELEASE_CURRENT})
+          Salesforce Marketing Cloud Account Engagement Specialist Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
           Your complete guide to passing the Pardot Specialist exam — lead scoring and grading, email marketing, Engagement Studio, forms, landing pages, and Salesforce integration.
@@ -109,9 +110,9 @@ export default function PardotSpecialistStudyGuidePage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
-          { label: 'Questions', value: '60' },
+          { label: 'Questions', value: '60 + up to 5 unscored' },
           { label: 'Time Limit', value: '90 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Passing Score', value: '72%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
@@ -166,7 +167,7 @@ export default function PardotSpecialistStudyGuidePage() {
             { week: 'Week 5', focus: 'Automation Rules & Segmentation — build automation rules with multi-condition logic. Create segmentation lists. Compare automation rules vs segmentation rules vs completion actions.' },
             { week: 'Week 6', focus: 'Engagement Studio — build a nurture program with action, trigger, and rule steps. Configure a branching sequence based on email open and form submission triggers.' },
             { week: 'Week 7', focus: 'Administration — review Salesforce connector settings, field sync behaviour, business units, and user roles. Practice identifying which user role can perform each action.' },
-            { week: 'Week 8', focus: 'Full mock exams. Administration (24%) and Lead Management (21%) are the heaviest sections. Focus on scoring vs grading distinctions and Engagement Studio step types. Aim for 75%+.' },
+            { week: 'Week 8', focus: 'Use practice questions to review weaker areas. The official outline weights Lead Management at 24%, Forms and Landing Pages at 20%, Email Marketing at 20%, and Engagement Studio at 17%.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -179,16 +180,16 @@ export default function PardotSpecialistStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Exam Question Strategy</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Scoring = engagement, Grading = fit:</strong> This distinction is tested repeatedly. A prospect who opens every email has a high score. A prospect who matches your ideal customer profile has a high grade. Marketing qualified leads (MQL) have both high score AND high grade.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Scoring = engagement, Grading = fit:</strong> A prospect’s score reflects activity; a grade reflects fit against profile criteria. Use both concepts when reviewing qualification workflows.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Automation rules run in real time; segmentation rules are static:</strong> Automation rules trigger when a prospect matches criteria (even as behaviour changes). Segmentation rules are point-in-time: they evaluate prospects and create a static list. Dynamic lists update continuously, like automation rules.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Engagement Studio step types:</strong> Action = do something now. Trigger = wait for a behaviour. Rule = branch based on a field or attribute. Know the exact difference — exam scenarios describe a desired workflow and ask which step type to use.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Form vs form handler:</strong> If you can replace the form on the website, use a Pardot form (better tracking, progressive profiling). If the form is locked (third-party system, complex front-end), use a form handler. Exam scenarios will describe which situation applies.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Engagement Studio step types:</strong> Action = do something now. Trigger = wait for a behaviour. Rule = branch based on a field or attribute. Practice identifying the appropriate step type for a desired workflow.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Form vs form handler:</strong> If you can replace the form on the website, use a Pardot form (better tracking, progressive profiling). If the form is locked (third-party system, complex front-end), use a form handler. Practice matching each form option to its documented use case.</span></li>
         </ul>
       </div>
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
-        <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Pardot Specialist is very hands-on — many questions describe a specific Pardot configuration scenario and ask what happens next. Hands-on Pardot experience (ideally a Pardot sandbox or trial) is the most effective preparation beyond reading Trailhead.</p>
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Practice Review</h2>
+        <p className="text-sm text-gray-700">Use practice questions to find topics for further review, and compare your preparation with the official objectives. Lead Management carries the largest domain weight at 24%. No practice score guarantees an exam result.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

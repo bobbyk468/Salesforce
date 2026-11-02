@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight, BookOpen } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
@@ -21,7 +21,7 @@ const slug = 'agentforce-specialist'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist study guide: 5 sections, Agent Builder, topics, testing strategies. Pass first attempt Free practice questions.`
+  `Agentforce Specialist study guide: official exam objectives, Agent Builder, topics, actions, and testing strategies.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -51,15 +51,15 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Agentforce Specialist exam format?',
-    answer: 'The Agentforce Specialist exam has 60 multiple-choice and multiple-select questions, a 105-minute time limit, a 73% passing score, and a $200 fee ($100 retake). It tests Agent Builder configuration, topic and action design, prompt engineering within agents, testing methodologies, and responsible AI deployment.',
+    answer: 'The current Salesforce guide lists 60 multiple-choice questions plus up to five unscored questions, 105 minutes, a 72% passing score, a US$200 registration fee, and a US$100 retake fee (taxes may apply). It lists no prerequisite. It tests Agent Builder configuration, topic and action design, prompt engineering within agents, testing methodologies, and responsible AI deployment.',
   },
   {
-    question: 'What are the highest-weight Agentforce Specialist exam sections?',
-    answer: 'Agent Building (35%) is the single most important section — it covers Agent Builder hands-on configuration. Agentforce Concepts (17%) and Agent Design (22%) together provide the framework and architecture knowledge. Testing and Debugging (14%) is critical because the exam heavily tests how to validate agent behaviour before deployment.',
+    question: 'What exam objectives and weights does Salesforce list?',
+    answer: 'The published outline lists Prompt Engineering (20%), Data 360 Fundamentals (20%), AI Agents (35%), Testing, Deployment, and Maintenance (10%), Governance and Observability (10%), and Multi-Agent Orchestration (5%). See the linked official guide for the objectives.',
   },
   {
     question: 'Do I need hands-on Agent Builder experience for the Agentforce Specialist exam?',
-    answer: 'Yes — hands-on experience is essential. The exam tests practical configuration: creating agents in Agent Builder, defining topics with instructions, adding actions (Flows, Apex, Prompt Templates), setting guardrails, and testing conversations. Candidates who study only conceptually consistently fail Agent Building questions. Use a free Salesforce Developer Edition org with Agentforce enabled.',
+    answer: 'Salesforce recommends combining relevant on-the-job experience with self-study; its guide has no prerequisite. Use the official objectives to structure practice with agent configuration, testing, and the other listed areas.',
   },
   {
     question: 'What is the difference between agent topics and agent actions?',
@@ -68,11 +68,12 @@ const faqItems = [
 ]
 
 const examSections = [
-  { name: 'Agentforce Concepts', weight: 17, note: 'What Agentforce is, the autonomous agent lifecycle, reasoning engine, Trust Layer, Einstein Trust Layer data privacy' },
-  { name: 'Agent Design', weight: 22, note: 'Designing agent scope, identifying use cases, selecting agent type (Service Agent, Sales Agent, custom), planning topics and actions' },
-  { name: 'Agent Building', weight: 35, note: 'Agent Builder configuration, creating and editing topics, defining agent instructions, adding and configuring actions (Flow, Apex, Prompt Template)' },
-  { name: 'Testing and Debugging', weight: 14, note: 'Testing agent conversations in Agent Builder, evaluating response quality, identifying reasoning failures, debugging action invocation errors' },
-  { name: 'Deployment and Management', weight: 12, note: 'Deploying agents to channels (Service Cloud, Experience Cloud, embedded), managing agent versions, monitoring agent performance and adoption' },
+  { name: 'Prompt Engineering', weight: 20, note: 'Study the prompt-engineering objectives in the current Salesforce exam guide.' },
+  { name: 'Data 360 Fundamentals', weight: 20, note: 'Review the Data 360 objectives listed in the exam guide.' },
+  { name: 'AI Agents', weight: 35, note: 'Review agent objectives, including configuration and capabilities, as specified by Salesforce.' },
+  { name: 'Testing, Deployment, and Maintenance', weight: 10, note: 'Use the published objectives to guide testing and lifecycle review.' },
+  { name: 'Governance and Observability', weight: 10, note: 'Review governance and observability objectives in the issuer guide.' },
+  { name: 'Multi-Agent Orchestration', weight: 5, note: 'Review the multi-agent orchestration objectives in the issuer guide.' },
 ]
 
 export default function AgentforceSpecialistStudyGuidePage() {
@@ -88,16 +89,16 @@ export default function AgentforceSpecialistStudyGuidePage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Study reference · {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Agentforce Specialist Study Guide ({RELEASE_CURRENT}): Complete Exam Prep
+          Agentforce Specialist Study Guide ({RELEASE_YEAR}): Complete Exam Prep
         </h1>
         <p className="text-lg text-gray-600">
-          The Agentforce Specialist certification is the most in-demand new Salesforce credential of 2026.
+          The Agentforce Specialist credential validates knowledge of Agentforce configuration and related published objectives.
           It validates your ability to design, build, test, and deploy autonomous AI agents using Salesforce
-          Agentforce — including Agent Builder, topics, actions, guardrails, and the Einstein Trust Layer.
-          This guide covers every exam section with the depth you need to pass.
+          Agentforce — including agent configuration, actions, testing, and the published objectives.
+          This guide organizes study around the published exam objectives.
         </p>
       </header>
 
@@ -109,6 +110,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
         certName="Agentforce Specialist"
         certPageSlug="agentforce-specialist"
       />
+      <p className="text-sm text-gray-600 mb-8">Primary sources: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer">official exam guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer">Agentforce data-masking documentation</a></p>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">Agentforce Specialist Exam at a Glance</h2>
@@ -116,7 +118,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
           {[
             { label: 'Questions', value: '60' },
             { label: 'Time Limit', value: '105 min' },
-            { label: 'Passing Score', value: '73%' },
+            { label: 'Passing Score', value: '72%' },
             { label: 'Exam Fee', value: '$200' },
           ].map(({ label, value }) => (
             <div key={label} className="rounded-lg bg-gray-50 border border-gray-100 p-3 text-center">
@@ -126,14 +128,14 @@ export default function AgentforceSpecialistStudyGuidePage() {
           ))}
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          73% passing score — higher than most Salesforce exams (ADM-201 is 68%). Retake fee: $100. Requires hands-on Agent Builder experience.
+          60 scored questions plus up to five unscored. Passing score: 72%. Retake fee: US$100 plus applicable taxes. Prerequisite: none; Salesforce recommends relevant experience and self-study.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Agentforce Specialist Exam Sections and Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          Agent Building (35%) is the single largest section. Spending the majority of your prep time in Agent Builder is mandatory — not optional.
+          Objective weights below follow the Salesforce exam guide. Use them to organize study; consult the linked guide for the complete objectives.
         </p>
         <div className="space-y-3">
           {examSections.map(({ name, weight, note }) => (
@@ -153,53 +155,20 @@ export default function AgentforceSpecialistStudyGuidePage() {
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-4">What Each Section Actually Tests</h2>
-        <div className="space-y-5 text-sm text-gray-700">
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Agentforce Concepts (17%)
-            </p>
-            <p>This section tests your understanding of how Agentforce agents work autonomously — the reasoning loop (perceive, plan, act, reflect), how the large language model (LLM) interprets user input against topic instructions, and how the Einstein Trust Layer ensures data is not used to train external models. Know the difference between Copilot (assisted, user-driven) and Agentforce agents (autonomous, goal-driven). Also understand the Zero Retention data policy: customer data sent to LLMs through Salesforce is not retained by the external model provider.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Agent Design (22%)
-            </p>
-            <p>Design questions present a business requirement and ask which agent type, topic structure, or action approach is most appropriate. Know the standard agent types: Service Agent (for customer service use cases), Sales Development Representative (SDR) agent (for outbound sales), and custom agents. For topic design, understand that good topic instructions are specific (defining what the agent should and should not do), and that vague instructions lead to off-topic responses. <strong>Common design mistake:</strong> creating a single topic that tries to do everything — topics should be scoped to a coherent task set.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Agent Building (35%)
-            </p>
-            <p>The largest section and the one most dependent on hands-on experience. Know how to: (1) create an agent in Agent Builder and set its system prompt / role description, (2) create topics with well-structured instructions that guide agent behaviour, (3) add actions — understand the three action types: Flow actions (declarative), Apex actions (programmatic), and Prompt Template actions (AI-generated responses). For each action, you must define the input/output variables clearly so the agent knows what data to pass. Also know guardrails: topics can be configured to block the agent from taking actions it should not take.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Testing and Debugging (14%)
-            </p>
-            <p>Testing agents is done through the Conversation Preview panel in Agent Builder — you interact with the agent as a user would and inspect how it reasons through the conversation. Know how to identify: topic misclassification (agent routes to the wrong topic), action invocation failure (agent calls an action with incorrect inputs), and reasoning loops (agent gets stuck). The exam tests your ability to diagnose which layer is failing — the topic instructions, the action configuration, or the underlying Flow/Apex logic.</p>
-          </div>
-          <div>
-            <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
-              <BookOpen className="h-4 w-4 text-salesforce-blue" />
-              Deployment and Management (12%)
-            </p>
-            <p>Agents are deployed to channels: Service Cloud (embedded in the console), Experience Cloud (customer-facing portals), or via the Messaging and Bots framework. Know that agent versions allow you to test changes without impacting the live agent. Monitoring: use the Agent Analytics dashboard to track conversation volume, resolution rates, and escalation rates. Escalation to a human agent is a key feature — know how to configure escalation conditions within topic instructions.</p>
-          </div>
+        <div className="space-y-3 text-sm text-gray-700">
+          {examSections.map((section) => <p key={section.name}><strong>{section.name} ({section.weight}%):</strong> {section.note}</p>)}
+          <p>Salesforce documents that pattern-based and field-based data masking is disabled for agents. Review the feature-specific configuration rather than assuming automatic PII masking.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">6-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Concepts &amp; Architecture (17%):</strong> Study the Agentforce reasoning engine, Trust Layer, Zero Retention policy, and how Agentforce differs from Einstein Copilot. Complete Trailhead’s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
-          <p><strong>Week 2 — Agent Design Principles (22%):</strong> Study the agent types (Service Agent, SDR Agent, custom), use case selection, topic scope planning, and action selection (Flow vs Apex vs Prompt Template). Practice: design on paper a multi-topic agent for a customer service scenario before building it.</p>
-          <p><strong>Week 3 &amp; 4 — Agent Building (35%):</strong> Build at least 2 complete agents with multiple topics and multiple action types. For each agent: write topic instructions, add a Flow action and a Prompt Template action, configure input/output variables, and set guardrails. This is the most time-intensive week and the most critical for passing.</p>
-          <p><strong>Week 5 — Testing and Deployment (14% + 12%):</strong> Practice the Conversation Preview workflow — deliberately break an agent (wrong action inputs, vague instructions) and then diagnose and fix the issue. Study channel deployment options and escalation configuration.</p>
-          <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min). Target 80%+ before booking — the 73% threshold is high.</p>
+          <p><strong>Week 1 — Prompt Engineering and Data 360:</strong> Review the corresponding published objectives and Salesforce documentation. Complete Trailhead’s &ldquo;Agentforce Basics&rdquo; and &ldquo;Einstein Trust Layer&rdquo; modules. Practice: enable Agentforce in a Developer Edition org and explore the Agent Builder interface.</p>
+          <p><strong>Week 2 — AI Agents:</strong> Study the agent types (Service Agent, SDR Agent, custom), use case selection, topic scope planning, and action selection (Flow vs Apex vs Prompt Template). Practice: design on paper a multi-topic agent for a customer service scenario before building it.</p>
+          <p><strong>Week 3 &amp; 4 — AI Agents (35%):</strong> Build at least 2 complete agents with multiple topics and multiple action types. For each agent: write topic instructions, add a Flow action and a Prompt Template action, configure input/output variables, and set guardrails. Use the issuer objectives to select relevant practice tasks.</p>
+          <p><strong>Week 5 — Testing, Deployment, Maintenance, Governance, and Observability:</strong> Practice the Conversation Preview workflow — deliberately break an agent (wrong action inputs, vague instructions) and then diagnose and fix the issue. Study channel deployment options and escalation configuration.</p>
+          <p><strong>Week 6:</strong> Full timed mock exams (60 Q / 105 min). Review missed questions against the issuer objectives and practice under timed conditions.</p>
         </div>
       </section>
 
@@ -216,7 +185,7 @@ export default function AgentforceSpecialistStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Trust Layer questions:</strong> The Einstein Trust Layer sits between Salesforce and the external LLM. It: (1) masks sensitive data (PII) before sending to the model, (2) enforces Zero Retention so data is not stored by the provider, (3) uses Audit Trail to log all AI interactions. When a scenario asks how to ensure customer data is not used to train the external model, the answer is the Einstein Trust Layer / Zero Retention policy.</span>
+            <span><strong>Trust Layer questions:</strong> Trust Layer capabilities vary by feature and configuration. Salesforce documents that pattern-based and field-based data masking is disabled for agents; do not assume all PII is automatically masked. Review the Salesforce documentation for the specific service retention terms; do not generalize across all services.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -226,34 +195,32 @@ export default function AgentforceSpecialistStudyGuidePage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Timed Practice</h2>
         <p className="text-sm text-gray-700 mb-2">
-          Agentforce Specialist passing score is 73% — significantly higher than most Salesforce exams.
+          The Salesforce guide lists a 72% passing score; this is not a mock-test benchmark.
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          80%+ on 3 timed full mocks (60 Q / 105 min) before booking
+          Timed practice (105-minute exam window) before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Set your mock benchmark at 80% (above the 73% passing threshold) because the actual exam includes
-          scenario-based questions that are harder than typical practice question banks. Candidates who book
-          at exactly 73% mock scores frequently fail. Build at least 2 complete agents before booking —
-          there is no substitute for Agent Builder hands-on experience.
+          Use timed practice to identify areas for further review; no issuer-endorsed mock-score threshold is specified. Practice configuring and testing agents where your environment permits —
+          hands-on practice is a study option, not a formal exam prerequisite.
         </p>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
-          <li>Agentforce reasoning loop: perceive → plan → act → reflect (how agents process conversations)</li>
-          <li>Einstein Trust Layer: Zero Retention policy, PII masking, audit logging</li>
+          <li>Review the six objective names and weights in the official guide linked above.</li>
+          <li>Trust Layer features and their documented configuration, including agent data-masking considerations</li>
           <li>Topics vs Actions: topics define scope; actions execute specific tasks</li>
           <li>Three action types: Flow (declarative), Apex (programmatic), Prompt Template (AI-generated text)</li>
           <li>Topic instructions: specificity matters — vague instructions = off-topic responses</li>
           <li>Agent types: Service Agent, SDR Agent, custom — when to use each</li>
           <li>Guardrails: how to prevent agents from taking unauthorised actions</li>
           <li>Conversation Preview: how to test and debug agent conversations in Agent Builder</li>
-          <li>Channel deployment: Service Cloud, Experience Cloud, Messaging</li>
+          <li>Review the deployment and maintenance objectives listed by Salesforce.</li>
           <li>Human escalation: how and when agents hand off to human agents</li>
         </ol>
       </section>

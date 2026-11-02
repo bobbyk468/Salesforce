@@ -427,7 +427,7 @@ export const CERTIFICATION_PATHS: CertificationPath[] = [
         stage: 'foundational',
         label: 'AI & Analytics base',
         nodes: [
-          { name: 'AI Associate', href: base('ai-associate') },
+          { name: 'AI Associate (retired)', href: base('ai-associate'), note: 'Retired February 2026; historical reference, not a current exam or prerequisite' },
           { name: 'Platform Foundations', href: base('platform-foundations'), note: 'Optional' },
         ],
       },

@@ -1,4 +1,7 @@
 import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
+import { getVisiblePracticeQuestions } from '@/lib/practice-question-lite'
+import { getQuizJsonLd } from '@/lib/schema-data'
+import { serializeJsonLd } from '@/lib/serialize-json-ld'
 
 interface CertQuizSchemaProps {
   certTitle: string
@@ -12,31 +15,16 @@ export default function CertQuizSchema({ certTitle, slug, questions }: CertQuizS
   if (!questions?.length) return null
 
   const quizJsonLd = {
-    '@context': 'https://schema.org',
-    '@type': 'Quiz',
-    name: `${certTitle} Practice Questions`,
-    about: {
-      '@type': 'Thing',
-      name: certTitle,
-    },
+    ...getQuizJsonLd(`${certTitle} Practice Questions`, getVisiblePracticeQuestions(questions)),
     educationalLevel: 'professional',
     assesses: certTitle,
     url: `${siteBaseUrl}/certifications/${slug}#practice-questions`,
-    hasPart: questions.slice(0, 3).map((q, i) => ({
-      '@type': 'Question',
-      name: q.question,
-      position: i + 1,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: q.options[q.correctAnswer],
-      },
-    })),
   }
 
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(quizJsonLd) }}
+      dangerouslySetInnerHTML={{ __html: serializeJsonLd(quizJsonLd) }}
     />
   )
 }

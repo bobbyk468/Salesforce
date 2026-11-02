@@ -231,7 +231,7 @@ export default function ContactSidebar({ defaultExamName = '' }: ContactSidebarP
   }
 
   return (
-    <aside className="w-full lg:w-80 flex-shrink-0">
+    <aside className="w-full min-w-0 flex-shrink-0">
       <div className="lg:sticky lg:top-24 bg-white rounded-2xl shadow-xl border border-gray-100 overflow-hidden">
         <div className="bg-gradient-to-br from-salesforce-dark via-salesforce-blue to-salesforce-light p-4 text-white">
           <div className="flex items-center gap-2">

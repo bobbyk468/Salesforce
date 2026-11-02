@@ -18,38 +18,13 @@ const host = (() => {
 
 export default function robots(): MetadataRoute.Robots {
   return {
-    rules: [
-      // Default: allow all crawlers, block API routes
-      {
-        userAgent: '*',
-        allow: '/',
-        // Block API routes and parameterized search URLs (?q= from CertSearch sitelinks box)
-        disallow: ['/api/', '/*?q=*'],
-      },
-      // Explicitly allow major AI/LLM crawlers so they index all content
-      // OpenAI (ChatGPT, SearchGPT)
-      { userAgent: 'GPTBot', allow: '/' },
-      { userAgent: 'OAI-SearchBot', allow: '/' },
-      { userAgent: 'ChatGPT-User', allow: '/' },
-      // Anthropic (Claude)
-      { userAgent: 'ClaudeBot', allow: '/' },
-      { userAgent: 'Claude-Web', allow: '/' },
-      // Perplexity
-      { userAgent: 'PerplexityBot', allow: '/' },
-      // Google (Gemini / AI Overviews)
-      { userAgent: 'Google-Extended', allow: '/' },
-      // Microsoft (Copilot / Bing AI)
-      { userAgent: 'Bingbot', allow: '/' },
-      // Apple (Apple Intelligence)
-      { userAgent: 'Applebot', allow: '/' },
-      { userAgent: 'Applebot-Extended', allow: '/' },
-      // Meta (Meta AI)
-      { userAgent: 'Meta-ExternalAgent', allow: '/' },
-      // ByteDance / Cohere
-      { userAgent: 'Bytespider', allow: '/' },
-      // You.com
-      { userAgent: 'YouBot', allow: '/' },
-    ],
+    // One shared policy keeps exclusions consistent for all crawlers. More
+    // specific user-agent groups would override these exclusions.
+    rules: {
+      userAgent: '*',
+      allow: '/',
+      disallow: ['/api/', '/*?q=*'],
+    },
     sitemap: `${baseUrl}/sitemap.xml`,
     host,
   }

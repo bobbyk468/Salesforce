@@ -34,7 +34,7 @@ export default function RelatedCertifications({ currentSlug }: RelatedCertificat
   if (linksToRender.length === 0 && studyResources.length === 0) return null
 
   return (
-    <section className="mt-12 rounded-xl border border-purple-100 bg-white p-6 [content-visibility:auto] [contain-intrinsic-size:auto_200px]" aria-labelledby="related-certs-heading">
+    <section className="mt-12 rounded-xl border border-purple-100 bg-white p-6" aria-label="Related certifications and study resources">
       {studyResources.length > 0 && (
         <div className="mb-6">
           <h2 className="text-xl font-bold text-gray-900 mb-4">

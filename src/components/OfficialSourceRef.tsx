@@ -1,5 +1,4 @@
 import { SLUG_TO_EXAM_GUIDE_URL, EXAM_PRICING_URL } from '@/lib/cert-seo-data'
-import { RELEASE_DATE, RELEASE_DATE_DISPLAY } from '@/lib/release-data'
 
 export default function OfficialSourceRef({ slug }: { slug: string }) {
   const guideUrl = SLUG_TO_EXAM_GUIDE_URL[slug]
@@ -8,9 +7,8 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
   return (
     <div className="mt-6 rounded-lg border border-gray-100 bg-gray-50 px-4 py-3 text-xs text-gray-600">
       <p className="mb-1.5">
-        <span className="font-semibold text-gray-700">Exam data verification:</span>{' '}
-        questions, duration, passing score, fees, and section coverage were checked against official source references on{' '}
-        <time dateTime={RELEASE_DATE}>{RELEASE_DATE_DISPLAY}</time>.
+        <span className="font-semibold text-gray-700">Official references:</span>{' '}
+        Use the issuer’s current materials to confirm exam objectives, format, and fees before booking.
       </p>
       <p>
         <span className="font-medium text-gray-700">Official sources:</span>{' '}
@@ -20,7 +18,7 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
               href={guideUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-0.5 text-salesforce-blue hover:underline"
+              className="inline-flex items-center gap-0.5 text-salesforce-dark hover:underline"
             >
               Exam guide
             </a>
@@ -32,13 +30,13 @@ export default function OfficialSourceRef({ slug }: { slug: string }) {
             href={EXAM_PRICING_URL}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-0.5 text-salesforce-blue hover:underline"
+            className="inline-flex items-center gap-0.5 text-salesforce-dark hover:underline"
           >
             Salesforce exam pricing
           </a>
         )}
         <span className="mx-1.5">&middot;</span>
-        <span>Independent prep resource; no braindumps or leaked exam questions.</span>
+        <span>Independent exam-prep resource; details may change.</span>
       </p>
     </div>
   )

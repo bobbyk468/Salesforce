@@ -1,3 +1,5 @@
+import { serializeJsonLd } from '@/lib/serialize-json-ld'
+import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import Link from 'next/link'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import CertificationCard from '@/components/CertificationCard'
@@ -16,22 +18,12 @@ import { getCertH1Text, getCertExamWeightageHeading, getCertPracticeQuestionsHea
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
-import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import ExecutionContextDiagram from '@/components/certifications/ExecutionContextDiagram'
-import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
-const PracticeQuestionsSection = dynamic(
-  () => import('@/components/PracticeQuestionsSection'),
-  {
-    ssr: false,
-    loading: () => (
-      <div id="practice-questions" className="mt-12 min-h-[440px] w-full" aria-hidden="true" />
-    ),
-  }
-)
-
+import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/practice-question-lite'
+import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
 const sampleQuestions = [
   {
     question: "A developer needs to create a trigger that fires after a record is inserted and updated. Which trigger events should be used?",
@@ -277,14 +269,14 @@ const sampleQuestions = [
 
 export default function Developer1CertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
-  const initialQuestions = getInitialPracticeQuestions(sampleQuestions)
+  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, sampleQuestions))
   return (
     <div data-critical-content className="max-w-7xl mx-auto px-4 py-12">
       <CertPageSeo slug={slug} certTitle={slugToDisplayName(slug)} />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, sampleQuestions)),
+            __html: serializeJsonLd(getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
           }}
         />
         <CertIntroParagraph slug={slug} />
@@ -300,7 +292,7 @@ export default function Developer1CertBody({ slug }: { slug: string }) {
               <strong>SOQL inside a loop</strong> will hit the <strong>100 SOQL query limit</strong> if the loop iterates over more than 100 records. Fix: run one SOQL query before the loop using <code className="bg-white px-1 rounded border border-gray-200">WHERE Id IN :idSet</code>, store results in a <code className="bg-white px-1 rounded border border-gray-200">Map&lt;Id, SObject&gt;</code>, and look up records inside the loop with no additional queries.
             </p>
           </details>
-          <p className="text-xs text-gray-600 mt-3">15 full practice questions with explanations are below ↓</p>
+          <p className="text-xs text-gray-600 mt-3">Sample practice questions and answers are below ↓</p>
         </div>
 
         {/* Trust signals + Prominent CTA above fold */}
@@ -600,7 +592,7 @@ private class CalloutServiceTest {
           <CertReadinessSummary slug={slug} />
           <PracticeQuestionsSection
             heading={getCertPracticeQuestionsHeading(slug)}
-            introText={getPracticeQuestionsIntro(sampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
+            introText={getPracticeQuestionsIntro(initialQuestions.length, ". Select the requested number of answers, then check your selection.")}
             questions={initialQuestions}
           />
 

@@ -1,4 +1,4 @@
-import { getCertDifficulty, getExamLogistics, getSocialProofNumber, slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { getCertDifficulty, getExamLogistics, slugToDisplayName, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
 
 interface Props {
   slug: string
@@ -9,21 +9,18 @@ const DIFFICULTY_CONFIG = {
     label: 'Entry-Level',
     color: 'text-green-700 bg-green-50 border-green-200',
     prepTime: '2-4 weeks',
-    passRate: 'above average',
-    tip: 'Focus on Trailhead modules and official exam guide. Most candidates with platform exposure pass on the first attempt.',
+    tip: 'Focus on Trailhead modules and the official exam guide, then practice the skills in a hands-on environment.',
   },
   medium: {
     label: 'Moderate',
     color: 'text-amber-700 bg-amber-50 border-amber-200',
     prepTime: '4-8 weeks',
-    passRate: 'moderate',
     tip: 'Combine Trailhead trailmix with hands-on practice and timed mock exams. Prioritise the highest-weighted sections.',
   },
   hard: {
     label: 'Challenging',
     color: 'text-red-700 bg-red-50 border-red-200',
     prepTime: '8-16 weeks',
-    passRate: 'below average',
     tip: 'Requires deep hands-on experience. Study the hardest sections first, take multiple timed mocks, and review wrong answers until you understand every distractor.',
   },
 } as const
@@ -34,7 +31,6 @@ export default function CertDifficultySection({ slug }: Props) {
   const certName = slugToDisplayName(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const logistics = getExamLogistics(slug)
-  const socialProof = getSocialProofNumber(slug)
 
   const displayName = examCode ? `${certName} (${examCode})` : certName
 
@@ -51,21 +47,12 @@ export default function CertDifficultySection({ slug }: Props) {
       </div>
       <div className="space-y-3 text-sm text-gray-700">
         <p>
-          The {certName} exam is rated <strong>{config.label.toLowerCase()}</strong> difficulty with a{' '}
-          <strong>{config.passRate}</strong> first-attempt pass rate across candidates.
+          We rate the {certName} exam as <strong>{config.label.toLowerCase()}</strong> for study planning. Difficulty and preparation time vary by experience.
           {logistics && (
             <> You have <strong>{logistics.duration}</strong> to answer <strong>{logistics.questions} questions</strong> and need <strong>{logistics.passingScore}</strong> to pass.</>
           )}
         </p>
         <p>{config.tip}</p>
-        {socialProof > 0 && (
-          <p className="text-xs text-gray-500">
-            {socialProof >= 1000
-              ? `${(socialProof / 1000).toFixed(1)}K+`
-              : `${socialProof.toLocaleString()}+`}{' '}
-            candidates use Trailblaze Prep for this exam each month.
-          </p>
-        )}
       </div>
     </div>
   )

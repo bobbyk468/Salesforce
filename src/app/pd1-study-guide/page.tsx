@@ -62,7 +62,7 @@ const faqItems = [
   },
   {
     question: 'What Apex governor limits are tested on PD1?',
-    answer: 'The most commonly tested governor limits are: 100 SOQL queries per synchronous transaction, 150 DML statements per transaction, 50,000 records returned by a single SOQL query, 10 callouts per transaction, and 60,000ms total CPU time. Bulkification is the exam’s primary governor limit scenario — you need to explain why SOQL/DML inside for-loops is wrong and how to fix it.',
+    answer: 'Key per-transaction Apex limits include 100 SOQL queries synchronously (200 asynchronously), 150 DML statements, 50,000 records retrieved by SOQL queries, and 100 callouts. The CPU-time limit is 10,000ms synchronously and 60,000ms asynchronously. Limits are enforced by execution context; special contexts and other documented exceptions can differ, and exceeding a governor limit can cause an unhandled runtime exception.',
   },
 ]
 
@@ -160,7 +160,8 @@ export default function Pd1StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Process Automation and Logic (30%)
             </p>
-            <p>The heart of the PD1 exam. <strong>Governor limits</strong> are the single most tested concept: 100 SOQL queries, 150 DML statements, 50,000 rows returned per query. <strong>Bulkification</strong> is a specific governor limit scenario — you must know why SOQL or DML inside a for-loop violates limits and how to fix it using List/Map patterns. <strong>Async Apex</strong>: Future methods (simple callouts, @future(callout=true), cannot be monitored); Batch Apex (Database.Batchable interface, 3 methods: start/execute/finish, up to 50M records in batches of 200 default); Queueable (can be chained, accepts non-primitive types); Scheduled (Schedulable interface, cron expression). <strong>Most common mistake:</strong> confusing when to use Future vs Queueable — Queueable is preferred when you need chaining or non-primitive parameters.</p>
+            <p>The heart of the PD1 exam. <strong>Apex governor limits</strong> are per transaction: SOQL is limited to 100 queries synchronously and 200 asynchronously; DML statements to 150; and records retrieved by SOQL queries to 50,000. CPU time is limited to 10,000ms synchronously and 60,000ms asynchronously. The callout limit is 100 per transaction. <strong>Bulkification</strong> is a specific governor limit scenario — you must know why SOQL or DML inside a for-loop violates limits and how to fix it using List/Map patterns. These are general per-transaction limits; the applicable context and documented exceptions matter, and exceeding a governor limit can cause an unhandled runtime exception. <strong>Async Apex</strong>: Future methods (simple callouts, @future(callout=true), cannot be monitored); Batch Apex (Database.Batchable interface, 3 methods: start/execute/finish, up to 50M records in batches of 200 default); Queueable (can be chained, accepts non-primitive types); Scheduled (Schedulable interface, cron expression). <strong>Most common mistake:</strong> confusing when to use Future vs Queueable — Queueable is preferred when you need chaining or non-primitive parameters.</p>
+            <p className="mt-2 text-xs text-gray-600">Verify current values and context-specific exceptions in Salesforce&apos;s <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/platform/salesforce-app-limits-cheatsheet/guide/salesforce-app-limits-platform-apexgov.html" target="_blank" rel="noreferrer">Apex Governor Limits quick reference</a> and <a className="underline text-salesforce-blue" href="https://developer.salesforce.com/docs/atlas.en-us.apexcode.meta/apexcode/apex_gov_limits.htm" target="_blank" rel="noreferrer">Execution Governors and Limits</a>.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -181,7 +182,7 @@ export default function Pd1StudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Integration (15%)
             </p>
-            <p><strong>REST vs SOAP:</strong> REST uses JSON, lightweight, stateless, simpler to implement; SOAP uses WSDL/XML, stricter contract, legacy systems. <strong>Callouts:</strong> HttpRequest object, HttpRequest.setEndpoint(), HttpRequest.setMethod('GET'), Http.send(). Named Credentials store endpoint + authentication — use them for credentials security. Callouts cannot be made from Apex triggers without @future(callout=true) or Queueable. <strong>Inbound:</strong> REST API (standard /services/data/vXX.0/ endpoints), SOAP API (WSDL import), Bulk API (CSV-based, high-volume). Know that callouts count against the 10 callouts per transaction limit.</p>
+            <p><strong>REST vs SOAP:</strong> REST uses JSON, lightweight, stateless, simpler to implement; SOAP uses WSDL/XML, stricter contract, legacy systems. <strong>Callouts:</strong> HttpRequest object, HttpRequest.setEndpoint(), HttpRequest.setMethod('GET'), Http.send(). Named Credentials store endpoint + authentication — use them for credentials security. Callouts cannot be made from Apex triggers without @future(callout=true) or Queueable. <strong>Inbound:</strong> REST API (standard /services/data/vXX.0/ endpoints), SOAP API (WSDL import), Bulk API (CSV-based, high-volume). Apex allows 100 callouts per transaction.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -286,7 +287,7 @@ export default function Pd1StudyGuidePage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
-          <li>Governor limits: 100 SOQL, 150 DML, 50,000 rows, 10 callouts per synchronous transaction</li>
+          <li>Governor limits per transaction: SOQL 100 synchronous / 200 asynchronous; DML 150; SOQL-retrieved rows 50,000; callouts 100; CPU 10,000ms synchronous / 60,000ms asynchronous</li>
           <li>Bulkification pattern — SOQL/DML outside loops, use Collections and Maps</li>
           <li>Trigger.new vs Trigger.old vs Trigger.newMap/oldMap and when each is available</li>
           <li>Before trigger vs After trigger — before is used to set field values (no DML needed), after is used to query related records</li>

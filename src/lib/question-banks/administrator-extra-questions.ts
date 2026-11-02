@@ -2,19 +2,19 @@ import type { SampleQuestion } from '@/components/PracticeQuestionsSection'
 
 export const ADMINISTRATOR_EXTRA_QUESTIONS: SampleQuestion[] = [
   {
-    question: "Which Lightning App Builder component allows users to filter records on a record page?",
+    question: "An admin wants a component on a Lightning record page to appear only when the Opportunity record’s Stage is Closed Won. Which feature should they configure in Lightning App Builder?",
     options: [
-      "Related List",
-      "Related Record",
-      "Filter",
-      "List View"
+      "Component visibility filters",
+      "Dynamic Forms",
+      "Record-triggered Flow",
+      "Page activation"
     ],
-    correctAnswer: 2,
-    explanation: "The Filter component in Lightning App Builder allows users to filter records displayed on a record page using predefined criteria.",
+    correctAnswer: 0,
+    explanation: "Configure component visibility filters on the component in Lightning App Builder. The filter criteria determine when the component appears on the Lightning page.",
     whyWrong: [
-      "Related List displays associated child records — it doesn't provide filtering controls itself.",
-      "Related Record shows a linked record's details — it isn't a filtering mechanism.",
-      "List View filters a list of records on a tab or app page, not records displayed within a specific record page layout."
+      "Dynamic Forms controls how record fields and sections are arranged; it is not the component visibility setting asked for.",
+      "A record-triggered Flow automates actions when a record changes; it does not control whether a page component is displayed.",
+      "Page activation assigns a Lightning page to users or contexts; component visibility filters control when an individual component appears."
     ]
   },
   {

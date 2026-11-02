@@ -14,19 +14,20 @@ export function generateStaticParams() {
   return SPIKED_CERT_SLUGS.map((slug) => ({ slug }))
 }
 
-type PageProps = { params: { slug: string } }
+type PageProps = { params: Promise<{ slug: string }> }
 
 const PRACTICE_TEST_SLUGS = ['administrator-practice-test', 'email-specialist-practice-test']
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
-  if (!isSpikedCertSlug(params.slug)) notFound()
+  const { slug } = await params
+  if (!isSpikedCertSlug(slug)) notFound()
   // Practice test pages are canonicalized to parent cert pages — noindex prevents
   // GSC "Duplicate without user-selected canonical" warnings.
-  if (PRACTICE_TEST_SLUGS.includes(params.slug)) {
-    return { ...getCertMetadata(params.slug), robots: { index: false, follow: true } }
+  if (PRACTICE_TEST_SLUGS.includes(slug)) {
+    return { ...getCertMetadata(slug), robots: { index: false, follow: true } }
   }
-  if (params.slug === ADMINISTRATOR_SLUG) {
-    const baseMetadata = getCertMetadata(params.slug)
+  if (slug === ADMINISTRATOR_SLUG) {
+    const baseMetadata = getCertMetadata(slug)
     const descriptionText = administratorMetadataDescription
     return {
       ...baseMetadata,
@@ -41,13 +42,14 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
       },
     }
   }
-  return getCertMetadata(params.slug)
+  return getCertMetadata(slug)
 }
 
 export default async function CertificationBySlugPage({ params }: PageProps) {
-  if (!isSpikedCertSlug(params.slug)) notFound()
-  const body = certSpikeBodyBySlug[params.slug]
+  const { slug } = await params
+  if (!isSpikedCertSlug(slug)) notFound()
+  const body = certSpikeBodyBySlug[slug]
   // Note: Legacy bodies (template: 'legacy') are not used; LEGACY_CERT_SLUGS is empty.
   // Type assertion is safe because the union excludes LegacySpikeBody at the CertificationBodyTemplate boundary.
-  return <CertificationBodyTemplate slug={params.slug} body={body as Exclude<CertSpikeBodyData, { template: 'legacy' }>} />
+  return <CertificationBodyTemplate slug={slug} body={body as Exclude<CertSpikeBodyData, { template: 'legacy' }>} />
 }

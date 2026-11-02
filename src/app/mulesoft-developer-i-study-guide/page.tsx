@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'mulesoft-developer-i'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `MuleSoft Developer I study guide: exam sections, DataWeave, connectors, error handling, 8-week plan. $200, 60 questions.`
+const pageDescription = `MuleSoft Developer I study guide: published exam objectives, Mule 4 application development, DataWeave, connectors, and error handling.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -45,26 +45,32 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Anypoint Platform Overview & API Design', weight: 23, note: 'API-led connectivity (system, process, experience layers). Anypoint Platform components: Anypoint Studio, Design Center, Exchange, Runtime Manager, API Manager. RAML and OAS API specification design.' },
-  { name: 'Building Mule Applications', weight: 25, note: 'Mule 4 application structure: flows, sub-flows, private flows. Core components: Logger, Set Variable, Transform Message (DataWeave), HTTP Listener/Request, Scheduler, Choice/Scatter-Gather routers.' },
-  { name: 'DataWeave 2.0', weight: 22, note: 'Transforming data between JSON, XML, CSV, and Java with DataWeave 2.0 expressions. Map, filter, reduce, groupBy, pluck, flatten functions. Using variables, type coercion, and inline scripts.' },
-  { name: 'Connecting to Systems', weight: 17, note: 'Anypoint Connectors for databases (DB connector), Salesforce, HTTP, FTP, SFTP, and message queues (Anypoint MQ). Configuring connection settings, operations, and error handling per connector.' },
-  { name: 'Error Handling & Debugging', weight: 8, note: 'Error handling strategies: On Error Propagate vs On Error Continue. Error types hierarchy (MULE, HTTP, CONNECTIVITY). Logging, debugging in Anypoint Studio, DataWeave playground, and MUnit basics.' },
-  { name: 'Deployment & Management', weight: 5, note: 'Deploying to CloudHub, Runtime Fabric, and customer-hosted Mule. Anypoint Runtime Manager basics, application monitoring, alerts, and environment management (dev, test, prod).' },
+  { name: 'Creating Application Networks', weight: 7, note: 'Network and application-network objectives in the published guide.' },
+  { name: 'Designing APIs', weight: 8, note: 'API design objectives in the published guide.' },
+  { name: 'Accessing and Modifying Mule Events', weight: 10, note: 'Mule event access and modification objectives.' },
+  { name: 'Structuring Mule Applications', weight: 10, note: 'Mule application structure objectives.' },
+  { name: 'Building API Implementation Interfaces', weight: 7, note: 'API implementation interface objectives.' },
+  { name: 'Using Connectors', weight: 10, note: 'Connector objectives.' },
+  { name: 'Processing Records', weight: 10, note: 'Record processing objectives.' },
+  { name: 'Transforming Data', weight: 10, note: 'Data transformation objectives.' },
+  { name: 'Routing Events', weight: 8, note: 'Event routing objectives.' },
+  { name: 'Handling Errors', weight: 8, note: 'Error handling objectives.' },
+  { name: 'Debugging and Troubleshooting Mule Applications', weight: 5, note: 'Debugging and troubleshooting objectives.' },
+  { name: 'Deploying and Managing APIs and Integrations', weight: 7, note: 'Deployment and management objectives.' },
 ]
 
 const faqItems = [
   {
     question: 'What is the MuleSoft Developer I certification?',
-    answer: 'The MuleSoft Developer I (MCIA-Level-1) certification validates foundational skills in building integrations with MuleSoft Anypoint Platform. It covers API design with RAML, building Mule 4 flows, DataWeave data transformation, Anypoint Connectors, error handling, and deployment. The exam has 60 questions, 120 minutes, ~70% passing score, and a $200 fee.',
+    answer: 'The Salesforce Certified MuleSoft Developer exam guide lists 60 multiple-choice questions plus up to five unscored questions, 120 minutes, 70% passing, US$200 registration and US$100 retake fees (taxes may apply), and no prerequisite. The guide says its questions align to Spring 24; check the linked guide for the published objective version.',
   },
   {
     question: 'Do I need Salesforce experience before MuleSoft Developer I?',
-    answer: 'No Salesforce experience is required for MuleSoft Developer I. The exam is focused on Anypoint Platform and integration development skills. However, understanding REST APIs, JSON/XML data formats, and basic programming concepts is very helpful. Many candidates come from non-Salesforce integration backgrounds.',
+    answer: 'The exam guide lists no prerequisite. It describes the target audience as people with guided experience on basic Mule 4 projects; this is audience guidance, not a formal prerequisite.',
   },
   {
     question: 'What is DataWeave and why is it important for this exam?',
-    answer: 'DataWeave is MuleSoft\'s native data transformation language used to map, transform, and process data between systems in Mule flows. It accounts for ~22% of the exam and is one of the most commonly tested areas. DataWeave 2.0 uses functional programming patterns (map, filter, reduce) and supports JSON, XML, CSV, and Java formats natively.',
+    answer: 'DataWeave is MuleSoft\'s native data transformation language used to map, transform, and process data between systems in Mule flows. The published Transforming Data objective is weighted 10%; the exam guide lists its objectives and version alignment. DataWeave 2.0 uses functional programming patterns (map, filter, reduce) and supports JSON, XML, CSV, and Java formats natively.',
   },
   {
     question: 'What is API-led connectivity in MuleSoft?',
@@ -72,7 +78,7 @@ const faqItems = [
   },
   {
     question: 'How long should I study for the MuleSoft Developer I exam?',
-    answer: 'Plan for 8–10 weeks with 10–15 hours per week. Anypoint Studio hands-on practice is essential — the exam tests practical DataWeave expressions, flow configuration, and connector setup. Download Anypoint Studio for free, follow the MuleSoft Developer Fundamentals course on Trailhead/MuleSoft training, and build several integrations from scratch before sitting the exam.',
+    answer: 'Plan for 8–10 weeks with 10–15 hours per week. The issuer recommends combining work experience and self-study. Hands-on practice with DataWeave, flows, and connectors can support study. Download Anypoint Studio for free, follow the MuleSoft Developer Fundamentals course on Trailhead/MuleSoft training, and build several integrations from scratch before sitting the exam.',
   },
 ]
 
@@ -93,10 +99,10 @@ export default function MulesoftDeveloperIStudyGuidePage() {
           <span>Study Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          MuleSoft Developer I Study Guide ({RELEASE_CURRENT})
+          MuleSoft Developer I Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the MuleSoft Certified Integration Associate (MCIA-Level-1) exam — API design, DataWeave, connectors, and error handling.
+          A study reference for the Salesforce Certified MuleSoft Developer exam objectives, including APIs, DataWeave, connectors, and error handling.
         </p>
       </div>
 
@@ -108,13 +114,14 @@ export default function MulesoftDeveloperIStudyGuidePage() {
         certName="MuleSoft Developer I"
         certPageSlug="mulesoft-developer-i"
       />
+      <p className="text-sm text-gray-600 mb-8">The available exam guide states Spring 24 alignment; confirm current requirements with Salesforce. <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer">Official exam guide and objectives</a>.</p>
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Questions', value: '60' },
           { label: 'Time Limit', value: '120 min' },
-          { label: 'Passing Score', value: '~70%' },
+          { label: 'Passing Score', value: '70%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
@@ -126,7 +133,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
 
       {/* Exam Sections */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">How the Exam Is Weighted</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Published Exam Objective Weights</h2>
         <div className="space-y-4">
           {examSections.map((section) => (
             <div key={section.name}>
@@ -135,7 +142,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
                 <span className="text-salesforce-blue font-semibold">{section.weight}%</span>
               </div>
               <div className="w-full bg-gray-100 rounded-full h-2">
-                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight * 4}%` }} />
+                <div className="bg-salesforce-blue h-2 rounded-full" style={{ width: `${section.weight}%` }} />
               </div>
             </div>
           ))}
@@ -196,7 +203,7 @@ export default function MulesoftDeveloperIStudyGuidePage() {
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Know You’re Ready</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>80%+ on practice exams</strong> before scheduling — the passing score is ~70%, higher than most Salesforce exams. Building Mule Applications (25%) and DataWeave (22%) together account for nearly half the exam. Make sure you can write and read basic DataWeave transformations without reference documentation.</p>
+        <p className="text-sm text-gray-700">Use timed practice to identify objectives for further review. The available Salesforce exam guide lists 70% passing, no prerequisite, and Spring 24 alignment; verify current details with the issuer.</p>
       </div>
 
       {/* Top 10 Review */}

@@ -74,15 +74,19 @@ def classify_index_status(result: dict[str, Any]) -> dict[str, str]:
     canonical = str(index.get("googleCanonical", ""))
     user_canonical = str(index.get("userCanonical", ""))
 
-    indexed = verdict.upper() == "PASS" and "Indexed" in coverage
+    verdict = verdict.upper()
+    indexed = 'yes' if verdict == 'PASS' else 'no' if verdict in {'FAIL', 'NEUTRAL'} else 'unknown'
     return {
-        "indexed": "yes" if indexed else "no",
+        "indexed": indexed,
         "verdict": verdict,
         "coverageState": coverage,
         "indexingState": indexing_state,
         "robotsTxtState": robots,
         "googleCanonical": canonical,
         "userCanonical": user_canonical,
+        "lastCrawlTime": str(index.get("lastCrawlTime", "")),
+        "pageFetchState": str(index.get("pageFetchState", "")),
+        "crawledAs": str(index.get("crawledAs", "")),
     }
 
 
@@ -148,6 +152,7 @@ def main() -> int:
     all_rows: list[dict[str, str]] = []
     indexed_rows: list[dict[str, str]] = []
     not_indexed_rows: list[dict[str, str]] = []
+    unknown_rows: list[dict[str, str]] = []
 
     for i, url in enumerate(urls, start=1):
         if creds.expired and creds.refresh_token:
@@ -164,9 +169,12 @@ def main() -> int:
             if classified["indexed"] == "yes":
                 indexed_rows.append(row)
                 marker = "INDEXED"
-            else:
+            elif classified["indexed"] == "no":
                 not_indexed_rows.append(row)
                 marker = "NOT_INDEXED"
+            else:
+                unknown_rows.append(row)
+                marker = "UNKNOWN"
             print(f"[{i:>3}/{len(urls)}] {marker} - {url}")
         except Exception as e:
             row = {
@@ -180,7 +188,7 @@ def main() -> int:
                 "userCanonical": "",
             }
             all_rows.append(row)
-            not_indexed_rows.append(row)
+            unknown_rows.append(row)
             print(f"[{i:>3}/{len(urls)}] ERROR - {url} - {e}")
         time.sleep(max(args.delay_ms, 0) / 1000)
 
@@ -194,15 +202,20 @@ def main() -> int:
         "robotsTxtState",
         "googleCanonical",
         "userCanonical",
+        "lastCrawlTime",
+        "pageFetchState",
+        "crawledAs",
     ]
     write_csv(reports_dir / "gsc-index-status-all.csv", all_rows, fields)
     write_csv(reports_dir / "gsc-indexed-urls.csv", indexed_rows, fields)
     write_csv(reports_dir / "gsc-not-indexed-urls.csv", not_indexed_rows, fields)
+    write_csv(reports_dir / "gsc-unknown-urls.csv", unknown_rows, fields)
 
     summary = {
         "checked": len(all_rows),
         "indexed": len(indexed_rows),
         "not_indexed": len(not_indexed_rows),
+        "unknown": len(unknown_rows),
         "site_url": args.site_url,
         "urls_file": str(args.urls_file),
     }
@@ -214,7 +227,7 @@ def main() -> int:
     print(json.dumps(summary, indent=2))
     print(f"Indexed CSV: {reports_dir / 'gsc-indexed-urls.csv'}")
     print(f"Not indexed CSV: {reports_dir / 'gsc-not-indexed-urls.csv'}")
-    return 0
+    return 1 if unknown_rows else 0
 
 
 if __name__ == "__main__":

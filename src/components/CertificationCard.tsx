@@ -2,6 +2,7 @@ import Link from 'next/link'
 import type { ExamSection } from '@/lib/exam-weightage-data'
 import DifficultyBadge from '@/components/DifficultyBadge'
 import PrerequisiteAlert from '@/components/PrerequisiteAlert'
+import { hasUnverifiedClaudeExamDetails, isUnavailableCredentialExam } from '@/lib/credential-status'
 
 export interface ComponentExam {
   name: string
@@ -51,15 +52,15 @@ export default function CertificationCard({
   headingLevel = 'h1',
   componentExams,
 }: CertificationCardProps) {
+  const hideExamDetails = hasUnverifiedClaudeExamDetails(slug)
+  const retired = isUnavailableCredentialExam(slug)
   return (
     <div className="bg-white rounded-xl shadow-sm overflow-hidden border border-blue-100 cert-card [content-visibility:auto] [contain-intrinsic-size:auto_400px]">
       {/* Header: heading with exam name and primary keyword for SEO */}
       <div className="gradient-bg p-6 text-white">
         <div className="flex items-center gap-3 mb-4 flex-wrap">
-          <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">
-            {code}
-          </span>
-          <DifficultyBadge slug={slug} size="sm" />
+          {!hideExamDetails && code && <span className="bg-white/20 px-3 py-1 rounded-full text-sm font-medium">{code}</span>}
+          {!hideExamDetails && !retired && <DifficultyBadge slug={slug} size="sm" />}
         </div>
         {headingLevel === 'h1' ? (
           <h1 className="text-2xl md:text-3xl font-bold leading-tight">{h1Text ?? title}</h1>
@@ -76,7 +77,11 @@ export default function CertificationCard({
         <PrerequisiteAlert slug={slug} className="mb-6" />
 
         {/* Exam Details */}
-        {componentExams && componentExams.length > 0 ? (
+        {hideExamDetails ? null : retired ? (
+          <p className="mb-6 rounded-lg border border-amber-200 bg-amber-50 p-4 text-sm text-amber-900">
+            Current exam registration and delivery are unavailable. See the issuer notice above for current learning options.
+          </p>
+        ) : componentExams && componentExams.length > 0 ? (
           <div className="mb-6 rounded-lg border border-violet-200 bg-violet-50 p-4">
             <p className="text-sm font-semibold text-gray-900 mb-3">
               This credential is earned by passing {componentExams.length} component exams — not a single test:
@@ -116,7 +121,7 @@ export default function CertificationCard({
         )}
 
         {/* Exam weightage by section */}
-        {examSections && examSections.length > 0 && (
+        {!hideExamDetails && !retired && examSections && examSections.length > 0 && (
           <div id="exam-weightage" className="mb-6">
             <h2 className="text-lg font-semibold text-gray-900 mb-4">{examWeightageHeading ?? 'Exam Weightage by Section'}</h2>
             <div className="space-y-3">
@@ -144,7 +149,7 @@ export default function CertificationCard({
 
         {/* Topics */}
         <div>
-          <h2 className="text-lg font-semibold text-gray-900 mb-3">Exam Topics</h2>
+          <h2 className="text-lg font-semibold text-gray-900 mb-3">{hideExamDetails ? 'Learning Topics' : 'Exam Topics'}</h2>
           <div className="flex flex-wrap gap-2">
             {topics.map((topic) => (
               <span

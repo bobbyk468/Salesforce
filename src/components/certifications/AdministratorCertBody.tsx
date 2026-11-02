@@ -1,25 +1,12 @@
+import { serializeJsonLd } from '@/lib/serialize-json-ld'
+import { getPracticeQuestionsForExam, hasImportedPracticeQuestions } from '@/lib/git-practice-questions'
 import Link from 'next/link'
-import dynamic from 'next/dynamic'
 import CertificationCard from '@/components/CertificationCard'
 import CertIntroParagraph from '@/components/CertIntroParagraph'
 import ExamPrepContent from '@/components/ExamPrepContent'
 
-const PracticeQuestionsSection = dynamic(() => import('@/components/PracticeQuestionsSection'), {
-  ssr: false,
-  loading: () => (
-    <div
-      id="practice-questions"
-      className="mt-12 min-h-[440px] w-full"
-      aria-hidden="true"
-    />
-  ),
-})
-const AdministratorCtaSections = dynamic(() => import('@/components/AdministratorCtaSections'), {
-  ssr: false,
-  loading: () => (
-    <div className="mt-12 min-h-[340px] w-full" aria-hidden="true" />
-  ),
-})
+import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
+import AdministratorCtaSections from '@/components/AdministratorCtaSections'
 import CertPageSeo, { CertPageFaq } from '@/components/CertPageSeo'
 import { getQuizJsonLd } from '@/lib/schema-data'
 import CertPageIntro from '@/components/CertPageIntro'
@@ -34,7 +21,11 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import OrderOfExecutionDiagram from '@/components/certifications/OrderOfExecutionDiagram'
-import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
+import {
+  getInitialPracticeQuestions,
+  getPracticeQuestionsTotalCount,
+  getVisiblePracticeQuestions,
+} from '@/lib/practice-question-lite'
 import {
   ADMINISTRATOR_SLUG,
   administratorSampleQuestions,
@@ -42,7 +33,7 @@ import {
 
 export default function AdministratorCertBody({ slug }: { slug: string }) {
   const examSections = getExamWeightage(slug)
-  const initialQuestions = getInitialPracticeQuestions(administratorSampleQuestions)
+  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, administratorSampleQuestions))
 
   return (
     <div className="min-h-screen bg-pattern">
@@ -51,8 +42,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
-            __html: JSON.stringify(
-              getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, administratorSampleQuestions),
+            __html: serializeJsonLd(
+              getQuizJsonLd(`${slugToDisplayName(slug)} Practice Questions`, getVisiblePracticeQuestions(initialQuestions)),
             ),
           }}
         />
@@ -60,13 +51,13 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
         {/* Hero section: LCP candidate; data-lcp-hero enables mobile critical CSS in layout */}
         <section data-lcp-hero className="mb-6 sm:mb-8 rounded-xl sm:rounded-2xl bg-gradient-to-br from-salesforce-blue via-salesforce-light to-salesforce-blue p-6 sm:p-8 lg:p-10 text-white shadow-md sm:shadow-xl border border-salesforce-blue/20 sm:border-salesforce-blue/30" aria-label="Hero section">
           <p className="text-white/80 text-sm font-medium mb-2 tracking-wide">
-            Updated for {RELEASE_CURRENT} &bull; Aligned with official Salesforce exam guide
+            Independent study resource &bull; Check the current Salesforce exam guide before booking
           </p>
           <h1 className="text-xl sm:text-2xl lg:text-3xl font-bold leading-tight mb-3">
             Salesforce Certified Platform Administrator (ADM-201) Study Guide &amp; Free Practice Questions ({RELEASE_CURRENT})
           </h1>
           <p className="text-white text-sm sm:text-base max-w-2xl mb-6">
-            Everything you need to pass the Salesforce Certified Platform Administrator exam on your first attempt — mock questions, study plan, and section weightage. No sign-up required.
+            Prepare for the Salesforce Certified Platform Administrator exam with practice questions, a study plan, and section weightage. No sign-up required.
           </p>
           <p className="text-white/80 text-xs sm:text-sm max-w-2xl mb-6">
             The certification was previously known as ADM-201 (Salesforce Certified Administrator). Many candidates still search for &ldquo;ADM-201&rdquo;, while the current official name is Salesforce Certified Platform Administrator.
@@ -85,11 +76,8 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
               See 2026 Exam Weightage
             </Link>
           </div>
-          {/* Social proof inline */}
           <div className="flex flex-col sm:flex-row items-start sm:items-center gap-2 sm:gap-4 text-white/80 text-xs sm:text-sm">
-            <span><strong className="text-white">10,000+</strong> learners use Trailblaze Prep</span>
-            <span className="hidden sm:inline">&bull;</span>
-            <span>&ldquo;Passed ADM-201 on my first try using the weightage and practice questions.&rdquo;</span>
+            <span>Use this material alongside the current official exam guide.</span>
           </div>
         </section>
 
@@ -374,9 +362,9 @@ export default function AdministratorCertBody({ slug }: { slug: string }) {
           <CertReadinessSummary slug={slug} />
           <PracticeQuestionsSection
               heading={getCertPracticeQuestionsHeading(slug)}
-              introText={getPracticeQuestionsIntro(administratorSampleQuestions.length, ". Click on an answer to select it, then check your answer to see if you're correct.")}
+              introText={getPracticeQuestionsIntro(getPracticeQuestionsTotalCount(initialQuestions.length, hasImportedPracticeQuestions(slug) ? undefined : 'administrator'), ". Select the requested number of answers, then check your selection.")}
               questions={initialQuestions}
-              extraQuestionsKey="administrator"
+              extraQuestionsKey={hasImportedPracticeQuestions(slug) ? undefined : 'administrator'}
             />
 
             <AdministratorCtaSections />

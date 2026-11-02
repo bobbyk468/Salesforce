@@ -3,16 +3,15 @@ import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 import RelatedGuides from '@/components/RelatedGuides'
 import { getRelatedGuides } from '@/lib/related-guides-data'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
-import WhichFirstBlock from '@/components/WhichFirstBlock'
 import RelatedComparisons from '@/components/RelatedComparisons'
 
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Education Cloud vs Nonprofit Cloud Consultant (${RELEASE_CURRENT})`
-const pageDescription = `Education Cloud Consultant vs Nonprofit Cloud Consultant comparison: industry differences, exam content, data models, career paths, and which to take in 2026.`
+const pageTitle = `Education Cloud vs Nonprofit Cloud Consultant (${RELEASE_YEAR})`
+const pageDescription = `Compare Education Cloud and Nonprofit Cloud by use case, data model, and guide scope. Check product fit before choosing a study path.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -42,23 +41,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between Education Cloud and Nonprofit Cloud?',
-    answer: 'Education Cloud is built for higher education and K-12 institutions: it manages the student lifecycle, academic programmes, advising, admissions, and educational outcomes. Nonprofit Cloud is built for nonprofit organisations: it manages donor relationships, fundraising, volunteer coordination, programme delivery, and organisational impact measurement. Both run on the Salesforce platform but serve completely different sectors with different data models and use cases.',
+    answer: 'Education Cloud supports education use cases with learning and fundraising objects. Nonprofit Cloud supports nonprofit workflows. Product capabilities and data models vary; check the current product documentation and the organization’s implementation rather than assuming Education Cloud always means EDA or Nonprofit Cloud always means NPSP.',
   },
   {
-    question: 'Which certification should I take: Education Cloud or Nonprofit Cloud Consultant?',
-    answer: 'Choose based on the sector you work in or plan to work in. If you implement Salesforce for universities, colleges, or school districts, take Education Cloud Consultant. If you implement Salesforce for charities, nonprofits, foundations, or social enterprises, take Nonprofit Cloud Consultant. There is limited career value in holding both unless you work at a technology partner that serves both sectors.',
+    question: 'How should I use the Education Cloud Consultant material?',
+    answer: 'Exam registration is closed, and Salesforce schedules formal credential retirement for February 1, 2027. Do not treat this as a recommendation to book the exam. Verify current eligibility with Salesforce before planning. Check current product documentation and the target organization’s data model.',
   },
   {
-    question: 'Which exam is harder: Education Cloud or Nonprofit Cloud Consultant?',
-    answer: 'Both exams are similar in difficulty. Nonprofit Cloud Consultant has a slightly higher passing score (~68% vs ~63%), suggesting it is marginally harder. Education Cloud Consultant requires solid knowledge of the EDA (Education Data Architecture) data model, which has a steep learning curve. Nonprofit Cloud Consultant requires deep knowledge of NPSP fundraising concepts and the household account model. Hands-on experience in the respective sector is valuable for both.',
+    question: 'How should I compare the certification scope?',
+    answer: 'Use the current official certification guides for their stated objectives and verify product and data-model details in current documentation. Salesforce documentation describes Education Cloud objects for learning and fundraising; EDA and NPSP have compatibility constraints and should not be assumed to coexist in one organization.',
   },
   {
-    question: 'Do both certifications require the Salesforce Administrator certification?',
-    answer: 'Both strongly recommend the Administrator certification as a prerequisite. The exam questions assume platform-level knowledge that aligns with Administrator certification content. Candidates without admin-level experience often struggle on the implementation and configuration sections of both exams. Most successful candidates have at least 1–2 years of hands-on Salesforce experience.',
+    question: 'Can EDA and NPSP be used together in one organization?',
+    answer: 'Salesforce Help documents EDA and NPSP as incompatible in the same organization. Confirm the current compatibility guidance before designing or evaluating an implementation.',
   },
   {
     question: 'Are these certifications valuable outside their specific sector?',
-    answer: 'These are niche industry certifications — their primary value is within their specific sector. Education Cloud Consultant is valued by Salesforce consulting partners with education practice areas and technology teams at educational institutions. Nonprofit Cloud Consultant is valued by Salesforce partners with nonprofit practice areas and internal IT teams at nonprofit organisations. Neither certification commands significant career value outside its target sector.',
+    answer: 'Their applicability depends on the product scope and workflows in the role or project. Review the official guides and job responsibilities; this page does not rank employer demand or predict career outcomes.',
   },
 ]
 
@@ -72,45 +71,18 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
           <span>Industry Cloud Comparison</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          Education Cloud vs Nonprofit Cloud Consultant ({RELEASE_CURRENT})
+          Education Cloud Consultant (exam closed) vs Nonprofit Cloud Consultant ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
-          Both are Salesforce industry cloud certifications — but for completely different sectors. Here is how to choose based on your work and clients.
+          Education Cloud Consultant registration has closed; Salesforce schedules formal retirement for February 1, 2027. Verify eligibility with the issuer and compare product scope before choosing study material.
         </p>
       </div>
 
       <ContentPageAuthor />
-      <WhichFirstBlock
-        certA={{
-          name: "Education Cloud Consultant",
-          certSlug: "education-cloud-consultant",
-          examTipsSlug: "education-cloud-consultant-exam-tips",
-          conditions: [
-          "Your clients are universities, K-12 schools, or education departments",
-          "You work with student lifecycle, admissions, or advancement use cases",
-          "You want to dominate a niche with very low certified competition",
-          "Your implementation work is in higher education or ed-tech",
-          ],
-        }}
-        certB={{
-          name: "Nonprofit Cloud Consultant",
-          certSlug: "nonprofit-cloud",
-          examTipsSlug: "nonprofit-cloud-exam-tips",
-          conditions: [
-          "Your clients are charities, NGOs, foundations, or social enterprises",
-          "You work with NPSP, fundraising, grants, or program management",
-          "You serve organisations using Salesforce.org or Nonprofit Success Pack",
-          "You want a niche credential with higher brand recognition than Education",
-          ],
-        }}
-        recommendation={{
-          certName: "Nonprofit Cloud Consultant",
-          certSlug: "nonprofit-cloud",
-          examTipsSlug: "nonprofit-cloud-exam-tips",
-          reason: "Nonprofit Cloud Consultant has slightly broader employer recognition and a larger addressable market. Only choose Education Cloud first if your current work is exclusively in the education sector.",
-          
-        }}
-      />
+      <section className="my-10 rounded-2xl border border-gray-200 bg-white p-6 shadow-sm">
+        <h2 className="text-lg font-bold text-gray-900 mb-2">Choosing current study material</h2>
+        <p className="text-sm text-gray-700">Education Cloud Consultant registration has closed, and Salesforce schedules formal retirement for February 1, 2027. Do not treat it as currently bookable; verify eligibility and lifecycle details with the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Salesforce issuer notice</a>. For current certification planning, review the Nonprofit Cloud Consultant guide and confirm its objectives match your target product and data model.</p>
+      </section>
 
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 mb-10">
         <div className="bg-white rounded-xl border-2 border-salesforce-blue p-6 shadow-sm">
@@ -119,11 +91,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <span className="text-xs font-semibold bg-salesforce-blue/10 text-salesforce-dark px-2 py-0.5 rounded-full">Higher Ed / K-12</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~63%</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Data model</span><span className="font-semibold">EDA</span></div>
+            <p className="text-sm text-gray-700 mb-4">Exam registration is closed; formal credential retirement is scheduled for February 1, 2027. Check the <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=005298934&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">issuer lifecycle notice</a>. For product study, review learning, student, and fundraising scope and confirm whether the target organization uses Education Cloud, EDA, or another configuration. <a className="text-salesforce-blue hover:underline" href="https://resources.docs.salesforce.com/latest/latest/en-us/sfdc/pdf/edu_cloud_dev_guide.pdf" target="_blank" rel="noreferrer">Salesforce Education Cloud developer guide</a></p>
           </div>
           <Link href="/education-cloud-consultant-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -134,11 +102,7 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Nonprofits / Charities</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Fee</span><span className="font-semibold">$200</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Questions</span><span className="font-semibold">60</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Time</span><span className="font-semibold">105 min</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Passing score</span><span className="font-semibold">~68%</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Data model</span><span className="font-semibold">NPSP Household</span></div>
+            <p className="text-sm text-gray-700 mb-4">Review nonprofit workflows and product scope in the current guide. Verify whether the target organization uses Nonprofit Cloud, NPSP, or another configuration.</p>
           </div>
           <Link href="/nonprofit-cloud-consultant-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -158,12 +122,9 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
             <tbody className="divide-y divide-gray-50 text-sm">
               {[
                 { area: 'Target sector', edu: 'Higher education, K-12', npo: 'Nonprofits, charities, foundations' },
-                { area: 'Primary data model', edu: 'EDA (Education Data Architecture)', npo: 'NPSP household account model' },
-                { area: 'Core use case', edu: 'Student lifecycle, advising, admissions', npo: 'Fundraising, donor management, volunteers' },
-                { area: 'Key objects', edu: 'Academic Program, Course, Enrollment, Term', npo: 'Opportunity (Gift), Household, Relationship' },
-                { area: 'Typical client', edu: 'Universities, colleges, school districts', npo: 'Charities, NGOs, social enterprises' },
-                { area: 'Recommended background', edu: 'Salesforce admin + education sector exp', npo: 'Salesforce admin + nonprofit sector exp' },
-                { area: 'Avg Salary', edu: '$85–115k (US)', npo: '$80–110k (US)' },
+                { area: 'Guide scope', edu: 'Education product workflows; see current certification guide', npo: 'Nonprofit product workflows; see current certification guide' },
+                { area: 'Product/data model', edu: 'Confirm product and EDA use in target org', npo: 'Confirm product and NPSP use in target org' },
+                { area: 'Compatibility', edu: 'EDA and NPSP are not supported together in one org', npo: 'EDA and NPSP are not supported together in one org' },
               ].map((row) => (
                 <tr key={row.area}>
                   <td className="py-2 pr-4 font-medium text-gray-900">{row.area}</td>
@@ -194,14 +155,12 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
           <table className="min-w-[500px] w-full text-sm text-left border-collapse">
             <thead><tr className="border-b-2 border-gray-200">
               <th scope="col" className="py-2.5 pr-4 font-semibold text-gray-900">Your Situation</th>
-              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Choose This Cert</th>
+              <th scope="col" className="py-2.5 font-semibold text-emerald-700">Study-material action</th>
             </tr></thead>
             <tbody className="text-gray-700 divide-y divide-gray-100">
-              <tr><td className="py-2.5 pr-4">Working with universities, colleges, or K-12 institutions</td><td className="py-2.5 font-semibold text-salesforce-blue">Education Cloud (EDA)</td></tr>
-              <tr><td className="py-2.5 pr-4">Implementing for charities, NGOs, or mission-driven nonprofits</td><td className="py-2.5 font-semibold text-purple-700">Nonprofit Cloud (NPSP)</td></tr>
-              <tr><td className="py-2.5 pr-4">Managing student recruitment, admissions, and academic records</td><td className="py-2.5 font-semibold text-salesforce-blue">Education Cloud</td></tr>
-              <tr><td className="py-2.5 pr-4">Managing donor relationships, fundraising, or grant tracking</td><td className="py-2.5 font-semibold text-purple-700">Nonprofit Cloud</td></tr>
-              <tr><td className="py-2.5 pr-4">Client serves both higher ed and nonprofit missions</td><td className="py-2.5 font-semibold text-gray-700">Assess primary use case — lead with that cert first</td></tr>
+              <tr><td className="py-2.5 pr-4">Project focuses on education product workflows</td><td className="py-2.5 font-semibold text-salesforce-blue">Review Education Cloud guide and verify org configuration</td></tr>
+              <tr><td className="py-2.5 pr-4">Project focuses on nonprofit product workflows</td><td className="py-2.5 font-semibold text-purple-700">Review Nonprofit Cloud guide and verify org configuration</td></tr>
+              <tr><td className="py-2.5 pr-4">Requirement specifically involves EDA or NPSP</td><td className="py-2.5 font-semibold text-gray-700">Check <a className="text-salesforce-blue hover:underline" href="https://help.salesforce.com/s/articleView?id=sfdo.EDA_Prereqs_Compatibility.htm&amp;language=en_US&amp;type=5" target="_blank" rel="noreferrer">Salesforce compatibility guidance</a>; they are not supported together in one org</td></tr>
             </tbody>
           </table>
         </div>
@@ -210,11 +169,11 @@ export default function EducationCloudVsNonprofitCloudConsultantPage() {
       <RelatedGuides links={getRelatedGuides('education-cloud-vs-nonprofit-cloud-consultant')} />
 
       <div className="bg-salesforce-blue rounded-xl p-8 text-center text-white">
-        <h2 className="text-2xl font-bold mb-2">Practice Industry Cloud Questions</h2>
-        <p className="text-white mb-6">Free practice questions for both Education Cloud and Nonprofit Cloud certifications.</p>
+        <h2 className="text-2xl font-bold mb-2">Explore Industry Cloud Study Material</h2>
+        <p className="text-white mb-6">Education Cloud content is historical learning material; use current guides for active credential planning.</p>
         <div className="flex flex-wrap justify-center gap-3">
           <Link href="/certifications/education-cloud-consultant" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
-            Education Cloud Practice
+            Education Cloud Historical Learning
           </Link>
           <Link href="/certifications/nonprofit-cloud" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
             Nonprofit Cloud Practice

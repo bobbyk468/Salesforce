@@ -2,11 +2,15 @@
 
 import { useMemo, useState } from 'react'
 import QuestionCard from '@/components/QuestionCard'
+import { INITIAL_PRACTICE_QUESTION_COUNT } from '@/lib/practice-question-lite'
+import type { ImportedQuestionSource } from '@/lib/cert-page-spike/types'
 
 export interface SampleQuestion {
   question: string
   options: string[]
-  correctAnswer: number
+  correctAnswer?: number
+  correctAnswers?: number[]
+  source?: ImportedQuestionSource
   explanation?: string
   whyWrong?: string[]
 }
@@ -18,18 +22,14 @@ interface PracticeQuestionsSectionProps {
   extraQuestionsKey?: 'administrator'
 }
 
-/**
- * Client-only section so practice questions are not in initial HTML (reduces PageSpeed HTML size).
- * Rendered after hydration; content remains in JS payload but not in first byte HTML.
- */
+/** Server-render the initial sample, then progressively reveal or load the rest. */
 export default function PracticeQuestionsSection({
   heading,
   introText,
   questions,
   extraQuestionsKey,
 }: PracticeQuestionsSectionProps) {
-  if (!questions?.length) return null
-  const initialCount = 5
+  const initialCount = INITIAL_PRACTICE_QUESTION_COUNT
   const [showAll, setShowAll] = useState(false)
   const [isLoadingExtras, setIsLoadingExtras] = useState(false)
   const [extraQuestions, setExtraQuestions] = useState<SampleQuestion[]>([])
@@ -40,6 +40,7 @@ export default function PracticeQuestionsSection({
     [allQuestions, showAll]
   )
   const hiddenCount = Math.max(allQuestions.length - initialCount, 0)
+  if (!questions?.length) return null
 
   async function handleShowMore() {
     if (showAll || isLoadingExtras) return
@@ -66,14 +67,23 @@ export default function PracticeQuestionsSection({
           {introText}
         </p>
       )}
+      {questions.some((question) => question.source) && (
+        <p className="mb-6 rounded-lg border border-blue-100 bg-blue-50 p-4 text-sm text-gray-700">
+          Imported from the SF-Questions repository. Answer keys are source-provided and have not
+          been independently verified. Use current official documentation to check your understanding;
+          this sample does not predict an exam result.
+        </p>
+      )}
       <div className="space-y-6 sm:space-y-8">
         {visibleQuestions.map((q, index) => (
           <QuestionCard
-            key={index}
+            key={q.source ? `${q.source.commit}:${q.source.path}:${q.source.questionId}:${index}` : `${q.question}:${index}`}
             questionNumber={index + 1}
             question={q.question}
             options={q.options}
             correctAnswer={q.correctAnswer}
+            correctAnswers={q.correctAnswers}
+            source={q.source}
             explanation={q.explanation}
             explanationSummary={q.explanation ? (q.explanation.split(/[.!?]/)[0]?.trim() ? q.explanation.split(/[.!?]/)[0].trim() + '.' : q.explanation) : undefined}
             whyWrong={q.whyWrong}
@@ -88,7 +98,11 @@ export default function PracticeQuestionsSection({
             disabled={isLoadingExtras}
             className="inline-flex items-center justify-center rounded-lg bg-salesforce-blue px-6 py-3 text-sm font-semibold text-white shadow-md transition-colors hover:bg-salesforce-dark"
           >
-            {isLoadingExtras ? 'Loading more questions...' : `Show ${hiddenCount} more questions`}
+            {isLoadingExtras
+              ? 'Loading more questions...'
+              : hasDeferredExtras
+                ? 'Load all practice questions'
+                : `Show ${hiddenCount} more questions`}
           </button>
         </div>
       )}

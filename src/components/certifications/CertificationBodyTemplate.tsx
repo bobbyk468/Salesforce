@@ -1,3 +1,5 @@
+import { serializeJsonLd } from '@/lib/serialize-json-ld'
+import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import FullQuestionBankCta from '@/components/FullQuestionBankCta'
 import Link from 'next/link'
 import CertificationCard from '@/components/CertificationCard'
@@ -93,27 +95,19 @@ import WhatIsSalesforceDiagram from '@/components/certifications/WhatIsSalesforc
 import SalesMethodologyDiagram from '@/components/certifications/SalesMethodologyDiagram'
 import JTBDFrameworkDiagram from '@/components/certifications/JTBDFrameworkDiagram'
 import SLDSHooksDiagram from '@/components/certifications/SLDSHooksDiagram'
-import dynamic from 'next/dynamic'
 import CertReadinessSummary from '@/components/CertReadinessSummary'
 import ReleaseNoteBadge from '@/components/certifications/ReleaseNoteBadge'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
+import CredentialStatusNotice from '@/components/CredentialStatusNotice'
+import { hasUnverifiedClaudeExamDetails, isUnavailableCredentialExam } from '@/lib/credential-status'
 import ExpertInsightCallout from '@/components/ExpertInsightCallout'
 import OfficialSourceRef from '@/components/OfficialSourceRef'
 import { WhoIsThisForSection, ExamDifficultySection, ExamFormatSection } from '@/components/CertAdminStyleSections'
 import CertDifferentiationSection from '@/components/CertDifferentiationSection'
-import { getInitialPracticeQuestions } from '@/lib/practice-question-lite'
+import { getInitialPracticeQuestions, getVisiblePracticeQuestions } from '@/lib/practice-question-lite'
 import type { ReactNode } from 'react'
 
-const PracticeQuestionsSection = dynamic(
-  () => import('@/components/PracticeQuestionsSection'),
-  {
-    ssr: false,
-    loading: () => (
-      <div id="practice-questions" className="mt-12 min-h-[440px] w-full" aria-hidden="true" />
-    ),
-  },
-)
-
+import PracticeQuestionsSection from '@/components/PracticeQuestionsSection'
 function renderIntroSegments(segments: IntroSegment[]): ReactNode {
   return segments.map((s, i) => {
     if (s.type === 'text') return <span key={i}>{s.text}</span>
@@ -237,18 +231,32 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
   const examSections = getExamWeightage(slug)
   const title = slugToDisplayName(slug)
   const card = body.certificationCard
-  const initialQuestions = getInitialPracticeQuestions(body.sampleQuestions)
+  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, body.sampleQuestions))
+  const hideExamDetails = hasUnverifiedClaudeExamDetails(slug)
+  const retired = isUnavailableCredentialExam(slug)
+  const tocSections = body.tocSections.filter((section) => {
+    if (section.id === 'difficulty-heatmap') return false
+    if (hideExamDetails || retired) {
+      if (section.id === 'scenario-tips') return false
+      if (hideExamDetails && section.id === 'related-certs') return false
+      return !/exam|readiness|scenario|more questions/i.test(section.title)
+    }
+    return true
+  })
 
   return (
     <>
       <CertPageSeo slug={slug} certTitle={title} />
+      <div className="max-w-7xl mx-auto px-4"><CredentialStatusNotice slug={slug} /></div>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getQuizJsonLd(`${title} Practice Questions`, body.sampleQuestions)),
+          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
         }}
       />
-      {body.introLead?.length ? (
+      {hideExamDetails || retired ? (
+        <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{retired ? 'Historical learning notes and practice questions. See the issuer notice above for credential status and current learning options.' : 'Independent learning topics and practice questions. Anthropic’s public announcement describes the Claude certification program; specific exam details have not been verified.'}</p>
+      ) : body.introLead?.length ? (
         <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
       ) : (
         <div className="max-w-7xl mx-auto px-4">
@@ -281,8 +289,8 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         <ContentPageAuthor />
       </div>
 
-      <CertificationPageShell tocSections={body.tocSections}>
-        {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
+      <CertificationPageShell tocSections={tocSections}>
+        {body.whoIsThisFor && <WhoIsThisForSection data={hideExamDetails || retired ? { ...body.whoIsThisFor, heading: retired ? 'Who may use this historical learning reference?' : 'Who may find these learning topics useful?' } : body.whoIsThisFor} />}
 
         <ExamFeesSection slug={slug} />
         <OfficialSourceRef slug={slug} />
@@ -291,26 +299,24 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           slug={slug}
           title={title}
           code={card.code}
-          description={card.description}
+          description={hideExamDetails ? `Independent learning notes and practice questions about ${title}. Credential availability and exam details have not been verified with Anthropic.` : retired ? `Historical learning notes for ${title}. See the issuer notice above for credential status and current learning options.` : card.description}
           examDetails={card.examDetails}
           topics={card.topics}
-          examSections={examSections}
+          examSections={hideExamDetails || retired ? undefined : examSections}
           h1Text={getCertH1Text(slug)}
           examWeightageHeading={getCertExamWeightageHeading(slug)}
           componentExams={card.componentExams}
         />
 
-        <div id="exam-prep">
-          <ExamPrepContent slug={slug} />
-        </div>
+        {!hideExamDetails && !retired && <div id="exam-prep"><ExamPrepContent slug={slug} /></div>}
 
-        {body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
+        {!hideExamDetails && body.expertInsight && <ExpertInsightCallout insight={body.expertInsight} />}
 
-        {body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
-        {body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
-        {body.differentiation && <CertDifferentiationSection data={body.differentiation} />}
+        {!hideExamDetails && !retired && body.examDifficulty && <ExamDifficultySection data={body.examDifficulty} />}
+        {!hideExamDetails && !retired && body.examFormat && <ExamFormatSection slug={slug} data={body.examFormat} />}
+        {!hideExamDetails && !retired && body.differentiation && <CertDifferentiationSection data={body.differentiation} />}
 
-        <KeyConceptsSection id="key-concepts" h2={body.keyConcepts.h2} blocks={body.keyConcepts.blocks} />
+        <KeyConceptsSection id="key-concepts" h2={hideExamDetails ? 'Learning Concepts' : body.keyConcepts.h2.replace(/ for the exam/ig, '')} blocks={body.keyConcepts.blocks} />
 
         {slug === 'agentforce-specialist' ? <AgentforceArchitectureDiagram /> : null}
         {slug === 'ai-associate' ? <EinsteinTrustLayerDiagram /> : null}
@@ -376,27 +382,27 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
         {slug === 'strategy-designer' ? <JTBDFrameworkDiagram /> : null}
         {slug === 'ux-designer' ? <SLDSHooksDiagram /> : null}
 
-        <ScenarioTipsSection
+        {!hideExamDetails && !retired && <ScenarioTipsSection
           h2={body.scenarioTips.h2}
           intro={body.scenarioTips.intro}
           blocks={body.scenarioTips.blocks}
-        />
+        />}
 
-        <CertReadinessSummary slug={slug} />
+        {!hideExamDetails && !retired && <CertReadinessSummary slug={slug} />}
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
           introText={getPracticeQuestionsIntro(
-            body.sampleQuestions.length,
-            body.practiceQuestionsIntroSuffix,
+            initialQuestions.length,
+            initialQuestions[0]?.source ? 'Select the requested number of answers, then check your selection.' : body.practiceQuestionsIntroSuffix,
           )}
           questions={initialQuestions}
         />
 
-        <FullQuestionBankCta slug={slug} certTitle={title} />
+        {!hideExamDetails && !retired && <FullQuestionBankCta slug={slug} certTitle={title} />}
 
         <CertPageFaq slug={slug} certTitle={title} />
 
-        {body.nextCertsAfter ? (
+        {!hideExamDetails && body.nextCertsAfter ? (
           <section
             className="mt-8 rounded-xl border border-blue-100 bg-blue-50/40 p-5 sm:p-6"
             aria-labelledby="next-certs-heading"
@@ -417,9 +423,7 @@ function AssociateTemplate({ slug, body }: { slug: string; body: AssociateSpikeB
           </section>
         ) : null}
 
-        <div id="related-certs">
-          <RelatedCertifications currentSlug={slug} />
-        </div>
+        {!hideExamDetails && <div id="related-certs"><RelatedCertifications currentSlug={slug} /></div>}
       </CertificationPageShell>
     </>
   )
@@ -429,7 +433,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
   const examSections = getExamWeightage(slug)
   const title = slugToDisplayName(slug)
   const card = body.certificationCard
-  const initialQuestions = getInitialPracticeQuestions(body.sampleQuestions)
+  const initialQuestions = getInitialPracticeQuestions(getPracticeQuestionsForExam(slug, body.sampleQuestions))
 
   return (
     <>
@@ -437,7 +441,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{
-          __html: JSON.stringify(getQuizJsonLd(`${title} Practice Questions`, body.sampleQuestions)),
+          __html: serializeJsonLd(getQuizJsonLd(`${title} Practice Questions`, getVisiblePracticeQuestions(initialQuestions))),
         }}
       />
       <p className="text-sm text-gray-600 mb-6 max-w-7xl mx-auto px-4">{renderIntroSegments(body.introLead)}</p>
@@ -456,7 +460,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         <ContentPageAuthor />
       </div>
 
-      <CertificationPageShell tocSections={body.tocSections}>
+      <CertificationPageShell tocSections={body.tocSections.filter((section) => section.id !== 'difficulty-heatmap')}>
         {body.whoIsThisFor && <WhoIsThisForSection data={body.whoIsThisFor} />}
 
         <ExamFeesSection slug={slug} />
@@ -498,7 +502,7 @@ function AppBuilderTemplate({ slug, body }: { slug: string; body: AppBuilderSpik
         <CertReadinessSummary slug={slug} />
         <PracticeQuestionsSection
           heading={getCertPracticeQuestionsHeading(slug)}
-          introText={getPracticeQuestionsIntro(body.sampleQuestions.length, body.practiceIntroSuffix)}
+          introText={getPracticeQuestionsIntro(initialQuestions.length, initialQuestions[0]?.source ? 'Select the requested number of answers, then check your selection.' : body.practiceIntroSuffix)}
           questions={initialQuestions}
         />
 

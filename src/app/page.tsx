@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import type { Metadata } from 'next'
 import HeroSampleQuestionCard from '@/components/HeroSampleQuestionCard'
+import { getPracticeQuestionsForExam } from '@/lib/git-practice-questions'
 import {
   Shield,
   Code,
@@ -22,7 +23,7 @@ import {
 import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
@@ -40,7 +41,7 @@ const certificationCategories = [
     color: 'from-slate-500 to-slate-700',
     certifications: [
       { name: 'Platform Foundations', href: '/certifications/platform-foundations' },
-      { name: 'AI Associate', href: '/certifications/ai-associate' },
+      { name: 'AI Associate (retired)', href: '/certifications/ai-associate' },
       { name: 'Marketing Cloud Engagement Foundations', href: '/certifications/marketing-cloud-engagement-foundations' },
       { name: 'MuleSoft Integration Foundations', href: '/certifications/mulesoft-integration-foundations' },
     ],
@@ -197,27 +198,30 @@ const certificationCategories = [
     ],
   },
 ]
+const additionalRoleCategories = CERTIFICATION_CATEGORIES.filter(
+  ({ slug }) => !certificationCategories.some((category) => category.slug === slug),
+)
 
 const faqItems = [
   {
     question: 'How accurate are these practice questions?',
     answer:
-      'They are aligned with official Salesforce exam outlines and updated regularly. They test the same concepts you will see on the real exam. Use them to gauge readiness and find gaps.',
+      'Some question sets are imported from the SF-Questions repository with source-provided answers that have not been independently verified. These resources do not guarantee a passing score. Check current official documentation and the source notice on each exam page.',
   },
   {
     question: 'How often are the questions and study materials updated?',
     answer:
-      'We review and update content to match the latest exam blueprints and product changes. When Salesforce changes exams or weightage, we update our section weightage and topics.',
+      'Content is revised as changes are identified. We do not promise a fixed review interval; always confirm current exam objectives, availability, and fees with the issuer before booking.',
   },
   {
     question: 'What certifications do you cover?',
     answer:
-      'We cover all major Salesforce certifications: Associate, Administrator, Developer, Consultant, Marketing, Architect, Accredited Professional, Sales, Designer, and Tableau. Each page has exam weightage, tips, prerequisites, and practice questions.',
+      'Browse study resources by Administrator, Developer, Consultant, Marketing, Architect, Accredited Professional, Designer, Tableau, and other tracks. Some historical or unverified credentials are retained with clear status notices.',
   },
   {
     question: 'What makes your materials different from other study resources?',
     answer:
-      'We give section-wise exam weightage for every certification so you know where to focus. Each page has exam tips, prerequisites, focus areas, and a study strategy—not just questions. Content is easy to scan.',
+      'The resources combine topic explanations, sample practice questions, study suggestions, and issuer references. They are designed to support hands-on learning, not replace the official exam guide.',
   },
   {
     question: 'Do I need hands-on experience before taking a Salesforce certification exam?',
@@ -226,7 +230,7 @@ const faqItems = [
   },
 ]
 
-export default function Home() {
+export default async function Home() {
   const organizationJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'Organization',
@@ -265,11 +269,39 @@ export default function Home() {
   const webPageJsonLd = getWebPageJsonLd({
     name: 'Salesforce Certification Practice Questions & Study Guides | Trailblaze Prep',
     description:
-      'Prepare for every Salesforce certification with practice questions, section-wise exam weightage, and study guides. Admin, Developer, Consultant, Architect & more. Browse by role and start free.',
+      'Explore Salesforce certification study guides and sample practice questions across Admin, Developer, Consultant and Architect tracks. Browse by role and start free.',
     path: '/',
     breadcrumbItems: homeBreadcrumb,
   })
   const breadcrumbJsonLd = getBreadcrumbListJsonLd(homeBreadcrumb)
+  const homepageQuestionExams = [
+    { slug: 'administrator', label: 'Platform Administrator' },
+    { slug: 'developer-1', label: 'Platform Developer I' },
+    { slug: 'app-builder', label: 'Platform App Builder' },
+    { slug: 'sales-cloud', label: 'Sales Cloud Consultant' },
+    { slug: 'tableau-data-analyst', label: 'Tableau Data Analyst' },
+  ]
+  const homepageQuestions = homepageQuestionExams.flatMap(({ slug, label }) => {
+    const sample = getPracticeQuestionsForExam(slug, []).find((question) => {
+      const answerIndex = question.correctAnswers === undefined
+        ? question.correctAnswer
+        : question.correctAnswers.length === 1
+          ? question.correctAnswers[0]
+          : undefined
+      return Number.isInteger(answerIndex) &&
+        question.options.length > 0 &&
+        answerIndex! >= 0 &&
+        answerIndex! < question.options.length
+    })
+    const correctAnswer = sample?.correctAnswers === undefined
+      ? sample?.correctAnswer
+      : sample.correctAnswers.length === 1
+        ? sample.correctAnswers[0]
+        : undefined
+    return sample
+      ? [{ examLabel: label, question: sample.question, options: sample.options, correctAnswer: correctAnswer! }]
+      : []
+  })
 
   return (
     <div>
@@ -288,15 +320,15 @@ export default function Home() {
             <div>
               <span className="inline-flex items-center gap-2 bg-salesforce-blue/10 text-salesforce-dark font-semibold text-sm px-4 py-1.5 rounded-full border border-salesforce-blue/20 mb-5">
                 <Sparkles className="h-3.5 w-3.5" aria-hidden="true" />
-                Updated for {RELEASE_CURRENT}
+                Independent study resources
               </span>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-bold text-gray-900 leading-[1.05] tracking-tight mb-5">
-                Pass your{' '}
+                Prepare for your{' '}
                 <span className="hero-gradient-text">Salesforce certification</span>
-                {' '}on the first try.
+                {' '}with confidence.
               </h1>
               <p className="text-lg sm:text-xl text-gray-600 leading-relaxed max-w-xl mb-8">
-                Practice questions, exam weightage, and study guides for every Salesforce certification &mdash; Admin, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and more.
+                Explore sample practice questions, exam topics, and study guides across Admin, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, and Tableau tracks.
               </p>
               <div className="flex flex-wrap gap-3 mb-9">
                 <Link
@@ -316,11 +348,11 @@ export default function Home() {
               </div>
               <div className="flex gap-8">
                 <div>
-                  <div className="text-2xl font-bold text-salesforce-dark leading-none">90+</div>
+                  <div className="text-2xl font-bold text-salesforce-dark leading-none">Role-based</div>
                   <div className="text-sm text-gray-500 mt-1">Certifications</div>
                 </div>
                 <div>
-                  <div className="text-2xl font-bold text-salesforce-dark leading-none">4,200+</div>
+                  <div className="text-2xl font-bold text-salesforce-dark leading-none">Original</div>
                   <div className="text-sm text-gray-500 mt-1">Practice Questions</div>
                 </div>
                 <div>
@@ -332,7 +364,7 @@ export default function Home() {
 
             {/* Right: sample practice question card (desktop only) — rotates across cert tracks */}
             <div className="hidden lg:block">
-              <HeroSampleQuestionCard />
+              <HeroSampleQuestionCard questions={homepageQuestions} />
             </div>
 
           </div>
@@ -386,10 +418,10 @@ export default function Home() {
               Why Trailblaze Prep
             </span>
             <h2 id="features-heading" className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Everything you need to pass — in one place.
+              Build your study plan in one place.
             </h2>
             <p className="text-lg text-gray-600">
-              Each certification page has section weightage, study tips, prerequisites, and practice questions written against the official exam outline.
+              Explore study topics and practice questions, then use the linked issuer resources to confirm current exam requirements.
             </p>
           </div>
 
@@ -399,7 +431,7 @@ export default function Home() {
                 <Target className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Section weightage</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Know exactly how each topic is weighted. Spend more time on the 30% sections, less on the 5% ones.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Use the topic breakdown to plan your study time. Confirm the current objective weights in the linked official exam guide.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
@@ -407,7 +439,7 @@ export default function Home() {
                 <BookOpen className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">Practice questions</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">4,200+ questions aligned with official Salesforce exam outlines, each with a written explanation.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Sample practice questions with answer keys and source information. Check current official documentation as you study.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
@@ -422,16 +454,16 @@ export default function Home() {
               <div className="w-12 h-12 rounded-xl bg-amber-500 flex items-center justify-center text-white mb-5 flex-shrink-0">
                 <BarChart3 className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">Real exam stats</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Question count, passing score, duration, and fee for every cert. Confirmed against current Salesforce docs.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Exam reference details</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Find exam details and issuer references. Availability and fees can change; check the official guide before booking.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
               <div className="w-12 h-12 rounded-xl bg-salesforce-dark flex items-center justify-center text-white mb-5 flex-shrink-0">
                 <TrendingUp className="h-6 w-6" aria-hidden="true" />
               </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-2">{RELEASE_CURRENT} ready</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">Updated within 30 days of every Salesforce release. We track the changelog so you don’t have to.</p>
+              <h3 className="text-xl font-bold text-gray-900 mb-2">Issuer references</h3>
+              <p className="text-gray-500 text-sm leading-relaxed">Follow links to official learning resources and exam guides. Retired and unverified credentials are labelled separately.</p>
             </div>
 
             <div className="bg-white border border-gray-100 rounded-2xl p-8 transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-salesforce-blue/30 card-hover">
@@ -439,7 +471,7 @@ export default function Home() {
                 <CheckCircle className="h-6 w-6" aria-hidden="true" />
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-2">100% free, no login</h3>
-              <p className="text-gray-500 text-sm leading-relaxed">No paywall, no email gate, no ads. Bookmarked by 60,000+ admins, devs, and consultants.</p>
+              <p className="text-gray-500 text-sm leading-relaxed">Access the study materials and practice questions without a subscription or account.</p>
             </div>
           </div>
         </div>
@@ -462,6 +494,17 @@ export default function Home() {
                   className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/50 hover:text-salesforce-dark transition-colors"
                 >
                   {category.title}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </li>
+            ))}
+            {additionalRoleCategories.map((category) => (
+              <li key={category.slug}>
+                <Link
+                  href={`/certifications/role/${category.slug}`}
+                  className="inline-flex items-center gap-1.5 px-5 py-2.5 bg-white border border-gray-200 rounded-lg font-medium text-gray-700 hover:bg-salesforce-blue/5 hover:border-salesforce-blue/50 hover:text-salesforce-dark transition-colors"
+                >
+                  {category.name}
                   <ArrowRight className="h-4 w-4" />
                 </Link>
               </li>

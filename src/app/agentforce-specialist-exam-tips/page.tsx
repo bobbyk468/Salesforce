@@ -2,10 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
-import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
@@ -19,7 +18,7 @@ const slug = 'agentforce-specialist'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Agentforce Specialist exam tips (${RELEASE_CURRENT}): Einstein Copilot, agent actions, flow automation, and exam topics. Start free now.`
+  `Agentforce Specialist exam tips: issuer objectives, agent configuration, and study strategies.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -49,11 +48,11 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Agentforce Specialist exam format?',
-    answer: 'The Salesforce Certified Agentforce Specialist exam has 40 multiple-choice questions, a 70-minute time limit, a 63% passing score, and a $200 fee.',
+    answer: 'The Salesforce Certified Agentforce Specialist exam has 60 multiple-choice questions plus up to five unscored questions, 105 minutes, 72% passing score, US$200 registration and US$100 retake fees (taxes may apply); prerequisite: none.',
   },
   {
     question: 'What does the Agentforce Specialist exam cover?',
-    answer: 'The exam covers Agentforce agent configuration, AI agent actions, Einstein Copilot customisation, Flow automation integration, and model selection and grounding techniques.',
+    answer: 'The current outline lists Prompt Engineering (20%), Data 360 Fundamentals (20%), AI Agents (35%), Testing, Deployment, and Maintenance (10%), Governance and Observability (10%), and Multi-Agent Orchestration (5%).',
   },
   {
     question: 'Who should take the Agentforce Specialist certification?',
@@ -61,13 +60,12 @@ const faqItems = [
   },
   {
     question: 'What study resources are available for Agentforce Specialist?',
-    answer: 'Salesforce Trailhead, the official exam guide, and Agentforce documentation are the primary resources. Because the cert is new, third-party study materials are limited — focus on hands-on practice in a Salesforce org with Agentforce enabled.',
+    answer: 'Salesforce Trailhead, the official exam guide, and Agentforce documentation are the primary resources. Use the current Salesforce exam guide and linked product documentation as primary references; hands-on practice is optional preparation.',
   },
   {
-    question: 'What concepts do most Agentforce Specialist candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Agentforce Specialist exam are: (1) Topics vs Actions vs Instructions — What Goes Where; (2) Apex Actions vs Flow Actions — When to Use Each; (3) Data Cloud Grounding vs Standard Object Data Access. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    question: 'Which distinctions can I review while studying?',
+    answer: 'Use the official exam guide objectives to review agent concepts and distinguish topics, instructions, actions, and configured data sources. This page does not assess question frequency or candidate performance.',
   },
-  ...getConceptFaqs('agentforce-specialist-exam-tips'),
 ]
 
 export default function AgentforceSpecialistExamTipsPage() {
@@ -78,15 +76,15 @@ export default function AgentforceSpecialistExamTipsPage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Study reference · {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Agentforce Specialist Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
+          Agentforce Specialist Exam Tips ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
           The Salesforce Agentforce Specialist certification validates your ability to configure, optimize, and deploy
           AI agents using Agentforce. This guide covers the exam weightage, key concepts, and the strategic
-          preparation approach to pass on your first attempt.
+          preparation approach aligned to the published issuer objectives.
         </p>
       </header>
 
@@ -99,16 +97,17 @@ export default function AgentforceSpecialistExamTipsPage() {
         certName="Agentforce Specialist"
         certPageSlug="agentforce-specialist"
       />
+      <p className="text-sm text-gray-600 mb-8">Primary source: <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298924&language=en_US&type=1" target="_blank" rel="noreferrer">Salesforce Agentforce Specialist Exam Guide</a> · <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=ai.agent_trust_data_masking.htm&language=en_US" target="_blank" rel="noreferrer">Agentforce data-masking documentation</a></p>
 
 
       {/* Quick answer */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Agentforce Specialist</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The four exam sections are equally weighted at 25% each — no section can be skipped.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The six published objective weights are 20%, 20%, 35%, 10%, 10%, and 5%; review all objectives.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Master Agent Actions, Topics, and the Einstein Trust Layer first — these appear in scenario questions across all sections.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice in a Trailhead Playground using Agentforce and Agent Builder before sitting the exam. Hands-on experience separates passers from retakers.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Passing score is ~65%. Target 75%+ on mocks before booking. Exam is 60 questions in 105 minutes.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Practice in a Trailhead Playground using Agentforce and Agent Builder before sitting the exam. Hands-on practice can help connect study to configuration tasks.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The current guide lists 72% passing; it allows 105 minutes for 60 scored and up to five unscored questions.</li>
         </ul>
       </section>
 
@@ -116,14 +115,16 @@ export default function AgentforceSpecialistExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Agentforce Specialist Exam Weightage</h2>
         <p className="text-sm text-gray-600 mb-4">
-          All four sections contribute equally. A weakness in any one area significantly impacts your score.
+          The objective names and weights below follow the current Salesforce exam guide.
         </p>
         <div className="space-y-3">
           {[
-            { section: 'Agentforce Configuration', weight: 25, note: 'Agent Builder, Agent Types, Topics, Actions, testing agents' },
-            { section: 'Platform and Security', weight: 25, note: 'Einstein Trust Layer, data masking, audit trail, permissions, org security' },
-            { section: 'Agent Capabilities and Optimization', weight: 25, note: 'Prompt Templates, Instructions, response tuning, feedback loops, handoff to humans' },
-            { section: 'Integration and Best Practices', weight: 25, note: 'External actions, API integrations, Flow integration, deployment considerations' },
+            { section: 'Prompt Engineering', weight: 20, note: 'Published objective' },
+            { section: 'Data 360 Fundamentals', weight: 20, note: 'Published objective' },
+            { section: 'AI Agents', weight: 35, note: 'Published objective' },
+            { section: 'Testing, Deployment, and Maintenance', weight: 10, note: 'Published objective' },
+            { section: 'Governance and Observability', weight: 10, note: 'Published objective' },
+            { section: 'Multi-Agent Orchestration', weight: 5, note: 'Published objective' },
           ].map(({ section, weight, note }) => (
             <div key={section}>
               <div className="flex justify-between text-sm mb-1">
@@ -153,7 +154,7 @@ export default function AgentforceSpecialistExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">Einstein Trust Layer</p>
-            <p>The Trust Layer provides data masking before LLM calls, audit logging of all AI interactions, and toxicity filtering. Know what it does and does NOT do — it does not prevent all hallucinations but it does prevent PII leakage to external models.</p>
+            <p>Capabilities depend on feature and configuration. Salesforce states that pattern-based and field-based data masking is disabled for agents; do not assume blanket PII masking.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">Prompt Templates</p>
@@ -170,9 +171,9 @@ export default function AgentforceSpecialistExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">3-Week Agentforce Specialist Study Plan</h2>
         <div className="space-y-4 text-sm text-gray-700">
-          <p><strong>Week 1 — Configuration and Security (50%):</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create topics, assign actions, test conversations. Study Einstein Trust Layer architecture — what flows through it, what gets masked, and how audit logs work. Review org security: profiles, permission sets, and how they govern agent access.</p>
+          <p><strong>Week 1 — Configuration and Security (50%):</strong> Complete the Agentforce Specialist Superbadge on Trailhead. Build a working agent in a Playground: create topics, assign actions, test conversations. Review documented Trust Layer capabilities and configuration, including the agent masking limitation. Review org security: profiles, permission sets, and how they govern agent access.</p>
           <p><strong>Week 2 — Capabilities and Integration (50%):</strong> Practice with Prompt Builder — create and test flex prompts with merge fields. Build a Flow-based action and connect it to an Agent Topic. Study external action configuration (API-based actions, named credentials). Review best practices for testing agents and using the test panel in Agent Builder.</p>
-          <p><strong>Week 3:</strong> Full timed mock exams (60 Q / 105 min). Focus on scenario questions that combine configuration + security (e.g., &ldquo;a user cannot see the agent — what is the likely permission issue?&rdquo;). Re-test any weak sections. Score 75%+ consistently before booking.</p>
+          <p><strong>Week 3:</strong> Full timed mock exams (60 Q / 105 min). Focus on scenario questions that combine configuration + security (e.g., &ldquo;a user cannot see the agent — what is the likely permission issue?&rdquo;). Re-test any weak sections. Review errors against the official objectives.</p>
         </div>
       </section>
 
@@ -182,7 +183,7 @@ export default function AgentforceSpecialistExamTipsPage() {
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Configuration errors:</strong> When an agent gives wrong answers or cannot complete a task, look at Topics and Actions first. Incorrect topic scope or a missing action is the most common cause.</span>
+            <span><strong>Configuration errors:</strong> When an agent gives wrong answers or cannot complete a task, look at Topics and Actions first. Incorrect topic scope or a missing action is the one area to inspect; also check the relevant configuration and documentation.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
@@ -201,30 +202,28 @@ export default function AgentforceSpecialistExamTipsPage() {
 
       {/* Mock benchmark */}
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Mock-Test Benchmark Before Booking</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Timed Practice</h2>
         <p className="text-sm text-gray-700 mb-2">
-          Agentforce Specialist passing score is ~65% (39/60 questions). Use this benchmark before scheduling:
+          Use timed practice to identify objectives for additional study; no issuer-endorsed mock-score benchmark is specified.
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          75%+ on 3 timed full mocks (60 Q / 105 min), one week apart
+          Use timed practice; review missed objectives
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          This is a newer certification — the question pool is smaller than older exams, so question types repeat more.
-          If you are missing questions on Einstein Trust Layer or Prompt Templates consistently, those sections reward
-          specific hands-on practice more than additional reading.
+          Practice questions are study aids, not evidence of live exam frequency. Review official objectives and the linked Salesforce documentation.
         </p>
       </section>
 
       {/* CTA */}
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Agentforce Specialist Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Three Agentforce concepts to distinguish</h2>
+        <p className="text-sm text-gray-600 mb-5">Use the current Salesforce guide and product documentation to check terminology and configuration details.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Topics vs Actions vs Instructions — What Goes Where</p>
-            <p className="text-sm text-gray-700">Topics define the scope and subject area an agent handles (e.g., Order Status, Returns). Instructions go inside a topic to tell the agent how to behave within that scope. Actions are the specific tasks the agent can perform (call an Apex method, run a Flow, query a Data Cloud segment). Candidates confuse instructions (behaviour guidance) with actions (executable capabilities) — these are distinct and the exam tests the distinction explicitly.</p>
+            <p className="text-sm text-gray-700">Topics define an agent’s scope, instructions guide behavior, and actions are configured capabilities such as Flow or Apex actions. Data sources depend on configuration and access controls. Instructions provide behavior guidance; actions are configured capabilities. Consult the issuer objectives for exam scope.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Apex Actions vs Flow Actions — When to Use Each</p>
@@ -232,7 +231,7 @@ export default function AgentforceSpecialistExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Data Cloud Grounding vs Standard Object Data Access</p>
-            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup — it is not automatic. Candidates assume agents automatically access all Salesforce data. Know that Data Cloud connection, permission sets, and segment configuration are required before an agent can ground on unified customer profiles.</p>
+            <p className="text-sm text-gray-700">Agentforce agents access Salesforce object data through standard object access grants. Data Cloud grounding (real-time unified customer data) requires explicit Data Cloud setup — it is not automatic. Agent data sources depend on configured capabilities and access controls; Data 360 is not a universal prerequisite. See Salesforce documentation for supported sources and permissions.</p>
           </div>
         </div>
       </section>

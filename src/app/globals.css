@@ -1,6 +1,48 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+@source "../**/*.{js,jsx,ts,tsx,mdx,json}";
+@config "../../tailwind.config.js";
+
+@theme {
+  /* Retain v3 defaults where v4 changed existing utility semantics. */
+  --default-ring-width: 3px;
+  --default-ring-color: rgb(59 130 246 / 0.5);
+  --radius: 0.25rem;
+  --radius-sm: 0.125rem;
+  --blur-sm: 4px;
+
+  /* Preserve the Tailwind v3 neutral-gray palette used throughout the UI. */
+  --color-gray-50: #f9fafb;
+  --color-gray-100: #f3f4f6;
+  --color-gray-200: #e5e7eb;
+  --color-gray-300: #d1d5db;
+  --color-gray-400: #9ca3af;
+  --color-gray-500: #6b7280;
+  --color-gray-600: #4b5563;
+  --color-gray-700: #374151;
+  --color-gray-800: #1f2937;
+  --color-gray-900: #111827;
+  --color-gray-950: #030712;
+}
+
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-gray-400);
+  }
+
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
 
 :root {
   /* ── Brand (Tailwind aliases + design-system tokens) ─────────── */
@@ -214,5 +256,30 @@ body {
   /* Hide main layout sidebar in print (handled by no-print on aside) */
   [data-main-layout] {
     display: block !important;
+  }
+}
+
+/* Tailwind v4 renamed the default shadow-sm value; keep v3 output for existing classes. */
+@layer utilities {
+  .bg-gradient-to-b {
+    --tw-gradient-position: to bottom in srgb;
+  }
+
+  .bg-gradient-to-br {
+    --tw-gradient-position: to bottom right in srgb;
+  }
+
+  .bg-gradient-to-r {
+    --tw-gradient-position: to right in srgb;
+  }
+
+  .shadow-sm {
+    --tw-shadow: 0 1px 2px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.05));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
+  }
+
+  .shadow {
+    --tw-shadow: 0 1px 3px 0 var(--tw-shadow-color, rgb(0 0 0 / 0.1)), 0 1px 2px -1px var(--tw-shadow-color, rgb(0 0 0 / 0.1));
+    box-shadow: var(--tw-inset-shadow), var(--tw-inset-ring-shadow), var(--tw-ring-offset-shadow), var(--tw-ring-shadow), var(--tw-shadow);
   }
 }

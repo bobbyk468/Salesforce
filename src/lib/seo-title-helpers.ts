@@ -1,12 +1,49 @@
 import { getCertPrimaryName } from './cert-name-aliases'
 import { OFFICIAL_CERT_NAMES } from './cert-official-names'
-import { RELEASE_CURRENT } from './release-data'
+import { EXAM_CODE_TITLE_LABELS, getRecognizedExamCode } from './certification-exam-codes'
+import { RELEASE_YEAR } from './release-data'
 
-const TITLE_YEAR = RELEASE_CURRENT
+// A calendar label does not assert that every issuer exam uses this release.
+const TITLE_YEAR = RELEASE_YEAR
 const MAX_TITLE_LENGTH = 60
 
 function clampTitle(title: string): string {
   return title.length <= MAX_TITLE_LENGTH ? title : `${title.slice(0, MAX_TITLE_LENGTH - 1)}…`
+}
+
+function compactStudyGuideLabel(label: string): string {
+  return label
+    .replace(/^Salesforce Certified\s+/i, '')
+    .replace(/^Salesforce\s+/i, '')
+    .replace(/\s+and\s+/gi, ' & ')
+    .replace(/Marketing Cloud Account Engagement/gi, 'Account Engagement')
+    .replace(/Marketing Cloud Engagement/gi, 'MC Engagement')
+    .replace(/Marketing Cloud Advanced Cross Channel/gi, 'MC Advanced Cross Channel')
+    .replace(/Marketing Cloud Intelligence/gi, 'MC Intelligence')
+    .replace(/Marketing Cloud Personalization/gi, 'MC Personalization')
+    .replace(/Agentforce Field Service/gi, 'Field Service')
+    .replace(/Identity & Access Management/gi, 'Identity & Access Mgmt')
+    .replace(/Development Lifecycle & Deployment/gi, 'Dev Lifecycle & Deployment')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+}
+
+function boundedStudyGuideTitle(label: string, code?: string): string {
+  const prefix = code ? `${code} ` : ''
+  const labels = [...new Set([label, compactStudyGuideLabel(label)])]
+  const candidates = [
+    ...labels.map((value) => `${prefix}${value} Study Guide [${TITLE_YEAR}]`),
+    ...labels.map((value) => `${prefix}${value} Study Guide`),
+  ]
+  const title = candidates.find((candidate) => candidate.length <= MAX_TITLE_LENGTH)
+  if (title) return title
+
+  const suffix = 'Study Guide'
+  const maxLabelLength = MAX_TITLE_LENGTH - prefix.length - suffix.length - 1
+  const shortened = compactStudyGuideLabel(label).slice(0, maxLabelLength).trimEnd()
+  const lastSpace = shortened.lastIndexOf(' ')
+  const readable = lastSpace > 12 ? shortened.slice(0, lastSpace) : shortened
+  return `${prefix}${readable.trimEnd()} ${suffix}`
 }
 
 function getShortCertLabel(slug: string): string {
@@ -44,6 +81,10 @@ export function buildExamTipsTitle(slug: string): string {
 
 /** Authority‑framed title for `[slug]-study-guide` pages. */
 export function buildStudyGuideTitle(slug: string): string {
+  const examCode = getRecognizedExamCode(slug)
+  const codeLabel = EXAM_CODE_TITLE_LABELS[slug]
+  if (examCode && codeLabel) return boundedStudyGuideTitle(codeLabel, examCode)
+
   // Overrides for cert names that are too long for the default format.
   const overrides: Record<string, string> = {
     'crm-analytics-einstein-discovery-consultant': `CRM Analytics Study Guide [${TITLE_YEAR}]`,
@@ -54,7 +95,7 @@ export function buildStudyGuideTitle(slug: string): string {
     'pardot-consultant': `Pardot Consultant Study Guide [${TITLE_YEAR}]`,
     'pardot-specialist': `Pardot Specialist Study Guide [${TITLE_YEAR}]`,
   }
-  if (overrides[slug]) return overrides[slug]
+  if (overrides[slug] && overrides[slug].length <= MAX_TITLE_LENGTH) return overrides[slug]
 
   const official = getCertPrimaryName(slug, getShortCertLabel(slug))
   const short =
@@ -63,8 +104,7 @@ export function buildStudyGuideTitle(slug: string): string {
       .replace(/\s*Certification\s*/i, ' ')
       .trim() || getShortCertLabel(slug)
 
-  const base = `${short} Study Guide [${TITLE_YEAR}]`
-  return clampTitle(base)
+  return boundedStudyGuideTitle(short)
 }
 
 /** Decision‑support title for `[a]-vs-[b]` pages. */
@@ -80,4 +120,3 @@ export function buildPathTitle(roleLabel: string): string {
   const base = `Salesforce ${roleLabel} Cert Path: ${TITLE_YEAR} Roadmap`
   return clampTitle(base)
 }
-

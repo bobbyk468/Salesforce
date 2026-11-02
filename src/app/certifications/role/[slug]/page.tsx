@@ -8,6 +8,7 @@ import RoleAggregationSchemas from '@/components/RoleAggregationSchemas'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import CareerRoadmapDiagram from '@/components/CareerRoadmapDiagram'
 import { RELEASE_CURRENT } from '@/lib/release-data'
+import { getRecognizedExamCode } from '@/lib/certification-exam-codes'
 
 type Props = { params: Promise<{ slug: string }> }
 
@@ -400,6 +401,12 @@ export default async function RoleCertificationsPage({ params }: Props) {
   const category = getCategoryBySlug(slug)
 
   if (!category) notFound()
+  const roleCerts = category.items.map((item) => {
+    const certSlug = item.href.split('/').filter(Boolean).at(-1) ?? ''
+    const examCode = getRecognizedExamCode(certSlug)
+    const name = examCode && !item.name.includes(examCode) ? `${item.name} (${examCode})` : item.name
+    return { ...item, name }
+  })
   const title = ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
   const description =
     ROLE_DESCRIPTIONS[slug] ||
@@ -431,7 +438,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
       />
       <RoleAggregationSchemas
         roleTitle={category.name}
-        roleCerts={category.items}
+        roleCerts={roleCerts}
         rolePath={`/certifications/role/${slug}`}
       />
       <Link
@@ -521,7 +528,7 @@ export default async function RoleCertificationsPage({ params }: Props) {
       )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-        {category.items.map((item) => (
+        {roleCerts.map((item) => (
           <Link
             key={item.href}
             href={item.href}

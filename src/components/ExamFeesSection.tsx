@@ -1,6 +1,8 @@
 import Link from 'next/link'
 import { DollarSign, RefreshCw, Calendar, ExternalLink } from 'lucide-react'
 import { getExamCost, getRetakeCost, SLUG_TO_EXAM_CODE } from '@/lib/cert-seo-data'
+import { SLUG_TO_EXAM_GUIDE_URL } from '@/lib/cert-seo-data'
+import { getCredentialStatus, hasUnverifiedClaudeExamDetails, isComponentOnlyCredential, isUnavailableCredentialExam } from '@/lib/credential-status'
 import { slugToDisplayName } from '@/lib/cert-seo-data'
 
 interface ExamFeesSectionProps {
@@ -9,6 +11,31 @@ interface ExamFeesSectionProps {
 
 /** Dedicated "Exam Fees & Registration" section for better cost query CTR and user clarity. */
 export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
+  if (isUnavailableCredentialExam(slug)) return null
+  const credentialStatus = getCredentialStatus(slug)
+  if (hasUnverifiedClaudeExamDetails(slug)) {
+    return (
+      <section className="mt-8 mb-8 rounded-xl border border-blue-200 bg-blue-50 p-6">
+        <h2 className="text-xl font-bold text-gray-900">Credential details</h2>
+        <p className="mt-2 text-sm text-gray-700">Fees, retake rules, format, and availability have not been verified from Anthropic. Check the issuer announcement for current program information.</p>
+        <a className="mt-3 inline-flex items-center gap-2 text-salesforce-blue underline" href={credentialStatus?.sourceUrl} target="_blank" rel="noopener noreferrer">
+          Anthropic Claude Partner Network announcement <ExternalLink className="h-4 w-4" aria-hidden="true" />
+        </a>
+      </section>
+    )
+  }
+  if (isComponentOnlyCredential(slug)) {
+    return (
+      <section className="mt-8 mb-8 rounded-xl border border-violet-200 bg-violet-50 p-6">
+        <h2 className="text-xl font-bold text-gray-900">How this credential is earned</h2>
+        <p className="mt-2 text-sm text-gray-700">
+          There is no exam to book for {slugToDisplayName(slug)}. You earn it by holding the component
+          certifications listed above, so the cost is the sum of those exam fees. Each component exam page
+          lists its own fee, format and retake policy.
+        </p>
+      </section>
+    )
+  }
   const examCost = getExamCost(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]
   const certName = slugToDisplayName(slug)
@@ -54,7 +81,7 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <div>
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">Certification Validity</h3>
             <p className="text-gray-600 text-sm sm:text-base">
-              Your {certName} certification is valid for <strong>3 years</strong> from the date you pass the exam. You'll need to maintain your certification through continuing education or retake the exam.
+              Maintenance and renewal requirements vary. Check the issuer’s current credential page for requirements that apply to you.
             </p>
           </div>
         </div>
@@ -64,15 +91,15 @@ export default function ExamFeesSection({ slug }: ExamFeesSectionProps) {
           <div>
             <h3 className="font-semibold text-gray-900 text-sm sm:text-base mb-1">How to Register</h3>
             <p className="text-gray-600 text-sm sm:text-base mb-3">
-              Register for the {examCode ? `${certName} (${examCode})` : certName} exam through the official Salesforce certification portal.
+              Check current {examCode ? `${certName} (${examCode})` : certName} credential and registration details with the issuer.
             </p>
             <a
-              href="https://trailhead.salesforce.com/en/credentials/verification"
+              href={SLUG_TO_EXAM_GUIDE_URL[slug] || 'https://trailhead.salesforce.com/credentials'}
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 text-salesforce-blue hover:text-salesforce-dark font-medium text-sm sm:text-base transition-colors"
             >
-              Register for Exam
+              View official credential details
               <ExternalLink className="h-4 w-4" aria-hidden="true" />
             </a>
           </div>

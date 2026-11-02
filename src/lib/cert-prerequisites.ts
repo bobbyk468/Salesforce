@@ -9,8 +9,10 @@
 
 export interface CertPrerequisite {
   slug: string
-  /** Slug of required prerequisite cert */
+  /** Slug of required prerequisite cert (legacy single prerequisite) */
   requiredPrerequisite?: string
+  /** Slugs of required prerequisite certs when more than one is required */
+  requiredPrerequisites?: string[]
   /** Slug of recommended (but not required) prerequisite cert */
   recommendedPrerequisite?: string
   /** Additional notes about prerequisites */
@@ -56,7 +58,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
   'agentforce-specialist': {
     slug: 'agentforce-specialist',
     recommendedPrerequisite: 'administrator',
-    notes: 'Autonomous AI agents on Salesforce; admin context required',
+    notes: 'The issuer recommends Platform Administrator and Platform App Builder; no prerequisite certification is required.',
   },
 
   'cpq-administrator': {
@@ -179,8 +181,8 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'field-service': {
     slug: 'field-service',
-    recommendedPrerequisite: 'administrator',
-    notes: 'Field service scheduling and optimization',
+    requiredPrerequisites: ['administrator', 'service-cloud'],
+    notes: 'Both Platform Administrator and Agentforce Service Consultant certifications are required.',
   },
 
   'crm-analytics-einstein-discovery-consultant': {
@@ -233,8 +235,8 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'education-cloud-consultant': {
     slug: 'education-cloud-consultant',
-    recommendedPrerequisite: 'administrator',
-    notes: 'Higher education platform specialization',
+    requiredPrerequisite: 'administrator',
+    notes: 'Published exam prerequisite; exam delivery is closed and credential retirement is scheduled for February 1, 2027.',
   },
 
   'slack-consultant': {
@@ -277,8 +279,8 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'data-architect': {
     slug: 'data-architect',
-    recommendedPrerequisite: 'system-architect',
-    notes: 'Large-scale data modeling and management',
+    recommendedPrerequisite: 'app-builder',
+    notes: 'The issuer recommends Platform App Builder, Platform Developer, and Platform Developer II; no prerequisite certification is required.',
   },
 
   'integration-architect': {
@@ -551,14 +553,22 @@ export function getCertPrerequisites(slug: string): CertPrerequisite | null {
  */
 export function hasRequiredPrerequisite(slug: string): boolean {
   const prereq = CERT_PREREQUISITES[slug]
-  return prereq?.requiredPrerequisite ? true : false
+  return Boolean(prereq?.requiredPrerequisite || prereq?.requiredPrerequisites?.length)
 }
 
 /**
- * Get the required prerequisite slug for a certification
+ * Get every required prerequisite slug for a certification.
+ */
+export function getRequiredPrerequisites(slug: string): string[] {
+  const prereq = CERT_PREREQUISITES[slug]
+  return prereq?.requiredPrerequisites ?? (prereq?.requiredPrerequisite ? [prereq.requiredPrerequisite] : [])
+}
+
+/**
+ * Get the first required prerequisite slug for backward-compatible callers.
  */
 export function getRequiredPrerequisite(slug: string): string | undefined {
-  return CERT_PREREQUISITES[slug]?.requiredPrerequisite
+  return getRequiredPrerequisites(slug)[0]
 }
 
 /**
@@ -574,6 +584,8 @@ export function getRecommendedPrerequisite(slug: string): string | undefined {
 export function getCertificationsRequiringThis(slug: string): CertPrerequisite[] {
   return Object.values(CERT_PREREQUISITES).filter(
     (cert) =>
-      cert.requiredPrerequisite === slug || cert.recommendedPrerequisite === slug
+      cert.requiredPrerequisite === slug ||
+      cert.requiredPrerequisites?.includes(slug) ||
+      cert.recommendedPrerequisite === slug
   )
 }

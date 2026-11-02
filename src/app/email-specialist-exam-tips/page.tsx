@@ -2,7 +2,7 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
@@ -19,7 +19,7 @@ const slug = 'email-specialist'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Email Specialist exam tips (${RELEASE_CURRENT}): 4-week study plan, deliverability strategies, and scenario tips. Start free practice now.`
+  `Marketing Cloud Engagement Specialist exam tips (${RELEASE_YEAR}): 4-week study plan, deliverability strategies, and objective-focused practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -49,23 +49,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Email Specialist exam format?',
-    answer: 'The Salesforce Marketing Cloud Email Specialist exam has 60 multiple-choice questions, a 90-minute time limit, a 65% passing score, and a $200 fee.',
+    answer: 'The Salesforce Certified Marketing Cloud Engagement Specialist exam has 60 multiple-choice questions and up to five unscored questions, a 90-minute time limit, a 67% passing score, and a $200 registration fee.',
   },
   {
     question: 'What sections carry the most weight on the Email Specialist exam?',
-    answer: 'Building and Sending Email (23%), Email Marketing Best Practices (13%), and Marketing Cloud Connect (13%) are the highest-weight sections. Together they account for nearly 50% of the exam.',
+    answer: 'Marketing Automation and Subscriber and Data Management are each weighted 26%, Content Creation and Delivery is 24%, Insights and Analytics is 14%, and Email Marketing Best Practices is 10%.',
   },
   {
     question: 'How long does it take to prepare for the Email Specialist exam?',
     answer: '4–5 weeks of focused study. Prioritise deliverability, Journey Builder basics, Subscriber Management, and Content Builder. Hands-on practice with a Marketing Cloud sandbox makes scenarios much clearer.',
   },
   {
-    question: 'Is the Email Specialist a good first Marketing Cloud certification?',
-    answer: 'Yes — it is the most popular Marketing Cloud entry point and validates core SFMC skills. It is widely recognised and provides a strong foundation before taking Marketing Cloud Admin or Developer exams.',
+    question: 'Can this credential be part of a Marketing Cloud learning path?',
+    answer: 'Yes. It covers Marketing Cloud email objectives and can be one part of a broader learning path. Review the prerequisites listed for any later credential separately.',
   },
   {
-    question: 'What concepts do most Email Specialist (Marketing Cloud) candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Email Specialist (Marketing Cloud) exam are: (1) Send Classification — Transactional vs Commercial and Suppression Bypasses; (2) AMPscript — Block Syntax vs Inline Syntax and Lookup Functions; (3) Data Extensions vs Subscriber Lists — When to Use Each. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    question: 'Which Email Specialist concepts are useful to review?',
+    answer: 'Useful distinctions to review include send classifications, AMPscript syntax and lookup functions, and when to use Data Extensions versus subscriber lists. Compare your understanding with the official exam objectives and documentation.',
   },
   ...getConceptFaqs('email-specialist-exam-tips'),
 ]
@@ -78,15 +78,15 @@ export default function EmailSpecialistExamTipsPage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Updated for {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Marketing Cloud Email Specialist Exam Tips ({RELEASE_CURRENT}): How to Pass First Attempt
+          Marketing Cloud Engagement Specialist Exam Tips ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
           The SFMC Email Specialist certification covers email deliverability, subscriber management, AMPscript,
           send classification, and Journey Builder. These tips help you focus on the highest-impact topics and
-          navigate scenario-based questions confidently.
+          apply the exam objectives to practical examples.
         </p>
       </header>
 
@@ -104,10 +104,10 @@ export default function EmailSpecialistExamTipsPage() {
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Quick Answer: Best Way to Pass Email Specialist</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 60 questions in 105 minutes. Passing score is 67%. Aim for 77%+ on full mocks before booking.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Email Marketing Best Practices and Content Creation/Delivery are the highest-weight sections — cover these first.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Hands-on Marketing Cloud Email Studio experience is strongly recommended — the exam tests practical configuration, not just theory.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Know SPF, DKIM, and DMARC cold — deliverability questions appear frequently and require precise differentiation between the three.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />The exam has 60 multiple-choice questions and up to five unscored questions in 90 minutes. The passing score is 67%; no practice score guarantees an exam result.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Marketing Automation and Subscriber and Data Management carry the largest weights at 26% each; Content Creation and Delivery is 24%.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />No prerequisite is required. Salesforce highly recommends MKT 101; hands-on experience is part of the guide’s audience description.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" />Review SPF, DKIM, and DMARC against the email deliverability objectives and be able to explain their distinct roles.</li>
         </ul>
       </section>
 
@@ -117,44 +117,42 @@ export default function EmailSpecialistExamTipsPage() {
           <p><strong>Week 1:</strong> Email Marketing Best Practices — CAN-SPAM compliance, commercial vs transactional send classification, list hygiene, unsubscribe handling, and sender reputation fundamentals.</p>
           <p><strong>Week 2:</strong> Content Creation &amp; Data Management — Content Builder, AMPscript personalisation functions (Lookup, LookupRows, AttributeValue, IIF), Data Extensions, Data Filters, and segmentation with SQL in Automation Studio.</p>
           <p><strong>Week 3:</strong> Email Deliverability — SPF (authorised sending IPs), DKIM (cryptographic signature), DMARC (policy enforcement), Sender Authentication Package (SAP), IP warming, bounce handling, and suppression lists. Subscriber management: All Subscribers list, Publication Lists, Auto-Suppression Lists.</p>
-          <p><strong>Week 4:</strong> Tracking &amp; Reporting, Automation Studio, Journey Builder, Triggered Sends, A/B Testing, and full mock exams targeting 77%+. Revise weak areas before booking.</p>
+          <p><strong>Week 4:</strong> Tracking &amp; Reporting, Automation Studio, Journey Builder, Triggered Sends, and A/B Testing. Use practice questions to identify and revisit weak areas.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">How to Handle Email Specialist Scenario Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Many questions describe an email marketing requirement and ask which Marketing Cloud feature or configuration is most appropriate.
-          Match the scenario to the correct feature layer before selecting an answer.
+          When a practice question describes an email marketing requirement, identify the relevant Marketing Cloud feature or configuration before selecting an answer.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Deliverability questions:</strong> SPF authorises sending IPs in DNS; DKIM adds a cryptographic header signature; DMARC defines the policy (none/quarantine/reject) when SPF or DKIM fails. All three are included in the Sender Authentication Package (SAP). Know what each protects against.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Subscriber management:</strong> Global unsubscribes on the All Subscribers list override everything. Suppression Lists exclude specific addresses from a send even if they’re in the target audience. Auto-Suppression Lists apply across all sends automatically.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Send type questions:</strong> Triggered Sends fire in real time based on an event or external API call (transactional). Batch sends go to a list or Data Extension at a scheduled time (commercial). Misclassifying marketing emails as transactional violates CAN-SPAM.</span></li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>AMPscript questions:</strong> Lookup() retrieves a single value; LookupRows() returns a full row set; AttributeValue() accesses subscriber attributes; IIF() is the inline conditional. Most personalisation scenarios use one of these four functions.</span></li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>AMPscript:</strong> Review Lookup(), LookupRows(), AttributeValue(), and IIF(), including their distinct return values and use cases.</span></li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" /><span><strong>Metrics questions:</strong> Match the metric to the business question — Delivered Rate (did it arrive?), Open Rate (was it opened?), Click-to-Open Rate or CTOR (content relevance), hard bounce (permanent failure), soft bounce (temporary). Hard bounces trigger automatic unsubscribe in Marketing Cloud.</span></li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Practice Review</h2>
         <p className="text-sm text-gray-700 mb-2">
-          Use this minimum benchmark before scheduling your Email Specialist exam:
+          Use timed practice to identify topics that need another review; this is not a guarantee of exam readiness:
         </p>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          77%+ on 3 timed full mocks (60 questions / 105 minutes each)
+          Practice with the official 90-minute exam limit
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The official passing score is 67% (41/60 questions), but scoring at 77%+ on mocks provides a safety buffer
-          and confirms you have mastered the deliverability and AMPscript sections that trip up most candidates.
+          The official guide lists 60 multiple-choice questions plus up to five unscored questions. Review the full set of objectives and revisit any concepts that remain unclear.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Email Specialist (Marketing Cloud) Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Three Concepts to Review</h2>
+        <p className="text-sm text-gray-600 mb-5">Use these distinctions as a focused review list alongside the official exam objectives.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Send Classification — Transactional vs Commercial and Suppression Bypasses</p>

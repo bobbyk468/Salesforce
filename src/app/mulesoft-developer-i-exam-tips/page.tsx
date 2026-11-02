@@ -2,10 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
-import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
@@ -19,7 +18,7 @@ const slug = 'mulesoft-developer-i'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Developer I exam tips for ${RELEASE_CURRENT}: Mule 4 flows, connectors, DataWeave, error handling. Scenario tips to pass first attempt.`
+  `MuleSoft Developer I exam tips: published Mule 4 objectives, DataWeave, connectors, and error handling.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -49,25 +48,24 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the MuleSoft Developer I exam format?',
-    answer: 'The MuleSoft Developer I exam has 60 multiple-choice questions, a 120-minute time limit, a 70% passing score, and a $200 fee ($100 retake). It tests Mule 4 application development using Anypoint Studio, DataWeave 2.0, connectors, and error handling patterns.',
+    answer: 'The MuleSoft Developer I exam has 60 multiple-choice questions plus up to five unscored questions, 120 minutes, 70% passing, US$200 registration and US$100 retake fees (taxes may apply); no prerequisite. The guide states Spring 24 alignment. It tests Mule 4 application development using Anypoint Studio, DataWeave 2.0, connectors, and error handling patterns.',
   },
   {
-    question: 'What are the highest-weight MuleSoft Developer I exam sections?',
-    answer: 'Designing Mule Applications (30%) and Consuming Web Services (22%) together account for 52% of the exam. Building Mule flows, configuring HTTP connectors, using DataWeave for data transformation, and implementing error handling strategies are the most heavily tested topics.',
+    question: 'What objective weights does the published guide list?',
+    answer: 'The guide lists 12 objective weights: Creating Application Networks 7%; Designing APIs 8%; Accessing and Modifying Mule Events 10%; Structuring Mule Applications 10%; Building API Implementation Interfaces 7%; Using Connectors 10%; Processing Records 10%; Transforming Data 10%; Routing Events 8%; Handling Errors 8%; Debugging and Troubleshooting Mule Applications 5%; Deploying and Managing APIs and Integrations 7%. The guide states Spring 24 alignment.',
   },
   {
     question: 'What is DataWeave and how important is it for the exam?',
-    answer: 'DataWeave is MuleSoft’s data transformation language — the primary way to map, filter, and reshape data in Mule 4 flows. It is tested heavily across multiple sections. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
+    answer: 'DataWeave is MuleSoft’s data transformation language — the primary way to map, filter, and reshape data in Mule 4 flows. The published Transforming Data objective is weighted 10%. You need to be comfortable reading and writing DataWeave 2.0 scripts: using map, filter, mapObject, pluck, and conditional logic to transform JSON, XML, and CSV payloads.',
   },
   {
     question: 'What is the difference between MuleSoft Developer I and Developer II?',
     answer: 'Developer I covers foundational Mule 4 application development — flows, connectors, DataWeave, and basic error handling. Developer II tests advanced topics: Anypoint MQ, batch processing, API-led connectivity design patterns, custom policy implementation, and advanced DataWeave. Developer I is the prerequisite foundation for Developer II.',
   },
   {
-    question: 'What concepts do most MuleSoft Developer I candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the MuleSoft Developer I exam are: (1) DataWeave Type System — Coercion, Null Safety, and Default Operator; (2) Error Handling Scope — Try, On Error Continue vs On Error Propagate; (3) CloudHub vs Runtime Fabric — Worker Size vs Container Config. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    question: 'Which Mule 4 concepts can I review?',
+    answer: 'Review the issuer objectives for DataWeave, error handling, and deployment/management. This page does not make claims about question frequency or candidate performance.',
   },
-  ...getConceptFaqs('mulesoft-developer-i-exam-tips'),
 ]
 
 export default function MuleSoftDeveloperIExamTipsPage() {
@@ -78,15 +76,15 @@ export default function MuleSoftDeveloperIExamTipsPage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Study reference · {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          MuleSoft Developer I Exam Tips ({RELEASE_CURRENT}): How to Pass
+          MuleSoft Developer I Exam Tips ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
           The MuleSoft Developer I exam tests your ability to build Mule 4 integration applications using Anypoint
           Studio. These tips focus on DataWeave transformation, flow design, error handling, and API consumption
-          that define the highest-weight sections of this exam.
+          that appear in the issuer-published exam objectives.
         </p>
       </header>
 
@@ -99,6 +97,7 @@ export default function MuleSoftDeveloperIExamTipsPage() {
         certName="MuleSoft Developer I"
         certPageSlug="mulesoft-developer-i"
       />
+      <p className="text-sm text-gray-600 mb-8">Primary source (Spring 24 alignment stated): <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&language=en_US&type=1" target="_blank" rel="noreferrer">Salesforce Certified MuleSoft Developer Exam Guide</a>.</p>
 
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
@@ -111,72 +110,52 @@ export default function MuleSoftDeveloperIExamTipsPage() {
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Which Sections Carry the Most Weight</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Published Objective Weights</h2>
         <div className="space-y-3 text-sm text-gray-700">
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Designing Mule Applications</span>
-            <span className="font-bold text-salesforce-blue ml-4">30%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Consuming Web Services</span>
-            <span className="font-bold text-salesforce-blue ml-4">22%</span>
-          </div>
-          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">DataWeave Transformations</span>
-            <span className="font-bold text-salesforce-blue ml-4">20%</span>
-          </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Error Handling</span>
-            <span className="font-bold text-salesforce-blue ml-4">16%</span>
-          </div>
-          <p className="text-xs text-gray-600 pt-1">Flow Design + Web Services + DataWeave = 72%. Master DataWeave and scatter-gather patterns before booking.</p>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Creating Application Networks</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Designing APIs</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Accessing and Modifying Mule Events</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Structuring Mule Applications</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Building API Implementation Interfaces</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Using Connectors</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Processing Records</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Transforming Data</span><span className="font-bold text-salesforce-blue ml-4">10%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Routing Events</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Handling Errors</span><span className="font-bold text-salesforce-blue ml-4">8%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Debugging and Troubleshooting Mule Applications</span><span className="font-bold text-salesforce-blue ml-4">5%</span></div>
+<div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Deploying and Managing APIs and Integrations</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
+          <p className="text-xs text-gray-600 pt-1">The available Salesforce guide states Spring 24 alignment. Confirm current requirements with Salesforce before scheduling.</p>
+          <a className="text-salesforce-blue underline" href="https://help.salesforce.com/s/articleView?id=005298959&amp;language=en_US&amp;type=1" target="_blank" rel="noreferrer">Official exam guide</a>
         </div>
-      </section>
-
-      <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach MuleSoft Developer I Questions</h2>
-        <p className="text-sm text-gray-700 mb-3">
-          Questions describe an integration scenario and ask which Mule 4 component, pattern, or DataWeave expression
-          achieves it. Read for the requirement (parallel calls, sequential calls, data transformation, error recovery)
-          and map it to the correct Anypoint Studio component.
-        </p>
-        <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For flow component questions: scatter-gather runs routes in parallel and merges results; for-each processes a collection sequentially; parallel-for-each processes a collection in parallel; choice routes to one branch based on conditions. Know which component to use for each concurrency/routing scenario.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For error handling questions: On Error Continue catches the error and continues processing; On Error Propagate catches and re-throws (the flow fails). A global error handler catches errors not handled locally. Reconnection strategies (reconnect, reconnect-forever) apply to connector connectivity errors only.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For DataWeave questions: read the input and output format carefully. Use output application/json before the DataWeave body to set the output MIME type. The %dw 2.0 directive is always required. Understand that payload refers to the current message payload and vars refers to flow variables.</li>
-        </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Booking Readiness Benchmark</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          78%+ on 3 timed full mocks before booking (70% passing score)
+          Use timed practice to identify objectives for further review
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          MuleSoft Developer I has a 70% passing score — higher than most Salesforce exams. Build at least
-          5 Mule 4 applications in Anypoint Studio with real HTTP APIs, DataWeave transformations, and error
-          handling before booking. Candidates who only study theory without hands-on Anypoint Studio
-          experience consistently fail the DataWeave and error handling sections.
+          The guide lists a 70% passing score and no prerequisite. The published guide states Spring 24 alignment; verify current requirements with Salesforce. Practice the listed objectives using official documentation and relevant exercises.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most MuleSoft Developer I Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Three Mule 4 concepts to distinguish</h2>
+        <p className="text-sm text-gray-600 mb-5">Use the official objectives as a checklist; no candidate-frequency claims are made here.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. DataWeave Type System — Coercion, Null Safety, and Default Operator</p>
-            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — candidates expect an error and miss null-safety logic. The default operator (??) provides a fallback value when an expression is null. payload.field default ’N/A’ prevents null propagation. Forgetting null safety in transformation scenarios is the most common DataWeave mistake on the exam.</p>
+            <p className="text-sm text-gray-700">DataWeave is strongly typed at runtime. Type coercion (as String, as Number) fails silently and returns null if the source cannot be cast — check DataWeave null-handling behavior in current product documentation. The default operator (??) provides a fallback value when an expression is null. payload.field default ’N/A’ prevents null propagation. The exam guide includes data transformation objectives; it does not publish question-frequency data.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Error Handling Scope — Try, On Error Continue vs On Error Propagate</p>
-            <p className="text-sm text-gray-700">On Error Continue catches the error, executes the error handler, and continues the flow as if the error did not occur — the original message proceeds. On Error Propagate catches the error, executes the error handler, and then re-throws the error — the calling flow receives the error. Candidates choose Propagate when they want to log and continue (should use Continue) or vice versa. Know which error scopes nest inside which.</p>
+            <p className="text-sm text-gray-700">On Error Continue catches the error, executes the error handler, and continues the flow as if the error did not occur — the original message proceeds. On Error Propagate catches the error, executes the error handler, and then re-throws the error — the calling flow receives the error. Select the error handler behavior that matches whether processing should continue or propagate the error. Know which error scopes nest inside which.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. CloudHub vs Runtime Fabric — Worker Size vs Container Config</p>
-            <p className="text-sm text-gray-700">CloudHub 1.0 uses workers (vCores, memory sizes) on Salesforce-managed infrastructure. CloudHub 2.0 and Runtime Fabric use containers with explicit memory/vCPU allocation on Kubernetes. Exam questions about deployment options test which platform applies to which scenario: customer-managed Kubernetes clusters = RTF; fully managed Salesforce cloud = CloudHub. Candidates confuse worker sizes (CloudHub 1.0 concept) with container resource limits (CloudHub 2.0/RTF concept).</p>
+            <p className="text-sm text-gray-700">CloudHub 1.0 uses workers (vCores, memory sizes) on Salesforce-managed infrastructure. CloudHub 2.0 and Runtime Fabric use containers with explicit memory/vCPU allocation on Kubernetes. Exam questions about deployment options test which platform applies to which scenario: customer-managed Kubernetes clusters = RTF; fully managed Salesforce cloud = CloudHub. Consult current deployment documentation for platform-specific resource configuration.</p>
           </div>
         </div>
       </section>

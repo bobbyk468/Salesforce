@@ -1,12 +1,13 @@
 'use client'
 
-import { useRef, useState } from 'react'
+import { useCallback, useEffect, useRef, useState } from 'react'
 import Link from 'next/link'
 import { Award, ChevronDown, Menu, X } from 'lucide-react'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 
 export default function Header() {
   const desktopDetailsRefs = useRef<(HTMLDetailsElement | null)[]>([])
+  const desktopMenuRefs = useRef<(HTMLDivElement | null)[]>([])
   // Mobile menu: only mounts full DOM when opened — eliminates ~200 nodes on initial load
   const [mobileOpen, setMobileOpen] = useState(false)
   // Desktop dropdowns: only render sub-items after a category is first opened
@@ -29,17 +30,51 @@ export default function Header() {
     }
   }
 
+  const fitDesktopMenu = useCallback((index: number) => {
+    const menu = desktopMenuRefs.current[index]
+    const trigger = desktopDetailsRefs.current[index]
+    if (!menu || !trigger?.open) return
+
+    const gutter = 16
+    const triggerRect = trigger.getBoundingClientRect()
+    const menuWidth = menu.getBoundingClientRect().width
+    const left = Math.min(
+      Math.max(triggerRect.left, gutter),
+      window.innerWidth - gutter - menuWidth,
+    )
+    menu.style.left = `${left - triggerRect.left}px`
+    menu.style.right = 'auto'
+  }, [])
+
+  const setDesktopMenuRef = useCallback((index: number, element: HTMLDivElement | null) => {
+    desktopMenuRefs.current[index] = element
+    if (element) requestAnimationFrame(() => fitDesktopMenu(index))
+  }, [fitDesktopMenu])
+
+  useEffect(() => {
+    const repositionOpenMenus = () => {
+      desktopDetailsRefs.current.forEach((details, index) => {
+        if (details?.open) fitDesktopMenu(index)
+      })
+    }
+    window.addEventListener('resize', repositionOpenMenus)
+    return () => window.removeEventListener('resize', repositionOpenMenus)
+  }, [fitDesktopMenu])
+
   return (
     <header data-critical-header className="no-print bg-white border-b border-gray-100 sticky top-0 z-50 shadow-sm min-h-16">
+      <a href="#main-content" className="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-2 focus:z-[100] focus:rounded-lg focus:bg-white focus:p-3 focus:text-salesforce-dark">
+        Skip to main content
+      </a>
       {/* Top bar: Logo + primary links */}
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center min-h-16 h-16">
-          <Link href="/" className="flex items-center gap-2 group" aria-label="Trailblaze Prep Home">
+          <Link href="/" className="flex items-center gap-2 group">
             <div className="flex items-center justify-center w-10 h-10 rounded-xl bg-gradient-to-br from-salesforce-dark to-salesforce-blue text-white shadow-md group-hover:shadow-lg transition-shadow">
               <Award className="h-6 w-6" aria-hidden="true" />
             </div>
             <span className="text-xl font-bold text-salesforce-dark">
-              Trailblaze<span className="text-salesforce-blue"> Prep</span>
+              Trailblaze{' '}<span className="text-salesforce-blue">Prep</span>
             </span>
           </Link>
 
@@ -73,7 +108,12 @@ export default function Header() {
             </button>
 
             {mobileOpen && (
-              <div className="absolute right-0 mt-2 w-[85vw] max-w-sm border border-gray-200 bg-white rounded-xl shadow-2xl p-3 space-y-2 z-50">
+              <div className="absolute right-0 mt-2 w-[85vw] max-w-sm max-h-[75vh] overflow-y-auto border border-gray-200 bg-white rounded-xl shadow-2xl p-3 space-y-2 z-50" onKeyDown={(event) => {
+                if (event.key === 'Escape') {
+                  setMobileOpen(false)
+                  event.currentTarget.parentElement?.querySelector('button')?.focus()
+                }
+              }}>
                 <Link href="/certifications" onClick={() => setMobileOpen(false)} className="block py-2 font-medium text-gray-700 hover:text-salesforce-blue">
                   All Certifications
                 </Link>
@@ -128,14 +168,24 @@ export default function Header() {
                 key={category.slug}
                 className="relative group"
                 ref={(el) => { if (el) desktopDetailsRefs.current[index] = el }}
-                onToggle={(e) => handleDesktopToggle(category.slug, (e.currentTarget as HTMLDetailsElement).open)}
+                onToggle={(e) => {
+                  const open = (e.currentTarget as HTMLDetailsElement).open
+                  handleDesktopToggle(category.slug, open)
+                  if (open) requestAnimationFrame(() => fitDesktopMenu(index))
+                }}
+                onKeyDown={(event) => {
+                  if (event.key === 'Escape') {
+                    event.currentTarget.open = false
+                    event.currentTarget.querySelector('summary')?.focus()
+                  }
+                }}
               >
                 <summary className="inline-flex items-center gap-1 px-4 py-2 rounded-lg bg-white border border-gray-200 text-sm font-medium text-gray-700 hover:border-salesforce-blue hover:text-salesforce-blue hover:bg-salesforce-blue/5 transition-all duration-200 shadow-sm hover:shadow-md cursor-pointer list-none">
                   <span>{category.name}</span>
                   <ChevronDown className="h-4 w-4 opacity-70 group-hover:opacity-100 transition-opacity duration-200" aria-hidden="true" />
                 </summary>
                 {/* Sub-items only mounted after the dropdown is opened for the first time */}
-                <div className="absolute left-0 top-full mt-2 w-64 max-h-[70vh] overflow-y-auto py-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-[60]">
+                <div ref={(element) => setDesktopMenuRef(index, element)} className="absolute left-0 top-full mt-2 w-64 max-h-[70vh] overflow-y-auto py-2 bg-white rounded-xl shadow-2xl border border-gray-200 z-[60]">
                   {renderedDesktopCats.has(category.slug) && category.items.map((item) => (
                     <Link
                       key={item.href}

@@ -2,10 +2,9 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
-import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
 import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
@@ -19,7 +18,7 @@ const slug = 'education-cloud-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Education Cloud Consultant exam tips for ${RELEASE_CURRENT}: EDA data model, student lifecycle, adviser console Free practice questions.`
+  `Education Cloud Consultant study notes (${RELEASE_YEAR}): official archived exam outline, lifecycle concepts, and solution-design practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -49,25 +48,24 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Education Cloud Consultant exam format?',
-    answer: 'The Salesforce Education Cloud Consultant exam has 60 multiple-choice questions, a 105-minute time limit, a 65% passing score, and a $200 fee. It tests implementation of the Education Data Architecture (EDA) and Salesforce for higher education institutions.',
+    answer: 'The published Salesforce Certified Education Cloud Consultant exam guide lists 60 multiple-choice questions plus up to five unscored questions, 105 minutes, a 67% passing score, a US$200 registration fee, and a US$100 retake fee (JPY 30,000 for each), plus applicable tax. Registration ended July 24, 2026 and exam delivery ended August 31, 2026.',
   },
   {
-    question: 'What are the highest-weight Education Cloud Consultant exam sections?',
-    answer: 'Industry Knowledge (25%) and Data Management and Integration (22%) together account for 47% of the exam. Understanding higher education business processes, the EDA data model, and how to map institution requirements to Salesforce Education Cloud capabilities are the most heavily tested areas.',
+    question: 'What domains and weights appear in the published exam guide?',
+    answer: 'Domain Expertise 18%; Education Cloud Configuration 22%; Implementation Strategies and Best Practices 18%; Solution Design 19%; Integration and Data Management 16%; Analytics 7%. These are the published Winter ’24 guide weights, not a current exam outline.',
   },
   {
     question: 'What is EDA (Education Data Architecture) and why does the exam focus on it?',
-    answer: 'EDA is the Salesforce-managed data model for higher education institutions. It replaces standard Salesforce objects with education-specific ones (Contact as student, Account as institution, Affiliation linking students to institutions). Understanding EDA relationships, the household account model, and how course connections and academic programs work is essential for this exam.',
+    answer: 'EDA is a Salesforce for Education managed-package data model. Salesforce distinguishes that package from its Education Cloud platform solution, now called Agentforce Education. Confirm the institution’s product and model before making design assumptions.',
   },
   {
-    question: 'What prerequisites help with the Education Cloud Consultant exam?',
-    answer: 'Salesforce Administrator (ADM-201) is the recommended foundation. Real experience implementing Salesforce for a higher education institution — managing student lifecycle, enrollment processes, and adviser workflows — is strongly recommended. Familiarity with the EDA managed package and Education Cloud setup is essential.',
+    question: 'What is the prerequisite for the Education Cloud Consultant exam?',
+    answer: 'The published exam guide lists Salesforce Certified Platform Administrator Certification as a prerequisite. Its audience description mentions 2+ years of Salesforce Platform experience, 1+ year of education-industry implementation experience, and at least one Education Cloud project; those are audience qualifications, not extra formal exam prerequisites. Registration and exam delivery have ended.',
   },
   {
-    question: 'What concepts do most Education Cloud Consultant candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Education Cloud Consultant exam are: (1) Education Data Architecture (EDA) — Household vs Individual Account Model; (2) Admissions Connect — Application vs Inquiry vs Prospect Record; (3) Success Plans vs Alerts — Proactive vs Reactive Advising. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    question: 'Which solution-design distinctions are useful to review?',
+    answer: 'Compare requirements before choosing a data model or product; distinguish a managed-package implementation from the Education Cloud platform solution; and assess integration ownership, governance, adoption, and scalability. These are study prompts derived from the published domains, not predictions about question frequency.',
   },
-  ...getConceptFaqs('education-cloud-consultant-exam-tips'),
 ]
 
 export default function EducationCloudConsultantExamTipsPage() {
@@ -78,20 +76,23 @@ export default function EducationCloudConsultantExamTipsPage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Study notes {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Salesforce Education Cloud Consultant Exam Tips ({RELEASE_CURRENT}): How to Pass
+          Salesforce Certified Education Cloud Consultant: Study Notes
         </h1>
         <p className="text-lg text-gray-600">
-          The Education Cloud Consultant exam tests your ability to implement Salesforce Education Cloud for higher
-          education institutions. These tips focus on the EDA data model, student lifecycle management, and the
-          industry knowledge that distinguishes this exam from standard Salesforce consultant certifications.
+          Salesforce ended this exam’s registration and delivery windows. These notes summarize the published
+          Winter ’24 exam guide and provide product-design study prompts; Salesforce now calls Education Cloud
+          Agentforce Education.
         </p>
       </header>
 
       <ContentPageAuthor />
 
+      <div role="status" className="rounded-xl border border-amber-200 bg-amber-50 p-4 mb-8 text-sm text-amber-950">
+        <strong>Exam registration and delivery are closed:</strong> Registration closed July 24, 2026; the last exam date was August 31, 2026. Salesforce lists credential retirement effective February 1, 2027. Fee figures below are historical guide amounts; no booking or retake is available.
+      </div>
       <ExamTipsCertLink certSlug={slug} />
       <StudyGuideCrossLink studyGuideSlug="education-cloud-consultant-study-guide" certName="Education Cloud Consultant" />
       <ExamPricingCard
@@ -100,88 +101,86 @@ export default function EducationCloudConsultantExamTipsPage() {
         certPageSlug="education-cloud-consultant"
       />
 
-
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Fast Facts: Education Cloud Consultant Focus Areas</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Selected Education Product Learning Themes</h2>
         <ul className="space-y-2 text-gray-700 text-sm">
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>EDA data model</strong> — Education Data Architecture objects (Contact as student, Affiliation, Academic Program, Course Connection, Behavior Management), their relationships, and how they map to institutional processes.</li>
-          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Higher education processes</strong> — Student lifecycle (inquiry, application, enrollment, retention, alumni), adviser workflows, program management, and the unique privacy requirements (FERPA) of educational institutions.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education data model</strong> — Compare the institution’s chosen Education Cloud platform data model with the EDA managed package; map entities and relationships from documented requirements.</li>
+          <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Education processes</strong> — Recruitment and admissions, academic operations, student success, advancement, and alumni relations appear in Salesforce’s product documentation.</li>
           <li className="flex gap-2"><CheckCircle2 className="h-4 w-4 mt-0.5 text-emerald-600 flex-shrink-0" /><strong>Integration and data management</strong> — How Salesforce Education Cloud integrates with Student Information Systems (SIS), the importance of unique student IDs, and data migration from legacy systems.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Published Winter ’24 Guide Weights</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Industry Knowledge</span>
-            <span className="font-bold text-salesforce-blue ml-4">25%</span>
+            <span className="font-medium text-gray-900">Domain Expertise</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Management and Integration</span>
+            <span className="font-medium text-gray-900">Education Cloud Configuration</span>
             <span className="font-bold text-salesforce-blue ml-4">22%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Implementing Education Cloud</span>
-            <span className="font-bold text-salesforce-blue ml-4">20%</span>
+            <span className="font-medium text-gray-900">Implementation Strategies and Best Practices</span>
+            <span className="font-bold text-salesforce-blue ml-4">18%</span>
           </div>
-          <div className="flex justify-between items-start">
-            <span className="font-medium text-gray-900">Student Lifecycle Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">17%</span>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2">
+            <span className="font-medium text-gray-900">Solution Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">19%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Industry Knowledge + Data Management + Implementation = 67%. Understanding higher education processes is as important as knowing the product.</p>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Integration and Data Management</span><span className="font-bold text-salesforce-blue ml-4">16%</span></div>
+          <div className="flex justify-between items-start"><span className="font-medium text-gray-900">Analytics</span><span className="font-bold text-salesforce-blue ml-4">7%</span></div>
+          <p className="text-xs text-gray-600 pt-1">These weights are from Salesforce’s published Winter ’24 exam guide; they do not establish a current exam syllabus.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Education Cloud Questions</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: Education Solution Design</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Education Cloud questions describe an institutional process or challenge and ask which EDA configuration
-          or Education Cloud feature best addresses it. The correct answer is always the most native Education Cloud
-          approach — not a custom workaround using standard Salesforce objects.
+          For a solution-design practice scenario, first identify the institution’s requirements, existing systems,
+          data ownership, constraints, and success measures. Then compare product capabilities and implementation tradeoffs.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For EDA model questions: a Contact record represents a student or staff member; an Account represents an institution, department, or household. Affiliation links a Contact to an Account with a role and status — know when to create Affiliations vs. direct lookups.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For student lifecycle questions: map the scenario to the EDA objects (Inquiry → Lead; Application → Academic Program Enrollment; Course registration → Course Connection). Know the correct EDA object for each stage.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For FERPA questions: student educational records are protected. Salesforce field-level security, profiles, and permission sets are the mechanism — but the exam tests whether you understand which data is protected and who can access it.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Model-choice check: identify the institution’s product edition and data model before mapping people, programs, relationships, or enrollment data; don’t assume the EDA package and Education Cloud platform are interchangeable.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Integration check: document which system owns each data element, direction and timing of exchange, reconciliation/error handling, and migration constraints before choosing an integration pattern.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />Implementation check: balance stakeholder requirements with security, governance, change management, testing, deployment, adoption, and long-term maintainability.</li>
         </ul>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">How to Know You’re Ready</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Preparation Notes</h2>
         <p className="inline-flex items-center gap-2 text-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 rounded-lg px-3 py-2">
           <Clock className="h-4 w-4" />
-          75%+ on 3 timed full mocks before booking
+          Published guide time limit: 105 minutes
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          Education Cloud Consultant is a niche certification requiring knowledge of both Salesforce
-          and higher education business processes. Candidates without direct experience working with
-          universities or colleges should spend extra time on the industry knowledge section.
+          Salesforce’s audience description lists implementation and education-industry experience. Those audience qualifications are distinct from the formal prerequisite. The exam itself is no longer available to register for or take.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Education Cloud Consultant Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Three Solution-Design Checks</h2>
+        <p className="text-sm text-gray-600 mb-5">Use these prompts to structure practice against the published guide’s solution-design and implementation objectives.</p>
         <div className="space-y-5">
           <div>
-            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA) — Household vs Individual Account Model</p>
-            <p className="text-sm text-gray-700">Education Cloud uses the Salesforce.org Education Data Architecture (EDA) which models students as Contacts linked to multiple Accounts (Household, Academic Program, University). This is different from the standard B2C Account-Contact model. Candidates answer relationship questions using standard Account-Contact logic — the exam expects EDA relationship types and the Affiliation object for representing student membership in programs.</p>
+            <p className="font-semibold text-gray-900 mb-1">1. Education Data Architecture (EDA) — Confirm the Model</p>
+            <p className="text-sm text-gray-700">Start by identifying whether a scenario uses the EDA managed package or the Education Cloud platform solution. Verify the applicable account model and relationship semantics in documentation for that product before proposing a schema.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">2. Admissions Connect — Application vs Inquiry vs Prospect Record</p>
-            <p className="text-sm text-gray-700">Admissions Connect tracks the prospective student lifecycle: Inquiry (initial interest) → Application (formal submission) → Decision (acceptance/rejection) → Enrollment. Each stage has distinct record types and status fields. Candidates use a single Contact record for all stages — the exam expects Application-level record management and understands that Applications are separate objects from Contact/Lead.</p>
+            <p className="font-semibold text-gray-900 mb-1">2. Recruitment and Admissions — Map the Workflow</p>
+            <p className="text-sm text-gray-700">For recruitment and admissions, trace a prospective learner from initial interest through application and enrollment. Determine which records, staff workflows, portal steps, and integration points the institution’s chosen product actually uses; avoid assuming every deployment shares identical stages or objects.</p>
           </div>
           <div>
-            <p className="font-semibold text-gray-900 mb-1">3. Success Plans vs Alerts — Proactive vs Reactive Advising</p>
-            <p className="text-sm text-gray-700">Success Plans in Education Cloud are proactive templates for student advising milestones (register for courses, meet with advisor, complete FAFSA). Alerts are reactive notifications triggered by at-risk signals (missed class, low GPA). Candidates design alerts for all advising scenarios — the exam expects Success Plans for structured, proactive outreach and Alerts only for reactive intervention.</p>
+            <p className="font-semibold text-gray-900 mb-1">3. Student Success — Define Outcomes and Ownership</p>
+            <p className="text-sm text-gray-700">For student-success design, clarify the intervention goal, responsible staff, signal source, access rules, and follow-up process. Select an available product feature only after checking the organization’s licensed capabilities and documented behavior.</p>
           </div>
         </div>
       </section>
 
 <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">FAQs From Candidates</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
         <dl className="space-y-4">
           {faqItems.map((item, i) => (
             <div key={i} className="border-b border-gray-100 pb-4 last:border-0 last:pb-0">
@@ -216,10 +215,10 @@ export default function EducationCloudConsultantExamTipsPage() {
 
 
       <section className="rounded-xl border border-salesforce-blue/20 bg-salesforce-blue/5 p-6">
-        <h2 className="text-xl font-bold text-gray-900 mb-3">Start Education Cloud Prep</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-3">Continue Education Product Learning</h2>
         <div className="flex flex-col sm:flex-row gap-3">
           <Link href="/certifications/education-cloud-consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-salesforce-blue text-white rounded-lg font-semibold hover:bg-salesforce-dark transition-colors">
-            Education Cloud Practice Questions <ArrowRight className="h-4 w-4" />
+            Historical Education Cloud Practice Questions <ArrowRight className="h-4 w-4" />
           </Link>
           <Link href="/certifications/role/consultant" className="inline-flex items-center justify-center gap-2 px-5 py-3 bg-white text-gray-700 rounded-lg font-semibold border border-gray-200 hover:bg-gray-50 transition-colors">
             All Consultant Certifications
@@ -229,7 +228,7 @@ export default function EducationCloudConsultantExamTipsPage() {
           </Link>
         </div>
         <p className="text-xs text-gray-600 mt-4">
-          After this exam, consider <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link> next.
+          For adjacent product learning, see <Link href="/certifications/sales-cloud" className="text-salesforce-blue underline">Sales Cloud Consultant</Link> or <Link href="/certifications/service-cloud" className="text-salesforce-blue underline">Service Cloud Consultant</Link>.
         </p>
       </section>
     </div>

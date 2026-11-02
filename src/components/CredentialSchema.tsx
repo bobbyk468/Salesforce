@@ -1,17 +1,6 @@
-import { getCertInsight, DIFFICULTY_LABELS } from '@/lib/cert-insights-data'
-import { RELEASE_CURRENT } from '@/lib/release-data'
-import { getReleaseWindow } from '@/utils/releaseDates'
+import { isRetiredCredential, hasUnverifiedClaudeExamDetails } from '@/lib/credential-status'
 
 const SITE_URL = 'https://www.trailblazeprep.com'
-
-function parseSalary(range: string): { min: number; max: number; median: number } | null {
-  // Handles en-dash (–), em-dash (—), and hyphen (-)
-  const match = range.match(/\$([0-9,]+)[–—\-]+\$([0-9,]+)/)
-  if (!match) return null
-  const min = parseInt(match[1].replace(/,/g, ''), 10)
-  const max = parseInt(match[2].replace(/,/g, ''), 10)
-  return { min, max, median: Math.round((min + max) / 2) }
-}
 
 interface Props {
   certSlug: string    // key in cert-insights-data.ts e.g. "adm-201"
@@ -21,8 +10,7 @@ interface Props {
 }
 
 export default function CredentialSchema({ certSlug, certName, description, pageUrl }: Props) {
-  const insight = getCertInsight(certSlug)
-
+  if (isRetiredCredential(certSlug) || hasUnverifiedClaudeExamDetails(certSlug)) return null
   const schema: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'EducationalOccupationalCredential',
@@ -35,33 +23,6 @@ export default function CredentialSchema({ certSlug, certName, description, page
       name: 'Salesforce',
       url: 'https://www.salesforce.com',
     },
-  }
-
-  if (insight) {
-    const label = DIFFICULTY_LABELS[insight.difficulty]
-    schema.educationalLevel = `${label} (${insight.difficulty}/5) — ${insight.difficultyNote}`
-
-    const salary = parseSalary(insight.salaryRange)
-    if (salary) {
-      schema.about = {
-        '@type': 'Occupation',
-        name: certName,
-        estimatedSalary: {
-          '@type': 'MonetaryAmountDistribution',
-          name: `US average annual salary for ${certName} certified professionals`,
-          currency: 'USD',
-          duration: 'P1Y',
-          percentile10: salary.min,
-          median: salary.median,
-          percentile90: salary.max,
-          validThrough: getReleaseWindow(RELEASE_CURRENT),
-        },
-        occupationLocation: {
-          '@type': 'Country',
-          name: 'United States',
-        },
-      }
-    }
   }
 
   return (

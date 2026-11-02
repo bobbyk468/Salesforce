@@ -11,6 +11,9 @@
     "cf:deploy": "opennextjs-cloudflare build && opennextjs-cloudflare deploy",
     "cf:typegen": "wrangler types --env-interface CloudflareEnv cloudflare-env.d.ts",
     "lint": "next lint",
+    "audit:search": "node scripts/audit-search-readiness.mjs",
+    "test:search": "node --test scripts/audit-search-readiness.test.mjs scripts/validate-seo-lengths.test.mjs scripts/worker-security.test.mjs scripts/audit-transport.test.mjs src/tests/cert-sync.test.mjs src/tests/request-canonical.test.mjs src/tests/chat-route.test.mjs scripts/train-bot-http.test.mjs src/tests/credential-facts.test.mjs src/tests/editorial-callout.test.mjs src/tests/marketing-facts.test.mjs src/tests/agentforce-mulesoft-facts.test.mjs && python3 scripts/test_analyze_gsc_baseline.py && python3 scripts/test_gsc_index_status.py",
+    "audit:gsc": "python3 scripts/analyze-gsc-baseline.py",
     "perf:check": "python3 scripts/page_speed_monitor.py",
     "validate:seo": "node scripts/validate-technical-seo.mjs",
     "validate:seo:local": "npm run build && node scripts/validate-technical-seo.mjs --base=http://localhost:3000",
@@ -42,28 +45,42 @@
     "bot:train": "node scripts/train-bot.mjs",
     "content:advisors": "node scripts/query-content-advisors.mjs",
     "x:tag-cert-focus": "node scripts/tag-queue-cert-focus.mjs",
-    "x:seed-tips-range": "node scripts/seed-queue-tips-range.mjs"
+    "x:seed-tips-range": "node scripts/seed-queue-tips-range.mjs",
+    "audit:transport": "node scripts/audit-transport.mjs",
+    "bot:train:http": "node scripts/train-bot-http.mjs",
+    "questions:fetch": "node scripts/fetch-git-question-source.mjs",
+    "questions:import": "node scripts/import-git-questions.mjs",
+    "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs",
+    "questions:verify": "node scripts/verify-git-question-import.mjs",
+    "audit:questions": "node scripts/audit-imported-question-pages.mjs"
   },
   "dependencies": {
-    "@next/third-parties": "^16.2.3",
+    "@next/third-parties": "^15.5.27",
     "critters": "0.0.23",
     "html-to-image": "^1.11.13",
     "lucide-react": "^0.400.0",
-    "next": "^14.2.0",
+    "next": "^15.5.27",
     "react": "^18.3.0",
     "react-dom": "^18.3.0"
   },
   "devDependencies": {
     "@opennextjs/cloudflare": "^1.15.0",
+    "@tailwindcss/postcss": "4.3.3",
     "@types/node": "^20.0.0",
     "@types/react": "^18.3.0",
     "@types/react-dom": "^18.3.0",
     "autoprefixer": "^10.4.0",
-    "postcss": "^8.4.0",
-    "puppeteer": "^24.40.0",
-    "tailwindcss": "^3.4.0",
+    "css-select": "^5.2.2",
+    "htmlparser2": "^8.0.2",
+    "postcss": "^8.5.28",
+    "puppeteer": "^25.12.0",
+    "tailwindcss": "4.3.3",
     "twitter-api-v2": "^1.29.0",
     "typescript": "^5.4.0",
     "wrangler": "^4.133.0"
+  },
+  "overrides": {
+    "postcss": "^8.5.28",
+    "sharp": "0.35.4"
   }
 }

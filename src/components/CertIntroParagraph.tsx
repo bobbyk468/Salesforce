@@ -1,7 +1,7 @@
 'use client'
 
 import Link from 'next/link'
-import { getRequiredPrerequisite, getRecommendedPrerequisite } from '@/lib/cert-prerequisites'
+import { getRequiredPrerequisite, getRequiredPrerequisites, getRecommendedPrerequisite } from '@/lib/cert-prerequisites'
 import { slugToDisplayName, SLUG_TO_EXAM_TIPS, SLUG_TO_STUDY_GUIDE } from '@/lib/cert-seo-data'
 import { getExamWeightage } from '@/lib/exam-weightage-data'
 
@@ -20,7 +20,8 @@ interface CertIntroParagraphProps {
  * distinct even when the prerequisite is shared.
  */
 export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
-  const requiredPrereq = getRequiredPrerequisite(slug)
+  const requiredPrereqs = getRequiredPrerequisites(slug)
+  const requiredPrereq = requiredPrereqs[0] ?? getRequiredPrerequisite(slug)
   const recommendedPrereq = getRecommendedPrerequisite(slug)
   const prereq = requiredPrereq ?? recommendedPrereq
   const examTipsPath = SLUG_TO_EXAM_TIPS[slug]
@@ -53,6 +54,29 @@ export default function CertIntroParagraph({ slug }: CertIntroParagraphProps) {
       {!studyGuideLink && examTipsLink}
     </>
   ) : null
+
+  if (requiredPrereqs.length > 1) {
+    return (
+      <p className="text-sm text-gray-600 mb-6">
+        Before attempting this exam, complete both required certifications:{' '}
+        {requiredPrereqs.map((requiredSlug, index) => (
+          <span key={requiredSlug}>
+            {index > 0 ? ' and ' : ''}
+            <Link href={`/certifications/${requiredSlug}`} className="text-salesforce-blue font-medium hover:underline">
+              {slugToDisplayName(requiredSlug)}
+            </Link>
+          </span>
+        ))}. See our{' '}
+        <Link href="/certification-path" className="text-salesforce-blue font-medium hover:underline">
+          certification path
+        </Link>{' '}
+        to understand where this certification fits.{' '}
+        {topSection && <>The {certName} exam weights <strong className="text-gray-900">{topSection.name}</strong> most heavily ({topSection.percentage}%) — see the full breakdown, study tips, and practice questions below.</>}
+        {studyGuideLink && <> See our{studyGuideLink}</>}
+        {extraLinks}
+      </p>
+    )
+  }
 
   if (prereq) {
     const prereqName = slugToDisplayName(prereq)

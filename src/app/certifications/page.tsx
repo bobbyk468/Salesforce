@@ -47,24 +47,24 @@ const certsBreadcrumb: { name: string; url: string }[] = [
 
 const faqItems = [
   {
-    question: 'How many Salesforce certifications are there?',
-    answer: `Salesforce offers 40+ certification credentials plus 50+ Accredited Professional (AP) designations, for a total of more than 90 credential types. They are organised across eight tracks: Administrator, Developer, Consultant, Architect, Marketing Cloud, Commerce Cloud, MuleSoft, Tableau, and Designer. Salesforce releases updated exam outlines three times per year (aligned to Spring, Summer, and Winter releases) — the current release is ${RELEASE_CURRENT}.`,
+    question: 'How do I find the current Salesforce certification catalog?',
+    answer: 'Check the Salesforce credential catalog for the current list. This directory groups our learning resources by role; Accredited Professional designations differ from certifications, and retired credentials are historical references.',
   },
   {
-    question: 'Which Salesforce certification should I get first?',
-    answer: 'For most people, Salesforce Administrator (ADM-201) is the recommended starting point. It covers the core platform — objects, security, automation, reports — and is a prerequisite or assumed knowledge for most Consultant and Architect certifications. If you are a developer, Platform Developer I (PD1) is the developer equivalent entry point. If you are already working on a specific product (e.g., Marketing Cloud, MuleSoft), start with the foundations exam for that product.',
+    question: 'Which Salesforce certification should I explore first?',
+    answer: 'Choose a credential whose objectives match the work you want to do. Platform Administrator covers core administration, while Platform Foundations introduces platform concepts. Read the current issuer guide for prerequisites and recommended experience.',
   },
   {
-    question: 'How much do Salesforce certifications cost?',
-    answer: 'Most Salesforce exams cost $200 (full credentials) or $150 (Accredited Professional exams). Foundational-level exams (AI Associate, Platform Foundations, Sales Foundations, MuleSoft Integration Foundations) cost $75. Tableau certifications cost $250. The CTA pathway involves $400 for the evaluation exam and $3,000 for the Review Board. Retakes cost $100 for most exams. See the full fee table at our Salesforce certification cost guide.',
+    question: 'How much does a Salesforce certification cost?',
+    answer: 'Fees vary by credential, location, taxes, and promotions. Confirm prices and retake terms in the current issuer exam guide and registration portal before booking. Our fee guide is a starting point rather than a price quote.',
   },
   {
-    question: 'How long does it take to get Salesforce certified?',
-    answer: 'Study time varies by cert and experience. Administrator (ADM-201): 4–6 weeks for candidates with some Salesforce exposure, 8–10 weeks from scratch. Platform Developer I: 6–8 weeks for developers with coding experience. Consultant-level certs (Sales Cloud, Service Cloud): 6–10 weeks with implementation experience. Architect-level certs: 10–16 weeks each. The fastest path is to work through the official Trailhead Trailmix for your target cert combined with timed practice tests.',
+    question: 'How long should I spend preparing?',
+    answer: 'Study time depends on your experience and the exam objectives. Identify unfamiliar topics, practice hands-on tasks, and use original questions to check your understanding. There is no fixed study period that guarantees a pass.',
   },
   {
-    question: 'Are Salesforce certifications worth it in Summer \'26?',
-    answer: 'Yes. Salesforce certified professionals earn 20–35% higher salaries than their non-certified peers, according to Salesforce ecosystem salary surveys. Administrator certified professionals earn an average of $90,000–$110,000 in the US; architects earn $150,000–$200,000+. Beyond salary, certifications are often a hiring requirement at Salesforce consulting partners. With Agentforce and AI capabilities expanding the platform in Summer \'26, Data Cloud and Agentforce Specialist certifications are seeing particularly strong job market demand.',
+    question: 'How do I decide whether a certification fits my career goals?',
+    answer: 'Compare the objectives with your target role, the skills employers in your location request, and the time and cost of preparation. A certification can demonstrate knowledge, but it does not guarantee a job or salary increase.',
   },
 ]
 
@@ -72,7 +72,7 @@ const topCerts = [
   { name: 'Salesforce Administrator', href: '/certifications/administrator', desc: 'The most popular entry-point cert. Covers core platform administration, automation, and reporting.' },
   { name: 'Platform Developer I', href: '/certifications/developer-1', desc: 'Entry-level developer cert. Tests Apex, SOQL, Visualforce, and Lightning Web Component basics.' },
   { name: 'Agentforce Specialist', href: '/certifications/agentforce-specialist', desc: 'The new AI certification. Tests Agentforce Topics, Actions, and prompt template configuration.' },
-  { name: 'AI Associate', href: '/certifications/ai-associate', desc: 'Foundational AI cert. 40 questions, $75 fee. Tests AI concepts, ethics, and Salesforce AI features.' },
+  { name: 'AI Associate (retired)', href: '/certifications/ai-associate', desc: 'Retired in February 2026. Historical learning reference; explore Agentblazer for current AI learning.' },
   { name: 'App Builder', href: '/certifications/app-builder', desc: 'Builds on Admin knowledge. Tests Lightning App Builder, page layouts, and declarative automation.' },
   { name: 'Service Cloud Consultant', href: '/certifications/service-cloud', desc: 'Consultant-level cert for Service Cloud. Tests omni-channel, entitlements, and case management.' },
   { name: 'Sales Cloud Consultant', href: '/certifications/sales-cloud', desc: 'Consultant-level cert for Sales Cloud. Tests leads, opportunities, forecasting, and territory management.' },
@@ -112,10 +112,10 @@ export default function CertificationsIndexPage() {
         </p>
         <h1 className="text-4xl font-bold text-gray-900 mb-4">All Salesforce Certifications ({RELEASE_CURRENT})</h1>
         <p className="text-xl text-gray-600 mb-3 max-w-3xl mx-auto">
-          Salesforce offers 90+ credentials across Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Every certification page on Trailblaze Prep includes {RELEASE_CURRENT} exam weightage, free practice questions, and a study plan.
+          Browse independent study resources across Administrator, Developer, Consultant, Architect, Marketing Cloud, MuleSoft, Tableau, and Designer tracks. Confirm current exam details with the issuer; retired credentials are historical references.
         </p>
         <p className="text-gray-600 max-w-3xl mx-auto">
-          New to Salesforce? Start with <Link href="/certifications/administrator" className="text-salesforce-dark hover:underline font-medium">Administrator (ADM-201)</Link>. Already an admin? Progress to <Link href="/certifications/app-builder" className="text-salesforce-dark hover:underline font-medium">App Builder</Link> or a <Link href="/consultant-certification-path" className="text-salesforce-dark hover:underline font-medium">Consultant track</Link>. Working in AI? The <Link href="/certifications/agentforce-specialist" className="text-salesforce-dark hover:underline font-medium">Agentforce Specialist</Link> and <Link href="/certifications/ai-associate" className="text-salesforce-dark hover:underline font-medium">AI Associate</Link> certifications are the highest-demand credentials in {RELEASE_CURRENT}.
+          New to Salesforce? Start with <Link href="/certifications/administrator" className="text-salesforce-dark hover:underline font-medium">Administrator (ADM-201)</Link>. Already an admin? Progress to <Link href="/certifications/app-builder" className="text-salesforce-dark hover:underline font-medium">App Builder</Link> or a <Link href="/consultant-certification-path" className="text-salesforce-dark hover:underline font-medium">Consultant track</Link>. Working in AI? The <Link href="/certifications/agentforce-specialist" className="text-salesforce-dark hover:underline font-medium">Agentforce Specialist</Link> and <Link href="/certifications/ai-associate" className="text-salesforce-dark hover:underline font-medium">AI Associate</Link> learning resources cover different levels of AI experience. AI Associate retired in February 2026; it is retained here as a historical reference.
         </p>
       </header>
 

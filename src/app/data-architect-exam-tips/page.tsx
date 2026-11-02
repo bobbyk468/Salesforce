@@ -2,11 +2,10 @@ import type { Metadata } from 'next'
 import Link from 'next/link'
 import { CheckCircle2, Clock, Target, ArrowRight } from 'lucide-react'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import ExamTipsCertLink from '@/components/ExamTipsCertLink'
 import { getConceptFaqs } from '@/lib/exam-tips-concept-faqs'
-import { buildExamTipsTitle } from '@/lib/seo-title-helpers'
 import StudyGuideCrossLink from '@/components/StudyGuideCrossLink'
 import ExamPricingCard from '@/components/ExamPricingCard'
 
@@ -16,10 +15,10 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'data-architect'
 
-const pageTitle = buildExamTipsTitle(slug)
+const pageTitle = `Salesforce Data Architect Exam Tips (${RELEASE_YEAR})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Data Architect exam tips for ${RELEASE_CURRENT}: data modelling, large data volumes, master data management Free practice questions.`
+  `Salesforce Data Architect exam tips for ${RELEASE_YEAR}: data modelling, large data volumes, master data management and free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -49,23 +48,23 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce Data Architect exam format?',
-    answer: 'The Salesforce Data Architect exam has 60 multiple-choice questions, a 105-minute time limit, a 63% passing score, and a $200 fee. It is a component exam for both the Application Architect and System Architect role-based credentials.',
+    answer: 'The Salesforce Certified Platform Data Architect exam has 60 scored multiple-choice questions plus up to five unscored questions, a 105-minute time limit, and a 58% passing score. The registration fee is US$400 and the retake fee is US$200, plus applicable taxes. Salesforce lists no prerequisite.',
   },
   {
     question: 'What are the highest-weight Salesforce Data Architect exam sections?',
-    answer: 'Data Management (26%), Data Modelling (24%), and Master Data Management (18%) together account for 68% of the Data Architect exam. Large data volume strategy and data governance are the most nuanced topics and require real project experience.',
+    answer: 'Salesforce lists six weighted domains: Data Modeling/Database Design (25%), Master Data Management (5%), Salesforce Data Management (25%), Data Governance (10%), Large Data Volume Considerations (20%), and Data Migration (15%).',
   },
   {
     question: 'What prerequisites do I need for the Salesforce Data Architect exam?',
-    answer: 'There are no hard prerequisites, but Salesforce recommends Platform App Builder (DEV-402) as foundational knowledge before the Data Architect exam. Real experience with Salesforce data modelling, data loading, SOQL optimisation, and large-scale implementations is strongly recommended.',
+    answer: 'Salesforce lists no prerequisite. Its recommended certifications (not required) include Platform App Builder, Platform Developer, and Platform Developer II.',
   },
   {
     question: 'What is the hardest part of the Salesforce Data Architect exam?',
-    answer: 'Large Data Volume (LDV) strategy is consistently the hardest section — skinny tables, custom indexes, query optimisation, and division management require hands-on experience that is difficult to learn from study materials alone. Master data management and data governance concepts are also highly scenario-based.',
+    answer: 'The official guide does not rank domains by difficulty. Consider reviewing the full set of objectives, including scalable data models, performance, archiving and purging, and virtualized data options.',
   },
   {
-    question: 'What concepts do most Data Architect candidates get wrong?',
-    answer: 'The most commonly misunderstood topics for the Data Architect exam are: (1) Skinny Tables vs Custom Indexes — Different Performance Tools, Different Use Cases; (2) External Objects vs Big Objects — Real-Time vs Archive; (3) Data Masking vs Field Encryption vs Classic Encryption — Three Security Layers. Candidates are most confidently wrong on these — learn the distinctions early to avoid losing marks on questions you expect to get right.',
+    question: 'What topics should I review for the Data Architect exam?',
+    answer: 'Use the official exam outline to review all six domains. For large data volume topics, compare indexing, data-model design, performance, archiving, purging, and virtualized data options against the stated requirements.',
   },
   ...getConceptFaqs('data-architect-exam-tips'),
 ]
@@ -78,10 +77,10 @@ export default function DataArchitectExamTipsPage() {
 
       <header data-lcp-header className="mb-10">
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
-          Updated for {RELEASE_CURRENT}
+          Study topics reviewed for {RELEASE_YEAR}
         </p>
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          Salesforce Data Architect Exam Tips ({RELEASE_CURRENT}): How to Pass
+          Salesforce Data Architect Exam Tips ({RELEASE_YEAR}): Study Strategy
         </h1>
         <p className="text-lg text-gray-600">
           The Salesforce Data Architect exam tests your ability to design scalable, high-performance Salesforce data
@@ -114,37 +113,38 @@ export default function DataArchitectExamTipsPage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Section Weightings to Prioritise</h2>
         <div className="space-y-3 text-sm text-gray-700">
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">26%</span>
+            <span className="font-medium text-gray-900">Data Modeling/Database Design</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
-            <span className="font-medium text-gray-900">Data Modelling</span>
-            <span className="font-bold text-salesforce-blue ml-4">24%</span>
+            <span className="font-medium text-gray-900">Salesforce Data Management</span>
+            <span className="font-bold text-salesforce-blue ml-4">25%</span>
           </div>
           <div className="flex justify-between items-start border-b border-gray-100 pb-2">
             <span className="font-medium text-gray-900">Master Data Management</span>
-            <span className="font-bold text-salesforce-blue ml-4">18%</span>
+            <span className="font-bold text-salesforce-blue ml-4">5%</span>
           </div>
           <div className="flex justify-between items-start">
             <span className="font-medium text-gray-900">Data Governance</span>
-            <span className="font-bold text-salesforce-blue ml-4">16%</span>
+            <span className="font-bold text-salesforce-blue ml-4">10%</span>
           </div>
-          <p className="text-xs text-gray-600 pt-1">Data Management + Data Modelling + MDM = 68%. These three sections are your highest-ROI study areas.</p>
+          <div className="flex justify-between items-start border-b border-gray-100 pb-2"><span className="font-medium text-gray-900">Large Data Volume Considerations</span><span className="font-bold text-salesforce-blue ml-4">20%</span></div>
+          <div className="flex justify-between items-start"><span className="font-medium text-gray-900">Data Migration</span><span className="font-bold text-salesforce-blue ml-4">15%</span></div>
+          <p className="text-xs text-gray-600 pt-1">The six weights follow Salesforce's published exam outline.</p>
         </div>
       </section>
 
       <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">Scenario Strategy: How to Approach Data Architect Questions</h2>
         <p className="text-sm text-gray-700 mb-3">
-          Data Architect questions describe a data challenge (scale, quality, integration, or performance) and ask
-          which strategy or feature solves it. The correct answer always considers long-term performance
-          at scale — not just immediate functionality.
+          Practice mapping a data challenge to the relevant published objective, then compare design options against
+          the scenario's requirements and trade-offs.
         </p>
         <ul className="space-y-2 text-sm text-gray-700">
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For LDV questions: identify whether the bottleneck is SOQL performance, storage, or UI response time — each has a different solution (custom index, skinny table, or query optimisation).</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data model questions: prefer normalised models in transactional systems; consider denormalisation only when query performance at millions of records is explicitly required.</li>
           <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For MDM questions: external IDs are the key tool for upsert operations and cross-system record matching — know when to use a single external ID vs. multiple external IDs per object.</li>
-          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For data migration questions: the Salesforce Data Loader vs. Bulk API vs. REST API choice depends on record volume and real-time vs. batch requirement — know the thresholds.</li>
+          <li className="flex gap-2"><Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />For migration planning: compare data quality at load time, large-volume migration performance, and export requirements before selecting tools and methods.</li>
         </ul>
       </section>
 
@@ -155,28 +155,27 @@ export default function DataArchitectExamTipsPage() {
           76%+ on 3 timed full mocks before booking
         </p>
         <p className="text-sm text-gray-700 mt-3">
-          The 63% passing score sounds achievable, but Data Architect questions are deeply scenario-based and require
-          applied knowledge of data at scale. Candidates who only study documentation — without LDV project experience —
-          consistently struggle with LDV and MDM sections. Hands-on practice is essential.
+          The passing score is 58%. Use the published objectives to organize preparation, and practice explaining
+          how your proposed design addresses the stated data requirements.
         </p>
       </section>
 
 
             <section className="rounded-xl border border-amber-100 bg-amber-50 p-6 mb-8">
-        <h2 className="text-xl font-bold text-gray-900 mb-2">3 Concepts That Fail Most Data Architect Candidates</h2>
-        <p className="text-sm text-gray-600 mb-5">These are not the hardest topics — they are the ones where candidates are <strong>most confidently wrong</strong>. Learn the distinction early.</p>
+        <h2 className="text-xl font-bold text-gray-900 mb-2">Large Data Volume Design Concepts</h2>
+        <p className="text-sm text-gray-600 mb-5">Compare these platform capabilities against the query and data requirements in a design scenario.</p>
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. Skinny Tables vs Custom Indexes — Different Performance Tools, Different Use Cases</p>
-            <p className="text-sm text-gray-700">Skinny tables are Salesforce-managed read-only copies of frequently queried subsets of large objects — they speed full-table reads. Custom indexes speed lookups on specific fields in WHERE clauses. Candidates request custom indexes when they need skinny tables and vice versa. Use skinny tables when reports and queries need to scan millions of records; use custom indexes when queries filter on specific non-standard fields.</p>
+            <p className="text-sm text-gray-700">Skinny tables can avoid joins for supported read-only operations and are maintained by Salesforce; contact Salesforce Support to request them. Custom indexes help the query optimizer when they suit the filter and data distribution. These are distinct options, not interchangeable fixes.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. External Objects vs Big Objects — Real-Time vs Archive</p>
-            <p className="text-sm text-gray-700">External Objects surface data from external systems via Salesforce Connect without importing it — data stays in the source system and is queried in real time. Big Objects store massive historical volumes inside Salesforce for archival — they are write-once and have limited query capabilities (only indexed fields). Candidates recommend External Objects for large historical data — the exam expects Big Objects for archive data already in Salesforce.</p>
+            <p className="text-sm text-gray-700">External Objects surface data held in an external system through Salesforce Connect. Big Objects support high-volume data storage and access patterns on the Salesforce platform. Select an approach based on data location, access needs, and the applicable platform capabilities.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Data Masking vs Field Encryption vs Classic Encryption — Three Security Layers</p>
-            <p className="text-sm text-gray-700">Classic Encryption (legacy) encrypts individual text fields using AES 128 — it is visible to users with "View Encrypted Data" permission. Shield Platform Encryption encrypts data at rest at the database level using AES 256 — transparent to users with access. Data Masking replaces sensitive values with synthetic data in sandbox environments. The exam tests which to apply for a given security scenario — database-level encryption = Shield; field-level hiding = Classic; sandbox data protection = Data Masking.</p>
+            <p className="text-sm text-gray-700">Field-level encryption, Shield Platform Encryption, and sandbox data masking serve different protection goals. Compare them against the data sensitivity, access needs, environment, and compliance requirements; check current Salesforce documentation for supported fields and feature behavior.</p>
           </div>
         </div>
       </section>

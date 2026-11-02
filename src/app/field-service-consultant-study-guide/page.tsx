@@ -1,10 +1,8 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
-import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
 import ExamTipsCrossLink from '@/components/ExamTipsCrossLink'
 import CertInsightBlock from '@/components/CertInsightBlock'
 import CredentialSchema from '@/components/CredentialSchema'
@@ -15,9 +13,10 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const issuerGuideUrl = 'https://help.salesforce.com/s/articleView?id=005298947&language=en_US&type=1'
 const slug = 'field-service'
-const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Salesforce Field Service Consultant study guide (${RELEASE_CURRENT}): 8 exam sections, study plan, scheduling tips, and free practice questions. $200 fee, 60 questions.`
+const pageTitle = 'Agentforce Field Service & Operations Consultant Study Guide'
+const pageDescription = `Salesforce Certified Agentforce Field Service and Operations Consultant study guide: official exam domains, prerequisites, and scenario practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -45,36 +44,36 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Managing a Field Service Business', weight: 19, note: 'Designing a Field Service solution to meet business requirements: service territories, operating hours, service resources (agents, technicians, crew), and defining service capacity.' },
-  { name: 'Defining Field Service', weight: 16, note: 'Core FSL objects: Work Orders, Work Order Line Items, Service Appointments, Service Resources, Service Territories, Service Crews, and the relationships between them.' },
-  { name: 'Service Resources', weight: 15, note: 'Configuring technician profiles, resource skills, skill levels, resource absence, resource capacity, and preferred resources on accounts and work orders.' },
-  { name: 'Work Orders', weight: 13, note: 'Creating and managing Work Orders and Work Order Line Items. Products consumed, required skills, required parts, location tracking, and priority settings.' },
-  { name: 'Scheduling & Optimization', weight: 13, note: 'Scheduling policies, scheduling rules (pinned, travel time, skill matching), Optimization request types (global, single resource, in-day), and the dispatcher console.' },
-  { name: 'Inventory Management', weight: 8, note: 'Product inventory, product requests, product transfers between locations, consumed and returned products, and van stock management for field technicians.' },
-  { name: 'Mobility', weight: 8, note: 'Salesforce Field Service mobile app configuration, offline capabilities, work order status updates, geolocation tracking, and technician-facing knowledge articles.' },
-  { name: 'Managed Package', weight: 8, note: 'Installing and configuring the FSL managed package, Gantt configuration, appointment booking, drip feed scheduling, and automatic scheduling settings.' },
+  { name: 'Managing Resources', weight: 16, note: 'Crews and resource types; service territories and members; time sheets; skills and skill levels; operating hours; and license types.' },
+  { name: 'Managing Work Orders', weight: 23, note: 'Work Order processes, parameters and Work Types; resource preferences; Products Required; Work Order Line Items; milestones; and relationships to Service Appointments.' },
+  { name: 'Managing Scheduling and Optimization', weight: 28, note: 'Service Appointment actions and lifecycle; Schedule Policies; complex work; routing; Dispatcher Console filters; and scheduling and optimization services.' },
+  { name: 'Configuring Mobility', weight: 10, note: 'Customer sign-off; Field Service app configuration; Field Service Mobile versus Salesforce Mobile; and mobile settings.' },
+  { name: 'Managing Inventory', weight: 8, note: 'Price book models for Products Consumed, inventory models, and Return Orders.' },
+  { name: 'Managing Assets', weight: 5, note: 'Procedures for maintaining and updating assets and asset relationships.' },
+  { name: 'Configuring Maintenance Plans', weight: 5, note: 'Selecting an appropriate maintenance plan for a scenario.' },
+  { name: 'Permissions and Sharing', weight: 5, note: 'Permission set use cases; sharing scheduled Service Appointments with resources; and user territories versus service territories.' },
 ]
 
 const faqItems = [
   {
     question: 'What is the Salesforce Field Service Consultant certification?',
-    answer: 'The Salesforce Field Service Consultant certification validates skills in implementing Salesforce Field Service (formerly Field Service Lightning / FSL). It covers Work Order management, scheduling, resource management, inventory, and the FSL managed package. The exam has 60 questions, a 105-minute time limit, ~65% passing score, and a $200 fee.',
+    answer: 'The current credential is Salesforce Certified Agentforce Field Service and Operations Consultant. The exam has 60 multiple-choice/multiple-select questions plus up to five unscored questions, 105 minutes, and a 63% passing score. The US registration fee is $200 plus applicable taxes. The official guide lists Salesforce Certified Platform Administrator and Salesforce Certified Agentforce Service Consultant as prerequisites.',
   },
   {
-    question: 'What prerequisites are recommended for the Field Service Consultant exam?',
-    answer: 'ADM-201 is strongly recommended, and Service Cloud Consultant is highly recommended. Field Service is built on top of Service Cloud — Work Orders, Entitlements, and Service Console are all Service Cloud concepts. Candidates without Service Cloud knowledge typically struggle with the Work Order and Managed Package sections. Most successful candidates have hands-on FSL project experience.',
+    question: 'What are the prerequisites for this exam?',
+    answer: 'The official guide lists Salesforce Certified Platform Administrator and Salesforce Certified Agentforce Service Consultant certifications as prerequisites. The exam audience description recommends relevant implementation experience but does not replace these prerequisites.',
   },
   {
     question: 'How long should I study for the Field Service Consultant exam?',
-    answer: 'Plan for 8–12 weeks with 10–15 hours per week. The FSL managed package has a steep learning curve — setting up the package, configuring scheduling policies, and using the Gantt dispatcher console requires hands-on sandbox practice. Read the Salesforce Field Service documentation alongside Trailhead modules.',
+    answer: 'Salesforce does not prescribe a fixed study duration. Use the official exam outline to identify gaps, then combine hands-on practice, Trailhead learning, and Salesforce Help documentation.',
   },
   {
     question: 'What is the Gantt in Salesforce Field Service?',
-    answer: 'The Field Service Gantt is the dispatcher console — a visual scheduling board showing service appointments, technician availability, and travel time. Dispatchers use the Gantt to drag-and-drop appointments, run optimization, filter by territory, and see real-time technician locations. Understanding Gantt configuration (visible resources, time horizon, colour coding) is tested on the exam.',
+    answer: 'The Dispatcher Console provides tools to manage appointments, schedules, resources, and maps. The Gantt is a schedule visualization within the console; consult current Salesforce Help for specific controls and behavior.',
   },
   {
     question: 'What is the difference between scheduling policies and scheduling rules in FSL?',
-    answer: 'Scheduling policies are named rule sets (e.g., Customer First, High Intensity) that combine multiple scheduling rules. Scheduling rules are individual constraints or preferences applied during scheduling — examples include Skill Match (required), Travel Distance (soft preference), and Emergency (priority override). A scheduling policy can include many rules with different priority levels.',
+    answer: 'A Schedule Policy is selected to meet scheduling requirements. Salesforce’s exam outline separately names scheduling services and optimization services; use Salesforce Help for current policy configuration and rule behavior rather than assuming every rule acts as a hard constraint or preference.',
   },
 ]
 
@@ -95,10 +94,10 @@ export default function FieldServiceConsultantStudyGuidePage() {
           <span>Study Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          Salesforce Field Service Consultant Study Guide ({RELEASE_CURRENT})
+          Salesforce Certified Agentforce Field Service and Operations Consultant Study Guide
         </h1>
         <p className="text-lg text-gray-600">
-          Your complete guide to passing the Field Service Consultant exam — Work Orders, scheduling policies, resource management, the FSL managed package, and more.
+          Review the published exam objectives and practice applying Field Service configuration choices to realistic operations scenarios.
         </p>
       </div>
 
@@ -110,14 +109,15 @@ export default function FieldServiceConsultantStudyGuidePage() {
         certName="Field Service Consultant"
         certPageSlug="field-service"
       />
+      <p className="text-sm text-gray-600 mb-6">Official source: <a className="text-salesforce-blue underline" href={issuerGuideUrl}>Salesforce Agentforce Field Service and Operations Consultant Exam Guide</a>. Salesforce lists Platform Administrator and Agentforce Service Consultant as prerequisites.</p>
 
       {/* Exam At a Glance */}
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
-          { label: 'Questions', value: '60' },
+          { label: 'Questions', value: '60 + up to 5 unscored' },
           { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
-          { label: 'Exam Fee', value: '$200' },
+          { label: 'Passing Score', value: '63%' },
+          { label: 'US Registration', value: '$200 + tax' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
@@ -162,19 +162,17 @@ export default function FieldServiceConsultantStudyGuidePage() {
         </div>
       </div>
 
-      {/* 8-Week Study Plan */}
+      {/* Flexible study sequence; Salesforce does not prescribe a duration. */}
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">8-Week Study Plan</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">Suggested Study Sequence</h2>
         <div className="space-y-3 text-sm">
           {[
-            { week: 'Week 1', focus: 'Install the FSL managed package in a developer org. Explore the FSL app, understand the object model: Work Order → Work Order Line Item → Service Appointment.' },
-            { week: 'Week 2', focus: 'Service Territories & Resources — configure service territories, operating hours, service resources (agent, technician, crew), resource skills and skill levels.' },
-            { week: 'Week 3', focus: 'Work Orders — create Work Orders and Line Items, assign required skills and parts, understand status transitions, and configure work type templates.' },
-            { week: 'Week 4', focus: 'Scheduling — configure scheduling policies and rules, manually schedule from dispatcher console, use the Gantt. Understand travel time and skill-matching rules.' },
-            { week: 'Week 5', focus: 'Optimization — Global Optimization, Single Resource Optimization, and In-Day Optimization. When to use each, how to run optimization requests, and interpret results.' },
-            { week: 'Week 6', focus: 'Inventory — product inventory, product requests, product transfers, consumed products on Work Order Line Items. Configure van stock for technicians.' },
-            { week: 'Week 7', focus: 'Mobility & Managed Package — configure the FSL mobile app, offline sync settings, appointment booking, drip feed, and automatic scheduling configuration.' },
-            { week: 'Week 8', focus: 'Full mock exams. Focus on scheduling policy/rule scenarios and FSL object relationship questions — these are the most commonly tested areas.' },
+            { week: '1', focus: 'Map the Work Order, Work Order Line Item, Service Appointment, and Service Resource relationships.' },
+            { week: '2', focus: 'Practice selecting resource types, territory members, skills, and operating hours for a stated service area.' },
+            { week: '3', focus: 'Trace a Work Order through its lifecycle; distinguish Work Types, required products, and line items.' },
+            { week: '4', focus: 'For scheduling scenarios, identify lifecycle constraints first, then choose the policy/service and dispatch strategy.' },
+            { week: '5', focus: 'Review mobility, sign-off, inventory, assets, maintenance plans, permissions, and sharing against the official objectives.' },
+            { week: '6', focus: 'Use original practice questions to diagnose gaps; verify explanations against Salesforce Help and the published outline.' },
           ].map((item) => (
             <div key={item.week} className="flex gap-3">
               <span className="flex-shrink-0 font-semibold text-salesforce-blue w-16">{item.week}</span>
@@ -188,17 +186,17 @@ export default function FieldServiceConsultantStudyGuidePage() {
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Know the FSL object model cold:</strong> Work Order → Work Order Line Items → Service Appointments → Service Resources. Understand which object stores skills (Service Resource), which stores location (Service Territory Member), and which stores the job details (Work Order).</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Scheduling policy vs scheduling rule:</strong> A policy is a named collection of rules. Each rule has a type (Required, Preferred, Excluded), a weight, and a scope. Required rules must be satisfied; preferred rules improve score. Exam scenarios describe a business need — identify which rule type applies.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Optimization types:</strong> Global Optimization runs on all unscheduled appointments in a territory. Single Resource Optimization runs on one technician’s schedule. In-Day Optimization re-optimises the current day in real time. Know when a dispatcher would choose each.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Preferred resource vs required skill:</strong> A preferred resource on an account or work order influences scheduling but doesn’t block it. A required skill on a Work Order blocks scheduling — only technicians with that skill level or higher are candidates.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Work Order relationship:</strong> In a scenario, distinguish the Work Order (job), its Work Order Line Items (tasks), and related Service Appointments (visits). Identify which record the requested change applies to.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Schedule requirements:</strong> Separate eligibility constraints such as skills, operating hours, and territory membership from the business objective, such as selecting a scheduling approach. Confirm the precise rule behavior in Salesforce Help.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Scheduling versus optimization:</strong> Look for whether the scenario asks to place a particular appointment or improve a broader existing schedule; then compare the relevant scheduling or optimization service to the requirement.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Required versus preferred:</strong> Distinguish a stated must-have qualification from a preference in the scenario. Check the applicable object and configuration before assuming either one blocks a candidate resource.</span></li>
         </ul>
       </div>
 
       {/* Mock Benchmark */}
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Field Service is one of the more hands-on exams — if you’ve never used the Gantt dispatcher console or run an optimization, set up a sandbox first. The top two sections (Managing a Field Service Business 19% + Defining Field Service 16%) together account for 35% of the exam.</p>
+        <p className="text-sm text-gray-700">Salesforce does not publish a practice-test readiness threshold. Check your understanding against the official weighted objectives; use a sandbox to compare how different resource, appointment lifecycle, and scheduling choices affect eligibility and dispatch outcomes.</p>
       </div>
 
       {/* Top 10 Review */}

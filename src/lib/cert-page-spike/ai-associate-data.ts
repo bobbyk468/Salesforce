@@ -10,7 +10,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       {
         label: 'Salesforce beginners',
         description:
-          'You want an entry-level Salesforce credential that proves you understand AI concepts, trusted AI principles, and how AI applies to CRM.',
+          'You are reviewing foundational AI concepts, trusted AI principles, and how AI applies to CRM.',
       },
       {
         label: 'Admins and consultants',
@@ -20,7 +20,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       {
         label: 'Career switchers',
         description:
-          'You want a lower-cost credential that strengthens your Salesforce profile before moving into Administrator, Agentforce, or Data Cloud certifications.',
+          'You want historical learning material before moving into current Administrator, Agentforce, or Data Cloud learning.',
       },
     ],
   },
@@ -35,7 +35,7 @@ export const aiAssociateCertPageBody: AssociateSpikeBody = {
       '<strong>Responsible AI focus</strong> — expect questions about bias, hallucinations, data quality, privacy, and human oversight.',
     ],
     passRateGuidance:
-      'Aim for 75%+ on timed practice sets before booking. If you miss ethics or data-quality questions, review the Trusted AI principles and Einstein Trust Layer before retesting.',
+      'This retired exam cannot be booked. Use the practice material as a historical learning review; verify current Salesforce AI learning options with Salesforce.',
   },
   examFormat: {
     heading: 'Salesforce AI Associate Exam Format Explained',

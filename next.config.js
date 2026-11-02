@@ -10,9 +10,9 @@ const nextConfig = {
     optimizePackageImports: ['lucide-react'],
     optimizeCss: true,
     // Include bot-data JSON in the serverless bundle for /api/chat on Vercel.
-    outputFileTracingIncludes: {
-      '/api/chat': ['./bot-data/**/*'],
-    },
+  },
+  outputFileTracingIncludes: {
+    '/api/chat': ['./bot-data/**/*'],
   },
   images: {
     formats: ['image/avif', 'image/webp'],
@@ -33,8 +33,18 @@ const nextConfig = {
         permanent: true,
       },
       {
+        source: '/certifications/developer',
+        destination: '/certifications/developer-1',
+        permanent: true,
+      },
+      {
         source: '/certifications/platform-developer-ii',
         destination: '/certifications/developer-2',
+        permanent: true,
+      },
+      {
+        source: '/og-image',
+        destination: '/og-default.png',
         permanent: true,
       },
       {
@@ -131,11 +141,11 @@ const nextConfig = {
   async headers() {
     const csp = [
       "default-src 'self'",
-      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com",
+      "script-src 'self' 'unsafe-inline' 'unsafe-eval' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com",
       "style-src 'self' 'unsafe-inline'",
       "img-src 'self' data: https: blob:",
       "font-src 'self' data:",
-      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net",
+      "connect-src 'self' https://www.google-analytics.com https://www.googletagmanager.com https://analytics.google.com https://region1.google-analytics.com https://stats.g.doubleclick.net https://cloudflareinsights.com",
       "frame-src 'self'",
       "object-src 'none'",
       "base-uri 'self'",
@@ -145,6 +155,7 @@ const nextConfig = {
       { key: 'Content-Security-Policy', value: csp },
       { key: 'X-Content-Type-Options', value: 'nosniff' },
       { key: 'X-Frame-Options', value: 'DENY' },
+      { key: 'Strict-Transport-Security', value: 'max-age=31536000' },
       { key: 'Referrer-Policy', value: 'strict-origin-when-cross-origin' }, // fixes "Missing Referrer Policy" audit
     ]
     // Apply to every route: root, all pages, all API routes

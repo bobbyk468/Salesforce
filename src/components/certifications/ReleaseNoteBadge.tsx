@@ -4,7 +4,6 @@
  */
 
 import { Sparkles, CheckCircle, Smartphone, ShieldCheck } from 'lucide-react'
-import { RELEASE_CURRENT } from '@/lib/release-data'
 
 export default function ReleaseNoteBadge() {
   return (
@@ -13,8 +12,8 @@ export default function ReleaseNoteBadge() {
       <div className="flex items-start gap-3">
         <Sparkles className="mt-1 h-6 w-6 flex-shrink-0 text-blue-600" />
         <div className="flex-1">
-          <h3 className="text-lg font-bold text-gray-900">Updated for {RELEASE_CURRENT}</h3>
-          <p className="mt-1 text-sm text-gray-600">This page is reviewed every release to stay aligned with the current exam blueprint.</p>
+          <h3 className="text-lg font-bold text-gray-900">Independent study resource</h3>
+          <p className="mt-1 text-sm text-gray-600">Exam objectives and policies can change. Confirm current details with the certification issuer.</p>
         </div>
       </div>
 
@@ -23,16 +22,16 @@ export default function ReleaseNoteBadge() {
         <div className="flex gap-3 rounded-lg bg-white p-4">
           <CheckCircle className="h-5 w-5 flex-shrink-0 text-blue-600" />
           <div className="flex-1">
-            <p className="font-semibold text-gray-900">Exam Blueprint Aligned</p>
-            <p className="mt-1 text-sm text-gray-600">Section weightages match the official {RELEASE_CURRENT} exam guide</p>
+            <p className="font-semibold text-gray-900">Check current objectives</p>
+            <p className="mt-1 text-sm text-gray-600">Use the official exam guide as the source for current objectives and section weights.</p>
           </div>
         </div>
 
         <div className="flex gap-3 rounded-lg bg-white p-4">
           <ShieldCheck className="h-5 w-5 flex-shrink-0 text-blue-600" />
           <div className="flex-1">
-            <p className="font-semibold text-gray-900">Questions Reviewed</p>
-            <p className="mt-1 text-sm text-gray-600">Practice questions and explanations checked each release cycle</p>
+            <p className="font-semibold text-gray-900">Practice for learning</p>
+            <p className="mt-1 text-sm text-gray-600">Use sample questions to review concepts and identify topics for further study.</p>
           </div>
         </div>
 

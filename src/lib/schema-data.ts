@@ -43,7 +43,6 @@ export function getArticleJsonLd({
   about?: string[]
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
-  const now = new Date().toISOString()
   const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
   const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
@@ -56,8 +55,6 @@ export function getArticleJsonLd({
       { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
       imageUrl,
     ],
-    datePublished: datePublished ?? now,
-    dateModified: dateModified ?? now,
     author: [
       { '@type': 'Organization', '@id': `${baseUrl}/#organization`, name: 'Trailblaze Prep', url: baseUrl },
       {
@@ -81,6 +78,9 @@ export function getArticleJsonLd({
     },
   }
 
+  if (datePublished) article.datePublished = datePublished
+  if (dateModified) article.dateModified = dateModified
+
   article.mainEntityOfPage = {
     '@type': 'WebPage',
     '@id': `${url}#webpage`,
@@ -102,7 +102,7 @@ export interface FaqItem {
   answer: string
 }
 
-/** FAQPage JSON-LD for exam-tips, comparison, and path pages. Enables "People Also Ask" rich snippets. */
+/** FAQPage JSON-LD for pages where the marked-up answers are also visible. */
 export function getFaqPageJsonLd(items: FaqItem[]) {
   return {
     '@context': 'https://schema.org',
@@ -229,16 +229,19 @@ export function getComparisonHubJsonLd({
   description,
   path,
   vsPageUrls,
+  datePublished,
+  dateModified,
 }: {
   headline: string
   description: string
   path: string
   vsPageUrls: string[]
+  datePublished?: string
+  dateModified?: string
 }) {
   const url = path.startsWith('http') ? path : `${baseUrl}${path}`
-  const now = new Date().toISOString()
   const imageUrl = `${baseUrl}/og?t=${encodeURIComponent(headline)}`
-  return {
+  const article: Record<string, unknown> = {
     '@context': 'https://schema.org',
     '@type': 'Article',
     headline,
@@ -248,8 +251,6 @@ export function getComparisonHubJsonLd({
       { '@type': 'ImageObject', url: imageUrl, width: 1200, height: 630 },
       imageUrl,
     ],
-    datePublished: now,
-    dateModified: now,
     author: [
       { '@type': 'Organization', name: 'Trailblaze Prep', url: baseUrl },
       {
@@ -275,6 +276,11 @@ export function getComparisonHubJsonLd({
       url: vsUrl.startsWith('http') ? vsUrl : `${baseUrl}${vsUrl}`,
     })),
   }
+
+  if (datePublished) article.datePublished = datePublished
+  if (dateModified) article.dateModified = dateModified
+
+  return article
 }
 
 /** Occupation JSON-LD for cert pages with salary range. Helps Google understand the economic value of the credential. */
@@ -388,7 +394,8 @@ export function getRoleDifficultyProfileJsonLd({
 export interface QuizQuestionItem {
   question: string
   options: string[]
-  correctAnswer: number
+  correctAnswer?: number
+  correctAnswers?: number[]
 }
 
 /** Quiz JSON-LD for a certification page's practice questions. Must mirror the questions actually rendered. */
@@ -398,16 +405,21 @@ export function getQuizJsonLd(name: string, questions: QuizQuestionItem[]) {
     '@type': 'Quiz',
     name,
     about: { '@type': 'Thing', name },
-    hasPart: questions.map((q) => ({
-      '@type': 'Question',
-      text: q.question,
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: q.options[q.correctAnswer],
-      },
-      suggestedAnswer: q.options
-        .filter((_, i) => i !== q.correctAnswer)
-        .map((text) => ({ '@type': 'Answer', text })),
-    })),
+    hasPart: questions.map((q) => {
+      const correctIndices = [...new Set(q.correctAnswers ?? (q.correctAnswer === undefined ? [] : [q.correctAnswer]))]
+      const acceptedAnswers = correctIndices
+        .filter((index) => index >= 0 && index < q.options.length)
+        .map((index) => ({ '@type': 'Answer', text: q.options[index] }))
+      const question: Record<string, unknown> = {
+        '@type': 'Question',
+        text: q.question,
+        suggestedAnswer: q.options
+          .filter((_, index) => !correctIndices.includes(index))
+          .map((text) => ({ '@type': 'Answer', text })),
+      }
+      if (acceptedAnswers.length === 1) question.acceptedAnswer = acceptedAnswers[0]
+      else if (acceptedAnswers.length > 1) question.acceptedAnswer = acceptedAnswers
+      return question
+    }),
   }
 }

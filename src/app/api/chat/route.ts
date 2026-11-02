@@ -1,6 +1,7 @@
 import { NextResponse } from 'next/server'
 import knowledgeBase from '../../../../bot-data/knowledge-base.json'
 import { getRuntimeSecret } from '@/lib/runtime-secrets'
+import { readBoundedJson } from '@/lib/read-bounded-json'
 
 // ---------------------------------------------------------------------------
 // BM25 — retrieval at query time with no external deps or API calls
@@ -33,6 +34,7 @@ interface Chunk {
   url: string
   source: string
   content: string
+  pageNotice?: string
 }
 
 interface BM25State {
@@ -111,9 +113,12 @@ function bm25Search(query: string, k = 5): Chunk[] {
 
 const RATE_LIMIT_WINDOW_MS = 60_000
 const RATE_LIMIT_MAX = 20
+// Best-effort per-isolate protection only; persistent shared limiting is intentionally deferred.
 const rateLimitMap = new Map<string, { count: number; resetAt: number }>()
 
 function getClientIp(request: Request): string {
+  const cloudflareIp = request.headers.get('cf-connecting-ip')
+  if (cloudflareIp) return cloudflareIp.trim()
   const fwd = request.headers.get('x-forwarded-for')
   if (fwd) return fwd.split(',')[0].trim()
   return request.headers.get('x-real-ip') || 'unknown'
@@ -185,13 +190,22 @@ export async function POST(request: Request) {
       )
     }
 
-    const body = await request.json()
-    const { message } = body as {
-      message: string
+    const parsed = await readBoundedJson(request)
+    if (!parsed.ok) return NextResponse.json({ error: parsed.error }, { status: parsed.status })
+    const body = parsed.body
+    if (!body || typeof body !== 'object' || Array.isArray(body)) {
+      return NextResponse.json({ error: 'Invalid chat request.' }, { status: 400 })
     }
-
-    if (!message?.trim()) {
+    const messageValue = (body as Record<string, unknown>).message
+    if (typeof messageValue !== 'string') {
+      return NextResponse.json({ error: 'Message must be text.' }, { status: 400 })
+    }
+    const message = messageValue.trim()
+    if (!message) {
       return NextResponse.json({ error: 'Message is required.' }, { status: 400 })
+    }
+    if (message.length > 2000) {
+      return NextResponse.json({ error: 'Message must be 2,000 characters or fewer.' }, { status: 413 })
     }
 
     // BM25 retrieval against the bundled Trailblaze Prep corpus only.
@@ -207,7 +221,7 @@ export async function POST(request: Request) {
     }
 
     const context = chunks
-      .map(c => `[Trailblaze Prep page: ${c.title}]\n${c.content}`)
+      .map(c => `[Trailblaze Prep page: ${c.title}]\n${c.pageNotice ? `Page notice: ${c.pageNotice}\n\n` : ''}${c.content}`)
       .join('\n\n---\n\n')
 
     const groqRes = await fetch('https://api.groq.com/openai/v1/chat/completions', {
@@ -232,8 +246,7 @@ export async function POST(request: Request) {
     })
 
     if (!groqRes.ok) {
-      const errText = await groqRes.text()
-      console.error('[Chat] Groq error:', groqRes.status, errText)
+      console.error('[Chat] Groq request failed:', groqRes.status)
       return NextResponse.json(
         { error: 'Assistant is temporarily unavailable. Please try again.' },
         { status: 503 }
@@ -249,8 +262,8 @@ export async function POST(request: Request) {
         Connection: 'keep-alive',
       },
     })
-  } catch (err) {
-    console.error('[Chat] Unexpected error:', err)
+  } catch {
+    console.error('[Chat] Unexpected request failure.')
     return NextResponse.json(
       { error: 'Something went wrong. Please try again.' },
       { status: 500 }

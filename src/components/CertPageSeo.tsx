@@ -1,5 +1,4 @@
 import Link from 'next/link'
-import { RELEASE_CURRENT } from '@/lib/release-data'
 import {
   getCertBreadcrumb,
   getCertBreadcrumbJsonLd,
@@ -57,10 +56,6 @@ export default function CertPageSeo({ slug, certTitle }: CertPageSeoProps) {
         </ol>
       </nav>
 
-      {/* Freshness + E-E-A-T badge — visible to users and crawlers */}
-      <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-xs font-medium text-salesforce-dark mb-4">
-        Updated for {RELEASE_CURRENT}
-      </p>
     </>
   )
 }

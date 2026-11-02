@@ -11,7 +11,7 @@
  * Exit code 1 if any violations found — safe to add as a CI step.
  */
 
-import { readFileSync, readdirSync, statSync } from 'fs'
+import { existsSync, readFileSync, readdirSync } from 'fs'
 import { join } from 'path'
 
 const BUILD_DIR = join(process.cwd(), '.next/server/app')
@@ -53,6 +53,11 @@ function extractDescription(html) {
 let violations = 0
 let checked = 0
 
+if (!existsSync(BUILD_DIR)) {
+  console.error('No production build found. Run npm run build before validating metadata.')
+  process.exit(1)
+}
+
 for (const file of walkHtml(BUILD_DIR)) {
   const html = readFileSync(file, 'utf8')
   const relPath = file.replace(BUILD_DIR, '').replace(/\/page\.html$/, '') || '/'
@@ -77,6 +82,11 @@ for (const file of walkHtml(BUILD_DIR)) {
     console.warn(`MISSING DESC on ${relPath}`)
     violations++
   }
+}
+
+if (checked === 0) {
+  console.error('No HTML pages found; metadata validation did not run.')
+  process.exit(1)
 }
 
 console.log(`\nChecked ${checked} pages. Violations: ${violations}`)

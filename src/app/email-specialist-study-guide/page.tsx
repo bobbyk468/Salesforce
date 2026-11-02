@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import Link from 'next/link'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
-import { RELEASE_CURRENT } from '@/lib/release-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import DifficultyHeatmap from '@/components/DifficultyHeatmap'
 import { buildStudyGuideTitle } from '@/lib/seo-title-helpers'
@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'email-specialist'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Salesforce Email Specialist study guide (${RELEASE_CURRENT}): 6 exam sections, Journey Builder, deliverability tips, 8-week plan, and free practice questions. $200 fee.`
+const pageDescription = `Marketing Cloud Engagement Specialist study guide (${RELEASE_YEAR}): official objectives, email automation, subscriber data, analytics, and original practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -45,22 +45,21 @@ const breadcrumbItems = [
 ]
 
 const examSections = [
-  { name: 'Email Sending & Delivery', weight: 24, note: 'Send classifications, delivery profiles, sender authentication (SPF, DKIM, DMARC), bounce management (hard vs soft), suppression lists, compliance (CAN-SPAM, GDPR), and deliverability best practices.' },
-  { name: 'Journey Building', weight: 20, note: 'Journey Builder entry sources (data extension, Salesforce data, API event, audience, date-based). Journey activities: Email, Wait, Decision Split, Engagement Split, Update Contact, Salesforce Activity. Journey testing, activation, and goal metrics.' },
-  { name: 'Subscriber & List Management', weight: 18, note: 'All Subscribers list, publications, suppression lists, data extensions vs lists, subscriber key, profile and preference centre, unsubscribe management, and data extension relationships.' },
-  { name: 'Email Design & Creation', weight: 16, note: 'Content Builder: blocks, templates, layout blocks, dynamic content. AMPscript basics for personalisation. A/B testing setup (subject line, content, from name). Preview and test sends.' },
-  { name: 'Reporting & Analytics', weight: 12, note: 'Email performance metrics: open rate, click rate, bounce rate, unsubscribe rate, delivery rate. Tracking extracts, data views, Intelligence Reports. Setting up tracking and measuring campaign performance.' },
-  { name: 'Account Management', weight: 10, note: 'Marketing Cloud account hierarchy (enterprise, business units), user roles and permissions, sender profile, reply mail management, and connect to Sales/Service Cloud via Marketing Cloud Connect.' },
+  { name: 'Email Marketing Best Practices', weight: 10, note: 'Evaluate email design and programs, deliverability, and subscriber acquisition and retention.' },
+  { name: 'Content Creation and Delivery', weight: 24, note: 'Prepare and customize messages, configure sends, report on email performance, and select relevant Einstein capabilities.' },
+  { name: 'Marketing Automation', weight: 26, note: 'Review the official guide objectives for Marketing Cloud automation tools and campaign workflows.' },
+  { name: 'Subscriber and Data Management', weight: 26, note: 'Review subscriber and data management objectives, including data models, segmentation, and subscriber status.' },
+  { name: 'Insights and Analytics', weight: 14, note: 'Review reporting and analytics objectives in the current official exam guide.' },
 ]
 
 const faqItems = [
   {
     question: 'What is the Salesforce Marketing Cloud Email Specialist certification?',
-    answer: 'The Marketing Cloud Email Specialist certification validates skills in building email campaigns in Salesforce Marketing Cloud Engagement — including Email Studio, Content Builder, Journey Builder, subscriber management, and deliverability. The exam has 60 questions, 105 minutes, ~65% passing score, and a $200 fee. It is the entry-level Marketing Cloud certification and a prerequisite for Marketing Cloud Consultant.',
+    answer: 'The Salesforce Certified Marketing Cloud Engagement Specialist credential covers email marketing skills in Marketing Cloud. The exam has 60 multiple-choice questions and up to five unscored questions, 90 minutes, a 67% passing score, and a $200 registration fee. No prerequisite is required; MKT 101 attendance is highly recommended.',
   },
   {
     question: 'Do I need Marketing Cloud experience before the Email Specialist exam?',
-    answer: 'Hands-on Marketing Cloud Engagement experience is essential. The exam tests practical scenarios — configuring a Journey, setting up send classifications, managing suppression lists — that cannot be learned from documentation alone. Request a Marketing Cloud trial environment or work through the Trailhead Marketing Cloud Trailmix with a live sandbox before sitting the exam.',
+    answer: 'No formal prerequisite is required. Salesforce describes a typical audience with Marketing Cloud Email application experience and recommends MKT 101; hands-on practice and the official study resources can help you review the objectives.',
   },
   {
     question: 'What is the difference between a list and a data extension in Marketing Cloud?',
@@ -68,11 +67,11 @@ const faqItems = [
   },
   {
     question: 'What is the hardest part of the Email Specialist exam?',
-    answer: 'Email Sending & Delivery (24%) and Journey Building (20%) are the highest-weighted and most commonly cited as hardest sections. Deliverability (SPF, DKIM, DMARC, bounce types) requires technical understanding. Journey Builder requires hands-on practice — understanding which entry source and activity type to use for a given scenario is tested directly and requires sandbox experience.',
+    answer: 'The official outline assigns the largest weights to Marketing Automation and Subscriber and Data Management (26% each), followed by Content Creation and Delivery (24%). Review each section against the official objectives and focus extra practice where your knowledge is weakest.',
   },
   {
     question: 'Is the Email Specialist required before Marketing Cloud Consultant?',
-    answer: 'Yes — the Salesforce Marketing Cloud Consultant certification requires the Marketing Cloud Email Specialist as a formal prerequisite. You must pass Email Specialist before you can sit the Consultant exam. This makes Email Specialist the first step on the Marketing Cloud certification path.',
+    answer: 'The Marketing Cloud Engagement Specialist exam guide lists no prerequisite. Check the current Marketing Cloud Engagement Consultant exam guide for its own prerequisite requirements before registering.',
   },
 ]
 
@@ -92,7 +91,7 @@ export default function EmailSpecialistStudyGuidePage() {
           <span>Study Guide</span>
         </div>
         <h1 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-3">
-          Marketing Cloud Email Specialist Study Guide ({RELEASE_CURRENT})
+          Marketing Cloud Engagement Specialist Study Guide ({RELEASE_YEAR})
         </h1>
         <p className="text-lg text-gray-600">
           Your complete guide to passing the Email Specialist exam — Journey Builder, deliverability, subscriber management, Content Builder, and free practice questions.
@@ -110,9 +109,9 @@ export default function EmailSpecialistStudyGuidePage() {
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
-          { label: 'Questions', value: '60' },
-          { label: 'Time Limit', value: '105 min' },
-          { label: 'Passing Score', value: '~65%' },
+          { label: 'Questions', value: '60 + up to 5 unscored' },
+          { label: 'Time Limit', value: '90 min' },
+          { label: 'Passing Score', value: '67%' },
           { label: 'Exam Fee', value: '$200' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
@@ -181,7 +180,7 @@ export default function EmailSpecialistStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">How to Read Scenario Questions</h2>
         <ul className="space-y-3 text-sm text-gray-700">
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">1.</span><span><strong>Bounce type classification:</strong> Hard bounce = permanent delivery failure (invalid address) → automatically unsubscribed. Soft bounce = temporary failure (mailbox full, server unavailable) → retried. Technical bounce = infrastructure issue (block, challenge-response). Know which category triggers automatic unsubscription.</span></li>
-          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Journey entry source selection:</strong> Data Extension entry for scheduled or batch sends; Salesforce Data entry for CRM-triggered journeys; API Event for real-time triggers from external systems; Date-Based entry for anniversary or renewal journeys. The exam presents a scenario — match the trigger type to the entry source.</span></li>
+          <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">2.</span><span><strong>Journey entry source selection:</strong> Data Extension entry for scheduled or batch sends; Salesforce Data entry for CRM-triggered journeys; API Event for real-time triggers from external systems; Date-Based entry for anniversary or renewal journeys. For practice scenarios, match the trigger type to the entry source.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">3.</span><span><strong>Decision Split vs Engagement Split:</strong> Decision Split branches based on data attributes (contact field values). Engagement Split branches based on email interaction behaviour (opened, clicked, not opened). Pick the right one based on whether the branching condition is data-driven or interaction-driven.</span></li>
           <li className="flex gap-2"><span className="text-salesforce-blue font-bold flex-shrink-0">4.</span><span><strong>Suppression list vs publication list:</strong> Suppression lists prevent sends to specific addresses regardless of subscription status. Publication lists are opt-in lists for specific content types. A contact can be on a publication list but also suppressed — suppression always wins.</span></li>
         </ul>
@@ -189,7 +188,7 @@ export default function EmailSpecialistStudyGuidePage() {
 
       <div className="bg-salesforce-blue/5 rounded-xl border border-salesforce-blue/20 p-5 mb-8">
         <h2 className="text-lg font-bold text-gray-900 mb-2">Readiness Benchmark</h2>
-        <p className="text-sm text-gray-700">Aim for <strong>75%+ on practice exams</strong> before scheduling. Email Sending &amp; Delivery (24%) is the largest section — master bounce types, suppression logic, and SPF/DKIM/DMARC. Journey Building (20%) requires hands-on sandbox experience to answer scenario questions confidently. Together these two sections account for 44% of the exam.</p>
+        <p className="text-sm text-gray-700">Use practice exams to identify gaps, then review the official objectives. Marketing Automation and Subscriber and Data Management are each 26% of the exam outline; Content Creation and Delivery is 24%. No practice score guarantees an exam result.</p>
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">

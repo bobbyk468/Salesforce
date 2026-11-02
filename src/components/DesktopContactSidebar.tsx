@@ -10,7 +10,7 @@ const ContactSidebar = dynamic(() => import('@/components/ContactSidebar'), {
 /**
  * Rendered only on desktop (via DesktopSidebarSlot). Uses a mount gate so the
  * heavy ContactSidebar does not run during initial hydration, reducing desktop TBT.
- * Placeholder has fixed width (w-80) to match layout and prevent CLS.
+ * Placeholder fills the padded sidebar column without introducing overflow.
  */
 export default function DesktopContactSidebar() {
   const [mounted, setMounted] = useState(false)
@@ -36,7 +36,7 @@ export default function DesktopContactSidebar() {
   if (!mounted) {
     return (
       <div
-        className="w-80 min-h-[420px] bg-transparent"
+        className="w-full min-w-0 min-h-[420px] bg-transparent"
         aria-hidden="true"
       />
     )

@@ -2,6 +2,15 @@ import { NextResponse } from 'next/server'
 import type { NextRequest } from 'next/server'
 
 export function middleware(request: NextRequest) {
+  const url = request.nextUrl.clone()
+  const productionHost = ['trailblazeprep.com', 'www.trailblazeprep.com'].includes(url.hostname)
+  if (productionHost && (url.protocol !== 'https:' || url.hostname !== 'www.trailblazeprep.com')) {
+    url.protocol = 'https:'
+    url.hostname = 'www.trailblazeprep.com'
+    url.port = ''
+    return NextResponse.redirect(url, 308)
+  }
+
   const response = NextResponse.next()
 
   // Query-param contact URLs are utility entry points; keep canonical /contact as the indexable URL.
@@ -13,5 +22,5 @@ export function middleware(request: NextRequest) {
 }
 
 export const config = {
-  matcher: ['/contact'],
+  matcher: ['/:path*'],
 }
