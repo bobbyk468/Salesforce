@@ -71,3 +71,11 @@ performance-report/
 
 # Temporary data files
 scripts/sample_pii_data/
+
+# Imported question banks are generated locally by scripts/import-git-questions.mjs
+# from a private source repo and are not redistributed here. Only empty placeholders
+# are tracked, so a clean clone builds and pages fall back to their own questions.
+src/lib/question-banks/imported/*
+!src/lib/question-banks/imported/banks.json
+!src/lib/question-banks/imported/counts.json
+src/lib/question-banks/local/
