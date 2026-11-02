@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Admins configuring order fulfillment",
-        "description": "You set up order orchestration workflows, fulfillment routing rules, and return processing in Salesforce Order Management and want to formalize that expertise."
+        "description": "You set up how orders are split, routed and shipped in Salesforce Order Management."
       },
       {
         "label": "Operations managers",
-        "description": "You oversee inventory allocation, fulfillment location management, and post-purchase customer service and need the credential to validate your Order Management knowledge."
+        "description": "You own order processing, returns and customer service for orders, and want to understand how the system works."
       },
       {
         "label": "Implementation partners",
-        "description": "You connect Salesforce Order Management to Commerce Cloud storefronts and external fulfillment systems and want formal recognition of your implementation skills."
+        "description": "You roll out Order Management alongside B2C or B2B Commerce for clients."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Order Management Administrator AP Exam Hard?",
-    "summary": "The Order Management Admin AP is moderately challenging. The ~65% passing score is standard, but the exam covers a specialized product with its own data model (Order Summary, Fulfillment Order, Return Order) that differs from standard Salesforce objects, requiring focused study.",
+    "summary": "It is a moderate exam, but the product has its own data model that most admins haven't used. Once you understand how an Order becomes an Order Summary and then Fulfillment Orders, the rest falls into place.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; standard for AP exams, but the Order Management data model is unfamiliar territory for most Salesforce admins.",
-      "<strong>Specialized domain</strong> &mdash; concepts like Distributed Order Management, OCI inventory allocation, and Return Merchandise Authorization are unique to this product and cannot be learned from general admin experience.",
-      "<strong>Integration knowledge required</strong> &mdash; the exam tests how Order Management connects to B2B Commerce, B2C Commerce, and external fulfillment providers."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>New data model.</strong> Order Summary, Fulfillment Order, Return Order, Change Order and their related objects.",
+      "<strong>Flow-driven processes.</strong> Much of the order lifecycle is run by flows, so know which flows do what."
     ],
-    "passRateGuidance": "Walk through the full order lifecycle in a developer org &mdash; from order capture through fulfillment, shipment, and return/refund processing &mdash; before booking the exam."
+    "passRateGuidance": "Set up a trial org with Order Management and push a test order all the way through fulfilment, cancellation and return. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Order Management Administrator AP Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Expect scenario questions describing an omnichannel retailer’s order fulfillment challenge and asking which Order Management configuration solves it. Common themes include fulfillment routing, partial fulfillment across locations, return processing, and Commerce Cloud integration.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions are about an order at a certain stage, such as a partial cancellation or a return, and ask which record, flow or setting handles it.",
     "bestWayToPass": [
-      "<strong>Master the OM data model:</strong> Know how Order Summary, Order Product Summary, Fulfillment Order, and Order Delivery Group relate to each other and to standard Salesforce Order objects.",
-      "<strong>Study fulfillment routing:</strong> Understand how routing rule sets select fulfillment locations based on inventory availability, proximity, and business rules, and how partial fulfillment splits orders across locations.",
-      "<strong>Practice return and refund flows:</strong> Configure return orders, RMA approval, refund processing through original payment methods, and inventory restocking in a hands-on environment.",
-      "<strong>Know the Commerce Cloud integration:</strong> Understand how orders flow from B2B and B2C Commerce storefronts into Order Management, how order status syncs back to the storefront, and how the customer order history portal works."
+      "<strong>Draw the data model:</strong> Order, Order Summary, Order Item Summary, Fulfillment Order, Return Order and Change Order.",
+      "<strong>Follow one order through its life:</strong> Placed, routed, fulfilled, invoiced, then cancelled or returned.",
+      "<strong>Know the role of flows:</strong> Many steps, like creating fulfilment orders or handling exceptions, run in flows you can change.",
+      "<strong>Learn Omnichannel Inventory basics:</strong> Locations, location groups, availability and reservations."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers administering Salesforce Order Management, including order lifecycle configuration, fulfillment routing, inventory allocation, return/refund processing, and Commerce Cloud integration.",
+    "description": "This exam tests how you set up and run Salesforce Order Management: the order data model, routing and fulfilment, changes, returns, payments and inventory.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -61,71 +61,71 @@
     "blocks": [
       {
         "heading": "Order Lifecycle & Order Summary",
-        "body": "Salesforce Order Management (SOM) tracks the post-purchase lifecycle from order capture through fulfillment and return. The Order Summary is the central object — it holds the canonical state of an order and aggregates Order Product Summaries (line items), Fulfillment Orders, Invoices, and Payment Summaries. Order states: Draft → Activated → Fulfilled → Cancelled. Order Product Summary states: Ordered → Allocated → Fulfilled → Returned. Change Orders handle post-capture modifications (address change, item cancellation, add-on). The AP exam tests the Order Summary data model, how state transitions are triggered, and the relationship between Order Summary and its child objects."
+        "body": "An order usually arrives from a commerce store or an outside system as an **Order**. Order Management then creates an **Order Summary**, which becomes the main record for everything that happens next. The Order Summary has **Order Item Summaries** for each product and **Order Delivery Group Summaries** for each delivery address and method. The original Order isn't changed after that. All later changes, like cancellations or price adjustments, are recorded against the Order Summary, so you always have both the original order and its current state."
       },
       {
         "heading": "Fulfillment & Inventory Allocation",
-        "body": "Fulfillment Orders represent the instruction to a fulfillment location to pick, pack, and ship items. Distributed Order Management (DOM) determines which fulfillment location handles each item based on inventory availability, proximity, and business rules. Fulfillment Location represents a warehouse, store, or 3PL partner. Inventory Availability is checked in real time via OCI (Omnichannel Inventory) API. Partial Fulfillment splits an order across multiple locations or shipments. Fulfillment Order Line Items map to specific order products and quantities. The exam tests how to configure fulfillment rules, how DOM selects locations, and how partial fulfillment is handled when one location has insufficient stock."
+        "body": "To ship an order, Order Management creates **Fulfillment Orders**, each tied to one **Location** such as a warehouse or store. Routing logic, usually in a flow, decides which location fulfils which items, for example the nearest warehouse with stock. One Order Summary can be split across several Fulfillment Orders. Warehouse staff or outside systems update the Fulfillment Order as items are picked, packed and shipped. Once items ship, an **invoice** can be created and payment captured."
       },
       {
         "heading": "Returns, Refunds & Return Merchandise Authorization",
-        "body": "Return Orders represent a customer's request to return one or more items. Return Merchandise Authorization (RMA) is the approval to accept a return. Return Order Line Items reference the original Order Product Summaries. Upon receipt of the returned item, a Return Receipt is created and inventory is restocked. Refunds are processed through the original payment method — partial refunds are supported. Credit Memos document the financial adjustment. Exchange workflows replace a returned item with a new one in a single transaction. The AP exam tests the configuration of a return policy, the sequence of return → receipt → refund → inventory restock, and how to set up an exchange flow."
+        "body": "Before shipping, a customer can **cancel** items, which creates a **Change Order** and lowers the amount on the Order Summary. After shipping, a customer **returns** items with a **Return Order** and **Return Order Line Items**. When the return is received, the items are marked as returned and a refund is issued with a **credit memo**. Service agents usually do this from the Order Summary in the console, using built-in actions. The process records why items came back, which helps reporting."
       },
       {
         "heading": "Pricing, Promotions & Tax",
-        "body": "Order Management uses Price Adjustments to apply discounts at the order level (coupon codes, loyalty discounts) or the line level (product-specific promotions). Price Book Entries set base prices. Tax Policies and Tax Treatments configure tax calculation — either Salesforce Tax or a third-party integration (Avalara, Vertex). Tax is calculated at order capture and re-calculated if the order is modified. Shipping Charges are added as a separate order product. The AP exam tests how to configure a promotion that applies a percentage discount to an entire order, how tax is recalculated on a change order, and how shipping charges are represented in the Order Summary data model."
+        "body": "Prices, discounts and taxes come across from the original order and are stored on the Order Summary and its item summaries. When items are cancelled or returned, the system works out how much to refund, including the right share of any order-level discount and tax. Price adjustments, such as a goodwill discount, are recorded as changes so the totals stay correct. Payment records such as **Payment Summaries** track what was authorised, captured and refunded."
       },
       {
         "heading": "Integration & OCI (Omnichannel Inventory)",
-        "body": "OCI (Omnichannel Inventory) is the Salesforce API layer for real-time inventory availability checks across fulfillment locations. External systems (e-commerce platforms, ERP, WMS) integrate with SOM via the Order Management APIs. Webhooks and **Platform Events** notify external systems of order state changes. External Fulfillment Provider integration sends Fulfillment Orders to 3PL partners. The External Catalog and Pricing APIs support headless commerce scenarios where the storefront is not Salesforce B2B/B2C Commerce. The AP exam tests how to design the integration between a Salesforce-native Commerce Cloud storefront and SOM, how OCI responds to an availability check, and how to handle an external fulfillment partner that cannot receive Salesforce webhooks."
+        "body": "**Omnichannel Inventory** tracks stock across locations. **Location groups** let you show availability for a set of locations, such as all warehouses in one country. When an order is placed, stock is **reserved** so it can't be sold twice, and the reservation moves to the fulfilling location when the order is routed. Order Management works closely with B2C and B2B Commerce, and with outside systems like warehouse or ERP systems through APIs and events. Failures in automated steps can be caught and handled as **process exceptions** that agents can review."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Order Management Administrator Accredited Professional Exam",
-    "intro": "The Order Management Admin AP exam tests administration of Salesforce Order Management for omnichannel fulfillment. Focus on order lifecycle configuration, fulfillment routing, and inventory allocation.",
+    "intro": "Most questions place you at one point in an order's life. Work out which record changes at that point and which flow or action does the work.",
     "blocks": [
       {
         "heading": "Order Management Data Model",
-        "body": "Know the OM data model: Order Summary (master order record), Fulfillment Order (fulfillment unit), Fulfillment Order Line Item, Order Delivery Group (ship-to address), and how these relate to standard Order objects."
+        "body": "Order is the original. Order Summary is the living record. Fulfillment Orders ship. Change Orders record cancellations and adjustments. Return Orders handle returns."
       },
       {
         "heading": "Order Routing & Allocation",
-        "body": "Know how to configure routing rules: Order Routing Rule Sets, Inventory allocation logic (allocate from nearest location), and how the routing engine selects fulfillment locations based on inventory availability."
+        "body": "Routing decides which location fulfils which items, usually in a flow. One order can be split across locations."
       },
       {
         "heading": "Order Lifecycle Configuration",
-        "body": "Know the standard OM order statuses and the actions that transition between them: Activated → Fulfillment → Shipped → Delivered → Return/Refund. Know how Process Builders or Flows automate status transitions."
+        "body": "Order Summary status shows where the order is. Flows drive most steps, and admins can change them."
       },
       {
         "heading": "Return & Refund Processing",
-        "body": "Know how to configure return orders: Return Merchandise Authorizations (RMA), return reason codes, refund payment processing, and how restocking updates inventory counts."
+        "body": "Cancel before shipping, return after shipping. Refunds use credit memos."
       },
       {
         "heading": "OM Integration with Commerce",
-        "body": "Know how Salesforce Order Management integrates with B2B Commerce and B2C Commerce (SFCC): order creation via API, order status sync back to the storefront, and how the customer order history portal works."
+        "body": "Commerce places the order, Order Management fulfils it, and Omnichannel Inventory keeps stock correct across channels."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after Order Management Admin:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/order-management-developer-ap",
+        "label": "Order Management Developer AP"
+      },
+      {
+        "href": "/certifications/b2c-commerce-developer",
+        "label": "B2C Commerce Developer"
+      },
+      {
+        "href": "/certifications/b2b-commerce-admin-ap",
+        "label": "B2B Commerce Admin AP"
       },
       {
         "href": "/certifications/service-cloud",
         "label": "Service Cloud Consultant"
-      },
-      {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
-      },
-      {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
       }
     ]
   },
@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Order Management Administrator AP validate?",
+      "question": "After an order comes in from the online store, which record becomes the main record for tracking its fulfilment, changes and returns?",
       "options": [
-        "Only basics",
-        "Experience implementing and consulting on Order Management projects in a customer-facing role",
-        "Only reporting",
-        "Only Slack"
+        "The original Order",
+        "The Account",
+        "The Order Summary",
+        "The Cart"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Order Management Administrator Professionals have experience implementing and consulting on Order Management projects in a customer-facing role."
+      "correctAnswer": 2,
+      "explanation": "Order Management creates an Order Summary from the Order, and all later activity is recorded against it.",
+      "whyWrong": [
+        "The original Order is kept as it was and isn't updated.",
+        "The Account is the customer, not the order.",
+        "The cart is gone once the order is placed."
+      ]
     },
     {
-      "question": "Which Salesforce product does Order Management refer to?",
+      "question": "An order has items shipping from two different warehouses. How is this represented?",
       "options": [
-        "Marketing Cloud",
-        "Order Management for order orchestration and fulfillment",
-        "Service Cloud",
-        "Slack"
+        "Two separate Accounts",
+        "Two Fulfillment Orders, one for each location",
+        "One Return Order",
+        "Two Order Summaries"
       ],
       "correctAnswer": 1,
-      "explanation": "Order Management is Salesforce's order orchestration and fulfillment product."
+      "explanation": "Each Fulfillment Order is tied to one location, so an order split across warehouses gets one per warehouse.",
+      "whyWrong": [
+        "The customer is the same.",
+        "Return Orders are for returns.",
+        "There is one Order Summary per order."
+      ]
     },
     {
-      "question": "What is a key activity for an Order Management Administrator?",
+      "question": "A customer cancels one item before it has shipped. What does Order Management create?",
       "options": [
-        "Only coding",
-        "Implementing and consulting on Order Management projects",
-        "Only reporting",
-        "Only lists"
+        "A new Order",
+        "A Case only",
+        "A Return Order",
+        "A Change Order that reduces the Order Summary"
       ],
-      "correctAnswer": 1,
-      "explanation": "They implement and consult on Order Management projects."
+      "correctAnswer": 3,
+      "explanation": "Cancellations before shipping are recorded as Change Orders, which adjust the Order Summary totals.",
+      "whyWrong": [
+        "A new Order isn't needed.",
+        "A Case may be logged, but it doesn't change the order.",
+        "Return Orders are for items that have already shipped."
+      ]
     },
     {
-      "question": "Which role typically pursues Order Management Admin AP?",
+      "question": "A customer wants to send back a shipped item for a refund. What should the agent use?",
       "options": [
-        "Marketers",
-        "Partners and implementers working with Order Management",
-        "Sales only",
-        "Designers only"
+        "A Return Order with Return Order Line Items",
+        "Delete the Order Item Summary",
+        "Edit the original Order",
+        "A Change Order to cancel the item"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with Order Management pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Shipped items are returned through a Return Order. When received, the refund is processed.",
+      "whyWrong": [
+        "Deleting records loses history and breaks totals.",
+        "The original Order should not be changed.",
+        "Cancellation is for items that haven't shipped yet."
+      ]
     },
     {
-      "question": "What does order orchestration often involve?",
+      "question": "The business wants orders sent to the warehouse closest to the customer that has stock. Where is this logic usually set up?",
       "options": [
-        "Only email",
-        "Fulfillment, inventory, and shipping coordination",
-        "Only CPQ",
-        "Only Slack"
+        "In the routing flow that creates Fulfillment Orders",
+        "In the product description",
+        "In a report",
+        "In the Account page layout"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order orchestration involves fulfillment, inventory, and shipping coordination."
+      "correctAnswer": 0,
+      "explanation": "Routing is usually handled by a flow that picks locations and creates Fulfillment Orders. Admins can change its logic.",
+      "whyWrong": [
+        "Product descriptions can't route orders.",
+        "Reports show data but don't act on it.",
+        "Page layouts don't route orders."
+      ]
     },
     {
-      "question": "Which Order Management concept refers to splitting an order into multiple fulfillment groups?",
+      "question": "The online store must show stock available across all warehouses in Germany. What should be configured?",
       "options": [
-        "Order capture only",
-        "Order orchestration and fulfillment groups",
-        "CPQ only",
-        "Lead routing"
+        "A separate store for each warehouse",
+        "A custom field on each product",
+        "A daily email from each warehouse",
+        "A location group in Omnichannel Inventory containing the German warehouses"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order orchestration can split orders into fulfillment groups for different locations or methods."
+      "correctAnswer": 3,
+      "explanation": "Location groups combine availability for several locations, which the store can then show.",
+      "whyWrong": [
+        "Separate stores don't combine stock.",
+        "A custom field must be updated by hand and goes out of date.",
+        "Emails don't feed the store."
+      ]
     },
     {
-      "question": "What does fulfillment coordination typically include?",
+      "question": "Why does Order Management reserve stock when an order is placed?",
       "options": [
-        "Email only",
-        "Inventory allocation, picking, packing, and shipping",
-        "Reports only",
-        "CPQ quotes"
+        "To raise the price",
+        "So the same item isn't sold twice before it ships",
+        "To create an invoice",
+        "To hide the product from search"
       ],
       "correctAnswer": 1,
-      "explanation": "Fulfillment coordination covers inventory, picking, packing, and shipping steps."
+      "explanation": "A reservation holds the stock for that order until it is fulfilled, so other buyers can't buy it.",
+      "whyWrong": [
+        "Reservations don't change prices.",
+        "Invoices come after shipping.",
+        "Search visibility isn't affected."
+      ]
     },
     {
-      "question": "Which Salesforce product often integrates with Order Management?",
+      "question": "A step in an order flow fails because a payment service didn't respond. How can agents find and fix these orders?",
       "options": [
-        "Marketing Cloud only",
-        "Commerce Cloud, CPQ, and Billing",
-        "Slack only",
-        "Tableau only"
+        "Wait for customers to complain",
+        "Search emails for errors",
+        "Delete the failed orders",
+        "Review the process exceptions created for the failures"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order Management integrates with Commerce Cloud, CPQ, and Billing."
+      "correctAnswer": 3,
+      "explanation": "Process exceptions record failures in automated steps so agents can see and resolve them.",
+      "whyWrong": [
+        "Waiting for complaints harms customers.",
+        "Emails aren't a reliable list of failures.",
+        "Deleting orders loses sales."
+      ]
     },
     {
-      "question": "What is a fulfillment order in Order Management?",
+      "question": "A service agent gives a customer a goodwill discount on an order that has already been placed. How should it be recorded?",
       "options": [
-        "A CPQ quote",
-        "A unit of work that drives fulfillment (e.g., ship-to-location)",
-        "A lead",
-        "An email"
+        "In a note only",
+        "By editing the original Order's total",
+        "As a price adjustment recorded against the Order Summary",
+        "By deleting an item"
       ],
-      "correctAnswer": 1,
-      "explanation": "Fulfillment orders represent units of work for fulfillment execution."
+      "correctAnswer": 2,
+      "explanation": "Adjustments are recorded as changes on the Order Summary, so totals and refunds stay correct.",
+      "whyWrong": [
+        "A note doesn't change the amount owed.",
+        "The original Order should stay unchanged.",
+        "Deleting items misstates what the customer bought."
+      ]
     },
     {
-      "question": "What is an order summary in Order Management?",
+      "question": "An order had a 10% order-level discount. The customer returns one of three items. What should the refund include?",
       "options": [
-        "A CPQ quote",
-        "The consolidated view of order details, orchestration status, and fulfillment progress",
-        "A lead",
-        "An email"
+        "The whole order amount",
+        "The item's price less its share of the discount, plus its share of tax",
+        "The full item price with no discount",
+        "Nothing, because discounts block refunds"
       ],
       "correctAnswer": 1,
-      "explanation": "Order summary provides a single view of order state and fulfillment progress."
+      "explanation": "Order Management spreads order-level discounts and tax across items, so the refund reflects what was actually paid for that item.",
+      "whyWrong": [
+        "Only the returned item is refunded.",
+        "Refunding the full price ignores the discount the customer received.",
+        "Discounted orders can still be refunded."
+      ]
     },
     {
-      "question": "What does inventory allocation mean in Order Management?",
+      "question": "When can payment usually be captured for items in an order?",
       "options": [
-        "Only reporting",
-        "Reserving inventory for specific order lines",
-        "Email routing",
-        "CPQ configuration"
+        "When the items ship and an invoice is created",
+        "When the customer signs up",
+        "When the cart is created",
+        "Only after a return"
       ],
-      "correctAnswer": 1,
-      "explanation": "Inventory allocation reserves stock for order lines."
+      "correctAnswer": 0,
+      "explanation": "Capturing payment is usually tied to shipping, with an invoice created for what has shipped.",
+      "whyWrong": [
+        "Signing up has no payment attached.",
+        "A cart isn't an order yet.",
+        "Returns lead to refunds, not captures."
+      ]
     },
     {
-      "question": "Which concept helps route orders to the right fulfillment location?",
+      "question": "Which record tracks one product line in an Order Summary, including how many were ordered, cancelled and returned?",
       "options": [
-        "Lead assignment only",
-        "Fulfillment group rules and location logic",
-        "Campaigns only",
-        "Case queues"
+        "Fulfillment Order",
+        "Location",
+        "Order Item Summary",
+        "Payment Summary"
       ],
-      "correctAnswer": 1,
-      "explanation": "Fulfillment group rules route orders to appropriate locations."
+      "correctAnswer": 2,
+      "explanation": "Each Order Item Summary holds the quantities for one product line, including changes over time.",
+      "whyWrong": [
+        "A Fulfillment Order covers shipping from one location.",
+        "A Location is a warehouse or store.",
+        "A Payment Summary tracks payments."
+      ]
     },
     {
-      "question": "What is the purpose of Order Management administration?",
+      "question": "Customers can choose different delivery addresses for different items in one order. Which record groups items by delivery address and method?",
       "options": [
-        "Only coding",
-        "Configuring orchestration, fulfillment, and integration settings",
-        "Marketing only",
-        "Slack setup only"
+        "Return Order",
+        "Order Delivery Group Summary",
+        "Change Order",
+        "Credit Memo"
       ],
       "correctAnswer": 1,
-      "explanation": "Administration covers orchestration, fulfillment, and integration configuration."
+      "explanation": "Order Delivery Group Summaries group items by where and how they are delivered.",
+      "whyWrong": [
+        "Return Orders are for returns.",
+        "Change Orders record changes.",
+        "Credit memos record refunds."
+      ]
     },
     {
-      "question": "Which best practice applies to Order Management implementation?",
+      "question": "A warehouse system needs to tell Salesforce when a Fulfillment Order ships. What is the best approach?",
       "options": [
-        "Ignore integration",
-        "Align orchestration with business processes and fulfillment capabilities",
-        "No testing needed",
-        "Single location only"
+        "Update the Fulfillment Order through the API or an integration",
+        "Create a new Order",
+        "Edit the Account",
+        "Email the service team"
       ],
-      "correctAnswer": 1,
-      "explanation": "Orchestration should align with business processes and fulfillment capabilities."
+      "correctAnswer": 0,
+      "explanation": "Outside systems update the Fulfillment Order status through APIs, which moves the order forward automatically.",
+      "whyWrong": [
+        "A new Order would duplicate the sale.",
+        "The Account doesn't track shipping.",
+        "Email needs someone to update the record by hand."
+      ]
     },
     {
-      "question": "What does order lifecycle management involve?",
+      "question": "Where do service agents usually handle cancellations and returns?",
       "options": [
-        "Email only",
-        "Order creation, orchestration, fulfillment, and completion tracking",
-        "CPQ only",
-        "Slack messages"
+        "In the Developer Console",
+        "In Setup",
+        "From the Order Summary in the console, using the built-in actions",
+        "In Data Loader"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order lifecycle spans creation through orchestration to fulfillment and completion."
+      "correctAnswer": 2,
+      "explanation": "The Order Management console gives agents actions like Cancel Item and Return Item on the Order Summary.",
+      "whyWrong": [
+        "The Developer Console is for code.",
+        "Setup is for admins, not daily order work.",
+        "Data Loader is for bulk data, not single orders."
+      ]
     }
   ]
 }

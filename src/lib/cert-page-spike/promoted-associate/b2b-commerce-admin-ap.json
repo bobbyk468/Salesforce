@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Salesforce admins managing B2B storefronts",
-        "description": "You administer B2B Commerce stores on Experience Cloud and want to validate your storefront configuration and catalog management skills."
+        "description": "You look after a B2B Commerce store in Salesforce and want proof that you know how to set it up and run it."
       },
       {
         "label": "Implementation partners",
-        "description": "You configure buyer groups, pricing, and checkout flows for clients and need the credential to demonstrate B2B Commerce expertise."
+        "description": "You build B2B stores for clients and need a credential that shows you know the setup end to end."
       },
       {
         "label": "Operations leads",
-        "description": "You own the day-to-day catalog, entitlement, and order configuration for a B2B Commerce storefront and want formal recognition of that skill set."
+        "description": "You own the online ordering channel for business buyers and want to understand how products, prices and buyers fit together."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the B2B Commerce Administrator AP Exam Hard?",
-    "summary": "The B2B Commerce Admin AP is moderately challenging. The 75% passing score is higher than most Accredited Professional exams, and the content blends B2B Commerce-specific configuration with Experience Cloud and core CRM data model concepts that many candidates underestimate.",
+    "summary": "It is a fair but strict exam. The topics are practical admin tasks, but the pass mark is high, so you need to know the setup steps well rather than roughly.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>75% passing score</strong> &mdash; higher than most AP exams, leaving little room for guesswork.",
-      "<strong>Cross-product knowledge</strong> &mdash; questions span B2B Commerce, Experience Cloud, and the core Salesforce data model, so studying one area alone won’t be enough.",
-      "<strong>Hands-on experience matters</strong> &mdash; configuring at least one B2B Commerce store from scratch is the strongest preparation."
+      "<strong>75% to pass</strong>, which is 45 correct answers. That is higher than most Accredited Professional exams.",
+      "<strong>Setup order matters.</strong> Many questions are about what must be in place before a buyer can see a product or check out.",
+      "<strong>Hands-on helps a lot.</strong> If you have built a test store yourself, many questions will feel familiar."
     ],
-    "passRateGuidance": "Set up a full B2B Commerce store in a developer org &mdash; including buyer groups, entitlement policies, and checkout configuration &mdash; before booking the exam."
+    "passRateGuidance": "Build a store in a trial or sandbox org before the exam. Before you book, aim for 85% or more on practice tests, since the pass mark leaves little room for error."
   },
   "examFormat": {
     "heading": "B2B Commerce Administrator AP Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Most questions describe a business requirement and ask which configuration option meets it. Expect scenarios around store setup, buyer group entitlements, catalog pricing, and checkout flow configuration.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions are short admin scenarios, such as a buyer who can't see a product or a price that looks wrong, and ask what to set up or fix.",
     "bestWayToPass": [
-      "<strong>Master the B2B Commerce data model:</strong> Understand how Buyer Accounts, Buyer Groups, Entitlement Policies, and Price Books relate to each other and to standard Salesforce objects.",
-      "<strong>Configure a complete store:</strong> Walk through the Commerce Setup Assistant, set up catalogs and products, configure buyer groups, and build a checkout flow in a hands-on org.",
-      "<strong>Study checkout configuration deeply:</strong> Know how to add and reorder checkout steps, configure payment gateways, enable purchase orders, and integrate tax calculation.",
-      "<strong>Review CRM integration points:</strong> Understand how B2B Commerce orders map to standard Order records and how buyer data flows between Experience Cloud and Salesforce CRM."
+      "<strong>Learn the chain from buyer to product:</strong> Buyer account, buyer group, entitlement policy, catalog and price book all have to line up.",
+      "<strong>Know when to rebuild the search index:</strong> Product and category changes don't show in the store until the index is rebuilt.",
+      "<strong>Understand checkout:</strong> Know the main checkout steps and where pricing, tax, shipping and inventory checks come in.",
+      "<strong>Practise in a real store:</strong> Create a buyer, give them access, and place a test order."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam covers B2B Commerce store administration — configuring storefronts, catalogs, buyer groups, pricing, and checkout flows on the Salesforce platform.",
+    "description": "This exam tests how you set up and run a B2B Commerce store in Salesforce: stores, buyers, catalogs, prices, search and checkout.",
     "examDetails": {
       "questions": 60,
       "passingScore": "75%",
@@ -61,71 +61,71 @@
     "blocks": [
       {
         "heading": "Store Setup & Storefront Configuration",
-        "body": "B2B Commerce stores are built on Experience Cloud sites. The Commerce Setup Assistant guides the initial configuration of a store, including currency, tax, and locale settings. Storefronts use **LWC** (Lightning Web Components) for the buyer-facing UI. Store Context defines which products, pricebooks, and catalogs are available to buyers. Buyer Groups link accounts to specific catalogs and price books. Guest Browse allows unauthenticated users to view products but not purchase. The AP exam tests how to configure a store for a specific business model — know which settings live in the store vs. the Experience Cloud site."
+        "body": "A B2B store is created from the Commerce app and is built on an Experience Cloud site, which you design in Experience Builder. Each store has its own settings for currencies, languages, buyer access and checkout. The store is linked to one or more catalogs and to the buyer groups that can use it. Guest browsing can be turned on so visitors can see products before they log in, but buying still needs a buyer account. Keep a test store or sandbox to try changes before they reach buyers."
       },
       {
         "heading": "Product Catalog & Pricing",
-        "body": "Entitlement Policies define which products a buyer group can see and purchase. Price Books in B2B Commerce work similarly to standard Salesforce Price Books — assign products with list and negotiated prices. Price Adjustments apply tier-based or account-specific discounts. Product media (images, documents) is managed through CMS (Content Management System) connected to the store. Product variations (color, size) use Variation Parents and Child Products. Category hierarchies organize products for navigation. The exam focuses on catalog **entitlements**, pricing logic order of operations, and how to configure account-specific pricing without custom development."
+        "body": "Products live in a **catalog** organised into **categories**. A product can be simple or have variations, such as size and colour, set up with a variation parent and variation attributes. Prices come from **price books**, and each buyer group is assigned the price books it should use. If a buyer sees no price, check that the product is in a price book linked to their buyer group. After changing products, categories or searchable fields, **rebuild the search index** so the changes appear in the store."
       },
       {
         "heading": "Buyer Account & Contact Management",
-        "body": "Buyer accounts in B2B Commerce are standard Salesforce Accounts with a Buyer Account record associating them to the store. Buyer users are Experience Cloud community users. Buyer Group membership determines catalog and price access. Delegated admin users in the buyer organization can manage their own users. Checkout configuration controls which buyer roles can place orders and set shipping addresses. The exam tests the relationship between Accounts, Contacts, Buyer Accounts, and Buyer Groups — understand how adding a new buyer contact and granting access flows through these objects."
+        "body": "A business customer is an Account that has been **enabled as a buyer account**. Its contacts become **buyer users**, who are external users that log in to the store. Buyer accounts are added to **buyer groups**. Buyer groups are the key link: they get **entitlement policies**, which decide which products the buyers can see and buy, and price books, which decide what they pay. Changing access for many customers at once is done by changing the buyer group, not each account."
       },
       {
         "heading": "Order Management & Checkout",
-        "body": "The B2B Commerce checkout flow is configurable — admins can add, remove, or reorder checkout steps. Cart-to-Order conversion creates a Salesforce Order record. Order Delivery Groups define shipping destinations and methods. Tax integration (Avalara or custom) calculates tax during checkout. Payment Gateway integration handles credit card and purchase order payments. Order History is surfaced back to the buyer in the storefront. The exam tests checkout configuration steps, how to enable purchase order payments, and how the cart-to-order process maps to standard Salesforce order objects."
+        "body": "Checkout takes the buyer from cart to order. Along the way the store checks inventory, works out prices, shipping and tax, and takes payment, often through integrations with outside systems. Once the order is placed it becomes an Order in Salesforce, and with Salesforce Order Management an **Order Summary** that tracks fulfilment, changes and returns. Buyers can reorder from their order history, and admins can set up approval steps or purchase limits where needed."
       },
       {
         "heading": "Integration with Salesforce CRM",
-        "body": "B2B Commerce is natively integrated with Salesforce CRM — buyer accounts map to Account records, orders become Order records, and product data uses the standard Product2 and PricebookEntry objects. Reorder functionality uses order history stored in Salesforce. External data (ERP inventory, pricing) is integrated via OCI (Order Management) or custom APIs. The Commerce Storefront uses Connect REST APIs for all front-end data operations. The exam tests the data flow between the storefront, Experience Cloud, and core CRM — know which objects store what and how standard Salesforce security applies to buyer data."
+        "body": "Because the store runs inside Salesforce, buyer accounts, contacts, orders and cases are the same records your sales and service teams use. Sales reps can see what a customer ordered online. Service agents can handle order questions as Cases. Reports and dashboards can combine online orders with the rest of the pipeline. Outside systems such as an ERP usually supply prices, stock and order status through integrations."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2B Commerce Administrator Accredited Professional Exam",
-    "intro": "The B2B Commerce Admin AP exam tests administration of B2B Commerce stores: catalog management, pricing, buyer groups, and order configuration. Focus on the B2B Commerce data model and store setup.",
+    "intro": "Most questions are about why a buyer can't see or buy something, or how to set something up for many buyers at once. Trace the chain from buyer to product.",
     "blocks": [
       {
         "heading": "Store Setup & Configuration",
-        "body": "Know how to configure a B2B Commerce store: create a store, configure the storefront theme (Builder Studio), set up locales/currencies, and configure the guest browsing and buyer authentication experience."
+        "body": "A store sits on an Experience Cloud site. Settings like currency, language and guest browsing are set per store."
       },
       {
         "heading": "Product Catalog Management",
-        "body": "Know how to organize the catalog: Category tree structure, Products, Product Attributes (SKU variants), and how to publish catalog data to the storefront. Understand price book associations for B2B buyers."
+        "body": "Products go in catalogs and categories. After changes, rebuild the search index, or buyers won't see them."
       },
       {
         "heading": "Buyer Groups & Entitlements",
-        "body": "Know how Buyer Groups control catalog and pricing **entitlements**: associating accounts to buyer groups, configuring entitlement policies, and how B2B buyers see only their entitled products and prices."
+        "body": "If a buyer can't see a product, check the entitlement policy on their buyer group. If they can't see a price, check the price book on the buyer group."
       },
       {
         "heading": "Cart & Checkout Configuration",
-        "body": "Know how to configure the checkout flow: delivery methods, payment methods, tax calculation integration, and how to configure CartItem rules for minimum order quantities and increments."
+        "body": "Checkout steps cover inventory, pricing, shipping, tax and payment. Each can call an outside system."
       },
       {
         "heading": "Order Management Integration",
-        "body": "Know how B2B Commerce orders flow to Order Management: order creation triggers, order summary creation, and how to configure the post-order experience (order tracking, returns)."
+        "body": "Placed orders become Orders, and with Order Management, Order Summaries that track fulfilment and returns."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after B2B Commerce Admin:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/b2b-commerce-developer-ap",
+        "label": "B2B Commerce Developer AP"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/order-management-admin-ap",
+        "label": "Order Management Admin AP"
+      },
+      {
+        "href": "/certifications/b2b-solution-architect",
+        "label": "B2B Solution Architect"
       },
       {
         "href": "/certifications/administrator",
         "label": "Platform Administrator"
-      },
-      {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
       }
     ]
   },
@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does B2B Commerce for Administrators AP validate?",
+      "question": "A buyer logs in but can't see a new product line in the store. The products are in the catalog. What should the admin check first?",
       "options": [
-        "Only development",
-        "Broad knowledge of B2B Commerce and platform capabilities to troubleshoot and solve basic platform issues",
-        "Only marketing",
-        "Only Slack"
+        "The buyer's password",
+        "The store's colour theme",
+        "The product's description length",
+        "The entitlement policy on the buyer's buyer group"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited B2B Commerce For Administrators Professionals have developed broad knowledge of the B2B Commerce discipline and platform capabilities."
+      "correctAnswer": 3,
+      "explanation": "Entitlement policies decide which products a buyer group can see. If the products aren't in the policy, the buyer won't see them.",
+      "whyWrong": [
+        "A wrong password would stop the login completely.",
+        "The theme changes how the store looks, not what products show.",
+        "Description length doesn't affect visibility."
+      ]
     },
     {
-      "question": "Which Salesforce product does B2B Commerce refer to?",
+      "question": "A buyer can see a product but no price is shown. What is the most likely cause?",
       "options": [
-        "Marketing Cloud",
-        "B2B Commerce (formerly CloudCraze) for B2B digital storefronts",
-        "Service Cloud",
-        "Slack"
+        "The search index is too new",
+        "The product has no image",
+        "The buyer has too many items in the cart",
+        "The product isn't in a price book assigned to the buyer's buyer group"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B Commerce is Salesforce's B2B digital commerce product."
+      "explanation": "Prices come from the price books linked to the buyer group. No matching price book entry means no price.",
+      "whyWrong": [
+        "A recently rebuilt index isn't a problem.",
+        "Cart size doesn't hide prices.",
+        "Images don't affect prices."
+      ]
     },
     {
-      "question": "What is a key responsibility of a B2B Commerce Administrator?",
+      "question": "The admin renamed several categories and added new products, but buyers still see the old names. What should the admin do?",
       "options": [
-        "Only coding",
-        "Configuring and troubleshooting B2B Commerce and platform",
-        "Only reporting",
-        "Only email"
+        "Change the buyers' profiles",
+        "Rebuild the search index",
+        "Delete and recreate the store",
+        "Ask buyers to clear their cache"
       ],
       "correctAnswer": 1,
-      "explanation": "They configure and troubleshoot B2B Commerce and platform issues."
+      "explanation": "Store search and navigation use the search index. It must be rebuilt for product and category changes to appear.",
+      "whyWrong": [
+        "Profiles don't control category names.",
+        "Recreating the store is unnecessary and loses setup.",
+        "The old names come from the index, not the buyers' browsers."
+      ]
     },
     {
-      "question": "Which role typically pursues B2B Commerce Admin AP?",
+      "question": "A company wants 300 customer accounts to get a new 10% price list. What is the most efficient way?",
       "options": [
-        "Marketers",
-        "Partners and implementers working with B2B Commerce",
-        "Sales only",
-        "Designers only"
+        "Edit each of the 300 accounts",
+        "Assign the new price book to the buyer group those accounts belong to",
+        "Create 300 new stores",
+        "Ask buyers to enter a discount code"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with B2B Commerce pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Buyer groups let you change prices for many accounts at once by assigning a price book to the group.",
+      "whyWrong": [
+        "Editing 300 accounts is slow and error-prone.",
+        "One store can serve many buyers.",
+        "A discount code relies on every buyer remembering it."
+      ]
     },
     {
-      "question": "What does B2B stand for?",
+      "question": "What must happen before a contact at a customer company can log in and place orders?",
       "options": [
-        "Back to Back",
-        "Business to Business",
-        "Build to Order",
-        "Brand to Brand"
+        "The contact must have a Sales Cloud licence",
+        "The contact must be a Salesforce admin",
+        "The account must be enabled as a buyer account and the contact must have a buyer user",
+        "The account must be marked as a competitor"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B stands for Business to Business."
+      "correctAnswer": 2,
+      "explanation": "Buyer access starts with a buyer account. Its contacts are then set up as external buyer users who can log in to the store.",
+      "whyWrong": [
+        "Buyers don't need internal Sales Cloud licences.",
+        "Buyers are external users, not admins.",
+        "Competitor status has nothing to do with store access."
+      ]
     },
     {
-      "question": "What does B2B Commerce catalog management involve?",
+      "question": "Visitors should be able to browse products before logging in, but only logged-in buyers can place orders. What should be turned on?",
       "options": [
-        "Email only",
-        "Products, categories, and pricing for B2B buyers",
-        "Slack only",
-        "Service Cloud only"
+        "A second store for guests",
+        "Self-registration only",
+        "Guest browsing for the store",
+        "Public Read/Write on all objects"
       ],
-      "correctAnswer": 1,
-      "explanation": "Catalog management covers products, categories, and pricing."
+      "correctAnswer": 2,
+      "explanation": "Guest browsing lets visitors see the catalog without logging in, while checkout still needs a buyer account.",
+      "whyWrong": [
+        "A second store is unnecessary for this.",
+        "Self-registration creates accounts but doesn't allow browsing without login.",
+        "Opening all objects is a big security risk."
+      ]
     },
     {
-      "question": "Which B2B Commerce feature supports buyer-specific pricing?",
+      "question": "A T-shirt comes in three sizes and four colours. How should it be set up in the catalog?",
       "options": [
-        "List price only",
-        "Customer-specific prices and contract pricing",
-        "Standard only",
-        "No pricing"
+        "A variation parent with variation attributes for size and colour",
+        "Twelve unrelated products",
+        "A separate category for each colour",
+        "One product with sizes in the description"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce supports customer-specific pricing."
+      "correctAnswer": 0,
+      "explanation": "Variations group the options under one parent, so buyers pick size and colour on a single product page.",
+      "whyWrong": [
+        "Twelve separate products make browsing confusing.",
+        "Categories organise products. They don't create options.",
+        "Sizes in the description can't be selected or priced."
+      ]
     },
     {
-      "question": "What does B2B Commerce Administrator configure?",
+      "question": "Which record links buyer accounts to the products they can see and the prices they pay?",
       "options": [
-        "Only Apex",
-        "Storefront settings, catalog, and buyer groups",
-        "Only reports",
-        "Only dashboards"
+        "The store theme",
+        "The search index",
+        "The buyer group",
+        "The checkout flow"
       ],
-      "correctAnswer": 1,
-      "explanation": "Administrators configure storefront, catalog, and buyer groups."
+      "correctAnswer": 2,
+      "explanation": "Buyer groups hold the entitlement policies and price books that apply to their buyer accounts.",
+      "whyWrong": [
+        "The theme controls look and feel.",
+        "The search index helps buyers find products, it doesn't control access.",
+        "Checkout handles buying, not visibility or pricing."
+      ]
     },
     {
-      "question": "Which platform does B2B Commerce run on?",
+      "question": "During checkout, the store must confirm that items are in stock in the company's ERP. Where does this fit?",
       "options": [
-        "Heroku only",
-        "Experience Cloud (formerly Community Cloud)",
-        "Marketing Cloud only",
-        "Slack only"
+        "The buyer's profile",
+        "A weekly report",
+        "The product description",
+        "The inventory check step in checkout, using an integration with the ERP"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce runs on Experience Cloud."
+      "correctAnswer": 3,
+      "explanation": "Checkout has a step for checking inventory, which can call the outside system for live stock levels.",
+      "whyWrong": [
+        "Profiles control permissions, not stock.",
+        "A weekly report is far too late at checkout.",
+        "Descriptions can't check stock."
+      ]
     },
     {
-      "question": "What is a buyer group in B2B Commerce?",
+      "question": "A sales rep wants to see what a customer has ordered through the B2B store. Where can they find it?",
       "options": [
-        "A report",
-        "A group of buyers with shared catalog and pricing",
-        "A lead",
-        "A campaign"
+        "Only by asking the customer",
+        "On the customer's Account in Salesforce, since store orders are Salesforce records",
+        "In the store's theme settings",
+        "Only in a separate commerce system"
       ],
       "correctAnswer": 1,
-      "explanation": "Buyer groups define shared catalog and pricing."
+      "explanation": "The store runs in Salesforce, so orders are linked to the same Account records that reps use.",
+      "whyWrong": [
+        "There is no need to ask, the data is in Salesforce.",
+        "Theme settings don't hold order data.",
+        "B2B Commerce runs inside Salesforce, not in a separate system."
+      ]
     },
     {
-      "question": "Which integration connects B2B Commerce to Salesforce?",
+      "question": "After an order is placed, the team wants to track fulfilment, changes and returns. What should they use?",
       "options": [
-        "Manual only",
-        "Native integration with CRM, CPQ, and Order Management",
-        "Email only",
-        "Slack only"
+        "Chatter posts",
+        "A spreadsheet",
+        "Salesforce Order Management with Order Summaries",
+        "The cart object"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce integrates natively with CRM and CPQ."
+      "correctAnswer": 2,
+      "explanation": "Order Management creates an Order Summary that tracks the order through fulfilment, changes and returns.",
+      "whyWrong": [
+        "Chatter is for collaboration, not order tracking.",
+        "A spreadsheet is manual and disconnected.",
+        "The cart is gone once the order is placed."
+      ]
     },
     {
-      "question": "What does checkout configuration include?",
+      "question": "The store must sell in US dollars and euros. Where is this set?",
       "options": [
-        "Only payment",
-        "Payment, shipping, tax, and approval workflows",
-        "Only shipping",
-        "Only tax"
+        "In each product's name",
+        "In the store's currency settings, with price books for each currency",
+        "In the buyers' passwords",
+        "In the search index"
       ],
       "correctAnswer": 1,
-      "explanation": "Checkout includes payment, shipping, tax, and approvals."
+      "explanation": "Stores can support several currencies, with prices coming from price books in each currency.",
+      "whyWrong": [
+        "Product names don't control currency.",
+        "Passwords are unrelated.",
+        "The search index doesn't set currency."
+      ]
     },
     {
-      "question": "Which troubleshooting skill does B2B Commerce Admin need?",
+      "question": "An admin wants to change the layout of the store's home page without code. Which tool should they use?",
       "options": [
-        "Only coding",
-        "Catalog, pricing, and order flow debugging",
-        "Only reports",
-        "Only email"
+        "Workbench",
+        "Developer Console",
+        "Data Loader",
+        "Experience Builder"
       ],
-      "correctAnswer": 1,
-      "explanation": "Admins need catalog, pricing, and order flow debugging skills."
+      "correctAnswer": 3,
+      "explanation": "B2B stores are built on Experience Cloud sites, and Experience Builder lets admins change pages with drag and drop.",
+      "whyWrong": [
+        "Workbench is a utility for queries and API work.",
+        "Developer Console is for code.",
+        "Data Loader moves data."
+      ]
     },
     {
-      "question": "What is the purpose of B2B Commerce administration?",
+      "question": "A product should only be sold to buyers in the Healthcare buyer group. How should this be set up?",
       "options": [
-        "Only development",
-        "Configuring and maintaining B2B storefront and buyer experience",
-        "Only marketing",
-        "Only service"
+        "Add the product only to the entitlement policy used by the Healthcare buyer group",
+        "Remove the product from all price books",
+        "Put 'Healthcare only' in the product name",
+        "Hide the product with CSS"
       ],
-      "correctAnswer": 1,
-      "explanation": "Administration configures and maintains the B2B storefront."
+      "correctAnswer": 0,
+      "explanation": "Entitlement policies control which buyer groups can see and buy each product.",
+      "whyWrong": [
+        "Removing prices stops everyone buying it, including Healthcare.",
+        "A note in the name doesn't stop others buying it.",
+        "CSS only hides the product on screen. It can still be found."
+      ]
     },
     {
-      "question": "Which best practice applies to B2B Commerce Admin?",
+      "question": "Buyers often order the same items every month. Which feature saves them time?",
       "options": [
-        "Ignore platform",
-        "Understand platform capabilities and catalog best practices",
-        "No catalog",
-        "Single product only"
+        "Reordering from their order history",
+        "Downloading the catalog as a PDF",
+        "Calling customer service every month",
+        "Creating a new account each time"
       ],
-      "correctAnswer": 1,
-      "explanation": "Understand platform and catalog best practices."
+      "correctAnswer": 0,
+      "explanation": "Buyers can reorder past orders from their order history, which adds the same items to the cart in one step.",
+      "whyWrong": [
+        "A PDF doesn't place an order.",
+        "Calling service is slower and costs more.",
+        "New accounts add confusion and lose history."
+      ]
     }
   ]
 }

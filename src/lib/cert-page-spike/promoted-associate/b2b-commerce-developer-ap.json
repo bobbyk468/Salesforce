@@ -5,43 +5,43 @@
     "personas": [
       {
         "label": "Developers building custom storefronts",
-        "description": "You create LWC components for B2B Commerce stores and want to prove your storefront development skills."
+        "description": "You build Lightning Web Components and Apex for B2B stores and want to show you know the commerce extension points."
       },
       {
         "label": "Integration engineers",
-        "description": "You connect B2B Commerce to ERP, pricing, and inventory systems using Commerce APIs and need the credential to back up your integration expertise."
+        "description": "You connect B2B stores to ERPs and outside services for pricing, stock, tax and shipping."
       },
       {
         "label": "Technical consultants",
-        "description": "You extend B2B checkout and cart logic with Apex extensions and want formal validation of your Commerce development capabilities."
+        "description": "You advise clients on what can be configured and what needs custom development in B2B Commerce."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the B2B Commerce Developer AP Exam Hard?",
-    "summary": "The B2B Commerce Developer AP is moderately difficult. The ~65% passing score is standard, but the exam dives deep into the Commerce extension framework, LWC development, and Apex integration patterns that require hands-on coding experience rather than theoretical knowledge.",
+    "summary": "It is a technical exam. You need to know where B2B Commerce lets you plug in your own code, how storefront components work, and how the APIs are used. The pass mark is moderate, but the questions go deep.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 90 minutes.",
-      "<strong>~65% passing score</strong> &mdash; a standard threshold, but the technical depth of the questions makes it harder than the score suggests.",
-      "<strong>Code-level knowledge required</strong> &mdash; questions test specific Commerce APIs, LWC wire adapters, and Apex extension interfaces rather than high-level concepts.",
-      "<strong>Hands-on coding essential</strong> &mdash; building at least one custom LWC commerce component and writing an Apex cart extension before sitting the exam helps significantly."
+      "<strong>About 65% to pass</strong>, roughly 39 correct answers. Check the official guide for the current figure.",
+      "<strong>Extension points.</strong> Expect questions on custom pricing, inventory, shipping and tax integrations, and how to plug them into checkout.",
+      "<strong>LWC and APIs.</strong> Building and customising store components and calling the Commerce APIs come up often."
     ],
-    "passRateGuidance": "Deploy a custom storefront component and implement a checkout extension in a developer org before booking. Score consistently above 75% on practice tests to build a comfortable margin."
+    "passRateGuidance": "People who have built at least one custom component or integration for a B2B store do best. Before you book, aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "B2B Commerce Developer AP Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Expect scenario-based questions describing a storefront customization requirement and asking which API, extension point, or component pattern solves it. Common themes include cart calculations, custom checkout steps, and external system integration.",
+    "intro": "Accredited Professional exams are taken online. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a business need that standard features don't cover, such as prices from an ERP or a custom product page, and ask for the right way to build it.",
     "bestWayToPass": [
-      "<strong>Build custom LWC components:</strong> Create a product detail override or custom checkout component using the @salesforce/commerce scoped modules in a hands-on org.",
-      "<strong>Implement Apex extensions:</strong> Write a CartExtension for custom pricing and a CheckoutExtension for validation &mdash; the exam tests these interfaces specifically.",
-      "<strong>Study the Commerce Connect API:</strong> Know which API to call for product search, cart operations, and order management, and how buyer authentication differs from guest access.",
-      "<strong>Practice deployment workflows:</strong> Understand the correct sequence for deploying commerce metadata, LWC components, and integration services to an Experience Cloud site."
+      "<strong>Learn the extension points:</strong> Know how custom pricing, inventory, shipping and tax logic plugs into the store and checkout.",
+      "<strong>Build an LWC for a store:</strong> Know how to expose it in Experience Builder and get data with the Commerce APIs.",
+      "<strong>Know when not to code:</strong> If configuration can meet the need, that is usually the right answer.",
+      "<strong>Understand search and data:</strong> How products are indexed, which fields are searchable, and when to rebuild the index."
     ]
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam tests your ability to customize B2B Commerce storefronts using LWC components, Apex extensions, and Commerce APIs for real-world implementations.",
+    "description": "This exam tests how you extend B2B Commerce with code: custom storefront components, Apex integrations for pricing, stock, shipping and tax, and the Commerce APIs.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -62,71 +62,71 @@
     "blocks": [
       {
         "heading": "LWC Commerce Components & Override Pattern",
-        "body": "B2B Commerce storefronts use Lightning Web Components. The Component Override pattern allows developers to replace default checkout or product detail components with custom implementations — registered in the Community Builder component map. Custom LWCs use the `@salesforce/commerce` scoped modules to access cart, product, and checkout data. The `NavigationMixin` handles in-store navigation. Wire adapters for commerce provide reactive data binding to store context. The AP exam tests how to implement component overrides, wire data into custom components, and handle error states without breaking the checkout flow."
+        "body": "B2B stores are built in Experience Builder from Lightning Web Components. You can add your own LWCs to store pages, or replace a standard component when it doesn't do what you need. To make a component usable in the builder, expose it with the right targets in its metadata file and add properties admins can set. Store components get context, such as the current product, cart or buyer account, from commerce modules and wire adapters, so they show the right data for the logged-in buyer. Keep components small and reuse standard ones where you can."
       },
       {
         "heading": "Commerce APIs & Storefront REST APIs",
-        "body": "The Commerce Connect API (Connect in **Apex**) provides programmatic access to storefront operations. REST APIs power all storefront interactions — search, product detail, cart, checkout, and order history. The Product Search API supports faceted search with category and attribute filters. Custom price calculators can be implemented via the Commerce Extension framework. The B2C and B2B APIs share similar patterns but differ in auth context (buyer session vs. guest). The exam tests which API to use for a given scenario, how to authenticate as a buyer, and how to extend standard behavior using the extension framework."
+        "body": "The **Commerce Connect REST APIs** (often called the B2B Commerce APIs) let you work with products, carts, checkout, wishlists and orders from code or outside apps. Apex also has **ConnectApi** classes for the same tasks from server-side code. Use them instead of querying and updating commerce objects directly, because the APIs apply entitlements and pricing rules for the buyer. Headless and mobile apps can use the same APIs to offer the store outside the website."
       },
       {
         "heading": "Checkout Integrations & Tax/Payment",
-        "body": "Custom checkout integrations implement the `CartExtension` or `CheckoutExtension` **Apex** interfaces. Tax calculation extensions receive a cart and return line-item tax amounts. Shipping calculation extensions provide shipping options and costs. Payment integrations use the Payment Gateway framework — implement `commercepayments.PaymentGatewayAdapter`. Test classes for commerce extensions must mock the cart and checkout context. The exam tests how to implement and register each extension type, how to handle exceptions gracefully, and how to write unit tests for commerce Apex extensions."
+        "body": "Checkout can call outside systems for **inventory**, **pricing**, **shipping** and **tax**. You write an Apex class that implements the right integration interface (or a commerce extension), register it, and link it to the store. Payment uses a **payment gateway adapter** that talks to the payment provider, so card data never sits in Salesforce. Integrations should handle slow or failed responses cleanly and return clear messages to the buyer. Test them with realistic carts and failure cases."
       },
       {
         "heading": "Search Configuration & Merchandising",
-        "body": "B2B Commerce search uses the Salesforce Search Index — products are indexed when published. Search configuration allows field boosts, synonym groups, and exclusion rules. Facets are configured from product attributes and category fields. Sorting options are configurable. Merchandising Rules let admins pin, boost, or bury specific products in search results. CMS-managed banners can appear in search result pages. The developer exam tests how to configure search tuning, how to add custom product attributes to the search index, and how to implement custom search result handling in **LWC**."
+        "body": "Store search is driven by a **search index** built from products, categories and their fields. Admins choose which fields are searchable and which ones become filters (facets). Developers may add custom fields to products and make them searchable. After changing these settings or loading many products, the index must be **rebuilt**, and large catalogs should be rebuilt outside busy hours. Product data loaded by integrations must include the fields search relies on."
       },
       {
         "heading": "Testing, Deployment & Performance",
-        "body": "B2B Commerce deployments use standard Salesforce metadata tooling — Salesforce CLI, change sets, or CI/CD pipelines. Commerce metadata types include StoreIntegratedService, CommerceSettings, and custom **LWC** components. Integration tests for commerce extensions use **Apex** test utilities to simulate cart operations. Page performance is governed by LWC best practices: avoid unnecessary re-renders, use lazy loading for images, minimize wire adapter calls. CDN configuration for Experience Cloud handles static asset caching. The exam tests the correct deployment sequence for a store update and how to diagnose checkout performance issues."
+        "body": "Apex for commerce needs test classes like any other Apex, with 75% coverage to deploy. Mock outside callouts in tests so they don't depend on live systems. Store setup lives partly in metadata and partly in data, so plan how to move catalogs, buyer groups and settings between orgs. For performance, avoid heavy work in components that load on every page, cache data that doesn't change often, and keep integration calls fast, since slow pricing or tax calls make checkout slow."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2B Commerce Developer Accredited Professional Exam",
-    "intro": "The B2B Commerce Developer AP exam tests custom development for B2B Commerce stores. Focus on the B2B Commerce extensibility framework, LWC development, and integration patterns.",
+    "intro": "Most questions start with a need that standard setup can't meet. Pick the supported extension point, not a workaround.",
     "blocks": [
       {
         "heading": "B2B Commerce Extensibility Framework",
-        "body": "Know the key extension points: Custom **LWC** components in the storefront, Cart Extension **Apex** classes for custom cart logic, Integration APIs for external catalog and pricing, and checkout step overrides."
+        "body": "Custom pricing, stock, shipping and tax all plug in through supported integration points registered to the store. Don't rebuild checkout from scratch."
       },
       {
         "heading": "Storefront LWC Development",
-        "body": "Know how to create custom **LWC** components for the B2B storefront: using the ConnectApi in JavaScript, styling with the B2B CSS framework, and deploying components to the Experience Cloud site."
+        "body": "Expose components to Experience Builder in the metadata file, and get store context from commerce modules rather than hard-coding IDs."
       },
       {
         "heading": "Apex Extension Points",
-        "body": "Know how to implement CartExtension.CartCalculate for custom pricing/promotions, CartExtension.CartOrchestrator for cart validation, and how to register extensions in the Cart Lifecycle class."
+        "body": "Use ConnectApi commerce classes in Apex so entitlements and prices are applied for the buyer."
       },
       {
         "heading": "External Catalog Integration",
-        "body": "Know how to integrate an external PIM or catalog system: using the Integration APIs to sync product data, configuring data feeds, and how real-time pricing calls from external systems work."
+        "body": "Load products from outside systems with external IDs, then rebuild the search index."
       },
       {
         "heading": "Order Fulfillment Integration",
-        "body": "Know how to integrate B2B Commerce orders with external ERP systems: order creation events, custom order processing logic, and how to implement order status updates from external systems."
+        "body": "Send placed orders to the ERP with events or async Apex, and keep order status in sync."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After This AP",
-    "intro": "AP credentials pair well with core platform certifications. Consider:",
+    "intro": "Good next steps after B2B Commerce Developer:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/b2b-commerce-admin-ap",
+        "label": "B2B Commerce Admin AP"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/developer-2",
+        "label": "Platform Developer II"
       },
       {
-        "href": "/certifications/administrator",
-        "label": "Platform Administrator"
+        "href": "/certifications/b2b-solution-architect",
+        "label": "B2B Solution Architect"
       },
       {
-        "href": "/certifications/role/administrator",
-        "label": "Admin certification path"
+        "href": "/certifications/order-management-developer-ap",
+        "label": "Order Management Developer AP"
       }
     ]
   },
@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does B2B Commerce for Developers AP validate?",
+      "question": "Prices for some customers must come from the company's ERP at the moment a product is added to the cart. What is the right approach?",
       "options": [
-        "Only administration",
-        "Configuring and customizing B2B Commerce in the context of sample apps and real-world implementations",
-        "Only marketing",
-        "Only Slack"
+        "Write an Apex pricing integration and register it with the store",
+        "Change the store theme",
+        "Ask buyers to phone for prices",
+        "Copy all ERP prices into product descriptions"
       ],
-      "correctAnswer": 1,
-      "explanation": "Accredited B2B Commerce For Developers Professionals have demonstrated skill and knowledge in configuring and customizing B2B Commerce."
+      "correctAnswer": 0,
+      "explanation": "B2B Commerce lets you plug in a custom pricing integration so prices are fetched from the ERP when needed.",
+      "whyWrong": [
+        "The theme doesn't affect pricing.",
+        "Phoning for prices defeats the purpose of the store.",
+        "Prices in descriptions can't be used by the cart."
+      ]
     },
     {
-      "question": "Which type of implementations do B2B Commerce Developers work with?",
+      "question": "A developer builds an LWC that should appear in Experience Builder for admins to drag onto store pages. What must they do?",
       "options": [
-        "Only sample apps",
-        "Sample apps and real-world implementations",
-        "Only reporting",
-        "Only email"
+        "Add it to a page layout",
+        "Write it in Visualforce instead",
+        "Expose the component and add the right targets in its metadata file",
+        "Deploy it as a static resource only"
       ],
-      "correctAnswer": 1,
-      "explanation": "They work with sample apps and real-world implementations."
+      "correctAnswer": 2,
+      "explanation": "LWCs need to be exposed with community or Lightning targets in their js-meta.xml file to show up in Experience Builder.",
+      "whyWrong": [
+        "Page layouts are for internal record pages.",
+        "Visualforce isn't used for B2B store pages.",
+        "A static resource isn't a component."
+      ]
     },
     {
-      "question": "What is a key activity for a B2B Commerce Developer?",
+      "question": "An Apex class needs to add a product to a buyer's cart while respecting their entitlements and prices. What should it use?",
       "options": [
-        "Only reporting",
-        "Configuring and customizing B2B Commerce storefronts and integrations",
-        "Only dashboards",
-        "Only lists"
+        "A direct DML insert on CartItem",
+        "The ConnectApi commerce classes",
+        "An outbound message",
+        "A SOQL query on Product2 only"
       ],
       "correctAnswer": 1,
-      "explanation": "They configure and customize B2B Commerce storefronts and integrations."
+      "explanation": "ConnectApi commerce methods apply the buyer's entitlements and pricing rules, which direct DML would skip.",
+      "whyWrong": [
+        "Direct DML skips the commerce rules and can create invalid carts.",
+        "Outbound messages send data out of Salesforce.",
+        "A query reads data but doesn't add to a cart."
+      ]
     },
     {
-      "question": "Which role typically pursues B2B Commerce Developer AP?",
+      "question": "Tax must be calculated by an outside tax service during checkout. What should the developer build?",
       "options": [
-        "Marketers",
-        "Partners and developers working with B2B Commerce",
-        "Sales only",
-        "Designers only"
+        "A tax integration class registered with the store",
+        "A report that shows tax",
+        "A validation rule",
+        "A formula field on the cart"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and developers working with B2B Commerce pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Checkout supports a tax integration point. A registered Apex class can call the tax service and return the tax lines.",
+      "whyWrong": [
+        "Reports show data after the fact.",
+        "Validation rules block saves, they don't calculate tax.",
+        "Formula fields can't call outside services."
+      ]
     },
     {
-      "question": "What does customization in B2B Commerce often involve?",
+      "question": "Card payments must be processed by a payment provider without storing card numbers in Salesforce. What should be used?",
       "options": [
-        "Only UI",
-        "Storefront themes, cart, checkout, and APIs",
-        "Only reports",
-        "Only emails"
+        "A custom text field for card numbers",
+        "Emailing card details to finance",
+        "A payment gateway adapter for the provider",
+        "A long text area on the Order"
       ],
-      "correctAnswer": 1,
-      "explanation": "Customization involves storefront, cart, checkout, and APIs."
+      "correctAnswer": 2,
+      "explanation": "A payment gateway adapter connects checkout to the provider, which handles the card data and returns a result.",
+      "whyWrong": [
+        "Storing card numbers in fields is a serious security risk.",
+        "Email is insecure for card data.",
+        "Any field that stores card numbers is a risk."
+      ]
     },
     {
-      "question": "Which B2B Commerce component can developers customize?",
+      "question": "A custom product field should be searchable in the store. The developer has created the field. What else must happen?",
       "options": [
-        "Slack only",
-        "Storefront templates, cart, and checkout flow",
-        "Marketing Cloud only",
-        "Service Cloud only"
+        "Put the field value in the product name",
+        "Add the field to the buyer's profile",
+        "Nothing, all fields are searched automatically",
+        "Mark the field as searchable in search settings and rebuild the search index"
       ],
-      "correctAnswer": 1,
-      "explanation": "Developers customize templates, cart, and checkout."
+      "correctAnswer": 3,
+      "explanation": "Only fields chosen in search settings are indexed, and the index must be rebuilt to include them.",
+      "whyWrong": [
+        "Changing names is a workaround that breaks data quality.",
+        "Profiles don't control store search.",
+        "Fields are not searched unless chosen."
+      ]
     },
     {
-      "question": "What does B2B Commerce run on?",
+      "question": "A pricing integration sometimes takes 20 seconds to respond, making checkout slow. What should the developer do first?",
       "options": [
-        "Heroku only",
-        "Experience Cloud",
-        "Marketing Cloud only",
-        "Slack only"
+        "Remove pricing from checkout",
+        "Add a timeout and a clear fallback message, and work with the ERP team to speed up the service",
+        "Retry the call ten times in a row",
+        "Ask buyers to wait"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B Commerce runs on Experience Cloud."
+      "explanation": "Integrations should fail cleanly with timeouts and helpful messages, and the slow service itself needs fixing.",
+      "whyWrong": [
+        "Removing pricing breaks the order.",
+        "Ten retries make checkout even slower.",
+        "Asking buyers to wait leads to abandoned carts."
+      ]
     },
     {
-      "question": "Which API supports B2B Commerce customization?",
+      "question": "A mobile app needs to let buyers browse products and manage their cart using the same rules as the website. What should it use?",
       "options": [
-        "Apex only",
-        "B2B Commerce APIs and Connector",
-        "Slack API only",
-        "No API"
+        "Screen scraping of the website",
+        "Direct SOQL from the mobile app",
+        "A nightly CSV export",
+        "The B2B Commerce REST APIs"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce APIs and Connector support customization."
+      "correctAnswer": 3,
+      "explanation": "The Commerce REST APIs give the app the same products, prices and cart logic as the store.",
+      "whyWrong": [
+        "Screen scraping is fragile and breaks when the site changes.",
+        "Mobile apps can't run SOQL directly, and it would skip commerce rules.",
+        "A nightly file can't manage a live cart."
+      ]
     },
     {
-      "question": "What is a B2B Commerce buyer group?",
+      "question": "Test classes for a shipping integration fail when the shipping provider is down. What should be changed?",
       "options": [
-        "A report",
-        "A group with shared catalog and pricing",
-        "A lead",
-        "A campaign"
+        "Lower the coverage target",
+        "Run tests only at night",
+        "Use HttpCalloutMock so tests don't call the live service",
+        "Remove the tests"
       ],
-      "correctAnswer": 1,
-      "explanation": "Buyer groups define shared catalog and pricing."
+      "correctAnswer": 2,
+      "explanation": "Mock callouts let tests run the integration code without depending on outside systems.",
+      "whyWrong": [
+        "Coverage requirements are fixed.",
+        "The provider can be down at night too.",
+        "Removing tests stops deployments, which need 75% coverage."
+      ]
     },
     {
-      "question": "Which integration does B2B Commerce Developer work with?",
+      "question": "A business wants a product comparison feature that no standard component offers. What should the developer do?",
       "options": [
-        "Slack only",
-        "CPQ, Order Management, and CRM",
-        "Marketing Cloud only",
-        "Service Cloud only"
+        "Use a Visualforce page in the store",
+        "Build a custom LWC and add it to the product pages in Experience Builder",
+        "Edit Salesforce's standard component source",
+        "Ask buyers to open two tabs"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B Commerce integrates with CPQ and Order Management."
+      "explanation": "Custom LWCs are the supported way to add new features to store pages.",
+      "whyWrong": [
+        "Visualforce doesn't fit modern store pages.",
+        "You can't edit Salesforce's standard component code.",
+        "Two tabs is not a feature."
+      ]
     },
     {
-      "question": "What does storefront customization include?",
+      "question": "10,000 products are loaded from the ERP each night. Buyers say new products don't show up in search until days later. What is the fix?",
       "options": [
-        "Only colors",
-        "Themes, layouts, and components",
-        "Only reports",
-        "Only dashboards"
+        "Load the products one at a time",
+        "Rebuild the search index after each nightly load",
+        "Turn off search",
+        "Make the product names shorter"
       ],
       "correctAnswer": 1,
-      "explanation": "Customization includes themes, layouts, and components."
+      "explanation": "New products only appear in search once the index is rebuilt, so the rebuild should follow the load.",
+      "whyWrong": [
+        "Loading one at a time doesn't update the index.",
+        "Turning off search makes the store unusable.",
+        "Name length isn't the problem."
+      ]
     },
     {
-      "question": "Which best practice applies to B2B Commerce development?",
+      "question": "When an order is placed, it must be sent to the ERP without slowing down the buyer's checkout. What fits best?",
       "options": [
-        "Ignore cart",
-        "Test cart, checkout, and integration flows",
-        "No testing",
-        "Single product only"
+        "Asking sales reps to re-enter the order",
+        "A synchronous callout before the order is saved",
+        "A nightly manual export",
+        "Publish an event or start async Apex after the order is created"
       ],
-      "correctAnswer": 1,
-      "explanation": "Test cart, checkout, and integration flows."
+      "correctAnswer": 3,
+      "explanation": "Async processing sends the order in the background, so the buyer isn't kept waiting.",
+      "whyWrong": [
+        "Re-entering orders is slow and error-prone.",
+        "A synchronous call makes the buyer wait and fails if the ERP is down.",
+        "Nightly exports delay fulfilment."
+      ]
     },
     {
-      "question": "What is the purpose of B2B Commerce Connector?",
+      "question": "Store components should show data for the logged-in buyer's account. How should a component find the current account?",
       "options": [
-        "To replace B2B Commerce",
-        "To sync catalog and order data with Salesforce",
-        "To send emails",
-        "To create reports"
+        "Use the store's commerce context rather than hard-coding an account ID",
+        "Read it from a custom setting",
+        "Ask the buyer to type their account number",
+        "Hard-code the account ID in the component"
       ],
-      "correctAnswer": 1,
-      "explanation": "Connector syncs catalog and order data."
+      "correctAnswer": 0,
+      "explanation": "Commerce context modules give the component the current buyer account, cart and store at run time.",
+      "whyWrong": [
+        "A custom setting holds one value for everyone.",
+        "Buyers shouldn't have to type their account.",
+        "A hard-coded ID would show the same account to every buyer."
+      ]
     },
     {
-      "question": "Which sample app helps B2B Commerce Developers?",
+      "question": "Before deploying a custom inventory integration to production, what must the Apex code have?",
       "options": [
-        "No sample",
-        "B2B Commerce sample store and codebase",
-        "Slack only",
-        "Marketing Cloud only"
+        "A managed package",
+        "A Visualforce page",
+        "Test classes giving at least 75% code coverage",
+        "A Full sandbox refresh"
       ],
-      "correctAnswer": 1,
-      "explanation": "Sample store provides reference implementation."
+      "correctAnswer": 2,
+      "explanation": "All Apex needs tests with at least 75% coverage to deploy to production.",
+      "whyWrong": [
+        "Packaging isn't required for a custom class.",
+        "Visualforce isn't required.",
+        "A refresh isn't a deployment requirement."
+      ]
     },
     {
-      "question": "What is a price list in B2B Commerce?",
+      "question": "A requirement can be met either by configuring a standard checkout option or by writing custom code. What should the developer recommend?",
       "options": [
-        "A report",
-        "A set of prices assigned to a buyer group or account for catalog products",
-        "A workflow only",
-        "An email template"
+        "Use the standard configuration",
+        "Always write custom code",
+        "Build a separate checkout outside Salesforce",
+        "Ignore the requirement"
       ],
-      "correctAnswer": 1,
-      "explanation": "Price lists define product pricing per buyer group or account."
+      "correctAnswer": 0,
+      "explanation": "Configuration is cheaper to maintain and upgrade. Code is for needs that configuration can't meet.",
+      "whyWrong": [
+        "Custom code adds cost and upgrade risk when it isn't needed.",
+        "A separate checkout loses the built-in commerce rules.",
+        "Ignoring requirements isn't an option."
+      ]
     }
   ]
 }
