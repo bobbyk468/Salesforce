@@ -168,92 +168,92 @@
     {
       "question": "What is the primary focus of a Marketing Cloud Engagement Administrator?",
       "options": [
-        "Writing AMPscript",
-        "Configuring Marketing Cloud products using industry and product best practices",
+        "Managing Salesforce CRM only",
         "Designing Pardot campaigns",
-        "Managing Salesforce CRM only"
+        "Writing AMPscript",
+        "Configuring Marketing Cloud products using industry and product best practices"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Certified Marketing Cloud Engagement Administrators have hands-on experience configuring Marketing Cloud products utilizing industry and product best practices.",
       "whyWrong": [
-        "Writing AMPscript is a developer-level skill, not the administrator's core configuration focus.",
+        "Managing Salesforce CRM only undersells the role, which is specifically about Marketing Cloud configuration.",
         "Designing Pardot campaigns is a separate product (Account Engagement) outside Marketing Cloud Engagement admin scope.",
-        "Managing Salesforce CRM only undersells the role, which is specifically about Marketing Cloud configuration."
+        "Writing AMPscript is a developer-level skill, not the administrator's core configuration focus."
       ]
     },
     {
       "question": "Which area must an Engagement Administrator thoroughly navigate?",
       "options": [
-        "Only Email Studio",
-        "Setup and subscriber data management",
         "Slack workspace settings",
-        "CPQ product configuration"
+        "CPQ product configuration",
+        "Only Email Studio",
+        "Setup and subscriber data management"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "They understand data structure in subscriber data management and can thoroughly navigate Setup.",
       "whyWrong": [
-        "'Only Email Studio' undersells the broader setup and subscriber data areas an admin must navigate.",
         "Slack workspace settings are entirely unrelated to Marketing Cloud administration.",
-        "CPQ product configuration is entirely unrelated to Marketing Cloud administration."
+        "CPQ product configuration is entirely unrelated to Marketing Cloud administration.",
+        "'Only Email Studio' undersells the broader setup and subscriber data areas an admin must navigate."
       ]
     },
     {
       "question": "What is Subscriber Data Management in Marketing Cloud?",
       "options": [
-        "A reporting tool",
+        "Journey Builder only",
         "The structure and management of contact/subscriber data across data extensions and lists",
         "Email template storage",
-        "Journey Builder only"
+        "A reporting tool"
       ],
       "correctAnswer": 1,
       "explanation": "Subscriber data management refers to how contact and subscriber data is structured and managed in Data Extensions and lists.",
       "whyWrong": [
-        "A reporting tool is a different function, not the data structure/management concept being described.",
+        "'Journey Builder only' undersells subscriber data management, which spans data extensions and lists broadly, not just journeys.",
         "Email template storage is a Content Builder function, unrelated to subscriber data structure.",
-        "'Journey Builder only' undersells subscriber data management, which spans data extensions and lists broadly, not just journeys."
+        "A reporting tool is a different function, not the data structure/management concept being described."
       ]
     },
     {
       "question": "Which Marketing Cloud product is typically configured by an Engagement Administrator?",
       "options": [
-        "Sales Cloud",
         "Email Studio, Journey Builder, Automation Studio",
-        "Heroku",
-        "Experience Cloud"
+        "Experience Cloud",
+        "Sales Cloud",
+        "Heroku"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Engagement Administrators configure core Marketing Cloud engagement products including Email Studio, Journey Builder, and Automation Studio.",
       "whyWrong": [
+        "Experience Cloud is a different product, unrelated to Marketing Cloud Engagement Administrator's typical configuration scope.",
         "Sales Cloud is a different Salesforce Core product, not a Marketing Cloud Engagement Administrator's configuration focus.",
-        "Heroku is a PaaS platform, unrelated to Marketing Cloud Engagement administration.",
-        "Experience Cloud is a different product, unrelated to Marketing Cloud Engagement Administrator's typical configuration scope."
+        "Heroku is a PaaS platform, unrelated to Marketing Cloud Engagement administration."
       ]
     },
     {
       "question": "What best practice should an Engagement Administrator follow when configuring sends?",
       "options": [
-        "Send to all contacts without segmentation",
         "Use suppression lists, test sends, and follow deliverability best practices",
-        "Disable tracking",
-        "Use only one data extension"
+        "Send to all contacts without segmentation",
+        "Use only one data extension",
+        "Disable tracking"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Best practices include using suppression lists, conducting test sends, and following deliverability guidelines.",
       "whyWrong": [
         "Sending without segmentation ignores best practices and risks poor deliverability and engagement.",
-        "Disabling tracking removes the data needed to measure and improve send performance.",
-        "Using only one data extension ignores the relational data structure best practices recommend for scalable sends."
+        "Using only one data extension ignores the relational data structure best practices recommend for scalable sends.",
+        "Disabling tracking removes the data needed to measure and improve send performance."
       ]
     },
     {
       "question": "What is a Data Extension in Marketing Cloud?",
       "options": [
         "A report only",
-        "A table that stores subscriber/contact data for sends and journeys",
         "An email template",
-        "A list only"
+        "A list only",
+        "A table that stores subscriber/contact data for sends and journeys"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Data Extensions store subscriber data for sends and journeys.",
       "whyWrong": [
         "A report alone displays data — it isn't the underlying storage structure for subscriber/contact data.",
@@ -264,44 +264,44 @@
     {
       "question": "Which Journey Builder activity sends an email?",
       "options": [
-        "Wait only",
+        "Update contact only",
         "Email send activity",
         "Decision split only",
-        "Update contact only"
+        "Wait only"
       ],
       "correctAnswer": 1,
       "explanation": "Email send activity sends messages in a journey.",
       "whyWrong": [
-        "Wait only pauses the journey — it doesn't send an email.",
+        "Update contact only modifies data — it doesn't send an email.",
         "Decision split branches the journey — it doesn't itself send an email.",
-        "Update contact only modifies data — it doesn't send an email."
+        "Wait only pauses the journey — it doesn't send an email."
       ]
     },
     {
       "question": "What does Automation Studio support?",
       "options": [
         "Only manual sends",
+        "Email Studio only",
         "Scheduled automations, imports, and file drops",
-        "Journey Builder only",
-        "Email Studio only"
+        "Journey Builder only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Automation Studio runs scheduled automations and imports.",
       "whyWrong": [
         "'Only manual sends' undersells Automation Studio, which specifically handles scheduled and file-based automation.",
-        "'Journey Builder only' misattributes Automation Studio's scheduled/import capabilities to a different tool.",
-        "'Email Studio only' misattributes Automation Studio's scheduled/import capabilities to a different tool."
+        "'Email Studio only' misattributes Automation Studio's scheduled/import capabilities to a different tool.",
+        "'Journey Builder only' misattributes Automation Studio's scheduled/import capabilities to a different tool."
       ]
     },
     {
       "question": "Which best practice supports email deliverability?",
       "options": [
-        "Send to all",
         "Authenticate domains (SPF, DKIM), maintain list hygiene, avoid spam triggers",
+        "Send to all",
         "No authentication",
         "No list hygiene"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Domain auth and list hygiene support deliverability.",
       "whyWrong": [
         "Sending to all without segmentation is a poor deliverability practice, not a best practice.",
@@ -312,97 +312,97 @@
     {
       "question": "What is a suppression list used for?",
       "options": [
-        "To add contacts",
+        "To track opens",
         "To exclude contacts who unsubscribed or should not receive emails",
         "To send more",
-        "To track opens"
+        "To add contacts"
       ],
       "correctAnswer": 1,
       "explanation": "Suppression lists exclude unsubscribed or blocked contacts.",
       "whyWrong": [
-        "Adding contacts is the opposite of a suppression list's exclusion purpose.",
+        "Suppression lists aren't for tracking opens — that's an unrelated reporting function.",
         "Suppression lists don't increase sending — they specifically prevent sends to certain contacts.",
-        "Suppression lists aren't for tracking opens — that's an unrelated reporting function."
+        "Adding contacts is the opposite of a suppression list's exclusion purpose."
       ]
     },
     {
       "question": "Which Marketing Cloud role controls access?",
       "options": [
-        "Profile only",
         "Business unit roles and permissions",
-        "No roles",
-        "Only admin"
+        "Profile only",
+        "Only admin",
+        "No roles"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Business unit roles and permissions control access.",
       "whyWrong": [
         "Profile alone undersells the broader business-unit-level role and permission structure in Marketing Cloud.",
-        "'No roles' contradicts the fact that Marketing Cloud has a defined role/permission system.",
-        "'Only admin' undersells the granular business unit roles beyond a single admin designation."
+        "'Only admin' undersells the granular business unit roles beyond a single admin designation.",
+        "'No roles' contradicts the fact that Marketing Cloud has a defined role/permission system."
       ]
     },
     {
       "question": "What does tracking in Email Studio measure?",
       "options": [
         "Only sends",
+        "Only clicks",
         "Opens, clicks, bounces, and unsubscribes",
-        "Only opens",
-        "Only clicks"
+        "Only opens"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes.",
       "whyWrong": [
         "'Only sends' undersells tracking, which covers multiple engagement metrics beyond just send counts.",
-        "'Only opens' undersells tracking, which covers clicks, bounces, and unsubscribes too.",
-        "'Only clicks' undersells tracking, which covers opens, bounces, and unsubscribes too."
+        "'Only clicks' undersells tracking, which covers opens, bounces, and unsubscribes too.",
+        "'Only opens' undersells tracking, which covers clicks, bounces, and unsubscribes too."
       ]
     },
     {
       "question": "Which feature allows personalized content in emails?",
       "options": [
+        "Only merge fields",
         "Plain text only",
         "AMPscript and personalization strings",
-        "No personalization",
-        "Only merge fields"
+        "No personalization"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "AMPscript and personalization strings enable dynamic content.",
       "whyWrong": [
+        "'Only merge fields' undersells the broader personalization capability, which includes AMPscript too.",
         "Plain text alone doesn't support the dynamic personalization the question is asking about.",
-        "'No personalization' contradicts the fact that real personalization features exist in Email Studio.",
-        "'Only merge fields' undersells the broader personalization capability, which includes AMPscript too."
+        "'No personalization' contradicts the fact that real personalization features exist in Email Studio."
       ]
     },
     {
       "question": "What is the purpose of a send classification?",
       "options": [
-        "To replace lists",
-        "To define sender profile and deliverability settings for sends",
         "To create templates only",
-        "To track only"
+        "To track only",
+        "To define sender profile and deliverability settings for sends",
+        "To replace lists"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Send classification defines sender and deliverability settings.",
       "whyWrong": [
-        "Send classification doesn't replace lists — it configures sender/deliverability settings for a send.",
         "'To create templates only' misattributes send classification's purpose to a different feature.",
-        "'To track only' misattributes send classification's purpose, which is about sender/deliverability configuration, not tracking."
+        "'To track only' misattributes send classification's purpose, which is about sender/deliverability configuration, not tracking.",
+        "Send classification doesn't replace lists — it configures sender/deliverability settings for a send."
       ]
     },
     {
       "question": "Which integration connects Marketing Cloud to Salesforce?",
       "options": [
-        "Manual only",
-        "Marketing Cloud Connect (or equivalent connector)",
         "No integration",
-        "Email only"
+        "Marketing Cloud Connect (or equivalent connector)",
+        "Email only",
+        "Manual only"
       ],
       "correctAnswer": 1,
       "explanation": "Marketing Cloud Connect syncs data with Salesforce.",
       "whyWrong": [
-        "'Manual only' contradicts the fact that a native connector automates the Salesforce integration.",
         "'No integration' contradicts the fact that Marketing Cloud Connect is a real, documented integration.",
-        "'Email only' undersells the broader CRM data sync the connector provides beyond just email."
+        "'Email only' undersells the broader CRM data sync the connector provides beyond just email.",
+        "'Manual only' contradicts the fact that a native connector automates the Salesforce integration."
       ]
     }
   ]

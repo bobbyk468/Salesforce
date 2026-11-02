@@ -172,97 +172,97 @@
     {
       "question": "What is the primary focus of an Identity and Access Management Architect?",
       "options": [
-        "Only reports",
-        "Designing solutions that meet Single Sign-On (SSO) and identity requirements on the Salesforce Platform",
         "Email only",
+        "Designing solutions that meet Single Sign-On (SSO) and identity requirements on the Salesforce Platform",
+        "Only reports",
         "Slack only"
       ],
       "correctAnswer": 1,
       "explanation": "They design solutions that meet SSO and identity requirements on the platform.",
       "whyWrong": [
-        "'Only reports' undersells the role, which is about SSO and identity architecture, not reporting.",
         "Email is unrelated to the IAM Architect's core identity/SSO focus.",
+        "'Only reports' undersells the role, which is about SSO and identity architecture, not reporting.",
         "Slack is unrelated to the IAM Architect's core identity/SSO focus."
       ]
     },
     {
       "question": "Which protocol is commonly used for SSO with Salesforce?",
       "options": [
+        "Only SOAP",
         "Only HTTP",
         "SAML 2.0 and OAuth 2.0",
-        "Only FTP",
-        "Only SOAP"
+        "Only FTP"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "SAML 2.0 and OAuth 2.0 are used for SSO and identity with Salesforce.",
       "whyWrong": [
+        "'Only SOAP' is an API messaging protocol, not the specific SSO protocols being asked about.",
         "'Only HTTP' is a generic transport protocol, not the specific identity protocols (SAML/OAuth) used for SSO.",
-        "'Only FTP' is a file transfer protocol, unrelated to SSO.",
-        "'Only SOAP' is an API messaging protocol, not the specific SSO protocols being asked about."
+        "'Only FTP' is a file transfer protocol, unrelated to SSO."
       ]
     },
     {
       "question": "What does My Domain provide in Salesforce?",
       "options": [
-        "Only branding",
         "Custom login URL and foundation for SSO and identity",
         "Only reports",
+        "Only branding",
         "Only dashboards"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "My Domain provides custom login URL and is required for SSO and identity features.",
       "whyWrong": [
-        "'Only branding' undersells My Domain, which specifically establishes the SSO/identity foundation, not just visual branding.",
         "'Only reports' is unrelated to My Domain's actual identity/URL foundation purpose.",
+        "'Only branding' undersells My Domain, which specifically establishes the SSO/identity foundation, not just visual branding.",
         "'Only dashboards' is unrelated to My Domain's actual identity/URL foundation purpose."
       ]
     },
     {
       "question": "Which feature allows users to log in once and access multiple connected apps?",
       "options": [
+        "Only roles",
         "Only profiles",
-        "Single Sign-On (SSO)",
         "Only permission sets",
-        "Only roles"
+        "Single Sign-On (SSO)"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "SSO allows one login to access multiple connected applications.",
       "whyWrong": [
+        "'Only roles' misattributes single-login access to a different access-control feature.",
         "'Only profiles' misattributes single-login access to a different access-control feature.",
-        "'Only permission sets' misattributes single-login access to a different access-control feature.",
-        "'Only roles' misattributes single-login access to a different access-control feature."
+        "'Only permission sets' misattributes single-login access to a different access-control feature."
       ]
     },
     {
       "question": "What is the purpose of Connected Apps in identity?",
       "options": [
-        "Only external apps",
-        "OAuth-based access for external and internal apps with configurable policies",
         "Only internal apps",
-        "Only email"
+        "Only email",
+        "Only external apps",
+        "OAuth-based access for external and internal apps with configurable policies"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Connected Apps provide OAuth-based access with configurable policies.",
       "whyWrong": [
-        "'Only external apps' undersells Connected Apps, which manage both external and internal app access.",
         "'Only internal apps' undersells Connected Apps, which manage both external and internal app access.",
-        "'Only email' is unrelated to Connected Apps' OAuth-based access purpose."
+        "'Only email' is unrelated to Connected Apps' OAuth-based access purpose.",
+        "'Only external apps' undersells Connected Apps, which manage both external and internal app access."
       ]
     },
     {
       "question": "What is an Identity Provider (IdP) in SSO?",
       "options": [
-        "Salesforce only",
-        "The system that authenticates users and asserts identity to Salesforce",
         "A permission set",
-        "A profile"
+        "A profile",
+        "The system that authenticates users and asserts identity to Salesforce",
+        "Salesforce only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "IdP authenticates users and asserts identity to Salesforce.",
       "whyWrong": [
-        "Salesforce alone isn't the IdP in this scenario — the IdP is the external system asserting identity.",
         "A permission set controls object/field access — it isn't an authentication system.",
-        "A profile controls access levels — it isn't an authentication/identity-asserting system."
+        "A profile controls access levels — it isn't an authentication/identity-asserting system.",
+        "Salesforce alone isn't the IdP in this scenario — the IdP is the external system asserting identity."
       ]
     },
     {
@@ -285,59 +285,59 @@
       "question": "What does Session Security Level control?",
       "options": [
         "Only timeout",
+        "Only OWD",
         "Session requirements (e.g., high assurance, require re-auth)",
-        "Only IP",
-        "Only OWD"
+        "Only IP"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Session Security Level enforces session assurance requirements.",
       "whyWrong": [
         "'Only timeout' undersells Session Security Level, which covers broader session requirements beyond just timeout.",
-        "'Only IP' undersells Session Security Level, which is about broader assurance/re-auth requirements, not just IP restriction.",
-        "'Only OWD' misattributes session security to an unrelated record-access concept."
+        "'Only OWD' misattributes session security to an unrelated record-access concept.",
+        "'Only IP' undersells Session Security Level, which is about broader assurance/re-auth requirements, not just IP restriction."
       ]
     },
     {
       "question": "Which SAML attribute is used for user provisioning?",
       "options": [
-        "Only name",
         "Federation ID and other attributes for matching/provisioning",
         "Only email",
-        "Only role"
+        "Only role",
+        "Only name"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Federation ID and attributes support user matching and provisioning.",
       "whyWrong": [
-        "'Only name' undersells the Federation ID, which serves the specific matching/provisioning purpose described.",
         "'Only email' undersells the Federation ID's specific matching/provisioning role.",
-        "'Only role' undersells the Federation ID's specific matching/provisioning role."
+        "'Only role' undersells the Federation ID's specific matching/provisioning role.",
+        "'Only name' undersells the Federation ID, which serves the specific matching/provisioning purpose described."
       ]
     },
     {
       "question": "What is the purpose of Auth. Provider?",
       "options": [
+        "To create users only",
         "To replace SSO",
         "To configure external IdP connection (e.g., SAML, OAuth)",
-        "To create users only",
         "To assign permission sets"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Auth. Provider configures external IdP (SAML/OAuth) connection.",
       "whyWrong": [
-        "Auth. Provider doesn't replace SSO — it configures the external connection SSO relies on.",
         "'To create users only' undersells Auth. Provider's broader identity connection purpose.",
+        "Auth. Provider doesn't replace SSO — it configures the external connection SSO relies on.",
         "'To assign permission sets' is unrelated to what an Auth. Provider configures."
       ]
     },
     {
       "question": "Which feature supports multi-factor authentication?",
       "options": [
-        "SSO only",
         "Two-Factor Authentication (2FA) and verified modes",
+        "SSO only",
         "OAuth only",
         "SAML only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "2FA and verified modes support multi-factor authentication.",
       "whyWrong": [
         "'SSO only' misattributes multi-factor authentication to a different, single-login feature.",
@@ -350,15 +350,15 @@
       "options": [
         "Only SSO",
         "Linking Salesforce user to external identity for SSO and provisioning",
-        "Only OAuth",
-        "Only permission sets"
+        "Only permission sets",
+        "Only OAuth"
       ],
       "correctAnswer": 1,
       "explanation": "Federation ID links Salesforce user to external identity.",
       "whyWrong": [
         "'Only SSO' undersells Federation ID's specific role in both SSO and provisioning.",
-        "'Only OAuth' misattributes Federation ID's purpose to a different protocol.",
-        "'Only permission sets' is unrelated to Federation ID's actual identity-linking purpose."
+        "'Only permission sets' is unrelated to Federation ID's actual identity-linking purpose.",
+        "'Only OAuth' misattributes Federation ID's purpose to a different protocol."
       ]
     },
     {
@@ -366,26 +366,26 @@
       "options": [
         "Single IdP only",
         "Domain-based routing and IdP selection logic",
-        "No routing",
-        "Manual only"
+        "Manual only",
+        "No routing"
       ],
       "correctAnswer": 1,
       "explanation": "Domain-based routing supports multiple IdPs.",
       "whyWrong": [
         "'Single IdP only' is the opposite of the multi-IdP scenario the question describes.",
-        "'No routing' contradicts the fact that domain-based routing is a real design consideration for multiple IdPs.",
-        "'Manual only' contradicts the fact that automated routing logic is the actual design consideration."
+        "'Manual only' contradicts the fact that automated routing logic is the actual design consideration.",
+        "'No routing' contradicts the fact that domain-based routing is a real design consideration for multiple IdPs."
       ]
     },
     {
       "question": "What is the purpose of Certificate and Key Management?",
       "options": [
-        "To create users",
         "To manage SAML certificates and signing keys for trust",
+        "To create users",
         "To assign profiles",
         "To create permission sets"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Certificate management ensures SAML and signing key trust.",
       "whyWrong": [
         "'To create users' misattributes certificate/key management's actual trust-and-signing purpose.",
@@ -397,16 +397,16 @@
       "question": "Which best practice supports identity governance?",
       "options": [
         "No review",
-        "Regular access reviews, least privilege, and audit logging",
+        "No logging",
         "All access",
-        "No logging"
+        "Regular access reviews, least privilege, and audit logging"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Access reviews, least privilege, and audit support governance.",
       "whyWrong": [
         "'No review' contradicts the fact that regular access reviews are a core identity governance best practice.",
-        "'All access' contradicts the least-privilege principle that's central to good identity governance.",
-        "'No logging' contradicts the fact that audit logging is a core identity governance best practice."
+        "'No logging' contradicts the fact that audit logging is a core identity governance best practice.",
+        "'All access' contradicts the least-privilege principle that's central to good identity governance."
       ]
     }
   ]

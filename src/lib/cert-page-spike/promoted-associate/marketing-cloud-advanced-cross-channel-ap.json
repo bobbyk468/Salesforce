@@ -168,45 +168,45 @@
     {
       "question": "What does Marketing Cloud Advanced Cross Channel AP validate?",
       "options": [
-        "Only basics",
         "Knowledge, skills, and experience with key Marketing Cloud Cross Channel topics",
-        "Only reporting",
-        "Only Slack"
+        "Only basics",
+        "Only Slack",
+        "Only reporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Accredited Marketing Cloud Advanced Cross Channel Professionals have demonstrated knowledge, skills, and experience with key Marketing Cloud Cross Channel topics."
     },
     {
       "question": "What does 'Cross Channel' mean in Marketing Cloud?",
       "options": [
-        "Only email",
-        "Coordinating campaigns across email, mobile, web, and other channels",
+        "Only social",
         "Only SMS",
-        "Only social"
+        "Coordinating campaigns across email, mobile, web, and other channels",
+        "Only email"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Cross Channel means coordinating campaigns across multiple channels."
     },
     {
       "question": "What is a key activity for an Advanced Cross Channel Professional?",
       "options": [
-        "Only coding",
         "Designing and implementing cross-channel marketing solutions",
-        "Only reporting",
-        "Only lists"
+        "Only coding",
+        "Only lists",
+        "Only reporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "They design and implement cross-channel marketing solutions."
     },
     {
       "question": "Which role typically pursues Marketing Cloud Advanced Cross Channel AP?",
       "options": [
+        "Developers only",
         "Sales only",
-        "Partners and implementers with advanced Marketing Cloud cross-channel experience",
         "Designers only",
-        "Developers only"
+        "Partners and implementers with advanced Marketing Cloud cross-channel experience"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Partners and implementers with cross-channel experience pursue this credential."
     },
     {
@@ -214,8 +214,8 @@
       "options": [
         "Only Email Studio",
         "Email Studio, Journey Builder, Mobile, Advertising, and more",
-        "Only Journey Builder",
-        "Only Automation Studio"
+        "Only Automation Studio",
+        "Only Journey Builder"
       ],
       "correctAnswer": 1,
       "explanation": "Cross-channel solutions use Email, Journey Builder, Mobile, Advertising, and more."
@@ -223,65 +223,65 @@
     {
       "question": "What does Journey Builder support for cross-channel?",
       "options": [
-        "Email only",
-        "Multi-channel journeys (email, SMS, push, etc.)",
         "SMS only",
-        "Push only"
+        "Push only",
+        "Email only",
+        "Multi-channel journeys (email, SMS, push, etc.)"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Journey Builder supports multi-channel journeys."
     },
     {
       "question": "Which capability enables cross-channel orchestration?",
       "options": [
         "Single channel only",
-        "Unified contact data and journey orchestration",
         "No orchestration",
+        "Unified contact data and journey orchestration",
         "Manual only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Unified data and orchestration enable cross-channel."
     },
     {
       "question": "What does Mobile Studio support?",
       "options": [
-        "Email only",
         "SMS, push notifications, and in-app messaging",
-        "SMS only",
-        "Push only"
+        "Push only",
+        "Email only",
+        "SMS only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Mobile Studio supports SMS, push, and in-app."
     },
     {
       "question": "Which integration connects cross-channel data?",
       "options": [
+        "No integration",
         "Slack only",
         "CDP, Salesforce CRM, and advertising platforms",
-        "Email only",
-        "No integration"
+        "Email only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "CDP and CRM connect cross-channel data."
     },
     {
       "question": "What is the purpose of cross-channel marketing?",
       "options": [
-        "Single channel only",
-        "Consistent, coordinated experiences across touchpoints",
+        "SMS only",
         "Email only",
-        "SMS only"
+        "Consistent, coordinated experiences across touchpoints",
+        "Single channel only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Cross-channel delivers consistent experiences."
     },
     {
       "question": "Which best practice applies to cross-channel implementation?",
       "options": [
-        "Ignore data",
-        "Unified contact identity and channel preferences",
         "No identity",
-        "Single channel only"
+        "Unified contact identity and channel preferences",
+        "Single channel only",
+        "Ignore data"
       ],
       "correctAnswer": 1,
       "explanation": "Unified identity and preferences support cross-channel."
@@ -289,12 +289,12 @@
     {
       "question": "What does Advertising Studio support?",
       "options": [
-        "Email only",
         "Paid media activation across ad platforms",
-        "SMS only",
-        "Push only"
+        "Push only",
+        "Email only",
+        "SMS only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Advertising Studio supports paid media activation."
     },
     {
@@ -311,21 +311,21 @@
     {
       "question": "What is the benefit of cross-channel marketing?",
       "options": [
-        "No benefit",
-        "Coordinated experiences that improve engagement and conversion",
         "Siloed only",
-        "Manual only"
+        "No benefit",
+        "Manual only",
+        "Coordinated experiences that improve engagement and conversion"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Cross-channel improves engagement and conversion."
     },
     {
       "question": "Which Marketing Cloud topic is key for Advanced Cross Channel?",
       "options": [
-        "Slack only",
+        "Reports only",
         "Journey Builder, data model, and channel integration",
         "Email only",
-        "Reports only"
+        "Slack only"
       ],
       "correctAnswer": 1,
       "explanation": "Journey Builder, data, and channel integration are key."

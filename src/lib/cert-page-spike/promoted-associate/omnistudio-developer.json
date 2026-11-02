@@ -172,28 +172,28 @@
     {
       "question": "Which OmniStudio tool is used to create guided, step-by-step digital experiences?",
       "options": [
-        "Apex only",
         "OmniScript",
+        "LWC only",
         "Visualforce",
-        "LWC only"
+        "Apex only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "OmniScript provides declarative, step-by-step guided experiences without code.",
       "whyWrong": [
-        "Apex is a backend Salesforce Core language, not a guided-experience builder tool.",
+        "LWC alone isn't OmniStudio's guided-experience tool — OmniScript is purpose-built for that.",
         "Visualforce is a legacy Salesforce Core UI framework, not an OmniStudio tool.",
-        "LWC alone isn't OmniStudio's guided-experience tool — OmniScript is purpose-built for that."
+        "Apex is a backend Salesforce Core language, not a guided-experience builder tool."
       ]
     },
     {
       "question": "What is DataRaptor used for in OmniStudio?",
       "options": [
-        "Sending emails",
         "Data extraction, load, and transform (DET, DLT, DTT)",
+        "Sending emails",
         "Slack messages",
         "CPQ configuration"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "DataRaptors handle data extraction (DET), load (DLT), and transform (DTT) for OmniStudio.",
       "whyWrong": [
         "DataRaptor isn't used for sending emails — that's outside its scope.",
@@ -204,60 +204,60 @@
     {
       "question": "Which component displays a compact, card-based view of record data?",
       "options": [
-        "OmniScript",
         "FlexCard",
+        "Integration Procedure",
         "DataRaptor",
-        "Integration Procedure"
+        "OmniScript"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "FlexCards display compact, card-based views of data with declarative layout.",
       "whyWrong": [
-        "OmniScript builds guided flows, not compact card views.",
+        "Integration Procedure orchestrates backend logic — it isn't a visual card component.",
         "DataRaptor moves and transforms data — it doesn't render a card-based UI.",
-        "Integration Procedure orchestrates backend logic — it isn't a visual card component."
+        "OmniScript builds guided flows, not compact card views."
       ]
     },
     {
       "question": "What is an Integration Procedure in OmniStudio?",
       "options": [
-        "A report",
-        "A reusable server-side flow that orchestrates APIs and DataRaptors",
         "An email template",
+        "A reusable server-side flow that orchestrates APIs and DataRaptors",
+        "A report",
         "A dashboard"
       ],
       "correctAnswer": 1,
       "explanation": "Integration Procedures orchestrate server-side logic, APIs, and DataRaptors.",
       "whyWrong": [
-        "A report is a Salesforce analytics artifact, not an orchestration flow.",
         "An email template is unrelated to backend orchestration logic.",
+        "A report is a Salesforce analytics artifact, not an orchestration flow.",
         "A dashboard visualizes data — it isn't an orchestration mechanism."
       ]
     },
     {
       "question": "Which industry solution commonly uses OmniStudio?",
       "options": [
-        "Retail only",
-        "Financial Services, Insurance, and other industries for digital flows",
         "Manufacturing only",
-        "Education only"
+        "Education only",
+        "Financial Services, Insurance, and other industries for digital flows",
+        "Retail only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "OmniStudio is used across Financial Services, Insurance, and other industries for digital experiences.",
       "whyWrong": [
-        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more.",
         "Manufacturing isn't the typical highlighted use case for OmniStudio.",
-        "Education isn't the typical highlighted use case for OmniStudio."
+        "Education isn't the typical highlighted use case for OmniStudio.",
+        "Retail alone undersells OmniStudio's broader industry use across Financial Services, Insurance, and more."
       ]
     },
     {
       "question": "What is DET (DataRaptor Extract) used for?",
       "options": [
         "To load only",
-        "To extract data from Salesforce or external sources",
         "To transform only",
+        "To extract data from Salesforce or external sources",
         "To send emails"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "DET extracts data from Salesforce or external sources.",
       "whyWrong": [
         "DET is specifically for extraction, not the loading step.",
@@ -268,17 +268,17 @@
     {
       "question": "Which OmniScript element type defines a step?",
       "options": [
-        "DataRaptor only",
-        "Step or Type element",
         "FlexCard only",
-        "Integration Procedure only"
+        "Step or Type element",
+        "Integration Procedure only",
+        "DataRaptor only"
       ],
       "correctAnswer": 1,
       "explanation": "Step and Type elements define OmniScript structure.",
       "whyWrong": [
-        "DataRaptor is a separate OmniStudio tool, not an OmniScript element type.",
         "FlexCard is a separate OmniStudio component, not an OmniScript element type.",
-        "Integration Procedure is a separate OmniStudio tool, not an OmniScript element type."
+        "Integration Procedure is a separate OmniStudio tool, not an OmniScript element type.",
+        "DataRaptor is a separate OmniStudio tool, not an OmniScript element type."
       ]
     },
     {
@@ -286,26 +286,26 @@
       "options": [
         "No data",
         "Apex, DataRaptor, or Integration Procedure",
-        "OmniScript only",
-        "Email only"
+        "Email only",
+        "OmniScript only"
       ],
       "correctAnswer": 1,
       "explanation": "FlexCards can use Apex, DataRaptor, or Integration Procedure.",
       "whyWrong": [
         "FlexCard data sources include far more than 'no data' implies.",
-        "OmniScript alone doesn't capture the range of sources FlexCards can pull from (Apex, DataRaptor, Integration Procedure).",
-        "Email isn't a valid FlexCard data source."
+        "Email isn't a valid FlexCard data source.",
+        "OmniScript alone doesn't capture the range of sources FlexCards can pull from (Apex, DataRaptor, Integration Procedure)."
       ]
     },
     {
       "question": "Which OmniStudio feature supports conditional navigation?",
       "options": [
         "No support",
-        "conditional branching and navigation rules",
         "Static only",
-        "Linear only"
+        "Linear only",
+        "conditional branching and navigation rules"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Conditional branching controls OmniScript flow.",
       "whyWrong": [
         "OmniStudio does support conditional navigation — 'no support' is incorrect.",
@@ -316,16 +316,16 @@
     {
       "question": "What is the purpose of an Integration Procedure output?",
       "options": [
+        "To delete only",
         "To replace input",
         "To return data to the caller (OmniScript, FlexCard)",
-        "To delete only",
         "To log only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Integration Procedure outputs return data to callers.",
       "whyWrong": [
-        "Integration Procedure output returns data — it doesn't replace input logic.",
         "Deleting data isn't the purpose of an Integration Procedure output.",
+        "Integration Procedure output returns data — it doesn't replace input logic.",
         "Logging isn't the primary purpose of an Integration Procedure's output — returning data to the caller is."
       ]
     },
@@ -333,59 +333,59 @@
       "question": "Which deployment tool is used for OmniStudio?",
       "options": [
         "Change Sets only",
-        "FlexDeploy or source-driven deployment",
+        "Workbench only",
         "Data Loader only",
-        "Workbench only"
+        "FlexDeploy or source-driven deployment"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "FlexDeploy and source-driven deployment manage OmniStudio.",
       "whyWrong": [
         "Change Sets are a Salesforce Core deployment mechanism, not the OmniStudio-specific approach.",
-        "Data Loader moves records, not OmniStudio metadata.",
-        "Workbench is a generic Salesforce tool, not the OmniStudio-specific deployment approach."
+        "Workbench is a generic Salesforce tool, not the OmniStudio-specific deployment approach.",
+        "Data Loader moves records, not OmniStudio metadata."
       ]
     },
     {
       "question": "What does OmniScript Save behavior control?",
       "options": [
+        "Only navigation",
         "Nothing",
         "When and how OmniScript state is persisted",
-        "Only navigation",
         "Only validation"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Save behavior controls state persistence.",
       "whyWrong": [
-        "OmniScript Save behavior does control something specific — persistence of state — so 'nothing' is incorrect.",
         "Save behavior is distinct from navigation logic.",
+        "OmniScript Save behavior does control something specific — persistence of state — so 'nothing' is incorrect.",
         "Save behavior is distinct from validation logic."
       ]
     },
     {
       "question": "Which OmniStudio component can invoke Apex?",
       "options": [
-        "DataRaptor only",
         "Integration Procedure",
+        "OmniScript only",
         "FlexCard only",
-        "OmniScript only"
+        "DataRaptor only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Integration Procedures can invoke Apex.",
       "whyWrong": [
-        "DataRaptor moves/transforms data — it doesn't invoke Apex directly the way Integration Procedures can.",
+        "OmniScript orchestrates the guided experience but relies on Integration Procedures to invoke Apex.",
         "FlexCard displays data — it doesn't invoke Apex directly.",
-        "OmniScript orchestrates the guided experience but relies on Integration Procedures to invoke Apex."
+        "DataRaptor moves/transforms data — it doesn't invoke Apex directly the way Integration Procedures can."
       ]
     },
     {
       "question": "What is the purpose of FlexCard merge fields?",
       "options": [
         "To replace DataRaptor",
-        "To display dynamic data from the data source",
         "To send emails",
-        "To create reports"
+        "To create reports",
+        "To display dynamic data from the data source"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Merge fields display dynamic data in FlexCards.",
       "whyWrong": [
         "DataRaptor is a separate tool — merge fields don't replace it.",
@@ -396,17 +396,17 @@
     {
       "question": "Which best practice applies to OmniStudio development?",
       "options": [
-        "Ignore testing",
-        "Reusable elements, error handling, and user testing",
         "Single use only",
-        "No reuse"
+        "Reusable elements, error handling, and user testing",
+        "No reuse",
+        "Ignore testing"
       ],
       "correctAnswer": 1,
       "explanation": "Reusable design, error handling, and testing support quality.",
       "whyWrong": [
-        "Ignoring testing increases risk of production failures — the opposite of best practice.",
         "Building for single use contradicts the reusability best practice.",
-        "Avoiding reuse leads to duplicated, harder-to-maintain solutions — the opposite of best practice."
+        "Avoiding reuse leads to duplicated, harder-to-maintain solutions — the opposite of best practice.",
+        "Ignoring testing increases risk of production failures — the opposite of best practice."
       ]
     }
   ]

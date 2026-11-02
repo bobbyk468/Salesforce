@@ -164,10 +164,10 @@
     {
       "question": "A sales manager wants to see which reps have logged the most calls this month. Which report type should they use?",
       "options": [
-        "Activities with Accounts",
-        "Tasks and Events",
         "Accounts with Activities",
-        "Activity History"
+        "Tasks and Events",
+        "Activity History",
+        "Activities with Accounts"
       ],
       "correctAnswer": 1,
       "explanation": "Tasks and Events report type lets you report on activities including calls, meetings, and tasks."
@@ -175,87 +175,87 @@
     {
       "question": "What is the maximum number of fields that can be tracked for field history on a custom object?",
       "options": [
+        "20 fields",
         "10 fields",
         "15 fields",
-        "20 fields",
         "25 fields"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "You can track up to 20 fields per object for field history tracking."
     },
     {
       "question": "Which permission allows a user to transfer records they don't own?",
       "options": [
         "Modify All",
-        "Transfer Records",
+        "View All",
         "Edit",
-        "View All"
+        "Transfer Records"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "The 'Transfer Records' permission allows users to transfer records they don't own to other users."
     },
     {
       "question": "What does Organization-Wide Defaults (OWD) control?",
       "options": [
-        "Only field visibility",
         "The baseline record-level access for each object (Private, Public Read Only, Public Read/Write)",
-        "Only profiles",
-        "Only permission sets"
+        "Only field visibility",
+        "Only permission sets",
+        "Only profiles"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "OWD sets the baseline access. Role hierarchy, sharing rules, and manual sharing grant additional access."
     },
     {
       "question": "Which automation tool is recommended for updating a field when a record is created or edited?",
       "options": [
         "Workflow Rule",
-        "Record-Triggered Flow",
+        "Apex only",
         "Process Builder",
-        "Apex only"
+        "Record-Triggered Flow"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Record-Triggered Flow is the recommended declarative tool for record-triggered automation."
     },
     {
       "question": "What is a validation rule used for?",
       "options": [
+        "Assigning records",
         "Sending emails",
         "Preventing invalid data from being saved based on criteria",
-        "Assigning records",
         "Creating reports"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Validation rules enforce data quality by blocking saves that don't meet the criteria."
     },
     {
       "question": "Which report format shows data in a spreadsheet-like layout?",
       "options": [
-        "Summary only",
         "Tabular",
+        "Summary only",
         "Matrix",
         "Joined"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Tabular reports display data in rows and columns, similar to a spreadsheet."
     },
     {
       "question": "What is the purpose of a roll-up summary field?",
       "options": [
-        "To link objects",
-        "To aggregate values from child records on a master-detail parent",
         "To create formulas",
-        "To track history"
+        "To track history",
+        "To link objects",
+        "To aggregate values from child records on a master-detail parent"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Roll-up summary fields aggregate (SUM, COUNT, MIN, MAX) child records on a master object."
     },
     {
       "question": "Which feature restricts access to specific fields regardless of record access?",
       "options": [
-        "Sharing Rules",
+        "OWD",
         "Field-Level Security",
         "Role Hierarchy",
-        "OWD"
+        "Sharing Rules"
       ],
       "correctAnswer": 1,
       "explanation": "Field-Level Security controls view and edit access to fields at the profile or permission set level."
@@ -263,10 +263,10 @@
     {
       "question": "What does a Master-Detail relationship provide that a Lookup does not?",
       "options": [
-        "Nothing different",
+        "Only cascade delete",
         "Cascade delete and roll-up summary fields",
-        "Only roll-up summary",
-        "Only cascade delete"
+        "Nothing different",
+        "Only roll-up summary"
       ],
       "correctAnswer": 1,
       "explanation": "Master-Detail supports cascade delete and roll-up summaries. Lookup is more flexible but doesn't support these."
@@ -274,42 +274,42 @@
     {
       "question": "Which dashboard component displays a single value (e.g., total pipeline)?",
       "options": [
-        "Bar chart",
         "Gauge",
-        "Table",
-        "Metric"
+        "Bar chart",
+        "Metric",
+        "Table"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "The Metric component shows a single KPI or aggregated value prominently."
     },
     {
       "question": "What is a record type used for?",
       "options": [
-        "Only security",
-        "Offering different picklist values, page layouts, and processes for the same object",
+        "Only workflows",
         "Only page layouts",
-        "Only workflows"
+        "Offering different picklist values, page layouts, and processes for the same object",
+        "Only security"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Record types let you tailor picklists, page layouts, and business processes by record type."
     },
     {
       "question": "Which feature helps prevent duplicate accounts or contacts?",
       "options": [
+        "Workflow rules only",
         "Validation rules only",
         "Duplicate Rules with Matching Rules",
-        "Workflow rules only",
         "Process Builder only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Duplicate Rules use Matching Rules to detect and prevent or warn about duplicates."
     },
     {
       "question": "What does the Lightning App Builder allow you to customize?",
       "options": [
-        "Only reports",
-        "App pages, record pages, and home pages with drag-and-drop components",
         "Only dashboards",
+        "App pages, record pages, and home pages with drag-and-drop components",
+        "Only reports",
         "Only list views"
       ],
       "correctAnswer": 1,
@@ -318,12 +318,12 @@
     {
       "question": "Which sharing option grants access to records owned by users in a role or group?",
       "options": [
-        "OWD only",
         "Sharing Rules",
         "Manual sharing only",
+        "OWD only",
         "Public groups only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Sharing Rules grant access based on ownership (e.g., share with a role or group)."
     }
   ]

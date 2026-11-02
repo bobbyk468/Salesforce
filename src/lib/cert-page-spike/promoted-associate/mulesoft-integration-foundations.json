@@ -182,80 +182,80 @@
       "question": "Who is the MuleSoft Integration Foundations certification designed for?",
       "options": [
         "Senior architects only",
+        "Marketers only",
         "Individuals who know core integration and API-led connectivity terminology and can work as informed members of a MuleSoft project team",
-        "Developers only",
-        "Marketers only"
+        "Developers only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "It is designed for individuals who know core integration and API-led connectivity and can work as informed team members.",
       "whyWrong": [
         "'Senior architects only' is too narrow — this is a foundational, entry-level credential, not an architect-level one.",
-        "'Developers only' is too narrow — this credential targets any project team member, not just developers.",
-        "'Marketers only' is too narrow — this credential is about integration terminology, unrelated to marketing."
+        "'Marketers only' is too narrow — this credential is about integration terminology, unrelated to marketing.",
+        "'Developers only' is too narrow — this credential targets any project team member, not just developers."
       ]
     },
     {
       "question": "What is API-led connectivity?",
       "options": [
-        "Only REST",
         "An approach that organizes APIs in layers (System, Process, Experience) for reusable integration",
-        "Only SOAP",
-        "Only file transfer"
+        "Only file transfer",
+        "Only REST",
+        "Only SOAP"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "API-led connectivity organizes APIs in System, Process, and Experience layers.",
       "whyWrong": [
+        "'Only file transfer' undersells API-led connectivity, which is about API layering, not file-based integration.",
         "'Only REST' undersells API-led connectivity, which is a broader layered architectural approach, not a single protocol.",
-        "'Only SOAP' undersells API-led connectivity, which is a broader layered architectural approach, not a single protocol.",
-        "'Only file transfer' undersells API-led connectivity, which is about API layering, not file-based integration."
+        "'Only SOAP' undersells API-led connectivity, which is a broader layered architectural approach, not a single protocol."
       ]
     },
     {
       "question": "Which layer in API-led connectivity exposes data from systems of record?",
       "options": [
-        "Experience API only",
-        "System API",
         "Process API only",
-        "No layers"
+        "No layers",
+        "System API",
+        "Experience API only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "System APIs expose data from systems of record.",
       "whyWrong": [
-        "Experience API is the consumer-facing layer, not the one exposing data from systems of record.",
         "Process API orchestrates logic across System APIs — it isn't the layer directly exposing systems of record.",
-        "'No layers' contradicts the fact that API-led connectivity explicitly uses a layered architecture."
+        "'No layers' contradicts the fact that API-led connectivity explicitly uses a layered architecture.",
+        "Experience API is the consumer-facing layer, not the one exposing data from systems of record."
       ]
     },
     {
       "question": "What is Anypoint Platform?",
       "options": [
+        "A database",
         "A CRM",
-        "MuleSoft's platform for designing, building, and managing APIs and integrations",
         "An email tool",
-        "A database"
+        "MuleSoft's platform for designing, building, and managing APIs and integrations"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations.",
       "whyWrong": [
+        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform.",
         "Anypoint Platform isn't a CRM — it's an integration/API management platform.",
-        "Anypoint Platform isn't primarily an email tool — that's unrelated to its core function.",
-        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform."
+        "Anypoint Platform isn't primarily an email tool — that's unrelated to its core function."
       ]
     },
     {
       "question": "Which term describes a reusable, composable integration asset?",
       "options": [
-        "Monolith",
-        "API or connector",
         "Legacy system",
-        "Silo"
+        "Silo",
+        "API or connector",
+        "Monolith"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "APIs and connectors are reusable, composable integration assets.",
       "whyWrong": [
-        "A monolith describes a single unified system, the opposite of a reusable, composable asset.",
         "A legacy system describes an older system, not the composable integration asset concept being described.",
-        "A silo describes an isolated system, the opposite of the reusable, composable concept being described."
+        "A silo describes an isolated system, the opposite of the reusable, composable concept being described.",
+        "A monolith describes a single unified system, the opposite of a reusable, composable asset."
       ]
     },
     {
@@ -278,11 +278,11 @@
       "question": "What does the Experience API layer provide?",
       "options": [
         "Direct connection to backend databases",
-        "Data tailored to the needs of a specific consumer channel such as mobile, web, or partner portal",
         "Caching for System APIs",
-        "API usage monitoring"
+        "API usage monitoring",
+        "Data tailored to the needs of a specific consumer channel such as mobile, web, or partner portal"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Experience APIs expose data in a format optimised for a specific consumer — mobile app, web portal, or third-party partner.",
       "whyWrong": [
         "Direct backend database connections bypass the API layering Experience API is specifically designed to abstract.",
@@ -293,12 +293,12 @@
     {
       "question": "What is DataWeave used for in MuleSoft?",
       "options": [
-        "Database schema design",
         "Transforming and mapping data between formats such as JSON, XML, and CSV within Mule flows",
+        "Database schema design",
         "API security policy enforcement",
         "Runtime performance monitoring"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "DataWeave is MuleSoft's functional data transformation language used to convert and map data formats within integration flows.",
       "whyWrong": [
         "Database schema design is a data modeling task, not DataWeave's transformation purpose.",
@@ -311,31 +311,31 @@
       "options": [
         "Runtime Manager",
         "API Manager",
-        "Anypoint Exchange",
-        "Design Center"
+        "Design Center",
+        "Anypoint Exchange"
       ],
       "correctAnswer": 1,
       "explanation": "API Manager allows teams to apply SLA tiers, rate limiting, OAuth policies, and client application management to deployed APIs.",
       "whyWrong": [
         "Runtime Manager deploys and monitors applications — it isn't the security-policy enforcement component.",
-        "Anypoint Exchange is an asset marketplace, not a security-policy enforcement tool.",
-        "Design Center is for designing APIs — it isn't the runtime security-policy enforcement component."
+        "Design Center is for designing APIs — it isn't the runtime security-policy enforcement component.",
+        "Anypoint Exchange is an asset marketplace, not a security-policy enforcement tool."
       ]
     },
     {
       "question": "What is Anypoint Exchange?",
       "options": [
+        "A log monitoring dashboard",
         "An email marketing tool",
-        "A marketplace for publishing and discovering reusable APIs, connectors, templates, and integration examples",
         "A Mule runtime environment",
-        "A log monitoring dashboard"
+        "A marketplace for publishing and discovering reusable APIs, connectors, templates, and integration examples"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Anypoint Exchange is MuleSoft's asset marketplace where teams share and consume APIs, connectors, and pre-built integration templates.",
       "whyWrong": [
+        "Anypoint Exchange isn't a log monitoring dashboard — that's a separate operational tool.",
         "Anypoint Exchange isn't an email marketing tool — that's unrelated to its asset-marketplace purpose.",
-        "Anypoint Exchange isn't a Mule runtime environment — that's a separate execution component.",
-        "Anypoint Exchange isn't a log monitoring dashboard — that's a separate operational tool."
+        "Anypoint Exchange isn't a Mule runtime environment — that's a separate execution component."
       ]
     },
     {
@@ -357,44 +357,44 @@
     {
       "question": "Which Anypoint Platform tool allows teams to design APIs using RAML or OpenAPI Specification before building them?",
       "options": [
-        "Runtime Manager",
-        "Design Center",
         "Anypoint Studio",
+        "Design Center",
+        "Runtime Manager",
         "API Manager"
       ],
       "correctAnswer": 1,
       "explanation": "Design Center's API Designer provides a visual and code editor for creating API specifications in RAML or OAS (OpenAPI).",
       "whyWrong": [
-        "Runtime Manager deploys and monitors running applications — it isn't the pre-build API design tool.",
         "Anypoint Studio is the IDE for building Mule applications, not specifically the RAML/OAS design tool.",
+        "Runtime Manager deploys and monitors running applications — it isn't the pre-build API design tool.",
         "API Manager applies policies to deployed APIs — it isn't the pre-build design tool."
       ]
     },
     {
       "question": "What is the primary purpose of MuleSoft Connectors?",
       "options": [
-        "Writing custom integration code from scratch for every system",
         "Providing pre-built, reusable components that connect Mule applications to external systems, databases, and SaaS apps",
+        "Executing DataWeave transformations",
         "Monitoring API performance dashboards",
-        "Executing DataWeave transformations"
+        "Writing custom integration code from scratch for every system"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Connectors provide out-of-the-box connectivity to systems like Salesforce, SAP, databases, and message queues — eliminating repetitive custom integration code.",
       "whyWrong": [
-        "Writing custom code from scratch is the opposite of what reusable Connectors provide.",
+        "Executing DataWeave transformations is a separate data-transformation function, unrelated to Connectors' system-connection purpose.",
         "Monitoring API performance dashboards is a separate operational function, unrelated to Connectors' integration purpose.",
-        "Executing DataWeave transformations is a separate data-transformation function, unrelated to Connectors' system-connection purpose."
+        "Writing custom code from scratch is the opposite of what reusable Connectors provide."
       ]
     },
     {
       "question": "Which Anypoint Platform tool monitors deployed Mule application health, performance, and logs in real time?",
       "options": [
+        "Runtime Manager",
         "Design Center",
         "Anypoint Studio",
-        "Runtime Manager",
         "Exchange"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Runtime Manager provides visibility into deployed Mule apps including deployment status, CPU/memory metrics, and log streaming.",
       "whyWrong": [
         "Design Center is for designing APIs, not monitoring deployed application health.",

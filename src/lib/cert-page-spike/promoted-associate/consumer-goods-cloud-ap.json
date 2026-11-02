@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Consumer Goods Cloud Accredited Professional exam for?",
     "personas": [
-      { "label": "CPG implementation consultants", "description": "You deliver Consumer Goods Cloud projects for CPG manufacturers and distributors and need the credential to validate your retail execution expertise." },
-      { "label": "Salesforce admins in consumer goods", "description": "You manage a Consumer Goods Cloud org and want to prove your knowledge of visit planning, in-store audits, and field team management." },
-      { "label": "Retail execution and field sales partners", "description": "You design solutions for field reps covering store visits, shelf compliance, and order capture and need to demonstrate your configuration skills." }
+      {
+        "label": "CPG implementation consultants",
+        "description": "You deliver Consumer Goods Cloud projects for CPG manufacturers and distributors and need the credential to validate your retail execution expertise."
+      },
+      {
+        "label": "Salesforce admins in consumer goods",
+        "description": "You manage a Consumer Goods Cloud org and want to prove your knowledge of visit planning, in-store audits, and field team management."
+      },
+      {
+        "label": "Retail execution and field sales partners",
+        "description": "You design solutions for field reps covering store visits, shelf compliance, and order capture and need to demonstrate your configuration skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -158,23 +167,23 @@
     {
       "question": "What does Consumer Goods Cloud AP validate?",
       "options": [
-        "Only basics",
-        "Fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets",
+        "Only Slack",
         "Only reporting",
-        "Only Slack"
+        "Only basics",
+        "Fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Accredited Consumer Goods Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets."
     },
     {
       "question": "Which industry does Consumer Goods Cloud serve?",
       "options": [
-        "Telecom only",
         "Consumer goods manufacturers and distributors (e.g., retail execution)",
+        "Telecom only",
         "Healthcare only",
         "Financial services only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Consumer Goods Cloud serves consumer goods manufacturers and distributors."
     },
     {
@@ -191,10 +200,10 @@
     {
       "question": "Which role typically pursues Consumer Goods Cloud AP?",
       "options": [
-        "Marketers",
-        "Partners and implementers in consumer goods",
         "Sales only",
-        "Designers only"
+        "Partners and implementers in consumer goods",
+        "Designers only",
+        "Marketers"
       ],
       "correctAnswer": 1,
       "explanation": "Partners and implementers in consumer goods pursue this credential."
@@ -202,10 +211,10 @@
     {
       "question": "What does 'outlet' refer to in Consumer Goods Cloud?",
       "options": [
-        "Email only",
-        "Retail or distribution points (stores, distributors)",
         "Only reports",
-        "Only dashboards"
+        "Retail or distribution points (stores, distributors)",
+        "Only dashboards",
+        "Email only"
       ],
       "correctAnswer": 1,
       "explanation": "Outlet refers to retail or distribution points."
@@ -214,42 +223,42 @@
       "question": "What is retail execution?",
       "options": [
         "Email campaigns only",
-        "Field reps visiting outlets to execute promotions, audits, and merchandising",
+        "Warehouse only",
         "Online sales only",
-        "Warehouse only"
+        "Field reps visiting outlets to execute promotions, audits, and merchandising"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Retail execution involves field activities at retail outlets."
     },
     {
       "question": "What is trade promotion management?",
       "options": [
         "Only discounts",
-        "Planning, executing, and tracking promotional activities and spend",
+        "Only reports",
         "Only pricing",
-        "Only reports"
+        "Planning, executing, and tracking promotional activities and spend"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Trade promotion covers planning, execution, and spend tracking."
     },
     {
       "question": "Which role visits outlets in Consumer Goods Cloud?",
       "options": [
-        "Sales reps only",
         "Retail execution reps (e.g., merchandisers, field reps)",
-        "Marketers only",
-        "Developers only"
+        "Developers only",
+        "Sales reps only",
+        "Marketers only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Retail execution reps visit outlets for audits and merchandising."
     },
     {
       "question": "What does 'design and build' mean for Consumer Goods Cloud?",
       "options": [
-        "Only coding",
+        "Only deployment",
         "Designing the solution architecture and configuring the platform",
-        "Only reporting",
-        "Only deployment"
+        "Only coding",
+        "Only reporting"
       ],
       "correctAnswer": 1,
       "explanation": "Design = architecture; build = configuration."
@@ -258,66 +267,66 @@
       "question": "Which data is often tracked at the outlet level?",
       "options": [
         "Only sales",
+        "Only finance",
         "Inventory, compliance, promotions, and outlet attributes",
-        "Only marketing",
-        "Only finance"
+        "Only marketing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Outlet-level data includes inventory, compliance, and promotions."
     },
     {
       "question": "What is outlet management in Consumer Goods Cloud?",
       "options": [
+        "Only dashboards",
         "Email only",
         "Managing outlet records, hierarchies, and visit planning",
-        "Only reports",
-        "Only dashboards"
+        "Only reports"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Outlet management covers outlet data and visit planning."
     },
     {
       "question": "Which industry segment uses Consumer Goods Cloud?",
       "options": [
+        "Education only",
         "Healthcare only",
         "CPG manufacturers and distributors (e.g., beverages, packaged goods)",
-        "Financial services only",
-        "Education only"
+        "Financial services only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "CPG (Consumer Packaged Goods) is the primary segment."
     },
     {
       "question": "What does deploy mean for Consumer Goods Cloud?",
       "options": [
-        "Only coding",
-        "Implementing the solution and going live with the customer",
         "Only design",
-        "Only training"
+        "Only training",
+        "Implementing the solution and going live with the customer",
+        "Only coding"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Deploy = implement and go-live."
     },
     {
       "question": "Why is visit planning important for retail execution?",
       "options": [
-        "Not important",
         "Optimizing field rep routes and outlet visit schedules",
         "Only for HQ",
-        "Only for marketing"
+        "Only for marketing",
+        "Not important"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Visit planning optimizes field rep coverage of outlets."
     },
     {
       "question": "Which Salesforce product does Consumer Goods Cloud extend?",
       "options": [
-        "Marketing Cloud only",
         "Sales Cloud and Service Cloud for retail execution workflows",
         "Commerce Cloud only",
-        "Slack only"
+        "Slack only",
+        "Marketing Cloud only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Consumer Goods Cloud extends Sales Cloud and Service Cloud."
     }
   ]

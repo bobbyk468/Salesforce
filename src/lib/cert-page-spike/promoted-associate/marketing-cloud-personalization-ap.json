@@ -168,12 +168,12 @@
     {
       "question": "What does Marketing Cloud Personalization AP validate?",
       "options": [
-        "Only basics",
         "Skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization",
-        "Only reporting",
-        "Only Slack"
+        "Only basics",
+        "Only Slack",
+        "Only reporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization."
     },
     {
@@ -192,8 +192,8 @@
       "options": [
         "Only coding",
         "Designing, configuring, building, and implementing personalization solutions",
-        "Only reporting",
-        "Only lists"
+        "Only lists",
+        "Only reporting"
       ],
       "correctAnswer": 1,
       "explanation": "They design, configure, build, and implement personalization solutions."
@@ -201,10 +201,10 @@
     {
       "question": "Which role typically pursues Marketing Cloud Personalization AP?",
       "options": [
-        "Sales only",
+        "Developers only",
         "Partners and implementers working with Marketing Cloud Personalization",
         "Designers only",
-        "Developers only"
+        "Sales only"
       ],
       "correctAnswer": 1,
       "explanation": "Partners and implementers working with personalization pursue this credential."
@@ -212,54 +212,54 @@
     {
       "question": "What does personalization often rely on?",
       "options": [
-        "Only static content",
-        "Data, segments, and real-time decisioning",
         "Only reports",
-        "Only dashboards"
+        "Only dashboards",
+        "Only static content",
+        "Data, segments, and real-time decisioning"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Personalization relies on data, segments, and real-time decisioning."
     },
     {
       "question": "What is real-time decisioning in personalization?",
       "options": [
         "Batch only",
+        "Static only",
         "Instant content and offer selection based on user context",
-        "Manual only",
-        "Static only"
+        "Manual only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Real-time decisioning selects content/offers instantly."
     },
     {
       "question": "Which data source feeds Marketing Cloud Personalization?",
       "options": [
         "Slack only",
+        "No data",
         "CDP, Data Extensions, and event data",
-        "Salesforce only",
-        "No data"
+        "Salesforce only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "CDP and event data feed personalization."
     },
     {
       "question": "What does web personalization target?",
       "options": [
-        "Email only",
         "Web pages, banners, and recommendations",
+        "Email only",
         "SMS only",
         "Social only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Web personalization targets pages and recommendations."
     },
     {
       "question": "Which touchpoint does Marketing Cloud Personalization support?",
       "options": [
-        "Email only",
+        "Social only",
         "Web, mobile, email, and in-app",
-        "SMS only",
-        "Social only"
+        "Email only",
+        "SMS only"
       ],
       "correctAnswer": 1,
       "explanation": "Personalization supports web, mobile, email, and in-app."
@@ -267,67 +267,67 @@
     {
       "question": "What is the purpose of segments in personalization?",
       "options": [
-        "To replace data",
-        "To target and tailor experiences by audience",
+        "To report only",
         "To send only",
-        "To report only"
+        "To target and tailor experiences by audience",
+        "To replace data"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Segments target and tailor experiences by audience."
     },
     {
       "question": "Which integration connects personalization to Marketing Cloud?",
       "options": [
-        "Manual only",
         "CDP, Journey Builder, and Email Studio",
+        "Service Cloud only",
         "Slack only",
-        "Service Cloud only"
+        "Manual only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "CDP and Journey Builder connect to personalization."
     },
     {
       "question": "What does building personalization solutions involve?",
       "options": [
-        "Only design",
-        "Configuring decision rules, segments, and experiences",
+        "Only reports",
         "Only coding",
-        "Only reports"
+        "Only design",
+        "Configuring decision rules, segments, and experiences"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Building involves rules, segments, and experiences."
     },
     {
       "question": "Which best practice applies to personalization?",
       "options": [
         "Ignore data",
-        "Privacy-first, test experiences, and measure lift",
         "No testing",
+        "Privacy-first, test experiences, and measure lift",
         "Static only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Privacy-first, testing, and measurement support success."
     },
     {
       "question": "What is the benefit of Marketing Cloud Personalization?",
       "options": [
-        "No benefit",
         "Relevant experiences that drive engagement and conversion",
-        "Generic only",
-        "Manual only"
+        "Manual only",
+        "No benefit",
+        "Generic only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Personalization drives relevant engagement and conversion."
     },
     {
       "question": "What is an offer in Marketing Cloud Personalization?",
       "options": [
-        "A report",
-        "A content asset (banner, message) presented based on rules or segments",
         "An email only",
-        "A workflow only"
+        "A report",
+        "A workflow only",
+        "A content asset (banner, message) presented based on rules or segments"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Offers are content assets presented conditionally based on rules and audience."
     }
   ]

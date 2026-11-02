@@ -168,92 +168,92 @@
     {
       "question": "What is the primary focus of a Certified UX Designer on the Salesforce Platform?",
       "options": [
-        "Only backend",
         "Building and designing human-centered experiences on the Salesforce Platform",
         "Email only",
+        "Only backend",
         "Slack only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Certified UX Designers build and design human-centered experiences on the Salesforce Platform.",
       "whyWrong": [
-        "'Only backend' misrepresents UX Design, which is about human-centered front-end experiences, not backend systems.",
         "Email is unrelated to the UX Designer's core experience-design focus.",
+        "'Only backend' misrepresents UX Design, which is about human-centered front-end experiences, not backend systems.",
         "Slack is unrelated to the UX Designer's core experience-design focus."
       ]
     },
     {
       "question": "Which principle is central to human-centered design?",
       "options": [
-        "Only aesthetics",
-        "Understanding user needs, behaviors, and context to design solutions",
         "Only performance",
-        "Only cost"
+        "Only aesthetics",
+        "Only cost",
+        "Understanding user needs, behaviors, and context to design solutions"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Human-centered design focuses on user needs, behaviors, and context.",
       "whyWrong": [
-        "'Only aesthetics' undersells human-centered design, which is about understanding user needs and behavior, not just visuals.",
         "'Only performance' misattributes the principle to a technical concern, not user understanding.",
+        "'Only aesthetics' undersells human-centered design, which is about understanding user needs and behavior, not just visuals.",
         "'Only cost' misattributes the principle to a business concern, not user understanding."
       ]
     },
     {
       "question": "Which Salesforce capability do UX Designers often work with?",
       "options": [
-        "Only Apex",
+        "Only MuleSoft",
         "Lightning Experience, Experience Cloud, and declarative UI",
-        "Only Heroku",
-        "Only MuleSoft"
+        "Only Apex",
+        "Only Heroku"
       ],
       "correctAnswer": 1,
       "explanation": "They work with Lightning Experience, Experience Cloud, and declarative UI.",
       "whyWrong": [
+        "'Only MuleSoft' undersells the broader set of Salesforce UI capabilities UX Designers work with.",
         "'Only Apex' narrows the platform focus incorrectly to a single programming language.",
-        "'Only Heroku' undersells the broader set of Salesforce UI capabilities UX Designers work with.",
-        "'Only MuleSoft' undersells the broader set of Salesforce UI capabilities UX Designers work with."
+        "'Only Heroku' undersells the broader set of Salesforce UI capabilities UX Designers work with."
       ]
     },
     {
       "question": "What does accessibility mean in UX design?",
       "options": [
-        "Only speed",
+        "Only desktop",
         "Designing so that products are usable by people with diverse abilities",
-        "Only mobile",
-        "Only desktop"
+        "Only speed",
+        "Only mobile"
       ],
       "correctAnswer": 1,
       "explanation": "Accessibility ensures products are usable by people with diverse abilities.",
       "whyWrong": [
+        "'Only desktop' undersells accessibility, which applies across all devices, not just desktop.",
         "'Only speed' misattributes accessibility to a performance concern, not usability for diverse abilities.",
-        "'Only mobile' undersells accessibility, which applies across all devices, not just mobile.",
-        "'Only desktop' undersells accessibility, which applies across all devices, not just desktop."
+        "'Only mobile' undersells accessibility, which applies across all devices, not just mobile."
       ]
     },
     {
       "question": "Who is the UX Designer certification for?",
       "options": [
+        "Only marketers",
         "Only developers",
         "Aspiring or experienced designers wanting to build human-centered experiences on the Salesforce Platform",
-        "Only admins",
-        "Only marketers"
+        "Only admins"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "It's for aspiring or experienced designers building human-centered experiences on the platform.",
       "whyWrong": [
+        "'Only marketers' is too narrow — this certification targets designers, not marketers.",
         "'Only developers' is too narrow — this certification targets designers broadly, not developers.",
-        "'Only admins' is too narrow — this certification targets designers, not administrators.",
-        "'Only marketers' is too narrow — this certification targets designers, not marketers."
+        "'Only admins' is too narrow — this certification targets designers, not administrators."
       ]
     },
     {
       "question": "What is the purpose of user research in UX design?",
       "options": [
-        "To skip design",
         "To understand user needs, pain points, and behaviors before designing",
+        "To skip design",
         "Only to validate",
         "Only to test"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "User research informs design by understanding needs and behaviors.",
       "whyWrong": [
         "'To skip design' is the opposite of user research's purpose, which informs design, not replaces it.",
@@ -264,113 +264,113 @@
     {
       "question": "Which deliverable communicates structure and layout before visual design?",
       "options": [
-        "Final UI only",
+        "Reports only",
         "Wireframes",
-        "Code only",
-        "Reports only"
+        "Final UI only",
+        "Code only"
       ],
       "correctAnswer": 1,
       "explanation": "Wireframes communicate structure and layout before visual design.",
       "whyWrong": [
+        "'Reports only' is unrelated to wireframes' structural design purpose.",
         "'Final UI only' is the opposite of wireframes' purpose, which is pre-visual-design structure.",
-        "'Code only' misattributes wireframes' purpose to implementation, not structural design communication.",
-        "'Reports only' is unrelated to wireframes' structural design purpose."
+        "'Code only' misattributes wireframes' purpose to implementation, not structural design communication."
       ]
     },
     {
       "question": "What does prototyping support in the design process?",
       "options": [
         "Only documentation",
-        "Testing and validating design concepts with users before development",
+        "Only deployment",
         "Only coding",
-        "Only deployment"
+        "Testing and validating design concepts with users before development"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Prototypes enable early testing and validation of design concepts.",
       "whyWrong": [
         "'Only documentation' undersells prototyping, which is about active testing and validation, not just documentation.",
-        "'Only coding' misattributes prototyping's purpose to implementation, not design validation.",
-        "'Only deployment' misattributes prototyping's purpose to implementation, not design validation."
+        "'Only deployment' misattributes prototyping's purpose to implementation, not design validation.",
+        "'Only coding' misattributes prototyping's purpose to implementation, not design validation."
       ]
     },
     {
       "question": "Which WCAG principle ensures content is perceivable?",
       "options": [
+        "Only understandable",
         "Only operable",
         "Perceivable (e.g., text alternatives, color contrast)",
-        "Only understandable",
         "Only robust"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Perceivable covers alternatives and contrast for accessibility.",
       "whyWrong": [
-        "'Only operable' misattributes the principle — Operable is a different WCAG principle, not the one about perceivability.",
         "'Only understandable' misattributes the principle — Understandable is a different WCAG principle.",
+        "'Only operable' misattributes the principle — Operable is a different WCAG principle, not the one about perceivability.",
         "'Only robust' misattributes the principle — Robust is a different WCAG principle, not the one about perceivability."
       ]
     },
     {
       "question": "What is a design system?",
       "options": [
-        "A single component",
-        "Reusable components, patterns, and guidelines for consistent UI",
+        "Only typography",
         "Only colors",
-        "Only typography"
+        "Reusable components, patterns, and guidelines for consistent UI",
+        "A single component"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Design systems provide reusable components and guidelines.",
       "whyWrong": [
-        "A single component doesn't represent the broader reusable system of patterns and guidelines a design system provides.",
+        "'Only typography' undersells a design system, which spans components and patterns beyond just typography.",
         "'Only colors' undersells a design system, which spans components and patterns beyond just color.",
-        "'Only typography' undersells a design system, which spans components and patterns beyond just typography."
+        "A single component doesn't represent the broader reusable system of patterns and guidelines a design system provides."
       ]
     },
     {
       "question": "Which Experience Cloud capability supports UX Designers?",
       "options": [
+        "Only batch",
         "Only Apex",
-        "Templates, themes, and declarative site building",
         "Only APIs",
-        "Only batch"
+        "Templates, themes, and declarative site building"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Templates, themes, and declarative building support UX design.",
       "whyWrong": [
+        "'Only batch' undersells the broader declarative site-building capability being described.",
         "'Only Apex' narrows Experience Cloud's UX capability incorrectly to a single programming language.",
-        "'Only APIs' undersells the broader declarative site-building capability being described.",
-        "'Only batch' undersells the broader declarative site-building capability being described."
+        "'Only APIs' undersells the broader declarative site-building capability being described."
       ]
     },
     {
       "question": "What does usability testing measure?",
       "options": [
-        "Only speed",
         "How effectively users can complete tasks and identify issues",
         "Only aesthetics",
+        "Only speed",
         "Only cost"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Usability testing measures task completion and identifies issues.",
       "whyWrong": [
-        "'Only speed' misattributes usability testing to a performance metric, not task completion effectiveness.",
         "'Only aesthetics' misattributes usability testing to visual design, not task completion effectiveness.",
+        "'Only speed' misattributes usability testing to a performance metric, not task completion effectiveness.",
         "'Only cost' misattributes usability testing to a business metric, not task completion effectiveness."
       ]
     },
     {
       "question": "Which principle supports inclusive design?",
       "options": [
+        "Design for developers only",
         "Design for one user only",
         "Design for diverse abilities and contexts",
-        "Design for desktop only",
-        "Design for developers only"
+        "Design for desktop only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Inclusive design considers diverse abilities and contexts.",
       "whyWrong": [
+        "'Design for developers only' misattributes inclusive design's audience, which is end users broadly, not developers.",
         "Designing for one user only is the opposite of the inclusive design principle.",
-        "'Design for desktop only' is the opposite of the inclusive, diverse-context design principle.",
-        "'Design for developers only' misattributes inclusive design's audience, which is end users broadly, not developers."
+        "'Design for desktop only' is the opposite of the inclusive, diverse-context design principle."
       ]
     },
     {
@@ -392,17 +392,17 @@
     {
       "question": "Which best practice applies to Lightning Experience design?",
       "options": [
-        "Ignore mobile",
         "Design for responsive layouts and Lightning Design System",
-        "Desktop only",
-        "No accessibility"
+        "Ignore mobile",
+        "No accessibility",
+        "Desktop only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Responsive design and LDS align with Lightning best practices.",
       "whyWrong": [
         "Ignoring mobile contradicts the responsive design best practice for Lightning Experience.",
-        "'Desktop only' contradicts the responsive, mobile-inclusive best practice for Lightning Experience design.",
-        "'No accessibility' contradicts the fact that accessibility is a core best practice for Lightning Experience design."
+        "'No accessibility' contradicts the fact that accessibility is a core best practice for Lightning Experience design.",
+        "'Desktop only' contradicts the responsive, mobile-inclusive best practice for Lightning Experience design."
       ]
     }
   ]

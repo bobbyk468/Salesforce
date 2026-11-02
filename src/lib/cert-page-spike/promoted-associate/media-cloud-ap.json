@@ -167,21 +167,21 @@
     {
       "question": "What does Media Cloud AP validate?",
       "options": [
-        "Only basics",
         "Knowledge, skills, and experience to plan, design, and implement business value through Media Cloud",
+        "Only basics",
         "Only reporting",
         "Only Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Accredited Media Cloud Professionals have knowledge, skills, and experience to plan, design, and implement business value to customers through Media Cloud."
     },
     {
       "question": "Which industry does Media Cloud serve?",
       "options": [
-        "Retail only",
+        "Education only",
         "Media and entertainment (e.g., ad sales, content, rights)",
-        "Healthcare only",
-        "Education only"
+        "Retail only",
+        "Healthcare only"
       ],
       "correctAnswer": 1,
       "explanation": "Media Cloud serves media and entertainment industries."
@@ -191,8 +191,8 @@
       "options": [
         "Only email",
         "Ad sales, rights management, and campaign management",
-        "Only CPQ",
-        "Only Slack"
+        "Only Slack",
+        "Only CPQ"
       ],
       "correctAnswer": 1,
       "explanation": "Ad sales, rights management, and campaign management are key use cases."
@@ -200,21 +200,21 @@
     {
       "question": "Which role typically pursues Media Cloud AP?",
       "options": [
-        "Marketers",
-        "Partners and implementers in media and entertainment",
         "Sales only",
-        "Designers only"
+        "Designers only",
+        "Marketers",
+        "Partners and implementers in media and entertainment"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Partners and implementers in media pursue this credential."
     },
     {
       "question": "What does 'implement business value' mean in Media Cloud context?",
       "options": [
-        "Only shipping",
+        "Only dashboards",
         "Delivering solutions that drive outcomes for media customers",
         "Only reporting",
-        "Only dashboards"
+        "Only shipping"
       ],
       "correctAnswer": 1,
       "explanation": "It means delivering solutions that drive outcomes for media customers."
@@ -222,32 +222,32 @@
     {
       "question": "What is ad sales management in Media Cloud?",
       "options": [
-        "Email only",
-        "Managing ad inventory, proposals, and sales workflows for media",
+        "Only dashboards",
         "Only reports",
-        "Only dashboards"
+        "Managing ad inventory, proposals, and sales workflows for media",
+        "Email only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Ad sales covers inventory, proposals, and sales processes."
     },
     {
       "question": "What is rights management in media?",
       "options": [
-        "Only legal",
         "Managing content rights, licensing, and distribution terms",
         "Only marketing",
-        "Only sales"
+        "Only sales",
+        "Only legal"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Rights management tracks content rights and licensing."
     },
     {
       "question": "Which Salesforce products does Media Cloud often integrate with?",
       "options": [
-        "Slack only",
+        "Commerce Cloud only",
         "Industries CPQ, Billing, and CRM for media workflows",
-        "Marketing Cloud only",
-        "Commerce Cloud only"
+        "Slack only",
+        "Marketing Cloud only"
       ],
       "correctAnswer": 1,
       "explanation": "Media Cloud integrates with CPQ, Billing, and CRM."
@@ -255,78 +255,78 @@
     {
       "question": "What does campaign management mean in media context?",
       "options": [
-        "Email campaigns only",
         "Managing ad campaigns, flight dates, and delivery",
-        "Only social",
-        "Only SEO"
+        "Only SEO",
+        "Email campaigns only",
+        "Only social"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Campaign management covers ad campaigns and delivery."
     },
     {
       "question": "Why is the media industry unique for CRM?",
       "options": [
-        "It isn't",
         "Complex rights, inventory, and multi-party workflows",
+        "It isn't",
         "Only standard objects",
         "Only simple pricing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Media has complex rights, inventory, and workflows."
     },
     {
       "question": "What does 'plan and design' mean for Media Cloud?",
       "options": [
-        "Only coding",
-        "Planning the solution architecture and designing the implementation",
         "Only reporting",
-        "Only deployment"
+        "Only deployment",
+        "Planning the solution architecture and designing the implementation",
+        "Only coding"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Plan = roadmap; design = solution architecture."
     },
     {
       "question": "What is a rate card in media ad sales?",
       "options": [
         "A report only",
-        "Pricing structure for ad inventory (CPM, CPC, packages)",
         "A workflow only",
+        "Pricing structure for ad inventory (CPM, CPC, packages)",
         "An email list"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Rate cards define ad pricing and package structures for media sales."
     },
     {
       "question": "What is ad inventory?",
       "options": [
-        "A report",
-        "Available ad slots or units that can be sold",
+        "An email list",
         "A workflow only",
-        "An email list"
+        "A report",
+        "Available ad slots or units that can be sold"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Ad inventory is the sellable ad space or units."
     },
     {
       "question": "Which use case does Media Cloud support for content?",
       "options": [
         "Only email",
+        "Only Slack",
         "Content rights, licensing, and distribution tracking",
-        "Only CPQ",
-        "Only Slack"
+        "Only CPQ"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Content rights and distribution are key use cases."
     },
     {
       "question": "What does implement mean for Media Cloud AP?",
       "options": [
         "Only coding",
-        "Configuring and deploying the solution for the customer",
         "Only design",
-        "Only training"
+        "Only training",
+        "Configuring and deploying the solution for the customer"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Implement = configure and deploy."
     }
   ]

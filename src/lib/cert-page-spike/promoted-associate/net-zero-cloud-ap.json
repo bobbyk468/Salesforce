@@ -168,20 +168,20 @@
     {
       "question": "What does Net Zero Cloud AP validate?",
       "options": [
-        "Only basics",
-        "Knowledge, skills, and experience with managing and collecting key sustainability data",
+        "Only Slack",
         "Only reporting",
-        "Only Slack"
+        "Only basics",
+        "Knowledge, skills, and experience with managing and collecting key sustainability data"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data."
     },
     {
       "question": "What is Net Zero Cloud used for?",
       "options": [
-        "Only email",
-        "Sustainability and carbon footprint management",
         "Only CPQ",
+        "Sustainability and carbon footprint management",
+        "Only email",
         "Only Slack"
       ],
       "correctAnswer": 1,
@@ -190,21 +190,21 @@
     {
       "question": "What is a key activity for a Net Zero Cloud Professional?",
       "options": [
-        "Only coding",
-        "Managing and collecting sustainability data",
+        "Only lists",
         "Only reporting",
-        "Only lists"
+        "Only coding",
+        "Managing and collecting sustainability data"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "They manage and collect sustainability data."
     },
     {
       "question": "Which role typically pursues Net Zero Cloud AP?",
       "options": [
-        "Marketers",
+        "Designers only",
         "Partners and implementers working with sustainability and Net Zero Cloud",
         "Sales only",
-        "Designers only"
+        "Marketers"
       ],
       "correctAnswer": 1,
       "explanation": "Partners and implementers working with sustainability pursue this credential."
@@ -212,34 +212,34 @@
     {
       "question": "What does 'sustainability data' often include?",
       "options": [
+        "Only financial data",
         "Only sales data",
-        "Carbon emissions, energy usage, and environmental metrics",
         "Only marketing data",
-        "Only financial data"
+        "Carbon emissions, energy usage, and environmental metrics"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Sustainability data includes carbon emissions, energy usage, and environmental metrics."
     },
     {
       "question": "What is carbon footprint tracking?",
       "options": [
-        "Only sales",
         "Measuring and reporting carbon emissions (Scope 1, 2, 3)",
+        "Only finance",
         "Only marketing",
-        "Only finance"
+        "Only sales"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Carbon footprint tracks emissions across Scopes 1, 2, and 3."
     },
     {
       "question": "What are Scope 1, 2, and 3 emissions?",
       "options": [
-        "Report types",
         "Scope 1 = direct, 2 = energy indirect, 3 = value chain indirect",
         "Workflow stages",
-        "Dashboard filters"
+        "Dashboard filters",
+        "Report types"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Scopes 1–3 categorize emissions by source."
     },
     {
@@ -257,41 +257,41 @@
       "question": "What does 'managing' sustainability data mean?",
       "options": [
         "Only viewing",
-        "Collecting, validating, and maintaining environmental data for reporting",
         "Only deleting",
+        "Collecting, validating, and maintaining environmental data for reporting",
         "Only exporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Managing includes collecting, validating, and maintaining data."
     },
     {
       "question": "Why is sustainability reporting important?",
       "options": [
+        "Only for marketing",
         "Not important",
         "Regulatory compliance, stakeholder disclosure, and ESG commitments",
-        "Only for internal use",
-        "Only for marketing"
+        "Only for internal use"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Reporting supports compliance and ESG disclosure."
     },
     {
       "question": "Which Salesforce product does Net Zero Cloud extend?",
       "options": [
+        "Slack",
         "Marketing Cloud",
         "Sustainability Cloud (Net Zero Cloud) for environmental data",
-        "Commerce Cloud",
-        "Slack"
+        "Commerce Cloud"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Net Zero Cloud is the sustainability product."
     },
     {
       "question": "What is ESG?",
       "options": [
-        "A report type",
-        "Environmental, Social, and Governance—sustainability and responsibility metrics",
         "A workflow",
+        "Environmental, Social, and Governance—sustainability and responsibility metrics",
+        "A report type",
         "An object"
       ],
       "correctAnswer": 1,
@@ -300,34 +300,34 @@
     {
       "question": "What does data collection involve for Net Zero Cloud?",
       "options": [
-        "Only manual entry",
         "Integrating sources (e.g., energy, travel) and mapping to sustainability metrics",
+        "Only dashboards",
         "Only reports",
-        "Only dashboards"
+        "Only manual entry"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Data collection integrates sources and maps to metrics."
     },
     {
       "question": "What is Science Based Targets initiative (SBTi) in sustainability?",
       "options": [
-        "A report type",
         "A framework for setting emissions reduction targets aligned with climate science",
         "A data source only",
+        "A report type",
         "A dashboard only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "SBTi provides standards for science-based emissions reduction targets."
     },
     {
       "question": "What is a sustainability metric?",
       "options": [
-        "Only revenue",
-        "A measured value such as tons CO2e, MWh energy, or water usage",
         "Only sales",
-        "Only marketing"
+        "Only marketing",
+        "A measured value such as tons CO2e, MWh energy, or water usage",
+        "Only revenue"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Sustainability metrics quantify environmental impact."
     }
   ]

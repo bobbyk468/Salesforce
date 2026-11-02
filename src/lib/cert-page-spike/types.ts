@@ -2,9 +2,20 @@
 export type SpikeSampleQuestion = {
   question: string
   options: string[]
-  correctAnswer: number
+  correctAnswer?: number
+  correctAnswers?: number[]
+  source?: ImportedQuestionSource
   explanation?: string
   whyWrong?: string[]
+}
+
+export type ImportedQuestionSource = {
+  repository: string
+  commit: string
+  path: string
+  questionId: string
+  answerEvidence?: string
+  bankPath?: string
 }
 
 /** Inline segments for lead copy and CTA paragraphs (text, links, bold). */
@@ -35,7 +46,7 @@ export type RichSectionBlock = {
 }
 
 export type SharedCertCardAndContent = {
-  /** First-hand exam observation rendered as an ExpertInsightCallout. Targets Google's E-E-A-T "Experience" signal. */
+  /** Neutral editorial study-planning note; does not imply first-hand exam experience. */
   expertInsight?: string
   /** Page-specific trap/readiness section used to reduce template similarity on priority cert pages. */
   differentiation?: CertDifferentiation

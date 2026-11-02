@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Manufacturing Cloud Accredited Professional exam for?",
     "personas": [
-      { "label": "Manufacturing implementation consultants", "description": "You deliver Manufacturing Cloud projects for industrial manufacturers and need the credential to validate your expertise in sales agreements, forecasting, and rebate management." },
-      { "label": "Salesforce admins in manufacturing", "description": "You manage a Manufacturing Cloud org and want to prove your knowledge of account-based forecasting, demand planning, and dealer visit management." },
-      { "label": "Supply chain and ERP integration partners", "description": "You design integrations between Salesforce Manufacturing Cloud and ERP systems like SAP or Oracle and need to demonstrate your solution design skills." }
+      {
+        "label": "Manufacturing implementation consultants",
+        "description": "You deliver Manufacturing Cloud projects for industrial manufacturers and need the credential to validate your expertise in sales agreements, forecasting, and rebate management."
+      },
+      {
+        "label": "Salesforce admins in manufacturing",
+        "description": "You manage a Manufacturing Cloud org and want to prove your knowledge of account-based forecasting, demand planning, and dealer visit management."
+      },
+      {
+        "label": "Supply chain and ERP integration partners",
+        "description": "You design integrations between Salesforce Manufacturing Cloud and ERP systems like SAP or Oracle and need to demonstrate your solution design skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -158,64 +167,64 @@
     {
       "question": "What does Manufacturing Cloud AP validate?",
       "options": [
-        "Only basics",
-        "Fundamental knowledge and skills to design, build, and deploy solutions across Manufacturing Cloud",
         "Only reporting",
-        "Only Slack"
+        "Only Slack",
+        "Only basics",
+        "Fundamental knowledge and skills to design, build, and deploy solutions across Manufacturing Cloud"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Accredited Manufacturing Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions across Manufacturing Cloud."
     },
     {
       "question": "Which industry does Manufacturing Cloud serve?",
       "options": [
-        "Retail only",
-        "Manufacturing (e.g., production, supply chain)",
         "Healthcare only",
-        "Education only"
+        "Education only",
+        "Manufacturing (e.g., production, supply chain)",
+        "Retail only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Manufacturing Cloud serves manufacturing industries."
     },
     {
       "question": "What is a key use case for Manufacturing Cloud?",
       "options": [
+        "Only CPQ",
         "Only email",
         "Production planning, supply chain, and shop floor",
-        "Only CPQ",
         "Only Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Production planning, supply chain, and shop floor are key use cases."
     },
     {
       "question": "Which role typically pursues Manufacturing Cloud AP?",
       "options": [
-        "Marketers",
         "Partners and implementers in manufacturing",
-        "Sales only",
-        "Designers only"
+        "Designers only",
+        "Marketers",
+        "Sales only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Partners and implementers in manufacturing pursue this credential."
     },
     {
       "question": "What does 'design, build, and deploy' mean in this context?",
       "options": [
         "Only UI",
-        "Implementing end-to-end manufacturing solutions",
         "Only reports",
+        "Implementing end-to-end manufacturing solutions",
         "Only dashboards"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "It means implementing end-to-end manufacturing solutions."
     },
     {
       "question": "What does Manufacturing Cloud support for production?",
       "options": [
-        "Only sales",
-        "Production planning, work orders, and shop floor execution",
         "Only marketing",
+        "Production planning, work orders, and shop floor execution",
+        "Only sales",
         "Only service"
       ],
       "correctAnswer": 1,
@@ -224,21 +233,21 @@
     {
       "question": "Which object represents production work in Manufacturing Cloud?",
       "options": [
-        "Opportunity only",
         "Work orders and production runs",
-        "Lead only",
-        "Campaign only"
+        "Opportunity only",
+        "Campaign only",
+        "Lead only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Work orders and production runs represent production work."
     },
     {
       "question": "What does supply chain management involve in manufacturing?",
       "options": [
-        "Only sales",
+        "Only service",
         "Procurement, inventory, and planning",
-        "Only marketing",
-        "Only service"
+        "Only sales",
+        "Only marketing"
       ],
       "correctAnswer": 1,
       "explanation": "Supply chain covers procurement, inventory, and planning."
@@ -247,42 +256,42 @@
       "question": "Which Salesforce product integrates with Manufacturing Cloud?",
       "options": [
         "Slack only",
+        "Commerce Cloud only",
         "ERP, Field Service, and CRM",
-        "Marketing Cloud only",
-        "Commerce Cloud only"
+        "Marketing Cloud only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Manufacturing Cloud integrates with ERP and Field Service."
     },
     {
       "question": "What is the purpose of shop floor management?",
       "options": [
-        "Only reporting",
         "Tracking production execution and real-time status",
         "Only planning",
+        "Only reporting",
         "Only procurement"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Shop floor management tracks production execution."
     },
     {
       "question": "Which use case supports demand planning?",
       "options": [
         "Manual only",
-        "Forecasting and demand signals for production",
+        "Reports only",
         "Email only",
-        "Reports only"
+        "Forecasting and demand signals for production"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Demand planning uses forecasts for production planning."
     },
     {
       "question": "What is capacity planning in Manufacturing Cloud?",
       "options": [
-        "Only reporting",
+        "Only sales",
         "Aligning production capacity with demand forecasts and work orders",
         "Only procurement",
-        "Only sales"
+        "Only reporting"
       ],
       "correctAnswer": 1,
       "explanation": "Capacity planning aligns production resources with expected demand."
@@ -290,20 +299,20 @@
     {
       "question": "Which object tracks material consumption in production?",
       "options": [
-        "Opportunity only",
         "Work order components and material requirements",
         "Lead only",
+        "Opportunity only",
         "Campaign only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Work orders and component records track material usage in production."
     },
     {
       "question": "What is the benefit of Manufacturing Cloud for production?",
       "options": [
-        "Only CRM",
-        "End-to-end visibility from planning to shop floor",
         "Only marketing",
+        "End-to-end visibility from planning to shop floor",
+        "Only CRM",
         "Only service"
       ],
       "correctAnswer": 1,
@@ -312,12 +321,12 @@
     {
       "question": "Which best practice applies to Manufacturing Cloud implementation?",
       "options": [
+        "Single product only",
         "Ignore processes",
-        "Align with production and supply chain processes",
         "No testing",
-        "Single product only"
+        "Align with production and supply chain processes"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Align with production and supply chain processes."
     }
   ]

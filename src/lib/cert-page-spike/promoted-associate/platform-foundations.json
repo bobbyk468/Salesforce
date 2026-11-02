@@ -168,11 +168,11 @@
       "question": "Who is the Salesforce Associate certification designed for?",
       "options": [
         "Developers only",
-        "Individuals with up to 6 months of user experience on Salesforce",
         "Architects only",
-        "Marketers only"
+        "Marketers only",
+        "Individuals with up to 6 months of user experience on Salesforce"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "The Associate certification is designed for individuals who may have up to 6 months of user experience.",
       "whyWrong": [
         "'Developers only' is too narrow — this associate-level credential targets general users, not developers specifically.",
@@ -183,65 +183,65 @@
     {
       "question": "What does the Customer 360 Platform refer to?",
       "options": [
-        "Only Sales Cloud",
-        "The integrated set of Salesforce products that connect customer data across the organization",
         "Only Marketing Cloud",
-        "Only Service Cloud"
+        "The integrated set of Salesforce products that connect customer data across the organization",
+        "Only Service Cloud",
+        "Only Sales Cloud"
       ],
       "correctAnswer": 1,
       "explanation": "Customer 360 is Salesforce's integrated platform connecting customer data across products.",
       "whyWrong": [
-        "'Only Sales Cloud' undersells Customer 360, which spans the full integrated product suite, not one cloud.",
         "'Only Marketing Cloud' undersells Customer 360, which spans the full integrated product suite.",
-        "'Only Service Cloud' undersells Customer 360, which spans the full integrated product suite."
+        "'Only Service Cloud' undersells Customer 360, which spans the full integrated product suite.",
+        "'Only Sales Cloud' undersells Customer 360, which spans the full integrated product suite, not one cloud."
       ]
     },
     {
       "question": "Which object is central to the Salesforce CRM data model?",
       "options": [
-        "Report",
         "Account",
         "Dashboard",
+        "Report",
         "Email Template"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Account is a core object representing companies or people you do business with.",
       "whyWrong": [
-        "Report is a data display tool, not the central data model object.",
         "Dashboard visualizes data — it isn't the central CRM data model object.",
+        "Report is a data display tool, not the central data model object.",
         "Email Template is a content asset, unrelated to the core data model."
       ]
     },
     {
       "question": "What is a Record in Salesforce?",
       "options": [
-        "A report type",
-        "A single row of data in an object (e.g., one Account)",
         "A dashboard",
-        "A permission set"
+        "A permission set",
+        "A single row of data in an object (e.g., one Account)",
+        "A report type"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "A record is a single row of data in an object.",
       "whyWrong": [
-        "A report type defines report structure, not an individual data row.",
         "A dashboard visualizes data — it isn't itself a single row of data.",
-        "A permission set controls access — it isn't a data row."
+        "A permission set controls access — it isn't a data row.",
+        "A report type defines report structure, not an individual data row."
       ]
     },
     {
       "question": "Which feature allows users to see their tasks and calendar?",
       "options": [
-        "Reports only",
-        "Home page and Activity components",
+        "Only list views",
         "Only dashboards",
-        "Only list views"
+        "Home page and Activity components",
+        "Reports only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "The Home page and Activity components show tasks and calendar.",
       "whyWrong": [
-        "'Reports only' undersells the Home page feature, which includes activity/calendar components too.",
+        "'Only list views' misattributes the task/calendar visibility to a different feature.",
         "'Only dashboards' misattributes the task/calendar visibility to a different feature.",
-        "'Only list views' misattributes the task/calendar visibility to a different feature."
+        "'Reports only' undersells the Home page feature, which includes activity/calendar components too."
       ]
     },
     {
@@ -249,46 +249,46 @@
       "options": [
         "A single report",
         "A collection of report components displayed together for at-a-glance visibility",
-        "A list view only",
-        "An email template"
+        "An email template",
+        "A list view only"
       ],
       "correctAnswer": 1,
       "explanation": "Dashboards display multiple report charts and metrics in a single view.",
       "whyWrong": [
         "A single report shows one dataset — a Dashboard combines multiple report components together.",
-        "A list view shows a filtered record list — it isn't the multi-component visual summary a Dashboard provides.",
-        "An email template is a content asset, unrelated to Dashboards."
+        "An email template is a content asset, unrelated to Dashboards.",
+        "A list view shows a filtered record list — it isn't the multi-component visual summary a Dashboard provides."
       ]
     },
     {
       "question": "Which Salesforce feature enables real-time collaboration on records?",
       "options": [
-        "Reports only",
-        "Chatter and Activity",
         "Validation rules only",
-        "Workflow rules"
+        "Workflow rules",
+        "Chatter and Activity",
+        "Reports only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Chatter and Activity enable comments, mentions, and collaboration on records.",
       "whyWrong": [
-        "'Reports only' misattributes real-time collaboration to a display feature, not a collaboration tool.",
         "Validation rules enforce data entry rules — they aren't a collaboration feature.",
-        "Workflow rules automate backend logic — they aren't a real-time collaboration feature."
+        "Workflow rules automate backend logic — they aren't a real-time collaboration feature.",
+        "'Reports only' misattributes real-time collaboration to a display feature, not a collaboration tool."
       ]
     },
     {
       "question": "What does the Lightning Experience refer to?",
       "options": [
-        "A mobile app only",
-        "The modern Salesforce user interface with responsive design and enhanced features",
         "Classic only",
-        "An API"
+        "A mobile app only",
+        "An API",
+        "The modern Salesforce user interface with responsive design and enhanced features"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Lightning Experience is the modern, responsive Salesforce UI.",
       "whyWrong": [
-        "Lightning Experience isn't limited to mobile — it's the full desktop and mobile modern interface.",
         "'Classic only' is the opposite of what Lightning Experience refers to — Classic is the older interface.",
+        "Lightning Experience isn't limited to mobile — it's the full desktop and mobile modern interface.",
         "An API is a technical integration mechanism, not a user interface."
       ]
     },
@@ -296,11 +296,11 @@
       "question": "Which object typically represents a person or company you do business with?",
       "options": [
         "Opportunity",
-        "Account",
         "Task",
-        "Report"
+        "Report",
+        "Account"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Account represents companies or people you do business with.",
       "whyWrong": [
         "Opportunity represents a potential sale, not the person/company relationship itself.",
@@ -311,97 +311,97 @@
     {
       "question": "What is a List View in Salesforce?",
       "options": [
-        "A report type",
         "A filtered list of records from an object displayed in a table format",
-        "A dashboard only",
-        "A permission set"
+        "A report type",
+        "A permission set",
+        "A dashboard only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "List views show filtered records in a tabular layout for quick access.",
       "whyWrong": [
         "A report type defines report structure — it isn't itself the filtered record list being described.",
-        "A dashboard visualizes data — it isn't the filtered table view being described.",
-        "A permission set controls access — it isn't a filtered list of records."
+        "A permission set controls access — it isn't a filtered list of records.",
+        "A dashboard visualizes data — it isn't the filtered table view being described."
       ]
     },
     {
       "question": "Which navigation element helps users find records and apps in Salesforce?",
       "options": [
-        "Report Builder only",
+        "Workflow",
         "App Launcher and global search",
         "Validation rules only",
-        "Workflow"
+        "Report Builder only"
       ],
       "correctAnswer": 1,
       "explanation": "App Launcher and global search help users navigate and find content.",
       "whyWrong": [
-        "'Report Builder only' misattributes navigation/search to a different, unrelated reporting tool.",
+        "Workflow automates backend logic — it's unrelated to navigation and search.",
         "Validation rules enforce data quality — they're unrelated to navigation.",
-        "Workflow automates backend logic — it's unrelated to navigation and search."
+        "'Report Builder only' misattributes navigation/search to a different, unrelated reporting tool."
       ]
     },
     {
       "question": "What does the Customer 360 Platform aim to achieve?",
       "options": [
-        "Only sales automation",
-        "A single, unified view of the customer across all touchpoints and systems",
         "Only service cloud",
-        "Only marketing"
+        "A single, unified view of the customer across all touchpoints and systems",
+        "Only marketing",
+        "Only sales automation"
       ],
       "correctAnswer": 1,
       "explanation": "Customer 360 unifies customer data across sales, service, marketing, and more.",
       "whyWrong": [
-        "'Only sales automation' undersells Customer 360's broader unified cross-touchpoint vision.",
         "'Only service cloud' undersells Customer 360's broader unified cross-touchpoint vision.",
-        "'Only marketing' undersells Customer 360's broader unified cross-touchpoint vision."
+        "'Only marketing' undersells Customer 360's broader unified cross-touchpoint vision.",
+        "'Only sales automation' undersells Customer 360's broader unified cross-touchpoint vision."
       ]
     },
     {
       "question": "Which feature allows users to access Salesforce on mobile devices?",
       "options": [
-        "Desktop only",
-        "Salesforce Mobile App",
+        "Reports only",
         "Email only",
-        "Reports only"
+        "Salesforce Mobile App",
+        "Desktop only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "The Salesforce Mobile App provides full CRM access on phones and tablets.",
       "whyWrong": [
-        "'Desktop only' contradicts the fact that the Salesforce Mobile App specifically enables mobile access.",
+        "Reports alone don't provide the mobile access capability being described.",
         "Email access doesn't provide the full mobile app experience being described.",
-        "Reports alone don't provide the mobile access capability being described."
+        "'Desktop only' contradicts the fact that the Salesforce Mobile App specifically enables mobile access."
       ]
     },
     {
       "question": "What is the purpose of Reports in Salesforce?",
       "options": [
-        "To send emails only",
         "To organize, filter, and display data from your Salesforce records",
-        "To create dashboards only",
-        "To assign tasks"
+        "To send emails only",
+        "To assign tasks",
+        "To create dashboards only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Reports query and display data from your org's objects and records.",
       "whyWrong": [
         "'To send emails only' misattributes Reports' purpose, which is data organization/display, not messaging.",
-        "'To create dashboards only' undersells Reports, which serve their own distinct purpose beyond feeding dashboards.",
-        "'To assign tasks' misattributes Reports' purpose to an unrelated task-management function."
+        "'To assign tasks' misattributes Reports' purpose to an unrelated task-management function.",
+        "'To create dashboards only' undersells Reports, which serve their own distinct purpose beyond feeding dashboards."
       ]
     },
     {
       "question": "Which Salesforce concept represents a potential sale?",
       "options": [
-        "Account",
         "Opportunity",
-        "Contact",
-        "Lead"
+        "Lead",
+        "Account",
+        "Contact"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Opportunity represents a potential sale or deal being pursued.",
       "whyWrong": [
+        "Lead represents an unqualified prospect, not yet the specific potential-sale concept an Opportunity represents.",
         "Account represents a company/organization, not a potential sale itself.",
-        "Contact represents a person, not a potential sale.",
-        "Lead represents an unqualified prospect, not yet the specific potential-sale concept an Opportunity represents."
+        "Contact represents a person, not a potential sale."
       ]
     }
   ]

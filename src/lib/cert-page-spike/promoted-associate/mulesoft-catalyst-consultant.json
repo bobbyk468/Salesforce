@@ -167,33 +167,33 @@
     {
       "question": "What does a MuleSoft Catalyst Consultant do?",
       "options": [
+        "Only reporting",
         "Only coding",
         "Use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes",
-        "Only reporting",
         "Only Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes.",
       "whyWrong": [
-        "'Only coding' undersells the role, which is about applying delivery methodology, not just writing code.",
         "'Only reporting' misrepresents the role, which is about delivery practices, not reporting.",
+        "'Only coding' undersells the role, which is about applying delivery methodology, not just writing code.",
         "'Only Slack' is unrelated to what a Catalyst Consultant actually does."
       ]
     },
     {
       "question": "What is MuleSoft Catalyst?",
       "options": [
-        "Only a product",
-        "A methodology and set of principles for API-led delivery and business outcomes",
         "Only Anypoint",
-        "Only Mule runtime"
+        "Only Mule runtime",
+        "A methodology and set of principles for API-led delivery and business outcomes",
+        "Only a product"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "MuleSoft Catalyst is a methodology for API-led delivery and business outcomes.",
       "whyWrong": [
-        "Catalyst is a methodology, not a specific product.",
         "'Only Anypoint' undersells Catalyst — it's a delivery methodology, not just a platform reference.",
-        "'Only Mule runtime' undersells Catalyst — it's about delivery principles, not the runtime engine specifically."
+        "'Only Mule runtime' undersells Catalyst — it's about delivery principles, not the runtime engine specifically.",
+        "Catalyst is a methodology, not a specific product."
       ]
     },
     {
@@ -201,170 +201,170 @@
       "options": [
         "Only coding",
         "Applying Catalyst principles in delivery engagements",
-        "Only reporting",
-        "Only lists"
+        "Only lists",
+        "Only reporting"
       ],
       "correctAnswer": 1,
       "explanation": "They apply Catalyst principles in delivery engagements.",
       "whyWrong": [
         "'Only coding' undersells the activity, which is about applying delivery principles broadly, not just writing code.",
-        "'Only reporting' misrepresents the key activity, which is methodology application, not reporting.",
-        "'Only lists' is unrelated to what a Catalyst Consultant's key activity actually is."
+        "'Only lists' is unrelated to what a Catalyst Consultant's key activity actually is.",
+        "'Only reporting' misrepresents the key activity, which is methodology application, not reporting."
       ]
     },
     {
       "question": "Which role typically pursues MuleSoft Catalyst Consultant?",
       "options": [
-        "Marketers",
-        "Consultants and delivery leads working with MuleSoft",
+        "Designers only",
         "Sales only",
-        "Designers only"
+        "Marketers",
+        "Consultants and delivery leads working with MuleSoft"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Consultants and delivery leads working with MuleSoft pursue this credential.",
       "whyWrong": [
-        "Marketers aren't the typical audience for this MuleSoft delivery-focused credential.",
+        "Designers aren't the typical audience — this targets consultants and delivery leads specifically.",
         "Sales roles aren't the typical audience — this targets delivery-focused technical/consulting roles.",
-        "Designers aren't the typical audience — this targets consultants and delivery leads specifically."
+        "Marketers aren't the typical audience for this MuleSoft delivery-focused credential."
       ]
     },
     {
       "question": "What does 'business outcomes' mean in Catalyst context?",
       "options": [
-        "Only revenue",
-        "Measurable results achieved through API-led delivery (e.g., speed, reuse)",
         "Only cost",
-        "Only speed"
+        "Only speed",
+        "Measurable results achieved through API-led delivery (e.g., speed, reuse)",
+        "Only revenue"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Business outcomes are measurable results achieved through API-led delivery.",
       "whyWrong": [
-        "'Only revenue' narrows the definition too much — business outcomes include broader measurable results like speed and reuse.",
         "'Only cost' narrows the definition too much — it's about broader measurable results, not just cost.",
-        "'Only speed' narrows the definition too much — speed is one example among several measurable outcomes."
+        "'Only speed' narrows the definition too much — speed is one example among several measurable outcomes.",
+        "'Only revenue' narrows the definition too much — business outcomes include broader measurable results like speed and reuse."
       ]
     },
     {
       "question": "What does API-led connectivity emphasize?",
       "options": [
-        "Point-to-point only",
         "Reusable APIs in System, Process, and Experience layers",
-        "No reuse",
-        "Single API only"
+        "Single API only",
+        "Point-to-point only",
+        "No reuse"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "API-led connectivity uses reusable API layers.",
       "whyWrong": [
+        "'Single API only' contradicts the layered, multi-API structure API-led connectivity is built on.",
         "Point-to-point integration is what API-led connectivity moves away from — it's the opposite of the reusable-layer approach.",
-        "'No reuse' contradicts the core principle of API-led connectivity, which is built around reusability.",
-        "'Single API only' contradicts the layered, multi-API structure API-led connectivity is built on."
+        "'No reuse' contradicts the core principle of API-led connectivity, which is built around reusability."
       ]
     },
     {
       "question": "Which Catalyst principle supports faster delivery?",
       "options": [
-        "Manual only",
+        "Big bang only",
         "Reuse, design-first, and incremental delivery",
-        "No design",
-        "Big bang only"
+        "Manual only",
+        "No design"
       ],
       "correctAnswer": 1,
       "explanation": "Reuse and design-first support faster delivery.",
       "whyWrong": [
+        "'Big bang only' contradicts the incremental delivery principle Catalyst promotes for speed and risk reduction.",
         "'Manual only' contradicts the principle of structured, repeatable delivery practices that speed things up.",
-        "'No design' contradicts the design-first principle that's central to faster, more reliable delivery.",
-        "'Big bang only' contradicts the incremental delivery principle Catalyst promotes for speed and risk reduction."
+        "'No design' contradicts the design-first principle that's central to faster, more reliable delivery."
       ]
     },
     {
       "question": "What does a Catalyst Consultant help achieve?",
       "options": [
-        "Only code",
         "Business outcomes through API-led methodology",
         "Only reports",
+        "Only code",
         "Only deployment"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Consultants drive outcomes through Catalyst methodology.",
       "whyWrong": [
-        "'Only code' undersells what a Catalyst Consultant helps achieve — the focus is on business outcomes via methodology, not code alone.",
         "'Only reports' misrepresents the goal, which is broader business outcome achievement.",
+        "'Only code' undersells what a Catalyst Consultant helps achieve — the focus is on business outcomes via methodology, not code alone.",
         "'Only deployment' undersells the broader business-outcome focus of the role."
       ]
     },
     {
       "question": "Which stakeholder does Catalyst engage?",
       "options": [
-        "Developers only",
-        "Business and IT for alignment",
         "Only IT",
-        "Only business"
+        "Only business",
+        "Developers only",
+        "Business and IT for alignment"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Catalyst engages both business and IT stakeholders.",
       "whyWrong": [
-        "'Developers only' is too narrow — Catalyst specifically emphasizes aligning both business and IT stakeholders.",
         "'Only IT' misses half of the stakeholder alignment Catalyst emphasizes.",
-        "'Only business' misses half of the stakeholder alignment Catalyst emphasizes — IT alignment matters equally."
+        "'Only business' misses half of the stakeholder alignment Catalyst emphasizes — IT alignment matters equally.",
+        "'Developers only' is too narrow — Catalyst specifically emphasizes aligning both business and IT stakeholders."
       ]
     },
     {
       "question": "What is the purpose of Catalyst delivery practices?",
       "options": [
-        "To replace MuleSoft",
+        "To deploy only",
         "To achieve predictable, outcome-focused delivery",
-        "To code only",
-        "To deploy only"
+        "To replace MuleSoft",
+        "To code only"
       ],
       "correctAnswer": 1,
       "explanation": "Catalyst practices aim for predictable, outcome-focused delivery.",
       "whyWrong": [
+        "'To deploy only' undersells the purpose, which spans the full delivery lifecycle, not just deployment.",
         "Catalyst practices complement MuleSoft rather than replacing the platform itself.",
-        "'To code only' undersells the purpose, which is about delivery practices, not just writing code.",
-        "'To deploy only' undersells the purpose, which spans the full delivery lifecycle, not just deployment."
+        "'To code only' undersells the purpose, which is about delivery practices, not just writing code."
       ]
     },
     {
       "question": "Which MuleSoft product supports Catalyst methodology?",
       "options": [
-        "Email only",
-        "Anypoint Platform and design tools",
+        "CPQ only",
         "Slack only",
-        "CPQ only"
+        "Email only",
+        "Anypoint Platform and design tools"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Anypoint Platform supports Catalyst practices.",
       "whyWrong": [
-        "Email is unrelated to the MuleSoft platform tools that support Catalyst methodology.",
+        "CPQ is a pricing tool, unrelated to MuleSoft's Catalyst-supporting platform and design tools.",
         "Slack is unrelated to the MuleSoft platform tools that support Catalyst methodology.",
-        "CPQ is a pricing tool, unrelated to MuleSoft's Catalyst-supporting platform and design tools."
+        "Email is unrelated to the MuleSoft platform tools that support Catalyst methodology."
       ]
     },
     {
       "question": "What does 'reuse' mean in Catalyst context?",
       "options": [
-        "Single use only",
+        "Copy-paste only",
         "APIs and assets designed for reuse across projects",
         "No reuse",
-        "Copy-paste only"
+        "Single use only"
       ],
       "correctAnswer": 1,
       "explanation": "Reuse means APIs and assets used across projects.",
       "whyWrong": [
-        "'Single use only' is the opposite of what 'reuse' means in this context.",
+        "'Copy-paste only' isn't true reuse — it's duplication, which is what reusable, shared assets specifically avoid.",
         "'No reuse' directly contradicts the definition of the term being asked about.",
-        "'Copy-paste only' isn't true reuse — it's duplication, which is what reusable, shared assets specifically avoid."
+        "'Single use only' is the opposite of what 'reuse' means in this context."
       ]
     },
     {
       "question": "Which role applies Catalyst principles?",
       "options": [
         "Sales only",
-        "Consultants, architects, and delivery leads",
         "Marketers only",
+        "Consultants, architects, and delivery leads",
         "End users only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Consultants and architects apply Catalyst principles.",
       "whyWrong": [
         "Sales roles aren't the typical audience applying Catalyst principles — that's consultants, architects, and delivery leads.",
@@ -375,33 +375,33 @@
     {
       "question": "What is the benefit of Catalyst for organizations?",
       "options": [
-        "No benefit",
         "Faster time-to-value and reduced integration debt",
+        "Higher cost only",
         "Slower only",
-        "Higher cost only"
+        "No benefit"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Catalyst supports faster time-to-value and reduced debt.",
       "whyWrong": [
-        "'No benefit' contradicts the documented value Catalyst delivery practices provide.",
+        "'Higher cost only' contradicts the actual benefit, which includes reduced integration debt and cost efficiency over time.",
         "'Slower only' contradicts the actual benefit, which is faster time-to-value.",
-        "'Higher cost only' contradicts the actual benefit, which includes reduced integration debt and cost efficiency over time."
+        "'No benefit' contradicts the documented value Catalyst delivery practices provide."
       ]
     },
     {
       "question": "Which best practice does Catalyst promote?",
       "options": [
-        "Ignore governance",
         "Design-first, reuse, and governance",
-        "No design",
-        "Ad-hoc only"
+        "Ignore governance",
+        "Ad-hoc only",
+        "No design"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Catalyst promotes design-first, reuse, and governance.",
       "whyWrong": [
         "Ignoring governance contradicts Catalyst's actual emphasis on governance as a core best practice.",
-        "'No design' contradicts the design-first principle Catalyst promotes.",
-        "'Ad-hoc only' contradicts the structured, repeatable approach Catalyst recommends over unplanned work."
+        "'Ad-hoc only' contradicts the structured, repeatable approach Catalyst recommends over unplanned work.",
+        "'No design' contradicts the design-first principle Catalyst promotes."
       ]
     }
   ]

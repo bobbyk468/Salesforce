@@ -169,11 +169,11 @@
       "question": "What does a MuleSoft Platform Architect do?",
       "options": [
         "Only coding",
-        "Define and be responsible for an organization's Anypoint Platform strategy",
         "Only reporting",
+        "Define and be responsible for an organization's Anypoint Platform strategy",
         "Only Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Certified MuleSoft Platform Architect architects have proven knowledge and skills to define and be responsible for an organization's Anypoint Platform strategy.",
       "whyWrong": [
         "'Only coding' undersells the role, which is about owning platform strategy, not just writing code.",
@@ -184,44 +184,44 @@
     {
       "question": "What is Anypoint Platform?",
       "options": [
-        "A CRM",
-        "MuleSoft's unified platform for designing, building, and managing APIs and integrations",
+        "A database only",
         "An email tool",
-        "A database only"
+        "MuleSoft's unified platform for designing, building, and managing APIs and integrations",
+        "A CRM"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Anypoint Platform is MuleSoft's unified platform for APIs and integrations.",
       "whyWrong": [
-        "Anypoint Platform isn't a CRM — it's an API/integration management platform.",
+        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform.",
         "Anypoint Platform isn't primarily an email tool — that's unrelated to its core function.",
-        "Anypoint Platform is more than just a database — it's a full API design/build/manage platform."
+        "Anypoint Platform isn't a CRM — it's an API/integration management platform."
       ]
     },
     {
       "question": "What is a key activity for a MuleSoft Platform Architect?",
       "options": [
-        "Only coding",
-        "Defining and owning Anypoint Platform strategy",
         "Only reporting",
-        "Only lists"
+        "Defining and owning Anypoint Platform strategy",
+        "Only lists",
+        "Only coding"
       ],
       "correctAnswer": 1,
       "explanation": "They define and own Anypoint Platform strategy.",
       "whyWrong": [
-        "'Only coding' undersells the key activity, which is strategic platform ownership, not just writing code.",
         "'Only reporting' misrepresents the key activity, which is strategy ownership, not reporting.",
-        "'Only lists' is unrelated to the actual key activity being described."
+        "'Only lists' is unrelated to the actual key activity being described.",
+        "'Only coding' undersells the key activity, which is strategic platform ownership, not just writing code."
       ]
     },
     {
       "question": "Which role typically pursues MuleSoft Platform Architect?",
       "options": [
         "Marketers",
-        "Architects and senior consultants defining integration strategy",
         "Sales only",
-        "Designers only"
+        "Designers only",
+        "Architects and senior consultants defining integration strategy"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Architects and senior consultants defining integration strategy pursue this credential.",
       "whyWrong": [
         "Marketers aren't the typical audience for this platform strategy credential.",
@@ -232,16 +232,16 @@
     {
       "question": "What does 'platform strategy' mean in MuleSoft context?",
       "options": [
-        "Only APIs",
-        "API-led connectivity, governance, and integration architecture",
         "Only Mule runtime",
+        "API-led connectivity, governance, and integration architecture",
+        "Only APIs",
         "Only CloudHub"
       ],
       "correctAnswer": 1,
       "explanation": "Platform strategy includes API-led connectivity, governance, and integration architecture.",
       "whyWrong": [
-        "'Only APIs' undersells platform strategy, which spans governance and broader integration architecture too.",
         "'Only Mule runtime' undersells platform strategy, which is broader than just the runtime engine.",
+        "'Only APIs' undersells platform strategy, which spans governance and broader integration architecture too.",
         "'Only CloudHub' undersells platform strategy, which spans more than just the cloud deployment option."
       ]
     },
@@ -249,31 +249,31 @@
       "question": "What does Anypoint Platform governance include?",
       "options": [
         "Only deployment",
+        "Only runtime",
         "API policies, design standards, and lifecycle management",
-        "Only design",
-        "Only runtime"
+        "Only design"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Governance covers policies, standards, and lifecycle.",
       "whyWrong": [
         "'Only deployment' undersells governance, which spans design standards and lifecycle management too.",
-        "'Only design' undersells governance, which spans policies and lifecycle management too.",
-        "'Only runtime' undersells governance, which spans design and lifecycle stages, not just runtime."
+        "'Only runtime' undersells governance, which spans design and lifecycle stages, not just runtime.",
+        "'Only design' undersells governance, which spans policies and lifecycle management too."
       ]
     },
     {
       "question": "Which deployment option does Anypoint Platform support?",
       "options": [
+        "On-prem only",
         "CloudHub only",
         "CloudHub, on-prem, and hybrid",
-        "On-prem only",
         "No deployment"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Anypoint supports cloud, on-prem, and hybrid deployment.",
       "whyWrong": [
-        "'CloudHub only' undersells the broader deployment flexibility (on-prem, hybrid) Anypoint Platform supports.",
         "'On-prem only' undersells the broader deployment flexibility (CloudHub, hybrid) Anypoint Platform supports.",
+        "'CloudHub only' undersells the broader deployment flexibility (on-prem, hybrid) Anypoint Platform supports.",
         "'No deployment' contradicts the fact that Anypoint Platform explicitly supports multiple deployment options."
       ]
     },
@@ -281,107 +281,107 @@
       "question": "What is the purpose of API design standards?",
       "options": [
         "To replace APIs",
-        "Consistency, reusability, and maintainability",
+        "To create only",
         "To delete only",
-        "To create only"
+        "Consistency, reusability, and maintainability"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Design standards ensure consistency and reusability.",
       "whyWrong": [
         "API design standards don't replace APIs — they guide how APIs are built.",
-        "'To delete only' misrepresents design standards' purpose, which is consistency, not deletion.",
-        "'To create only' undersells design standards' broader purpose of consistency and maintainability."
+        "'To create only' undersells design standards' broader purpose of consistency and maintainability.",
+        "'To delete only' misrepresents design standards' purpose, which is consistency, not deletion."
       ]
     },
     {
       "question": "Which capability does Runtime Manager provide?",
       "options": [
-        "Design only",
-        "Deploy, monitor, and manage Mule applications",
         "API design only",
-        "No management"
+        "Design only",
+        "No management",
+        "Deploy, monitor, and manage Mule applications"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Runtime Manager deploys and manages Mule applications.",
       "whyWrong": [
-        "'Design only' undersells Runtime Manager, which handles deployment and ongoing management, not just design.",
         "'API design only' misattributes design-time functionality to Runtime Manager, which is an operational tool.",
+        "'Design only' undersells Runtime Manager, which handles deployment and ongoing management, not just design.",
         "'No management' contradicts the fact that Runtime Manager's core purpose is managing running applications."
       ]
     },
     {
       "question": "What does integration architecture encompass?",
       "options": [
-        "Only APIs",
         "System, Process, and Experience API layers",
         "Only Mule",
-        "Only CloudHub"
+        "Only CloudHub",
+        "Only APIs"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Integration architecture includes API layers.",
       "whyWrong": [
-        "'Only APIs' undersells integration architecture, which is structured across specific layers (System/Process/Experience).",
         "'Only Mule' undersells integration architecture, which is a broader architectural concept beyond the runtime engine.",
-        "'Only CloudHub' undersells integration architecture, which is broader than just the deployment platform."
+        "'Only CloudHub' undersells integration architecture, which is broader than just the deployment platform.",
+        "'Only APIs' undersells integration architecture, which is structured across specific layers (System/Process/Experience)."
       ]
     },
     {
       "question": "Which role defines platform strategy?",
       "options": [
-        "Developers only",
-        "Platform Architects",
         "Sales only",
+        "Platform Architects",
+        "Developers only",
         "Marketers only"
       ],
       "correctAnswer": 1,
       "explanation": "Platform Architects define platform strategy.",
       "whyWrong": [
-        "Developers implement the strategy but don't typically define platform strategy at the organizational level.",
         "Sales roles don't define technical platform strategy.",
+        "Developers implement the strategy but don't typically define platform strategy at the organizational level.",
         "Marketers don't define technical platform strategy."
       ]
     },
     {
       "question": "What is the benefit of API-led connectivity?",
       "options": [
-        "No benefit",
-        "Reusability, agility, and reduced point-to-point complexity",
         "More complexity",
-        "Slower delivery"
+        "Reusability, agility, and reduced point-to-point complexity",
+        "Slower delivery",
+        "No benefit"
       ],
       "correctAnswer": 1,
       "explanation": "API-led connectivity promotes reusability and agility.",
       "whyWrong": [
-        "'No benefit' contradicts the real, documented benefits of API-led connectivity.",
         "'More complexity' is the opposite of the reduced point-to-point complexity API-led connectivity provides.",
-        "'Slower delivery' is the opposite of the agility benefit API-led connectivity typically provides."
+        "'Slower delivery' is the opposite of the agility benefit API-led connectivity typically provides.",
+        "'No benefit' contradicts the real, documented benefits of API-led connectivity."
       ]
     },
     {
       "question": "Which Anypoint component manages API lifecycle?",
       "options": [
-        "Mule only",
         "Design Center, Exchange, and API Manager",
         "CloudHub only",
-        "Runtime only"
+        "Runtime only",
+        "Mule only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Design Center, Exchange, and API Manager manage lifecycle.",
       "whyWrong": [
-        "'Mule only' undersells the broader set of Anypoint components (Design Center, Exchange, API Manager) involved in lifecycle management.",
         "'CloudHub only' undersells the broader set of components involved in API lifecycle management.",
-        "'Runtime only' undersells the broader set of components involved in API lifecycle management."
+        "'Runtime only' undersells the broader set of components involved in API lifecycle management.",
+        "'Mule only' undersells the broader set of Anypoint components (Design Center, Exchange, API Manager) involved in lifecycle management."
       ]
     },
     {
       "question": "What does a Platform Architect own?",
       "options": [
-        "Only code",
         "Platform strategy, governance, and standards",
+        "Only code",
         "Only deployment",
         "Only testing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Platform Architects own strategy, governance, and standards.",
       "whyWrong": [
         "'Only code' undersells what a Platform Architect owns, which is strategy and governance, not just code.",
@@ -392,17 +392,17 @@
     {
       "question": "Which best practice applies to platform strategy?",
       "options": [
-        "Ignore governance",
         "Align with business goals and enable self-service",
         "No alignment",
-        "Ad-hoc only"
+        "Ad-hoc only",
+        "Ignore governance"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Strategy should align with business and enable self-service.",
       "whyWrong": [
-        "Ignoring governance contradicts the core best practice of aligning platform strategy with organizational needs.",
         "'No alignment' contradicts the fact that business alignment is a core best practice for platform strategy.",
-        "'Ad-hoc only' contradicts the structured, self-service-enabling approach platform strategy best practice recommends."
+        "'Ad-hoc only' contradicts the structured, self-service-enabling approach platform strategy best practice recommends.",
+        "Ignoring governance contradicts the core best practice of aligning platform strategy with organizational needs."
       ]
     }
   ]

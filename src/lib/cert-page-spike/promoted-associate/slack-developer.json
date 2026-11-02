@@ -205,241 +205,241 @@
     {
       "question": "Which Slack API is used to build interactive components like buttons and menus?",
       "options": [
-        "REST API only",
         "Block Kit",
         "Web API",
+        "REST API only",
         "Events API only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Block Kit is the UI framework for designing interactive message surfaces in Slack apps.",
       "whyWrong": [
-        "The REST API is the general term; Block Kit is the specific framework for interactive UI elements.",
         "The Web API is used to call methods generally, not specifically for interactive component layout.",
+        "The REST API is the general term; Block Kit is the specific framework for interactive UI elements.",
         "The Events API delivers event notifications, not the UI building blocks for buttons and menus."
       ]
     },
     {
       "question": "What is the purpose of Slack App Manifests?",
       "options": [
+        "To configure CPQ",
         "To deploy to Heroku",
-        "To define app configuration in YAML",
         "To send emails",
-        "To configure CPQ"
+        "To define app configuration in YAML"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "App Manifests allow you to define Slack app configuration (scopes, events, shortcuts) in YAML.",
       "whyWrong": [
+        "CPQ configuration is unrelated to Slack app manifests.",
         "Deploying to Heroku is a hosting decision, unrelated to what a manifest defines.",
-        "Sending emails is unrelated to app configuration.",
-        "CPQ configuration is unrelated to Slack app manifests."
+        "Sending emails is unrelated to app configuration."
       ]
     },
     {
       "question": "Which Slack event type is fired when a user joins a channel?",
       "options": [
-        "message",
-        "member_joined_channel",
         "app_mention",
+        "member_joined_channel",
+        "message",
         "reaction_added"
       ],
       "correctAnswer": 1,
       "explanation": "member_joined_channel is the event emitted when a user joins a public or private channel.",
       "whyWrong": [
-        "'message' fires for message events, not channel joins.",
         "app_mention fires when the app is @-mentioned, not on channel joins.",
+        "'message' fires for message events, not channel joins.",
         "reaction_added fires for emoji reactions, not channel joins."
       ]
     },
     {
       "question": "What does the Slack Web API method chat.postMessage do?",
       "options": [
-        "Delete a message",
-        "Post a message to a channel",
         "Create a channel",
-        "List users"
+        "List users",
+        "Delete a message",
+        "Post a message to a channel"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "chat.postMessage sends a message to a channel, user DM, or other conversation.",
       "whyWrong": [
-        "chat.postMessage doesn't delete messages — chat.delete handles that.",
         "Creating a channel uses a different method (conversations.create).",
-        "Listing users uses a different method (users.list) — chat.postMessage only posts messages."
+        "Listing users uses a different method (users.list) — chat.postMessage only posts messages.",
+        "chat.postMessage doesn't delete messages — chat.delete handles that."
       ]
     },
     {
       "question": "Which OAuth scope is required to post messages as your app?",
       "options": [
-        "users:read",
         "chat:write",
-        "channels:history",
-        "im:read"
+        "im:read",
+        "users:read",
+        "channels:history"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "chat:write allows the app to post messages to channels and conversations.",
       "whyWrong": [
+        "im:read grants read access to direct messages, not the ability to post as the app.",
         "users:read grants profile visibility, not messaging permission.",
-        "channels:history grants read access to message history, not posting rights.",
-        "im:read grants read access to direct messages, not the ability to post as the app."
+        "channels:history grants read access to message history, not posting rights."
       ]
     },
     {
       "question": "What is the Bolt Framework in Slack app development?",
       "options": [
-        "A deployment pipeline for Slack apps",
-        "Slack's official framework for building apps in JavaScript, Python, and Java with built-in handlers for events, actions, and shortcuts",
+        "A UI design kit for Block Kit layouts",
         "A database management tool for Slack data",
-        "A UI design kit for Block Kit layouts"
+        "Slack's official framework for building apps in JavaScript, Python, and Java with built-in handlers for events, actions, and shortcuts",
+        "A deployment pipeline for Slack apps"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Bolt abstracts Slack API complexity, providing a framework with built-in handling for events, actions, shortcuts, and commands.",
       "whyWrong": [
-        "Bolt isn't a deployment pipeline — it's an application framework.",
+        "Bolt is a code framework, not a visual UI design kit.",
         "Bolt doesn't manage Slack data storage — that's outside its scope.",
-        "Bolt is a code framework, not a visual UI design kit."
+        "Bolt isn't a deployment pipeline — it's an application framework."
       ]
     },
     {
       "question": "How do you register and handle a slash command in a Slack app?",
       "options": [
-        "Define it in the app's package.json file",
-        "Register it in the App Manifest or App Settings under Slash Commands, then handle the incoming POST payload in your app server",
         "Add it directly to a Block Kit message surface",
-        "Use only the Slack Web API chat.postMessage method"
+        "Use only the Slack Web API chat.postMessage method",
+        "Register it in the App Manifest or App Settings under Slash Commands, then handle the incoming POST payload in your app server",
+        "Define it in the app's package.json file"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Slash commands are registered in App Settings (or App Manifest), and your server must respond to the incoming POST payload within 3 seconds.",
       "whyWrong": [
-        "package.json configures npm dependencies, not Slack slash command registration.",
         "Slash commands aren't defined inside Block Kit messages — they're a separate app configuration.",
-        "chat.postMessage sends messages; it doesn't register a slash command."
+        "chat.postMessage sends messages; it doesn't register a slash command.",
+        "package.json configures npm dependencies, not Slack slash command registration."
       ]
     },
     {
       "question": "What Slack API method is used to open a modal in response to a user interaction?",
       "options": [
-        "chat.postMessage",
-        "views.open",
         "conversations.open",
+        "views.open",
+        "chat.postMessage",
         "users.info"
       ],
       "correctAnswer": 1,
       "explanation": "views.open opens a modal dialog using a trigger_id obtained from an interaction payload. The modal must be opened within 3 seconds of the trigger.",
       "whyWrong": [
-        "chat.postMessage posts a message, not a modal.",
         "conversations.open opens a DM/group conversation, not a modal dialog.",
+        "chat.postMessage posts a message, not a modal.",
         "users.info retrieves user profile data — it doesn't open UI surfaces."
       ]
     },
     {
       "question": "What is Socket Mode in Slack apps and when should you use it?",
       "options": [
-        "A real-time database sync method for Slack data",
         "A connection method that delivers event payloads over a WebSocket, allowing apps to receive events without exposing a public HTTP endpoint",
         "An OAuth token type for machine-to-machine apps",
+        "A real-time database sync method for Slack data",
         "A Block Kit interactive element type"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Socket Mode is ideal for development or firewalled environments — it eliminates the need for a publicly accessible HTTPS endpoint to receive events.",
       "whyWrong": [
-        "Socket Mode is unrelated to database synchronization.",
         "Socket Mode isn't a token type — it's a connection method.",
+        "Socket Mode is unrelated to database synchronization.",
         "Socket Mode is a connection mechanism, not a Block Kit UI element."
       ]
     },
     {
       "question": "What is an Incoming Webhook in Slack?",
       "options": [
-        "A method for receiving messages sent to your app from Slack users",
         "A simple URL that accepts HTTP POST requests to post messages to a specific Slack channel, without needing a full app installation",
         "A Block Kit element for embedding external content",
+        "A method for receiving messages sent to your app from Slack users",
         "An event fired when a webhook URL is triggered from outside Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Incoming Webhooks provide a pre-configured URL that accepts HTTP POST requests to post messages to a channel — useful for notifications from external systems.",
       "whyWrong": [
-        "Incoming Webhooks send messages out, they don't receive messages from users.",
         "Incoming Webhooks aren't a Block Kit element — they're a separate posting mechanism.",
+        "Incoming Webhooks send messages out, they don't receive messages from users.",
         "This describes an outbound trigger you configure, not an event fired externally."
       ]
     },
     {
       "question": "What is the difference between a Global Shortcut and a Message Shortcut in Slack?",
       "options": [
-        "They are identical in functionality and scope",
-        "Global Shortcuts are accessible from the shortcut menu anywhere in Slack; Message Shortcuts appear in the context menu of a specific message",
         "Message Shortcuts require workspace admin approval before use",
-        "Global Shortcuts only work in direct messages, not channels"
+        "Global Shortcuts are accessible from the shortcut menu anywhere in Slack; Message Shortcuts appear in the context menu of a specific message",
+        "Global Shortcuts only work in direct messages, not channels",
+        "They are identical in functionality and scope"
       ],
       "correctAnswer": 1,
       "explanation": "Global Shortcuts launch from the lightning bolt icon anywhere in Slack; Message Shortcuts appear when right-clicking a specific message.",
       "whyWrong": [
-        "They differ meaningfully — Global and Message Shortcuts have different access points.",
         "There's no admin-approval distinction between the two shortcut types by default.",
-        "Global Shortcuts aren't restricted to DMs only — they're accessible more broadly."
+        "Global Shortcuts aren't restricted to DMs only — they're accessible more broadly.",
+        "They differ meaningfully — Global and Message Shortcuts have different access points."
       ]
     },
     {
       "question": "How does Slack enforce API rate limits and what happens when they are exceeded?",
       "options": [
+        "All methods share a single fixed limit of 100 requests per hour",
         "There are no rate limits — all methods are unlimited",
         "Methods have tiered rate limits per minute per workspace (Tier 1–4). Exceeding limits returns HTTP 429 with a Retry-After header indicating when to retry",
-        "All methods share a single fixed limit of 100 requests per hour",
         "Rate limits only apply to Incoming Webhooks, not Web API methods"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Slack Web API methods have tiered rate limits (Tier 1–4). The 429 response includes a Retry-After header — apps must back off and retry after the specified delay.",
       "whyWrong": [
-        "Slack does enforce rate limits — 'unlimited' is incorrect.",
         "Rate limits vary by tier (1–4), not a single fixed number.",
+        "Slack does enforce rate limits — 'unlimited' is incorrect.",
         "Rate limits apply broadly across Web API methods, not just Incoming Webhooks."
       ]
     },
     {
       "question": "What is the App Home tab in a Slack app?",
       "options": [
-        "A Slack channel automatically created for app notifications",
+        "A tab for managing the app's channel memberships",
         "A dedicated, persistent space where an app displays a customised view for each user, built with Block Kit via views.publish",
-        "The app's settings page in the Slack App Directory",
-        "A tab for managing the app's channel memberships"
+        "A Slack channel automatically created for app notifications",
+        "The app's settings page in the Slack App Directory"
       ],
       "correctAnswer": 1,
       "explanation": "The App Home tab provides each user a private, personalised space. Your app controls the content by calling views.publish with the user ID and Block Kit layout.",
       "whyWrong": [
+        "App Home isn't specifically about channel membership management.",
         "App Home isn't an auto-created notification channel — it's a dedicated per-user view.",
-        "App Home is a feature within the app experience, not the App Directory settings page.",
-        "App Home isn't specifically about channel membership management."
+        "App Home is a feature within the app experience, not the App Directory settings page."
       ]
     },
     {
       "question": "How must a Slack app respond to an interactive component action such as a button click?",
       "options": [
-        "Send a new message to the channel immediately",
-        "Acknowledge the action within 3 seconds with HTTP 200, then perform any async processing and update the message or open a modal",
         "Call chat.delete to remove the original message containing the button",
-        "Reply in the message thread only, without acknowledging the payload"
+        "Reply in the message thread only, without acknowledging the payload",
+        "Send a new message to the channel immediately",
+        "Acknowledge the action within 3 seconds with HTTP 200, then perform any async processing and update the message or open a modal"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Slack requires acknowledgement within 3 seconds to avoid showing a timeout error to the user. Use ack() or respond() first, then process asynchronously.",
       "whyWrong": [
-        "Sending a new message doesn't satisfy the required immediate acknowledgment step.",
         "Deleting the original message doesn't fulfill Slack's required acknowledgment protocol.",
-        "Replying in a thread doesn't substitute for the required HTTP 200 acknowledgment within 3 seconds."
+        "Replying in a thread doesn't substitute for the required HTTP 200 acknowledgment within 3 seconds.",
+        "Sending a new message doesn't satisfy the required immediate acknowledgment step."
       ]
     },
     {
       "question": "Which Slack API delivers event notifications to your app when subscribed events occur in a workspace?",
       "options": [
-        "Web API",
-        "Events API",
         "Block Kit API",
-        "SCIM Provisioning API"
+        "SCIM Provisioning API",
+        "Events API",
+        "Web API"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "The Events API sends event payloads to your app's endpoint (or Socket Mode connection) whenever a subscribed event fires — message posted, reaction added, member joined, etc.",
       "whyWrong": [
-        "The Web API is used to call methods, not to receive push notifications about events.",
         "Block Kit defines UI layout, not event delivery.",
-        "SCIM Provisioning API manages user provisioning, unrelated to event notifications."
+        "SCIM Provisioning API manages user provisioning, unrelated to event notifications.",
+        "The Web API is used to call methods, not to receive push notifications about events."
       ]
     }
   ]

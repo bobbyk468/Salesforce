@@ -3,9 +3,18 @@
   "whoIsThisFor": {
     "heading": "Who is the Energy &amp; Utilities Accredited Professional exam for?",
     "personas": [
-      { "label": "Utility industry implementation consultants", "description": "You deliver Salesforce projects for electric, gas, or water utilities and need the credential to validate your expertise in the Energy &amp; Utilities Cloud data model and customer engagement workflows." },
-      { "label": "Salesforce admins at utility companies", "description": "You manage an Energy &amp; Utilities Cloud org and want to prove your knowledge of service points, premises, meter-to-cash processes, and outage management." },
-      { "label": "OmniStudio and integration partners", "description": "You design customer journeys and billing system integrations for utility companies using OmniStudio and need to demonstrate your configuration skills." }
+      {
+        "label": "Utility industry implementation consultants",
+        "description": "You deliver Salesforce projects for electric, gas, or water utilities and need the credential to validate your expertise in the Energy &amp; Utilities Cloud data model and customer engagement workflows."
+      },
+      {
+        "label": "Salesforce admins at utility companies",
+        "description": "You manage an Energy &amp; Utilities Cloud org and want to prove your knowledge of service points, premises, meter-to-cash processes, and outage management."
+      },
+      {
+        "label": "OmniStudio and integration partners",
+        "description": "You design customer journeys and billing system integrations for utility companies using OmniStudio and need to demonstrate your configuration skills."
+      }
     ]
   },
   "examDifficulty": {
@@ -159,31 +168,31 @@
       "question": "What does Energy and Utilities Cloud AP validate?",
       "options": [
         "Only basics",
-        "Fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud",
         "Only reporting",
-        "Only Slack"
+        "Only Slack",
+        "Fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Accredited Energy and Utilities Cloud Professionals have fundamental knowledge, skills, and experience to deliver business value through Energy and Utilities Cloud."
     },
     {
       "question": "Which industry does Energy and Utilities Cloud serve?",
       "options": [
-        "Retail only",
-        "Energy and utilities (e.g., electric, gas, water)",
+        "Financial services only",
         "Healthcare only",
-        "Financial services only"
+        "Retail only",
+        "Energy and utilities (e.g., electric, gas, water)"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Energy and Utilities Cloud serves energy and utilities industries."
     },
     {
       "question": "What is a key use case for Energy and Utilities Cloud?",
       "options": [
-        "Only email",
-        "Metering, billing, and customer engagement for utilities",
         "Only CPQ",
-        "Only Slack"
+        "Metering, billing, and customer engagement for utilities",
+        "Only Slack",
+        "Only email"
       ],
       "correctAnswer": 1,
       "explanation": "Metering, billing, and customer engagement are key use cases."
@@ -191,21 +200,21 @@
     {
       "question": "Which role typically pursues Energy and Utilities AP?",
       "options": [
-        "Marketers",
-        "Partners and implementers in energy and utilities",
         "Sales only",
-        "Designers only"
+        "Designers only",
+        "Marketers",
+        "Partners and implementers in energy and utilities"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Partners and implementers in energy and utilities pursue this credential."
     },
     {
       "question": "What does 'deliver business value' mean in this context?",
       "options": [
-        "Only shipping",
+        "Only dashboards",
         "Implementing solutions that drive outcomes for energy and utilities customers",
         "Only reporting",
-        "Only dashboards"
+        "Only shipping"
       ],
       "correctAnswer": 1,
       "explanation": "It means implementing solutions that drive outcomes for energy and utilities customers."
@@ -213,65 +222,65 @@
     {
       "question": "What does meter-to-cash represent in utilities?",
       "options": [
+        "Only billing",
         "Only metering",
         "End-to-end process from meter reading through billing and collection",
-        "Only billing",
         "Only service"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Meter-to-cash spans metering, billing, and revenue collection."
     },
     {
       "question": "Which Energy and Utilities Cloud object supports customer engagement?",
       "options": [
-        "Lead only",
         "Service points, accounts, and cases",
         "Opportunity only",
+        "Lead only",
         "Campaign only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Service points, accounts, and cases support customer engagement."
     },
     {
       "question": "What does outage management involve?",
       "options": [
+        "Only marketing",
         "Only billing",
         "Tracking and resolving service outages",
-        "Only metering",
-        "Only marketing"
+        "Only metering"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Outage management tracks and resolves service interruptions."
     },
     {
       "question": "Which Salesforce product integrates with Energy and Utilities Cloud?",
       "options": [
-        "Slack only",
-        "Billing, Field Service, and CRM",
+        "Commerce Cloud only",
         "Marketing Cloud only",
-        "Commerce Cloud only"
+        "Billing, Field Service, and CRM",
+        "Slack only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Billing, Field Service, and CRM integrate with Energy and Utilities."
     },
     {
       "question": "What is a service territory in utilities?",
       "options": [
+        "A lead",
         "A report",
         "Geographic area for service delivery and metering",
-        "A lead",
         "A campaign"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Service territories define geographic service areas."
     },
     {
       "question": "Which use case supports customer self-service for utilities?",
       "options": [
-        "Manual only",
+        "Phone only",
         "Experience Cloud and mobile for bill pay and outage reporting",
-        "Email only",
-        "Phone only"
+        "Manual only",
+        "Email only"
       ],
       "correctAnswer": 1,
       "explanation": "Experience Cloud supports self-service portals."
@@ -279,12 +288,12 @@
     {
       "question": "What does energy consumption data support?",
       "options": [
-        "Only billing",
         "Billing, demand response, and analytics",
-        "Only reports",
-        "Only dashboards"
+        "Only dashboards",
+        "Only billing",
+        "Only reports"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Consumption data drives billing and analytics."
     },
     {
@@ -292,8 +301,8 @@
       "options": [
         "Ignore compliance",
         "Align with regulatory and meter-to-cash processes",
-        "No testing",
-        "Single product only"
+        "Single product only",
+        "No testing"
       ],
       "correctAnswer": 1,
       "explanation": "Regulatory alignment and meter-to-cash are key."
@@ -301,23 +310,23 @@
     {
       "question": "What is the purpose of Energy and Utilities Cloud?",
       "options": [
-        "Only CRM",
         "Unify customer data, metering, and billing for utilities",
+        "Only service",
         "Only marketing",
-        "Only service"
+        "Only CRM"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Energy and Utilities Cloud unifies customer, metering, and billing."
     },
     {
       "question": "What is AMI (Advanced Metering Infrastructure) in utilities?",
       "options": [
-        "A report",
         "Smart meters and systems that collect detailed consumption data",
-        "A billing object only",
-        "An outage tool only"
+        "An outage tool only",
+        "A report",
+        "A billing object only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "AMI enables automated meter reading and detailed consumption data for billing and analytics."
     }
   ]

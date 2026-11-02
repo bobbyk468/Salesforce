@@ -168,33 +168,33 @@
     {
       "question": "What is the purpose of Opportunity Splits?",
       "options": [
-        "To divide an opportunity into multiple stages",
-        "To share revenue credit among multiple team members",
         "To create child opportunities",
+        "To share revenue credit among multiple team members",
+        "To divide an opportunity into multiple stages",
         "To track competing opportunities"
       ],
       "correctAnswer": 1,
       "explanation": "Opportunity Splits allow you to share credit for an opportunity among multiple team members, with each member receiving a percentage of the revenue credit.",
       "whyWrong": [
-        "Opportunity Splits doesn't divide an opportunity into separate stages — stages remain a single sequential field on the opportunity.",
         "Splits share existing revenue credit among team members — they don't create separate child opportunity records.",
+        "Opportunity Splits doesn't divide an opportunity into separate stages — stages remain a single sequential field on the opportunity.",
         "Tracking competing opportunities is a different feature (Competitors related list), not what Splits are for."
       ]
     },
     {
       "question": "A sales manager wants to see a forecast that includes opportunities from their direct reports and all subordinates. Which forecast type provides this?",
       "options": [
-        "Individual Forecast",
-        "Role Hierarchy Forecast",
         "Territory Forecast",
-        "Collaborative Forecast"
+        "Role Hierarchy Forecast",
+        "Collaborative Forecast",
+        "Individual Forecast"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 2,
       "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, adjust amounts, and roll up forecasts through the hierarchy.",
       "whyWrong": [
-        "Individual Forecast shows only one user's own opportunities, not their reports' pipeline.",
+        "Territory Forecast rolls up by territory assignment, not specifically by direct-report role hierarchy as described.",
         "Role Hierarchy Forecast isn't a standard Salesforce forecast type name — the actual roll-up-by-hierarchy feature is Collaborative Forecasts.",
-        "Territory Forecast rolls up by territory assignment, not specifically by direct-report role hierarchy as described."
+        "Individual Forecast shows only one user's own opportunities, not their reports' pipeline."
       ]
     },
     {
@@ -216,16 +216,16 @@
     {
       "question": "What is the benefit of using Path on the Opportunity object?",
       "options": [
-        "Automatic stage progression",
         "Visual guidance through sales stages with key fields and tips",
         "Automated email notifications",
+        "Automatic stage progression",
         "Revenue forecasting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Path provides visual guidance through each stage of a record, highlighting key fields to complete and offering tips for success at each stage.",
       "whyWrong": [
-        "Path doesn't automatically progress the stage itself — a user still manually moves the opportunity forward.",
         "Path doesn't send automated emails — that's a separate automation feature (Flow/Workflow).",
+        "Path doesn't automatically progress the stage itself — a user still manually moves the opportunity forward.",
         "Path is a visual guidance tool, not a forecasting/revenue calculation feature."
       ]
     },
@@ -233,16 +233,16 @@
       "question": "A company wants to track products and their prices on Opportunities. Which feature should be configured?",
       "options": [
         "Products",
-        "Price Books",
         "Opportunity Products",
+        "Price Books",
         "All of the above"
       ],
       "correctAnswer": 3,
       "explanation": "Products define what you sell, Price Books define pricing, and Opportunity Products link products to opportunities with specific quantities and prices.",
       "whyWrong": [
         "Products alone define what's sellable, but pricing and opportunity-level tracking need the other two pieces as well.",
-        "Price Books alone define pricing, but you still need Products and Opportunity Products to actually track them on deals.",
-        "Opportunity Products alone can't exist without Products and Price Books configured first — all three work together."
+        "Opportunity Products alone can't exist without Products and Price Books configured first — all three work together.",
+        "Price Books alone define pricing, but you still need Products and Opportunity Products to actually track them on deals."
       ]
     },
     {
@@ -264,44 +264,44 @@
     {
       "question": "A sales manager wants to see which sales reps are performing best this quarter. Which report type should be used?",
       "options": [
-        "Opportunities by Owner",
         "Opportunities by Stage",
-        "Opportunities by Account",
-        "Opportunities by Product"
+        "Opportunities by Product",
+        "Opportunities by Owner",
+        "Opportunities by Account"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "An Opportunities by Owner report shows opportunities grouped by the sales rep (owner), allowing managers to see performance metrics per rep.",
       "whyWrong": [
         "Opportunities by Stage groups deals by pipeline stage, not by which rep is performing best.",
-        "Opportunities by Account groups by customer, not by sales rep performance.",
-        "Opportunities by Product groups by product line, not by individual rep performance."
+        "Opportunities by Product groups by product line, not by individual rep performance.",
+        "Opportunities by Account groups by customer, not by sales rep performance."
       ]
     },
     {
       "question": "Which feature allows sales reps to see recommended next steps based on opportunity stage?",
       "options": [
-        "Path",
-        "Salesforce Inbox",
         "Einstein Opportunity Insights",
-        "Opportunity Teams"
+        "Opportunity Teams",
+        "Path",
+        "Salesforce Inbox"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Path provides visual guidance and recommended actions at each opportunity stage, helping sales reps know what to do next.",
       "whyWrong": [
-        "Salesforce Inbox is an email productivity tool, not a stage-based next-step recommendation feature.",
         "Einstein Opportunity Insights surfaces AI-driven signals about deal risk/health, but the specific stage-based visual guidance described is Path's function.",
-        "Opportunity Teams defines who's collaborating on a deal — it doesn't provide next-step recommendations."
+        "Opportunity Teams defines who's collaborating on a deal — it doesn't provide next-step recommendations.",
+        "Salesforce Inbox is an email productivity tool, not a stage-based next-step recommendation feature."
       ]
     },
     {
       "question": "A company wants to automatically assign leads to sales reps based on round-robin distribution. What should be configured?",
       "options": [
-        "Lead Assignment Rules with Round-Robin",
         "Workflow Rules",
         "Process Builder",
-        "Apex Triggers"
+        "Apex Triggers",
+        "Lead Assignment Rules with Round-Robin"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Lead Assignment Rules support round-robin distribution, automatically distributing leads evenly among assigned users or queues.",
       "whyWrong": [
         "Workflow Rules can't perform round-robin distribution logic — that's a native capability of Lead Assignment Rules with round-robin queues.",
@@ -312,81 +312,81 @@
     {
       "question": "What is the benefit of using Collaborative Forecasts?",
       "options": [
-        "Automatic opportunity creation",
-        "Managers can adjust forecasts and see team roll-ups",
         "Automatic email notifications",
-        "Integration with external systems"
+        "Integration with external systems",
+        "Managers can adjust forecasts and see team roll-ups",
+        "Automatic opportunity creation"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Collaborative Forecasts allow managers to see forecasts from their team, make adjustments, and roll up forecasts through the role hierarchy.",
       "whyWrong": [
-        "Collaborative Forecasts doesn't automatically create opportunity records — it forecasts based on existing ones.",
         "Automated email notifications are a separate automation feature, not what Collaborative Forecasts provides.",
-        "Collaborative Forecasts isn't an external-system integration tool — it's an internal forecasting and roll-up feature."
+        "Collaborative Forecasts isn't an external-system integration tool — it's an internal forecasting and roll-up feature.",
+        "Collaborative Forecasts doesn't automatically create opportunity records — it forecasts based on existing ones."
       ]
     },
     {
       "question": "Which feature allows sales reps to track activities related to opportunities?",
       "options": [
         "Tasks",
-        "Events",
         "Activities",
+        "Events",
         "All of the above"
       ],
       "correctAnswer": 3,
       "explanation": "Activities include both Tasks (to-dos) and Events (calendar items) that can be associated with opportunities, accounts, contacts, and leads.",
       "whyWrong": [
         "Tasks alone is one piece of activity tracking, but Events also count — the complete answer includes both.",
-        "Events alone is one piece of activity tracking, but Tasks also count — the complete answer includes both.",
-        "'Activities' as a standalone option is a category label, not a specific answer distinct from the actual Tasks + Events options being tested."
+        "'Activities' as a standalone option is a category label, not a specific answer distinct from the actual Tasks + Events options being tested.",
+        "Events alone is one piece of activity tracking, but Tasks also count — the complete answer includes both."
       ]
     },
     {
       "question": "A company wants to ensure sales reps follow a specific sales methodology. Which feature should be used?",
       "options": [
-        "Sales Processes",
-        "Validation Rules",
         "Workflow Rules",
-        "Sharing Rules"
+        "Validation Rules",
+        "Sharing Rules",
+        "Sales Processes"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "Sales Processes define the stages and record types for different sales methodologies, ensuring consistency across the sales team.",
       "whyWrong": [
-        "Validation Rules enforce data-entry correctness, not the sequence of a sales methodology's stages.",
         "Workflow Rules automate field updates/notifications — they don't define or enforce a sales methodology's stage structure.",
+        "Validation Rules enforce data-entry correctness, not the sequence of a sales methodology's stages.",
         "Sharing Rules control record visibility, unrelated to enforcing a specific sales methodology."
       ]
     },
     {
       "question": "What is the purpose of Territory Management in Sales Cloud?",
       "options": [
-        "To assign leads to sales reps",
-        "To organize sales teams by geographic or account-based territories",
         "To track competitor information",
-        "To calculate commissions"
+        "To assign leads to sales reps",
+        "To calculate commissions",
+        "To organize sales teams by geographic or account-based territories"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Territory Management allows you to organize sales teams by geographic regions, account types, or other criteria, and automatically assign accounts and opportunities to territories.",
       "whyWrong": [
-        "Assigning leads to reps is the job of Lead Assignment Rules, not Territory Management.",
         "Tracking competitor information is handled by the Competitors related list, not Territory Management.",
+        "Assigning leads to reps is the job of Lead Assignment Rules, not Territory Management.",
         "Calculating commissions is a separate compensation feature, unrelated to Territory Management's organizational purpose."
       ]
     },
     {
       "question": "Which Sales Cloud feature helps forecast revenue based on opportunities?",
       "options": [
-        "Reports only",
         "Sales Forecasting with Collaborative Forecasts or Custom Forecast Types",
-        "Territory Management",
-        "Lead Assignment Rules"
+        "Lead Assignment Rules",
+        "Reports only",
+        "Territory Management"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Sales Forecasting lets managers predict revenue using opportunity data; Collaborative Forecasts support quota and custom forecast types.",
       "whyWrong": [
+        "Lead Assignment Rules route leads to reps — they have nothing to do with forecasting revenue from opportunities.",
         "Reports alone display data but don't perform the roll-up forecasting calculations themselves.",
-        "Territory Management organizes sales coverage by region/account — it isn't the revenue forecasting mechanism itself.",
-        "Lead Assignment Rules route leads to reps — they have nothing to do with forecasting revenue from opportunities."
+        "Territory Management organizes sales coverage by region/account — it isn't the revenue forecasting mechanism itself."
       ]
     }
   ]

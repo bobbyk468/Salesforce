@@ -172,32 +172,32 @@
     {
       "question": "What is the primary focus of a Salesforce Certified Technical Architect?",
       "options": [
-        "Only coding",
-        "Designing and implementing secure, high-performance, integrated technical solutions within a client's landscape",
         "Email only",
-        "Slack only"
+        "Designing and implementing secure, high-performance, integrated technical solutions within a client's landscape",
+        "Slack only",
+        "Only coding"
       ],
       "correctAnswer": 1,
       "explanation": "Technical Architects design and implement secure, high-performance, integrated solutions in a client's landscape.",
       "whyWrong": [
-        "'Only coding' undersells the CTA role, which spans secure, integrated end-to-end solution design, not just code.",
         "Email is unrelated to the CTA's core solution-design focus.",
-        "Slack is unrelated to the CTA's core solution-design focus."
+        "Slack is unrelated to the CTA's core solution-design focus.",
+        "'Only coding' undersells the CTA role, which spans secure, integrated end-to-end solution design, not just code."
       ]
     },
     {
       "question": "Which certifications are typically required before attempting the CTA board?",
       "options": [
-        "None",
-        "Application Architect and System Architect (or equivalent)",
         "Email Specialist only",
+        "Application Architect and System Architect (or equivalent)",
+        "None",
         "Slack only"
       ],
       "correctAnswer": 1,
       "explanation": "CTA board typically requires Application Architect and System Architect (or equivalent) as prerequisites.",
       "whyWrong": [
-        "'None' contradicts the fact that specific prerequisite credentials are typically required before the CTA board.",
         "Email Specialist alone doesn't provide the broad architectural foundation the CTA board requires.",
+        "'None' contradicts the fact that specific prerequisite credentials are typically required before the CTA board.",
         "Slack alone doesn't provide the broad architectural foundation the CTA board requires."
       ]
     },
@@ -206,26 +206,26 @@
       "options": [
         "Only multiple choice",
         "Scenario-based architecture design and presentation",
-        "Only coding",
-        "Only documentation"
+        "Only documentation",
+        "Only coding"
       ],
       "correctAnswer": 1,
       "explanation": "The CTA board is a scenario-based design and presentation exam.",
       "whyWrong": [
         "'Only multiple choice' undersells the CTA board's actual format, which centers on scenario-based design and presentation.",
-        "'Only coding' misrepresents the CTA board, which assesses architecture design and communication, not coding ability.",
-        "'Only documentation' undersells the CTA board, which also requires live presentation and defense."
+        "'Only documentation' undersells the CTA board, which also requires live presentation and defense.",
+        "'Only coding' misrepresents the CTA board, which assesses architecture design and communication, not coding ability."
       ]
     },
     {
       "question": "Which aspect is critical in Technical Architecture?",
       "options": [
         "Only UI",
-        "Security, performance, scalability, and integration",
         "Only reports",
+        "Security, performance, scalability, and integration",
         "Only dashboards"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Security, performance, scalability, and integration are core to technical architecture.",
       "whyWrong": [
         "'Only UI' undersells the broader set of technical architecture concerns (security, performance, scalability, integration).",
@@ -236,44 +236,44 @@
     {
       "question": "What is meant by 'integrated' in the context of CTA?",
       "options": [
-        "Only Salesforce",
-        "Salesforce working with other systems (APIs, middleware, data flow)",
+        "Only LWC",
         "Only Apex",
-        "Only LWC"
+        "Salesforce working with other systems (APIs, middleware, data flow)",
+        "Only Salesforce"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Integrated means Salesforce and other systems working together via APIs and middleware.",
       "whyWrong": [
-        "'Only Salesforce' misrepresents 'integrated,' which specifically refers to Salesforce working with other systems.",
+        "'Only LWC' narrows the concept incorrectly to a single UI framework.",
         "'Only Apex' narrows the concept incorrectly to a single programming language.",
-        "'Only LWC' narrows the concept incorrectly to a single UI framework."
+        "'Only Salesforce' misrepresents 'integrated,' which specifically refers to Salesforce working with other systems."
       ]
     },
     {
       "question": "What does the CTA architecture scenario typically require?",
       "options": [
-        "Only coding",
-        "End-to-end solution design covering data, integration, security, and scalability",
+        "Only testing",
         "Only documentation",
-        "Only testing"
+        "Only coding",
+        "End-to-end solution design covering data, integration, security, and scalability"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "CTA scenarios require comprehensive end-to-end solution design.",
       "whyWrong": [
-        "'Only coding' undersells the CTA scenario, which requires end-to-end solution design, not just code.",
+        "'Only testing' undersells the CTA scenario, which requires broader design work, not just testing.",
         "'Only documentation' undersells the CTA scenario, which requires full solution design across multiple dimensions.",
-        "'Only testing' undersells the CTA scenario, which requires broader design work, not just testing."
+        "'Only coding' undersells the CTA scenario, which requires end-to-end solution design, not just code."
       ]
     },
     {
       "question": "Which architectural concern is critical for high-volume orgs?",
       "options": [
-        "Only UI",
         "Governor limits, data volume, and query optimization",
+        "Only UI",
         "Only reports",
         "Only dashboards"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "High volume requires attention to limits, data, and queries.",
       "whyWrong": [
         "'Only UI' misrepresents the critical concern for high-volume orgs, which is governor limits and query optimization, not interface design.",
@@ -284,129 +284,129 @@
     {
       "question": "What does 'secure' mean in CTA context?",
       "options": [
-        "Only encryption",
-        "Sharing, authentication, encryption, and compliance",
+        "Only OWD",
         "Only sharing",
-        "Only OWD"
+        "Only encryption",
+        "Sharing, authentication, encryption, and compliance"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Secure covers sharing, auth, encryption, and compliance.",
       "whyWrong": [
-        "'Only encryption' undersells 'secure,' which spans sharing, authentication, and compliance too.",
+        "'Only OWD' undersells 'secure,' which is a much broader concept than just baseline record access.",
         "'Only sharing' undersells 'secure,' which spans encryption, authentication, and compliance too.",
-        "'Only OWD' undersells 'secure,' which is a much broader concept than just baseline record access."
+        "'Only encryption' undersells 'secure,' which spans sharing, authentication, and compliance too."
       ]
     },
     {
       "question": "Which presentation skill is important for the CTA board?",
       "options": [
-        "Only slides",
         "Clear communication of trade-offs, risks, and rationale",
-        "Only coding",
-        "Only documentation"
+        "Only documentation",
+        "Only slides",
+        "Only coding"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "CTAs must clearly communicate trade-offs and rationale.",
       "whyWrong": [
+        "'Only documentation' undersells the live communication skill the board specifically evaluates.",
         "'Only slides' undersells the presentation skill being asked about, which is about clear communication, not just visual aids.",
-        "'Only coding' misrepresents the CTA board's focus on communication skills, not coding ability.",
-        "'Only documentation' undersells the live communication skill the board specifically evaluates."
+        "'Only coding' misrepresents the CTA board's focus on communication skills, not coding ability."
       ]
     },
     {
       "question": "What is the purpose of an architecture decision record?",
       "options": [
-        "To replace design",
-        "To document decisions, context, and consequences",
         "Only for code",
+        "To document decisions, context, and consequences",
+        "To replace design",
         "Only for testing"
       ],
       "correctAnswer": 1,
       "explanation": "ADRs document decisions and their context.",
       "whyWrong": [
-        "Architecture decision records don't replace the design process — they document it.",
         "'Only for code' undersells ADRs, which document broader architectural decisions, not just code.",
+        "Architecture decision records don't replace the design process — they document it.",
         "'Only for testing' undersells ADRs, which document broader architectural decisions, not just testing."
       ]
     },
     {
       "question": "Which integration pattern supports scalability?",
       "options": [
+        "Tight coupling",
         "Point-to-point only",
-        "Event-driven and loosely coupled architectures",
         "Synchronous only",
-        "Tight coupling"
+        "Event-driven and loosely coupled architectures"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Event-driven and loosely coupled support scalability.",
       "whyWrong": [
+        "'Tight coupling' is the opposite of what supports scalability.",
         "'Point-to-point only' is the opposite pattern from the scalable, event-driven approach being asked about.",
-        "'Synchronous only' doesn't provide the decoupled scalability event-driven architecture offers.",
-        "'Tight coupling' is the opposite of what supports scalability."
+        "'Synchronous only' doesn't provide the decoupled scalability event-driven architecture offers."
       ]
     },
     {
       "question": "What does the CTA board evaluate?",
       "options": [
-        "Only technical knowledge",
         "Design quality, trade-offs, communication, and completeness",
-        "Only coding",
-        "Only deployment"
+        "Only deployment",
+        "Only technical knowledge",
+        "Only coding"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Board evaluates design, trade-offs, and communication.",
       "whyWrong": [
+        "'Only deployment' undersells the CTA board's broader evaluation criteria.",
         "'Only technical knowledge' undersells the CTA board's holistic evaluation, which includes communication and trade-off analysis too.",
-        "'Only coding' misrepresents the CTA board's evaluation focus, which is architecture, not coding.",
-        "'Only deployment' undersells the CTA board's broader evaluation criteria."
+        "'Only coding' misrepresents the CTA board's evaluation focus, which is architecture, not coding."
       ]
     },
     {
       "question": "Which consideration applies when designing for multiple business units?",
       "options": [
-        "Single org only",
         "Sharing, licensing, and data isolation strategies",
         "No isolation",
+        "Single org only",
         "Ignore licensing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Multi-BU requires sharing, licensing, and isolation strategy.",
       "whyWrong": [
-        "'Single org only' contradicts the multi-business-unit scenario the question specifically describes.",
         "'No isolation' contradicts the fact that data isolation is a real, necessary consideration for multi-BU design.",
+        "'Single org only' contradicts the multi-business-unit scenario the question specifically describes.",
         "'Ignore licensing' contradicts the fact that licensing is a real consideration in multi-BU design."
       ]
     },
     {
       "question": "What is the benefit of a phased implementation approach?",
       "options": [
-        "No benefit",
-        "Reduced risk, incremental value, and easier rollback",
         "Faster only",
-        "Lower cost only"
+        "Lower cost only",
+        "Reduced risk, incremental value, and easier rollback",
+        "No benefit"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Phased approach reduces risk and enables incremental value.",
       "whyWrong": [
-        "'No benefit' contradicts the real, documented benefits of a phased implementation approach.",
         "'Faster only' undersells the broader set of benefits (reduced risk, easier rollback) beyond just speed.",
-        "'Lower cost only' undersells the broader set of benefits beyond just cost."
+        "'Lower cost only' undersells the broader set of benefits beyond just cost.",
+        "'No benefit' contradicts the real, documented benefits of a phased implementation approach."
       ]
     },
     {
       "question": "Which governance area does a CTA address?",
       "options": [
+        "Only testing",
         "Only coding standards",
         "Release management, change control, and technical debt",
-        "Only documentation",
-        "Only testing"
+        "Only documentation"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Governance covers release, change control, and technical debt.",
       "whyWrong": [
+        "'Only testing' undersells governance, which spans release management and change control, not just testing.",
         "'Only coding standards' undersells governance, which spans release management and technical debt too.",
-        "'Only documentation' undersells governance, which spans broader practices beyond just documentation.",
-        "'Only testing' undersells governance, which spans release management and change control, not just testing."
+        "'Only documentation' undersells governance, which spans broader practices beyond just documentation."
       ]
     }
   ]

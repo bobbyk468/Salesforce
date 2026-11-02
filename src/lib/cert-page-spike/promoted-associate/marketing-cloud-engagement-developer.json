@@ -168,48 +168,48 @@
     {
       "question": "Which Marketing Cloud scripting language is used for server-side logic in emails and landing pages?",
       "options": [
-        "Apex",
-        "AMPscript",
         "Visualforce",
+        "AMPscript",
+        "Apex",
         "LWC"
       ],
       "correctAnswer": 1,
       "explanation": "AMPscript is Marketing Cloud's scripting language for personalization and dynamic content in emails and landing pages.",
       "whyWrong": [
-        "Apex is a Salesforce Core language, not used for Marketing Cloud email/landing page scripting.",
         "Visualforce is a Salesforce Core UI framework, unrelated to Marketing Cloud scripting.",
+        "Apex is a Salesforce Core language, not used for Marketing Cloud email/landing page scripting.",
         "LWC is used in Salesforce Core/Experience Cloud, not Marketing Cloud email personalization."
       ]
     },
     {
       "question": "What is Server-Side JavaScript (SSJS) used for in Marketing Cloud?",
       "options": [
-        "Client-side only",
-        "Script Activities in Automation Studio and advanced scripting",
         "CPQ configuration",
-        "Slack apps"
+        "Slack apps",
+        "Script Activities in Automation Studio and advanced scripting",
+        "Client-side only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "SSJS is used in Script Activities and for advanced server-side logic in Marketing Cloud.",
       "whyWrong": [
-        "'Client-side only' misrepresents SSJS, which specifically runs server-side.",
         "CPQ configuration is entirely unrelated to SSJS's data manipulation purpose.",
-        "Slack apps are entirely unrelated to SSJS."
+        "Slack apps are entirely unrelated to SSJS.",
+        "'Client-side only' misrepresents SSJS, which specifically runs server-side."
       ]
     },
     {
       "question": "Which function retrieves a value from a Data Extension row in AMPscript?",
       "options": [
-        "LOOKUP",
-        "VLOOKUP",
         "GET",
-        "RETRIEVE"
+        "VLOOKUP",
+        "RETRIEVE",
+        "LOOKUP"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 3,
       "explanation": "The LOOKUP function retrieves a single value from a Data Extension based on matching criteria.",
       "whyWrong": [
-        "VLOOKUP isn't a real AMPscript function — that's an Excel formula, not AMPscript syntax.",
         "GET isn't the AMPscript function for retrieving a Data Extension value.",
+        "VLOOKUP isn't a real AMPscript function — that's an Excel formula, not AMPscript syntax.",
         "RETRIEVE isn't the correct AMPscript function name for this operation."
       ]
     },
@@ -233,59 +233,59 @@
       "question": "Which Marketing Cloud product is used to build and host landing pages with dynamic content?",
       "options": [
         "Sales Cloud",
+        "Heroku",
         "Cloud Pages",
-        "Slack",
-        "Heroku"
+        "Slack"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Cloud Pages (formerly Landing Pages) host web pages with AMPscript and dynamic content.",
       "whyWrong": [
         "Sales Cloud is a different Salesforce Core product, unrelated to landing page hosting.",
-        "Slack is a collaboration tool, unrelated to landing page hosting.",
-        "Heroku is a separate PaaS platform, not the Marketing Cloud-native landing page tool."
+        "Heroku is a separate PaaS platform, not the Marketing Cloud-native landing page tool.",
+        "Slack is a collaboration tool, unrelated to landing page hosting."
       ]
     },
     {
       "question": "Which AMPscript block retrieves multiple rows from a Data Extension?",
       "options": [
-        "LOOKUP only",
         "LOOKUPROWS or LOOKUPORDEREDROWS",
         "GET only",
+        "LOOKUP only",
         "RETRIEVE only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "LOOKUPROWS and LOOKUPORDEREDROWS retrieve multiple rows.",
       "whyWrong": [
-        "LOOKUP alone retrieves a single value, not multiple rows.",
         "GET alone isn't the correct AMPscript function for retrieving multiple Data Extension rows.",
+        "LOOKUP alone retrieves a single value, not multiple rows.",
         "RETRIEVE alone isn't the correct AMPscript function name for this operation."
       ]
     },
     {
       "question": "What is the purpose of a Script Activity in Automation Studio?",
       "options": [
+        "To create journeys only",
         "To send emails only",
         "To run SSJS for data manipulation, imports, or custom logic",
-        "To create journeys only",
         "To design templates only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Script Activities run SSJS for data and custom logic.",
       "whyWrong": [
-        "'To send emails only' undersells Script Activity, which handles broader data manipulation and custom logic, not just sending.",
         "'To create journeys only' misattributes Script Activity's purpose to a different tool (Journey Builder).",
+        "'To send emails only' undersells Script Activity, which handles broader data manipulation and custom logic, not just sending.",
         "'To design templates only' misattributes Script Activity's purpose to a different tool (Content Builder)."
       ]
     },
     {
       "question": "Which API is used for programmatic access to Marketing Cloud?",
       "options": [
-        "Apex",
         "REST API and SOAP API",
+        "Apex",
         "Visualforce only",
         "LWC only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Marketing Cloud exposes REST and SOAP APIs.",
       "whyWrong": [
         "Apex is a Salesforce Core language, not the API used for Marketing Cloud programmatic access.",
@@ -296,113 +296,113 @@
     {
       "question": "What does the Treat As Content option do in AMPscript?",
       "options": [
-        "Nothing",
-        "Prevents AMPscript from being executed (treats as literal)",
+        "To delete",
         "To encrypt",
-        "To delete"
+        "Nothing",
+        "Prevents AMPscript from being executed (treats as literal)"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Treat As Content displays AMPscript as literal text.",
       "whyWrong": [
-        "'Nothing' contradicts the fact that Treat As Content has a specific, real effect on AMPscript execution.",
+        "Treat As Content doesn't delete data — that's unrelated to its rendering-control purpose.",
         "Treat As Content doesn't encrypt data — that's unrelated to its rendering-control purpose.",
-        "Treat As Content doesn't delete data — that's unrelated to its rendering-control purpose."
+        "'Nothing' contradicts the fact that Treat As Content has a specific, real effect on AMPscript execution."
       ]
     },
     {
       "question": "Which Data Extension type supports sendable sends?",
       "options": [
-        "Standard only",
         "Sendable Data Extension (subscriber-key based)",
+        "No extension",
         "Random only",
-        "No extension"
+        "Standard only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Sendable Data Extensions link to subscriber key for sends.",
       "whyWrong": [
-        "'Standard only' isn't the specific subscriber-key-based type that supports sendable sends.",
+        "'No extension' contradicts the fact that a specific Data Extension type does support sendable sends.",
         "'Random only' isn't a real Data Extension sendability type.",
-        "'No extension' contradicts the fact that a specific Data Extension type does support sendable sends."
+        "'Standard only' isn't the specific subscriber-key-based type that supports sendable sends."
       ]
     },
     {
       "question": "What is the purpose of Microsites in Marketing Cloud?",
       "options": [
-        "To replace Cloud Pages",
         "To host landing pages with tracking and forms",
         "To send emails only",
+        "To replace Cloud Pages",
         "To create journeys only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Microsites host landing pages with tracking and forms.",
       "whyWrong": [
-        "Microsites don't replace Cloud Pages — they're a related but distinct hosting concept.",
         "'To send emails only' misattributes Microsites' landing-page hosting purpose to a different function.",
+        "Microsites don't replace Cloud Pages — they're a related but distinct hosting concept.",
         "'To create journeys only' misattributes Microsites' landing-page hosting purpose to a different tool."
       ]
     },
     {
       "question": "Which SSJS object provides access to platform features?",
       "options": [
-        "Platform only",
-        "Platform.Function and Platform.Variable",
+        "Only Variable",
         "No object",
-        "Only Variable"
+        "Platform only",
+        "Platform.Function and Platform.Variable"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Platform.Function and Platform.Variable provide platform access.",
       "whyWrong": [
-        "'Platform only' is incomplete — the specific SSJS objects are Platform.Function and Platform.Variable together.",
+        "'Only Variable' is incomplete — Platform.Function is also part of the object providing platform access.",
         "'No object' contradicts the fact that specific SSJS platform objects exist for this purpose.",
-        "'Only Variable' is incomplete — Platform.Function is also part of the object providing platform access."
+        "'Platform only' is incomplete — the specific SSJS objects are Platform.Function and Platform.Variable together."
       ]
     },
     {
       "question": "What does Personalization String syntax use?",
       "options": [
-        "Only AMPscript",
-        "%%Attribute_Name%% or similar",
         "Only SSJS",
-        "Only HTML"
+        "%%Attribute_Name%% or similar",
+        "Only HTML",
+        "Only AMPscript"
       ],
       "correctAnswer": 1,
       "explanation": "Personalization strings use %%Attribute_Name%% syntax.",
       "whyWrong": [
-        "'Only AMPscript' misrepresents personalization string syntax, which uses a distinct %% syntax, not general AMPscript blocks.",
         "'Only SSJS' misattributes personalization string syntax to a different scripting language.",
-        "'Only HTML' misattributes personalization string syntax, which is Marketing-Cloud-specific, not plain HTML."
+        "'Only HTML' misattributes personalization string syntax, which is Marketing-Cloud-specific, not plain HTML.",
+        "'Only AMPscript' misrepresents personalization string syntax, which uses a distinct %% syntax, not general AMPscript blocks."
       ]
     },
     {
       "question": "Which testing approach applies to Marketing Cloud development?",
       "options": [
-        "No testing",
+        "Manual only",
         "Preview and test sends with sample data",
-        "Production only",
-        "Manual only"
+        "No testing",
+        "Production only"
       ],
       "correctAnswer": 1,
       "explanation": "Preview and test sends validate development.",
       "whyWrong": [
+        "'Manual only' undersells the structured preview/test capability available for development.",
         "'No testing' contradicts the fact that preview/test sends are a standard development practice.",
-        "'Production only' contradicts the fact that testing should happen before production, not only in it.",
-        "'Manual only' undersells the structured preview/test capability available for development."
+        "'Production only' contradicts the fact that testing should happen before production, not only in it."
       ]
     },
     {
       "question": "What is the purpose of Journey Builder Entry Sources?",
       "options": [
-        "To replace Data Extensions",
-        "To define how contacts enter a journey (e.g., API, data extension, form)",
         "To send only",
-        "To track only"
+        "To track only",
+        "To define how contacts enter a journey (e.g., API, data extension, form)",
+        "To replace Data Extensions"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Entry sources define how contacts enter journeys.",
       "whyWrong": [
-        "Entry Sources don't replace Data Extensions — they define how contacts enter, using various sources including Data Extensions.",
         "'To send only' misattributes Entry Sources' purpose, which is about journey entry, not sending.",
-        "'To track only' misattributes Entry Sources' purpose, which is about journey entry, not tracking."
+        "'To track only' misattributes Entry Sources' purpose, which is about journey entry, not tracking.",
+        "Entry Sources don't replace Data Extensions — they define how contacts enter, using various sources including Data Extensions."
       ]
     }
   ]

@@ -164,124 +164,124 @@
     {
       "question": "What does the Tableau Desktop Foundations certification validate?",
       "options": [
-        "Server administration only",
-        "Core Tableau Desktop skills: connecting to data, building views, and creating dashboards",
         "Marketing automation",
-        "Salesforce CRM configuration"
+        "Core Tableau Desktop skills: connecting to data, building views, and creating dashboards",
+        "Salesforce CRM configuration",
+        "Server administration only"
       ],
       "correctAnswer": 1,
       "explanation": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards in Tableau Desktop.",
       "whyWrong": [
-        "'Server administration only' misrepresents Foundations, which is about core Desktop skills, not server administration.",
         "Marketing automation is unrelated to Tableau Desktop Foundations.",
-        "Salesforce CRM configuration is unrelated to Tableau Desktop Foundations."
+        "Salesforce CRM configuration is unrelated to Tableau Desktop Foundations.",
+        "'Server administration only' misrepresents Foundations, which is about core Desktop skills, not server administration."
       ]
     },
     {
       "question": "Which is a fundamental Tableau Desktop concept?",
       "options": [
-        "Only colors",
         "Dimensions, measures, and the shelf (Rows, Columns, Marks)",
         "Apex programming",
+        "Only colors",
         "Email templates"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Dimensions, measures, and the shelf (Rows, Columns, Marks) are fundamental to building views in Tableau Desktop.",
       "whyWrong": [
-        "'Only colors' undersells the fundamental concepts, which include dimensions, measures, and shelves broadly.",
         "Apex programming is a Salesforce Core language, unrelated to Tableau Desktop concepts.",
+        "'Only colors' undersells the fundamental concepts, which include dimensions, measures, and shelves broadly.",
         "Email templates are unrelated to Tableau Desktop's core visualization concepts."
       ]
     },
     {
       "question": "What do the Rows and Columns shelves do in Tableau?",
       "options": [
-        "Store data only",
         "Define the structure of the view; fields placed here create headers and axes",
+        "Change colors",
         "Apply filters only",
-        "Change colors"
+        "Store data only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Rows and Columns define the layout of the visualization. Fields create headers, axes, and panes.",
       "whyWrong": [
-        "'Store data only' misrepresents the Rows/Columns shelves, which define view structure, not data storage.",
+        "'Change colors' misattributes the Rows/Columns shelves' function to a different visual property (that's the Marks card).",
         "'Apply filters only' undersells the Rows/Columns shelves' broader structural role beyond filtering.",
-        "'Change colors' misattributes the Rows/Columns shelves' function to a different visual property (that's the Marks card)."
+        "'Store data only' misrepresents the Rows/Columns shelves, which define view structure, not data storage."
       ]
     },
     {
       "question": "Which data type appears as a dimension (blue pill) by default in Tableau?",
       "options": [
-        "Only numbers",
-        "Text, dates, and booleans are typically dimensions",
         "Only dates",
+        "Text, dates, and booleans are typically dimensions",
+        "Only numbers",
         "Only booleans"
       ],
       "correctAnswer": 1,
       "explanation": "Text, dates, and booleans default to dimensions. Numeric fields often default to measures.",
       "whyWrong": [
-        "'Only numbers' is the opposite of what typically becomes a dimension — numbers are usually measures.",
         "'Only dates' undersells the broader set of data types (text, booleans too) that appear as dimensions.",
+        "'Only numbers' is the opposite of what typically becomes a dimension — numbers are usually measures.",
         "'Only booleans' undersells the broader set of data types (text, dates too) that appear as dimensions."
       ]
     },
     {
       "question": "What does the Marks card control in Tableau?",
       "options": [
-        "Data connection only",
-        "Color, size, text, detail, and tooltip of marks in the view",
         "Filters only",
+        "Color, size, text, detail, and tooltip of marks in the view",
+        "Data connection only",
         "Calculations only"
       ],
       "correctAnswer": 1,
       "explanation": "The Marks card controls how data points are encoded: color, size, label, tooltip, and more.",
       "whyWrong": [
-        "Data connection is a separate step, not what the Marks card itself controls.",
         "'Filters only' undersells the Marks card's broader control over color, size, text, and detail.",
+        "Data connection is a separate step, not what the Marks card itself controls.",
         "'Calculations only' misattributes the Marks card's function to a different Tableau capability."
       ]
     },
     {
       "question": "Which Tableau feature lets you connect to Excel or CSV files?",
       "options": [
+        "Only PDF",
         "Only databases",
         "Connect to a File supports Excel, CSV, PDF, and other file types",
-        "Only PDF",
         "Only JSON"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Connect to a File lets you use Excel, CSV, and other file-based data sources.",
       "whyWrong": [
-        "'Only databases' undersells the file-connection capability, which covers Excel, CSV, PDF, and more.",
         "'Only PDF' undersells the broader set of file types Tableau can connect to.",
+        "'Only databases' undersells the file-connection capability, which covers Excel, CSV, PDF, and more.",
         "'Only JSON' undersells the broader set of file types Tableau can connect to."
       ]
     },
     {
       "question": "What is a filter in Tableau used for?",
       "options": [
-        "Changing colors only",
-        "Limiting which data appears in the view based on criteria",
+        "Connecting to servers",
         "Deleting data",
-        "Connecting to servers"
+        "Limiting which data appears in the view based on criteria",
+        "Changing colors only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Filters restrict the data displayed in a view based on field values or conditions.",
       "whyWrong": [
-        "'Changing colors only' misattributes filtering's actual purpose, which is limiting displayed data.",
+        "'Connecting to servers' misattributes filtering's function to a different, unrelated data-connection concept.",
         "Filters don't delete data — they limit what's displayed, not what's stored.",
-        "'Connecting to servers' misattributes filtering's function to a different, unrelated data-connection concept."
+        "'Changing colors only' misattributes filtering's actual purpose, which is limiting displayed data."
       ]
     },
     {
       "question": "Which chart type uses bars to compare categories?",
       "options": [
         "Line chart",
-        "Bar chart",
         "Pie chart",
-        "Map"
+        "Map",
+        "Bar chart"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Bar charts compare values across categories using horizontal or vertical bars.",
       "whyWrong": [
         "A line chart shows trends over time, not category comparison via bars.",
@@ -292,108 +292,108 @@
     {
       "question": "What does 'aggregate' mean in Tableau?",
       "options": [
-        "Combine colors",
-        "Summarize measure values (e.g., SUM, AVG) at the level of the view",
         "Delete data",
-        "Connect tables"
+        "Combine colors",
+        "Connect tables",
+        "Summarize measure values (e.g., SUM, AVG) at the level of the view"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Aggregation summarizes measures (SUM, AVG, etc.) at the granularity defined by dimensions in the view.",
       "whyWrong": [
-        "'Combine colors' misattributes aggregation's function to an unrelated visual property.",
         "Aggregation doesn't delete data — it summarizes values, not removes them.",
+        "'Combine colors' misattributes aggregation's function to an unrelated visual property.",
         "'Connect tables' misattributes aggregation's function to a data-connection concept, which is unrelated."
       ]
     },
     {
       "question": "How do you create a dashboard in Tableau Desktop?",
       "options": [
-        "Only in Server",
         "Use the Dashboard tab to add worksheets and objects to a single layout",
-        "Dashboards are automatic",
-        "Only from CSV"
+        "Only from CSV",
+        "Only in Server",
+        "Dashboards are automatic"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "The Dashboard tab lets you add worksheets, images, text, and objects to create a unified view.",
       "whyWrong": [
+        "'Only from CSV' incorrectly ties dashboard creation to a specific data source type, which isn't a requirement.",
         "'Only in Server' contradicts the fact that dashboards are built directly in Tableau Desktop.",
-        "'Dashboards are automatic' contradicts the fact that building a dashboard requires deliberate use of the Dashboard tab.",
-        "'Only from CSV' incorrectly ties dashboard creation to a specific data source type, which isn't a requirement."
+        "'Dashboards are automatic' contradicts the fact that building a dashboard requires deliberate use of the Dashboard tab."
       ]
     },
     {
       "question": "What is the difference between discrete and continuous in Tableau?",
       "options": [
-        "No difference",
-        "Discrete creates headers; continuous creates axes. Blue = discrete, green = continuous",
+        "Only for dates",
         "Only for colors",
-        "Only for dates"
+        "Discrete creates headers; continuous creates axes. Blue = discrete, green = continuous",
+        "No difference"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Discrete fields create headers and categories; continuous fields create axes. Pill color indicates type.",
       "whyWrong": [
-        "'No difference' contradicts the fact that discrete and continuous have distinct, defined behaviors (headers vs. axes).",
+        "'Only for dates' undersells the broader applicability of the discrete/continuous distinction beyond just dates.",
         "'Only for colors' undersells the broader header-versus-axis distinction discrete/continuous represents.",
-        "'Only for dates' undersells the broader applicability of the discrete/continuous distinction beyond just dates."
+        "'No difference' contradicts the fact that discrete and continuous have distinct, defined behaviors (headers vs. axes)."
       ]
     },
     {
       "question": "Which Tableau feature shows a summary when you hover over a mark?",
       "options": [
+        "Parameters",
         "Filters",
-        "Tooltips",
         "Legends only",
-        "Parameters"
+        "Tooltips"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Tooltips display contextual information when users hover over marks in the view.",
       "whyWrong": [
+        "Parameters are input controls — they don't show a hover summary of a mark.",
         "Filters limit displayed data — they don't show a hover summary.",
-        "Legends explain color/size encoding — they don't show a hover summary of a specific mark.",
-        "Parameters are input controls — they don't show a hover summary of a mark."
+        "Legends explain color/size encoding — they don't show a hover summary of a specific mark."
       ]
     },
     {
       "question": "What does the Show Me panel in Tableau do?",
       "options": [
-        "Manages licenses",
         "Recommends chart types based on selected fields",
-        "Connects to data only",
-        "Applies filters only"
+        "Applies filters only",
+        "Manages licenses",
+        "Connects to data only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Show Me suggests visualization types based on the fields you have selected.",
       "whyWrong": [
+        "'Applies filters only' misattributes Show Me's function to a different, unrelated feature.",
         "'Manages licenses' misattributes Show Me's function to an unrelated administrative feature.",
-        "'Connects to data only' misattributes Show Me's function, which is chart recommendation, not data connection.",
-        "'Applies filters only' misattributes Show Me's function to a different, unrelated feature."
+        "'Connects to data only' misattributes Show Me's function, which is chart recommendation, not data connection."
       ]
     },
     {
       "question": "How do you sort a bar chart in Tableau?",
       "options": [
-        "Cannot sort",
+        "Only for dimensions",
         "Click the sort icon on the axis or use the sort option in the field menu",
         "Only in dashboards",
-        "Only for dimensions"
+        "Cannot sort"
       ],
       "correctAnswer": 1,
       "explanation": "Use the sort icon on the axis or the field's sort option to order bars by value or manually.",
       "whyWrong": [
-        "'Cannot sort' contradicts the fact that sorting is a standard, available Tableau feature.",
+        "Sorting isn't limited to dimensions — measures can be involved in sort order too.",
         "Sorting isn't limited to dashboards — it's available directly on worksheets too.",
-        "Sorting isn't limited to dimensions — measures can be involved in sort order too."
+        "'Cannot sort' contradicts the fact that sorting is a standard, available Tableau feature."
       ]
     },
     {
       "question": "What is a Tableau worksheet?",
       "options": [
         "A data source",
-        "A single visualization (chart, map, or table) built from data",
         "A dashboard only",
+        "A single visualization (chart, map, or table) built from data",
         "A filter only"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "A worksheet is a single view—one chart, map, or table. Dashboards combine multiple worksheets.",
       "whyWrong": [
         "A data source is the underlying connection, not the visualization itself.",

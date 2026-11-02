@@ -169,67 +169,67 @@
     {
       "question": "What does CPQ and Billing Consultant AP validate?",
       "options": [
-        "Only basics",
-        "Fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Billing solutions",
         "Only reporting",
-        "Only Slack"
+        "Only Slack",
+        "Fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Billing solutions",
+        "Only basics"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Accredited Salesforce CPQ and Billing Consultant Professionals have the fundamental knowledge and consulting skills to scope, design, build, and deploy Salesforce CPQ and Salesforce Billing solutions."
     },
     {
       "question": "Which products does this AP cover?",
       "options": [
+        "Only Marketing Cloud",
         "Only CPQ",
-        "Salesforce CPQ and Salesforce Billing",
         "Only Billing",
-        "Only Marketing Cloud"
+        "Salesforce CPQ and Salesforce Billing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "It covers Salesforce CPQ and Salesforce Billing."
     },
     {
       "question": "What is a key activity for a CPQ and Billing Consultant?",
       "options": [
-        "Only coding",
         "Scoping, designing, building, and deploying CPQ and Billing solutions",
-        "Only reporting",
-        "Only email"
+        "Only email",
+        "Only coding",
+        "Only reporting"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "They scope, design, build, and deploy CPQ and Billing solutions."
     },
     {
       "question": "Which role typically pursues CPQ and Billing AP?",
       "options": [
-        "Marketers",
-        "Partners and consultants working with CPQ and Billing",
         "Sales only",
-        "Designers only"
+        "Marketers",
+        "Designers only",
+        "Partners and consultants working with CPQ and Billing"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Partners and consultants working with CPQ and Billing pursue this credential."
     },
     {
       "question": "What does CPQ stand for?",
       "options": [
-        "Customer Product Quality",
         "Configure, Price, Quote",
-        "Central Purchase Queue",
-        "Contract Pricing Query"
+        "Customer Product Quality",
+        "Contract Pricing Query",
+        "Central Purchase Queue"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "CPQ stands for Configure, Price, Quote."
     },
     {
       "question": "What does Salesforce Billing handle?",
       "options": [
-        "Only quotes",
-        "Revenue recognition, invoicing, and subscription billing",
         "Only products",
-        "Only discounts"
+        "Only discounts",
+        "Revenue recognition, invoicing, and subscription billing",
+        "Only quotes"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Billing manages invoicing, revenue recognition, and subscription lifecycle."
     },
     {
@@ -246,43 +246,43 @@
     {
       "question": "What is a Price Rule in CPQ used for?",
       "options": [
-        "Validation only",
-        "Applying custom pricing logic based on conditions",
         "Reporting only",
-        "Approval only"
+        "Validation only",
+        "Approval only",
+        "Applying custom pricing logic based on conditions"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 3,
       "explanation": "Price Rules inject values into quote line fields based on conditions."
     },
     {
       "question": "What is a Product Bundle in CPQ?",
       "options": [
         "A report",
-        "A parent product with optional or required child products",
         "A discount type",
+        "A parent product with optional or required child products",
         "A quote template"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Bundles group parent and child products for configuration."
     },
     {
       "question": "Which activity is part of CPQ scoping?",
       "options": [
-        "Only deployment",
         "Understanding product catalog, pricing, and quote requirements",
-        "Only coding",
-        "Only reporting"
+        "Only reporting",
+        "Only deployment",
+        "Only coding"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Scoping involves gathering product, pricing, and process requirements."
     },
     {
       "question": "What does a Discount Schedule do in CPQ?",
       "options": [
-        "Approves discounts",
+        "Sends emails only",
         "Applies tiered discounts based on quantity or term",
         "Validates only",
-        "Sends emails only"
+        "Approves discounts"
       ],
       "correctAnswer": 1,
       "explanation": "Discount Schedules apply volume-based or term-based tier discounts."
@@ -290,10 +290,10 @@
     {
       "question": "Why is Salesforce Billing often paired with CPQ?",
       "options": [
-        "Not related",
+        "Only for products",
         "CPQ creates quotes/contracts; Billing handles invoicing and revenue",
         "Only for reporting",
-        "Only for products"
+        "Not related"
       ],
       "correctAnswer": 1,
       "explanation": "CPQ handles configure-quote-contract; Billing handles invoicing and revenue."
@@ -301,23 +301,23 @@
     {
       "question": "What is the Quote Line Editor (QLE)?",
       "options": [
-        "A report",
         "The interactive grid for configuring products and pricing on a quote",
         "An approval step",
-        "A data import tool"
+        "A data import tool",
+        "A report"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "QLE is the grid where reps configure products and view pricing."
     },
     {
       "question": "What is a Configuration Attribute in CPQ?",
       "options": [
         "A report filter",
+        "An approval rule",
         "A product option that users select when configuring a bundle (e.g., color, size)",
-        "A discount type",
-        "An approval rule"
+        "A discount type"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Configuration Attributes define selectable options for product configuration."
     },
     {
