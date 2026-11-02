@@ -24,7 +24,7 @@
     "summary": "Salesforce now calls this credential Agentforce Service Consultant. It is a moderate to hard exam. Many questions offer several reasonable setups, and you have to pick the one that fits the business need best with the least effort.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>Pass mark:</strong> check the official exam guide, since figures quoted online vary.",
+      "<strong>78% to pass</strong>, about 47 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Prerequisite:</strong> Platform Administrator.",
       "<strong>Broad scope.</strong> Case management, routing, entitlements, knowledge, the Service Console, self-service and AI features."
     ],
@@ -46,7 +46,7 @@
     "description": "This exam tests how you design Service Cloud solutions: case handling, routing, service levels, knowledge, the agent console and customer self-service.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "See official guide",
+      "passingScore": "78%",
       "duration": "105 min",
       "cost": "$200"
     },

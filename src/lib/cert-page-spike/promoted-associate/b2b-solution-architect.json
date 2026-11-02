@@ -22,7 +22,7 @@
     "summary": "It is a hard exam because it is wide. One question might be about the data model across clouds, the next about integration with an ERP, and the next about how to run the project. Real project experience helps more than memorising features.",
     "bullets": [
       "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones.",
-      "<strong>Pass mark and time:</strong> third-party sources quote different numbers, so check the official exam guide before you book.",
+      "<strong>About 63% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Cross-cloud scenarios.</strong> Expect questions that mix Sales Cloud, Service Cloud, CPQ, Order Management, B2B Commerce and Experience Cloud.",
       "<strong>Project delivery counts.</strong> Some questions are about discovery, governance and change management, not just technology."
     ],
@@ -44,8 +44,8 @@
     "description": "This exam tests how you design B2B solutions that span several Salesforce clouds and outside systems. You decide where data lives, how systems connect, and how the project is run.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "See official guide",
-      "duration": "See official guide",
+      "passingScore": "~63%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [

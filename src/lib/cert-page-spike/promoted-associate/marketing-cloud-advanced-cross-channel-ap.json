@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "AP",
-    "description": "This exam goes beyond single-channel sends. You&amp;apos;ll need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",
+    "description": "This exam goes beyond single-channel sends. You will need to coordinate Journey Builder across email, SMS, push, and advertising while using Einstein for engagement scoring and send-time optimization.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",

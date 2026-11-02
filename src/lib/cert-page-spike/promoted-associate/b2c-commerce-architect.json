@@ -22,7 +22,7 @@
     "summary": "It is one of the harder commerce exams. You need deep B2C Commerce knowledge and you have to weigh trade-offs, such as speed versus flexibility or custom code versus standard features. Salesforce lists B2C Commerce Developer as a prerequisite.",
     "bullets": [
       "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones, in about 105 minutes.",
-      "<strong>Pass mark:</strong> sources quote different figures, so check the official exam guide before you book.",
+      "<strong>About 63% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Trade-off questions.</strong> SFRA or headless, OCAPI or SCAPI, page caching choices, and how to integrate with other systems.",
       "<strong>Experience matters.</strong> Years on real B2C Commerce projects, with different traffic levels and site setups, is the best preparation."
     ],
@@ -44,7 +44,7 @@
     "description": "This exam tests how you design and run Salesforce B2C Commerce sites: choosing a storefront approach, setting up sites and catalogs, planning integrations, and keeping sites fast and secure.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "See official guide",
+      "passingScore": "~63%",
       "duration": "105 min",
       "cost": "$400"
     },

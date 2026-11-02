@@ -4,44 +4,44 @@
     "heading": "Who is the Slack Administrator exam for?",
     "personas": [
       {
-        "label": "IT Administrators",
-        "description": "Professionals managing Slack workspaces and Enterprise Grid environments, including channel governance, security policies, and compliance."
+        "label": "IT administrators",
+        "description": "You run Slack for a company and handle the settings, users and apps."
       },
       {
-        "label": "Workspace Owners",
-        "description": "Admins responsible for user provisioning, app approval workflows, retention policies, and Slack Connect configuration."
+        "label": "Workspace owners",
+        "description": "You approve apps, add and remove people, and decide who can do what."
       },
       {
-        "label": "Collaboration Platform Managers",
-        "description": "Managers overseeing enterprise messaging tools who want to validate their Slack administration skills and best practices knowledge."
+        "label": "Collaboration platform managers",
+        "description": "You own the messaging tools for the business and want a credential that proves it."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Slack Administrator Exam Hard?",
-    "summary": "The Slack Administrator exam is moderately difficult. It covers a wide surface area — workspace setup, Enterprise Grid, Slack Connect, security, compliance, and Workflow Builder — so depth in just one area is not enough. Candidates need broad familiarity with Slack’s admin console and enterprise features.",
+    "summary": "It is a moderate exam, but wide. You need to know workspace and Enterprise Grid settings, how people get accounts, how apps are approved, what the security and compliance tools do, and how Workflow Builder works. Each topic is shallow on its own, but there are a lot of them.",
     "bullets": [
-      "<strong>60 questions</strong> in 105 minutes — just under two minutes per question, which is adequate for most scenario-based items.",
-      "<strong>~65% passing score</strong> — you need approximately 39 correct answers out of 60 to pass.",
-      "<strong>Breadth is the challenge</strong> — the exam spans workspace configuration, Enterprise Grid administration, Slack Connect, app management, compliance, and Workflow Builder.",
-      "<strong>Hands-on admin experience helps most</strong> — candidates who have configured permissions, app approval workflows, and retention policies in a real Slack workspace pass at higher rates."
+      "<strong>60 multiple-choice questions</strong> in 105 minutes, so just under two minutes each.",
+      "<strong>About 65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
+      "<strong>Breadth is the difficulty.</strong> Settings, permissions, Enterprise Grid, Slack Connect, security, compliance and automation.",
+      "<strong>Admin experience helps most.</strong> If you have actually set up SSO and app approvals, much of this is familiar."
     ],
-    "passRateGuidance": "Book when you can confidently configure workspace permissions, set up SAML SSO, manage app approvals, create Workflow Builder automations, and explain Enterprise Grid vs. single-workspace differences."
+    "passRateGuidance": "You are ready when you can set up SSO and user provisioning, decide who may create channels and invite guests, approve an app, build a simple workflow, and explain retention. Aim for 75% or more on practice tests before booking."
   },
   "examFormat": {
     "heading": "Slack Administrator Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe an organizational need — a security requirement, channel structure decision, or compliance mandate — and ask you to select the correct Slack admin configuration.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe something a company needs, such as keeping messages for seven years or stopping guests from joining private channels, and ask which setting does it.",
     "bestWayToPass": [
-      "<strong>Enterprise Grid:</strong> Know the difference between workspace-level and org-level admin controls, including centralized user provisioning and cross-workspace channels.",
-      "<strong>Security policies:</strong> Study SAML SSO, SCIM provisioning, IP allowlisting, two-factor enforcement, and message retention settings and their configuration scope.",
-      "<strong>App management:</strong> Understand app approval workflows, the approved apps list, and how to restrict or permit app installations for compliance.",
-      "<strong>Workflow Builder:</strong> Practice creating workflows with different trigger types (shortcut, emoji reaction, schedule, webhook) and step types (send message, open form, add to channel)."
+      "<strong>Learn the roles:</strong> Primary Owner, Owner, Admin, Member and the guest types, and what each can and cannot do.",
+      "<strong>Know Enterprise Grid:</strong> What changes when a company has several connected workspaces, and which settings move to the org level.",
+      "<strong>Study the security tools:</strong> SSO, SCIM provisioning, session length, data retention, legal holds, DLP and device management.",
+      "<strong>Use Workflow Builder:</strong> Build a workflow with a form and a channel post so the trigger and step options are familiar."
     ]
   },
   "certificationCard": {
     "code": "Slack Admin",
-    "description": "This exam covers setting up and managing Slack workspaces, including channel governance, user provisioning, security policies, app management, and Enterprise Grid administration.",
+    "description": "This exam tests how you set up and run Slack: workspaces and channels, user accounts and roles, permissions, apps, security and compliance settings, Enterprise Grid and Workflow Builder.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~65%",
@@ -65,72 +65,72 @@
     "h2": "Slack Administrator: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Workspace Setup and Channel Management",
-        "body": "Slack workspaces are the top-level container. Channels are the primary collaboration unit — public (discoverable and joinable by anyone), private (by invitation only), shared (connects multiple workspaces). Default channels are automatically joined when users are added. Channel naming conventions (e.g., #team-, #proj-, #ext-) aid discoverability. User groups are tagged groups of users for notifications and channel management. The administrator manages channel creation policies, retention settings, and default channel assignments."
+        "heading": "Workspaces, Channels and Roles",
+        "body": "A **workspace** is the container people log in to. **Channels** are where work happens: public channels anyone in the workspace can join, private channels by invitation, and shared channels that reach outside the company. Roles run from **Primary Owner** (one per workspace, the only role that can delete it or transfer ownership) through **Owners** and **Admins** to **Members**. **Multi-channel guests** can be added to several channels, **single-channel guests** to one. Admins decide who may create or archive channels, who may invite guests, and which channels everyone joins by default."
       },
       {
-        "heading": "Permissions, Security, and Compliance",
-        "body": "Slack admin roles: Primary Owner, Owner, Admin, Member, Guest (Single-channel or Multi-channel). Message retention policies define how long messages and files are kept — configurable per workspace or per channel. Data exports: standard exports include public channel messages; eDiscovery requires Enterprise Grid. IP allowlisting restricts workspace login to authorised networks. **SSO** (**SAML** 2.0) integration with corporate IdP centralises authentication. Two-factor authentication can be enforced at the workspace level. The exam tests security configuration options and their scope."
+        "heading": "Permissions, Security and Compliance",
+        "body": "Most exam questions in this area are about matching a requirement to a setting. **SSO** with SAML lets people sign in with the company identity provider, and can be made mandatory. **SCIM provisioning** creates and deactivates accounts automatically from that system, which is how leavers lose access the same day. **Session duration** controls how often people re-authenticate. **Retention settings** decide how long messages and files are kept, **legal holds** preserve a person's data for a case, and **DLP** can detect sensitive content. **Enterprise Key Management** gives the company control of its encryption keys, and mobile device management controls access from phones."
       },
       {
-        "heading": "App Integration and App Directory",
-        "body": "Slack App Directory provides vetted third-party integrations. Admins can restrict which apps users can install — allow all, custom approval workflow, or block all. Approved apps list manages pre-approved integrations. Slack-Salesforce integration (built by Salesforce) enables Salesforce record alerts, record creation from Slack, and search from Slack. Workflow Builder creates automated workflows triggered by Slack events — message posted, emoji reaction, channel created — without code. Admins govern which workflows members can create and share."
+        "heading": "Managing Apps and Integrations",
+        "body": "Apps extend Slack, and an admin's job is to keep that safe without blocking useful work. You can require **app approval**, so a request goes to admins before anything is installed, and keep an approved list. Admins can see which apps are installed, which scopes they hold, and remove them. **Custom apps** built in-house are managed the same way. Know the difference between installing an app for yourself and for the whole workspace or org, and that on Enterprise Grid app policies can be set once at org level."
       },
       {
         "heading": "Enterprise Grid Administration",
-        "body": "Enterprise Grid is Slack's multi-workspace tier for large organisations. Org-level administrators manage all workspaces from a single console. Workspaces within the Grid can be siloed (members limited to one workspace) or connected via channels. Shared channels enable collaboration between different workspaces or external organisations. Data Residency options allow message storage in specific geographic regions. Centralised user provisioning via SCIM API or HRMS integration. The exam tests org-level vs workspace-level admin distinctions."
+        "body": "**Enterprise Grid** connects several workspaces under one organisation, which suits large companies where each business unit wants its own space. Some settings move up to the **org level**, such as SSO, retention policies and app approvals, so they apply everywhere. **Org-wide channels** can be shared across workspaces so company-wide announcements reach everyone. Users can belong to more than one workspace with a single account. Know when Grid is the answer, which is usually strict separation between units combined with central control."
       },
       {
         "heading": "Workflow Builder and Automation",
-        "body": "Workflow Builder creates automated workflows without code. Trigger types: Shortcut (user-initiated), New channel member (someone joins), Emoji reaction, Scheduled time, Webhook (from external systems). Steps: Send a message, Open a form (collect structured input), Add to spreadsheet, Create a channel. Workflow variables carry data between steps (form responses, trigger context). Workflows can be shared with other workspace members. The exam tests how to design and troubleshoot Workflow Builder automations for common team processes."
+        "body": "**Workflow Builder** creates simple automations with no code. A workflow starts from a **trigger**: someone clicks a shortcut, a person joins a channel, a scheduled time arrives, or a webhook fires. Steps can send a message, collect information with a **form**, or call a connected app. Typical uses are request forms, onboarding checklists and approval routing. Admins should know who may publish workflows and that unused workflows need reviewing, since they accumulate. For anything that has to change data in another system, a tool like Salesforce Flow is usually the better choice."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Slack Administrator Exam",
-    "intro": "The Slack Administrator exam tests workspace administration skills: user management, channel governance, app management, and security configuration. Focus on enterprise-grade Slack management for large organizations.",
+    "intro": "Most questions name a business or security requirement and ask which setting meets it. Learn where each setting lives, and whether it is per workspace or org wide.",
     "blocks": [
       {
-        "heading": "Workspace & Org Administration",
-        "body": "Know the difference between single-workspace organizations and Enterprise Grid (multi-workspace). Understand how to manage users, channels, and settings at both the workspace and org level."
+        "heading": "Workspaces and Enterprise Grid",
+        "body": "One workspace for most companies. Enterprise Grid when business units need separation with central control, which moves key settings to org level."
       },
       {
         "heading": "Channel Governance",
-        "body": "Know how to configure channel naming conventions, default channels, required channels, and channel management policies. Understand how to use channel manager settings to control who can create channels."
+        "body": "Control who can create and archive channels, set default channels, and use naming conventions so people can find things."
       },
       {
-        "heading": "App Management & Security",
-        "body": "Know how to manage the Slack App Directory: approving apps, restricting app installation, and configuring app permissions. Understand how to use App Approval workflows for enterprise compliance."
+        "heading": "Apps and Security",
+        "body": "Require app approval, keep an approved list, and review installed apps and their scopes."
       },
       {
-        "heading": "Compliance & DLP",
-        "body": "Know Slack's Enterprise Mobility Management (EMM), message retention policies, eDiscovery/export capabilities, and how to configure Data Loss Prevention (DLP) integrations for regulated industries."
+        "heading": "Compliance and Retention",
+        "body": "Retention sets how long messages are kept. Legal holds preserve data for a case. DLP spots sensitive content."
       },
       {
-        "heading": "User Provisioning & SSO",
-        "body": "Know how to configure **SAML** **SSO** for Slack, SCIM provisioning for automated user lifecycle management, and how to use Slack's Directory to manage user profiles and deactivations."
+        "heading": "Accounts and Sign-in",
+        "body": "SSO for logging in, SCIM for creating and removing accounts automatically. Together they handle joiners and leavers."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications to Consider",
-    "intro": "After this certification, common next steps in the admin track or consultant track:",
+    "intro": "Good next steps after Slack Administrator:",
     "links": [
       {
-        "href": "/certifications/advanced-administrator",
-        "label": "Advanced Administrator"
+        "href": "/certifications/slack-consultant",
+        "label": "Slack Consultant"
       },
       {
-        "href": "/certifications/app-builder",
-        "label": "Platform App Builder"
+        "href": "/certifications/slack-developer",
+        "label": "Slack Developer"
       },
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
       },
       {
         "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "label": "Agentforce Service Consultant"
       }
     ]
   },

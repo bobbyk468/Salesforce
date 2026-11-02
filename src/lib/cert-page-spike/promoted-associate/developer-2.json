@@ -1,49 +1,49 @@
 {
   "template": "associate",
-  "expertInsight": "PD2 is nothing like PD1 — the multiple-choice section barely matters if you bomb the programming assignment. The assignment is graded on test coverage AND code quality: I’ve seen people pass all functional tests but fail because their trigger handler wasn’t bulkified or they used SOQL inside a loop. Write your tests to cover bulk scenarios (200+ records) from the start, not as an afterthought. Also, the Visualforce and Lightning component questions lean heavily on controller lifecycle — when does init fire vs. afterRender, what happens on a rerender, and where server calls actually execute.",
+  "expertInsight": "PD2 is not a bigger PD1. PD1 asks what a feature does; PD2 gives you a situation and asks which design holds up when 200 records arrive at once. The questions I found hardest were the async ones, where two options both work and you have to pick the one that survives a retry or a chained job. Know the governor limits cold, and be able to read a trigger and say what breaks it in bulk. Check the official exam guide for the current requirements, since Salesforce has changed what sits alongside the exam over the years.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
   "whoIsThisFor": {
     "heading": "Who is the Platform Developer II exam for?",
     "personas": [
       {
         "label": "Mid-senior developers",
-        "description": "You write Apex daily and want to prove advanced design pattern and architecture skills."
+        "description": "You write Apex most weeks and want to show you can design well, not just make code work."
       },
       {
-        "label": "PD1 holders",
-        "description": "You passed Developer I and want the next credential in the developer track."
+        "label": "Platform Developer I holders",
+        "description": "You have PD1 and want the next step in the developer track."
       },
       {
         "label": "Tech leads",
-        "description": "You review code, make architecture decisions, and need to demonstrate senior-level Salesforce development expertise."
+        "description": "You review other people's Apex and make the design calls on a team."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Platform Developer II Exam Hard?",
-    "summary": "PD2 is widely considered one of the hardest Salesforce certifications. It combines a 60-question multiple-choice exam with a separate programming assignment, and the $400 price tag reflects its architect-tier difficulty.",
+    "summary": "PD2 is one of the harder Salesforce exams. It assumes you can read Apex and reason about it, so there is little to memorise. Most questions describe code or a requirement and ask which approach is correct in bulk, under governor limits, and when something fails.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes — the longest non-architect exam.",
-      "<strong>70% passing score</strong> — higher than PD1 and most consultant exams.",
-      "<strong>Separate programming assignment</strong> — graded on code quality, test coverage, and bulkification, not just passing tests.",
-      "<strong>Advanced Apex patterns</strong> — trigger frameworks, governor limit strategies, asynchronous processing, and enterprise integration patterns."
+      "<strong>60 multiple-choice questions</strong> in 120 minutes, which is longer than most non-architect exams.",
+      "<strong>70% to pass</strong>, about 42 correct answers. That is a higher bar than PD1.",
+      "<strong>Code reasoning.</strong> Expect to be shown logic and asked what happens with 200 records, or after a retry.",
+      "<strong>Check the guide for extras.</strong> Salesforce has at times paired this credential with hands-on requirements, so confirm the current ones in the official exam guide."
     ],
-    "passRateGuidance": "Most successful candidates have 2+ years of daily Apex development. Score 80%+ on multiple-choice practice exams before attempting the programming assignment."
+    "passRateGuidance": "Most people who pass have a couple of years writing Apex daily. Before you book, aim for 80% or more on practice tests, and make sure you can write a trigger handler and a batch class from memory."
   },
   "examFormat": {
     "heading": "Platform Developer II Exam Format Explained",
-    "intro": "PD2 has a unique two-part format. You must pass both the multiple-choice exam and the programming assignment to earn the certification:",
-    "scenarioPercent": "The multiple-choice section is roughly 40% scenario-based, but the programming assignment is 100% hands-on. You receive a set of requirements and must build a working solution with proper test coverage in a proctored environment.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Many questions give you a short piece of logic or a requirement and ask which approach is right. The most common pattern is code that works for one record and fails for 200, where you pick the fix.",
     "bestWayToPass": [
-      "<strong>Write bulkified code from day one:</strong> The programming assignment tests bulk data handling with 200+ records. SOQL inside loops is an automatic failure pattern.",
-      "<strong>Master async Apex:</strong> Know when to use @future, Queueable, Batch, and Schedulable — and their respective governor limits.",
-      "<strong>Study design patterns:</strong> Trigger handler patterns, selector/domain/service layer separation, and dependency injection appear in both the MC and programming sections.",
-      "<strong>Practice test-driven development:</strong> Write tests before code. The assignment grades test coverage AND assertion quality."
+      "<strong>Write everything in bulk:</strong> No queries or DML inside loops, collect records and act once. Half the wrong answers break this rule.",
+      "<strong>Know the async options apart:</strong> Future methods, Queueable, Batch and Scheduled Apex each have different limits and uses. Queueable is the one that chains and keeps state.",
+      "<strong>Learn the common patterns:</strong> One trigger per object with a handler class, and separating queries from business logic.",
+      "<strong>Test like the exam does:</strong> Create your own data, mock callouts, and use Test.startTest and Test.stopTest so async work actually runs."
     ]
   },
   "certificationCard": {
     "code": "PD2",
-    "description": "The Platform Developer II certification validates your advanced development skills including design patterns, testing strategies, and integration techniques.",
+    "description": "This exam tests advanced Apex: designing code that works in bulk, choosing the right asynchronous approach, integrating with outside systems, writing real tests, and keeping data secure.",
     "examDetails": {
       "questions": 60,
       "passingScore": "70%",
@@ -67,80 +67,72 @@
     "h2": "Platform Developer II: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Design Patterns for Enterprise Apex",
-        "body": "The exam tests four core patterns. Singleton ensures one shared class instance per transaction — used for handler registries and settings caches. Factory creates objects dynamically based on runtime type. Strategy encapsulates interchangeable algorithms in separate classes — ideal for pricing or routing logic that varies by record type. Trigger Handler separates trigger logic from business logic, enabling testable, single-responsibility handler classes. Know which pattern a given code smell or requirement maps to."
+        "heading": "Designing Apex That Scales",
+        "body": "Most PD2 questions come back to one idea: code must work for 200 records as well as one. Never put a SOQL query or a DML statement inside a loop. Query once into a map, work in memory, then update once at the end. Use **one trigger per object** that calls a **handler class**, so the order of operations is clear and the logic can be tested on its own. Keep queries selective on large objects, since a filter on an unindexed field will time out once the table is big. Know the key limits by heart: 100 SOQL queries, 150 DML statements, 50,000 records retrieved, and 10,000 records per DML in a synchronous transaction."
       },
       {
-        "heading": "Asynchronous Apex: Choosing the Right Context",
-        "body": "@future — simplest async, no complex parameters, no chaining, no job IDs. Queueable — supports complex sObject parameters, job chaining (enqueue from finish), and returns AsyncApexJob ID. **Batch Apex** — processes up to 50 million records in chunks; implement Database.Stateful to retain instance variables across iterations; chain in finish() via Database.executeBatch(). Schedulable — time-based entry point; use to kick off Batch or Queueable. The exam presents a scenario and asks which context is appropriate."
+        "heading": "Asynchronous Apex: Picking the Right One",
+        "body": "**Future methods** are the simplest. They take only primitive parameters, cannot be chained, and give you no job ID to track. **Queueable** is the usual modern choice: it accepts objects, returns a job ID, can be chained to run one job after another, and can hold state. **Batch Apex** processes large volumes in chunks, each chunk with its own governor limits, which is how you touch millions of records. **Scheduled Apex** runs on a timetable and usually just starts a batch job. Async transactions get higher limits, for example 200 SOQL queries and a longer CPU allowance, which is often the reason to move work off the main transaction."
       },
       {
-        "heading": "Integration: Callouts, Named Credentials, and Platform Events",
-        "body": "Callouts cannot be made from synchronous triggers — use @future(callout=true) or Queueable with Database.AllowsCallouts. **Named Credentials** store the endpoint URL and authentication credentials securely, referenced in **Apex** as callout:NamedCredName. **Platform Events** provide loosely coupled, fire-and-forget publish/subscribe messaging — publishers do not wait for subscribers. **Change Data Capture** streams record change events to external systems without polling. The exam tests when each mechanism is appropriate."
+        "heading": "Integration: Callouts, Named Credentials and Events",
+        "body": "A trigger cannot make a callout directly. Move the work to a future method marked for callouts or, better, to a Queueable. Store endpoints and credentials in **Named Credentials** so no secret appears in code. Remember the limits: 100 callouts per transaction and 120 seconds total. For loose coupling, publish a **Platform Event** and let subscribers react, which means the publisher does not fail when a subscriber is down. **Change Data Capture** sends field-level changes automatically. In tests, callouts must be mocked with Test.setMock, because tests cannot reach the network."
       },
       {
-        "heading": "Testing Strategy: Setup, Mocking, and Coverage",
-        "body": "@TestSetup creates test data once for all test methods in the class, preventing repeated **DML** and improving performance. Test.startTest() / Test.stopTest() resets **governor limits** for the code under test and forces async jobs to complete. Mock callouts using **HttpCalloutMock** (implement the interface) or StaticResourceCalloutMock (use a static resource JSON file). System.assert patterns: assertEquals(expected, actual), assertNotEquals, assertTrue — always provide a meaningful message. 75% code coverage is required for deployment."
+        "heading": "Testing: Data, Mocks and Coverage",
+        "body": "Tests must build their own data. Use **@TestSetup** to create it once for all methods in the class, and avoid SeeAllData, which makes tests depend on whatever happens to be in the org. Wrap the code under test in **Test.startTest** and **Test.stopTest**, which resets limits and forces queued async work to run before you assert. Mock callouts with **HttpCalloutMock**, and use **Test.isRunningTest** sparingly. You need 75% coverage to deploy, but coverage is not the goal: assert the result, test the bulk case, and test the failure case."
       },
       {
-        "heading": "Security in Apex: Sharing, FLS, and AuraEnabled",
-        "body": "with sharing enforces the running user's **sharing rules**; without sharing bypasses them; inherited sharing inherits from caller context. Classes default to without sharing if unspecified — a PD2-level trap. FLS enforcement: use Schema.SObjectType.getDescribe().fields.getMap() to check field accessibility, or stripInaccessible() to filter query results. @AuraEnabled exposes methods to **LWC** and Aura components — always combine with FLS and sharing checks. CRUD checks require Schema.SObjectType.Account.isCreateable() style checks."
+        "heading": "Security in Apex: Sharing, Field Access and Exposure",
+        "body": "Apex runs in system mode by default, which ignores the user's record access. **With sharing** makes a class respect the user's sharing, **without sharing** ignores it, and **inherited sharing** takes whichever applies to the caller. Sharing does not cover fields: check field-level security with **Security.stripInaccessible** or **WITH USER_MODE** so a user cannot read or write a field they should not see. Use **WITH SECURITY_ENFORCED** in SOQL where it fits. Any method marked **@AuraEnabled** is reachable from the front end, so validate its input and check access inside it."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Platform Developer II Exam",
-    "intro": "The PD2 exam requires deep technical expertise — questions assume you can read and reason about code, not just identify syntax. Focus on complex governor limit scenarios, asynchronous patterns, integration architecture, and enterprise design principles.",
+    "intro": "Most questions give you code or a requirement and several approaches that look reasonable. The right answer is nearly always the one that still works in bulk, respects limits, and fails safely.",
     "blocks": [
       {
-        "heading": "Asynchronous Apex Mastery",
-        "body": "Know all four async patterns: Queueable (chainable, stateful), Batch (large data sets), Scheduled (time-based), and Future (simple async). Understand **governor limits** in async contexts (higher **SOQL**/**DML** limits) and when each pattern is appropriate."
+        "heading": "Bulk Safety First",
+        "body": "If an option has a query or DML inside a loop, it is wrong. Collect into collections and act once."
       },
       {
-        "heading": "Integration Architecture Decisions",
-        "body": "REST vs. SOAP vs. **Platform Events** vs. **Change Data Capture** — know the use cases for each. Understand outbound messaging, callout limits, **Named Credentials**, and how to handle integration errors gracefully."
+        "heading": "Choosing an Async Option",
+        "body": "Objects as parameters, chaining or job tracking means Queueable. Millions of records means Batch. A timetable means Scheduled."
       },
       {
-        "heading": "Platform Events & Event-Driven Architecture",
-        "body": "Know how **Platform Events** enable event-driven, decoupled architectures. Understand the difference between Platform Events and CDC, how to publish events from **Apex** and Flows, and how subscribers process events reliably."
+        "heading": "Integration Decisions",
+        "body": "Callouts leave triggers through async Apex. Named Credentials hold the endpoint and auth. Platform Events decouple publisher from subscriber."
       },
       {
-        "heading": "LWC Advanced Patterns",
-        "body": "Understand component communication patterns: parent-to-child via properties, child-to-parent via custom events, and sibling communication via a shared service. Know when to use @wire vs. imperative **Apex** calls."
+        "heading": "Trigger Design",
+        "body": "One trigger per object, logic in a handler class, and no recursion. This is the pattern the exam expects."
       },
       {
-        "heading": "Testing Architecture",
-        "body": "PD2 emphasizes test design: mock callouts with Test.setMock, test data isolation (SeeAllData=false), testing async **Apex** with Test.startTest/stopTest, and achieving meaningful code coverage vs. superficial coverage."
+        "heading": "Test Design",
+        "body": "Build your own data, mock callouts, wrap in start and stop test, and assert the outcome rather than chasing coverage."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Developer",
-    "intro": "After this certification, common next steps in the developer track:",
+    "intro": "Good next steps after Platform Developer II:",
     "links": [
-      {
-        "href": "/certifications/developer-2",
-        "label": "Platform Developer II"
-      },
-      {
-        "href": "/certifications/app-builder",
-        "label": "Platform App Builder"
-      },
       {
         "href": "/certifications/javascript-developer-i",
         "label": "JavaScript Developer I"
       },
       {
-        "href": "/certifications/role/developer",
+        "href": "/certifications/integration-architect",
+        "label": "Integration Architect"
+      },
+      {
+        "href": "/certifications/application-architect",
+        "label": "Application Architect"
+      },
+      {
+        "href": "/developer-certification-path",
         "label": "Developer certification path"
-      },
-      {
-        "href": "/pd1-vs-pd2",
-        "label": "PD1 vs PD2: Key Differences →"
-      },
-      {
-        "href": "/pd1-exam-tips",
-        "label": "PD1 Exam Tips →"
       }
     ]
   },

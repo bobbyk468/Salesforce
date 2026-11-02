@@ -21,8 +21,8 @@
     "heading": "Is the Slack Consultant Exam Hard?",
     "summary": "It is a moderate exam, but it covers more than features. You need to know how to plan a Slack rollout, set it up securely, connect it to Salesforce, and get people to actually use it.",
     "bullets": [
-      "<strong>60 multiple-choice questions.</strong> Check the official guide for the current time limit.",
-      "<strong>Pass mark:</strong> sources quote 65% to 67%, so check the official exam guide before you book.",
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>About 65% to pass</strong>, about 39 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Wide scope.</strong> Workspace and channel design, Slack Connect, Workflow Builder, Salesforce integration and security.",
       "<strong>People topics.</strong> Adoption planning, champions and success measures come up often."
     ],
@@ -44,8 +44,8 @@
     "description": "This exam tests how you plan and run a Slack rollout: workspace and channel design, workflows, Salesforce integration, security and governance, and getting people to use it.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "See official guide",
-      "duration": "See official guide",
+      "passingScore": "~65%",
+      "duration": "105 min",
       "cost": "$200"
     },
     "topics": [

@@ -22,7 +22,7 @@
     "summary": "It is a hard exam for people who only know Salesforce, because a lot of it is about running apps: dynos, databases, networking and deployment. You also need to know how Heroku connects to Salesforce.",
     "bullets": [
       "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones.",
-      "<strong>Pass mark and time:</strong> third-party sources quote different numbers, so check the official exam guide before you book.",
+      "<strong>About 63% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
       "<strong>Design choices.</strong> Common Runtime or Private Spaces, which data service to use, and how to scale.",
       "<strong>Salesforce links.</strong> Heroku Connect, events and APIs between Heroku and Salesforce show up often."
     ],
@@ -44,8 +44,8 @@
     "description": "This exam tests how you design apps on Heroku that scale, stay secure and work with Salesforce. You choose runtimes, data services, deployment flows and integration options.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "See official guide",
-      "duration": "See official guide",
+      "passingScore": "~63%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [

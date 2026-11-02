@@ -1,51 +1,51 @@
 {
   "template": "associate",
-  "expertInsight": "The exam goes deep on identity resolution rules and unified profile merging logic — areas that genuinely require hands-on practice in a Data Cloud-enabled org. Reconciliation rules (most recent vs. source priority) are heavily tested in scenario format. About 30% of questions involved DMO relationship mapping, which is very hard to absorb from documentation alone — you need to build a few data streams yourself to internalize it.",
+  "expertInsight": "The part that needs real practice is identity resolution. Reading about match rules teaches you the words, but you only understand reconciliation once you have watched two source records merge and seen which value won. Build one small end-to-end setup: bring data in, map it, resolve it, build a segment, send it somewhere. Also learn where data spaces fit, because questions about keeping brands or regions apart come up more than people expect.",
   "whoIsThisFor": {
     "heading": "Who is the Data Cloud Consultant exam for?",
     "personas": [
       {
         "label": "Data architects",
-        "description": "You design data models and want to validate your Salesforce Data Cloud and CDP expertise."
+        "description": "You design how customer data is modelled and joined, and you want to show you can do it in Data 360."
       },
       {
         "label": "CRM analysts",
-        "description": "You work with customer data unification and want to prove your identity resolution and segmentation skills."
+        "description": "You work with customer data across systems and want to prove you can unify and segment it."
       },
       {
         "label": "Implementation consultants",
-        "description": "You deliver Data Cloud projects and need the credential to demonstrate hands-on proficiency."
+        "description": "You deliver Data 360 projects and need a credential clients recognise."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Data Cloud Consultant Exam Hard?",
-    "summary": "The Data Cloud Consultant exam is challenging. The 70% passing score is above average, and the content covers Data Cloud-specific concepts (DMOs, identity resolution, calculated insights) that require hands-on experience in a Data Cloud-enabled org.",
+    "summary": "Salesforce renamed Data Cloud to Data 360, and the exam is now the Data 360 Consultant. It is a hard exam because almost nothing transfers from core Salesforce admin work. Data streams, data model objects, identity resolution and calculated insights are a new vocabulary, and the questions assume you have built with them.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>70% passing score</strong> — you can only miss about 18 questions.",
-      "<strong>Data Cloud-specific concepts</strong> — data model objects (DMOs), data streams, identity resolution rules, and segmentation are all heavily tested.",
-      "<strong>Hands-on required</strong> — documentation alone is insufficient; you need to configure data streams and reconciliation rules yourself."
+      "<strong>60 multiple-choice questions</strong>, plus a few unscored ones, in 105 minutes.",
+      "<strong>70% to pass</strong>, about 42 correct answers out of 60. Confirm it in the official exam guide before you book, since Salesforce updates these.",
+      "<strong>Its own vocabulary.</strong> Data streams, data lake objects, data model objects, identity resolution, calculated insights and activations.",
+      "<strong>Hands-on matters.</strong> Reading alone rarely gets people through. You need to have mapped and resolved real data."
     ],
-    "passRateGuidance": "Build at least one end-to-end Data Cloud implementation (ingest, model, resolve, segment, activate) in a trial org before booking. Target 80%+ on practice exams."
+    "passRateGuidance": "Build one complete flow in a trial org before you book: bring data in, map it to the data model, resolve identities, build a segment and activate it. Aim for 80% or more on practice tests, and make sure you can explain why two records merged."
   },
   "examFormat": {
     "heading": "Data Cloud Consultant Exam Format Explained",
-    "intro": "The exam is proctored and delivered online through Webassessor. Here is the format:",
-    "scenarioPercent": "Roughly 50-60% of questions are scenario-based. Common patterns include choosing the correct identity resolution rule type for a merge scenario, mapping DMO relationships for a given business requirement, and selecting the right activation target for a segment.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions are short scenarios. A typical one describes customer records arriving from several systems and asks how to match them, or describes an audience the marketing team wants and asks how to build and send it.",
     "bestWayToPass": [
-      "<strong>Master identity resolution:</strong> Understand reconciliation rules (most recent, source priority), match rules, and how unified profiles are built.",
-      "<strong>Build DMO relationships hands-on:</strong> Map data streams to DMOs, configure relationships, and understand how calculated insights work.",
-      "<strong>Study segmentation and activation:</strong> Know how to build segments, schedule activations, and choose the right activation target (Marketing Cloud, Ads, etc.).",
-      "<strong>Understand data ingestion patterns:</strong> Know the difference between connector-based ingestion, API-based ingestion, and file-based ingestion."
+      "<strong>Learn identity resolution properly:</strong> Know what match rules do, what reconciliation rules do, and which value wins when two sources disagree.",
+      "<strong>Map data yourself:</strong> Bring a CSV in, map it to data model objects, and see how keys and relationships behave.",
+      "<strong>Practise segments and activations:</strong> Build a segment, then send it to a target such as Marketing Cloud, and know how often it refreshes.",
+      "<strong>Know how data gets in:</strong> Batch ingestion, streaming, and reading data where it sits without copying it."
     ]
   },
   "certificationCard": {
-    "code": "Data Cloud",
-    "description": "This exam tests your ability to design data ingestion, identity resolution, segmentation, and activation workflows in Salesforce Data Cloud. Expect scenario questions on unified profiles, calculated insights, and consent management.",
+    "code": "Data 360",
+    "description": "This exam tests how you bring customer data into Salesforce Data 360, model it, resolve it into one profile per person, then segment and activate it. Expect scenarios about matching records, mapping data and sending audiences to other systems.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~65%",
+      "passingScore": "70%",
       "duration": "105 min",
       "cost": "$200"
     },
@@ -66,72 +66,72 @@
     "h2": "Data Cloud Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "The Data Cloud Data Flow: Ingest → Model → Resolve → Segment → Activate",
-        "body": "Data Cloud follows a structured flow: Data Streams ingest source data, mapping it to Data Model Objects (DMOs). Identity Resolution links records across sources into a Unified Profile. Segments filter profiles by criteria. Activation publishes segments to destination systems. Exam questions often describe a step and ask which feature or object is responsible."
+        "heading": "How Data 360 Works: Ingest, Model, Resolve, Segment, Activate",
+        "body": "The whole product follows one path, and most exam questions sit somewhere on it. **Data streams** bring data in from a source such as Salesforce CRM, an S3 bucket, a website or a mobile app. The raw data lands in **data lake objects**. You then **map** those to **data model objects (DMOs)**, which are the shared shape Data 360 understands, for example Individual, Contact Point Email and Order. **Identity resolution** matches records that belong to the same person and builds a **unified profile**. **Segments** pick groups out of those profiles. **Activations** send a segment to a target system so it can be used in a campaign or a journey. If you can place a question on this path, the answer is usually easy to see."
       },
       {
-        "heading": "Identity Resolution",
-        "body": "Identity Resolution uses matching rules (email, phone, name, custom) and reconciliation rules (which source wins for a given attribute) to stitch records together into a Unified Profile. A Unified Individual represents the single person after resolution. Understand the difference between matching rules (what makes records the same person) and reconciliation rules (which data is authoritative)."
+        "heading": "Identity Resolution: Match Rules and Reconciliation",
+        "body": "Identity resolution runs in two steps. **Match rules** decide which records belong to the same person, for example an exact email match, a fuzzy name and address match, or a custom match on a loyalty ID. Several rules can run in order, and each one can catch records the previous one missed. **Reconciliation rules** then decide which value to keep when matched records disagree, for example 'most recently updated wins' or 'prefer the CRM source'. The result is one unified individual with links back to every source record. Watch for questions where a too-loose match rule merges two different people, which is the classic mistake."
       },
       {
         "heading": "Segments and Activation",
-        "body": "Segments are dynamic audiences defined by filters on Unified Profile attributes and Calculated Insights. They refresh on a defined schedule. Activations publish segment membership to destinations — Marketing Cloud, Advertising Studio, or custom targets. Data Actions trigger on segment entry or exit to orchestrate downstream processes in real time."
+        "body": "A **segment** is a group of unified profiles that match the filters you set, such as bought in the last 90 days and lives in Germany. Segments can use attributes from related objects and from calculated insights. They **refresh** on a schedule, so a segment is a living audience rather than a fixed list. An **activation** sends the segment to a target, such as Marketing Cloud, Advertising or an external system, and an **activation target** defines where it goes. You choose which attributes travel with it. Exam questions often turn on whether the data the marketer wants is actually available on the profile."
       },
       {
-        "heading": "Calculated Insights",
-        "body": "Calculated Insights are SQL-based derived metrics stored as attributes on the Unified Profile — examples include customer lifetime value, average order frequency, days since last purchase, or churn score. They can be used in segment filters and activations. Know that they require SQL and run on a scheduled basis."
+        "heading": "Calculated Insights and Data Transforms",
+        "body": "**Calculated insights** are metrics you define once and reuse, written in SQL, such as lifetime spend, average order value or days since last purchase. They can be used in segments, in activations and on the profile. **Data transforms** reshape data during or after ingestion, for example splitting a full name or converting currencies, so you do not have to fix the source system. Both matter on the exam because they are how you answer business questions that the raw data cannot answer on its own."
       },
       {
-        "heading": "Consent and Data Governance",
-        "body": "Data Cloud honours consent via the Individual object's privacy attributes. Opt-outs and deletion requests propagate to suppress profiles from being included in segments and activations. GDPR and CCPA compliance requires correct consent capture and propagation across all ingested data sources. The exam tests both the technical mechanism and the business reason for consent management."
+        "heading": "Consent, Data Spaces and Governance",
+        "body": "Customer data brings rules with it. Consent and privacy preferences are held against the individual, and activations should respect them. **Data spaces** keep data apart inside one Data 360 org, which is how you separate brands, regions or business units without buying another org. Permission sets control who can see and build what. Know which objects hold personal data, how deletion requests are handled, and why you would use a data space rather than filters to keep two brands separate."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Data Cloud Consultant Exam",
-    "intro": "The Data Cloud Consultant exam tests your ability to design and implement a unified customer data platform. Focus on data ingestion architecture, identity resolution, segmentation, and activation — the full data lifecycle in Data Cloud.",
+    "intro": "Almost every question sits somewhere on the path from raw data to an activated audience. Work out which step the scenario is describing, then pick the tool that belongs to that step.",
     "blocks": [
       {
-        "heading": "Data Ingestion & Data Streams",
-        "body": "Know the difference between ingestion-based (real-time) and query-based data sources. Understand how Data Streams map source data to Data Cloud objects using the data model (Individual, Engagement, etc.)."
+        "heading": "Getting Data In",
+        "body": "Batch ingestion for scheduled loads, streaming for events as they happen, and federated access when the data should stay in the source system."
       },
       {
         "heading": "Identity Resolution",
-        "body": "Identity resolution matches and merges records from multiple sources into a single Unified Individual profile. Know how to configure matching rules, reconciliation rules, and how to handle merge conflicts."
+        "body": "Match rules find the same person. Reconciliation rules choose which value wins. Loose match rules merge different people, which is the most common design error."
       },
       {
-        "heading": "Segmentation & Activation",
-        "body": "Understand how to build segments using AND/OR logic across related data objects. Know activation targets (Marketing Cloud, Advertising Studio, CRM) and how segment membership flows to each target."
+        "heading": "Segmentation and Activation",
+        "body": "Segments are living audiences that refresh on a schedule. Activations send them to a target with the attributes you choose."
       },
       {
-        "heading": "Calculated Insights & Einstein",
-        "body": "Know how to create Calculated Insights for metric computation (e.g., LTV, engagement score) using **SOQL**-like query language. Understand how Einstein features in Data Cloud use unified profiles for predictions."
+        "heading": "Calculated Insights",
+        "body": "Use these for metrics like lifetime value or purchase frequency, then filter segments on them."
       },
       {
-        "heading": "Data Cloud Permissions & Governance",
-        "body": "Understand Data Cloud **permission sets**, data spaces for data segregation, consent management, and the Data Cloud governance framework for handling PII and regulatory compliance."
+        "heading": "Data Spaces and Permissions",
+        "body": "Use data spaces to separate brands or regions. Use permission sets to control who can build segments and activations."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Consultant Certifications",
-    "intro": "After this consultant certification, you can add adjacent clouds or deepen your specialisation:",
+    "intro": "Good next steps after Data 360 Consultant:",
     "links": [
       {
-        "href": "/certifications/sales-cloud",
-        "label": "Sales Cloud Consultant"
+        "href": "/certifications/marketing-cloud-consultant",
+        "label": "Marketing Cloud Engagement Consultant"
       },
       {
-        "href": "/certifications/service-cloud",
-        "label": "Service Cloud Consultant"
+        "href": "/certifications/data-architect",
+        "label": "Data Architect"
       },
       {
-        "href": "/certifications/experience-cloud",
-        "label": "Experience Cloud Consultant"
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
       },
       {
-        "href": "/certifications/role/consultant",
-        "label": "Consultant certification path"
+        "href": "/certifications/agentforce-specialist",
+        "label": "Agentforce Specialist"
       }
     ]
   },
