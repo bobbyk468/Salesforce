@@ -1,53 +1,53 @@
 {
   "template": "associate",
-  "expertInsight": "Application Architect isn't a single exam — it's a credential Salesforce auto-awards once you pass four component certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There's no separate 'Application Architect' test to schedule. If you've already earned App Builder and PD1, you're halfway there; Data Architect and Sharing & Visibility Architect are the two remaining, harder components.",
+  "expertInsight": "Application Architect is not an exam you book. You earn it by holding four certifications: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. Once the fourth one is passed, the credential appears on your profile. If you already hold App Builder and Platform Developer I you are halfway there, and the two architect exams are the harder half. Platform Developer I is also the one exam that counts toward System Architect.",
   "whoIsThisFor": {
     "heading": "Who is the Application Architect exam for?",
     "personas": [
       {
-        "label": "Platform Developers",
-        "description": "Developers with deep Apex and LWC experience who are ready to make data model, security, and design-pattern decisions at the architecture level."
+        "label": "Platform developers",
+        "description": "You know Apex and Lightning Web Components and want to show you can design a whole application, not just build parts of it."
       },
       {
-        "label": "Senior Admins",
-        "description": "Experienced administrators who design role hierarchies, sharing models, and complex declarative solutions for enterprise orgs."
+        "label": "Senior admins",
+        "description": "You already design data models, role hierarchies and sharing, and want the architect credential that covers them."
       },
       {
-        "label": "Solution Consultants",
-        "description": "Consultants who architect end-to-end Salesforce implementations and need to validate their platform-side design expertise."
+        "label": "Solution consultants",
+        "description": "You design end-to-end Salesforce solutions and want the credential employers ask for on architect roles."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Application Architect Exam Hard?",
-    "summary": "The Application Architect exam is a challenging architect-level credential that tests your ability to choose the right data model, security layer, and build approach for complex business requirements. Expect scenario-based questions that require you to weigh multiple valid options and pick the one that best balances maintainability, scalability, and security.",
+    "summary": "There is no Application Architect exam. The credential is granted once you hold Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. The work is in those four exams, and the two architect ones are considerably harder than the first two.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 minutes &mdash; roughly two minutes per question, with many requiring multi-step reasoning.",
-      "<strong>~68% passing score</strong> &mdash; about 41 correct answers needed, which leaves limited room for error on an architect-level exam.",
-      "<strong>Scenario depth</strong> &mdash; questions present real-world requirements and ask you to select the best combination of declarative and programmatic tools.",
-      "<strong>Prerequisite knowledge</strong> &mdash; strong familiarity with Platform Developer I, Data Architect, and Sharing &amp; Visibility Architect topics is expected."
+      "<strong>No separate exam.</strong> The credential is awarded when all four component certifications are active.",
+      "<strong>Four exams to pass.</strong> Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect.",
+      "<strong>Each has its own format and fee.</strong> App Builder and Platform Developer I are the cheaper pair, and the two architect exams cost more. Check each exam guide for the current figures.",
+      "<strong>It pairs with System Architect.</strong> Hold both, and you can apply for the Technical Architect (CTA) review board."
     ],
-    "passRateGuidance": "Book the exam once you can confidently diagram a data model, explain OWD and sharing rule trade-offs, and justify declarative vs. Apex decisions for any given scenario."
+    "passRateGuidance": "Most people take Platform App Builder first, then Platform Developer I, then Data Architect and Sharing and Visibility Architect. Prepare for each exam on its own terms and use that exam's practice questions."
   },
   "examFormat": {
     "heading": "Application Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "The majority of questions are scenario-based, presenting a business requirement and asking you to choose the best architectural approach from multiple valid options.",
+    "intro": "There is no Application Architect exam to book. Here is how the credential works:",
+    "scenarioPercent": "The two architect exams in this set are scenario-heavy. A typical question describes a business requirement and asks which data model, sharing design or build approach fits best.",
     "bestWayToPass": [
-      "<strong>Master data modeling trade-offs:</strong> Know when to use lookup vs. master-detail, junction objects, and external objects &mdash; and the downstream impact on sharing, rollups, and reporting.",
-      "<strong>Layer your security knowledge:</strong> Understand how OWD, role hierarchy, sharing rules, and permission sets interact so you can design a complete access model under time pressure.",
-      "<strong>Practice declarative vs. code decisions:</strong> The exam rewards candidates who choose the simplest maintainable solution and can articulate why code is warranted when it is.",
-      "<strong>Study integration patterns:</strong> Know REST, Platform Events, Bulk API, and when middleware is justified &mdash; integration questions appear frequently on this exam."
+      "<strong>Start with Platform App Builder:</strong> Declarative building, the data model and automation basics. It is the gentlest of the four.",
+      "<strong>Then Platform Developer I:</strong> Apex, SOQL, triggers and testing. It also counts toward System Architect, so it is useful twice.",
+      "<strong>Then Data Architect:</strong> Data modelling, large data volumes, master data management and migration.",
+      "<strong>Finish with Sharing and Visibility Architect:</strong> Org-wide defaults, role hierarchy, sharing rules and external access."
     ]
   },
   "certificationCard": {
     "code": "Application Architect",
-    "description": "This page covers the Application Architect credential — earned by passing four component exams (Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect), not a single test. Practice questions here focus on the Data Architect and Sharing and Visibility domains: data model design, role hierarchies, and sharing configurations using native Salesforce features.",
+    "description": "Application Architect is earned, not tested. You get it by holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. The practice questions here cover the data model and sharing topics those exams focus on.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
-      "cost": "$400"
+      "questions": "No exam",
+      "passingScore": "N/A",
+      "duration": "N/A",
+      "cost": "Fees of the 4 exams"
     },
     "topics": [
       "Data Modeling",
@@ -88,72 +88,72 @@
     "h2": "Application Architect: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Data Architecture: Object Design and Large Data Volumes",
-        "body": "Application Architects design the data model to support business processes, sharing requirements, and performance. **Master-Detail** vs Lookup choice impacts cascade delete, sharing inheritance, roll-up summaries, and required relationship. **Junction objects** for many-to-many. External Objects for data federation. Large Data Volume (LDV) considerations &mdash; indexed fields, selective queries, skinny tables &mdash; must be built into the design, not retrofitted. The architect evaluates trade-offs between normalised and denormalised structures based on query patterns."
+        "heading": "Data Modelling and Large Data Volumes",
+        "body": "From the Data Architect exam. Choose relationships for how the data behaves, not for convenience. A **lookup** is a loose link where either record can exist alone. A **master-detail** link makes the child depend on its parent, inherits the parent's sharing, and allows roll-up summary fields, but it also means deleting the parent deletes the children. **External objects** show data that stays in another system. **Big objects** hold very large volumes of historical data that is written and read but rarely updated. For large tables, keep queries **selective** by filtering on indexed fields, watch for **data skew** where one parent owns too many children, and plan archiving before volumes become a problem."
       },
       {
-        "heading": "Business Logic: Flow vs Apex Decision Matrix",
-        "body": "Prefer declarative (Flow) over programmatic (**Apex**) when flows can handle the logic without governor limit concerns. Use Apex when: the logic is too complex for Flow, requires complex data manipulation, needs callouts, or has performance requirements that Flow cannot meet. **Platform Events** decouple systems &mdash; use for fire-and-forget async messaging. **Change Data Capture** streams record changes to external systems. The exam tests the trade-off decision at the architect level &mdash; maintainability, scalability, and test coverage requirements factor into the choice."
+        "heading": "Choosing Between Configuration and Code",
+        "body": "Salesforce expects you to prefer configuration and reach for code only when configuration cannot do the job. **Flow** covers most automation, including record updates, guided screens and scheduled work. Code becomes the right answer when logic is genuinely complex, when very large volumes need batch processing, or when you must do something Flow cannot. The architect's job is to justify the choice: configuration is cheaper to maintain and survives upgrades, while code brings test requirements, deployment overhead and a maintenance burden. Questions that offer a custom-built option alongside a standard feature usually want the standard feature."
       },
       {
-        "heading": "Integration Architecture: Patterns and Tools",
-        "body": "REST callouts for synchronous data retrieval. **Platform Events** for async, decoupled messaging. **Bulk API** 2.0 for high-volume data exchange. MuleSoft for complex orchestration, protocol translation, or multi-system fan-out. **Named Credentials** secure endpoint and auth configuration. The integration pattern selection depends on: synchronous vs asynchronous requirements, volume (Bulk API threshold is typically 200+ records), direction (inbound vs outbound), and latency requirements. The exam tests pattern selection based on these criteria."
+        "heading": "Designing Record Access",
+        "body": "From the Sharing and Visibility exam. Access is built in layers and each layer can only open access further, never close it. **Org-wide defaults** set the baseline, so start as private as anyone needs and open up from there. The **role hierarchy** gives managers access to their team's records. **Sharing rules** share by owner or by field value. **Teams** and **manual shares** cover individual records, and **Apex managed sharing** handles rules that configuration cannot express. External users follow their own rules, with **sharing sets** for Experience Cloud customers. Object and field permissions come from profiles and permission sets, and they are checked before sharing ever applies."
       },
       {
-        "heading": "Security Architecture: Layered Access Design",
-        "body": "Security design starts at the data model &mdash; **OWD** determines the record access baseline. **Role Hierarchy** grants manager visibility. **Sharing Rules** extend access. **Permission Sets** and **Permission Set Groups** manage object/field permissions. The architect must also consider Connected App policies, **OAuth** scopes, **Named Credentials**, Shield Platform Encryption for sensitive data, and Event Monitoring for audit. The exam tests holistic security design &mdash; identifying which layer to configure for a given access requirement."
+        "heading": "Integration Patterns for Applications",
+        "body": "From both architect exams and Platform Developer I. Pick the pattern from the requirement: a synchronous callout when a user is waiting, **Platform Events** or **Change Data Capture** when other systems only need to know something changed, **Bulk API** for large scheduled loads, and **Salesforce Connect** when data should stay in the source system. Keep secrets out of code with **Named Credentials**. Remember the callout limits, 100 per transaction and 120 seconds in total, and move slow work into asynchronous Apex so the user is not kept waiting."
       },
       {
-        "heading": "Declarative vs Programmatic Trade-offs",
-        "body": "Architects make build-vs-configure decisions. Declarative tools (Flow, **Validation Rules**, Formula Fields, Approval Processes) are preferred for maintainability &mdash; no deployment complexity, admins can modify without code deployment. Programmatic code (**Apex**, **LWC**) is required for: complex conditional logic exceeding Flow capabilities, external system callouts requiring transformation, and UI patterns not achievable declaratively. The exam presents a business requirement and asks which combination of declarative and programmatic tools provides the best architecture, weighing complexity, maintainability, and scalability."
+        "heading": "Build Quality: Testing, Deployment and Governance",
+        "body": "Across all four exams, the same expectations recur. Apex needs at least 75% test coverage to reach production, and tests should build their own data and assert real outcomes. Changes move through sandboxes, with source control and the Salesforce CLI or DevOps Center for larger teams. Design for bulk from the start, since code that works on one record and fails on two hundred is the most common defect. Keep an eye on org limits and technical debt, and document the decisions behind the data model and sharing design so the next person can follow them."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Application Architect Exam",
-    "intro": "The Application Architect credential validates expertise in designing robust Salesforce applications. Questions test your ability to apply the right pattern — declarative vs. programmatic, which relationship type, which security model — for complex multi-requirement scenarios.",
+    "intro": "Because this credential is four exams, prepare for each separately. These are the themes that run through all of them.",
     "blocks": [
       {
-        "heading": "Data Modeling for Scale",
-        "body": "Know when to use lookup vs. **master-detail**, external objects (Salesforce Connect), big objects, and custom metadata types. Understand the impact of each relationship type on reporting, rollups, and data access."
+        "heading": "Data Modelling Choices",
+        "body": "Master-detail for dependent children, roll-ups and inherited sharing. Lookup when records stand alone. External objects when the data should not be copied."
       },
       {
-        "heading": "Security Architecture Layers",
-        "body": "Understand how object-level, field-level, and **record-level security** interact. Know the order of evaluation and how to use the Access Checker to diagnose access issues in complex orgs."
+        "heading": "Record Access Design",
+        "body": "Start with the most private org-wide default anyone needs, then open access with the role hierarchy and sharing rules. Only use Apex sharing when configuration cannot express the rule."
       },
       {
-        "heading": "Apex Design Patterns",
-        "body": "Know common design patterns: Singleton, Strategy, and Decorator for **Apex**. Understand trigger frameworks (one trigger per object pattern), virtual/abstract classes, and interface-based design for testability."
+        "heading": "Configuration Before Code",
+        "body": "Flow first. Code when logic is complex, volumes are large, or Flow genuinely cannot do it, and be ready to justify the choice."
       },
       {
         "heading": "Integration Patterns",
-        "body": "Know the canonical integration patterns: Remote Process Invocation (request/reply and fire-and-forget), Data Virtualization, Batch Data Sync, and UI Update via Remote Process. Match each to REST/SOAP/**Platform Events**."
+        "body": "User waiting means synchronous. Others just need to know means events. Large and scheduled means Bulk API. Should not be copied means Salesforce Connect."
       },
       {
-        "heading": "Declarative vs. Programmatic Decision",
-        "body": "Always justify when code is needed vs. when declarative tools suffice. Exam questions reward candidates who choose the simplest, most maintainable solution and understand the trade-offs."
+        "heading": "Large Data Volumes",
+        "body": "Keep queries selective, avoid ownership and account data skew, and plan archiving before the table gets big."
       }
     ]
   },
   "nextCertsAfter": {
-    "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "heading": "What to Do After Application Architect",
+    "intro": "Application Architect and System Architect together are the prerequisites for CTA:",
     "links": [
-      {
-        "href": "/certifications/application-architect",
-        "label": "Application Architect"
-      },
       {
         "href": "/certifications/system-architect",
         "label": "System Architect"
       },
       {
-        "href": "/certifications/technical-architect",
-        "label": "Technical Architect (CTA)"
+        "href": "/certifications/data-architect",
+        "label": "Data Architect"
       },
       {
-        "href": "/architect-certification-path",
-        "label": "Architect certification path"
+        "href": "/certifications/sharing-visibility-architect",
+        "label": "Sharing and Visibility Architect"
+      },
+      {
+        "href": "/certifications/technical-architect",
+        "label": "Technical Architect (CTA)"
       }
     ]
   },

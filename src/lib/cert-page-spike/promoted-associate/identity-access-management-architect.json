@@ -4,48 +4,48 @@
     "heading": "Who is the Identity and Access Management Architect exam for?",
     "personas": [
       {
-        "label": "Identity Architects",
-        "description": "Security professionals who design SSO, OAuth, and SAML configurations for enterprise Salesforce integrations with corporate identity providers."
+        "label": "Identity architects",
+        "description": "You design how people and systems log in, and you want the credential that proves it."
       },
       {
-        "label": "Integration Specialists",
-        "description": "Developers and architects who build server-to-server and user-facing authentication flows between Salesforce and external applications."
+        "label": "Integration specialists",
+        "description": "You build server-to-server connections and need to pick the right OAuth flow with confidence."
       },
       {
-        "label": "Security Engineers",
-        "description": "Engineers responsible for MFA enforcement, Connected App policies, and identity federation across multi-org or multi-cloud Salesforce environments."
+        "label": "Security engineers",
+        "description": "You own multi-factor authentication, Connected Apps and session policy for a Salesforce org."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Identity and Access Management Architect Exam Hard?",
-    "summary": "The IAM Architect exam is demanding because it requires precise knowledge of authentication protocols &mdash; SAML 2.0, OAuth 2.0, and their many variations. You must match the correct flow to a specific integration scenario and understand the security implications of each choice. Memorizing flow names is not enough; the exam tests whether you know which flow to recommend when given specific constraints like no browser access, machine-to-machine communication, or mobile-first requirements.",
+    "summary": "It is a demanding exam because the answers turn on small differences between protocols. You need to know SAML and the OAuth flows well enough to match one to a specific situation, not just describe them. It is one of the four exams that earn the System Architect credential.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 minutes &mdash; protocol-specific questions require exact knowledge of flow mechanics and configuration steps.",
-      "<strong>~68% passing score</strong> &mdash; about 41 correct answers, with multiple OAuth flow options that look similar but serve different use cases.",
-      "<strong>Protocol precision</strong> &mdash; questions test the difference between JWT Bearer, Client Credentials, Web Server, and Device flows at a configuration level.",
-      "<strong>SSO architecture</strong> &mdash; expect questions on SP-initiated vs. IdP-initiated flows, Federation ID mapping, certificate management, and multi-IdP routing."
+      "<strong>60 multiple-choice questions</strong> in 105 minutes.",
+      "<strong>About 58% to pass</strong>, roughly 35 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>Protocol detail matters.</strong> Expect questions where two OAuth flows both look workable and only one fits.",
+      "<strong>Single sign-on design.</strong> Know which side starts the login, how users are provisioned, and what Salesforce can do as an identity provider."
     ],
-    "passRateGuidance": "Book the exam when you can diagram every OAuth 2.0 flow from memory, configure a SAML SSO setup end to end, and explain when Salesforce should act as IdP vs. SP."
+    "passRateGuidance": "You are ready when you can sketch each OAuth flow from memory, set up SAML single sign-on in both directions, and say what a Connected App's scopes and policies control. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Identity and Access Management Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Most questions describe an integration or authentication scenario and ask you to select the correct OAuth flow, SSO configuration, or identity architecture to meet the requirements.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a login or integration situation and ask which flow, setting or feature fits. The detail that decides it is usually whether a person is involved and whether the app can hold a secret safely.",
     "bestWayToPass": [
-      "<strong>Map every OAuth flow to its use case:</strong> Web Server for interactive login, JWT Bearer for server-to-server, Client Credentials for machine-to-machine, Device for browserless clients, and PKCE for mobile apps.",
-      "<strong>Configure SAML from both sides:</strong> Know how to set up Salesforce as both a Service Provider and an Identity Provider, including certificate exchange, assertion attributes, and Federation ID mapping.",
-      "<strong>Study Connected App security:</strong> Understand OAuth scopes, IP restrictions, session policies, and how certificate-based authentication eliminates shared secrets.",
-      "<strong>Know MFA enforcement rules:</strong> Understand how MFA interacts with SSO (IdP-provided vs. Salesforce-enforced), which methods are supported, and how session security levels affect high-assurance access."
+      "<strong>Match each OAuth flow to its situation:</strong> Web server when a person logs in through a browser, JWT bearer for server-to-server with no user, device flow for a TV or CLI, user-agent for a browser or mobile app.",
+      "<strong>Set up SAML both ways:</strong> Salesforce as the service provider logging users in from an outside provider, and Salesforce as the identity provider for other apps.",
+      "<strong>Learn Connected App controls:</strong> Scopes, IP restrictions, session policies and which users are pre-authorised.",
+      "<strong>Know the multi-factor rules:</strong> What satisfies the requirement, and how single sign-on interacts with it."
     ]
   },
   "certificationCard": {
     "code": "Identity & Access Mgmt",
-    "description": "This exam tests SSO architecture, OAuth 2.0 flows, SAML configuration, and Connected App security on the Salesforce Platform. You’ll need to match authentication patterns to integration scenarios and configure MFA, My Domain, and identity federation.",
+    "description": "This exam tests how you design login and access for Salesforce: single sign-on with SAML, the OAuth flows, Connected Apps, multi-factor authentication, and how user accounts are created and kept in step.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "~58%",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [
@@ -65,68 +65,68 @@
     "h2": "Identity and Access Management Architect: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Identity Fundamentals: Authentication vs Authorisation",
-        "body": "Authentication verifies who you are (login). Authorisation determines what you can access (permissions). An Identity Provider (IdP) authenticates users and issues assertions. A Service Provider (SP) relies on the IdP's assertion to grant access. Salesforce can act as both &mdash; as an IdP for **connected apps** and external systems, and as an SP when receiving **SSO** from corporate identity systems like Okta or Azure AD. Understanding this distinction is the foundation for all IAM exam questions."
+        "heading": "Authentication and Authorisation Are Not the Same",
+        "body": "**Authentication** proves who someone is, which is logging in. **Authorisation** decides what they may then do or which data an app may reach. SAML handles authentication for people. OAuth handles authorisation for applications: it gives an app a token to act on someone's behalf, or on its own behalf, without handing over a password. OpenID Connect sits on top of OAuth and adds an identity token, so an app learns who the user is as well as what it may do. Many exam questions become easy once you decide which of the two the scenario is really about."
       },
       {
-        "heading": "SAML 2.0 SSO: SP-Initiated vs IdP-Initiated",
-        "body": "**SAML** 2.0 is the standard for web **SSO**. SP-Initiated SSO: the user accesses Salesforce, gets redirected to the IdP for login, the IdP sends a SAML assertion back to Salesforce. IdP-Initiated SSO: the user logs in at the IdP portal first, then accesses Salesforce from there &mdash; no redirect needed. My Domain is required for SSO &mdash; it provides the Salesforce login URL that the IdP redirects to. The exam tests the SSO flow direction, how to configure the SAML settings, and certificate management."
+        "heading": "SAML Single Sign-On: Who Starts the Login",
+        "body": "With **SAML**, the **identity provider** checks the user and vouches for them, and the **service provider** is the app they are reaching. In **service-provider-initiated** single sign-on the user starts at Salesforce, is redirected to the provider to log in, and comes back with an assertion. In **identity-provider-initiated** single sign-on the user starts at the provider's portal and clicks through to Salesforce. Setup needs the provider's certificate, the entity ID and the login URL to match on both sides, and Salesforce needs **My Domain** turned on. Typical failures are a mismatched entity ID, an expired certificate, or clocks out of step so the assertion looks stale. Salesforce can also be the identity provider for other applications."
       },
       {
-        "heading": "OAuth 2.0 Flows: Server, JWT, and Client Credentials",
-        "body": "Web Server Flow (Authorization Code): user-facing, browser redirect, best for interactive login. **JWT** Bearer Flow: server-to-server, no user interaction &mdash; client signs a JWT with a private key registered as a certificate on the Connected App. Client Credentials Flow: machine-to-machine authentication using client ID & secret. Device Flow: for devices without browsers (smart TV, IoT). PKCE (Proof Key for Code Exchange): protects mobile apps against authorization code interception. The exam presents an integration scenario and asks which **OAuth** flow is appropriate."
+        "heading": "OAuth 2.0 Flows and When Each Fits",
+        "body": "**Web server flow** (authorisation code) is for apps with a server that can keep a secret, where a person logs in through a browser. **User-agent flow** suits apps running in a browser or on a phone, where no secret can be hidden. **JWT bearer flow** is for server-to-server access with no person present: the app signs an assertion with a certificate and receives a token. **Client credentials flow** also covers server-to-server work tied to a single integration user. **Device flow** is for devices with awkward input, such as a TV, where the user authorises on another screen. **Refresh tokens** let an app get new access tokens without asking the user again, and their lifetime is controlled by policy."
       },
       {
-        "heading": "Connected Apps: Scopes, Policies, and Sessions",
-        "body": "**Connected Apps** define the **OAuth** configuration &mdash; scopes (which Salesforce data the app can access), IP ranges, session duration, and refresh token policy. OAuth scopes include api, full, refresh_token, web, chatter_api, and others. The Manage Connected Apps permission is required to modify policies. IP allowlists on Connected Apps can restrict which IPs can obtain tokens. Certificate-based authentication (mutual TLS) eliminates shared secrets by using client certificates for authentication."
+        "heading": "Connected Apps: Scopes, Policies and Sessions",
+        "body": "A **Connected App** is how an outside application is registered with Salesforce. Its **scopes** limit what a token may do, for example reading data, managing the user's account or acting offline with a refresh token. **Policies** control who may use it: admin pre-authorised, so only chosen profiles or permission sets can connect, or self-authorised, where any user may approve it. You can restrict it to trusted **IP ranges**, set how long sessions last, and set a refresh token policy such as expiring after a period of inactivity. Newer orgs may use External Client Apps for the same purpose. Revoking the app's tokens cuts off access immediately."
       },
       {
-        "heading": "MFA, My Domain, and Identity Connect",
-        "body": "Multi-Factor Authentication (**MFA**) is now required for all Salesforce users &mdash; admins cannot disable it org-wide. MFA methods: Salesforce Authenticator (push notification), TOTP apps (Google Authenticator), security keys (WebAuthn). My Domain customises the Salesforce login URL and is required for **SSO**, custom components, and some lightning features. Identity Connect (Salesforce Identity for AD) syncs Active Directory users to Salesforce &mdash; supports LDAP directory integration for provisioning and deprovisioning."
+        "heading": "Provisioning, Multi-Factor and My Domain",
+        "body": "Accounts have to be created and removed as well as authenticated. **Just-in-time provisioning** creates or updates a Salesforce user from the SAML assertion the first time they log in. **User provisioning** for Connected Apps pushes accounts out to other systems. **SCIM** is the standard many identity providers use for the same job. **Multi-factor authentication** is required for Salesforce access, and the requirement can be met by a verification method in Salesforce or by single sign-on where the provider enforces it. **My Domain** gives the org its own login URL, which single sign-on and several identity features depend on. For customers, Experience Cloud supports social sign-on and self-registration."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Identity and Access Management Architect Exam",
-    "intro": "The IAM Architect exam tests deep knowledge of authentication, authorization, and identity federation. Focus on OAuth flows, SAML configuration, Connected Apps, and how to secure both Salesforce and external applications.",
+    "intro": "Nearly every question is a choice between protocols or flows. Look for whether a person is present, whether a secret can be kept, and which side starts the login.",
     "blocks": [
       {
-        "heading": "OAuth 2.0 Flows",
-        "body": "Know all **OAuth** flows: Web Server (authorization code), User-Agent (implicit), Username-Password, **JWT** Bearer, Device, and Refresh Token flows. Match each flow to its use case and security characteristics."
+        "heading": "Choosing an OAuth Flow",
+        "body": "Person plus a server that keeps a secret: web server flow. No person at all: JWT bearer. Browser or mobile app with no secret: user-agent. Limited input device: device flow."
       },
       {
-        "heading": "SAML & SSO Configuration",
-        "body": "Understand how **SAML** 2.0 enables **SSO**: SP-Initiated vs. IdP-Initiated flows, assertion attributes, Federation IDs, and how to configure Salesforce as a SP or IdP. Know common troubleshooting steps."
+        "heading": "SAML Setup and Failures",
+        "body": "Entity ID, certificate and login URL must match on both sides, and My Domain must be on. Mismatched IDs, expired certificates and clock drift are the usual causes of failure."
       },
       {
-        "heading": "Connected Apps & Scopes",
-        "body": "Know how **Connected Apps** control external system access to Salesforce APIs. Understand **OAuth** scopes, IP restrictions, user provisioning (SCIM), and how policies control access."
+        "heading": "Connected App Controls",
+        "body": "Scopes limit what a token can do. Admin pre-authorisation limits who can connect. IP ranges and session policies tighten it further."
       },
       {
         "heading": "Multi-Factor Authentication",
-        "body": "Know **MFA** enforcement methods: Salesforce Authenticator, TOTP apps, security keys. Understand how MFA interacts with **SSO** (IdP-provided MFA vs. Salesforce MFA), and the MFA enforcement timeline implications."
+        "body": "The requirement can be satisfied inside Salesforce or by the identity provider through single sign-on. Know which methods count."
       },
       {
-        "heading": "Salesforce Identity Features",
-        "body": "Know User Provisioning for **Connected Apps**, Identity Connect (AD sync), Login Flows for custom authentication logic, and how External Identity licenses differ from internal user licenses."
+        "heading": "Provisioning Users",
+        "body": "Just-in-time provisioning creates users during single sign-on. SCIM and user provisioning keep accounts in step and remove leavers."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "This is one of the four exams for System Architect. Good next steps:",
     "links": [
-      {
-        "href": "/certifications/application-architect",
-        "label": "Application Architect"
-      },
       {
         "href": "/certifications/system-architect",
         "label": "System Architect"
       },
       {
-        "href": "/certifications/technical-architect",
-        "label": "Technical Architect (CTA)"
+        "href": "/certifications/integration-architect",
+        "label": "Integration Architect"
+      },
+      {
+        "href": "/certifications/sharing-visibility-architect",
+        "label": "Sharing and Visibility Architect"
       },
       {
         "href": "/architect-certification-path",
@@ -409,5 +409,6 @@
         "'All access' contradicts the least-privilege principle that's central to good identity governance."
       ]
     }
-  ]
+  ],
+  "expertInsight": "This exam rewards precision. Several OAuth flows can technically move a token around, but only one fits the situation described, and the deciding detail is usually whether a person is present and whether the app can keep a secret. Learn to spot those two things in the question. The other area worth drilling is SAML: know which side starts the login, and what breaks when the clock or the entity ID is wrong."
 }

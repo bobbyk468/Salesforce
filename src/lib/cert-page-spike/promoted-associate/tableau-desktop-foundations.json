@@ -4,48 +4,48 @@
     "heading": "Who is the Tableau Desktop Foundations exam for?",
     "personas": [
       {
-        "label": "Tableau Beginners",
-        "description": "People learning Tableau Desktop who want an entry-level credential to validate their core data visualization skills."
+        "label": "Tableau beginners",
+        "description": "You are learning Tableau Desktop and want a first credential to show for it."
       },
       {
-        "label": "Business Users",
-        "description": "Professionals transitioning from Excel and spreadsheet reporting to interactive Tableau dashboards for data analysis."
+        "label": "Business users",
+        "description": "You build reports in spreadsheets today and want to move that work into Tableau."
       },
       {
-        "label": "Students &amp; Career Changers",
-        "description": "Individuals building a foundation in analytics and visualization as a stepping stone to advanced Tableau certifications."
+        "label": "Students and career changers",
+        "description": "You are building a base in analytics and want proof you can use the tool."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Tableau Desktop Foundations Exam Hard?",
-    "summary": "The Tableau Desktop Foundations exam is the easiest Tableau certification. It tests foundational knowledge of Tableau Desktop features rather than advanced calculations or architecture, making it accessible to candidates with a few weeks of focused practice.",
+    "summary": "This is the gentlest Tableau exam. It asks what the tool does and where things live, rather than making you design a data model or write complex calculations. If you have built a few dashboards yourself, most of it will look familiar.",
     "bullets": [
-      "<strong>40 questions</strong> in 60 minutes — 90 seconds per question, which is comfortable for candidates familiar with the Tableau Desktop interface.",
-      "<strong>~65% passing score</strong> — you need approximately 26 correct answers out of 40 to pass.",
-      "<strong>Breadth over depth</strong> — the exam covers data connections, chart types, filters, basic calculations, and dashboards, so you need working knowledge across all areas.",
-      "<strong>Two to four weeks of daily practice is typically enough</strong> — candidates with basic data literacy who practice in Tableau Desktop using sample data (like Superstore) are well prepared."
+      "<strong>40 questions</strong> in 70 minutes, which is a comfortable pace.",
+      "<strong>48% to pass</strong>, about 20 correct answers out of 40. Confirm it in the official exam guide before you book, since Salesforce updates these.",
+      "<strong>Wide but shallow.</strong> Connecting to data, chart types, the Marks card, filters, simple calculations and dashboards.",
+      "<strong>Practice beats reading.</strong> Two to four weeks of building in Tableau Desktop is usually enough."
     ],
-    "passRateGuidance": "Book when you can connect to data, build common chart types, apply filters, write basic calculated fields, and create a multi-sheet dashboard without following a tutorial."
+    "passRateGuidance": "You are ready when you can connect to a spreadsheet, build a bar and a line chart, add a filter, write a simple calculated field and put two sheets on a dashboard without looking anything up. Aim for 80% or more on practice tests."
   },
   "examFormat": {
     "heading": "Tableau Desktop Foundations Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Questions describe a task — build a bar chart, apply a filter, create a calculated field — and ask you to identify the correct Tableau Desktop steps or feature.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Many questions describe a small task, such as showing sales by region or highlighting the top five products, and ask which feature does it.",
     "bestWayToPass": [
-      "<strong>Show Me panel:</strong> Know which chart type Tableau recommends for each combination of dimensions and measures, and when to override it.",
-      "<strong>Marks card:</strong> Understand how Color, Size, Label, Detail, and Tooltip encode data on marks and how changing them affects the view.",
-      "<strong>Filters and sorting:</strong> Practice applying dimension filters, measure filters, and date filters, and sorting by field value, manual drag, or nested sort.",
-      "<strong>Build a dashboard:</strong> Create a multi-sheet dashboard with Filter Actions and Highlight Actions to understand interactivity and layout containers."
+      "<strong>Know dimensions from measures:</strong> Dimensions describe things and slice the view. Measures are numbers that get added up.",
+      "<strong>Learn the Marks card:</strong> Colour, Size, Label, Detail and Tooltip each change the view differently. Dragging a field to Detail splits the marks without changing colour.",
+      "<strong>Practise filters and sorting:</strong> Filter on a dimension, filter on a measure, and sort by a field rather than by hand.",
+      "<strong>Build one real dashboard:</strong> Put two sheets together, add a filter, and make the filter apply to both."
     ]
   },
   "certificationCard": {
     "code": "Tableau Desktop Foundations",
-    "description": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards using Tableau Desktop. It is an entry-level credential for analytics and visualization.",
+    "description": "This entry-level exam covers the basics of Tableau Desktop: connecting to data, building charts, filtering and sorting, writing simple calculations, and putting sheets together into a dashboard.",
     "examDetails": {
       "questions": 40,
-      "passingScore": "~65%",
-      "duration": "60 min",
+      "passingScore": "48%",
+      "duration": "70 min",
       "cost": "$100"
     },
     "topics": [
@@ -61,68 +61,72 @@
     "h2": "Tableau Desktop Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Connecting to Data and Data Source Basics",
-        "body": "**Tableau Desktop** connects to hundreds of data sources: files (Excel, CSV, JSON), databases (SQL Server, PostgreSQL, BigQuery), and cloud services. Data Source page: connect, join or union tables, preview data, rename fields, hide unused fields, change data types. Live connection queries the database each time; Extract (.hyper) snapshots the data for performance. Field types: Dimensions (qualitative, blue), Measures (quantitative, green). Discrete fields create headers; Continuous fields create axes. Understanding pills (fields), shelves (rows, columns, marks card) and how they map to the view is the foundation of the Foundations exam."
+        "heading": "Connecting to Data",
+        "body": "Tableau Desktop connects to files such as Excel and CSV, to databases, and to published sources on Tableau Server or Tableau Cloud. Once connected, you can join tables, which combines columns from two tables on a matching field, or union them, which stacks rows from tables with the same columns. A **live connection** queries the source each time, so the view always shows current data. An **extract** takes a copy into Tableau's own fast format, which helps with slow sources and lets you work offline. In the data pane, fields arrive as **dimensions** (things to slice by, like Region or Order Date) or **measures** (numbers to aggregate, like Sales). You can change a field's data type and rename it without touching the source."
       },
       {
-        "heading": "Building Basic Visualisations",
-        "body": "Tableau's Show Me panel suggests chart types based on selected fields. Common charts: Bar (compare categories), Line (trend over time), Scatter (correlation between two measures), Map (geographic data), Pie (part-to-whole — use sparingly). Shelves: Columns shelf = X axis, Rows shelf = Y axis, Marks card controls colour, size, shape, label, detail, tooltip. Sorting: by field value (ascending/descending), by manual drag, or by nested sort. The Foundations exam tests how to build each chart type and which is most appropriate for a given question."
+        "heading": "Building Views: Rows, Columns and the Marks Card",
+        "body": "A view is built by putting fields on **Rows** and **Columns**. Tableau decides the chart type from what you drop, and the **Show Me** panel suggests charts that fit the fields you have selected, greying out the ones that need different fields. The **Marks card** controls how the marks look: **Colour** splits and colours them, **Size** scales them, **Label** writes values on them, **Tooltip** sets what appears on hover, and **Detail** splits marks into more pieces without changing their appearance. Measures are aggregated by default, usually as a sum, and you can change that to average, count or minimum from the field's menu."
       },
       {
-        "heading": "Filtering, Sorting, and Groups",
-        "body": "Filter types: Dimension filters (categorical), Measure filters (range/conditional), Date filters (relative, range, discrete). Filter order of operations: Extract &rarr; Data Source &rarr; Context &rarr; Dimension &rarr; Measure. Context filters improve performance by reducing the data set before other filters apply. Sets are named subsets of dimension members — In/Out members can be used in calculations. Groups combine dimension members into named categories directly on the field (e.g., combining East and West into 'Combined'). Quick filters show filter controls in the view for user interactivity."
+        "heading": "Filtering, Sorting and Grouping",
+        "body": "**Dimension filters** keep or exclude categories. **Measure filters** keep rows inside a numeric range. A **Top N filter** keeps, say, the five best products by sales. You can show a filter on screen as a **quick filter** so viewers change it themselves, and decide whether it applies to one sheet or to every sheet using that data source. **Sorting** can be alphabetical, by a measure, or manual. **Groups** combine several members into one, for example rolling small categories into Other, while **sets** are a saved selection you can use in calculations and filters. **Hierarchies** let viewers drill from Country to State to City."
       },
       {
-        "heading": "Calculated Fields: Basic Formulas",
-        "body": "**calculated fields** create new data from existing fields. Basic functions: String (LEFT, RIGHT, MID, CONTAINS, LEN), Date (DATEPART, DATEDIFF, DATEADD, TODAY), Logical (IF/ELSEIF/END, IIF, CASE), Aggregate (SUM, AVG, MAX, MIN, COUNTD). **table calculations** reference values relative to other rows in the view (RUNNING_SUM, WINDOW_SUM, RANK, PREVIOUS_VALUE). The Foundations exam tests writing basic calculated fields to answer common business questions — e.g., profit margin (SUM([Profit])/SUM([Sales])), year-over-year growth, conditional categorisation."
+        "heading": "Calculated Fields",
+        "body": "A **calculated field** makes a new field from existing ones. The common kinds are arithmetic (Profit divided by Sales for a margin), string functions such as LEFT or CONTAINS, date functions such as DATEDIFF or DATEPART, and logic with IF or CASE, for example flagging orders above a value as High. **Aggregate** functions like SUM and AVG work on the whole group of rows behind a mark, so you cannot mix an aggregated and a non-aggregated field in the same expression. Tableau also offers quick **table calculations** such as running total, percent of total and difference, which compute on what is already in the view rather than in the source data."
       },
       {
         "heading": "Dashboards and Stories",
-        "body": "Dashboards combine multiple sheets into a single view. Layout: Tiled vs Floating objects. Containers (Horizontal, Vertical) control how objects resize together. Device preview shows how the dashboard looks on desktop, tablet, and phone. Dashboard Actions enable interactivity — Filter Action (click to filter), Highlight Action (click to highlight), URL Action (open a link). Stories are a presentation format — a sequence of Story Points, each showing a sheet or dashboard with a caption, for guided data narration. The Foundations exam tests how to create a dashboard, add interactivity, and build a basic story."
+        "body": "A **dashboard** brings several sheets into one screen. Objects can be **tiled**, which snaps them into a layout that resizes neatly, or **floating**, which you position freely. **Dashboard actions** make the dashboard interactive: a **filter action** uses a selection in one sheet to filter another, a **highlight action** emphasises matching marks, and a **URL action** opens a link. A **story** is a sequence of sheets or dashboards with captions, used to walk an audience through a finding step by step. Finished work is shared by publishing it to Tableau Cloud or Tableau Server."
       }
     ]
   },
   "scenarioTips": {
-    "h2": "How to Pass the Tableau Desktop Specialist Exam",
-    "intro": "The Tableau Desktop Specialist exam tests foundational Tableau Desktop skills. Focus on connecting to data, building basic visualizations, and using core features. This is a practical knowledge exam — understand the UI and feature capabilities.",
+    "h2": "How to Pass the Tableau Desktop Foundations Exam",
+    "intro": "Most questions name a small task and ask which feature does it. Learn where each control lives and what it changes in the view.",
     "blocks": [
       {
         "heading": "Connecting to Data",
-        "body": "Know how to connect to file-based sources (Excel, CSV, JSON), database sources, and how to configure joins and unions in the Data Source pane. Understand the difference between live and extract connections."
+        "body": "Joins add columns, unions add rows. Live connections stay current, extracts are faster and work offline."
       },
       {
-        "heading": "Building Basic Visualizations",
-        "body": "Know the Show Me panel chart types and when Tableau recommends each. Understand how to use Rows/Columns shelf, Marks card (color, size, label, detail, tooltip), and filters pane."
+        "heading": "Building Views",
+        "body": "Show Me suggests charts for the fields you picked. Measures aggregate by default, usually as a sum."
       },
       {
-        "heading": "Sorting & Grouping",
-        "body": "Know how to sort data (field sort, manual sort, nested sort) and how to create groups (custom groups from dimension members) and sets (dynamic or fixed subsets of dimension members)."
+        "heading": "Sorting and Grouping",
+        "body": "Sort by a measure rather than by hand. Groups combine members, sets save a selection, hierarchies allow drilling."
       },
       {
-        "heading": "Basic Calculations",
-        "body": "Know how to create simple **calculated fields**: string functions (LEFT, MID, CONTAINS), date functions (DATEDIFF, DATEPART), and aggregate functions (SUM, AVG, COUNT, COUNTD) applied to measures."
+        "heading": "Calculations",
+        "body": "Simple arithmetic, string, date and IF logic cover most of the exam. Table calculations work on what is in the view."
       },
       {
-        "heading": "Sharing & Publishing",
-        "body": "Know how to publish workbooks and data sources to **Tableau Server** or Cloud, export views to images/PDFs/PowerPoint, and use Tableau Reader for offline sharing."
+        "heading": "Dashboards and Sharing",
+        "body": "Use a filter action to make one sheet filter another, and publish to Tableau Cloud or Server to share."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Tableau Certifications",
-    "intro": "After this Tableau certification, consider other Tableau credentials or CRM Analytics:",
+    "intro": "Good next steps after Tableau Desktop Foundations:",
     "links": [
-      {
-        "href": "/certifications/tableau-consultant",
-        "label": "Tableau Consultant"
-      },
       {
         "href": "/certifications/tableau-data-analyst",
         "label": "Tableau Data Analyst"
       },
       {
-        "href": "/certifications/tableau-desktop-foundations",
-        "label": "Tableau Desktop Foundations"
+        "href": "/certifications/tableau-consultant",
+        "label": "Tableau Consultant"
+      },
+      {
+        "href": "/certifications/tableau-server-administrator",
+        "label": "Tableau Server Administrator"
+      },
+      {
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
       }
     ]
   },
@@ -162,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does the Tableau Desktop Foundations certification validate?",
+      "question": "You need to combine a sales table and a returns table that share an Order ID column, so the returns information appears alongside each order. What should you use?",
       "options": [
-        "Marketing automation",
-        "Core Tableau Desktop skills: connecting to data, building views, and creating dashboards",
-        "Salesforce CRM configuration",
-        "Server administration only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Tableau Desktop Foundations validates core skills in connecting to data, building views, and creating dashboards in Tableau Desktop.",
-      "whyWrong": [
-        "Marketing automation is unrelated to Tableau Desktop Foundations.",
-        "Salesforce CRM configuration is unrelated to Tableau Desktop Foundations.",
-        "'Server administration only' misrepresents Foundations, which is about core Desktop skills, not server administration."
-      ]
-    },
-    {
-      "question": "Which is a fundamental Tableau Desktop concept?",
-      "options": [
-        "Dimensions, measures, and the shelf (Rows, Columns, Marks)",
-        "Apex programming",
-        "Only colors",
-        "Email templates"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Dimensions, measures, and the shelf (Rows, Columns, Marks) are fundamental to building views in Tableau Desktop.",
-      "whyWrong": [
-        "Apex programming is a Salesforce Core language, unrelated to Tableau Desktop concepts.",
-        "'Only colors' undersells the fundamental concepts, which include dimensions, measures, and shelves broadly.",
-        "Email templates are unrelated to Tableau Desktop's core visualization concepts."
-      ]
-    },
-    {
-      "question": "What do the Rows and Columns shelves do in Tableau?",
-      "options": [
-        "Define the structure of the view; fields placed here create headers and axes",
-        "Change colors",
-        "Apply filters only",
-        "Store data only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Rows and Columns define the layout of the visualization. Fields create headers, axes, and panes.",
-      "whyWrong": [
-        "'Change colors' misattributes the Rows/Columns shelves' function to a different visual property (that's the Marks card).",
-        "'Apply filters only' undersells the Rows/Columns shelves' broader structural role beyond filtering.",
-        "'Store data only' misrepresents the Rows/Columns shelves, which define view structure, not data storage."
-      ]
-    },
-    {
-      "question": "Which data type appears as a dimension (blue pill) by default in Tableau?",
-      "options": [
-        "Only dates",
-        "Text, dates, and booleans are typically dimensions",
-        "Only numbers",
-        "Only booleans"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Text, dates, and booleans default to dimensions. Numeric fields often default to measures.",
-      "whyWrong": [
-        "'Only dates' undersells the broader set of data types (text, booleans too) that appear as dimensions.",
-        "'Only numbers' is the opposite of what typically becomes a dimension — numbers are usually measures.",
-        "'Only booleans' undersells the broader set of data types (text, dates too) that appear as dimensions."
-      ]
-    },
-    {
-      "question": "What does the Marks card control in Tableau?",
-      "options": [
-        "Filters only",
-        "Color, size, text, detail, and tooltip of marks in the view",
-        "Data connection only",
-        "Calculations only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The Marks card controls how data points are encoded: color, size, label, tooltip, and more.",
-      "whyWrong": [
-        "'Filters only' undersells the Marks card's broader control over color, size, text, and detail.",
-        "Data connection is a separate step, not what the Marks card itself controls.",
-        "'Calculations only' misattributes the Marks card's function to a different Tableau capability."
-      ]
-    },
-    {
-      "question": "Which Tableau feature lets you connect to Excel or CSV files?",
-      "options": [
-        "Only PDF",
-        "Only databases",
-        "Connect to a File supports Excel, CSV, PDF, and other file types",
-        "Only JSON"
+        "A dashboard filter action",
+        "A calculated field",
+        "A join on Order ID",
+        "A union of the two tables"
       ],
       "correctAnswer": 2,
-      "explanation": "Connect to a File lets you use Excel, CSV, and other file-based data sources.",
+      "explanation": "A join matches rows using a shared field and brings the other table's columns alongside, which is what is needed here.",
       "whyWrong": [
-        "'Only PDF' undersells the broader set of file types Tableau can connect to.",
-        "'Only databases' undersells the file-connection capability, which covers Excel, CSV, PDF, and more.",
-        "'Only JSON' undersells the broader set of file types Tableau can connect to."
+        "A filter action links sheets in a dashboard, not tables in a data source.",
+        "A calculated field works with data you already have.",
+        "A union stacks rows from tables with the same columns. It does not add columns."
       ]
     },
     {
-      "question": "What is a filter in Tableau used for?",
+      "question": "Monthly sales files all have identical columns, and you want them all in one data source as additional rows. What should you use?",
       "options": [
-        "Connecting to servers",
-        "Deleting data",
-        "Limiting which data appears in the view based on criteria",
-        "Changing colors only"
+        "A group",
+        "A set",
+        "A union",
+        "A join"
       ],
       "correctAnswer": 2,
-      "explanation": "Filters restrict the data displayed in a view based on field values or conditions.",
+      "explanation": "A union stacks rows from tables with the same structure, which is what you want for repeated monthly files.",
       "whyWrong": [
-        "'Connecting to servers' misattributes filtering's function to a different, unrelated data-connection concept.",
-        "Filters don't delete data — they limit what's displayed, not what's stored.",
-        "'Changing colors only' misattributes filtering's actual purpose, which is limiting displayed data."
+        "Groups combine members of a field, not tables.",
+        "Sets save a selection of members.",
+        "A join would add columns rather than stack rows."
       ]
     },
     {
-      "question": "Which chart type uses bars to compare categories?",
+      "question": "Which statement about dimensions and measures is correct?",
       "options": [
-        "Line chart",
-        "Pie chart",
-        "Map",
-        "Bar chart"
+        "Dimensions are always dates; measures are always text",
+        "Dimensions slice the view; measures are numbers that get aggregated",
+        "Measures slice the view; dimensions are aggregated",
+        "They are interchangeable and behave identically"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Dimensions are the descriptive fields you break the view down by. Measures are numeric fields that Tableau aggregates, usually by summing them.",
+      "whyWrong": [
+        "Dimensions can be text, dates or numbers, and measures are numeric, not text.",
+        "That reverses the two roles.",
+        "They behave differently, which is why Tableau separates them."
+      ]
+    },
+    {
+      "question": "A scatter plot shows one mark per region, but you want one mark per customer while keeping the colour as it is. Where should you drag the Customer field?",
+      "options": [
+        "The Filters shelf",
+        "Detail on the Marks card",
+        "Colour on the Marks card",
+        "The Columns shelf"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Detail splits the marks into more pieces without changing how they look, which is exactly the requirement.",
+      "whyWrong": [
+        "Filters would remove data rather than split marks.",
+        "Colour would split the marks and recolour them, changing the appearance.",
+        "Columns would change the chart's structure."
+      ]
+    },
+    {
+      "question": "You want the view to show only the five products with the highest sales. What is the simplest way?",
+      "options": [
+        "A Top N filter on Product by sum of Sales",
+        "Manually hiding the other products",
+        "Sorting the products and leaving the rest visible",
+        "A measure filter on Sales above a guessed value"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A Top N filter keeps the highest five by the measure you choose, and it updates as the data changes.",
+      "whyWrong": [
+        "Hiding by hand breaks as soon as the data changes.",
+        "Sorting changes the order but still shows every product.",
+        "A guessed threshold may return more or fewer than five."
+      ]
+    },
+    {
+      "question": "A viewer should be able to change the Region shown on a published dashboard. What should you add?",
+      "options": [
+        "A calculated field for each region",
+        "A quick filter shown on the dashboard",
+        "A group containing all regions",
+        "A separate dashboard per region"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Showing the filter puts a control on screen so viewers pick the region themselves.",
+      "whyWrong": [
+        "Calculated fields do not give the viewer a control.",
+        "A group combines members rather than offering a choice.",
+        "One dashboard per region is unnecessary duplication."
+      ]
+    },
+    {
+      "question": "One filter should apply to every sheet built on the same data source, not just the current sheet. What should you do?",
+      "options": [
+        "Apply the filter to all sheets using that data source",
+        "Copy the filter onto each sheet by hand",
+        "Put the filter on the Detail shelf",
+        "Convert the filter into a set"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A filter's scope can be widened so it applies to all worksheets using that data source, keeping sheets in step.",
+      "whyWrong": [
+        "Copying by hand works but has to be repeated and drifts out of step.",
+        "Detail splits marks and has nothing to do with filter scope.",
+        "A set saves a selection but does not apply a filter everywhere."
+      ]
+    },
+    {
+      "question": "You need a field that shows profit as a percentage of sales. What should you create?",
+      "options": [
+        "A Top N filter on Profit",
+        "A union with the profit table",
+        "A group of profit values",
+        "A calculated field dividing SUM(Profit) by SUM(Sales)"
       ],
       "correctAnswer": 3,
-      "explanation": "Bar charts compare values across categories using horizontal or vertical bars.",
+      "explanation": "A calculated field with aggregated measures gives the ratio correctly for whatever level the view shows.",
       "whyWrong": [
-        "A line chart shows trends over time, not category comparison via bars.",
-        "A pie chart shows part-to-whole composition, not the bar-based category comparison being asked about.",
-        "A map shows geographic data, not the bar-based category comparison being asked about."
+        "A Top N filter selects members rather than calculating.",
+        "A union stacks rows and does not compute a ratio.",
+        "Groups combine members of a dimension."
       ]
     },
     {
-      "question": "What does 'aggregate' mean in Tableau?",
+      "question": "Several small product categories should be reported together as Other. What feature fits?",
       "options": [
-        "Delete data",
-        "Combine colors",
-        "Connect tables",
-        "Summarize measure values (e.g., SUM, AVG) at the level of the view"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Aggregation summarizes measures (SUM, AVG, etc.) at the granularity defined by dimensions in the view.",
-      "whyWrong": [
-        "Aggregation doesn't delete data — it summarizes values, not removes them.",
-        "'Combine colors' misattributes aggregation's function to an unrelated visual property.",
-        "'Connect tables' misattributes aggregation's function to a data-connection concept, which is unrelated."
-      ]
-    },
-    {
-      "question": "How do you create a dashboard in Tableau Desktop?",
-      "options": [
-        "Use the Dashboard tab to add worksheets and objects to a single layout",
-        "Only from CSV",
-        "Only in Server",
-        "Dashboards are automatic"
-      ],
-      "correctAnswer": 0,
-      "explanation": "The Dashboard tab lets you add worksheets, images, text, and objects to create a unified view.",
-      "whyWrong": [
-        "'Only from CSV' incorrectly ties dashboard creation to a specific data source type, which isn't a requirement.",
-        "'Only in Server' contradicts the fact that dashboards are built directly in Tableau Desktop.",
-        "'Dashboards are automatic' contradicts the fact that building a dashboard requires deliberate use of the Dashboard tab."
-      ]
-    },
-    {
-      "question": "What is the difference between discrete and continuous in Tableau?",
-      "options": [
-        "Only for dates",
-        "Only for colors",
-        "Discrete creates headers; continuous creates axes. Blue = discrete, green = continuous",
-        "No difference"
+        "A set",
+        "A hierarchy",
+        "A group",
+        "An extract"
       ],
       "correctAnswer": 2,
-      "explanation": "Discrete fields create headers and categories; continuous fields create axes. Pill color indicates type.",
+      "explanation": "Groups combine several members of a field into one, which is how you roll small categories into Other.",
       "whyWrong": [
-        "'Only for dates' undersells the broader applicability of the discrete/continuous distinction beyond just dates.",
-        "'Only for colors' undersells the broader header-versus-axis distinction discrete/continuous represents.",
-        "'No difference' contradicts the fact that discrete and continuous have distinct, defined behaviors (headers vs. axes)."
+        "A set is a saved selection used in filters and calculations.",
+        "A hierarchy lets viewers drill between levels.",
+        "An extract is a copy of the data for speed."
       ]
     },
     {
-      "question": "Which Tableau feature shows a summary when you hover over a mark?",
+      "question": "A database is slow and you also want to work on the dashboard while travelling without a connection. What should you use?",
       "options": [
-        "Parameters",
-        "Filters",
-        "Legends only",
-        "Tooltips"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Tooltips display contextual information when users hover over marks in the view.",
-      "whyWrong": [
-        "Parameters are input controls — they don't show a hover summary of a mark.",
-        "Filters limit displayed data — they don't show a hover summary.",
-        "Legends explain color/size encoding — they don't show a hover summary of a specific mark."
-      ]
-    },
-    {
-      "question": "What does the Show Me panel in Tableau do?",
-      "options": [
-        "Recommends chart types based on selected fields",
-        "Applies filters only",
-        "Manages licenses",
-        "Connects to data only"
+        "An extract",
+        "A live connection",
+        "A story",
+        "A union"
       ],
       "correctAnswer": 0,
-      "explanation": "Show Me suggests visualization types based on the fields you have selected.",
+      "explanation": "An extract copies the data into Tableau's own format, which is faster and works offline.",
       "whyWrong": [
-        "'Applies filters only' misattributes Show Me's function to a different, unrelated feature.",
-        "'Manages licenses' misattributes Show Me's function to an unrelated administrative feature.",
-        "'Connects to data only' misattributes Show Me's function, which is chart recommendation, not data connection."
+        "A live connection queries the source every time and needs the connection.",
+        "A story sequences sheets for presenting.",
+        "A union combines rows and does not change performance this way."
       ]
     },
     {
-      "question": "How do you sort a bar chart in Tableau?",
+      "question": "What does a filter action on a dashboard do?",
       "options": [
-        "Only for dimensions",
-        "Click the sort icon on the axis or use the sort option in the field menu",
-        "Only in dashboards",
-        "Cannot sort"
+        "Permanently removes rows from the data source",
+        "Uses a selection in one sheet to filter another sheet",
+        "Publishes the dashboard to Tableau Cloud",
+        "Creates a calculated field from the selection"
       ],
       "correctAnswer": 1,
-      "explanation": "Use the sort icon on the axis or the field's sort option to order bars by value or manually.",
+      "explanation": "Filter actions make dashboards interactive: clicking a mark in one sheet filters the others.",
       "whyWrong": [
-        "Sorting isn't limited to dimensions — measures can be involved in sort order too.",
-        "Sorting isn't limited to dashboards — it's available directly on worksheets too.",
-        "'Cannot sort' contradicts the fact that sorting is a standard, available Tableau feature."
+        "Nothing is removed from the underlying data.",
+        "Publishing is a separate step.",
+        "No calculated field is created."
       ]
     },
     {
-      "question": "What is a Tableau worksheet?",
+      "question": "You want to walk an audience through a finding one step at a time, with a caption on each step. What should you build?",
       "options": [
-        "A data source",
-        "A dashboard only",
-        "A single visualization (chart, map, or table) built from data",
-        "A filter only"
+        "A story",
+        "A set",
+        "A hierarchy",
+        "A dashboard with floating objects"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A story is a sequence of sheets or dashboards with captions, designed for presenting a narrative.",
+      "whyWrong": [
+        "Sets save selections.",
+        "Hierarchies are for drilling into levels of detail.",
+        "A dashboard shows views together rather than in sequence."
+      ]
+    },
+    {
+      "question": "Viewers should be able to drill from Country down to State and then City in one click. What should you create?",
+      "options": [
+        "Three separate sheets",
+        "A group of countries",
+        "A hierarchy of those fields",
+        "A measure filter"
       ],
       "correctAnswer": 2,
-      "explanation": "A worksheet is a single view—one chart, map, or table. Dashboards combine multiple worksheets.",
+      "explanation": "A hierarchy nests the fields so viewers can expand from one level to the next in the view.",
       "whyWrong": [
-        "A data source is the underlying connection, not the visualization itself.",
-        "A dashboard combines multiple worksheets — a single worksheet is a smaller, individual component.",
-        "A filter limits displayed data — it isn't itself a visualization."
+        "Separate sheets make the viewer navigate manually.",
+        "A group combines members rather than nesting levels.",
+        "A measure filter limits numeric ranges."
+      ]
+    },
+    {
+      "question": "Sales is showing as a sum, but you need the average order value in the view instead. What should you change?",
+      "options": [
+        "The mark type to a line",
+        "The data type of the field",
+        "The dashboard layout to floating",
+        "The field's aggregation, from Sum to Average"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A measure's aggregation can be changed from the field's menu, which switches the view from total to average.",
+      "whyWrong": [
+        "Mark type changes the chart's appearance.",
+        "The data type controls how the field is interpreted, not how it is aggregated.",
+        "Layout affects positioning on a dashboard."
+      ]
+    },
+    {
+      "question": "What does the Show Me panel do?",
+      "options": [
+        "Creates an extract of the data source",
+        "Publishes the workbook for others to view",
+        "Writes a calculated field for you",
+        "Suggests chart types that suit the fields you have selected"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Show Me offers chart types that work with the fields you picked, and greys out those that need different fields.",
+      "whyWrong": [
+        "Extracts are created from the data source menu.",
+        "Publishing is done separately to Tableau Cloud or Server.",
+        "Calculations are written by you in the calculation editor."
       ]
     }
   ]

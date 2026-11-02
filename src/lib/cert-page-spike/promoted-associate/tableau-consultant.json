@@ -113,10 +113,6 @@
     "intro": "After this Tableau certification, consider other Tableau credentials or CRM Analytics:",
     "links": [
       {
-        "href": "/certifications/tableau-consultant",
-        "label": "Tableau Consultant"
-      },
-      {
         "href": "/certifications/tableau-data-analyst",
         "label": "Tableau Data Analyst"
       },

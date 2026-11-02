@@ -5,48 +5,48 @@
     "personas": [
       {
         "label": "Salesforce beginners",
-        "description": "You have up to 6 months of Salesforce experience and want an entry-level credential to prove you understand the platform basics."
+        "description": "You have a few months of Salesforce behind you and want a first credential."
       },
       {
         "label": "Career changers exploring CRM",
-        "description": "You’re transitioning into the Salesforce ecosystem and want a low-risk first certification before tackling ADM-201 or Developer I."
+        "description": "You are moving into the Salesforce world and want a foothold that employers recognise."
       },
       {
-        "label": "Business users seeking formal validation",
-        "description": "You use Salesforce daily in a sales, service, or operations role and want to validate your understanding of objects, reports, and security fundamentals."
+        "label": "Business users",
+        "description": "You use Salesforce in a sales, service or operations job and want to prove what you know."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Platform Foundations Exam Hard?",
-    "summary": "The Platform Foundations exam is considered easy to moderate. It covers a wide surface area at a shallow depth, which means the challenge is breadth of knowledge rather than deep configuration expertise.",
+    "summary": "It is an easy to moderate exam, but wide. Nothing goes deep, so the work is in covering everything: the data model, the clouds, security, reports, automation and the wider Salesforce ecosystem.",
     "bullets": [
-      "<strong>40 multiple-choice questions</strong> in 75 minutes.",
-      "<strong>~65% passing score</strong> &mdash; you can miss up to 14 questions.",
-      "<strong>Broad but shallow</strong> &mdash; questions span Customer 360, data modelling, security basics, reports, and the Salesforce ecosystem, but none go deep into configuration.",
-      "<strong>Terminology traps</strong> &mdash; many answers sound plausible because they use real Salesforce terms in slightly wrong contexts. Focus on what each Cloud product actually does."
+      "<strong>40 multiple-choice questions</strong> in 70 minutes.",
+      "<strong>62% to pass</strong>, about 25 correct answers out of 40. Confirm it in the official exam guide before you book.",
+      "<strong>Wide but shallow.</strong> Expect a little of everything rather than depth in one area.",
+      "<strong>Wording traps.</strong> Several answers in each question sound plausible, so learn the exact names of things."
     ],
-    "passRateGuidance": "If you can score 80%+ on two full practice exams and clearly distinguish Sales Cloud from Service Cloud from Marketing Cloud, you’re ready to book."
+    "passRateGuidance": "You are ready when you can say what each standard object is for, tell the clouds apart, and explain in one sentence how profiles, roles and sharing differ. Aim for 80% or more on two full practice tests."
   },
   "examFormat": {
     "heading": "Platform Foundations Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 30-40% of questions are scenario-based. Common patterns include identifying which standard object fits a business requirement, choosing the correct Cloud product for a use case, and selecting the right security layer to solve an access problem.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "About a third of the questions are short scenarios. A typical one describes a business need and asks which object, cloud or feature fits.",
     "bestWayToPass": [
-      "<strong>Learn the core data model:</strong> Know the standard objects (Account, Contact, Lead, Opportunity, Case), their relationships, and when to use Lookup vs Master-Detail.",
-      "<strong>Distinguish the Salesforce Clouds:</strong> Sales Cloud for pipeline and forecasting, Service Cloud for cases and support, Marketing Cloud for campaigns &mdash; the exam tests which product solves which problem.",
-      "<strong>Understand security layers:</strong> Know the four-level security model (Org, Object, Field, Record) and that Profiles control what users can do while Roles control what data they see.",
-      "<strong>Know AppExchange and Trailhead:</strong> Understand managed vs unmanaged packages, how to evaluate an AppExchange listing, and the role of Trailhead in the Salesforce learning ecosystem."
+      "<strong>Learn the standard objects:</strong> Lead, Account, Contact, Opportunity and Case, and what each one holds.",
+      "<strong>Tell the clouds apart:</strong> Sales Cloud for the pipeline, Service Cloud for support, Marketing Cloud for campaigns, and where Data 360 fits.",
+      "<strong>Understand the layers of access:</strong> Who can log in, which objects and fields they see, and which records.",
+      "<strong>Know the ecosystem:</strong> What AppExchange is for, what Trailhead is, and the difference between a sandbox and production."
     ]
   },
-  "expertInsight": "Platform Foundations is positioned as entry-level, but don’t underestimate it — the 62% passing score is low, yet the questions cover a surprisingly wide surface area. You’ll see questions on AppExchange, Trailhead, the Salesforce ecosystem, basic data modelling, and even some light security concepts. The trap is that many answers sound plausible because they use real Salesforce terminology in slightly wrong contexts. Focus on understanding what each Cloud product actually does (Sales Cloud vs. Service Cloud vs. Marketing Cloud) and the difference between standard and custom objects. If you’re already studying for Admin, this exam is excellent warm-up.",
+  "expertInsight": "This exam is entry level, but the 62% pass mark still catches people out, because the questions are about vocabulary as much as understanding. Several options in each question will sound right. Spend your time learning which standard object holds what, and which cloud does which job, and you will recognise most answers on sight.",
   "certificationCard": {
     "code": "Associate",
-    "description": "An entry-level exam for people with up to 6 months of Salesforce experience, covering Customer 360 basics -- navigation, objects and records, reports, security fundamentals, and the Salesforce ecosystem.",
+    "description": "An entry-level exam for people with a few months of Salesforce experience. It covers the basics: moving around the platform, the standard objects, reports and dashboards, security and where each Salesforce product fits.",
     "examDetails": {
       "questions": 40,
-      "passingScore": "~65%",
-      "duration": "75 min",
+      "passingScore": "62%",
+      "duration": "70 min",
       "cost": "$75"
     },
     "topics": [
@@ -64,68 +64,72 @@
     "h2": "Salesforce Platform Foundations: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Salesforce Platform Architecture",
-        "body": "Salesforce is a multi-tenant cloud platform — all customers share the same infrastructure but data is logically isolated. The platform provides automatic upgrades (3 major releases per year: Spring, Summer, Winter), managed scalability, and built-in high availability. The metadata-driven architecture means that customizations (objects, fields, layouts, code) are stored as metadata rather than application code changes. The Lightning Platform delivers Force.com (declarative + code), Experience Cloud (portals), and Einstein (AI) on a common foundation. The Foundations exam tests understanding of the multi-tenant model, what the metadata layer controls, and how Salesforce manages upgrades without breaking customer customizations."
+        "heading": "How the Salesforce Platform Fits Together",
+        "body": "Salesforce is a cloud platform shared by many customers, which is called **multi-tenant**: everyone runs on the same infrastructure, with their data kept separate in their own **org**. Because it is shared, Salesforce upgrades everyone three times a year, in the Spring, Summer and Winter releases, and your customisations carry over. The platform is configured mostly through **Setup** rather than code, which is why admins can change a great deal without a developer. **Sandboxes** are copies used for building and testing, so changes are tried out before they reach the live org, which is called **production**."
       },
       {
-        "heading": "Data Modeling Basics",
-        "body": "Salesforce organizes data into Objects (equivalent to database tables) and Records (rows). Standard Objects (Account, Contact, Lead, Opportunity, Case) are pre-built. Custom Objects store business-specific data. Fields define the data types stored in an object. **Record Types** allow different **page layouts** and picklist values per user group on the same object. Relationships connect objects: Lookup (loose coupling, optional parent), **Master-Detail** (tight coupling, cascade delete, **roll-up summary**). External Objects connect to external data via Salesforce Connect. The exam tests field type selection (Formula, Roll-Up Summary, Picklist, Text, Currency), when to use Lookup vs. Master-Detail, and how Record Types enable different business processes on the same object."
+        "heading": "The Data Model: Objects, Records and Fields",
+        "body": "Salesforce stores data in **objects**, which are like tables. Each row is a **record** and each column a **field**. **Standard objects** come with the platform: a **Lead** is an unqualified prospect, an **Account** is a company, a **Contact** is a person at that company, an **Opportunity** is a potential sale, and a **Case** is a customer issue. **Custom objects** are ones you create for things Salesforce does not cover. Objects are connected by **relationships**: a **lookup** is a loose link, while a **master-detail** link is tighter, with the child record depending on its parent and inheriting its sharing. Converting a Lead turns it into an Account, a Contact and usually an Opportunity."
       },
       {
-        "heading": "Security Model Overview",
-        "body": "Salesforce security operates at four levels: Org (login, network access), Object (CRUD via profiles/**permission sets**), Field (read/edit via profiles/permission sets), and Record (**OWD** + **Role Hierarchy** + Sharing). Profiles assign baseline permissions to every user of a type. Permission Sets grant additional permissions to specific users without changing the profile. **Permission Set Groups** bundle multiple Permission Sets. Org-Wide Defaults (OWD) set the most restrictive baseline access for records. Role Hierarchy and **Sharing Rules** extend record visibility beyond OWD. The exam tests which security layer to modify to solve a given access problem — know that you always configure the most restrictive layer first, then open up selectively."
+        "heading": "Who Can See What",
+        "body": "Access is built in layers, and the exam expects you to know the order. First, can the person log in at all, which covers passwords, multi-factor authentication and login hours. Second, which **objects and fields** can they use, which comes from their **profile** and any **permission sets**. Third, which **records** can they see, which starts with the **org-wide default** for each object and is opened up by the **role hierarchy** and **sharing rules**. The simplest way to remember it: profiles and permission sets decide what you can do, while sharing decides which rows you can do it to."
       },
       {
-        "heading": "Automation Overview: Declarative Tools",
-        "body": "Salesforce provides a suite of declarative automation tools. **Validation Rules** prevent records from being saved if data doesn't meet criteria — fires before save. Formula Fields calculate values automatically from other field values — read-only. Default Field Values pre-fill fields on new records. Record-Triggered Flows execute automation before or after a record save — replaces Process Builder and Workflow Rules. Approval Processes route records through human reviewers. Scheduled Flows process batches of records at a scheduled time. The Foundations exam tests which tool to use for: enforcing data quality (Validation Rule), calculating a derived value (Formula Field), automating a multi-step process (Flow), or requiring manager sign-off (Approval Process)."
+        "heading": "Automation and Reporting Without Code",
+        "body": "**Flow Builder** is the main automation tool. It can update records, send emails and guide users through steps, all without code. **Validation rules** stop bad data being saved. **Approval processes** route a record to someone for sign-off. For reporting, a **report** is a list or summary of records built from a report type, and a **dashboard** shows reports as charts and numbers on one screen. **List views** give a quick filtered list of records on an object's tab. Knowing which tool to reach for is more important here than knowing how to build it."
       },
       {
-        "heading": "AppExchange, Ecosystem & Trailhead",
-        "body": "**AppExchange** is Salesforce's marketplace for third-party applications, components, Flows, and Lightning Bolts. Managed Packages are ISV-published solutions that are upgradeable and have protected code. Unmanaged Packages are open-source and not upgradeable. Security Review ensures AppExchange listings meet Salesforce security standards. Partner Ecosystem includes consulting SIs, ISVs, and Salesforce-trained professionals (Trailblazers). **Trailhead** is the free learning platform — modules, trails, superbadges, and certifications. Trailblazer Community provides forums and user groups. The Foundations exam tests the difference between managed and unmanaged packages, how to evaluate an AppExchange listing, and the role of the Salesforce ecosystem in extending the platform."
+        "heading": "The Wider Salesforce Ecosystem",
+        "body": "**AppExchange** is the marketplace for ready-made apps and components, some free and some paid, which can be installed into an org. **Trailhead** is Salesforce's free learning site, where modules and trails lead to badges and **Superbadges** for hands-on work. The **Trailblazer Community** is where people ask questions and share solutions. It helps to know the main product families by name, including Sales Cloud, Service Cloud, Marketing Cloud, Experience Cloud, Tableau, MuleSoft, Slack and Data 360, and roughly what each is used for."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce Platform Foundations Exam",
-    "intro": "This associate-level exam tests foundational knowledge of the Salesforce platform. Questions focus on what Salesforce can do, how core features work together, and basic configuration — ideal for those new to the ecosystem.",
+    "intro": "Most questions ask what something is, or which feature fits a simple need. Precise names matter more than depth here.",
     "blocks": [
       {
-        "heading": "Understand the Core Data Model",
-        "body": "Know standard vs. custom objects, field types, and relationship types (lookup vs. **master-detail**). Understand how these building blocks come together to create business applications on the platform."
+        "heading": "The Core Data Model",
+        "body": "Lead, Account, Contact, Opportunity and Case, plus lookup and master-detail relationships. Know what Lead conversion creates."
       },
       {
-        "heading": "Core Automation Features",
-        "body": "Know Flow Builder for automation, **validation rules** for data quality, formula fields for calculated values, and approval processes for multi-step reviews. No deep configuration details required — focus on use cases."
+        "heading": "Automation Basics",
+        "body": "Flow Builder for automation, validation rules to block bad data, approval processes for sign-off."
       },
       {
-        "heading": "User Management Basics",
-        "body": "Profiles control what users can do; Roles control what data they can see via the **role hierarchy**. **Permission Sets** add access beyond a profile. These three work together to govern user access."
+        "heading": "Users and Access",
+        "body": "Profiles and permission sets decide what someone can do. Org-wide defaults, roles and sharing rules decide which records they see."
       },
       {
-        "heading": "Reports & Dashboards Overview",
-        "body": "Know that reports query Salesforce data and dashboards visualize report data. Understand the four report types at a high level and that dashboards require a running user for data access."
+        "heading": "Reports and Dashboards",
+        "body": "Reports list and summarise records. Dashboards present reports visually. List views filter records on a tab."
       },
       {
-        "heading": "The Salesforce Ecosystem",
-        "body": "Understand **AppExchange** for third-party apps, **Trailhead** for learning, and the main Salesforce clouds (Sales, Service, Marketing, Experience, Platform) at a high level — what each cloud solves and when it's appropriate."
+        "heading": "The Ecosystem",
+        "body": "AppExchange for apps, Trailhead for learning, three seasonal releases a year, sandboxes for testing before production."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Certifications After Associate",
-    "intro": "After earning an associate credential, many candidates move to role-based certifications:",
+    "intro": "Good next steps after Platform Foundations:",
     "links": [
       {
         "href": "/certifications/administrator",
-        "label": "Platform Administrator (ADM-201)"
+        "label": "Platform Administrator"
       },
       {
         "href": "/certifications/developer-1",
         "label": "Platform Developer I"
       },
       {
-        "href": "/certifications/ai-associate",
-        "label": "AI Associate"
+        "href": "/certifications/sales-foundations",
+        "label": "Sales Foundations"
+      },
+      {
+        "href": "/certifications/agentforce-specialist",
+        "label": "Agentforce Specialist"
       }
     ]
   },

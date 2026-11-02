@@ -1,49 +1,49 @@
 {
   "template": "associate",
-  "expertInsight": "Sales Cloud questions cluster around forecasting hierarchy setup and opportunity splits — two areas most candidates underestimate. At least 20% of questions test when to use Territory Management vs. Opportunity Teams vs. Collaborative Forecasting. Time-box your study on collaborative forecasting; it shows up in scenario questions far more than the official exam guide suggests.",
+  "expertInsight": "Forecasting and opportunity splits are where people lose marks. Both depend on setup you cannot guess at: the forecast hierarchy follows the role hierarchy, and splits need enabling before they can be used. Build both in a free Developer org with a few users under you, close a couple of opportunities, and watch the numbers roll up. Territory management is the other area worth real practice, because the questions assume you know what changes when an account moves territory.",
   "practiceQuestionsIntroSuffix": ". Click on an answer to select it, then check your answer to see if you're correct.",
   "whoIsThisFor": {
     "heading": "Who is the Sales Cloud Consultant exam for?",
     "personas": [
       {
         "label": "Sales ops professionals",
-        "description": "You configure Salesforce for sales teams and want to validate your solution design skills."
+        "description": "You configure Salesforce for a sales team and want a credential that proves it."
       },
       {
         "label": "Admins moving into consulting",
-        "description": "You have ADM-201 and want to specialise in sales process automation and forecasting."
+        "description": "You hold Platform Administrator and want to specialise in sales processes."
       },
       {
         "label": "CRM consultants",
-        "description": "You deliver Sales Cloud implementations and need the credential for client-facing engagements."
+        "description": "You deliver Sales Cloud projects and need the credential clients look for."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Sales Cloud Consultant Exam Hard?",
-    "summary": "The Sales Cloud Consultant exam is moderately difficult. It is scenario-heavy and assumes strong ADM-201 knowledge plus real-world Sales Cloud project experience.",
+    "summary": "Salesforce now calls this credential Agentforce Sales Consultant. It is a moderate exam that assumes solid admin knowledge plus real project experience. Most questions describe what a sales team needs and ask which setup delivers it.",
     "bullets": [
       "<strong>60 multiple-choice questions</strong> in 105 minutes.",
-      "<strong>~65% passing score</strong> — roughly 39 correct answers needed.",
-      "<strong>Scenario-driven</strong> — questions describe sales team requirements and ask you to choose the best Salesforce configuration.",
-      "<strong>Forecasting and territory management</strong> are heavily tested and often the most challenging topics."
+      "<strong>68% to pass</strong>, about 41 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>Scenario-driven.</strong> Expect a requirement and several setups that nearly work.",
+      "<strong>Forecasting and territories</strong> are heavily tested and are where most people lose marks."
     ],
-    "passRateGuidance": "Score 75%+ on at least 3 full-length practice exams before booking. Candidates with hands-on Sales Cloud project experience have a significant advantage."
+    "passRateGuidance": "You are ready when you can set up a sales process with stages, enable and use forecasting, and explain what territory management changes. Aim for 75% or more on three full practice tests, and build the setup yourself rather than reading about it."
   },
   "examFormat": {
     "heading": "Sales Cloud Consultant Exam Format Explained",
-    "intro": "The exam is delivered online or at a test centre through Webassessor. Here is the format:",
-    "scenarioPercent": "About 50-60% of questions are scenario-based. Common patterns include: configuring opportunity stages and sales processes for different business units, setting up collaborative forecasting, and choosing between Territory Management and manual sharing for complex org structures.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions are short scenarios. A typical one describes how a sales team works, such as two reps sharing credit on a deal or managers wanting a forecast by region, and asks which feature fits.",
     "bestWayToPass": [
-      "<strong>Master forecasting:</strong> Understand Collaborative Forecasting, forecast types, forecast hierarchies, and forecast adjustments. This is the most tested area.",
-      "<strong>Know opportunity management deeply:</strong> Sales processes, record types, path, and opportunity splits all appear frequently.",
-      "<strong>Study territory management:</strong> Understand Territory Management 2.0 — territory types, models, assignment rules, and how they interact with forecasting.",
-      "<strong>Practice in a real org:</strong> Set up a Developer Edition with sample sales data and configure the features you study."
+      "<strong>Learn forecasting properly:</strong> Know how forecast categories map to opportunity stages, how the forecast rolls up the role hierarchy, and who can adjust a forecast.",
+      "<strong>Know opportunity management in depth:</strong> Sales processes and stages, record types, opportunity teams and splits.",
+      "<strong>Understand territory management:</strong> How accounts and opportunities are assigned, and what access a territory grants.",
+      "<strong>Build it in a real org:</strong> A Developer Edition org with sample data and a couple of users teaches more than reading."
     ]
   },
   "certificationCard": {
     "code": "SCC",
-    "description": "The Sales Cloud Consultant certification validates your expertise in designing and implementing Sales Cloud solutions to meet business requirements.",
+    "description": "This exam tests how you design and configure Sales Cloud: leads and conversion, accounts and contacts, opportunities, products and quotes, forecasting, territories and sales reporting.",
     "examDetails": {
       "questions": 60,
       "passingScore": "68%",
@@ -67,50 +67,50 @@
     "h2": "Sales Cloud Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Lead Management: Assignment Rules and Lead Conversion",
-        "body": "Lead **Assignment Rules** automatically route leads to users or queues based on criteria — region, lead source, company size. **Web-to-Lead** captures leads directly from web forms. When a lead converts, Salesforce creates or merges an Account, Contact, and optionally an Opportunity — understanding what maps to what is a high-frequency exam topic. **Duplicate rules** should be configured to prevent duplicate leads entering the funnel."
+        "heading": "Leads: Assignment, Qualification and Conversion",
+        "body": "A **Lead** is an unqualified prospect. **Lead assignment rules** route new leads to the right user or queue using field values, and the first matching rule entry wins, so order matters. **Queues** hold leads nobody owns yet so a team can claim them. **Web-to-Lead** captures leads from a form on a website, and **auto-response rules** reply to them. **Lead conversion** turns a lead into an Account, a Contact and, optionally, an Opportunity, and maps custom lead fields onto those records, which must be set up in advance or data is lost. **Duplicate rules** and **matching rules** catch leads that already exist. **Einstein Lead Scoring** ranks leads by how similar they are to ones that converted before."
       },
       {
-        "heading": "Opportunity Management: Stages, Splits, and Teams",
-        "body": "Sales Processes define which opportunity stages are available for a given record type — enabling different methodologies for different deal types. Path provides stage-by-stage guidance with key fields and success tips. Opportunity Splits share revenue credit among team members (overlay splits vs revenue splits). Opportunity Teams let multiple reps collaborate on a single deal. The exam tests when each feature applies and how they interact."
+        "heading": "Opportunities: Stages, Teams and Splits",
+        "body": "A **sales process** defines which **stages** an opportunity moves through, and is tied to a **record type**, so different lines of business can follow different processes. Each stage carries a default probability and a **forecast category**. **Opportunity teams** let several people work one deal with their own roles and access. **Opportunity splits** divide the amount between team members: revenue splits must total 100%, while overlay splits can add up to any figure, which suits specialists who support a deal without owning the revenue. **Products** and **price books** hold what is sold and at what price, with the standard price book always present and custom price books for specific markets or channels. **Quotes** are generated from the opportunity's products."
       },
       {
-        "heading": "Collaborative Forecasts: Categories and Adjustments",
-        "body": "Collaborative Forecasts roll up opportunity amounts through the **role hierarchy**. Each opportunity stage maps to a Forecast Category: Pipeline, Best Case, Commit, Closed, or Omitted. Managers can submit adjustments to subordinate forecasts. Custom Forecast Types let organisations forecast on non-amount fields (quantity, revenue). Understand how categories roll up and when manager adjustments override rep numbers."
+        "heading": "Collaborative Forecasts",
+        "body": "**Collaborative Forecasts** roll up opportunity amounts through the **role hierarchy**, so each manager sees their team's numbers. The rollup uses **forecast categories**, such as Pipeline, Best Case, Commit and Closed, which come from the opportunity stage. Forecasts can be based on opportunity revenue, quantity, product families or splits, and more than one forecast type can run at once. Managers can enter **adjustments** when they disagree with the raw rollup, and the original figure is kept alongside the adjusted one. **Quotas** can be loaded per user and shown against the forecast. Setup depends on the role hierarchy, so a wrong hierarchy produces a wrong forecast."
       },
       {
-        "heading": "Products, Price Books, and Quotes",
-        "body": "Every org has a Standard Price Book. Custom Price Books define alternative pricing for specific markets, channels, or customer tiers. Opportunity Products link products to opportunities with quantity and price. Products must be added to a Price Book before they can appear on an opportunity. Salesforce CPQ (Revenue Cloud) extends native quoting with complex pricing rules, discount schedules, and subscription management — know when CPQ is needed vs native products."
+        "heading": "Territory Management",
+        "body": "**Enterprise Territory Management** assigns accounts to territories using rules, and gives the users in a territory access to those accounts and their opportunities. A **territory model** can be built and tested in planning state before it is activated, and only one model is active at a time. **Territory types** and hierarchies organise the structure, for example by region then by segment. Territory assignment can run automatically from rules or be set by hand. Forecasts can be produced by territory as well as by role, which is why the exam often pairs the two topics. Know what happens to access when an account is reassigned."
       },
       {
-        "heading": "Territory Management and Sales Analytics",
-        "body": "Enterprise Territory Management assigns accounts and opportunities to multiple territories simultaneously — enabling matrix-style coverage (by region and product line). Territory rules run automatically as account attributes change. For reporting, key report types are Opportunities by Owner (rep performance), Opportunities by Stage (pipeline health), and Activities by rep. Einstein Opportunity Scoring uses AI to predict close probability beyond the stage-based probability field."
+        "heading": "Sales Productivity and Reporting",
+        "body": "Several features exist to save reps time, and the exam expects you to pick the right one. **Email templates** and **Einstein Activity Capture** reduce manual logging. **Path** shows guidance for each stage on the record page. **Kanban** views let reps drag opportunities between stages. **Sales Engagement** supports cadences of calls and emails. For reporting, know the difference between a **report type**, a **summary report** and a **joined report**, and that **dashboards** need a running user that determines whose data viewers see. Pipeline reports, win-rate reports and forecast reports are the ones most often described in scenarios."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Sales Cloud Consultant Exam",
-    "intro": "The Sales Cloud Consultant exam is scenario-based, presenting real business situations and asking you to identify the best Salesforce configuration. Deep knowledge of the full sales lifecycle — from lead to closed-won — and feature trade-offs is essential.",
+    "intro": "Most questions describe how a sales team works and ask which configuration fits. Match the requirement to the feature that was built for it, rather than to custom work.",
     "blocks": [
       {
-        "heading": "Lead-to-Cash Process Mastery",
-        "body": "Understand the full lifecycle: Lead capture → Lead **Assignment Rules** → Conversion → Opportunity stages → Quotes → Close. Know what data transfers during lead conversion and what must be manually re-entered."
+        "heading": "Lead to Cash",
+        "body": "Lead captured and assigned, converted to Account, Contact and Opportunity, products and a quote added, then closed and forecast. Know what conversion creates and what field mapping does."
       },
       {
-        "heading": "Forecasting & Territory Management",
-        "body": "Know the difference between Collaborative Forecasts, Territory Forecasts, and customizable forecasting. Understand how Opportunity Splits share revenue credit and how territory **assignment rules** work."
+        "heading": "Forecasting and Territories",
+        "body": "Forecasts roll up the role hierarchy using forecast categories. Territories grant access to accounts and their opportunities, and can drive their own forecast."
       },
       {
-        "heading": "Einstein Sales Features",
-        "body": "Know Einstein Lead Scoring (predictive scoring), Einstein Opportunity Insights (AI recommendations), and Einstein Activity Capture (email/calendar sync). Questions ask when to recommend each to solve a specific business problem."
+        "heading": "Opportunity Splits",
+        "body": "Revenue splits must total 100%. Overlay splits do not, which suits supporting specialists."
       },
       {
         "heading": "Sales Process Configuration",
-        "body": "Understand Opportunity stages and sales processes, how to configure multiple sales processes for different **record types**, and how Path guides reps through stages with key fields and coaching tips."
+        "body": "Record types tie to sales processes, which control the available stages. Each stage carries a probability and a forecast category."
       },
       {
-        "heading": "CPQ Integration Basics",
-        "body": "Know how Salesforce CPQ integrates with Sales Cloud, the difference between Products/Pricebooks (native) and CPQ (add-on), and when to recommend CPQ over native product functionality."
+        "heading": "Reporting Choices",
+        "body": "Summary reports group data, joined reports compare blocks, and a dashboard's running user decides whose data viewers see."
       }
     ]
   },
@@ -389,5 +389,27 @@
         "Territory Management organizes sales coverage by region/account — it isn't the revenue forecasting mechanism itself."
       ]
     }
-  ]
+  ],
+  "nextCertsAfter": {
+    "heading": "Next Certifications After Sales Cloud",
+    "intro": "Good next steps after the Sales Consultant credential:",
+    "links": [
+      {
+        "href": "/certifications/service-cloud",
+        "label": "Agentforce Service Consultant"
+      },
+      {
+        "href": "/certifications/cpq-administrator",
+        "label": "CPQ Administrator"
+      },
+      {
+        "href": "/certifications/revenue-cloud-consultant",
+        "label": "Revenue Management Consultant"
+      },
+      {
+        "href": "/certifications/administrator",
+        "label": "Platform Administrator"
+      }
+    ]
+  }
 }

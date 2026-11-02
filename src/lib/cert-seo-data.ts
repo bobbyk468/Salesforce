@@ -391,7 +391,6 @@ const SLUG_TO_EXAM_LOGISTICS: Record<string, ExamLogisticsDetail> = {
   'process-automation-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   'public-sector-solutions-ap': { questions: 60, passingScore: '~65%', duration: '90 min' },
   // $400 Architects
-  'application-architect': { questions: 60, passingScore: '~58%', duration: '105 min' },
   'data-architect': { questions: 60, passingScore: '58%', duration: '105 min' },
   'integration-architect': { questions: 60, passingScore: '67%', duration: '105 min' },
   'sharing-visibility-architect': { questions: 60, passingScore: '67%', duration: '120 min' },
