@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with B2B Commerce features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You have built Sales Cloud, Service Cloud or CPQ solutions for B2B companies and want to show you can design across all of them."
       },
       {
         "label": "Solution designers",
-        "description": "You support Salesforce projects where B2B Commerce, Multi-Cloud, and CPQ decisions affect the final design."
+        "description": "You lead discovery and solution design on projects where several Salesforce clouds and outside systems have to work together."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+        "description": "You are moving from a single-cloud consultant role into a cross-cloud architect role."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the B2B Solution Architect Exam Hard?",
-    "summary": "The B2B Solution Architect exam is hard. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "It is a hard exam because it is wide. One question might be about the data model across clouds, the next about integration with an ERP, and the next about how to run the project. Real project experience helps more than memorising features.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 min.",
-      "<strong>~68% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use B2B Commerce, Multi-Cloud, or CPQ.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported B2B Commerce in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones.",
+      "<strong>Pass mark and time:</strong> third-party sources quote different numbers, so check the official exam guide before you book.",
+      "<strong>Cross-cloud scenarios.</strong> Expect questions that mix Sales Cloud, Service Cloud, CPQ, Order Management, B2B Commerce and Experience Cloud.",
+      "<strong>Project delivery counts.</strong> Some questions are about discovery, governance and change management, not just technology."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "People with several years of solution design work on B2B projects tend to do best. Before you book, aim for 75% or more on practice tests and make sure you can explain how a quote turns into an order and an invoice across your systems."
   },
   "examFormat": {
     "heading": "B2B Solution Architect Exam Format Explained",
-    "intro": "The B2B Solution Architect exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for B2B Commerce.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a B2B company with a specific problem, such as slow quoting or customer data spread across systems, and ask which design solves it best.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on B2B Commerce, Multi-Cloud, and CPQ because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Follow the B2B process end to end:</strong> Lead, opportunity, quote, order, fulfilment, invoice and service. Know which cloud or system owns each step.",
+      "<strong>Know where data should live:</strong> Decide which system is the source of truth for accounts, products, prices and orders.",
+      "<strong>Learn the integration basics:</strong> When to use real-time APIs, events or batch loads between Salesforce and an ERP.",
+      "<strong>Don't skip delivery topics:</strong> Discovery, requirements, governance and adoption all show up."
     ]
   },
   "certificationCard": {
     "code": "B2B Architect",
-    "description": "This exam covers designing end-to-end B2B solutions that span Sales Cloud, Service Cloud, B2B Commerce, and CPQ — connecting multiple Salesforce products into a unified architecture.",
+    "description": "This exam tests how you design B2B solutions that span several Salesforce clouds and outside systems. You decide where data lives, how systems connect, and how the project is run.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "See official guide",
+      "duration": "See official guide",
       "cost": "$400"
     },
     "topics": [
@@ -62,55 +62,55 @@
     "blocks": [
       {
         "heading": "Solution Architecture Fundamentals",
-        "body": "B2B Solution Architects design end-to-end solutions spanning Sales Cloud, Service Cloud, Experience Cloud, B2B Commerce, and external systems. Architecture decisions must balance functional requirements, non-functional requirements (scalability, performance, security), and total cost of ownership. The Salesforce Well-Architected framework (Trusted, Easy, Adaptable) guides design trade-offs. Architects produce solution design documents, data models, integration diagrams, and governance plans. The exam presents business scenarios and tests which combination of Salesforce products and configuration approaches best meets the requirements — always favor declarative over code unless code is clearly necessary."
+        "body": "A B2B solution architect starts with the business process, not the product list. Map the steps from first contact to renewal, find the pain points, and only then decide which cloud handles each step. A common B2B flow is: Sales Cloud for leads and opportunities, CPQ or Revenue Cloud for quotes, Order Management or the ERP for orders, the ERP for invoicing, and Service Cloud for support. Experience Cloud or B2B Commerce lets customers and partners serve themselves. Prefer standard features and configuration over custom code, because they are cheaper to run and upgrade."
       },
       {
         "heading": "Multi-Cloud Data Architecture",
-        "body": "B2B scenarios frequently involve Account, Contact, Opportunity, Order, and custom product data shared across Sales, Service, and Commerce clouds. Data governance decisions include: which cloud is the system of record for each object, how to maintain data consistency, and how to handle conflicts. External Data Sources and Salesforce Connect allow external data to appear in Salesforce without ETL. Data Cloud unifies customer data across channels. Master Data Management (MDM) principles prevent duplicate records. The exam tests scenarios where data must flow between clouds — know the object model for each cloud and how standard sharing applies across Salesforce applications."
+        "body": "Every key piece of data needs one system that owns it, called the source of truth. Customer accounts often live in Salesforce. Products and prices may be owned by the ERP and copied in. Orders may start in Salesforce and be finished in the ERP. Use **external IDs** to match the same record across systems, and keep the Account and Contact model simple so every cloud can share it. Watch for large data volumes on objects like Orders and Assets, and plan archiving. **Data Cloud** can bring customer data from many sources into one profile without moving everything into the core org."
       },
       {
         "heading": "Integration Architecture Patterns",
-        "body": "Common B2B integration patterns: Point-to-Point (simple but brittle), Hub-and-Spoke (MuleSoft as integration hub), Event-Driven (**Platform Events**, **Change Data Capture**). MuleSoft API-led connectivity uses System, Process, and Experience API layers. Salesforce Connect enables OData-based external object integration. REST/SOAP callouts from **Apex** require **Named Credentials** and remote site settings. **Bulk API** handles high-volume data loads. Idempotent design prevents duplicate processing on retry. The exam tests which integration pattern fits a given latency, volume, and error-handling requirement — know the trade-offs between synchronous and asynchronous patterns."
+        "body": "B2B projects nearly always connect to an ERP. Use real-time API calls only when a user is waiting, such as checking stock or credit during quoting. Use **Platform Events** or **Change Data Capture** when other systems just need to know something changed, like a closed opportunity. Use batch loads with Bulk API for large nightly syncs such as price lists. When several systems share the same data, middleware such as MuleSoft keeps the connections in one place and makes them reusable."
       },
       {
         "heading": "Security & Compliance Design",
-        "body": "B2B solutions must address data residency, access control, and audit requirements. Shield Platform Encryption encrypts data at rest. Event Monitoring captures detailed user activity logs. Field Audit Trail retains field history beyond the standard 18 months. Customer-Managed Keys (Bring Your Own Key) give enterprises control over encryption keys. GDPR and CCPA compliance require Right to Be Forgotten capabilities and data retention policies. Health Check and Security Center provide org-level security scoring. The exam tests how to design security controls that meet enterprise compliance requirements without breaking Salesforce native functionality or **Apex** logic."
+        "body": "B2B customers and partners often log in to the same org through Experience Cloud. Plan sharing so each company sees only its own accounts, orders and cases. Use account relationships or sharing sets for external users. Think about data residency, consent and privacy rules such as GDPR when customer data crosses borders or systems. Use single sign-on for employees and, where it helps, for partners. Shield encryption and Event Monitoring may be needed in regulated industries."
       },
       {
         "heading": "Governance, Change Management & Scalability",
-        "body": "Governance frameworks define how changes move from concept to production — org strategy (single org vs. multi-org), release management (change sets, CLI, CI/CD), and team structure (center of excellence). Sandbox strategy: scratch orgs for development, full sandboxes for UAT. **Governor limits** must be designed around — particularly **SOQL** limits in triggers, callout limits in async processes, and heap size in batch jobs. Scalability considerations include: large data volumes (skinny tables, custom indexes), high API throughput (**Bulk API**, async), and global deployments (multi-currency, multi-language). The exam tests the right governance approach for a given enterprise scale and deployment cadence."
+        "body": "Large B2B programmes touch many teams, so governance matters. Set up a design authority that approves big decisions, clear standards for naming and code, and a release plan with the right sandboxes. Run discovery workshops with the business before designing. Plan training and adoption early, since a good design that nobody uses still fails. Design for growth: more users, more orders and more countries should not need a rebuild."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2B Solution Architect Exam",
-    "intro": "The B2B Solution Architect exam tests multi-cloud architecture design for B2B scenarios. Focus on designing solutions that span Sales Cloud, Service Cloud, B2B Commerce, and CPQ for complex B2B customer experiences.",
+    "intro": "Most questions give you a B2B company, a problem and several reasonable designs. Pick the one that solves the stated problem with the least custom work and a clear owner for each piece of data.",
     "blocks": [
       {
         "heading": "Multi-Cloud B2B Architecture",
-        "body": "Know how to design end-to-end B2B solutions spanning Sales Cloud (opportunity management), Service Cloud (support), B2B Commerce (self-service purchasing), and CPQ (complex configuration). Understand data flow between clouds."
+        "body": "Match each step of the B2B process to the cloud or system that owns it. Questions often hide the answer in which step is causing the pain."
       },
       {
         "heading": "B2B Data Model Design",
-        "body": "Know how to model complex B2B relationships: Account hierarchies (parent/subsidiary), multiple contacts per account, multiple ship-to addresses, and how the B2B Commerce buyer/account model maps to Sales Cloud."
+        "body": "Keep one shared Account model. Decide which system owns products, prices and orders, and use external IDs to keep them in sync."
       },
       {
         "heading": "Integration Architecture for B2B",
-        "body": "Know common B2B integration scenarios: ERP integration for order fulfillment (SAP, Oracle), PIM integration for product data, and how **Platform Events** or MuleSoft orchestrate these integrations."
+        "body": "Real time when a user waits, events when others just need to know, batch for big scheduled loads. Middleware once several systems share data."
       },
       {
         "heading": "CPQ for B2B Commerce",
-        "body": "Know how CPQ and B2B Commerce complement each other: CPQ for complex configured products (bundles, rules) vs. B2B Commerce for catalog-driven self-service purchasing. Know when to recommend each."
+        "body": "Quotes are usually built in CPQ or Revenue Cloud, then become orders. Know where pricing rules live and how the order reaches the ERP."
       },
       {
         "heading": "Customer 360 for B2B",
-        "body": "Know how to design a unified customer view for B2B: Account 360 dashboards, Relationship Maps, Account hierarchies, and how Data Cloud unifies B2B customer data from multiple systems."
+        "body": "Customers and partners often need a portal. Experience Cloud or B2B Commerce lets them see orders, cases and invoices without calling support."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "After B2B Solution Architect, many people move toward the platform architect credentials and CTA:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a B2B Solution Architect do?",
+      "question": "A manufacturer's sales reps wait two days for quotes because pricing rules live in spreadsheets kept by the finance team. What should the architect recommend first?",
       "options": [
-        "Only coding",
-        "Design and build multi-cloud B2B solutions that deliver business value across Salesforce products",
-        "Only reporting",
-        "Only Slack"
+        "Build a custom Lightning component that reads the spreadsheet",
+        "Move pricing and discount rules into CPQ or Revenue Cloud with approval rules",
+        "Add more finance staff",
+        "Email the spreadsheet to reps every week"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified B2B Solution Architects design and build multi-cloud B2B solutions that deliver business value for the customer across Salesforce products.",
+      "explanation": "Putting pricing and approvals into the quoting tool lets reps build correct quotes themselves, with approvals only where needed.",
       "whyWrong": [
-        "'Only coding' undersells the role, which is business-value-focused cross-cloud design, not just writing code.",
-        "'Only reporting' misrepresents the role, which spans full solution architecture, not just reports.",
-        "'Only Slack' is unrelated to what a B2B Solution Architect actually does."
+        "A custom component on a spreadsheet is fragile and hard to maintain.",
+        "More staff treats the symptom and doesn't scale.",
+        "Weekly emails go out of date and reps still price by hand."
       ]
     },
     {
-      "question": "What does B2B stand for?",
+      "question": "Product and price data is owned by the ERP, but reps quote in Salesforce. How should product data be handled?",
       "options": [
-        "Back to Back",
-        "Business to Business",
-        "Build to Order",
-        "Brand to Brand"
+        "Let reps edit prices in Salesforce and copy them back to the ERP",
+        "Treat the ERP as the source of truth and sync products and prices into Salesforce",
+        "Ask reps to look up prices in the ERP for each quote",
+        "Keep two separate price lists and let reps choose"
       ],
       "correctAnswer": 1,
-      "explanation": "B2B stands for Business to Business.",
+      "explanation": "One system must own the data. If the ERP owns products and prices, Salesforce should receive copies and not change them.",
       "whyWrong": [
-        "'Back to Back' isn't a real acronym expansion for B2B.",
-        "'Build to Order' is a manufacturing term, not what B2B stands for.",
-        "'Brand to Brand' isn't the actual expansion of B2B."
+        "Two-way editing causes conflicts and makes it unclear which price is right.",
+        "Looking up each price by hand is slow and causes mistakes.",
+        "Two price lists will drift apart and confuse everyone."
       ]
     },
     {
-      "question": "Which Salesforce products are often part of B2B solutions?",
+      "question": "When a rep builds a quote, they must see live stock levels from the ERP before promising a delivery date. Which pattern fits?",
       "options": [
-        "Only Marketing Cloud",
-        "B2B Commerce, CPQ, Order Management, and more",
-        "Only Service Cloud",
-        "Only Slack"
+        "A real-time request and reply call to the ERP",
+        "A Platform Event published when the quote is saved",
+        "A nightly batch sync of stock levels",
+        "A weekly export of stock data"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B solutions often include B2B Commerce, CPQ, Order Management, and more.",
+      "correctAnswer": 0,
+      "explanation": "The rep is waiting for the answer to make a promise, so a real-time call that returns current stock is the right fit.",
       "whyWrong": [
-        "'Only Marketing Cloud' undersells the broader set of products (Commerce, CPQ, Order Management) typically involved in B2B solutions.",
-        "'Only Service Cloud' undersells the broader multi-product B2B landscape.",
-        "'Only Slack' is unrelated to the core B2B commerce/CPQ/order management products involved."
+        "A Platform Event doesn't return an answer to the rep.",
+        "Nightly data can be hours out of date.",
+        "Weekly data is far too old for delivery promises."
       ]
     },
     {
-      "question": "What does 'multi-cloud' mean in this context?",
+      "question": "Several systems (ERP, billing, warehouse and a data lake) all need to know when an order is placed in Salesforce. What is the best design?",
       "options": [
-        "Only one product",
-        "Multiple Salesforce products working together",
-        "Only Heroku",
-        "Only MuleSoft"
+        "A nightly CSV export to each system",
+        "Four separate Apex callouts in the order trigger",
+        "Publish an event when an order is placed, and let each system subscribe",
+        "Each system calls Salesforce every minute to check for new orders"
       ],
-      "correctAnswer": 1,
-      "explanation": "Multi-cloud means multiple Salesforce products working together.",
+      "correctAnswer": 2,
+      "explanation": "Publishing one event lets every system react on its own. Salesforce doesn't need to know who is listening, and new subscribers can be added later.",
       "whyWrong": [
-        "'Only one product' is the opposite of what multi-cloud means.",
-        "'Only Heroku' narrows multi-cloud incorrectly to a single specific product.",
-        "'Only MuleSoft' narrows multi-cloud incorrectly to a single specific product."
+        "Nightly exports are slow and need one integration per system.",
+        "Four callouts tie Salesforce to every system and fail if any one is down.",
+        "Constant polling wastes API calls and adds delay."
       ]
     },
     {
-      "question": "Which role typically pursues B2B Solution Architect?",
+      "question": "Partner companies log in to an Experience Cloud site to see their own orders. A partner must never see another partner's orders. What is the main design concern?",
       "options": [
-        "Marketers",
-        "Architects and senior consultants designing B2B solutions",
-        "Sales only",
-        "Designers only"
+        "Sharing settings so external users only see their own account's records",
+        "How many reports the partners can run",
+        "The page layout used by internal users",
+        "The colour scheme of the site"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing B2B solutions pursue this credential.",
+      "correctAnswer": 0,
+      "explanation": "With many companies in one org, the sharing model is what keeps each partner's data separate. External defaults should be private, then opened up per account.",
       "whyWrong": [
-        "Marketers aren't the typical role pursuing this architecture-focused credential.",
-        "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience — this targets architects and senior consultants."
+        "Report counts don't control record access.",
+        "Internal page layouts don't affect what partners can see.",
+        "Branding doesn't affect who can see data."
       ]
     },
     {
-      "question": "What does B2B Commerce catalog management involve?",
+      "question": "A B2B company wants a single view of each customer, but customer data sits in Salesforce, the ERP, a marketing tool and a support system. The core org shouldn't store everything. What fits?",
       "options": [
-        "Email only",
-        "Products, categories, and pricing for B2B buyers",
-        "Slack only",
-        "CPQ only"
+        "Ask each team to update all four systems by hand",
+        "Use Data Cloud to unify the customer profiles",
+        "Pick one system and delete the others",
+        "Copy every system's data into custom objects"
       ],
       "correctAnswer": 1,
-      "explanation": "Catalog management covers products, categories, and pricing.",
+      "explanation": "Data Cloud is designed to bring customer data from many sources together into unified profiles, without loading it all into the core CRM objects.",
       "whyWrong": [
-        "Email is unrelated to B2B Commerce catalog management, which concerns products, categories, and pricing.",
-        "Slack is unrelated to catalog management.",
-        "CPQ alone doesn't cover the full catalog management scope, which includes categories and buyer-specific pricing."
+        "Manual updates in four systems never stay consistent.",
+        "Deleting systems that teams depend on isn't realistic.",
+        "Copying everything into custom objects bloats the org and is hard to keep in sync."
       ]
     },
     {
-      "question": "Which B2B Commerce feature supports buyer-specific pricing?",
+      "question": "Where should an architect start when designing a new B2B solution?",
       "options": [
-        "Standard Price Book only",
-        "Customer-specific prices and contract pricing",
-        "List price only",
-        "No pricing"
+        "Mapping the business process and its pain points",
+        "Designing the page layouts",
+        "Writing the integration code",
+        "Choosing the Salesforce licences"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce supports customer-specific and contract pricing.",
+      "correctAnswer": 0,
+      "explanation": "The process tells you what needs solving and which cloud or system should own each step. Products come after that.",
       "whyWrong": [
-        "A standard Price Book alone doesn't support the buyer-specific/contract pricing this feature is about.",
-        "List price alone is the default, not the buyer-specific pricing feature described.",
-        "'No pricing' contradicts the fact that a real feature exists for this exact scenario."
+        "Page layouts are a detail that depends on the process.",
+        "Code comes much later, after the design is agreed.",
+        "Licences depend on the design, so picking them first is backwards."
       ]
     },
     {
-      "question": "What does checkout customization in B2B involve?",
+      "question": "An order is captured in Salesforce, fulfilled in the ERP and then invoiced. Which statement is the best design principle?",
       "options": [
-        "Only default flow",
-        "Payment, shipping, and approval workflows",
-        "Email only",
-        "Reports only"
+        "Orders should be re-entered by hand in each system",
+        "Order data should only ever exist in Salesforce",
+        "Each step should have a clear owning system, with IDs that link the records",
+        "Every system should be able to edit every order field"
       ],
-      "correctAnswer": 1,
-      "explanation": "Checkout includes payment, shipping, and approval workflows.",
+      "correctAnswer": 2,
+      "explanation": "Clear ownership per step, linked by shared IDs, avoids conflicting edits and makes it easy to trace an order across systems.",
       "whyWrong": [
-        "'Only default flow' is the opposite of customization — the question asks what checkout customization involves.",
-        "Email alone doesn't cover the payment/shipping/approval workflow scope of checkout customization.",
-        "Reports alone are unrelated to checkout process customization."
+        "Re-entering data by hand causes errors and delay.",
+        "The ERP needs the order to fulfil and invoice it.",
+        "Letting every system edit everything causes conflicts."
       ]
     },
     {
-      "question": "Which integration connects B2B Commerce to ERP?",
+      "question": "A global B2B company stores customer data for EU customers. What must the architect consider?",
       "options": [
-        "Slack only",
-        "Order Management, middleware, or direct APIs",
-        "Marketing Cloud only",
-        "Service Cloud only"
+        "Only the speed of the website",
+        "Only the number of licences",
+        "Only the language of the user interface",
+        "Data privacy rules such as GDPR, consent and where data is stored"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order Management and APIs connect B2B Commerce to ERP.",
+      "correctAnswer": 3,
+      "explanation": "Personal data of EU customers falls under GDPR. The design must handle consent, data access requests and where the data is held.",
       "whyWrong": [
-        "Slack is unrelated to ERP integration for B2B Commerce.",
-        "Marketing Cloud alone is unrelated to the ERP integration pathways described.",
-        "Service Cloud alone is unrelated to ERP integration for commerce order data."
+        "Speed matters, but it doesn't address legal duties.",
+        "Licence counts don't cover privacy.",
+        "Translation is useful, but it isn't a privacy control."
       ]
     },
     {
-      "question": "What is a buyer account in B2B Commerce?",
+      "question": "A programme has six delivery teams. Teams keep making conflicting design choices. What should the architect set up?",
       "options": [
-        "A lead",
-        "The company/account that purchases through the storefront",
-        "A contact only",
-        "A campaign"
+        "Let each team decide on its own",
+        "A design authority with shared standards and review of major decisions",
+        "A rule that only one team may work at a time",
+        "One huge release every year"
       ],
       "correctAnswer": 1,
-      "explanation": "Buyer accounts represent purchasing organizations.",
+      "explanation": "A design authority and shared standards keep decisions consistent while teams work in parallel.",
       "whyWrong": [
-        "A Lead is a Sales Cloud prospecting record, not the account making storefront purchases.",
-        "A Contact alone represents an individual, not the purchasing company/account itself.",
-        "A Campaign tracks marketing initiatives, unrelated to the buyer account concept."
+        "Working in isolation is what is causing the conflicts.",
+        "Only one team at a time would make delivery far too slow.",
+        "Yearly releases make each release riskier and slow down value."
       ]
     },
     {
-      "question": "Which B2B Commerce feature supports approval workflows?",
+      "question": "Customers keep phoning support to ask about order status and download invoices. What is the best way to cut these calls?",
       "options": [
-        "No approvals",
-        "Cart approval rules and multi-step approvals",
-        "Email only",
-        "CPQ only"
+        "Send customers a weekly spreadsheet",
+        "Hire more support agents",
+        "Turn off the support phone line",
+        "Give customers a self-service portal showing orders and invoices"
       ],
-      "correctAnswer": 1,
-      "explanation": "Cart approval rules support multi-step approval workflows.",
+      "correctAnswer": 3,
+      "explanation": "A self-service portal through Experience Cloud or B2B Commerce lets customers check orders and invoices themselves at any time.",
       "whyWrong": [
-        "'No approvals' contradicts the fact that this feature specifically supports approval workflows.",
-        "Email alone isn't the mechanism that enforces cart approval rules.",
-        "CPQ alone isn't the B2B Commerce-specific approval workflow feature being described."
+        "Spreadsheets go out of date and still cause questions.",
+        "More agents handle the same calls at higher cost.",
+        "Turning off support harms customers."
       ]
     },
     {
-      "question": "What does B2B solution design typically include?",
+      "question": "A business sponsor asks for a custom-built quoting engine. Standard CPQ meets 90% of the requirements. What should the architect recommend?",
       "options": [
-        "Only UI",
-        "Catalog, pricing, checkout, and integration architecture",
-        "Only reports",
-        "Only dashboards"
+        "Use standard CPQ and look for simple ways to cover the remaining 10%",
+        "Wait a year for new features",
+        "Use two quoting tools side by side",
+        "Build the custom engine"
       ],
-      "correctAnswer": 1,
-      "explanation": "Solution design covers catalog, pricing, checkout, and integration.",
+      "correctAnswer": 0,
+      "explanation": "Standard features are cheaper to build, run and upgrade. The gap can often be closed with configuration or a small extension.",
       "whyWrong": [
-        "'Only UI' undersells B2B solution design, which spans catalog, pricing, checkout, and integration architecture broadly.",
-        "'Only reports' undersells the broader architectural scope of B2B solution design.",
-        "'Only dashboards' undersells the broader architectural scope of B2B solution design."
+        "Waiting delays value when most needs are already met.",
+        "Two tools confuse users and duplicate data.",
+        "A custom engine is costly to build and maintain for a small gain."
       ]
     },
     {
-      "question": "Which Salesforce product handles B2B storefront experience?",
+      "question": "Price list updates for 200,000 products come from the ERP once a night. Which approach fits?",
       "options": [
-        "Service Cloud only",
-        "B2B Commerce on Experience Cloud",
-        "Marketing Cloud only",
-        "Slack only"
+        "A real-time callout for each product",
+        "A Platform Event per product",
+        "Batch load with Bulk API",
+        "Manual entry by the product team"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2B Commerce runs on Experience Cloud for storefront.",
+      "correctAnswer": 2,
+      "explanation": "Large, scheduled loads are what Bulk API is built for. It is efficient and uses few API calls.",
       "whyWrong": [
-        "Service Cloud alone doesn't handle the storefront experience — that's Commerce on Experience Cloud.",
-        "Marketing Cloud alone doesn't provide the storefront experience itself.",
-        "Slack alone is unrelated to storefront experience delivery."
+        "200,000 single calls would be slow and use up API limits.",
+        "Events per product add overhead for a simple nightly load.",
+        "Manual entry at this scale is not realistic."
       ]
     },
     {
-      "question": "What is the purpose of B2B Commerce order orchestration?",
+      "question": "A good design was delivered, but six months later few sales reps use it. What was most likely missed?",
       "options": [
-        "Only capture",
-        "Fulfillment, inventory, and shipping coordination",
-        "Only CPQ",
-        "Only reports"
+        "More custom code",
+        "More fields on the page",
+        "A bigger sandbox",
+        "Training, change management and adoption planning"
       ],
-      "correctAnswer": 1,
-      "explanation": "Order orchestration handles fulfillment and shipping.",
+      "correctAnswer": 3,
+      "explanation": "Even good solutions fail without training and change management. Adoption should be planned from the start.",
       "whyWrong": [
-        "'Only capture' undersells order orchestration, which spans fulfillment, inventory, and shipping too.",
-        "CPQ alone handles pricing/quoting, not the fulfillment/inventory/shipping coordination order orchestration provides.",
-        "Reports alone don't perform order orchestration — they display data after the fact."
+        "More code doesn't fix people not using the system.",
+        "Extra fields usually make adoption worse.",
+        "Sandbox size doesn't affect adoption."
       ]
     },
     {
-      "question": "Which best practice applies to B2B multi-cloud design?",
+      "question": "The same customer appears in Salesforce and in the ERP with different IDs. How should the two be linked?",
       "options": [
-        "Single product only",
-        "Align catalog, pricing, and order flow across Commerce, CPQ, and Order Management",
-        "Ignore integration",
-        "No testing"
+        "Match records by customer name each night",
+        "Ask users to link them by hand",
+        "Store the ERP's ID in an external ID field in Salesforce",
+        "Keep them separate"
       ],
-      "correctAnswer": 1,
-      "explanation": "Align catalog, pricing, and order flow across products.",
+      "correctAnswer": 2,
+      "explanation": "An external ID field holds the other system's key, so integrations can match and upsert records reliably.",
       "whyWrong": [
-        "Focusing on a single product ignores the cross-product alignment this multi-cloud best practice calls for.",
-        "Ignoring integration contradicts the core best practice of aligning systems together.",
-        "Skipping testing contradicts sound architecture practice for a multi-cloud design."
+        "Names change and are not unique, so name matching causes errors.",
+        "Linking by hand is slow and error-prone.",
+        "Unlinked records mean no single view of the customer."
       ]
     }
   ]

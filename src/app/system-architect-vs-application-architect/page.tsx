@@ -38,7 +38,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the difference between System Architect and Application Architect?',
-    answer: 'Application Architect is auto-awarded once you pass four component exams: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect — no separate proctored exam. System Architect requires Platform Developer I plus Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect, then a final proctored System Architect exam. Application Architect is more application-layer-and-declarative-focused; System Architect is more infrastructure, integration, and platform-focused.',
+    answer: 'Application Architect is auto-awarded once you pass four component exams: Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect — no separate proctored exam. System Architect requires Platform Developer I plus Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. It is also auto-awarded, with no separate exam. Application Architect is more application-layer-and-declarative-focused; System Architect is more infrastructure, integration, and platform-focused.',
   },
   {
     question: 'Which should I pursue first: System Architect or Application Architect?',
@@ -46,7 +46,7 @@ const faqItems = [
   },
   {
     question: 'How much does it cost to earn both credentials?',
-    answer: 'Application Architect: App Builder $200 + PD1 $200 + Data Architect $400 + Sharing & Visibility Architect $400 = $1,200. System Architect adds: Integration Architect $400 + IAM Architect $400 + Dev Lifecycle Architect $400 + a final proctored System Architect exam $200 = $1,400 (PD1 is already covered from the Application Architect side). Combined total: approximately $2,600 for both credentials.',
+    answer: 'Application Architect: App Builder $200 + PD1 $200 + Data Architect $400 + Sharing & Visibility Architect $400 = $1,200. System Architect adds: Integration Architect $400 + IAM Architect $400 + Dev Lifecycle Architect $400 = $1,200 (PD1 is already covered from the Application Architect side). Combined total: approximately $2,600 for both credentials.',
   },
   {
     question: 'Are both credentials required for the CTA?',
@@ -105,8 +105,8 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <span className="text-xs font-semibold bg-gray-100 text-gray-600 px-2 py-0.5 rounded-full">Take Second</span>
           </div>
           <div className="space-y-2 text-sm text-gray-700 mb-4">
-            <div className="flex justify-between"><span className="text-gray-600">Required exams</span><span className="font-semibold">5 (incl. final exam)</span></div>
-            <div className="flex justify-between"><span className="text-gray-600">Min cost</span><span className="font-semibold">~$1,400 additional</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Required exams</span><span className="font-semibold">4 (auto-awarded)</span></div>
+            <div className="flex justify-between"><span className="text-gray-600">Min cost</span><span className="font-semibold">~$1,200 additional</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Est. timeline</span><span className="font-semibold">6–18 months</span></div>
             <div className="flex justify-between"><span className="text-gray-600">Entry cost</span><span className="font-semibold">$400 (each domain exam)</span></div>
           </div>
@@ -116,7 +116,6 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <p>Integration Architect ($400)</p>
             <p>IAM Architect ($400)</p>
             <p>Dev Lifecycle &amp; Deployment Architect ($400)</p>
-            <p>System Architect exam ($200, final proctored exam)</p>
           </div>
           <Link href="/system-architect-study-guide" className="block text-center text-xs font-semibold text-salesforce-blue hover:underline">Study Guide →</Link>
         </div>
@@ -136,7 +135,7 @@ export default function SystemArchitectVsApplicationArchitectPage() {
             <tbody className="divide-y divide-gray-50 text-sm">
               {[
                 { area: 'Primary domain', app: 'Application layer design', sys: 'Infrastructure & technical architecture' },
-                { area: 'Number of exams', app: '4 (auto-awarded)', sys: '5 (incl. final proctored exam)' },
+                { area: 'Number of exams', app: '4 (auto-awarded)', sys: '4 (auto-awarded)' },
                 { area: 'Min first exam cost', app: '$200 (App Builder or PD1)', sys: '$200 (PD1, shared) or $400 (domain exams)' },
                 { area: 'Study material availability', app: 'Abundant (App Builder & PD1 are popular)', sys: 'Less abundant for architect-level exams' },
                 { area: 'Recommended first', app: 'Yes — lower entry cost', sys: 'After Application Architect' },

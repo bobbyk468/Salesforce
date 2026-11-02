@@ -260,7 +260,7 @@ export const CERT_PREREQUISITES: Record<string, CertPrerequisite> = {
 
   'system-architect': {
     slug: 'system-architect',
-    notes: 'Earned by passing PD1, Integration Architect, IAM Architect, and Dev Lifecycle Architect, plus a final proctored exam. See the component-exam list on the page instead of a single prerequisite.',
+    notes: 'Earned by passing PD1, Integration Architect, IAM Architect, and Dev Lifecycle Architect. There is no separate exam. See the component-exam list on the page instead of a single prerequisite.',
   },
 
   'technical-architect': {

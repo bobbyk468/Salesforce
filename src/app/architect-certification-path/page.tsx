@@ -42,7 +42,7 @@ const breadcrumbItems = [
 const faqItems = [
   {
     question: 'What is the Salesforce architect certification path?',
-    answer: 'The Salesforce architect path has two role-based credentials below CTA: Application Architect (auto-awarded after App Builder + PD1 + Data Architect + Sharing & Visibility Architect, no separate exam) and System Architect (requires PD1 + Integration Architect + IAM Architect + Dev Lifecycle & Deployment Architect, then a final proctored System Architect exam). Platform Developer I is the only exam shared between the two. Both credentials are prerequisites for the Certified Technical Architect (CTA).',
+    answer: 'The Salesforce architect path has two role-based credentials below CTA: Application Architect (auto-awarded after App Builder + PD1 + Data Architect + Sharing & Visibility Architect, no separate exam) and System Architect (requires PD1 + Integration Architect + IAM Architect + Dev Lifecycle & Deployment Architect, also auto-awarded, no separate exam). Platform Developer I is the only exam shared between the two. Both credentials are prerequisites for the Certified Technical Architect (CTA).',
   },
   {
     question: 'What is the first certification for the Salesforce architect track?',
@@ -103,7 +103,7 @@ export default function ArchitectCertificationPathPage() {
               </tr>
               <tr>
                 <td className="py-2.5 pr-4 font-medium text-purple-700">System Architect</td>
-                <td className="py-2.5 pr-4">PD1 + Integration Architect + IAM Architect + Dev Lifecycle Architect + final System Architect exam</td>
+                <td className="py-2.5 pr-4">PD1 + Integration Architect + IAM Architect + Dev Lifecycle Architect (no separate exam)</td>
                 <td className="py-2.5 text-right text-xs font-medium text-gray-600">Advanced</td>
               </tr>
               <tr>
@@ -198,15 +198,15 @@ export default function ArchitectCertificationPathPage() {
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">4</span>
             <div>
               <p className="font-semibold text-gray-900">Dev Lifecycle &amp; Deployment Architect</p>
-              <p className="text-sm text-gray-600 mt-0.5">Environment strategy, sandbox hierarchy, release management, SFDX, CI/CD pipelines. 63% passing score.</p>
+              <p className="text-sm text-gray-600 mt-0.5">Environment strategy, sandbox hierarchy, release management, SFDX, CI/CD pipelines. 65% passing score.</p>
               <Link href="/dev-lifecycle-deployment-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">Dev Lifecycle Architect exam tips →</Link>
             </div>
           </div>
           <div className="flex gap-4 items-start">
             <span className="flex-shrink-0 h-7 w-7 rounded-full bg-purple-600 text-white text-sm font-bold flex items-center justify-center">5</span>
             <div>
-              <p className="font-semibold text-gray-900">System Architect Exam (final)</p>
-              <p className="text-sm text-gray-600 mt-0.5">Unlike Application Architect, System Architect requires this additional proctored exam after the four component exams above — broad architectural knowledge across the whole platform.</p>
+              <p className="font-semibold text-gray-900">System Architect credential granted</p>
+              <p className="text-sm text-gray-600 mt-0.5">There is no extra exam. Like Application Architect, System Architect is added to your profile once you hold the four credentials above.</p>
               <Link href="/system-architect-exam-tips" className="text-sm text-salesforce-blue hover:underline mt-1 inline-block">System Architect exam tips →</Link>
             </div>
           </div>

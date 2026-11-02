@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "Hands-on practitioners",
-        "description": "You work with Heroku features and want to prove you can apply them in realistic implementation scenarios."
+        "description": "You build and run apps on Heroku and want to show you can design them for scale, security and uptime."
       },
       {
         "label": "Solution designers",
-        "description": "You support Salesforce projects where Heroku, Scalability, and Deployment decisions affect the final design."
+        "description": "You plan solutions where Heroku apps work alongside Salesforce, using Heroku Connect, events or APIs."
       },
       {
         "label": "Career builders",
-        "description": "You want a focused credential that strengthens your Salesforce resume and helps position you for architect roles."
+        "description": "You are a developer moving into an architect role on projects that mix Salesforce and custom apps."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Heroku Architect Exam Hard?",
-    "summary": "The Heroku Architect exam is hard. It rewards practical Salesforce experience because many questions ask you to choose the best configuration, design, or troubleshooting approach rather than recall isolated definitions.",
+    "summary": "It is a hard exam for people who only know Salesforce, because a lot of it is about running apps: dynos, databases, networking and deployment. You also need to know how Heroku connects to Salesforce.",
     "bullets": [
-      "<strong>60 questions</strong> in 120 min.",
-      "<strong>~68% passing score</strong> — build a margin above the minimum before booking.",
-      "<strong>Scenario-based choices</strong> — expect questions that test when to use Heroku, Scalability, or Deployment.",
-      "<strong>Hands-on context matters</strong> — candidates who have configured or supported Heroku in a real org are better prepared than candidates who only memorize notes."
+      "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones.",
+      "<strong>Pass mark and time:</strong> third-party sources quote different numbers, so check the official exam guide before you book.",
+      "<strong>Design choices.</strong> Common Runtime or Private Spaces, which data service to use, and how to scale.",
+      "<strong>Salesforce links.</strong> Heroku Connect, events and APIs between Heroku and Salesforce show up often."
     ],
-    "passRateGuidance": "Aim for 75%+ on timed practice sets before booking. If your score is below that, review the highest-weight topics first and retake questions until you can explain why each wrong option is wrong."
+    "passRateGuidance": "People who have run production apps on Heroku do best. Before you book, aim for 75% or more on practice tests and be able to explain how you would make a Heroku app survive a dyno or database failure."
   },
   "examFormat": {
     "heading": "Heroku Architect Exam Format Explained",
-    "intro": "The Heroku Architect exam is a timed Salesforce credential exam. Use the format below to plan pacing and practice-test strategy.",
-    "scenarioPercent": "A meaningful share of questions are scenario-based. The common pattern is a business requirement followed by several plausible Salesforce options; your job is to identify the safest, most maintainable choice for Heroku.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe an app with certain needs, such as strict compliance, heavy traffic or a link to Salesforce, and ask which Heroku design fits best.",
     "bestWayToPass": [
-      "<strong>Start with the official outline:</strong> Map each exam objective to your notes, Trailhead practice, and weak areas before taking full mocks.",
-      "<strong>Prioritize high-impact topics:</strong> Spend extra time on Heroku, Scalability, and Deployment because these usually drive the hardest scenario questions.",
-      "<strong>Practice under time pressure:</strong> Use timed question sets so you learn when to move on and return to marked questions later.",
-      "<strong>Review explanations deeply:</strong> Do not just memorize the right option; write down why the other options are less appropriate for the scenario."
+      "<strong>Know the runtimes:</strong> Common Runtime, Private Spaces and Shield Private Spaces, and which one each compliance need calls for.",
+      "<strong>Learn the data services:</strong> Heroku Postgres (followers, forks, high availability), Key-Value Store and Apache Kafka on Heroku.",
+      "<strong>Understand Heroku Connect:</strong> How it syncs Salesforce data into Postgres and back, and its limits.",
+      "<strong>Think twelve-factor:</strong> Stateless dynos, config in config vars, and logs as event streams."
     ]
   },
   "certificationCard": {
     "code": "Heroku Architect",
-    "description": "This exam tests enterprise-scale Heroku architecture — dyno sizing, Postgres configuration, Private Spaces, and CI/CD pipelines. You’ll need to know Heroku Connect patterns for Salesforce data sync and how to design for high availability.",
+    "description": "This exam tests how you design apps on Heroku that scale, stay secure and work with Salesforce. You choose runtimes, data services, deployment flows and integration options.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "See official guide",
+      "duration": "See official guide",
       "cost": "$400"
     },
     "topics": [
@@ -62,55 +62,55 @@
     "blocks": [
       {
         "heading": "Heroku Platform Architecture & Dynos",
-        "body": "Heroku runs applications in lightweight Linux containers called Dynos. Dyno types: Web (handles HTTP traffic), Worker (background jobs, no HTTP), One-Off (manual or scheduled tasks). Dyno sizes range from Eco (shared, sleeps after 30 min) to Performance-XL (dedicated, high memory). The Dyno Manager restarts crashed dynos automatically. Horizontal scaling adds more dynos of the same type; vertical scaling changes the dyno size. The Procfile defines process types and start commands. The Router load-balances requests across web dynos (round-robin with session stickiness disabled by default). The architect exam tests how to size and scale a Heroku deployment for a given traffic and processing profile."
+        "body": "Heroku apps run in **dynos**, which are lightweight containers. **Web** dynos take HTTP traffic, **worker** dynos run background jobs, and **one-off** dynos run admin tasks. Dynos are stateless: the file system is wiped on restart, and dynos are restarted at least once a day. So any data you need to keep must go to a database, cache or file store such as S3. The router drops requests that take more than 30 seconds, so long work belongs on a worker with a queue. Scale **horizontally** by adding dynos, and **vertically** by choosing larger dyno types. Performance dynos support autoscaling based on response time."
       },
       {
         "heading": "Data Services: Heroku Postgres & Redis",
-        "body": "Heroku Postgres is the primary managed database — available in Essential (row limits), Standard, Premium, and Private tiers. Connection pooling via PgBouncer reduces database connection overhead. Follow databases provide read replicas for analytics queries. Continuous protection (WAL archiving) enables point-in-time recovery. Heroku Data for Redis handles caching, session storage, and pub/sub messaging. Redis plans: Mini (non-persistent) to Premium (persistent, HA). Heroku Key-Value Store (Redis) replaces legacy Heroku Redis. The exam tests data tier selection for a given durability, availability, and performance requirement, and how to configure read replicas for a high-read workload."
+        "body": "**Heroku Postgres** is the main managed database. **Followers** are read-only copies that take reporting load off the main database. **Forks** are full copies used for testing or migrations. Higher plans offer **high availability**, with a standby that takes over if the primary fails. **Heroku Key-Value Store** (Redis-compatible) is used for caching, sessions and fast queues. **Apache Kafka on Heroku** handles high-volume event streams between services. Use connection pooling when many dynos connect to one database, so you don't run out of connections."
       },
       {
         "heading": "CI/CD, Review Apps & Release Management",
-        "body": "Heroku Pipelines define promotion stages: Development → Staging → Production. Review Apps automatically deploy pull requests to ephemeral apps for testing — each PR gets its own URL. Heroku CI runs automated tests on each push and blocks promotion on failure. The `heroku pipelines:promote` command promotes a slug (compiled app image) from one stage to the next without rebuilding. Release Phase runs migration scripts or data seeding commands before each new release goes live. Rollbacks revert to a previous release slug instantly. Config Vars (environment variables) are separate per stage, preventing accidental production config in staging. The exam tests how to design a pipeline for a team with multiple parallel feature branches."
+        "body": "**Pipelines** move the same build through stages, such as development, staging and production, by promoting it instead of rebuilding. **Review apps** create a temporary app for each pull request, so changes can be tested before merging. **Heroku CI** runs tests on every push. Builds use **buildpacks** or Docker images to turn code into a slug that dynos run. Settings live in **config vars**, not code, so the same build can run in every stage. **Release phase** commands, like database migrations, run before new dynos take traffic. Rollbacks are one command to an earlier release."
       },
       {
         "heading": "Security, Compliance & Private Spaces",
-        "body": "Heroku Private Spaces run Dynos and data services inside a dedicated, isolated network environment — required for compliance workloads (HIPAA, PCI, SOC 2). Private Spaces connect to Salesforce orgs via Salesforce Private Connect (AWS PrivateLink) for secure data exchange without traffic traversing the public internet. Internal Routing restricts apps in a Private Space to only receive traffic from within the space. Shield Private Spaces add encryption at rest and enhanced security controls. Log Drains export Heroku logs to external SIEM or logging systems. Heroku Enterprise provides **SSO**, audit logs, and team-based access controls. The exam tests Private Space configuration for compliance scenarios and the networking model."
+        "body": "The **Common Runtime** is shared and fine for many apps. **Private Spaces** give you an isolated network in a chosen region, with fixed outbound IPs, internal routing and options to connect to your own network by VPN or peering. **Shield Private Spaces** add stricter controls, such as extra logging and encryption, for regulated data like health records or payment data. Use **Heroku Enterprise** teams with SSO and fine-grained permissions to control who can deploy and change settings. Keep secrets in config vars and limit who can read them."
       },
       {
         "heading": "Architecture Patterns for Salesforce + Heroku",
-        "body": "Heroku Connect syncs data bidirectionally between Heroku Postgres and Salesforce objects — enabling Heroku apps to read/write Salesforce data without direct API calls. Write acceleration pattern: high-volume writes go to Heroku Postgres first, then Heroku Connect syncs to Salesforce asynchronously, avoiding API rate limits. Event-driven pattern: Salesforce **Platform Events** trigger Heroku workers via Heroku Connect CDC. Compute-offload pattern: complex calculations (ML inference, image processing) run on Heroku and results are written back to Salesforce. The architect exam tests which pattern to apply for a given scalability, latency, and Salesforce API limit scenario — especially for IoT, mobile, or high-volume data scenarios."
+        "body": "**Heroku Connect** syncs Salesforce objects with tables in Heroku Postgres, one way or both ways. It suits apps that need to read lots of Salesforce data quickly or write it back without using up API calls in the app. For events, Heroku apps can subscribe to **Platform Events** or **Change Data Capture**, or publish back to Salesforce. For direct calls, apps can use the Salesforce REST API, and Salesforce can call Heroku with **Heroku AppLink** or External Services. A common pattern: customer-facing apps on Heroku handle heavy public traffic, while Salesforce stays the system of record for staff."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Heroku Architect Exam",
-    "intro": "The Heroku Architect exam tests enterprise-scale Heroku deployment design. Focus on Heroku infrastructure components, Heroku Connect for Salesforce data sync, high-availability patterns, and security architecture.",
+    "intro": "Most questions give you an app with one or two firm needs, like compliance, scale or a link to Salesforce. Use those to rule out the designs that almost work.",
     "blocks": [
       {
         "heading": "Heroku Infrastructure Components",
-        "body": "Know dynos (web, worker, one-off), formations, add-ons, buildpacks, and config vars. Understand how these components combine to run a scalable application on Heroku."
+        "body": "Web dynos for requests, worker dynos for background jobs, one-off dynos for admin tasks. Long work goes to workers with a queue."
       },
       {
         "heading": "Heroku Connect Architecture",
-        "body": "Know how Heroku Connect syncs data between Heroku Postgres and Salesforce using polled sync (Salesforce → Postgres) and a Salesforce trigger (Postgres → Salesforce). Understand conflict resolution and sync frequency."
+        "body": "Use Heroku Connect when an app needs fast access to lots of Salesforce data in Postgres. Know that sync isn't instant and that two-way sync needs care with conflicts."
       },
       {
         "heading": "High Availability & Scaling",
-        "body": "Understand horizontal scaling (multiple dynos), how the Heroku Router load-balances requests, database connection pooling (PgBouncer), and how to design for zero-downtime deployments."
+        "body": "Several dynos for the app, a high-availability Postgres plan for the database, and followers for read-heavy reporting."
       },
       {
         "heading": "Security Architecture",
-        "body": "Know how to use Private Spaces for network isolation, Heroku Shield for HIPAA/PCI compliance, and how to secure data in transit (TLS) and at rest with encrypted Heroku Postgres."
+        "body": "Common Runtime for most apps, Private Spaces for network isolation and fixed IPs, Shield Private Spaces for regulated data."
       },
       {
         "heading": "Performance Optimization",
-        "body": "Know how to use Heroku caching (Redis add-on), async job processing (worker dynos with Sidekiq/Celery), and database query optimization to design performant Heroku applications."
+        "body": "Cache with Key-Value Store, pool database connections, move slow work off web dynos, and use autoscaling on performance dynos."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "After Heroku Architect, many people move toward the wider Salesforce architect credentials:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a Heroku Architect do?",
+      "question": "A web request sometimes takes 45 seconds because it generates a large PDF. Users see timeout errors. What is the best fix?",
       "options": [
-        "Only coding",
-        "Architect scalable solutions, deploy and manage apps, and manage teams and build-workflows on Heroku",
-        "Only reporting",
-        "Only Slack"
+        "Move PDF creation to a worker dyno with a queue and tell the user when it is ready",
+        "Ask users to refresh the page",
+        "Use a larger web dyno",
+        "Turn off the router timeout"
       ],
-      "correctAnswer": 1,
-      "explanation": "Certified Heroku Architects are skilled at architecting scalable solutions, deploying and managing apps, and managing teams and build-workflows on Heroku.",
+      "correctAnswer": 0,
+      "explanation": "The router drops requests over 30 seconds. Background work on a worker dyno avoids the limit and keeps web dynos free.",
       "whyWrong": [
-        "'Only coding' undersells the role, which spans architecture, deployment, and team/workflow management, not just code.",
-        "'Only reporting' misrepresents the role, which is about architecture and operations, not reporting.",
-        "'Only Slack' is unrelated to what a Heroku Architect actually does."
+        "Refreshing just starts the same slow request again.",
+        "A larger dyno may be faster but can still pass 30 seconds.",
+        "You can't turn off the router timeout."
       ]
     },
     {
-      "question": "What is Heroku?",
+      "question": "An app saves uploaded images to the dyno's local disk. Images vanish after a while. Why?",
       "options": [
-        "A CRM",
-        "A cloud platform (PaaS) for building, running, and managing apps",
-        "An email tool",
-        "A database only"
+        "The images are too large",
+        "The database is full",
+        "Dyno file systems are temporary and are wiped when the dyno restarts",
+        "Heroku deletes images by policy"
       ],
-      "correctAnswer": 1,
-      "explanation": "Heroku is a cloud platform (PaaS) for building and running apps.",
+      "correctAnswer": 2,
+      "explanation": "Dynos are restarted at least daily and their disk is wiped. Files must go to a store like S3.",
       "whyWrong": [
-        "Heroku isn't a CRM — it's a platform-as-a-service for running applications.",
-        "Heroku isn't primarily an email tool — that's unrelated to its core PaaS function.",
-        "Heroku is more than just a database — it's a full platform for building and running apps."
+        "Size isn't the cause. Any file on local disk is lost.",
+        "The images weren't in the database.",
+        "Heroku doesn't target images. The whole local disk is temporary."
       ]
     },
     {
-      "question": "What is a key activity for a Heroku Architect?",
+      "question": "A healthcare app on Heroku will store patient data and must meet strict compliance rules. Which runtime fits?",
       "options": [
-        "Only coding",
-        "Architecting scalable solutions and managing deployment workflows",
-        "Only reporting",
-        "Only lists"
+        "Shield Private Spaces",
+        "A free dyno",
+        "A one-off dyno",
+        "Common Runtime"
       ],
-      "correctAnswer": 1,
-      "explanation": "They architect scalable solutions and manage deployment workflows.",
+      "correctAnswer": 0,
+      "explanation": "Shield Private Spaces add the extra isolation, logging and encryption controls needed for regulated data such as health records.",
       "whyWrong": [
-        "'Only coding' undersells the key activity, which includes architecture and workflow management, not just writing code.",
-        "'Only reporting' misrepresents the key activity, which is about architecture and deployment, not reporting.",
-        "'Only lists' is unrelated to the actual key activity being described."
+        "Free or hobby dynos are not suitable for production or compliance.",
+        "One-off dynos are for admin tasks, not a runtime choice.",
+        "The Common Runtime is shared and not built for regulated data."
       ]
     },
     {
-      "question": "Which role typically pursues Heroku Architect?",
+      "question": "Reporting queries are slowing down the main Heroku Postgres database used by the live app. What should be added?",
       "options": [
-        "Marketers",
-        "Architects and senior developers working with Heroku",
-        "Sales only",
-        "Designers only"
+        "A second app with its own empty database",
+        "A daily database fork",
+        "A follower database for the reports",
+        "More web dynos"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architects and senior developers working with Heroku pursue this credential.",
+      "correctAnswer": 2,
+      "explanation": "A follower is a read-only copy that stays in sync. Reports can run on it without slowing the main database.",
       "whyWrong": [
-        "Marketers aren't the typical audience for this platform architecture credential.",
-        "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience — this targets architects and senior developers."
+        "An empty database has none of the data.",
+        "A fork is a one-time copy that quickly goes out of date.",
+        "More web dynos don't reduce database load."
       ]
     },
     {
-      "question": "What does 'build-workflows' mean in Heroku context?",
+      "question": "A partner's firewall only allows traffic from fixed IP addresses. Your Heroku app must call the partner's API. What fits?",
       "options": [
-        "Only CI",
-        "CI/CD, pipelines, and release management on Heroku",
-        "Only CD",
-        "Only testing"
+        "Common Runtime with a random IP",
+        "Private Spaces with stable outbound IPs",
+        "Calling the partner from the user's browser",
+        "A larger dyno"
       ],
       "correctAnswer": 1,
-      "explanation": "Build-workflows include CI/CD, pipelines, and release management on Heroku.",
+      "explanation": "Private Spaces give the app fixed outbound IPs that the partner can allow.",
       "whyWrong": [
-        "'Only CI' undersells build-workflows, which include CD and release management too.",
-        "'Only CD' undersells build-workflows, which include CI and release management too.",
-        "'Only testing' undersells build-workflows, which is broader than testing alone."
+        "Common Runtime IPs change, so the partner can't allow them.",
+        "Browser calls come from users' IPs, which are unknown.",
+        "Dyno size doesn't change the IP address."
       ]
     },
     {
-      "question": "What is a Heroku Dyno?",
+      "question": "A customer portal on Heroku needs to read millions of Salesforce Account and Order records quickly, without using up Salesforce API calls on every page view. What should be used?",
       "options": [
-        "A database only",
-        "A lightweight container that runs application code",
-        "An email service",
-        "A storage bucket"
+        "Heroku Connect syncing the records into Heroku Postgres",
+        "A REST API call to Salesforce for each page view",
+        "Storing the data in config vars",
+        "Exporting a CSV from Salesforce each week"
       ],
-      "correctAnswer": 1,
-      "explanation": "Dynos are containers that run app processes on Heroku.",
+      "correctAnswer": 0,
+      "explanation": "Heroku Connect keeps a copy of Salesforce data in Postgres, so the app reads it locally with fast SQL queries.",
       "whyWrong": [
-        "A Dyno isn't a database — that's a separate Heroku Postgres service.",
-        "A Dyno isn't an email service — that's unrelated to its function.",
-        "A Dyno isn't a storage bucket — it's a lightweight compute container."
+        "An API call per page view uses up limits and is slower.",
+        "Config vars are for settings, not data.",
+        "A weekly CSV is out of date."
       ]
     },
     {
-      "question": "Which Heroku feature supports horizontal scaling?",
+      "question": "The team wants a temporary test app created for every pull request. Which feature fits?",
       "options": [
-        "Single dyno only",
-        "Dyno scaling (web and worker dynos)",
-        "No scaling",
-        "Vertical only"
+        "Release phase",
+        "Pipelines promotion",
+        "One-off dynos",
+        "Review apps"
       ],
-      "correctAnswer": 1,
-      "explanation": "Heroku supports scaling web and worker dynos horizontally.",
+      "correctAnswer": 3,
+      "explanation": "Review apps spin up a fresh app for each pull request and remove it when the pull request is closed.",
       "whyWrong": [
-        "'Single dyno only' is the opposite of what horizontal scaling provides.",
-        "'No scaling' contradicts the fact that dyno scaling is a real, core Heroku capability.",
-        "'Vertical only' misrepresents dyno scaling, which is specifically about horizontal (multiple dyno) scaling."
+        "Release phase runs tasks before a release, like migrations.",
+        "Promotion moves an existing build between stages. It doesn't create per-PR apps.",
+        "One-off dynos run single commands."
       ]
     },
     {
-      "question": "What does Heroku Postgres provide?",
+      "question": "A tested build in staging should go to production without being rebuilt. What should the team use?",
       "options": [
-        "Only backups",
-        "Managed relational database with add-ons",
-        "No database",
-        "External only"
+        "Push the code to production again",
+        "Copy files by hand",
+        "Rebuild with a different buildpack",
+        "Promote the build through a Pipeline"
       ],
-      "correctAnswer": 1,
-      "explanation": "Heroku Postgres is a managed database add-on.",
+      "correctAnswer": 3,
+      "explanation": "Promotion copies the exact slug from staging to production, so what you tested is what goes live.",
       "whyWrong": [
-        "'Only backups' undersells Heroku Postgres, which is a full managed relational database service, not just backups.",
-        "'No database' contradicts the fact that Heroku Postgres is a real managed database offering.",
-        "'External only' misrepresents Heroku Postgres as an external-only service when it's a native Heroku offering."
+        "Pushing again rebuilds the code, which might not match what was tested.",
+        "Copying by hand is error-prone.",
+        "A different buildpack produces a different build."
       ]
     },
     {
-      "question": "Which Heroku feature manages environment-specific configuration?",
+      "question": "Database migrations must run before new code starts taking traffic. Where should they run?",
       "options": [
-        "Hardcoded values",
-        "Config Vars",
-        "Only buildpacks",
-        "Only releases"
+        "By hand after every deploy",
+        "In a web dyno on first request",
+        "In the release phase",
+        "In the browser"
       ],
-      "correctAnswer": 1,
-      "explanation": "Config Vars store environment-specific configuration.",
+      "correctAnswer": 2,
+      "explanation": "Release phase commands run after the build and before new dynos start, so the database is ready first.",
       "whyWrong": [
-        "Hardcoded values are the opposite of what Config Vars are designed to replace.",
-        "'Only buildpacks' misattributes environment configuration to a different Heroku feature.",
-        "'Only releases' misattributes environment configuration to a different Heroku feature."
+        "Manual steps get missed.",
+        "Running on the first request can cause errors for users.",
+        "Browsers can't run database migrations."
       ]
     },
     {
-      "question": "What is a Heroku buildpack?",
+      "question": "A Heroku app should react within seconds when an Opportunity is closed in Salesforce. What fits?",
       "options": [
-        "A database",
-        "Scripts that compile and prepare an app for execution",
-        "An add-on only",
-        "A dyno type"
+        "A weekly data export",
+        "Subscribing to Change Data Capture or a Platform Event",
+        "Polling Salesforce every hour",
+        "Asking sales reps to email the app team"
       ],
       "correctAnswer": 1,
-      "explanation": "Buildpacks compile and prepare apps for the dyno environment.",
+      "explanation": "Events push the change to the app as it happens, without polling.",
       "whyWrong": [
-        "A buildpack isn't a database — that's a separate Heroku Postgres service.",
-        "A buildpack isn't just an add-on — it's core to how an app is compiled and prepared for execution.",
-        "A buildpack isn't a dyno type — dynos run the app after buildpacks prepare it."
+        "Weekly exports are far too slow.",
+        "Hourly polling is slow and wastes API calls.",
+        "Email isn't an integration."
       ]
     },
     {
-      "question": "Which Heroku feature supports zero-downtime deployments?",
+      "question": "The app stores its database password in the source code. What should be done?",
       "options": [
-        "No support",
-        "Preboot and release phase",
-        "Manual only",
-        "Single dyno only"
+        "Put the password in a comment",
+        "Encrypt the source file",
+        "Move the password into a config var",
+        "Store it in the README"
       ],
-      "correctAnswer": 1,
-      "explanation": "Preboot and release phase enable zero-downtime deployments.",
+      "correctAnswer": 2,
+      "explanation": "Config vars keep settings and secrets out of code, and each environment can have its own values.",
       "whyWrong": [
-        "'No support' contradicts the fact that Heroku explicitly supports zero-downtime deployment mechanisms.",
-        "'Manual only' contradicts the fact that preboot and release phase are automated features.",
-        "'Single dyno only' misrepresents the multi-dyno mechanism that enables zero-downtime deploys."
+        "A comment is still in the code.",
+        "The secret is still in the repository, just harder to read.",
+        "A README is even more visible."
       ]
     },
     {
-      "question": "What does Heroku Pipelines support?",
+      "question": "Many dynos connect to one Heroku Postgres database, and the database runs out of connections at peak. What helps most?",
       "options": [
-        "Only staging",
-        "Multi-stage (dev, staging, production) deployment workflow",
-        "Production only",
-        "No staging"
+        "Use connection pooling",
+        "Add more web dynos",
+        "Remove the database indexes",
+        "Restart the database every hour"
       ],
-      "correctAnswer": 1,
-      "explanation": "Pipelines support multi-stage deployment workflows.",
+      "correctAnswer": 0,
+      "explanation": "Connection pooling shares a smaller number of database connections between many app processes.",
       "whyWrong": [
-        "'Only staging' undersells Pipelines, which support the full dev-to-production workflow, not just staging.",
-        "'Production only' undersells Pipelines, which manage the full multi-stage workflow, not just production.",
-        "'No staging' contradicts the fact that Pipelines explicitly support staging as part of the workflow."
+        "More dynos would open even more connections.",
+        "Removing indexes slows queries and doesn't reduce connections.",
+        "Restarts cause downtime and don't fix the cause."
       ]
     },
     {
-      "question": "Which Heroku add-on category supports background jobs?",
+      "question": "The live app's database must keep running if the primary database server fails. What should be chosen?",
       "options": [
-        "Database only",
-        "Worker dynos and queue add-ons (e.g., Redis)",
-        "Email only",
-        "Storage only"
+        "Daily backups only",
+        "A Heroku Postgres plan with high availability",
+        "A follower used for reports only",
+        "A larger dyno"
       ],
       "correctAnswer": 1,
-      "explanation": "Worker dynos and queues support background job processing.",
+      "explanation": "High-availability plans keep a standby that takes over automatically if the primary fails.",
       "whyWrong": [
-        "Database add-ons don't provide background job/queue functionality — that's a separate category.",
-        "Email add-ons are unrelated to background job processing.",
-        "Storage add-ons are unrelated to background job processing."
+        "Backups let you restore, but with downtime and some data loss.",
+        "A follower can be promoted by hand, but it isn't an automatic failover plan.",
+        "Dyno size doesn't protect the database."
       ]
     },
     {
-      "question": "What is the purpose of Heroku Review Apps?",
+      "question": "A Heroku app needs a fast cache for user sessions and frequently read data. What should be used?",
       "options": [
-        "Production only",
-        "Automatic ephemeral apps for pull request review",
-        "Staging only",
-        "No automation"
+        "A Heroku Postgres follower",
+        "Config vars",
+        "Local dyno disk",
+        "Heroku Key-Value Store"
       ],
-      "correctAnswer": 1,
-      "explanation": "Review Apps create ephemeral apps for PR review.",
+      "correctAnswer": 3,
+      "explanation": "Key-Value Store (Redis-compatible) is built for fast caching and session storage.",
       "whyWrong": [
-        "Production apps aren't the ephemeral review apps described — those are for PR review specifically.",
-        "'Staging only' misrepresents Review Apps, which are created automatically for pull requests, not just staging.",
-        "'No automation' contradicts the fact that Review Apps are specifically an automated feature."
+        "A follower is a read copy of the database, not a cache.",
+        "Config vars are for settings.",
+        "Local disk is wiped on restart and isn't shared between dynos."
       ]
     },
     {
-      "question": "Which best practice applies to Heroku architecture?",
+      "question": "Many services must exchange a very high volume of events reliably, and new consumers will be added over time. What fits?",
       "options": [
-        "Ignore scaling",
-        "Design for stateless processes, use 12-factor app methodology",
-        "Single dyno only",
-        "No logging"
+        "Writing events to log files",
+        "Apache Kafka on Heroku",
+        "Polling a database table",
+        "Sending HTTP calls between every pair of services"
       ],
       "correctAnswer": 1,
-      "explanation": "Stateless processes and 12-factor methodology support scalability.",
+      "explanation": "Kafka is built for high-volume event streams, and new consumers can read the same stream without changing producers.",
       "whyWrong": [
-        "Ignoring scaling contradicts a core best practice for cloud-native Heroku architecture.",
-        "'Single dyno only' contradicts the scalable, multi-dyno design best practice recommends.",
-        "'No logging' contradicts the fact that logging is part of sound 12-factor app design."
+        "Logs aren't a reliable way to deliver events to other services.",
+        "Polling a table doesn't scale to high volume.",
+        "Point-to-point calls tie services together and grow messy."
       ]
     }
   ]

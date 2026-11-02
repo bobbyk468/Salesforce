@@ -47,7 +47,7 @@ const faqItems = [
   },
   {
     question: 'What certifications are required for Salesforce System Architect?',
-    answer: 'The System Architect credential requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect, plus a final proctored System Architect exam. Platform Developer I is the only exam shared with Application Architect.',
+    answer: 'The System Architect credential requires Platform Developer I, Integration Architect, Identity and Access Management Architect, and Dev Lifecycle and Deployment Architect. There is no separate System Architect exam. The credential is granted once you hold all four. Platform Developer I is the only exam shared with Application Architect.',
   },
   {
     question: 'What is the CTA Board Review?',
@@ -85,8 +85,8 @@ const stages = [
     stage: 'Sys Architect',
     time: '1–2 years',
     title: 'System Architect (4 Certs + Final Exam)',
-    description: 'System Architect tests infrastructure and integration knowledge: API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only exam shared with Application Architect, so Integration Architect, IAM Architect, and Dev Lifecycle Architect are new — followed by a final proctored System Architect exam covering the whole domain.',
-    certs: ['Platform Developer I (already completed)', 'Integration Architect', 'Identity and Access Management Architect', 'Dev Lifecycle and Deployment Architect', 'System Architect exam (final)'],
+    description: 'System Architect tests infrastructure and integration knowledge: API design, identity and access management (SSO, OAuth, SAML), and release management. Platform Developer I is the only exam shared with Application Architect, so Integration Architect, IAM Architect, and Dev Lifecycle Architect are new. There is no extra System Architect exam. The credential is granted once you hold all four.',
+    certs: ['Platform Developer I (already completed)', 'Integration Architect', 'Identity and Access Management Architect', 'Dev Lifecycle and Deployment Architect'],
   },
   {
     stage: 'CTA',

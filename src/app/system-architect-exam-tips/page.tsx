@@ -164,7 +164,7 @@ export default function SystemArchitectExamTipsPage() {
         <div className="space-y-5">
           <div>
             <p className="font-semibold text-gray-900 mb-1">1. System Architect Role Credential — Requires Four Domain Exams</p>
-            <p className="text-sm text-gray-700">The System Architect credential requires passing all four Domain Architect exams: Data Architect, Integration Architect, Sharing &amp; Visibility Architect, and Development Lifecycle &amp; Deployment Architect. There is no separate "System Architect exam." Candidates study for System Architect as a single test — understand that each domain exam is a standalone test and all four are required before the credential is awarded.</p>
+            <p className="text-sm text-gray-700">The System Architect credential requires four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate "System Architect exam." Candidates study for System Architect as a single test — understand that each domain exam is a standalone test and all four are required before the credential is awarded.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. API Rate Limits vs Concurrency Limits — Volume vs Parallelism</p>

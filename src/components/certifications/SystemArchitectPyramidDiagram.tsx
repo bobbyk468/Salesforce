@@ -1,15 +1,15 @@
-/** Visual pyramid of the System Architect component exams plus final proctored exam. */
+/** Visual pyramid of the four System Architect component exams. */
 export default function SystemArchitectPyramidDiagram() {
   const certs = ['Platform Developer I', 'Integration Architect', 'IAM Architect', 'Dev Lifecycle Architect']
   return (
     <figure id="system-architect-pyramid-overview" className="mt-8 rounded-xl border border-gray-200 bg-gradient-to-b from-slate-50/90 to-white p-4 sm:p-6 scroll-mt-24">
-      <figcaption className="text-base font-semibold text-gray-900 mb-1">System Architect: 4 component exams + final exam (exam mental model)</figcaption>
+      <figcaption className="text-base font-semibold text-gray-900 mb-1">System Architect: 4 component exams, then the credential is granted</figcaption>
       <p className="text-xs text-gray-600 mb-4 max-w-3xl">
-        Unlike Application Architect, System Architect requires a <strong>final proctored exam</strong> after the
+        Like Application Architect, System Architect has <strong>no exam of its own</strong>. It is granted once you hold the
         four component certifications. Platform Developer I is the only exam shared with Application Architect.
       </p>
       <svg role="img" aria-labelledby="sap-title" className="w-full max-w-3xl mx-auto h-auto" style={{ fontSize: '11px' }} viewBox="0 0 600 220" xmlns="http://www.w3.org/2000/svg">
-        <title id="sap-title">Four component certifications feed into a final proctored System Architect exam, unlike Application Architect which is auto-awarded</title>
+        <title id="sap-title">Four component certifications lead to System Architect, which is awarded automatically like Application Architect</title>
         <defs><marker id="sapArrow" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0,0 L8,4 L0,8 Z" fill="#0b5cab" /></marker></defs>
         {certs.map((c, i) => (
           <g key={c}>
@@ -20,8 +20,8 @@ export default function SystemArchitectPyramidDiagram() {
           </g>
         ))}
         <rect x="180" y="140" width="240" height="60" rx="8" fill="#fee2e2" stroke="#dc2626" strokeWidth="2" />
-        <text x="300" y="162" textAnchor="middle" fill="#0f172a" fontWeight="700">Final System Architect Exam</text>
-        <text x="300" y="180" textAnchor="middle" fill="#334155">Required — tests all 4 domains together</text>
+        <text x="300" y="162" textAnchor="middle" fill="#0f172a" fontWeight="700">System Architect Credential</text>
+        <text x="300" y="180" textAnchor="middle" fill="#334155">Granted automatically, no extra exam</text>
       </svg>
     </figure>
   )

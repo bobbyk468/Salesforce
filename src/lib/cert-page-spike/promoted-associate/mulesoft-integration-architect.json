@@ -5,46 +5,46 @@
     "personas": [
       {
         "label": "Senior integration consultants",
-        "description": "You design integration solutions for clients and want the credential to validate your API-led architecture expertise on Anypoint Platform."
+        "description": "You have built Mule applications for a few years and now design whole integration solutions for clients."
       },
       {
         "label": "Enterprise architects",
-        "description": "You define integration strategy across the organization and need to demonstrate mastery of MuleSoft’s architecture patterns and governance frameworks."
+        "description": "You decide how a company's systems connect, where Mule apps run, and how they meet uptime and security needs."
       },
       {
         "label": "Technical leads",
-        "description": "You guide development teams on Anypoint Platform best practices and want to certify your ability to translate requirements into integration designs."
+        "description": "You lead MuleSoft teams and need to make and defend design choices on reliability, performance and deployment."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the MuleSoft Integration Architect Exam Hard?",
-    "summary": "MuleSoft Integration Architect is a challenging exam. It tests your ability to make architectural trade-off decisions — choosing between synchronous and asynchronous patterns, designing API-led layers, and establishing governance frameworks for enterprise-scale integration programs.",
+    "summary": "It is a hard exam. Few questions ask what a feature does. Most ask which design best meets a set of needs, such as no lost messages, a response under two seconds, or data that must stay on site.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>~68% passing score</strong> — roughly 41 correct answers needed.",
-      "<strong>Architecture reasoning</strong> — most questions require justifying a design choice based on non-functional requirements like latency, scalability, and security.",
-      "<strong>Broad scope</strong> — candidates must understand API-led connectivity layers, C4E governance, security architecture, and resilience patterns across the entire Anypoint Platform."
+      "<strong>About 60 multiple-choice questions</strong> in 120 minutes.",
+      "<strong>70% to pass</strong>, per MuleSoft's training site. That is a higher bar than most Salesforce exams.",
+      "<strong>Design reasoning.</strong> Most questions turn on non-functional needs like reliability, speed, scale and security.",
+      "<strong>Whole platform scope.</strong> API-led layers, deployment options, messaging, transactions, monitoring and governance all come up."
     ],
-    "passRateGuidance": "Gain experience designing at least 2–3 integration architectures using API-led connectivity before booking. Score 80%+ on practice exams to account for trade-off questions with nuanced answer choices."
+    "passRateGuidance": "People who have designed and run Mule apps in production do best. Before you book, aim for 75% or more on practice tests and make sure you can explain when to use a queue, a transaction or an idempotent filter."
   },
   "examFormat": {
     "heading": "MuleSoft Integration Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "About 55–65% of questions are scenario-based. Common patterns include assigning capabilities to the correct API-led layer (System, Process, or Experience), designing security architecture with OAuth and mutual TLS, and recommending Center for Enablement governance frameworks.",
+    "intro": "You can take the exam online with a proctor. Here is what to expect:",
+    "scenarioPercent": "Most questions are scenarios. A typical one describes an integration with certain needs, for example no message may be lost and the target system is often down, and asks for the best design.",
     "bestWayToPass": [
-      "<strong>Master API-led connectivity layers:</strong> Know exactly when a capability belongs in the System, Process, or Experience API layer and be able to justify the decision.",
-      "<strong>Study C4E governance:</strong> Understand how to establish a Center for Enablement, measure reuse metrics, and govern the API lifecycle across teams.",
-      "<strong>Know security patterns:</strong> Practice combining OAuth 2.0, mutual TLS, API Manager policies, and Anypoint Secrets Manager for multi-layer security designs.",
-      "<strong>Think in trade-offs:</strong> Every architecture question has multiple valid approaches — the exam rewards candidates who can articulate why one pattern fits the stated requirements better than alternatives."
+      "<strong>Read for the requirement:</strong> Underline words like 'guaranteed', 'real time', 'on premises' or 'thousands per second'. They point to the answer.",
+      "<strong>Know the deployment options:</strong> CloudHub 2.0, Runtime Fabric and customer-hosted runtimes, and when each fits.",
+      "<strong>Learn the reliability tools:</strong> Persistent queues, Anypoint MQ, transactions, idempotent filters, retries and dead-letter queues.",
+      "<strong>Understand API-led layers:</strong> Which logic belongs in System, Process and Experience APIs, and why."
     ]
   },
   "certificationCard": {
     "code": "MuleSoft Integration Architect",
-    "description": "This exam tests your ability to design integration architectures on Anypoint Platform — choosing the right API-led layers, defining security and resilience patterns, and establishing governance through a Center for Enablement.",
+    "description": "This exam tests how you design MuleSoft integration solutions that meet real business and technical needs: choosing deployment models, making integrations reliable and fast, and keeping them secure and governed.",
     "examDetails": {
-      "questions": 60,
-      "passingScore": "~68%",
+      "questions": "About 60",
+      "passingScore": "70%",
       "duration": "120 min",
       "cost": "$400"
     },
@@ -62,55 +62,55 @@
     "blocks": [
       {
         "heading": "Integration Architecture Patterns",
-        "body": "Integration patterns: Point-to-point (direct connection between two systems — brittle at scale), Hub-and-spoke (central integration hub mediates all connections — reduces n*(n-1) connections to n connections), API-led (layered API approach — flexible and composable), Event-driven (publish/subscribe decoupling — scalable but eventual consistency). The [Integration Architect](/certifications/integration-architect) selects patterns based on: number of systems, latency requirements, scalability needs, and team capability. Know when API-led supersedes traditional hub-and-spoke."
+        "body": "Start from what the integration must guarantee. **Synchronous** request and reply when a caller waits for an answer. **Asynchronous** messaging with Anypoint MQ or VM queues when the caller doesn't need to wait, or the target is slow or unreliable. **Batch** processing for large scheduled data sets, using the Batch Job scope. **Publish and subscribe** when many systems need the same event. **Scatter-gather** to call several systems at once and combine the results. Every pattern has a cost: queues add delay but protect against outages, and synchronous calls are simple but fail when the target is down."
       },
       {
         "heading": "API-Led Connectivity: Three-Layer Architecture",
-        "body": "System APIs wrap individual backend systems — they insulate the network from system-specific protocols and expose stable REST interfaces regardless of what the backend system uses. Process APIs orchestrate business logic by calling multiple System APIs — they implement the business process without knowing which systems back each System API. Experience APIs tailor the data for specific consumers — mobile app, partner portal, web app — formatting and filtering for the channel. Each layer can be independently scaled and versioned. The exam tests how to assign capabilities to the correct API layer."
+        "body": "API-led connectivity splits APIs into three layers. **System APIs** wrap a single back-end system, such as SAP or a database, and hide its quirks. **Process APIs** combine data from several System APIs and apply business rules, such as building a full customer view. **Experience APIs** shape data for one consumer, such as a mobile app or a partner portal. The benefit is reuse: when a new app needs customer data, it calls the existing Process API instead of building new connections. Don't add layers for their own sake. A simple one-off integration may not need all three."
       },
       {
         "heading": "Security Architecture for Integrations",
-        "body": "**OAuth** 2.0 client credentials flow for M2M API authentication. Mutual TLS (mTLS) for certificate-based authentication — both client and server present certificates. API Manager policy stacking — apply multiple policies in sequence (auth → rate limit → header injection). Secrets Manager for credential storage — never hardcode credentials in Mule apps. Anypoint Security (separate licence) provides tokenisation, secrets management, and crypto operations. The exam tests how to design a multi-layer security architecture for APIs and integrations."
+        "body": "Secure APIs at the edge with **API Manager policies**: client ID enforcement, OAuth 2.0 token checks, rate limiting and IP allow lists. Use TLS for data in transit, and mutual TLS when both sides must prove who they are. Keep passwords and keys out of code by using **secure properties** that are encrypted in configuration. For sensitive data, mask or encrypt fields before logging. Use separate environments and business groups so teams only reach what they own."
       },
       {
         "heading": "High Availability, Resilience, and SLAs",
-        "body": "CloudHub workers can be scaled horizontally (multiple workers) or vertically (larger worker size). Multiple workers in the same region provide active-active high availability — each worker processes a portion of the load. Persistent queues (VM connector with JMS) ensure message delivery even if a worker restarts. Reconnection strategies handle transient network failures. Circuit Breaker pattern prevents cascade failures. The architect designs resilience to meet SLA requirements (e.g., 99.9% uptime, maximum 5-second response time)."
+        "body": "For uptime, run more than one worker or replica so one failure doesn't stop the service. On customer-hosted runtimes, **clustering** shares work and state across nodes, and some tasks run on the primary node only. For no lost messages, use persistent queues, Anypoint MQ or **XA transactions** where several resources must succeed or fail together. Use **idempotent** designs, such as the Idempotent Message Validator with an Object Store, so retries don't create duplicates. **Until Successful** handles retries, and failed messages should land in a **dead-letter queue** for review. Set SLA tiers in API Manager to limit how much each consumer can call."
       },
       {
         "heading": "Anypoint Governance and Centre for Enablement",
-        "body": "Centre for Enablement (C4E) is MuleSoft's operating model for scaling API-led connectivity. The C4E team creates reusable assets (API templates, connector extensions, shared fragments) published to Exchange. Governance: API rating and certification in Exchange, API contract testing, dependency tracking via API Catalog. The [Integration Architect](/certifications/integration-architect) designs governance policies — when new versions require review, how breaking changes are managed, and how teams discover and reuse existing assets. The exam tests C4E principles and governance framework design."
+        "body": "A **Centre for Enablement (C4E)** is a small central team that helps other teams build and reuse APIs. It sets standards, publishes templates and shared assets in **Anypoint Exchange**, and measures reuse. It is not a gatekeeper that builds everything itself. **API Governance** checks API specs against rules, such as naming and security, before they are published. **Anypoint Monitoring** gives dashboards, alerts and log search across apps. Good governance means teams move faster because they start from proven assets."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the MuleSoft Integration Architect Exam",
-    "intro": "The MuleSoft Integration Architect exam tests expertise in designing integration solutions using API-led connectivity and the Anypoint Platform. Focus on architecture patterns, Center for Enablement (C4E), and governance frameworks.",
+    "intro": "Most questions give you one or two firm requirements and several designs that almost work. Find the requirement that rules out the wrong ones.",
     "blocks": [
       {
         "heading": "API-Led Connectivity Layers",
-        "body": "Master the three-layer model: Experience APIs (channel-specific), Process APIs (orchestration), and System APIs (backend connectivity). Know how to identify which layer each integration belongs to and why."
+        "body": "One back-end system: System API. Business rules across systems: Process API. Shaping data for a channel: Experience API."
       },
       {
         "heading": "Center for Enablement (C4E)",
-        "body": "The C4E promotes reuse by publishing discoverable assets (connectors, APIs, templates) to Anypoint Exchange. Know how to establish a C4E, measure reuse metrics, and govern API lifecycle through the C4E."
+        "body": "C4E enables and shares. If an answer says the C4E should build every API itself, it is probably wrong."
       },
       {
         "heading": "API Governance Framework",
-        "body": "Know how to use API Manager for API governance: applying policies, defining SLAs, monitoring API usage, and how API Autodiscovery links deployed applications to API Manager."
+        "body": "Policies in API Manager, rules in API Governance, shared assets in Exchange and alerts in Anypoint Monitoring."
       },
       {
         "heading": "Architecture Decision Trade-offs",
-        "body": "Architect questions test trade-off reasoning: synchronous vs. asynchronous, REST vs. SOAP, on-premise vs. cloud deployment. Always justify recommendations based on requirements (latency, volume, security)."
+        "body": "Guaranteed delivery points to queues or transactions. Low latency points to synchronous calls and caching. Huge volume points to batch."
       },
       {
         "heading": "Anypoint Platform Architecture",
-        "body": "Know the major platform components: Anypoint Studio (IDE), Anypoint Exchange (asset library), Runtime Manager (deployment), API Manager (governance), and MQ (async messaging). Understand how they integrate."
+        "body": "CloudHub 2.0 for fully managed cloud. Runtime Fabric when you need your own Kubernetes or on-premises control. Customer-hosted for full control."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "After MuleSoft Integration Architect, many people add Salesforce architect credentials:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a MuleSoft Platform Integration Architect do?",
+      "question": "Orders must never be lost, even when the target ERP is down for an hour. What design fits best?",
       "options": [
-        "Only coding",
-        "Work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations",
-        "Only reporting",
-        "Only Slack"
+        "Store orders in memory until the ERP comes back",
+        "Put orders on a persistent queue such as Anypoint MQ and process them when the ERP is back",
+        "Call the ERP synchronously and return an error if it is down",
+        "Drop orders that fail and ask customers to try again"
       ],
       "correctAnswer": 1,
-      "explanation": "Certified MuleSoft Platform Integration Architects have proven knowledge and skills to work with technical and non-technical stakeholders to translate functional and non-functional requirements into integration interfaces and implementations.",
+      "explanation": "A persistent queue holds each order safely until the ERP can take it, so nothing is lost during the outage.",
       "whyWrong": [
-        "'Only coding' undersells the role, which is about stakeholder collaboration and requirements translation, not just code.",
-        "'Only reporting' misrepresents the role, which is about integration design, not reporting.",
-        "'Only Slack' is unrelated to what a MuleSoft Integration Architect does."
+        "Memory is lost if the app restarts.",
+        "A synchronous call fails while the ERP is down, and the order may be lost.",
+        "Dropping orders breaks the requirement."
       ]
     },
     {
-      "question": "What is a key activity for a MuleSoft Integration Architect?",
+      "question": "Customer data from SAP, Salesforce and a billing system must be combined into one view for several apps. Where should the combining logic live?",
       "options": [
-        "Only coding",
-        "Translating requirements into integration interfaces and implementations",
-        "Only reporting",
-        "Only lists"
+        "In an Experience API for each app",
+        "In a Process API",
+        "In the SAP System API",
+        "In each consuming app"
       ],
       "correctAnswer": 1,
-      "explanation": "They translate requirements into integration interfaces and implementations.",
+      "explanation": "Process APIs combine data from several System APIs and apply business rules, so every app can reuse the same logic.",
       "whyWrong": [
-        "'Only coding' undersells the key activity, which is requirements translation, not just writing code.",
-        "'Only reporting' misrepresents the key activity, which is architecture design, not reporting.",
-        "'Only lists' is unrelated to the actual key activity being described."
+        "Experience APIs shape data for a channel. Combining it there means repeating it per app.",
+        "A System API should wrap one system only.",
+        "Putting it in each app duplicates the work."
       ]
     },
     {
-      "question": "Which stakeholders do MuleSoft Integration Architects work with?",
+      "question": "A retry sends the same payment message twice. The target must not charge the customer twice. What should be used?",
       "options": [
-        "Only technical",
-        "Technical and non-technical stakeholders",
-        "Only non-technical",
-        "Only developers"
+        "A bigger worker size",
+        "A larger timeout",
+        "An idempotent message validator backed by an Object Store",
+        "A scatter-gather"
       ],
-      "correctAnswer": 1,
-      "explanation": "They work with technical and non-technical stakeholders.",
+      "correctAnswer": 2,
+      "explanation": "The idempotent validator remembers message IDs it has seen and rejects repeats, so the payment only happens once.",
       "whyWrong": [
-        "'Only technical' undersells the stakeholder scope, which includes non-technical stakeholders too.",
-        "'Only non-technical' undersells the stakeholder scope, which includes technical stakeholders too.",
-        "'Only developers' undersells the broader stakeholder scope beyond just developers."
+        "More capacity doesn't affect duplicate handling.",
+        "A longer timeout doesn't stop duplicates.",
+        "Scatter-gather calls several targets at once. It doesn't stop duplicates."
       ]
     },
     {
-      "question": "Which role typically pursues MuleSoft Integration Architect?",
+      "question": "A bank must run Mule apps on its own Kubernetes clusters inside its data centre, with central management from Anypoint Platform. Which option fits?",
       "options": [
-        "Marketers",
-        "Architects and senior consultants designing integration solutions",
-        "Sales only",
-        "Designers only"
+        "Anypoint Studio only",
+        "Runtime Fabric",
+        "CloudHub 2.0",
+        "A single customer-hosted runtime with no management"
       ],
       "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing integration solutions pursue this credential.",
+      "explanation": "Runtime Fabric runs Mule apps on the customer's own infrastructure while still being managed from Anypoint Platform.",
       "whyWrong": [
-        "Marketers aren't the typical audience for this integration architecture credential.",
-        "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience — this targets architects and senior consultants."
+        "Studio is a design tool, not a runtime.",
+        "CloudHub 2.0 runs in MuleSoft's cloud, not the bank's data centre.",
+        "An unmanaged runtime loses central management and is harder to scale."
       ]
     },
     {
-      "question": "What does 'integration interfaces' mean?",
+      "question": "A database update and a message to a JMS queue must both succeed or both be rolled back. What should be used?",
       "options": [
-        "Only UI",
-        "APIs, contracts, and data flows between systems",
-        "Only reports",
-        "Only dashboards"
+        "A batch job",
+        "An Until Successful scope only",
+        "An XA transaction across both resources",
+        "Two separate flows"
       ],
-      "correctAnswer": 1,
-      "explanation": "Integration interfaces are APIs, contracts, and data flows between systems.",
+      "correctAnswer": 2,
+      "explanation": "An XA transaction ties both resources together, so either both commit or both roll back.",
       "whyWrong": [
-        "'Only UI' misrepresents integration interfaces, which are about APIs and data flows, not visual interfaces.",
-        "'Only reports' is unrelated to what integration interfaces actually define.",
-        "'Only dashboards' is unrelated to what integration interfaces actually define."
+        "Batch jobs are for large data sets, not two-part commits.",
+        "Until Successful retries but doesn't roll back the other resource.",
+        "Separate flows can leave one done and the other not."
       ]
     },
     {
-      "question": "Which design approach supports integration architecture?",
+      "question": "A partner is calling an API so often that other consumers are slowed down. What should the architect apply?",
       "options": [
-        "Ad-hoc only",
-        "Contract-first and API-led design",
-        "Code-first only",
-        "No design"
+        "Removing the partner's access entirely",
+        "Moving the API to a batch job",
+        "A rate-limiting or SLA-based policy in API Manager",
+        "A bigger CloudHub worker for everyone"
       ],
-      "correctAnswer": 1,
-      "explanation": "Contract-first and API-led support sound architecture.",
+      "correctAnswer": 2,
+      "explanation": "SLA tiers and rate limits cap how much each consumer can call, protecting the API for others.",
       "whyWrong": [
-        "'Ad-hoc only' is the opposite of the structured, design-first approach that supports good integration architecture.",
-        "'Code-first only' is the opposite of the contract-first approach commonly recommended for integration design.",
-        "'No design' contradicts the fact that structured design approaches are the actual best practice."
+        "Removing access isn't needed when limits will do.",
+        "A batch job doesn't serve live API calls.",
+        "More capacity treats the symptom and costs more."
       ]
     },
     {
-      "question": "What does non-functional requirements include?",
+      "question": "What is the main job of a Centre for Enablement (C4E)?",
       "options": [
-        "Only features",
-        "Performance, security, scalability, and reliability",
-        "Only UI",
-        "Only data"
+        "To help teams build and reuse APIs by sharing standards, templates and assets",
+        "To replace the security team",
+        "To approve every code change by hand",
+        "To build every API for the whole company"
       ],
-      "correctAnswer": 1,
-      "explanation": "Non-functional requirements cover performance, security, etc.",
+      "correctAnswer": 0,
+      "explanation": "A C4E enables other teams with shared assets and guidance, so delivery speeds up and reuse grows.",
       "whyWrong": [
-        "'Only features' misses the point — non-functional requirements are specifically about qualities like performance and security, not features.",
-        "'Only UI' is unrelated to non-functional requirements, which concern qualities like performance and reliability.",
-        "'Only data' undersells non-functional requirements, which span performance, security, and more."
+        "Security still needs its own experts.",
+        "Manual approval of every change slows teams down.",
+        "Building everything centrally creates a bottleneck."
       ]
     },
     {
-      "question": "Which MuleSoft tool supports API design?",
+      "question": "An app must call three systems at the same time and combine the answers before replying. Which scope fits?",
       "options": [
-        "Mule runtime only",
-        "Design Center and RAML/OAS",
-        "CloudHub only",
-        "No design"
+        "Scatter-gather",
+        "Choice router",
+        "Until Successful",
+        "Batch Job"
       ],
-      "correctAnswer": 1,
-      "explanation": "Design Center and RAML/OAS support API design.",
+      "correctAnswer": 0,
+      "explanation": "Scatter-gather sends requests in parallel and gathers the results into one response.",
       "whyWrong": [
-        "Mule runtime executes integrations — it isn't the design tool for API specification.",
-        "CloudHub is a deployment platform, not the design tool for API specification.",
-        "'No design' contradicts the fact that dedicated design tools (Design Center) exist."
+        "Choice routes to one path, not several at once.",
+        "Until Successful retries one step, it doesn't call in parallel.",
+        "Batch is for large scheduled data sets."
       ]
     },
     {
-      "question": "What is the purpose of integration patterns?",
+      "question": "10 million records must be moved from a database to a data warehouse every night. What is the best approach?",
       "options": [
-        "To replace APIs",
-        "To address common integration scenarios (sync, async, batch)",
-        "To delete only",
-        "To create only"
+        "A synchronous API call per record from the warehouse",
+        "Manual export and import",
+        "A Batch Job that processes records in blocks",
+        "A single flow that loads all records into memory"
       ],
-      "correctAnswer": 1,
-      "explanation": "Patterns address common integration scenarios.",
+      "correctAnswer": 2,
+      "explanation": "The Batch Job scope splits large data sets into blocks, handles errors per record and can run in parallel.",
       "whyWrong": [
-        "Integration patterns don't replace APIs — they define common approaches to using them.",
-        "'To delete only' misrepresents integration patterns' purpose, which is addressing common scenarios, not deletion.",
-        "'To create only' undersells integration patterns' broader purpose beyond just creation."
+        "Per-record API calls would be very slow.",
+        "Manual work at this scale isn't reliable.",
+        "Loading 10 million records into memory will fail."
       ]
     },
     {
-      "question": "Which stakeholder provides functional requirements?",
+      "question": "Where should passwords and API keys used by a Mule app be stored?",
       "options": [
-        "Developers only",
-        "Business analysts and domain experts",
-        "Only architects",
-        "Only operations"
+        "Hard-coded in the flow XML",
+        "In a plain-text properties file in source control",
+        "In the API description in Exchange",
+        "In encrypted secure properties"
       ],
-      "correctAnswer": 1,
-      "explanation": "Business and domain experts provide functional requirements.",
+      "correctAnswer": 3,
+      "explanation": "Secure properties keep secrets encrypted in configuration, so they aren't readable in code or source control.",
       "whyWrong": [
-        "Developers implement based on requirements — they aren't the primary source of functional requirements themselves.",
-        "'Only architects' misattributes functional requirements gathering to architects rather than business stakeholders.",
-        "'Only operations' misattributes functional requirements to the wrong stakeholder group."
+        "Hard-coded secrets can be read by anyone with the code.",
+        "Plain-text files in Git expose the secrets.",
+        "Exchange is for sharing APIs, not storing secrets."
       ]
     },
     {
-      "question": "What does implementation encompass?",
+      "question": "A Mule app on customer-hosted runtimes must keep running if one server fails, and a scheduled task must run only once across all servers. What should be used?",
       "options": [
-        "Only design",
-        "Mule flows, connectors, and deployment",
-        "Only documentation",
-        "Only testing"
+        "A cluster, with the scheduler running on the primary node",
+        "A single server with more memory",
+        "Separate copies of the app with no link between them",
+        "Running the scheduler on every server"
       ],
-      "correctAnswer": 1,
-      "explanation": "Implementation includes flows, connectors, and deployment.",
+      "correctAnswer": 0,
+      "explanation": "A cluster keeps the app running when a node fails, and by default schedulers run only on the primary node, so the task runs once.",
       "whyWrong": [
-        "'Only design' undersells implementation, which includes building flows and deploying, not just design.",
-        "'Only documentation' undersells implementation, which is about building and deploying, not just documenting.",
-        "'Only testing' undersells implementation, which spans building and deployment, not just testing."
+        "One server is a single point of failure.",
+        "Unlinked copies would each run the task, causing duplicates.",
+        "Running on every server makes the task run several times."
       ]
     },
     {
-      "question": "Which consideration applies to integration security?",
+      "question": "A new mobile app needs order data shaped for small screens. Existing System and Process APIs already provide order data. What should be built?",
       "options": [
-        "Ignore security",
-        "Authentication, encryption, and authorization",
-        "Only HTTPS",
-        "No auth"
+        "A new System API to the ERP",
+        "A copy of the Process API",
+        "Direct database access from the app",
+        "An Experience API for the mobile app"
       ],
-      "correctAnswer": 1,
-      "explanation": "Integration security covers auth, encryption, and authorization.",
+      "correctAnswer": 3,
+      "explanation": "An Experience API shapes existing data for one channel. It reuses the Process API instead of building new connections.",
       "whyWrong": [
-        "Ignoring security contradicts the core consideration needed for integration architecture.",
-        "'Only HTTPS' undersells the broader set of security considerations (auth, encryption, authorization) needed.",
-        "'No auth' contradicts the fact that authentication is a core integration security consideration."
+        "A new System API duplicates an existing connection.",
+        "Copying the Process API duplicates logic.",
+        "Direct database access skips security and reuse."
       ]
     },
     {
-      "question": "What is the benefit of translating requirements to interfaces?",
+      "question": "Messages that keep failing after all retries must not block the queue and must be reviewed later. What should be used?",
       "options": [
-        "No benefit",
-        "Clear contracts and reduced integration errors",
-        "More errors",
-        "Slower delivery"
+        "Retrying forever",
+        "Deleting the failed messages",
+        "Raising the queue's size",
+        "A dead-letter queue"
       ],
-      "correctAnswer": 1,
-      "explanation": "Clear interfaces reduce integration errors.",
+      "correctAnswer": 3,
+      "explanation": "A dead-letter queue moves messages that still fail out of the way, so others keep flowing and someone can review them.",
       "whyWrong": [
-        "'No benefit' contradicts the real, documented benefit of translating requirements into clear interfaces.",
-        "'More errors' is the opposite of the benefit (reduced errors) that clear translation provides.",
-        "'Slower delivery' is the opposite of the benefit clear requirements translation typically provides."
+        "Endless retries block the queue and waste resources.",
+        "Deleting messages loses data.",
+        "A bigger queue doesn't fix the stuck messages."
       ]
     },
     {
-      "question": "What does RAML define in MuleSoft?",
+      "question": "An API must only be called by known applications that send a valid client ID and secret. What should be applied?",
       "options": [
-        "Only runtime config",
-        "API contract: resources, methods, data types, and examples",
-        "Only deployment",
-        "Only security"
+        "A caching policy",
+        "A client ID enforcement policy",
+        "A bigger worker",
+        "An IP allow list only"
       ],
       "correctAnswer": 1,
-      "explanation": "RAML (RESTful API Modeling Language) defines the API contract and structure.",
+      "explanation": "Client ID enforcement checks that each call comes from a registered application with valid credentials.",
       "whyWrong": [
-        "'Only runtime config' undersells RAML, which defines the full API contract, not just runtime settings.",
-        "'Only deployment' misrepresents RAML's purpose, which is API contract definition, not deployment.",
-        "'Only security' undersells RAML, which defines the broader API contract beyond just security."
+        "Caching affects speed, not security.",
+        "Worker size doesn't control access.",
+        "IP lists check where calls come from, not which application is calling."
       ]
     },
     {
-      "question": "What does an Integration Architect ensure?",
+      "question": "A team wants to be told when an API's error rate rises above 5%. What should they use?",
       "options": [
-        "Only code",
-        "Requirements are translated into sound, maintainable interfaces",
-        "Only deployment",
-        "Only testing"
+        "Alerts in Anypoint Monitoring",
+        "A weekly report from the C4E",
+        "Reading logs by hand each morning",
+        "Exchange ratings"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architects ensure requirements become maintainable interfaces.",
+      "correctAnswer": 0,
+      "explanation": "Anypoint Monitoring can track error rates and send alerts as soon as a threshold is crossed.",
       "whyWrong": [
-        "'Only code' undersells what an architect ensures, which is sound, maintainable interfaces broadly, not just code.",
-        "'Only deployment' undersells the broader design assurance an architect provides beyond deployment.",
-        "'Only testing' undersells the broader design assurance an architect provides beyond testing."
+        "A weekly report is far too late for live problems.",
+        "Reading logs by hand is slow and easy to miss.",
+        "Exchange ratings are about asset quality, not live errors."
       ]
     }
   ]

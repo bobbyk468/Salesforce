@@ -5,47 +5,47 @@
     "personas": [
       {
         "label": "Senior SFCC architects",
-        "description": "You design multi-brand, multi-locale Commerce Cloud solutions for enterprise retailers and want the certification to validate your architectural expertise."
+        "description": "You have led B2C Commerce builds and want proof that you can design whole storefront programmes, not just features."
       },
       {
         "label": "Technical leads evaluating commerce patterns",
-        "description": "You assess headless vs. SFRA approaches, CDN caching strategies, and integration architecture for large-scale B2C deployments."
+        "description": "You decide between SFRA and a headless storefront, and you plan integrations, caching and site operations."
       },
       {
         "label": "Solution architects",
-        "description": "You integrate Commerce Cloud with Order Management, Marketing Cloud, and payment providers and need the credential to demonstrate cross-cloud architectural competence."
+        "description": "You work on retail projects where B2C Commerce has to fit with Order Management, Marketing Cloud and outside systems."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the B2C Commerce Architect Exam Hard?",
-    "summary": "The B2C Commerce Architect exam is one of the more difficult Salesforce certifications. The ~68% passing score is above average, and the exam tests architectural judgment &mdash; evaluating trade-offs between caching strategies, headless patterns, and integration approaches rather than recalling isolated configuration steps.",
+    "summary": "It is one of the harder commerce exams. You need deep B2C Commerce knowledge and you have to weigh trade-offs, such as speed versus flexibility or custom code versus standard features. Salesforce lists B2C Commerce Developer as a prerequisite.",
     "bullets": [
-      "<strong>60 multiple-choice questions</strong> in 120 minutes.",
-      "<strong>~68% passing score</strong> &mdash; above the standard 65%, reflecting the advanced level of architectural reasoning expected.",
-      "<strong>Trade-off analysis</strong> &mdash; questions require choosing between viable approaches (headless vs. SFRA, CDN strategies, integration patterns) based on business and technical constraints.",
-      "<strong>Deep project experience expected</strong> &mdash; multiple years of SFCC project experience across different site configurations and traffic patterns is the strongest preparation."
+      "<strong>60 scored multiple-choice questions</strong>, plus a few unscored ones, in about 105 minutes.",
+      "<strong>Pass mark:</strong> sources quote different figures, so check the official exam guide before you book.",
+      "<strong>Trade-off questions.</strong> SFRA or headless, OCAPI or SCAPI, page caching choices, and how to integrate with other systems.",
+      "<strong>Experience matters.</strong> Years on real B2C Commerce projects, with different traffic levels and site setups, is the best preparation."
     ],
-    "passRateGuidance": "This exam rewards breadth of real-world project experience over study alone. If you have designed at least two multi-site SFCC deployments and can articulate caching, performance, and integration trade-offs confidently, you are ready to book."
+    "passRateGuidance": "People who have taken a site live and supported it during peak trading do best. Before you book, aim for 75% or more on practice tests and be able to explain why you would pick a headless storefront or not."
   },
   "examFormat": {
     "heading": "B2C Commerce Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "The majority of questions are scenario-based. Expect long scenarios describing a global retailer’s requirements (multi-brand, multi-locale, high traffic) and asking you to select the architecture that best meets performance, scalability, and maintainability goals.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions are scenarios. A typical one describes a retailer with several brands and countries and asks for the best way to set up sites, catalogs, code or integrations.",
     "bestWayToPass": [
-      "<strong>Know the SFRA vs. headless trade-offs:</strong> Understand when SFRA is the right choice vs. PWA Kit or a custom headless front-end, and how each affects performance, SEO, and development cost.",
-      "<strong>Master CDN and caching strategy:</strong> Study the caching hierarchy (browser, CDN, application), page cache configuration, and how to handle dynamic content alongside cached pages.",
-      "<strong>Study integration architecture deeply:</strong> Know OCAPI vs. SCAPI, the Salesforce Connector for Order Management, and how to design fault-tolerant integrations with external payment and tax providers.",
-      "<strong>Review security and compliance:</strong> Understand PCI DSS responsibility boundaries, GDPR data handling, and how to design graceful degradation when external services are unavailable."
+      "<strong>Know the cartridge path:</strong> Cartridges on the left override those on the right. Keep custom code in your own cartridges, not in the base.",
+      "<strong>Understand caching:</strong> Page caching is the main lever for speed. Know what can be cached and what must stay dynamic.",
+      "<strong>Learn the APIs:</strong> SCAPI and the Shopper APIs for new headless builds, OCAPI for older ones, and SLAS for shopper login.",
+      "<strong>Plan multi-site setups:</strong> Shared master catalog, separate storefront catalogs, price books and locales per site."
     ]
   },
   "certificationCard": {
     "code": "B2C Architect",
-    "description": "This exam tests your ability to architect global B2C Commerce (SFCC) sites across multiple brands, locales, and channels using SFRA, headless patterns, and CDN caching strategies.",
+    "description": "This exam tests how you design and run Salesforce B2C Commerce sites: choosing a storefront approach, setting up sites and catalogs, planning integrations, and keeping sites fast and secure.",
     "examDetails": {
       "questions": 60,
-      "passingScore": "~68%",
-      "duration": "120 min",
+      "passingScore": "See official guide",
+      "duration": "105 min",
       "cost": "$400"
     },
     "topics": [
@@ -62,55 +62,55 @@
     "blocks": [
       {
         "heading": "Architecture Patterns & Scalability",
-        "body": "B2C Commerce (Salesforce Commerce Cloud) uses a multi-tenant SaaS architecture for high-volume retail. The SFRA (Storefront Reference Architecture) is the recommended development baseline — it provides a cartridge-based override pattern, MVC structure, and responsive templates. Architects must design for Black Friday-level traffic: CDN caching strategy, page cache TTLs, and product recommendation service integration. Instance types (PIG for production, SIG/ATIG for non-prod) differ in capacity and SLA. The exam tests architecture decisions for scalability, caching hierarchy (browser → CDN → application), and when to use headless vs. SFRA approaches."
+        "body": "A B2C Commerce realm holds several instances: sandboxes for developers, then Development, Staging and Production. Code and data are built and tested on Staging, then **replicated** to Production. A realm can run many sites, which share code but can have their own catalogs, prices and settings. For a retailer with several brands or countries, the usual design is one **master catalog** for products, separate **storefront catalogs** per site to control what each one shows, and separate **price books** per currency or market. Scale comes from the platform, but your code must still be efficient: avoid heavy logic on every page request and use jobs for batch work."
       },
       {
         "heading": "Storefront Architecture & Headless Commerce",
-        "body": "SFRA cartridges implement the Controller → Template → Model pattern. Custom cartridges extend base cartridges via the cartridge path (left-to-right override). Headless architecture decouples the front-end from Commerce Cloud, using the OCAPI (Open Commerce API) or SCAPI (Salesforce Commerce API) for data. PWA Kit provides a React-based headless starter with Managed Runtime hosting. The architect must decide between SFRA (monolithic, faster to stand up) and headless (more flexibility, higher development cost). The exam tests the trade-offs between these approaches and how the cartridge override pattern enables maintainable customization."
+        "body": "**SFRA** (Storefront Reference Architecture) is the standard server-rendered storefront. You customise it by adding your own cartridges on top, without editing the base code. **Composable Storefront** (PWA Kit with Managed Runtime) is the headless option: a React front end that calls the B2C Commerce APIs. Headless gives more freedom in the front end and fits teams with strong JavaScript skills, but it means more to build and run yourself. Pick SFRA when speed to market and standard features matter most, and headless when the brand needs a very custom experience or one front end for several back ends."
       },
       {
         "heading": "Integration Architecture: OCAPI, SCAPI & Connectors",
-        "body": "OCAPI (Open Commerce API) is the **REST API** for Shop (storefront), Data (admin), and Meta endpoints — used by SFRA and third-party integrations. SCAPI (Salesforce Commerce API) is the newer, more secure API replacing OCAPI for front-end use. Connectors integrate Commerce Cloud with Service Cloud, Marketing Cloud, and Order Management. The Salesforce Connector for Order Management syncs orders to Salesforce OMS. Einstein Recommendations API surfaces personalized product recommendations. B2C Connect (now Commerce to Service Cloud Connector) links shopper profiles to Service Cloud cases. The exam tests the correct API for each use case and the security model (PKCE flow for SCAPI)."
+        "body": "**SCAPI** (Salesforce Commerce API), including the Shopper APIs, is the modern API set and is the default for new headless builds. **OCAPI** (Open Commerce API) is the older API, still used on many sites. **SLAS** handles shopper login and tokens for headless storefronts. For outside systems, use **service framework** definitions in Business Manager so calls have timeouts, logging and circuit breakers. Large data such as product feeds and inventory usually come in through scheduled **jobs** that import XML or CSV files. Payment, tax and address providers usually plug in through certified **LINK cartridges**."
       },
       {
         "heading": "Performance, Caching & CDN Strategy",
-        "body": "B2C Commerce uses a CDN (Akamai) for global delivery. Page cache rules define what can be cached, for how long, and with what cache key variations (country, currency, login state). Dynamic content (personalized recommendations, cart) bypasses the page cache. Pipeline profiler and Log Center are key tools for identifying performance bottlenecks. SFRA uses server-side rendering — minimize business logic in templates. Einstein Recommendations and A/B testing (content experiments) add external dependencies that affect page load time. The exam tests cache hierarchy decisions, how to diagnose slow pages using profiler data, and CDN configuration best practices."
+        "body": "Page caching is the biggest performance lever. Cache whole pages or page parts with the iscache tag, and keep user-specific bits, like the mini cart, as small uncached includes loaded separately. Set sensible cache times and clear the cache when catalog or content changes. The **eCDN** serves images and static files from locations close to the shopper. Watch the platform **quotas**, which limit things like the number of objects or API calls per request, and fix code that breaks them before peak season. Test with realistic traffic before big sale days."
       },
       {
         "heading": "Security, Compliance & Site Operations",
-        "body": "B2C Commerce security includes PCI DSS compliance for payment flows — use a certified payment integration (Stripe, Adyen, CyberSource) and never log card data. SLAs, disaster recovery, and business continuity are Salesforce-managed at the platform level but architects must design for graceful degradation when external services (tax, recommendations) are unavailable. Site Genesis and SFRA include CSRF tokens, input validation, and secure cookies. GDPR compliance requires cookie consent management and data deletion capabilities. The exam tests the architect's responsibility boundary: what Salesforce manages vs. what the customer and SI partner must configure and maintain."
+        "body": "Never store raw card numbers on the platform. Use a payment provider's cartridge so card data goes straight to them as a token, which keeps you out of most PCI scope. Use role-based access in Business Manager so each team only sees what it needs. Handle shopper privacy requests, consent and cookie rules for each country. For operations, plan code deployments through Staging with replication, schedule jobs outside peak hours, and set up log monitoring and alerts. Have a clear plan for peak trading such as Black Friday, including code freezes."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2C Commerce Architect Exam",
-    "intro": "The B2C Commerce (SFCC) Architect exam tests enterprise-scale Salesforce Commerce Cloud architecture. Focus on multi-site design, performance optimization, integration patterns, and the cartridge development model.",
+    "intro": "Most questions describe a retailer's needs and ask for the best design. Look for clues about how many brands and countries there are, how custom the front end must be, and how much traffic to expect.",
     "blocks": [
       {
         "heading": "SFCC Architecture & Multi-Site",
-        "body": "Know how SFCC organizes deployments: Business Manager, Organizations, Sites, and how to share catalogs and price books across sites. Understand the multi-site configuration for different brands, regions, and locales."
+        "body": "Several brands or countries usually means one realm, several sites, a shared master catalog and separate storefront catalogs and price books."
       },
       {
         "heading": "Cartridge Architecture",
-        "body": "Know the cartridge layering model: base cartridges (Commerce Cloud Storefront Reference Architecture — SFRA), site cartridges, and custom cartridges. Understand cartridge path override and module resolution."
+        "body": "Put custom code in your own cartridges and place them to the left of the base on the cartridge path. Never edit the base cartridge directly."
       },
       {
         "heading": "Performance Optimization",
-        "body": "Know SFCC performance levers: page caching (full-page, partial), lazy loading for product tiles, CDN configuration for static assets, and how to use the Business Manager performance reports."
+        "body": "Cache as much of each page as you can. Load shopper-specific parts separately so they don't stop the rest of the page being cached."
       },
       {
         "heading": "Integration Patterns",
-        "body": "Know SFCC integration approaches: REST/SOAP web services from cartridges, Job Frameworks for batch data exchange, and how SFCC integrates with Salesforce CRM via Marketing Cloud Connector and Order Management."
+        "body": "SCAPI for new headless builds, jobs for large feeds, the service framework for outside calls, and LINK cartridges for payment and tax."
       },
       {
         "heading": "Security Architecture",
-        "body": "Know SFCC security: PCI compliance requirements, tokenization for payment data, account locking policies, and how to configure access control lists (ACLs) for Business Manager roles."
+        "body": "Tokenise payments through a provider, give Business Manager users only the roles they need, and respect each country's privacy rules."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Architect Certifications",
-    "intro": "After this architect certification, progress toward CTA or other architect domains:",
+    "intro": "After B2C Commerce Architect, many people move toward the wider architect credentials:",
     "links": [
       {
         "href": "/certifications/application-architect",
@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a B2C Commerce Architect do?",
+      "question": "A retailer runs three brands in five countries. Most products are shared, but each brand shows a different range and each country has its own prices. What is the best catalog design?",
       "options": [
-        "Only coding",
-        "Design global sites that support multiple brands and channels using standard design patterns",
-        "Only reporting",
-        "Only Slack"
+        "One master catalog, a storefront catalog per site, and price books per market",
+        "Store prices as custom attributes on each product",
+        "A separate master catalog for every site",
+        "One storefront catalog shared by all sites"
       ],
-      "correctAnswer": 1,
-      "explanation": "Certified B2C Commerce Architects are skilled in designing global sites that support multiple brands and channels using standard design patterns.",
+      "correctAnswer": 0,
+      "explanation": "A shared master catalog avoids duplicating products. Storefront catalogs control what each site shows, and price books handle prices per market.",
       "whyWrong": [
-        "'Only coding' undersells the architect role, which spans global site design using standard patterns, not just code.",
-        "'Only reporting' misrepresents the role, which is about architecture design, not reporting.",
-        "'Only Slack' is unrelated to what a B2C Commerce Architect does."
+        "Prices in custom attributes skip the price book system and are hard to manage.",
+        "Separate master catalogs duplicate shared products and make updates harder.",
+        "One shared storefront catalog can't show a different range per brand."
       ]
     },
     {
-      "question": "What does B2C stand for?",
+      "question": "A developer needs to change how the checkout page works on an SFRA site. Where should the change go?",
       "options": [
-        "Back to Customer",
-        "Business to Consumer",
-        "Build to Order",
-        "Brand to Consumer"
+        "In Business Manager site preferences",
+        "In a custom cartridge placed to the left of the base cartridge on the cartridge path",
+        "In a cartridge placed to the right of the base cartridge",
+        "Directly in the app_storefront_base cartridge"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C stands for Business to Consumer.",
+      "explanation": "Cartridges on the left override those on the right. Putting changes in your own cartridge keeps the base untouched, so upgrades are easier.",
       "whyWrong": [
-        "'Back to Customer' isn't the actual expansion of B2C.",
-        "'Build to Order' is a manufacturing term, not what B2C stands for.",
-        "'Brand to Consumer' isn't the actual expansion of B2C."
+        "Site preferences change settings, not page logic.",
+        "A cartridge on the right is overridden by the base, so the change wouldn't apply.",
+        "Editing the base makes future SFRA upgrades painful."
       ]
     },
     {
-      "question": "Which Salesforce product does B2C Commerce Architect focus on?",
+      "question": "A brand wants a highly custom, app-like front end built by their React team, with fast page loads. Which approach fits best?",
       "options": [
-        "Marketing Cloud",
-        "B2C Commerce (formerly Demandware) for B2C storefronts",
-        "Service Cloud",
-        "Slack"
+        "OCAPI calls from ISML templates",
+        "SFRA with a custom theme",
+        "Composable Storefront (PWA Kit) using the Commerce APIs",
+        "Business Manager content slots only"
       ],
-      "correctAnswer": 1,
-      "explanation": "B2C Commerce Architect focuses on B2C Commerce for B2C storefronts.",
+      "correctAnswer": 2,
+      "explanation": "Composable Storefront is the headless option built on React and the Commerce APIs, and it suits teams that want full control of the front end.",
       "whyWrong": [
-        "Marketing Cloud is a different product, unrelated to the B2C Commerce Architect's core storefront focus.",
-        "Service Cloud is a different product, unrelated to B2C storefront architecture.",
-        "Slack is unrelated to B2C Commerce storefront architecture."
+        "ISML is SFRA's template language. Calling OCAPI from it isn't a headless design.",
+        "SFRA is server-rendered and less suited to an app-like React experience.",
+        "Content slots manage content, not the whole front-end design."
       ]
     },
     {
-      "question": "What is a key consideration for global B2C sites?",
+      "question": "Category pages load slowly at peak. Each page includes the shopper's mini cart. What should the architect recommend?",
       "options": [
-        "Only language",
-        "Multiple brands, channels, and locales",
-        "Only currency",
-        "Only shipping"
+        "Move the whole category page into a job",
+        "Turn off page caching to keep the cart accurate",
+        "Add more product images",
+        "Cache the category page and load the mini cart as a separate uncached include"
       ],
-      "correctAnswer": 1,
-      "explanation": "Multiple brands, channels, and locales are key considerations.",
+      "correctAnswer": 3,
+      "explanation": "Caching the main page and loading the shopper-specific mini cart separately gives fast pages without showing the wrong cart.",
       "whyWrong": [
-        "'Only language' undersells the broader set of considerations (brands, channels, locales) for global sites.",
-        "'Only currency' undersells the broader multi-brand, multi-channel, multi-locale considerations.",
-        "'Only shipping' undersells the broader considerations beyond just logistics."
+        "Jobs run in the background and can't serve live pages.",
+        "Turning off caching makes the slowdown worse.",
+        "More images slow the page further."
       ]
     },
     {
-      "question": "Which role typically pursues B2C Commerce Architect?",
+      "question": "A new headless storefront needs shoppers to log in and get tokens to call the Shopper APIs. What should be used?",
       "options": [
-        "Marketers",
-        "Architects and senior consultants designing B2C commerce solutions",
-        "Sales only",
-        "Designers only"
+        "SLAS (Shopper Login and API Access Service)",
+        "Business Manager user accounts",
+        "A shared API key in the front end",
+        "Basic authentication on every call"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architects and senior consultants designing B2C commerce solutions pursue this credential.",
+      "correctAnswer": 0,
+      "explanation": "SLAS is the service for shopper login and API tokens in headless B2C Commerce builds.",
       "whyWrong": [
-        "Marketers aren't the typical audience for this architecture-focused credential.",
-        "Sales roles aren't the typical audience for this technical architecture credential.",
-        "Designers aren't the typical audience — this targets architects and senior consultants."
+        "Business Manager accounts are for staff, not shoppers.",
+        "A shared key in the front end can be copied by anyone.",
+        "Basic auth isn't how the Shopper APIs authenticate shoppers."
       ]
     },
     {
-      "question": "What does multi-brand B2C architecture support?",
+      "question": "The retailer must avoid storing card numbers on the platform to reduce PCI scope. What is the right design?",
       "options": [
-        "Single brand only",
-        "Multiple brands with shared or separate catalogs and experiences",
-        "B2B only",
-        "No branding"
+        "Use a payment provider's LINK cartridge that tokenises the card",
+        "Encrypt card numbers in a custom object",
+        "Email card details to the finance team",
+        "Store cards in session data only"
       ],
-      "correctAnswer": 1,
-      "explanation": "Multi-brand supports multiple brands with shared or separate catalogs.",
+      "correctAnswer": 0,
+      "explanation": "With tokenisation, the card data goes to the payment provider and the site only keeps a token, which greatly reduces PCI scope.",
       "whyWrong": [
-        "'Single brand only' is the opposite of what multi-brand architecture supports.",
-        "'B2B only' misrepresents the topic, which is specifically about B2C multi-brand architecture.",
-        "'No branding' contradicts the fact that multi-brand support is a real, well-defined capability."
+        "Encrypted cards on the platform still bring the site into PCI scope.",
+        "Emailing card details is insecure and breaks PCI rules.",
+        "Session data still passes through and stores card data."
       ]
     },
     {
-      "question": "Which B2C Commerce design pattern supports scalability?",
+      "question": "Inventory levels for 500,000 products arrive from the warehouse system every hour. How should they be loaded?",
       "options": [
-        "Monolith only",
-        "SFRA, cartridge architecture, and headless",
-        "Static only",
-        "No patterns"
+        "One OCAPI call per product every hour",
+        "Updating stock during each page view",
+        "Manual updates in Business Manager",
+        "A scheduled job that imports an inventory file"
       ],
-      "correctAnswer": 1,
-      "explanation": "SFRA, cartridges, and headless support scalability.",
+      "correctAnswer": 3,
+      "explanation": "Scheduled jobs that import inventory files are the standard way to handle large, regular feeds.",
       "whyWrong": [
-        "'Monolith only' is the opposite of the scalable, modern patterns (SFRA, headless) this question asks about.",
-        "'Static only' doesn't reflect the dynamic, scalable architecture patterns being described.",
-        "'No patterns' contradicts the existence of well-documented scalability patterns like SFRA and headless."
+        "Half a million API calls per hour is wasteful and may hit quotas.",
+        "Updating stock on page views slows pages and doesn't keep stock in sync.",
+        "Manual updates can't keep up at this scale."
       ]
     },
     {
-      "question": "What does locale support in B2C Commerce include?",
+      "question": "Code has been tested on Staging and is ready for Production. How does it usually reach Production?",
       "options": [
-        "Language only",
-        "Language, currency, and regional preferences",
-        "Currency only",
-        "No locale"
+        "Developers upload it straight to Production from their sandboxes",
+        "Replication from Staging to Production",
+        "Rebuilding the site by hand",
+        "Copying files by FTP"
       ],
       "correctAnswer": 1,
-      "explanation": "Locale includes language, currency, and regional preferences.",
+      "explanation": "Code and data are prepared on Staging and then replicated to Production, which keeps the two in step.",
       "whyWrong": [
-        "'Language only' undersells locale support, which also includes currency and regional preferences.",
-        "'Currency only' undersells locale support, which also includes language and regional preferences.",
-        "'No locale' contradicts the fact that locale support is a real, documented capability."
+        "Uploading straight to Production skips testing and is not the standard flow.",
+        "Rebuilding by hand is slow and error-prone.",
+        "FTP isn't how code is deployed to Production."
       ]
     },
     {
-      "question": "Which B2C Commerce channel can be designed?",
+      "question": "A call to an outside tax service sometimes hangs and slows checkout. What should the architect use for this call?",
       "options": [
-        "Web only",
-        "Web, mobile, and omnichannel",
-        "Mobile only",
-        "No channels"
+        "Running the call in a nightly job",
+        "The service framework with a timeout and circuit breaker",
+        "A plain HTTP call with no timeout",
+        "Calling the tax service from the shopper's browser"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce supports web, mobile, and omnichannel.",
+      "explanation": "Service definitions in the service framework let you set timeouts, logging and a circuit breaker, so one slow service doesn't stall checkout.",
       "whyWrong": [
-        "'Web only' undersells the omnichannel capability, which spans mobile too.",
-        "'Mobile only' undersells the omnichannel capability, which spans web too.",
-        "'No channels' contradicts the fact that multiple channels can be designed for."
+        "Tax is needed during checkout, not overnight.",
+        "No timeout lets the call hang and block the shopper.",
+        "Calling from the browser exposes the integration and is hard to secure."
       ]
     },
     {
-      "question": "What is the purpose of B2C Commerce architecture?",
+      "question": "A new site is being built from scratch with a headless front end. Which API set should be the default choice?",
       "options": [
-        "Only coding",
-        "Global, scalable, and maintainable B2C experiences",
-        "Only reports",
-        "Only dashboards"
+        "SOAP web services",
+        "OCAPI only",
+        "SCAPI and the Shopper APIs",
+        "Direct database access"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architecture supports global, scalable B2C experiences.",
+      "correctAnswer": 2,
+      "explanation": "SCAPI is the current API set for headless builds and is where Salesforce is investing.",
       "whyWrong": [
-        "'Only coding' undersells the broader purpose of B2C architecture, which is global, scalable, maintainable experiences.",
-        "'Only reports' misrepresents the purpose, which is about experience architecture, not reporting.",
-        "'Only dashboards' misrepresents the purpose, which is about experience architecture, not dashboards."
+        "SOAP isn't the storefront API for B2C Commerce.",
+        "OCAPI still works but is the older choice for new builds.",
+        "There is no direct database access on the platform."
       ]
     },
     {
-      "question": "Which integration does B2C Commerce Architect consider?",
+      "question": "Before Black Friday, a load test shows some pages breaking platform quotas. What should the team do?",
       "options": [
-        "Slack only",
-        "Order Management, Marketing Cloud, and payment",
-        "Marketing Cloud only",
-        "Service Cloud only"
+        "Ask shoppers to visit at quieter times",
+        "Ignore it, since quotas only apply in sandboxes",
+        "Turn off the eCDN",
+        "Fix the code that breaks the quotas before peak"
       ],
-      "correctAnswer": 1,
-      "explanation": "Architects consider Order Management and Marketing Cloud integration.",
+      "correctAnswer": 3,
+      "explanation": "Quotas are enforced on Production. Code that breaks them can fail under load, so it must be fixed before peak trading.",
       "whyWrong": [
-        "Slack alone is unrelated to the order management, marketing, and payment integrations a B2C architect considers.",
-        "Marketing Cloud alone undersells the broader integration landscape, which includes order management and payment too.",
-        "Service Cloud alone undersells the broader integration landscape being described."
+        "Asking shoppers to wait isn't a real fix.",
+        "Quotas apply in Production too.",
+        "Turning off the eCDN would make performance worse."
       ]
     },
     {
-      "question": "What does standard design patterns mean for B2C?",
+      "question": "The merchandising team should manage promotions but must not change site code or payment settings. How is this controlled?",
       "options": [
-        "Proprietary only",
-        "Proven patterns for catalog, cart, and checkout",
-        "No patterns",
-        "Ad-hoc only"
+        "Business Manager roles with only the needed permissions",
+        "Give everyone Administrator access",
+        "Remove promotions from Business Manager",
+        "Share one login for the whole team"
       ],
-      "correctAnswer": 1,
-      "explanation": "Standard patterns cover catalog, cart, and checkout.",
+      "correctAnswer": 0,
+      "explanation": "Business Manager roles let you grant only the modules each team needs, such as promotions, without wider access.",
       "whyWrong": [
-        "'Proprietary only' contradicts the use of proven, standard design patterns.",
-        "'No patterns' contradicts the fact that standard, proven patterns exist for catalog, cart, and checkout.",
-        "'Ad-hoc only' is the opposite of what standard design patterns provide."
+        "Full admin access gives far more than the team needs.",
+        "Removing promotions stops the team doing their job.",
+        "Shared logins remove accountability and are a security risk."
       ]
     },
     {
-      "question": "Which best practice applies to B2C Commerce architecture?",
+      "question": "Product images load slowly for shoppers in Asia, while the site is hosted in Europe. What helps most?",
       "options": [
-        "Ignore performance",
-        "Performance, SEO, and mobile-first design",
-        "Desktop only",
-        "No SEO"
+        "Move all images into the cartridge",
+        "Serve images and static files through the eCDN",
+        "Turn off page caching",
+        "Make all images larger"
       ],
       "correctAnswer": 1,
-      "explanation": "Performance, SEO, and mobile-first support B2C.",
+      "explanation": "The eCDN serves static files from locations close to the shopper, which cuts load times far from the main site.",
       "whyWrong": [
-        "Ignoring performance contradicts a core best practice for commerce site architecture.",
-        "'Desktop only' contradicts the mobile-first best practice for modern commerce sites.",
-        "'No SEO' contradicts the fact that SEO is a real, important best practice for commerce architecture."
+        "Images in cartridges still come from the same place and bloat code.",
+        "Page caching helps speed. Turning it off makes things worse.",
+        "Larger images load more slowly."
       ]
     },
     {
-      "question": "What does global site design encompass?",
+      "question": "When should an architect choose SFRA over a headless storefront?",
       "options": [
-        "Single locale only",
-        "Multi-locale, multi-currency, and regional fulfillment",
-        "Single currency only",
-        "No fulfillment"
+        "When the site won't use any Salesforce APIs",
+        "When the team has deep React skills and wants full control",
+        "When speed to market and standard commerce features matter most",
+        "When the brand needs a front end shared with a mobile app and kiosks"
       ],
-      "correctAnswer": 1,
-      "explanation": "Global design encompasses multi-locale and fulfillment.",
+      "correctAnswer": 2,
+      "explanation": "SFRA gives a working storefront with standard features out of the box, so it is often the faster route to launch.",
       "whyWrong": [
-        "'Single locale only' is the opposite of what global site design encompasses.",
-        "'Single currency only' is the opposite of the multi-currency scope global design covers.",
-        "'No fulfillment' contradicts the fact that regional fulfillment is part of global site design."
+        "Every B2C Commerce storefront relies on the platform either way.",
+        "Strong React teams wanting full control is the case for headless.",
+        "Sharing one front end across channels is a strength of headless, not SFRA."
       ]
     },
     {
-      "question": "Which B2C Commerce capability supports headless?",
+      "question": "A retailer wants to show different home page banners per country without code changes. What should be used?",
       "options": [
-        "Full-stack only",
-        "OCAPI/SCAPI for headless storefronts",
-        "No headless",
-        "Slack only"
+        "Hard-code banners in ISML templates",
+        "Separate cartridges per country",
+        "Content slots and content assets in Business Manager",
+        "A custom object holding HTML strings"
       ],
-      "correctAnswer": 1,
-      "explanation": "OCAPI/SCAPI enables headless B2C Commerce.",
+      "correctAnswer": 2,
+      "explanation": "Content slots and assets let merchandisers manage banners per site or locale in Business Manager without a deployment.",
       "whyWrong": [
-        "'Full-stack only' undersells the specific headless capability (OCAPI/SCAPI) being asked about.",
-        "'No headless' contradicts the fact that B2C Commerce explicitly supports headless via OCAPI/SCAPI.",
-        "Slack is unrelated to headless storefront capability."
+        "Hard-coded banners need a code change every time.",
+        "Separate cartridges per country add needless code.",
+        "HTML in custom objects is hard to manage and skips the content tools."
       ]
     }
   ]

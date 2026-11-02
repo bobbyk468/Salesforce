@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'system-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `System Architect study guide: 5 required domain exams, key topics, recommended study order, preparation strategy Free practice questions.`
+const pageDescription = `System Architect study guide: the 4 required exams, what each covers, a sensible study order and free practice questions.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
@@ -45,33 +45,32 @@ const breadcrumbItems = [
 ]
 
 const domainExams = [
-  { step: '1', name: 'Integration Architect', fee: '$400', time: '110 min', summary: 'Translating business requirements into integration solutions using Salesforce integration patterns, middleware, and API design.', href: '/integration-architect-study-guide' },
-  { step: '2', name: 'Data Architect', fee: '$400', time: '110 min', summary: 'Data modelling, master data management, large data volumes, data governance, and migration strategy.', href: '/data-architect-study-guide' },
-  { step: '3', name: 'Sharing & Visibility Architect', fee: '$400', time: '110 min', summary: 'Designing and implementing Salesforce sharing models, OWD, roles, profiles, permission sets, and territory management.', href: '/sharing-visibility-architect-study-guide' },
-  { step: '4', name: 'Identity & Access Management Architect', fee: '$400', time: '110 min', summary: 'Identity protocols, SSO design, OAuth flows, connected apps, and Salesforce Identity implementation.', href: '/identity-access-management-architect-study-guide' },
-  { step: '5', name: 'Dev Lifecycle & Deployment Architect', fee: '$400', time: '110 min', summary: 'Environment strategy, release management, CI/CD pipelines, team development, and deployment governance.', href: '/dev-lifecycle-deployment-architect-study-guide' },
+  { step: '1', name: 'Platform Developer I', fee: '$200', time: 'Developer exam', summary: 'Apex, SOQL, triggers, testing and the data model. The base the three architect exams build on. It also counts toward Application Architect.', href: '/pd1-study-guide' },
+  { step: '2', name: 'Integration Architect', fee: '$400', time: 'Architect exam', summary: 'Choosing integration patterns, picking the right API, planning for failures, and deciding when to use middleware.', href: '/integration-architect-study-guide' },
+  { step: '3', name: 'Identity & Access Management Architect', fee: '$400', time: 'Architect exam', summary: 'Single sign-on with SAML, OAuth flows, Connected Apps, My Domain, and how users are created and kept up to date.', href: '/identity-access-management-architect-study-guide' },
+  { step: '4', name: 'Dev Lifecycle & Deployment Architect', fee: '$400', time: 'Architect exam', summary: 'Sandbox plans, source control, testing, CI/CD pipelines and release management.', href: '/dev-lifecycle-deployment-architect-study-guide' },
 ]
 
 const faqItems = [
   {
     question: 'What is the Salesforce System Architect credential?',
-    answer: 'The Salesforce Certified System Architect is a credential awarded when you pass all five domain architect exams: Integration Architect, Data Architect, Sharing & Visibility Architect, Identity & Access Management Architect, and Dev Lifecycle & Deployment Architect. Each exam is a separate $400 proctored exam. Passing all five automatically awards the System Architect credential on your Trailhead profile.',
+    answer: 'System Architect is a credential you earn by holding four certifications: Platform Developer I, Integration Architect, Identity and Access Management Architect, and Development Lifecycle and Deployment Architect. There is no separate System Architect exam. Once all four are active, the credential is added to your Trailhead profile.',
   },
   {
-    question: 'What order should I take the System Architect domain exams?',
-    answer: 'Most candidates start with Data Architect or Sharing & Visibility Architect — both are foundational and overlap heavily with Advanced Administrator knowledge. Integration Architect is typically third. IAM Architect and Dev Lifecycle & Deployment Architect can follow in any order, though many finish with Dev Lifecycle as it covers governance topics easier to contextualise after hands-on work in the other domains.',
+    question: 'What order should I take the System Architect exams?',
+    answer: 'Most people take Platform Developer I first, because the architect exams assume you know Apex and the data model. After that, pick the architect exam closest to your day job. Many start with Integration Architect, then Identity and Access Management, and finish with Development Lifecycle and Deployment.',
   },
   {
     question: 'How long does it take to earn the System Architect credential?',
-    answer: 'Most candidates spend 6–18 months earning all five domain exams, depending on experience and study intensity. Each domain exam typically requires 6–10 weeks of focused preparation. Candidates with 5+ years of Salesforce architect experience often move faster. There is no deadline — you can pass exams at your own pace and partial progress is still visible on your Trailhead profile.',
+    answer: 'It depends on your experience. Many people plan 6 to 10 weeks of study per architect exam, which adds up to roughly 6 to 12 months for all four. There is no deadline, and each exam you pass shows on your Trailhead profile straight away.',
   },
   {
     question: 'What is the difference between System Architect and Application Architect?',
-    answer: 'Salesforce Certified System Architect focuses on infrastructure and technical architecture: data, integration, identity, sharing, and deployment. Application Architect focuses on application-layer expertise: advanced administration, platform development, data modelling, and sharing design. Both credentials are required before applying for the CTA (Certified Technical Architect) Board Review.',
+    answer: 'System Architect covers how Salesforce connects to everything else: integrations, logins and identity, and how changes are released. Application Architect covers what is built inside Salesforce: the data model, sharing, and declarative and code-based development. You need both before you can go for Certified Technical Architect (CTA).',
   },
   {
-    question: 'Do Data Architect and Sharing & Visibility Architect count toward both credentials?',
-    answer: 'Yes — both Data Architect and Sharing & Visibility Architect exams appear in both the System Architect and Application Architect credential requirements. If you are pursuing the CTA credential (which requires both System Architect and Application Architect), passing these two exams counts toward both credentials simultaneously, reducing the total unique exams needed.',
+    question: 'Do any exams count toward both System Architect and Application Architect?',
+    answer: 'Yes, one. Platform Developer I counts toward both. Data Architect and Sharing and Visibility Architect are part of Application Architect only, and Integration, Identity and Access Management, and Development Lifecycle are part of System Architect only. So if you want both credentials, you need seven different certifications in total.',
   },
 ]
 
@@ -94,7 +93,7 @@ export default function SystemArchitectStudyGuidePage() {
           Salesforce System Architect Study Guide ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
-          The System Architect credential is earned by passing five domain architect exams — not a single test. Here is what each exam covers, the recommended study order, and how to approach all five efficiently.
+          There is no single System Architect exam. You earn the credential by holding four certifications. Here is what each one covers, a sensible order to take them, and how to plan your study.
         </p>
       </div>
 
@@ -109,15 +108,15 @@ export default function SystemArchitectStudyGuidePage() {
 
       <div className="bg-blue-50 border border-blue-200 rounded-xl p-5 mb-8">
         <h2 className="text-base font-bold text-blue-900 mb-1">Multi-exam credential</h2>
-        <p className="text-sm text-blue-800">System Architect requires passing all five domain architect exams — each is a separate $400 proctored exam. The credential is automatically awarded on your Trailhead profile when all five are active. Both System Architect and Application Architect are prerequisites for the CTA Board Review.</p>
+        <p className="text-sm text-blue-800">System Architect needs four certifications: Platform Developer I and three architect exams. There is no extra exam at the end. The credential is added to your Trailhead profile once all four are active. You need both System Architect and Application Architect before the CTA review board.</p>
       </div>
 
       <div className="grid grid-cols-2 sm:grid-cols-4 gap-4 mb-10">
         {[
           { label: 'Credential Type', value: 'Multi-Exam' },
-          { label: 'Domain Exams', value: '5' },
-          { label: 'Fee Per Exam', value: '$400' },
-          { label: 'Est. Timeline', value: '6–18 mo' },
+          { label: 'Required Exams', value: '4' },
+          { label: 'Total Fees', value: '$1,400' },
+          { label: 'Est. Timeline', value: '6–12 mo' },
         ].map((stat) => (
           <div key={stat.label} className="bg-white rounded-xl border border-gray-100 p-4 text-center shadow-sm">
             <div className="text-2xl font-bold text-salesforce-blue">{stat.value}</div>
@@ -127,7 +126,7 @@ export default function SystemArchitectStudyGuidePage() {
       </div>
 
       <div className="bg-white rounded-xl border border-gray-100 p-6 mb-8 shadow-sm">
-        <h2 className="text-xl font-bold text-gray-900 mb-4">The Five Required Domain Exams</h2>
+        <h2 className="text-xl font-bold text-gray-900 mb-4">The Four Required Exams</h2>
         <div className="space-y-4">
           {domainExams.map((exam) => (
             <div key={exam.name} className="flex gap-4 p-4 bg-gray-50 rounded-xl">
@@ -154,10 +153,10 @@ export default function SystemArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">Recommended Study Order</h2>
         <div className="space-y-3 text-sm text-gray-700">
           {[
-            { phase: 'Phase 1', text: 'Data Architect + Sharing & Visibility Architect — Start here. Both exams have extensive overlap with Advanced Administrator knowledge. Data modelling and sharing models are foundational to all subsequent architect thinking.' },
-            { phase: 'Phase 2', text: 'Integration Architect — Tackle this after building your data foundation. Integration patterns, APIs, and middleware design become more intuitive once you deeply understand the data layer.' },
-            { phase: 'Phase 3', text: 'IAM Architect — Identity, SSO, and OAuth are highly specialised topics. Study these in isolation with dedicated focus on identity protocol concepts and Salesforce Identity.' },
-            { phase: 'Phase 4', text: 'Dev Lifecycle & Deployment Architect — Finish here. Governance and deployment topics are easier to contextualise after hands-on work across the other four domains.' },
+            { phase: 'Phase 1', text: 'Platform Developer I. Start here. The architect exams assume you can read Apex, know the governor limits and understand the data model.' },
+            { phase: 'Phase 2', text: 'Integration Architect. Patterns, APIs, error handling and middleware. It builds directly on what you learned about callouts and async Apex in Platform Developer I.' },
+            { phase: 'Phase 3', text: 'Identity and Access Management Architect. SAML, OAuth and user provisioning are a world of their own, so give this exam focused time. Integration work helps, since OAuth shows up in both.' },
+            { phase: 'Phase 4', text: 'Dev Lifecycle and Deployment Architect. Many people finish here, because release planning is easier to think about once you have seen the other areas.' },
           ].map((item) => (
             <div key={item.phase} className="flex gap-3">
               <span className="font-bold text-salesforce-blue min-w-[72px] flex-shrink-0">{item.phase}</span>
@@ -171,7 +170,7 @@ export default function SystemArchitectStudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-4">What the System Architect Credential Signals</h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm text-gray-700">
           {[
-            { title: 'Technical architecture depth', body: 'Demonstrates mastery across all five core Salesforce technical architecture domains — data, integration, identity, security, and deployment lifecycle.' },
+            { title: 'Technical architecture depth', body: 'Shows you can design how Salesforce connects to other systems, how people log in, and how changes reach production safely.' },
             { title: 'CTA prerequisite', body: 'System Architect (plus Application Architect) is required before applying for the Certified Technical Architect Board Review — the highest Salesforce credential.' },
             { title: 'Partner tier impact', body: 'Salesforce consulting partners count System Architect credentials toward partner tier requirements, making holders especially valuable to employers.' },
             { title: 'Career premium', body: 'System Architect holders typically qualify for senior architect and principal architect roles commanding significant salary premium over standard certification holders.' },
@@ -211,8 +210,8 @@ export default function SystemArchitectStudyGuidePage() {
           <Link href="/certifications/integration-architect" className="inline-flex items-center px-5 py-3 bg-white text-salesforce-blue rounded-lg font-semibold hover:bg-blue-50 transition-colors text-sm">
             Integration Architect Practice
           </Link>
-          <Link href="/certifications/data-architect" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
-            Data Architect Practice
+          <Link href="/certifications/dev-lifecycle-deployment-architect" className="inline-flex items-center px-5 py-3 border border-white/40 text-white rounded-lg font-semibold hover:bg-white/10 transition-colors text-sm">
+            Dev Lifecycle Architect Practice
           </Link>
         </div>
       </div>
@@ -221,7 +220,7 @@ export default function SystemArchitectStudyGuidePage() {
             <section className="rounded-xl border border-gray-100 bg-white p-6 mb-8">
         <h2 className="text-xl font-bold text-gray-900 mb-3">What Comes After This Certification?</h2>
         <p className="text-sm text-gray-700">
-          After this certification, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/certifications/system-architect" className="text-salesforce-blue font-medium hover:underline">System Architect</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
+          After System Architect, consider: <Link href="/certifications/application-architect" className="text-salesforce-blue font-medium hover:underline">Application Architect</Link>, <Link href="/architect-certification-path" className="text-salesforce-blue font-medium hover:underline">the full architect path</Link>, or <Link href="/certifications/technical-architect" className="text-salesforce-blue font-medium hover:underline">Technical Architect (CTA)</Link>.
         </p>
       </section>
 
