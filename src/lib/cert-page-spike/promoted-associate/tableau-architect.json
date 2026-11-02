@@ -4,44 +4,44 @@
     "heading": "Who is the Tableau Architect exam for?",
     "personas": [
       {
-        "label": "Enterprise Architects",
-        "description": "Professionals designing large-scale Tableau deployments with multi-node server topology, high availability, and disaster recovery."
+        "label": "Enterprise architects",
+        "description": "You decide how Tableau is deployed, secured and scaled across a large organisation."
       },
       {
-        "label": "Tableau Server Admins Moving Up",
-        "description": "Experienced administrators who want to validate their skills in architecture design, security planning, and governance frameworks."
+        "label": "Tableau Server administrators moving up",
+        "description": "You run the platform today and want to own its design rather than its daily operation."
       },
       {
-        "label": "BI Platform Leads",
-        "description": "Leaders responsible for Tableau platform scalability, performance optimization, content management, and enterprise data governance."
+        "label": "BI platform leads",
+        "description": "You are responsible for analytics for the whole business, including governance and cost."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Tableau Architect Exam Hard?",
-    "summary": "The Tableau Architect exam is one of the harder Tableau certifications. It tests deep knowledge of Tableau Server topology, multi-node clustering, row-level security, and enterprise governance — surface-level familiarity with Tableau administration is not enough to pass.",
+    "summary": "This exam is about running Tableau at scale rather than building views. It covers how the platform is deployed and sized, how data sources are governed, how security is designed including row-level access, and how to keep it fast as usage grows.",
     "bullets": [
-      "<strong>45 questions</strong> in 105 minutes — roughly two minutes per question, but architecture scenarios often require careful analysis.",
-      "<strong>63% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
-      "<strong>Enterprise-scale depth required</strong> — questions test server process distribution, HA configuration, RLS implementation patterns, and content governance at scale.",
-      "<strong>Hands-on architecture experience is critical</strong> — candidates who have designed or managed multi-node Tableau Server environments with security layers and governance frameworks are best prepared."
+      "<strong>59 questions</strong> in 105 minutes.",
+      "<strong>63% to pass</strong>, about 38 correct answers out of 59. Confirm it in the official exam guide before you book.",
+      "<strong>Platform knowledge.</strong> Processes, topology, sizing, high availability and upgrades.",
+      "<strong>Governance matters.</strong> Projects, permissions, certified sources and content lifecycle are heavily tested."
     ],
-    "passRateGuidance": "Book when you can confidently design a Tableau Server topology, configure row-level security, plan disaster recovery, and build a governance framework without referencing documentation."
+    "passRateGuidance": "You are ready when you can design a deployment for a stated number of users, explain which processes to add when a bottleneck appears, and set up row-level security without duplicating workbooks. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Tableau Architect Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe enterprise environments and ask you to design the correct server topology, security model, or governance framework for the given requirements.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe an organisation's situation, such as slow dashboards at month end or a need to isolate one region's data, and ask which platform design or setting solves it.",
     "bestWayToPass": [
-      "<strong>Server topology:</strong> Know every Tableau Server process (VizQL, Data Server, Backgrounder, Repository) and how to distribute them across nodes for performance and redundancy.",
-      "<strong>Security layers:</strong> Master site roles, content permissions, and row-level security implementation patterns including user filters and entitlement tables.",
-      "<strong>Performance tuning:</strong> Understand extract optimization, Backgrounder sizing, workbook performance analysis, and the Performance Recorder tool.",
-      "<strong>Governance design:</strong> Study project hierarchies, content certification, Data Catalog lineage, and content lifecycle management for enterprise environments."
+      "<strong>Learn the server processes:</strong> What the VizQL, backgrounder, data engine, repository and gateway each do, and which one to scale for a given symptom.",
+      "<strong>Design security once:</strong> Row-level security on a published data source beats one workbook per audience.",
+      "<strong>Know the deployment choices:</strong> Tableau Cloud versus self-managed Server, and what each means for control, upgrades and cost.",
+      "<strong>Plan governance up front:</strong> Project structure, group-based permissions, certification and a plan for retiring stale content."
     ]
   },
   "certificationCard": {
     "code": "Tableau Architect",
-    "description": "Tableau Architects design and govern enterprise Tableau analytics solutions. They define architecture, governance, scalability, and best practices for Tableau Server and Tableau Cloud.",
+    "description": "This exam covers designing and governing Tableau for an enterprise: deployment topology and sizing, published data sources, security including row-level access, performance at scale, and content governance.",
     "examDetails": {
       "questions": 59,
       "passingScore": "63%",
@@ -61,68 +61,72 @@
     "h2": "Tableau Architect: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Tableau Platform Architecture and Deployment",
-        "body": "**Tableau Server** is the on-premise or customer-managed cloud deployment. Tableau Cloud is the fully managed SaaS offering. Server architecture: primary node runs all processes; worker nodes scale individual processes (VizQL Server, Data Server, Backgrounder, Application Server). Process distribution: VizQL renders visualisations; Backgrounder runs extract refreshes and subscriptions; Data Server manages data connections and caching. The architect selects the deployment model (Server vs Cloud) based on data residency, security, and operational capability requirements."
+        "heading": "Platform Topology and Processes",
+        "body": "A Tableau Server deployment is made of processes with distinct jobs. The **gateway** receives requests and routes them. **VizQL** renders views, so it is what you scale when interactive dashboards are slow for many concurrent users. The **backgrounder** runs extract refreshes and subscriptions, so it is what you scale when refreshes queue or finish late. The **data engine** stores and queries extracts. The **repository** is the PostgreSQL database holding metadata, users, permissions and usage history. **Tableau Cloud** removes this work entirely at the cost of control over infrastructure and upgrade timing, which is the usual trade-off in exam scenarios."
       },
       {
-        "heading": "Data Architecture: Published Data Sources and Extracts",
-        "body": "Published Data Sources are centrally managed connections shared across workbooks — changes to the data source propagate to all workbooks using it. Embedded data sources are local to the workbook — simpler but harder to govern. Live connections query the database in real time; **extracts** (.hyper files) snapshot data for fast performance. **Tableau Prep** Builder creates ETL **pipelines** that output clean, reshaped data. The architect designs the data source strategy — which sources to publish, what extract schedules to run, and when live connections are appropriate."
+        "heading": "Data Source Strategy",
+        "body": "At scale, the unit of governance is the **published data source**, not the workbook. One source with agreed joins, calculations and field names, reused everywhere, prevents the common failure where every team reports a different number for the same measure. **Certification** marks the trusted ones. Decide per source whether a **live connection** or an **extract** fits: extracts are fast and shield the source database but are only as current as the last refresh, while live connections are current but push load onto the source every time someone opens a view. Schedule refreshes to match how fresh the data actually needs to be."
       },
       {
-        "heading": "Security Architecture: Users, Groups, and Row-Level Security",
-        "body": "**Tableau Server** security layers: Site Roles define what a user can do on the server. Content permissions control who can view, edit, or publish each workbook or data source. Row-Level Security (RLS) filters data based on the logged-in user — implemented via user filters in the data source, **calculated fields** using USERNAME() and ISMEMBEROF(), or entitlement tables joined to the data. The architect designs the RLS implementation based on the complexity of the access model (single-attribute vs multi-attribute vs role-based entitlement table)."
+        "heading": "Security and Row-Level Access",
+        "body": "Access has two layers. **Content permissions** decide who can see and edit workbooks and data sources, and should be granted to **groups** at the **project** level rather than user by user. **Row-level security** decides which rows a user sees inside a view, so one dashboard can serve many audiences. The usual approach is an entitlements table mapping users to the records they may see, joined to the data and filtered by the logged-in username, applied on the **published data source** so every workbook inherits it. The alternative, one workbook per region or team, multiplies maintenance and is almost always the wrong answer."
       },
       {
-        "heading": "Performance Optimisation and Scalability",
-        "body": "Workbook performance factors: number of marks in the view, query complexity, extract size, and use of context filters. Performance Recorder in **Tableau Desktop** identifies slow queries and rendering. Extract optimisation: aggregating **extracts**, filtering to only needed rows, hiding unused fields. Server-level: worker node sizing for Backgrounder (concurrent extract refreshes) and VizQL (concurrent view renders). Tableau Workbook Advisor (Tableau Cloud) flags performance anti-patterns. The architect balances user experience performance with infrastructure cost."
+        "heading": "Performance and Scale",
+        "body": "Performance problems usually start in the data, not the hardware. Reduce extracts by filtering rows, removing unused fields and aggregating. Keep dashboards focused, since every worksheet and quick filter costs a query. Watch for very wide crosstabs and for calculations that force row-level work on large tables. Once the content is efficient, scale the platform to the symptom: more VizQL capacity for slow interactive viewing, more backgrounder capacity for queueing refreshes. For resilience, a highly available deployment runs redundant processes across several nodes so one failure does not take the platform down."
       },
       {
-        "heading": "Governance and Content Management at Scale",
-        "body": "Projects organise content with inherited permissions — nested projects allow hierarchical governance. Content certification marks high-quality, approved data sources and workbooks. Data Catalog (Tableau Catalog — part of Data Management Add-on) provides data lineage, field-level metadata, quality warnings, and impact analysis. Usage analytics in the Admin area show which workbooks are accessed and which are stale (candidates for archival). The architect designs the governance framework — project hierarchy, certification process, naming conventions, and content lifecycle management."
+        "heading": "Governance and Content Lifecycle",
+        "body": "Governance keeps a large deployment usable. Structure **projects** to match how the business is organised, and set permissions on them by group so new content inherits sensible access. Decide who may publish and who may only view. Use **certification** so users can tell trusted sources from experiments. Plan for the lifecycle: content accumulates, and stale dashboards erode trust, so use **usage data from the repository** to find what nobody opens and retire it. Agree naming conventions, and monitor licence consumption so the platform's cost stays visible."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Tableau Architect Exam",
-    "intro": "The Tableau Architect exam tests enterprise-scale Tableau deployment design. Focus on server architecture, performance optimization, security configuration, and designing scalable self-service analytics environments.",
+    "intro": "Most questions name a symptom or a constraint. Match it to the process, setting or governance control that addresses it, rather than adding hardware.",
     "blocks": [
       {
-        "heading": "Tableau Server Architecture",
-        "body": "Know the **Tableau Server** component topology: Gateway, Application Server, VizQL Server, Data Server, Backgrounder, and Repository. Understand how each component scales and where bottlenecks occur in high-usage environments."
+        "heading": "Scale to the Symptom",
+        "body": "Slow interactive dashboards point to VizQL capacity. Queued or late refreshes point to the backgrounder."
       },
       {
-        "heading": "Performance Optimization",
-        "body": "Know how to optimize extract refreshes (incremental vs. full), optimize workbook performance (data source optimization, context filters, reducing marks), and configure Backgrounder for large extract loads."
+        "heading": "Row-Level Security",
+        "body": "An entitlements table filtered by the logged-in user, applied on the published data source, so one dashboard serves many audiences."
       },
       {
-        "heading": "Security Architecture",
-        "body": "Understand Tableau's multi-layer security: server-level (authentication), site-level (content permissions), data-level (row-level security via user filters or VPD). Know how to implement data-level security at scale."
+        "heading": "Cloud or Self-Managed",
+        "body": "Tableau Cloud removes infrastructure work but gives up control of upgrades and topology. Self-managed is the opposite trade."
       },
       {
-        "heading": "High Availability & Disaster Recovery",
-        "body": "Know how to configure **Tableau Server** for HA: multi-node cluster, repository failover (PostgreSQL clustering), and backup strategies. Understand TSM backup/restore and the Tableau Cloud migration options."
+        "heading": "High Availability",
+        "body": "Redundant processes across several nodes, so a single failure does not stop the platform."
       },
       {
-        "heading": "Governance Framework",
-        "body": "Know how to design a data governance framework in Tableau: certified data sources, data quality warnings, column-level descriptions, and Tableau Catalog for data lineage and impact analysis."
+        "heading": "Content Lifecycle",
+        "body": "Use repository usage data to find unused content and retire it. Stale dashboards cost trust as well as resources."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Tableau Certifications",
-    "intro": "After this Tableau certification, consider other Tableau credentials or CRM Analytics:",
+    "intro": "Good next steps after Tableau Architect:",
     "links": [
+      {
+        "href": "/certifications/tableau-server-administrator",
+        "label": "Tableau Server Administrator"
+      },
       {
         "href": "/certifications/tableau-consultant",
         "label": "Tableau Consultant"
       },
       {
-        "href": "/certifications/tableau-data-analyst",
-        "label": "Tableau Data Analyst"
+        "href": "/certifications/data-architect",
+        "label": "Data Architect"
       },
       {
-        "href": "/certifications/tableau-desktop-foundations",
-        "label": "Tableau Desktop Foundations"
+        "href": "/certifications/integration-architect",
+        "label": "Integration Architect"
       }
     ]
   },
@@ -162,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Salesforce Certified Tableau Architect?",
+      "question": "Extract refreshes are queueing and finishing hours late, while interactive dashboards perform fine. Which capacity should be increased?",
       "options": [
-        "Creating individual dashboards only",
-        "Managing Salesforce CRM data",
-        "Marketing automation",
-        "Designing and governing enterprise Tableau analytics solutions at scale"
+        "VizQL",
+        "Gateway",
+        "Repository",
+        "Backgrounder"
       ],
       "correctAnswer": 3,
-      "explanation": "Tableau Architects design and govern enterprise Tableau analytics solutions, including architecture, governance, and scalability.",
+      "explanation": "The backgrounder runs extract refreshes and subscriptions, so queued refreshes point directly at it.",
       "whyWrong": [
-        "Creating individual dashboards is a narrower analyst task, not the enterprise-scale governance focus of an architect.",
-        "Managing Salesforce CRM data is unrelated to Tableau's own architecture and governance concerns.",
-        "Marketing automation is unrelated to Tableau architecture."
+        "VizQL renders views, which are performing fine here.",
+        "The gateway routes requests and is not the bottleneck described.",
+        "The repository stores metadata rather than running refreshes."
       ]
     },
     {
-      "question": "Which Tableau deployment consideration is critical for an architect?",
+      "question": "Each regional manager must see only their own region's rows, but the business wants one dashboard for everyone. What should the architect implement?",
       "options": [
-        "Server topology, scalability, high availability, and security",
-        "Dashboard count only",
-        "User count only",
-        "Color schemes only"
+        "Separate Tableau sites per region",
+        "Row-level security using an entitlements table on the published data source",
+        "A separate workbook per region",
+        "A quick filter set to each region"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Row-level security filters rows by the logged-in user, so one dashboard safely serves every region.",
+      "whyWrong": [
+        "Separate sites is a heavy structure for a row-level requirement.",
+        "One workbook per region multiplies maintenance and still risks mistakes.",
+        "A filter can be changed by the user, so it is not a security control."
+      ]
+    },
+    {
+      "question": "Interactive dashboards are slow at month end when hundreds of users log in at once, while refreshes complete on time. What should be scaled?",
+      "options": [
+        "Backgrounder capacity",
+        "Extract storage",
+        "VizQL capacity",
+        "The number of projects"
+      ],
+      "correctAnswer": 2,
+      "explanation": "VizQL renders views for interactive users, so concurrency problems during viewing point to it.",
+      "whyWrong": [
+        "Backgrounder handles refreshes, which are fine in this scenario.",
+        "Storage size does not address rendering concurrency.",
+        "Projects are an organisational structure, not a performance lever."
+      ]
+    },
+    {
+      "question": "A company wants Tableau without managing servers, patching or upgrade windows. Which option fits, and what is the trade-off?",
+      "options": [
+        "Tableau Desktop alone",
+        "Tableau Cloud, giving up control of infrastructure and upgrade timing",
+        "Self-managed Server, with no trade-off",
+        "Tableau Prep alone"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Tableau Cloud removes infrastructure work but means Salesforce controls the platform and when it is upgraded.",
+      "whyWrong": [
+        "Desktop is an authoring tool, not a sharing platform.",
+        "Self-managed is the option that requires exactly the work they want to avoid.",
+        "Prep prepares data and does not host content."
+      ]
+    },
+    {
+      "question": "Every team reports a different figure for the same measure. What is the architectural fix?",
+      "options": [
+        "More Tableau licences",
+        "A training course on calculations",
+        "A certified published data source with the agreed definition, reused by all",
+        "A monthly reconciliation meeting"
+      ],
+      "correctAnswer": 2,
+      "explanation": "One governed, certified source with the agreed calculation stops teams defining the same measure differently.",
+      "whyWrong": [
+        "Licences do not affect definitions.",
+        "Training does not prevent definitions drifting apart again.",
+        "Reconciliation treats the symptom every month."
+      ]
+    },
+    {
+      "question": "Which component stores users, permissions, metadata and usage history?",
+      "options": [
+        "VizQL",
+        "The gateway",
+        "The repository",
+        "The data engine"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The repository is the PostgreSQL database holding the platform's own metadata, including usage history.",
+      "whyWrong": [
+        "VizQL renders visualisations.",
+        "The gateway routes incoming requests.",
+        "The data engine stores and queries extract data."
+      ]
+    },
+    {
+      "question": "An extract takes too long to refresh. What should be tried before adding hardware?",
+      "options": [
+        "Filter rows, remove unused fields and aggregate the extract",
+        "Increase the refresh frequency",
+        "Double the backgrounder nodes immediately",
+        "Switch every workbook to live connections"
       ],
       "correctAnswer": 0,
-      "explanation": "Architects must consider server topology, scalability, high availability, and security for enterprise Tableau deployments.",
+      "explanation": "Most refresh problems are caused by extracts that are larger than they need to be, and reducing them is cheaper than scaling.",
       "whyWrong": [
-        "Dashboard count alone doesn't capture the full scalability/HA/security considerations an architect must address.",
-        "User count alone doesn't capture the full topology/scalability/security considerations of deployment architecture.",
-        "Color schemes are a design detail, not a deployment-scale architectural consideration."
+        "More frequent refreshes of a slow extract makes it worse.",
+        "Hardware should follow content optimisation, not precede it.",
+        "Live connections move load onto the source database."
       ]
     },
     {
-      "question": "What role does Tableau's VizQL engine play in architecture decisions?",
+      "question": "How should permissions be granted in a large deployment?",
       "options": [
-        "Renders only static images",
-        "Translates drag-and-drop actions into database queries and optimizes performance",
-        "Handles user authentication only",
-        "Manages licensing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "VizQL translates visual design into database queries. Architects must understand its impact on data source design and query performance.",
-      "whyWrong": [
-        "VizQL doesn't just render static images — it dynamically generates optimized queries from user interactions.",
-        "VizQL isn't the authentication mechanism — that's a separate concern (SSO/SAML).",
-        "VizQL isn't a licensing management tool — that's unrelated to its query-generation role."
-      ]
-    },
-    {
-      "question": "Which authentication method supports single sign-on (SSO) for Tableau Server?",
-      "options": [
-        "Local authentication only",
-        "SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing",
-        "OAuth 1.0 only",
-        "LDAP only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Tableau Server supports SAML 2.0, Kerberos, OpenID Connect, and trusted ticketing for SSO and enterprise identity integration.",
-      "whyWrong": [
-        "Local authentication alone doesn't provide the SSO capability the question asks about.",
-        "OAuth 1.0 is an older, less common protocol — modern Tableau SSO relies on SAML 2.0, Kerberos, and OpenID Connect.",
-        "LDAP alone is a directory protocol, not itself an SSO mechanism the way SAML/Kerberos/OIDC are."
-      ]
-    },
-    {
-      "question": "What is the purpose of Tableau's repository database?",
-      "options": [
-        "Stores metadata, user info, permissions, and extract info for Tableau Server",
-        "Stores only workbooks",
-        "Stores user data",
-        "Manages extracts only"
+        "To groups, at the project level",
+        "To individual users, per workbook",
+        "By sharing one administrator account",
+        "By exporting content to PDF for those without access"
       ],
       "correctAnswer": 0,
-      "explanation": "The repository stores metadata, permissions, schedules, and extract information. Architects plan for its backup and scalability.",
+      "explanation": "Group permissions set on projects scale as people and content change, and new content inherits sensible access.",
       "whyWrong": [
-        "'Stores only workbooks' undersells the repository's broader scope beyond just workbook files.",
-        "'Stores user data' alone undersells the repository's broader role, which includes metadata, permissions, and extract info.",
-        "'Manages extracts only' undersells the repository's broader role beyond just extract metadata."
+        "Per-user, per-workbook permissions become unmanageable.",
+        "Shared accounts remove accountability.",
+        "PDF exports bypass governance and go stale."
       ]
     },
     {
-      "question": "Which factor affects Tableau Server scalability the most?",
+      "question": "What does certifying a data source do?",
       "options": [
-        "Dashboard color themes",
-        "Concurrent user load, background job load, and data source performance",
-        "Number of workbooks only",
-        "Font sizes"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Scalability depends on concurrent users, background jobs (extracts, subscriptions), and underlying data source performance.",
-      "whyWrong": [
-        "Dashboard color themes are a visual design detail, not a scalability factor.",
-        "Number of workbooks alone doesn't capture the concurrent-load and performance factors that most affect scalability.",
-        "Font sizes are a visual design detail, unrelated to server scalability."
-      ]
-    },
-    {
-      "question": "What is a Tableau data server used for?",
-      "options": [
-        "Serving web content only",
-        "Managing licenses",
-        "Hosting Tableau Server only",
-        "Centralizing published data sources for reuse and governance across workbooks"
+        "Makes refreshes run faster",
+        "Encrypts the underlying data",
+        "Restricts it to administrators",
+        "Marks it as reviewed and trusted so users prefer it over ad-hoc sources"
       ],
       "correctAnswer": 3,
-      "explanation": "Data servers let you publish and reuse data sources across workbooks, improving consistency and governance.",
+      "explanation": "Certification is a governance signal that helps users pick the trusted source.",
       "whyWrong": [
-        "Serving generic web content isn't the data server's specific purpose — that's about centralizing published data sources.",
-        "Managing licenses is unrelated to the data server's data-source centralization purpose.",
-        "Hosting Tableau Server itself is a different infrastructure concern, not what a data server specifically provides."
+        "It does not change refresh performance.",
+        "Certification is not an encryption feature.",
+        "Certified sources are intended for broad use."
       ]
     },
     {
-      "question": "Which governance practice helps control Tableau content proliferation?",
+      "question": "How can an architect find dashboards that nobody uses?",
       "options": [
-        "Limiting users to one workbook",
-        "Removing all extracts",
-        "Promoting certified data sources, using projects for organization, and setting ownership policies",
-        "Disabling all sharing"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Certified data sources, project structure, and ownership policies help govern content at scale.",
-      "whyWrong": [
-        "Limiting users to one workbook is an impractical, overly restrictive approach, not the actual recommended governance practice.",
-        "Removing all extracts would hurt performance, not help control content proliferation.",
-        "Disabling all sharing would hurt collaboration, the opposite of a sound content-governance practice."
-      ]
-    },
-    {
-      "question": "What does Tableau's backgrounder process handle?",
-      "options": [
-        "VizQL rendering only",
-        "License validation only",
-        "Extract refreshes, subscriptions, and other scheduled jobs",
-        "User sessions only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "The backgrounder process runs extract refreshes, subscriptions, and other scheduled tasks. Architects size it for job load.",
-      "whyWrong": [
-        "VizQL rendering happens in real-time during interaction, not as a background scheduled job.",
-        "License validation is a separate administrative function, not what the backgrounder specifically handles.",
-        "User sessions are a different concern, not what the backgrounder process specifically handles."
-      ]
-    },
-    {
-      "question": "Which high-availability configuration uses multiple Tableau Server nodes?",
-      "options": [
-        "Cloud-only deployment",
-        "Development server only",
-        "Single-node deployment only",
-        "Distributed deployment with multiple application servers and a gateway"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Distributed deployment spreads services across nodes for high availability and load distribution.",
-      "whyWrong": [
-        "Cloud-only deployment describes Tableau Cloud, not the on-premises multi-node HA configuration being described.",
-        "A development server is a non-production environment, not the HA configuration being asked about.",
-        "A single-node deployment is the opposite of the multi-node HA configuration being described."
-      ]
-    },
-    {
-      "question": "What is the benefit of Tableau extracts (.tde/.hyper) for performance?",
-      "options": [
-        "They reduce colors",
-        "They only store images",
-        "They pre-aggregate and compress data, reducing load on source systems and improving query speed",
-        "They manage licensing"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Extracts pre-aggregate and compress data, offloading work from source systems and speeding up queries.",
-      "whyWrong": [
-        "Extracts don't reduce the number of colors — that's unrelated to their performance purpose.",
-        "Extracts don't only store images — they store optimized, compressed data for query performance.",
-        "Extracts aren't a licensing management tool — that's unrelated to their performance purpose."
-      ]
-    },
-    {
-      "question": "Which security layer controls who can view or edit Tableau content?",
-      "options": [
-        "VizQL only",
-        "Repository only",
-        "Project permissions, workbook permissions, and row-level security",
-        "Data source only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Project and workbook permissions plus row-level security control access to Tableau content.",
-      "whyWrong": [
-        "VizQL alone is the query engine, not itself a security/access-control layer.",
-        "The repository alone stores metadata — it isn't itself the permission-enforcement layer for content viewing.",
-        "Data source permissions alone don't cover the full security layering (project, workbook, row-level) the question describes."
-      ]
-    },
-    {
-      "question": "What is a best practice for Tableau Server disaster recovery?",
-      "options": [
-        "Regular repository backups, documented restore procedures, and testing recovery",
-        "No backups needed",
-        "Backing up only workbooks",
-        "Single-node only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Regular repository backups and tested restore procedures are essential for disaster recovery.",
-      "whyWrong": [
-        "'No backups needed' contradicts the fundamental disaster-recovery best practice of regular backups.",
-        "Backing up only workbooks misses the repository data essential for full recovery.",
-        "'Single-node only' contradicts the resilience goal disaster recovery planning is meant to achieve."
-      ]
-    },
-    {
-      "question": "Which Tableau Cloud consideration differs from on-premises Server?",
-      "options": [
-        "Managed infrastructure, built-in high availability, and connectivity to cloud data sources",
-        "No authentication",
-        "No governance",
-        "No difference"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Tableau Cloud is fully managed with built-in HA; architects focus on connectivity and data source design.",
-      "whyWrong": [
-        "'No authentication' contradicts the fact that Tableau Cloud has its own authentication considerations.",
-        "'No governance' contradicts the fact that governance still applies differently in a cloud-managed context.",
-        "'No difference' contradicts the real, documented differences between Tableau Cloud and Server."
-      ]
-    },
-    {
-      "question": "What does incremental refresh do for Tableau extracts?",
-      "options": [
-        "Changes colors only",
-        "Refreshes only new or changed rows based on a key, reducing refresh time",
-        "Deletes old data only",
-        "Refreshes all data every time"
+        "Check the size of each workbook",
+        "Analyse usage data from the repository",
+        "Ask each department by email",
+        "Delete anything older than a year"
       ],
       "correctAnswer": 1,
-      "explanation": "Incremental refresh updates only new or changed rows, improving refresh performance for large datasets.",
+      "explanation": "The repository records views and usage, which is the reliable way to identify content to retire.",
       "whyWrong": [
-        "Incremental refresh doesn't change colors — that's unrelated to its data-refresh function.",
-        "Incremental refresh doesn't delete old data — it adds/updates based on a key.",
-        "Refreshing all data every time is the opposite of what incremental refresh is designed to avoid."
+        "File size says nothing about usage.",
+        "Surveys are slow and incomplete.",
+        "Age alone does not indicate value: some old dashboards are heavily used."
+      ]
+    },
+    {
+      "question": "What does a highly available Tableau Server deployment require?",
+      "options": [
+        "Disabling extracts",
+        "Daily backups only",
+        "Redundant processes across multiple nodes",
+        "A single larger server"
+      ],
+      "correctAnswer": 2,
+      "explanation": "High availability comes from redundancy: multiple nodes running the key processes so one failure does not stop the platform.",
+      "whyWrong": [
+        "Extracts are unrelated to availability.",
+        "Backups allow recovery but not continuous availability.",
+        "One big server remains a single point of failure."
+      ]
+    },
+    {
+      "question": "A live connection to the warehouse is causing heavy load every time users open dashboards. The data only changes nightly. What should change?",
+      "options": [
+        "Use a scheduled extract refreshed after the nightly load",
+        "Move to a larger warehouse instance",
+        "Add more VizQL capacity",
+        "Ask users to open dashboards less often"
+      ],
+      "correctAnswer": 0,
+      "explanation": "If the source only changes nightly, an extract gives the same currency with far less load on the warehouse.",
+      "whyWrong": [
+        "Upgrading the warehouse pays for a problem that an extract removes.",
+        "More rendering capacity does not reduce source database load.",
+        "Restricting usage defeats the purpose of the platform."
+      ]
+    },
+    {
+      "question": "What is the main risk of building one workbook per audience instead of using row-level security?",
+      "options": [
+        "Dashboards render more slowly",
+        "Permissions become unnecessary",
+        "Extracts refresh faster",
+        "Maintenance multiplies and the copies drift apart"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Duplicated workbooks must each be updated for every change, and they inevitably diverge.",
+      "whyWrong": [
+        "Rendering speed is not the central issue.",
+        "Permissions are still required on every copy.",
+        "More copies means more refresh work, not less."
+      ]
+    },
+    {
+      "question": "Which structure should projects reflect?",
+      "options": [
+        "How the business is organised, so permissions can be inherited sensibly",
+        "The date content was created",
+        "The file size of each workbook",
+        "The alphabetical order of workbook names"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Projects aligned to business structure let group permissions be set once and inherited by new content.",
+      "whyWrong": [
+        "Creation date does not reflect who should see what.",
+        "Size is irrelevant to organisation.",
+        "Alphabetical grouping carries no access meaning."
+      ]
+    },
+    {
+      "question": "A dashboard contains twelve worksheets and nine quick filters, and is slow. What is the most likely cause?",
+      "options": [
+        "Row-level security is enabled",
+        "Each worksheet and filter issues queries, so the dashboard is doing too much work",
+        "The data source is certified",
+        "The server needs more disk"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Every worksheet and filter on a dashboard generates queries, so heavily loaded dashboards are slow regardless of hardware.",
+      "whyWrong": [
+        "Row-level security has a cost but is not the main factor with this much content.",
+        "Certification is a label and has no performance cost.",
+        "Disk space rarely causes this pattern."
       ]
     }
   ]

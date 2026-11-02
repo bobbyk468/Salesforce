@@ -4,44 +4,44 @@
     "heading": "Who is the Tableau Consultant exam for?",
     "personas": [
       {
-        "label": "Analytics Consultants",
-        "description": "Professionals who implement Tableau solutions for clients, covering requirements gathering, data modeling, and visualization design."
+        "label": "Analytics consultants",
+        "description": "You deliver Tableau projects for clients and want the credential that names the role."
       },
       {
-        "label": "BI Implementation Leads",
-        "description": "Team leads responsible for designing and delivering Tableau deployments including data source strategy, governance, and user training."
+        "label": "BI implementation leads",
+        "description": "You run the rollout: data sources, dashboards, publishing and getting people to use them."
       },
       {
-        "label": "Solution Architects",
-        "description": "Technical advisors who recommend Tableau Server vs. Cloud, live vs. extract connections, and published data source strategies for organizations."
+        "label": "Solution architects",
+        "description": "You decide how Tableau fits with the rest of a client's data estate."
       }
     ]
   },
   "examDifficulty": {
     "heading": "Is the Tableau Consultant Exam Hard?",
-    "summary": "The Tableau Consultant exam is moderately difficult. It blends technical Tableau product knowledge with consulting and advisory competencies, so strong product skills alone are not enough — you also need experience translating business requirements into Tableau solutions.",
+    "summary": "This exam is about delivering Tableau to an organisation, not just building views. It covers gathering requirements, preparing data, designing dashboards people will actually use, and publishing and governing them on Tableau Cloud or Server.",
     "bullets": [
-      "<strong>45 questions</strong> in 105 minutes — roughly two minutes per question, which gives adequate time for scenario analysis.",
-      "<strong>63% passing score</strong> — you need approximately 32 correct answers out of 45 to pass.",
-      "<strong>Consulting scenarios dominate</strong> — questions describe client requirements and ask you to recommend the best Tableau approach, not just identify a feature.",
-      "<strong>Implementation experience is essential</strong> — candidates with real project experience advising clients on Tableau deployments perform significantly better."
+      "<strong>60 questions</strong> in 105 minutes.",
+      "<strong>63% to pass</strong>, about 38 correct answers out of 60. Confirm it in the official exam guide before you book.",
+      "<strong>Delivery, not just desktop.</strong> Expect discovery, data preparation, publishing, permissions and adoption.",
+      "<strong>Judgement questions.</strong> Several options will work; the right one fits the client's constraints."
     ],
-    "passRateGuidance": "Book when you have completed at least one Tableau implementation project and can confidently recommend data source strategies, deployment models, and adoption approaches."
+    "passRateGuidance": "You are ready when you can take a vague business request, turn it into a data source and a dashboard, publish it with sensible permissions, and explain the choices. Aim for 75% or more on practice tests."
   },
   "examFormat": {
     "heading": "Tableau Consultant Exam Format Explained",
-    "intro": "The exam is proctored online or in-person. Here is the format:",
-    "scenarioPercent": "Scenario questions describe a client requirement and ask you to recommend the best Tableau approach — data source strategy, deployment model, or visualization technique.",
+    "intro": "You can take the exam online with a proctor or at a test centre. Here is what to expect:",
+    "scenarioPercent": "Most questions describe a client situation, such as a dashboard nobody uses or a data source that is slow for everyone, and ask what the consultant should do.",
     "bestWayToPass": [
-      "<strong>Requirements mapping:</strong> Practice translating business questions into Tableau solution designs covering data sources, visualizations, and deployment architecture.",
-      "<strong>Live vs. Extract trade-offs:</strong> Know when to recommend each connection type based on data freshness needs, query performance, and infrastructure constraints.",
-      "<strong>Tableau Prep knowledge:</strong> Understand when to preprocess data in Prep Builder versus using Desktop calculated fields or database-side transformations.",
-      "<strong>Adoption strategy:</strong> Study user training plans, Champions programs, and how to measure Tableau ROI using built-in usage analytics."
+      "<strong>Start from the question the business is asking:</strong> The right chart and the right data model both follow from it.",
+      "<strong>Know Tableau Prep:</strong> When to clean and shape data before it reaches the workbook, rather than with calculations inside it.",
+      "<strong>Learn published data sources:</strong> One governed source reused across workbooks is usually the answer to duplication and inconsistency.",
+      "<strong>Think about adoption:</strong> Training, subscriptions and alerts matter as much as the dashboard itself."
     ]
   },
   "certificationCard": {
     "code": "Tableau Consultant",
-    "description": "Tableau Consultants implement Tableau solutions and advise organizations on analytics strategy, dashboard design, and data visualization best practices.",
+    "description": "This exam covers delivering Tableau for an organisation: gathering requirements, preparing and publishing data, designing dashboards that get used, and managing permissions and adoption on Tableau Cloud or Server.",
     "examDetails": {
       "questions": 60,
       "passingScore": "63%",
@@ -61,64 +61,72 @@
     "h2": "Tableau Consultant: Key Concepts for the Exam",
     "blocks": [
       {
-        "heading": "Requirements and Solution Design",
-        "body": "Tableau Consultants gather requirements by understanding: what business questions need answering, what data sources exist and their quality, who the end users are (executives vs analysts vs frontline), and how the dashboards will be maintained. A good solution design specifies: data source strategy (published vs embedded, live vs extract), visualisation types (matching the analytical question), and the deployment plan (who publishes, who maintains). The consultant also assesses data readiness — is the data structured appropriately for Tableau, or does it need preparation in Prep Builder first?"
+        "heading": "Discovery and Solution Design",
+        "body": "A consultant's first job is to find the real question. Ask who the audience is, what decision the dashboard supports, how current the data must be, and what people do today instead. Those answers determine almost everything: a dashboard for executives wants a few clear numbers, while one for analysts wants filters and detail. Agree the measures and their definitions in writing, because disagreement about what revenue means causes more rework than any technical problem. Then decide where logic belongs: in the source system, in Tableau Prep, in a published data source, or in the workbook."
       },
       {
-        "heading": "Advanced Calculations: LOD Expressions",
-        "body": "Level of Detail (LOD) expressions are Tableau's most powerful calculation type. FIXED: computes a value at a specific dimension level regardless of the view's level of detail — e.g., {'{'}FIXED [Region]: SUM([Sales]){'}'} gives sales per region in every row. INCLUDE: adds dimensions to the view LOD for the calculation. EXCLUDE: removes dimensions from the view LOD. Common use cases: cohort analysis, year-over-year comparison at a fixed level, customer-level metrics in transaction-level views. The exam tests which LOD expression type applies to a given analysis scenario."
+        "heading": "Preparing Data with Tableau Prep",
+        "body": "**Tableau Prep Builder** cleans and reshapes data before it reaches a workbook. Its steps include **clean** (rename, split, filter, change types), **join** and **union**, **aggregate**, **pivot** (turning columns into rows, which is how you fix spreadsheet-shaped data), and **output** to an extract or a published source. Doing this work in Prep rather than in workbook calculations means it happens once and every workbook benefits. Prep flows can be scheduled to run on a timetable so the output stays current."
       },
       {
-        "heading": "Dashboard Design Principles",
-        "body": "Effective dashboard layout: use containers (horizontal and vertical) to control component resizing and alignment. Padding and spacing separate sections visually. Filter placement: global filters affect all sheets; local filters affect one. Dashboard actions (Filter Action, Highlight Action, URL Action, Set Action) create interactivity — clicking one chart filters another. Mobile layout optimization defines a separate layout for phone-size screens. The consultant also validates dashboard performance — too many filters, marks, or cross-database queries degrade user experience."
+        "heading": "Published Data Sources and Governance",
+        "body": "A **published data source** lives on Tableau Cloud or Server and can be reused by many workbooks. It carries its own joins, calculations, field names, descriptions and permissions. This is the main tool against the usual problem of five workbooks that each calculate revenue slightly differently. **Certification** marks a source as trusted so users can tell it apart from ad-hoc ones. Decide refresh schedules by how fresh the data must be, and remember that an extract refresh takes load off the source database while a live connection does not."
       },
       {
-        "heading": "Tableau Prep Builder: Data Preparation",
-        "body": "Tableau Prep Builder creates Flow pipelines for data cleaning and reshaping before loading to Tableau Desktop or Server. Steps: Input (connect to source), Clean (remove nulls, fix data types, rename fields), Aggregate (roll up), Join (combine tables), Union (stack rows), Pivot (reshape wide to tall or vice versa), Output (Hyper extract, CSV, or Published Data Source). Flows can be published to Tableau Server/Cloud and scheduled for automated refresh. The consultant assesses whether source data requires Prep preprocessing before it can be visualised effectively."
+        "heading": "Dashboard Design That Gets Used",
+        "body": "Design for the audience and the device. Lead with the headline number, then the breakdown, then the detail. Use **actions** so a selection in one view filters or highlights another, and keep the number of filters on screen small, since each one costs performance and attention. Size the dashboard for how people will actually view it rather than for your own monitor. Use colour deliberately: one highlight colour draws the eye where you want it, while a rainbow of categories tells the reader nothing. Avoid putting everything on one dashboard; two focused dashboards beat one crowded one."
       },
       {
-        "heading": "Tableau Server Administration for Consultants",
-        "body": "Consultants configure Tableau Server for clients: create sites (for multi-tenancy — each site is isolated), configure projects and permissions, set up user authentication (Local, Active Directory, **SAML** **SSO**), and schedule extract refreshes. Subscriptions send emailed snapshots of views on a schedule. Webhooks trigger external systems when Tableau events occur (publish, refresh completion). The consultant advises on content governance — project structure, who can publish where, certification workflows, and data source governance to prevent fragmented analytics environments."
+        "heading": "Publishing, Permissions and Adoption",
+        "body": "Content on Tableau Cloud or Server lives in **projects**, and permissions are best managed by **group** at the project level rather than per user per workbook. Plan who may view, who may edit and who may publish. **Subscriptions** email a view on a schedule and **data-driven alerts** notify people when a measure crosses a threshold, both of which bring users back without training them to remember. For adoption, launch with a small group, watch usage, and fix the first complaints quickly. A technically perfect dashboard nobody opens has not delivered anything."
       }
     ]
   },
   "scenarioTips": {
     "h2": "How to Pass the Tableau Consultant Exam",
-    "intro": "The Tableau Consultant exam tests implementation and solution design skills for Tableau projects. Focus on discovery, solution architecture, performance best practices, and advising clients on Tableau deployment strategies.",
+    "intro": "Most questions give you a client problem and several workable answers. Pick the one that fits the audience, the data and the constraints described.",
     "blocks": [
       {
-        "heading": "Discovery & Requirements",
-        "body": "Know how to run a Tableau discovery: understanding existing data sources, report inventory, user personas, and governance requirements. Map business requirements to Tableau features and identify migration complexity."
+        "heading": "Discovery",
+        "body": "Who is the audience, what decision does this support, how fresh must the data be, and what do they do today? Everything else follows."
       },
       {
-        "heading": "Solution Architecture Decisions",
-        "body": "Know when to use Tableau Server vs. Tableau Cloud, Desktop vs. Prep, live vs. extract connections, and published data sources vs. embedded data. Justify each decision based on security, performance, and governance needs."
+        "heading": "Where Logic Belongs",
+        "body": "Source system first, then Tableau Prep, then a published data source, then the workbook. The earlier it sits, the more reuse you get."
       },
       {
-        "heading": "Data Preparation Strategy",
-        "body": "Know when to use Tableau Prep vs. database-side transformations vs. Tableau Desktop calculated fields. Understand the performance implications of each approach for large data volumes."
+        "heading": "Published Data Sources",
+        "body": "One governed, certified source stops five workbooks disagreeing about the same measure."
       },
       {
-        "heading": "User Adoption Strategy",
-        "body": "Know how to drive Tableau adoption: training plans for different user personas, Tableau Champions programs, usage analytics, and how to measure ROI through Tableau's usage data."
+        "heading": "Dashboard Design",
+        "body": "Headline, breakdown, detail. Few filters, deliberate colour, sized for the device people actually use."
       },
       {
-        "heading": "Performance Best Practices",
-        "body": "Know how to advise clients on workbook performance: minimizing marks, using context filters effectively, optimizing data source queries, and using extracts to improve dashboard responsiveness."
+        "heading": "Adoption",
+        "body": "Subscriptions and alerts bring users back. Launch small, watch usage, fix the first complaints fast."
       }
     ]
   },
   "nextCertsAfter": {
     "heading": "Next Tableau Certifications",
-    "intro": "After this Tableau certification, consider other Tableau credentials or CRM Analytics:",
+    "intro": "Good next steps after Tableau Consultant:",
     "links": [
+      {
+        "href": "/certifications/tableau-architect",
+        "label": "Tableau Architect"
+      },
+      {
+        "href": "/certifications/tableau-server-administrator",
+        "label": "Tableau Server Administrator"
+      },
       {
         "href": "/certifications/tableau-data-analyst",
         "label": "Tableau Data Analyst"
       },
       {
-        "href": "/certifications/tableau-desktop-foundations",
-        "label": "Tableau Desktop Foundations"
+        "href": "/certifications/crm-analytics-einstein-discovery-consultant",
+        "label": "CRM Analytics and Einstein Discovery Consultant"
       }
     ]
   },
@@ -158,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary role of a Salesforce Certified Tableau Consultant?",
+      "question": "Five workbooks each calculate revenue slightly differently and the numbers do not agree in meetings. What should the consultant recommend?",
       "options": [
-        "Selling Tableau licenses only",
-        "Managing Salesforce CRM only",
-        "Implementing Tableau solutions and advising on analytics best practices",
-        "Email marketing"
+        "A training session on writing calculations",
+        "A certified published data source with the agreed calculation, reused by all workbooks",
+        "Switching all connections from extract to live",
+        "Rebuilding the five workbooks separately"
       ],
-      "correctAnswer": 2,
-      "explanation": "Tableau Consultants implement Tableau solutions and advise stakeholders on analytics design, governance, and best practices.",
+      "correctAnswer": 1,
+      "explanation": "One governed source with the agreed definition is what stops workbooks disagreeing, and certification signals it is the trusted one.",
       "whyWrong": [
-        "Selling licenses is a sales function, not the consultant's implementation and advisory role.",
-        "Managing Salesforce CRM is a separate function, unrelated to Tableau consulting specifically.",
-        "Email marketing is entirely unrelated to Tableau consulting."
+        "Training does not stop five separate definitions drifting apart again.",
+        "Connection type does not change how revenue is defined.",
+        "Rebuilding separately recreates the same problem."
       ]
     },
     {
-      "question": "Which skill is essential for a Tableau Consultant?",
+      "question": "A client's source data has monthly figures spread across twelve columns, one per month. What is the cleanest fix?",
       "options": [
-        "Marketing automation",
-        "Server administration only",
-        "Requirements gathering, data modeling, visualization design, and stakeholder communication",
-        "Only dashboard design"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Consultants need requirements gathering, data modeling, visualization design, and stakeholder communication skills.",
-      "whyWrong": [
-        "Marketing automation is unrelated to the Tableau consultant's analytics-focused role.",
-        "Server administration alone is a narrower technical skill, not the full consulting skill set.",
-        "'Only dashboard design' undersells the broader skill set spanning requirements, data modeling, and communication."
-      ]
-    },
-    {
-      "question": "What is the difference between dimensions and measures in Tableau?",
-      "options": [
-        "Dimensions are categorical (blue pills); measures are numeric aggregations (green pills)",
-        "Measures are always dates",
-        "Dimensions are always numbers",
-        "There is no difference"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Dimensions create headers and categories; measures are aggregated. Understanding this is core to Tableau data modeling.",
-      "whyWrong": [
-        "Measures aren't always dates — this reverses the actual distinction.",
-        "Dimensions aren't always numbers — dimensions are categorical, which is the opposite of this claim.",
-        "There is a real, well-defined difference — this option denies a fundamental Tableau concept."
-      ]
-    },
-    {
-      "question": "Which chart type is best for showing trends over time?",
-      "options": [
-        "Pie chart",
-        "Scatter plot",
-        "Treemap",
-        "Line chart"
+        "Write twelve calculated fields in the workbook",
+        "Create twelve separate data sources",
+        "Ask the client to retype the data",
+        "Pivot the columns into rows in Tableau Prep"
       ],
       "correctAnswer": 3,
-      "explanation": "Line charts effectively show trends and patterns over continuous time.",
+      "explanation": "Pivoting turns spreadsheet-shaped columns into rows, which is the shape Tableau works with, and doing it in Prep means every workbook benefits.",
       "whyWrong": [
-        "A pie chart shows part-to-whole composition at a point in time, not trends over time.",
-        "A scatter plot shows correlation between two variables, not trends over a time axis.",
-        "A treemap shows hierarchical proportions, not chronological trends."
+        "Twelve calculations repeat the problem in every workbook.",
+        "Twelve sources multiply the maintenance.",
+        "Retyping is error-prone and does not scale."
       ]
     },
     {
-      "question": "What does LOD (Level of Detail) expression control in Tableau?",
+      "question": "An executive dashboard is slow and cluttered, with fifteen filters on screen. What should the consultant do first?",
       "options": [
-        "The granularity at which calculations are performed (FIXED, INCLUDE, EXCLUDE)",
-        "Font size",
-        "Colors only",
-        "Filters only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "LOD expressions let you compute at a different granularity than the view level.",
-      "whyWrong": [
-        "'Font size' is entirely unrelated to LOD expressions.",
-        "'Colors only' misrepresents what LOD expressions control — they define calculation granularity, not visual color.",
-        "'Filters only' undersells LOD's purpose, which is about the level of aggregation, not just filtering."
-      ]
-    },
-    {
-      "question": "When should you use a Tableau extract versus a live connection?",
-      "options": [
-        "Always use extracts",
-        "Use extracts when you need faster performance and can refresh periodically; live when real-time data is critical",
-        "Only for small datasets",
-        "Always use live"
+        "Move it to a larger server",
+        "Cut it back to the few measures the executives actually decide on",
+        "Add more filters so users can narrow further",
+        "Switch every chart to a table"
       ],
       "correctAnswer": 1,
-      "explanation": "Extracts improve performance; live connections support real-time requirements. Consultants choose based on use case.",
+      "explanation": "Executive audiences need a small number of clear numbers. Reducing scope fixes both the clutter and much of the slowness.",
       "whyWrong": [
-        "Always using extracts ignores cases where real-time data is genuinely required.",
-        "This isn't limited to small datasets — the live-vs-extract decision applies at any data size based on performance and freshness needs.",
-        "Always using live connections ignores legitimate performance benefits of extracts for many use cases."
+        "Hardware hides a design problem rather than fixing it.",
+        "More filters worsen both problems.",
+        "Tables are usually harder to read at a glance than charts."
       ]
     },
     {
-      "question": "What is the purpose of Tableau's dual axis?",
+      "question": "A client needs the sales team notified when any region's weekly revenue falls below target. What fits?",
       "options": [
-        "Plots two measures with different scales on the same axis for comparison",
-        "Changes colors only",
-        "Combines two worksheets only",
-        "Removes axes"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Dual axis lets you overlay two measures with different scales for comparison.",
-      "whyWrong": [
-        "A dual axis isn't just a color change — it fundamentally changes how two measures are plotted together.",
-        "A dual axis doesn't just combine two worksheets — it plots two measures on the same visualization.",
-        "A dual axis doesn't remove axes — it adds a second one for comparison."
-      ]
-    },
-    {
-      "question": "Which Tableau filter type applies before data is aggregated?",
-      "options": [
-        "There is no order",
-        "Extract filter and data source filter apply earliest; dimension filters before aggregation",
-        "Context filter only",
-        "All filters apply after"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Data source and extract filters run first; dimension filters apply before aggregation. Measure filters apply after.",
-      "whyWrong": [
-        "There is a defined filter order in Tableau — 'there is no order' is incorrect.",
-        "A context filter is a specific filter category, not the general answer to which filters apply earliest.",
-        "Not all filters apply after aggregation — extract and data source filters specifically apply earliest, before aggregation."
-      ]
-    },
-    {
-      "question": "What is a Tableau parameter used for?",
-      "options": [
-        "Letting users dynamically change values (e.g., top N, thresholds) that drive calculations and filters",
-        "Managing licenses",
-        "Storing passwords",
-        "Only for colors"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Parameters allow interactive control over calculations, filters, and reference lines.",
-      "whyWrong": [
-        "Parameters don't manage licensing — that's an administrative function, unrelated to parameters.",
-        "Parameters don't store passwords — that's unrelated to their purpose.",
-        "Parameters aren't limited to color changes — they drive dynamic values across calculations and filters."
-      ]
-    },
-    {
-      "question": "Which visualization best shows part-to-whole relationships?",
-      "options": [
-        "Scatter plot",
-        "Pie chart or treemap",
-        "Bar chart",
-        "Line chart"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Pie charts and treemaps show proportions of a whole. Consultants choose based on number of categories.",
-      "whyWrong": [
-        "A scatter plot shows correlation, not part-to-whole composition.",
-        "A bar chart compares categories, not proportional composition as directly as pie/treemap.",
-        "A line chart shows trends over time, not part-to-whole composition."
-      ]
-    },
-    {
-      "question": "What does Tableau's 'Show Me' panel help with?",
-      "options": [
-        "Server settings",
-        "Licensing",
-        "User login only",
-        "Recommending chart types based on selected fields and data types"
+        "A weekly meeting to review the dashboard",
+        "A subscription emailing the dashboard daily",
+        "A note in the dashboard title",
+        "A data-driven alert on that measure"
       ],
       "correctAnswer": 3,
-      "explanation": "Show Me suggests appropriate chart types based on the fields you select.",
+      "explanation": "Data-driven alerts fire when a measure crosses a threshold, which is exactly the requirement.",
       "whyWrong": [
-        "'Show Me' isn't a server settings tool — it's a chart-recommendation panel.",
-        "'Show Me' isn't a licensing tool — it's unrelated to license management.",
-        "'Show Me' isn't related to user login — that's an authentication feature."
+        "A meeting is slower and depends on someone noticing.",
+        "A daily email arrives whether or not anything is wrong.",
+        "A static note cannot react to data."
       ]
     },
     {
-      "question": "When gathering requirements for a dashboard, what should a consultant prioritize?",
+      "question": "Where should permissions normally be managed on Tableau Cloud or Server?",
       "options": [
-        "Colors first",
-        "Number of sheets only",
-        "Key metrics, user roles, refresh frequency, and data sources",
-        "Font choices"
+        "By exporting dashboards as PDFs instead",
+        "Per user on each individual workbook",
+        "By group at the project level",
+        "By sharing passwords for a shared account"
       ],
       "correctAnswer": 2,
-      "explanation": "Requirements should cover metrics, users, refresh needs, and data sources to design effective solutions.",
+      "explanation": "Group permissions set on projects scale and stay manageable as content and staff change.",
       "whyWrong": [
-        "Colors are a design detail — they shouldn't be prioritized above understanding metrics, roles, and data sources during requirements gathering.",
-        "Sheet count alone doesn't reflect the substantive requirements (metrics, roles, refresh needs) that matter most.",
-        "Font choices are a minor design detail, not a requirements-gathering priority."
+        "PDFs lose interactivity and go stale immediately.",
+        "Per-user, per-workbook permissions become unmanageable quickly.",
+        "Shared accounts destroy accountability and security."
       ]
     },
     {
-      "question": "What is the benefit of calculated fields in Tableau?",
+      "question": "The business says it needs data 'in real time', but the source is a nightly warehouse load. What should the consultant do?",
       "options": [
-        "They delete data",
-        "They create new metrics and dimensions from existing data without changing the source",
-        "They only change colors",
-        "They manage extracts only"
+        "Build the dashboard on a manual spreadsheet upload",
+        "Refresh the extract every five minutes",
+        "Clarify how fresh the data genuinely needs to be, then set refresh accordingly",
+        "Switch to a live connection and promise real time"
+      ],
+      "correctAnswer": 2,
+      "explanation": "If the source only updates nightly, no Tableau setting makes it fresher. The requirement needs clarifying against what the data can support.",
+      "whyWrong": [
+        "Manual uploads are less current and error-prone.",
+        "Frequent refreshes of unchanged data waste resources.",
+        "A live connection to a nightly warehouse still shows nightly data."
+      ]
+    },
+    {
+      "question": "A dashboard will mostly be viewed on tablets in the field. What should the consultant account for?",
+      "options": [
+        "Design and size the dashboard for that device",
+        "Increase the number of worksheets",
+        "Use a fixed 4K layout",
+        "Assume desktop sizing will adapt automatically"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Dashboards should be designed for the device people actually use, since a desktop layout often becomes unusable on a smaller screen.",
+      "whyWrong": [
+        "More worksheets makes the small-screen problem worse.",
+        "A 4K layout is unusable on a tablet.",
+        "Automatic resizing rarely produces a good small-screen layout."
+      ]
+    },
+    {
+      "question": "What is the main benefit of doing data cleaning in Tableau Prep rather than in workbook calculations?",
+      "options": [
+        "It removes the need for permissions",
+        "The work happens once and every workbook using the output benefits",
+        "It makes the workbook file larger",
+        "It converts live connections to extracts automatically"
       ],
       "correctAnswer": 1,
-      "explanation": "Calculated fields extend your data model for analysis without modifying source systems.",
+      "explanation": "Preparing data upstream means the logic is defined once, rather than repeated and varied in each workbook.",
       "whyWrong": [
-        "Calculated fields don't delete data — they derive new metrics/dimensions.",
-        "Calculated fields do more than change colors — they compute new values from existing data.",
-        "Calculated fields aren't specifically an extract-management tool — that's a separate Tableau concept."
+        "Permissions are still required on published content.",
+        "File size is not the point, and Prep output is usually smaller.",
+        "Connection type is a separate decision."
       ]
     },
     {
-      "question": "Which Tableau feature supports collaborative design and governance?",
+      "question": "Six months after launch, usage data shows almost nobody opens the dashboard. What should the consultant investigate first?",
       "options": [
-        "No collaboration",
-        "Local files only",
-        "Tableau Server/Cloud with projects, permissions, and certified data sources",
-        "Email only"
+        "Whether it answers a question the audience actually has",
+        "Whether to add more charts",
+        "Whether the colours match the brand",
+        "Whether to buy more licences"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Low usage usually means the dashboard does not support a decision people are making, which is a discovery failure rather than a design detail.",
+      "whyWrong": [
+        "Adding content to an unused dashboard does not create demand.",
+        "Branding rarely determines whether people use a dashboard.",
+        "More licences do not create usage."
+      ]
+    },
+    {
+      "question": "A client wants one dashboard covering executive summary, regional detail and individual rep performance. What is the better approach?",
+      "options": [
+        "Three copies of the same dashboard with different filters saved",
+        "One dashboard with every chart on it",
+        "Separate focused dashboards, linked, for each audience",
+        "A single giant crosstab"
       ],
       "correctAnswer": 2,
-      "explanation": "Tableau Server and Cloud enable projects, permissions, and certified content for team collaboration.",
+      "explanation": "Different audiences need different views. Focused dashboards are faster, clearer and easier to maintain.",
       "whyWrong": [
-        "'No collaboration' contradicts the fact that Tableau Server/Cloud is specifically built for collaborative governance.",
-        "Local files alone don't provide the collaborative governance capabilities Tableau Server/Cloud offers.",
-        "Email is unrelated to collaborative dashboard governance."
+        "Three near-identical copies triple the maintenance.",
+        "One dashboard for three audiences serves none of them well.",
+        "A giant crosstab is slow and hard to read."
       ]
     },
     {
-      "question": "What is a Tableau story used for?",
+      "question": "What does certifying a published data source communicate?",
       "options": [
-        "Single worksheet only",
-        "Managing licenses",
-        "Storing data",
-        "Guiding viewers through a narrative using a sequence of dashboards and text"
+        "That it refreshes faster than other sources",
+        "That it is encrypted",
+        "That only administrators can use it",
+        "That it is a trusted, governed source users should prefer"
       ],
       "correctAnswer": 3,
-      "explanation": "Stories combine worksheets and text to present a narrative and guide analysis.",
+      "explanation": "Certification marks a source as reviewed and trusted, helping users choose it over ad-hoc alternatives.",
       "whyWrong": [
-        "A story isn't limited to a single worksheet — it sequences multiple dashboards/visualizations into a narrative.",
-        "A story isn't a licensing management tool — that's unrelated to its narrative purpose.",
-        "A story isn't a data storage mechanism — that's unrelated to its narrative purpose."
+        "Certification does not change refresh performance.",
+        "It is a trust marker, not an encryption setting.",
+        "Certified sources are meant to be widely used."
+      ]
+    },
+    {
+      "question": "Stakeholders disagree about what counts as an active customer. What should the consultant do before building?",
+      "options": [
+        "Build one version and let them react",
+        "Get the definition agreed and written down",
+        "Show both definitions on the same chart",
+        "Use the definition the most senior person prefers"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Undocumented measure definitions cause rework and arguments later. Agreeing them first is cheaper than rebuilding.",
+      "whyWrong": [
+        "Building first wastes effort when the definition changes.",
+        "Two competing numbers on one chart confuses the audience.",
+        "Seniority does not settle a definitional question correctly."
+      ]
+    },
+    {
+      "question": "A published extract takes two hours to refresh and finishes after the morning meeting. What is a reasonable first step?",
+      "options": [
+        "Reduce the extract: filter rows, drop unused fields, aggregate where possible",
+        "Switch everyone to a live connection",
+        "Move the meeting",
+        "Refresh twice as often"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Smaller extracts refresh faster. Filtering, removing unused fields and aggregating are the standard levers.",
+      "whyWrong": [
+        "A live connection may be slower still and loads the source database.",
+        "Changing the business to suit the tool is a last resort.",
+        "More frequent refreshes of a slow extract makes it worse."
+      ]
+    },
+    {
+      "question": "Which sequence best reflects where calculation logic should live, most preferred first?",
+      "options": [
+        "Workbook, published data source, Tableau Prep, source system",
+        "Wherever the developer prefers",
+        "Source system, Tableau Prep, published data source, workbook",
+        "Workbook only, always"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The earlier logic sits, the more consumers reuse it and the less it drifts between workbooks.",
+      "whyWrong": [
+        "That reverses the preference and maximises duplication.",
+        "Consistency matters more than individual preference.",
+        "Workbook-only logic cannot be reused."
+      ]
+    },
+    {
+      "question": "What is the purpose of a subscription in Tableau Cloud or Server?",
+      "options": [
+        "To email a view to users on a schedule",
+        "To certify a data source",
+        "To refresh an extract",
+        "To grant permission to edit a workbook"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Subscriptions deliver a view by email on a timetable, which keeps users engaged without them remembering to look.",
+      "whyWrong": [
+        "Certification is a trust marker on a data source.",
+        "Refresh schedules are configured separately.",
+        "Editing rights come from permissions."
       ]
     }
   ]
