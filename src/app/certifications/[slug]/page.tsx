@@ -24,7 +24,21 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // Practice test pages are canonicalized to parent cert pages, noindex prevents
   // GSC "Duplicate without user-selected canonical" warnings.
   if (PRACTICE_TEST_SLUGS.includes(slug)) {
-    return { ...getCertMetadata(slug), robots: { index: false, follow: true } }
+    const base = getCertMetadata(slug)
+    // Distinct title: these inherited the parent cert page's title verbatim, so
+    // the pair read as duplicates to crawlers even though noindex and the
+    // canonical already point at the parent.
+    const parentTitle = typeof base.title === 'object' && base.title && 'absolute' in base.title
+      ? String(base.title.absolute)
+      : String(base.title ?? '')
+    const testTitle = parentTitle.replace(/Practice Exam/i, 'Full Practice Test')
+    return {
+      ...base,
+      title: { absolute: testTitle },
+      openGraph: base.openGraph ? { ...base.openGraph, title: testTitle } : base.openGraph,
+      twitter: base.twitter ? { ...base.twitter, title: testTitle } : base.twitter,
+      robots: { index: false, follow: true },
+    }
   }
   if (slug === ADMINISTRATOR_SLUG) {
     const baseMetadata = getCertMetadata(slug)

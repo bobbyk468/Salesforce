@@ -90,8 +90,10 @@ export default function SalesforceListPage() {
         <p className="inline-flex items-center rounded-full bg-salesforce-blue/10 px-3 py-1 text-sm font-medium text-salesforce-dark mb-4">
           Updated for {RELEASE_CURRENT}
         </p>
+        {/* Names the by-role framing, so this does not share an H1 with
+            /certifications, which lists the same credentials by track. */}
         <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-          All Salesforce Certifications ({RELEASE_CURRENT})
+          All Salesforce Certifications by Role ({RELEASE_CURRENT})
         </h1>
         <p className="text-lg text-gray-600">
           Salesforce offers <strong>{totalCerts} certifications</strong> across {CERTIFICATION_CATEGORIES.length} role tracks.
