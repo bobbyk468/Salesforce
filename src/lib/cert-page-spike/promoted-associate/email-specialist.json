@@ -227,243 +227,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which scripting language can personalize Marketing Cloud email content using subscriber data?",
+      "question": "A marketing team's emails are landing in spam at one major mailbox provider. DNS has an SPF record but no DKIM. What should be addressed first?",
       "options": [
-        "Static Content",
-        "AMPscript",
-        "HTML Block",
-        "Text Block"
+        "Increase the send volume to build reputation",
+        "Publish a DKIM record for the sending domain",
+        "Remove the unsubscribe link to reduce complaints",
+        "Switch every send to a transactional classification"
       ],
       "correctAnswer": 1,
-      "explanation": "AMPscript is Marketing Cloud Engagement's scripting language for creating dynamic, personalized email content from subscriber attributes and data.",
+      "explanation": "DKIM signs the message so a receiver can confirm it was not altered and came from an authorised sender. Missing DKIM is a common cause of filtering even when SPF passes.",
       "whyWrong": [
-        "Static Content is fixed and doesn't personalize per subscriber.",
-        "An HTML Block is a static layout element, not a dynamic personalization mechanism.",
-        "A Text Block is fixed text, not dynamic personalized content."
+        "Raising volume on a poor reputation makes filtering worse, not better.",
+        "Removing the unsubscribe link breaches anti-spam law and drives complaints up.",
+        "Misclassifying commercial mail as transactional is a compliance problem, not a deliverability fix."
       ]
     },
     {
-      "question": "What is a Data Extension used for in Marketing Cloud?",
+      "question": "What does a DMARC policy add on top of SPF and DKIM?",
       "options": [
-        "To create email templates",
-        "To store subscriber and relational data",
-        "To schedule sends",
-        "To track email opens"
+        "It guarantees inbox placement",
+        "It replaces the need for a sender authentication record",
+        "It encrypts the message body in transit",
+        "It sets the policy for authentication failures"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data Extensions are tables that store subscriber data, custom data, and relational data used for segmentation and personalization.",
+      "correctAnswer": 3,
+      "explanation": "DMARC sets the handling policy for authentication failures and enables reporting back to the domain owner.",
       "whyWrong": [
-        "Data Extensions aren't for creating email templates — that's Content Builder's role.",
-        "Scheduling sends is an Automation Studio/Journey Builder function, not what a Data Extension does.",
-        "Tracking opens is a reporting function, not the storage purpose of a Data Extension."
+        "No standard guarantees placement; authentication only removes one reason to filter.",
+        "DMARC builds on SPF and DKIM rather than replacing them.",
+        "Encryption in transit is handled by TLS, not DMARC."
       ]
     },
     {
-      "question": "Which feature should be used to send emails at the optimal time for each subscriber?",
+      "question": "An email confirming a completed purchase must reach customers who have opted out of marketing. How should it be sent?",
       "options": [
-        "Triggered Send",
-        "Send Time Optimization",
-        "Journey Builder",
-        "Automation Studio"
+        "With a transactional send classification",
+        "From a separate business unit",
+        "Through Advertising Studio",
+        "With a commercial send classification"
       ],
-      "correctAnswer": 1,
-      "explanation": "Einstein Send Time Optimization uses engagement data to predict an optimal send time for each contact. When data is insufficient, it uses a generalized option configured by the administrator.",
+      "correctAnswer": 0,
+      "explanation": "Transactional classification is for operational messages tied to a transaction, and it bypasses the commercial subscription status.",
       "whyWrong": [
-        "Triggered Send fires on a specific event, not specifically at an AI-optimized time per subscriber.",
-        "Journey Builder orchestrates multi-step journeys — it isn't specifically the send-time optimization feature.",
-        "Automation Studio handles scheduled batch processes, not per-subscriber optimal send timing."
+        "A different business unit does not change a subscriber's opt-out status.",
+        "Advertising Studio handles paid audiences, not transactional email.",
+        "Commercial classification respects opt-outs, so opted-out customers would not receive it."
       ]
     },
     {
-      "question": "What metric measures the percentage of emails that were successfully delivered?",
+      "question": "A subscriber unsubscribes from a monthly newsletter but must keep receiving a separate product update email. What supports this?",
       "options": [
-        "Open Rate",
-        "Click Rate",
-        "Delivery Rate",
-        "Bounce Rate"
+        "Deleting and recreating the subscriber",
+        "A suppression list containing all subscribers",
+        "Publication lists for each email category",
+        "A second subscriber key for the same person"
       ],
       "correctAnswer": 2,
-      "explanation": "Delivery Rate measures the percentage of sent emails reported as successfully delivered; it does not establish inbox placement.",
+      "explanation": "Publication lists let a subscriber opt out of one category while remaining subscribed to others.",
       "whyWrong": [
-        "Open Rate measures how many delivered emails were opened, not delivery success itself.",
-        "Click Rate measures link engagement, not delivery success.",
-        "Bounce Rate measures failed deliveries, which is the inverse of the metric being asked about."
+        "Deleting and recreating a subscriber discards history and does not create category-level choice.",
+        "Suppressing everyone would stop all mail, which is the opposite of the requirement.",
+        "Duplicate subscriber keys fragment the record and create double sends."
       ]
     },
     {
-      "question": "Which Marketing Cloud list stores subscriber status used to suppress standard sends to unsubscribed subscribers?",
+      "question": "Which AMPscript function would retrieve a single value from a data extension for personalisation?",
       "options": [
-        "Publication List",
-        "Suppression List",
-        "All Subscribers List",
-        "Auto-Suppression List"
+        "DateAdd",
+        "RaiseError",
+        "Lookup",
+        "Concat"
       ],
       "correctAnswer": 2,
-      "explanation": "All Subscribers is the account's main subscriber record list. An Unsubscribed status there prevents standard sends; the subscriber record remains in the list.",
+      "explanation": "Lookup returns one field value from a data extension row matching the criteria supplied.",
       "whyWrong": [
-        "A Publication List is a general subscription list, not the specific auto-removal mechanism described.",
-        "A Suppression List is manually maintained to exclude addresses — it doesn't automatically populate from bounces/unsubscribes the way Auto-Suppression does.",
-        "All Subscribers contains subscriber records with different statuses; its status controls send eligibility rather than removing the record."
+        "DateAdd performs date arithmetic.",
+        "RaiseError stops the send for that subscriber and reports a problem.",
+        "Concat joins strings together."
       ]
     },
     {
-      "question": "What is a Triggered Send in Marketing Cloud Email Studio?",
+      "question": "What is the purpose of wrapping personalisation in a default value, for example with AMPscript conditional logic?",
       "options": [
-        "A batch email sent to all subscribers at the same time",
-        "An automated, real-time email sent based on a specific subscriber action or external API call",
-        "A scheduled one-time email send",
-        "An A/B split test send"
+        "To bypass the send classification",
+        "To avoid a blank greeting when the field is empty",
+        "To reduce the size of the data extension",
+        "To improve the sender reputation score"
       ],
       "correctAnswer": 1,
-      "explanation": "Triggered Sends fire individually in real time when a defined event occurs, such as a form submission or purchase — common for transactional and confirmation emails.",
+      "explanation": "Missing data is normal, and a fallback prevents visible gaps such as a greeting addressed to nobody.",
       "whyWrong": [
-        "A batch send to everyone at once isn't a Triggered Send — that's a standard bulk send.",
-        "A scheduled one-time send is time-based, not triggered by a specific action or API call.",
-        "An A/B split test send compares content variants — it isn't the event-triggered mechanism being described."
+        "Send classification is unrelated to content logic.",
+        "Defaults are evaluated at send time and do not change stored data.",
+        "Reputation is driven by engagement and complaints, not by personalisation defaults."
       ]
     },
     {
-      "question": "What does the Sender Policy Framework (SPF) DNS record do for email deliverability?",
+      "question": "A hard bounce is recorded for a subscriber. What does this indicate?",
       "options": [
-        "Encrypts the email body content before sending",
-        "Authorises which IP addresses and mail servers are permitted to send email on behalf of your domain",
-        "Adds an unsubscribe header to all outgoing messages",
-        "Defines the maximum send volume per hour"
+        "The address is permanently undeliverable",
+        "The send was throttled by the provider",
+        "The subscriber marked the message as spam",
+        "The mailbox was temporarily full"
       ],
-      "correctAnswer": 1,
-      "explanation": "SPF publishes authorised sending IPs in DNS. Receiving servers check SPF to verify the sender — failing SPF increases spam folder placement risk.",
+      "correctAnswer": 0,
+      "explanation": "Hard bounces mean the address does not exist or has permanently rejected mail.",
       "whyWrong": [
-        "SPF doesn't encrypt email content — that's a different (unrelated) security function.",
-        "SPF doesn't add unsubscribe headers — that's a separate compliance feature.",
-        "SPF doesn't define send volume limits — that's an unrelated sending configuration."
+        "Throttling delays delivery rather than bouncing it.",
+        "A spam complaint is a separate event from a bounce.",
+        "A temporarily full mailbox produces a soft bounce."
       ]
     },
     {
-      "question": "What is the Sender Authentication Package (SAP) in Marketing Cloud?",
+      "question": "Which figure should a team watch to judge whether their list hygiene is deteriorating?",
       "options": [
-        "A spam-filtering rule set for inbound email",
-        "A bundle that provides a private IP, custom sending domain, branded link wrapping, and reply mail management for improved deliverability",
-        "A subscriber segmentation tool",
-        "An analytics dashboard for email performance"
+        "The total number of emails created",
+        "The count of available templates",
+        "The number of data extensions in the account",
+        "The bounce rate over successive sends"
       ],
-      "correctAnswer": 1,
-      "explanation": "SAP establishes your brand's sending identity in Marketing Cloud with a dedicated IP, authenticated custom domain, and reply mail management to protect sender reputation.",
+      "correctAnswer": 3,
+      "explanation": "A rising bounce rate is the clearest signal that a list contains stale or invalid addresses.",
       "whyWrong": [
-        "SAP isn't a spam-filtering rule set — that's a different deliverability concern.",
-        "SAP isn't a segmentation tool — its purpose is deliverability infrastructure, not audience targeting.",
-        "SAP isn't an analytics dashboard — its purpose is sending infrastructure, not reporting."
+        "Email volume produced says nothing about list quality.",
+        "Template count has no bearing on deliverability.",
+        "The number of data extensions is a structural detail, not a hygiene measure."
       ]
     },
     {
-      "question": "In Marketing Cloud, what is the primary purpose of a Suppression List?",
+      "question": "Click-through rate on a send is calculated against which figure?",
       "options": [
-        "To add new subscribers to a send",
-        "To exclude specific email addresses from a send, even if they appear in the target audience",
-        "To track bounced subscribers across all sends",
-        "To schedule automated re-engagement campaigns"
+        "Total subscribers in the account",
+        "Delivered emails",
+        "Unique opens",
+        "Emails sent"
       ],
       "correctAnswer": 1,
-      "explanation": "Suppression Lists prevent specific addresses from receiving emails regardless of their presence in the send audience — used for opt-outs, complaints, and domain blocks.",
+      "explanation": "Engagement rates are measured against what actually reached the mailbox, which is the delivered count.",
       "whyWrong": [
-        "Adding new subscribers is the opposite of a Suppression List's exclusion purpose.",
-        "Suppression Lists don't track bounces across all sends — that's a separate reporting function.",
-        "Suppression Lists aren't for scheduling re-engagement campaigns — that's a different automation feature."
+        "Account-wide subscriber counts are unrelated to one send.",
+        "Click-to-open rate uses opens; click-through rate uses delivered.",
+        "Sent includes bounces, which never reached anyone."
       ]
     },
     {
-      "question": "Which Marketing Cloud feature lets you test two email versions on a subset of subscribers before sending the winner to the rest?",
+      "question": "A/B testing an email subject line requires what to produce a usable result?",
       "options": [
-        "Journey Builder split activity",
-        "A/B Testing in Email Studio",
-        "Triggered Send definition",
-        "Automation Studio schedule"
+        "Testing on the smallest segment available",
+        "A random split with only the subject line differing",
+        "Two completely different emails sent to the same people",
+        "Sending version A one week and version B the next"
       ],
       "correctAnswer": 1,
-      "explanation": "A/B Testing sends version A to one portion and version B to another, then automatically sends the winning version (by open rate, click rate, or manual choice) to the remainder.",
+      "explanation": "Isolating one variable across randomly split, sufficiently large groups is what makes the difference attributable to the subject line.",
       "whyWrong": [
-        "A Journey Builder split activity branches an audience by criteria — it isn't specifically the A/B content comparison tool.",
-        "A Triggered Send fires based on an event — it isn't the content-comparison testing mechanism.",
-        "An Automation Studio schedule handles timing — it isn't the content-comparison testing tool."
+        "A small sample produces differences that are indistinguishable from noise.",
+        "Changing several things at once means the result cannot be attributed to any one of them.",
+        "Sending at different times introduces timing as a confounding factor."
       ]
     },
     {
-      "question": "What is the main use case for Journey Builder in Marketing Cloud?",
+      "question": "What distinguishes a data extension from a subscriber list?",
       "options": [
-        "Creating HTML email templates",
-        "Designing and automating multi-step, event-driven customer journeys across email, SMS, push, and ads",
-        "Managing subscriber import jobs",
-        "Running batch data extracts"
+        "They are identical with different names",
+        "A data extension cannot be used for sending",
+        "Columns and a primary key that you define",
+        "A subscriber list supports more fields"
       ],
-      "correctAnswer": 1,
-      "explanation": "Journey Builder orchestrates personalised, cross-channel experiences triggered by subscriber events — going beyond single-send campaigns to full lifecycle automation.",
+      "correctAnswer": 2,
+      "explanation": "Data extensions are tables you define, which is why they are used wherever custom fields or relationships are needed.",
       "whyWrong": [
-        "Creating HTML templates is a Content Builder function, not Journey Builder's core orchestration purpose.",
-        "Managing subscriber imports is a Contact Builder/Automation Studio function, not Journey Builder's main use case.",
-        "Running batch data extracts is an Automation Studio function, not Journey Builder's core purpose."
+        "They are genuinely different storage models.",
+        "Data extensions are a standard sendable audience.",
+        "Lists are limited to account-level profile and preference attributes."
       ]
     },
     {
-      "question": "What happens in Marketing Cloud when an email receives a hard bounce?",
+      "question": "An unsubscribe recorded through the standard profile centre takes effect at which level by default?",
       "options": [
-        "The email is retried up to 3 times before the address is flagged",
-        "The subscriber's status is automatically set to Bounced and they are excluded from future sends to protect sender reputation",
-        "The subscriber receives a follow-up SMS notification",
-        "The send is paused until the bounce is manually reviewed"
+        "All Subscribers, across the whole account",
+        "The data extension used for that send",
+        "The single email that was sent",
+        "The business unit's sender profile"
       ],
-      "correctAnswer": 1,
-      "explanation": "Hard bounces indicate a permanent delivery failure (invalid address). Marketing Cloud automatically marks the subscriber as Bounced and prevents further sends to protect IP reputation.",
+      "correctAnswer": 0,
+      "explanation": "Without publication lists in play, an unsubscribe is recorded against All Subscribers and applies account-wide.",
       "whyWrong": [
-        "A hard bounce isn't retried — that would risk sender reputation, the opposite of the actual safeguard.",
-        "A hard bounce doesn't trigger an SMS notification — that's unrelated to the bounce-handling mechanism.",
-        "A hard bounce isn't manually reviewed before pausing — it's automatically handled to protect reputation immediately."
+        "Opt-out status lives on the subscriber record, not the sending audience.",
+        "Single-email opt-out is not the default behaviour.",
+        "Sender profiles govern the from address, not subscription status."
       ]
     },
     {
-      "question": "What does DKIM (DomainKeys Identified Mail) add to outgoing emails?",
+      "question": "Why does a sender profile matter for deliverability?",
       "options": [
-        "A visible disclaimer in the email footer",
-        "A cryptographic signature in the email header that receiving servers use to verify the message was sent from the claimed domain and was not altered in transit",
-        "An encrypted payload for the email body content",
-        "A link to the sender's unsubscribe preference centre"
+        "It determines the tracking retention period",
+        "It stores the subscriber's preferences",
+        "It controls how many emails can be built",
+        "It sets the from address used in authentication"
       ],
-      "correctAnswer": 1,
-      "explanation": "DKIM signs outgoing emails with a private key — receiving servers verify the signature using the domain's public key published in DNS, confirming authenticity.",
+      "correctAnswer": 3,
+      "explanation": "Authentication checks compare the sending domain with published DNS records, so the from address must align with what is authenticated.",
       "whyWrong": [
-        "DKIM isn't a visible footer disclaimer — it's a technical, invisible cryptographic mechanism.",
-        "DKIM doesn't encrypt the email body — it verifies authenticity, not content confidentiality.",
-        "DKIM isn't an unsubscribe link — that's an unrelated compliance feature."
+        "Tracking retention is an account setting.",
+        "Preferences sit on the subscriber record.",
+        "Content creation limits are unrelated to the sender profile."
       ]
     },
     {
-      "question": "Which AMPscript function retrieves a single field value from a Data Extension based on matching criteria?",
+      "question": "A send is scheduled but a large portion of the audience never receives it, and the tracking shows them excluded before sending. What is the most likely cause?",
       "options": [
-        "LookupRows()",
-        "Lookup()",
-        "RetrieveSalesforceObjects()",
-        "AttributeValue()"
+        "They are on a suppression list applied to the send",
+        "The send classification was transactional",
+        "The email template was too large",
+        "The subject line was too long"
       ],
-      "correctAnswer": 1,
-      "explanation": "Lookup() returns a single column value from a Data Extension row that matches the specified key-value pair — the most common AMPscript function for personalisation.",
+      "correctAnswer": 0,
+      "explanation": "Exclusions and suppressions are applied before sending, which is why those subscribers appear removed rather than bounced.",
       "whyWrong": [
-        "LookupRows() retrieves multiple rows, not a single field value.",
-        "RetrieveSalesforceObjects() queries Salesforce CRM data, not Data Extension fields.",
-        "AttributeValue() retrieves subscriber attribute data, not a Data Extension field lookup."
+        "A transactional classification widens rather than narrows the audience.",
+        "Template size affects rendering, not audience exclusion.",
+        "Subject length has no effect on who is sent to."
       ]
     },
     {
-      "question": "What is the purpose of a Data Filter in Marketing Cloud?",
+      "question": "Which practice most directly reduces spam complaints over time?",
       "options": [
-        "To import subscribers from a CSV file",
-        "To define criteria-based subscriber segments from a Data Extension or list for targeted sends",
-        "To schedule automated email sends",
-        "To encrypt subscriber data at rest"
+        "Removing the preference centre link",
+        "Using a new sending domain for each campaign",
+        "Relevant content, sensible frequency, opted-in list",
+        "Increasing the volume of sends"
       ],
-      "correctAnswer": 1,
-      "explanation": "Data Filters apply rule-based criteria to a Data Extension or list to create a filtered subset of subscribers — used for targeted segmentation without writing SQL.",
+      "correctAnswer": 2,
+      "explanation": "Complaints come from unwanted mail, so relevance, consent and frequency are what reduce them.",
       "whyWrong": [
-        "Importing subscribers from CSV is a separate data-loading function, not what a Data Filter does.",
-        "Scheduling sends is an Automation Studio/Journey Builder function, not a Data Filter's purpose.",
-        "Encrypting data at rest is a security function, unrelated to Data Filter's segmentation purpose."
+        "Taking away the preference centre pushes people towards the spam button instead.",
+        "Rotating domains destroys accumulated reputation and looks evasive to receivers.",
+        "More mail to an uninterested audience produces more complaints."
       ]
     }
   ]

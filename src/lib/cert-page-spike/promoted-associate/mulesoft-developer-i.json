@@ -174,243 +174,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary purpose of Anypoint Platform?",
+      "question": "An error occurs in a flow and the developer wants the flow to recover and return a successful result to the caller. Which scope should be used?",
       "options": [
-        "To run Apex",
-        "To design, build, and manage APIs and integrations",
-        "To send marketing emails",
-        "To configure CPQ"
+        "Until Successful",
+        "On Error Continue",
+        "Try with no handler",
+        "On Error Propagate"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform is MuleSoft's unified platform for designing, building, and managing APIs and integrations.",
+      "explanation": "On Error Continue handles the error and lets the owning flow complete successfully, returning the handler's result.",
       "whyWrong": [
-        "Apex execution is a Salesforce Core concept, unrelated to Anypoint Platform's integration focus.",
-        "Marketing emails are handled by Marketing Cloud, not Anypoint Platform.",
-        "CPQ configuration is unrelated to Anypoint Platform's integration and API management purpose."
+        "Until Successful retries an operation rather than shaping the error outcome.",
+        "A Try scope without a handler does not change the outcome.",
+        "On Error Propagate re-throws to the caller after handling, so the caller sees a failure."
       ]
     },
     {
-      "question": "Which Mule runtime component processes messages in a flow?",
+      "question": "What does a Mule event consist of?",
       "options": [
-        "Apex Class",
-        "Flow",
-        "Trigger",
-        "Visualforce"
+        "Only the payload and nothing else",
+        "The connectors configured in the project",
+        "A message with payload and attributes, plus variables",
+        "A payload plus a reference to the flow"
       ],
-      "correctAnswer": 1,
-      "explanation": "In Mule, a Flow contains the sequence of components that process messages.",
+      "correctAnswer": 2,
+      "explanation": "The event carries the message, which holds payload and attributes, alongside any variables set in the flow.",
       "whyWrong": [
-        "Apex Class is a Salesforce Core concept, not a Mule runtime component.",
-        "Trigger is a Salesforce Core automation concept, unrelated to Mule flows.",
-        "Visualforce is a Salesforce Core UI framework, unrelated to Mule message processing."
+        "Attributes and variables are part of the event as well as the payload.",
+        "Connectors are configuration, not event content.",
+        "Flow references are components, not parts of the event."
       ]
     },
     {
-      "question": "What does API-led connectivity emphasize?",
+      "question": "A DataWeave script must output JSON from an incoming XML payload. Which directive sets the output type?",
       "options": [
-        "Only system APIs",
-        "Reusable APIs organized in layers: System, Process, Experience",
-        "No APIs",
-        "Only Experience APIs"
+        "A setPayload transformer only",
+        "output application/json in the header",
+        "The connector's reconnection strategy",
+        "input application/xml in the body"
       ],
       "correctAnswer": 1,
-      "explanation": "API-led connectivity uses System, Process, and Experience API layers for reusable, composable integrations.",
+      "explanation": "The DataWeave header declares the output MIME type, which determines how the result is written.",
       "whyWrong": [
-        "API-led connectivity explicitly uses multiple layers, not just System APIs alone.",
-        "API-led connectivity requires APIs by definition — 'no APIs' contradicts the concept.",
-        "API-led connectivity uses System, Process, AND Experience layers together, not Experience APIs alone."
+        "Setting the payload does not declare a MIME type for serialisation.",
+        "Reconnection strategies deal with connectivity failures.",
+        "Input type is usually inferred and does not control output."
       ]
     },
     {
-      "question": "Which format is commonly used for API specifications in MuleSoft?",
+      "question": "Which DataWeave operator applies a transformation to every item in an array?",
       "options": [
-        "Apex",
-        "RAML or OAS (OpenAPI)",
-        "AMPscript",
-        "Visualforce"
+        "map",
+        "filter",
+        "reduce",
+        "groupBy"
       ],
-      "correctAnswer": 1,
-      "explanation": "RAML and OpenAPI (OAS) are used to design and document APIs in Anypoint.",
+      "correctAnswer": 0,
+      "explanation": "map returns a new array with the transformation applied to each element.",
       "whyWrong": [
-        "Apex is a Salesforce Core language, unrelated to API specification formats.",
-        "AMPscript is a Marketing Cloud personalization language, unrelated to API specs.",
-        "Visualforce is a Salesforce UI framework, unrelated to API specification formats."
+        "filter selects a subset without transforming the items.",
+        "reduce collapses the array to a single accumulated value.",
+        "groupBy reorganises items into an object keyed by an expression."
       ]
     },
     {
-      "question": "What is a Connector in Mule?",
+      "question": "What distinguishes attributes from variables in a Mule event?",
       "options": [
-        "A database",
-        "A pre-built module that connects to an external system or protocol",
-        "A Slack channel",
-        "An email template"
+        "They are interchangeable",
+        "Attributes survive across flows but variables do not",
+        "Attributes are set by each operation; variables persist",
+        "Variables are read-only"
       ],
-      "correctAnswer": 1,
-      "explanation": "Connectors are pre-built modules that provide connectivity to systems like Salesforce, SAP, HTTP, etc.",
+      "correctAnswer": 2,
+      "explanation": "Attributes are metadata produced by the source or operation and are overwritten by each one. Variables are set deliberately and persist through the flow.",
       "whyWrong": [
-        "A Connector is reusable integration logic, not a data storage mechanism.",
-        "Connectors are unrelated to Slack-specific channels.",
-        "Connectors integrate systems generally — they aren't email templates."
+        "They have different lifecycles and uses.",
+        "Variables propagate through flow references, so this is the wrong way round.",
+        "Variables are writable; that is their purpose."
       ]
     },
     {
-      "question": "What is DataWeave used for in Mule applications?",
+      "question": "An API specification should be designed and agreed before implementation begins. Which approach and artefact support this?",
       "options": [
-        "Database queries only",
-        "Transforming and querying data in Mule flows",
-        "Sending emails only",
-        "CPQ configuration"
+        "API-first design using a RAML or OAS specification",
+        "Starting from a database schema",
+        "Writing the Mule flows first and documenting afterwards",
+        "Deploying to CloudHub and iterating in production"
       ],
-      "correctAnswer": 1,
-      "explanation": "DataWeave is MuleSoft's transformation language for data mapping and querying.",
+      "correctAnswer": 0,
+      "explanation": "API-first means the specification is written and agreed first, then used to generate the implementation scaffolding.",
       "whyWrong": [
-        "DataWeave does more than run database queries — it's a general-purpose transformation language.",
-        "DataWeave isn't used for sending emails — that's outside its scope.",
-        "DataWeave has nothing to do with CPQ configuration."
+        "A database schema describes storage rather than the API contract.",
+        "Documenting after the fact is the opposite of API-first.",
+        "Iterating in production is not a design approach."
       ]
     },
     {
-      "question": "Which Mule component handles errors in a flow?",
+      "question": "Which component processes a large input in configurable chunks with per-record error tracking?",
       "options": [
-        "Logger only",
-        "Error Handler with try, on-error-continue, or on-error-propagate",
-        "Transform Message only",
-        "Set Variable"
+        "For Each",
+        "Batch Job",
+        "Choice",
+        "Scatter-Gather"
       ],
       "correctAnswer": 1,
-      "explanation": "Error Handlers manage exceptions using try, on-error-continue, or on-error-propagate.",
+      "explanation": "Batch jobs are designed for large datasets, splitting records into blocks and recording success and failure per record.",
       "whyWrong": [
-        "Logger only records messages — it doesn't handle or recover from errors.",
-        "Transform Message only converts data format — it doesn't manage error flow.",
-        "Set Variable stores a value — it has no error-handling capability."
+        "For Each iterates a collection within a single flow without batch-level record tracking.",
+        "Choice routes conditionally between paths.",
+        "Scatter-Gather sends the same event down multiple routes in parallel."
       ]
     },
     {
-      "question": "What is the purpose of an API specification (RAML/OAS)?",
+      "question": "A flow must call three independent services at the same time and combine their responses. Which router fits?",
       "options": [
-        "To run Apex",
-        "To design, document, and define the contract for an API before implementation",
-        "To send emails",
-        "To configure CPQ"
+        "Scatter-Gather",
+        "First Successful",
+        "Choice",
+        "Round Robin"
       ],
-      "correctAnswer": 1,
-      "explanation": "API specs define the contract and enable design-first development.",
+      "correctAnswer": 0,
+      "explanation": "Scatter-Gather executes routes concurrently and aggregates the results.",
       "whyWrong": [
-        "Apex execution is unrelated to defining an API's contract.",
-        "Sending emails is unrelated to API specification purposes.",
-        "CPQ configuration is unrelated to API specification purposes."
+        "First Successful tries routes in order until one succeeds.",
+        "Choice selects a single route based on a condition.",
+        "Round Robin sends each event to one route in turn."
       ]
     },
     {
-      "question": "Which deployment target is used for cloud-hosted Mule applications?",
+      "question": "What is the purpose of the Anypoint Exchange?",
       "options": [
-        "On-premises only",
-        "CloudHub",
-        "Salesforce only",
-        "Slack only"
+        "To store runtime logs",
+        "To monitor CPU usage on CloudHub workers",
+        "To define error handling strategies",
+        "To publish and discover reusable assets"
       ],
-      "correctAnswer": 1,
-      "explanation": "CloudHub is MuleSoft's cloud runtime for deploying Mule applications.",
+      "correctAnswer": 3,
+      "explanation": "Exchange is the catalogue where reusable assets are published and found.",
       "whyWrong": [
-        "On-premises deployment is the opposite of cloud-hosted — CloudHub is Mule's cloud offering.",
-        "Salesforce itself isn't a Mule deployment target.",
-        "Slack isn't a deployment target for Mule applications."
+        "Logs are accessed through Runtime Manager and Monitoring.",
+        "Runtime metrics are shown in Anypoint Monitoring.",
+        "Error handling is defined in the application, not in Exchange."
       ]
     },
     {
-      "question": "What does the HTTP Listener connector do?",
+      "question": "Which tool is used to apply policies such as rate limiting and client ID enforcement to a deployed API?",
       "options": [
-        "Sends outbound HTTP requests only",
-        "Receives incoming HTTP requests and triggers a flow",
-        "Transforms data only",
-        "Queries databases"
+        "Design Center",
+        "Anypoint Studio",
+        "MUnit",
+        "API Manager"
       ],
-      "correctAnswer": 1,
-      "explanation": "The HTTP Listener receives incoming requests and triggers Mule flows.",
+      "correctAnswer": 3,
+      "explanation": "API Manager is where an API is managed at runtime, including applying policies through the gateway.",
       "whyWrong": [
-        "HTTP Listener specifically receives incoming requests — it doesn't send outbound requests.",
-        "HTTP Listener triggers flows on incoming requests; it doesn't transform data itself.",
-        "HTTP Listener isn't used to query databases directly."
+        "Design Center is for designing specifications.",
+        "Studio is the development environment.",
+        "MUnit is the testing framework."
       ]
     },
     {
-      "question": "Which layer in API-led connectivity exposes system-of-record data?",
+      "question": "A developer needs to write automated tests for a Mule flow, including mocking an outbound connector. What should they use?",
       "options": [
-        "Experience API only",
-        "System API",
-        "Process API only",
-        "No layers"
+        "Anypoint Monitoring",
+        "A Batch Job",
+        "MUnit",
+        "A Logger component"
       ],
-      "correctAnswer": 1,
-      "explanation": "System APIs abstract and expose data from underlying systems.",
+      "correctAnswer": 2,
+      "explanation": "MUnit is the testing framework for Mule applications and supports mocking processors.",
       "whyWrong": [
-        "Experience API is the top, consumer-facing layer — not where system-of-record data is exposed.",
-        "Process API orchestrates logic across System APIs — it isn't the layer that directly exposes system-of-record data.",
-        "API-led connectivity explicitly uses layered architecture, so 'no layers' is incorrect."
+        "Monitoring observes a running application rather than testing it.",
+        "Batch jobs process data; they are not a test harness.",
+        "A Logger writes diagnostic output and does not assert behaviour."
       ]
     },
     {
-      "question": "What is the purpose of Mocking in Anypoint Platform?",
+      "question": "Where should an environment-specific value such as a host name be held?",
       "options": [
-        "To delete APIs",
-        "To simulate API behavior for testing before implementation",
-        "To send emails",
-        "To configure CPQ"
+        "Hard-coded in the connector configuration",
+        "In a property file referenced by the configuration",
+        "In the payload at runtime",
+        "In a flow variable set at deployment"
       ],
       "correctAnswer": 1,
-      "explanation": "Mocking allows frontend and consumer development before backend is ready.",
+      "explanation": "Externalising values into properties lets the same application move between environments without code changes.",
       "whyWrong": [
-        "Mocking is meant to support testing, not to delete APIs.",
-        "Mocking simulates API responses — it isn't for sending emails.",
-        "Mocking is unrelated to CPQ configuration."
+        "Hard-coding forces a code change for each environment.",
+        "The payload carries business data, not configuration.",
+        "A flow variable is set per event and is not deployment configuration."
       ]
     },
     {
-      "question": "In Mule 4, how do you reference a flow variable from a DataWeave expression?",
+      "question": "What does the Transform Message component produce?",
       "options": [
-        "Target only",
-        "Use vars followed by the variable name, such as vars.myVar",
-        "Session only",
-        "No variables"
+        "A RAML specification for the API",
+        "A deployment artefact for the application",
+        "A reconnection strategy for the connector",
+        "A payload or variable value, defined by DataWeave"
       ],
-      "correctAnswer": 1,
-      "explanation": "Mule 4 accesses event variables with the vars keyword; flowVars is Mule 3 terminology.",
+      "correctAnswer": 3,
+      "explanation": "Transform Message runs DataWeave and writes the result to the payload or to a target variable.",
       "whyWrong": [
-        "Target is an operation setting for storing a value in a variable, not the Mule 4 expression syntax for reading it.",
-        "Session scope has different persistence semantics than flow-wide variables.",
-        "Mule does support variable scoping — 'no variables' is incorrect."
+        "Specifications are authored in Design Center or a text editor.",
+        "Deployment artefacts are produced by the build.",
+        "Reconnection strategies are connector configuration."
       ]
     },
     {
-      "question": "What does client credentials grant provide in OAuth?",
+      "question": "A connector intermittently fails because the downstream service is briefly unavailable. Which configuration addresses this directly?",
       "options": [
-        "User password",
-        "Application-level authentication without user context",
-        "Slack token only",
-        "Email credentials"
+        "A Batch Job",
+        "An increase to the payload size limit",
+        "A reconnection strategy with retries",
+        "A Choice router"
       ],
-      "correctAnswer": 1,
-      "explanation": "Client credentials grant is for machine-to-machine, app-level authentication.",
+      "correctAnswer": 2,
+      "explanation": "Reconnection strategies retry connectivity failures, which suits a service that is only briefly unavailable.",
       "whyWrong": [
-        "Client credentials grant is specifically for machine-to-machine auth, not user password exchange.",
-        "Client credentials grant isn't tied to Slack specifically — it's a general OAuth 2.0 concept.",
-        "Client credentials grant isn't about email credentials — it's an OAuth authentication flow."
+        "Batch processing changes how records are handled, not connection reliability.",
+        "Payload size is unrelated to availability.",
+        "Routing does not address a connectivity failure."
       ]
     },
     {
-      "question": "Which Anypoint component manages API policies?",
+      "question": "In which order does a Mule application handle an error raised inside a Try scope that has an On Error Propagate handler?",
       "options": [
-        "Studio only",
-        "API Manager",
-        "Design Center only",
-        "Runtime Manager only"
+        "The handler runs, then the error is re-thrown",
+        "The error is logged and ignored",
+        "The application shuts down",
+        "The error is swallowed and the flow continues normally"
       ],
-      "correctAnswer": 1,
-      "explanation": "API Manager handles policies, client management, and analytics.",
+      "correctAnswer": 0,
+      "explanation": "On Error Propagate executes its handler and then passes the error up, so the enclosing scope also fails.",
       "whyWrong": [
-        "Anypoint Studio is the design/development IDE, not the policy management tool.",
-        "Design Center is for designing APIs, not managing runtime policies.",
-        "Runtime Manager deploys and monitors applications; API Manager specifically manages API policies."
+        "Propagation is more than logging; the error continues upward.",
+        "A handled error does not stop the application.",
+        "Swallowing the error is On Error Continue behaviour."
       ]
     }
   ]

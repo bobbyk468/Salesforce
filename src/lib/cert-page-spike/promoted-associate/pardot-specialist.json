@@ -207,243 +207,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is a Prospect in Pardot (Marketing Cloud Account Engagement)?",
+      "question": "A prospect has downloaded three whitepapers but works at a company far outside the target market. How should this show up in Account Engagement?",
       "options": [
-        "A qualified lead that a sales rep has contacted",
-        "Any visitor who has been identified by their email address — through a form submission, tracked email click, or manual creation",
-        "A paying customer with an active subscription",
-        "A sales opportunity linked to a Salesforce Account"
+        "High score, high grade",
+        "High score, low grade",
+        "Low score, low grade",
+        "Low score, high grade"
       ],
       "correctAnswer": 1,
-      "explanation": "In Pardot, a Prospect is any visitor identified by email address. Until identified, they are an anonymous Visitor. Prospects have a profile record in Pardot that tracks all engagement and can sync to Salesforce leads or contacts.",
+      "explanation": "Score measures engagement and activity, which is high here. Grade measures fit against the ideal customer profile, which is poor.",
       "whyWrong": [
-        "A 'qualified lead contacted by sales' describes a further-along stage, not the initial Prospect definition.",
-        "A paying customer with a subscription describes a different, later relationship stage, not a Prospect.",
-        "A sales opportunity linked to an Account is a Salesforce CRM concept, not the Pardot Prospect definition."
+        "A high grade would mean the company matches the target profile, which it does not.",
+        "The activity alone rules out a low score.",
+        "Three downloads is substantial activity, so the score would not be low."
       ]
     },
     {
-      "question": "Which Pardot feature automatically adjusts a prospect's score based on engagement activities?",
+      "question": "What resets or changes a prospect's grade?",
       "options": [
-        "Grading",
-        "Scoring",
-        "Automation Rules",
-        "Completion Actions"
+        "Visiting the pricing page several times",
+        "Profile criteria matched to the prospect's fields",
+        "Opening a tracked marketing email",
+        "Clicking a tracked link on a landing page"
       ],
       "correctAnswer": 1,
-      "explanation": "Scoring tracks prospect engagement activities — form submissions, email opens, page views, file downloads — and automatically adds or subtracts points to measure how interested a prospect is in your offering.",
+      "explanation": "Grade is driven by profile criteria such as industry, job title or company size, not by behaviour.",
       "whyWrong": [
-        "Grading assesses static profile fit, not dynamic engagement-based adjustment — that's Scoring's role.",
-        "Automation Rules perform broader if-then actions — score adjustment is a specific outcome, not the general mechanism.",
-        "Completion Actions fire once per specific interaction — score adjustment can happen more continuously through Scoring, not just via Completion Actions."
+        "Page visits are activity and affect score.",
+        "Email opens are activity and affect score.",
+        "Link clicks are activity and affect score."
       ]
     },
     {
-      "question": "What is the key difference between Scoring and Grading in Pardot?",
+      "question": "A single action must happen immediately when a prospect submits one specific form, and only for that form. What is the right tool?",
       "options": [
-        "Scoring measures fit, Grading measures interest",
-        "Scoring measures interest (engagement activity), Grading measures fit (profile attributes against your ideal customer)",
-        "They are the same thing applied at different pipeline stages",
-        "Scoring is manual, Grading is automatic"
+        "A completion action on that form",
+        "A segmentation rule",
+        "An Engagement Studio program",
+        "An automation rule"
       ],
-      "correctAnswer": 1,
-      "explanation": "Scoring measures how interested a prospect is based on their engagement activities. Grading measures how well they fit your ideal customer profile based on attributes like job title, company size, and industry. Both are needed together for an effective lead qualification model.",
+      "correctAnswer": 0,
+      "explanation": "Completion actions are attached to the asset and fire on that asset's submission, which matches a single form.",
       "whyWrong": [
-        "This reverses the actual definitions — Scoring measures interest/engagement, Grading measures fit, not the other way around.",
-        "They are distinct, complementary concepts, not the same thing at different stages.",
-        "Both Scoring and Grading are automated — 'scoring is manual' misrepresents how Scoring works."
+        "Segmentation rules build static lists and do not react to a submission.",
+        "Engagement Studio runs multi-step nurture over time, not a single immediate action.",
+        "Automation rules run across the whole database and are heavier than this requirement needs."
       ]
     },
     {
-      "question": "What is the difference between a Pardot Form and a Form Handler?",
+      "question": "Which statement about automation rules is correct?",
       "options": [
-        "Pardot Forms are styled with CSS; Form Handlers use HTML only",
-        "Pardot Forms are hosted on Pardot servers and can be embedded or used on landing pages; Form Handlers connect Pardot to existing third-party forms on external websites without replacing them",
-        "Form Handlers require Salesforce integration; Pardot Forms do not",
-        "There is no practical difference — both capture the same data in the same way"
+        "They fire only on form submissions",
+        "They run repeatedly against the whole database",
+        "They run only inside Engagement Studio",
+        "They only ever run once per prospect and cannot be repeated"
       ],
       "correctAnswer": 1,
-      "explanation": "Pardot Forms are fully Pardot-hosted and provide built-in progressive profiling and validation. Form Handlers allow Pardot to receive submissions from existing external forms that you cannot replace — useful when a company has custom-built forms they want to keep.",
+      "explanation": "Automation rules run continuously against the database and can be configured to let a prospect match more than once.",
       "whyWrong": [
-        "This mischaracterizes the difference — it isn't about CSS versus HTML styling, it's about hosting and where the form lives.",
-        "Form Handlers don't require Salesforce integration specifically — that's not the differentiating factor.",
-        "There is a real, meaningful difference in how each connects to hosting/existing forms — this option denies it."
+        "Form submission is one possible criterion among many.",
+        "Automation rules are independent of Engagement Studio.",
+        "Repetition is a configuration choice rather than a fixed limit."
       ]
     },
     {
-      "question": "What happens when a prospect meets the criteria of an Automation Rule in Pardot?",
+      "question": "A marketer needs a one-time static list of prospects who match a set of criteria as of today. What should they use?",
       "options": [
-        "The prospect is deleted from the database",
-        "The configured actions are executed — such as assigning to a user, adjusting score, or adding to a list",
-        "The prospect is automatically synced to Salesforce CRM",
-        "An email is automatically sent to the prospect's account manager"
+        "A segmentation rule",
+        "A dynamic list",
+        "A completion action",
+        "An automation rule"
       ],
-      "correctAnswer": 1,
-      "explanation": "Automation Rules continually check updated prospects against their criteria and apply configured actions when a prospect matches. A prospect can match again only when Repeat Rule is enabled.",
+      "correctAnswer": 0,
+      "explanation": "Segmentation rules run once against matching prospects and produce a fixed list.",
       "whyWrong": [
-        "Automation Rules don't delete prospects — that's not their function.",
-        "Automation Rules don't automatically sync to Salesforce — that's a separate connector function.",
-        "Automation Rules don't send emails to account managers by default — the configured action is whatever criteria-based action was set up, not a fixed notification."
+        "A dynamic list keeps updating, which is the opposite of a static snapshot.",
+        "Completion actions are tied to a single asset submission.",
+        "Automation rules run on an ongoing basis rather than once."
       ]
     },
     {
-      "question": "What is Engagement Studio in Pardot?",
+      "question": "A prospect is deleted in Salesforce but the record remains in Account Engagement. What is the expected sync behaviour?",
       "options": [
-        "An Apex-based automation that sends bulk emails to all prospects in a list",
-        "A visual lead nurturing tool that sends targeted emails and performs actions based on prospect behaviour over time — using wait steps, conditional branches, and action steps",
-        "A reporting dashboard that tracks email open rates and click-through rates across campaigns",
-        "A landing page builder that creates multi-step registration flows"
+        "The connector pauses until resolved",
+        "A duplicate prospect is created",
+        "The prospect is deleted immediately in both systems",
+        "Deletion does not cascade to Account Engagement"
       ],
-      "correctAnswer": 1,
-      "explanation": "Engagement Studio is Pardot's visual nurture programme builder. It allows marketers to design branching paths based on prospect actions (e.g., opened email? Go to branch A; did not open? Go to branch B) — with wait steps between actions to control timing.",
+      "correctAnswer": 3,
+      "explanation": "Deletion does not cascade from Salesforce to Account Engagement, so the prospect record persists.",
       "whyWrong": [
-        "Engagement Studio isn't Apex-based — it's a native Pardot visual tool, not a bulk email blast mechanism.",
-        "Engagement Studio isn't a reporting dashboard — it's an automation-building tool, not an analytics view.",
-        "Engagement Studio isn't a landing page builder — that's a separate Pardot feature."
+        "The connector continues operating normally.",
+        "No duplicate is produced by a deletion.",
+        "Deletions are not mirrored automatically."
       ]
     },
     {
-      "question": "What is the key difference between Completion Actions and Automation Rules in Pardot?",
+      "question": "When a field value differs between Salesforce and Account Engagement, what normally decides the winner?",
       "options": [
-        "Completion Actions run on a schedule; Automation Rules run in real time",
-        "Completion Actions fire once per prospect when a specific asset interaction occurs (e.g., form submitted); Automation Rules continuously evaluate all prospects against criteria",
-        "Completion Actions require Salesforce admin access; Automation Rules are Pardot-only",
-        "There is no difference — both are used for the same purpose"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Completion Actions are triggered by a specific asset event (e.g., a prospect submits a form, opens an email, or clicks a link) and fire only once per asset interaction. Automation Rules continuously evaluate all matching prospects and can fire multiple times.",
-      "whyWrong": [
-        "This reverses the actual behavior — Completion Actions fire once per interaction, while Automation Rules run continuously, not the other way around.",
-        "Completion Actions don't require Salesforce admin access specifically — that's not the differentiating factor.",
-        "There is a real, meaningful difference between the two mechanisms — this option denies it."
-      ]
-    },
-    {
-      "question": "What is a Dynamic List in Pardot?",
-      "options": [
-        "A manually maintained list that a marketer updates periodically",
-        "A list that automatically adds or removes prospects based on rules you define — prospects join or leave as their attributes change",
-        "A list of prospects exported from Salesforce CRM for one-time use in a campaign",
-        "A list used exclusively for A/B testing email subject lines"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Dynamic Lists automatically update membership as prospect attributes change — if a prospect's job title changes to match the rule criteria, they are added; if they no longer match, they are removed. This makes them ideal for always-current audience segments.",
-      "whyWrong": [
-        "A manually maintained list is a static list, the opposite of what a Dynamic List automatically does.",
-        "A one-time CRM export is a static snapshot, not the ongoing rule-based membership a Dynamic List provides.",
-        "A Dynamic List isn't specifically an A/B testing tool — that's a different, unrelated use case."
-      ]
-    },
-    {
-      "question": "What controls which field value wins when there is a data conflict between Pardot and Salesforce during a sync?",
-      "options": [
-        "The connector user's profile determines the winning field value",
-        "Pardot always overwrites Salesforce field values to prevent data loss",
-        "The field sync behaviour setting on each mapped field — configured as Pardot wins, Salesforce wins, or most recently updated",
-        "The record with the higher prospect score wins the conflict"
+        "The value is discarded in both systems",
+        "Whichever record was created first",
+        "The field's sync behaviour setting",
+        "Account Engagement always wins"
       ],
       "correctAnswer": 2,
-      "explanation": "Each field mapping in the Pardot-Salesforce connector has a sync behaviour setting: Pardot wins (Pardot value always overwrites Salesforce), Salesforce wins (Salesforce value always overwrites Pardot), or Use the most recently updated (the field with the newer timestamp wins).",
+      "explanation": "Each field has a configurable sync behaviour, and the default treats Salesforce as the system of record.",
       "whyWrong": [
-        "The connector user's profile doesn't determine field-level sync winners — that's a separate sync behavior setting.",
-        "Pardot doesn't always overwrite Salesforce values — the actual behavior depends on the configured field sync setting.",
-        "Prospect score doesn't determine sync conflict resolution — that's an unrelated Pardot concept."
+        "Conflicts resolve to one value rather than clearing both.",
+        "Creation order does not govern field conflicts.",
+        "Account Engagement winning is a configurable option, not the default."
       ]
     },
     {
-      "question": "How does Pardot identify an anonymous website visitor as a known prospect?",
+      "question": "How does Account Engagement normally convert a visitor into a prospect?",
       "options": [
-        "By matching their IP address against the CRM account database",
-        "When the visitor clicks a Pardot-tracked link in an email or submits a Pardot form — creating a browser cookie that identifies them on future site visits",
-        "By requiring visitors to authenticate with their Salesforce login credentials",
-        "By scanning the visitor's browser history for Pardot-associated domains"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Pardot uses first-party cookies. When a prospect clicks a tracked email link or submits a form, Pardot places a cookie in their browser. On future visits to tracked pages, Pardot recognises the cookie and links page views to the known prospect record.",
-      "whyWrong": [
-        "IP address matching against a CRM account database isn't how anonymous visitor identification typically works in Pardot.",
-        "Requiring Salesforce login authentication isn't how Pardot identifies anonymous website visitors.",
-        "Scanning browser history for associated domains isn't a real Pardot identification mechanism."
-      ]
-    },
-    {
-      "question": "Which Pardot feature allows separate score tracking for prospects interested in different product lines or business units?",
-      "options": [
-        "Automation Rules with product-specific score adjustments",
-        "Scoring Categories — which maintain independent score totals per product or business unit alongside the overall prospect score",
-        "Engagement Studio with conditional branching per product interest",
-        "Dynamic Lists filtered by page view URL"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Scoring Categories let organisations maintain separate score totals for each product line or business unit. A prospect who visits the Enterprise product pages gets points in the Enterprise category without inflating scores in other categories — enabling more precise sales routing.",
-      "whyWrong": [
-        "Automation Rules with score adjustments don't provide independent per-product score totals — that's Scoring Categories' specific function.",
-        "Engagement Studio branching handles nurture flow, not separate score tracking per product.",
-        "Dynamic Lists filter by criteria — they don't maintain independent score totals per product line."
-      ]
-    },
-    {
-      "question": "A Pardot admin wants to send a follow-up email 3 days after a prospect downloads a whitepaper, and then a different email if they did not open the first one. Which feature handles this?",
-      "options": [
-        "An Automation Rule with a time-based trigger",
-        "A Completion Action on the form with a delayed send",
-        "An Engagement Studio programme with wait steps and conditional branches",
-        "A Dynamic List combined with a List Email send"
+        "After a set number of page views",
+        "Only when a sales user creates the record by hand",
+        "The visitor identifies themselves, usually via a form",
+        "When the cookie expires"
       ],
       "correctAnswer": 2,
-      "explanation": "Engagement Studio is designed for exactly this — wait steps control timing (3 days), and conditional branches check actions (opened email? yes/no) and route prospects to different content based on behaviour.",
+      "explanation": "An anonymous visitor becomes a prospect once they supply identifying information, most commonly through a form.",
       "whyWrong": [
-        "An Automation Rule alone with a time-based trigger doesn't provide the branching (conditional email based on open status) described.",
-        "A Completion Action alone doesn't provide the multi-step, conditional branching described — that's Engagement Studio's specific capability.",
-        "A Dynamic List with a List Email send doesn't provide the automated, conditional multi-day sequencing described."
+        "Page view volume alone does not identify anybody.",
+        "Manual creation is possible but is not the normal conversion path.",
+        "Cookie expiry ends tracking rather than creating a prospect."
       ]
     },
     {
-      "question": "What is the relationship between a Pardot Campaign and a Salesforce Campaign?",
+      "question": "A company wants to keep its existing website form markup and styling exactly as it is, but capture submissions in Account Engagement. What fits?",
       "options": [
-        "Pardot Campaigns are completely separate from Salesforce Campaigns and never sync",
-        "A Pardot Campaign tracks a prospect's first touch (original source) and can be connected to a Salesforce Campaign for multi-touch attribution reporting",
-        "Pardot Campaigns replace Salesforce Campaigns when Pardot is installed in the org",
-        "Pardot Campaigns sync automatically to Salesforce Campaigns without any configuration"
+        "A landing page",
+        "A form handler",
+        "An Account Engagement form",
+        "A dynamic list"
       ],
       "correctAnswer": 1,
-      "explanation": "Pardot Campaigns track the first source that identified a prospect. They connect to Salesforce Campaigns to support reporting on prospect sourcing and multi-touch attribution. Exam questions frequently test the first-touch vs. multi-touch distinction between Pardot and Salesforce campaigns.",
+      "explanation": "Form handlers accept posts from a form you host and style yourself, leaving the existing markup untouched.",
       "whyWrong": [
-        "Pardot Campaigns do connect to Salesforce Campaigns for attribution — they aren't completely separate.",
-        "Pardot Campaigns don't replace Salesforce Campaigns — they serve a complementary first-touch tracking purpose.",
-        "The connection between Pardot and Salesforce Campaigns requires configuration — it doesn't happen automatically without setup."
+        "A landing page hosts new content rather than preserving an existing page.",
+        "An Account Engagement form would replace the existing form and its markup.",
+        "Dynamic lists segment prospects and do not capture submissions."
       ]
     },
     {
-      "question": "Which Pardot report helps marketers understand which campaigns are generating the most pipeline and revenue?",
+      "question": "What is a trade-off of using a form handler rather than an Account Engagement form?",
       "options": [
-        "Prospect Lifecycle Report — showing prospects at each stage of the funnel",
-        "Pipeline Report / Lifecycle Report showing how opportunities relate to Pardot campaigns and prospect activities",
-        "Email Performance Report showing open and click rates per list email",
-        "Engagement History Report showing all activities per prospect"
+        "It cannot pass data to Salesforce",
+        "It cannot trigger completion actions",
+        "It requires a separate Engagement Studio licence",
+        "Progressive profiling and validation are unavailable"
       ],
-      "correctAnswer": 1,
-      "explanation": "The Pipeline Report (also known as the Lifecycle Report) connects Pardot prospect activity to Salesforce opportunity data — showing which campaigns and activities are driving pipeline creation and closed-won revenue. This bridges marketing and sales attribution.",
+      "correctAnswer": 3,
+      "explanation": "Features built into Account Engagement forms, including progressive profiling and native validation, are lost when you host the form yourself.",
       "whyWrong": [
-        "A Prospect Lifecycle Report shows funnel stage, not specifically pipeline/revenue attribution by campaign.",
-        "An Email Performance Report shows open/click rates, not pipeline and revenue generated by campaign.",
-        "An Engagement History Report shows per-prospect activity, not the aggregate campaign-to-pipeline reporting being asked about."
+        "Form handlers do pass captured data through to Account Engagement and on to Salesforce.",
+        "Completion actions are available on form handlers.",
+        "No separate licence is involved."
       ]
     },
     {
-      "question": "What is the difference between Pardot scoring and grading?",
+      "question": "What does progressive profiling achieve on a form?",
       "options": [
-        "No difference",
-        "Scoring is activity-based (interest); grading is attribute-based (fit)",
-        "Grading is activity-based; scoring is attribute-based",
-        "Only scoring exists"
+        "It asks only for fields not yet captured",
+        "It scores the prospect twice",
+        "It hides the form from known prospects",
+        "It validates email syntax"
       ],
-      "correctAnswer": 1,
-      "explanation": "Scoring measures engagement (opens, clicks, form submits). Grading measures fit to ideal customer profile (title, company size, industry).",
+      "correctAnswer": 0,
+      "explanation": "Progressive profiling keeps forms short by requesting only fields not yet captured for that prospect.",
       "whyWrong": [
-        "'No difference' contradicts the fact that scoring and grading are distinct, well-defined concepts.",
-        "This reverses the actual definitions — grading is attribute-based (fit), scoring is activity-based (interest), not the other way around.",
-        "'Only scoring exists' contradicts the fact that grading is a separate, real Pardot feature."
+        "Scoring is unrelated to field display.",
+        "The form remains available to known prospects with different fields.",
+        "Syntax validation is a separate form feature."
+      ]
+    },
+    {
+      "question": "An Engagement Studio program should pause a prospect's path for three days before the next email. Which element does this?",
+      "options": [
+        "A trigger",
+        "A rule",
+        "A wait step",
+        "An action"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Wait steps hold the prospect in place for a defined period before the program continues.",
+      "whyWrong": [
+        "Triggers branch on something the prospect does within a window.",
+        "Rules branch on data the prospect already has.",
+        "Actions change data or send something."
+      ]
+    },
+    {
+      "question": "What is the difference between a trigger and a rule in Engagement Studio?",
+      "options": [
+        "They behave identically",
+        "A trigger is faster",
+        "A rule can only be used once per program",
+        "A trigger waits for behaviour; a rule checks data"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Triggers listen for behaviour during a window, while rules evaluate existing prospect data immediately.",
+      "whyWrong": [
+        "They evaluate genuinely different things.",
+        "Speed is not the distinction.",
+        "There is no single-use restriction on rules."
+      ]
+    },
+    {
+      "question": "Scoring has been configured so that a pricing page visit adds more points than a blog visit. Why is this reasonable?",
+      "options": [
+        "Pricing interest signals stronger buying intent",
+        "Pricing pages load faster than blog pages",
+        "Blog pages are not tracked by default",
+        "Scores must always differ between pages"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Scoring is meant to reflect how much an action indicates intent, and pricing interest indicates more than casual reading.",
+      "whyWrong": [
+        "Load speed has nothing to do with scoring.",
+        "Blog visits are tracked and can carry points.",
+        "Equal weighting is allowed; the point is that weight should reflect intent."
+      ]
+    },
+    {
+      "question": "A marketer wants different content shown inside one email depending on the prospect's industry. What should they use?",
+      "options": [
+        "A segmentation rule",
+        "A form handler",
+        "Dynamic content",
+        "A separate email per industry"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Dynamic content varies a region of the email based on prospect field values, keeping it to a single asset.",
+      "whyWrong": [
+        "Segmentation rules build lists rather than varying content within an email.",
+        "Form handlers capture submissions and do not affect email content.",
+        "Building one email per industry multiplies maintenance for the same result."
       ]
     }
   ],
