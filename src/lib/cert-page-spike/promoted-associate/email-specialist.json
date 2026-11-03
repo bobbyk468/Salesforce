@@ -227,94 +227,110 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A marketing team's emails are landing in spam at one major mailbox provider. DNS has an SPF record but no DKIM. What should be addressed first?",
+      "question": "AMPscript is a scripting language inside Marketing Cloud. Which job is it suited to?",
       "options": [
-        "Increase the send volume to build reputation",
-        "Publish a DKIM record for the sending domain",
-        "Remove the unsubscribe link to reduce complaints",
-        "Switch every send to a transactional classification"
+        "Scheduling the nightly automation that imports the subscriber file from FTP",
+        "Varying content per subscriber from stored data",
+        "Deciding which sending domain and dedicated IP address a given send will use",
+        "Setting the retention period that applies to rows inside a data extension"
       ],
       "correctAnswer": 1,
-      "explanation": "DKIM signs the message so a receiver can confirm it was not altered and came from an authorised sender. Missing DKIM is a common cause of filtering even when SPF passes.",
+      "explanation": "AMPscript runs at send time and can look values up, test them and vary the content each subscriber receives. That is what makes it a scripting language rather than a set of merge fields.",
       "whyWrong": [
-        "Raising volume on a poor reputation makes filtering worse, not better.",
-        "Removing the unsubscribe link breaches anti-spam law and drives complaints up.",
-        "Misclassifying commercial mail as transactional is a compliance problem, not a deliverability fix."
+        "Scheduling is configured in Automation Studio, not in email content.",
+        "Sending domain and IP come from the sender and delivery profiles.",
+        "Retention is a setting on the data extension itself."
       ]
     },
     {
-      "question": "What does a DMARC policy add on top of SPF and DKIM?",
+      "question": "A team's emails are filtered as spam at one mailbox provider. DNS has SPF but no DKIM. What comes first?",
       "options": [
-        "It guarantees inbox placement",
-        "It replaces the need for a sender authentication record",
-        "It encrypts the message body in transit",
-        "It sets the policy for authentication failures"
+        "Remove the unsubscribe link so that fewer complaints are registered overall",
+        "Publish a DKIM record for the sending domain",
+        "Switch every single send across to a transactional classification instead",
+        "Increase the overall send volume in order to build a stronger reputation"
+      ],
+      "correctAnswer": 1,
+      "explanation": "DKIM signs the message so a receiver can confirm it was not altered in transit and came from an authorised sender. Missing DKIM is a common cause of filtering even where SPF passes.",
+      "whyWrong": [
+        "Removing the unsubscribe link breaches anti-spam law and drives complaints up.",
+        "Misclassifying commercial mail as transactional is a compliance problem, not a fix.",
+        "Raising volume on a poor reputation makes filtering worse, not better."
+      ]
+    },
+    {
+      "question": "A marketer wants to pick the best send time for a brand new list with almost no history. What should they do?",
+      "options": [
+        "Copy the send time that performs best for a completely different brand's audience",
+        "Delay the campaign for several months until a full year of history has built up",
+        "Apply the send-time optimisation feature immediately to the whole of the new list",
+        "Send at a sensible default and gather data first"
       ],
       "correctAnswer": 3,
-      "explanation": "DMARC sets the handling policy for authentication failures and enables reporting back to the domain owner.",
+      "explanation": "Send-time optimisation relies on engagement data for the individual subscriber. On a new list that data is insufficient, so you start with a reasonable default and let real behaviour accumulate.",
       "whyWrong": [
-        "No standard guarantees placement; authentication only removes one reason to filter.",
-        "DMARC builds on SPF and DKIM rather than replacing them.",
-        "Encryption in transit is handled by TLS, not DMARC."
+        "Another brand's audience behaves differently and tells you little.",
+        "Waiting months to send anything forfeits the campaign entirely.",
+        "Optimisation has nothing to work from when engagement data does not yet exist."
       ]
     },
     {
-      "question": "An email confirming a completed purchase must reach customers who have opted out of marketing. How should it be sent?",
+      "question": "A client points to their sender authentication package and asks whether their email will now reach the inbox. What is the accurate answer?",
       "options": [
-        "With a transactional send classification",
-        "From a separate business unit",
-        "Through Advertising Studio",
-        "With a commercial send classification"
+        "No, because authentication has no bearing at all on how receivers treat mail",
+        "Yes, because a dedicated sending domain and IP guarantee delivery to the inbox",
+        "Yes, provided that every single one of the sends is classified as transactional",
+        "It helps, but placement still depends on engagement"
       ],
-      "correctAnswer": 0,
-      "explanation": "Transactional classification is for operational messages tied to a transaction, and it bypasses the commercial subscription status.",
+      "correctAnswer": 3,
+      "explanation": "Authentication proves who sent the message and is necessary, but it does not establish inbox placement. Receivers still weigh complaints, bounces and how recipients engage.",
       "whyWrong": [
-        "A different business unit does not change a subscriber's opt-out status.",
-        "Advertising Studio handles paid audiences, not transactional email.",
-        "Commercial classification respects opt-outs, so opted-out customers would not receive it."
+        "Authentication does matter, so dismissing it entirely is wrong.",
+        "Authentication removes a reason to filter; it does not guarantee placement.",
+        "Classification governs opt-out handling, not inbox placement."
       ]
     },
     {
-      "question": "A subscriber unsubscribes from a monthly newsletter but must keep receiving a separate product update email. What supports this?",
+      "question": "Which list stores subscriber status for the whole Marketing Cloud account?",
       "options": [
-        "Deleting and recreating the subscriber",
-        "A suppression list containing all subscribers",
-        "Publication lists for each email category",
-        "A second subscriber key for the same person"
+        "The sendable data extension that was used for the most recent campaign",
+        "The publication list that was most recently created inside the account",
+        "All Subscribers",
+        "The suppression list attached to the send classification being used"
       ],
       "correctAnswer": 2,
-      "explanation": "Publication lists let a subscriber opt out of one category while remaining subscribed to others.",
+      "explanation": "All Subscribers holds the account-level status for every subscriber. When someone unsubscribes their record remains in the list with an unsubscribed status rather than being deleted.",
       "whyWrong": [
-        "Deleting and recreating a subscriber discards history and does not create category-level choice.",
-        "Suppressing everyone would stop all mail, which is the opposite of the requirement.",
-        "Duplicate subscriber keys fragment the record and create double sends."
+        "A data extension is an audience, not the account's status record.",
+        "Publication lists manage opt-out by category, not account-level status.",
+        "Suppression lists hold addresses to exclude from a particular send."
       ]
     },
     {
       "question": "Which AMPscript function would retrieve a single value from a data extension for personalisation?",
       "options": [
-        "DateAdd",
-        "RaiseError",
         "Lookup",
-        "Concat"
+        "DateAdd",
+        "Concat",
+        "RaiseError"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Lookup returns one field value from a data extension row matching the criteria supplied.",
       "whyWrong": [
         "DateAdd performs date arithmetic.",
-        "RaiseError stops the send for that subscriber and reports a problem.",
-        "Concat joins strings together."
+        "Concat joins strings together.",
+        "RaiseError stops the send for that subscriber and reports a problem."
       ]
     },
     {
       "question": "What is the purpose of wrapping personalisation in a default value, for example with AMPscript conditional logic?",
       "options": [
         "To bypass the send classification",
-        "To avoid a blank greeting when the field is empty",
         "To reduce the size of the data extension",
+        "To avoid a blank greeting when the field is empty",
         "To improve the sender reputation score"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Missing data is normal, and a fallback prevents visible gaps such as a greeting addressed to nobody.",
       "whyWrong": [
         "Send classification is unrelated to content logic.",
@@ -326,48 +342,48 @@
       "question": "A hard bounce is recorded for a subscriber. What does this indicate?",
       "options": [
         "The address is permanently undeliverable",
+        "The mailbox was temporarily full",
         "The send was throttled by the provider",
-        "The subscriber marked the message as spam",
-        "The mailbox was temporarily full"
+        "The subscriber marked the message as spam"
       ],
       "correctAnswer": 0,
       "explanation": "Hard bounces mean the address does not exist or has permanently rejected mail.",
       "whyWrong": [
+        "A temporarily full mailbox produces a soft bounce.",
         "Throttling delays delivery rather than bouncing it.",
-        "A spam complaint is a separate event from a bounce.",
-        "A temporarily full mailbox produces a soft bounce."
+        "A spam complaint is a separate event from a bounce."
       ]
     },
     {
       "question": "Which figure should a team watch to judge whether their list hygiene is deteriorating?",
       "options": [
-        "The total number of emails created",
-        "The count of available templates",
         "The number of data extensions in the account",
+        "The count of available templates",
+        "The total number of emails created",
         "The bounce rate over successive sends"
       ],
       "correctAnswer": 3,
       "explanation": "A rising bounce rate is the clearest signal that a list contains stale or invalid addresses.",
       "whyWrong": [
-        "Email volume produced says nothing about list quality.",
+        "The number of data extensions is a structural detail, not a hygiene measure.",
         "Template count has no bearing on deliverability.",
-        "The number of data extensions is a structural detail, not a hygiene measure."
+        "Email volume produced says nothing about list quality."
       ]
     },
     {
       "question": "Click-through rate on a send is calculated against which figure?",
       "options": [
-        "Total subscribers in the account",
-        "Delivered emails",
         "Unique opens",
-        "Emails sent"
+        "Emails sent",
+        "Delivered emails",
+        "Total subscribers in the account"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 2,
       "explanation": "Engagement rates are measured against what actually reached the mailbox, which is the delivered count.",
       "whyWrong": [
-        "Account-wide subscriber counts are unrelated to one send.",
         "Click-to-open rate uses opens; click-through rate uses delivered.",
-        "Sent includes bounces, which never reached anyone."
+        "Sent includes bounces, which never reached anyone.",
+        "Account-wide subscriber counts are unrelated to one send."
       ]
     },
     {
@@ -389,81 +405,81 @@
     {
       "question": "What distinguishes a data extension from a subscriber list?",
       "options": [
-        "They are identical with different names",
+        "A subscriber list supports more fields",
         "A data extension cannot be used for sending",
         "Columns and a primary key that you define",
-        "A subscriber list supports more fields"
+        "They are identical with different names"
       ],
       "correctAnswer": 2,
       "explanation": "Data extensions are tables you define, which is why they are used wherever custom fields or relationships are needed.",
       "whyWrong": [
-        "They are genuinely different storage models.",
+        "Lists are limited to account-level profile and preference attributes.",
         "Data extensions are a standard sendable audience.",
-        "Lists are limited to account-level profile and preference attributes."
+        "They are genuinely different storage models."
       ]
     },
     {
       "question": "An unsubscribe recorded through the standard profile centre takes effect at which level by default?",
       "options": [
+        "The business unit's sender profile",
         "All Subscribers, across the whole account",
         "The data extension used for that send",
-        "The single email that was sent",
-        "The business unit's sender profile"
+        "The single email that was sent"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 1,
       "explanation": "Without publication lists in play, an unsubscribe is recorded against All Subscribers and applies account-wide.",
       "whyWrong": [
+        "Sender profiles govern the from address, not subscription status.",
         "Opt-out status lives on the subscriber record, not the sending audience.",
-        "Single-email opt-out is not the default behaviour.",
-        "Sender profiles govern the from address, not subscription status."
+        "Single-email opt-out is not the default behaviour."
       ]
     },
     {
       "question": "Why does a sender profile matter for deliverability?",
       "options": [
         "It determines the tracking retention period",
-        "It stores the subscriber's preferences",
         "It controls how many emails can be built",
+        "It stores the subscriber's preferences",
         "It sets the from address used in authentication"
       ],
       "correctAnswer": 3,
       "explanation": "Authentication checks compare the sending domain with published DNS records, so the from address must align with what is authenticated.",
       "whyWrong": [
         "Tracking retention is an account setting.",
-        "Preferences sit on the subscriber record.",
-        "Content creation limits are unrelated to the sender profile."
+        "Content creation limits are unrelated to the sender profile.",
+        "Preferences sit on the subscriber record."
       ]
     },
     {
       "question": "A send is scheduled but a large portion of the audience never receives it, and the tracking shows them excluded before sending. What is the most likely cause?",
       "options": [
         "They are on a suppression list applied to the send",
+        "The subject line was too long",
         "The send classification was transactional",
-        "The email template was too large",
-        "The subject line was too long"
+        "The email template was too large"
       ],
       "correctAnswer": 0,
       "explanation": "Exclusions and suppressions are applied before sending, which is why those subscribers appear removed rather than bounced.",
       "whyWrong": [
+        "Subject length has no effect on who is sent to.",
         "A transactional classification widens rather than narrows the audience.",
-        "Template size affects rendering, not audience exclusion.",
-        "Subject length has no effect on who is sent to."
+        "Template size affects rendering, not audience exclusion."
       ]
     },
     {
       "question": "Which practice most directly reduces spam complaints over time?",
       "options": [
-        "Removing the preference centre link",
-        "Using a new sending domain for each campaign",
         "Relevant content, sensible frequency, opted-in list",
-        "Increasing the volume of sends"
+        "Using a new sending domain for each campaign",
+        "Increasing the volume of sends",
+        "Removing the preference centre link"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 0,
       "explanation": "Complaints come from unwanted mail, so relevance, consent and frequency are what reduce them.",
       "whyWrong": [
-        "Taking away the preference centre pushes people towards the spam button instead.",
         "Rotating domains destroys accumulated reputation and looks evasive to receivers.",
-        "More mail to an uninterested audience produces more complaints."
+        "More mail to an uninterested audience produces more complaints.",
+        "Taking away the preference centre pushes people towards the spam button instead."
       ]
     }
   ]

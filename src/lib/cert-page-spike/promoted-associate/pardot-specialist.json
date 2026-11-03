@@ -207,66 +207,82 @@
   ],
   "sampleQuestions": [
     {
-      "question": "A prospect has downloaded three whitepapers but works at a company far outside the target market. How should this show up in Account Engagement?",
+      "question": "An anonymous website visitor fills in a form. What happens to them in Account Engagement?",
       "options": [
-        "High score, high grade",
+        "They stay an anonymous visitor until a sales user converts them by hand",
+        "They are added to the next Engagement Studio program that happens to be running",
+        "They are created as a lead in Salesforce without any Account Engagement record",
+        "They become a prospect record"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A visitor becomes a prospect once they are identified by email address, which a form submission supplies. The visitor activity already captured is then associated with that prospect.",
+      "whyWrong": [
+        "Identification happens automatically on submission, with no manual step.",
+        "Program membership is a separate decision from identification.",
+        "The prospect record is created in Account Engagement first."
+      ]
+    },
+    {
+      "question": "Which prospect behaviour feeds the score rather than the grade?",
+      "options": [
+        "The size of the company the prospect works for as recorded on the account",
+        "The industry recorded on the prospect's own company record in the database",
+        "The job title that the prospect entered when they first completed a form",
+        "Opening an email and clicking its links"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Score rises and falls with engagement activities such as email opens, link clicks, form submissions and page views. Grade is driven by profile attributes instead.",
+      "whyWrong": [
+        "Company size is a profile attribute and affects grade.",
+        "Industry is a profile attribute and affects grade.",
+        "Job title is a profile attribute and affects grade."
+      ]
+    },
+    {
+      "question": "A prospect has downloaded three whitepapers but works well outside the target market. How should this look?",
+      "options": [
+        "A low score and a low grade because the company is outside the target market",
         "High score, low grade",
-        "Low score, low grade",
-        "Low score, high grade"
+        "A low score and a high grade because of the company they happen to work for",
+        "A high score and an equally high grade because of the download activity"
       ],
       "correctAnswer": 1,
-      "explanation": "Score measures engagement and activity, which is high here. Grade measures fit against the ideal customer profile, which is poor.",
+      "explanation": "Scoring measures how interested a prospect is, and three downloads is real interest. Grading measures how well they fit the ideal customer profile, which here is poor.",
       "whyWrong": [
-        "A high grade would mean the company matches the target profile, which it does not.",
-        "The activity alone rules out a low score.",
-        "Three downloads is substantial activity, so the score would not be low."
+        "The activity alone rules out a low score, whatever the fit.",
+        "Three downloads is substantial activity, so the score would not be low.",
+        "A high grade would mean the company matches the target profile, which it does not."
       ]
     },
     {
-      "question": "What resets or changes a prospect's grade?",
+      "question": "A company wants to keep its website forms exactly as they are but capture the submissions. What fits?",
       "options": [
-        "Visiting the pricing page several times",
-        "Profile criteria matched to the prospect's fields",
-        "Opening a tracked marketing email",
-        "Clicking a tracked link on a landing page"
+        "A landing page built in Account Engagement and linked from the website menu",
+        "A form handler",
+        "A dynamic list that is populated from the website's own submission database",
+        "An Account Engagement form embedded in place of the current website form"
       ],
       "correctAnswer": 1,
-      "explanation": "Grade is driven by profile criteria such as industry, job title or company size, not by behaviour.",
+      "explanation": "Form handlers accept posts from existing external forms, so the markup and styling you already have stay untouched while the data flows into Account Engagement.",
       "whyWrong": [
-        "Page visits are activity and affect score.",
-        "Email opens are activity and affect score.",
-        "Link clicks are activity and affect score."
+        "A landing page hosts new content rather than preserving the current page.",
+        "Dynamic lists segment prospects and do not capture submissions.",
+        "An Account Engagement form would replace the existing form and its markup."
       ]
     },
     {
-      "question": "A single action must happen immediately when a prospect submits one specific form, and only for that form. What is the right tool?",
+      "question": "How do automation rules differ from completion actions?",
       "options": [
-        "A completion action on that form",
-        "A segmentation rule",
-        "An Engagement Studio program",
-        "An automation rule"
+        "Rules are configured by an administrator and completion actions by a marketer",
+        "Rules apply to prospects and completion actions apply to anonymous visitors",
+        "Rules look across the whole database; actions are tied to one asset",
+        "Rules run only once for each prospect whereas completion actions can run again"
       ],
-      "correctAnswer": 0,
-      "explanation": "Completion actions are attached to the asset and fire on that asset's submission, which matches a single form.",
+      "correctAnswer": 2,
+      "explanation": "Automation rules continually check updated prospects across the database and can match again when a Repeat Rule is enabled. A completion action fires only on the asset it belongs to.",
       "whyWrong": [
-        "Segmentation rules build static lists and do not react to a submission.",
-        "Engagement Studio runs multi-step nurture over time, not a single immediate action.",
-        "Automation rules run across the whole database and are heavier than this requirement needs."
-      ]
-    },
-    {
-      "question": "Which statement about automation rules is correct?",
-      "options": [
-        "They fire only on form submissions",
-        "They run repeatedly against the whole database",
-        "They run only inside Engagement Studio",
-        "They only ever run once per prospect and cannot be repeated"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Automation rules run continuously against the database and can be configured to let a prospect match more than once.",
-      "whyWrong": [
-        "Form submission is one possible criterion among many.",
-        "Automation rules are independent of Engagement Studio.",
+        "Either can be configured by anyone with the right permission.",
+        "Both work on prospects; neither targets anonymous visitors.",
         "Repetition is a configuration choice rather than a fixed limit."
       ]
     },
@@ -274,79 +290,79 @@
       "question": "A marketer needs a one-time static list of prospects who match a set of criteria as of today. What should they use?",
       "options": [
         "A segmentation rule",
-        "A dynamic list",
         "A completion action",
+        "A dynamic list",
         "An automation rule"
       ],
       "correctAnswer": 0,
       "explanation": "Segmentation rules run once against matching prospects and produce a fixed list.",
       "whyWrong": [
-        "A dynamic list keeps updating, which is the opposite of a static snapshot.",
         "Completion actions are tied to a single asset submission.",
+        "A dynamic list keeps updating, which is the opposite of a static snapshot.",
         "Automation rules run on an ongoing basis rather than once."
       ]
     },
     {
       "question": "A prospect is deleted in Salesforce but the record remains in Account Engagement. What is the expected sync behaviour?",
       "options": [
-        "The connector pauses until resolved",
+        "Deletion does not cascade to Account Engagement",
         "A duplicate prospect is created",
         "The prospect is deleted immediately in both systems",
-        "Deletion does not cascade to Account Engagement"
+        "The connector pauses until resolved"
       ],
-      "correctAnswer": 3,
+      "correctAnswer": 0,
       "explanation": "Deletion does not cascade from Salesforce to Account Engagement, so the prospect record persists.",
       "whyWrong": [
-        "The connector continues operating normally.",
         "No duplicate is produced by a deletion.",
-        "Deletions are not mirrored automatically."
+        "Deletions are not mirrored automatically.",
+        "The connector continues operating normally."
       ]
     },
     {
       "question": "When a field value differs between Salesforce and Account Engagement, what normally decides the winner?",
       "options": [
-        "The value is discarded in both systems",
         "Whichever record was created first",
+        "The value is discarded in both systems",
         "The field's sync behaviour setting",
         "Account Engagement always wins"
       ],
       "correctAnswer": 2,
       "explanation": "Each field has a configurable sync behaviour, and the default treats Salesforce as the system of record.",
       "whyWrong": [
-        "Conflicts resolve to one value rather than clearing both.",
         "Creation order does not govern field conflicts.",
+        "Conflicts resolve to one value rather than clearing both.",
         "Account Engagement winning is a configurable option, not the default."
       ]
     },
     {
       "question": "How does Account Engagement normally convert a visitor into a prospect?",
       "options": [
-        "After a set number of page views",
-        "Only when a sales user creates the record by hand",
+        "When the cookie expires",
         "The visitor identifies themselves, usually via a form",
-        "When the cookie expires"
+        "After a set number of page views",
+        "Only once a sales user has created the record by hand"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "An anonymous visitor becomes a prospect once they supply identifying information, most commonly through a form.",
       "whyWrong": [
+        "Cookie expiry ends tracking rather than creating a prospect.",
         "Page view volume alone does not identify anybody.",
-        "Manual creation is possible but is not the normal conversion path.",
-        "Cookie expiry ends tracking rather than creating a prospect."
+        "Manual creation is possible but is not the normal conversion path."
       ]
     },
     {
       "question": "A company wants to keep its existing website form markup and styling exactly as it is, but capture submissions in Account Engagement. What fits?",
       "options": [
-        "A landing page",
         "A form handler",
         "An Account Engagement form",
+        "A landing page",
         "A dynamic list"
       ],
-      "correctAnswer": 1,
+      "correctAnswer": 0,
       "explanation": "Form handlers accept posts from a form you host and style yourself, leaving the existing markup untouched.",
       "whyWrong": [
-        "A landing page hosts new content rather than preserving an existing page.",
         "An Account Engagement form would replace the existing form and its markup.",
+        "A landing page hosts new content rather than preserving an existing page.",
         "Dynamic lists segment prospects and do not capture submissions."
       ]
     },
@@ -354,16 +370,16 @@
       "question": "What is a trade-off of using a form handler rather than an Account Engagement form?",
       "options": [
         "It cannot pass data to Salesforce",
+        "It requires a separate Engagement Studio licence to be bought",
         "It cannot trigger completion actions",
-        "It requires a separate Engagement Studio licence",
         "Progressive profiling and validation are unavailable"
       ],
       "correctAnswer": 3,
       "explanation": "Features built into Account Engagement forms, including progressive profiling and native validation, are lost when you host the form yourself.",
       "whyWrong": [
         "Form handlers do pass captured data through to Account Engagement and on to Salesforce.",
-        "Completion actions are available on form handlers.",
-        "No separate licence is involved."
+        "No separate licence is involved.",
+        "Completion actions are available on form handlers."
       ]
     },
     {
@@ -371,7 +387,7 @@
       "options": [
         "It asks only for fields not yet captured",
         "It scores the prospect twice",
-        "It hides the form from known prospects",
+        "It hides the whole form from any prospect already known",
         "It validates email syntax"
       ],
       "correctAnswer": 0,
@@ -385,65 +401,65 @@
     {
       "question": "An Engagement Studio program should pause a prospect's path for three days before the next email. Which element does this?",
       "options": [
-        "A trigger",
         "A rule",
+        "A trigger",
         "A wait step",
-        "An action"
+        "An action step"
       ],
       "correctAnswer": 2,
       "explanation": "Wait steps hold the prospect in place for a defined period before the program continues.",
       "whyWrong": [
-        "Triggers branch on something the prospect does within a window.",
         "Rules branch on data the prospect already has.",
+        "Triggers branch on something the prospect does within a window.",
         "Actions change data or send something."
       ]
     },
     {
       "question": "What is the difference between a trigger and a rule in Engagement Studio?",
       "options": [
-        "They behave identically",
         "A trigger is faster",
-        "A rule can only be used once per program",
+        "A rule may only be used once in any single program",
+        "They behave identically",
         "A trigger waits for behaviour; a rule checks data"
       ],
       "correctAnswer": 3,
       "explanation": "Triggers listen for behaviour during a window, while rules evaluate existing prospect data immediately.",
       "whyWrong": [
-        "They evaluate genuinely different things.",
         "Speed is not the distinction.",
-        "There is no single-use restriction on rules."
+        "There is no single-use restriction on rules.",
+        "They evaluate genuinely different things."
       ]
     },
     {
       "question": "Scoring has been configured so that a pricing page visit adds more points than a blog visit. Why is this reasonable?",
       "options": [
-        "Pricing interest signals stronger buying intent",
-        "Pricing pages load faster than blog pages",
+        "Scores must always differ between pages",
         "Blog pages are not tracked by default",
-        "Scores must always differ between pages"
+        "Pricing interest signals stronger buying intent",
+        "Pricing pages load more quickly than the blog pages do"
       ],
-      "correctAnswer": 0,
+      "correctAnswer": 2,
       "explanation": "Scoring is meant to reflect how much an action indicates intent, and pricing interest indicates more than casual reading.",
       "whyWrong": [
-        "Load speed has nothing to do with scoring.",
+        "Equal weighting is allowed; the point is that weight should reflect intent.",
         "Blog visits are tracked and can carry points.",
-        "Equal weighting is allowed; the point is that weight should reflect intent."
+        "Load speed has nothing to do with scoring."
       ]
     },
     {
       "question": "A marketer wants different content shown inside one email depending on the prospect's industry. What should they use?",
       "options": [
         "A segmentation rule",
-        "A form handler",
         "Dynamic content",
-        "A separate email per industry"
+        "A separate email per industry",
+        "A form handler"
       ],
-      "correctAnswer": 2,
+      "correctAnswer": 1,
       "explanation": "Dynamic content varies a region of the email based on prospect field values, keeping it to a single asset.",
       "whyWrong": [
         "Segmentation rules build lists rather than varying content within an email.",
-        "Form handlers capture submissions and do not affect email content.",
-        "Building one email per industry multiplies maintenance for the same result."
+        "Building one email per industry multiplies maintenance for the same result.",
+        "Form handlers capture submissions and do not affect email content."
       ]
     }
   ],
