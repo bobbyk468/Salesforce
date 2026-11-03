@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Net Zero Cloud AP validate?",
+      "question": "A company burns gas in its own boilers and buys electricity from the grid. How are these classified?",
       "options": [
-        "Only Slack",
-        "Only reporting",
-        "Only basics",
-        "Knowledge, skills, and experience with managing and collecting key sustainability data"
+        "Gas as Scope 1, purchased electricity as Scope 2",
+        "Both as Scope 2, since each of them is bought in from an external supplier",
+        "Both as Scope 1, because the company chooses to consume each of them directly",
+        "Gas as Scope 2 and the purchased electricity as Scope 1 emissions instead"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Scope 1 is emissions from sources the company owns or controls. Scope 2 is the indirect emissions from the energy it buys.",
+      "whyWrong": [
+        "Gas burned on site is a direct emission from the company's own equipment.",
+        "Purchased electricity is generated elsewhere, so it is not Scope 1.",
+        "This reverses the two definitions."
+      ]
+    },
+    {
+      "question": "Which emissions fall under Scope 3?",
+      "options": [
+        "The natural gas burned in the boilers the company owns at its head office",
+        "The diesel used in the delivery vans that the company owns and operates",
+        "Business travel and purchased goods",
+        "The electricity the company purchases from the grid for its own buildings"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Scope 3 covers the value chain: suppliers, business travel, commuting, waste, and the use of sold products.",
+      "whyWrong": [
+        "On-site gas is Scope 1.",
+        "Fuel in company-owned vehicles is Scope 1.",
+        "Purchased electricity is Scope 2."
+      ]
+    },
+    {
+      "question": "Why is Scope 3 usually the hardest to measure?",
+      "options": [
+        "It can only be calculated once Scope 1 and Scope 2 have been fully audited",
+        "The data sits with suppliers and customers",
+        "Regulators have never published any methodology for calculating these figures",
+        "The emissions involved are far too small to be measured with any accuracy"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Scope 3 depends on activity outside the company's own operations, so it relies on supplier data, industry averages and estimation.",
+      "whyWrong": [
+        "There is no such sequencing requirement.",
+        "Methodologies for Scope 3 categories are well established.",
+        "Scope 3 is typically the largest share of a company's footprint."
+      ]
+    },
+    {
+      "question": "What does an emissions factor do?",
+      "options": [
+        "It converts activity data into emissions",
+        "It identifies which of the three reporting scopes an activity belongs to",
+        "It sets the reduction target a company has formally committed to achieving",
+        "It records the price the company paid for the energy it consumed that year"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An emissions factor turns a quantity of activity, such as kilowatt hours or litres of fuel, into a figure for greenhouse gas emitted.",
+      "whyWrong": [
+        "Scope classification is a judgement about the source of the emission.",
+        "Targets are a commitment, not a conversion factor.",
+        "Cost is financial data and is separate from emissions."
+      ]
+    },
+    {
+      "question": "A company changes its electricity supplier to one using only renewable generation. What happens to its reported figures?",
+      "options": [
+        "Scope 3 emissions fall because the supplier is part of its own value chain",
+        "Nothing changes at all, because the electricity comes from the same grid",
+        "Scope 1 emissions fall because the company now generates its own power",
+        "Scope 2 emissions fall under market-based reporting"
       ],
       "correctAnswer": 3,
-      "explanation": "Accredited Net Zero Cloud Professionals have demonstrated knowledge, skills, and experience with managing and collecting key sustainability data."
+      "explanation": "Market-based Scope 2 reporting reflects the contracts a company holds, so a renewable supply contract reduces the reported figure.",
+      "whyWrong": [
+        "Purchased electricity sits in Scope 2, not Scope 3.",
+        "Location-based reporting would be unchanged, but market-based would not.",
+        "The company's own combustion has not changed."
+      ]
     },
     {
-      "question": "What is Net Zero Cloud used for?",
+      "question": "What is the difference between location-based and market-based Scope 2 reporting?",
       "options": [
-        "Only CPQ",
-        "Sustainability and carbon footprint management",
-        "Only email",
-        "Only Slack"
+        "One uses the local grid average, the other uses contracts",
+        "One covers electricity while the other one covers gas and other fuels burned",
+        "One is used for the current year and the other for historical comparisons",
+        "One applies to offices and the other applies to manufacturing facilities"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Location-based uses the average emissions intensity of the grid you draw from. Market-based uses what you actually contracted to buy.",
+      "whyWrong": [
+        "Both methods concern purchased energy, chiefly electricity.",
+        "Both are reported for the same period, side by side.",
+        "Neither is restricted to a building type."
+      ]
+    },
+    {
+      "question": "A company offsets some emissions by buying carbon credits. How should this be presented?",
+      "options": [
+        "Offsets excluded from the report entirely because they are purchased",
+        "Offsets subtracted from gross emissions so only the net figure is reported",
+        "Gross emissions reported, with offsets shown separately",
+        "Offsets recorded as a reduction in the company's own Scope 1 emissions"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Credible reporting shows what was emitted and what was offset as separate figures, so readers can see the actual footprint.",
+      "whyWrong": [
+        "Offsets are material information and should be disclosed.",
+        "Netting hides the real emissions and is widely criticised.",
+        "An offset does not change what the company itself emitted."
+      ]
+    },
+    {
+      "question": "What is a baseline year used for?",
+      "options": [
+        "Setting the emissions factors that will be applied in all subsequent years",
+        "Measuring progress against a fixed starting point",
+        "Determining the price the company will pay for its carbon credits later",
+        "Deciding which of the three emissions scopes each activity should sit within"
       ],
       "correctAnswer": 1,
-      "explanation": "Net Zero Cloud is used for sustainability and carbon footprint management."
+      "explanation": "A baseline year gives a fixed reference so reductions can be measured consistently over time.",
+      "whyWrong": [
+        "Factors are updated as better data becomes available.",
+        "Credit pricing is a market matter.",
+        "Scope classification does not depend on the year chosen."
+      ]
     },
     {
-      "question": "What is a key activity for a Net Zero Cloud Professional?",
+      "question": "A company acquires another business halfway through the reporting year. What does this affect?",
       "options": [
-        "Only lists",
-        "Only reporting",
-        "Only coding",
-        "Managing and collecting sustainability data"
+        "The organisational boundary of the report",
+        "The requirement to report on business travel within the Scope 3 categories",
+        "The emissions factors that apply to the acquiring company's own activities",
+        "The classification of purchased electricity between Scope 1 and Scope 2"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Acquisitions change what is inside the reporting entity, which is why the organisational boundary and often the baseline must be restated.",
+      "whyWrong": [
+        "Travel remains reportable regardless.",
+        "Factors depend on the activity and location, not on ownership changes.",
+        "Scope definitions are unaffected by corporate structure."
+      ]
+    },
+    {
+      "question": "Why would a company track emissions per unit of revenue as well as in absolute terms?",
+      "options": [
+        "It is the only figure that external auditors are permitted to verify formally",
+        "It removes the need to report absolute emissions figures to any regulator",
+        "It converts the emissions total into the company's reporting currency",
+        "It shows whether efficiency is improving as the business grows"
       ],
       "correctAnswer": 3,
-      "explanation": "They manage and collect sustainability data."
+      "explanation": "A growing company can cut emissions per unit of output while its total still rises, and both facts matter.",
+      "whyWrong": [
+        "Auditors verify absolute figures as well as intensity measures.",
+        "Absolute reporting remains the primary requirement.",
+        "Intensity is a ratio, not a currency conversion."
+      ]
     },
     {
-      "question": "Which role typically pursues Net Zero Cloud AP?",
+      "question": "What does a science-based target mean?",
       "options": [
-        "Designers only",
-        "Partners and implementers working with sustainability and Net Zero Cloud",
-        "Sales only",
-        "Marketers"
+        "A target calculated solely from the company's own historical emissions trend",
+        "A reduction target aligned to a warming limit",
+        "A target that has been independently audited after the reporting year closed",
+        "A target covering Scope 1 emissions only, with the other scopes excluded"
       ],
       "correctAnswer": 1,
-      "explanation": "Partners and implementers working with sustainability pursue this credential."
+      "explanation": "Science-based targets are set so that the company's reductions are consistent with limiting global warming to an agreed level.",
+      "whyWrong": [
+        "Extrapolating your own trend is not the same as aligning to a climate limit.",
+        "Audit is assurance of reported figures, not what makes a target science-based.",
+        "Science-based targets normally include Scope 3 where it is material."
+      ]
     },
     {
-      "question": "What does 'sustainability data' often include?",
+      "question": "A company has activity data in kilowatt hours but no emissions figure. What is needed?",
       "options": [
-        "Only financial data",
-        "Only sales data",
-        "Only marketing data",
-        "Carbon emissions, energy usage, and environmental metrics"
+        "The financial cost of the electricity consumed over the reporting period",
+        "An emissions factor for that energy source",
+        "A restatement of the baseline year before any calculation can be made",
+        "A full physical audit of every piece of equipment installed on the site"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Activity data multiplied by the appropriate emissions factor gives the emissions figure.",
+      "whyWrong": [
+        "Cost does not convert into emissions.",
+        "Restating the baseline is unrelated to this calculation.",
+        "An equipment audit is not required to apply a factor to consumption."
+      ]
+    },
+    {
+      "question": "Why is data quality a recurring theme in carbon accounting?",
+      "options": [
+        "Measured data is always available for every category that must be reported",
+        "Companies are prohibited from using any industry average in their reporting",
+        "Emissions data is legally required to be accurate to three decimal places",
+        "Much of the data is estimated rather than measured"
       ],
       "correctAnswer": 3,
-      "explanation": "Sustainability data includes carbon emissions, energy usage, and environmental metrics."
+      "explanation": "Especially in Scope 3, figures often come from averages and estimates, so stating how good the data is matters as much as the number.",
+      "whyWrong": [
+        "Measured data is frequently unavailable in the value chain.",
+        "Industry averages are an accepted method where primary data is absent.",
+        "No such precision requirement exists."
+      ]
     },
     {
-      "question": "What is carbon footprint tracking?",
+      "question": "A company wants to reduce emissions from employee commuting. Which scope does this sit in?",
       "options": [
-        "Measuring and reporting carbon emissions (Scope 1, 2, 3)",
-        "Only finance",
-        "Only marketing",
-        "Only sales"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Carbon footprint tracks emissions across Scopes 1, 2, and 3."
-    },
-    {
-      "question": "What are Scope 1, 2, and 3 emissions?",
-      "options": [
-        "Scope 1 = direct, 2 = energy indirect, 3 = value chain indirect",
-        "Workflow stages",
-        "Dashboard filters",
-        "Report types"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Scopes 1–3 categorize emissions by source."
-    },
-    {
-      "question": "Which activity does a Net Zero Cloud Professional perform?",
-      "options": [
-        "Only reporting",
-        "Configuring data collection, managing sustainability metrics, and supporting reporting",
-        "Only coding",
-        "Only marketing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Professionals configure data collection and manage metrics."
-    },
-    {
-      "question": "What does 'managing' sustainability data mean?",
-      "options": [
-        "Only viewing",
-        "Only deleting",
-        "Collecting, validating, and maintaining environmental data for reporting",
-        "Only exporting"
+        "None of the scopes, as commuting is a private matter for each employee",
+        "Scope 2, because commuting depends on purchased energy such as electricity",
+        "Scope 3",
+        "Scope 1, because the employees are working for the company at the time"
       ],
       "correctAnswer": 2,
-      "explanation": "Managing includes collecting, validating, and maintaining data."
+      "explanation": "Commuting is a Scope 3 category: the company does not own the vehicles but the travel results from its activity.",
+      "whyWrong": [
+        "Commuting is an established Scope 3 category.",
+        "Scope 2 is specifically purchased energy for the company's own use.",
+        "The company does not own or control employees' own vehicles."
+      ]
     },
     {
-      "question": "Why is sustainability reporting important?",
+      "question": "What is the first practical step for a company beginning to report its footprint?",
       "options": [
-        "Only for marketing",
-        "Not important",
-        "Regulatory compliance, stakeholder disclosure, and ESG commitments",
-        "Only for internal use"
+        "Appoint external auditors to verify figures that have not yet been produced",
+        "Purchase carbon credits sufficient to offset an initial estimate of emissions",
+        "Define the boundary and gather activity data",
+        "Announce a public net zero target before any measurement has been carried out"
       ],
       "correctAnswer": 2,
-      "explanation": "Reporting supports compliance and ESG disclosure."
-    },
-    {
-      "question": "Which Salesforce product does Net Zero Cloud extend?",
-      "options": [
-        "Slack",
-        "Marketing Cloud",
-        "Sustainability Cloud (Net Zero Cloud) for environmental data",
-        "Commerce Cloud"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Net Zero Cloud is the sustainability product."
-    },
-    {
-      "question": "What is ESG?",
-      "options": [
-        "A workflow",
-        "Environmental, Social, and Governance—sustainability and responsibility metrics",
-        "A report type",
-        "An object"
-      ],
-      "correctAnswer": 1,
-      "explanation": "ESG covers environmental, social, and governance metrics."
-    },
-    {
-      "question": "What does data collection involve for Net Zero Cloud?",
-      "options": [
-        "Integrating sources (e.g., energy, travel) and mapping to sustainability metrics",
-        "Only dashboards",
-        "Only reports",
-        "Only manual entry"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Data collection integrates sources and maps to metrics."
-    },
-    {
-      "question": "What is Science Based Targets initiative (SBTi) in sustainability?",
-      "options": [
-        "A framework for setting emissions reduction targets aligned with climate science",
-        "A data source only",
-        "A report type",
-        "A dashboard only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "SBTi provides standards for science-based emissions reduction targets."
-    },
-    {
-      "question": "What is a sustainability metric?",
-      "options": [
-        "Only sales",
-        "Only marketing",
-        "A measured value such as tons CO2e, MWh energy, or water usage",
-        "Only revenue"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Sustainability metrics quantify environmental impact."
+      "explanation": "You cannot report or reduce what you have not scoped and measured, so the boundary and the activity data come first.",
+      "whyWrong": [
+        "There is nothing to assure until figures exist.",
+        "Offsetting before measuring means you do not know what you are offsetting.",
+        "A target announced without data is not credible and may have to be revised."
+      ]
     }
   ]
 }

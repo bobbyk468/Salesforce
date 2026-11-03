@@ -165,169 +165,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Consumer Goods Cloud AP validate?",
+      "question": "A field rep visits 20 stores a week and needs their call plan on a tablet with no signal in the back of shop. What supports this?",
       "options": [
-        "Only Slack",
-        "Only reporting",
-        "Only basics",
-        "Fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets"
+        "A web browser session kept open on the tablet for the whole of the working day",
+        "A printed route sheet produced each morning and typed up again that evening",
+        "The offline-capable mobile app",
+        "A nightly email containing the full list of stores the rep has to visit next"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Retail execution happens in places with poor connectivity, so the app stores the visit, its tasks and the data captured, then syncs when a signal returns.",
+      "whyWrong": [
+        "A browser session drops as soon as connectivity goes and loses unsaved work.",
+        "Paper means double entry and a day's delay before anyone sees the data.",
+        "An email list cannot capture what the rep records during the visit."
+      ]
+    },
+    {
+      "question": "What does a retail store visit record in Consumer Goods Cloud represent?",
+      "options": [
+        "The promotional discount agreed with the retailer for a particular period",
+        "The stock currently held in the distribution centre serving that outlet",
+        "The monthly invoice raised against the retailer for the goods delivered",
+        "A planned or completed call at an outlet"
       ],
       "correctAnswer": 3,
-      "explanation": "Accredited Consumer Goods Cloud Professionals have demonstrated the fundamental knowledge and skills to design, build, and deploy solutions for Consumer Goods outlets."
+      "explanation": "A visit is the unit of field work. It carries the date, the outlet, the rep and the tasks to be completed while they are there.",
+      "whyWrong": [
+        "Promotions are commercial agreements, not field visits.",
+        "Warehouse stock is a supply chain record.",
+        "Invoicing is handled in order management and finance."
+      ]
     },
     {
-      "question": "Which industry does Consumer Goods Cloud serve?",
+      "question": "A rep must check shelf stock, take a photo and place a reorder during one visit. How is this structured?",
       "options": [
-        "Consumer goods manufacturers and distributors (e.g., retail execution)",
-        "Telecom only",
-        "Healthcare only",
-        "Financial services only"
+        "As three separate visits to the same outlet on the same day of the week",
+        "As three cases raised against the retailer's account for someone to action",
+        "As tasks on the visit",
+        "As a single free-text note the rep types up at the end of the whole visit"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Visit tasks break the call into the specific actions required, which makes completion measurable and keeps the captured data structured.",
+      "whyWrong": [
+        "Splitting one call into three visits distorts the visit metrics.",
+        "Cases are for issues to resolve, not planned field work.",
+        "Free text cannot be reported on or compared across outlets."
+      ]
+    },
+    {
+      "question": "What is the purpose of a planogram in retail execution?",
+      "options": [
+        "It defines how products should be arranged on shelf",
+        "It lists every single product the retailer has ordered over the past year",
+        "It schedules the delivery vehicles serving the outlets in a given region",
+        "It records the payment terms that have been agreed with the retailer"
       ],
       "correctAnswer": 0,
-      "explanation": "Consumer Goods Cloud serves consumer goods manufacturers and distributors."
+      "explanation": "A planogram is the agreed shelf layout, and comparing it against what the rep finds in store is how compliance is measured.",
+      "whyWrong": [
+        "Order history is a transactional record, not a layout.",
+        "Delivery scheduling is a logistics function.",
+        "Payment terms are commercial, not merchandising."
+      ]
     },
     {
-      "question": "What is a key use case for Consumer Goods Cloud?",
+      "question": "A rep photographs a shelf and the system identifies which products are present. What is this called?",
       "options": [
-        "Only email",
-        "Retail execution, trade promotion, and outlet management",
-        "Only CPQ",
-        "Only Slack"
+        "A manual stock count entered by the rep into the app during the visit",
+        "Image recognition for shelf audit",
+        "An order placed automatically against the distribution centre for that region",
+        "A planogram template downloaded from the retailer's own merchandising team"
       ],
       "correctAnswer": 1,
-      "explanation": "Retail execution, trade promotion, and outlet management are key use cases."
+      "explanation": "Image recognition reads the photo and reports what is on shelf, which is far faster and more consistent than counting by hand.",
+      "whyWrong": [
+        "The point of image recognition is that it replaces the manual count.",
+        "Ordering is a separate step that may follow the audit.",
+        "A template describes the target layout rather than reading the actual shelf."
+      ]
     },
     {
-      "question": "Which role typically pursues Consumer Goods Cloud AP?",
+      "question": "Why does a consumer goods company care about share of shelf?",
       "options": [
-        "Sales only",
-        "Partners and implementers in consumer goods",
-        "Designers only",
-        "Marketers"
+        "Shelf space drives what shoppers actually buy",
+        "Retailers are required by regulation to report it publicly every quarter",
+        "It determines the payment terms the retailer is willing to offer the supplier",
+        "It sets the number of field reps the company is permitted to employ"
       ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers in consumer goods pursue this credential."
+      "correctAnswer": 0,
+      "explanation": "Products that are visible and well placed sell more, so the proportion of shelf a brand holds is a direct commercial measure.",
+      "whyWrong": [
+        "There is no such public reporting requirement.",
+        "Payment terms are negotiated separately from shelf position.",
+        "Field headcount is an internal resourcing decision."
+      ]
     },
     {
-      "question": "What does 'outlet' refer to in Consumer Goods Cloud?",
+      "question": "A promotion runs for six weeks across 300 outlets. What is the useful measure of its success?",
       "options": [
-        "Only reports",
-        "Retail or distribution points (stores, distributors)",
-        "Only dashboards",
-        "Email only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Outlet refers to retail or distribution points."
-    },
-    {
-      "question": "What is retail execution?",
-      "options": [
-        "Email campaigns only",
-        "Warehouse only",
-        "Online sales only",
-        "Field reps visiting outlets to execute promotions, audits, and merchandising"
+        "The number of promotional display units that were shipped to the retailers",
+        "The count of photographs the reps uploaded while the promotion was running",
+        "The total number of outlets the field team managed to visit during the period",
+        "Sales lift against a comparable baseline period"
       ],
       "correctAnswer": 3,
-      "explanation": "Retail execution involves field activities at retail outlets."
+      "explanation": "A promotion is judged by whether it moved more product than the equivalent period without it, which requires a baseline to compare against.",
+      "whyWrong": [
+        "Units shipped measures logistics, not sales to shoppers.",
+        "Photo volume measures data capture, not performance.",
+        "Visit coverage measures field activity, not commercial outcome."
+      ]
     },
     {
-      "question": "What is trade promotion management?",
+      "question": "What does trade promotion management address?",
       "options": [
-        "Only discounts",
-        "Only reports",
-        "Only pricing",
-        "Planning, executing, and tracking promotional activities and spend"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Trade promotion covers planning, execution, and spend tracking."
-    },
-    {
-      "question": "Which role visits outlets in Consumer Goods Cloud?",
-      "options": [
-        "Retail execution reps (e.g., merchandisers, field reps)",
-        "Developers only",
-        "Sales reps only",
-        "Marketers only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Retail execution reps visit outlets for audits and merchandising."
-    },
-    {
-      "question": "What does 'design and build' mean for Consumer Goods Cloud?",
-      "options": [
-        "Only deployment",
-        "Designing the solution architecture and configuring the platform",
-        "Only coding",
-        "Only reporting"
+        "Recruiting and scheduling the field representatives across each territory",
+        "Planning and funding promotions with retailers",
+        "Designing the packaging artwork used for each product in the range",
+        "Routing the delivery vehicles that serve each of the retail outlets daily"
       ],
       "correctAnswer": 1,
-      "explanation": "Design = architecture; build = configuration."
+      "explanation": "Trade promotion management covers the agreement, funding and measurement of promotions run with retail partners.",
+      "whyWrong": [
+        "Field scheduling is workforce management.",
+        "Packaging design is a marketing and production activity.",
+        "Vehicle routing is transport planning."
+      ]
     },
     {
-      "question": "Which data is often tracked at the outlet level?",
+      "question": "A rep finds a product out of stock on shelf while the back room holds plenty. What is the issue?",
       "options": [
-        "Only sales",
-        "Only finance",
-        "Inventory, compliance, promotions, and outlet attributes",
-        "Only marketing"
+        "An error in the planogram agreed with the retailer's merchandising team",
+        "A replenishment problem inside the store",
+        "A pricing dispute that has not yet been resolved with the retailer",
+        "A manufacturing shortage at the supplier's own production facility"
       ],
-      "correctAnswer": 2,
-      "explanation": "Outlet-level data includes inventory, compliance, and promotions."
+      "correctAnswer": 1,
+      "explanation": "Stock on site but not on shelf is a store execution issue, and flagging it is one of the most valuable things a visit produces.",
+      "whyWrong": [
+        "The layout is not the cause when the shelf is simply unfilled.",
+        "Pricing does not explain why available stock is not displayed.",
+        "Supply is clearly fine, because the stock is in the building."
+      ]
     },
     {
-      "question": "What is outlet management in Consumer Goods Cloud?",
+      "question": "Why is visit frequency usually set differently for different outlets?",
       "options": [
-        "Only dashboards",
-        "Email only",
-        "Managing outlet records, hierarchies, and visit planning",
-        "Only reports"
+        "Field representatives are contractually limited to a fixed number of calls",
+        "Retailers insist that every one of their stores is visited on the same day",
+        "The mobile app can only synchronise a small number of visits each week",
+        "Outlets differ in size and sales potential"
       ],
-      "correctAnswer": 2,
-      "explanation": "Outlet management covers outlet data and visit planning."
+      "correctAnswer": 3,
+      "explanation": "A large high-turnover store justifies more attention than a small one, so frequency is matched to the value of the outlet.",
+      "whyWrong": [
+        "Contracts do not normally dictate call patterns per outlet.",
+        "Simultaneous visits across a chain are not operationally possible.",
+        "Sync capacity is not what limits a call plan."
+      ]
     },
     {
-      "question": "Which industry segment uses Consumer Goods Cloud?",
+      "question": "What is the benefit of capturing competitor presence during a visit?",
       "options": [
-        "Education only",
-        "Healthcare only",
-        "CPG manufacturers and distributors (e.g., beverages, packaged goods)",
-        "Financial services only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "CPG (Consumer Packaged Goods) is the primary segment."
-    },
-    {
-      "question": "What does deploy mean for Consumer Goods Cloud?",
-      "options": [
-        "Only design",
-        "Only training",
-        "Implementing the solution and going live with the customer",
-        "Only coding"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Deploy = implement and go-live."
-    },
-    {
-      "question": "Why is visit planning important for retail execution?",
-      "options": [
-        "Optimizing field rep routes and outlet visit schedules",
-        "Only for HQ",
-        "Only for marketing",
-        "Not important"
+        "It shows how the category is really performing",
+        "It satisfies a retailer requirement to report on all brands in the store",
+        "It removes the need to measure the company's own share of shelf at all",
+        "It allows the company to set the competitor's prices in that retail outlet"
       ],
       "correctAnswer": 0,
-      "explanation": "Visit planning optimizes field rep coverage of outlets."
+      "explanation": "Your own numbers mean little without the context of what else is on shelf and how the whole category is moving.",
+      "whyWrong": [
+        "This is not a retailer reporting obligation.",
+        "Competitor data complements your own measures rather than replacing them.",
+        "A supplier cannot set a competitor's prices."
+      ]
     },
     {
-      "question": "Which Salesforce product does Consumer Goods Cloud extend?",
+      "question": "A field manager wants to know whether reps are completing their planned calls. What should they look at?",
       "options": [
-        "Sales Cloud and Service Cloud for retail execution workflows",
-        "Commerce Cloud only",
-        "Slack only",
-        "Marketing Cloud only"
+        "Visit completion against the call plan",
+        "The quantity of product shipped to the region during the same time period",
+        "The total number of photographs that have been uploaded across the territory",
+        "The number of promotions that were agreed with retailers over the quarter"
       ],
       "correctAnswer": 0,
-      "explanation": "Consumer Goods Cloud extends Sales Cloud and Service Cloud."
+      "explanation": "Comparing completed visits with the plan is the direct measure of whether field activity is happening as intended.",
+      "whyWrong": [
+        "Shipment volume reflects orders, not field discipline.",
+        "Photo volume is a by-product and can be high while calls are missed.",
+        "Promotion count measures commercial activity, not call execution."
+      ]
+    },
+    {
+      "question": "What should happen to data captured offline once the device regains connectivity?",
+      "options": [
+        "It is held on the device until an administrator approves the upload manually",
+        "It syncs to the org automatically",
+        "It is discarded, because only data captured while online can be trusted",
+        "It is emailed to the field manager as an attachment for them to key in"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The whole point of offline capture is that the work survives the lack of signal and lands in the org once there is one.",
+      "whyWrong": [
+        "Requiring manual approval for every sync would not scale to a field team.",
+        "Offline data is as valid as anything captured online.",
+        "Emailing data back for rekeying defeats the purpose of the app."
+      ]
+    },
+    {
+      "question": "Why would a company audit price on shelf during a visit?",
+      "options": [
+        "Suppliers are legally required to enforce the price the retailer displays",
+        "It is the only way to establish what the retailer has actually ordered",
+        "Retail price affects demand and brand positioning",
+        "It determines the commission the field representative will be paid"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The shelf price shapes what shoppers buy and how the brand is perceived, so a supplier wants to know what it actually is.",
+      "whyWrong": [
+        "A supplier generally cannot dictate a retailer's price.",
+        "Order quantities come from the order records.",
+        "Rep commission is not normally based on shelf price."
+      ]
+    },
+    {
+      "question": "Which best describes what Consumer Goods Cloud is for?",
+      "options": [
+        "Designing the range of products the company will launch in the coming year",
+        "Running the manufacturing schedule across each of the production facilities",
+        "Managing field execution at retail outlets",
+        "Handling the payroll and expenses for the field representatives employed"
+      ],
+      "correctAnswer": 2,
+      "explanation": "It supports the work of getting products properly stocked, priced and displayed in stores, through visit planning, execution and measurement.",
+      "whyWrong": [
+        "Range planning is a product management activity.",
+        "Production scheduling is a manufacturing system's job.",
+        "Payroll and expenses are handled in human resources systems."
+      ]
     }
   ]
 }

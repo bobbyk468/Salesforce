@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Marketing Cloud Personalization AP validate?",
+      "question": "A retailer wants product recommendations on its homepage to react to what the visitor is doing right now. What does this require?",
       "options": [
-        "Skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization",
-        "Only basics",
-        "Only Slack",
-        "Only reporting"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Accredited Marketing Cloud Personalization Professionals have demonstrated skills and knowledge in designing, configuring, building, and implementing Marketing Cloud Personalization."
-    },
-    {
-      "question": "What is Marketing Cloud Personalization used for?",
-      "options": [
-        "Only email",
-        "Delivering personalized experiences across web, mobile, and other touchpoints",
-        "Only SMS",
-        "Only social"
-      ],
-      "correctAnswer": 1,
-      "explanation": "It delivers personalized experiences across touchpoints."
-    },
-    {
-      "question": "What is a key activity for a Marketing Cloud Personalization Professional?",
-      "options": [
-        "Only coding",
-        "Designing, configuring, building, and implementing personalization solutions",
-        "Only lists",
-        "Only reporting"
-      ],
-      "correctAnswer": 1,
-      "explanation": "They design, configure, build, and implement personalization solutions."
-    },
-    {
-      "question": "Which role typically pursues Marketing Cloud Personalization AP?",
-      "options": [
-        "Developers only",
-        "Partners and implementers working with Marketing Cloud Personalization",
-        "Designers only",
-        "Sales only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Partners and implementers working with personalization pursue this credential."
-    },
-    {
-      "question": "What does personalization often rely on?",
-      "options": [
-        "Only reports",
-        "Only dashboards",
-        "Only static content",
-        "Data, segments, and real-time decisioning"
+        "A manually curated list of products chosen by the merchandising team weekly",
+        "A segment built the previous week from the visitor's purchase history alone",
+        "A nightly batch job that recalculates the recommendations for every visitor",
+        "Behaviour evaluated in the current session"
       ],
       "correctAnswer": 3,
-      "explanation": "Personalization relies on data, segments, and real-time decisioning."
+      "explanation": "Personalization responds to in-session behaviour, so what the visitor clicks and views in the current visit changes what they are shown.",
+      "whyWrong": [
+        "A hand-curated list is the same for everyone and never adapts.",
+        "Last week's segment misses everything about this visit.",
+        "A nightly batch cannot react to something that happened a minute ago."
+      ]
     },
     {
-      "question": "What is real-time decisioning in personalization?",
+      "question": "What is a catalog in Marketing Cloud Personalization?",
       "options": [
-        "Batch only",
-        "Static only",
-        "Instant content and offer selection based on user context",
-        "Manual only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Real-time decisioning selects content/offers instantly."
-    },
-    {
-      "question": "Which data source feeds Marketing Cloud Personalization?",
-      "options": [
-        "Slack only",
-        "No data",
-        "CDP, Data Extensions, and event data",
-        "Salesforce only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "CDP and event data feed personalization."
-    },
-    {
-      "question": "What does web personalization target?",
-      "options": [
-        "Web pages, banners, and recommendations",
-        "Email only",
-        "SMS only",
-        "Social only"
+        "The structured set of items that can be recommended",
+        "The list of email templates available for use in a personalised campaign",
+        "The record of every page each visitor has viewed over the last twelve months",
+        "The schedule controlling when each personalisation campaign goes live"
       ],
       "correctAnswer": 0,
-      "explanation": "Web personalization targets pages and recommendations."
+      "explanation": "The catalog holds the items, such as products or articles, along with their attributes, which is what recommendations are drawn from.",
+      "whyWrong": [
+        "Email templates are content assets, not catalog items.",
+        "Visitor history is behavioural data rather than the catalog.",
+        "Campaign scheduling is a separate configuration."
+      ]
     },
     {
-      "question": "Which touchpoint does Marketing Cloud Personalization support?",
+      "question": "Why does the quality of catalog attributes matter so much?",
       "options": [
-        "Social only",
-        "Web, mobile, email, and in-app",
-        "Email only",
-        "SMS only"
+        "The number of attributes decides how many campaigns can run at one time",
+        "Recommendations can only use attributes that exist",
+        "Attributes determine how quickly each web page will load for the visitor",
+        "Attributes are required before any email can be sent to a known visitor"
       ],
       "correctAnswer": 1,
-      "explanation": "Personalization supports web, mobile, email, and in-app."
+      "explanation": "A recommendation rule can only filter or rank on data it has, so missing or inconsistent attributes directly limit what you can personalise on.",
+      "whyWrong": [
+        "Campaign capacity is not a function of attribute count.",
+        "Attribute data does not drive page load performance.",
+        "Email sending does not depend on catalog attributes."
+      ]
     },
     {
-      "question": "What is the purpose of segments in personalization?",
+      "question": "A visitor is browsing anonymously and then signs in. What should happen to their behaviour data?",
       "options": [
-        "To report only",
-        "To send only",
-        "To target and tailor experiences by audience",
-        "To replace data"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Segments target and tailor experiences by audience."
-    },
-    {
-      "question": "Which integration connects personalization to Marketing Cloud?",
-      "options": [
-        "CDP, Journey Builder, and Email Studio",
-        "Service Cloud only",
-        "Slack only",
-        "Manual only"
+        "The session is tied to their known profile",
+        "The known profile is replaced entirely by the new anonymous session data",
+        "The anonymous activity is discarded as soon as they authenticate themselves",
+        "Two separate profiles are kept permanently, one anonymous and one known"
       ],
       "correctAnswer": 0,
-      "explanation": "CDP and Journey Builder connect to personalization."
+      "explanation": "Identity resolution links the anonymous session to the known profile, so the browsing that led up to sign-in is not lost.",
+      "whyWrong": [
+        "Overwriting the known profile would destroy its history.",
+        "Discarding pre-login behaviour throws away the most recent intent signal.",
+        "Leaving the profiles separate means neither view is complete."
+      ]
     },
     {
-      "question": "What does building personalization solutions involve?",
+      "question": "What does an affinity score represent?",
       "options": [
-        "Only reports",
-        "Only coding",
-        "Only design",
-        "Configuring decision rules, segments, and experiences"
+        "The total amount of money the visitor has spent across all their orders",
+        "How strongly a visitor leans towards an attribute",
+        "The position a product occupies in the merchandising team's priority list",
+        "The number of separate sessions the visitor has started in a given month"
       ],
-      "correctAnswer": 3,
-      "explanation": "Building involves rules, segments, and experiences."
+      "correctAnswer": 1,
+      "explanation": "Affinity is built from repeated behaviour and expresses a visitor's inclination towards a category, brand or other attribute.",
+      "whyWrong": [
+        "Lifetime spend is a monetary measure, not an affinity.",
+        "Merchandising priority is a business decision, not visitor behaviour.",
+        "Session count measures frequency of visits."
+      ]
     },
     {
-      "question": "Which best practice applies to personalization?",
+      "question": "A campaign should only show to visitors who have put something in the basket but not checked out. How is this expressed?",
       "options": [
-        "Ignore data",
-        "No testing",
-        "Privacy-first, test experiences, and measure lift",
-        "Static only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Privacy-first, testing, and measurement support success."
-    },
-    {
-      "question": "What is the benefit of Marketing Cloud Personalization?",
-      "options": [
-        "Relevant experiences that drive engagement and conversion",
-        "Manual only",
-        "No benefit",
-        "Generic only"
+        "As a segment based on in-session behaviour",
+        "As a change to the catalog attributes on each of the products in the basket",
+        "As a nightly export of abandoned baskets sent to the email platform instead",
+        "As a manual list of visitors compiled each morning by the marketing team"
       ],
       "correctAnswer": 0,
-      "explanation": "Personalization drives relevant engagement and conversion."
+      "explanation": "Segments can be defined on behaviour, including what has happened in the current session, which is what basket abandonment is.",
+      "whyWrong": [
+        "Catalog attributes describe items, not visitor state.",
+        "A nightly export cannot drive an on-site message during the visit.",
+        "A manual list cannot keep pace with live sessions."
+      ]
     },
     {
-      "question": "What is an offer in Marketing Cloud Personalization?",
+      "question": "Why is a control group used when testing a personalisation campaign?",
       "options": [
-        "An email only",
-        "A report",
-        "A workflow only",
-        "A content asset (banner, message) presented based on rules or segments"
+        "To ensure that each visitor sees the campaign no more than once per session",
+        "To show what would have happened without it",
+        "To reduce the amount of traffic the personalisation engine has to process",
+        "To satisfy a requirement that every campaign is reviewed before it goes live"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Without a group that does not see the campaign, a rise in conversion cannot be attributed to the personalisation rather than to something else.",
+      "whyWrong": [
+        "Frequency capping is a separate campaign setting.",
+        "Control groups are about measurement, not reducing load.",
+        "Review processes are unrelated to holdout measurement."
+      ]
+    },
+    {
+      "question": "What distinguishes a recipe from a simple rule in recommendations?",
+      "options": [
+        "A recipe runs overnight whereas a simple rule is evaluated in real time",
+        "A recipe applies to email while a simple rule applies only to the website",
+        "A recipe is configured by a developer and a rule by a marketing user",
+        "A recipe combines and weights several strategies"
       ],
       "correctAnswer": 3,
-      "explanation": "Offers are content assets presented conditionally based on rules and audience."
+      "explanation": "A recipe lets you blend approaches, such as popularity, affinity and similarity, and weight them, rather than applying one filter.",
+      "whyWrong": [
+        "Recipes are evaluated in real time as well.",
+        "Both can serve web and email channels.",
+        "Either can be configured without development work."
+      ]
+    },
+    {
+      "question": "A client complains that recommendations keep suggesting items the visitor already bought. What should be configured?",
+      "options": [
+        "A reduction in the total number of recommendations shown on the page",
+        "A nightly refresh of the affinity scores held against each visitor profile",
+        "A new catalog containing only the items that have never been purchased",
+        "An exclusion rule for purchased items"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Recommendation logic supports excluding items based on prior behaviour, which is exactly what a repeat purchase of a one-off item needs.",
+      "whyWrong": [
+        "Showing fewer bad recommendations does not make them relevant.",
+        "Refreshing affinity does not stop already-purchased items appearing.",
+        "A separate catalog per visitor is unworkable."
+      ]
+    },
+    {
+      "question": "What is the purpose of a sitemap or tracking implementation in Personalization?",
+      "options": [
+        "It lists the URLs that search engines are permitted to index on the site",
+        "It tells the platform what each page and action means",
+        "It records which marketing emails each visitor has opened and clicked",
+        "It controls which pages are cached by the content delivery network used"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The tracking implementation identifies page types, items being viewed and actions being taken, which is what turns raw traffic into usable behaviour.",
+      "whyWrong": [
+        "Search engine indexing is handled by a different kind of sitemap.",
+        "Email engagement is tracked by the email platform.",
+        "Caching is a delivery concern."
+      ]
+    },
+    {
+      "question": "Why would a retailer personalise search results as well as recommendations?",
+      "options": [
+        "Search results are the only part of a website that can be personalised",
+        "Personalising search removes the need to maintain catalog attributes",
+        "Search already signals strong intent",
+        "Search traffic is unaffected by the visitor's own browsing behaviour"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Someone typing a query is telling you what they want, so ordering those results by their affinities is a high-value place to personalise.",
+      "whyWrong": [
+        "Most of the page can be personalised, not just search.",
+        "Search personalisation depends on catalog attributes rather than replacing them.",
+        "Browsing behaviour is highly relevant to how results should be ranked."
+      ]
+    },
+    {
+      "question": "A campaign performs well on desktop but poorly on mobile. What is the sensible response?",
+      "options": [
+        "Apply the desktop version unchanged and wait for the figures to improve",
+        "Switch the campaign off entirely across both of the available channels",
+        "Treat them as separate contexts and adjust",
+        "Assume the mobile measurement is wrong and continue without any change"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Screen size and intent differ between devices, so a placement that works on one may need different content or positioning on the other.",
+      "whyWrong": [
+        "Waiting for an unchanged campaign to improve is not a plan.",
+        "Turning off a campaign that works on desktop discards real value.",
+        "Dismissing inconvenient data is not a response."
+      ]
+    },
+    {
+      "question": "What does a frequency cap on a campaign do?",
+      "options": [
+        "It limits how often a visitor sees the message",
+        "It caps the number of separate campaigns that may run on a single page",
+        "It restricts the number of catalog items that may appear in each placement",
+        "It sets a maximum number of visitors who can be shown the campaign at once"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Frequency capping stops the same message being shown repeatedly to one visitor, which protects the experience and the message's effect.",
+      "whyWrong": [
+        "Campaign conflicts are handled by prioritisation.",
+        "Item count per placement is a separate setting.",
+        "Audience size is governed by the segment, not a frequency cap."
+      ]
+    },
+    {
+      "question": "A business wants to prove the value of personalisation to its finance team. What should it present?",
+      "options": [
+        "The volume of behavioural events the platform captured across the website",
+        "The number of campaigns the marketing team managed to launch that quarter",
+        "Conversion and revenue against the control group",
+        "The total number of personalised impressions served during the period"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Finance wants the incremental effect, which means the difference in conversion and revenue between the personalised and the control experience.",
+      "whyWrong": [
+        "Event volume shows the platform is working, not that it earns money.",
+        "Campaign count measures team output rather than outcome.",
+        "Impression volume is activity, not value."
+      ]
+    },
+    {
+      "question": "Which best describes what Marketing Cloud Personalization does?",
+      "options": [
+        "Manages the paid advertising budget across each of the available channels",
+        "Sends scheduled marketing emails to segments built the previous evening",
+        "Decides what each visitor sees, as they browse",
+        "Stores the organisation's consolidated customer records across every system"
+      ],
+      "correctAnswer": 2,
+      "explanation": "It evaluates who the visitor is and what they are doing now, and selects the content, offers or recommendations to show them in response.",
+      "whyWrong": [
+        "Paid media budgeting is handled by advertising tools.",
+        "Scheduled email sending is Marketing Cloud Engagement's role.",
+        "Consolidated customer records sit in Data Cloud."
+      ]
     }
   ]
 }
