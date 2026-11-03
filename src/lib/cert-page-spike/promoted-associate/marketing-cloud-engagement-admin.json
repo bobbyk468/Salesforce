@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the primary focus of a Marketing Cloud Engagement Administrator?",
+      "question": "A new marketing user must build and send email but must not be able to change account settings. What should the admin do?",
       "options": [
-        "Managing Salesforce CRM only",
-        "Designing Pardot campaigns",
-        "Writing AMPscript",
-        "Configuring Marketing Cloud products using industry and product best practices"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Certified Marketing Cloud Engagement Administrators have hands-on experience configuring Marketing Cloud products utilizing industry and product best practices.",
-      "whyWrong": [
-        "Managing Salesforce CRM only undersells the role, which is specifically about Marketing Cloud configuration.",
-        "Designing Pardot campaigns is a separate product (Account Engagement) outside Marketing Cloud Engagement admin scope.",
-        "Writing AMPscript is a developer-level skill, not the administrator's core configuration focus."
-      ]
-    },
-    {
-      "question": "Which area must an Engagement Administrator thoroughly navigate?",
-      "options": [
-        "Slack workspace settings",
-        "CPQ product configuration",
-        "Only Email Studio",
-        "Setup and subscriber data management"
-      ],
-      "correctAnswer": 3,
-      "explanation": "They understand data structure in subscriber data management and can thoroughly navigate Setup.",
-      "whyWrong": [
-        "Slack workspace settings are entirely unrelated to Marketing Cloud administration.",
-        "CPQ product configuration is entirely unrelated to Marketing Cloud administration.",
-        "'Only Email Studio' undersells the broader setup and subscriber data areas an admin must navigate."
-      ]
-    },
-    {
-      "question": "What is Subscriber Data Management in Marketing Cloud?",
-      "options": [
-        "Journey Builder only",
-        "The structure and management of contact/subscriber data across data extensions and lists",
-        "Email template storage",
-        "A reporting tool"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Subscriber data management refers to how contact and subscriber data is structured and managed in Data Extensions and lists.",
-      "whyWrong": [
-        "'Journey Builder only' undersells subscriber data management, which spans data extensions and lists broadly, not just journeys.",
-        "Email template storage is a Content Builder function, unrelated to subscriber data structure.",
-        "A reporting tool is a different function, not the data structure/management concept being described."
-      ]
-    },
-    {
-      "question": "Which Marketing Cloud product is typically configured by an Engagement Administrator?",
-      "options": [
-        "Email Studio, Journey Builder, Automation Studio",
-        "Experience Cloud",
-        "Sales Cloud",
-        "Heroku"
+        "Assign a role with send and content rights only",
+        "Give the user the administrator role for the business unit they work in",
+        "Create a separate business unit and add the user there as its administrator",
+        "Share the existing administrator login with the new marketing user"
       ],
       "correctAnswer": 0,
-      "explanation": "Engagement Administrators configure core Marketing Cloud engagement products including Email Studio, Journey Builder, and Automation Studio.",
+      "explanation": "Roles control what a user can do. A send and content role gives them their job without account-level rights.",
       "whyWrong": [
-        "Experience Cloud is a different product, unrelated to Marketing Cloud Engagement Administrator's typical configuration scope.",
-        "Sales Cloud is a different Salesforce Core product, not a Marketing Cloud Engagement Administrator's configuration focus.",
-        "Heroku is a PaaS platform, unrelated to Marketing Cloud Engagement administration."
+        "The administrator role includes the account settings you are trying to protect.",
+        "A new business unit does not limit what an administrator can change inside it.",
+        "Shared logins remove any ability to tell who made a change."
       ]
     },
     {
-      "question": "What best practice should an Engagement Administrator follow when configuring sends?",
+      "question": "What does the sender authentication package provide?",
       "options": [
-        "Use suppression lists, test sends, and follow deliverability best practices",
-        "Send to all contacts without segmentation",
-        "Use only one data extension",
-        "Disable tracking"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Best practices include using suppression lists, conducting test sends, and following deliverability guidelines.",
-      "whyWrong": [
-        "Sending without segmentation ignores best practices and risks poor deliverability and engagement.",
-        "Using only one data extension ignores the relational data structure best practices recommend for scalable sends.",
-        "Disabling tracking removes the data needed to measure and improve send performance."
-      ]
-    },
-    {
-      "question": "What is a Data Extension in Marketing Cloud?",
-      "options": [
-        "A report only",
-        "An email template",
-        "A list only",
-        "A table that stores subscriber/contact data for sends and journeys"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Data Extensions store subscriber data for sends and journeys.",
-      "whyWrong": [
-        "A report alone displays data — it isn't the underlying storage structure for subscriber/contact data.",
-        "An email template is a content asset, not a data storage structure.",
-        "A list alone is a simpler grouping mechanism — a Data Extension is the broader relational table structure."
-      ]
-    },
-    {
-      "question": "Which Journey Builder activity sends an email?",
-      "options": [
-        "Update contact only",
-        "Email send activity",
-        "Decision split only",
-        "Wait only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Email send activity sends messages in a journey.",
-      "whyWrong": [
-        "Update contact only modifies data — it doesn't send an email.",
-        "Decision split branches the journey — it doesn't itself send an email.",
-        "Wait only pauses the journey — it doesn't send an email."
-      ]
-    },
-    {
-      "question": "What does Automation Studio support?",
-      "options": [
-        "Only manual sends",
-        "Email Studio only",
-        "Scheduled automations, imports, and file drops",
-        "Journey Builder only"
+        "A library of prebuilt email templates for each of the standard studios",
+        "A set of default journeys that can be activated without any configuration",
+        "A dedicated domain and IP for sending",
+        "An automatic weekly report covering deliverability across the whole account"
       ],
       "correctAnswer": 2,
-      "explanation": "Automation Studio runs scheduled automations and imports.",
+      "explanation": "The package gives the account its own branded sending domain and dedicated IP, which is the basis of its sending reputation.",
       "whyWrong": [
-        "'Only manual sends' undersells Automation Studio, which specifically handles scheduled and file-based automation.",
-        "'Email Studio only' misattributes Automation Studio's scheduled/import capabilities to a different tool.",
-        "'Journey Builder only' misattributes Automation Studio's scheduled/import capabilities to a different tool."
+        "Templates are built in Content Builder and are not part of authentication.",
+        "Journeys are built by the customer, not supplied by the package.",
+        "Deliverability reporting is a separate feature from authentication."
       ]
     },
     {
-      "question": "Which best practice supports email deliverability?",
+      "question": "A data extension holds 8 million rows and queries against it are slow. What should the admin consider first?",
       "options": [
-        "Authenticate domains (SPF, DKIM), maintain list hygiene, avoid spam triggers",
-        "Send to all",
-        "No authentication",
-        "No list hygiene"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Domain auth and list hygiene support deliverability.",
-      "whyWrong": [
-        "Sending to all without segmentation is a poor deliverability practice, not a best practice.",
-        "'No authentication' contradicts the fact that domain authentication (SPF/DKIM) is a core deliverability best practice.",
-        "'No list hygiene' contradicts the fact that list hygiene is a core deliverability best practice."
-      ]
-    },
-    {
-      "question": "What is a suppression list used for?",
-      "options": [
-        "To track opens",
-        "To exclude contacts who unsubscribed or should not receive emails",
-        "To send more",
-        "To add contacts"
+        "Moving the whole data extension into a brand new business unit",
+        "Adding a primary key and indexing the fields used in filters",
+        "Rebuilding the data extension as a standard subscriber list instead",
+        "Splitting the data extension into twelve smaller monthly extensions"
       ],
       "correctAnswer": 1,
-      "explanation": "Suppression lists exclude unsubscribed or blocked contacts.",
+      "explanation": "Keys and indexes are what let the platform find rows without scanning the whole table, so they come before any restructuring.",
       "whyWrong": [
-        "Suppression lists aren't for tracking opens — that's an unrelated reporting function.",
-        "Suppression lists don't increase sending — they specifically prevent sends to certain contacts.",
-        "Adding contacts is the opposite of a suppression list's exclusion purpose."
+        "Business units separate access and do not change query performance.",
+        "Lists are less capable than data extensions and would make this worse.",
+        "Splitting by month leaves you joining twelve tables for every query."
       ]
     },
     {
-      "question": "Which Marketing Cloud role controls access?",
+      "question": "Which statement about a retention policy on a data extension is correct?",
       "options": [
-        "Business unit roles and permissions",
-        "Profile only",
-        "Only admin",
-        "No roles"
+        "It prevents any user in the account from deleting rows manually",
+        "It copies the rows into an archive extension before anything is removed",
+        "It automatically compresses older rows to reduce the storage used",
+        "It deletes rows, or the whole extension, after a set period"
       ],
-      "correctAnswer": 0,
-      "explanation": "Business unit roles and permissions control access.",
+      "correctAnswer": 3,
+      "explanation": "Retention removes data on a schedule, either row by row or the entire object, depending on how it is set.",
       "whyWrong": [
-        "Profile alone undersells the broader business-unit-level role and permission structure in Marketing Cloud.",
-        "'Only admin' undersells the granular business unit roles beyond a single admin designation.",
-        "'No roles' contradicts the fact that Marketing Cloud has a defined role/permission system."
+        "Retention does not restrict manual deletion by users.",
+        "No archive copy is made; the data is deleted.",
+        "There is no compression step involved."
       ]
     },
     {
-      "question": "What does tracking in Email Studio measure?",
+      "question": "An admin must give a partner agency access to one brand's data only. What is the right structure?",
       "options": [
-        "Only sends",
-        "Only clicks",
-        "Opens, clicks, bounces, and unsubscribes",
-        "Only opens"
+        "A new set of user roles created inside the existing business unit",
+        "A separate Marketing Cloud contract purchased for the agency to use",
+        "A single shared account with the agency told which folders to use",
+        "A business unit for that brand, with the agency scoped to it"
       ],
-      "correctAnswer": 2,
-      "explanation": "Tracking measures opens, clicks, bounces, and unsubscribes.",
+      "correctAnswer": 3,
+      "explanation": "Business units are the data boundary in Marketing Cloud, so scoping the agency's users to one unit limits what they can reach.",
       "whyWrong": [
-        "'Only sends' undersells tracking, which covers multiple engagement metrics beyond just send counts.",
-        "'Only clicks' undersells tracking, which covers opens, bounces, and unsubscribes too.",
-        "'Only opens' undersells tracking, which covers clicks, bounces, and unsubscribes too."
-      ]
-    },
-    {
-      "question": "Which feature allows personalized content in emails?",
-      "options": [
-        "Only merge fields",
-        "Plain text only",
-        "AMPscript and personalization strings",
-        "No personalization"
-      ],
-      "correctAnswer": 2,
-      "explanation": "AMPscript and personalization strings enable dynamic content.",
-      "whyWrong": [
-        "'Only merge fields' undersells the broader personalization capability, which includes AMPscript too.",
-        "Plain text alone doesn't support the dynamic personalization the question is asking about.",
-        "'No personalization' contradicts the fact that real personalization features exist in Email Studio."
+        "Roles limit actions but not which brand's data is visible.",
+        "A second contract is expensive and splits the data unnecessarily.",
+        "Relying on instructions rather than permissions is not access control."
       ]
     },
     {
       "question": "What is the purpose of a send classification?",
       "options": [
-        "To create templates only",
-        "To track only",
-        "To define sender profile and deliverability settings for sends",
-        "To replace lists"
+        "It ties a send to its sender and delivery profiles",
+        "It determines the order in which automation activities will run",
+        "It decides which content blocks are included in the finished email",
+        "It controls how many subscribers can be included in a single send"
       ],
-      "correctAnswer": 2,
-      "explanation": "Send classification defines sender and deliverability settings.",
+      "correctAnswer": 0,
+      "explanation": "Send classification carries the sender profile and delivery profile, and marks the send as commercial or transactional.",
       "whyWrong": [
-        "'To create templates only' misattributes send classification's purpose to a different feature.",
-        "'To track only' misattributes send classification's purpose, which is about sender/deliverability configuration, not tracking.",
-        "Send classification doesn't replace lists — it configures sender/deliverability settings for a send."
+        "Activity order is set within the automation.",
+        "Content selection happens in the email itself, not the classification.",
+        "There is no audience size limit set by classification."
       ]
     },
     {
-      "question": "Which integration connects Marketing Cloud to Salesforce?",
+      "question": "A nightly import is failing silently and nobody notices for a week. What should the admin add?",
       "options": [
-        "No integration",
-        "Marketing Cloud Connect (or equivalent connector)",
-        "Email only",
-        "Manual only"
+        "A larger file transfer window to allow the import more time to finish",
+        "Error notifications on the automation",
+        "A second copy of the same automation running later the same night",
+        "A manual check carried out by the marketing team every single morning"
       ],
       "correctAnswer": 1,
-      "explanation": "Marketing Cloud Connect syncs data with Salesforce.",
+      "explanation": "Automations can notify on error, which turns a silent failure into something someone hears about the same night.",
       "whyWrong": [
-        "'No integration' contradicts the fact that Marketing Cloud Connect is a real, documented integration.",
-        "'Email only' undersells the broader CRM data sync the connector provides beyond just email.",
-        "'Manual only' contradicts the fact that a native connector automates the Salesforce integration."
+        "A longer window does not help if the cause is not a timeout.",
+        "A duplicate automation fails the same way and doubles the problem.",
+        "A daily manual check is unreliable and does not scale."
+      ]
+    },
+    {
+      "question": "Which best describes the All Subscribers list?",
+      "options": [
+        "A folder in Content Builder holding the audiences used by each journey",
+        "The account-level record of every subscriber and their status",
+        "A report showing which subscribers opened the most recent email sent",
+        "A list that must be rebuilt by the administrator before each major send"
+      ],
+      "correctAnswer": 1,
+      "explanation": "All Subscribers is the master record for the account, and it holds the global unsubscribe status.",
+      "whyWrong": [
+        "It is a subscriber record, not a content folder.",
+        "It is not a report on engagement.",
+        "It is maintained by the platform and is not rebuilt manually."
+      ]
+    },
+    {
+      "question": "An admin needs to move a journey and its emails from a sandbox-style unit into production. What is the supported approach?",
+      "options": [
+        "Export each asset by hand and then import it into the target unit one by one",
+        "Rebuild everything manually in production and compare the two side by side",
+        "Use Package Manager to deploy the assets",
+        "Ask Salesforce support to copy the configuration across for the account"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Package Manager exists to bundle and deploy Marketing Cloud assets between business units.",
+      "whyWrong": [
+        "Manual export and import is slow and loses the links between assets.",
+        "Rebuilding by hand invites differences you will not notice.",
+        "Support does not perform customer configuration migrations."
+      ]
+    },
+    {
+      "question": "What happens when a subscriber is added to the account's global suppression list?",
+      "options": [
+        "They are excluded from sends across the account",
+        "They continue to receive transactional email but no commercial messages",
+        "They are moved automatically into a separate holding business unit",
+        "Their subscriber record is deleted from every data extension in the account"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Global suppression removes the address from sends throughout the account, whatever audience is used.",
+      "whyWrong": [
+        "Global suppression is broader than the commercial and transactional split.",
+        "No business unit change takes place.",
+        "Suppression excludes the address; it does not delete stored data."
+      ]
+    },
+    {
+      "question": "A client reports that one subscriber received the same email twice. What is the most likely cause?",
+      "options": [
+        "The journey was activated twice on the same day by two different users",
+        "The email template contained two copies of the same content block inside it",
+        "The subscriber appears twice under different keys",
+        "The send classification was set to transactional rather than commercial"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Duplicate sends usually come from the same person existing as two records, because deduplication works on the subscriber key.",
+      "whyWrong": [
+        "Activating a journey twice creates versions rather than duplicate sends.",
+        "Duplicate content blocks affect the layout, not the number of emails.",
+        "Classification does not cause a second send."
+      ]
+    },
+    {
+      "question": "Which tool should an admin use to see login history and changes made in the account?",
+      "options": [
+        "The deliverability report produced each week by the sending domain",
+        "A SQL query written against the subscriber data views in the account",
+        "Audit Trail",
+        "The tracking tab on each of the email jobs sent during the period"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Audit Trail records security and configuration events, including logins and changes to users and settings.",
+      "whyWrong": [
+        "Deliverability reporting is about inbox placement.",
+        "Data views hold send and engagement data, not configuration changes.",
+        "Email tracking covers sends, not account administration."
+      ]
+    },
+    {
+      "question": "What is the effect of setting a data extension as sendable?",
+      "options": [
+        "It is automatically backed up each night to a secondary storage location",
+        "It is excluded from the account's standard data retention processing",
+        "It becomes visible to every user in every business unit in the account",
+        "It can be used as the audience for a send"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Marking an extension sendable, and relating it to subscribers, is what allows it to be used as a send audience.",
+      "whyWrong": [
+        "Sendable has nothing to do with backups.",
+        "Retention applies regardless of the sendable setting.",
+        "Visibility is governed by business unit and folder permissions."
+      ]
+    },
+    {
+      "question": "An admin wants to limit which IP addresses can log in to the account. Where is this configured?",
+      "options": [
+        "In the role assigned to each individual user within the business unit",
+        "In the account security settings",
+        "In the sender authentication package supplied for the sending domain",
+        "In the delivery profile attached to each of the send classifications"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Login IP restrictions are part of the account's security settings alongside password and session policy.",
+      "whyWrong": [
+        "Roles control permissions, not network access.",
+        "The authentication package concerns sending reputation.",
+        "Delivery profiles govern sending, not logins."
+      ]
+    },
+    {
+      "question": "Which is the strongest reason to use folders and a naming convention in a Marketing Cloud account?",
+      "options": [
+        "Assets become findable and safe to change",
+        "Journeys run noticeably faster when their assets sit in the same folder",
+        "Emails sent from well-named folders are delivered more reliably than others",
+        "The platform charges less for storage when assets are organised in folders"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Shared content means an edit can affect many sends, so knowing what an asset is and who uses it is what keeps changes safe.",
+      "whyWrong": [
+        "Folder structure does not change journey performance.",
+        "Folder names have no effect on deliverability.",
+        "Storage is not priced by organisation."
       ]
     }
   ]
