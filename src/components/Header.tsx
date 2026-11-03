@@ -114,20 +114,7 @@ export default function Header() {
                   event.currentTarget.parentElement?.querySelector('button')?.focus()
                 }
               }}>
-                <Link href="/certifications" onClick={() => setMobileOpen(false)} className="block py-2 font-medium text-gray-700 hover:text-salesforce-blue">
-                  All Certifications
-                </Link>
-                <Link href="/certification-path" onClick={() => setMobileOpen(false)} className="block py-2 font-medium text-gray-700 hover:text-salesforce-blue">
-                  Certification Path
-                </Link>
-                <Link href="/become-cta" onClick={() => setMobileOpen(false)} className="block py-2 font-medium text-gray-700 hover:text-salesforce-blue">
-                  Become a CTA
-                </Link>
-                <Link href="/contact" onClick={() => setMobileOpen(false)} className="block py-2 font-medium text-gray-700 hover:text-salesforce-blue">
-                  Contact Us
-                </Link>
-
-                <div className="pt-2 border-t border-gray-100">
+                <div>
                   <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2">Choose your role</p>
                   {CERTIFICATION_CATEGORIES.map((category) => (
                     <details key={category.slug} className="py-1">
@@ -156,8 +143,24 @@ export default function Header() {
         </div>
       </div>
 
+      {/* Keep the four primary actions visible without expanding the role directory. */}
+      <nav aria-label="Primary mobile navigation" className="lg:hidden grid grid-cols-2 gap-2 border-t border-gray-100 bg-gray-50 px-4 py-2.5">
+        <Link href="/certifications" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
+          All Certifications
+        </Link>
+        <Link href="/certification-path" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
+          Cert Path
+        </Link>
+        <Link href="/become-cta" className="flex min-h-11 items-center justify-center rounded-lg border border-gray-200 bg-white px-2 text-center text-sm font-medium text-gray-700 shadow-sm hover:border-salesforce-blue hover:text-salesforce-blue">
+          Become a CTA
+        </Link>
+        <Link href="/contact" className="flex min-h-11 items-center justify-center rounded-lg bg-salesforce-blue px-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-salesforce-dark">
+          Contact Us
+        </Link>
+      </nav>
+
       {/* Choose your role, desktop dropdowns with lazy sub-item rendering */}
-      <div className="bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
+      <div className="hidden lg:block bg-gradient-to-r from-gray-50 to-white border-t border-gray-100">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3">
           <p className="text-xs font-semibold text-gray-600 uppercase tracking-wider mb-2 hidden lg:block">
             Choose your role

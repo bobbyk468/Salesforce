@@ -266,105 +266,21 @@ function ContactPageContent() {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Hero Section */}
-      <section className="gradient-bg text-white py-16 px-4">
+      <section className="gradient-bg text-white py-10 md:py-16 px-4">
         <div className="max-w-4xl mx-auto text-center">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-white">
+          <h1 className="text-3xl md:text-5xl font-bold mb-3 md:mb-4">Contact Us</h1>
+          <p className="text-base md:text-xl text-white">
             Have questions about our study materials? We'd love to hear from you.
           </p>
         </div>
       </section>
 
-      <section className="py-16 px-4">
+      <section className="py-8 md:py-16 px-4">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">
-            {/* Contact Information */}
-            <div className="lg:col-span-1">
-              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <p className="text-gray-600 mb-8">
-                Questions about our materials or pricing? Just want to say hello? We’re here to help.
-              </p>
-              <div className="mb-8 space-y-3 text-sm leading-6 text-gray-700">
-                <p>
-                  Use this page for questions about certification coverage, full mock exam access, exam-specific study
-                  plans, or corrections to published exam details. If your message is about one certification, include the
-                  exam name or code so we can route the reply faster.
-                </p>
-                <p>
-                  We review support messages manually. Most replies include the relevant certification page, recommended next
-                  resource, and any pricing or access details needed for full practice materials.
-                </p>
-              </div>
-
-              <div className="space-y-6">
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
-                    <Mail className="h-6 w-6 text-salesforce-blue" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
-                    <a href={`mailto:${CONTACT_EMAIL}`} className="text-blue-800 underline hover:no-underline">
-                      {CONTACT_EMAIL}
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
-                    <MessageCircle className="h-6 w-6 text-green-700" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">WhatsApp</h3>
-                    <a
-                      href={WHATSAPP_LINK}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="text-green-700 underline hover:no-underline font-medium"
-                    >
-                      Chat with us directly
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
-                    <Phone className="h-6 w-6 text-salesforce-blue" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
-                    <p className="text-gray-600">Available on request</p>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
-                    <MapPin className="h-6 w-6 text-salesforce-blue" />
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-lg font-semibold text-gray-900">Location</h3>
-                    <p className="text-gray-600">Remote - Worldwide</p>
-                  </div>
-                </div>
-              </div>
-
-              {/* FAQ Link */}
-              <div className="mt-8 p-6 bg-salesforce-blue/10 rounded-xl">
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  Find answers to common questions about our certification materials and study guides.
-                </p>
-                <ul className="text-sm text-gray-600 space-y-2">
-                  <li>• How do I access the study materials?</li>
-                  <li>• Are the questions up to date?</li>
-                  <li>• What certifications do you cover?</li>
-                  <li>• Do you offer refunds?</li>
-                </ul>
-              </div>
-            </div>
-
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-12">
             {/* Contact Form */}
-            <div id="contact-form" className="lg:col-span-2 scroll-mt-24">
-              <div className="bg-white rounded-xl shadow-xl p-8 border-2 border-salesforce-blue/10">
+            <div id="contact-form" className="lg:col-span-2 lg:col-start-2 lg:row-start-1 scroll-mt-48 lg:scroll-mt-24">
+              <div className="bg-white rounded-xl shadow-xl p-5 sm:p-8 border-2 border-salesforce-blue/10">
                 {isSubmitted ? (
                   <div className="text-center py-12">
                     <div className="inline-flex items-center justify-center w-16 h-16 bg-green-100 rounded-full mb-6">
@@ -529,6 +445,90 @@ function ContactPageContent() {
                 )}
               </div>
             </div>
+            {/* Contact Information */}
+            <div className="lg:col-span-1 lg:col-start-1 lg:row-start-1">
+              <h2 className="text-2xl font-bold text-gray-900 mb-6">Get in Touch</h2>
+              <p className="text-gray-600 mb-8">
+                Questions about our materials or pricing? Just want to say hello? We’re here to help.
+              </p>
+              <div className="mb-8 space-y-3 text-sm leading-6 text-gray-700">
+                <p>
+                  Use this page for questions about certification coverage, full mock exam access, exam-specific study
+                  plans, or corrections to published exam details. If your message is about one certification, include the
+                  exam name or code so we can route the reply faster.
+                </p>
+                <p>
+                  We review support messages manually. Most replies include the relevant certification page, recommended next
+                  resource, and any pricing or access details needed for full practice materials.
+                </p>
+              </div>
+
+              <div className="space-y-6">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-salesforce-blue" />
+                  </div>
+                  <div className="ml-4 min-w-0">
+                    <h3 className="text-lg font-semibold text-gray-900">Email</h3>
+                    <a href={`mailto:${CONTACT_EMAIL}`} className="break-all text-blue-800 underline hover:no-underline">
+                      {CONTACT_EMAIL}
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-green-100 rounded-lg flex items-center justify-center">
+                    <MessageCircle className="h-6 w-6 text-green-700" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">WhatsApp</h3>
+                    <a
+                      href={WHATSAPP_LINK}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-green-700 underline hover:no-underline font-medium"
+                    >
+                      Chat with us directly
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-salesforce-blue" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Phone</h3>
+                    <p className="text-gray-600">Available on request</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0 w-12 h-12 bg-salesforce-blue/10 rounded-lg flex items-center justify-center">
+                    <MapPin className="h-6 w-6 text-salesforce-blue" />
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-lg font-semibold text-gray-900">Location</h3>
+                    <p className="text-gray-600">Remote - Worldwide</p>
+                  </div>
+                </div>
+              </div>
+
+              {/* FAQ Link */}
+              <div className="mt-8 p-6 bg-salesforce-blue/10 rounded-xl">
+                <h3 className="text-lg font-semibold text-gray-900 mb-2">Frequently Asked Questions</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  Find answers to common questions about our certification materials and study guides.
+                </p>
+                <ul className="text-sm text-gray-600 space-y-2">
+                  <li>• How do I access the study materials?</li>
+                  <li>• Are the questions up to date?</li>
+                  <li>• What certifications do you cover?</li>
+                  <li>• Do you offer refunds?</li>
+                </ul>
+              </div>
+            </div>
+
           </div>
         </div>
       </section>
