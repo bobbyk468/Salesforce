@@ -79,3 +79,10 @@ src/lib/question-banks/imported/*
 !src/lib/question-banks/imported/banks.json
 !src/lib/question-banks/imported/counts.json
 src/lib/question-banks/local/
+
+# Search Console exports and analysis artifacts. These hold private site
+# performance data (clicks, impressions, CTR, average position) and this
+# repository is public, so they stay local.
+reports/
+docs/SEO-GSC-AUDIT-*.md
+docs/Gemini GSC *
