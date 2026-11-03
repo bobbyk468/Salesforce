@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does hyperautomation typically involve?",
+      "question": "A legacy application has no API and the only way in is its desktop interface. Which tool fits?",
       "options": [
-        "Only RPA",
-        "Only Slack",
-        "Only email",
-        "Combining RPA, integration, AI, and process automation across systems"
+        "A platform event published whenever the application's state is changed",
+        "MuleSoft RPA",
+        "A standard HTTP connector pointed at the application's own web address",
+        "A database connector reading directly from the application's data store"
+      ],
+      "correctAnswer": 1,
+      "explanation": "RPA drives the user interface of an application that offers no programmatic way in, which is precisely the gap it exists to fill.",
+      "whyWrong": [
+        "The application cannot publish events if it has no integration surface.",
+        "An HTTP connector needs an endpoint the application does not expose.",
+        "Reading the database directly bypasses the application's own logic and validation."
+      ]
+    },
+    {
+      "question": "A business user needs to move data between two cloud systems without writing code. What suits them?",
+      "options": [
+        "A DataWeave script run manually whenever the two systems fall out of step",
+        "An Anypoint Studio project built and deployed to CloudHub by a developer",
+        "A custom Apex class invoked on a schedule from within the Salesforce org",
+        "MuleSoft Composer"
       ],
       "correctAnswer": 3,
-      "explanation": "Hyperautomation combines RPA, integration (e.g., MuleSoft), AI, and process automation for end-to-end automation.",
+      "explanation": "Composer is the point-and-click integration tool aimed at business users for connecting systems without development work.",
       "whyWrong": [
-        "Hyperautomation is broader than RPA alone — it combines RPA with integration, AI, and process automation.",
-        "Hyperautomation spans systems well beyond Slack alone.",
-        "Hyperautomation involves more than email-based workflows."
+        "A manual script is neither automated nor no-code.",
+        "A Studio project requires a developer, which is what the requirement excludes.",
+        "Apex is code and needs a developer to write and maintain it."
       ]
     },
     {
-      "question": "Which MuleSoft product supports automation and integration in hyperautomation solutions?",
+      "question": "What distinguishes attended from unattended RPA?",
       "options": [
-        "Commerce Cloud only",
-        "Anypoint Platform and Mule runtime",
-        "CPQ only",
-        "Email Studio"
+        "Attended is licensed per process whereas unattended is licensed per user",
+        "Attended runs alongside a person; unattended runs on its own",
+        "Attended runs in the cloud and unattended runs on a local desktop machine",
+        "Attended processes structured data while unattended handles only documents"
       ],
       "correctAnswer": 1,
-      "explanation": "Anypoint Platform and Mule provide the integration layer for connecting systems in hyperautomation.",
+      "explanation": "Attended automation is triggered by and works with a person at their desk. Unattended runs on a server without anyone present.",
       "whyWrong": [
-        "Commerce Cloud is an e-commerce platform, not the integration layer used here.",
-        "CPQ is a pricing tool, not the integration backbone for hyperautomation.",
-        "Email Studio is a Marketing Cloud tool, not an automation/integration platform."
+        "Licensing is not the defining difference.",
+        "Either can run in various locations.",
+        "Both can handle either kind of data."
       ]
     },
     {
-      "question": "What is the role of a MuleSoft Hyperautomation Developer?",
+      "question": "An RPA process breaks every time the target application's screen layout changes. What is the better design?",
       "options": [
-        "Developing hyperautomation solutions across Salesforce and MuleSoft products",
-        "Only reporting",
-        "Only UI design",
-        "Only data entry"
+        "Anchor on stable element identifiers rather than positions",
+        "Capture a screenshot at each step so a person can check it afterwards",
+        "Increase the wait time before each step so the screen has longer to load",
+        "Run the process more frequently so failures are discovered much sooner"
       ],
       "correctAnswer": 0,
-      "explanation": "They develop hyperautomation solutions that span Salesforce and MuleSoft products.",
+      "explanation": "Selectors based on durable attributes survive cosmetic layout changes, whereas coordinates break the moment anything moves.",
       "whyWrong": [
-        "The role includes far more than reporting — it covers building automation solutions.",
-        "The role spans much more than UI design — it includes cross-platform automation development.",
-        "Data entry is a manual task, not the developer's core role."
+        "Screenshots help diagnosis but do not prevent the breakage.",
+        "Longer waits do not help when the element has moved.",
+        "Running a broken process more often produces more failures."
       ]
     },
     {
-      "question": "Which capability is often part of a hyperautomation architecture?",
+      "question": "What is document processing used for in a hyperautomation context?",
       "options": [
-        "Manual processes only",
-        "Single system only",
-        "APIs, workflows, and event-driven integration",
-        "Static spreadsheets only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Hyperautomation uses APIs, workflows, and event-driven integration to connect and automate processes.",
-      "whyWrong": [
-        "Manual processes are what hyperautomation aims to eliminate, not what it's built from.",
-        "Hyperautomation architectures span multiple systems, not a single isolated one.",
-        "Static spreadsheets represent manual, non-automated processes — the opposite of hyperautomation."
-      ]
-    },
-    {
-      "question": "What benefit does hyperautomation aim to deliver?",
-      "options": [
-        "Fewer integrations",
-        "More manual work",
-        "End-to-end process automation and reduced manual effort",
-        "Slower delivery"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Hyperautomation aims to automate end-to-end processes and reduce manual effort across the enterprise.",
-      "whyWrong": [
-        "Hyperautomation typically increases the number of automated integrations, not decreases them.",
-        "Hyperautomation aims to reduce manual work, not increase it.",
-        "The goal of hyperautomation is faster, not slower, delivery through automation."
-      ]
-    },
-    {
-      "question": "What role does RPA play in hyperautomation?",
-      "options": [
-        "No role",
-        "Replacing APIs only",
-        "Replacing MuleSoft only",
-        "Automating repetitive UI and manual tasks that integrate with APIs"
+        "Storing the documents that a process produces in a compliant archive",
+        "Converting each of the organisation's documents into a single shared format",
+        "Signing documents electronically before they are returned to the customer",
+        "Extracting structured data from invoices and forms"
       ],
       "correctAnswer": 3,
-      "explanation": "RPA automates repetitive tasks and works alongside API integration.",
+      "explanation": "Document processing reads unstructured or semi-structured documents and turns them into fields an automated process can act on.",
       "whyWrong": [
-        "RPA plays a specific, defined role — 'no role' misrepresents its function.",
-        "RPA complements APIs by automating tasks that don't have API access, not replacing them.",
-        "RPA specifically works alongside MuleSoft integrations rather than replacing MuleSoft's role."
+        "Archiving is a content management function.",
+        "Format conversion is not the point of document processing.",
+        "Electronic signature is a separate capability."
       ]
     },
     {
-      "question": "Which MuleSoft capability supports event-driven automation?",
+      "question": "A process must wait for a manager to approve a value before continuing. How is this handled?",
       "options": [
-        "Only REST",
-        "Anypoint MQ, Kafka connector, or event-driven flows",
-        "Only batch",
-        "Only SOAP"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Anypoint MQ and event-driven flows support event-based automation.",
-      "whyWrong": [
-        "Event-driven automation is not limited to REST — it uses messaging/eventing tools instead.",
-        "Event-driven automation specifically avoids batch-only processing — it reacts to events in near real time.",
-        "Event-driven patterns are distinct from SOAP-based synchronous calls."
-      ]
-    },
-    {
-      "question": "What does end-to-end process automation require?",
-      "options": [
-        "Manual steps only",
-        "Email only",
-        "Orchestration across multiple systems via APIs and workflows",
-        "Single system only"
+        "A second process that the manager starts manually once they have decided",
+        "A long wait period calculated to give the manager time to act anyway",
+        "A human-in-the-loop step in the process",
+        "An email notification sent to the manager while the process simply continues"
       ],
       "correctAnswer": 2,
-      "explanation": "End-to-end automation requires orchestration across systems.",
+      "explanation": "Automation that needs a decision pauses at a defined approval step and resumes on the response, rather than guessing or carrying on regardless.",
       "whyWrong": [
-        "Manual steps are what end-to-end automation aims to eliminate.",
-        "Email-only workflows don't represent full end-to-end process orchestration.",
-        "End-to-end automation spans multiple systems, not just one."
+        "Splitting into two processes loses the state in between.",
+        "A fixed wait cannot know whether the manager actually approved.",
+        "Continuing without the decision defeats the point of the approval."
       ]
     },
     {
-      "question": "Which Salesforce product can be part of hyperautomation?",
+      "question": "Why would a developer put an API in front of an RPA process?",
       "options": [
-        "Marketing Cloud only",
-        "Flow, Process Builder, and Platform Events",
-        "Slack only",
-        "Tableau only"
+        "It allows the process to run without any licensing being required at all",
+        "Other systems can then trigger it in a standard way",
+        "It removes the need for the RPA bot to interact with the user interface",
+        "It guarantees the process will never fail when the target screen changes"
       ],
       "correctAnswer": 1,
-      "explanation": "Flow, Process Builder, and Platform Events support automation.",
+      "explanation": "Wrapping the automation in an API means anything that can call an endpoint can start it, which makes it reusable across the organisation.",
       "whyWrong": [
-        "Marketing Cloud alone doesn't capture the Salesforce automation tools (Flow, Process Builder, Platform Events) relevant here.",
-        "Slack alone isn't the Salesforce automation product referenced in this context.",
-        "Tableau is an analytics tool, not a process automation product."
+        "Licensing still applies to the automation itself.",
+        "The bot still drives the interface; the API only triggers it.",
+        "Fragility to layout change is unaffected by how it is triggered."
       ]
     },
     {
-      "question": "What is the purpose of workflow orchestration in hyperautomation?",
+      "question": "What is the main risk of automating a broken business process?",
       "options": [
-        "To coordinate steps across systems and handle exceptions",
-        "To replace APIs",
-        "To create reports only",
-        "To send emails only"
+        "The licence cost rises in proportion to the number of errors produced",
+        "The automation will refuse to run until the process has been documented",
+        "You make the bad outcome happen faster",
+        "RPA is technically unable to automate a process with any exceptions in it"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Automation does not improve a process, it accelerates it, so the sensible step is to fix the process before committing it to a bot.",
+      "whyWrong": [
+        "Licensing is not priced on error volume.",
+        "Nothing technically prevents automating an undocumented process.",
+        "RPA can handle exceptions; that is not the risk here."
+      ]
+    },
+    {
+      "question": "A bot must handle the case where a record already exists in the target system. What should the design include?",
+      "options": [
+        "An explicit check and a defined path for each outcome",
+        "An assumption that the record will not exist, with errors reviewed weekly",
+        "A final step that deletes any duplicate records the bot has just created",
+        "A retry loop that attempts the creation repeatedly until it finally succeeds"
       ],
       "correctAnswer": 0,
-      "explanation": "Orchestration coordinates steps and handles exceptions.",
+      "explanation": "Real data contains the case you did not plan for, so the process needs to test for it and have a deliberate branch for each result.",
       "whyWrong": [
-        "Workflow orchestration coordinates systems — it doesn't replace the APIs it orchestrates.",
-        "Orchestration coordinates multi-system workflows, not simply generating reports.",
-        "Orchestration is about coordinating processes, not just sending emails."
+        "Assuming the happy path guarantees recurring failures.",
+        "Creating duplicates then deleting them risks removing the wrong record.",
+        "Retrying a creation that will always fail achieves nothing."
       ]
     },
     {
-      "question": "Which best practice applies to hyperautomation development?",
+      "question": "What does orchestration add on top of individual automations?",
       "options": [
-        "No logging",
-        "Ignore error handling",
-        "Manual only",
-        "Design for resilience, logging, and human-in-the-loop where needed"
+        "It converts each of the automations into a reusable API specification",
+        "It sequences and coordinates them into one process",
+        "It reduces the number of licences the organisation needs to purchase",
+        "It guarantees that every individual automation will succeed every time"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Orchestration joins separate automations, APIs and human steps into a single end-to-end process with defined handoffs and error handling.",
+      "whyWrong": [
+        "Orchestration coordinates rather than converting anything to APIs.",
+        "Licensing is not reduced by coordinating automations.",
+        "Individual steps can still fail; orchestration handles that."
+      ]
+    },
+    {
+      "question": "A process runs overnight and fails at step seven of ten. What should happen?",
+      "options": [
+        "The failure is recorded and the process resumes or alerts",
+        "The process waits indefinitely until somebody notices and intervenes",
+        "The remaining steps are skipped and the process reports itself successful",
+        "The whole process restarts from step one the following night automatically"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Unattended work needs observable failures and a defined recovery, whether that is resuming from the failed step or raising an alert.",
+      "whyWrong": [
+        "Silent waiting means nobody finds out until something else breaks.",
+        "Reporting success after a failure hides the problem.",
+        "Blind restarting may repeat steps that already took effect."
+      ]
+    },
+    {
+      "question": "Why does credential handling need particular care in RPA?",
+      "options": [
+        "Credentials have to be written into the process definition to be usable",
+        "Bots are unable to use any form of multi-factor authentication at all",
+        "Each bot requires its own separate licence for every system it accesses",
+        "Bots sign in to systems as if they were a user"
       ],
       "correctAnswer": 3,
-      "explanation": "Resilience, logging, and human-in-the-loop support reliability.",
+      "explanation": "A bot holds working credentials for real systems, so those secrets need a vault and the account needs only the access the process requires.",
       "whyWrong": [
-        "Skipping logging removes visibility needed to diagnose automation failures.",
-        "Ignoring error handling creates fragile automations — the opposite of best practice.",
-        "Manual-only processes defeat the purpose of building automation in the first place."
+        "Hard-coding credentials is exactly the practice to avoid.",
+        "Many bots can work with additional authentication factors.",
+        "Licensing is not the security concern here."
       ]
     },
     {
-      "question": "What does AI add to hyperautomation?",
+      "question": "What is a sensible first candidate process for automation?",
       "options": [
-        "Only RPA",
-        "Nothing",
-        "Intelligent decision-making, document processing, or prediction",
-        "Only APIs"
+        "A process carried out once a year by a single experienced member of staff",
+        "The most complex process in the organisation, to prove the technology works",
+        "High volume, repetitive, with stable rules",
+        "A process that changes frequently as the business adapts its approach"
       ],
       "correctAnswer": 2,
-      "explanation": "AI enables intelligent decisions and document processing.",
+      "explanation": "Automation pays back where the work is frequent and the rules are settled, which is also where it is easiest to build reliably.",
       "whyWrong": [
-        "AI's contribution goes beyond RPA alone — it adds intelligence like prediction and decisioning.",
-        "AI adds real capability to hyperautomation — 'nothing' misrepresents its contribution.",
-        "AI's role extends beyond APIs — it contributes analytical and decision-making capabilities."
+        "An annual task offers almost no return for the build effort.",
+        "Starting with the hardest process maximises the chance of visible failure.",
+        "A changing process means constant rework of the automation."
       ]
     },
     {
-      "question": "Which deployment model supports hyperautomation?",
+      "question": "How should a developer measure whether an automation is working?",
       "options": [
-        "CloudHub, hybrid, or on-prem Mule runtime",
-        "Salesforce only",
-        "On-prem only",
-        "No deployment"
+        "The number of individual steps the automation performs each time it runs",
+        "The volume of log output the process generates during a typical week",
+        "Completion rate and exceptions against the manual baseline",
+        "The number of systems the process touches while it is executing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The useful comparison is against how the work went before: how much completes without intervention, and how often a human still has to step in.",
+      "whyWrong": [
+        "Step count describes the build, not the outcome.",
+        "Log volume measures verbosity rather than success.",
+        "System count describes scope, not performance."
+      ]
+    },
+    {
+      "question": "Which best describes hyperautomation as an approach?",
+      "options": [
+        "Combining APIs, RPA, bots and people as needed",
+        "Moving all of the organisation's automation into a single Mule application",
+        "Replacing every integration in the organisation with RPA processes instead",
+        "Automating only those tasks that can be done entirely without any code"
       ],
       "correctAnswer": 0,
-      "explanation": "CloudHub and hybrid support Mule-based hyperautomation.",
+      "explanation": "The idea is to use whichever mechanism fits each part of the process, including a person where judgement is required, rather than one tool everywhere.",
       "whyWrong": [
-        "Hyperautomation spans more than just the Salesforce platform — it includes MuleSoft and RPA tooling.",
-        "On-prem-only doesn't reflect the flexible deployment options hyperautomation solutions typically use.",
-        "Deployment options do exist for hyperautomation solutions — 'no deployment' is incorrect."
-      ]
-    },
-    {
-      "question": "What is the benefit of combining RPA and API integration?",
-      "options": [
-        "Automate legacy systems without APIs plus modern API integration",
-        "Replace RPA",
-        "Replace APIs",
-        "No benefit"
-      ],
-      "correctAnswer": 0,
-      "explanation": "RPA handles legacy UI; APIs handle modern integrations.",
-      "whyWrong": [
-        "The combination is meant to complement RPA, not replace it.",
-        "The combination is meant to complement APIs, not replace them.",
-        "Combining RPA and APIs provides real, tangible benefits — 'no benefit' is incorrect."
-      ]
-    },
-    {
-      "question": "Which MuleSoft product supports design and deployment?",
-      "options": [
-        "Email only",
-        "Anypoint Studio, Flow Designer, and CloudHub",
-        "Slack only",
-        "CPQ only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Anypoint Studio, Flow Designer, and CloudHub support design and deployment.",
-      "whyWrong": [
-        "Email tooling doesn't align with MuleSoft's design and deployment product set.",
-        "Slack isn't a MuleSoft design/deployment product.",
-        "CPQ is unrelated to MuleSoft's design and deployment tooling."
+        "Consolidating everything into one application is not the aim.",
+        "RPA is a fallback where APIs are absent, not a replacement for them.",
+        "No-code is one option among several."
       ]
     }
   ]

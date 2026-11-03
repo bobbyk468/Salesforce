@@ -165,243 +165,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does a MuleSoft Catalyst Consultant do?",
+      "question": "A client has delivered 40 APIs but teams keep building their own versions of the same thing. What does Catalyst address this with?",
       "options": [
-        "Only reporting",
-        "Only coding",
-        "Use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes",
-        "Only Slack"
+        "A single large API that covers every one of the organisation's use cases",
+        "A policy requiring all new projects to be approved by the architecture board",
+        "A Centre for Enablement that curates reusable assets",
+        "A central integration team that builds every API on behalf of the other teams"
       ],
       "correctAnswer": 2,
-      "explanation": "Certified Catalyst Consultants use MuleSoft Catalyst principles in delivery engagements to achieve business outcomes.",
+      "explanation": "A C4E publishes and promotes reusable assets so teams find and use what exists instead of rebuilding it.",
       "whyWrong": [
-        "'Only reporting' misrepresents the role, which is about delivery practices, not reporting.",
-        "'Only coding' undersells the role, which is about applying delivery methodology, not just writing code.",
-        "'Only Slack' is unrelated to what a Catalyst Consultant actually does."
+        "One monolithic API recreates the problem it was meant to solve.",
+        "Approval gates slow delivery without making assets discoverable.",
+        "A central build team becomes a bottleneck, which is what C4E avoids."
       ]
     },
     {
-      "question": "What is MuleSoft Catalyst?",
+      "question": "What is the purpose of defining business outcomes at the start of a Catalyst engagement?",
       "options": [
-        "Only Anypoint",
-        "Only Mule runtime",
-        "A methodology and set of principles for API-led delivery and business outcomes",
-        "Only a product"
-      ],
-      "correctAnswer": 2,
-      "explanation": "MuleSoft Catalyst is a methodology for API-led delivery and business outcomes.",
-      "whyWrong": [
-        "'Only Anypoint' undersells Catalyst — it's a delivery methodology, not just a platform reference.",
-        "'Only Mule runtime' undersells Catalyst — it's about delivery principles, not the runtime engine specifically.",
-        "Catalyst is a methodology, not a specific product."
-      ]
-    },
-    {
-      "question": "What is a key activity for a Catalyst Consultant?",
-      "options": [
-        "Only coding",
-        "Applying Catalyst principles in delivery engagements",
-        "Only lists",
-        "Only reporting"
+        "They establish which members of staff will sit on the delivery team",
+        "They give the programme a measurable definition of success",
+        "They set the order in which each of the APIs will be built and released",
+        "They determine how many MuleSoft licences the client will need to buy"
       ],
       "correctAnswer": 1,
-      "explanation": "They apply Catalyst principles in delivery engagements.",
+      "explanation": "Without agreed outcomes the programme cannot show value, and technical delivery becomes an end in itself.",
       "whyWrong": [
-        "'Only coding' undersells the activity, which is about applying delivery principles broadly, not just writing code.",
-        "'Only lists' is unrelated to what a Catalyst Consultant's key activity actually is.",
-        "'Only reporting' misrepresents the key activity, which is methodology application, not reporting."
+        "Team composition is a staffing decision.",
+        "Build sequencing is a delivery planning activity.",
+        "Licensing follows from scope rather than from outcome definitions."
       ]
     },
     {
-      "question": "Which role typically pursues MuleSoft Catalyst Consultant?",
+      "question": "A client measures success purely by the number of APIs built. What is wrong with this?",
       "options": [
-        "Designers only",
-        "Sales only",
-        "Marketers",
-        "Consultants and delivery leads working with MuleSoft"
+        "It cannot be reported on without additional Anypoint Platform licensing",
+        "It counts output rather than value delivered",
+        "It excludes the RPA processes the organisation has also built alongside them",
+        "It is impossible to count APIs accurately once there are more than fifty"
+      ],
+      "correctAnswer": 1,
+      "explanation": "An API that nobody reuses has delivered nothing, so the meaningful measures are consumption, reuse and the business outcome behind them.",
+      "whyWrong": [
+        "Reporting capability is not the issue.",
+        "Including RPA would still be counting output.",
+        "Counting APIs is easy; it is just the wrong measure."
+      ]
+    },
+    {
+      "question": "What does API-led connectivity propose as the layering of APIs?",
+      "options": [
+        "Development, testing and production layers aligned to the environments",
+        "Synchronous, asynchronous and batch layers based on how each API behaves",
+        "Internal, external and partner layers divided by who consumes each API",
+        "System, process and experience layers"
       ],
       "correctAnswer": 3,
-      "explanation": "Consultants and delivery leads working with MuleSoft pursue this credential.",
+      "explanation": "System APIs expose underlying systems, process APIs orchestrate business logic, and experience APIs serve specific consumers.",
       "whyWrong": [
-        "Designers aren't the typical audience — this targets consultants and delivery leads specifically.",
-        "Sales roles aren't the typical audience — this targets delivery-focused technical/consulting roles.",
-        "Marketers aren't the typical audience for this MuleSoft delivery-focused credential."
+        "Environments are a deployment concern, not an architectural layer.",
+        "Interaction style does not define the layers.",
+        "Audience is a consideration but is not the layering model."
       ]
     },
     {
-      "question": "What does 'business outcomes' mean in Catalyst context?",
+      "question": "Why does the system layer matter most for reuse?",
       "options": [
-        "Only cost",
-        "Only speed",
-        "Measurable results achieved through API-led delivery (e.g., speed, reuse)",
-        "Only revenue"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Business outcomes are measurable results achieved through API-led delivery.",
-      "whyWrong": [
-        "'Only cost' narrows the definition too much — it's about broader measurable results, not just cost.",
-        "'Only speed' narrows the definition too much — speed is one example among several measurable outcomes.",
-        "'Only revenue' narrows the definition too much — business outcomes include broader measurable results like speed and reuse."
-      ]
-    },
-    {
-      "question": "What does API-led connectivity emphasize?",
-      "options": [
-        "Reusable APIs in System, Process, and Experience layers",
-        "Single API only",
-        "Point-to-point only",
-        "No reuse"
+        "It hides the underlying system so consumers are insulated",
+        "It is the layer that business users are able to configure themselves",
+        "It performs better than the other layers because it is closest to the data",
+        "It is the only layer that is permitted to apply any security policies"
       ],
       "correctAnswer": 0,
-      "explanation": "API-led connectivity uses reusable API layers.",
+      "explanation": "A well-designed system API means a change in the backend does not ripple out to every consumer, which is what makes it genuinely reusable.",
       "whyWrong": [
-        "'Single API only' contradicts the layered, multi-API structure API-led connectivity is built on.",
-        "Point-to-point integration is what API-led connectivity moves away from — it's the opposite of the reusable-layer approach.",
-        "'No reuse' contradicts the core principle of API-led connectivity, which is built around reusability."
+        "System APIs are developer artefacts.",
+        "Performance is not what makes the layer valuable.",
+        "Policies can be applied at any layer."
       ]
     },
     {
-      "question": "Which Catalyst principle supports faster delivery?",
+      "question": "A consultant finds that the client's APIs are documented only in a wiki nobody reads. What should they recommend?",
       "options": [
-        "Big bang only",
-        "Reuse, design-first, and incremental delivery",
-        "Manual only",
-        "No design"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Reuse and design-first support faster delivery.",
-      "whyWrong": [
-        "'Big bang only' contradicts the incremental delivery principle Catalyst promotes for speed and risk reduction.",
-        "'Manual only' contradicts the principle of structured, repeatable delivery practices that speed things up.",
-        "'No design' contradicts the design-first principle that's central to faster, more reliable delivery."
-      ]
-    },
-    {
-      "question": "What does a Catalyst Consultant help achieve?",
-      "options": [
-        "Business outcomes through API-led methodology",
-        "Only reports",
-        "Only code",
-        "Only deployment"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Consultants drive outcomes through Catalyst methodology.",
-      "whyWrong": [
-        "'Only reports' misrepresents the goal, which is broader business outcome achievement.",
-        "'Only code' undersells what a Catalyst Consultant helps achieve — the focus is on business outcomes via methodology, not code alone.",
-        "'Only deployment' undersells the broader business-outcome focus of the role."
-      ]
-    },
-    {
-      "question": "Which stakeholder does Catalyst engage?",
-      "options": [
-        "Only IT",
-        "Only business",
-        "Developers only",
-        "Business and IT for alignment"
+        "Appointing someone whose job is to keep the existing wiki up to date",
+        "Moving the documentation into the comments inside each API's source code",
+        "Requiring every developer to read the wiki before starting a new project",
+        "Publishing the assets to Exchange with usable documentation"
       ],
       "correctAnswer": 3,
-      "explanation": "Catalyst engages both business and IT stakeholders.",
+      "explanation": "Discoverability is the point: assets published in Exchange with working examples get found and reused, which a separate wiki does not achieve.",
       "whyWrong": [
-        "'Only IT' misses half of the stakeholder alignment Catalyst emphasizes.",
-        "'Only business' misses half of the stakeholder alignment Catalyst emphasizes — IT alignment matters equally.",
-        "'Developers only' is too narrow — Catalyst specifically emphasizes aligning both business and IT stakeholders."
+        "A dedicated editor does not solve discoverability at the point of need.",
+        "Documentation inside source code is invisible to potential consumers.",
+        "Mandating reading does not make the content findable or current."
       ]
     },
     {
-      "question": "What is the purpose of Catalyst delivery practices?",
+      "question": "What does a maturity assessment in Catalyst establish?",
       "options": [
-        "To deploy only",
-        "To achieve predictable, outcome-focused delivery",
-        "To replace MuleSoft",
-        "To code only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Catalyst practices aim for predictable, outcome-focused delivery.",
-      "whyWrong": [
-        "'To deploy only' undersells the purpose, which spans the full delivery lifecycle, not just deployment.",
-        "Catalyst practices complement MuleSoft rather than replacing the platform itself.",
-        "'To code only' undersells the purpose, which is about delivery practices, not just writing code."
-      ]
-    },
-    {
-      "question": "Which MuleSoft product supports Catalyst methodology?",
-      "options": [
-        "CPQ only",
-        "Slack only",
-        "Email only",
-        "Anypoint Platform and design tools"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Anypoint Platform supports Catalyst practices.",
-      "whyWrong": [
-        "CPQ is a pricing tool, unrelated to MuleSoft's Catalyst-supporting platform and design tools.",
-        "Slack is unrelated to the MuleSoft platform tools that support Catalyst methodology.",
-        "Email is unrelated to the MuleSoft platform tools that support Catalyst methodology."
-      ]
-    },
-    {
-      "question": "What does 'reuse' mean in Catalyst context?",
-      "options": [
-        "Copy-paste only",
-        "APIs and assets designed for reuse across projects",
-        "No reuse",
-        "Single use only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Reuse means APIs and assets used across projects.",
-      "whyWrong": [
-        "'Copy-paste only' isn't true reuse — it's duplication, which is what reusable, shared assets specifically avoid.",
-        "'No reuse' directly contradicts the definition of the term being asked about.",
-        "'Single use only' is the opposite of what 'reuse' means in this context."
-      ]
-    },
-    {
-      "question": "Which role applies Catalyst principles?",
-      "options": [
-        "Sales only",
-        "Marketers only",
-        "Consultants, architects, and delivery leads",
-        "End users only"
+        "How many integration developers the organisation will need to recruit",
+        "Which release of the Anypoint Platform the client should be running",
+        "Where the organisation is now and what to improve next",
+        "Which of the client's existing systems should be decommissioned first"
       ],
       "correctAnswer": 2,
-      "explanation": "Consultants and architects apply Catalyst principles.",
+      "explanation": "The assessment gives a baseline across capability areas so improvement can be targeted and progress demonstrated.",
       "whyWrong": [
-        "Sales roles aren't the typical audience applying Catalyst principles — that's consultants, architects, and delivery leads.",
-        "Marketers aren't the typical audience applying Catalyst delivery principles.",
-        "End users consume the delivered solution — they aren't the ones applying Catalyst principles during delivery."
+        "Headcount follows from the delivery plan.",
+        "Platform versioning is an operational matter.",
+        "System decommissioning is a separate architectural decision."
       ]
     },
     {
-      "question": "What is the benefit of Catalyst for organizations?",
+      "question": "Why is executive sponsorship emphasised in a Catalyst programme?",
       "options": [
-        "Faster time-to-value and reduced integration debt",
-        "Higher cost only",
-        "Slower only",
-        "No benefit"
+        "Executives are required to attend each of the delivery team's ceremonies",
+        "Reuse requires behaviour change across teams",
+        "Platform licensing cannot be purchased without an executive signature",
+        "Executives are the people who write the API specifications themselves"
       ],
-      "correctAnswer": 0,
-      "explanation": "Catalyst supports faster time-to-value and reduced debt.",
+      "correctAnswer": 1,
+      "explanation": "Asking teams to build for reuse rather than for their own immediate deadline is an organisational change, and that needs authority behind it.",
       "whyWrong": [
-        "'Higher cost only' contradicts the actual benefit, which includes reduced integration debt and cost efficiency over time.",
-        "'Slower only' contradicts the actual benefit, which is faster time-to-value.",
-        "'No benefit' contradicts the documented value Catalyst delivery practices provide."
+        "Attendance at ceremonies is not the point of sponsorship.",
+        "Procurement is a process detail rather than the reason for sponsorship.",
+        "Specifications are written by architects and developers."
       ]
     },
     {
-      "question": "Which best practice does Catalyst promote?",
+      "question": "A client wants to know the return on their integration investment. What evidence is most convincing?",
       "options": [
-        "Design-first, reuse, and governance",
-        "Ignore governance",
-        "Ad-hoc only",
-        "No design"
+        "The number of environments the organisation has provisioned to date",
+        "The count of developers who have been trained on the platform so far",
+        "Delivery time saved through reuse of existing assets",
+        "The total number of lines of configuration the team has produced"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Reuse shortens delivery, and the time and cost avoided on each subsequent project is the clearest financial argument.",
+      "whyWrong": [
+        "Environment counts are infrastructure, not value.",
+        "Training counts measure investment rather than return.",
+        "Volume of configuration is effort, not return."
+      ]
+    },
+    {
+      "question": "What is the role of a KPI in the Catalyst approach?",
+      "options": [
+        "It determines the sequence in which the APIs will be decommissioned",
+        "It records the number of defects found during each testing cycle",
+        "It links technical delivery to the agreed business outcome",
+        "It sets the maximum response time permitted for each published API"
+      ],
+      "correctAnswer": 2,
+      "explanation": "KPIs are what connect the work being done to the outcome that justified it, so progress can be shown in business terms.",
+      "whyWrong": [
+        "Decommissioning order is a lifecycle decision.",
+        "Defect counts are a quality measure within delivery.",
+        "Response time targets are service level agreements."
+      ]
+    },
+    {
+      "question": "A team builds an experience API that talks directly to three databases. What is the design problem?",
+      "options": [
+        "It skips the system layer and couples to the backends",
+        "Experience APIs are technically unable to connect to a database at all",
+        "Three databases exceed the number an API is permitted to connect to",
+        "Experience APIs must always be built before the process APIs are built"
       ],
       "correctAnswer": 0,
-      "explanation": "Catalyst promotes design-first, reuse, and governance.",
+      "explanation": "Bypassing the system layer means the experience API is tied to backend detail, so every backend change breaks the consumer.",
       "whyWrong": [
-        "Ignoring governance contradicts Catalyst's actual emphasis on governance as a core best practice.",
-        "'Ad-hoc only' contradicts the structured, repeatable approach Catalyst recommends over unplanned work.",
-        "'No design' contradicts the design-first principle Catalyst promotes."
+        "There is no technical bar on database connectivity.",
+        "No such connection limit exists.",
+        "Build order is not the issue; the coupling is."
+      ]
+    },
+    {
+      "question": "How should a C4E measure its own effectiveness?",
+      "options": [
+        "By the size of the team it has managed to build up over time",
+        "By how much its assets are consumed by other teams",
+        "By the number of assets it has published to Exchange in total",
+        "By the number of governance policies it has written and approved"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A C4E exists to enable others, so the measure is whether its assets are actually being used, not how many it has produced.",
+      "whyWrong": [
+        "Team size is an input to the function.",
+        "Publishing volume is output rather than impact.",
+        "Policy count measures bureaucracy rather than enablement."
+      ]
+    },
+    {
+      "question": "What should a consultant do when a client insists on building a point-to-point integration under time pressure?",
+      "options": [
+        "Agree it as a conscious trade-off and record the debt",
+        "Refuse to proceed until the client agrees to build it as a system API",
+        "Build it quietly as a system API without telling the client about it",
+        "Escalate to the executive sponsor so the deadline is formally moved"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Deadlines are real, and the honest approach is to name the cost, get it acknowledged, and plan to address it rather than pretending it is free.",
+      "whyWrong": [
+        "Blocking delivery over architecture purity damages the relationship.",
+        "Building something other than what was agreed is not transparent.",
+        "Escalating every trade-off exhausts the sponsor's attention."
+      ]
+    },
+    {
+      "question": "Why does Catalyst treat enablement as a continuing activity rather than a one-off?",
+      "options": [
+        "New teams and people keep arriving and needing support",
+        "The Anypoint Platform changes so often that training expires each quarter",
+        "Assets published to Exchange expire unless they are republished regularly",
+        "Licensing terms require that training is repeated at regular intervals"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Capability leaks away as people move and teams form, so enablement has to be ongoing for reuse to persist.",
+      "whyWrong": [
+        "Platform change is real but is not the main reason.",
+        "Published assets do not expire on their own.",
+        "Licensing does not mandate recurring training."
+      ]
+    },
+    {
+      "question": "Which best describes what MuleSoft Catalyst is?",
+      "options": [
+        "A licensing model that charges according to the number of API calls made",
+        "A set of prebuilt connectors supplied for common enterprise systems",
+        "A testing framework used to validate Mule applications before release",
+        "A delivery approach linking outcomes to capability"
+      ],
+      "correctAnswer": 3,
+      "explanation": "Catalyst is the methodology for running an integration programme: establish outcomes, build capability, deliver with reuse, and measure the result.",
+      "whyWrong": [
+        "Catalyst is not a commercial pricing model.",
+        "Connectors are platform components, not a methodology.",
+        "Testing is handled by MUnit."
       ]
     }
   ]

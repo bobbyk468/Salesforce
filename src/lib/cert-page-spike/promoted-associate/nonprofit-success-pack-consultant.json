@@ -175,243 +175,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the Nonprofit Success Pack (NPSP)?",
+      "question": "In the Nonprofit Success Pack, what does a donation from an individual supporter normally look like?",
       "options": [
-        "A CRM product for retail",
-        "A managed package that extends Salesforce for nonprofits (donations, households, etc.)",
-        "A Marketing Cloud product",
-        "A CPQ product"
+        "A campaign member record created against the appeal the donation came from",
+        "A custom donation record created separately from the standard opportunity object",
+        "An opportunity linked to their household account",
+        "A payment record attached directly to the contact with no opportunity involved"
       ],
-      "correctAnswer": 1,
-      "explanation": "NPSP is a managed package that provides donation management, households, and nonprofit-specific features on Salesforce.",
+      "correctAnswer": 2,
+      "explanation": "NPSP uses the standard opportunity object for gifts, with the household account as the account on the record.",
       "whyWrong": [
-        "NPSP isn't a retail CRM product — it's a nonprofit-specific managed package.",
-        "NPSP isn't a Marketing Cloud product — it's built on Salesforce Core for nonprofit operations.",
-        "NPSP isn't a CPQ product — it has nothing to do with pricing/quoting."
+        "Campaign members record response, not the gift itself.",
+        "NPSP deliberately reuses opportunities rather than inventing a donation object.",
+        "Payments relate to an opportunity rather than replacing it."
       ]
     },
     {
-      "question": "How does NPSP differ from Nonprofit Cloud (NPC)?",
+      "question": "What is the purpose of the household account model?",
       "options": [
-        "They are identical",
-        "NPSP is the managed package; NPC is the industry solution that may include NPSP and more",
-        "NPSP is for B2B only",
-        "NPC is only for K-12"
+        "It holds the grant applications the organisation has submitted this year",
+        "It records which volunteers are available for each of the upcoming events",
+        "It groups people who give and are addressed together",
+        "It stores the employer of each contact so that matching gifts can be claimed"
       ],
-      "correctAnswer": 1,
-      "explanation": "NPSP is the managed package; Nonprofit Cloud is the broader industry solution that can include NPSP.",
+      "correctAnswer": 2,
+      "explanation": "Households let an organisation address a couple or family once and see their combined giving, which is how most individual fundraising works.",
       "whyWrong": [
-        "They aren't identical — NPSP is a managed package, while Nonprofit Cloud is the newer, broader industry solution.",
-        "NPSP isn't limited to B2B use cases — it's built specifically for nonprofit donation/constituent management.",
-        "NPC isn't limited to K-12 — it's a general nonprofit industry solution."
+        "Grants are modelled as their own kind of opportunity.",
+        "Volunteer availability is tracked separately.",
+        "Employer relationships are handled by affiliations."
       ]
     },
     {
-      "question": "Which role does an NPSP Consultant typically fulfill?",
+      "question": "A supporter gives £20 every month by direct debit. How should this be set up?",
       "options": [
-        "Designing and implementing nonprofit managed package solutions in a customer-facing role",
-        "UI design only",
-        "Slack configuration only",
-        "Email marketing only"
+        "As a single annual opportunity for £240 with a note describing the schedule",
+        "As a recurring donation that generates the instalments",
+        "As twelve separate opportunities created by hand at the start of each year",
+        "As a campaign with the supporter added as a member once every month"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Recurring donations hold the schedule and generate the individual gift records, so the commitment and the instalments are both visible.",
+      "whyWrong": [
+        "One annual figure hides whether each instalment was actually received.",
+        "Manual creation is laborious and breaks when the gift changes.",
+        "Campaign membership does not record money received."
+      ]
+    },
+    {
+      "question": "What does a General Accounting Unit allocation do?",
+      "options": [
+        "It stores the payment method the supporter used to make their gift",
+        "It records which member of the fundraising team secured the donation",
+        "It assigns part of a gift to a fund or purpose",
+        "It tracks the date on which the gift was acknowledged in writing"
+      ],
+      "correctAnswer": 2,
+      "explanation": "GAU allocations split a gift across funds or restricted purposes, which is what lets a nonprofit report on restricted income.",
+      "whyWrong": [
+        "Payment method is a field on the payment record.",
+        "Credit to a fundraiser is handled by ownership and soft credits.",
+        "Acknowledgement is tracked by its own fields."
+      ]
+    },
+    {
+      "question": "A couple gives jointly but only one of them is named on the cheque. How is the other recognised?",
+      "options": [
+        "By creating a second opportunity for the same gift under their own name",
+        "Through a soft credit",
+        "By splitting the gift amount equally across two separate opportunities",
+        "By adding them as the primary contact and removing the original donor"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Soft credits recognise influence or shared responsibility for a gift without double counting the income.",
+      "whyWrong": [
+        "A duplicate opportunity inflates the organisation's reported income.",
+        "Splitting the amount understates what each person is associated with.",
+        "Replacing the donor misstates who actually gave."
+      ]
+    },
+    {
+      "question": "Why does double counting matter so much in nonprofit reporting?",
+      "options": [
+        "Duplicate records prevent acknowledgement letters from being generated",
+        "Reported income has to reconcile with the accounts",
+        "Soft credits are unable to be reported on alongside hard credit figures",
+        "Salesforce imposes a limit on how many opportunities an account may hold"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Fundraising totals are published and audited, so a gift recorded twice overstates income and undermines trust in the data.",
+      "whyWrong": [
+        "Letters can still be generated from duplicated records, wrongly.",
+        "Both can be reported on, which is precisely why the distinction is kept.",
+        "There is no such record limit in play."
+      ]
+    },
+    {
+      "question": "An organisation receives a grant with reporting conditions attached. How is this usually handled?",
+      "options": [
+        "As an opportunity with a record type for grants",
+        "As a recurring donation with the reporting dates set as its instalments",
+        "As a case raised against the funder so the conditions can be tracked",
+        "As a campaign with the funder added as the only member of that campaign"
       ],
       "correctAnswer": 0,
-      "explanation": "They design and implement NPSP and nonprofit package solutions in a customer-facing role.",
+      "explanation": "Grants are modelled as opportunities with their own record type and stages, which accommodates the application and reporting lifecycle.",
       "whyWrong": [
-        "UI design alone undersells the role, which spans data model and nonprofit process configuration.",
-        "Slack configuration is a separate specialization, unrelated to NPSP implementation.",
-        "Email marketing alone is a Marketing Cloud function, not the broader NPSP consulting role."
+        "A grant is not a regular recurring gift.",
+        "Cases are for service queries rather than income.",
+        "Campaigns group appeals and responses, not grant conditions."
       ]
     },
     {
-      "question": "What is a Household in NPSP?",
+      "question": "What is batch gift entry used for?",
       "options": [
-        "An email list",
-        "A report",
-        "A campaign",
-        "A grouping of related contacts (e.g., family) for giving and communications"
+        "Importing the organisation's entire contact database from a legacy system",
+        "Generating the acknowledgement letters for gifts received in the period",
+        "Reconciling the organisation's bank statement against its accounting system",
+        "Entering many gifts quickly and consistently"
       ],
       "correctAnswer": 3,
-      "explanation": "Households group related contacts for household-level giving and communication.",
+      "explanation": "Batch gift entry gives a fast, validated screen for keying in a pile of gifts, which is what a post opening or event produces.",
       "whyWrong": [
-        "An email list is a marketing concept, unrelated to the Household grouping structure.",
-        "A report displays data — it doesn't itself group related contacts into a giving unit.",
-        "A campaign tracks marketing/fundraising initiatives, not a household grouping of related contacts."
+        "Bulk contact loading uses data import tools.",
+        "Acknowledgement is a separate downstream process.",
+        "Bank reconciliation happens in the finance system."
       ]
     },
     {
-      "question": "Which NPSP feature supports recurring donations?",
+      "question": "A supporter's spouse dies and the household should now reflect one person. What should the consultant consider?",
       "options": [
-        "Recurring Donations object with installment opportunities",
-        "Leads only",
-        "Campaigns only",
-        "Only one-time gifts"
+        "Leaving the record unchanged so the giving history is not disturbed",
+        "Merging the two contact records so only one person remains in the system",
+        "Updating the household naming and salutation settings",
+        "Deleting the household account and attaching the survivor to a new one"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Household names and salutations are generated from members, so they need updating to avoid addressing someone who has died.",
+      "whyWrong": [
+        "Leaving it unchanged produces distressing correspondence.",
+        "Merging two people destroys one person's record entirely.",
+        "Deleting the household risks the giving history attached to it."
+      ]
+    },
+    {
+      "question": "Why would an organisation use affiliations alongside the household model?",
+      "options": [
+        "People relate to employers and other organisations too",
+        "Affiliations replace the need to record any soft credits on a gift",
+        "Affiliations are required before a recurring donation can be created",
+        "Household accounts are unable to hold more than two contacts each"
       ],
       "correctAnswer": 0,
-      "explanation": "The Recurring Donations object creates installment opportunities based on the donation schedule.",
+      "explanation": "A supporter may also be an employee, trustee or member of a partner organisation, and affiliations capture those links.",
       "whyWrong": [
-        "Leads are a Sales Cloud concept, unrelated to recurring donation tracking.",
-        "Campaigns track marketing/fundraising initiatives, not the specific recurring-payment structure.",
-        "'Only one-time gifts' is the opposite of what supports recurring donations."
+        "Affiliations and soft credits serve different purposes.",
+        "Recurring donations do not depend on affiliations.",
+        "Households can hold more than two members."
       ]
     },
     {
-      "question": "What is the Gift Entry feature in NPSP?",
+      "question": "What should drive the design of an organisation's campaign hierarchy?",
       "options": [
-        "An email template",
-        "A report",
-        "A campaign",
-        "A streamlined interface for entering and processing donations"
+        "How the organisation actually plans and reports on appeals",
+        "The number of campaign records the Salesforce edition will permit",
+        "The preference of whichever fundraiser is most senior in the team",
+        "The order in which the campaigns were created in the legacy system"
       ],
-      "correctAnswer": 3,
-      "explanation": "Gift Entry provides a streamlined interface for donation entry.",
+      "correctAnswer": 0,
+      "explanation": "Campaigns exist to answer questions about appeal performance, so the hierarchy should mirror how the organisation plans and measures its fundraising.",
       "whyWrong": [
-        "An email template is unrelated to donation data entry.",
-        "A report displays existing data — it isn't itself the donation entry interface.",
-        "A campaign tracks fundraising initiatives, not the transactional entry process for gifts."
+        "Record limits are not the binding constraint on good design.",
+        "Seniority is not a design principle.",
+        "Legacy creation order rarely reflects current strategy."
       ]
     },
     {
-      "question": "Which NPSP setting controls soft credit behavior?",
+      "question": "A donor asks to stop receiving post but is happy with email. What does this require?",
       "options": [
-        "No setting",
-        "Campaign only",
-        "Household settings and soft credit allocation",
-        "Opportunity only"
+        "Channel-level preferences on the contact",
+        "Deletion of the donor's postal address from the household account record",
+        "Removal of the donor from every campaign in the organisation's database",
+        "A soft credit so the gift is still recorded without any contact being made"
       ],
-      "correctAnswer": 2,
-      "explanation": "Household settings control soft credit allocation.",
+      "correctAnswer": 0,
+      "explanation": "Consent and preference need to be recorded per channel, so mailings can exclude them while email continues.",
       "whyWrong": [
-        "'No setting' contradicts the fact that NPSP has specific configurable household/soft-credit settings.",
-        "Campaign settings are a different configuration area, unrelated to soft credit allocation.",
-        "Opportunity settings alone don't control the household-level soft credit behavior described."
+        "Deleting the address loses information needed for gift aid and receipts.",
+        "Blanket campaign removal stops the email they do want.",
+        "Soft credits have nothing to do with contact preferences."
       ]
     },
     {
-      "question": "What does NPSP data model support for nonprofits?",
+      "question": "What is the risk of customising NPSP's standard objects heavily?",
       "options": [
-        "Leads only",
-        "Standard objects only",
-        "Donations, households, affiliations, and engagements",
-        "Campaigns only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "NPSP supports donations, households, affiliations, and engagements.",
-      "whyWrong": [
-        "Leads alone don't reflect the donation/household/affiliation data model NPSP provides.",
-        "Standard objects alone don't capture NPSP's nonprofit-specific extensions like households and affiliations.",
-        "Campaigns alone don't reflect the broader donation/household/engagement data model NPSP supports."
-      ]
-    },
-    {
-      "question": "Which NPSP feature supports payment processing?",
-      "options": [
-        "Opportunity only",
-        "Manual only",
-        "Payment object and payment gateway integration",
-        "Campaign only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Payment object and gateways support payment processing.",
-      "whyWrong": [
-        "Opportunity alone is the donation record, not the payment processing mechanism itself.",
-        "'Manual only' contradicts the automated payment gateway integration NPSP actually supports.",
-        "Campaign alone tracks fundraising initiatives, not payment processing."
-      ]
-    },
-    {
-      "question": "What is the purpose of NPSP migration?",
-      "options": [
-        "To delete only",
-        "To replace NPSP",
-        "To move data from legacy systems or customize NPSP",
-        "To backup only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Migration moves data from legacy or custom implementations.",
-      "whyWrong": [
-        "'To delete only' misrepresents migration's purpose, which is about moving and customizing data.",
-        "Migration doesn't replace NPSP — it moves or restructures data within/into it.",
-        "'To backup only' misrepresents migration's purpose, which is broader than just backup."
-      ]
-    },
-    {
-      "question": "Which reporting need is common for NPSP?",
-      "options": [
-        "Only sales pipeline",
-        "Donor retention, campaign ROI, and gift summary",
-        "Only support cases",
-        "Only product sales"
+        "Salesforce removes support for the organisation's entire Nonprofit Cloud org",
+        "Future package upgrades become harder to absorb",
+        "The organisation loses the ability to report on any of its own donations",
+        "Recurring donations stop generating their scheduled instalment records"
       ],
       "correctAnswer": 1,
-      "explanation": "NPSP reporting covers donor retention and gift summary.",
+      "explanation": "NPSP is a managed package that is updated regularly, so heavy divergence from its model makes each upgrade more work and more risk.",
       "whyWrong": [
-        "Sales pipeline reporting is a Sales Cloud concept, unrelated to nonprofit-specific reporting needs.",
-        "Support case reporting is a Service Cloud concept, unrelated to donor/fundraising reporting.",
-        "Product sales reporting is a Commerce concept, unrelated to nonprofit donor reporting."
+        "Support is not withdrawn for customisation.",
+        "Reporting continues to function on customised objects.",
+        "Recurring donations are not disabled by customisation as such."
       ]
     },
     {
-      "question": "What does the Engagement Plan support?",
+      "question": "An organisation wants to know its donor retention rate. What does this measure?",
       "options": [
-        "Templated task sequences for stewardship",
-        "Only email",
-        "Only events",
-        "Only marketing"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Engagement Plans create stewardship task sequences.",
-      "whyWrong": [
-        "'Only email' undersells the Engagement Plan's broader task-sequencing capability.",
-        "'Only events' undersells the Engagement Plan, which covers general stewardship tasks, not just events.",
-        "'Only marketing' undersells the Engagement Plan, which specifically manages task sequences for donor stewardship."
-      ]
-    },
-    {
-      "question": "Which integration is common for NPSP?",
-      "options": [
-        "Marketing Cloud only",
-        "Payment processors, fundraising platforms, and accounting",
-        "Slack only",
-        "CPQ only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "NPSP integrates with payment and fundraising platforms.",
-      "whyWrong": [
-        "Marketing Cloud alone undersells the integration landscape, which includes payment processors and accounting systems too.",
-        "Slack alone is unrelated to NPSP's typical fundraising and accounting integrations.",
-        "CPQ is unrelated to the typical fundraising/payment/accounting integrations NPSP implementations need."
-      ]
-    },
-    {
-      "question": "What does an NPSP Consultant need to understand?",
-      "options": [
-        "NPSP data model, nonprofit processes, and configuration",
-        "Only CRM",
-        "Only Marketing Cloud",
-        "Only UI"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Consultants need NPSP data model and nonprofit process knowledge.",
-      "whyWrong": [
-        "'Only CRM' undersells the nonprofit-specific process knowledge required beyond generic CRM concepts.",
-        "'Only Marketing Cloud' is too narrow — the role requires broader NPSP-specific configuration knowledge.",
-        "'Only UI' undersells the consultant's needed knowledge, which spans data model and nonprofit process configuration."
-      ]
-    },
-    {
-      "question": "Which best practice applies to NPSP implementation?",
-      "options": [
-        "Ignore data",
-        "No training",
-        "Single user only",
-        "Clean data, align with nonprofit processes, and train users"
+        "The number of new donors acquired during the current financial year",
+        "The total amount of income received compared with the previous year",
+        "The average size of the gifts received across the whole supporter base",
+        "The share of last year's donors who gave again"
       ],
       "correctAnswer": 3,
-      "explanation": "Clean data, process alignment, and training support success.",
+      "explanation": "Retention asks how many existing donors came back, which is usually a cheaper source of income than acquiring new ones.",
       "whyWrong": [
-        "Ignoring data quality contradicts sound implementation practice, which starts with clean data.",
-        "'No training' contradicts standard implementation best practice, which includes user enablement.",
-        "Focusing on a single user ignores the organization-wide training and process alignment this best practice calls for."
+        "New donor counts measure acquisition rather than retention.",
+        "Total income can rise while retention falls.",
+        "Average gift size is a different measure entirely."
+      ]
+    },
+    {
+      "question": "Which best describes what the Nonprofit Success Pack provides?",
+      "options": [
+        "A finance and accounting system that replaces the organisation's ledger",
+        "A website builder for creating donation pages and supporter portals",
+        "A separate Salesforce product with its own entirely independent database",
+        "A fundraising data model built on standard Salesforce"
+      ],
+      "correctAnswer": 3,
+      "explanation": "NPSP is a managed package that adapts standard Salesforce objects to how nonprofits raise and report on money.",
+      "whyWrong": [
+        "It is not a replacement for an accounting ledger.",
+        "Donation pages come from separate tools or Experience Cloud.",
+        "It runs on the same platform and objects, not a separate database."
       ]
     }
   ]

@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is Education Cloud used for?",
+      "question": "A university needs to track an individual who is a prospective student, not yet attached to any organisation. How is this person stored?",
       "options": [
-        "Retail only",
-        "Manufacturing only",
-        "CPQ only",
-        "Managing student lifecycle, admissions, and advancement for educational institutions"
+        "As a user record in the org with a licence assigned for the applicant portal",
+        "As a contact attached to a placeholder account created for unaffiliated people",
+        "As a lead record that is converted only once they accept an offer of a place",
+        "As a person account"
       ],
       "correctAnswer": 3,
-      "explanation": "Education Cloud supports student lifecycle, admissions, advancement, and engagement for schools and universities.",
+      "explanation": "Education Cloud uses person accounts so an individual exists in their own right, which suits students who are not employees of an organisation.",
       "whyWrong": [
-        "Retail is a different industry vertical, unrelated to Education Cloud's purpose.",
-        "Manufacturing is a different industry vertical, unrelated to Education Cloud's purpose.",
-        "CPQ is a pricing/quoting product, unrelated to Education Cloud's student lifecycle focus."
+        "A user record is for someone logging in, not for the person being tracked.",
+        "A placeholder account is the workaround person accounts were designed to remove.",
+        "Leads lose the relationship history a prospective student accumulates."
       ]
     },
     {
-      "question": "Which role does an Education Cloud Consultant typically fulfill?",
+      "question": "What does an affiliation record represent?",
       "options": [
-        "Email marketing only",
-        "Slack configuration only",
-        "Implementing Salesforce Education Cloud solutions in a customer-facing role",
-        "UI design only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "They implement Education Cloud solutions in a customer-facing consultant role.",
-      "whyWrong": [
-        "Email marketing alone is a Marketing Cloud function, not the broader consulting role.",
-        "Slack configuration is a separate specialization, unrelated to Education Cloud implementation.",
-        "UI design alone undersells the role, which spans data model, processes, and stakeholder alignment."
-      ]
-    },
-    {
-      "question": "Which education settings are named in the consultant exam guide?",
-      "options": [
-        "Retail only",
-        "K-12 and higher education institutions",
-        "Manufacturing only",
-        "Financial services only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "The official consultant exam guide explicitly includes K-12 customers and describes higher education implementation experience.",
-      "whyWrong": [
-        "Retail organizations don't typically use Education Cloud — it's purpose-built for educational institutions.",
-        "Manufacturing companies don't typically use Education Cloud.",
-        "Financial services firms are outside the education settings named in the guide."
-      ]
-    },
-    {
-      "question": "Which Salesforce technology powers an Education Cloud online learner portal?",
-      "options": [
-        "CPQ only",
-        "Experience Cloud",
-        "Commerce Cloud only",
-        "Marketing Cloud only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Salesforce Help states that Education Cloud includes an online learner portal powered by Experience Cloud.",
-      "whyWrong": [
-        "CPQ is not the portal technology identified in Salesforce’s Education Cloud overview.",
-        "Commerce Cloud is not the portal technology identified in Salesforce’s Education Cloud overview.",
-        "Marketing Cloud is not the portal technology identified in Salesforce’s Education Cloud overview."
-      ]
-    },
-    {
-      "question": "What is a common use case for Education Cloud?",
-      "options": [
-        "Student recruitment, enrollment, and alumni engagement",
-        "Quote generation",
-        "Order management",
-        "Email campaigns only"
+        "A relationship between a person and an organisation",
+        "The set of courses a student has enrolled on during a given academic term",
+        "The advisor who has been assigned to support the student through their degree",
+        "The financial aid package that has been awarded to a particular student"
       ],
       "correctAnswer": 0,
-      "explanation": "Student recruitment, enrollment, and alumni engagement are core Education Cloud use cases.",
+      "explanation": "Affiliations connect a person to an organisation such as a school, department or employer, with a role and a date range.",
       "whyWrong": [
-        "Quote generation is a Sales/CPQ concept, unrelated to Education Cloud's student-focused use cases.",
-        "Order management is a Commerce concept, unrelated to student recruitment and enrollment.",
-        "Email campaigns alone are a narrow marketing function, not the broader recruitment/enrollment/alumni use case."
+        "Course enrolment is held on course connection records.",
+        "Advisor relationships are their own kind of connection.",
+        "Financial aid is tracked separately from affiliations."
       ]
     },
     {
-      "question": "What does the Admissions lifecycle typically include?",
+      "question": "A student enrols on a degree programme and then takes six courses within it. How is this modelled?",
       "options": [
-        "Only billing",
-        "Only marketing",
-        "Inquiry, application, acceptance, and enrollment",
-        "Only reporting"
+        "An opportunity record for the programme with six product line items on it",
+        "A single affiliation record listing all six of the courses in its description",
+        "A program enrollment with course connections beneath it",
+        "Six separate program enrollments, one created for each of the courses taken"
       ],
       "correctAnswer": 2,
-      "explanation": "Admissions covers inquiry through application to enrollment.",
+      "explanation": "Program enrollment represents membership of the programme, and course connections record the individual courses taken within it.",
       "whyWrong": [
-        "'Only billing' undersells the admissions lifecycle, which spans the full inquiry-to-enrollment journey, not just payment.",
-        "'Only marketing' undersells the lifecycle — admissions spans much more than marketing activities.",
-        "'Only reporting' undersells the lifecycle — reporting is a byproduct, not the process itself."
+        "Opportunities track fundraising and admissions, not enrolment structure.",
+        "Course detail in free text cannot be reported on.",
+        "Each course is a connection, not a separate programme."
       ]
     },
     {
-      "question": "Which Education Cloud object supports program management?",
+      "question": "Why does Education Cloud model a household as well as the individual student?",
       "options": [
-        "Standard Account only",
-        "Opportunity only",
-        "Lead only",
-        "Program, Term, and Course objects"
+        "Family members are often involved in decisions and giving",
+        "Course connections can only be created for students who belong to a household",
+        "Regulators require every student's home address to be stored on a separate object",
+        "The platform is unable to store more than one address against a person account"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Recruitment, financial aid and alumni giving all involve parents and siblings, so the household gives those relationships somewhere to live.",
+      "whyWrong": [
+        "Household membership is not a prerequisite for enrolment.",
+        "No such regulatory requirement exists.",
+        "Person accounts can hold multiple addresses."
+      ]
+    },
+    {
+      "question": "An admissions team needs to track an applicant through review, interview and decision. What fits best?",
+      "options": [
+        "A task assigned to an admissions officer for every stage the applicant reaches",
+        "A case raised against the applicant for each step of the admissions process",
+        "A new program enrollment created at the start of each stage of the process",
+        "An application record with stages"
       ],
       "correctAnswer": 3,
-      "explanation": "Program, Term, and Course support academic program management.",
+      "explanation": "An application record moves through defined stages, which is what gives the team a pipeline view and consistent reporting.",
       "whyWrong": [
-        "Standard Account object alone doesn't capture the education-specific Program/Term/Course structure.",
-        "Opportunity is a Sales Cloud object, unrelated to academic program structure.",
-        "Lead is a Sales Cloud object, unrelated to program management."
+        "Tasks record activity but do not model the applicant's progress.",
+        "Cases are for issues and queries rather than a defined pipeline.",
+        "Enrolment happens after admission, not during it."
       ]
     },
     {
-      "question": "What is Advancement in the education context?",
+      "question": "What is the purpose of an advisor link or relationship record?",
       "options": [
-        "Alumni relations, fundraising, and donor engagement",
-        "Only admissions",
-        "Only enrollment",
-        "Only courses"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Advancement covers alumni relations and fundraising.",
-      "whyWrong": [
-        "'Only admissions' undersells Advancement, which is specifically about post-enrollment alumni/fundraising activity, distinct from admissions.",
-        "'Only enrollment' undersells Advancement — it's specifically about the alumni/donor relationship stage, not enrollment itself.",
-        "'Only courses' is unrelated — Advancement concerns alumni and fundraising, not course management."
-      ]
-    },
-    {
-      "question": "Which Experience Cloud use case applies to Education Cloud?",
-      "options": [
-        "B2B storefront only",
-        "Partner portal only",
-        "Student and alumni portals for self-service",
-        "Support portal only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Student and alumni portals are common Experience Cloud use cases.",
-      "whyWrong": [
-        "B2B storefronts are a Commerce Cloud use case, unrelated to Education Cloud's student/alumni self-service portals.",
-        "Partner portals are a different Experience Cloud use case, not specific to Education Cloud's audience.",
-        "Support portals are a Service Cloud use case, distinct from the student/alumni self-service scenario."
-      ]
-    },
-    {
-      "question": "What does the student lifecycle encompass?",
-      "options": [
-        "Only graduation",
-        "Prospect, applicant, enrolled student, alumni",
-        "Only enrollment",
-        "Only courses"
+        "It holds the advisor's own employment details and contract information",
+        "It records who supports a student and in what capacity",
+        "It tracks the fees that the student owes for the advisory service provided",
+        "It lists the courses the advisor is responsible for teaching in the term"
       ],
       "correctAnswer": 1,
-      "explanation": "Student lifecycle spans prospect through alumni.",
+      "explanation": "Advising relationships need to be explicit so the institution knows who is responsible for a student and can report on caseloads.",
       "whyWrong": [
-        "'Only graduation' undersells the full lifecycle, which spans from prospect through alumni, not just the graduation moment.",
-        "'Only enrollment' undersells the lifecycle, which extends before and after enrollment.",
-        "'Only courses' is unrelated — the student lifecycle spans the person's journey, not course structure."
+        "Staff employment data belongs in human resources.",
+        "Advising is not normally charged for separately.",
+        "Teaching responsibility is a different relationship."
       ]
     },
     {
-      "question": "Which reporting need is common for Education Cloud?",
+      "question": "A student takes a leave of absence and returns the following year. What should happen to their records?",
       "options": [
-        "Only sales pipeline",
-        "Only support cases",
-        "Enrollment, retention, and advancement metrics",
-        "Only product sales"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Enrollment, retention, and advancement reporting are key.",
-      "whyWrong": [
-        "Sales pipeline reporting is a Sales Cloud concept, unrelated to Education Cloud's enrollment/retention metrics.",
-        "Support case reporting is a Service Cloud concept, unrelated to Education Cloud's typical reporting needs.",
-        "Product sales reporting is a Commerce concept, unrelated to education-specific metrics."
-      ]
-    },
-    {
-      "question": "What is the purpose of Term in Education Cloud?",
-      "options": [
-        "To represent academic periods (e.g., semesters, quarters)",
-        "To replace Program",
-        "To track donations only",
-        "To manage campaigns"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Term represents academic periods for enrollment and scheduling.",
-      "whyWrong": [
-        "Term doesn't replace Program — they're complementary objects representing different concepts (academic period vs. program of study).",
-        "Term isn't specifically about tracking donations — that's an Advancement concept.",
-        "Term isn't about managing campaigns — that's a Marketing/Sales concept unrelated to academic periods."
-      ]
-    },
-    {
-      "question": "Which integration is common for Education Cloud?",
-      "options": [
-        "Student information systems (SIS), learning management, and payment",
-        "CPQ only",
-        "Marketing Cloud only",
-        "Slack only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Education Cloud integrates with SIS and LMS systems.",
-      "whyWrong": [
-        "CPQ alone doesn't capture the SIS/LMS/payment integration landscape typical of Education Cloud implementations.",
-        "Marketing Cloud alone undersells the integration scope, which spans SIS and LMS systems too.",
-        "Slack alone is unrelated to the core academic/payment system integrations typical here."
-      ]
-    },
-    {
-      "question": "What does an Education Cloud Consultant need to understand?",
-      "options": [
-        "Only UI",
-        "Student lifecycle, institutional processes, and industry data model",
-        "Only CRM",
-        "Only Marketing Cloud"
+        "The original program enrollment is deleted and recreated on their return",
+        "The history is retained and a new enrolment period recorded",
+        "A second person account is created to represent the returning student",
+        "The affiliation is edited so that the gap in attendance is not visible"
       ],
       "correctAnswer": 1,
-      "explanation": "Consultants need student lifecycle and institutional process knowledge.",
+      "explanation": "Academic history matters for progression and reporting, so the record of what happened is kept and the new period added alongside it.",
       "whyWrong": [
-        "'Only UI' undersells the consultant's needed knowledge, which spans process and data model, not just interface design.",
-        "'Only CRM' undersells the industry-specific knowledge required beyond generic CRM concepts.",
-        "'Only Marketing Cloud' is too narrow — the role requires broader institutional and data-model understanding."
+        "Deleting enrolment loses the courses already completed.",
+        "A duplicate person account splits the student's entire history.",
+        "Hiding a genuine gap misrepresents the student's record."
       ]
     },
     {
-      "question": "Which best practice applies to Education Cloud implementation?",
+      "question": "Why is the educational institution hierarchy useful?",
       "options": [
-        "Ignore stakeholders",
-        "No training",
-        "Single department only",
-        "Engage admissions, advancement, and IT; align with institutional workflows"
+        "It reflects how faculties and departments actually nest",
+        "It controls which members of staff are able to log in to the system at all",
+        "It determines the order in which students are offered places on a course",
+        "It sets the tuition fee that applies to each of the programmes on offer"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Universities are structured in layers, and modelling that hierarchy lets you roll reporting and access up and down it.",
+      "whyWrong": [
+        "Login access is governed by users and profiles.",
+        "Offer sequencing is an admissions decision.",
+        "Fees are held against programmes and courses."
+      ]
+    },
+    {
+      "question": "An institution wants to know which recruitment events led to enrolments. What makes this possible?",
+      "options": [
+        "Asking each enrolled student to recall which events they attended before",
+        "Comparing the number of events held with the total intake for that year",
+        "Linking event attendance through to the application",
+        "Counting the total number of people who attended each event in the period"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Attribution needs the chain from attendance to application to enrolment, which means the records have to be connected rather than counted separately.",
+      "whyWrong": [
+        "Recollection is unreliable and incomplete.",
+        "Comparing totals shows correlation at best.",
+        "Attendance counts alone cannot show what converted."
+      ]
+    },
+    {
+      "question": "What distinguishes a course from a course offering?",
+      "options": [
+        "The course is for undergraduates and the offering is for postgraduates",
+        "The course is taught in person while the offering is delivered online only",
+        "The course is the definition; the offering is a specific run of it",
+        "The course is created by faculty and the offering by the admissions team"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A course exists as a catalogue entry, and each offering is that course delivered in a particular term by a particular instructor.",
+      "whyWrong": [
+        "Both apply at any level of study.",
+        "Delivery mode is an attribute, not the distinction.",
+        "Who creates the record is not what separates the two concepts."
+      ]
+    },
+    {
+      "question": "A consultant finds the client storing student data in a custom object they built themselves. What should they weigh?",
+      "options": [
+        "Whether the client has enough custom object capacity left in their org",
+        "Whether the custom object could be renamed to match the standard one instead",
+        "Whether the custom object can be moved into a separate Salesforce org",
+        "Whether the standard model already covers the requirement"
       ],
       "correctAnswer": 3,
-      "explanation": "Engage stakeholders and align with institutional workflows.",
+      "explanation": "Standard Education Cloud objects carry behaviour, reporting and future upgrades, so departing from them needs a reason the standard model cannot meet.",
       "whyWrong": [
-        "Ignoring stakeholders contradicts sound implementation practice and risks a solution that doesn't fit institutional needs.",
-        "'No training' contradicts standard implementation best practice, which includes user enablement.",
-        "Focusing on a single department ignores the cross-functional nature of admissions, advancement, and IT collaboration this best practice calls for."
+        "Capacity is rarely the real constraint; suitability is.",
+        "Renaming does not give the object the standard model's behaviour.",
+        "Moving data to another org fragments the institution's records."
+      ]
+    },
+    {
+      "question": "Why would an institution use program enrollments rather than opportunities to track student participation?",
+      "options": [
+        "Opportunities are unable to store any date fields for start and end periods",
+        "Enrolment is an ongoing state, not a deal to be won",
+        "Program enrollments are the only object that can relate to a person account",
+        "Opportunities cannot be reported on alongside the other education objects"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Opportunities model a sales pipeline that closes. Enrolment is a continuing relationship with a start, an end and a status.",
+      "whyWrong": [
+        "Opportunities do have date fields; the mismatch is conceptual.",
+        "Many objects can relate to a person account.",
+        "Opportunities report perfectly well alongside other objects."
+      ]
+    },
+    {
+      "question": "An alumni office wants to track giving alongside academic history. What makes this straightforward?",
+      "options": [
+        "A separate alumni database synchronised with the student system each night",
+        "A second person account created for the individual once they graduate",
+        "The same person record carries both",
+        "A rule preventing academic records from being edited after graduation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Because the person persists across the whole lifecycle, their study history and their giving sit on the same record rather than in two systems.",
+      "whyWrong": [
+        "A nightly sync between two systems invites drift and duplication.",
+        "A second account splits the person in half.",
+        "Locking records does not connect giving to academic history."
+      ]
+    },
+    {
+      "question": "What should a consultant establish before designing the data model?",
+      "options": [
+        "Which reporting tool the institution intends to use after go-live",
+        "How the institution is structured and how students move through it",
+        "How many custom fields the institution has created in its previous system",
+        "Which Salesforce licence type each member of staff has been assigned"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The model has to fit the real academic structure and student lifecycle, so understanding those comes before any object design.",
+      "whyWrong": [
+        "Reporting tooling is downstream of the data model.",
+        "A count of legacy fields says little about what is needed now.",
+        "Licensing is a commercial detail that follows the design."
+      ]
+    },
+    {
+      "question": "Which best describes what Education Cloud is intended to support?",
+      "options": [
+        "The student relationship from enquiry to alumnus",
+        "The timetabling of classrooms and teaching staff across each academic term",
+        "The delivery of course content and assessment to enrolled students online",
+        "The payroll and contracts of the academic staff employed by the institution"
+      ],
+      "correctAnswer": 0,
+      "explanation": "It covers recruitment, admissions, enrolment, advising, retention and alumni relations as one continuous relationship.",
+      "whyWrong": [
+        "Timetabling is handled by specialist scheduling systems.",
+        "Content delivery is a learning management system's role.",
+        "Staff payroll belongs in human resources."
       ]
     }
   ]
