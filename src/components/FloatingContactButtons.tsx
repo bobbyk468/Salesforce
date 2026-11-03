@@ -1,7 +1,8 @@
 'use client'
 
 import { useEffect, useState } from 'react'
-import { CONTACT_EMAIL, WHATSAPP_LINK } from '@/lib/constants'
+import Link from 'next/link'
+import { WHATSAPP_LINK } from '@/lib/constants'
 
 function Tooltip({ text }: { text: string }) {
   return (
@@ -49,15 +50,15 @@ export default function FloatingContactButtons() {
         </a>
       </div>
 
-      {/* Email */}
+      {/* Contact form */}
       <div
         className={`fixed z-50 group lg:hidden transition-opacity duration-200 ${pastHero ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}
         style={{ bottom: '5.5rem', right: '1.5rem' }}
       >
-        <Tooltip text="Email us your question" />
-        <a
-          href={`mailto:${CONTACT_EMAIL}?subject=Salesforce%20Certification%20Question`}
-          aria-label="Send us an email"
+        <Tooltip text="Open contact form" />
+        <Link
+          href="/contact#contact-form"
+          aria-label="Open contact form"
           className="w-14 h-14 rounded-full shadow-lg flex items-center justify-center transition-all duration-200 hover:scale-105 active:scale-95"
           style={{ backgroundColor: '#032D60' }}
         >
@@ -66,7 +67,7 @@ export default function FloatingContactButtons() {
             <rect x="2" y="4" width="20" height="16" rx="2.5" stroke="white" strokeWidth="1.8" />
             <path d="M2 7l10 7 10-7" stroke="white" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" />
           </svg>
-        </a>
+        </Link>
       </div>
     </>
   )

@@ -363,7 +363,7 @@ function ContactPageContent() {
             </div>
 
             {/* Contact Form */}
-            <div className="lg:col-span-2">
+            <div id="contact-form" className="lg:col-span-2 scroll-mt-24">
               <div className="bg-white rounded-xl shadow-xl p-8 border-2 border-salesforce-blue/10">
                 {isSubmitted ? (
                   <div className="text-center py-12">
