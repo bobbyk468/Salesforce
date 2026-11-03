@@ -168,7 +168,7 @@
     {
       "question": "A manufacturer's sales reps wait two days for quotes because pricing rules live in spreadsheets kept by the finance team. What should the architect recommend first?",
       "options": [
-        "Build a custom Lightning component that reads the spreadsheet",
+        "Build a custom Lightning component that reads the spreadsheet file each time",
         "Move pricing and discount rules into CPQ or Revenue Cloud with approval rules",
         "Add more finance staff",
         "Email the spreadsheet to reps every week"
@@ -184,7 +184,7 @@
     {
       "question": "Product and price data is owned by the ERP, but reps quote in Salesforce. How should product data be handled?",
       "options": [
-        "Let reps edit prices in Salesforce and copy them back to the ERP",
+        "Let the reps edit prices inside Salesforce and then copy them back into the ERP",
         "Treat the ERP as the source of truth and sync products and prices into Salesforce",
         "Ask reps to look up prices in the ERP for each quote",
         "Keep two separate price lists and let reps choose"
@@ -234,7 +234,7 @@
       "options": [
         "Sharing settings so external users only see their own account's records",
         "How many reports the partners can run",
-        "The page layout used by internal users",
+        "The page layout that is used by the internal users of the system",
         "The colour scheme of the site"
       ],
       "correctAnswer": 0,
@@ -267,7 +267,7 @@
         "Mapping the business process and its pain points",
         "Designing the page layouts",
         "Writing the integration code",
-        "Choosing the Salesforce licences"
+        "Choosing which of the Salesforce licences to buy"
       ],
       "correctAnswer": 0,
       "explanation": "The process tells you what needs solving and which cloud or system should own each step. Products come after that.",
@@ -314,7 +314,7 @@
       "options": [
         "Let each team decide on its own",
         "A design authority with shared standards and review of major decisions",
-        "A rule that only one team may work at a time",
+        "A rule stating that only one of the teams may work on it at a time",
         "One huge release every year"
       ],
       "correctAnswer": 1,
@@ -328,7 +328,7 @@
     {
       "question": "Customers keep phoning support to ask about order status and download invoices. What is the best way to cut these calls?",
       "options": [
-        "Send customers a weekly spreadsheet",
+        "Send each of the customers a spreadsheet once every week",
         "Hire more support agents",
         "Turn off the support phone line",
         "Give customers a self-service portal showing orders and invoices"
@@ -344,9 +344,9 @@
     {
       "question": "A business sponsor asks for a custom-built quoting engine. Standard CPQ meets 90% of the requirements. What should the architect recommend?",
       "options": [
-        "Use standard CPQ and look for simple ways to cover the remaining 10%",
+        "Use standard CPQ and cover the rest simply",
         "Wait a year for new features",
-        "Use two quoting tools side by side",
+        "Use two separate quoting tools alongside one another",
         "Build the custom engine"
       ],
       "correctAnswer": 0,
@@ -377,7 +377,7 @@
       "question": "A good design was delivered, but six months later few sales reps use it. What was most likely missed?",
       "options": [
         "More custom code",
-        "More fields on the page",
+        "A good many more fields added to the page",
         "A bigger sandbox",
         "Training, change management and adoption planning"
       ],
@@ -392,7 +392,7 @@
     {
       "question": "The same customer appears in Salesforce and in the ERP with different IDs. How should the two be linked?",
       "options": [
-        "Match records by customer name each night",
+        "Match the records by customer name during a nightly batch job",
         "Ask users to link them by hand",
         "Store the ERP's ID in an external ID field in Salesforce",
         "Keep them separate"

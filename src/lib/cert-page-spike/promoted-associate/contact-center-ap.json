@@ -169,7 +169,7 @@
       "question": "Spanish-speaking customers keep reaching agents who only speak English. What routing approach fixes this?",
       "options": [
         "Lower the case priority",
-        "Queue-based routing to one big queue",
+        "Queue-based routing sending everything to one large queue",
         "Skills-based routing with a Spanish language skill",
         "Increase agent capacity"
       ],
@@ -184,10 +184,10 @@
     {
       "question": "Agents are getting too many chats at once and response times are suffering. What should be adjusted?",
       "options": [
-        "Agent capacity and the size each chat uses in the routing configuration",
+        "Agent capacity and the size each chat uses",
         "The IVR menu",
         "The case page layout",
-        "The knowledge article layout"
+        "The layout used for the knowledge articles themselves"
       ],
       "correctAnswer": 0,
       "explanation": "Capacity settings control how much work an agent receives at the same time.",
@@ -202,7 +202,7 @@
       "options": [
         "A knowledge article",
         "An Omni-Channel flow that checks the customer and routes accordingly",
-        "Manual assignment by a supervisor",
+        "Manual assignment carried out by a supervisor each time",
         "A separate org for VIPs"
       ],
       "correctAnswer": 1,
@@ -216,7 +216,7 @@
     {
       "question": "Phone calls, the customer record and a live transcript should appear together in the Service Console. What provides this?",
       "options": [
-        "Email-to-Case",
+        "Email-to-Case handling",
         "Web-to-Lead",
         "Service Cloud Voice",
         "A dashboard"
@@ -234,7 +234,7 @@
       "options": [
         "In a knowledge article",
         "In Amazon Connect contact flows",
-        "In a Salesforce page layout",
+        "In a standard Salesforce page layout",
         "In a validation rule"
       ],
       "correctAnswer": 1,
@@ -248,9 +248,9 @@
     {
       "question": "Many customers ask the same simple question about delivery times. How can the business reduce chats about it?",
       "options": [
-        "Lower the chat priority",
+        "Lower the priority assigned to the chat channel",
         "Remove the chat button",
-        "Have a bot answer it with a knowledge article, and hand over to an agent if needed",
+        "A bot answers with an article, then hands over",
         "Hire more agents"
       ],
       "correctAnswer": 2,
@@ -266,7 +266,7 @@
       "options": [
         "The conversation so far and details the bot collected",
         "A link to the bot's settings",
-        "Nothing, the agent starts fresh",
+        "Nothing at all, because the agent simply starts fresh",
         "Only the customer's name"
       ],
       "correctAnswer": 0,
@@ -296,8 +296,8 @@
     {
       "question": "How does an agent show they are ready to take chats but not phone calls?",
       "options": [
-        "Set a presence status that includes only chat",
-        "Log out of Salesforce",
+        "A presence status that includes only chat",
+        "Log out of Salesforce altogether",
         "Turn off the console",
         "Change their profile"
       ],
@@ -313,7 +313,7 @@
       "question": "Agents write the same reply to password reset requests many times a day. What saves them time?",
       "options": [
         "A new IVR menu",
-        "A larger capacity",
+        "A larger configured capacity",
         "A new queue",
         "Quick text or a macro"
       ],
@@ -345,9 +345,9 @@
       "question": "Customers want to message the business on WhatsApp and have those conversations handled by agents in Salesforce. What should be set up?",
       "options": [
         "Web-to-Case",
-        "A messaging channel for WhatsApp, routed through Omni-Channel",
-        "Email-to-Case",
-        "A public knowledge base only"
+        "A WhatsApp channel routed through Omni-Channel",
+        "Email-to-Case handling",
+        "A public-facing knowledge base and nothing more"
       ],
       "correctAnswer": 1,
       "explanation": "Messaging supports channels like WhatsApp, and sessions can be routed to agents through Omni-Channel.",
@@ -376,10 +376,10 @@
     {
       "question": "Urgent cases should be offered to agents before normal ones in the same queue. What should be set?",
       "options": [
-        "A longer case description",
+        "A considerably longer case description field",
         "More agents in the queue",
         "A different page layout",
-        "A higher priority in the routing configuration for urgent cases"
+        "A higher routing priority for urgent cases"
       ],
       "correctAnswer": 3,
       "explanation": "Routing priority decides which work is offered first.",
@@ -392,7 +392,7 @@
     {
       "question": "A manager wants to know how many problems are solved during the customer's first contact. Which measure fits?",
       "options": [
-        "Average speed to answer",
+        "The average speed to answer",
         "First contact resolution",
         "Abandonment rate",
         "Agent utilisation"

@@ -184,7 +184,7 @@
     {
       "question": "Monthly sales files all have identical columns, and you want them all in one data source as additional rows. What should you use?",
       "options": [
-        "A group",
+        "A group of members",
         "A set",
         "A union",
         "A join"
@@ -201,7 +201,7 @@
       "question": "Which statement about dimensions and measures is correct?",
       "options": [
         "Dimensions are always dates; measures are always text",
-        "Dimensions slice the view; measures are numbers that get aggregated",
+        "Dimensions slice; measures aggregate",
         "Measures slice the view; dimensions are aggregated",
         "They are interchangeable and behave identically"
       ],
@@ -218,7 +218,7 @@
       "options": [
         "The Filters shelf",
         "Detail on the Marks card",
-        "Colour on the Marks card",
+        "The Colour shelf on the Marks card",
         "The Columns shelf"
       ],
       "correctAnswer": 1,
@@ -248,7 +248,7 @@
     {
       "question": "A viewer should be able to change the Region shown on a published dashboard. What should you add?",
       "options": [
-        "A calculated field for each region",
+        "A separate calculated field for each region",
         "A quick filter shown on the dashboard",
         "A group containing all regions",
         "A separate dashboard per region"
@@ -264,7 +264,7 @@
     {
       "question": "One filter should apply to every sheet built on the same data source, not just the current sheet. What should you do?",
       "options": [
-        "Apply the filter to all sheets using that data source",
+        "Apply it to all sheets using that source",
         "Copy the filter onto each sheet by hand",
         "Put the filter on the Detail shelf",
         "Convert the filter into a set"
@@ -283,7 +283,7 @@
         "A Top N filter on Profit",
         "A union with the profit table",
         "A group of profit values",
-        "A calculated field dividing SUM(Profit) by SUM(Sales)"
+        "A field dividing SUM(Profit) by SUM(Sales)"
       ],
       "correctAnswer": 3,
       "explanation": "A calculated field with aggregated measures gives the ratio correctly for whatever level the view shows.",
@@ -298,7 +298,7 @@
       "options": [
         "A set",
         "A hierarchy",
-        "A group",
+        "A group of members",
         "An extract"
       ],
       "correctAnswer": 2,
@@ -328,7 +328,7 @@
     {
       "question": "What does a filter action on a dashboard do?",
       "options": [
-        "Permanently removes rows from the data source",
+        "Permanently removes the rows from the data source",
         "Uses a selection in one sheet to filter another sheet",
         "Publishes the dashboard to Tableau Cloud",
         "Creates a calculated field from the selection"
@@ -362,7 +362,7 @@
       "options": [
         "Three separate sheets",
         "A group of countries",
-        "A hierarchy of those fields",
+        "A hierarchy of the fields",
         "A measure filter"
       ],
       "correctAnswer": 2,
@@ -395,7 +395,7 @@
         "Creates an extract of the data source",
         "Publishes the workbook for others to view",
         "Writes a calculated field for you",
-        "Suggests chart types that suit the fields you have selected"
+        "Suggests charts suited to the selected fields"
       ],
       "correctAnswer": 3,
       "explanation": "Show Me offers chart types that work with the fields you picked, and greys out those that need different fields.",

@@ -174,7 +174,7 @@
       "options": [
         "A dashboard filter on owner",
         "Removing the dataset from all apps",
-        "A security predicate comparing the owner column to the running user's ID",
+        "A predicate comparing owner to the running user",
         "Field-level security on the source object"
       ],
       "correctAnswer": 2,
@@ -220,7 +220,7 @@
     {
       "question": "Which dataflow node joins columns from one dataset onto another?",
       "options": [
-        "augment",
+        "the augment node",
         "sfdcDigest",
         "sfdcRegister",
         "flatten"
@@ -252,7 +252,7 @@
     {
       "question": "For new data preparation work in CRM Analytics, which tool is the expected choice?",
       "options": [
-        "A report snapshot",
+        "A standard report snapshot",
         "An Apex batch job",
         "A JSON dataflow",
         "A recipe in Data Prep"
@@ -270,7 +270,7 @@
       "options": [
         "Ask users to read the score and act manually",
         "Add a formula field on the dashboard",
-        "Consume the prediction in Flow and create the task there",
+        "Consume the prediction in Flow",
         "Rebuild the model with a lower threshold"
       ],
       "correctAnswer": 2,
@@ -285,7 +285,7 @@
       "question": "Which dataflow node is required to filter on a role hierarchy within a dataset?",
       "options": [
         "flatten",
-        "augment",
+        "the augment node",
         "dim2mea",
         "slice"
       ],
@@ -303,7 +303,7 @@
         "Precision and recall",
         "The confusion matrix",
         "R squared and mean absolute error",
-        "The number of insights generated"
+        "The total number of insights generated"
       ],
       "correctAnswer": 2,
       "explanation": "Numeric outcomes are evaluated with regression measures such as R squared and mean absolute error.",
@@ -334,7 +334,7 @@
       "options": [
         "Ignore it, since models are objective",
         "Delete the dataset",
-        "Run bias detection to see whether outcomes differ by group",
+        "Run bias detection across the groups",
         "Convert it to a measure"
       ],
       "correctAnswer": 2,
@@ -365,7 +365,7 @@
       "question": "A prediction definition is being deployed to the Opportunity object. Which step is essential?",
       "options": [
         "Adding a results binding",
-        "Mapping the model's variables to fields on the object",
+        "Mapping model variables to object fields",
         "Writing a security predicate for the model",
         "Creating a new dataflow"
       ],
@@ -383,7 +383,7 @@
         "For every dashboard widget",
         "To replace recipes",
         "Whenever performance matters",
-        "When a query cannot be expressed through the standard dashboard query builder"
+        "When the query builder cannot express it"
       ],
       "correctAnswer": 3,
       "explanation": "Most dashboard work needs no SAQL, so hand-written queries are for the cases the builder cannot express.",
@@ -399,7 +399,7 @@
         "Field-level security on the role field",
         "A dashboard filter on manager name",
         "Separate dashboards per manager",
-        "A flattened role column plus a predicate referencing the running user's role"
+        "A flattened role column plus a predicate"
       ],
       "correctAnswer": 3,
       "explanation": "Flattening produces the ancestor path, and the predicate then compares it against the running user.",

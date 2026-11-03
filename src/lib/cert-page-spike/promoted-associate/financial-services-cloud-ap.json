@@ -169,8 +169,8 @@
       "question": "A married couple and their adult son share some bank accounts. How should they be represented in FSC?",
       "options": [
         "One Opportunity with three contacts",
-        "One person account for the whole family",
-        "Three person accounts linked to a household through account-contact relationships",
+        "One single person account covering the whole of the family",
+        "Three person accounts linked to a household",
         "Three Leads"
       ],
       "correctAnswer": 2,
@@ -185,8 +185,8 @@
       "question": "A joint savings account is owned by two clients. What links the account to both people?",
       "options": [
         "Financial account roles for each owner",
-        "A contact-contact relationship only",
-        "An action plan",
+        "A contact-to-contact relationship and nothing else",
+        "A standard action plan",
         "Two copies of the financial account"
       ],
       "correctAnswer": 0,
@@ -201,7 +201,7 @@
       "question": "An adviser wants to see the total of all deposits for a family in one number. What feature provides this?",
       "options": [
         "Rollups from financial accounts to the household",
-        "A custom formula on each person",
+        "A custom formula field placed on each person record",
         "A report emailed weekly",
         "A manual sum in a spreadsheet"
       ],
@@ -217,7 +217,7 @@
       "question": "A bank teller learns a client wants a mortgage. How should the lead reach a mortgage specialist?",
       "options": [
         "Create an action plan",
-        "Send a Chatter post to the whole bank",
+        "Send a Chatter post out to everyone in the whole bank",
         "Update the client's address",
         "Create a referral that is routed to the mortgage team"
       ],
@@ -234,8 +234,8 @@
       "options": [
         "A financial goal",
         "A report",
-        "A new household per step",
-        "An action plan template applied to each new client"
+        "A newly created household for each step",
+        "An action plan template per new client"
       ],
       "correctAnswer": 3,
       "explanation": "Action plan templates create the same set of tasks each time, with due dates and owners.",
@@ -248,10 +248,10 @@
     {
       "question": "A client's investment account holds shares in several funds. Where are the individual funds recorded?",
       "options": [
-        "As interaction summaries",
+        "As recorded interaction summaries",
         "As referrals",
         "As separate households",
-        "Financial holdings on the financial account"
+        "Financial holdings on the account"
       ],
       "correctAnswer": 3,
       "explanation": "Financial holdings record the securities or funds within an investment account.",
@@ -265,7 +265,7 @@
       "question": "A client owns a house and has a mortgage with another bank. How can the adviser record these?",
       "options": [
         "As Cases",
-        "As financial holdings",
+        "As recorded financial holdings",
         "As assets and liabilities",
         "As Leads"
       ],
@@ -283,7 +283,7 @@
         "Giving everyone View All",
         "Compliant data sharing based on the team roles",
         "Removing the opportunities",
-        "Setting OWD to Public Read/Write"
+        "Setting the org-wide default to Public Read/Write"
       ],
       "correctAnswer": 1,
       "explanation": "Compliant data sharing grants access based on roles in the relationship or deal, which meets privacy needs.",
@@ -314,8 +314,8 @@
       "options": [
         "A household",
         "A financial holding",
-        "A contact-contact relationship",
-        "A financial account role"
+        "A contact-to-contact relationship",
+        "A financial account role record"
       ],
       "correctAnswer": 2,
       "explanation": "Contact-contact relationships link people, such as a client and their adviser or accountant.",
@@ -346,7 +346,7 @@
       "options": [
         "A liability",
         "A financial goal",
-        "An action plan",
+        "A standard action plan",
         "A referral"
       ],
       "correctAnswer": 1,
@@ -362,8 +362,8 @@
       "options": [
         "A household",
         "An account-account relationship",
-        "A contact-contact relationship",
-        "A financial account role"
+        "A contact-to-contact relationship",
+        "A financial account role record"
       ],
       "correctAnswer": 1,
       "explanation": "Account-account relationships link businesses, such as a parent and subsidiary.",
@@ -377,7 +377,7 @@
       "question": "The firm must show it checked each client's identity under Know Your Customer rules. What should be recorded?",
       "options": [
         "Identity checks and documents with dates and outcomes on the client record",
-        "Nothing, KYC is outside Salesforce",
+        "Nothing at all, because KYC sits entirely outside Salesforce",
         "A financial goal",
         "A Chatter post saying checked"
       ],

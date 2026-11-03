@@ -169,7 +169,7 @@
     {
       "question": "Database migrations must run each time a new version is deployed, before the new code takes traffic. Where should the migration command go?",
       "options": [
-        "The release process type in the Procfile",
+        "The release process type",
         "A worker dyno that runs forever",
         "A comment in the README",
         "The web process type"
@@ -186,7 +186,7 @@
       "question": "A web process starts but Heroku reports error H10, and the app crashes on boot. The app listens on port 3000. What is the likely cause?",
       "options": [
         "The database is full",
-        "The app must listen on the port given in the PORT environment variable",
+        "The app must listen on the PORT variable",
         "The app needs a bigger dyno",
         "The buildpack is too new"
       ],
@@ -220,7 +220,7 @@
         "Use a larger web dyno",
         "Increase the router timeout",
         "Tell users to wait longer",
-        "Put the job on a queue and process it with a worker dyno"
+        "Queue the job and use a worker dyno"
       ],
       "correctAnswer": 3,
       "explanation": "The router stops requests after 30 seconds. Long jobs should run on a worker dyno in the background.",
@@ -234,7 +234,7 @@
       "question": "A Heroku app needs to read Salesforce Contact data with fast SQL queries, without using Salesforce API calls on every request. What should be used?",
       "options": [
         "A REST API call on every request",
-        "Heroku Connect with a read-only mapping for Contact",
+        "Heroku Connect, read-only on Contact",
         "Config vars holding the contacts",
         "A CSV file uploaded each week"
       ],
@@ -251,7 +251,7 @@
       "options": [
         "A log drain",
         "A follower database",
-        "A read-write Heroku Connect mapping",
+        "A read-write Connect mapping",
         "A read-only mapping"
       ],
       "correctAnswer": 2,
@@ -266,7 +266,7 @@
       "question": "A cleanup task must run every night at 2 a.m. What is the simplest option?",
       "options": [
         "A release phase command",
-        "Running the task by hand each night",
+        "Running the task by hand every single night",
         "Heroku Scheduler running a one-off dyno",
         "A web dyno that sleeps until 2 a.m."
       ],
@@ -298,7 +298,7 @@
       "question": "Metrics show frequent R14 errors on a web dyno. What do they mean?",
       "options": [
         "The app crashed on boot",
-        "The dyno is using more memory than its limit",
+        "The dyno has exceeded its memory limit",
         "The database is down",
         "A request timed out"
       ],
@@ -347,7 +347,7 @@
       "options": [
         "Jobs that can never be interrupted",
         "Running all jobs in the web dyno",
-        "Jobs that can be safely retried without causing duplicate effects",
+        "Jobs that can be retried without duplicate effects",
         "Turning off dyno restarts"
       ],
       "correctAnswer": 2,
@@ -362,7 +362,7 @@
       "question": "A Heroku app needs to create Salesforce Cases in real time when a user submits a form. Heroku Connect isn't set up. What should it do?",
       "options": [
         "Post the Case to Chatter",
-        "Write to a local file and email it",
+        "Write it to a local file and then email it",
         "Wait for a nightly batch",
         "Call the Salesforce REST API using OAuth"
       ],
@@ -396,7 +396,7 @@
         "Review apps in the pipeline",
         "Heroku Scheduler",
         "One-off dynos",
-        "A second production app"
+        "A second separate production app"
       ],
       "correctAnswer": 0,
       "explanation": "Review apps create a short-lived app per pull request and remove it when the pull request closes.",

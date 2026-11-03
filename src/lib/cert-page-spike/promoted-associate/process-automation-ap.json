@@ -168,8 +168,8 @@
       "question": "When an Opportunity is saved, its Region field should be set from the owner's country. Nothing else changes. Which flow is the best fit?",
       "options": [
         "A screen flow",
-        "A before-save record-triggered flow",
-        "An after-save record-triggered flow",
+        "A before-save record-triggered flow on the object",
+        "An after-save record-triggered flow on the object",
         "A schedule-triggered flow"
       ],
       "correctAnswer": 1,
@@ -183,8 +183,8 @@
     {
       "question": "When a Case is closed, a follow-up Task must be created on the related Account. Which flow fits?",
       "options": [
-        "An after-save record-triggered flow",
-        "A before-save record-triggered flow",
+        "An after-save record-triggered flow on the object",
+        "A before-save record-triggered flow on the object",
         "A schedule-triggered flow",
         "A platform event-triggered flow"
       ],
@@ -199,10 +199,10 @@
     {
       "question": "A reminder email should go to the case owner if a case is still open three days after it was created. What should be used?",
       "options": [
-        "A scheduled path on a record-triggered flow",
+        "A scheduled path on the flow",
         "A screen flow",
         "A manual reminder",
-        "A before-save flow"
+        "A before-save flow on that object"
       ],
       "correctAnswer": 0,
       "explanation": "Scheduled paths run part of a record-triggered flow at a set time after the trigger, with conditions checked again.",
@@ -215,8 +215,8 @@
     {
       "question": "A flow loops over 300 Contacts and runs Update Records inside the loop. It fails during a data load. What is the fix?",
       "options": [
-        "Add each Contact to a collection in the loop, then update the collection once after the loop",
-        "Split the flow into 300 flows",
+        "Collect the Contacts in the loop, then update once after it",
+        "Split the single flow out into three hundred separate flows",
         "Remove the loop",
         "Add a Pause element"
       ],
@@ -231,10 +231,10 @@
     {
       "question": "A flow's Create Records step sometimes fails, and users just see a generic error. What should be added?",
       "options": [
-        "A fault path that logs the error and notifies an admin",
+        "A fault path that logs and notifies",
         "A Pause element",
         "A Decision with no outcomes",
-        "A second Create Records step"
+        "A second Create Records element in the flow"
       ],
       "correctAnswer": 0,
       "explanation": "Fault paths catch errors so the flow can handle them, such as logging details or sending a notification.",
@@ -249,7 +249,7 @@
       "options": [
         "Copy the logic into all four flows",
         "Build it once as a subflow and call it from each flow",
-        "Ask users to check addresses by hand",
+        "Ask each of the users to check the addresses by hand",
         "Move it into a validation rule"
       ],
       "correctAnswer": 1,
@@ -265,8 +265,8 @@
       "options": [
         "A screen flow",
         "A validation rule",
-        "A before-save flow",
-        "The run asynchronously path in a record-triggered flow"
+        "A before-save flow on that object",
+        "The run asynchronously path"
       ],
       "correctAnswer": 3,
       "explanation": "The async path runs after the transaction, so callouts don't slow the save.",
@@ -282,7 +282,7 @@
         "A screen flow",
         "A platform event-triggered flow",
         "A schedule-triggered flow",
-        "A before-save record-triggered flow"
+        "A before-save record-triggered flow on the object"
       ],
       "correctAnswer": 2,
       "explanation": "Schedule-triggered flows run at set times over a set of records.",
@@ -296,9 +296,9 @@
       "question": "Discounts over 20% need sign-off from the sales manager and then finance. What tool is designed for this?",
       "options": [
         "A report",
-        "An approval process or flow-based approval",
+        "An approval process or flow approval",
         "A validation rule",
-        "A before-save flow"
+        "A before-save flow on that object"
       ],
       "correctAnswer": 1,
       "explanation": "Approvals route records to the right people in order, with actions on approve or reject.",
@@ -329,8 +329,8 @@
       "options": [
         "A Campaign",
         "A screen flow",
-        "Entitlements with milestones and milestone actions",
-        "A Lead assignment rule"
+        "Entitlements with milestone actions",
+        "A Lead assignment rule on the object"
       ],
       "correctAnswer": 2,
       "explanation": "Entitlements and milestones track service levels and can trigger warnings and escalations.",
@@ -359,7 +359,7 @@
     {
       "question": "An org still has old workflow rules and Process Builder processes. What should be done?",
       "options": [
-        "Delete them without replacing them",
+        "Delete all of them without putting anything in their place",
         "Leave them as they are forever",
         "Rebuild them as validation rules",
         "Move them to Flow, using the Migrate to Flow tool where it helps"
@@ -376,7 +376,7 @@
       "question": "Before deploying a record-triggered flow, the team wants to check it behaves correctly for a set of example records. What should they use?",
       "options": [
         "A page layout",
-        "An email template",
+        "A standard email template",
         "A dashboard",
         "Flow tests and Debug"
       ],
@@ -391,7 +391,7 @@
     {
       "question": "A record-triggered flow runs on every update to Account, even though it only matters when Industry changes. What should be changed?",
       "options": [
-        "Add more Decision elements later in the flow",
+        "Add a number of further Decision elements later on in the flow",
         "Turn the flow into a screen flow",
         "Tighten the entry conditions to run only when Industry changes",
         "Add a Pause element"

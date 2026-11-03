@@ -170,7 +170,7 @@
       "options": [
         "Increase the job's duration",
         "Add a service objective for preferred technician",
-        "Add a required skill to the work type and make sure the policy has a skill work rule",
+        "A required skill on the work type, plus a skill work rule",
         "Turn off optimisation"
       ],
       "correctAnswer": 2,
@@ -184,7 +184,7 @@
     {
       "question": "The business wants schedules that cut down on driving time, while still meeting all the rules. What should be adjusted?",
       "options": [
-        "The weight of the minimise travel service objective",
+        "The weight of the minimise travel objective",
         "The number of work types",
         "The page layout",
         "The assets' serial numbers"
@@ -218,7 +218,7 @@
       "options": [
         "Make the job twice as long",
         "Create one appointment and hope two people turn up",
-        "Use a service crew, or assign several resources to the appointment",
+        "A service crew, or several resources on it",
         "Schedule it twice on different days"
       ],
       "correctAnswer": 2,
@@ -234,7 +234,7 @@
       "options": [
         "A note in the description",
         "One very long appointment",
-        "A dependency between the two service appointments",
+        "A dependency between the appointments",
         "Two unrelated appointments"
       ],
       "correctAnswer": 2,
@@ -248,7 +248,7 @@
     {
       "question": "A building's lifts must be inspected every 3 months. How should the work orders be created?",
       "options": [
-        "Creating them by hand each quarter",
+        "Creating each of them by hand every quarter",
         "A maintenance plan for the lift assets",
         "A report emailed to the team",
         "A Case for each inspection"
@@ -314,7 +314,7 @@
       "options": [
         "A dashboard",
         "A new scheduling policy",
-        "A mobile flow launched from the work order",
+        "A mobile flow from the work order",
         "A new service territory"
       ],
       "correctAnswer": 2,
@@ -345,7 +345,7 @@
       "question": "A scheduling policy has work rules and service objectives. What is the difference?",
       "options": [
         "Objectives remove candidates, rules rank them",
-        "Work rules remove candidates that don't qualify. Objectives rank the ones left.",
+        "Work rules exclude; objectives rank what is left",
         "Both only apply to mobile users",
         "They are the same thing"
       ],
@@ -377,7 +377,7 @@
       "question": "A new hire should only get simple jobs for their first month. How can this be done?",
       "options": [
         "Give them no territory",
-        "Give them only the basic skills, with the right skill levels",
+        "Only the basic skills, at the right levels",
         "Turn off their user account",
         "Put them in a separate org"
       ],

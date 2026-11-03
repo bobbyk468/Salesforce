@@ -172,7 +172,7 @@
     {
       "question": "A bundle must prevent a user from selecting the Premium Support option when the Basic tier has been chosen. What should the admin configure?",
       "options": [
-        "A product selection rule that disables the option",
+        "A selection rule that disables the option",
         "A validation rule on the Quote object",
         "A price rule with a conditional action",
         "A discount schedule"
@@ -207,7 +207,7 @@
         "Slab",
         "Term",
         "Range",
-        "Block"
+        "Block pricing"
       ],
       "correctAnswer": 2,
       "explanation": "Range schedules apply the rate of the tier reached to the entire quantity.",
@@ -220,7 +220,7 @@
     {
       "question": "A customer wants to add 20 licences four months into a twelve-month contract. What should the admin do?",
       "options": [
-        "Create a new quote on a new opportunity",
+        "Create an entirely new quote on a new opportunity",
         "Create a renewal quote",
         "Create an amendment quote from the contract",
         "Edit the original quote"
@@ -236,7 +236,7 @@
     {
       "question": "At which stage of the pricing waterfall do discount schedules take effect?",
       "options": [
-        "Special price",
+        "The special price stage",
         "Customer price",
         "Net price",
         "List price"
@@ -284,7 +284,7 @@
     {
       "question": "What happens to subscription products when a quote is ordered and contracted?",
       "options": [
-        "Subscription records are created with start and end dates",
+        "Subscription records with start and end dates",
         "They are held until the renewal date",
         "They are deleted from the quote",
         "They convert to one-off products"
@@ -300,7 +300,7 @@
     {
       "question": "An approver who has already approved a 20% discount should not be asked again when the quote is resubmitted at 15%. Which feature does this?",
       "options": [
-        "A validation rule on the quote",
+        "A validation rule placed on the quote record",
         "A standard approval process",
         "An approval alert rule",
         "Smart approvals in advanced approvals"
@@ -319,7 +319,7 @@
         "The quantity field on each option",
         "The bundle's price book entry",
         "A validation product rule",
-        "The min and max options fields on the feature"
+        "The min and max fields on the feature"
       ],
       "correctAnswer": 3,
       "explanation": "Features carry the minimum and maximum option counts that constrain selection within them.",
@@ -332,7 +332,7 @@
     {
       "question": "What does a bundled product option mean for pricing?",
       "options": [
-        "Its price is included in the parent and it does not price separately",
+        "Its price sits in the parent, not on its own line",
         "It is always free of charge",
         "It must be discounted to zero manually",
         "It appears as a separate quote line with its own total"
@@ -350,7 +350,7 @@
       "options": [
         "Replacing the need for product rules",
         "Storing the final quote total",
-        "Capturing one selection that drives option behaviour below it",
+        "One selection that drives the options below",
         "Setting the contract end date"
       ],
       "correctAnswer": 2,
@@ -365,7 +365,7 @@
       "question": "A renewal opportunity and quote should be created automatically as a contract approaches its end date. What governs this?",
       "options": [
         "The amendment process",
-        "The renewal forecasting and renewal quoting settings on the contract",
+        "The renewal forecasting and quoting settings",
         "A scheduled Apex job written by the admin",
         "A price rule with an After Calculate event"
       ],
@@ -381,7 +381,7 @@
       "question": "Why might a manual discount entered by a sales user fail to change the net price as expected?",
       "options": [
         "Net price ignores all discounts",
-        "Something earlier in the pricing sequence, such as a contracted price, has already fixed the value",
+        "An earlier stage has already fixed the value",
         "Manual discounts are not supported in CPQ",
         "Discounts only apply to subscription products"
       ],
@@ -396,7 +396,7 @@
     {
       "question": "Which best describes what a filter rule does?",
       "options": [
-        "Restricts the products returned by the product search",
+        "Restricts what the product search returns",
         "Writes a value into a target field",
         "Blocks a quote from being saved",
         "Prorates an amendment"

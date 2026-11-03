@@ -169,7 +169,7 @@
         "A suppression list",
         "A data extension with columns for each field",
         "A publication list",
-        "A subscriber list with profile attributes"
+        "A subscriber list holding profile attributes"
       ],
       "correctAnswer": 1,
       "explanation": "Data extensions let you define your own columns, which is what storing 20 custom fields requires.",
@@ -199,7 +199,7 @@
       "question": "What happens to a subscriber record after a hard bounce?",
       "options": [
         "The subscriber is added to a publication list",
-        "The address is treated as permanently undeliverable and the subscriber is marked accordingly",
+        "The address is marked permanently undeliverable",
         "The platform retries the send for several days",
         "Nothing, because hard bounces are temporary"
       ],
@@ -214,7 +214,7 @@
     {
       "question": "A nightly process must import a file from the FTP folder, build a segment from it with SQL, then email that segment. Which tool is designed for this?",
       "options": [
-        "Journey Builder",
+        "The Journey Builder tool",
         "Contact Builder",
         "Automation Studio",
         "Content Builder"
@@ -232,7 +232,7 @@
       "options": [
         "They are the same feature with different names",
         "A decision split is faster",
-        "A decision split routes on stored data; an engagement split routes on opens or clicks",
+        "Decision splits use stored data; engagement splits use opens",
         "An engagement split can only be used once per journey"
       ],
       "correctAnswer": 2,
@@ -248,7 +248,7 @@
       "options": [
         "Create a new version of the journey",
         "Pause Automation Studio first",
-        "Edit the running journey in place",
+        "Edit the running journey directly in place",
         "Delete the journey and rebuild it"
       ],
       "correctAnswer": 0,
@@ -264,7 +264,7 @@
       "options": [
         "They are removed from the account entirely",
         "Their data extension row is deleted",
-        "They are recorded as unsubscribed on All Subscribers and stop receiving sends from the account",
+        "They are unsubscribed at All Subscribers level",
         "Only that one email is blocked"
       ],
       "correctAnswer": 2,
@@ -359,7 +359,7 @@
       "question": "Which is the clearest sign that a journey should re-evaluate its entry source more often?",
       "options": [
         "The account has more than one business unit",
-        "New qualifying contacts are arriving throughout the day and should enter promptly",
+        "New contacts qualify all day and should enter promptly",
         "The journey has too many decision splits",
         "The emails have low open rates"
       ],
@@ -374,7 +374,7 @@
     {
       "question": "A test send is run before a campaign. What is its purpose?",
       "options": [
-        "To check rendering and personalisation before the real audience receives it",
+        "To check rendering and personalisation first",
         "To create the tracking report",
         "To count the audience",
         "To warm up the sending IP address"
@@ -390,7 +390,7 @@
     {
       "question": "Which statement about soft bounces is correct?",
       "options": [
-        "They permanently mark the address undeliverable",
+        "They mark the address as permanently undeliverable",
         "They are temporary failures and the platform will retry",
         "They are counted as delivered",
         "They trigger an automatic unsubscribe"

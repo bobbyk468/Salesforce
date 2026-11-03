@@ -186,7 +186,7 @@
       "options": [
         "A variable fund that grows with shipments",
         "A deduction",
-        "A fixed fund with a set amount",
+        "A fixed fund holding a set amount of money",
         "A claim"
       ],
       "correctAnswer": 0,
@@ -200,7 +200,7 @@
     {
       "question": "A retailer runs a temporary price cut and an in-store display during the same two-week promotion. How should these be recorded?",
       "options": [
-        "As two separate account plans",
+        "As two entirely separate account plans",
         "As two funds",
         "As two claims",
         "As two tactics within one promotion"
@@ -216,9 +216,9 @@
     {
       "question": "After a promotion, a retailer takes $8,000 off their next invoice. What is this called?",
       "options": [
-        "A deduction that must be matched to the promotion",
+        "A deduction matched to the promotion",
         "A tactic",
-        "A baseline",
+        "A sales baseline for comparison",
         "A fund"
       ],
       "correctAnswer": 0,
@@ -232,7 +232,7 @@
     {
       "question": "A claim is $2,000 higher than the agreed tactic cost. What should happen?",
       "options": [
-        "Raise the fund budget automatically",
+        "Raise the budget on the fund automatically each time",
         "Investigate the difference before approving payment",
         "Delete the promotion",
         "Pay the full claim straight away"
@@ -250,8 +250,8 @@
       "options": [
         "Total volume sold",
         "Number of tactics",
-        "ROI based on incremental profit compared with the promotion's cost",
-        "Length of the promotion"
+        "ROI from incremental profit against cost",
+        "The overall length of the promotion"
       ],
       "correctAnswer": 2,
       "explanation": "ROI looks at the extra profit the promotion created against what it cost.",
@@ -283,7 +283,7 @@
         "A fund transfer",
         "Post-event analysis",
         "A claim",
-        "A new account plan"
+        "A brand new account plan"
       ],
       "correctAnswer": 1,
       "explanation": "Post-event analysis compares forecast with actual results, which improves future planning.",
@@ -299,7 +299,7 @@
         "The retailer's account plan",
         "The product's price",
         "A single claim",
-        "The ERP invoice list"
+        "The invoice list held in the ERP"
       ],
       "correctAnswer": 0,
       "explanation": "Account plans compare targets with planned promotions, showing gaps early.",
@@ -314,8 +314,8 @@
       "options": [
         "Ignore the fund",
         "Delete the fund",
-        "Flag it through approval rules before the promotion is approved",
-        "Approve it automatically"
+        "Flag it through approval rules beforehand",
+        "Approve the claim automatically without review"
       ],
       "correctAnswer": 2,
       "explanation": "Approval rules can check spend against available funds before a promotion goes ahead.",
@@ -330,8 +330,8 @@
       "options": [
         "It creates tactics",
         "It replaces the ERP",
-        "It shows what consumers actually bought (sell-out) during promotions",
-        "It sets fund budgets"
+        "It shows what consumers actually bought",
+        "It sets the budgets held on each fund"
       ],
       "correctAnswer": 2,
       "explanation": "Sell-out data shows real consumer purchases, which helps measure promotion effect.",
@@ -347,7 +347,7 @@
         "A separate org",
         "Manual spreadsheets",
         "Product and account hierarchies",
-        "A new fund for each item"
+        "A separate new fund for each of the items"
       ],
       "correctAnswer": 2,
       "explanation": "Hierarchies let users plan at higher levels, like brand and retailer group, and roll numbers up and down.",
@@ -360,7 +360,7 @@
     {
       "question": "Teams keep setting up the same kind of promotion from scratch. What would save time and keep them consistent?",
       "options": [
-        "Longer promotions",
+        "Considerably longer promotions",
         "Fewer tactics",
         "More funds",
         "Promotion templates"
@@ -376,10 +376,10 @@
     {
       "question": "Why must product and customer IDs match across TPM, the ERP and retailer data?",
       "options": [
-        "So shipments, sell-out data and claims can be matched to the right promotions",
+        "So shipments, sell-out and claims can be matched",
         "So tactics are cheaper",
         "So funds never run out",
-        "So the website loads faster"
+        "So that the company's website loads a little faster"
       ],
       "correctAnswer": 0,
       "explanation": "Consistent IDs let the system tie each piece of data to the right product, customer and promotion.",
@@ -392,7 +392,7 @@
     {
       "question": "A promotion lifted volume a lot, but the price cut was so deep that profit fell. What does this show?",
       "options": [
-        "Every promotion with lift is profitable",
+        "Every promotion that shows a sales lift is also profitable",
         "High volume lift doesn't always mean a good ROI",
         "Baselines don't matter",
         "Funds were too small"

@@ -187,7 +187,7 @@
         "A larger vCore size",
         "A dedicated load balancer",
         "An extra replica",
-        "The shared load balancer"
+        "The shared CloudHub load balancer"
       ],
       "correctAnswer": 1,
       "explanation": "A dedicated load balancer provides static IPs, custom domains and your own TLS certificates.",
@@ -201,7 +201,7 @@
       "question": "Mule applications on CloudHub need to reach a database that is only available on the company's internal network. What should the architect set up?",
       "options": [
         "A public endpoint on the database",
-        "An Anypoint VPC connected by VPN or VPC peering",
+        "An Anypoint VPC with VPN or peering",
         "A larger worker",
         "An extra environment"
       ],
@@ -217,7 +217,7 @@
       "question": "An application must keep serving traffic if one node fails, and a scheduled job inside it must run only once per schedule. What design fits a customer-hosted runtime?",
       "options": [
         "Running the scheduler on every node",
-        "A cluster, with the scheduler running on the primary node",
+        "A cluster with the scheduler on the primary",
         "A single larger server",
         "Two unconnected standalone runtimes"
       ],
@@ -234,7 +234,7 @@
       "options": [
         "Both always run in MuleSoft's cloud",
         "The runtime plane designs APIs",
-        "The control plane manages and monitors; the runtime plane runs the applications",
+        "The control plane manages; the runtime plane runs",
         "They are two names for the same thing"
       ],
       "correctAnswer": 2,
@@ -267,7 +267,7 @@
         "More replicas alone",
         "A larger heap",
         "In-memory queues",
-        "Persistent queues or Anypoint MQ"
+        "Persistent queues or MQ"
       ],
       "correctAnswer": 3,
       "explanation": "Persistent messaging stores the message outside the application, so a restart does not lose it.",
@@ -280,7 +280,7 @@
     {
       "question": "An architect needs to see which applications call which APIs across the estate, to find unexpected dependencies. Which tool shows this?",
       "options": [
-        "Anypoint Exchange",
+        "The Anypoint Exchange",
         "Anypoint Visualizer",
         "Design Center",
         "Business groups"
@@ -296,7 +296,7 @@
     {
       "question": "All APIs published by every team must require a client ID before they can be called. How should this be enforced consistently?",
       "options": [
-        "Apply the client ID enforcement policy through API Manager",
+        "Client ID enforcement through API Manager",
         "Ask each team to add checks in their code",
         "Review each API by hand before release",
         "Rely on the dedicated load balancer"
@@ -328,7 +328,7 @@
     {
       "question": "Which pair of numbers should drive a disaster recovery design?",
       "options": [
-        "How much downtime and how much data loss are acceptable",
+        "How much downtime and data loss are acceptable",
         "The number of developers and APIs",
         "The count of business groups",
         "The vCore size and heap size"
@@ -344,7 +344,7 @@
     {
       "question": "What does an Anypoint VPC provide?",
       "options": [
-        "A private, isolated network for your CloudHub applications",
+        "A private network for your CloudHub apps",
         "A place to store API specifications",
         "Automatic code deployment",
         "A monitoring dashboard"
@@ -379,7 +379,7 @@
         "By using a smaller vCore in production",
         "By turning off monitoring",
         "By deleting the production environment",
-        "Through environment permissions and roles in the control plane"
+        "Through environment permissions and roles"
       ],
       "correctAnswer": 3,
       "explanation": "Roles and environment permissions control who can deploy where, which is how promotion gates are enforced.",
@@ -392,7 +392,7 @@
     {
       "question": "A company runs Mule applications on Kubernetes clusters it already owns, and wants MuleSoft to manage deployment and monitoring. Which option is this?",
       "options": [
-        "Anypoint Exchange",
+        "The Anypoint Exchange",
         "CloudHub 1.0",
         "Anypoint Studio",
         "Runtime Fabric"

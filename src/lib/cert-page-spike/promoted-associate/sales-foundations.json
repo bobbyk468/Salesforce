@@ -189,7 +189,7 @@
       "question": "A lead has been qualified and there is a real deal to pursue. What does converting the lead create?",
       "options": [
         "A Quote and a Contract",
-        "An Account, a Contact and usually an Opportunity",
+        "An Account, Contact and Opportunity",
         "Only an Account",
         "A Case and a Task"
       ],
@@ -222,7 +222,7 @@
       "options": [
         "The activity timeline",
         "A list view of all accounts",
-        "Forecasting with forecast categories",
+        "Forecasting with categories",
         "The lead queue"
       ],
       "correctAnswer": 2,
@@ -238,7 +238,7 @@
       "options": [
         "Log an activity against the contact",
         "Create a new Lead",
-        "Write it in a personal notebook",
+        "Write it down in a personal notebook",
         "Change the opportunity stage"
       ],
       "correctAnswer": 0,
@@ -253,7 +253,7 @@
       "question": "Which view lets a rep drag opportunities from one stage to the next?",
       "options": [
         "A report",
-        "The setup menu",
+        "The main setup menu",
         "The Kanban view",
         "A dashboard"
       ],
@@ -269,7 +269,7 @@
       "question": "What is the relationship between an Account and a Contact?",
       "options": [
         "They are two words for the same record",
-        "Accounts are only used in service, Contacts only in sales",
+        "Accounts are only used in service and Contacts only in sales",
         "A Contact contains many Accounts",
         "An Account is the company and Contacts are the people at it"
       ],
@@ -287,7 +287,7 @@
         "A Chatter post",
         "A task on the account",
         "A new lead per product",
-        "Products from a price book, added to the opportunity"
+        "Products from a price book on the opportunity"
       ],
       "correctAnswer": 3,
       "explanation": "Products come from a price book and are added to the opportunity, which usually sets the amount.",
@@ -317,7 +317,7 @@
       "question": "A manager wants one screen showing pipeline by stage, deals closing this month and team performance. What should be built?",
       "options": [
         "A quote",
-        "A dashboard made of several reports",
+        "A dashboard built from reports",
         "A single list view",
         "A price book"
       ],
@@ -335,7 +335,7 @@
         "It assigns the account owner",
         "It changes the product price",
         "It creates a case automatically",
-        "Forecasts and pipeline reports depend on it to show what lands when"
+        "Forecasts and pipeline reports depend on it"
       ],
       "correctAnswer": 3,
       "explanation": "Close dates drive the time-based view of the pipeline, so wrong dates make forecasts meaningless.",
@@ -348,7 +348,7 @@
     {
       "question": "A rep asks a product question and wants the answer kept with the deal for others to see. What fits best?",
       "options": [
-        "Chatter on the opportunity record",
+        "Chatter on the opportunity",
         "A personal task",
         "Editing the account name",
         "A private email"
@@ -365,7 +365,7 @@
       "question": "What does a forecast category do?",
       "options": [
         "Controls login access",
-        "Groups opportunity stages into buckets such as Commit and Best Case",
+        "Groups stages into buckets such as Commit",
         "Decides who owns the account",
         "Sets the product price"
       ],
@@ -398,7 +398,7 @@
       "options": [
         "A directory of employees",
         "A record of past invoices",
-        "A view of open opportunities, usually grouped by stage",
+        "Open opportunities grouped by stage",
         "A list of closed cases"
       ],
       "correctAnswer": 2,
