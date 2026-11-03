@@ -162,6 +162,17 @@ const nextConfig = {
     return [
       { source: '/', headers: securityHeaders },
       { source: '/:path*', headers: securityHeaders },
+      {
+        // /og is the Open Graph image endpoint, not a page. Every distinct ?t=
+        // title became its own crawlable URL: 111 of them sit in Search Console
+        // as "Crawled - currently not indexed", 59% of that whole report.
+        // noindex rather than a robots.txt Disallow, because Facebook, X and
+        // LinkedIn honour robots.txt and would then stop fetching the share
+        // image, breaking social previews. This keeps the fetch and drops the
+        // indexing.
+        source: '/og',
+        headers: [...securityHeaders, { key: 'X-Robots-Tag', value: 'noindex' }],
+      },
     ]
   },
 }

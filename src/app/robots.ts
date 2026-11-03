@@ -23,6 +23,9 @@ export default function robots(): MetadataRoute.Robots {
     rules: {
       userAgent: '*',
       allow: '/',
+      // /og is deliberately NOT disallowed here: Facebook, X and LinkedIn
+      // honour robots.txt, so blocking it would stop them fetching the share
+      // image. It carries X-Robots-Tag: noindex instead (see next.config.js).
       disallow: ['/api/', '/*?q=*'],
     },
     sitemap: `${baseUrl}/sitemap.xml`,
