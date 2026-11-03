@@ -864,6 +864,43 @@ function getCertMetaTitle(slug: string): string {
   return makePracticeExamTitle(getReadablePracticeTitleLabel(legacyTitle))
 }
 
+/**
+ * Meta description built from the verified exam logistics.
+ *
+ * 82 of the 93 certification pages previously shared one generic line that
+ * ended by telling the searcher to go and check the issuer's guide, which is a
+ * poor use of the only sentence shown in a search result. The hand-written
+ * ctrDescriptionOverrides read better, but 12 of them contradict
+ * SLUG_TO_EXAM_LOGISTICS on the passing score, so they are not a safe source.
+ *
+ * Generating from the logistics table keeps one source of truth: the figures
+ * here always match what the page itself shows. Where a credential has no
+ * logistics row, the cautious wording is kept.
+ */
+function buildLogisticsDescription(slug: string, certName: string): string {
+  const name = getCertPrimaryName(slug, certName)
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  if (!detail) {
+    return `${name}: free sample practice questions and study topics. Check the issuer’s current guide for exam format, fees, and objectives.`
+  }
+  const format = [
+    detail.questions ? `${detail.questions} questions` : null,
+    detail.passingScore ? `${detail.passingScore} to pass` : null,
+    detail.duration ? detail.duration : null,
+  ]
+    .filter(Boolean)
+    .join(', ')
+  // Richest first, so a long credential name degrades gracefully under the
+  // 160-character limit rather than being truncated mid-sentence.
+  const candidates = [
+    `${name}: free practice questions with explanations, plus ${TITLE_YEAR} study topics. Official format: ${format}. No sign-up.`,
+    `${name}: free practice questions and ${TITLE_YEAR} study topics. Official format: ${format}. No sign-up.`,
+    `${name}: free practice questions. Official format: ${format}. No sign-up.`,
+    `${name}: free practice questions. ${format}.`,
+  ]
+  return candidates.find((candidate) => candidate.length <= 140) ?? candidates[candidates.length - 1]
+}
+
 /** Unique meta description 140–160 chars for certification pages. Rendered as <meta name="description" content="..."> in <head>. */
 export function getCertMetaDescription(slug: string): string {
   const certName = slugToDisplayName(slug)
@@ -1014,9 +1051,7 @@ export function getCertMetaDescription(slug: string): string {
     if (slug === 'system-architect' || slug === 'application-architect' || slug === 'pardot-specialist') {
       return finalizeMetaDescription(`${getCertPrimaryName(slug, certName)}: free sample questions and study topics. Check the issuer’s current guide for exam format, fees, and objectives.`)
     }
-    return finalizeMetaDescription(
-      `${getCertPrimaryName(slug, certName)}: free sample practice questions and study topics. Check the issuer’s current guide for exam format, fees, and objectives.`,
-    )
+    return finalizeMetaDescription(buildLogisticsDescription(slug, certName))
   }
   const primaryName = getCertPrimaryName(slug, certName)
   const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
