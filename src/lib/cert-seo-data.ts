@@ -876,11 +876,35 @@ export function getCertMetaDescription(slug: string): string {
     getReadablePracticeTitleLabel(getLegacyCertMetaTitle(slug)),
     getRecognizedExamCode(slug),
   ].filter((label): label is string => Boolean(label)))]
+  // The description is the one sentence a searcher reads before deciding to
+  // click, so it states the exam format rather than telling them to go and
+  // look it up elsewhere. Figures come from SLUG_TO_EXAM_LOGISTICS, the same
+  // source the page body uses, so the two cannot drift apart. Credentials with
+  // no logistics row fall back to wording that still does not defer.
+  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
+  const format = detail
+    ? [
+        detail.questions ? `${detail.questions} questions` : null,
+        detail.passingScore ? `${detail.passingScore} to pass` : null,
+        detail.duration ?? null,
+      ]
+        .filter(Boolean)
+        .join(', ')
+    : ''
   const descriptions = (label: string) => [
-    `${label}: review exam objectives, section weightage, and study notes. Try free sample questions; check the issuer's current guide.`,
-    `${label}: review exam topics and study notes. Try free sample questions; check the issuer's current guide.`,
-    `${label}: review exam topics and try free sample questions. Confirm exam details with the issuer's current guide.`,
-    `${label}: study exam topics and try free sample questions. Confirm the current format with the issuer.`,
+    ...(format
+      ? [
+          `${label}: ${format}. Free practice questions with explanations, exam topics and a study plan. No sign-up.`,
+          `${label}: ${format}. Free practice questions with explanations and exam topics. No sign-up.`,
+          `${label}: ${format}. Free practice questions with explanations. No sign-up required.`,
+          `${label}: ${format}. Free practice questions with explanations.`,
+          `${label}: ${format}. Free practice questions.`,
+        ]
+      : []),
+    `${label}: exam topics, section weightage and a study plan, with free practice questions and explanations. No sign-up.`,
+    `${label}: exam topics and section weightage, with free practice questions and explanations. No sign-up.`,
+    `${label}: exam topics and study notes, with free practice questions and worked explanations.`,
+    `${label}: exam topics and free practice questions with worked explanations.`,
   ]
   for (const label of labels) {
     const description = descriptions(label).find((candidate) => candidate.length >= 100 && candidate.length <= 130)
