@@ -10,25 +10,26 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const metadataTitle = 'Field Service vs Service Cloud: Consultant Exam Guide'
 const pageTitle = `Field Service vs Service Cloud Consultant (${RELEASE_YEAR})`
-const pageDescription = `Compare Service Cloud and Field Service: workflows, product components, certification scope, and which credential to take first for your role.`
+const pageDescription = 'Compare Service Cloud and Field Service workflows, product components, and certification scope to choose a consultant credential.'
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/field-service-vs-service-cloud-consultant` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/field-service-vs-service-cloud-consultant`,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, alt: metadataTitle }],
   },
 }
 

@@ -222,7 +222,7 @@ export default function Footer() {
           <p className="text-gray-300 text-sm">
             © {new Date().getFullYear()} {SITE_NAME}. All rights reserved.
           </p>
-          <div className="flex items-center space-x-4 mt-4 md:mt-0">
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-2 mt-4 md:mt-0">
             <a
               href={X_HANDLE}
               target="_blank"

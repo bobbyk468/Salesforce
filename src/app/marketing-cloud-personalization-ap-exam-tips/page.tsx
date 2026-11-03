@@ -18,7 +18,7 @@ const slug = 'marketing-cloud-personalization-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Personalization (Interaction Studio) AP exam tips for ${RELEASE_CURRENT}: real-time personalisation, recipes, Einstein decisions.`
+  'Prepare for Marketing Cloud Personalization AP with real-time personalization, recipes, and Einstein decision topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

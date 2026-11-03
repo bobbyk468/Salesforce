@@ -12,7 +12,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `JavaScript Developer I vs Platform Developer I (${RELEASE_CURRENT})`
-const pageDescription = `JavaScript Developer I vs Platform Developer I (PD1): which Salesforce developer cert first? Compare exam format, skills, career value.`
+const pageDescription = 'Compare JavaScript Developer I and Platform Developer I by exam format, skills, and career value to choose a developer credential.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

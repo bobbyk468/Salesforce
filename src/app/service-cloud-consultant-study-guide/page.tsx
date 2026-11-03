@@ -20,9 +20,7 @@ const slug = 'service-cloud'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Service Cloud Consultant study guide: exam sections, Omni-Channel, entitlements, case management, knowledge base. Pass first attempt.`
-
+const pageDescription = `Service Cloud Consultant study guide: review Omni-Channel, entitlements, cases, and knowledge topics for exam preparation.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

@@ -18,7 +18,7 @@ const slug = 'loyalty-management-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Loyalty Management Accredited Professional exam tips for ${RELEASE_CURRENT}: loyalty programmes, tiers, points management, partner integration.`
+  'Prepare for the Loyalty Management AP exam with review topics on loyalty programs, tiers, points, and partner integration.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

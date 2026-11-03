@@ -6,7 +6,8 @@ import {
   certSpikeBodyBySlug,
   isSpikedCertSlug,
 } from '@/lib/cert-page-spike/registry'
-import { ADMINISTRATOR_SLUG, administratorMetadataDescription } from '@/lib/cert-page-spike/administrator-data'
+import { ADMINISTRATOR_SLUG } from '@/lib/cert-page-spike/administrator-data'
+import { RELEASE_YEAR } from '@/lib/release-data'
 import type { Metadata } from 'next'
 import type { CertSpikeBodyData } from '@/lib/cert-page-spike/types'
 
@@ -17,6 +18,10 @@ export function generateStaticParams() {
 type PageProps = { params: Promise<{ slug: string }> }
 
 const PRACTICE_TEST_SLUGS = ['administrator-practice-test', 'email-specialist-practice-test']
+const PRACTICE_TEST_TITLE_LABELS: Record<string, string> = {
+  'administrator-practice-test': 'ADM-201 Salesforce Admin',
+  'email-specialist-practice-test': 'CRT-550 Email Specialist',
+}
 
 export async function generateMetadata({ params }: PageProps): Promise<Metadata> {
   const { slug } = await params
@@ -25,13 +30,9 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   // GSC "Duplicate without user-selected canonical" warnings.
   if (PRACTICE_TEST_SLUGS.includes(slug)) {
     const base = getCertMetadata(slug)
-    // Distinct title: these inherited the parent cert page's title verbatim, so
-    // the pair read as duplicates to crawlers even though noindex and the
-    // canonical already point at the parent.
-    const parentTitle = typeof base.title === 'object' && base.title && 'absolute' in base.title
-      ? String(base.title.absolute)
-      : String(base.title ?? '')
-    const testTitle = parentTitle.replace(/Practice Exam/i, 'Full Practice Test')
+    // The two legacy test aliases keep distinct, readable titles while their
+    // noindex and parent canonical continue to identify the main exam page.
+    const testTitle = `${PRACTICE_TEST_TITLE_LABELS[slug]} Practice Test Guide (${RELEASE_YEAR})`
     return {
       ...base,
       title: { absolute: testTitle },
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: PageProps): Promise<Metadata>
   }
   if (slug === ADMINISTRATOR_SLUG) {
     const baseMetadata = getCertMetadata(slug)
-    const descriptionText = administratorMetadataDescription
+    const descriptionText = 'Prepare for ADM-201 with exam weightage, a study plan, and free practice questions with explanations. No sign-up required.'
     return {
       ...baseMetadata,
       description: descriptionText,

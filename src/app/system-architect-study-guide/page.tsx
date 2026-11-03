@@ -16,8 +16,7 @@ import CredentialSchema from '@/components/CredentialSchema'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'system-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `System Architect study guide: the 4 required exams, what each covers, a sensible study order and free practice questions.`
-
+const pageDescription = `Study the four exams required for Salesforce System Architect, review each scope, and follow a suggested order with free practice.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

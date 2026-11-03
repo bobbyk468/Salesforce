@@ -19,7 +19,7 @@ const slug = 'administrator'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `ADM-201 study guide (${RELEASE_CURRENT}): all 7 exam sections, key topics, and exam scenario strategies. Start free practice today.`
+  `ADM-201 study guide (${RELEASE_CURRENT}): exam sections, key topics, and scenario-based practice strategies. Start free practice today.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

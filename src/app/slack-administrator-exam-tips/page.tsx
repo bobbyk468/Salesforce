@@ -18,9 +18,7 @@ const slug = 'slack-administrator'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Slack Administrator exam tips for ${RELEASE_CURRENT}: workspace management, channels, security, Slack Connect Free practice questions.`
-
+const pageDescription = `Salesforce Slack Administrator exam tips for ${RELEASE_CURRENT}: review workspace management, channels, security, and Slack Connect.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

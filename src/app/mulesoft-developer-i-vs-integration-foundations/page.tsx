@@ -8,7 +8,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `MuleSoft Developer I vs Integration Foundations (${RELEASE_CURRENT})`
-const pageDescription = `MuleSoft Developer I vs MuleSoft Integration Foundations: compare fees, difficulty, skills tested, and which MuleSoft certification to take first in 2026.`
+const pageDescription = 'Compare MuleSoft Developer I and Integration Foundations by cost, difficulty, tested skills, and which credential to take first.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

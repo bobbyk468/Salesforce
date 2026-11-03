@@ -19,7 +19,7 @@ const slug = 'mulesoft-platform-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Platform Architect exam tips for ${RELEASE_CURRENT}: Anypoint Platform governance, API management, enterprise integration strategy.`
+  'Review MuleSoft Platform Architect topics including Anypoint governance, API management, and enterprise integration strategy.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

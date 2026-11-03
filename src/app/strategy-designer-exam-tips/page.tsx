@@ -18,8 +18,7 @@ const slug = 'strategy-designer'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Strategy Designer exam tips for ${RELEASE_CURRENT}: design thinking, business strategy, value maps, journey design Free practice questions.`
+const pageDescription = `Salesforce Strategy Designer exam tips for ${RELEASE_CURRENT}: review design thinking, business strategy, value maps, and journey design.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

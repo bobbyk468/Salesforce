@@ -18,9 +18,7 @@ const slug = 'sharing-visibility-architect'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Sharing & Visibility Architect exam tips for ${RELEASE_CURRENT}: OWD design, sharing rules, role hierarchy Free practice questions.`
-
+const pageDescription = `Sharing and Visibility Architect exam tips for ${RELEASE_CURRENT}: review OWD design, sharing rules, and role hierarchy scenarios.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

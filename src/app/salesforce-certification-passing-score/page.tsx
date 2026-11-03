@@ -8,8 +8,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Passing Scores (${RELEASE_CURRENT})`
-const pageDescription = `See Salesforce passing scores by exam tier, including Admin, Associate, Specialist, Consultant, Architect, and the safe mock score to aim for.`
-
+const pageDescription = `Review Salesforce passing scores from Associate and Specialist to Consultant and Architect, and choose a useful mock exam target.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

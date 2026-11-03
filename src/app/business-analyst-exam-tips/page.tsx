@@ -19,7 +19,7 @@ const slug = 'business-analyst'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Business Analyst exam tips for ${RELEASE_CURRENT}: user stories, process mapping, collaboration. Scenario tips to pass first attempt.`
+  'Prepare for the Salesforce Business Analyst exam with user stories, process mapping, and collaboration for scenario questions.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

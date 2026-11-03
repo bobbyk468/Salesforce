@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'sharing-visibility-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Sharing & Visibility Architect study guide: OWD, role hierarchy, sharing rules, Apex sharing. $400, ~68% pass Free practice questions.`
-
+const pageDescription = `Sharing and Visibility Architect study guide: review OWD, role hierarchy, sharing rules, and Apex sharing with practice questions.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

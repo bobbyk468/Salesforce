@@ -7,7 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Consultant (${RELEASE_CURRENT} Guide)`
-const pageDescription = `How to become a Salesforce Consultant in 2026: ADM-201 to Sales Cloud or Service Cloud Consultant in 6–12 months. Career path, salary data, and study resources.`
+const pageDescription = 'Learn the consultant path, Administrator preparation, specializations, timelines, and study resources for a Salesforce career.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

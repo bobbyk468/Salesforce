@@ -6,6 +6,7 @@ import { getExamWeightage } from './exam-weightage-data'
 import { hasUnverifiedClaudeExamDetails, isRetiredCredential, isUnavailableCredentialExam } from './credential-status'
 import importedQuestionCounts from './question-banks/imported/counts.json'
 import { getExamCodeTitleLabel, getRecognizedExamCode, SLUG_TO_EXAM_CODE } from './certification-exam-codes'
+import { completeSeoTitle } from './seo-title-helpers'
 export { SLUG_TO_EXAM_CODE } from './certification-exam-codes'
 
 const gitQuestionCounts: Record<string, number> = importedQuestionCounts
@@ -15,16 +16,6 @@ const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 /** Calendar year for generic title/H1 freshness labels; release names remain guide-specific. */
 const TITLE_YEAR = RELEASE_YEAR
-
-function finalizeMetaDescription(text: string): string {
-  const normalized = text.replace(/\s+/g, ' ').trim()
-  // Recognise any explicit CTA phrase so we don't append a duplicate.
-  const hasCta = /\bstart free\b|\bstart now\b|\bget started\b|\btry free\b|start practici|(start|get|try)\b[\s\S]{0,30}\b(now|today)\b/i.test(normalized)
-  const withCta = hasCta
-    ? normalized
-    : `${normalized.replace(/[.\s]*$/, '')}. Start free practice now.`
-  return withCta.length > 160 ? `${withCta.slice(0, 157)}...` : withCta
-}
 
 /** Build slug -> display name from certification categories (first occurrence wins) */
 function buildSlugToTitle(): Record<string, string> {
@@ -822,37 +813,32 @@ function expandTitleAbbreviations(label: string): string {
 
 function makePracticeExamTitle(label: string, code?: string): string {
   const prefix = code ? `${code} ` : ''
-  const variants = [...new Set([label, compactPracticeTitleLabel(label)])]
-  // Most of these titles came in well under the 60-character limit, which wastes
-  // the space a SERP will actually show. Spend it on the "Salesforce" qualifier,
-  // which is how people search, before falling back to the bare label. The code
-  // prefix has to stay first when there is one, so those are left as they were.
   const expanded = expandTitleAbbreviations(label)
-  const richest = [...new Set([expanded, label])]
-  const qualified =
+  const variants = [...new Set([expanded, label, compactPracticeTitleLabel(label)])]
+  const names =
     !code && acceptsSalesforceQualifier(label)
-      ? [...richest.map((name) => `Salesforce ${name}`), ...richest, ...variants]
-      : [...richest, ...variants]
-  const candidates = [...new Set(qualified)].map(
-    (name) => `${prefix}${name} Practice Exam ${TITLE_YEAR}`,
-  )
-  const title = candidates.find((candidate) => candidate.length <= 60)
+      ? [...variants.map((name) => `Salesforce ${name}`), ...variants]
+      : variants
+  const candidates = [...new Set(names)].flatMap((name) => [
+    `${prefix}${name} Practice Exam ${TITLE_YEAR}`,
+    `${prefix}${name}: Free Practice Exam ${TITLE_YEAR}`,
+    `${prefix}${name} Certification Practice Exam ${TITLE_YEAR}`,
+    `${prefix}${name} Certification: Free Practice Exam ${TITLE_YEAR}`,
+    `${prefix}${name}: Free Sample Practice Exam ${TITLE_YEAR}`,
+  ])
+  const title = candidates.find((candidate) => candidate.length >= 50 && candidate.length <= 60)
   if (title) return title
 
-  const suffix = `Practice Exam ${TITLE_YEAR}`
-  const maxLabelLength = 60 - prefix.length - suffix.length - 1
-  const compact = compactPracticeTitleLabel(label)
-  const slice = compact.slice(0, maxLabelLength)
-  const lastSpace = slice.lastIndexOf(' ')
-  const readable = lastSpace > 12 ? slice.slice(0, lastSpace) : slice
-  return `${prefix}${readable.trimEnd()} ${suffix}`
+  throw new Error(`No complete practice exam title fits ${label}`)
 }
 
 /** Shared title policy for current credentials; status exceptions retain their existing titles. */
 function getCertMetaTitle(slug: string): string {
   const legacyTitle = getLegacyCertMetaTitle(slug)
-  if (isRetiredCredential(slug) || isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
-    return legacyTitle
+  if (isRetiredCredential(slug)) return 'Salesforce AI Associate Historical Exam Guide & Study Notes'
+  if (slug === 'education-cloud-consultant') return 'Education Cloud: Closed Exam & Archived Study Guide'
+  if (isUnavailableCredentialExam(slug) || hasUnverifiedClaudeExamDetails(slug)) {
+    return completeSeoTitle(legacyTitle, ['Exam Guide', 'Study Notes'])
   }
 
   const examCode = getRecognizedExamCode(slug)
@@ -864,210 +850,43 @@ function getCertMetaTitle(slug: string): string {
   return makePracticeExamTitle(getReadablePracticeTitleLabel(legacyTitle))
 }
 
-/**
- * Meta description built from the verified exam logistics.
- *
- * 82 of the 93 certification pages previously shared one generic line that
- * ended by telling the searcher to go and check the issuer's guide, which is a
- * poor use of the only sentence shown in a search result. The hand-written
- * ctrDescriptionOverrides read better, but 12 of them contradict
- * SLUG_TO_EXAM_LOGISTICS on the passing score, so they are not a safe source.
- *
- * Generating from the logistics table keeps one source of truth: the figures
- * here always match what the page itself shows. Where a credential has no
- * logistics row, the cautious wording is kept.
- */
-function buildLogisticsDescription(slug: string, certName: string): string {
-  const name = getCertPrimaryName(slug, certName)
-  const detail = SLUG_TO_EXAM_LOGISTICS[slug]
-  if (!detail) {
-    return `${name}: free sample practice questions and study topics. Check the issuer’s current guide for exam format, fees, and objectives.`
-  }
-  const format = [
-    detail.questions ? `${detail.questions} questions` : null,
-    detail.passingScore ? `${detail.passingScore} to pass` : null,
-    detail.duration ? detail.duration : null,
-  ]
-    .filter(Boolean)
-    .join(', ')
-  // Richest first, so a long credential name degrades gracefully under the
-  // 160-character limit rather than being truncated mid-sentence.
-  const candidates = [
-    `${name}: free practice questions with explanations, plus ${TITLE_YEAR} study topics. Official format: ${format}. No sign-up.`,
-    `${name}: free practice questions and ${TITLE_YEAR} study topics. Official format: ${format}. No sign-up.`,
-    `${name}: free practice questions. Official format: ${format}. No sign-up.`,
-    `${name}: free practice questions. ${format}.`,
-  ]
-  return candidates.find((candidate) => candidate.length <= 140) ?? candidates[candidates.length - 1]
-}
-
-/** Unique meta description 140–160 chars for certification pages. Rendered as <meta name="description" content="..."> in <head>. */
+/** Complete descriptions that avoid unverified exam logistics and preserve status notices. */
 export function getCertMetaDescription(slug: string): string {
-  const certName = slugToDisplayName(slug)
-  const examCode = SLUG_TO_EXAM_CODE[slug]
-  const formerName = getCertFormerName(slug)
-  const examCost = getExamCost(slug)
+  const certName = getCertPrimaryName(slug, slugToDisplayName(slug))
   if (hasUnverifiedClaudeExamDetails(slug)) {
-    const titles: Record<string, string> = {
-      'claude-certified-associate': 'Claude Certified Associate – Foundations',
-      'claude-certified-developer': 'Claude Certified Developer – Foundations',
-      'claude-certified-architect-foundations': 'Claude Certified Architect – Foundations',
-      'claude-certified-architect-professional': 'Claude Certified Architect – Professional',
-    }
-    const credential = titles[slug] || 'Claude certification'
-    return `${credential}: learning notes and practice questions. Availability, format, and fees unverified; confirm with Anthropic.`
+    const credential = certName.replace(/^Claude Certified\s+/i, 'Claude ')
+    return `${credential}: review learning notes and questions. Exam status and format are unverified; check Anthropic.`
   }
   if (slug === 'education-cloud-consultant') {
-    return 'Education Cloud Consultant exam closed August 2026; credential retirement is scheduled for February 2027. Archived objectives and learning notes.'
+    return 'Education Cloud Consultant exam closed August 2026. Review archived objectives and notes; retirement is planned for February 2027.'
   }
   if (isRetiredCredential(slug)) {
-    return 'Salesforce retired AI Associate in February 2026. Keep this page as historical AI learning notes; explore Agentblazer for current Salesforce AI learning.'
+    return 'AI Associate retired February 2026. Review historical exam notes, or explore Agentblazer for current Salesforce AI learning.'
   }
-  const ctrDescriptionOverrides: Record<string, string> = {
-    'app-builder':
-      `Platform App Builder certification (DEV-402): 60 questions, 105 min, 65% passing. Start free: 15 sample questions, no sign-up. ${TITLE_YEAR} study guide.`,
-    administrator:
-      `Free sample practice questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'marketing-cloud-consultant':
-      `Marketing Cloud Consultant: Free sample practice questions; official exam format: 60 questions; no sign-up, 67% passing. Sample Qs, exam tips & ${TITLE_YEAR} study guide.`,
-    'business-analyst':
-      `Business Analyst certification: Free sample practice questions; official exam format: 60 questions; no sign-up, ~65% passing, 105 min. Sample Qs & ${TITLE_YEAR} study guide.`,
-    'sales-cloud':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'advanced-administrator':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'email-specialist':
-      'Email Specialist practice: official guide lists 60 scored questions plus up to 5 unscored, 90 minutes and 67% passing. Start free practice.',
-    'mulesoft-hyperautomation-developer':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'sharing-visibility-architect':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 67% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'identity-access-management-architect':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'developer-2':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'cpq-administrator':
-      `CPQ certification: Free Salesforce CPQ Administrator practice. Start free: 15 sample questions, 60 exam Q, ~65% passing. ${TITLE_YEAR} study guide. $200 fee.`,
-    'pardot-consultant':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'pardot-specialist':
-      `Free Pardot Specialist certification practice: 60 questions, 72% passing score, 90 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'experience-cloud':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'slack-developer':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-data-analyst':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'mulesoft-integration-foundations':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~70% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'technical-architect':
-      `Free CTA practice scenarios: board-style design questions, solution defense prep, and architecture trade-off drills. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
-    'technical-architect-review-board':
-      `Free CTA Review Board prep: practice presenting and defending architecture decisions, scenario walkthroughs, and board Q&A drills. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
-    'integration-architect':
-      `Integration Architect: Free practice exam, no sign-up. 60 Qs, 67% passing. $400 fee. Sample Qs & ${TITLE_YEAR} guide.`,
-    'data-architect':
-      `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 58% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'system-architect':
-      `Salesforce System Architect: no separate exam. Earned with PD1, Integration, IAM and Dev Lifecycle Architect. Free sample questions and ${TITLE_YEAR} study guide.`,
-    // Extended coverage: All remaining certs for universal CTR optimization
-    'advanced-field-service-ap': `Advanced Field Service AP exam prep: covers work order lifecycle, scheduling optimization & mobile worker tools. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'administrator-practice-test': `Free ADM-201 mock test: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'agentforce-specialist': 'Agentforce Specialist practice: official guide lists 60 scored questions plus up to 5 unscored, 105 minutes and 72% passing. Start free practice.',
-    'ai-associate': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 65% passing score, 70 min. Exam retired Feb 2026. ${RELEASE_YEAR}, no sign-up.`,
-    'application-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~58% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'b2b-commerce-admin-ap': `B2B Commerce Admin AP exam prep: covers storefront setup, catalog management, buyer groups & entitlements. 60 Qs, 75% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'b2b-commerce-developer-ap': `B2B Commerce Developer AP exam prep: covers storefront customization, APIs, checkout & integration. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'b2b-solution-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions, key concepts and exam tips. 60 questions, $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'b2c-commerce-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions, key concepts and exam tips. 60 questions, 105 min, $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'b2c-commerce-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'b2c-solution-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'communications-cloud-ap': `Communications Cloud AP exam prep: covers telecom billing, subscriptions, product catalog & order management. 55 Qs, 56% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'consumer-goods-cloud-ap': `Consumer Goods Cloud AP exam prep: covers retail execution, visits, surveys & route accounting. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'consumer-goods-tpm-ap': `Consumer Goods TPM AP exam prep: covers trade promotion planning, fund management & deductions. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'contact-center-ap': `Contact Center AP exam prep: covers Service Cloud Voice, CTI, omni-channel routing & agent experience. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'cpq-billing-ap': `CPQ & Billing AP exam prep: covers configure-price-quote, subscription billing, amendments & renewals. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'crm-analytics-einstein-discovery-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'data-360-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'developer-1': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'dev-lifecycle-deployment-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 65% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'education-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'email-specialist-practice-test': `Free Email Specialist mock test: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'energy-utilities-ap': `Energy & Utilities AP exam prep: covers meter management, rates, service agreements & billing. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'field-service': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'financial-services-cloud-ap': `Financial Services Cloud AP exam prep: covers wealth management, insurance, mortgages & referral management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'health-cloud-ap': `Health Cloud AP exam prep: covers patient management, care coordination, care plans & provider search. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'heroku-architect': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions on dynos, data, Private Spaces and Heroku Connect. 60 questions, $400 fee. ${RELEASE_YEAR}.`,
-    'heroku-developer-ap': `Heroku Developer AP exam prep: covers dynos, pipelines, add-ons, deployment & Heroku Postgres. 60 Qs, 68% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'industries-cpq-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'javascript-developer-i': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'lightning-web-components-specialist': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'loyalty-management-ap': `Loyalty Management AP exam prep: covers loyalty programs, points, tiers, member benefits & partner integration. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'manufacturing-cloud-ap': `Manufacturing Cloud AP exam prep: covers run rate business, account-based forecasting & rebate management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'marketing-cloud-advanced-cross-channel-ap': `MC Advanced Cross-Channel AP exam prep: covers MC Advertising, Social, Push & Journey Builder integrations. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'marketing-cloud-engagement-admin': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'marketing-cloud-engagement-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~67% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'marketing-cloud-engagement-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'marketing-cloud-intelligence-ap': `MC Intelligence AP exam prep: covers Datorama data connectors, dashboards, KPI tracking & AI insights. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'marketing-cloud-personalization-ap': `MC Personalization AP exam prep: covers real-time segmentation, Einstein decisions & Interaction Studio. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'media-cloud-ap': `Media Cloud AP exam prep: covers media rights management, ad sales, revenue recognition & media orders. 60 Qs, 66% pass, 75 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'mulesoft-catalyst-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'mulesoft-developer-i': 'MuleSoft Developer study notes and original practice questions. Check the linked official exam guide and current booking details. Start free practice.',
-    'mulesoft-developer-ii': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~70% passing score, 120 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'mulesoft-integration-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; exam format: about 60 questions, 70% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'mulesoft-platform-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~68% passing score, 120 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'net-zero-cloud-ap': `Net Zero Cloud AP exam prep: covers carbon accounting, emissions tracking, ESG reporting & sustainability goals. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'nonprofit-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'nonprofit-success-pack-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'omnistudio-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'omnistudio-developer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'order-management-admin-ap': `Order Management Admin AP exam prep: covers order lifecycle, fulfillment, returns & inventory management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'order-management-developer-ap': `Order Management Developer AP exam prep: covers OMS APIs, custom flows, integrations & developer toolkit. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'platform-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, ~65% passing score, 75 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'process-automation-ap': `Process Automation AP exam prep: covers Flow Builder, approval processes, automation rules & invocable actions. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'public-sector-solutions-ap': `Public Sector Solutions AP exam prep: covers grants management, licensing, inspections & case management. 60 Qs, ~65% pass, 90 min. $150 fee. ${RELEASE_YEAR} guide.`,
-    'revenue-cloud-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'sales-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 62% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'service-cloud': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 78% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'slack-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'slack-consultant': `${getCertPrimaryName(slug, certName)}: Free scenario practice questions on rollout, Workflow Builder, governance and adoption. 60 questions, $200 fee. ${RELEASE_YEAR}.`,
-    'strategy-designer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 70% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-architect': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 59 questions, 63% passing score, 105 min. $400 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-consultant': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, 63% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-desktop-foundations': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 40 questions, 48% passing score, 70 min. $75 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'tableau-server-administrator': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    'technical-architect-evaluation': `Free CTA Evaluation prep: scenario-based architecture questions, multiple-choice sections, and timed design exercises. $6,000 total fee. ${RELEASE_YEAR}, no sign-up.`,
-    'ux-designer': `${getCertPrimaryName(slug, certName)}: Free sample questions; official exam format: 60 questions, ~65% passing score, 105 min. $200 fee. ${RELEASE_YEAR}, no sign-up.`,
-    // Claude (Anthropic) certifications
+
+  const shortName = certName
+    .replace(/^Salesforce Certified\s+/i, '')
+    .replace(/\s+Certification\b/i, '')
+    .trim()
+  // Prefer the full credential name. For long names, use the same distinct,
+  // readable label already chosen for the title; a recognized code is the last
+  // resort. Each sentence stays complete and avoids unverified exam claims.
+  const labels = [...new Set([
+    shortName,
+    getReadablePracticeTitleLabel(getLegacyCertMetaTitle(slug)),
+    getRecognizedExamCode(slug),
+  ].filter((label): label is string => Boolean(label)))]
+  const descriptions = (label: string) => [
+    `${label}: review exam objectives, section weightage, and study notes. Try free sample questions; check the issuer's current guide.`,
+    `${label}: review exam topics and study notes. Try free sample questions; check the issuer's current guide.`,
+    `${label}: review exam topics and try free sample questions. Confirm exam details with the issuer's current guide.`,
+    `${label}: study exam topics and try free sample questions. Confirm the current format with the issuer.`,
+  ]
+  for (const label of labels) {
+    const description = descriptions(label).find((candidate) => candidate.length >= 100 && candidate.length <= 130)
+    if (description) return description
   }
-  const override = ctrDescriptionOverrides[slug]
-  if (override) {
-    if (slug === 'administrator') {
-      return finalizeMetaDescription(`Salesforce Administrator (ADM-201): free sample practice questions; official exam format is 60 questions. Check current fees and objectives in the official guide.`)
-    }
-    if (slug === 'revenue-cloud-consultant') {
-      return finalizeMetaDescription(`Salesforce Revenue Management Consultant: free sample questions; official guide lists 60 questions, 63% passing score, and 105 minutes. ${TITLE_YEAR} study topics.`)
-    }
-    if (slug === 'system-architect' || slug === 'application-architect' || slug === 'pardot-specialist') {
-      return finalizeMetaDescription(`${getCertPrimaryName(slug, certName)}: free sample questions and study topics. Check the issuer’s current guide for exam format, fees, and objectives.`)
-    }
-    return finalizeMetaDescription(buildLogisticsDescription(slug, certName))
-  }
-  const primaryName = getCertPrimaryName(slug, certName)
-  const standardized = `Prepare for the ${primaryName}${examCode ? ` (${examCode})` : ''} exam with a ${TITLE_YEAR}-updated study guide, section-wise weightage, and free practice questions. No sign-up required.`
-  const desc =
-    formerName && standardized.length < 145
-      ? `${primaryName}${examCode ? ` (${examCode})`: ''}, formerly ${formerName}. ${standardized}`
-      : standardized
-  
-  const finalDesc = finalizeMetaDescription(desc)
-  
-  // Safety guard: ensure we never return undefined (per AI recommendation)
-  // This prevents Next.js from silently dropping the meta description tag
-  return (
-    finalDesc ??
-    `Prepare for the Salesforce ${certName} certification. Practice questions, exam weightage, and study guide.`
-  )
+  throw new Error(`No complete SEO description fits the published credential ${slug}`)
 }
 
 /** Practice test pages map to their parent cert for canonical (duplicate without user-selected canonical fix). */
@@ -1076,7 +895,7 @@ const PRACTICE_TEST_TO_PARENT: Record<string, string> = {
   'email-specialist-practice-test': 'email-specialist',
 }
 
-/** SEO metadata for a certification page: unique title <60 chars (absolute), description 140–160, canonical. */
+/** SEO metadata for a certification page with canonical URL and aligned social tags. */
 export function getCertMetadata(slug: string): Metadata {
   const certName = slugToDisplayName(slug)
   const examCode = SLUG_TO_EXAM_CODE[slug]

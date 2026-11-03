@@ -18,7 +18,7 @@ const slug = 'marketing-cloud-advanced-cross-channel-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Advanced Cross-Channel AP exam tips for ${RELEASE_CURRENT}: Journey Builder, mobile push, advertising audiences.`
+  'Prepare for Marketing Cloud Advanced Cross-Channel AP with Journey Builder, mobile push, and advertising audience topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

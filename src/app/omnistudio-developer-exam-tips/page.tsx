@@ -18,9 +18,7 @@ const slug = 'omnistudio-developer'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce OmniStudio Developer exam tips for ${RELEASE_CURRENT}: FlexCards, OmniScripts, DataRaptors, Integration Procedures Free practice questions.`
-
+const pageDescription = `Salesforce OmniStudio Developer exam tips for ${RELEASE_CURRENT}: review FlexCards, OmniScripts, DataRaptors, and Integration Procedures.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

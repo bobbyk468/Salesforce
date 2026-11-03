@@ -18,9 +18,7 @@ const slug = 'pardot-consultant'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Pardot Consultant exam tips for ${RELEASE_CURRENT}: lead nurturing, scoring, grading, Salesforce sync, engagement studio. Pass first attempt.`
-
+const pageDescription = `Pardot Consultant exam tips for ${RELEASE_CURRENT}: review lead nurturing, scoring, grading, Salesforce sync, and Engagement Studio.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

@@ -3,27 +3,27 @@ import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og?t=Privacy%20Policy%20%7C%20Trailblaze%20Prep`
+const ogImageUrl = `${baseUrl}/og?t=Certification%20Prep%20Privacy%20Policy%20%7C%20Trailblaze%20Prep`
 
 export const metadata: Metadata = {
-  title: { absolute: 'Privacy Policy | Trailblaze Prep' },
+  title: { absolute: 'Certification Prep Privacy Policy | Trailblaze Prep' },
   description:
-    'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
+    'Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.',
   alternates: { canonical: `${baseUrl}/privacy` },
   openGraph: {
-    title: 'Privacy Policy | Trailblaze Prep',
+    title: 'Certification Prep Privacy Policy | Trailblaze Prep',
     description:
-      'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
+      'Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.',
     type: 'website',
     url: `${baseUrl}/privacy`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Privacy Policy | Trailblaze Prep' }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Certification Prep Privacy Policy | Trailblaze Prep' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Privacy Policy | Trailblaze Prep',
+    title: 'Certification Prep Privacy Policy | Trailblaze Prep',
     description:
-      'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
-    images: [{ url: ogImageUrl, alt: 'Privacy Policy | Trailblaze Prep' }],
+      'Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.',
+    images: [{ url: ogImageUrl, alt: 'Certification Prep Privacy Policy | Trailblaze Prep' }],
   },
 }
 
@@ -31,9 +31,9 @@ const privacyBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Privacy Policy',
 
 export default function PrivacyPage() {
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'Privacy Policy | Trailblaze Prep',
+    name: 'Certification Prep Privacy Policy | Trailblaze Prep',
     description:
-      'Privacy policy for Trailblaze Prep, an independent Salesforce certification preparation resource. How we handle your data and contact information.',
+      'Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.',
     path: '/privacy',
     breadcrumbItems: privacyBreadcrumb,
   })

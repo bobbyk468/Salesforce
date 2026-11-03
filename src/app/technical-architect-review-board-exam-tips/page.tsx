@@ -14,9 +14,7 @@ const slug = 'technical-architect-review-board'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `CTA Review Board tips: scenario presentation, whiteboarding, panel Q&A. How to pass the live architecture defence Free practice questions.`
-
+const pageDescription = `CTA Review Board tips cover scenario presentations, whiteboarding, and panel questions for the live architecture defence.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

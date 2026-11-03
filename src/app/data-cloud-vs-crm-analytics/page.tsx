@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'Data Cloud vs CRM Analytics Consultant: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Data Cloud vs CRM Analytics Consultant: what each tests, career use cases. Which to prioritise. Free practice questions.'
+  'Compare Data Cloud and CRM Analytics Consultant credentials by exam focus and career use cases to choose a suitable path.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

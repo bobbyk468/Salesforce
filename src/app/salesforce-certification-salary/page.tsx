@@ -9,9 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = `Salesforce Certification Salary Guide (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Compare Salesforce salaries by certification: Administrator, Developer, Consultant, Marketing Cloud, and Architect tracks, with top-paying certs.`
-
+const pageDescription = `Compare Salesforce salaries for Administrator, Developer, Consultant, Marketing Cloud, and Architect credentials.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

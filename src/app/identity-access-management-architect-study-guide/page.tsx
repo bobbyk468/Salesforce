@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'identity-access-management-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Salesforce IAM Architect study guide (${RELEASE_CURRENT}): SAML, OAuth 2.0, SSO design, connected apps, MFA. $400 fee, 60 questions, ~68% passing score.`
+const pageDescription = 'Study IAM Architect topics including SAML, OAuth 2.0, SSO design, connected apps, and multifactor authentication.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

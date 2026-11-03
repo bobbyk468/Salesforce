@@ -18,7 +18,7 @@ const slug = 'cpq-billing-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CPQ &amp; Billing Accredited Professional exam tips for ${RELEASE_CURRENT}: product configuration, pricing, contracts, invoicing.`
+  'Prepare for the CPQ and Billing AP exam by reviewing product configuration, pricing, contracts, and invoicing topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -5,27 +5,28 @@ import { CTA_JOURNEY_PHASES, getCtaJourneyCertCount, getCtaJourneyRequiredCount 
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const metadataTitle = 'Become a Salesforce CTA: Career Path | Trailblaze Prep'
 const ctaTitle = 'Become a Salesforce CTA | Trailblaze Prep'
-const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(ctaTitle)}`
+const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const ctaDescription =
-  'Complete path to Salesforce CTA certification from beginner to board review. Covers Admin, Developer, Domain & System Architect prerequisites.'
+  'Follow the Salesforce CTA path from foundational certifications through architecture prerequisites to board review.'
 
 export const metadata: Metadata = {
-  title: { absolute: ctaTitle },
+  title: { absolute: metadataTitle },
   description: ctaDescription,
   alternates: { canonical: `${baseUrl}/become-cta` },
   openGraph: {
-    title: ctaTitle,
+    title: metadataTitle,
     description: ctaDescription,
     type: 'article',
     url: `${baseUrl}/become-cta`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: ctaTitle }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: ctaTitle,
+    title: metadataTitle,
     description: ctaDescription,
-    images: [{ url: ogImageUrl, alt: ctaTitle }],
+    images: [{ url: ogImageUrl, alt: metadataTitle }],
   },
 }
 

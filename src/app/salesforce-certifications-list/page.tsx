@@ -10,8 +10,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = `All Salesforce Certifications (${RELEASE_CURRENT}): List by Role`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Complete Salesforce certifications list (${RELEASE_CURRENT}) grouped by role: Admin, Developer, Architect, Consultant, and more. Free practice.`
+const pageDescription = `Complete Salesforce certification list for ${RELEASE_CURRENT}, grouped by Admin, Developer, Architect, Consultant, and other career roles.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -17,9 +17,7 @@ const slug = 'process-automation-ap'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Process Automation Accredited Professional exam tips for ${RELEASE_CURRENT}: Flow Builder, automation strategy, governor limits.`
-
+const pageDescription = `Salesforce Process Automation AP exam tips for ${RELEASE_CURRENT}: review Flow Builder, automation strategy, and governor limits.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

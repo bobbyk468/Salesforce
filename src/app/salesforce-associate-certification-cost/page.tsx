@@ -8,8 +8,7 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Associate Certification Cost (${RELEASE_CURRENT})`
-const pageDescription = 'Salesforce associate certification cost, exam format, best first options, and what to take after Platform Foundations or AI Associate.'
-
+const pageDescription = `Compare Salesforce associate exam costs, formats, first credentials, and next steps after Platform Foundations or AI Associate.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
@@ -20,6 +19,12 @@ export const metadata: Metadata = {
     type: 'article',
     url: `${siteUrl}/salesforce-associate-certification-cost`,
     images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
 }
 

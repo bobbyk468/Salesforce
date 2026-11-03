@@ -6,24 +6,24 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Which Salesforce Cert to Get First? (${RELEASE_CURRENT})`
-const pageDescription = `Which Salesforce certification to take first in 2026: recommendations by background and career goal, with study time and cost for each path.`
-
+const metadataTitle = 'Which Salesforce Certification Should You Get First?'
+const pageDescription = `Choose your first Salesforce certification by background and career goal, with advice on study time, cost, and next steps.`
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/which-salesforce-certification-first` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/which-salesforce-certification-first`,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, alt: metadataTitle }],
   },
 }
 

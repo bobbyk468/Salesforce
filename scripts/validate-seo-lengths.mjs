@@ -1,26 +1,16 @@
 #!/usr/bin/env node
-/**
- * SEO title & description length validator.
- * Scans the Next.js build output (.next/server/app) HTML files and asserts:
- *   - <title> ≤ 60 characters
- *   - <meta name="description"> ≤ 160 characters
- *
- * Usage (run after npm run build):
- *   node scripts/validate-seo-lengths.mjs
- *
- * Exit code 1 if any violations found — safe to add as a CI step.
- */
-
-import { existsSync, readFileSync, readdirSync } from 'fs'
-import { join } from 'path'
+/** Validate the site's chosen title (50–60) and description (100–130) ranges. */
+import { existsSync, readFileSync, readdirSync, writeFileSync } from 'node:fs'
+import { join } from 'node:path'
+import { parseDocument } from 'htmlparser2'
+import { selectOne } from 'css-select'
 
 const BUILD_DIR = join(process.cwd(), '.next/server/app')
+const TITLE_MIN = 50
 const TITLE_MAX = 60
-const DESC_MAX = 160
-// Advisory, not a violation: a title well under the limit wastes space the
-// search result would have shown. Utility pages are legitimately short, so this
-// reports rather than fails, to make drift visible.
-const TITLE_SHORT = 50
+const DESC_MIN = 100
+const DESC_MAX = 130
+const reportPath = process.argv.find((arg) => arg.startsWith('--report='))?.slice('--report='.length)
 
 function* walkHtml(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -30,80 +20,54 @@ function* walkHtml(dir) {
   }
 }
 
-function decodeHtmlEntities(str) {
-  return str
-    .replace(/&amp;/g, '&')
-    .replace(/&lt;/g, '<')
-    .replace(/&gt;/g, '>')
-    .replace(/&quot;/g, '"')
-    .replace(/&#x27;/g, "'")
-    .replace(/&#39;/g, "'")
-    .replace(/&apos;/g, "'")
-    .replace(/&#x2026;/g, '…')
-    .replace(/&#(\d+);/g, (_, n) => String.fromCharCode(Number(n)))
+function textContent(node) {
+  if (node?.type === 'text') return node.data
+  return (node?.children ?? []).map(textContent).join('')
 }
-
-function extractTitle(html) {
-  const m = html.match(/<title[^>]*>([^<]*)<\/title>/)
-  return m ? decodeHtmlEntities(m[1].trim()) : null
-}
-
-function extractDescription(html) {
-  const m = html.match(/<meta\s+name="description"\s+content="([^"]*)"/)
-    ?? html.match(/<meta\s+content="([^"]*)"\s+name="description"/)
-  return m ? decodeHtmlEntities(m[1].trim()) : null
-}
-
-let violations = 0
-let shortTitles = 0
-let checked = 0
 
 if (!existsSync(BUILD_DIR)) {
   console.error('No production build found. Run npm run build before validating metadata.')
   process.exit(1)
 }
 
-// Framework error boundaries are never indexed and carry no metadata of their
-// own. Next 16 emits _global-error.html, which would otherwise fail the
-// missing-description check.
-const SKIP = new Set(['/_global-error'])
-
+const pages = []
+let violations = 0
+// Framework error boundaries have no standalone searchable metadata.
+const SKIP = new Set(['/_global-error.html'])
 for (const file of walkHtml(BUILD_DIR)) {
-  const html = readFileSync(file, 'utf8')
-  const relPath = file.replace(BUILD_DIR, '').replace(/\/page\.html$/, '') || '/'
-  if (SKIP.has(relPath.replace(/\.html$/, ''))) continue
-
-  const title = extractTitle(html)
-  const desc = extractDescription(html)
-  checked++
-
-  if (title && title.length < TITLE_SHORT) shortTitles++
-  if (title && title.length > TITLE_MAX) {
-    console.error(`TITLE TOO LONG (${title.length} chars) on ${relPath}:\n  "${title}"`)
-    violations++
+  const relative = file.slice(BUILD_DIR.length).replaceAll('\\', '/')
+  if (SKIP.has(relative)) continue
+  const route = relative.replace(/(?:\/index)?\.html$/, '') || '/'
+  const doc = parseDocument(readFileSync(file, 'utf8'))
+  const title = textContent(selectOne('head > title', doc)).trim()
+  const description = selectOne('meta[name="description"]', doc)?.attribs.content?.trim() ?? ''
+  const titleLength = Array.from(title).length
+  const descriptionLength = Array.from(description).length
+  const issues = []
+  for (const [label, value, length, min, max] of [
+    ['TITLE', title, titleLength, TITLE_MIN, TITLE_MAX],
+    ['DESC', description, descriptionLength, DESC_MIN, DESC_MAX],
+  ]) {
+    if (!value) issues.push(`MISSING ${label}`)
+    else if (length < min) issues.push(`${label} TOO SHORT (${length} chars)`)
+    else if (length > max) issues.push(`${label} TOO LONG (${length} chars)`)
   }
-  if (desc && desc.length > DESC_MAX) {
-    console.error(`DESC TOO LONG (${desc.length} chars) on ${relPath}:\n  "${desc}"`)
-    violations++
-  }
-  if (!title) {
-    console.warn(`MISSING TITLE on ${relPath}`)
-    violations++
-  }
-  if (!desc) {
-    console.warn(`MISSING DESC on ${relPath}`)
-    violations++
-  }
+  for (const issue of issues) console.error(`${issue} on ${route}`)
+  violations += issues.length
+  pages.push({ route, title, titleLength, description, descriptionLength, issues })
 }
 
-if (checked === 0) {
+if (pages.length === 0) {
   console.error('No HTML pages found; metadata validation did not run.')
   process.exit(1)
 }
-
-console.log(`\nChecked ${checked} pages. Violations: ${violations}`)
-if (shortTitles > 0) {
-  console.log(`Note: ${shortTitles} titles under ${TITLE_SHORT} chars (limit ${TITLE_MAX}) — unused SERP space.`)
+const report = {
+  ranges: { title: [TITLE_MIN, TITLE_MAX], description: [DESC_MIN, DESC_MAX] },
+  checked: pages.length,
+  violations,
+  pages,
 }
-if (violations > 0) process.exit(1)
-else console.log('All titles ≤60 chars and descriptions ≤160 chars. ✓')
+if (reportPath) writeFileSync(reportPath, `${JSON.stringify(report, null, 2)}\n`)
+console.log(`\nChecked ${pages.length} pages. Violations: ${violations}`)
+if (violations > 0) process.exitCode = 1
+else console.log('All titles 50–60 chars and descriptions 100–130 chars. ✓')

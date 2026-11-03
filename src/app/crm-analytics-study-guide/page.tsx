@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'crm-analytics-einstein-discovery-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `CRM Analytics study guide: dataflows, recipes, SAQL, dashboards. $200, 60 questions, ~67% pass. Free practice questions.`
+const pageDescription = 'Review CRM Analytics study topics including dataflows, recipes, SAQL, dashboards, and exam format details.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

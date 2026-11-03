@@ -17,9 +17,7 @@ const slug = 'net-zero-cloud-ap'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Net Zero Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: carbon accounting, emissions tracking, sustainability reporting.`
-
+const pageDescription = `Net Zero Cloud AP exam tips for ${RELEASE_CURRENT}: review carbon accounting, emissions data, and sustainability reporting topics.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

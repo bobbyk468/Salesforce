@@ -15,7 +15,7 @@ const slug = 'mulesoft-catalyst-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Catalyst Consultant exam tips for ${RELEASE_CURRENT}: Catalyst methodology, IT operating model, API programme design Free practice questions.`
+  `MuleSoft Catalyst Consultant exam tips for ${RELEASE_CURRENT}: Catalyst methodology, IT operating model, API programme design.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -5,7 +5,7 @@ import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import { DeferredStickyContentCta, DeferredDesktopSidebarSlot, DeferredChatBot, DeferredFloatingContactButtons } from '@/components/DeferredSiteChrome'
 
-import { SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
+import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE, SITE_NAME, SOCIAL_LINKS } from '@/lib/constants'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,9 +22,8 @@ export const viewport: Viewport = {
   themeColor: '#0176D3', // Salesforce blue
 }
 
-const defaultTitle = `Free Salesforce Practice Exams | ${SITE_NAME}`
-const defaultDescription =
-  'Free Salesforce certification prep: original practice questions and study guides for Admin, Developer, Consultant and Architect tracks.'
+const defaultTitle = SITE_DEFAULT_TITLE
+const defaultDescription = SITE_DEFAULT_DESCRIPTION
 
 export const metadata: Metadata = {
   // Hardcode metadataBase for stability (per Gemini recommendation)

@@ -18,7 +18,7 @@ const slug = 'manufacturing-cloud-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Manufacturing Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: sales agreements, account-based forecasting, partner management.`
+  'Review Manufacturing Cloud AP topics covering sales agreements, account-based forecasting, and partner management.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -17,9 +17,7 @@ const slug = 'order-management-developer-ap'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Order Management Developer AP exam tips for ${RELEASE_CURRENT}: OMS APIs, Flow customisation, headless integration Free practice questions.`
-
+const pageDescription = `Salesforce Order Management Developer AP exam tips for ${RELEASE_CURRENT}: review OMS APIs, Flow customisation, and headless integration.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

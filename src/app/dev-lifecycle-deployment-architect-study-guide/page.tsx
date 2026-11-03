@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'dev-lifecycle-deployment-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Dev Lifecycle & Deployment Architect study guide: org strategy, CI/CD, packaging, release management. $400, 60 questions, ~68% passing.`
+const pageDescription = 'Review Dev Lifecycle and Deployment Architect topics covering org strategy, CI/CD, packaging, and release management.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -5,10 +5,8 @@ import { CONTACT_EMAIL, SITE_NAME } from '@/lib/constants'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Editorial Team | ${SITE_NAME}`
-const pageDescription =
-  'Trailblaze Prep content by Krishna Mohan, multi-certified Salesforce professional with hands-on Admin, Developer, and Consultant experience.'
-
+const pageTitle = `Salesforce Certification Editorial Team | ${SITE_NAME}`
+const pageDescription = `Meet Krishna Mohan, a multi-certified Salesforce professional with hands-on Admin, Developer, and Consultant experience.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
@@ -20,6 +18,12 @@ export const metadata: Metadata = {
     url: `${baseUrl}/team`,
     siteName: 'Trailblaze Prep',
     images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
   },
 }
 

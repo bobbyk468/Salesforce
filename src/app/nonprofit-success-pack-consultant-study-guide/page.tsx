@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'nonprofit-success-pack-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `NPSP Consultant study guide: exam sections, household data model, fundraising, gift management. Pass in 2026 Free practice questions.`
-
+const pageDescription = `NPSP Consultant study guide: review household data, fundraising, gift management, and exam sections with free practice questions.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

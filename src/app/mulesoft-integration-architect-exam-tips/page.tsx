@@ -19,7 +19,7 @@ const slug = 'mulesoft-integration-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Integration Architect exam tips for ${RELEASE_CURRENT}: enterprise integration design, Anypoint architecture patterns, API-led connectivity.`
+  'Prepare for MuleSoft Integration Architect with enterprise integration design, Anypoint architecture, and API-led connectivity.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -18,9 +18,7 @@ const slug = 'tableau-data-analyst'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Tableau Data Analyst exam tips (${RELEASE_CURRENT}): 4-week study plan, LOD expressions, context filters, and exam strategies. Start free now.`
-
+const pageDescription = `Tableau Data Analyst exam tips for ${RELEASE_CURRENT}: review LOD expressions, context filters, and strategies in a four-week plan.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

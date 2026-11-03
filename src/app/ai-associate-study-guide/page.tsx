@@ -4,15 +4,16 @@ import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const title = 'AI Associate: Historical Learning Guide'
-const description = 'AI Associate retired in February 2026. Explore AI fundamentals, responsible data use, and current Salesforce AI learning resources.'
+const metadataTitle = 'AI Associate: Historical Learning Guide | Salesforce'
+const description = 'AI Associate retired in February 2026. Review AI concepts, responsible data use, and current Salesforce learning resources.'
 const path = '/ai-associate-study-guide'
 const url = `https://www.trailblazeprep.com${path}`
 
 export const metadata: Metadata = {
-  title: { absolute: title }, description,
+  title: { absolute: metadataTitle }, description,
   alternates: { canonical: url },
-  openGraph: { title, description, url, type: 'article' },
-  twitter: { card: 'summary_large_image', title, description },
+  openGraph: { title: metadataTitle, description, url, type: 'article' },
+  twitter: { card: 'summary_large_image', title: metadataTitle, description },
 }
 
 export default function HistoricalAiResource() {

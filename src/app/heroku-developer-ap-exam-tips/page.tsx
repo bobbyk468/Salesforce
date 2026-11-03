@@ -18,7 +18,7 @@ const slug = 'heroku-developer-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Heroku Developer Accredited Professional exam tips for ${RELEASE_CURRENT}: Heroku deployments, dynos, add-ons, Salesforce integration.`
+  'Prepare for the Heroku Developer AP exam with review topics on deployments, dynos, add-ons, and Salesforce integration.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -12,7 +12,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Salesforce Consultant Cert Path (${RELEASE_CURRENT}): Which Order?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce consultant certification path (${RELEASE_CURRENT}): right order for Sales Cloud, Service Cloud, Experience Cloud, Field Service. Start free practice now.`
+  'Plan a Salesforce consultant certification path across Sales Cloud, Service Cloud, Experience Cloud, and Field Service.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

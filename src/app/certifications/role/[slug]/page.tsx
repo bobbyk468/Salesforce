@@ -332,29 +332,28 @@ const ROLE_FAQS: Record<string, FaqItem[]> = {
   ],
 }
 
-const ROLE_DESCRIPTIONS: Record<string, string> = {
-  architect:
-    'Salesforce Architect salary ($130K–$200K+), career path to CTA, daily responsibilities, and which architect cert to take first. Role overview and roadmap.',
-  consultant:
-    'Salesforce Consultant salary ($80K–$145K), career path, daily responsibilities, and which consultant cert to start with. Role guide and roadmap.',
-  marketing:
-    'Marketing Cloud career guide: salary ($65K–$125K), daily responsibilities, career path from Email Specialist to Consultant. Role overview and roadmap.',
-  associate:
-    'Salesforce Associate roles: entry salary ($50K–$70K), career path, skills needed, and which associate cert to start with. Role overview and roadmap.',
-  'accredited-professional':
-    'Salesforce Accredited Professional salary ($95K–$155K), career path, industry specializations, and which AP credential to target. Role guide.',
-  administrator:
-    'Salesforce Admin salary ($65K–$130K), career path, daily responsibilities, and which admin cert to take first. Career guide and roadmap.',
-  developer:
-    'Salesforce Developer salary ($85K–$155K), career path, daily responsibilities, and which developer cert to start with. Career guide and roadmap.',
-  tableau:
-    'Tableau career guide: salary ($75K–$135K), daily responsibilities, career path from Desktop Specialist to Architect. Role overview and roadmap.',
-  sales:
-    'Salesforce Sales role salary ($75K–$135K), career path, daily responsibilities, and which sales cert to pursue first. Career guide and roadmap.',
-  designer:
-    'Salesforce Designer salary ($75K–$135K), career path, daily responsibilities, and certification options. Role overview and roadmap.',
-  claude:
-    'Claude AI career guide: salary ($80K–$225K), career path, daily responsibilities, and which Claude cert to take first. Role overview and roadmap.',
+function fitRoleTitle(title: string, roleName: string): string {
+  const candidates = [
+    title,
+    /Guide/i.test(title) ? '' : `${title} Guide`,
+    title.replace(/\s*\(\d{4}\)$/, ` | Career Guide (${RELEASE_CURRENT})`),
+    `${roleName} Certifications: Career Path & Study Guide`,
+    `Explore ${roleName} Certifications: Career and Study Guide`,
+  ].filter(Boolean)
+  return candidates.find((candidate) => candidate.length >= 50 && candidate.length <= 60)
+    ?? candidates.find((candidate) => candidate.length <= 60)
+    ?? `${roleName} Certification Career Path & Guide`
+}
+
+function fitRoleDescription(roleName: string): string {
+  const candidates = [
+    `${roleName} certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.`,
+    `Explore ${roleName} credentials, career paths, and study guides. Compare role options and plan your next step.`,
+    `${roleName} certifications: explore role responsibilities, career paths, credential options, and study resources. Compare guides to choose your next step.`,
+  ]
+  return candidates.find((candidate) => candidate.length >= 100 && candidate.length <= 130)
+    ?? candidates.find((candidate) => candidate.length <= 130)
+    ?? `Explore ${roleName} credentials, career paths, and study guides. Compare role options and plan your next step.`
 }
 
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -364,10 +363,11 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
   const canonicalUrl = `${siteUrl}/certifications/role/${slug}`
   // Use absolute title to avoid template duplication (template adds "| Trailblaze Prep")
-  const title = ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
-  const description =
-    ROLE_DESCRIPTIONS[slug] ||
-    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Start free.`
+  const title = fitRoleTitle(
+    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`,
+    category.name,
+  )
+  const description = fitRoleDescription(category.name)
   
   return {
     title: { absolute: title },
@@ -380,10 +380,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       url: canonicalUrl,
       images: [
         {
-          url: `${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`,
+          url: `${siteUrl}/og?t=${encodeURIComponent(`${category.name} Certifications`)}&k=${slug}`,
           width: 1200,
           height: 630,
-          alt: `${category.name} Certifications - Free Salesforce Study Guide`,
+          alt: `${category.name} Certifications - Study Guide`,
         },
       ],
     },
@@ -391,7 +391,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       card: 'summary_large_image',
       title,
       description,
-      images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(`Salesforce ${category.name} Certifications`)}&k=${slug}`, alt: title }],
+      images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(`${category.name} Certifications`)}&k=${slug}`, alt: title }],
     },
   }
 }
@@ -407,10 +407,11 @@ export default async function RoleCertificationsPage({ params }: Props) {
     const name = examCode && !item.name.includes(examCode) ? `${item.name} (${examCode})` : item.name
     return { ...item, name }
   })
-  const title = ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`
-  const description =
-    ROLE_DESCRIPTIONS[slug] ||
-    `Salesforce ${category.name} certifications: ${RELEASE_CURRENT} study guides, free practice questions, and exam weightage. Start free.`
+  const title = fitRoleTitle(
+    ROLE_TITLES[slug] || `Salesforce ${category.name} Certifications (${RELEASE_CURRENT})`,
+    category.name,
+  )
+  const description = fitRoleDescription(category.name)
 
   const breadcrumb = [
     { name: 'Home', url: '/' },

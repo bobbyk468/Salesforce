@@ -6,7 +6,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Study for a Salesforce Certification (${RELEASE_CURRENT})`
-const pageDescription = `How to study for Salesforce certification exams in 2026: effective study methods, Trailhead strategy, hands-on practice, and mock exam approach.`
+const pageDescription = 'Build a Salesforce exam study plan using effective methods, Trailhead, hands-on practice, and mock exam review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

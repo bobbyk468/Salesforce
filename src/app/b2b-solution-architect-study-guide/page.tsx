@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'b2b-solution-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `B2B Solution Architect study guide: cross-cloud B2B design, CPQ, Revenue Cloud, partner portals. $400, ~68% pass Free practice questions.`
+const pageDescription = `B2B Solution Architect study guide: cross-cloud B2B design, CPQ, Revenue Cloud, partner portals. $400, ~68% pass.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

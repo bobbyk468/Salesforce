@@ -19,7 +19,7 @@ const slug = 'b2c-commerce-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2C Commerce Architect exam tips for ${RELEASE_CURRENT}: SFRA architecture, performance, security, integrations Free practice questions.`
+  `Salesforce B2C Commerce Architect exam tips for ${RELEASE_CURRENT}: SFRA architecture, performance, security, integrations.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

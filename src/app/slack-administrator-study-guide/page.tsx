@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'slack-administrator'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Slack Administrator study guide: exam sections, workspace config, security, integrations, and tips to pass the Salesforce Slack Admin exam.`
-
+const pageDescription = `Slack Administrator study guide: review workspace setup, security, and integrations for the Salesforce Slack exam.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

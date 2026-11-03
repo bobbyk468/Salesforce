@@ -19,7 +19,7 @@ const slug = 'javascript-developer-i'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce JavaScript Developer I exam tips for ${RELEASE_CURRENT}: JavaScript fundamentals, LWC, Apex integration Free practice questions.`
+  'Prepare for Salesforce JavaScript Developer I with JavaScript fundamentals, Lightning Web Components, and Apex integration review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

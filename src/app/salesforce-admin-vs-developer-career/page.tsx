@@ -10,8 +10,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Admin vs Developer Career Paths (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce Admin vs Developer career paths: day-to-day work, salary, progression, certs, and which path suits different backgrounds.`
-
+const pageDescription = `Compare Salesforce Administrator and Developer careers by work, pay, progression, certifications, and fit by background.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

@@ -18,7 +18,7 @@ const slug = 'consumer-goods-cloud-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Consumer Goods Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: retail execution, visit management, KPI tracking.`
+  'Prepare for the Consumer Goods Cloud AP exam with retail execution, visit management, and KPI tracking review topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

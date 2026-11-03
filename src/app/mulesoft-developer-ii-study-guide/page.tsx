@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'mulesoft-developer-ii'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `MuleSoft Developer II study guide: 5 sections, DataWeave, batch, security, deployment. $200. Free practice questions. Pass first attempt.`
+const pageDescription = 'Study MuleSoft Developer II topics across five exam sections, including DataWeave, batch processing, security, and deployment.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

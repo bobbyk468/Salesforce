@@ -18,7 +18,7 @@ const slug = 'advanced-field-service-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Advanced Field Service Accredited Professional exam tips for ${RELEASE_CURRENT}: advanced scheduling, resource optimisation, asset management.`
+  'Prepare for the Advanced Field Service AP exam with guidance on advanced scheduling, resource optimization, and asset management.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

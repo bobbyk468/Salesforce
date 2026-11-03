@@ -13,9 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = `Sales Cloud vs Service Cloud Consultant (${RELEASE_CURRENT})`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Sales Cloud vs Service Cloud Consultant (${RELEASE_CURRENT}): exam difficulty, career impact, and which to take first. Compare both certs side by side.`
-
+const pageDescription = `Compare Sales Cloud and Service Cloud Consultant exams by difficulty and career impact to choose your next certification.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

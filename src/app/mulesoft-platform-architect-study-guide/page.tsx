@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'mulesoft-platform-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `MuleSoft Platform Architect study guide: Anypoint Platform, connectivity, operations, governance. Pass in 2026 Free practice questions.`
+const pageDescription = `MuleSoft Platform Architect study guide: Anypoint Platform, connectivity, operations, governance. Pass in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

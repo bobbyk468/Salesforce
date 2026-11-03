@@ -16,7 +16,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'MC Engagement Admin vs Developer: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Marketing Cloud Admin vs Developer: what each tests, who each is for. Which cert to take first. Free practice questions.'
+  'Compare Marketing Cloud Administrator and Developer exam topics and role fit to choose which certification to pursue first.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

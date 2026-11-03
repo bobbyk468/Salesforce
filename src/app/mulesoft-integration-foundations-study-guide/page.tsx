@@ -19,7 +19,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'mulesoft-integration-foundations'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `MuleSoft Integration Foundations study guide: API-led connectivity, Anypoint Platform. $75, 40 questions, 70% pass Free practice questions.`
+const pageDescription = `MuleSoft Integration Foundations study guide: API-led connectivity, Anypoint Platform. $75, 40 questions, 70% pass.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

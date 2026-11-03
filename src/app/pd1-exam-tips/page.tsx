@@ -17,9 +17,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const slug = 'developer-1'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `PD1 exam tips (${RELEASE_CURRENT}): Apex governor limits, bulkification, trigger best practices, and 75% coverage rule. Start free practice.`
-
+const pageDescription = `Platform Developer I exam tips for ${RELEASE_CURRENT}: review Apex governor limits, bulkification, trigger practices, and coverage rules.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

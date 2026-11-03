@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'application-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Application Architect study guide: 4 required domain exams, key topics, study order, preparation strategy Free practice questions.`
+const pageDescription = `Application Architect study guide: 4 required domain exams, key topics, study order, preparation strategy.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

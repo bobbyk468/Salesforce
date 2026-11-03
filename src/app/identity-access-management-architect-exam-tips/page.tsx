@@ -19,7 +19,7 @@ const slug = 'identity-access-management-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce IAM Architect exam tips for ${RELEASE_CURRENT}: SSO, OAuth, connected apps, identity providers. Scenario tips to pass first attempt.`
+  'Review IAM Architect topics including SSO, OAuth, connected apps, and identity providers with scenario-based exam preparation.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

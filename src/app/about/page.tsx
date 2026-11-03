@@ -6,7 +6,7 @@ import ContentPageSchemas from '@/components/ContentPageSchemas'
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const ogImageUrl = `${baseUrl}/og?t=About%20Trailblaze%20Prep%20%7C%20Salesforce%20Certification%20Prep`
 const aboutDescription =
-  'Trailblaze Prep helps you pass Salesforce certifications with free practice questions, exam weightage, and study guides for Admin, Developer, and more.'
+  'Trailblaze Prep offers Salesforce exam guides and free practice questions for Admin, Developer, and Consultant candidates.'
 
 export const metadata = {
   title: { absolute: `About Trailblaze Prep | Salesforce Certification Prep` },

@@ -10,7 +10,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = `Salesforce Certification Comparison Guide (${RELEASE_CURRENT})`
 const pageDescription =
-  'Side-by-side Salesforce certification comparisons: difficulty, exam scope, career outcomes, and which to take first. All 20 comparisons in one place.'
+  'Compare Salesforce certifications by exam scope, difficulty, career outcomes, and recommended order across twenty guides.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

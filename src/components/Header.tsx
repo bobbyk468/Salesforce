@@ -98,7 +98,7 @@ export default function Header() {
           <div className="lg:hidden relative">
             <button
               onClick={() => setMobileOpen(o => !o)}
-              className="p-2 text-gray-600 hover:text-salesforce-blue rounded-lg"
+              className="min-h-11 min-w-11 p-2 text-gray-600 hover:text-salesforce-blue rounded-lg"
               aria-label={mobileOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={mobileOpen}
             >

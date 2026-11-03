@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'javascript-developer-i'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `JavaScript Developer I study guide: 6 exam sections, async, ES6+, LWC. $200, 60 questions. Free practice questions. Pass first attempt.`
+const pageDescription = 'Study JavaScript Developer I topics across six exam sections, including async JavaScript, ES6+, and Lightning Web Components.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

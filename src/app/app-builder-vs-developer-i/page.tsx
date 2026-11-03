@@ -13,27 +13,28 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
+const metadataTitle = 'App Builder vs Platform Developer I: Salesforce Guide'
 const pageTitle = `App Builder vs Platform Developer I (${RELEASE_CURRENT})`
-const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const pageDescription =
-  `App Builder vs Platform Developer I: exam scope, coding needs, difficulty, career paths. Which cert first for your Salesforce career.`
+  'Compare App Builder and Platform Developer I by exam scope, coding needs, difficulty, and career paths to choose a credential.'
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/app-builder-vs-developer-i` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/app-builder-vs-developer-i`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: ogImageUrl, alt: pageTitle }],
+    images: [{ url: ogImageUrl, alt: metadataTitle }],
   },
 }
 

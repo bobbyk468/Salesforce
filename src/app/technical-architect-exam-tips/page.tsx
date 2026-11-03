@@ -18,9 +18,7 @@ const slug = 'technical-architect'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Technical Architect exam tips for ${RELEASE_CURRENT}: CTA pathway, system architecture, integration, security, Review Board strategy.`
-
+const pageDescription = `Technical Architect tips for ${RELEASE_CURRENT}: review the CTA pathway, system design, integrations, security, and Review Board strategy.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

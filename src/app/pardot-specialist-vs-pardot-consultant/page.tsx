@@ -12,8 +12,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Pardot Specialist vs Pardot Consultant (${RELEASE_CURRENT})`
-const pageDescription = `Pardot Specialist vs Pardot Consultant certification comparison (${RELEASE_CURRENT}): fees, difficulty, skills tested, and which Pardot cert to take first.`
-
+const pageDescription = `Compare Pardot Specialist and Consultant by fees, difficulty, and tested skills to choose your Salesforce marketing credential.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

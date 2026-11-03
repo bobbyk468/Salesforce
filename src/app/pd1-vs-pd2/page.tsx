@@ -14,9 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = buildVsTitle('developer-1', 'developer-2')
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `PD1 vs PD2 (${RELEASE_CURRENT}): Compare difficulty, exam content, and career impact to choose the right developer cert. Start free practice today.`
-
+const pageDescription = `Compare Platform Developer I and II by difficulty, content, and career impact to choose the Salesforce credential for your goals.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

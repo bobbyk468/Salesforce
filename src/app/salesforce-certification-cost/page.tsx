@@ -9,8 +9,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 
 const pageTitle = `Salesforce Cert Cost (${RELEASE_CURRENT}): Exam Fees & Retake Prices`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce exam fees (${RELEASE_CURRENT}): most certs $200, Architects $400, AP certs $150. Retake fees and bundle options fully explained.`
+const pageDescription = `Salesforce exam fees for ${RELEASE_CURRENT}: compare typical prices, architect and AP fees, retakes, and available exam bundles.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

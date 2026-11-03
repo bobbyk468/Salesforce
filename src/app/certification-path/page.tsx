@@ -15,27 +15,28 @@ const LEGEND_STYLES: Record<PathStage, { bg: string; border: string; label: stri
 }
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const metadataTitle = 'Salesforce Certification Exam Paths | Trailblaze Prep'
 const pathTitle = 'Salesforce Certification Paths | Trailblaze Prep'
-const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(pathTitle)}`
+const ogImageUrl = `${baseUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const pathDescription =
-  'Salesforce certification paths from Admin to CTA. Plan your journey from foundational to advanced certifications including Developer, Architect, and more.'
+  'Explore Salesforce certification paths from Administrator to CTA, including foundational, Developer, and Architect credentials.'
 
 export const metadata: Metadata = {
-  title: { absolute: pathTitle },
+  title: { absolute: metadataTitle },
   description: pathDescription,
   alternates: { canonical: `${baseUrl}/certification-path` },
   openGraph: {
-    title: pathTitle,
+    title: metadataTitle,
     description: pathDescription,
     type: 'website',
     url: `${baseUrl}/certification-path`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pathTitle }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pathTitle,
+    title: metadataTitle,
     description: pathDescription,
-    images: [{ url: ogImageUrl, alt: pathTitle }],
+    images: [{ url: ogImageUrl, alt: metadataTitle }],
   },
 }
 

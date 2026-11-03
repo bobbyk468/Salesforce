@@ -3,27 +3,27 @@ import { Metadata } from 'next'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const ogImageUrl = `${baseUrl}/og?t=Terms%20of%20Use%20%7C%20Trailblaze%20Prep`
+const ogImageUrl = `${baseUrl}/og?t=Salesforce%20Certification%20Prep%20Terms%20%7C%20Trailblaze%20Prep`
 
 export const metadata: Metadata = {
-  title: { absolute: 'Terms of Use | Trailblaze Prep' },
+  title: { absolute: 'Salesforce Certification Prep Terms | Trailblaze Prep' },
   description:
-    'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+    'Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.',
   alternates: { canonical: `${baseUrl}/terms` },
   openGraph: {
-    title: 'Terms of Use | Trailblaze Prep',
+    title: 'Salesforce Certification Prep Terms | Trailblaze Prep',
     description:
-      'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+      'Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.',
     type: 'website',
     url: `${baseUrl}/terms`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Terms of Use | Trailblaze Prep' }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: 'Salesforce Certification Prep Terms | Trailblaze Prep' }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Terms of Use | Trailblaze Prep',
+    title: 'Salesforce Certification Prep Terms | Trailblaze Prep',
     description:
-      'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
-    images: [{ url: ogImageUrl, alt: 'Terms of Use | Trailblaze Prep' }],
+      'Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.',
+    images: [{ url: ogImageUrl, alt: 'Salesforce Certification Prep Terms | Trailblaze Prep' }],
   },
   robots: {
     index: true,
@@ -35,9 +35,9 @@ const termsBreadcrumb = [{ name: 'Home', url: '/' }, { name: 'Terms of Use', url
 
 export default function TermsPage() {
   const webPageJsonLd = getWebPageJsonLd({
-    name: 'Terms of Use | Trailblaze Prep',
+    name: 'Salesforce Certification Prep Terms | Trailblaze Prep',
     description:
-      'Terms of use for Trailblaze Prep, an independent Salesforce certification preparation resource. Use of practice questions and study materials.',
+      'Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.',
     path: '/terms',
     breadcrumbItems: termsBreadcrumb,
   })

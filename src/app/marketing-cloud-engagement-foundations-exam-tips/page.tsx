@@ -19,7 +19,7 @@ const slug = 'marketing-cloud-engagement-foundations'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Engagement Foundations exam tips for ${RELEASE_CURRENT}: platform navigation, email sends, subscriber management.`
+  'Review Marketing Cloud Engagement Foundations topics covering platform navigation, email sends, and subscriber management.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -19,7 +19,7 @@ const slug = 'application-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Application Architect exam tips for ${RELEASE_CURRENT}: declarative design, Apex patterns, data modelling Free practice questions.`
+  `Salesforce Application Architect exam tips for ${RELEASE_CURRENT}: declarative design, Apex patterns, data modelling.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

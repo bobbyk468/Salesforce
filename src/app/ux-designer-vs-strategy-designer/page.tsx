@@ -12,8 +12,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `UX vs Strategy Designer: Which Cert to Take (${RELEASE_CURRENT})`
-const pageDescription = `UX Designer vs Strategy Designer Salesforce certification comparison: exam difficulty, career use cases, content differences, and which to take first in 2026.`
-
+const pageDescription = `Compare UX Designer and Strategy Designer by difficulty, career use, content, and which Salesforce credential to take first.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

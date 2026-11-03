@@ -1,0 +1,2496 @@
+{
+  "ranges": {
+    "title": [
+      50,
+      60
+    ],
+    "description": [
+      100,
+      130
+    ]
+  },
+  "checked": 310,
+  "violations": 0,
+  "pages": [
+    {
+      "route": "/_not-found",
+      "title": "Free Salesforce Exam Practice Tests | Trailblaze Prep",
+      "titleLength": 53,
+      "description": "Free Salesforce practice exams and study guides for Admin, Developer, Consultant, Architect, MuleSoft and Tableau certifications.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/about",
+      "title": "About Trailblaze Prep | Salesforce Certification Prep",
+      "titleLength": 53,
+      "description": "Trailblaze Prep offers Salesforce exam guides and free practice questions for Admin, Developer, and Consultant candidates.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/adm-201-exam-tips",
+      "title": "How to Pass Platform Administrator: Exam Tips & Study Plan",
+      "titleLength": 58,
+      "description": "Prepare for ADM-201 with a focused study plan, high-weight topics, scenario practice, time management, and mock exam targets.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/adm-201-study-guide",
+      "title": "ADM-201 Platform Administrator Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "ADM-201 study guide (Summer '26): exam sections, key topics, and scenario-based practice strategies. Start free practice today.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/adm-201-vs-app-builder",
+      "title": "ADM-201 vs App Builder: Compare Salesforce Exam Paths",
+      "titleLength": 53,
+      "description": "Compare ADM-201 and DEV-402 by exam focus, difficulty, study time, and career fit to choose a Salesforce certification.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/admin-certification-path",
+      "title": "Salesforce Admin Certification Roadmap & Career Guide",
+      "titleLength": 53,
+      "description": "Salesforce admin cert path (Summer '26): right order for ADM-201, Advanced Admin, App Builder, and beyond. Start free practice.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/administrator-vs-advanced-administrator",
+      "title": "Administrator vs Advanced Administrator: Which Next?",
+      "titleLength": 52,
+      "description": "Compare Administrator and Advanced Administrator by exam topics, difficulty, study effort, and career fit before progressing.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/advanced-administrator-exam-tips",
+      "title": "Platform Administrator II: Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Salesforce Advanced Administrator (ADM-211) exam tips for Summer '26: security, automation, data management.",
+      "descriptionLength": 108,
+      "issues": []
+    },
+    {
+      "route": "/advanced-administrator-study-guide",
+      "title": "ADM-211 Advanced Administrator Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Review seven Advanced Administrator exam sections, including automation, security, data management, and scenario study strategies.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/advanced-field-service-ap-exam-tips",
+      "title": "Advanced Field Service AP: Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Prepare for the Advanced Field Service AP exam with guidance on advanced scheduling, resource optimization, and asset management.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/agentforce-specialist-exam-tips",
+      "title": "How to Pass Agentforce Specialist: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Prepare for Agentforce Specialist with current exam objectives, Agent Builder, topics, actions, testing, and focused practice.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/agentforce-specialist-study-guide",
+      "title": "Salesforce Agentforce Specialist Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Study Agentforce Specialist exam objectives, Agent Builder, topics and actions, testing, and structured practice questions.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/agentforce-specialist-vs-ai-associate",
+      "title": "Agentforce Specialist vs AI Associate (Retired) Guide",
+      "titleLength": 53,
+      "description": "Compare Agentforce Specialist with retired AI Associate, their learning goals, and current guidance for a Salesforce AI path.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/ai-associate-exam-tips",
+      "title": "AI Associate Retirement: Salesforce Study Options Guide",
+      "titleLength": 55,
+      "description": "AI Associate is retired. Review useful AI fundamentals and current Salesforce learning options before choosing another credential.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/ai-associate-study-guide",
+      "title": "AI Associate: Historical Learning Guide | Salesforce",
+      "titleLength": 52,
+      "description": "AI Associate retired in February 2026. Review AI concepts, responsible data use, and current Salesforce learning resources.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/app-builder-exam-tips",
+      "title": "How to Pass Platform App Builder: Exam Tips & Study Plan",
+      "titleLength": 56,
+      "description": "DEV-402 exam tips (Summer '26): 4-week study plan, scenario strategies, and high-weight topic focus. Start free practice now.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/app-builder-study-guide",
+      "title": "DEV-402 Platform App Builder Exam Study Guide [2026]",
+      "titleLength": 52,
+      "description": "App Builder study guide (Summer '26): all 5 exam sections, Flow Builder, Lightning App Builder, and scenario strategy..",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/app-builder-vs-developer-i",
+      "title": "App Builder vs Platform Developer I: Salesforce Guide",
+      "titleLength": 53,
+      "description": "Compare App Builder and Platform Developer I by exam scope, coding needs, difficulty, and career paths to choose a credential.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/application-architect-exam-tips",
+      "title": "How to Pass Application Architect: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Salesforce Application Architect exam tips for Summer '26: declarative design, Apex patterns, data modelling.",
+      "descriptionLength": 109,
+      "issues": []
+    },
+    {
+      "route": "/application-architect-study-guide",
+      "title": "Salesforce Application Architect Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Application Architect study guide: 4 required domain exams, key topics, study order, preparation strategy.",
+      "descriptionLength": 106,
+      "issues": []
+    },
+    {
+      "route": "/architect-certification-path",
+      "title": "Salesforce Architect Certification Roadmap & Career Guide",
+      "titleLength": 57,
+      "description": "Plan a Salesforce architect certification path through Application Architect, System Architect, and CTA board review.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/b2b-commerce-admin-ap-exam-tips",
+      "title": "How to Pass B2B Commerce Administrator AP: Exam Tips",
+      "titleLength": 52,
+      "description": "Salesforce B2B Commerce Administrator AP exam tips for Summer '26: storefront setup, product catalogue, pricing, buyer management.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/b2b-commerce-developer-ap-exam-tips",
+      "title": "B2B Commerce Developer AP: Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Salesforce B2B Commerce Developer AP exam tips for Summer '26: LWC customisation, headless commerce, cart and checkout APIs.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/b2b-solution-architect-exam-tips",
+      "title": "How to Pass B2B Solution Architect: Exam Tips & Study Plan",
+      "titleLength": 58,
+      "description": "Salesforce B2B Solution Architect exam tips for Summer '26: multi-cloud B2B architecture, Sales Cloud, CPQ, Marketing Cloud B2B.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/b2b-solution-architect-study-guide",
+      "title": "Salesforce B2B Solution Architect Study Guide [2026]",
+      "titleLength": 52,
+      "description": "B2B Solution Architect study guide: cross-cloud B2B design, CPQ, Revenue Cloud, partner portals. $400, ~68% pass.",
+      "descriptionLength": 113,
+      "issues": []
+    },
+    {
+      "route": "/b2b-vs-b2c-solution-architect",
+      "title": "B2B vs B2C Solution Architect Certification (Summer '26)",
+      "titleLength": 56,
+      "description": "B2B vs B2C Solution Architect: exam format, skills, industry focus. Which architect cert to pursue in 2026.",
+      "descriptionLength": 107,
+      "issues": []
+    },
+    {
+      "route": "/b2c-commerce-architect-exam-tips",
+      "title": "How to Pass B2C Commerce Architect: Exam Tips & Study Plan",
+      "titleLength": 58,
+      "description": "Salesforce B2C Commerce Architect exam tips for Summer '26: SFRA architecture, performance, security, integrations.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/b2c-commerce-architect-study-guide",
+      "title": "Salesforce B2C Commerce Architect Study Guide [2026]",
+      "titleLength": 52,
+      "description": "B2C Commerce Architect study guide: exam sections, solution architecture, integrations, performance, security. Pass in 2026.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/b2c-commerce-developer-exam-tips",
+      "title": "How to Pass B2C Commerce Developer: Exam Tips & Study Plan",
+      "titleLength": 58,
+      "description": "Prepare for Salesforce B2C Commerce Developer with SFRA, cartridges, controllers, and ISML template exam topics.",
+      "descriptionLength": 112,
+      "issues": []
+    },
+    {
+      "route": "/b2c-commerce-developer-study-guide",
+      "title": "CRT-500 B2C Commerce Developer Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Study B2C Commerce Developer topics including SFRA, cartridges, ISML, OCAPI, and Business Manager, with exam format details.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/b2c-solution-architect-exam-tips",
+      "title": "How to Pass B2C Solution Architect: Exam Tips & Study Plan",
+      "titleLength": 58,
+      "description": "Prepare for the B2C Solution Architect exam with Commerce Cloud, Marketing Cloud, and Service Cloud architecture topics.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/b2c-solution-architect-study-guide",
+      "title": "Salesforce B2C Solution Architect Study Guide [2026]",
+      "titleLength": 52,
+      "description": "B2C Solution Architect study guide: Commerce Cloud, Marketing Cloud, personalisation, omnichannel. $400, ~68% pass.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/become-cta",
+      "title": "Become a Salesforce CTA: Career Path | Trailblaze Prep",
+      "titleLength": 54,
+      "description": "Follow the Salesforce CTA path from foundational certifications through architecture prerequisites to board review.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/business-analyst-exam-tips",
+      "title": "How to Pass Business Analyst: Exam Tips & Study Plan",
+      "titleLength": 52,
+      "description": "Prepare for the Salesforce Business Analyst exam with user stories, process mapping, and collaboration for scenario questions.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/business-analyst-study-guide",
+      "title": "Salesforce Business Analyst Exam Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Business Analyst study guide: 7 exam sections, 8-week plan, scenario tips, free practice. $200, 60 questions. Pass first attempt.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/business-analyst-vs-strategy-designer",
+      "title": "Business Analyst vs Strategy Designer: Which Cert?",
+      "titleLength": 50,
+      "description": "Business Analyst vs Strategy Designer: what each tests, roles they target, difficulty. Which to prioritise for your career.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certification-comparison",
+      "title": "Salesforce Certification Comparison Guide (Summer '26)",
+      "titleLength": 54,
+      "description": "Compare Salesforce certifications by exam scope, difficulty, career outcomes, and recommended order across twenty guides.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/certification-path",
+      "title": "Salesforce Certification Exam Paths | Trailblaze Prep",
+      "titleLength": 53,
+      "description": "Explore Salesforce certification paths from Administrator to CTA, including foundational, Developer, and Architect credentials.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/certifications/administrator-practice-test",
+      "title": "ADM-201 Salesforce Admin Practice Test Guide (2026)",
+      "titleLength": 51,
+      "description": "Platform Administrator Practice Test: study exam topics and try free sample questions. Confirm the current format with the issuer.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/certifications/administrator",
+      "title": "ADM-201 Platform Administrator: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Prepare for ADM-201 with exam weightage, a study plan, and free practice questions with explanations. No sign-up required.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/certifications/advanced-administrator",
+      "title": "ADM-211 Advanced Administrator: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Platform Administrator II: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/advanced-field-service-ap",
+      "title": "Salesforce Advanced Field Service AP Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Advanced Field Service AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/agentforce-specialist",
+      "title": "Salesforce Agentforce Specialist Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Agentforce Specialist: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/ai-associate",
+      "title": "Salesforce AI Associate Historical Exam Guide & Study Notes",
+      "titleLength": 59,
+      "description": "AI Associate retired February 2026. Review historical exam notes, or explore Agentblazer for current Salesforce AI learning.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/app-builder",
+      "title": "DEV-402 Platform App Builder: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Platform App Builder: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/certifications/application-architect",
+      "title": "Salesforce Application Architect Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Application Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2b-commerce-admin-ap",
+      "title": "Salesforce B2B Commerce Admin AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "B2B Commerce Admin AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2b-commerce-developer-ap",
+      "title": "Salesforce B2B Commerce Dev AP: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "B2B Commerce Dev AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2b-solution-architect",
+      "title": "Salesforce B2B Solution Architect Practice Exam 2026",
+      "titleLength": 52,
+      "description": "B2B Solution Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2c-commerce-architect",
+      "title": "Salesforce B2C Commerce Architect Practice Exam 2026",
+      "titleLength": 52,
+      "description": "B2C Commerce Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2c-commerce-developer",
+      "title": "CRT-500 B2C Commerce Developer: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "B2C Commerce Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/b2c-solution-architect",
+      "title": "Salesforce B2C Solution Architect Practice Exam 2026",
+      "titleLength": 52,
+      "description": "B2C Solution Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/business-analyst",
+      "title": "Salesforce Business Analyst Certification Practice Exam 2026",
+      "titleLength": 60,
+      "description": "Business Analyst: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/claude-certified-architect-foundations",
+      "title": "Claude Architect Foundations Study Topics | Exam Guide",
+      "titleLength": 54,
+      "description": "Claude Architect – Foundations: review learning notes and questions. Exam status and format are unverified; check Anthropic.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/claude-certified-architect-professional",
+      "title": "Claude Architect Professional Study Topics | Exam Guide",
+      "titleLength": 55,
+      "description": "Claude Architect – Professional: review learning notes and questions. Exam status and format are unverified; check Anthropic.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/claude-certified-associate",
+      "title": "Claude Associate Foundations Study Topics | Exam Guide",
+      "titleLength": 54,
+      "description": "Claude Associate – Foundations: review learning notes and questions. Exam status and format are unverified; check Anthropic.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/claude-certified-developer",
+      "title": "Claude Developer Foundations Study Topics | Exam Guide",
+      "titleLength": 54,
+      "description": "Claude Developer – Foundations: review learning notes and questions. Exam status and format are unverified; check Anthropic.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/communications-cloud-ap",
+      "title": "Salesforce Agentforce Communications AP Practice Exam 2026",
+      "titleLength": 58,
+      "description": "Agentforce Communications AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/consumer-goods-cloud-ap",
+      "title": "Salesforce Agentforce Consumer Goods AP Practice Exam 2026",
+      "titleLength": 58,
+      "description": "Agentforce Consumer Goods AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/consumer-goods-tpm-ap",
+      "title": "Salesforce Consumer Goods TPM AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Consumer Goods TPM AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/contact-center-ap",
+      "title": "Salesforce Contact Center AP: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Contact Center AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/certifications/cpq-administrator",
+      "title": "Salesforce CPQ Admin Certification Practice Exam 2026",
+      "titleLength": 53,
+      "description": "CPQ Administrator: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/certifications/cpq-billing-ap",
+      "title": "Salesforce CPQ & Billing AP: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "CPQ & Billing AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/crm-analytics-einstein-discovery-consultant",
+      "title": "Salesforce CRM Analytics Certification Practice Exam 2026",
+      "titleLength": 57,
+      "description": "CRM Analytics: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 111,
+      "issues": []
+    },
+    {
+      "route": "/certifications/data-360-consultant",
+      "title": "Salesforce Data 360 Consultant: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Data 360 Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/data-architect",
+      "title": "ARC-801 Data Architect Certification Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Platform Data Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/certifications/dev-lifecycle-deployment-architect",
+      "title": "Salesforce Dev Lifecycle Architect Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Dev Lifecycle Arch: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/certifications/developer-1",
+      "title": "PD1 Platform Developer I Certification Practice Exam 2026",
+      "titleLength": 57,
+      "description": "Platform Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/certifications/developer-2",
+      "title": "PD2 Platform Developer II: Free Practice Exam 2026",
+      "titleLength": 50,
+      "description": "Platform Developer II: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/education-cloud-consultant",
+      "title": "Education Cloud: Closed Exam & Archived Study Guide",
+      "titleLength": 51,
+      "description": "Education Cloud Consultant exam closed August 2026. Review archived objectives and notes; retirement is planned for February 2027.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/certifications/email-specialist-practice-test",
+      "title": "CRT-550 Email Specialist Practice Test Guide (2026)",
+      "titleLength": 51,
+      "description": "Email Specialist Mock: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/email-specialist",
+      "title": "CRT-550 Email Specialist Certification Practice Exam 2026",
+      "titleLength": 57,
+      "description": "SFMC Email Specialist: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/energy-utilities-ap",
+      "title": "Salesforce Energy & Utilities AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Energy & Utilities AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/experience-cloud",
+      "title": "CRT-271 Experience Cloud Consultant Practice Exam 2026",
+      "titleLength": 54,
+      "description": "Experience Cloud Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/field-service",
+      "title": "Salesforce Field Service Consultant Practice Exam 2026",
+      "titleLength": 54,
+      "description": "Field Service Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/certifications/financial-services-cloud-ap",
+      "title": "Agentforce Financial Services AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Agentforce Financial Services AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/certifications/health-cloud-ap",
+      "title": "Salesforce Agentforce Health AP Practice Exam 2026",
+      "titleLength": 50,
+      "description": "Agentforce Health AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/certifications/heroku-architect",
+      "title": "Salesforce Heroku Architect: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "Heroku Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/heroku-developer-ap",
+      "title": "Salesforce Heroku Developer AP: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Heroku Developer AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/identity-access-management-architect",
+      "title": "Salesforce Identity & Access Architect Practice Exam 2026",
+      "titleLength": 57,
+      "description": "Identity & Access Arch: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/industries-cpq-developer",
+      "title": "Salesforce Industries CPQ Developer Practice Exam 2026",
+      "titleLength": 54,
+      "description": "Industries CPQ Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/certifications/integration-architect",
+      "title": "Salesforce Integration Architect Cert Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Platform Integration Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/certifications/javascript-developer-i",
+      "title": "CRT-600 JavaScript Developer: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "JavaScript Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/certifications/loyalty-management-ap",
+      "title": "Salesforce Loyalty Management AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Loyalty Management AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/manufacturing-cloud-ap",
+      "title": "Salesforce Agentforce Manufacturing AP Practice Exam 2026",
+      "titleLength": 57,
+      "description": "Agentforce Manufacturing AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-advanced-cross-channel-ap",
+      "title": "Salesforce MC Cross Channel AP: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "MC Cross Channel AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-consultant",
+      "title": "Salesforce Marketing Cloud Consultant Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Marketing Cloud Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-engagement-admin",
+      "title": "Salesforce MC Engagement Admin: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "MC Engagement Admin: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-engagement-developer",
+      "title": "Salesforce Marketing Cloud Engagement Dev Practice Exam 2026",
+      "titleLength": 60,
+      "description": "Marketing Cloud Engagement Developer: study exam topics and try free sample questions. Confirm the current format with the issuer.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-engagement-foundations",
+      "title": "Salesforce Marketing Cloud Foundations Practice Exam 2026",
+      "titleLength": 57,
+      "description": "MC Foundations: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 112,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-intelligence-ap",
+      "title": "Salesforce MC Intelligence AP: Free Practice Exam 2026",
+      "titleLength": 54,
+      "description": "MC Intelligence AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/certifications/marketing-cloud-personalization-ap",
+      "title": "Salesforce MC Personalization AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "MC Personalization AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/media-cloud-ap",
+      "title": "Salesforce Media Cloud AP: Free Practice Exam 2026",
+      "titleLength": 50,
+      "description": "Media Cloud Accredited Professional: study exam topics and try free sample questions. Confirm the current format with the issuer.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-catalyst-consultant",
+      "title": "Salesforce MuleSoft Catalyst Consultant Practice Exam 2026",
+      "titleLength": 58,
+      "description": "MuleSoft Catalyst Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-developer-i",
+      "title": "Salesforce MuleSoft Developer I Practice Exam 2026",
+      "titleLength": 50,
+      "description": "MuleSoft Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-developer-ii",
+      "title": "Salesforce MuleSoft Developer II Practice Exam 2026",
+      "titleLength": 51,
+      "description": "MuleSoft Developer II: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-hyperautomation-developer",
+      "title": "Salesforce MuleSoft Hyperautomation Practice Exam 2026",
+      "titleLength": 54,
+      "description": "MuleSoft Hyperautomation Developer: study exam topics and try free sample questions. Confirm the current format with the issuer.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-integration-architect",
+      "title": "Salesforce MuleSoft Integration Architect Practice Exam 2026",
+      "titleLength": 60,
+      "description": "MuleSoft Integration Arch: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-integration-foundations",
+      "title": "Salesforce MuleSoft Foundations Practice Exam 2026",
+      "titleLength": 50,
+      "description": "MuleSoft Integration Foundations: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/certifications/mulesoft-platform-architect",
+      "title": "Salesforce MuleSoft Platform Architect Practice Exam 2026",
+      "titleLength": 57,
+      "description": "MuleSoft Platform Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/net-zero-cloud-ap",
+      "title": "Salesforce Net Zero Cloud AP: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Net Zero Cloud AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/certifications/nonprofit-cloud",
+      "title": "Salesforce Nonprofit Cloud Consultant Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Agentforce Nonprofit Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/certifications/nonprofit-success-pack-consultant",
+      "title": "Salesforce NPSP Consultant: Free Practice Exam 2026",
+      "titleLength": 51,
+      "description": "NPSP Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 113,
+      "issues": []
+    },
+    {
+      "route": "/certifications/omnistudio-consultant",
+      "title": "Salesforce OmniStudio Consultant Practice Exam 2026",
+      "titleLength": 51,
+      "description": "OmniStudio Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/omnistudio-developer",
+      "title": "Salesforce OmniStudio Developer Practice Exam 2026",
+      "titleLength": 50,
+      "description": "OmniStudio Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/certifications/order-management-admin-ap",
+      "title": "Salesforce Order Management Admin AP Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Order Mgmt Admin AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/certifications/order-management-developer-ap",
+      "title": "Salesforce Order Management Dev AP Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Order Mgmt Dev AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/certifications/pardot-consultant",
+      "title": "CRT-302 Account Engagement Consultant Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Pardot Consultant (CRT-302): review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/pardot-specialist",
+      "title": "Salesforce Pardot Spec Certification Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Pardot Specialist Certification: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/certifications/platform-foundations",
+      "title": "Salesforce Platform Foundations Practice Exam 2026",
+      "titleLength": 50,
+      "description": "Platform Foundations: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/certifications/process-automation-ap",
+      "title": "Salesforce Process Automation AP Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Process Automation AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/certifications/public-sector-solutions-ap",
+      "title": "Salesforce Public Sector AP: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "Public Sector AP: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/revenue-cloud-consultant",
+      "title": "Salesforce Revenue Cloud Consultant Practice Exam 2026",
+      "titleLength": 54,
+      "description": "Revenue Management Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/accredited-professional",
+      "title": "Accredited Professional Career & Salary (Summer '26)",
+      "titleLength": 52,
+      "description": "Explore Accredited Professional credentials, career paths, and study guides. Compare role options and plan your next step.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/administrator",
+      "title": "Salesforce Admin Career Path & Salary Guide (Summer '26)",
+      "titleLength": 56,
+      "description": "Administrator certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/architect",
+      "title": "Salesforce Architect Career Path & Salary (Summer '26)",
+      "titleLength": 54,
+      "description": "Architect certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/associate",
+      "title": "Salesforce Associate Career Path & Salary (Summer '26)",
+      "titleLength": 54,
+      "description": "Associate certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/claude",
+      "title": "Explore Claude Certifications: Career and Study Guide",
+      "titleLength": 53,
+      "description": "Claude certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/consultant",
+      "title": "Salesforce Consultant Career Path & Salary (Summer '26)",
+      "titleLength": 55,
+      "description": "Consultant certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/designer",
+      "title": "Salesforce Designer Career Path & Salary (Summer '26)",
+      "titleLength": 53,
+      "description": "Designer certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/developer",
+      "title": "Salesforce Developer Career Path & Salary (Summer '26)",
+      "titleLength": 54,
+      "description": "Developer certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/marketing",
+      "title": "Marketing Cloud Career Path & Salary (Summer '26) Guide",
+      "titleLength": 55,
+      "description": "Marketing certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/sales",
+      "title": "Salesforce Sales Career Path & Salary (Summer '26)",
+      "titleLength": 50,
+      "description": "Sales certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/certifications/role/tableau",
+      "title": "Explore Tableau Certifications: Career and Study Guide",
+      "titleLength": 54,
+      "description": "Tableau certifications: compare credentials, career paths, role responsibilities, and study guides to plan your next step.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/certifications/sales-cloud",
+      "title": "CRT-251 Sales Cloud Consultant: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Agentforce Sales Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/sales-foundations",
+      "title": "Salesforce Sales Foundations: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Agentforce Sales Foundations: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/service-cloud",
+      "title": "CRT-261 Agentforce Service Consultant Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Agentforce Service Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/certifications/sharing-visibility-architect",
+      "title": "Salesforce Sharing & Visibility Architect Practice Exam 2026",
+      "titleLength": 60,
+      "description": "Sharing & Visibility Arch: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/slack-administrator",
+      "title": "Slack Administrator Certification Practice Exam 2026",
+      "titleLength": 52,
+      "description": "Slack Certified Administrator: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/certifications/slack-consultant",
+      "title": "Slack Consultant Certification: Free Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Slack Certified Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/slack-developer",
+      "title": "Slack Developer Certification: Free Practice Exam 2026",
+      "titleLength": 54,
+      "description": "Slack Certified Developer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/strategy-designer",
+      "title": "Salesforce Strategy Designer: Free Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Platform Strategy Designer: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/certifications/system-architect",
+      "title": "Salesforce System Architect: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "System Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/tableau-architect",
+      "title": "Tableau Architect Certification Practice Exam 2026",
+      "titleLength": 50,
+      "description": "Tableau Certified Architect: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/tableau-consultant",
+      "title": "Tableau Consultant Certification Practice Exam 2026",
+      "titleLength": 51,
+      "description": "Tableau Certified Consultant: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/tableau-data-analyst",
+      "title": "Tableau Data Analyst Certification Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Tableau Certified Data Analyst: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/certifications/tableau-desktop-foundations",
+      "title": "Tableau Desktop Foundations: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "Tableau Desktop Foundations: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/certifications/tableau-server-administrator",
+      "title": "Tableau Server Admin Certification Practice Exam 2026",
+      "titleLength": 53,
+      "description": "Tableau Server Administrator: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/certifications/technical-architect-evaluation",
+      "title": "Salesforce CTA Evaluation: Free Practice Exam 2026",
+      "titleLength": 50,
+      "description": "CTA Evaluation: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 112,
+      "issues": []
+    },
+    {
+      "route": "/certifications/technical-architect-review-board",
+      "title": "Salesforce CTA Review Board: Free Practice Exam 2026",
+      "titleLength": 52,
+      "description": "CTA Review Board: review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/certifications/technical-architect",
+      "title": "CTA Technical Architect Certification Practice Exam 2026",
+      "titleLength": 56,
+      "description": "Technical Architect (CTA): review exam topics and study notes. Try free sample questions; check the issuer's current guide.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/certifications/ux-designer",
+      "title": "Salesforce UX Designer Certification Practice Exam 2026",
+      "titleLength": 55,
+      "description": "Platform User Experience Designer: study exam topics and try free sample questions. Confirm the current format with the issuer.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/certifications",
+      "title": "All Salesforce Certifications (Summer '26) | Free Practice",
+      "titleLength": 58,
+      "description": "Browse Salesforce certifications by role for Summer '26, with exam weightage, free practice questions, and study guides.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/communications-cloud-ap-exam-tips",
+      "title": "How to Pass Agentforce Communications AP: Exam Tips",
+      "titleLength": 51,
+      "description": "Review Communications Cloud AP exam topics including order management, product catalogs, and contract management before test day.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/consultant-certification-path",
+      "title": "Salesforce Consultant Cert Path (Summer '26): Which Order?",
+      "titleLength": 58,
+      "description": "Plan a Salesforce consultant certification path across Sales Cloud, Service Cloud, Experience Cloud, and Field Service.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/consumer-goods-cloud-ap-exam-tips",
+      "title": "How to Pass Agentforce Consumer Goods AP: Exam Tips",
+      "titleLength": 51,
+      "description": "Prepare for the Consumer Goods Cloud AP exam with retail execution, visit management, and KPI tracking review topics.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/consumer-goods-tpm-ap-exam-tips",
+      "title": "How to Pass Consumer Goods TPM AP: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Salesforce Consumer Goods Trade Promotion Management AP exam tips for Summer '26: trade promotions, fund management, settlements.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/contact-center-ap-exam-tips",
+      "title": "How to Pass Contact Center AP: Exam Tips & Study Plan",
+      "titleLength": 53,
+      "description": "Review Contact Center AP topics including omnichannel routing, Service Cloud Voice, and Einstein Bots for exam preparation.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/contact",
+      "title": "Contact Trailblaze Prep | Salesforce Certification Prep",
+      "titleLength": 55,
+      "description": "Contact Trailblaze Prep about Salesforce exams, practice questions, study guides, or certification resources.",
+      "descriptionLength": 109,
+      "issues": []
+    },
+    {
+      "route": "/cpq-admin-vs-cpq-billing-ap",
+      "title": "CPQ Admin vs CPQ & Billing AP: Which Cert to Take?",
+      "titleLength": 50,
+      "description": "Compare CPQ Administrator and CPQ & Billing AP exam content and formats to choose the right credential for Revenue Cloud roles.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/cpq-admin-vs-revenue-cloud-consultant",
+      "title": "CPQ Admin vs Revenue Cloud Consultant (Summer '26)",
+      "titleLength": 50,
+      "description": "Compare CPQ Administrator and Revenue Cloud Consultant skills, difficulty, topic overlap, and fit for quote-to-cash roles.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/cpq-administrator-exam-tips",
+      "title": "How to Pass CPQ Administrator: Exam Tips & Study Plan",
+      "titleLength": 53,
+      "description": "Prepare for Salesforce CPQ Specialist with product catalog, pricing rules, quote configuration, and focused exam guidance.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/cpq-administrator-study-guide",
+      "title": "Salesforce CPQ Administrator Exam Study Guide [2026]",
+      "titleLength": 52,
+      "description": "Study CPQ Administrator exam sections, pricing cascades, and an eight-week preparation plan with practice questions.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/cpq-billing-ap-exam-tips",
+      "title": "How to Pass CPQ & Billing Consultant AP: Exam Tips",
+      "titleLength": 50,
+      "description": "Prepare for the CPQ and Billing AP exam by reviewing product configuration, pricing, contracts, and invoicing topics.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/crm-analytics-exam-tips",
+      "title": "How to Pass CRM Analytics Consultant: Exam Tips & Study Plan",
+      "titleLength": 60,
+      "description": "Prepare for the CRM Analytics Consultant exam with dashboard, SAQL, dataflow, and Einstein Discovery topic review.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/crm-analytics-study-guide",
+      "title": "CRM Analytics Study Guide [2026] for Exam Preparation",
+      "titleLength": 53,
+      "description": "Review CRM Analytics study topics including dataflows, recipes, SAQL, dashboards, and exam format details.",
+      "descriptionLength": 106,
+      "issues": []
+    },
+    {
+      "route": "/data-360-consultant-exam-tips",
+      "title": "How to Pass Data 360 Consultant: Exam Tips & Study Plan",
+      "titleLength": 55,
+      "description": "Prepare for the Data 360 Consultant exam with data ingestion, identity resolution, segmentation, and activation topic review.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/data-360-consultant-study-guide",
+      "title": "Salesforce Data 360 Consultant Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Study Data 360 Consultant topics covering ingestion, identity resolution, segmentation, and activation for Salesforce projects.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/data-architect-exam-tips",
+      "title": "Salesforce Data Architect Exam Tips and Study Plan (2026)",
+      "titleLength": 57,
+      "description": "Review Salesforce Data Architect topics including data modeling, large data volumes, and master data management before the exam.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/data-architect-study-guide",
+      "title": "ARC-801 Platform Data Architect Study Guide [2026]",
+      "titleLength": 50,
+      "description": "Study the six Platform Data Architect exam domains, including large data volumes, master data patterns, and migration strategies.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/data-cloud-vs-crm-analytics",
+      "title": "Data Cloud vs CRM Analytics Consultant: Which Cert to Take?",
+      "titleLength": 59,
+      "description": "Compare Data Cloud and CRM Analytics Consultant credentials by exam focus and career use cases to choose a suitable path.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/data-cloud-vs-marketing-cloud",
+      "title": "Data Cloud vs Marketing Cloud (Summer '26) | Which Cert?",
+      "titleLength": 56,
+      "description": "Data Cloud vs Marketing Cloud certs: what each does, how they compare, which path to choose for your role.",
+      "descriptionLength": 106,
+      "issues": []
+    },
+    {
+      "route": "/dev-lifecycle-deployment-architect-exam-tips",
+      "title": "How to Pass Dev Lifecycle & Deployment Architect: Exam Tips",
+      "titleLength": 59,
+      "description": "Dev Lifecycle & Deployment Architect exam tips: release management, CI/CD, environment strategy. Pass first attempt.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/dev-lifecycle-deployment-architect-study-guide",
+      "title": "Dev Lifecycle & Deployment Arch Study Guide [2026]",
+      "titleLength": 50,
+      "description": "Review Dev Lifecycle and Deployment Architect topics covering org strategy, CI/CD, packaging, and release management.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/developer-certification-path",
+      "title": "Salesforce Developer Cert Path (Summer '26): Which First?",
+      "titleLength": 57,
+      "description": "Salesforce developer cert path (Summer '26): right order for PD1, PD2, JavaScript Dev, and beyond. Start free practice now.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/editorial-policy",
+      "title": "Editorial Policy & Exam Data Review | Trailblaze Prep",
+      "titleLength": 53,
+      "description": "How Trailblaze Prep reviews Salesforce exam guides, fees, practice questions, update dates, source references, and corrections.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/education-cloud-consultant-exam-tips",
+      "title": "Education Cloud Consultant: Archived Exam Tips & Guide",
+      "titleLength": 54,
+      "description": "Education Cloud Consultant study notes (2026): official archived exam outline, lifecycle concepts, and solution-design practice.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/education-cloud-consultant-study-guide",
+      "title": "Salesforce Education Cloud Consultant Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Explore the historical Education Cloud Consultant guide, exam logistics, and education solution design study topics.",
+      "descriptionLength": 116,
+      "issues": []
+    },
+    {
+      "route": "/education-cloud-vs-nonprofit-cloud-consultant",
+      "title": "Education Cloud vs Nonprofit Cloud Consultant (2026)",
+      "titleLength": 52,
+      "description": "Compare Education Cloud and Nonprofit Cloud by use case, data model, and available guide scope before choosing a study path.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/email-specialist-exam-tips",
+      "title": "How to Pass Marketing Cloud Engagement Specialist: Exam Tips",
+      "titleLength": 60,
+      "description": "Prepare for Marketing Cloud Engagement Specialist with a four-week plan, deliverability guidance, and objective-based practice.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/email-specialist-study-guide",
+      "title": "CRT-550 Email Specialist Certification Study Guide [2026]",
+      "titleLength": 57,
+      "description": "Review Marketing Cloud Engagement Specialist objectives, email automation, subscriber data, analytics, and practice questions.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/energy-utilities-ap-exam-tips",
+      "title": "How to Pass Energy & Utilities Cloud AP: Exam Tips",
+      "titleLength": 50,
+      "description": "Prepare for the Energy and Utilities Cloud AP exam with customer engagement, service management, and OmniStudio topic review.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/experience-cloud-consultant-study-guide",
+      "title": "CRT-271 Experience Cloud Consultant Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Experience Cloud Consultant study guide: sharing model, external users, site templates, CMS, branding. Pass first attempt.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/experience-cloud-exam-tips",
+      "title": "How to Pass Experience Cloud Consultant: Exam Tips",
+      "titleLength": 50,
+      "description": "Study Experience Cloud Consultant topics covering portal design, member management, and security with scenario guidance.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/field-service-consultant-study-guide",
+      "title": "Agentforce Field Service & Operations Consultant Study Guide",
+      "titleLength": 60,
+      "description": "Review the Agentforce Field Service and Operations Consultant exam domains, prerequisites, and scenario practice guidance.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/field-service-exam-tips",
+      "title": "Agentforce Field Service and Operations Consultant Exam Tips",
+      "titleLength": 60,
+      "description": "Prepare for the Agentforce Field Service and Operations Consultant exam by reviewing official objectives and practical scenarios.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/field-service-vs-service-cloud-consultant",
+      "title": "Field Service vs Service Cloud: Consultant Exam Guide",
+      "titleLength": 53,
+      "description": "Compare Service Cloud and Field Service workflows, product components, and certification scope to choose a consultant credential.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/financial-services-cloud-ap-exam-tips",
+      "title": "How to Pass Financial Services AP: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Review Financial Services Cloud AP topics covering the FSC data model, financial accounts, and client management before the exam.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/health-cloud-ap-exam-tips",
+      "title": "How to Pass Agentforce Health AP: Exam Tips & Study Plan",
+      "titleLength": 56,
+      "description": "Salesforce Health Cloud Accredited Professional exam tips for Summer '26: patient management, care plans, provider network.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/heroku-architect-exam-tips",
+      "title": "How to Pass Heroku Architect: Exam Tips & Study Plan",
+      "titleLength": 52,
+      "description": "Salesforce Heroku Architect exam tips for Summer '26: Heroku architecture, Salesforce integration, security, scalability.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/heroku-developer-ap-exam-tips",
+      "title": "How to Pass Heroku Developer AP: Exam Tips & Study Plan",
+      "titleLength": 55,
+      "description": "Prepare for the Heroku Developer AP exam with review topics on deployments, dynos, add-ons, and Salesforce integration.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/how-to-become-salesforce-administrator",
+      "title": "How to Become a Salesforce Administrator (Summer '26 Guide)",
+      "titleLength": 59,
+      "description": "How to become a Salesforce Administrator in 2026: from zero experience to ADM-201 certified in 8–12 weeks. Step-by-step guide...",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/how-to-become-salesforce-architect",
+      "title": "How to Become a Salesforce Architect (Summer '26 Guide)",
+      "titleLength": 55,
+      "description": "How to become a Salesforce Architect: path from ADM-201 to CTA. Timeline, certs, salary, study resources.",
+      "descriptionLength": 105,
+      "issues": []
+    },
+    {
+      "route": "/how-to-become-salesforce-consultant",
+      "title": "How to Become a Salesforce Consultant (Summer '26 Guide)",
+      "titleLength": 56,
+      "description": "Learn the consultant path, Administrator preparation, specializations, timelines, and study resources for a Salesforce career.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/how-to-become-salesforce-developer",
+      "title": "How to Become a Salesforce Developer (Summer '26 Guide)",
+      "titleLength": 55,
+      "description": "Plan a Salesforce Developer path from fundamentals to Platform Developer I with a study timeline, resources, and career guidance.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/how-to-register-salesforce-exam",
+      "title": "How to Register for a Salesforce Cert Exam (Summer '26)",
+      "titleLength": 55,
+      "description": "How to register for a Salesforce cert exam: Webassessor setup, booking, online vs centre, exam day tips.",
+      "descriptionLength": 104,
+      "issues": []
+    },
+    {
+      "route": "/how-to-study-for-salesforce-certification",
+      "title": "How to Study for a Salesforce Certification (Summer '26)",
+      "titleLength": 56,
+      "description": "Build a Salesforce exam study plan using effective methods, Trailhead, hands-on practice, and mock exam review.",
+      "descriptionLength": 111,
+      "issues": []
+    },
+    {
+      "route": "/html-sitemap",
+      "title": "Salesforce Certification Guides Sitemap | Trailblaze Prep",
+      "titleLength": 57,
+      "description": "Browse Trailblaze Prep Salesforce guides, role hubs, and key site pages by category to find certification resources and exams.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/identity-access-management-architect-exam-tips",
+      "title": "How to Pass Identity & Access Mgmt Architect: Exam Tips",
+      "titleLength": 55,
+      "description": "Review IAM Architect topics including SSO, OAuth, connected apps, and identity providers with scenario-based exam preparation.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/identity-access-management-architect-study-guide",
+      "title": "Identity & Access Mgmt Architect Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Study IAM Architect topics including SAML, OAuth 2.0, SSO design, connected apps, and multifactor authentication.",
+      "descriptionLength": 113,
+      "issues": []
+    },
+    {
+      "route": "/",
+      "title": "Free Salesforce Exam Practice Tests | Trailblaze Prep",
+      "titleLength": 53,
+      "description": "Free Salesforce practice exams and study guides for Admin, Developer, Consultant, Architect, MuleSoft and Tableau certifications.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/industries-cpq-developer-exam-tips",
+      "title": "How to Pass Industries CPQ Developer: Exam Tips & Study Plan",
+      "titleLength": 60,
+      "description": "Prepare for Salesforce Industries CPQ Developer with product catalog, pricing, guided selling, and exam objective review.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/integration-architect-exam-tips",
+      "title": "How to Pass Platform Integration Architect: Exam Tips",
+      "titleLength": 53,
+      "description": "Prepare for Salesforce Integration Architect with integration patterns, API strategy, middleware, and objective-based practice.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/integration-architect-study-guide",
+      "title": "Salesforce Platform Integration Architect Study Guide [2026]",
+      "titleLength": 60,
+      "description": "Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, 67% to pass..",
+      "descriptionLength": 109,
+      "issues": []
+    },
+    {
+      "route": "/integration-architect-vs-system-architect",
+      "title": "Integration vs System Architect: Salesforce Cert Comparison",
+      "titleLength": 59,
+      "description": "Compare Salesforce Integration and System Architect certifications by exam focus, prerequisites, and career paths toward CTA.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/is-salesforce-certification-worth-it",
+      "title": "Is Salesforce Certification Worth It? (Summer '26)",
+      "titleLength": 50,
+      "description": "Is Salesforce certification worth it? ROI, salary, job demand, time investment. Who should (and shouldn't) get certified.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/javascript-developer-i-exam-tips",
+      "title": "How to Pass JavaScript Developer: Exam Tips & Study Plan",
+      "titleLength": 56,
+      "description": "Prepare for Salesforce JavaScript Developer I with JavaScript fundamentals, Lightning Web Components, and Apex integration review.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/javascript-developer-i-study-guide",
+      "title": "CRT-600 JavaScript Developer Exam Study Guide [2026]",
+      "titleLength": 52,
+      "description": "Study JavaScript Developer I topics across six exam sections, including async JavaScript, ES6+, and Lightning Web Components.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/javascript-developer-i-vs-pd1",
+      "title": "JavaScript Developer I vs Platform Developer I (Summer '26)",
+      "titleLength": 59,
+      "description": "Compare JavaScript Developer I and Platform Developer I by exam format, skills, and career value to choose a developer credential.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/loyalty-management-ap-exam-tips",
+      "title": "How to Pass Loyalty Management AP: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Prepare for the Loyalty Management AP exam with review topics on loyalty programs, tiers, points, and partner integration.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/manufacturing-cloud-ap-exam-tips",
+      "title": "How to Pass Agentforce Manufacturing AP: Exam Tips",
+      "titleLength": 50,
+      "description": "Review Manufacturing Cloud AP topics covering sales agreements, account-based forecasting, and partner management.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-admin-vs-developer",
+      "title": "MC Engagement Admin vs Developer: Which Cert to Take?",
+      "titleLength": 53,
+      "description": "Compare Marketing Cloud Administrator and Developer exam topics and role fit to choose which certification to pursue first.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-advanced-cross-channel-ap-exam-tips",
+      "title": "How to Pass MC Advanced Cross Channel AP: Exam Tips",
+      "titleLength": 51,
+      "description": "Prepare for Marketing Cloud Advanced Cross-Channel AP with Journey Builder, mobile push, and advertising audience topics.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-certification-path",
+      "title": "Salesforce Marketing Cloud Certification Path (Summer '26)",
+      "titleLength": 58,
+      "description": "Plan a Marketing Cloud certification path across Email Specialist, Consultant, Pardot, Administrator, and Developer credentials.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-consultant-exam-tips",
+      "title": "How to Pass Marketing Cloud Engagement Consultant: Exam Tips",
+      "titleLength": 60,
+      "description": "Review Marketing Cloud Consultant topics including email strategy, automation, segmentation, analytics, and scenarios.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-consultant-study-guide",
+      "title": "Marketing Cloud Engagement Consultant Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Marketing Cloud Consultant study guide: discovery, architecture, integration, data, Journey Builder. Pass first attempt.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-admin-exam-tips",
+      "title": "MC Engagement Admin Exam Tips (Summer '26): Study Guide",
+      "titleLength": 55,
+      "description": "Prepare for Marketing Cloud Engagement Administrator with Email Studio, Automation Studio, data extensions, and deliverability.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-admin-study-guide",
+      "title": "Marketing Cloud Engagement Administrator Study Guide [2026]",
+      "titleLength": 59,
+      "description": "Marketing Cloud Engagement Admin study guide: account setup, business units, data, compliance. $200, ~67% pass..",
+      "descriptionLength": 112,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-developer-exam-tips",
+      "title": "How to Pass Marketing Cloud Engagement Developer: Exam Tips",
+      "titleLength": 59,
+      "description": "Salesforce Marketing Cloud Developer exam tips for Summer '26: AMPscript, SSJS, SQL queries, API integration.",
+      "descriptionLength": 109,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-developer-study-guide",
+      "title": "MC Engagement Developer Certification Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Marketing Cloud Engagement Developer study guide: AMPscript, SSJS, REST API, data management. Pass in 2026.",
+      "descriptionLength": 107,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-foundations-exam-tips",
+      "title": "MC Engagement Foundations: Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Review Marketing Cloud Engagement Foundations topics covering platform navigation, email sends, and subscriber management.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-engagement-foundations-study-guide",
+      "title": "MC Engagement Foundations Certification Study Guide [2026]",
+      "titleLength": 58,
+      "description": "Marketing Cloud Engagement Foundations study guide: exam sections, email, data, automation. Pass this $75 cert in 2026.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-intelligence-ap-exam-tips",
+      "title": "How to Pass MC Intelligence AP: Exam Tips & Study Plan",
+      "titleLength": 54,
+      "description": "Salesforce Marketing Cloud Intelligence (Datorama) AP exam tips for Summer '26: data streams, harmonisation, dashboards, KPIs.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/marketing-cloud-personalization-ap-exam-tips",
+      "title": "How to Pass MC Personalization AP: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Prepare for Marketing Cloud Personalization AP with real-time personalization, recipes, and Einstein decision topics.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/media-cloud-ap-exam-tips",
+      "title": "How to Pass Media Cloud Accredited Professional: Exam Tips",
+      "titleLength": 58,
+      "description": "Salesforce Media Cloud Accredited Professional exam tips for Summer '26: media sales, order management, subscriber management.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-catalyst-consultant-exam-tips",
+      "title": "How to Pass MuleSoft Catalyst Consultant: Exam Tips",
+      "titleLength": 51,
+      "description": "MuleSoft Catalyst Consultant exam tips for Summer '26: Catalyst methodology, IT operating model, API programme design.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-i-exam-tips",
+      "title": "How to Pass MuleSoft Developer: Exam Tips & Study Plan",
+      "titleLength": 54,
+      "description": "Review MuleSoft Developer I objectives, Mule 4, DataWeave, connectors, error handling, and deployment exam topics.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-i-study-guide",
+      "title": "Salesforce MuleSoft Developer Exam Study Guide [2026]",
+      "titleLength": 53,
+      "description": "Review MuleSoft Developer I objectives, Mule 4 application development, DataWeave, connectors, and error handling.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-i-vs-ii",
+      "title": "MuleSoft Developer I vs II: Which Exam Should You Take Next?",
+      "titleLength": 60,
+      "description": "MuleSoft Developer I vs II: exam difficulty, topics, prerequisites. Which cert to target next on your MuleSoft path..",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-i-vs-integration-foundations",
+      "title": "MuleSoft Developer I vs Integration Foundations (Summer '26)",
+      "titleLength": 60,
+      "description": "Compare MuleSoft Developer I and Integration Foundations by cost, difficulty, tested skills, and which credential to take first.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-ii-exam-tips",
+      "title": "How to Pass MuleSoft Developer II: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "MuleSoft Developer II exam tips for Summer '26: API-led connectivity, Anypoint MQ, batch processing, custom policies.",
+      "descriptionLength": 117,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-developer-ii-study-guide",
+      "title": "Salesforce MuleSoft Developer II Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Study MuleSoft Developer II topics across five exam sections, including DataWeave, batch processing, security, and deployment.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-hyperautomation-developer-exam-tips",
+      "title": "How to Pass MuleSoft Hyperautomation Developer: Exam Tips",
+      "titleLength": 57,
+      "description": "MuleSoft Hyperautomation Developer exam tips for Summer '26: RPA, AI-powered automation, process orchestration.",
+      "descriptionLength": 111,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-integration-architect-exam-tips",
+      "title": "How to Pass MuleSoft Integration Architect: Exam Tips",
+      "titleLength": 53,
+      "description": "Prepare for MuleSoft Integration Architect with enterprise integration design, Anypoint architecture, and API-led connectivity.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-integration-architect-study-guide",
+      "title": "MuleSoft Platform Integration Architect Study Guide [2026]",
+      "titleLength": 58,
+      "description": "MuleSoft Integration Architect study guide: API-led connectivity, integration patterns, security, governance. Pass in 2026.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-integration-foundations-exam-tips",
+      "title": "How to Pass MuleSoft Integration Foundations: Exam Tips",
+      "titleLength": 55,
+      "description": "Use a three-week study plan to review MuleSoft Integration Foundations, API-led connectivity, and mock exam scenarios.",
+      "descriptionLength": 118,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-integration-foundations-study-guide",
+      "title": "MuleSoft Integration Foundations Study Guide [2026]",
+      "titleLength": 51,
+      "description": "MuleSoft Integration Foundations study guide: API-led connectivity, Anypoint Platform. $75, 40 questions, 70% pass.",
+      "descriptionLength": 115,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-platform-architect-exam-tips",
+      "title": "How to Pass MuleSoft Platform Architect: Exam Tips",
+      "titleLength": 50,
+      "description": "Review MuleSoft Platform Architect topics including Anypoint governance, API management, and enterprise integration strategy.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/mulesoft-platform-architect-study-guide",
+      "title": "Salesforce MuleSoft Platform Architect Study Guide [2026]",
+      "titleLength": 57,
+      "description": "MuleSoft Platform Architect study guide: Anypoint Platform, connectivity, operations, governance. Pass in 2026.",
+      "descriptionLength": 111,
+      "issues": []
+    },
+    {
+      "route": "/net-zero-cloud-ap-exam-tips",
+      "title": "How to Pass Net Zero Cloud AP: Exam Tips & Study Plan",
+      "titleLength": 53,
+      "description": "Net Zero Cloud AP exam tips for Summer '26: review carbon accounting, emissions data, and sustainability reporting topics.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/nonprofit-cloud-consultant-study-guide",
+      "title": "Agentforce Nonprofit Consultant Study Guide [2026]",
+      "titleLength": 50,
+      "description": "Nonprofit Cloud Consultant study guide: exam sections, NPSP data model, fundraising, volunteer management. Pass in 2026.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/nonprofit-cloud-exam-tips",
+      "title": "How to Pass Agentforce Nonprofit Consultant: Exam Tips",
+      "titleLength": 54,
+      "description": "Salesforce Nonprofit Cloud Consultant exam tips for Summer '26: review NPC data, fundraising, and programme management.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/nonprofit-success-pack-consultant-exam-tips",
+      "title": "How to Pass NPSP Consultant: Exam Tips & Study Plan",
+      "titleLength": 51,
+      "description": "Prepare for the Salesforce NPSP Consultant exam with household models, gift entry, and engagement plan scenarios for Summer '26.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/nonprofit-success-pack-consultant-study-guide",
+      "title": "Nonprofit Success Pack (NPSP) Consultant Study Guide [2026]",
+      "titleLength": 59,
+      "description": "NPSP Consultant study guide: review household data, fundraising, gift management, and exam sections with free practice questions.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/omnistudio-consultant-exam-tips",
+      "title": "How to Pass OmniStudio Consultant: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Salesforce OmniStudio Consultant exam tips for Summer '26: solution design, FlexCards, OmniScripts, implementation strategy.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/omnistudio-consultant-study-guide",
+      "title": "Salesforce OmniStudio Consultant Study Guide [2026]",
+      "titleLength": 51,
+      "description": "OmniStudio Consultant study guide: 4 sections, solution design, discovery, implementation. $200. Free practice questions.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/omnistudio-developer-exam-tips",
+      "title": "How to Pass OmniStudio Developer: Exam Tips & Study Plan",
+      "titleLength": 56,
+      "description": "Salesforce OmniStudio Developer exam tips for Summer '26: review FlexCards, OmniScripts, DataRaptors, and Integration Procedures.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/omnistudio-developer-study-guide",
+      "title": "Salesforce OmniStudio Developer Study Guide [2026]",
+      "titleLength": 50,
+      "description": "OmniStudio Developer study guide: 4 sections, DataRaptors, FlexCards, Integration Procedures. $200. Free practice questions.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/omnistudio-developer-vs-consultant",
+      "title": "OmniStudio Developer vs Consultant Roles | Trailblaze Prep",
+      "titleLength": 58,
+      "description": "Compare OmniStudio Developer and Consultant exams by focus, difficulty, and career use to choose the credential for your role.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/order-management-admin-ap-exam-tips",
+      "title": "How to Pass Order Management Administrator AP: Exam Tips",
+      "titleLength": 56,
+      "description": "Salesforce Order Management Administrator AP exam tips for Summer '26: order lifecycle, fulfilment, returns, inventory management.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/order-management-developer-ap-exam-tips",
+      "title": "How to Pass Order Management Developer AP: Exam Tips",
+      "titleLength": 52,
+      "description": "Salesforce Order Management Developer AP exam tips for Summer '26: review OMS APIs, Flow customisation, and headless integration.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/pardot-certification",
+      "title": "Salesforce Pardot Certification Guide and Exams (Summer '26)",
+      "titleLength": 60,
+      "description": "Compare Pardot Specialist and Consultant exam formats, difficulty, and study paths, with free practice for both credentials.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/pardot-consultant-exam-tips",
+      "title": "How to Pass Account Engagement Consultant: Exam Tips",
+      "titleLength": 52,
+      "description": "Pardot Consultant exam tips for Summer '26: review lead nurturing, scoring, grading, Salesforce sync, and Engagement Studio.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/pardot-consultant-study-guide",
+      "title": "CRT-302 Account Engagement Consultant Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Pardot Consultant study guide: exam sections, key topics, B2B marketing study plan. Pass in 2026 Free practice questions.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/pardot-consultant-vs-marketing-cloud-consultant",
+      "title": "Pardot Consultant vs Marketing Cloud Consultant (Summer '26)",
+      "titleLength": 60,
+      "description": "Pardot vs Marketing Cloud Consultant: B2B vs B2C, exam differences, career paths. Which Salesforce marketing cert in 2026.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/pardot-specialist-exam-tips",
+      "title": "How to Pass Account Engagement Specialist: Exam Tips",
+      "titleLength": 52,
+      "description": "Account Engagement Specialist exam tips (2026): lead scoring, engagement programs, and forms. Objective-focused practice advice.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/pardot-specialist-study-guide",
+      "title": "Pardot Specialist Certification Study Guide [2026]",
+      "titleLength": 50,
+      "description": "Pardot Specialist guide: review five exam sections, scoring, Engagement Studio, and an eight-week plan with practice questions.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/pardot-specialist-vs-pardot-consultant",
+      "title": "Pardot Specialist vs Pardot Consultant (Summer '26)",
+      "titleLength": 51,
+      "description": "Compare Pardot Specialist and Consultant by fees, difficulty, and tested skills to choose your Salesforce marketing credential.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/pd1-exam-tips",
+      "title": "How to Pass Platform Developer: Exam Tips & Study Plan",
+      "titleLength": 54,
+      "description": "Platform Developer I exam tips for Summer '26: review Apex governor limits, bulkification, trigger practices, and coverage rules.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/pd1-study-guide",
+      "title": "PD1 Platform Developer I Certification Study Guide [2026]",
+      "titleLength": 57,
+      "description": "Platform Developer I study guide for Summer '26: review five exam sections on Apex limits, testing, async patterns, and scenarios.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/pd1-vs-pd2",
+      "title": "PD1 vs PD2: Which Salesforce Developer Cert First?",
+      "titleLength": 50,
+      "description": "Compare Platform Developer I and II by difficulty, content, and career impact to choose the Salesforce credential for your goals.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/pd2-exam-tips",
+      "title": "How to Pass Platform Developer II: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Prepare for Platform Developer II with advanced Apex, integration, design patterns, and mock exam strategy for Summer '26.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/pd2-study-guide",
+      "title": "PD2 Platform Developer II Certification Study Guide [2026]",
+      "titleLength": 58,
+      "description": "Platform Developer II study guide for Summer '26: review design patterns, async Apex, integration, performance, and testing.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/platform-foundations-exam-tips",
+      "title": "How to Pass Platform Foundations: Exam Tips & Study Plan",
+      "titleLength": 56,
+      "description": "Salesforce Platform Foundations exam tips for Summer '26: review platform concepts, the data model, security, and automation.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/platform-foundations-study-guide",
+      "title": "Salesforce Platform Foundations Study Guide [2026]",
+      "titleLength": 50,
+      "description": "Platform Foundations study guide: review exam sections, key topics, and a plan for the $75 associate exam with practice questions.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/platform-foundations-vs-ai-associate",
+      "title": "Platform Foundations vs Retired AI Associate Guide",
+      "titleLength": 50,
+      "description": "Platform Foundations covers current platform basics; AI Associate is retired. Compare learning goals and current study options.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/privacy",
+      "title": "Certification Prep Privacy Policy | Trailblaze Prep",
+      "titleLength": 51,
+      "description": "Learn how Trailblaze Prep handles contact details, cookies, and site analytics for this Salesforce exam preparation resource.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/process-automation-ap-exam-tips",
+      "title": "How to Pass Process Automation AP: Exam Tips & Study Plan",
+      "titleLength": 57,
+      "description": "Salesforce Process Automation AP exam tips for Summer '26: review Flow Builder, automation strategy, and governor limits.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/public-sector-solutions-ap-exam-tips",
+      "title": "Public Sector Solutions AP: Exam Tips & Study Plan",
+      "titleLength": 50,
+      "description": "Public Sector Solutions AP exam tips for Summer '26: review Salesforce licences, permits, grants management, and OmniStudio.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/revenue-cloud-consultant-exam-tips",
+      "title": "How to Pass Revenue Management Consultant: Exam Tips",
+      "titleLength": 52,
+      "description": "Salesforce Revenue Cloud Consultant exam tips for Summer '26: CPQ, billing, subscription management, revenue recognition.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/revenue-cloud-consultant-study-guide",
+      "title": "Salesforce Revenue Management Consultant Study Guide [2026]",
+      "titleLength": 59,
+      "description": "Revenue Cloud Consultant study guide: 5 sections, billing schedules, pricing waterfall, 8-week plan. $200. Free practice.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/sales-cloud-consultant-study-guide",
+      "title": "CRT-251 Sales Cloud Consultant Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Sales Cloud Consultant study guide: review territory management, forecasting, and solution design with free exam practice.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/sales-cloud-exam-tips",
+      "title": "How to Pass Agentforce Sales Consultant: Exam Tips",
+      "titleLength": 50,
+      "description": "Sales Cloud Consultant exam tips for Summer '26: review opportunity management, forecasting, CPQ basics, and scenario practice.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/sales-cloud-vs-experience-cloud-consultant",
+      "title": "Sales Cloud vs Experience Cloud Consultant (Summer '26)",
+      "titleLength": 55,
+      "description": "Compare Sales Cloud and Experience Cloud Consultant exams by scope, difficulty, and career paths to choose which to pursue.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/sales-cloud-vs-service-cloud",
+      "title": "Sales Cloud vs Service Cloud Consultant (Summer '26)",
+      "titleLength": 52,
+      "description": "Compare Sales Cloud and Service Cloud Consultant exams by difficulty and career impact to choose your next certification.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/sales-foundations-exam-tips",
+      "title": "How to Pass Agentforce Sales Foundations: Exam Tips",
+      "titleLength": 51,
+      "description": "Salesforce Sales Foundations exam tips for Summer '26: review Sales Cloud basics, leads, opportunities, and forecasting concepts.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-admin-certification-201",
+      "title": "Salesforce Admin Certification 201 Guide (Summer '26)",
+      "titleLength": 53,
+      "description": "Salesforce Admin Certification 201 guide: ADM-201 exam format, cost, passing score, study path, and free practice exam links.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-admin-vs-developer-career",
+      "title": "Salesforce Admin vs Developer Career Paths (Summer '26)",
+      "titleLength": 55,
+      "description": "Compare Salesforce Administrator and Developer careers by work, pay, progression, certifications, and fit by background.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-associate-certification-cost",
+      "title": "Salesforce Associate Certification Cost (Summer '26)",
+      "titleLength": 52,
+      "description": "Compare Salesforce associate exam costs, formats, first credentials, and next steps after Platform Foundations or AI Associate.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-cost",
+      "title": "Salesforce Cert Cost (Summer '26): Exam Fees & Retake Prices",
+      "titleLength": 60,
+      "description": "Salesforce exam fees for Summer '26: compare typical prices, architect and AP fees, retakes, and available exam bundles.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-difficulty",
+      "title": "Salesforce Certification Difficulty: Easiest to Hardest",
+      "titleLength": 55,
+      "description": "Compare Salesforce cert difficulty from beginner to CTA: questions, passing score, fees, study time, and which exam to take first.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-exam-day-tips",
+      "title": "Salesforce Certification Exam Day Tips (Summer '26)",
+      "titleLength": 51,
+      "description": "Salesforce exam day tips: what to bring, online vs centre checklist, time management, what to do if something goes wrong.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-maintenance",
+      "title": "Salesforce Certification Maintenance Guide (Summer '26)",
+      "titleLength": 55,
+      "description": "Learn when Salesforce certification maintenance is due, which Trailhead modules to complete, and how to track renewal deadlines.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-passing-score",
+      "title": "Salesforce Certification Passing Scores (Summer '26)",
+      "titleLength": 52,
+      "description": "Review Salesforce passing scores from Associate and Specialist to Consultant and Architect, and choose a useful mock exam target.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-roi-calculator",
+      "title": "Salesforce Certification ROI Calculator (Summer '26)",
+      "titleLength": 52,
+      "description": "Estimate certification return using Salesforce exam fees, retakes, study time, salary uplift, and payback period.",
+      "descriptionLength": 113,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-salary",
+      "title": "Salesforce Certification Salary Guide (Summer '26)",
+      "titleLength": 50,
+      "description": "Compare Salesforce salaries for Administrator, Developer, Consultant, Marketing Cloud, and Architect credentials.",
+      "descriptionLength": 113,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-validity",
+      "title": "Salesforce Certification Validity and Renewal Guide",
+      "titleLength": 51,
+      "description": "Learn Salesforce certification validity, what Inactive means, and how maintenance and reactivation keep credentials current.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certification-voucher",
+      "title": "Salesforce Cert Voucher & Discount Guide (Summer '26)",
+      "titleLength": 53,
+      "description": "Salesforce cert discounts and vouchers: Dreamforce, Trailhead, partner discounts, 50% retake vouchers Free practice questions.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-certifications-list",
+      "title": "All Salesforce Certifications (Summer '26): List by Role",
+      "titleLength": 56,
+      "description": "Complete Salesforce certification list for Summer '26, grouped by Admin, Developer, Architect, Consultant, and other career roles.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-exam-retake-policy",
+      "title": "Salesforce Exam Retake Policy: Cost & Wait Time (Summer '26)",
+      "titleLength": 60,
+      "description": "Review Salesforce exam retake costs, wait times, attempt rules, and score reports, with guidance before booking another attempt.",
+      "descriptionLength": 128,
+      "issues": []
+    },
+    {
+      "route": "/salesforce-free-certification",
+      "title": "How to Get a Free Salesforce Certification (Summer '26)",
+      "titleLength": 55,
+      "description": "Find ways to earn Salesforce certification exams for free through event vouchers, Trailhead promotions, and employer sponsorship.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/service-cloud-consultant-exam-tips",
+      "title": "How to Pass Agentforce Service Consultant: Exam Tips",
+      "titleLength": 52,
+      "description": "Service Cloud Consultant exam tips for Summer '26: review omnichannel routing, cases, SLAs, and escalation rule scenarios.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/service-cloud-consultant-study-guide",
+      "title": "CRT-261 Agentforce Service Consultant Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Service Cloud Consultant study guide: review Omni-Channel, entitlements, cases, and knowledge topics for exam preparation.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/sharing-visibility-architect-exam-tips",
+      "title": "How to Pass Sharing & Visibility Architect: Exam Tips",
+      "titleLength": 53,
+      "description": "Sharing and Visibility Architect exam tips for Summer '26: review OWD design, sharing rules, and role hierarchy scenarios.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/sharing-visibility-architect-study-guide",
+      "title": "Platform Sharing and Visibility Architect Study Guide [2026]",
+      "titleLength": 60,
+      "description": "Sharing and Visibility Architect study guide: review OWD, role hierarchy, sharing rules, and Apex sharing with practice questions.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/slack-administrator-exam-tips",
+      "title": "How to Pass Slack Certified Administrator: Exam Tips",
+      "titleLength": 52,
+      "description": "Salesforce Slack Administrator exam tips for Summer '26: review workspace management, channels, security, and Slack Connect.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/slack-administrator-study-guide",
+      "title": "Slack Certified Administrator Exam Study Guide [2026]",
+      "titleLength": 53,
+      "description": "Slack Administrator study guide: review workspace setup, security, and integrations for the Salesforce Slack exam.",
+      "descriptionLength": 114,
+      "issues": []
+    },
+    {
+      "route": "/slack-consultant-exam-tips",
+      "title": "Slack Certified Consultant: Exam Tips & Study Plan",
+      "titleLength": 50,
+      "description": "Salesforce Slack Consultant exam tips for Summer '26: Slack implementation strategy, workflow automation, Salesforce integration.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/slack-developer-exam-tips",
+      "title": "Slack Certified Developer: Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Slack Developer exam tips (Summer '26): 4-week study plan, Slack API, Block Kit, and automation patterns. Start free practice now.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/strategy-designer-exam-tips",
+      "title": "Platform Strategy Designer: Exam Tips & Study Plan",
+      "titleLength": 50,
+      "description": "Salesforce Strategy Designer exam tips for Summer '26: review design thinking, business strategy, value maps, and journey design.",
+      "descriptionLength": 129,
+      "issues": []
+    },
+    {
+      "route": "/strategy-designer-study-guide",
+      "title": "Salesforce Platform Strategy Designer Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Strategy Designer study guide: review human-centred design exam sections, a focused study plan, and practice questions.",
+      "descriptionLength": 119,
+      "issues": []
+    },
+    {
+      "route": "/system-architect-exam-tips",
+      "title": "How to Pass System Architect: Exam Tips & Study Plan",
+      "titleLength": 52,
+      "description": "System Architect exam tips for Summer '26: review identity, integrations, deployment architecture, and governance scenarios.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/system-architect-study-guide",
+      "title": "Salesforce System Architect Exam Study Guide [2026]",
+      "titleLength": 51,
+      "description": "Study the four exams required for Salesforce System Architect, review each scope, and follow a suggested order with free practice.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/system-architect-vs-application-architect",
+      "title": "System vs Application Architect: Differences (Summer '26)",
+      "titleLength": 57,
+      "description": "System vs Application Architect: required exams, domain differences, costs, career value. Which to pursue first on CTA path.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/tableau-architect-exam-tips",
+      "title": "How to Pass Tableau Certified Architect: Exam Tips",
+      "titleLength": 50,
+      "description": "Salesforce Tableau Architect exam tips for Summer '26: enterprise deployment, security, performance, Tableau Server governance.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/tableau-consultant-exam-tips",
+      "title": "How to Pass Tableau Certified Consultant: Exam Tips",
+      "titleLength": 51,
+      "description": "Tableau Business Intelligence Analyst exam tips for Summer '26: Tableau Desktop, data connections, calculations, dashboards.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/tableau-data-analyst-exam-tips",
+      "title": "How to Pass Tableau Certified Data Analyst: Exam Tips",
+      "titleLength": 53,
+      "description": "Tableau Data Analyst exam tips for Summer '26: review LOD expressions, context filters, and strategies in a four-week plan.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/tableau-data-analyst-study-guide",
+      "title": "Tableau Certified Data Analyst Exam Study Guide [2026]",
+      "titleLength": 54,
+      "description": "Tableau Data Analyst study guide: 5 sections, LOD, dashboard tips, 8-week plan. 75% passing, $250. Free practice questions.",
+      "descriptionLength": 123,
+      "issues": []
+    },
+    {
+      "route": "/tableau-desktop-foundations-exam-tips",
+      "title": "How to Pass Tableau Desktop Foundations: Exam Tips",
+      "titleLength": 50,
+      "description": "Tableau Desktop Foundations exam tips for Summer '26: review data connections, charts, filters, and scenario-based questions.",
+      "descriptionLength": 125,
+      "issues": []
+    },
+    {
+      "route": "/tableau-server-administrator-exam-tips",
+      "title": "How to Pass Tableau Server Administrator: Exam Tips",
+      "titleLength": 51,
+      "description": "Tableau Server Administrator exam tips for Summer '26: server installation, user management, security, performance monitoring.",
+      "descriptionLength": 126,
+      "issues": []
+    },
+    {
+      "route": "/team",
+      "title": "Salesforce Certification Editorial Team | Trailblaze Prep",
+      "titleLength": 57,
+      "description": "Meet Krishna Mohan, a multi-certified Salesforce professional with hands-on Admin, Developer, and Consultant experience.",
+      "descriptionLength": 120,
+      "issues": []
+    },
+    {
+      "route": "/technical-architect-evaluation-exam-tips",
+      "title": "How to Pass CTA Evaluation: Exam Tips & Study Plan",
+      "titleLength": 50,
+      "description": "CTA Evaluation Exam tips: advanced architecture, large data, integration patterns. Written exam strategy for Review Board.",
+      "descriptionLength": 122,
+      "issues": []
+    },
+    {
+      "route": "/technical-architect-exam-tips",
+      "title": "Technical Architect (CTA): Exam Tips & Practice Plan",
+      "titleLength": 52,
+      "description": "Technical Architect tips for Summer '26: review the CTA pathway, system design, integrations, security, and Review Board strategy.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/technical-architect-review-board-exam-tips",
+      "title": "How to Pass CTA Review Board: Exam Tips & Study Plan",
+      "titleLength": 52,
+      "description": "CTA Review Board tips cover scenario presentations, whiteboarding, and panel questions for the live architecture defence.",
+      "descriptionLength": 121,
+      "issues": []
+    },
+    {
+      "route": "/technical-architect-study-guide",
+      "title": "CTA Technical Architect Certification Study Guide [2026]",
+      "titleLength": 56,
+      "description": "Salesforce CTA study guide: review prerequisites, board format, and solution presentation preparation for the final certification.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/terms",
+      "title": "Salesforce Certification Prep Terms | Trailblaze Prep",
+      "titleLength": 53,
+      "description": "Terms for using Trailblaze Prep study guides and practice questions, an independent Salesforce certification preparation resource.",
+      "descriptionLength": 130,
+      "issues": []
+    },
+    {
+      "route": "/ux-designer-exam-tips",
+      "title": "How to Pass Platform User Experience Designer: Exam Tips",
+      "titleLength": 56,
+      "description": "Salesforce UX Designer exam tips for Summer '26: review human-centred design, discovery, prototyping, and scenario practice.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/ux-designer-study-guide",
+      "title": "Platform User Experience Designer Study Guide [2026]",
+      "titleLength": 52,
+      "description": "Salesforce UX Designer study guide: review exam sections and key topics, then follow a plan for the Certified UX Designer exam.",
+      "descriptionLength": 127,
+      "issues": []
+    },
+    {
+      "route": "/ux-designer-vs-strategy-designer",
+      "title": "UX vs Strategy Designer: Which Cert to Take (Summer '26)",
+      "titleLength": 56,
+      "description": "Compare UX Designer and Strategy Designer by difficulty, career use, content, and which Salesforce credential to take first.",
+      "descriptionLength": 124,
+      "issues": []
+    },
+    {
+      "route": "/which-salesforce-certification-first",
+      "title": "Which Salesforce Certification Should You Get First?",
+      "titleLength": 52,
+      "description": "Choose your first Salesforce certification by background and career goal, with advice on study time, cost, and next steps.",
+      "descriptionLength": 122,
+      "issues": []
+    }
+  ]
+}

@@ -19,7 +19,7 @@ const slug = 'integration-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Integration Architect exam tips for ${RELEASE_CURRENT}: integration patterns, API strategy, middleware Free practice questions.`
+  'Prepare for Salesforce Integration Architect with integration patterns, API strategy, middleware, and objective-based practice.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

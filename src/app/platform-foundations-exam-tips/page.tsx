@@ -18,9 +18,7 @@ const slug = 'platform-foundations'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Platform Foundations exam tips for ${RELEASE_CURRENT}: core platform concepts, data model, security, automation Free practice questions.`
-
+const pageDescription = `Salesforce Platform Foundations exam tips for ${RELEASE_CURRENT}: review platform concepts, the data model, security, and automation.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

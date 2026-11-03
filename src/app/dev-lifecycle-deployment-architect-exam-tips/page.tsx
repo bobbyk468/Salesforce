@@ -19,7 +19,7 @@ const slug = 'dev-lifecycle-deployment-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Dev Lifecycle & Deployment Architect exam tips: release management, CI/CD, environment strategy. Pass first attempt Free practice questions.`
+  `Dev Lifecycle & Deployment Architect exam tips: release management, CI/CD, environment strategy. Pass first attempt.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

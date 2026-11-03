@@ -19,7 +19,7 @@ const slug = 'mulesoft-developer-ii'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Developer II exam tips for ${RELEASE_CURRENT}: API-led connectivity, Anypoint MQ, batch processing, custom policies Free practice questions.`
+  `MuleSoft Developer II exam tips for ${RELEASE_CURRENT}: API-led connectivity, Anypoint MQ, batch processing, custom policies.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'email-specialist'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Marketing Cloud Engagement Specialist study guide (${RELEASE_YEAR}): official objectives, email automation, subscriber data, analytics, and original practice questions.`
+const pageDescription = 'Review Marketing Cloud Engagement Specialist objectives, email automation, subscriber data, analytics, and practice questions.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

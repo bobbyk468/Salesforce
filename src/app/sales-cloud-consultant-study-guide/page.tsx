@@ -20,9 +20,7 @@ const slug = 'sales-cloud'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Sales Cloud Consultant study guide: exam sections, territory, forecasting, solution design. Pass first attempt Free practice questions.`
-
+const pageDescription = `Sales Cloud Consultant study guide: review territory management, forecasting, and solution design with free exam practice.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

@@ -13,7 +13,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = buildPathTitle('Architect')
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce architect certification path (${RELEASE_CURRENT}): right order for Application Architect, System Architect, and CTA components. Start free practice now.`
+  'Plan a Salesforce architect certification path through Application Architect, System Architect, and CTA board review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

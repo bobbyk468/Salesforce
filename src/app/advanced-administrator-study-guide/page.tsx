@@ -20,7 +20,7 @@ const slug = 'advanced-administrator'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Advanced Administrator study guide: 7 exam sections, automation, security, data management, scenario strategies to pass first attempt.`
+  'Review seven Advanced Administrator exam sections, including automation, security, data management, and scenario study strategies.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

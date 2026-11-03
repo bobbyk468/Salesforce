@@ -18,7 +18,7 @@ const slug = 'energy-utilities-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Energy &amp; Utilities Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: customer engagement, service management, OmniStudio.`
+  'Prepare for the Energy and Utilities Cloud AP exam with customer engagement, service management, and OmniStudio topic review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

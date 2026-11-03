@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'mulesoft-developer-i'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `MuleSoft Developer I study guide: published exam objectives, Mule 4 application development, DataWeave, connectors, and error handling.`
+const pageDescription = 'Review MuleSoft Developer I objectives, Mule 4 application development, DataWeave, connectors, and error handling.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

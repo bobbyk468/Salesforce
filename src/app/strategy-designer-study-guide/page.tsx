@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'strategy-designer'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Strategy Designer study guide: exam sections, human-centred design, study plan. Pass the Salesforce exam in 2026 Free practice questions.`
-
+const pageDescription = `Strategy Designer study guide: review human-centred design exam sections, a focused study plan, and practice questions.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

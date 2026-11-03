@@ -4,15 +4,16 @@ import CredentialStatusNotice from '@/components/CredentialStatusNotice'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const title = 'AI Associate Retirement: What to Study Next'
-const description = 'AI Associate is retired. Review your learning options, keep useful AI fundamentals, and check current issuer guidance before booking another exam.'
+const metadataTitle = 'AI Associate Retirement: Salesforce Study Options Guide'
+const description = 'AI Associate is retired. Review useful AI fundamentals and current Salesforce learning options before choosing another credential.'
 const path = '/ai-associate-exam-tips'
 const url = `https://www.trailblazeprep.com${path}`
 
 export const metadata: Metadata = {
-  title: { absolute: title }, description,
+  title: { absolute: metadataTitle }, description,
   alternates: { canonical: url },
-  openGraph: { title, description, url, type: 'article' },
-  twitter: { card: 'summary_large_image', title, description },
+  openGraph: { title: metadataTitle, description, url, type: 'article' },
+  twitter: { card: 'summary_large_image', title: metadataTitle, description },
 }
 
 export default function HistoricalAiResource() {

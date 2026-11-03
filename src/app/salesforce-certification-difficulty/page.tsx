@@ -6,24 +6,25 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certs: Easiest to Hardest (${RELEASE_CURRENT})`
+const metadataTitle = 'Salesforce Certification Difficulty: Easiest to Hardest'
 const pageDescription = `Compare Salesforce cert difficulty from beginner to CTA: questions, passing score, fees, study time, and which exam to take first.`
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/salesforce-certification-difficulty` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/salesforce-certification-difficulty`,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`, alt: metadataTitle }],
   },
 }
 

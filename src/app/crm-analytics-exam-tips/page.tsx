@@ -19,7 +19,7 @@ const slug = 'crm-analytics-einstein-discovery-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce CRM Analytics Consultant exam tips for ${RELEASE_CURRENT}: dashboards, SAQL, dataflows, Einstein Discovery Free practice questions.`
+  'Prepare for the CRM Analytics Consultant exam with dashboard, SAQL, dataflow, and Einstein Discovery topic review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

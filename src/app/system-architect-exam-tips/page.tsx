@@ -17,9 +17,7 @@ const slug = 'system-architect'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce System Architect exam tips for ${RELEASE_CURRENT}: identity, integrations, deployment architecture, and governance to pass first attempt.`
-
+const pageDescription = `System Architect exam tips for ${RELEASE_CURRENT}: review identity, integrations, deployment architecture, and governance scenarios.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

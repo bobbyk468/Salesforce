@@ -17,7 +17,7 @@ const slug = 'marketing-cloud-engagement-admin'
 const pageTitle = `MC Engagement Admin Exam Tips (${RELEASE_CURRENT}): Study Guide`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Engagement Administrator exam tips for ${RELEASE_CURRENT}: email studio, automation studio, data extensions, deliverability.`
+  'Prepare for Marketing Cloud Engagement Administrator with Email Studio, Automation Studio, data extensions, and deliverability.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

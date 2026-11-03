@@ -15,7 +15,7 @@ const slug = 'industries-cpq-developer'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Industries CPQ Developer exam tips for ${RELEASE_CURRENT}: product catalogue, pricing, guided selling Free practice questions.`
+  'Prepare for Salesforce Industries CPQ Developer with product catalog, pricing, guided selling, and exam objective review.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

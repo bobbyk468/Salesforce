@@ -19,7 +19,7 @@ const slug = 'b2c-solution-architect'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2C Solution Architect exam tips for ${RELEASE_CURRENT}: multi-cloud B2C architecture, Commerce Cloud, Marketing Cloud, Service Cloud.`
+  'Prepare for the B2C Solution Architect exam with Commerce Cloud, Marketing Cloud, and Service Cloud architecture topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

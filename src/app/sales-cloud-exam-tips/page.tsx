@@ -18,9 +18,7 @@ const slug = 'sales-cloud'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Sales Cloud Consultant exam tips for ${RELEASE_CURRENT}: opportunity management, forecasting, CPQ basics. Scenario tips to pass first attempt.`
-
+const pageDescription = `Sales Cloud Consultant exam tips for ${RELEASE_CURRENT}: review opportunity management, forecasting, CPQ basics, and scenario practice.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

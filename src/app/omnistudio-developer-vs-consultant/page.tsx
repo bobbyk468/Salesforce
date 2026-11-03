@@ -7,11 +7,9 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
-const pageTitle = 'OmniStudio Developer vs Consultant: Which Cert?'
+const pageTitle = 'OmniStudio Developer vs Consultant Roles | Trailblaze Prep'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  'Compare OmniStudio Developer and OmniStudio Consultant certifications: exam focus, career paths, difficulty, and which to take first based on your role.'
-
+const pageDescription = `Compare OmniStudio Developer and Consultant exams by focus, difficulty, and career use to choose the credential for your role.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

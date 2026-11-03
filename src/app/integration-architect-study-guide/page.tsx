@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'integration-architect'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, 67% to pass. Free practice questions.`
+const pageDescription = `Integration Architect study guide: 5 sections, 10-week plan, API patterns, async vs sync. $400, 67% to pass..`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

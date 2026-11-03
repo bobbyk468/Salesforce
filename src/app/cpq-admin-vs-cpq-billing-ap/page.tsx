@@ -14,7 +14,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = 'CPQ Admin vs CPQ & Billing AP: Which Cert to Take?'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  'Compare Salesforce CPQ Administrator and CPQ & Billing AP: what each tests, exam format differences, which to target for Revenue Cloud.'
+  'Compare CPQ Administrator and CPQ & Billing AP exam content and formats to choose the right credential for Revenue Cloud roles.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

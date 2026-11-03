@@ -8,8 +8,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Exam Retake Policy: Cost & Wait Time (${RELEASE_CURRENT})`
-const pageDescription = `Failed a Salesforce exam? See retake cost, wait time, attempt rules, score reports, and how to prepare before booking your next attempt.`
-
+const pageDescription = `Review Salesforce exam retake costs, wait times, attempt rules, and score reports, with guidance before booking another attempt.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

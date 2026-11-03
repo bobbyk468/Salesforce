@@ -11,27 +11,28 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
+const metadataTitle = 'ADM-201 vs App Builder: Compare Salesforce Exam Paths'
 const pageTitle = 'ADM-201 vs App Builder: Which Cert to Take First?'
-const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const pageDescription =
-  'Compare ADM-201 and DEV-402 by difficulty, exam focus, career outcomes, and study time to choose the right first Salesforce certification.'
+  'Compare ADM-201 and DEV-402 by exam focus, difficulty, study time, and career fit to choose a Salesforce certification.'
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/adm-201-vs-app-builder` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/adm-201-vs-app-builder`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: ogImageUrl, alt: pageTitle }],
+    images: [{ url: ogImageUrl, alt: metadataTitle }],
   },
 }
 

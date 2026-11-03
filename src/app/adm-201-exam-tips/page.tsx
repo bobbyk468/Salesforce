@@ -18,7 +18,7 @@ const slug = 'administrator'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `ADM-201 exam tips for ${RELEASE_CURRENT}: study plan, high-weight topics, scenario strategy, time management, and mock-test targets to help you pass first attempt.`
+  'Prepare for ADM-201 with a focused study plan, high-weight topics, scenario practice, time management, and mock exam targets.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

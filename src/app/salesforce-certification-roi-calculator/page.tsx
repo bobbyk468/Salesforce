@@ -7,10 +7,8 @@ import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification ROI Calculator (${RELEASE_CURRENT})`
-const pageDescription =
-  'Estimate Salesforce certification ROI by comparing exam fees, retake cost, study time, salary uplift, and payback period across popular cert tracks.'
+const pageDescription = `Estimate certification return using Salesforce exam fees, retakes, study time, salary uplift, and payback period.`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

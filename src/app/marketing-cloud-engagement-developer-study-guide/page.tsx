@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'marketing-cloud-engagement-developer'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Marketing Cloud Engagement Developer study guide: AMPscript, SSJS, REST API, data management. Pass in 2026 Free practice questions.`
+const pageDescription = `Marketing Cloud Engagement Developer study guide: AMPscript, SSJS, REST API, data management. Pass in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

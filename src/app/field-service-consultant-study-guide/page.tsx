@@ -16,7 +16,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const issuerGuideUrl = 'https://help.salesforce.com/s/articleView?id=005298947&language=en_US&type=1'
 const slug = 'field-service'
 const pageTitle = 'Agentforce Field Service & Operations Consultant Study Guide'
-const pageDescription = `Salesforce Certified Agentforce Field Service and Operations Consultant study guide: official exam domains, prerequisites, and scenario practice.`
+const pageDescription = 'Review the Agentforce Field Service and Operations Consultant exam domains, prerequisites, and scenario practice guidance.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

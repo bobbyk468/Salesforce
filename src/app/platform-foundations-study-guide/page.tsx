@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'platform-foundations'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Platform Foundations study guide: exam sections, key topics, study plan. Pass this $75 associate cert in 2026 Free practice questions.`
-
+const pageDescription = `Platform Foundations study guide: review exam sections, key topics, and a plan for the $75 associate exam with practice questions.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

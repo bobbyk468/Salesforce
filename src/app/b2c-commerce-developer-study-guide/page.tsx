@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'b2c-commerce-developer'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Salesforce B2C Commerce Developer (SFCC) study guide (${RELEASE_CURRENT}): SFRA, cartridges, ISML, OCAPI, Business Manager. $200 fee, 60 questions, ~65% passing score.`
+const pageDescription = 'Study B2C Commerce Developer topics including SFRA, cartridges, ISML, OCAPI, and Business Manager, with exam format details.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

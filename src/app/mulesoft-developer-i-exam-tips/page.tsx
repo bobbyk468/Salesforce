@@ -18,7 +18,7 @@ const slug = 'mulesoft-developer-i'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Developer I exam tips: published Mule 4 objectives, DataWeave, connectors, error handling, and deployment, with free practice questions.`
+  'Review MuleSoft Developer I objectives, Mule 4, DataWeave, connectors, error handling, and deployment exam topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

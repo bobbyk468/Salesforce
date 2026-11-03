@@ -18,7 +18,7 @@ const slug = 'communications-cloud-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Communications Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: order management, product catalogue, contract management.`
+  'Review Communications Cloud AP exam topics including order management, product catalogs, and contract management before test day.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

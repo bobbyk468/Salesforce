@@ -158,12 +158,12 @@ overlay('src/components/PracticeQuestionsSection.tsx', (text) =>
   text.replace('Imported from the SF-Questions repository. Answer keys are source-provided and have not\n          been independently verified. Use current official documentation to check your understanding;\n          this sample does not predict an exam result.',
     'Practice answer keys are study aids; verify concepts against current official documentation. Practice performance does not predict an exam result.'),
   'Use neutral validation wording for optional sourced questions.')
-overlay('src/components/QuestionCard.tsx', (text) =>
-  text.replace('<p className="font-semibold">Source-provided answer; not independently verified.</p>\n' +
-    '                <p className="whitespace-pre-wrap [overflow-wrap:anywhere]">{source.repository}@{source.commit} — {source.path} (question {source.questionId})</p>\n' +
-    '                {source.answerEvidence && <p className="mt-1 whitespace-pre-wrap [overflow-wrap:anywhere]">Source-provided answer evidence: {source.answerEvidence}</p>}',
-    '<p className="font-semibold">Practice answer key; verify concepts against current official documentation.</p>'),
-  'Remove upstream identifiers and neutralize answer-key wording.')
+overlay('src/components/QuestionCard.tsx', (text) => {
+  const start = text.indexOf('            {source && (\n')
+  const end = text.indexOf('\n            )}', start)
+  if (start < 0 || end < 0) throw new Error('Cannot bound upstream provenance UI')
+  return text.slice(0, start) + text.slice(end + '\n            )}'.length)
+}, 'Remove upstream provenance UI from the curated-question release.')
 
 let corpusHits = 0
 const sourceBankPath = path.join(repo, 'src/lib/question-banks/imported/banks.json')

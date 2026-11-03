@@ -7,7 +7,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Become a Salesforce Developer (${RELEASE_CURRENT} Guide)`
-const pageDescription = `How to become a Salesforce Developer in 2026: from zero to PD1 certified in 12–16 weeks. Step-by-step guide with free resources, salary data, and career tips.`
+const pageDescription = 'Plan a Salesforce Developer path from fundamentals to Platform Developer I with a study timeline, resources, and career guidance.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

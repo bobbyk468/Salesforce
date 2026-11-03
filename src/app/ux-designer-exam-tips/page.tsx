@@ -18,8 +18,7 @@ const slug = 'ux-designer'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}: human-centred design, discovery, prototyping. Scenario tips to pass first attempt.`
+const pageDescription = `Salesforce UX Designer exam tips for ${RELEASE_CURRENT}: review human-centred design, discovery, prototyping, and scenario practice.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

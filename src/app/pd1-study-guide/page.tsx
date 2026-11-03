@@ -19,9 +19,7 @@ const slug = 'developer-1'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `PD1 study guide (${RELEASE_CURRENT}): all 5 exam sections, Apex governor limits, testing rules, async patterns, and exam scenario strategy. Start free practice today.`
-
+const pageDescription = `Platform Developer I study guide for ${RELEASE_CURRENT}: review five exam sections on Apex limits, testing, async patterns, and scenarios.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

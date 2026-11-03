@@ -4,21 +4,28 @@ import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
 import ContentPageSchemas from '@/components/ContentPageSchemas'
 
 const baseUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
+const metadataTitle = 'Salesforce Certification Guides Sitemap | Trailblaze Prep'
 const pageTitle = 'HTML Sitemap | Trailblaze Prep'
 const pageDescription =
-  'Browse all Trailblaze Prep pages: Salesforce certification guides, role hubs, and key site pages. Browse by category and find your exam.'
+  'Browse Trailblaze Prep Salesforce guides, role hubs, and key site pages by category to find certification resources and exams.'
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${baseUrl}/html-sitemap` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'website',
     url: `${baseUrl}/html-sitemap`,
     siteName: 'Trailblaze Prep',
-    images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(metadataTitle)}`, width: 1200, height: 630, alt: metadataTitle }],
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: metadataTitle,
+    description: pageDescription,
+    images: [{ url: `${baseUrl}/og?t=${encodeURIComponent(metadataTitle)}`, alt: metadataTitle }],
   },
 }
 

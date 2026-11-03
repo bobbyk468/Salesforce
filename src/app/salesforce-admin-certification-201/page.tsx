@@ -15,6 +15,12 @@ export const metadata: Metadata = {
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/salesforce-admin-certification-201` },
   openGraph: { title: pageTitle, description: pageDescription, type: 'article', url: `${siteUrl}/salesforce-admin-certification-201`, images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }] },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+  },
 }
 
 const breadcrumbItems = [

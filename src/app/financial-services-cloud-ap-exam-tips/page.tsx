@@ -18,7 +18,7 @@ const slug = 'financial-services-cloud-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Financial Services Cloud Accredited Professional exam tips for ${RELEASE_CURRENT}: FSC data model, financial accounts, client management.`
+  'Review Financial Services Cloud AP topics covering the FSC data model, financial accounts, and client management before the exam.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

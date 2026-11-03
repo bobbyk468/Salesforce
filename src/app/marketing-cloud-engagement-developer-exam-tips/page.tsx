@@ -19,7 +19,7 @@ const slug = 'marketing-cloud-engagement-developer'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Marketing Cloud Developer exam tips for ${RELEASE_CURRENT}: AMPscript, SSJS, SQL queries, API integration Free practice questions.`
+  `Salesforce Marketing Cloud Developer exam tips for ${RELEASE_CURRENT}: AMPscript, SSJS, SQL queries, API integration.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

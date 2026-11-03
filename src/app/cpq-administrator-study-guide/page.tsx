@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'cpq-administrator'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Salesforce CPQ Administrator study guide (${RELEASE_CURRENT}): 5 exam sections, 8-week plan, pricing cascade tips, and free practice questions. $200 fee, 60 questions.`
+const pageDescription = 'Study CPQ Administrator exam sections, pricing cascades, and an eight-week preparation plan with practice questions.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -15,27 +15,28 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'data-architect'
 
+const metadataTitle = `Salesforce Data Architect Exam Tips and Study Plan (${RELEASE_YEAR})`
 const pageTitle = `Salesforce Data Architect Exam Tips (${RELEASE_YEAR})`
-const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
+const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(metadataTitle)}`
 const pageDescription =
-  `Salesforce Data Architect exam tips for ${RELEASE_YEAR}: data modelling, large data volumes, master data management and free practice questions.`
+  'Review Salesforce Data Architect topics including data modeling, large data volumes, and master data management before the exam.'
 
 export const metadata: Metadata = {
-  title: { absolute: pageTitle },
+  title: { absolute: metadataTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/data-architect-exam-tips` },
   openGraph: {
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
     type: 'article',
     url: `${siteUrl}/data-architect-exam-tips`,
-    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: pageTitle }],
+    images: [{ url: ogImageUrl, width: 1200, height: 630, alt: metadataTitle }],
   },
   twitter: {
     card: 'summary_large_image',
-    title: pageTitle,
+    title: metadataTitle,
     description: pageDescription,
-    images: [{ url: ogImageUrl, alt: pageTitle }],
+    images: [{ url: ogImageUrl, alt: metadataTitle }],
   },
 }
 

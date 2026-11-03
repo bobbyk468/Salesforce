@@ -21,7 +21,7 @@ const slug = 'app-builder'
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `App Builder study guide (${RELEASE_CURRENT}): all 5 exam sections, Flow Builder, Lightning App Builder, and scenario strategy. Free practice questions included.`
+  `App Builder study guide (${RELEASE_CURRENT}): all 5 exam sections, Flow Builder, Lightning App Builder, and scenario strategy..`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

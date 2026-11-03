@@ -8,8 +8,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Get a Free Salesforce Certification (${RELEASE_CURRENT})`
-const pageDescription = `How to get free Salesforce certification exams in 2026: Dreamforce vouchers, Trailhead promotions, employer-sponsored exams, and the lowest-cost entry points.`
-
+const pageDescription = `Find ways to earn Salesforce certification exams for free through event vouchers, Trailhead promotions, and employer sponsorship.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

@@ -17,9 +17,7 @@ const slug = 'public-sector-solutions-ap'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Public Sector Solutions Accredited Professional exam tips for ${RELEASE_CURRENT}: licences and permits, grants management, OmniStudio.`
-
+const pageDescription = `Public Sector Solutions AP exam tips for ${RELEASE_CURRENT}: review Salesforce licences, permits, grants management, and OmniStudio.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

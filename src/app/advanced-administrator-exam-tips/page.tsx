@@ -18,7 +18,7 @@ const slug = 'advanced-administrator'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Advanced Administrator (ADM-211) exam tips for ${RELEASE_CURRENT}: security, automation, data management Free practice questions.`
+  `Salesforce Advanced Administrator (ADM-211) exam tips for ${RELEASE_CURRENT}: security, automation, data management.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

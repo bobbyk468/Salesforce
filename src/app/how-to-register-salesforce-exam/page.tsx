@@ -6,7 +6,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `How to Register for a Salesforce Cert Exam (${RELEASE_CURRENT})`
-const pageDescription = `How to register for a Salesforce cert exam: Webassessor setup, booking, online vs centre, exam day tips Free practice questions.`
+const pageDescription = `How to register for a Salesforce cert exam: Webassessor setup, booking, online vs centre, exam day tips.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

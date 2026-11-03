@@ -19,7 +19,7 @@ const slug = 'experience-cloud'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Experience Cloud Consultant exam tips for ${RELEASE_CURRENT}: portal design, member management, security. Scenario tips to pass first attempt.`
+  'Study Experience Cloud Consultant topics covering portal design, member management, and security with scenario guidance.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

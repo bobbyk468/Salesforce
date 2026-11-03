@@ -16,7 +16,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'data-architect'
 const pageTitle = `ARC-801 Platform Data Architect Study Guide [${RELEASE_YEAR}]`
-const pageDescription = `Salesforce Platform Data Architect study guide (${RELEASE_YEAR}): six official exam domains, LDV strategies, MDM patterns, and migration. 105 minutes, 58% passing score.`
+const pageDescription = 'Study the six Platform Data Architect exam domains, including large data volumes, master data patterns, and migration strategies.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

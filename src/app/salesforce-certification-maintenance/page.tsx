@@ -6,7 +6,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Salesforce Certification Maintenance Guide (${RELEASE_CURRENT})`
-const pageDescription = `How to maintain Salesforce certification: when maintenance is due, Trailhead modules, deadline tips, renewal guide Free practice questions.`
+const pageDescription = `Learn when Salesforce certification maintenance is due, which Trailhead modules to complete, and how to track renewal deadlines.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

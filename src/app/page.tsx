@@ -24,10 +24,13 @@ import FaqAccordion from '@/components/FaqAccordion'
 import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { getWebPageJsonLd, getBreadcrumbListJsonLd } from '@/lib/schema-data'
 import { CERTIFICATION_CATEGORIES } from '@/lib/certifications-data'
+import { SITE_DEFAULT_DESCRIPTION, SITE_DEFAULT_TITLE } from '@/lib/constants'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 
 export const metadata: Metadata = {
+  title: { absolute: SITE_DEFAULT_TITLE },
+  description: SITE_DEFAULT_DESCRIPTION,
   alternates: { canonical: siteUrl },
 }
 
@@ -346,7 +349,7 @@ export default async function Home() {
                   Browse Certifications
                 </Link>
               </div>
-              <div className="flex gap-8">
+              <div className="flex flex-wrap gap-x-6 gap-y-4">
                 <div>
                   <div className="text-2xl font-bold text-salesforce-dark leading-none">Role-based</div>
                   <div className="text-sm text-gray-500 mt-1">Certifications</div>

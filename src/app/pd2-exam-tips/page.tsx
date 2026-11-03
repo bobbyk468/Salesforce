@@ -18,8 +18,7 @@ const slug = 'developer-2'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `PD2 exam tips for ${RELEASE_CURRENT}: advanced Apex patterns, integration, design patterns, and mock-test strategy to pass Platform Developer II first attempt.`
+const pageDescription = `Prepare for Platform Developer II with advanced Apex, integration, design patterns, and mock exam strategy for ${RELEASE_CURRENT}.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

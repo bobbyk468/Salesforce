@@ -8,7 +8,7 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `CPQ Admin vs Revenue Cloud Consultant (${RELEASE_CURRENT})`
-const pageDescription = `Salesforce CPQ Administrator vs Revenue Cloud Consultant comparison (${RELEASE_CURRENT}): skills, difficulty, overlap, and which cert to take for quote-to-cash roles.`
+const pageDescription = 'Compare CPQ Administrator and Revenue Cloud Consultant skills, difficulty, topic overlap, and fit for quote-to-cash roles.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

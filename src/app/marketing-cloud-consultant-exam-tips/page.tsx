@@ -19,7 +19,7 @@ const slug = 'marketing-cloud-consultant'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Marketing Cloud Consultant exam tips for ${RELEASE_CURRENT}: email strategy, automation, segmentation, analytics, and scenario approach to pass first attempt.`
+  'Review Marketing Cloud Consultant topics including email strategy, automation, segmentation, analytics, and scenarios.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

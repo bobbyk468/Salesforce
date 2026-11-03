@@ -14,9 +14,7 @@ const slug = 'tableau-desktop-foundations'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: data connections, basic charts, filters. Scenario tips to pass first attempt.`
-
+const pageDescription = `Tableau Desktop Foundations exam tips for ${RELEASE_CURRENT}: review data connections, charts, filters, and scenario-based questions.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

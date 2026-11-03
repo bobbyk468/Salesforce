@@ -20,9 +20,7 @@ const slug = 'developer-2'
 
 const pageTitle = buildStudyGuideTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Platform Developer II (PD2) study guide (${RELEASE_CURRENT}): design patterns, async Apex, integration, performance, testing. Pass one of Salesforce's hardest exams.`
-
+const pageDescription = `Platform Developer II study guide for ${RELEASE_CURRENT}: review design patterns, async Apex, integration, performance, and testing.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

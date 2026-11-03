@@ -18,7 +18,7 @@ const slug = 'field-service'
 const pageTitle = 'Agentforce Field Service and Operations Consultant Exam Tips'
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Exam preparation for the Salesforce Certified Agentforce Field Service and Operations Consultant: official objectives and scenario-based review.`
+  'Prepare for the Agentforce Field Service and Operations Consultant exam by reviewing official objectives and practical scenarios.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

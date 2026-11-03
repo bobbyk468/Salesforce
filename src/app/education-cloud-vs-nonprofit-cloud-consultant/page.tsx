@@ -11,7 +11,7 @@ import RelatedComparisons from '@/components/RelatedComparisons'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const pageTitle = `Education Cloud vs Nonprofit Cloud Consultant (${RELEASE_YEAR})`
-const pageDescription = `Compare Education Cloud and Nonprofit Cloud by use case, data model, and guide scope. Check product fit before choosing a study path.`
+const pageDescription = 'Compare Education Cloud and Nonprofit Cloud by use case, data model, and available guide scope before choosing a study path.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

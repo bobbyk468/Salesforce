@@ -17,8 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'ux-designer'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Complete UX Designer certification study guide: exam sections, key topics, study plan, and tips to pass the Salesforce Certified UX Designer exam in 2026.`
-
+const pageDescription = `Salesforce UX Designer study guide: review exam sections and key topics, then follow a plan for the Certified UX Designer exam.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

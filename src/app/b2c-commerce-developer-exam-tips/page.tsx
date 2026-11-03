@@ -19,7 +19,7 @@ const slug = 'b2c-commerce-developer'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce B2C Commerce Developer exam tips for ${RELEASE_CURRENT}: SFRA, cartridges, controllers, ISML templates Free practice questions.`
+  'Prepare for Salesforce B2C Commerce Developer with SFRA, cartridges, controllers, and ISML template exam topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

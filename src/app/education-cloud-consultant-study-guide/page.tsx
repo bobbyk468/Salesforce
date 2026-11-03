@@ -16,7 +16,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'education-cloud-consultant'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Historical notes on the Salesforce Education Cloud Consultant exam guide, published logistics, and education solution design study topics.`
+const pageDescription = 'Explore the historical Education Cloud Consultant guide, exam logistics, and education solution design study topics.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

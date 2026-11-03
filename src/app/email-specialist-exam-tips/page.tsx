@@ -19,7 +19,7 @@ const slug = 'email-specialist'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Marketing Cloud Engagement Specialist exam tips (${RELEASE_YEAR}): 4-week study plan, deliverability strategies, and objective-focused practice.`
+  'Prepare for Marketing Cloud Engagement Specialist with a four-week plan, deliverability guidance, and objective-based practice.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

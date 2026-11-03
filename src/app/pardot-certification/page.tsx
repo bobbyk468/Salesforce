@@ -7,14 +7,19 @@ import ContentPageAuthor from '@/components/ContentPageAuthor'
 import { RELEASE_CURRENT } from '@/lib/release-data'
 
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
-const pageTitle = `Pardot Certification Guide (${RELEASE_CURRENT})`
-const pageDescription = 'Pardot certification guide: choose Pardot Specialist or Consultant, compare exam difficulty, format, study path, and free practice questions.'
-
+const pageTitle = `Salesforce Pardot Certification Guide and Exams (${RELEASE_CURRENT})`
+const pageDescription = `Compare Pardot Specialist and Consultant exam formats, difficulty, and study paths, with free practice for both credentials.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,
   alternates: { canonical: `${siteUrl}/pardot-certification` },
   openGraph: { title: pageTitle, description: pageDescription, type: 'article', url: `${siteUrl}/pardot-certification`, images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, width: 1200, height: 630, alt: pageTitle }] },
+  twitter: {
+    card: 'summary_large_image',
+    title: pageTitle,
+    description: pageDescription,
+    images: [{ url: `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`, alt: pageTitle }],
+  },
 }
 
 const breadcrumbItems = [

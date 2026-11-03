@@ -18,8 +18,7 @@ const slug = 'nonprofit-success-pack-consultant'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce NPSP Consultant exam tips for ${RELEASE_CURRENT}: household model, gift entry, engagement plans. Scenario tips to pass first attempt.`
+const pageDescription = `Prepare for the Salesforce NPSP Consultant exam with household models, gift entry, and engagement plan scenarios for ${RELEASE_CURRENT}.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

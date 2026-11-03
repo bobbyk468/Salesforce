@@ -5,6 +5,9 @@ export const WHATSAPP_LINK = 'https://api.whatsapp.com/send?phone=918807570951&t
 
 /** Site brand name: used in header, footer, metadata, and schema. */
 export const SITE_NAME = 'Trailblaze Prep'
+export const SITE_DEFAULT_TITLE = `Free Salesforce Exam Practice Tests | ${SITE_NAME}`
+export const SITE_DEFAULT_DESCRIPTION =
+  'Free Salesforce practice exams and study guides for Admin, Developer, Consultant, Architect, MuleSoft and Tableau certifications.'
 
 /** Shown on cert pages and About for E-E-A-T; update when content is refreshed. */
 export const CONTENT_LAST_UPDATED = RELEASE_DATE_DISPLAY

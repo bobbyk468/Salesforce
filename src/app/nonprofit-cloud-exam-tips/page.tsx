@@ -18,9 +18,7 @@ const slug = 'nonprofit-cloud'
 
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
-const pageDescription =
-  `Salesforce Nonprofit Cloud Consultant exam tips for ${RELEASE_CURRENT}: NPC data model, fundraising, programme management Free practice questions.`
-
+const pageDescription = `Salesforce Nonprofit Cloud Consultant exam tips for ${RELEASE_CURRENT}: review NPC data, fundraising, and programme management.`
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
   description: pageDescription,

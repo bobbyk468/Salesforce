@@ -17,7 +17,7 @@ import ExamPricingCard from '@/components/ExamPricingCard'
 const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.com'
 const slug = 'marketing-cloud-engagement-foundations'
 const pageTitle = buildStudyGuideTitle(slug)
-const pageDescription = `Marketing Cloud Engagement Foundations study guide: exam sections, email, data, automation. Pass this $75 cert in 2026 Free practice questions.`
+const pageDescription = `Marketing Cloud Engagement Foundations study guide: exam sections, email, data, automation. Pass this $75 cert in 2026.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

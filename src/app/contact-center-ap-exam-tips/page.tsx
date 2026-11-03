@@ -18,7 +18,7 @@ const slug = 'contact-center-ap'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Salesforce Contact Center Accredited Professional exam tips for ${RELEASE_CURRENT}: omni-channel routing, Service Cloud Voice, Einstein bots.`
+  'Review Contact Center AP topics including omnichannel routing, Service Cloud Voice, and Einstein Bots for exam preparation.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

@@ -10,7 +10,7 @@ const siteUrl = process.env.NEXT_PUBLIC_SITE_URL || 'https://www.trailblazeprep.
 const pageTitle = `Data Cloud vs Marketing Cloud (${RELEASE_CURRENT}) | Which Cert?`
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `Data Cloud vs Marketing Cloud certs: what each does, how they compare, which path to choose for your role Free practice questions.`
+  `Data Cloud vs Marketing Cloud certs: what each does, how they compare, which path to choose for your role.`
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },

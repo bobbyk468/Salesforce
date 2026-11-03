@@ -19,7 +19,7 @@ const slug = 'mulesoft-integration-foundations'
 const pageTitle = buildExamTipsTitle(slug)
 const ogImageUrl = `${siteUrl}/og?t=${encodeURIComponent(pageTitle)}`
 const pageDescription =
-  `MuleSoft Foundations exam tips (${RELEASE_CURRENT}): 3-week study plan, API-led connectivity essentials, and mock exam strategies. Start free.`
+  'Use a three-week study plan to review MuleSoft Integration Foundations, API-led connectivity, and mock exam scenarios.'
 
 export const metadata: Metadata = {
   title: { absolute: pageTitle },
