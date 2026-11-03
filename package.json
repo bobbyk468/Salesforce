@@ -49,9 +49,10 @@
     "bot:train:http": "node scripts/train-bot-http.mjs",
     "questions:fetch": "node scripts/fetch-git-question-source.mjs",
     "questions:import": "node scripts/import-git-questions.mjs",
-    "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs",
+    "test:questions": "node --test scripts/fetch-git-question-source.test.mjs scripts/import-git-questions.test.mjs src/tests/imported-question-ui.test.mjs src/tests/git-practice-integration.test.mjs && node scripts/validate-practice-questions.mjs",
     "questions:verify": "node scripts/verify-git-question-import.mjs",
-    "audit:questions": "node scripts/audit-imported-question-pages.mjs"
+    "audit:questions": "node scripts/audit-imported-question-pages.mjs",
+    "validate:questions": "node scripts/validate-practice-questions.mjs"
   },
   "dependencies": {
     "@next/third-parties": "^16.4.4",
