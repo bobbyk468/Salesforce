@@ -416,7 +416,7 @@
         "Call chat.delete to remove the original message containing the button",
         "Reply in the message thread only, without acknowledging the payload",
         "Send a new message to the channel immediately",
-        "Acknowledge the action within 3 seconds with HTTP 200, then perform any async processing and update the message or open a modal"
+        "Acknowledge the action within 3 seconds with HTTP 200"
       ],
       "correctAnswer": 3,
       "explanation": "Slack requires acknowledgement within 3 seconds to avoid showing a timeout error to the user. Use ack() or respond() first, then process asynchronously.",

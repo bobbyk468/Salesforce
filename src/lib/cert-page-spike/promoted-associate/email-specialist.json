@@ -469,7 +469,7 @@
     {
       "question": "Which practice most directly reduces spam complaints over time?",
       "options": [
-        "Relevant content, sensible frequency, opted-in list",
+        "Relevant content, sensible frequency",
         "Using a new sending domain for each campaign",
         "Increasing the volume of sends",
         "Removing the preference centre link"

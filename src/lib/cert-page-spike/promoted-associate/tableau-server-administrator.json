@@ -260,7 +260,7 @@
     {
       "question": "What is the effect of locking permissions to a project?",
       "options": [
-        "Content inherits the project's permissions, with no per-item override",
+        "Content inherits the project's permissions",
         "The project is hidden from all search results",
         "Extract refreshes for content in the project pause",
         "The project becomes read-only for every user"
@@ -342,7 +342,7 @@
       "options": [
         "All site roles consume the same licence tier",
         "Viewers do not require a licence",
-        "Licences are tiered by site role, Creator highest",
+        "Licences are tiered by site role",
         "Licensing is configured per project"
       ],
       "correctAnswer": 2,

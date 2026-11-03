@@ -169,7 +169,7 @@
       "question": "Members should reach Gold status based on points earned from flights, but points from a credit card partner should only be spendable. How should currencies be set up?",
       "options": [
         "All points as qualifying",
-        "Flight points as qualifying, credit card points as non-qualifying",
+        "Flight points as qualifying",
         "All points as non-qualifying",
         "Use one currency and ignore tiers"
       ],
@@ -184,8 +184,8 @@
     {
       "question": "A member buys a $120 jacket in store. How is this recorded before points are given?",
       "options": [
-        "As a transaction journal that program processes then act on",
-        "As a partner record",
+        "As a transaction journal for the processes to act on",
+        "As a partner organisation record on the programme",
         "As a voucher",
         "As a new tier"
       ],
@@ -200,9 +200,9 @@
     {
       "question": "Gold members should earn 2 points per dollar, while others earn 1. Where is this rule set?",
       "options": [
-        "In the voucher definition",
+        "In the voucher definition held against the promotion",
         "In the partner settings",
-        "In a program process rule that checks the member's tier",
+        "In a program process rule checking the tier",
         "In the member's address"
       ],
       "correctAnswer": 2,
@@ -218,7 +218,7 @@
       "options": [
         "A new tier",
         "A manual points adjustment for each member",
-        "A promotion with dates, a multiplier and a limit",
+        "A promotion with dates",
         "A new currency"
       ],
       "correctAnswer": 2,
@@ -235,7 +235,7 @@
         "Points expiry rules for the currency",
         "A partner agreement",
         "A new tier group",
-        "Deleting inactive members"
+        "Deleting the members who are inactive"
       ],
       "correctAnswer": 0,
       "explanation": "Expiry rules remove points after a set time, which also helps control points liability.",
@@ -248,9 +248,9 @@
     {
       "question": "A member asks why their balance dropped last month. Where can an agent see every change to the balance?",
       "options": [
-        "The member's points ledger",
+        "The points ledger",
         "The partner list",
-        "The tier definition",
+        "The tier definition record",
         "A promotion record"
       ],
       "correctAnswer": 0,
@@ -264,7 +264,7 @@
     {
       "question": "Members of a hotel programme should also earn points when they rent cars from a partner company. What should be set up?",
       "options": [
-        "A loyalty program partner, with the partner sending transactions",
+        "A loyalty program partner",
         "A new tier",
         "A manual email process",
         "A second programme for car rental"
@@ -282,7 +282,7 @@
       "options": [
         "Enrollment rate",
         "Points liability",
-        "Redemption rate",
+        "The overall redemption rate",
         "Tier movement"
       ],
       "correctAnswer": 1,
@@ -297,8 +297,8 @@
       "question": "Gold members get free delivery. Where is this recorded?",
       "options": [
         "As a points currency",
-        "As a benefit linked to the Gold tier",
-        "As a transaction journal",
+        "As a benefit on the Gold tier",
+        "As a transaction journal entry",
         "As a partner"
       ],
       "correctAnswer": 1,
@@ -313,7 +313,7 @@
       "question": "A member reaches Gold in March. When should the programme check whether they keep Gold?",
       "options": [
         "Never, tiers are permanent",
-        "Only when they call support",
+        "Only at the point when they telephone the support team",
         "Every time they log in",
         "At the tier review date set in the tier rules"
       ],
@@ -328,9 +328,9 @@
     {
       "question": "Members should see their points, tier and vouchers online. What is the usual way?",
       "options": [
-        "A weekly PDF statement only",
+        "A weekly PDF statement sent by email",
         "Calling the contact centre",
-        "A member portal built on Experience Cloud",
+        "A portal built on Experience Cloud",
         "A Chatter group"
       ],
       "correctAnswer": 2,
@@ -344,10 +344,10 @@
     {
       "question": "After a promotion, the marketing team wants to know if it increased spend. What should they look at?",
       "options": [
-        "The member portal's colours",
+        "The colour scheme used across the member portal",
         "The number of tiers",
         "The expiry rule",
-        "Promotion results in reports or Loyalty Analytics"
+        "Promotion results in Loyalty Analytics"
       ],
       "correctAnswer": 3,
       "explanation": "Reporting on promotion performance shows whether it changed member behaviour.",
@@ -361,8 +361,8 @@
       "question": "A member returns a product they earned 120 points on. What should happen?",
       "options": [
         "Delete the member",
-        "A transaction journal for the return that removes the points",
-        "Move the member down a tier straight away",
+        "A transaction journal that removes the points",
+        "Move the member down into a lower tier straight away",
         "Nothing, points stay"
       ],
       "correctAnswer": 1,
@@ -379,7 +379,7 @@
         "Using only the tier name",
         "Keeping each data set separate",
         "Bringing the data together in Data Cloud",
-        "Asking members to fill in a survey"
+        "Asking all of the members to fill in a feedback survey"
       ],
       "correctAnswer": 2,
       "explanation": "Data Cloud combines data from many sources into one profile, which supports better targeting.",

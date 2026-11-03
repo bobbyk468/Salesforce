@@ -344,7 +344,7 @@
     {
       "question": "Five systems need customer data from SAP. Today each one has its own direct connection to SAP, and every change breaks something. What should the architect recommend?",
       "options": [
-        "Reusable APIs through middleware, with a System API in front of SAP",
+        "Reusable APIs through middleware",
         "Add a sixth direct connection",
         "Copy SAP data into every system each night",
         "Stop sharing the data"
@@ -363,7 +363,7 @@
         "Only managed packages need tests",
         "No tests are needed",
         "100% coverage on every class",
-        "At least 75% overall coverage, with some coverage on every trigger"
+        "At least 75% overall coverage"
       ],
       "correctAnswer": 3,
       "explanation": "Production deployments that include Apex need at least 75% overall coverage, and every trigger must be covered.",

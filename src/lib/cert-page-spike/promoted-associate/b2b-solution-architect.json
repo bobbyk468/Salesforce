@@ -218,7 +218,7 @@
       "options": [
         "A nightly CSV export to each system",
         "Four separate Apex callouts in the order trigger",
-        "Publish an event when an order is placed, and let each system subscribe",
+        "Publish an event when an order is placed",
         "Each system calls Salesforce every minute to check for new orders"
       ],
       "correctAnswer": 2,
@@ -282,7 +282,7 @@
       "options": [
         "Orders should be re-entered by hand in each system",
         "Order data should only ever exist in Salesforce",
-        "Each step should have a clear owning system, with IDs that link the records",
+        "Each step should have a clear owning system",
         "Every system should be able to edit every order field"
       ],
       "correctAnswer": 2,
@@ -299,7 +299,7 @@
         "Only the speed of the website",
         "Only the number of licences",
         "Only the language of the user interface",
-        "Data privacy rules such as GDPR, consent and where data is stored"
+        "Data privacy rules such as GDPR"
       ],
       "correctAnswer": 3,
       "explanation": "Personal data of EU customers falls under GDPR. The design must handle consent, data access requests and where the data is held.",

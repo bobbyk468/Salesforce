@@ -188,8 +188,8 @@
     {
       "question": "Sales reps want an alert in their team channel when an opportunity over $1 million is closed in Salesforce. What is the best approach?",
       "options": [
-        "A Salesforce Flow that posts to the Slack channel",
-        "Ask reps to post it by hand",
+        "A Salesforce Flow posting to the channel",
+        "Ask each of the reps to post the update by hand",
         "A daily email report",
         "A Workflow Builder form"
       ],
@@ -205,9 +205,9 @@
       "question": "Employees often send IT requests by DM, and nothing is tracked. What could a consultant recommend that needs no code?",
       "options": [
         "Banning DMs",
-        "A custom Slack app built by developers",
+        "A custom Slack application built by the in-house developers",
         "A weekly IT meeting",
-        "A Workflow Builder form that posts requests to an IT channel"
+        "A Workflow Builder form posting to an IT channel"
       ],
       "correctAnswer": 3,
       "explanation": "Workflow Builder can collect requests in a form and post them to a channel where IT can track them.",
@@ -222,8 +222,8 @@
       "options": [
         "A channel naming rule",
         "Slack Connect",
-        "Retention policies for those channels",
-        "A Workflow Builder step"
+        "Retention policies on the channels",
+        "A single Workflow Builder step"
       ],
       "correctAnswer": 2,
       "explanation": "Retention policies control how long messages and files are kept.",
@@ -237,8 +237,8 @@
       "question": "When people leave the company, their Slack access should be removed automatically. What should be set up?",
       "options": [
         "A retention policy",
-        "SCIM provisioning from the identity provider",
-        "Manual removal each month",
+        "SCIM provisioning from the provider",
+        "Manual removal carried out each month",
         "A naming convention"
       ],
       "correctAnswer": 1,
@@ -255,7 +255,7 @@
         "Turning off email for everyone",
         "Adding more Slack apps",
         "Buying more licences",
-        "Adoption work: champions, targeted training and clear guidance on when to use channels"
+        "Adoption work: champions"
       ],
       "correctAnswer": 3,
       "explanation": "Slow adoption is usually a people and process issue. Champions and clear guidance help most.",
@@ -270,8 +270,8 @@
       "options": [
         "The number of emoji used",
         "The number of workspaces",
-        "The share of messages in channels compared with direct messages",
-        "The number of apps installed"
+        "The share of messages in channels rather than DMs",
+        "The total number of apps that have been installed"
       ],
       "correctAnswer": 2,
       "explanation": "More messages in channels means more work is visible and searchable.",
@@ -284,9 +284,9 @@
     {
       "question": "A support agent is stuck on a complex case and needs help from engineering. What Slack-based approach fits?",
       "options": [
-        "Swarming: open a channel linked to the case and bring in the experts",
+        "Swarming: a channel on the case with the experts in it",
         "Email the engineering team",
-        "Close the case and open a new one",
+        "Close the existing case and then open an entirely new one",
         "Wait for the next team meeting"
       ],
       "correctAnswer": 0,
@@ -300,9 +300,9 @@
     {
       "question": "People can't find the right channels because names are all different. What should the consultant recommend?",
       "options": [
-        "A channel naming convention with clear prefixes",
+        "A naming convention with clear prefixes",
         "A new workspace",
-        "Deleting most channels",
+        "Deleting the majority of the channels",
         "More DMs"
       ],
       "correctAnswer": 0,
@@ -333,8 +333,8 @@
       "question": "A company has many business units, each needing its own workspace but with shared company-wide channels. What fits?",
       "options": [
         "One single channel for everyone",
-        "Enterprise Grid with several workspaces in one organisation",
-        "Slack Connect between the business units",
+        "Enterprise Grid with several workspaces",
+        "Slack Connect set up between the separate business units",
         "Separate unconnected workspaces"
       ],
       "correctAnswer": 1,
@@ -349,9 +349,9 @@
       "question": "A process needs to update several Salesforce records with complex rules when someone approves a request in Slack. What is the better tool?",
       "options": [
         "A pinned message",
-        "Workflow Builder alone",
+        "Workflow Builder used entirely on its own",
         "A Slack reminder",
-        "Salesforce Flow, with Slack used for the approval message"
+        "Salesforce Flow, with Slack for the message"
       ],
       "correctAnswer": 3,
       "explanation": "Flow handles complex Salesforce logic, and it can still use Slack for the approval step.",
@@ -366,7 +366,7 @@
       "options": [
         "Slack Connect",
         "Enterprise Key Management",
-        "Retention policies",
+        "Message retention policies",
         "SCIM"
       ],
       "correctAnswer": 1,
@@ -383,7 +383,7 @@
         "Turning off email",
         "Clear goals and a few high-value use cases",
         "Installing as many apps as possible",
-        "Moving every tool into Slack on day one"
+        "Moving every single tool into Slack on the first day"
       ],
       "correctAnswer": 1,
       "explanation": "Starting with goals and a few use cases gives quick wins and something to measure.",

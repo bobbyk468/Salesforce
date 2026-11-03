@@ -205,7 +205,7 @@
       "question": "An Einstein Discovery model shows excellent accuracy, but one of its variables is only populated after the outcome has been decided. What should happen?",
       "options": [
         "Deploy it, since the accuracy is high",
-        "Remove that variable and retrain, because it leaks the answer",
+        "Remove that variable and retrain",
         "Convert it to a text field",
         "Keep it but document the issue"
       ],

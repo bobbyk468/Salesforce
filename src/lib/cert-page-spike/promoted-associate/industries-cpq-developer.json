@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which industries does the Industries CPQ certification focus on?",
+      "question": "A developer must let a customer choose options on a product where each choice changes what else is available. What supports this?",
       "options": [
-        "Retail only",
-        "Healthcare only",
-        "Financial Services only",
-        "Communications, Media, and Energy & Utilities"
+        "A set of separate product records, one for each valid combination of choices",
+        "A text field where the sales user records the options the customer wanted",
+        "A product configuration with rules and attributes",
+        "A validation rule on the order object that rejects invalid combinations later"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Configuration models the product with attributes and rules, so the choices constrain each other as the user works through them.",
+      "whyWrong": [
+        "Enumerating every combination explodes the catalogue and is unmaintainable.",
+        "Free text cannot be priced, validated or fulfilled.",
+        "Catching errors after the fact is a poor experience and arrives too late."
+      ]
+    },
+    {
+      "question": "What does a product attribute do in Industries CPQ?",
+      "options": [
+        "It stores the historical prices the product has carried over time",
+        "It records which sales user configured the product for the customer",
+        "It defines which catalogue the product has been assigned into",
+        "It captures a characteristic that can drive rules and price"
       ],
       "correctAnswer": 3,
-      "explanation": "Industries CPQ covers Configure, Price, Quote solutions for Communications, Media, and Energy & Utilities clouds.",
+      "explanation": "Attributes hold the characteristics a customer selects or that describe the product, and rules and pricing can act on them.",
       "whyWrong": [
-        "Retail is covered by B2C Commerce, not Industries CPQ's core focus areas.",
-        "Healthcare uses Health Cloud, not Industries CPQ as its primary quoting tool.",
-        "Financial Services uses FSC-specific tools, not the Industries CPQ focus areas listed here."
+        "Price history is held in pricing records.",
+        "Ownership is tracked on the order or quote.",
+        "Catalogue assignment is separate configuration."
       ]
     },
     {
-      "question": "What is a key difference between standard CPQ and Industries CPQ?",
+      "question": "A rule must prevent two incompatible options being selected together. What should the developer build?",
       "options": [
-        "Industries CPQ does not support quotes",
-        "Industries CPQ is for B2C only",
-        "Industry-specific product and pricing models (e.g., subscriptions, usage)",
-        "No difference"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Industries CPQ extends CPQ with industry-specific models for subscriptions, usage-based pricing, and complex product structures.",
-      "whyWrong": [
-        "Industries CPQ absolutely supports quoting — that's its core function.",
-        "Industries CPQ supports B2B use cases extensively, not just B2C.",
-        "There is a meaningful difference — Industries CPQ adds industry-specific pricing models standard CPQ doesn't natively support."
-      ]
-    },
-    {
-      "question": "Which Salesforce product is often used with Industries CPQ for telecom?",
-      "options": [
-        "Marketing Cloud only",
-        "Communications Cloud",
-        "Commerce Cloud only",
-        "Heroku only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Communications Cloud (part of Industries) works with CPQ for telecom use cases.",
-      "whyWrong": [
-        "Marketing Cloud isn't the typical pairing for telecom CPQ implementations.",
-        "Commerce Cloud is B2C-focused e-commerce, not the typical telecom CPQ pairing.",
-        "Heroku is a platform-as-a-service, not a CPQ-paired product for telecom."
-      ]
-    },
-    {
-      "question": "What role does a Industries CPQ Developer typically fulfill?",
-      "options": [
-        "Developing and customizing CPQ applications for industry verticals",
-        "Email marketing",
-        "Data migration only",
-        "Slack configuration"
-      ],
-      "correctAnswer": 0,
-      "explanation": "They develop Industries CPQ applications for Communications, Media, and Energy & Utilities.",
-      "whyWrong": [
-        "Email marketing is unrelated to Industries CPQ development work.",
-        "Industries CPQ developers do far more than data migration — that undersells the role.",
-        "Slack configuration is a separate skill set from CPQ development."
-      ]
-    },
-    {
-      "question": "Which type of pricing is commonly modeled in Energy & Utilities CPQ?",
-      "options": [
-        "One-time only",
-        "Usage-based, tiered, and time-of-use pricing",
-        "Fixed fee only",
-        "No pricing"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Energy & Utilities often require usage-based, tiered, and time-of-use pricing models.",
-      "whyWrong": [
-        "Energy & Utilities pricing is rarely one-time only — usage patterns drive most billing models.",
-        "Fixed fee alone doesn't capture the usage-based nature of utility billing.",
-        "Utilities absolutely require pricing models — 'no pricing' is incorrect."
-      ]
-    },
-    {
-      "question": "Which Industries CPQ product model supports subscriptions?",
-      "options": [
-        "No modeling",
-        "Fixed only",
-        "One-time only",
-        "Subscription and usage-based product modeling"
+        "An Apex trigger that deletes one of the two options after they are saved",
+        "A report that the sales manager reviews at the end of each trading week",
+        "A required field on the order that asks the user to confirm compatibility",
+        "A configuration rule expressing the exclusion"
       ],
       "correctAnswer": 3,
-      "explanation": "Industries CPQ supports subscription and usage-based models.",
+      "explanation": "Configuration rules enforce compatibility while the user is configuring, which is where the mistake can still be prevented.",
       "whyWrong": [
-        "Subscription products require explicit modeling — 'no modeling' is incorrect.",
-        "'Fixed only' doesn't support the recurring nature of subscriptions.",
-        "Subscription/usage modeling requires more than one-time pricing structures."
+        "Silently deleting a selection confuses the user and hides the conflict.",
+        "A weekly report finds the problem long after the order has gone.",
+        "Asking a user to self-certify does not enforce anything."
       ]
     },
     {
-      "question": "What does Industries CPQ scripting extend?",
+      "question": "What is the purpose of a pricing element or matrix in this context?",
       "options": [
-        "Only reports",
-        "Only UI",
-        "Only dashboards",
-        "Product configuration, pricing, and quote logic"
+        "It stores the payment terms agreed with the customer's account",
+        "It resolves a price from the configured attributes",
+        "It records the discount each sales user is permitted to authorise",
+        "It lists the products that are currently available in the catalogue"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Pricing is derived from the configuration, so a matrix or element maps the chosen attributes to the price that results.",
+      "whyWrong": [
+        "Payment terms are commercial account data.",
+        "Discount authority is an approvals concern.",
+        "Catalogue availability is separate from pricing."
+      ]
+    },
+    {
+      "question": "A telecom customer orders a service that requires an engineer visit and a router shipment. What does this imply?",
+      "options": [
+        "The order cannot be submitted until the engineer visit has taken place",
+        "The router must be configured as an attribute of the service product",
+        "The order decomposes into separate fulfilment items",
+        "Two completely separate orders must be raised for the same customer"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Orders in industries settings break down into the technical and physical actions needed to deliver the service, each tracked to completion.",
+      "whyWrong": [
+        "Fulfilment follows submission rather than preceding it.",
+        "A shipped device is its own item, not an attribute.",
+        "Splitting into two orders loses the single customer commitment."
+      ]
+    },
+    {
+      "question": "What does order decomposition mean?",
+      "options": [
+        "Removing the products a customer later cancelled from the order",
+        "Dividing the order value across the sales users who contributed",
+        "Turning a commercial order into deliverable actions",
+        "Splitting a large order so each item is invoiced on its own"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Decomposition translates what the customer bought into the specific tasks and service orders that systems and people must carry out.",
+      "whyWrong": [
+        "Cancellation is an amendment to the order.",
+        "Revenue attribution is a reporting matter.",
+        "Invoicing is a billing concern rather than decomposition."
+      ]
+    },
+    {
+      "question": "A developer needs custom logic to run during configuration. What should they consider first?",
+      "options": [
+        "Whether declarative rules already cover the requirement",
+        "Whether the logic should instead run after the order is submitted",
+        "Whether the org has enough remaining Apex character capacity for it",
+        "Whether the logic can be written entirely in a single Apex trigger"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Declarative configuration rules are easier to maintain and survive upgrades, so custom code should be the fallback rather than the default.",
+      "whyWrong": [
+        "Running validation after submission defeats its purpose.",
+        "Code capacity is rarely the real constraint.",
+        "Choosing the implementation before checking the need is backwards."
+      ]
+    },
+    {
+      "question": "Why does caching matter for a configurable product catalogue?",
+      "options": [
+        "Caching ensures the catalogue data is always perfectly current",
+        "Configuration involves many reads that must stay fast",
+        "It determines which attributes the customer is able to select",
+        "It removes the need to define any configuration rules at all"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Resolving rules, attributes and prices touches a lot of data, so the platform caches aggressively to keep the experience responsive.",
+      "whyWrong": [
+        "Caching trades freshness for speed rather than guaranteeing currency.",
+        "Attribute availability comes from the configuration model.",
+        "Rules are still required regardless of caching."
+      ]
+    },
+    {
+      "question": "A price must change when a customer upgrades mid-contract. What handles the difference?",
+      "options": [
+        "A credit note cancelling the whole of the original contract value",
+        "Proration across the remaining term",
+        "A new contract replacing the original from the start of its term",
+        "A manual adjustment typed in by the sales user on the order"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Mid-term changes are prorated so the customer pays for the new service only for the period they actually receive it.",
+      "whyWrong": [
+        "A full credit reverses more than the change requires.",
+        "Replacing the contract discards the original term and its history.",
+        "Manual adjustment is error-prone where the platform can calculate it."
+      ]
+    },
+    {
+      "question": "What distinguishes a commercial product from a technical product in this model?",
+      "options": [
+        "One is configured by the customer and the other by the sales user",
+        "One applies to consumers and the other only to business customers",
+        "One is priced in the catalogue and the other is always free of charge",
+        "One is what the customer buys; the other is what is delivered"
       ],
       "correctAnswer": 3,
-      "explanation": "Scripting extends configuration, pricing, and quote logic.",
+      "explanation": "Customers buy a commercial offer, and that maps to the technical components and services that actually have to be provisioned.",
       "whyWrong": [
-        "Reports are a separate Salesforce feature, not what CPQ scripting extends.",
-        "Industries CPQ scripting extends core logic, not just the UI layer.",
-        "Dashboards visualize data — they aren't what CPQ scripting logic extends."
+        "Configuration is done against the commercial offer.",
+        "Both apply across customer types.",
+        "Both carry cost; the distinction is not about price."
       ]
     },
     {
-      "question": "Which Communications Cloud object supports CPQ?",
+      "question": "A developer is asked to add a field that the configuration rules will evaluate. What should they do?",
       "options": [
-        "Campaign only",
-        "Opportunity only",
-        "Product, offer, and service catalog",
-        "Lead only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Product, offer, and catalog support Communications CPQ.",
-      "whyWrong": [
-        "Campaign is a Marketing feature, unrelated to Communications Cloud's catalog objects.",
-        "Opportunity is generic CRM, not the specific product/offer/catalog structure used here.",
-        "Lead is a generic Sales Cloud object, not the Communications Cloud CPQ-specific object."
-      ]
-    },
-    {
-      "question": "What does Media Cloud CPQ support?",
-      "options": [
-        "Ad inventory, rights, and campaign pricing",
-        "Only social",
-        "Only email",
-        "Only print"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Media Cloud CPQ supports ad inventory and rights pricing.",
-      "whyWrong": [
-        "Media Cloud CPQ isn't restricted to social media — it spans multiple ad channels.",
-        "Media Cloud CPQ isn't limited to email — it covers ad inventory and campaign pricing broadly.",
-        "Media Cloud CPQ covers far more than print media alone."
-      ]
-    },
-    {
-      "question": "Which integration is common for Industries CPQ?",
-      "options": [
-        "Service Cloud only",
-        "Billing, ERP, and industry-specific systems",
-        "Slack only",
-        "Marketing Cloud only"
+        "Store it in a separate custom object linked back to the product",
+        "Define it as an attribute within the product model",
+        "Add it as a custom field on the order object and reference it there",
+        "Record it in the product description so users can read it directly"
       ],
       "correctAnswer": 1,
-      "explanation": "Industries CPQ integrates with billing and ERP.",
+      "explanation": "Rules evaluate the product model, so a value they need has to exist as an attribute within that model.",
       "whyWrong": [
-        "Service Cloud isn't the primary integration for billing/ERP CPQ workflows.",
-        "Slack isn't a typical downstream integration target for CPQ billing data.",
-        "Marketing Cloud isn't the typical integration point for CPQ back-office processes."
+        "A detached custom object is not part of the configuration model.",
+        "An order field is not available during product configuration.",
+        "Descriptive text cannot be evaluated by a rule."
       ]
     },
     {
-      "question": "What does Industries CPQ customization involve?",
+      "question": "Why would an implementation use a product hierarchy?",
       "options": [
-        "Only dashboards",
-        "Product model, pricing rules, and configuration attributes",
-        "Only UI",
-        "Only reports"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Customization involves product model and pricing rules.",
-      "whyWrong": [
-        "Dashboards visualize results; they aren't part of CPQ customization itself.",
-        "Customization goes beyond the UI — it includes underlying product and pricing logic.",
-        "Reports are a separate concern from CPQ product/pricing customization."
-      ]
-    },
-    {
-      "question": "Which pricing type does Energy & Utilities CPQ support?",
-      "options": [
-        "One-time only",
-        "No pricing",
-        "Time-of-use, demand charges, and tiered rates",
-        "Fixed only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Energy & Utilities supports time-of-use and tiered pricing.",
-      "whyWrong": [
-        "Utilities frequently use recurring billing, not one-time charges.",
-        "Utilities require sophisticated pricing models — 'no pricing' is incorrect.",
-        "Fixed-only pricing doesn't reflect the variable nature of utility rate structures."
-      ]
-    },
-    {
-      "question": "What is the purpose of Industries CPQ product modeling?",
-      "options": [
-        "To represent industry-specific products and bundles",
-        "To send emails",
-        "To create reports",
-        "To replace CPQ"
+        "Shared attributes and rules can be inherited",
+        "It determines the order in which products appear in search results",
+        "It controls which sales users are permitted to sell each product",
+        "It sets the commission rate applied to each of the products sold"
       ],
       "correctAnswer": 0,
-      "explanation": "Product modeling represents industry-specific products.",
+      "explanation": "Defining common attributes and rules once at a parent level and inheriting them avoids repeating the same configuration across many products.",
       "whyWrong": [
-        "Sending emails is unrelated to product modeling.",
-        "Product modeling is broader than reporting — it defines the product structure itself.",
-        "Industries CPQ modeling complements rather than replaces core CPQ."
+        "Search ordering is a presentation concern.",
+        "Selling permissions are handled by sharing and profiles.",
+        "Commission is a compensation calculation."
       ]
     },
     {
-      "question": "Which best practice applies to Industries CPQ development?",
+      "question": "An order fails during decomposition. What should the design provide?",
       "options": [
-        "Align with industry processes and test configuration flows",
-        "No testing",
-        "Single product only",
-        "Ignore industry"
+        "Visibility of the failure and a way to resume",
+        "A manual process where an agent rekeys the order from the beginning",
+        "A silent retry that repeats indefinitely until the step succeeds",
+        "An automatic rollback that deletes the customer's order entirely"
       ],
       "correctAnswer": 0,
-      "explanation": "Align with industry processes and test flows.",
+      "explanation": "Orders in flight are valuable, so the process needs to surface where it stopped and allow it to continue from there once the cause is fixed.",
       "whyWrong": [
-        "Testing configuration flows is essential, not optional, for CPQ implementations.",
-        "Real implementations involve multiple related products and bundles, not a single product.",
-        "Ignoring industry context defeats the purpose of an industry-specific CPQ tool."
+        "Rekeying loses data and invites fresh mistakes.",
+        "Indefinite silent retries hide the problem and waste resources.",
+        "Deleting the order discards a genuine customer commitment."
       ]
     },
     {
-      "question": "What does Industries CPQ Developer need to understand?",
+      "question": "What is the main risk of modelling every product variant as a separate product record?",
       "options": [
-        "Only UI",
-        "Only reports",
-        "Industry CPQ data model, pricing, and scripting",
-        "Only Apex"
+        "The catalogue becomes unmanageable as options multiply",
+        "Orders can no longer be decomposed into their fulfilment items",
+        "Configuration rules stop working once variants are defined at all",
+        "The platform is unable to price more than one variant at a time"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Options combine multiplicatively, so enumerating variants produces an enormous catalogue that nobody can maintain accurately.",
+      "whyWrong": [
+        "Decomposition is unaffected by how variants are modelled.",
+        "Rules continue to function.",
+        "Pricing handles many products; the problem is maintenance."
+      ]
+    },
+    {
+      "question": "Which best describes what Industries CPQ is designed for?",
+      "options": [
+        "Managing the field engineers who attend customer appointments",
+        "Producing the financial statements for a subscription business",
+        "Selling configurable services that must then be provisioned",
+        "Running the marketing campaigns that generate new customer demand"
       ],
       "correctAnswer": 2,
-      "explanation": "Developers need industry CPQ data model and scripting knowledge.",
+      "explanation": "It handles complex configurable offers in sectors such as telecom and utilities, through configuration, pricing, ordering and decomposition into fulfilment.",
       "whyWrong": [
-        "UI knowledge alone is insufficient without understanding the underlying data model.",
-        "Reports are a small part of the skill set, not the core requirement.",
-        "Industries CPQ developers need more than just Apex — they need the full data model and pricing context."
+        "Engineer scheduling is field service.",
+        "Financial reporting is an accounting function.",
+        "Demand generation is a marketing activity."
       ]
     }
   ]

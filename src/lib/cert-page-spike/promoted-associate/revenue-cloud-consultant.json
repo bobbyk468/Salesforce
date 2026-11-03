@@ -187,7 +187,7 @@
         "Email marketing only",
         "Slack workspace administration only",
         "Visual design of CRM pages only",
-        "Scoping, designing, building, and deploying Agentforce Revenue Management solutions on core across Product-to-Cash"
+        "Scoping, designing, building"
       ],
       "correctAnswer": 3,
       "explanation": "Salesforce’s current exam guide describes the credential as validating the ability to scope, design, build, and deploy the on-core product across Product-to-Cash.",

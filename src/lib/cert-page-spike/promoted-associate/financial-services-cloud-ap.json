@@ -394,7 +394,7 @@
       "options": [
         "A household can only have one member",
         "Households replace financial accounts",
-        "A household groups people, and one member is marked as primary",
+        "A household groups people",
         "A household is a type of Lead"
       ],
       "correctAnswer": 2,

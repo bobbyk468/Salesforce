@@ -172,7 +172,7 @@
     {
       "question": "A client asks for a new dashboard because 'sales reps aren't hitting targets'. What should the strategy designer do first?",
       "options": [
-        "Ask the developers what is easiest to build",
+        "Ask the development team which option would be easiest for them to build",
         "Build the dashboard straight away",
         "Research why reps are missing targets before agreeing on a solution",
         "Copy a dashboard from another client"
@@ -188,7 +188,7 @@
     {
       "question": "The team needs to understand why service agents keep switching between screens during calls. Which research method fits best?",
       "options": [
-        "Looking at the org's licence count",
+        "Looking closely at the org's current user licence count",
         "A competitor review",
         "Watching agents at work (contextual inquiry)",
         "A large online survey"
@@ -206,7 +206,7 @@
       "options": [
         "Group the notes into themes with affinity mapping",
         "Start building features from the first note",
-        "Throw away notes that don't match the brief",
+        "Throw away any research notes that do not match the original brief",
         "Run 15 more interviews straight away"
       ],
       "correctAnswer": 0,
@@ -237,7 +237,7 @@
       "question": "The team wants to show both the customer's steps and the staff, systems and processes behind each step. What should they create?",
       "options": [
         "A service blueprint",
-        "A mood board",
+        "A mood board of visual references",
         "A persona",
         "A wireframe"
       ],
@@ -255,7 +255,7 @@
         "Why are agents so slow?",
         "How might we help new agents find answers without asking a colleague?",
         "How might we build a new Lightning page?",
-        "Can we add three fields to the case layout?"
+        "Can we go ahead and add three more fields onto the existing case page layout?"
       ],
       "correctAnswer": 1,
       "explanation": "A good How Might We question frames the need and leaves room for many ideas.",
@@ -268,7 +268,7 @@
     {
       "question": "Two senior stakeholders want opposite things from the project. What should the strategy designer do?",
       "options": [
-        "Do what the louder stakeholder wants",
+        "Simply do whatever the louder of the two stakeholders happens to want",
         "Bring them together around shared goals and the research findings",
         "Build both versions",
         "Ignore both and decide alone"
@@ -286,7 +286,7 @@
       "options": [
         "Pick the most technically complex",
         "Pick the first five suggested",
-        "Pick the ideas the team finds most fun",
+        "Pick out whichever of the ideas the project team finds the most fun",
         "Prioritise by value to users and the business against effort"
       ],
       "correctAnswer": 3,
@@ -301,7 +301,7 @@
       "question": "The team wants to test a new case flow idea with agents next week, before any building. What should they make?",
       "options": [
         "A release note",
-        "A full production build",
+        "A full production build of the proposed solution",
         "A simple prototype to test with real agents",
         "A 50-page specification"
       ],
@@ -317,7 +317,7 @@
       "question": "In dual-track agile, what does the discovery track do?",
       "options": [
         "Explores and tests ideas so the delivery track builds validated work",
-        "Runs only at the end of the project",
+        "Runs only right at the very end of the whole delivery project, after build",
         "Writes all the code",
         "Handles production support"
       ],
@@ -332,7 +332,7 @@
     {
       "question": "How should the team show that a redesign was worth it?",
       "options": [
-        "Ask the project team if they like it",
+        "Ask each of the members of the project team whether they personally like the result",
         "Agree success measures linked to business goals before launch, then track them",
         "Measure how long the project took",
         "Count the number of new screens"
@@ -351,7 +351,7 @@
         "There is no risk",
         "The project will cost less",
         "The design may not meet field workers' needs because they weren't included",
-        "Field workers will adapt to anything"
+        "Field workers will eventually adapt themselves to almost anything they are given"
       ],
       "correctAnswer": 2,
       "explanation": "Leaving out a user group is a common bias that leads to designs that don't work for them.",
@@ -365,7 +365,7 @@
       "question": "What is the main purpose of an experience vision?",
       "options": [
         "To replace research",
-        "To list every field on every page",
+        "To list out every single field that appears on each and every one of the pages",
         "To set the project budget",
         "To give everyone a shared picture of the future experience and why it matters"
       ],
@@ -382,7 +382,7 @@
       "options": [
         "Use activities like silent idea writing so everyone contributes",
         "Remove the quieter people",
-        "Let the two people continue",
+        "Let the two people involved simply carry on exactly as they are now",
         "End the workshop early"
       ],
       "correctAnswer": 0,
@@ -398,8 +398,8 @@
       "options": [
         "Nothing, because AI is always right",
         "Only how fast it runs",
-        "Only the colour of the suggestion box",
-        "Trust, transparency, and what happens when the AI is wrong"
+        "Only the background colour of the on-screen suggestion box",
+        "Trust and transparency, and what happens when the AI gets it wrong"
       ],
       "correctAnswer": 3,
       "explanation": "Responsible design for AI includes clear disclosure, human oversight and handling mistakes.",

@@ -166,243 +166,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which Marketing Cloud scripting language is used for server-side logic in emails and landing pages?",
+      "question": "A developer needs to retrieve a value from a data extension and use it in an email. Which AMPscript function does this?",
       "options": [
-        "Visualforce",
-        "AMPscript",
-        "Apex",
-        "LWC"
+        "RaiseError, which stops processing for the subscriber being rendered",
+        "Lookup",
+        "SystemDateToLocalDate, which converts a stored date into local time",
+        "InsertData, which writes a new row into the target data extension instead"
       ],
       "correctAnswer": 1,
-      "explanation": "AMPscript is Marketing Cloud's scripting language for personalization and dynamic content in emails and landing pages.",
+      "explanation": "Lookup returns a single field value from a data extension row matching the criteria supplied.",
       "whyWrong": [
-        "Visualforce is a Salesforce Core UI framework, unrelated to Marketing Cloud scripting.",
-        "Apex is a Salesforce Core language, not used for Marketing Cloud email/landing page scripting.",
-        "LWC is used in Salesforce Core/Experience Cloud, not Marketing Cloud email personalization."
+        "RaiseError halts the send for that subscriber.",
+        "That function performs date conversion.",
+        "InsertData writes rather than reads."
       ]
     },
     {
-      "question": "What is Server-Side JavaScript (SSJS) used for in Marketing Cloud?",
+      "question": "What is the main reason to use SSJS rather than AMPscript in a Marketing Cloud build?",
       "options": [
-        "CPQ configuration",
-        "Slack apps",
-        "Script Activities in Automation Studio and advanced scripting",
-        "Client-side only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "SSJS is used in Script Activities and for advanced server-side logic in Marketing Cloud.",
-      "whyWrong": [
-        "CPQ configuration is entirely unrelated to SSJS's data manipulation purpose.",
-        "Slack apps are entirely unrelated to SSJS.",
-        "'Client-side only' misrepresents SSJS, which specifically runs server-side."
-      ]
-    },
-    {
-      "question": "Which function retrieves a value from a Data Extension row in AMPscript?",
-      "options": [
-        "GET",
-        "VLOOKUP",
-        "RETRIEVE",
-        "LOOKUP"
+        "It is the only language able to read from a sendable data extension",
+        "It renders more quickly than AMPscript does during a large email send",
+        "It is required whenever an email contains more than one content block",
+        "It handles loops, objects and API calls more comfortably"
       ],
       "correctAnswer": 3,
-      "explanation": "The LOOKUP function retrieves a single value from a Data Extension based on matching criteria.",
+      "explanation": "Server-Side JavaScript suits logic with real data structures, iteration and platform API work, where AMPscript becomes awkward.",
       "whyWrong": [
-        "GET isn't the AMPscript function for retrieving a Data Extension value.",
-        "VLOOKUP isn't a real AMPscript function — that's an Excel formula, not AMPscript syntax.",
-        "RETRIEVE isn't the correct AMPscript function name for this operation."
+        "AMPscript reads data extensions perfectly well.",
+        "AMPscript is generally the faster choice for inline personalisation.",
+        "Content block count has nothing to do with the language."
       ]
     },
     {
-      "question": "What is the purpose of personalization strings in Marketing Cloud emails?",
+      "question": "A cloud page must accept a form post and write it to a data extension. What should the developer be most careful about?",
       "options": [
-        "To encrypt data",
-        "To insert dynamic content from subscriber attributes",
-        "To schedule sends",
-        "To delete contacts"
+        "Validating and encoding the submitted input",
+        "Confirming that the data extension has a retention policy configured on it",
+        "Ensuring the page is published to the correct content folder in the account",
+        "Checking that the page uses the same template as the rest of the site"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A public endpoint accepting user input needs validation and encoding, or it becomes an injection and data integrity problem.",
+      "whyWrong": [
+        "Retention matters for storage, not for accepting input safely.",
+        "Folder location is housekeeping rather than a safety concern.",
+        "Template consistency is a presentation detail."
+      ]
+    },
+    {
+      "question": "What does a triggered send definition provide?",
+      "options": [
+        "A reusable configuration for sending one message on demand",
+        "A journey entry source that evaluates a data extension every hour",
+        "A report showing which subscribers received a particular email send",
+        "A schedule that causes an email to be sent at a fixed time each day"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Triggered sends are set up once and then invoked, usually via the API, to send a single message to one subscriber immediately.",
+      "whyWrong": [
+        "Entry source evaluation is a Journey Builder setting.",
+        "Send reporting is produced by tracking.",
+        "Scheduled sending is configured in Automation Studio."
+      ]
+    },
+    {
+      "question": "A developer must call the Marketing Cloud REST API from an external system. What is needed first?",
+      "options": [
+        "A data extension marked as sendable and related to subscribers",
+        "An access token obtained from the auth endpoint",
+        "A cloud page published with a public URL for the system to call",
+        "A triggered send definition created and published in the account"
       ],
       "correctAnswer": 1,
-      "explanation": "Personalization strings (e.g., %%First_Name%%) insert subscriber or data extension values into content.",
+      "explanation": "REST calls are authenticated with a token obtained from the authentication endpoint using the installed package credentials.",
       "whyWrong": [
-        "Personalization strings don't encrypt data — that's an unrelated security function.",
-        "Personalization strings don't schedule sends — that's an Automation Studio/Journey Builder function.",
-        "Personalization strings don't delete contacts — that's an unrelated data operation."
+        "Sendable extensions matter for sends, not for authenticating.",
+        "Cloud pages are a different integration surface.",
+        "Triggered sends are one thing you might call, not a prerequisite."
       ]
     },
     {
-      "question": "Which Marketing Cloud product is used to build and host landing pages with dynamic content?",
+      "question": "What is the purpose of an installed package in Marketing Cloud?",
       "options": [
-        "Sales Cloud",
-        "Heroku",
-        "Cloud Pages",
-        "Slack"
+        "It schedules the automations that run overnight in the account",
+        "It defines the retention rules applied to each data extension",
+        "It holds the credentials and scope for API access",
+        "It stores the email templates shared between the business units"
       ],
       "correctAnswer": 2,
-      "explanation": "Cloud Pages (formerly Landing Pages) host web pages with AMPscript and dynamic content.",
+      "explanation": "Installed packages carry the client credentials and the permission scopes that an integration is granted.",
       "whyWrong": [
-        "Sales Cloud is a different Salesforce Core product, unrelated to landing page hosting.",
-        "Heroku is a separate PaaS platform, not the Marketing Cloud-native landing page tool.",
-        "Slack is a collaboration tool, unrelated to landing page hosting."
+        "Scheduling is configured in Automation Studio.",
+        "Retention is set per data extension.",
+        "Templates live in Content Builder."
       ]
     },
     {
-      "question": "Which AMPscript block retrieves multiple rows from a Data Extension?",
+      "question": "A SQL query in Automation Studio must combine subscriber data with send history. Where does the send data come from?",
       "options": [
-        "LOOKUPROWS or LOOKUPORDEREDROWS",
-        "GET only",
-        "LOOKUP only",
-        "RETRIEVE only"
+        "Data views exposed within the account",
+        "A data extension that the developer creates and populates by hand",
+        "The tracking tab on each of the individual email jobs that were sent",
+        "The All Subscribers list filtered to the relevant date range"
       ],
       "correctAnswer": 0,
-      "explanation": "LOOKUPROWS and LOOKUPORDEREDROWS retrieve multiple rows.",
+      "explanation": "Data views such as _Sent, _Open and _Click expose send and engagement history to queries.",
       "whyWrong": [
-        "GET alone isn't the correct AMPscript function for retrieving multiple Data Extension rows.",
-        "LOOKUP alone retrieves a single value, not multiple rows.",
-        "RETRIEVE alone isn't the correct AMPscript function name for this operation."
+        "Manual population would be unmaintainable and immediately stale.",
+        "Per-job tracking is a user interface view, not a queryable source.",
+        "All Subscribers holds status rather than send history."
       ]
     },
     {
-      "question": "What is the purpose of a Script Activity in Automation Studio?",
+      "question": "Why must a developer be careful with a SQL query that has no filter on date?",
       "options": [
-        "To create journeys only",
-        "To send emails only",
-        "To run SSJS for data manipulation, imports, or custom logic",
-        "To design templates only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Script Activities run SSJS for data and custom logic.",
-      "whyWrong": [
-        "'To create journeys only' misattributes Script Activity's purpose to a different tool (Journey Builder).",
-        "'To send emails only' undersells Script Activity, which handles broader data manipulation and custom logic, not just sending.",
-        "'To design templates only' misattributes Script Activity's purpose to a different tool (Content Builder)."
-      ]
-    },
-    {
-      "question": "Which API is used for programmatic access to Marketing Cloud?",
-      "options": [
-        "REST API and SOAP API",
-        "Apex",
-        "Visualforce only",
-        "LWC only"
+        "It can scan far more data than it needs to",
+        "Queries without a date filter are rejected by the platform automatically",
+        "The results will be written to the wrong target data extension instead",
+        "Data views only return rows from the current calendar month in any case"
       ],
       "correctAnswer": 0,
-      "explanation": "Marketing Cloud exposes REST and SOAP APIs.",
+      "explanation": "Unbounded queries over large data views are slow and can time out, so constraining the period is basic hygiene.",
       "whyWrong": [
-        "Apex is a Salesforce Core language, not the API used for Marketing Cloud programmatic access.",
-        "Visualforce is a Salesforce Core UI framework, unrelated to Marketing Cloud's API access.",
-        "LWC is a Salesforce Core/Experience Cloud framework, unrelated to Marketing Cloud's API access."
+        "The platform does not reject them outright.",
+        "The target is set in the activity regardless of the filter.",
+        "Data views hold a longer history than one month."
       ]
     },
     {
-      "question": "What does the Treat As Content option do in AMPscript?",
+      "question": "What happens to an AMPscript error during a send?",
       "options": [
-        "To delete",
-        "To encrypt",
-        "Nothing",
-        "Prevents AMPscript from being executed (treats as literal)"
+        "The send is paused until a developer corrects the error in the content",
+        "The entire send is cancelled and no subscriber receives the email at all",
+        "The email is sent with the failing block silently omitted from the content",
+        "That subscriber's message fails while others continue"
       ],
       "correctAnswer": 3,
-      "explanation": "Treat As Content displays AMPscript as literal text.",
+      "explanation": "AMPscript is evaluated per subscriber, so a failure affects that individual message rather than the whole job.",
       "whyWrong": [
-        "Treat As Content doesn't delete data — that's unrelated to its rendering-control purpose.",
-        "Treat As Content doesn't encrypt data — that's unrelated to its rendering-control purpose.",
-        "'Nothing' contradicts the fact that Treat As Content has a specific, real effect on AMPscript execution."
+        "Sends are not paused for developer intervention.",
+        "A single failure does not cancel the send.",
+        "The message fails rather than rendering partially."
       ]
     },
     {
-      "question": "Which Data Extension type supports sendable sends?",
+      "question": "A developer needs the same personalisation logic in twelve emails. What is the maintainable approach?",
       "options": [
-        "Sendable Data Extension (subscriber-key based)",
-        "No extension",
-        "Random only",
-        "Standard only"
+        "A cloud page that each of the emails links out to when it is opened",
+        "A shared content block containing the logic",
+        "The same code pasted into each of the twelve individual email templates",
+        "A separate triggered send definition created for each of the emails"
       ],
-      "correctAnswer": 0,
-      "explanation": "Sendable Data Extensions link to subscriber key for sends.",
+      "correctAnswer": 1,
+      "explanation": "A shared block is referenced by each email, so the logic is written and corrected in one place.",
       "whyWrong": [
-        "'No extension' contradicts the fact that a specific Data Extension type does support sendable sends.",
-        "'Random only' isn't a real Data Extension sendability type.",
-        "'Standard only' isn't the specific subscriber-key-based type that supports sendable sends."
+        "Sending readers to a web page is not personalisation of the email.",
+        "Twelve copies means twelve places to fix every bug.",
+        "Triggered sends are about sending, not sharing logic."
       ]
     },
     {
-      "question": "What is the purpose of Microsites in Marketing Cloud?",
+      "question": "What distinguishes a sendable data extension from a non-sendable one?",
       "options": [
-        "To host landing pages with tracking and forms",
-        "To send emails only",
-        "To replace Cloud Pages",
-        "To create journeys only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Microsites host landing pages with tracking and forms.",
-      "whyWrong": [
-        "'To send emails only' misattributes Microsites' landing-page hosting purpose to a different function.",
-        "Microsites don't replace Cloud Pages — they're a related but distinct hosting concept.",
-        "'To create journeys only' misattributes Microsites' landing-page hosting purpose to a different tool."
-      ]
-    },
-    {
-      "question": "Which SSJS object provides access to platform features?",
-      "options": [
-        "Only Variable",
-        "No object",
-        "Platform only",
-        "Platform.Function and Platform.Variable"
+        "It is permitted to hold more rows than a non-sendable extension can",
+        "It is visible to every business unit configured within the account",
+        "It is backed up automatically each night by the platform itself",
+        "It is related to subscribers so it can be used as an audience"
       ],
       "correctAnswer": 3,
-      "explanation": "Platform.Function and Platform.Variable provide platform access.",
+      "explanation": "Marking an extension sendable and mapping its relationship to subscribers is what allows it to be targeted by a send.",
       "whyWrong": [
-        "'Only Variable' is incomplete — Platform.Function is also part of the object providing platform access.",
-        "'No object' contradicts the fact that specific SSJS platform objects exist for this purpose.",
-        "'Platform only' is incomplete — the specific SSJS objects are Platform.Function and Platform.Variable together."
+        "Row capacity is not affected by the sendable flag.",
+        "Visibility is governed by business unit and folders.",
+        "Backups are not a function of being sendable."
       ]
     },
     {
-      "question": "What does Personalization String syntax use?",
+      "question": "A journey must be entered by a single contact when an external system says so. What should the developer use?",
       "options": [
-        "Only SSJS",
-        "%%Attribute_Name%% or similar",
-        "Only HTML",
-        "Only AMPscript"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Personalization strings use %%Attribute_Name%% syntax.",
-      "whyWrong": [
-        "'Only SSJS' misattributes personalization string syntax to a different scripting language.",
-        "'Only HTML' misattributes personalization string syntax, which is Marketing-Cloud-specific, not plain HTML.",
-        "'Only AMPscript' misrepresents personalization string syntax, which uses a distinct %% syntax, not general AMPscript blocks."
-      ]
-    },
-    {
-      "question": "Which testing approach applies to Marketing Cloud development?",
-      "options": [
-        "Manual only",
-        "Preview and test sends with sample data",
-        "No testing",
-        "Production only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Preview and test sends validate development.",
-      "whyWrong": [
-        "'Manual only' undersells the structured preview/test capability available for development.",
-        "'No testing' contradicts the fact that preview/test sends are a standard development practice.",
-        "'Production only' contradicts the fact that testing should happen before production, not only in it."
-      ]
-    },
-    {
-      "question": "What is the purpose of Journey Builder Entry Sources?",
-      "options": [
-        "To send only",
-        "To track only",
-        "To define how contacts enter a journey (e.g., API, data extension, form)",
-        "To replace Data Extensions"
+        "A data extension entry source re-evaluated once every fifteen minutes",
+        "An automation that imports a file each time the external system changes",
+        "An API event entry source",
+        "A triggered send definition invoked directly by the external system"
       ],
       "correctAnswer": 2,
-      "explanation": "Entry sources define how contacts enter journeys.",
+      "explanation": "API events let an external system inject one contact into a journey in real time.",
       "whyWrong": [
-        "'To send only' misattributes Entry Sources' purpose, which is about journey entry, not sending.",
-        "'To track only' misattributes Entry Sources' purpose, which is about journey entry, not tracking.",
-        "Entry Sources don't replace Data Extensions — they define how contacts enter, using various sources including Data Extensions."
+        "A re-evaluated extension is still batch and introduces delay.",
+        "File-based import is slower and more fragile than an event.",
+        "A triggered send sends a message rather than entering a journey."
+      ]
+    },
+    {
+      "question": "Why would a developer store configuration values in a data extension rather than in the code?",
+      "options": [
+        "The platform imposes a strict limit on the length of any AMPscript block",
+        "They can be changed without editing and republishing content",
+        "Data extensions are able to execute the logic that uses those values",
+        "Values held in a data extension are encrypted by the platform by default"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Externalising values means a marketer or admin can change behaviour without a developer touching the content.",
+      "whyWrong": [
+        "Block length is not the reason to externalise configuration.",
+        "Data extensions store data; they do not execute logic.",
+        "There is no automatic encryption of ordinary stored values."
+      ]
+    },
+    {
+      "question": "A developer is asked to make an email render differently for subscribers in two countries. What is the simplest approach?",
+      "options": [
+        "Two separate emails, each one sent to its own country segment",
+        "A cloud page that detects the recipient's location when they open it",
+        "Conditional content driven by a country attribute",
+        "Two triggered send definitions, one configured for each of the countries"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Conditional logic on an attribute you already hold keeps it to a single asset with one place to maintain.",
+      "whyWrong": [
+        "Two emails doubles the maintenance for the same outcome.",
+        "Detecting location on open is unreliable and happens too late.",
+        "Triggered sends do not solve a content variation problem."
+      ]
+    },
+    {
+      "question": "Which best describes the developer's role in a Marketing Cloud implementation?",
+      "options": [
+        "Deciding which audiences each of the marketing campaigns should target",
+        "Designing the visual layout and copy used in each of the email templates",
+        "Building the data, logic and integrations behind the campaigns",
+        "Managing the account's sending reputation and deliverability over time"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The developer builds the plumbing: data models, queries, personalisation logic, cloud pages and API integrations that campaigns run on.",
+      "whyWrong": [
+        "Audience strategy is a marketing decision.",
+        "Visual design and copy sit with the marketing team.",
+        "Deliverability is usually an operational or consulting responsibility."
       ]
     }
   ]

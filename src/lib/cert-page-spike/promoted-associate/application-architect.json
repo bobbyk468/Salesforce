@@ -193,243 +193,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What is the focus of an Application Architect?",
+      "question": "An object will hold 40 million records and users need to filter by account. What should the architect plan for?",
       "options": [
-        "Only Apex",
-        "Email only",
-        "Slack only",
-        "Deep understanding of native Salesforce features and modeling role hierarchy, data, and sharing"
+        "A nightly batch job that copies the records into smaller summary objects",
+        "Selective filters backed by indexed fields",
+        "A separate Salesforce org created to hold the object's historical records",
+        "A restriction preventing users from running any reports on that object"
+      ],
+      "correctAnswer": 1,
+      "explanation": "At large volume, queries have to be selective against indexed fields or they time out, so the index strategy is part of the data model.",
+      "whyWrong": [
+        "Summary copies help reporting but do not make the base object queryable.",
+        "Splitting across orgs fragments the data and complicates every query.",
+        "Blocking reporting avoids the symptom rather than solving it."
+      ]
+    },
+    {
+      "question": "What is a skinny table used for?",
+      "options": [
+        "Holding the audit history of changes made to a given record",
+        "Storing records that have been archived from the main object",
+        "Faster reads across frequently queried fields",
+        "Enforcing validation across a very large set of records"
+      ],
+      "correctAnswer": 2,
+      "explanation": "A skinny table holds a narrow set of commonly used fields so reads avoid joining the standard and custom field tables.",
+      "whyWrong": [
+        "Field history tracking records changes.",
+        "Archiving is a separate data lifecycle concern.",
+        "Validation is unrelated to read performance."
+      ]
+    },
+    {
+      "question": "Users need read access to records they do not own, based on a field value. What should the architect use?",
+      "options": [
+        "Criteria-based sharing rules",
+        "Manual sharing applied to each record by its owner after creation",
+        "A change to the organisation-wide default so the object is public",
+        "A role hierarchy restructured so every user sits beneath one role"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Criteria-based sharing opens records automatically according to field values, which is what a data-driven access requirement needs.",
+      "whyWrong": [
+        "Manual sharing does not scale and depends on owners remembering.",
+        "Making the object public grants far more access than required.",
+        "Flattening the hierarchy breaks the management visibility it provides."
+      ]
+    },
+    {
+      "question": "What does the organisation-wide default for an object determine?",
+      "options": [
+        "The baseline access before any sharing is applied",
+        "How many records the object is permitted to contain in total",
+        "Which profiles are able to create records on that object",
+        "The fields that are visible on the object's page layouts"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The org-wide default sets the floor, and sharing rules, hierarchy and manual sharing can only open access above it.",
+      "whyWrong": [
+        "There is no record cap set by the default.",
+        "Object create permission comes from the profile or permission set.",
+        "Field visibility is governed by field-level security and layouts."
+      ]
+    },
+    {
+      "question": "A requirement can be met with a flow or with Apex. What should decide the choice?",
+      "options": [
+        "Whether the org already contains more flows than Apex classes",
+        "Whether the declarative option genuinely meets it",
+        "Whether the development team is more comfortable writing Apex code",
+        "Whether the requirement was raised by a business or technical user"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Declarative build is cheaper to maintain and survives upgrades, so code should be reserved for what configuration cannot do.",
+      "whyWrong": [
+        "Existing counts say nothing about what suits this requirement.",
+        "Team preference is not an architectural criterion.",
+        "Who asked for it does not determine how it should be built."
+      ]
+    },
+    {
+      "question": "What is the main architectural cost of choosing Apex where configuration would do?",
+      "options": [
+        "A reduction in the number of records the object can store",
+        "Ongoing maintenance and test coverage obligations",
+        "An automatic increase in the org's licence requirements",
+        "The loss of the ability to report on the affected object"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Code needs tests, review, deployment discipline and someone who understands it years later, none of which configuration demands to the same degree.",
+      "whyWrong": [
+        "Storage is unaffected by implementation choice.",
+        "Licensing does not change because logic is coded.",
+        "Reporting continues to work normally."
+      ]
+    },
+    {
+      "question": "An integration must notify an external system when an order is approved, without blocking the user. What pattern fits?",
+      "options": [
+        "A synchronous callout made from the approval process itself",
+        "A nightly batch job that exports every approved order as a file",
+        "A manual export performed by an administrator after each approval",
+        "Asynchronous publication of an event"
       ],
       "correctAnswer": 3,
-      "explanation": "Application Architects have deep understanding of native Salesforce features and model role hierarchy, data, and sharing.",
+      "explanation": "Fire and forget notification suits an event, which decouples the two systems and keeps the user's transaction fast.",
       "whyWrong": [
-        "'Only Apex' narrows the focus incorrectly to a single language, when the role is about broader native-feature architecture.",
-        "Email is unrelated to the Application Architect's data modeling and sharing focus.",
-        "Slack is unrelated to the Application Architect's data modeling and sharing focus."
+        "A synchronous callout makes the user wait on an external system's availability.",
+        "A nightly batch delays the notification by up to a day.",
+        "Manual export is neither timely nor reliable."
       ]
     },
     {
-      "question": "Which sharing mechanism is used to open access based on record ownership?",
+      "question": "When is a synchronous integration the right choice?",
       "options": [
-        "Only permission sets",
-        "Sharing rules",
-        "Only OWD",
-        "Only profiles"
+        "When the volume of calls is expected to be extremely high",
+        "When the external system is known to respond slowly under load",
+        "When the user cannot continue without the response",
+        "When the receiving system has no availability guarantees at all"
       ],
-      "correctAnswer": 1,
-      "explanation": "Sharing rules extend access based on ownership or criteria.",
+      "correctAnswer": 2,
+      "explanation": "Synchronous calls are justified where the answer is needed to proceed, such as a credit check or a real-time price.",
       "whyWrong": [
-        "'Only permission sets' misattributes ownership-based sharing to a different access-control feature.",
-        "'Only OWD' misattributes ownership-based access to the baseline setting, not the sharing mechanism itself.",
-        "'Only profiles' misattributes ownership-based sharing to a different access-control feature."
+        "High volume favours asynchronous handling.",
+        "A slow system is an argument against making the user wait.",
+        "Poor availability is a reason not to couple synchronously."
       ]
     },
     {
-      "question": "What is the role hierarchy used for?",
+      "question": "A manager must see records owned by their whole team. What provides this most simply?",
       "options": [
-        "CPQ only",
-        "Email only",
-        "Only reporting",
-        "Inheriting record access and roll-up for forecasts and reports"
+        "The role hierarchy with grant access enabled",
+        "Manual sharing applied by team members to their own manager",
+        "A sharing rule written for each individual manager in the business",
+        "A permission set granting View All on the object concerned"
+      ],
+      "correctAnswer": 0,
+      "explanation": "The role hierarchy exists to give managers access to their subordinates' records, and it maintains itself as people move.",
+      "whyWrong": [
+        "Manual sharing depends on individuals remembering every time.",
+        "Per-manager rules multiply and go stale as the organisation changes.",
+        "View All grants access to every record, far beyond the team."
+      ]
+    },
+    {
+      "question": "What should an architect establish before designing a record access model?",
+      "options": [
+        "How many permission sets the org currently has in place",
+        "The number of profiles the previous implementation created",
+        "Which reporting tool the business intends to use after go-live",
+        "Who must see what, and what must stay restricted"
       ],
       "correctAnswer": 3,
-      "explanation": "Role hierarchy controls record access inheritance and roll-up for reporting and forecasts.",
+      "explanation": "Access design starts from the business rules about visibility and confidentiality, because those determine every structural choice that follows.",
       "whyWrong": [
-        "CPQ is unrelated to role hierarchy's access-inheritance purpose.",
-        "Email is unrelated to role hierarchy's access-inheritance purpose.",
-        "'Only reporting' undersells role hierarchy, which also inherits record access, not just reporting roll-up."
+        "Existing counts describe the present rather than the requirement.",
+        "Legacy profile counts rarely reflect what is actually needed.",
+        "Reporting tooling is downstream of the access model."
       ]
     },
     {
-      "question": "Which certification is typically a prerequisite for Application Architect?",
+      "question": "Why does an architect care about test coverage beyond the platform minimum?",
       "options": [
-        "Marketing Cloud only",
-        "Email Specialist",
-        "Slack only",
-        "Platform Developer I and Sharing and Visibility Architect (or equivalent knowledge)"
+        "Coverage determines how many deployments may run each month",
+        "The platform refuses to run reports in orgs with low coverage",
+        "Tests are what make future change safe",
+        "Higher coverage increases the org's available storage allocation"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Coverage is not a target to hit once but the mechanism that lets someone change the system later without breaking it.",
+      "whyWrong": [
+        "Deployment frequency is not governed by coverage.",
+        "Reporting is unaffected.",
+        "Storage is unrelated to test coverage."
+      ]
+    },
+    {
+      "question": "A master-detail relationship is proposed between two objects. What does this commit the design to?",
+      "options": [
+        "Independent sharing settings on each of the two objects involved",
+        "Cascade delete and inherited record access",
+        "The ability to reparent the detail record at any time afterwards",
+        "A limit of one such relationship per object across the whole org"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Master-detail ties the child's existence and its sharing to the parent, which is powerful and deliberately rigid.",
+      "whyWrong": [
+        "The detail object inherits the master's sharing rather than having its own.",
+        "Reparenting is restricted unless explicitly allowed.",
+        "An object may have more than one master-detail relationship."
+      ]
+    },
+    {
+      "question": "When is a lookup relationship preferable to master-detail?",
+      "options": [
+        "When the child must exist independently of the parent",
+        "When the child's access must be inherited from the parent",
+        "When roll-up summary fields are required on the parent object",
+        "When deleting the parent should always delete the children"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A lookup leaves the two records independent, which is right when the child is meaningful on its own.",
+      "whyWrong": [
+        "Inherited access is a master-detail behaviour.",
+        "Standard roll-up summaries require master-detail.",
+        "Cascade delete is a master-detail behaviour."
+      ]
+    },
+    {
+      "question": "What is the purpose of a deployment pipeline with distinct environments?",
+      "options": [
+        "It allows several administrators to edit production at the same time",
+        "It increases the number of API calls the org is allowed to make",
+        "It removes the need to write tests for the code being deployed",
+        "Change is validated before it reaches production"
       ],
       "correctAnswer": 3,
-      "explanation": "Application Architect builds on platform and sharing/visibility knowledge.",
+      "explanation": "Separate environments let a change be built, tested and reviewed somewhere it cannot hurt anyone before it goes live.",
       "whyWrong": [
-        "Marketing Cloud alone is unrelated to the architect-track prerequisite knowledge needed.",
-        "Email Specialist is unrelated to the architect-track prerequisite knowledge needed.",
-        "Slack alone is unrelated to the architect-track prerequisite knowledge needed."
+        "Concurrent production editing is the risk a pipeline reduces.",
+        "API limits are unrelated to deployment process.",
+        "Tests remain necessary and are part of what the pipeline runs."
       ]
     },
     {
-      "question": "What does 'modeling data' mean for an Application Architect?",
+      "question": "Which best describes how the Application Architect credential is obtained?",
       "options": [
-        "Only backups",
-        "Designing object model, relationships, and data volume strategy",
-        "Only reports",
-        "Only dashboards"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Modeling data includes object design, relationships, and data volume strategy.",
-      "whyWrong": [
-        "'Only backups' undersells data modeling, which includes object design and volume strategy, not just backups.",
-        "'Only reports' undersells data modeling, which is about underlying structure, not display.",
-        "'Only dashboards' undersells data modeling, which is about underlying structure, not display."
-      ]
-    },
-    {
-      "question": "What does Organization-Wide Defaults (OWD) control?",
-      "options": [
-        "Only permission sets",
-        "The baseline record access for each object (Private, Public Read Only, etc.)",
-        "Only roles",
-        "Only profiles"
-      ],
-      "correctAnswer": 1,
-      "explanation": "OWD defines the default sharing model for each object.",
-      "whyWrong": [
-        "'Only permission sets' misattributes OWD to a different access-control concept.",
-        "'Only roles' misattributes OWD to a different access-control concept — OWD is the baseline setting, not role-based.",
-        "'Only profiles' misattributes OWD to a different access-control concept."
-      ]
-    },
-    {
-      "question": "Which mechanism extends access when OWD is Private?",
-      "options": [
-        "Sharing rules, role hierarchy, and manual sharing",
-        "Permission sets only",
-        "Profiles only",
-        "OWD only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sharing rules, role hierarchy, and manual sharing extend access beyond OWD.",
-      "whyWrong": [
-        "'Permission sets only' undersells the broader set of mechanisms (sharing rules, hierarchy, manual) that extend access.",
-        "'Profiles only' undersells the broader set of mechanisms that extend access when OWD is Private.",
-        "'OWD only' contradicts the question, which asks what extends access beyond a Private OWD baseline."
-      ]
-    },
-    {
-      "question": "What is the purpose of a criteria-based sharing rule?",
-      "options": [
-        "To create reports",
-        "To restrict access",
-        "To grant access to records that match specified criteria",
-        "To assign users"
+        "By passing a single scenario-based written examination",
+        "By completing a set of Trailhead superbadges and projects",
+        "By holding the four prerequisite certifications",
+        "By presenting a design to a panel of practising architects"
       ],
       "correctAnswer": 2,
-      "explanation": "Criteria-based sharing rules grant access based on field values.",
+      "explanation": "Application Architect is awarded for holding Platform App Builder, Platform Developer I, Data Architect, and Sharing and Visibility Architect. There is no separate exam.",
       "whyWrong": [
-        "Criteria-based sharing rules don't create reports — that's an unrelated function.",
-        "'To restrict access' is the opposite of what a criteria-based sharing rule does — it extends access.",
-        "Criteria-based sharing rules don't assign users — that's a separate administrative task."
-      ]
-    },
-    {
-      "question": "Which Salesforce feature supports multi-tenant data isolation?",
-      "options": [
-        "Sharing model, org ID, and platform architecture",
-        "Permission sets only",
-        "Roles only",
-        "Only profiles"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Sharing model and org-level isolation provide multi-tenant security.",
-      "whyWrong": [
-        "'Permission sets only' undersells multi-tenant isolation, which is a broader platform architecture concept.",
-        "'Roles only' undersells multi-tenant isolation, which is a broader platform architecture concept.",
-        "'Only profiles' undersells multi-tenant isolation, which is a broader platform architecture concept."
-      ]
-    },
-    {
-      "question": "What does the development lifecycle for an Application Architect include?",
-      "options": [
-        "Only coding",
-        "Design, development, testing, deployment, and governance",
-        "Only documentation",
-        "Only deployment"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Lifecycle spans design through deployment with governance.",
-      "whyWrong": [
-        "'Only coding' undersells the development lifecycle, which spans design through governance, not just code.",
-        "'Only documentation' undersells the development lifecycle, which spans the full process, not just documentation.",
-        "'Only deployment' undersells the development lifecycle, which spans the full process, not just deployment."
-      ]
-    },
-    {
-      "question": "Which relationship affects record-level security and roll-up?",
-      "options": [
-        "Junction object only",
-        "Lookup only",
-        "Master-Detail (sharing inherits from parent)",
-        "External lookup only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Master-Detail affects sharing; child inherits parent's access.",
-      "whyWrong": [
-        "A Junction object uses master-detail relationships, but the underlying mechanism being asked about is Master-Detail itself.",
-        "Lookup relationships don't inherit sharing from the parent — that's specifically a Master-Detail behavior.",
-        "External lookup connects to external data — it doesn't provide the internal sharing/roll-up inheritance being described."
-      ]
-    },
-    {
-      "question": "What is the purpose of a delegated admin group?",
-      "options": [
-        "To create profiles",
-        "To assign permission sets only",
-        "To grant limited admin capabilities to specific users",
-        "To replace sys admin"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Delegated admin groups provide scoped admin access.",
-      "whyWrong": [
-        "'To create profiles' misattributes delegated admin's purpose to a different administrative task.",
-        "'To assign permission sets only' undersells delegated admin, which can include broader limited admin capabilities.",
-        "Delegated admin groups don't replace the system admin — they extend limited admin capability to specific users."
-      ]
-    },
-    {
-      "question": "Which integration consideration applies to Application Architects?",
-      "options": [
-        "Ignore security",
-        "Only REST",
-        "Authentication, data ownership, and sharing for integrated data",
-        "Only batch"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Integration must consider auth, ownership, and sharing.",
-      "whyWrong": [
-        "Ignoring security contradicts the core consideration architects must address for integrated data.",
-        "'Only REST' undersells the broader integration considerations beyond a single protocol.",
-        "'Only batch' undersells the broader integration considerations beyond a single pattern."
-      ]
-    },
-    {
-      "question": "What does visibility mean in the sharing context?",
-      "options": [
-        "Which records a user can see based on sharing rules and permissions",
-        "Only UI",
-        "Only reports",
-        "Only dashboards"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Visibility determines which records are visible to users.",
-      "whyWrong": [
-        "'Only UI' misrepresents visibility, which is about data access via sharing/permissions, not interface design.",
-        "'Only reports' undersells visibility, which is a broader data-access concept beyond just reports.",
-        "'Only dashboards' undersells visibility, which is a broader data-access concept beyond just dashboards."
-      ]
-    },
-    {
-      "question": "Which best practice supports scalable role hierarchy design?",
-      "options": [
-        "Keep hierarchy flat where possible; avoid deep nesting",
-        "Unlimited depth",
-        "One role only",
-        "No hierarchy"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Flatter hierarchies simplify sharing and maintenance.",
-      "whyWrong": [
-        "'Unlimited depth' is the opposite of the flat-hierarchy best practice for scalability.",
-        "'One role only' is impractical and doesn't reflect real organizational structures needing role hierarchy at all.",
-        "'No hierarchy' contradicts the fact that role hierarchy is a real, necessary structure for most orgs."
+        "There is no examination for this credential itself.",
+        "Superbadges are not what earns it.",
+        "Panel defence is part of the CTA review board, not this credential."
       ]
     }
   ]

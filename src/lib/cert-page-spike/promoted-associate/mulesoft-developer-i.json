@@ -194,7 +194,7 @@
       "options": [
         "Only the payload and nothing else",
         "The connectors configured in the project",
-        "A message with payload and attributes, plus variables",
+        "A message with payload and attributes",
         "A payload plus a reference to the flow"
       ],
       "correctAnswer": 2,
@@ -371,7 +371,7 @@
         "A RAML specification for the API",
         "A deployment artefact for the application",
         "A reconnection strategy for the connector",
-        "A payload or variable value, defined by DataWeave"
+        "A payload or variable value"
       ],
       "correctAnswer": 3,
       "explanation": "Transform Message runs DataWeave and writes the result to the payload or to a target variable.",

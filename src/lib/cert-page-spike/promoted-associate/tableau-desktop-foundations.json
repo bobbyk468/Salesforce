@@ -379,7 +379,7 @@
         "The mark type to a line",
         "The data type of the field",
         "The dashboard layout to floating",
-        "The field's aggregation, from Sum to Average"
+        "The field's aggregation"
       ],
       "correctAnswer": 3,
       "explanation": "A measure's aggregation can be changed from the field's menu, which switches the view from total to average.",

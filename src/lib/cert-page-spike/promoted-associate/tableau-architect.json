@@ -376,7 +376,7 @@
     {
       "question": "Which structure should projects reflect?",
       "options": [
-        "How the business is organised, so permissions can be inherited sensibly",
+        "How the business is organised",
         "The date content was created",
         "The file size of each workbook",
         "The alphabetical order of workbook names"

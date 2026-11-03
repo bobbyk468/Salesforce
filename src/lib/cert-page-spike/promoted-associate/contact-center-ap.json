@@ -360,7 +360,7 @@
     {
       "question": "A knowledge article should be visible to agents but not to customers on the help site. How is this controlled?",
       "options": [
-        "Article visibility settings, such as internal app only",
+        "Article visibility settings",
         "Changing the case priority",
         "Deleting the article",
         "Putting it in a different org"

@@ -250,7 +250,7 @@
       "options": [
         "Build the dashboard on a manual spreadsheet upload",
         "Refresh the extract every five minutes",
-        "Clarify how fresh the data genuinely needs to be, then set refresh accordingly",
+        "Clarify how fresh the data genuinely needs to be",
         "Switch to a live connection and promise real time"
       ],
       "correctAnswer": 2,

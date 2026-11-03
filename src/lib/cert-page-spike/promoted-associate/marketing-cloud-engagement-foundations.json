@@ -281,7 +281,7 @@
         "The block is duplicated for each email",
         "Nothing until each email is republished",
         "Only new emails pick up the change",
-        "They all reflect the change, because content is shared"
+        "They all reflect the change"
       ],
       "correctAnswer": 3,
       "explanation": "Shared content is the point of Content Builder, and it means an edit propagates to everything using that block.",

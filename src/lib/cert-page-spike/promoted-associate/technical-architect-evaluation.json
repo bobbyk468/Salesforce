@@ -168,7 +168,7 @@
     {
       "question": "What is the main purpose of the architect evaluation stage?",
       "options": [
-        "To replace the System Architect credential",
+        "To replace the System Architect credential entirely for candidates",
         "To award the CTA credential",
         "To confirm a candidate is ready before they book the full review board",
         "To test Apex coding under time pressure"
@@ -185,7 +185,7 @@
       "question": "A scenario states that customer data must remain in the EU. A candidate's design stores it in a US-hosted system without comment. What is the problem?",
       "options": [
         "It affects cost but not the assessment",
-        "A stated constraint has been ignored, which undermines the whole design",
+        "A stated constraint has been ignored",
         "It only matters if the evaluator asks about it",
         "Nothing, as data location is an infrastructure concern"
       ],
@@ -203,7 +203,7 @@
         "Stop and wait for clarification",
         "State the assumption being made and design on that basis",
         "Ignore the requirement entirely",
-        "Design for every possible interpretation"
+        "Design separately for every possible interpretation of the requirement"
       ],
       "correctAnswer": 1,
       "explanation": "Making an assumption explicit shows judgement and lets the evaluator follow the reasoning.",
@@ -219,7 +219,7 @@
         "Deferring every decision to the client's preference",
         "Choosing the most technically advanced option available",
         "Using as many Salesforce products as possible",
-        "Naming the requirement, the option chosen, the alternative rejected and the trade-off"
+        "Naming the requirement, the option chosen"
       ],
       "correctAnswer": 3,
       "explanation": "The assessment is about reasoning: what you chose, against what, and at what cost.",
@@ -235,7 +235,7 @@
         "Neutrally, since both work",
         "Positively, as it shows technical depth",
         "Negatively, unless the candidate can justify why the standard feature was unsuitable",
-        "Positively, as custom code is more flexible"
+        "Positively, because custom code is a good deal more flexible in practice than configuration"
       ],
       "correctAnswer": 2,
       "explanation": "Standard capability is preferred. Custom build needs a reason, such as a requirement the standard feature genuinely cannot meet.",
@@ -250,7 +250,7 @@
       "options": [
         "A completed Trailhead superbadge",
         "Active Application Architect and System Architect credentials",
-        "Three years of Salesforce employment",
+        "Three full years of continuous Salesforce employment in an architect role",
         "Only the Administrator credential"
       ],
       "correctAnswer": 1,
@@ -266,7 +266,7 @@
       "options": [
         "The constraint is producing a complete design in the time given, not knowledge",
         "Reading is discouraged by Salesforce",
-        "The scenario is published in advance",
+        "The scenario and its requirements are published to candidates well in advance",
         "Timed practice guarantees a pass"
       ],
       "correctAnswer": 0,
@@ -281,7 +281,7 @@
       "question": "An evaluator challenges a candidate's integration choice with a reasonable objection. What is the best response?",
       "options": [
         "Engage with the objection and adjust if the argument is sound",
-        "Change the requirement to fit the design",
+        "Change the stated requirement so that it fits the design already produced",
         "Abandon the choice immediately",
         "Refuse to discuss it further"
       ],
@@ -296,7 +296,7 @@
     {
       "question": "Which set of areas should a complete design cover?",
       "options": [
-        "Only the integration diagram",
+        "Only the integration diagram and the systems that appear on it",
         "Only the user interface",
         "Only the data model",
         "Data, security and sharing, integration, development lifecycle and licensing"
@@ -312,7 +312,7 @@
     {
       "question": "How does this stage relate to the review board?",
       "options": [
-        "It is an alternative route that skips the board",
+        "It is an alternative route to the credential that skips the board entirely",
         "It is taken after the review board",
         "They are the same assessment under two names",
         "Passing it gives access to book the review board"
@@ -329,7 +329,7 @@
       "question": "A candidate produces an excellent design but cannot finish explaining it in the time available. What does this suggest?",
       "options": [
         "They need a repeatable presentation structure and timed rehearsal",
-        "Design quality alone will carry the result",
+        "Design quality on its own will be enough to carry the final result",
         "The scenario was unfair",
         "They should add more detail next time"
       ],
@@ -347,7 +347,7 @@
         "Check each one against the design and be ready to show where it is met",
         "Prioritise only the technical ones",
         "Summarise them back verbatim",
-        "Assume the evaluator remembers them"
+        "Assume the evaluator already remembers every requirement in the scenario"
       ],
       "correctAnswer": 0,
       "explanation": "Demonstrating coverage requirement by requirement is the most direct way to show the design answers the scenario.",
@@ -361,7 +361,7 @@
       "question": "Which is the best description of the material used in this stage?",
       "options": [
         "A live Salesforce org to configure",
-        "A hypothetical company with goals, existing systems and constraints",
+        "A hypothetical company with goals",
         "The candidate's own employer",
         "A bank of multiple-choice questions"
       ],
@@ -378,7 +378,7 @@
       "options": [
         "It automatically fails the attempt",
         "It shortens the discussion",
-        "The candidate must justify it, and cannot, which costs credibility",
+        "The candidate must justify it, and cannot",
         "None, as middleware is always good practice"
       ],
       "correctAnswer": 2,
@@ -392,7 +392,7 @@
     {
       "question": "What is the most useful form of rehearsal before this stage?",
       "options": [
-        "Reviewing other people's diagrams silently",
+        "Reviewing other people's architecture diagrams quietly on your own",
         "Re-reading the architect exam guides",
         "Producing timed designs and presenting them to someone who challenges you",
         "Memorising Salesforce limits"

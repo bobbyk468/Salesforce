@@ -284,7 +284,7 @@
     {
       "question": "A company is connecting Salesforce to an ERP, a warehouse system, a billing tool and a customer portal. Several teams will reuse the same customer and order data. What should the architect recommend?",
       "options": [
-        "Middleware with reusable APIs, such as MuleSoft's API-led layers",
+        "Middleware with reusable APIs",
         "Direct point-to-point connections between every pair of systems",
         "Nightly CSV files on a shared FTP server",
         "Let each team build its own Apex callouts"
@@ -397,7 +397,7 @@
       "question": "Version 1 of a company's customer API is being replaced by version 2, which changes some field names. Five other systems use version 1. What is the safest plan?",
       "options": [
         "Switch everyone to version 2 on the same day",
-        "Run both versions side by side, announce a retirement date, and help each consumer move",
+        "Run both versions side by side, announce a retirement date",
         "Change version 1 in place so it returns the new field names",
         "Keep version 1 forever and never release version 2"
       ],

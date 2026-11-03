@@ -360,7 +360,7 @@
     {
       "question": "Customers keep booking slots that technicians can't reach in time. What should be checked?",
       "options": [
-        "Travel time settings, such as street-level routing, and the territory set-up",
+        "Travel time settings, such as street-level routing",
         "The work order priority field",
         "The appointment booking slot length only",
         "The scheduling policy's preferred resource objective"

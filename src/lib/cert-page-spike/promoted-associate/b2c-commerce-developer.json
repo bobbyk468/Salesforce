@@ -170,243 +170,243 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does SFRA stand for in B2C Commerce?",
+      "question": "A developer needs to add a field to the product object that the storefront will display. Where is this defined?",
       "options": [
-        "Storefront Reference Architecture",
-        "Salesforce Retail Application",
-        "Script Framework Runtime API",
-        "Secure File Resource Access"
+        "In the system object metadata as a custom attribute",
+        "In a new custom object created alongside the standard product object",
+        "In the site preference settings for the storefront being developed",
+        "In a cartridge template that renders the value directly from the catalogue"
       ],
       "correctAnswer": 0,
-      "explanation": "Storefront Reference Architecture (SFRA) is the standard reference implementation for B2C Commerce storefronts.",
+      "explanation": "Custom attributes extend the standard system objects, which is how product data beyond the built-in fields is held.",
       "whyWrong": [
-        "'Salesforce Retail Application' isn't a real B2C Commerce term.",
-        "'Script Framework Runtime API' isn't the correct expansion of SFRA.",
-        "'Secure File Resource Access' isn't a recognized B2C Commerce acronym."
+        "A parallel custom object breaks the relationship to the product.",
+        "Site preferences hold configuration, not product attributes.",
+        "A template renders data; it does not define where the data lives."
       ]
     },
     {
-      "question": "Which API is used for headless or custom front-end integrations with B2C Commerce?",
+      "question": "What is the purpose of the cartridge path?",
       "options": [
-        "Apex",
-        "REST only",
-        "OCAPI (Open Commerce API) / SCAPI",
-        "SOAP only"
+        "It defines which payment providers are enabled for the storefront",
+        "It controls the order in which jobs execute on the instance overnight",
+        "It decides which cartridge's version of a file wins",
+        "It lists the catalogues that have been assigned to the current site"
       ],
       "correctAnswer": 2,
-      "explanation": "OCAPI/SCAPI (Shop API) is used for headless and custom integrations with B2C Commerce.",
+      "explanation": "The cartridge path is searched in order, so a file in an earlier cartridge overrides the same path in a later one. That is the basis of customisation without editing base code.",
       "whyWrong": [
-        "Apex is a Salesforce Core/Platform language, not used for B2C Commerce storefront integration.",
-        "REST alone doesn't describe B2C Commerce's specific headless API — OCAPI/SCAPI are the named implementations.",
-        "SOAP isn't used for B2C Commerce headless integrations."
+        "Payment configuration is held in site preferences.",
+        "Job order is configured in the job framework.",
+        "Catalogue assignment is separate site configuration."
       ]
     },
     {
-      "question": "What is a cartridge in B2C Commerce?",
+      "question": "A developer must customise checkout without modifying the base cartridge. What is the correct approach?",
       "options": [
-        "A payment method",
-        "A shipping box",
-        "A physical product",
-        "A modular unit of code that extends storefront functionality"
+        "Override the relevant files in a custom cartridge",
+        "Copy the whole base cartridge and rename it as the project's own version",
+        "Disable the base cartridge entirely and rebuild checkout from scratch",
+        "Edit the base cartridge directly and keep a record of every change made"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Putting your own version earlier on the cartridge path lets you change behaviour while leaving the base code upgradeable.",
+      "whyWrong": [
+        "Wholesale copying inherits the maintenance burden of the entire cartridge.",
+        "Rebuilding checkout discards tested, compliant functionality.",
+        "Editing base code makes every future platform upgrade painful."
+      ]
+    },
+    {
+      "question": "What does a controller do in a B2C Commerce storefront?",
+      "options": [
+        "It stores the product data that the storefront pages will display",
+        "It handles a request and decides what to render",
+        "It schedules the import jobs that refresh the catalogue each night",
+        "It defines the visual styling applied across the storefront's pages"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Controllers receive the request, run the server-side logic and choose the template or JSON response to return.",
+      "whyWrong": [
+        "Product data lives in the catalogue and system objects.",
+        "Imports are configured as jobs.",
+        "Styling is handled by stylesheets and templates."
+      ]
+    },
+    {
+      "question": "A developer needs to share logic between two controllers. What is the appropriate structure?",
+      "options": [
+        "A script module that both controllers require",
+        "A template fragment that each of the controllers renders in turn",
+        "A copy of the same function placed in each of the two controllers",
+        "A custom object holding the logic as a stored configuration value"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Shared server-side logic belongs in a module, so there is one implementation for both callers to use.",
+      "whyWrong": [
+        "Templates render output; they are not a place for business logic.",
+        "Duplicated functions drift apart and double the bug surface.",
+        "Custom objects store data rather than executable logic."
+      ]
+    },
+    {
+      "question": "Why does a developer need to be careful with API quotas on the platform?",
+      "options": [
+        "Quotas set the maximum number of products a catalogue may contain",
+        "Quotas control how often the storefront's cache can be invalidated",
+        "Exceeding them degrades or fails the request",
+        "Quotas determine how many cartridges a site is permitted to use"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The platform enforces limits on operations such as object queries per request, and breaching them causes warnings and eventually failures.",
+      "whyWrong": [
+        "Catalogue size is a data concern rather than a quota.",
+        "Cache invalidation is configured separately.",
+        "Cartridge count is not governed by API quotas."
+      ]
+    },
+    {
+      "question": "What is the role of OCAPI or SCAPI in a B2C Commerce implementation?",
+      "options": [
+        "Importing the product catalogue from the client's own backend system",
+        "Rendering the storefront pages that shoppers see in their browser",
+        "Defining the business manager screens used by the client's merchants",
+        "Exposing commerce data and operations to external clients"
       ],
       "correctAnswer": 3,
-      "explanation": "Cartridges contain scripts, templates, and assets that extend or customize the storefront.",
+      "explanation": "These APIs let external applications, including headless front ends and integrations, read and write commerce data.",
       "whyWrong": [
-        "Cartridges have nothing to do with payment processing.",
-        "Cartridges are a software concept unrelated to physical shipping.",
-        "Cartridges are code modules, not physical products — B2C Commerce cartridges contain pipelines, scripts, and templates."
+        "Catalogue import is handled by the job framework and feeds.",
+        "Storefront rendering is done by controllers and templates.",
+        "Business Manager screens are platform functionality."
       ]
     },
     {
-      "question": "Which scripting language is primarily used in B2C Commerce storefront development?",
+      "question": "A price must differ for members of a loyalty scheme. What mechanism supports this?",
       "options": [
-        "Apex",
-        "JavaScript (Node.js and ISML)",
-        "Ruby",
-        "Python"
+        "A separate catalogue containing a duplicate of every eligible product",
+        "A customer group with its own price book",
+        "A promotion applied by the shopper entering a code at the checkout",
+        "A custom attribute on the product holding the member price value"
       ],
       "correctAnswer": 1,
-      "explanation": "B2C Commerce uses JavaScript (Node.js) and ISML (template language) for storefront logic and rendering.",
+      "explanation": "Customer groups let the platform resolve a different price book for a defined set of shoppers.",
       "whyWrong": [
-        "Apex is used in Salesforce Core, not B2C Commerce storefronts.",
-        "Ruby isn't part of the B2C Commerce technology stack.",
-        "Python isn't used for B2C Commerce storefront scripting."
+        "Duplicating the catalogue is unmaintainable.",
+        "A code requires shopper action and is not automatic membership pricing.",
+        "An attribute holds a number but does not make the platform charge it."
       ]
     },
     {
-      "question": "What is the purpose of the Business Manager in B2C Commerce?",
+      "question": "What should a developer consider when writing a job that processes the full catalogue?",
       "options": [
-        "To deploy to Heroku",
-        "To write code",
-        "To manage catalogs, campaigns, and storefront settings",
-        "To configure Sales Cloud"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Business Manager is the admin console for managing B2C Commerce sites, catalogs, and operations.",
-      "whyWrong": [
-        "Deploying to Heroku is unrelated to Business Manager's purpose.",
-        "Business Manager is an admin console, not a code editor.",
-        "Business Manager doesn't configure Sales Cloud — it's a separate B2C Commerce product."
-      ]
-    },
-    {
-      "question": "What is a pipeline in B2C Commerce?",
-      "options": [
-        "A server-side script that processes a request through sequential steps",
-        "A database",
-        "An email",
-        "A report"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Pipelines process requests through sequential script steps.",
-      "whyWrong": [
-        "A pipeline is workflow logic, not a database.",
-        "Pipelines process requests, not emails.",
-        "Pipelines aren't reporting tools."
-      ]
-    },
-    {
-      "question": "Which B2C Commerce template language renders HTML?",
-      "options": [
-        "AMPscript",
-        "ISML (Internet Store Markup Language)",
-        "LWC",
-        "Visualforce"
+        "Disabling the storefront while the job is running to avoid conflicts",
+        "Chunking the work so it stays within limits",
+        "Processing the records one at a time to guarantee nothing is skipped",
+        "Running the job during peak trading so errors are noticed quickly"
       ],
       "correctAnswer": 1,
-      "explanation": "ISML is the template language for B2C Commerce storefronts.",
+      "explanation": "Large jobs need to process in chunks with checkpoints, or they exhaust resources and fail partway through.",
       "whyWrong": [
-        "AMPscript is a Marketing Cloud personalization language, unrelated to B2C Commerce templates.",
-        "LWC is used in Salesforce Core/Experience Cloud, not B2C Commerce storefronts.",
-        "Visualforce is a Salesforce Core UI framework, not used in B2C Commerce."
+        "Taking the storefront down for a routine job is not acceptable.",
+        "Row-by-row processing is what fails at catalogue scale.",
+        "Peak trading is the worst time to run heavy batch work."
       ]
     },
     {
-      "question": "What does OCAPI support?",
+      "question": "Why is content caching important on a storefront?",
       "options": [
-        "Only admin",
-        "Headless commerce, custom storefronts, and mobile apps",
-        "Only writes",
-        "Only reads"
+        "It ensures the catalogue data is always completely up to date",
+        "It keeps response times low under real traffic",
+        "It removes the need to consider API quotas within controllers",
+        "It guarantees that every shopper sees personalised pricing"
       ],
       "correctAnswer": 1,
-      "explanation": "OCAPI enables headless and custom storefront development.",
+      "explanation": "Caching is what allows a storefront to serve high traffic, and getting cache boundaries right is a core performance concern.",
       "whyWrong": [
-        "OCAPI is used by storefronts and integrations generally, not restricted to admin use.",
-        "OCAPI supports far more than headless/mobile use cases — 'only writes' misrepresents its scope.",
-        "OCAPI supports both reads and writes, not reads only."
+        "Caching trades freshness for speed, so it does the opposite of this.",
+        "Quotas still apply to uncached work.",
+        "Aggressive caching makes personalisation harder, not guaranteed."
       ]
     },
     {
-      "question": "Which B2C Commerce object represents a product?",
+      "question": "A developer finds personalised content being served from cache to the wrong shoppers. What is the cause?",
       "options": [
-        "Product and Product Variant",
-        "Lead",
-        "Account",
-        "Opportunity"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Product and Product Variant represent catalog items.",
-      "whyWrong": [
-        "Lead is a Sales Cloud object, unrelated to B2C Commerce catalog structure.",
-        "Account is a Salesforce Core CRM object, not a B2C Commerce catalog object.",
-        "Opportunity is a Sales Cloud object, unrelated to B2C Commerce product data."
-      ]
-    },
-    {
-      "question": "What is the purpose of a custom cartridge?",
-      "options": [
-        "To create reports only",
-        "To send emails only",
-        "To extend or override storefront functionality",
-        "To replace SFRA"
+        "An API quota being exceeded during the rendering of the page",
+        "A missing custom attribute on the product records being displayed",
+        "Personalised output cached without varying on the shopper",
+        "The cartridge path placing the custom cartridge in the wrong position"
       ],
       "correctAnswer": 2,
-      "explanation": "Custom cartridges extend or override storefront behavior.",
+      "explanation": "Caching a response that depends on who is viewing it, without including that in the cache key, serves one shopper's content to another.",
       "whyWrong": [
-        "Custom cartridges can contain full storefront logic, not just reports.",
-        "Cartridges handle far more than email sending — that's a Marketing Cloud concern.",
-        "Custom cartridges extend SFRA rather than replacing it entirely — the base cartridge is still required."
+        "Quota breaches cause failures rather than cross-contamination.",
+        "A missing attribute would show empty data rather than someone else's.",
+        "Cartridge order affects which code runs, not cache correctness."
       ]
     },
     {
-      "question": "Which B2C Commerce feature supports A/B testing?",
+      "question": "What distinguishes a storefront catalogue from a master catalogue?",
       "options": [
-        "No support",
-        "Manual only",
-        "Business Manager experiments and activities",
-        "Code only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Business Manager supports experiments for A/B testing.",
-      "whyWrong": [
-        "B2C Commerce does support A/B testing natively — 'no support' is incorrect.",
-        "A/B testing isn't limited to manual processes — Business Manager automates variant delivery.",
-        "A/B testing is configured through Business Manager tools, not raw code only."
-      ]
-    },
-    {
-      "question": "What does the Script Debugger support?",
-      "options": [
-        "Only deployment",
-        "Only logs",
-        "Only builds",
-        "Breakpoints, step-through, and variable inspection"
+        "One is editable by merchants and the other only by developers",
+        "One holds physical goods while the other holds digital products only",
+        "One applies to a single site and the other to a single locale",
+        "One organises products for browsing; the other owns them"
       ],
       "correctAnswer": 3,
-      "explanation": "Script Debugger supports breakpoints and variable inspection.",
+      "explanation": "Products are defined in a master catalogue and then assigned into a storefront catalogue's category structure for navigation.",
       "whyWrong": [
-        "The debugger is for runtime script inspection, not deployment.",
-        "The Script Debugger provides much more than log viewing — it supports live debugging.",
-        "The debugger doesn't manage builds — it's a runtime diagnostic tool."
+        "Both are managed through Business Manager.",
+        "Both can hold any product type.",
+        "Locale is handled separately from catalogue structure."
       ]
     },
     {
-      "question": "Which deployment method is used for B2C Commerce code?",
+      "question": "A client wants a headless front end calling the commerce platform. What changes for the developer?",
       "options": [
-        "Change Sets only",
-        "Workbench only",
-        "Data Loader only",
-        "Code deployment via Business Manager or CI/CD"
+        "Jobs must be rewritten because they cannot run without a storefront",
+        "The cartridge path is no longer used for any purpose at all",
+        "Custom attributes can no longer be added to the system objects",
+        "Rendering moves out and the platform serves data"
       ],
       "correctAnswer": 3,
-      "explanation": "Code deploys via Business Manager or CI/CD pipelines.",
+      "explanation": "In a headless setup the front end owns presentation and the platform is consumed through its APIs, so server-side templating largely falls away.",
       "whyWrong": [
-        "Change Sets are a Salesforce Core deployment mechanism, not used for B2C Commerce code.",
-        "Workbench is a Salesforce Core tool, unrelated to B2C Commerce code deployment.",
-        "Data Loader moves records, not B2C Commerce code artifacts."
+        "Jobs run independently of how the front end is built.",
+        "Cartridges remain relevant for server-side logic and hooks.",
+        "Object extension works as before."
       ]
     },
     {
-      "question": "What is the purpose of the hook mechanism in B2C Commerce?",
+      "question": "What is the safest way to handle a shopper's payment details in a custom checkout?",
       "options": [
-        "To delete only",
-        "To extend or override pipeline behavior without modifying base code",
-        "To create only",
-        "To replace pipelines"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Hooks allow extension without modifying base cartridges.",
-      "whyWrong": [
-        "Hooks aren't limited to deleting functionality — they can add or modify behavior too.",
-        "Hooks aren't limited to creation-only actions — they can intercept many lifecycle events.",
-        "Hooks extend behavior at defined extension points — they don't replace the entire pipeline system."
-      ]
-    },
-    {
-      "question": "Which best practice applies to B2C Commerce performance?",
-      "options": [
-        "Use caching, optimize ISML, and minimize API calls",
-        "Ignore caching",
-        "No caching",
-        "No optimization"
+        "Let the payment provider capture them directly",
+        "Pass them through the controller and log them for later reconciliation",
+        "Store them in a custom attribute on the shopper's own profile record",
+        "Hold them in session until the order has been successfully placed"
       ],
       "correctAnswer": 0,
-      "explanation": "Caching and optimization support storefront performance.",
+      "explanation": "Card data should never touch your application. The provider's hosted fields or redirect keeps it out of scope and out of your logs.",
       "whyWrong": [
-        "Ignoring caching would hurt performance, not help it — this is the opposite of best practice.",
-        "'No caching' is the opposite of the recommended performance approach.",
-        "'No optimization' contradicts the actual best practice of optimizing ISML and API usage."
+        "Logging payment details is exactly what must never happen.",
+        "Storing card details on a profile is a serious compliance breach.",
+        "Holding card data in session still brings it into scope."
+      ]
+    },
+    {
+      "question": "Which best describes what a developer is responsible for on a B2C Commerce project?",
+      "options": [
+        "The visual design of the storefront's pages and brand styling",
+        "The merchandising decisions about which products to promote",
+        "Storefront behaviour, integrations and data extensions",
+        "The hosting infrastructure the commerce platform itself runs on"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The developer builds and customises how the storefront behaves, extends the data model and connects the platform to other systems.",
+      "whyWrong": [
+        "Visual design is usually produced by designers.",
+        "Merchandising is a business user's role in Business Manager.",
+        "Infrastructure is operated by Salesforce."
       ]
     }
   ]

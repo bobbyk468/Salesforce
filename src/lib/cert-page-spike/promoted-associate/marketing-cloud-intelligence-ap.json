@@ -168,7 +168,7 @@
       "question": "The same campaign appears as 'Spring_Sale_US' in Google Ads and 'US Spring Sale' in Meta. The team wants one combined row. What should be done?",
       "options": [
         "Harmonise the sources with a shared campaign key or naming pattern",
-        "Rename the campaigns by hand every week",
+        "Rename each one of the campaigns by hand at the end of every single week",
         "Report on each platform separately",
         "Delete one of the data streams"
       ],
@@ -186,7 +186,7 @@
         "There are too many widgets",
         "The rate is being summed instead of recalculated from clicks and impressions",
         "The data stream is late",
-        "The filter is on the wrong date"
+        "The filter has been applied to entirely the wrong date field on the dashboard"
       ],
       "correctAnswer": 1,
       "explanation": "Rates must be calculated from their parts after adding up clicks and impressions, not summed directly.",
@@ -199,10 +199,10 @@
     {
       "question": "When setting up a new data stream, what must be done with each source field?",
       "options": [
-        "Map it to a dimension or measurement in the data model",
+        "Map it to a dimension or measurement",
         "Leave it unmapped",
         "Add it to a dashboard first",
-        "Rename it in the source system"
+        "Rename the field in the original source system instead"
       ],
       "correctAnswer": 0,
       "explanation": "Mapping puts each field in the right place in the shared model, so it can be used and compared.",
@@ -231,7 +231,7 @@
     {
       "question": "The team needs cost per acquisition for each channel. What should they create?",
       "options": [
-        "A new data stream",
+        "A new data stream configured for that advertising platform",
         "A calculated measurement of spend divided by conversions",
         "A filter",
         "A new workspace"
@@ -247,10 +247,10 @@
     {
       "question": "Campaign names follow a pattern like 'BRAND_PRODUCT_COUNTRY'. The team wants a Product dimension. What should they use?",
       "options": [
-        "Ask each team to add a product field",
+        "Ask each of the teams to add a product field to their own files",
         "A new workspace",
         "Create a dashboard filter",
-        "A classification or pattern rule that extracts the product from the name"
+        "A classification rule that extracts the product from the name"
       ],
       "correctAnswer": 3,
       "explanation": "Rules can read values from naming patterns and create new dimensions automatically.",
@@ -264,7 +264,7 @@
       "question": "Dashboards are out of date because someone forgot to upload last week's file. What should be changed?",
       "options": [
         "Add more widgets",
-        "Upload files less often",
+        "Upload the source files a good deal less often",
         "Schedule the data stream to run automatically",
         "Delete the dashboard"
       ],
@@ -280,7 +280,7 @@
       "question": "An agency manages marketing data for three separate clients who must not see each other's data. How should this be organised?",
       "options": [
         "Separate widgets for each client",
-        "One dashboard with a client filter",
+        "One single dashboard with a client filter applied",
         "One data stream for all clients",
         "Separate workspaces for each client"
       ],
@@ -297,8 +297,8 @@
       "options": [
         "A new KPI",
         "More filters",
-        "A larger dashboard",
-        "Monitoring and alerts on data stream runs"
+        "A single larger dashboard layout",
+        "Monitoring and alerts on the runs"
       ],
       "correctAnswer": 3,
       "explanation": "Alerts on failed runs let the team fix problems before reports are affected.",
@@ -311,8 +311,8 @@
     {
       "question": "A dashboard viewer only wants to see last month's results for the email channel. What should they use?",
       "options": [
-        "A new data stream",
-        "A new calculated measurement",
+        "A new data stream configured for that advertising platform",
+        "A newly created calculated measurement",
         "Filters for date and channel",
         "A new workspace"
       ],
@@ -330,7 +330,7 @@
         "By copying it into a widget",
         "Through a file upload or API data stream",
         "It can't be used",
-        "By typing it into a dashboard"
+        "By typing the value directly into a dashboard widget"
       ],
       "correctAnswer": 1,
       "explanation": "File and API-based streams can bring in data from sources without a built-in connector.",
@@ -344,7 +344,7 @@
       "question": "What is the main reason to bring all marketing data into one data model?",
       "options": [
         "So results can be compared across channels and platforms",
-        "So each platform's reports look different",
+        "So that each platform's own reports continue to look different",
         "So dashboards load more slowly",
         "So data stays in separate tools"
       ],
@@ -360,8 +360,8 @@
       "question": "Total conversions look doubled after adding a second data stream that also reports conversions. What is the likely cause?",
       "options": [
         "The workspace is too small",
-        "The dashboard has too many pages",
-        "The same conversions are counted in both sources and need de-duplication or a single source of truth",
+        "The dashboard simply has a great many more pages than it needs",
+        "The same conversions are counted in both sources and need de-duplicating",
         "The filter is wrong"
       ],
       "correctAnswer": 2,
@@ -378,7 +378,7 @@
         "Removing the KPI",
         "Adding more data streams",
         "Automated insights or alerts on that KPI",
-        "Checking the dashboard once a quarter"
+        "Checking the dashboard over just once every quarter"
       ],
       "correctAnswer": 2,
       "explanation": "Insights and alerts flag unusual changes so the team can act quickly.",
@@ -392,9 +392,9 @@
       "question": "What should a well-designed dashboard start from?",
       "options": [
         "The colour scheme",
-        "The question the viewer needs to answer",
+        "The question the viewer must answer",
         "Every available widget",
-        "The largest data stream"
+        "Whichever is the largest data stream"
       ],
       "correctAnswer": 1,
       "explanation": "Good dashboards are built around the decisions viewers need to make.",

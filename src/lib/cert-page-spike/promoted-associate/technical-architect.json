@@ -190,7 +190,7 @@
       "options": [
         "By designing a solution to a scenario and defending it to judges",
         "By completing Trailhead superbadges only",
-        "By submitting a portfolio of past projects",
+        "By submitting a portfolio documenting a range of past client projects",
         "By a 60-question multiple-choice exam"
       ],
       "correctAnswer": 0,
@@ -204,7 +204,7 @@
     {
       "question": "A candidate's design is technically elegant but does not address two business requirements stated in the scenario. What is the likely outcome?",
       "options": [
-        "It passes, because the design is technically strong",
+        "It passes anyway, because the design is technically very strong",
         "It is deferred for a written follow-up",
         "The judges rewrite the requirements",
         "It fails, because requirement coverage is fundamental"
@@ -222,7 +222,7 @@
       "options": [
         "To check readiness before access to the full review board",
         "To award the CTA credential directly",
-        "To replace the Application Architect credential",
+        "To replace the Application Architect credential for senior candidates",
         "To test coding ability in Apex"
       ],
       "correctAnswer": 0,
@@ -238,7 +238,7 @@
       "options": [
         "State that it is best practice",
         "Say the client insisted on it",
-        "Explain why it was chosen, what was rejected, and the trade-off accepted",
+        "Explain why it was chosen, what was rejected",
         "Immediately replace it with a direct integration"
       ],
       "correctAnswer": 2,
@@ -255,7 +255,7 @@
         "The visual polish of the slides",
         "Judgement: requirement coverage, justification, trade-offs, risk and communication",
         "Speed of typing a solution",
-        "Recall of Salesforce feature names"
+        "Recall of Salesforce feature names and the limits attached to each one"
       ],
       "correctAnswer": 1,
       "explanation": "Platform knowledge is assumed. The assessment is about the reasoning applied on top of it.",
@@ -269,7 +269,7 @@
       "question": "How many distinct exams must be passed before CTA, given the two prerequisite credentials?",
       "options": [
         "Seven, because Platform Developer I counts toward both",
-        "Eight, with no overlap between the two paths",
+        "Eight exams in total, with no overlap at all between the two paths",
         "Four, one per architect domain",
         "Two, one for each prerequisite credential"
       ],
@@ -286,7 +286,7 @@
       "options": [
         "It only affects the evaluation stage",
         "It affects the fee, not the result",
-        "It does not matter, as judges are all architects",
+        "It does not matter at all, because the judges are all practising architects",
         "Communication to a business audience is part of what is assessed"
       ],
       "correctAnswer": 3,
@@ -300,7 +300,7 @@
     {
       "question": "What is the most effective form of CTA preparation?",
       "options": [
-        "Watching recorded presentations without presenting",
+        "Watching recorded board presentations without ever presenting yourself",
         "Mock boards where people interrupt and challenge the design",
         "Memorising governor limits",
         "Re-reading the architect exam guides"
@@ -317,7 +317,7 @@
       "question": "Roughly what should a candidate budget for the two CTA stages?",
       "options": [
         "The same as a standard $200 exam",
-        "Around US$6,000 in total, subject to confirmation with Salesforce",
+        "Around US$6,000 in total",
         "A fixed annual subscription",
         "Nothing, as it is included with the prerequisites"
       ],
@@ -334,7 +334,7 @@
       "options": [
         "Well, provided the diagram is detailed",
         "Poorly, because every design carries trade-offs the board expects you to name",
-        "Well, because confidence is the main criterion",
+        "Well enough, because confidence is the main criterion being assessed",
         "Neutrally, as risk is assessed separately"
       ],
       "correctAnswer": 1,
@@ -351,7 +351,7 @@
         "It is a live production org to configure",
         "It is the candidate's own past project",
         "It is a hypothetical enterprise scenario with requirements and constraints",
-        "It is a set of multiple-choice questions"
+        "It is a set of scenario-based multiple-choice questions to answer"
       ],
       "correctAnswer": 2,
       "explanation": "Candidates design a solution for a hypothetical company described in the scenario.",
@@ -364,7 +364,7 @@
     {
       "question": "Why is having a repeatable presentation structure useful at the board?",
       "options": [
-        "It guarantees a pass regardless of content",
+        "It guarantees a pass regardless of the content that was presented",
         "It replaces the need for a diagram",
         "It lets you skip the questioning section",
         "It ensures every required area is covered under time pressure"
@@ -396,7 +396,7 @@
     {
       "question": "A candidate fails the board. What is the usual next step?",
       "options": [
-        "Prepare and sit the board again, paying the fee for that attempt",
+        "Prepare and sit the board again",
         "They are awarded a lower credential instead",
         "They must retake all seven prerequisite exams",
         "The credential is permanently closed to them"

@@ -162,7 +162,7 @@
         "A single model tier, with residency met by contract clause",
         "Per-team deployments, each setting its own retention policy",
         "One central endpoint processing applications in sequence",
-        "Regional nodes, task-based model routing, full audit logging"
+        "Regional nodes, task-based model routing"
       ],
       "correctAnswer": 3,
       "explanation": "Residency requires processing inside the region, SOC 2 requires per-decision auditability, and routing by task keeps cost proportionate. All three constraints have to be met at once.",
@@ -255,7 +255,7 @@
     {
       "question": "A platform serves several teams with different compliance needs. How should model and retention policy be managed?",
       "options": [
-        "Central policy, platform-enforced, with bounded team choice",
+        "Central policy, platform-enforced",
         "One strictest policy applied to every use case",
         "Each team sets policy and attests annually",
         "Policy chosen per request by the calling application"
@@ -272,7 +272,7 @@
       "question": "Which approach best controls spend on a platform whose cost is growing faster than usage?",
       "options": [
         "Apply the same flat token cap to every team",
-        "Attribute cost per workflow, then fix the top contributors",
+        "Attribute cost per workflow",
         "Move all workloads to the smallest available model",
         "Cap how many workflows each team may run"
       ],
@@ -289,7 +289,7 @@
       "options": [
         "A duplicate agent running the same task alongside",
         "More aggressive retries on each tool call",
-        "Checkpointed state in durable storage, with resumable steps",
+        "Checkpointed state in durable storage",
         "A larger context window for the whole task"
       ],
       "correctAnswer": 2,
