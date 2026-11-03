@@ -58,9 +58,15 @@ if (!existsSync(BUILD_DIR)) {
   process.exit(1)
 }
 
+// Framework error boundaries are never indexed and carry no metadata of their
+// own. Next 16 emits _global-error.html, which would otherwise fail the
+// missing-description check.
+const SKIP = new Set(['/_global-error'])
+
 for (const file of walkHtml(BUILD_DIR)) {
   const html = readFileSync(file, 'utf8')
   const relPath = file.replace(BUILD_DIR, '').replace(/\/page\.html$/, '') || '/'
+  if (SKIP.has(relPath.replace(/\.html$/, ''))) continue
 
   const title = extractTitle(html)
   const desc = extractDescription(html)
