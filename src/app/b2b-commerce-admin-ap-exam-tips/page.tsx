@@ -169,7 +169,7 @@ export default function B2bCommerceAdminApExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Buyer Groups vs Accounts: Access Is Granted Through the Group</p>
-            <p className="text-sm text-gray-700">Buyer Groups are the mechanism that assigns buyer accounts to a specific storefront, price list, and entitlement policy. You do not grant storefront access directly to an Account. Candidates answer "assign the account to the storefront", the correct answer is "add the account to a Buyer Group that has the storefront assignment." Missing this layer is the most common B2B Commerce admin exam mistake.</p>
+            <p className="text-sm text-gray-700">Buyer Groups are the mechanism that assigns buyer accounts to a specific storefront, price list, and entitlement policy. You do not grant storefront access directly to an Account. Candidates answer "assign the account to the storefront"; the correct answer is "add the account to a Buyer Group that has the storefront assignment." Missing this layer is the most common B2B Commerce admin exam mistake.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Quick Order vs Order Templates: Different Use Cases, Same Confusion</p>

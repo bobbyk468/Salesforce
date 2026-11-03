@@ -83,7 +83,7 @@ const COMPARISONS: ComparisonEntry[] = [
   { slug: 'pardot-specialist-vs-pardot-consultant', title: 'Pardot Specialist vs Pardot Consultant', description: 'B2B marketing certs: entry-level vs implementation-level. Which is right for your experience?', tag: 'Marketing Cloud' },
   { slug: 'marketing-cloud-admin-vs-developer', title: 'Marketing Cloud Admin vs Developer', description: 'Platform administration vs technical development in the Marketing Cloud stack.', tag: 'Marketing Cloud' },
   // Architect track
-  { slug: 'integration-architect-vs-system-architect', title: 'Integration Architect vs System Architect', description: 'Standalone architect credential vs CTA milestone, understanding the difference matters.', tag: 'Architect Track' },
+  { slug: 'integration-architect-vs-system-architect', title: 'Integration Architect vs System Architect', description: 'Standalone architect credential vs CTA milestone; understanding the difference matters.', tag: 'Architect Track' },
   { slug: 'b2b-vs-b2c-solution-architect', title: 'B2B vs B2C Solution Architect', description: 'Enterprise CRM architecture vs consumer e-commerce architecture, which fits your practice?', tag: 'Architect Track' },
   // Designer track
   { slug: 'business-analyst-vs-strategy-designer', title: 'Business Analyst vs Strategy Designer', description: 'Non-technical Salesforce credentials, requirements gathering vs design thinking leadership.', tag: 'Designer Track' },

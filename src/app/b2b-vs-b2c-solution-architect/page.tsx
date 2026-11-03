@@ -107,7 +107,7 @@ export default function B2bVsB2cSolutionArchitectPage() {
           certName: "B2B Solution Architect",
           certSlug: "b2b-solution-architect",
           examTipsSlug: "b2b-solution-architect-exam-tips",
-          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud, otherwise B2B gives you wider applicability.",
+          reason: "B2B Solution Architect applies to a broader range of Salesforce's core CRM clients. B2C is the right choice only if your practice is specifically in consumer e-commerce or B2C Marketing Cloud; otherwise B2B gives you wider applicability.",
           careerPathSlug: "architect-certification-path",
           careerPathLabel: "Architect Certification Path",
         }}

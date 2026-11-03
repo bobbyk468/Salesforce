@@ -169,7 +169,7 @@ export default function AdvancedAdministratorExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">2. Territory Management 2.0: Assignment Rules vs Sharing Rules</p>
-            <p className="text-sm text-gray-700">Territory Management 2.0 controls which accounts and their related objects a user can access based on geographic or segment-based territory models. Sharing rules extend access horizontally between peers. Candidates answer territory management questions using sharing rule logic. Key distinction: territory models have states (Planning, Active, Archived) and run assignment rules to associate accounts to territories, sharing rules have no concept of model states.</p>
+            <p className="text-sm text-gray-700">Territory Management 2.0 controls which accounts and their related objects a user can access based on geographic or segment-based territory models. Sharing rules extend access horizontally between peers. Candidates answer territory management questions using sharing rule logic. Key distinction: territory models have states (Planning, Active, Archived) and run assignment rules to associate accounts to territories; sharing rules have no concept of model states.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Change Data Capture vs Platform Events: Choosing the Right Tool</p>

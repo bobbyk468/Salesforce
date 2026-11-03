@@ -225,7 +225,7 @@ export default function Pd1ExamTipsPage() {
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1">3. Test Classes: Coverage Is Not Enough: Assertions Are Required</p>
-            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong, the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation, calling a real endpoint in a test will throw an exception, not just fail silently.</p>
+            <p className="text-sm text-gray-700">A test class that runs code and hits 75% coverage but contains no <code className="bg-amber-100 px-1 rounded text-xs">System.assert()</code> statements is considered invalid for certification purposes. Exam questions often show a test method and ask what is wrong; the correct answer is &ldquo;no assertions&rdquo; even if coverage looks sufficient. Also know: callout mocks require <code className="bg-amber-100 px-1 rounded text-xs">HttpCalloutMock</code> implementation, and calling a real endpoint in a test will throw an exception, not just fail silently.</p>
           </div>
         </div>
       </section>

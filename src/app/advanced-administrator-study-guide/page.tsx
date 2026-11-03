@@ -188,7 +188,7 @@ export default function AdvancedAdministratorStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Analytics, Reports and Dashboards (10%)
             </p>
-            <p><strong>Joined Reports:</strong> combine data from up to 5 report types in a single report, each block has its own filters and groupings. Useful for comparing data from different objects side by side. <strong>Cross-filters:</strong> filter a report to show records with or without related records (e.g., accounts with no open opportunities). <strong>Bucket fields:</strong> group report values into named categories without creating formula fields. <strong>Historical Trending:</strong> track record changes over time (up to 3 months), useful for pipeline movement analysis. <strong>Dynamic Dashboards:</strong> display data based on the logged-in viewer’s context (each user sees their own data) vs a fixed running user.</p>
+            <p><strong>Joined Reports:</strong> combine data from up to 5 report types in a single report; each block has its own filters and groupings. Useful for comparing data from different objects side by side. <strong>Cross-filters:</strong> filter a report to show records with or without related records (e.g., accounts with no open opportunities). <strong>Bucket fields:</strong> group report values into named categories without creating formula fields. <strong>Historical Trending:</strong> track record changes over time (up to 3 months), useful for pipeline movement analysis. <strong>Dynamic Dashboards:</strong> display data based on the logged-in viewer’s context (each user sees their own data) vs a fixed running user.</p>
           </div>
         </div>
       </section>

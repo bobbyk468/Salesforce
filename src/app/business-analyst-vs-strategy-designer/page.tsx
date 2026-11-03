@@ -56,7 +56,7 @@ const faqItems = [
   },
   {
     question: 'Can you take both Business Analyst and Strategy Designer?',
-    answer: 'Yes, both certifications are complementary and often pursued together. A professional who holds both credentials demonstrates a full spectrum of skills: from stakeholder engagement and requirements analysis (BA) through to experience design and CX strategy (Strategy Designer). This combination is increasingly valued on large transformation programmes where user experience is as important as technical delivery.',
+    answer: 'Yes; both certifications are complementary and often pursued together. A professional who holds both credentials demonstrates a full spectrum of skills: from stakeholder engagement and requirements analysis (BA) through to experience design and CX strategy (Strategy Designer). This combination is increasingly valued on large transformation programmes where user experience is as important as technical delivery.',
   },
 ]
 

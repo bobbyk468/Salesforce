@@ -61,7 +61,7 @@ const faqItems = [
   },
   {
     question: 'What is Headless Commerce and does the B2C Commerce Architect exam test it?',
-    answer: 'Headless Commerce separates the front-end presentation layer from the B2C Commerce back-end, the storefront is built with a custom front-end (React, Vue) consuming Commerce APIs (OCAPI or SCAPI). Yes, the Architect exam tests when to choose Headless vs. SFRA: Headless for maximum front-end flexibility, SFRA for faster time-to-market with a managed front-end framework.',
+    answer: 'Headless Commerce separates the front-end presentation layer from the B2C Commerce back-end; the storefront is built with a custom front-end (React, Vue) consuming Commerce APIs (OCAPI or SCAPI). Yes, the Architect exam tests when to choose Headless vs. SFRA: Headless for maximum front-end flexibility, SFRA for faster time-to-market with a managed front-end framework.',
   },
   {
     question: 'What concepts do most B2C Commerce Architect candidates get wrong?',

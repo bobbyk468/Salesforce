@@ -244,7 +244,7 @@ export default function AppBuilderStudyGuidePage() {
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />
-            <span><strong>Deployment questions:</strong> Change sets are used to move metadata between related orgs (sandbox → production with the same organization). Unmanaged packages are for distributing customisations. Managed packages are for AppExchange listings. If the question asks about deleting components, change sets cannot do it, metadata API is required.</span>
+            <span><strong>Deployment questions:</strong> Change sets are used to move metadata between related orgs (sandbox → production with the same organization). Unmanaged packages are for distributing customisations. Managed packages are for AppExchange listings. If the question asks about deleting components, change sets cannot do it; metadata API is required.</span>
           </li>
           <li className="flex gap-2">
             <Target className="h-4 w-4 mt-0.5 text-salesforce-blue flex-shrink-0" />

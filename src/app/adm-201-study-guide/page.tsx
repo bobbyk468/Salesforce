@@ -320,7 +320,7 @@ export default function Adm201StudyGuidePage() {
         <h2 className="text-xl font-bold text-gray-900 mb-3">Top 10 Topics to Review the Day Before</h2>
         <ol className="space-y-1 text-sm text-gray-700 list-decimal list-inside">
           <li>OWD settings (Private / Public Read Only / Public Read-Write / Controlled by Parent) and what each allows</li>
-          <li>Role hierarchy: visibility vs access, roles affect who can see records, not what they can do</li>
+          <li>Role hierarchy: visibility vs access; roles affect who can see records, not what they can do</li>
           <li>Profile vs Permission Set vs Permission Set Group, when to use each</li>
           <li>Validation rule order of execution and when they fire (before triggers, after page save)</li>
           <li>Record-triggered flow: before-save vs after-save and why before-save is more efficient</li>

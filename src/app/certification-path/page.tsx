@@ -59,7 +59,7 @@ const faqItems = [
   },
   {
     question: 'Do I need prerequisites to start Salesforce certifications?',
-    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended, many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
+    answer: 'Most Salesforce certifications have no hard prerequisites. The main exception is Platform Developer II (PD2), which requires PD1. However, practical experience is strongly recommended; many certification exams are scenario-based and reward hands-on platform knowledge over memorisation.',
   },
   {
     question: 'What is the Salesforce CTA certification path?',
