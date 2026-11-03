@@ -168,7 +168,7 @@
     {
       "question": "A web request sometimes takes 45 seconds because it generates a large PDF. Users see timeout errors. What is the best fix?",
       "options": [
-        "Move PDF creation to a worker dyno with a queue and tell the user when it is ready",
+        "Queue PDF creation on a worker dyno",
         "Ask users to refresh the page",
         "Use a larger web dyno",
         "Turn off the router timeout"
@@ -186,7 +186,7 @@
       "options": [
         "The images are too large",
         "The database is full",
-        "Dyno file systems are temporary and are wiped when the dyno restarts",
+        "Dyno file systems are wiped on restart",
         "Heroku deletes images by policy"
       ],
       "correctAnswer": 2,
@@ -200,10 +200,10 @@
     {
       "question": "A healthcare app on Heroku will store patient data and must meet strict compliance rules. Which runtime fits?",
       "options": [
-        "Shield Private Spaces",
+        "A Shield Private Space",
         "A free dyno",
         "A one-off dyno",
-        "Common Runtime"
+        "The Common Runtime"
       ],
       "correctAnswer": 0,
       "explanation": "Shield Private Spaces add the extra isolation, logging and encryption controls needed for regulated data such as health records.",
@@ -249,7 +249,7 @@
       "question": "A customer portal on Heroku needs to read millions of Salesforce Account and Order records quickly, without using up Salesforce API calls on every page view. What should be used?",
       "options": [
         "Heroku Connect syncing the records into Heroku Postgres",
-        "A REST API call to Salesforce for each page view",
+        "A REST API call made to Salesforce on every single page view",
         "Storing the data in config vars",
         "Exporting a CSV from Salesforce each week"
       ],
@@ -282,7 +282,7 @@
       "options": [
         "Push the code to production again",
         "Copy files by hand",
-        "Rebuild with a different buildpack",
+        "Rebuild the application with a different buildpack",
         "Promote the build through a Pipeline"
       ],
       "correctAnswer": 3,
@@ -313,7 +313,7 @@
       "question": "A Heroku app should react within seconds when an Opportunity is closed in Salesforce. What fits?",
       "options": [
         "A weekly data export",
-        "Subscribing to Change Data Capture or a Platform Event",
+        "Subscribing to Change Data Capture",
         "Polling Salesforce every hour",
         "Asking sales reps to email the app team"
       ],
@@ -330,7 +330,7 @@
       "options": [
         "Put the password in a comment",
         "Encrypt the source file",
-        "Move the password into a config var",
+        "Move the password to a config var",
         "Store it in the README"
       ],
       "correctAnswer": 2,
@@ -360,8 +360,8 @@
     {
       "question": "The live app's database must keep running if the primary database server fails. What should be chosen?",
       "options": [
-        "Daily backups only",
-        "A Heroku Postgres plan with high availability",
+        "Scheduled daily backups of the database",
+        "A Postgres plan with high availability",
         "A follower used for reports only",
         "A larger dyno"
       ],

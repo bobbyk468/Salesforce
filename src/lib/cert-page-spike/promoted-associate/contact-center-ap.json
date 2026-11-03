@@ -201,7 +201,7 @@
       "question": "VIP customers should go straight to a senior team, while others follow normal routing. What is the most flexible way?",
       "options": [
         "A knowledge article",
-        "An Omni-Channel flow that checks the customer and routes accordingly",
+        "An Omni-Channel flow that checks and routes",
         "Manual assignment carried out by a supervisor each time",
         "A separate org for VIPs"
       ],
@@ -266,7 +266,7 @@
       "options": [
         "The conversation so far and details the bot collected",
         "A link to the bot's settings",
-        "Nothing at all, because the agent simply starts fresh",
+        "Nothing at all, because the agent simply has to start fresh",
         "Only the customer's name"
       ],
       "correctAnswer": 0,
@@ -296,7 +296,7 @@
     {
       "question": "How does an agent show they are ready to take chats but not phone calls?",
       "options": [
-        "A presence status that includes only chat",
+        "A presence status covering chat",
         "Log out of Salesforce altogether",
         "Turn off the console",
         "Change their profile"

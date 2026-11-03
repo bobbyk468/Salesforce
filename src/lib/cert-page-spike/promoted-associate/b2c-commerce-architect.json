@@ -168,8 +168,8 @@
     {
       "question": "A retailer runs three brands in five countries. Most products are shared, but each brand shows a different range and each country has its own prices. What is the best catalog design?",
       "options": [
-        "One master catalog, a storefront catalog per site, and price books per market",
-        "Store prices as custom attributes on each product",
+        "One master catalog, storefront catalogs, price books",
+        "Store the prices as custom attributes on each of the products",
         "A separate master catalog for every site",
         "One storefront catalog shared by all sites"
       ],
@@ -185,7 +185,7 @@
       "question": "A developer needs to change how the checkout page works on an SFRA site. Where should the change go?",
       "options": [
         "In Business Manager site preferences",
-        "In a custom cartridge placed to the left of the base cartridge on the cartridge path",
+        "In a custom cartridge earlier on the cartridge path",
         "In a cartridge placed to the right of the base cartridge",
         "Directly in the app_storefront_base cartridge"
       ],
@@ -202,8 +202,8 @@
       "options": [
         "OCAPI calls from ISML templates",
         "SFRA with a custom theme",
-        "Composable Storefront (PWA Kit) using the Commerce APIs",
-        "Business Manager content slots only"
+        "Composable Storefront on the Commerce APIs",
+        "Business Manager content slots and nothing more"
       ],
       "correctAnswer": 2,
       "explanation": "Composable Storefront is the headless option built on React and the Commerce APIs, and it suits teams that want full control of the front end.",
@@ -219,7 +219,7 @@
         "Move the whole category page into a job",
         "Turn off page caching to keep the cart accurate",
         "Add more product images",
-        "Cache the category page and load the mini cart as a separate uncached include"
+        "Cache the page, load the mini cart uncached"
       ],
       "correctAnswer": 3,
       "explanation": "Caching the main page and loading the shopper-specific mini cart separately gives fast pages without showing the wrong cart.",
@@ -232,10 +232,10 @@
     {
       "question": "A new headless storefront needs shoppers to log in and get tokens to call the Shopper APIs. What should be used?",
       "options": [
-        "SLAS (Shopper Login and API Access Service)",
+        "Shopper Login and API Access Service",
         "Business Manager user accounts",
         "A shared API key in the front end",
-        "Basic authentication on every call"
+        "Basic authentication applied on every single call"
       ],
       "correctAnswer": 0,
       "explanation": "SLAS is the service for shopper login and API tokens in headless B2C Commerce builds.",
@@ -248,8 +248,8 @@
     {
       "question": "The retailer must avoid storing card numbers on the platform to reduce PCI scope. What is the right design?",
       "options": [
-        "Use a payment provider's LINK cartridge that tokenises the card",
-        "Encrypt card numbers in a custom object",
+        "A provider LINK cartridge that tokenises",
+        "Encrypt the card numbers inside a custom object",
         "Email card details to the finance team",
         "Store cards in session data only"
       ],
@@ -267,7 +267,7 @@
         "One OCAPI call per product every hour",
         "Updating stock during each page view",
         "Manual updates in Business Manager",
-        "A scheduled job that imports an inventory file"
+        "A scheduled inventory import job"
       ],
       "correctAnswer": 3,
       "explanation": "Scheduled jobs that import inventory files are the standard way to handle large, regular feeds.",
@@ -299,7 +299,7 @@
         "Running the call in a nightly job",
         "The service framework with a timeout and circuit breaker",
         "A plain HTTP call with no timeout",
-        "Calling the tax service from the shopper's browser"
+        "Calling the tax service directly from the shopper's own browser"
       ],
       "correctAnswer": 1,
       "explanation": "Service definitions in the service framework let you set timeouts, logging and a circuit breaker, so one slow service doesn't stall checkout.",
@@ -313,9 +313,9 @@
       "question": "A new site is being built from scratch with a headless front end. Which API set should be the default choice?",
       "options": [
         "SOAP web services",
-        "OCAPI only",
+        "OCAPI, the earlier generation of the APIs",
         "SCAPI and the Shopper APIs",
-        "Direct database access"
+        "Direct access to the database"
       ],
       "correctAnswer": 2,
       "explanation": "SCAPI is the current API set for headless builds and is where Salesforce is investing.",
@@ -329,7 +329,7 @@
       "question": "Before Black Friday, a load test shows some pages breaking platform quotas. What should the team do?",
       "options": [
         "Ask shoppers to visit at quieter times",
-        "Ignore it, since quotas only apply in sandboxes",
+        "Ignore it entirely, since quotas only ever apply in sandboxes",
         "Turn off the eCDN",
         "Fix the code that breaks the quotas before peak"
       ],
@@ -344,9 +344,9 @@
     {
       "question": "The merchandising team should manage promotions but must not change site code or payment settings. How is this controlled?",
       "options": [
-        "Business Manager roles with only the needed permissions",
+        "Business Manager roles with least privilege",
         "Give everyone Administrator access",
-        "Remove promotions from Business Manager",
+        "Remove the promotions module from Business Manager",
         "Share one login for the whole team"
       ],
       "correctAnswer": 0,
@@ -360,8 +360,8 @@
     {
       "question": "Product images load slowly for shoppers in Asia, while the site is hosted in Europe. What helps most?",
       "options": [
-        "Move all images into the cartridge",
-        "Serve images and static files through the eCDN",
+        "Move every one of the images into the cartridge",
+        "Serve images and static files via eCDN",
         "Turn off page caching",
         "Make all images larger"
       ],
@@ -394,8 +394,8 @@
       "options": [
         "Hard-code banners in ISML templates",
         "Separate cartridges per country",
-        "Content slots and content assets in Business Manager",
-        "A custom object holding HTML strings"
+        "Content slots and assets in Business Manager",
+        "A custom object that holds raw HTML strings"
       ],
       "correctAnswer": 2,
       "explanation": "Content slots and assets let merchandisers manage banners per site or locale in Business Manager without a deployment.",

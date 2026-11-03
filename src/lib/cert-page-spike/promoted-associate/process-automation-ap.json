@@ -169,7 +169,7 @@
       "options": [
         "A screen flow",
         "A before-save record-triggered flow on the object",
-        "An after-save record-triggered flow on the object",
+        "An after-save record-triggered flow on that same object",
         "A schedule-triggered flow"
       ],
       "correctAnswer": 1,
@@ -183,7 +183,7 @@
     {
       "question": "When a Case is closed, a follow-up Task must be created on the related Account. Which flow fits?",
       "options": [
-        "An after-save record-triggered flow on the object",
+        "An after-save record-triggered flow on that same object",
         "A before-save record-triggered flow on the object",
         "A schedule-triggered flow",
         "A platform event-triggered flow"
@@ -202,7 +202,7 @@
         "A scheduled path on the flow",
         "A screen flow",
         "A manual reminder",
-        "A before-save flow on that object"
+        "A before-save flow placed on that object"
       ],
       "correctAnswer": 0,
       "explanation": "Scheduled paths run part of a record-triggered flow at a set time after the trigger, with conditions checked again.",
@@ -216,7 +216,7 @@
       "question": "A flow loops over 300 Contacts and runs Update Records inside the loop. It fails during a data load. What is the fix?",
       "options": [
         "Collect the Contacts in the loop, then update once after it",
-        "Split the single flow out into three hundred separate flows",
+        "Split the single flow out into some three hundred separate flows",
         "Remove the loop",
         "Add a Pause element"
       ],
@@ -249,7 +249,7 @@
       "options": [
         "Copy the logic into all four flows",
         "Build it once as a subflow and call it from each flow",
-        "Ask each of the users to check the addresses by hand",
+        "Ask each one of the users to check the addresses by hand",
         "Move it into a validation rule"
       ],
       "correctAnswer": 1,
@@ -265,7 +265,7 @@
       "options": [
         "A screen flow",
         "A validation rule",
-        "A before-save flow on that object",
+        "A before-save flow placed on that object",
         "The run asynchronously path"
       ],
       "correctAnswer": 3,
@@ -298,7 +298,7 @@
         "A report",
         "An approval process or flow approval",
         "A validation rule",
-        "A before-save flow on that object"
+        "A before-save flow placed on that object"
       ],
       "correctAnswer": 1,
       "explanation": "Approvals route records to the right people in order, with actions on approve or reject.",
@@ -359,7 +359,7 @@
     {
       "question": "An org still has old workflow rules and Process Builder processes. What should be done?",
       "options": [
-        "Delete all of them without putting anything in their place",
+        "Delete all of them without putting anything at all in their place",
         "Leave them as they are forever",
         "Rebuild them as validation rules",
         "Move them to Flow, using the Migrate to Flow tool where it helps"
@@ -391,7 +391,7 @@
     {
       "question": "A record-triggered flow runs on every update to Account, even though it only matters when Industry changes. What should be changed?",
       "options": [
-        "Add a number of further Decision elements later on in the flow",
+        "Add a number of further Decision elements later on in that flow",
         "Turn the flow into a screen flow",
         "Tighten the entry conditions to run only when Industry changes",
         "Add a Pause element"

@@ -200,7 +200,7 @@
     {
       "question": "Mule applications on CloudHub need to reach a database that is only available on the company's internal network. What should the architect set up?",
       "options": [
-        "A public endpoint on the database",
+        "A public network endpoint on the database",
         "An Anypoint VPC with VPN or peering",
         "A larger worker",
         "An extra environment"
@@ -219,7 +219,7 @@
         "Running the scheduler on every node",
         "A cluster with the scheduler on the primary",
         "A single larger server",
-        "Two unconnected standalone runtimes"
+        "Two standalone runtimes with no connection"
       ],
       "correctAnswer": 1,
       "explanation": "Clustering keeps the service available, and schedulers run on the primary node by default so the job fires once.",
@@ -235,7 +235,7 @@
         "Both always run in MuleSoft's cloud",
         "The runtime plane designs APIs",
         "The control plane manages; the runtime plane runs",
-        "They are two names for the same thing"
+        "They are simply two different names for the very same thing"
       ],
       "correctAnswer": 2,
       "explanation": "Design, management and monitoring sit in the control plane, while applications execute in the runtime plane, and the two can be hosted differently.",
@@ -264,7 +264,7 @@
     {
       "question": "Orders must not be lost if the receiving application restarts mid-processing. What should the design include?",
       "options": [
-        "More replicas alone",
+        "Simply adding more replicas",
         "A larger heap",
         "In-memory queues",
         "Persistent queues or MQ"
@@ -297,7 +297,7 @@
       "question": "All APIs published by every team must require a client ID before they can be called. How should this be enforced consistently?",
       "options": [
         "Client ID enforcement through API Manager",
-        "Ask each team to add checks in their code",
+        "Ask each of the teams to add their own checks in code",
         "Review each API by hand before release",
         "Rely on the dedicated load balancer"
       ],
@@ -329,7 +329,7 @@
       "question": "Which pair of numbers should drive a disaster recovery design?",
       "options": [
         "How much downtime and data loss are acceptable",
-        "The number of developers and APIs",
+        "The total number of developers and APIs involved",
         "The count of business groups",
         "The vCore size and heap size"
       ],
@@ -345,7 +345,7 @@
       "question": "What does an Anypoint VPC provide?",
       "options": [
         "A private network for your CloudHub apps",
-        "A place to store API specifications",
+        "Somewhere to store the API specifications",
         "Automatic code deployment",
         "A monitoring dashboard"
       ],
@@ -376,7 +376,7 @@
     {
       "question": "Where should a team be prevented from deploying straight to production without review?",
       "options": [
-        "By using a smaller vCore in production",
+        "By using a rather smaller vCore size in production",
         "By turning off monitoring",
         "By deleting the production environment",
         "Through environment permissions and roles"

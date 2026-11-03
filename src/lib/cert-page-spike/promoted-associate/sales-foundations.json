@@ -188,7 +188,7 @@
     {
       "question": "A lead has been qualified and there is a real deal to pursue. What does converting the lead create?",
       "options": [
-        "A Quote and a Contract",
+        "A Quote and then a signed Contract",
         "An Account, Contact and Opportunity",
         "Only an Account",
         "A Case and a Task"
@@ -286,7 +286,7 @@
       "options": [
         "A Chatter post",
         "A task on the account",
-        "A new lead per product",
+        "A brand new lead created for each product",
         "Products from a price book on the opportunity"
       ],
       "correctAnswer": 3,
@@ -318,7 +318,7 @@
       "options": [
         "A quote",
         "A dashboard built from reports",
-        "A single list view",
+        "A single standard list view",
         "A price book"
       ],
       "correctAnswer": 1,
@@ -334,7 +334,7 @@
       "options": [
         "It assigns the account owner",
         "It changes the product price",
-        "It creates a case automatically",
+        "It creates a support case automatically each time",
         "Forecasts and pipeline reports depend on it"
       ],
       "correctAnswer": 3,
@@ -366,7 +366,7 @@
       "options": [
         "Controls login access",
         "Groups stages into buckets such as Commit",
-        "Decides who owns the account",
+        "Decides which user ends up owning the account",
         "Sets the product price"
       ],
       "correctAnswer": 1,
@@ -397,7 +397,7 @@
       "question": "Which is the best description of a pipeline report?",
       "options": [
         "A directory of employees",
-        "A record of past invoices",
+        "A record of all of the past invoices",
         "Open opportunities grouped by stage",
         "A list of closed cases"
       ],

@@ -207,8 +207,8 @@
       "options": [
         "Block Kit",
         "Web API",
-        "REST API only",
-        "Events API only"
+        "The Web API method endpoints",
+        "The Events API subscriptions"
       ],
       "correctAnswer": 0,
       "explanation": "Block Kit is the UI framework for designing interactive message surfaces in Slack apps.",
@@ -222,9 +222,9 @@
       "question": "What is the purpose of Slack App Manifests?",
       "options": [
         "To configure CPQ",
-        "To deploy to Heroku",
+        "To deploy the application out to Heroku",
         "To send emails",
-        "To define app configuration in YAML"
+        "To define app configuration as YAML"
       ],
       "correctAnswer": 3,
       "explanation": "App Manifests allow you to define Slack app configuration (scopes, events, shortcuts) in YAML.",
@@ -238,9 +238,9 @@
       "question": "Which Slack event type is fired when a user joins a channel?",
       "options": [
         "app_mention",
-        "member_joined_channel",
+        "The member_joined_channel event",
         "message",
-        "reaction_added"
+        "The reaction_added event type"
       ],
       "correctAnswer": 1,
       "explanation": "member_joined_channel is the event emitted when a user joins a public or private channel.",
@@ -255,8 +255,8 @@
       "options": [
         "Create a channel",
         "List users",
-        "Delete a message",
-        "Post a message to a channel"
+        "Delete a message already posted",
+        "Post a message into a channel"
       ],
       "correctAnswer": 3,
       "explanation": "chat.postMessage sends a message to a channel, user DM, or other conversation.",
@@ -286,8 +286,8 @@
       "question": "What is the Bolt Framework in Slack app development?",
       "options": [
         "A UI design kit for Block Kit layouts",
-        "A database management tool for Slack data",
-        "Slack's official framework for building apps in JavaScript, Python, and Java with built-in handlers for events, actions, and shortcuts",
+        "A database management tool for all of the Slack data",
+        "Slack's official app framework, with built-in handlers",
         "A deployment pipeline for Slack apps"
       ],
       "correctAnswer": 2,
@@ -302,8 +302,8 @@
       "question": "How do you register and handle a slash command in a Slack app?",
       "options": [
         "Add it directly to a Block Kit message surface",
-        "Use only the Slack Web API chat.postMessage method",
-        "Register it in the App Manifest or App Settings under Slash Commands, then handle the incoming POST payload in your app server",
+        "Use nothing but the Slack Web API chat.postMessage method",
+        "Register it under Slash Commands, then handle the POST",
         "Define it in the app's package.json file"
       ],
       "correctAnswer": 2,
@@ -333,8 +333,8 @@
     {
       "question": "What is Socket Mode in Slack apps and when should you use it?",
       "options": [
-        "A connection method that delivers event payloads over a WebSocket, allowing apps to receive events without exposing a public HTTP endpoint",
-        "An OAuth token type for machine-to-machine apps",
+        "Events over a WebSocket, with no public endpoint",
+        "An OAuth token type used for machine-to-machine apps",
         "A real-time database sync method for Slack data",
         "A Block Kit interactive element type"
       ],
@@ -349,7 +349,7 @@
     {
       "question": "What is an Incoming Webhook in Slack?",
       "options": [
-        "A simple URL that accepts HTTP POST requests to post messages to a specific Slack channel, without needing a full app installation",
+        "A URL that accepts a POST to message one channel",
         "A Block Kit element for embedding external content",
         "A method for receiving messages sent to your app from Slack users",
         "An event fired when a webhook URL is triggered from outside Slack"
@@ -366,7 +366,7 @@
       "question": "What is the difference between a Global Shortcut and a Message Shortcut in Slack?",
       "options": [
         "Message Shortcuts require workspace admin approval before use",
-        "Global Shortcuts are accessible from the shortcut menu anywhere in Slack; Message Shortcuts appear in the context menu of a specific message",
+        "Global ones work anywhere; message ones sit on a message",
         "Global Shortcuts only work in direct messages, not channels",
         "They are identical in functionality and scope"
       ],
@@ -383,7 +383,7 @@
       "options": [
         "All methods share a single fixed limit of 100 requests per hour",
         "There are no rate limits — all methods are unlimited",
-        "Methods have tiered rate limits per minute per workspace (Tier 1–4). Exceeding limits returns HTTP 429 with a Retry-After header indicating when to retry",
+        "Tiered per-minute limits; a 429 carries Retry-After",
         "Rate limits only apply to Incoming Webhooks, not Web API methods"
       ],
       "correctAnswer": 2,
@@ -398,7 +398,7 @@
       "question": "What is the App Home tab in a Slack app?",
       "options": [
         "A tab for managing the app's channel memberships",
-        "A dedicated, persistent space where an app displays a customised view for each user, built with Block Kit via views.publish",
+        "A per-user app view published with views.publish",
         "A Slack channel automatically created for app notifications",
         "The app's settings page in the Slack App Directory"
       ],

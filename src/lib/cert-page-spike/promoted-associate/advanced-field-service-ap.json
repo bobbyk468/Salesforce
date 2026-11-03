@@ -169,7 +169,7 @@
       "question": "A technician without the right certification keeps being suggested for electrical jobs. What should be changed?",
       "options": [
         "Increase the job's duration",
-        "Add a service objective for preferred technician",
+        "Add a service objective covering the preferred technician for the account",
         "A required skill on the work type, plus a skill work rule",
         "Turn off optimisation"
       ],
@@ -184,10 +184,10 @@
     {
       "question": "The business wants schedules that cut down on driving time, while still meeting all the rules. What should be adjusted?",
       "options": [
-        "The weight of the minimise travel objective",
+        "The minimise travel objective weight",
         "The number of work types",
         "The page layout",
-        "The assets' serial numbers"
+        "The serial numbers held on the assets"
       ],
       "correctAnswer": 0,
       "explanation": "Service objectives rank options. Giving more weight to minimise travel makes the scheduler prefer shorter trips.",
@@ -234,7 +234,7 @@
       "options": [
         "A note in the description",
         "One very long appointment",
-        "A dependency between the appointments",
+        "A dependency on the appointments",
         "Two unrelated appointments"
       ],
       "correctAnswer": 2,
@@ -314,8 +314,8 @@
       "options": [
         "A dashboard",
         "A new scheduling policy",
-        "A mobile flow from the work order",
-        "A new service territory"
+        "A mobile flow on the work order",
+        "A newly created service territory"
       ],
       "correctAnswer": 2,
       "explanation": "Mobile flows add guided steps, like checklists, inside the mobile app.",
@@ -344,7 +344,7 @@
     {
       "question": "A scheduling policy has work rules and service objectives. What is the difference?",
       "options": [
-        "Objectives remove candidates, rules rank them",
+        "Objectives remove the candidates and then the work rules rank them",
         "Work rules exclude; objectives rank what is left",
         "Both only apply to mobile users",
         "They are the same thing"
@@ -377,7 +377,7 @@
       "question": "A new hire should only get simple jobs for their first month. How can this be done?",
       "options": [
         "Give them no territory",
-        "Only the basic skills, at the right levels",
+        "Basic skills at the right levels",
         "Turn off their user account",
         "Put them in a separate org"
       ],

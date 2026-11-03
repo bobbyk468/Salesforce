@@ -169,7 +169,7 @@
       "question": "A manufacturer's sales reps wait two days for quotes because pricing rules live in spreadsheets kept by the finance team. What should the architect recommend first?",
       "options": [
         "Build a custom Lightning component that reads the spreadsheet file each time",
-        "Move pricing and discount rules into CPQ or Revenue Cloud with approval rules",
+        "Move pricing and discounts into CPQ with approvals",
         "Add more finance staff",
         "Email the spreadsheet to reps every week"
       ],
@@ -185,7 +185,7 @@
       "question": "Product and price data is owned by the ERP, but reps quote in Salesforce. How should product data be handled?",
       "options": [
         "Let the reps edit prices inside Salesforce and then copy them back into the ERP",
-        "Treat the ERP as the source of truth and sync products and prices into Salesforce",
+        "Treat the ERP as source of truth and sync inwards",
         "Ask reps to look up prices in the ERP for each quote",
         "Keep two separate price lists and let reps choose"
       ],
@@ -232,7 +232,7 @@
     {
       "question": "Partner companies log in to an Experience Cloud site to see their own orders. A partner must never see another partner's orders. What is the main design concern?",
       "options": [
-        "Sharing settings so external users only see their own account's records",
+        "Sharing so external users see only their account",
         "How many reports the partners can run",
         "The page layout that is used by the internal users of the system",
         "The colour scheme of the site"
@@ -264,7 +264,7 @@
     {
       "question": "Where should an architect start when designing a new B2B solution?",
       "options": [
-        "Mapping the business process and its pain points",
+        "Mapping the process and its pain points",
         "Designing the page layouts",
         "Writing the integration code",
         "Choosing which of the Salesforce licences to buy"
@@ -313,7 +313,7 @@
       "question": "A programme has six delivery teams. Teams keep making conflicting design choices. What should the architect set up?",
       "options": [
         "Let each team decide on its own",
-        "A design authority with shared standards and review of major decisions",
+        "A design authority with standards and review",
         "A rule stating that only one of the teams may work on it at a time",
         "One huge release every year"
       ],
@@ -331,7 +331,7 @@
         "Send each of the customers a spreadsheet once every week",
         "Hire more support agents",
         "Turn off the support phone line",
-        "Give customers a self-service portal showing orders and invoices"
+        "A self-service portal for orders and invoices"
       ],
       "correctAnswer": 3,
       "explanation": "A self-service portal through Experience Cloud or B2B Commerce lets customers check orders and invoices themselves at any time.",
@@ -379,7 +379,7 @@
         "More custom code",
         "A good many more fields added to the page",
         "A bigger sandbox",
-        "Training, change management and adoption planning"
+        "Training, change management and adoption"
       ],
       "correctAnswer": 3,
       "explanation": "Even good solutions fail without training and change management. Adoption should be planned from the start.",

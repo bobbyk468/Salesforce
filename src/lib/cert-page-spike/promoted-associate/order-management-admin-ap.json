@@ -183,8 +183,8 @@
     {
       "question": "An order has items shipping from two different warehouses. How is this represented?",
       "options": [
-        "Two separate Accounts",
-        "Two Fulfillment Orders, one for each location",
+        "Two entirely separate Account records instead",
+        "Two Fulfillment Orders, one per location",
         "One Return Order",
         "Two Order Summaries"
       ],
@@ -200,9 +200,9 @@
       "question": "A customer cancels one item before it has shipped. What does Order Management create?",
       "options": [
         "A new Order",
-        "A Case only",
-        "A Return Order",
-        "A Change Order that reduces the Order Summary"
+        "A Case raised against the customer's account",
+        "A Return Order raised against it",
+        "A Change Order reducing the summary"
       ],
       "correctAnswer": 3,
       "explanation": "Cancellations before shipping are recorded as Change Orders, which adjust the Order Summary totals.",
@@ -215,10 +215,10 @@
     {
       "question": "A customer wants to send back a shipped item for a refund. What should the agent use?",
       "options": [
-        "A Return Order with Return Order Line Items",
+        "A Return Order with its line items",
         "Delete the Order Item Summary",
         "Edit the original Order",
-        "A Change Order to cancel the item"
+        "A Change Order raised to cancel the item"
       ],
       "correctAnswer": 0,
       "explanation": "Shipped items are returned through a Return Order. When received, the refund is processed.",
@@ -231,8 +231,8 @@
     {
       "question": "The business wants orders sent to the warehouse closest to the customer that has stock. Where is this logic usually set up?",
       "options": [
-        "In the routing flow that creates Fulfillment Orders",
-        "In the product description",
+        "In the routing flow that creates them",
+        "In the product description field on the record",
         "In a report",
         "In the Account page layout"
       ],
@@ -247,10 +247,10 @@
     {
       "question": "The online store must show stock available across all warehouses in Germany. What should be configured?",
       "options": [
-        "A separate store for each warehouse",
+        "A separate storefront for each of the warehouses",
         "A custom field on each product",
         "A daily email from each warehouse",
-        "A location group in Omnichannel Inventory containing the German warehouses"
+        "A location group for the German warehouses"
       ],
       "correctAnswer": 3,
       "explanation": "Location groups combine availability for several locations, which the store can then show.",
@@ -264,9 +264,9 @@
       "question": "Why does Order Management reserve stock when an order is placed?",
       "options": [
         "To raise the price",
-        "So the same item isn't sold twice before it ships",
+        "So an item is not sold twice before shipping",
         "To create an invoice",
-        "To hide the product from search"
+        "To hide the product from the storefront search entirely"
       ],
       "correctAnswer": 1,
       "explanation": "A reservation holds the stock for that order until it is fulfilled, so other buyers can't buy it.",
@@ -279,10 +279,10 @@
     {
       "question": "A step in an order flow fails because a payment service didn't respond. How can agents find and fix these orders?",
       "options": [
-        "Wait for customers to complain",
+        "Simply wait for the customers to complain",
         "Search emails for errors",
         "Delete the failed orders",
-        "Review the process exceptions created for the failures"
+        "Review the process exceptions raised"
       ],
       "correctAnswer": 3,
       "explanation": "Process exceptions record failures in automated steps so agents can see and resolve them.",
@@ -295,9 +295,9 @@
     {
       "question": "A service agent gives a customer a goodwill discount on an order that has already been placed. How should it be recorded?",
       "options": [
-        "In a note only",
+        "In a note recorded on the account record",
         "By editing the original Order's total",
-        "As a price adjustment recorded against the Order Summary",
+        "As a price adjustment on the summary",
         "By deleting an item"
       ],
       "correctAnswer": 2,
@@ -312,9 +312,9 @@
       "question": "An order had a 10% order-level discount. The customer returns one of three items. What should the refund include?",
       "options": [
         "The whole order amount",
-        "The item's price less its share of the discount, plus its share of tax",
+        "Item price less its discount share, plus tax",
         "The full item price with no discount",
-        "Nothing, because discounts block refunds"
+        "Nothing at all, because discounts block any refund"
       ],
       "correctAnswer": 1,
       "explanation": "Order Management spreads order-level discounts and tax across items, so the refund reflects what was actually paid for that item.",
@@ -327,8 +327,8 @@
     {
       "question": "When can payment usually be captured for items in an order?",
       "options": [
-        "When the items ship and an invoice is created",
-        "When the customer signs up",
+        "When the items ship and an invoice exists",
+        "At the point when the customer first signs up",
         "When the cart is created",
         "Only after a return"
       ],
@@ -343,7 +343,7 @@
     {
       "question": "Which record tracks one product line in an Order Summary, including how many were ordered, cancelled and returned?",
       "options": [
-        "Fulfillment Order",
+        "The Fulfillment Order",
         "Location",
         "Order Item Summary",
         "Payment Summary"
@@ -359,8 +359,8 @@
     {
       "question": "Customers can choose different delivery addresses for different items in one order. Which record groups items by delivery address and method?",
       "options": [
-        "Return Order",
-        "Order Delivery Group Summary",
+        "A Return Order summary record",
+        "The Delivery Group Summary",
         "Change Order",
         "Credit Memo"
       ],
@@ -375,10 +375,10 @@
     {
       "question": "A warehouse system needs to tell Salesforce when a Fulfillment Order ships. What is the best approach?",
       "options": [
-        "Update the Fulfillment Order through the API or an integration",
+        "Update the Fulfillment Order via the API",
         "Create a new Order",
         "Edit the Account",
-        "Email the service team"
+        "Send an email across to the customer service team"
       ],
       "correctAnswer": 0,
       "explanation": "Outside systems update the Fulfillment Order status through APIs, which moves the order forward automatically.",
@@ -391,9 +391,9 @@
     {
       "question": "Where do service agents usually handle cancellations and returns?",
       "options": [
-        "In the Developer Console",
+        "From inside the Salesforce Developer Console",
         "In Setup",
-        "From the Order Summary in the console, using the built-in actions",
+        "From the Order Summary, using built-in actions",
         "In Data Loader"
       ],
       "correctAnswer": 2,

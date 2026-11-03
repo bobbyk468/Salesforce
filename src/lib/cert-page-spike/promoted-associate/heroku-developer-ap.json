@@ -187,7 +187,7 @@
       "options": [
         "The database is full",
         "The app must listen on the PORT variable",
-        "The app needs a bigger dyno",
+        "The application simply needs a bigger dyno",
         "The buildpack is too new"
       ],
       "correctAnswer": 1,
@@ -218,7 +218,7 @@
       "question": "A request that sends 5,000 emails takes over a minute, and users see H12 timeout errors. What should the developer do?",
       "options": [
         "Use a larger web dyno",
-        "Increase the router timeout",
+        "Increase the router's request timeout",
         "Tell users to wait longer",
         "Queue the job and use a worker dyno"
       ],
@@ -252,7 +252,7 @@
         "A log drain",
         "A follower database",
         "A read-write Connect mapping",
-        "A read-only mapping"
+        "A read-only Connect mapping"
       ],
       "correctAnswer": 2,
       "explanation": "Read-write mappings send changes made in Postgres back to Salesforce.",
@@ -297,7 +297,7 @@
     {
       "question": "Metrics show frequent R14 errors on a web dyno. What do they mean?",
       "options": [
-        "The app crashed on boot",
+        "The application crashed during boot",
         "The dyno has exceeded its memory limit",
         "The database is down",
         "A request timed out"
@@ -345,7 +345,7 @@
     {
       "question": "A background worker is restarted halfway through a job. What should the developer design for?",
       "options": [
-        "Jobs that can never be interrupted",
+        "Jobs that must never be interrupted at all",
         "Running all jobs in the web dyno",
         "Jobs that can be retried without duplicate effects",
         "Turning off dyno restarts"

@@ -169,8 +169,8 @@
       "question": "Five workbooks each calculate revenue slightly differently and the numbers do not agree in meetings. What should the consultant recommend?",
       "options": [
         "A training session on writing calculations",
-        "A certified published data source with the agreed calculation, reused by all workbooks",
-        "Switching all connections from extract to live",
+        "A certified data source with the agreed calculation",
+        "Switching all of the connections from extract to live",
         "Rebuilding the five workbooks separately"
       ],
       "correctAnswer": 1,
@@ -201,8 +201,8 @@
       "question": "An executive dashboard is slow and cluttered, with fifteen filters on screen. What should the consultant do first?",
       "options": [
         "Move it to a larger server",
-        "Cut it back to the few measures the executives actually decide on",
-        "Add more filters so users can narrow further",
+        "Cut back to the measures executives decide on",
+        "Add a good many more filters so users can narrow further",
         "Switch every chart to a table"
       ],
       "correctAnswer": 1,
@@ -283,7 +283,7 @@
         "It removes the need for permissions",
         "The work happens once and every workbook using the output benefits",
         "It makes the workbook file larger",
-        "It converts live connections to extracts automatically"
+        "It converts all live connections into extracts automatically"
       ],
       "correctAnswer": 1,
       "explanation": "Preparing data upstream means the logic is defined once, rather than repeated and varied in each workbook.",
@@ -296,7 +296,7 @@
     {
       "question": "Six months after launch, usage data shows almost nobody opens the dashboard. What should the consultant investigate first?",
       "options": [
-        "Whether it answers a question the audience actually has",
+        "Whether it answers a real question",
         "Whether to add more charts",
         "Whether the colours match the brand",
         "Whether to buy more licences"
@@ -328,10 +328,10 @@
     {
       "question": "What does certifying a published data source communicate?",
       "options": [
-        "That it refreshes faster than other sources",
+        "That it refreshes a good deal faster than other sources",
         "That it is encrypted",
         "That only administrators can use it",
-        "That it is a trusted, governed source users should prefer"
+        "That it is governed and should be preferred"
       ],
       "correctAnswer": 3,
       "explanation": "Certification marks a source as reviewed and trusted, helping users choose it over ad-hoc alternatives.",
@@ -360,8 +360,8 @@
     {
       "question": "A published extract takes two hours to refresh and finishes after the morning meeting. What is a reasonable first step?",
       "options": [
-        "Reduce the extract: filter rows, drop unused fields, aggregate where possible",
-        "Switch everyone to a live connection",
+        "Filter, drop unused fields and aggregate",
+        "Switch every one of the users to a live connection",
         "Move the meeting",
         "Refresh twice as often"
       ],
@@ -376,7 +376,7 @@
     {
       "question": "Which sequence best reflects where calculation logic should live, most preferred first?",
       "options": [
-        "Workbook, published data source, Tableau Prep, source system",
+        "Workbook, then published data source, then Prep, then source",
         "Wherever the developer prefers",
         "Source system, Tableau Prep, published data source, workbook",
         "Workbook only, always"
@@ -395,7 +395,7 @@
         "To email a view to users on a schedule",
         "To certify a data source",
         "To refresh an extract",
-        "To grant permission to edit a workbook"
+        "To grant someone permission to edit a workbook"
       ],
       "correctAnswer": 0,
       "explanation": "Subscriptions deliver a view by email on a timetable, which keeps users engaged without them remembering to look.",

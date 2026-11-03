@@ -169,7 +169,7 @@
         "A suppression list",
         "A data extension with columns for each field",
         "A publication list",
-        "A subscriber list holding profile attributes"
+        "A subscriber list holding the profile attributes"
       ],
       "correctAnswer": 1,
       "explanation": "Data extensions let you define your own columns, which is what storing 20 custom fields requires.",
@@ -200,7 +200,7 @@
       "options": [
         "The subscriber is added to a publication list",
         "The address is marked permanently undeliverable",
-        "The platform retries the send for several days",
+        "The platform keeps retrying the send for several days",
         "Nothing, because hard bounces are temporary"
       ],
       "correctAnswer": 1,
@@ -233,7 +233,7 @@
         "They are the same feature with different names",
         "A decision split is faster",
         "Decision splits use stored data; engagement splits use opens",
-        "An engagement split can only be used once per journey"
+        "An engagement split may only ever be used once per journey"
       ],
       "correctAnswer": 2,
       "explanation": "Decision splits read attributes you already hold. Engagement splits react to how the contact behaved with a previous send.",
@@ -262,7 +262,7 @@
     {
       "question": "A subscriber clicks unsubscribe in an email. What is the default effect?",
       "options": [
-        "They are removed from the account entirely",
+        "They are removed from the whole account entirely",
         "Their data extension row is deleted",
         "They are unsubscribed at All Subscribers level",
         "Only that one email is blocked"
@@ -358,7 +358,7 @@
     {
       "question": "Which is the clearest sign that a journey should re-evaluate its entry source more often?",
       "options": [
-        "The account has more than one business unit",
+        "The account has a number of business units configured in it",
         "New contacts qualify all day and should enter promptly",
         "The journey has too many decision splits",
         "The emails have low open rates"
@@ -377,7 +377,7 @@
         "To check rendering and personalisation first",
         "To create the tracking report",
         "To count the audience",
-        "To warm up the sending IP address"
+        "To warm up the account's dedicated sending IP address"
       ],
       "correctAnswer": 0,
       "explanation": "Test sends exist so you can see the email as a subscriber would, with personalisation resolved, before committing.",
@@ -390,7 +390,7 @@
     {
       "question": "Which statement about soft bounces is correct?",
       "options": [
-        "They mark the address as permanently undeliverable",
+        "They mark that address as being permanently undeliverable",
         "They are temporary failures and the platform will retry",
         "They are counted as delivered",
         "They trigger an automatic unsubscribe"

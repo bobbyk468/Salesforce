@@ -281,7 +281,7 @@
       "question": "You need a field that shows profit as a percentage of sales. What should you create?",
       "options": [
         "A Top N filter on Profit",
-        "A union with the profit table",
+        "A union joined to the profit table",
         "A group of profit values",
         "A field dividing SUM(Profit) by SUM(Sales)"
       ],
@@ -297,7 +297,7 @@
       "question": "Several small product categories should be reported together as Other. What feature fits?",
       "options": [
         "A set",
-        "A hierarchy",
+        "A field hierarchy",
         "A group of members",
         "An extract"
       ],
@@ -346,7 +346,7 @@
       "options": [
         "A story",
         "A set",
-        "A hierarchy",
+        "A field hierarchy",
         "A dashboard with floating objects"
       ],
       "correctAnswer": 0,

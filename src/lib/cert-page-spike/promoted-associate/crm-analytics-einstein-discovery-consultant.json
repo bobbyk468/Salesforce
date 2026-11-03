@@ -175,7 +175,7 @@
         "A dashboard filter on owner",
         "Removing the dataset from all apps",
         "A predicate comparing owner to the running user",
-        "Field-level security on the source object"
+        "Field-level security applied on the source object itself"
       ],
       "correctAnswer": 2,
       "explanation": "Security predicates are applied to every query against the dataset and are designed for exactly this rule.",
@@ -220,9 +220,9 @@
     {
       "question": "Which dataflow node joins columns from one dataset onto another?",
       "options": [
-        "the augment node",
+        "the augment join node",
         "sfdcDigest",
-        "sfdcRegister",
+        "the sfdcRegister node",
         "flatten"
       ],
       "correctAnswer": 0,
@@ -285,7 +285,7 @@
       "question": "Which dataflow node is required to filter on a role hierarchy within a dataset?",
       "options": [
         "flatten",
-        "the augment node",
+        "the augment join node",
         "dim2mea",
         "slice"
       ],
@@ -383,7 +383,7 @@
         "For every dashboard widget",
         "To replace recipes",
         "Whenever performance matters",
-        "When the query builder cannot express it"
+        "When the builder cannot express it"
       ],
       "correctAnswer": 3,
       "explanation": "Most dashboard work needs no SAQL, so hand-written queries are for the cases the builder cannot express.",
@@ -396,7 +396,7 @@
     {
       "question": "A manager must see rows belonging to everyone beneath them in the role hierarchy. Which combination achieves this?",
       "options": [
-        "Field-level security on the role field",
+        "Field-level security applied to the role field itself",
         "A dashboard filter on manager name",
         "Separate dashboards per manager",
         "A flattened role column plus a predicate"

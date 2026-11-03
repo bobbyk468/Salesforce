@@ -169,7 +169,7 @@
       "question": "Orders must never be lost, even when the target ERP is down for an hour. What design fits best?",
       "options": [
         "Store orders in memory until the ERP comes back",
-        "Put orders on a persistent queue such as Anypoint MQ and process them when the ERP is back",
+        "Queue the orders and process them when the ERP returns",
         "Call the ERP synchronously and return an error if it is down",
         "Drop orders that fail and ask customers to try again"
       ],
@@ -200,9 +200,9 @@
     {
       "question": "A retry sends the same payment message twice. The target must not charge the customer twice. What should be used?",
       "options": [
-        "A bigger worker size",
+        "A considerably bigger CloudHub worker size",
         "A larger timeout",
-        "An idempotent message validator backed by an Object Store",
+        "An idempotent validator on an Object Store",
         "A scatter-gather"
       ],
       "correctAnswer": 2,
@@ -216,7 +216,7 @@
     {
       "question": "A bank must run Mule apps on its own Kubernetes clusters inside its data centre, with central management from Anypoint Platform. Which option fits?",
       "options": [
-        "Anypoint Studio only",
+        "Anypoint Studio with a manual deployment",
         "Runtime Fabric",
         "CloudHub 2.0",
         "A single customer-hosted runtime with no management"
@@ -234,7 +234,7 @@
       "options": [
         "A batch job",
         "An Until Successful scope only",
-        "An XA transaction across both resources",
+        "An XA transaction across both",
         "Two separate flows"
       ],
       "correctAnswer": 2,
@@ -250,7 +250,7 @@
       "options": [
         "Removing the partner's access entirely",
         "Moving the API to a batch job",
-        "A rate-limiting or SLA-based policy in API Manager",
+        "A rate-limiting policy in API Manager",
         "A bigger CloudHub worker for everyone"
       ],
       "correctAnswer": 2,
@@ -264,10 +264,10 @@
     {
       "question": "What is the main job of a Centre for Enablement (C4E)?",
       "options": [
-        "To help teams build and reuse APIs by sharing standards, templates and assets",
+        "To help teams reuse APIs through shared standards",
         "To replace the security team",
         "To approve every code change by hand",
-        "To build every API for the whole company"
+        "To build every single API on behalf of the whole company"
       ],
       "correctAnswer": 0,
       "explanation": "A C4E enables other teams with shared assets and guidance, so delivery speeds up and reuse grows.",
@@ -330,7 +330,7 @@
       "options": [
         "A cluster, with the scheduler running on the primary node",
         "A single server with more memory",
-        "Separate copies of the app with no link between them",
+        "Separate copies of the application with no link at all between them",
         "Running the scheduler on every server"
       ],
       "correctAnswer": 0,
@@ -346,7 +346,7 @@
       "options": [
         "A new System API to the ERP",
         "A copy of the Process API",
-        "Direct database access from the app",
+        "Direct access to the database from the mobile app",
         "An Experience API for the mobile app"
       ],
       "correctAnswer": 3,
@@ -377,9 +377,9 @@
       "question": "An API must only be called by known applications that send a valid client ID and secret. What should be applied?",
       "options": [
         "A caching policy",
-        "A client ID enforcement policy",
+        "A client ID enforcement",
         "A bigger worker",
-        "An IP allow list only"
+        "An IP allow list on the API gateway"
       ],
       "correctAnswer": 1,
       "explanation": "Client ID enforcement checks that each call comes from a registered application with valid credentials.",

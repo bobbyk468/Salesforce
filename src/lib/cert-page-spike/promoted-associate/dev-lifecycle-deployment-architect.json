@@ -204,10 +204,10 @@
     {
       "question": "A deployment was validated against production on Monday and passed all tests. The release window is Thursday. How can they deploy quickly on Thursday?",
       "options": [
-        "Run the validation again on Thursday",
+        "Run the whole validation again on the Thursday",
         "Deploy with a change set instead",
         "Deploy with RunAllTestsInOrg",
-        "Use quick deploy on the validated deployment"
+        "Quick deploy the validated deployment"
       ],
       "correctAnswer": 3,
       "explanation": "A validated deployment can be quick deployed within 10 days without running the tests again, which keeps the release window short.",
@@ -222,7 +222,7 @@
       "options": [
         "Use a Full sandbox instead",
         "Adopt version control and source-driven development",
-        "Ask developers to keep notes in a spreadsheet",
+        "Ask each of the developers to keep notes in a shared spreadsheet",
         "Refresh the sandbox less often"
       ],
       "correctAnswer": 1,
@@ -238,7 +238,7 @@
       "options": [
         "Only triggers need coverage",
         "The whole org must have 90% coverage",
-        "Each Apex class and trigger in the deployment needs 75% coverage from the tests you specified",
+        "Each class and trigger needs 75% coverage",
         "No coverage is needed when tests are specified"
       ],
       "correctAnswer": 2,
@@ -252,7 +252,7 @@
     {
       "question": "A large org has five teams changing the same metadata. Releases often break each other's work. What should the architect recommend to split the org into independent parts?",
       "options": [
-        "Managed packages listed on AppExchange",
+        "Managed packages published on the AppExchange",
         "One Full sandbox shared by all teams",
         "Unlocked packages for each team's area",
         "More change sets"
@@ -269,8 +269,8 @@
       "question": "Which statement about scratch orgs is correct?",
       "options": [
         "They are copies of production data",
-        "They are built from source and a definition file, and last up to 30 days",
-        "They replace the need for a Dev Hub",
+        "Built from source and a definition file",
+        "They remove the need for a Dev Hub entirely",
         "They can be refreshed every 29 days"
       ],
       "correctAnswer": 1,
@@ -284,8 +284,8 @@
     {
       "question": "A release went live and broke a key process. Salesforce has no rollback button. What is the best plan for next time?",
       "options": [
-        "Keep the previous version in source control and use feature flags to switch new features off",
-        "Skip tests to deploy faster",
+        "Keep the old version in source control, use feature flags",
+        "Skip running any of the tests so the deployment is faster",
         "Always deploy on Fridays",
         "Never deploy Apex"
       ],
@@ -316,7 +316,7 @@
     {
       "question": "A deployment fails because a page layout refers to a field that doesn't exist in production yet. What is the right fix?",
       "options": [
-        "Include the field in the same deployment or deploy it first",
+        "Include the field, or deploy it first",
         "Delete the layout",
         "Run all tests",
         "Deploy the layout first, then the field"
@@ -365,9 +365,9 @@
       "question": "Salesforce's next seasonal release is in six weeks. The team wants to test their custom code against it before production is upgraded. What should they do?",
       "options": [
         "Create a new Developer Edition org",
-        "Refresh a sandbox onto the preview instance before the cutoff date",
+        "Refresh a sandbox onto preview before the cutoff",
         "Ask Salesforce to delay the upgrade",
-        "Wait for production to be upgraded and then test"
+        "Wait until production has been upgraded and then test it"
       ],
       "correctAnswer": 1,
       "explanation": "Sandboxes on a preview instance get the new release a few weeks before production. Refreshing in time puts a sandbox on preview so you can test early.",
@@ -381,8 +381,8 @@
       "question": "A team wants every pull request to be tested automatically before it is merged. What is the core of the pipeline?",
       "options": [
         "Emailing changes to the release manager",
-        "A change set uploaded for every pull request",
-        "A CI job that deploys the change to a test org with the CLI and runs Apex tests",
+        "A change set uploaded manually for every pull request",
+        "A CI job that deploys to a test org and runs tests",
         "A weekly manual deployment"
       ],
       "correctAnswer": 2,
@@ -398,7 +398,7 @@
       "options": [
         "Use SeeAllData=true in all tests",
         "Lower the coverage target",
-        "Copy the sandbox data to production",
+        "Copy all of the sandbox data into production",
         "Make the tests create their own test data"
       ],
       "correctAnswer": 3,

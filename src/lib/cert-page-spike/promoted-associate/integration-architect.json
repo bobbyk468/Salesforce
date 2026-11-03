@@ -254,7 +254,7 @@
       "options": [
         "Turn off retries in the billing system",
         "Upsert using an external ID taken from the invoice number",
-        "Add a nightly job that deletes duplicate invoices",
+        "Add a nightly job that finds and deletes the duplicate invoices",
         "Increase the API timeout to 10 minutes"
       ],
       "correctAnswer": 1,
@@ -270,7 +270,7 @@
       "options": [
         "It can't. Events are lost if no one is listening",
         "Ask Salesforce support to resend them",
-        "Rebuild the missed data with a full nightly export",
+        "Rebuild all of the missed data using a full nightly export",
         "Reconnect using the replay ID of the last event it processed"
       ],
       "correctAnswer": 3,
@@ -383,7 +383,7 @@
         "Raise the timeout to 120 seconds",
         "Retry each call right away in a loop",
         "Remove error handling so the calls fail faster",
-        "A circuit breaker that stops calls for a while and queues the work"
+        "A circuit breaker that pauses calls and queues work"
       ],
       "correctAnswer": 3,
       "explanation": "A circuit breaker notices repeated failures and stops calling the broken system for a set time. Work is queued and sent once the system is back.",
@@ -414,7 +414,7 @@
       "options": [
         "Three separate REST API calls",
         "Bulk API 2.0 with three jobs",
-        "Composite API with allOrNone set to true",
+        "Composite API with allOrNone true",
         "Three outbound messages"
       ],
       "correctAnswer": 2,

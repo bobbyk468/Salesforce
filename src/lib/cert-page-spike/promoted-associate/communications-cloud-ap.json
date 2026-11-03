@@ -169,7 +169,7 @@
       "question": "A provider wants to sell broadband, a router and TV together as one package at a special price. How should this be set up in the catalog?",
       "options": [
         "As a price list with one product",
-        "As a bundle offer that includes the three products",
+        "As a bundle offer of the three products",
         "As a contract with three line items only",
         "As three separate orders"
       ],
@@ -185,8 +185,8 @@
       "question": "A new fibre plan should only be offered to customers in areas where fibre is available. What should be used?",
       "options": [
         "A compatibility rule",
-        "A price list",
-        "An eligibility rule",
+        "A product price list on the catalogue",
+        "An eligibility rule for the offer",
         "A promotion"
       ],
       "correctAnswer": 2,
@@ -203,7 +203,7 @@
         "A Data Mapper",
         "A compatibility rule",
         "A FlexCard",
-        "An eligibility rule"
+        "An eligibility rule for the offer"
       ],
       "correctAnswer": 1,
       "explanation": "Compatibility rules stop combinations that don't make sense in the cart.",
@@ -216,10 +216,10 @@
     {
       "question": "A customer orders broadband. The back office needs to reserve a port, ship a router and activate the line. What breaks the order into these technical steps?",
       "options": [
-        "Decomposition in Industries Order Management",
+        "Decomposition in Order Management",
         "A promotion",
-        "A price list",
-        "An eligibility rule"
+        "A product price list on the catalogue",
+        "An eligibility rule for the offer"
       ],
       "correctAnswer": 0,
       "explanation": "Decomposition turns the commercial order into the technical orders needed for fulfilment.",
@@ -233,7 +233,7 @@
       "question": "After decomposition, which feature runs the fulfilment steps in the right order and calls outside systems?",
       "options": [
         "Orchestration plans",
-        "Eligibility rules",
+        "The eligibility rules",
         "Contracts",
         "FlexCards"
       ],
@@ -248,7 +248,7 @@
     {
       "question": "A customer wants to upgrade their existing broadband from 100 Mbps to 500 Mbps. How should this be handled?",
       "options": [
-        "As a brand-new order for broadband",
+        "As an entirely brand-new order for the broadband product",
         "By editing the price list",
         "As a change order on the existing asset",
         "By deleting the old asset"
@@ -265,7 +265,7 @@
       "question": "Which tool guides a service agent step by step through a complex process, such as moving a customer to a new address?",
       "options": [
         "A compatibility rule",
-        "A price list",
+        "A product price list on the catalogue",
         "An OmniScript",
         "A Data Mapper"
       ],
@@ -297,9 +297,9 @@
       "question": "A screen needs data from billing, network inventory and Salesforce in one fast server-side call. What should be used?",
       "options": [
         "An Integration Procedure",
-        "A FlexCard on its own",
+        "A FlexCard used on its own",
         "A promotion",
-        "A price list"
+        "A product price list on the catalogue"
       ],
       "correctAnswer": 0,
       "explanation": "Integration Procedures run several data actions on the server in one call, which keeps screens fast.",
@@ -313,9 +313,9 @@
       "question": "A new router model replaces the old one in 20 different offers. What is the benefit of building offers from reusable products?",
       "options": [
         "Customers have to reorder",
-        "Each offer must be edited by hand",
+        "Each one of the offers must be edited by hand",
         "Offers stop working",
-        "Updating the router product once updates every offer that uses it"
+        "One update to the router reaches every offer"
       ],
       "correctAnswer": 3,
       "explanation": "Reusable products mean a change in one place flows to every offer that includes it.",
@@ -344,10 +344,10 @@
     {
       "question": "Why is it important to keep customer assets accurate in Communications Cloud?",
       "options": [
-        "Assets control the website theme",
+        "The assets end up controlling the website's theme",
         "Assets set the price list",
         "Assets are only used for reports",
-        "Future moves, changes and disconnects all start from the current assets"
+        "Moves, changes and disconnects start from assets"
       ],
       "correctAnswer": 3,
       "explanation": "MACD orders change existing assets. If the assets are wrong, every later change is wrong too.",
@@ -363,7 +363,7 @@
         "A copy of the whole catalog for the partner",
         "Manual price changes on each order",
         "A separate org for the partner",
-        "A partner-specific price list used in the partner channel"
+        "A partner-specific price list"
       ],
       "correctAnswer": 3,
       "explanation": "Price lists can differ by channel, so partners use the same catalog with their own prices.",
@@ -376,8 +376,8 @@
     {
       "question": "A fulfilment step fails because the network activation system is down. What should the orchestration plan do?",
       "options": [
-        "Retry or pause the step and alert someone, without losing the order",
-        "Mark the order as complete",
+        "Retry or pause the step and alert someone",
+        "Simply mark the whole of the order as complete",
         "Delete the order",
         "Start a new order"
       ],
@@ -393,7 +393,7 @@
       "question": "Which tool should read data from Salesforce, transform it and save it back as part of an OmniScript?",
       "options": [
         "A promotion",
-        "A price list",
+        "A product price list on the catalogue",
         "A Data Mapper",
         "A FlexCard"
       ],

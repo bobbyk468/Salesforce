@@ -170,7 +170,7 @@
       "options": [
         "VizQL",
         "Gateway",
-        "Repository",
+        "The Repository process",
         "Backgrounder"
       ],
       "correctAnswer": 3,
@@ -184,8 +184,8 @@
     {
       "question": "Each regional manager must see only their own region's rows, but the business wants one dashboard for everyone. What should the architect implement?",
       "options": [
-        "Separate Tableau sites per region",
-        "Row-level security using an entitlements table on the published data source",
+        "Separate Tableau sites set up for each region",
+        "Row-level security via an entitlements table",
         "A separate workbook per region",
         "A quick filter set to each region"
       ],
@@ -217,7 +217,7 @@
       "question": "A company wants Tableau without managing servers, patching or upgrade windows. Which option fits, and what is the trade-off?",
       "options": [
         "Tableau Desktop alone",
-        "Tableau Cloud, giving up control of infrastructure and upgrade timing",
+        "Tableau Cloud, losing infrastructure control",
         "Self-managed Server, with no trade-off",
         "Tableau Prep alone"
       ],
@@ -233,8 +233,8 @@
       "question": "Every team reports a different figure for the same measure. What is the architectural fix?",
       "options": [
         "More Tableau licences",
-        "A training course on calculations",
-        "A certified published data source with the agreed definition, reused by all",
+        "A training course covering calculated fields",
+        "A certified data source reused by everyone",
         "A monthly reconciliation meeting"
       ],
       "correctAnswer": 2,
@@ -264,7 +264,7 @@
     {
       "question": "An extract takes too long to refresh. What should be tried before adding hardware?",
       "options": [
-        "Filter rows, remove unused fields and aggregate the extract",
+        "Filter, drop unused fields and aggregate",
         "Increase the refresh frequency",
         "Double the backgrounder nodes immediately",
         "Switch every workbook to live connections"
@@ -298,8 +298,8 @@
       "options": [
         "Makes refreshes run faster",
         "Encrypts the underlying data",
-        "Restricts it to administrators",
-        "Marks it as reviewed and trusted so users prefer it over ad-hoc sources"
+        "Restricts the data source to administrators only",
+        "Marks it reviewed and trusted, so users prefer it"
       ],
       "correctAnswer": 3,
       "explanation": "Certification is a governance signal that helps users pick the trusted source.",
@@ -315,7 +315,7 @@
         "Check the size of each workbook",
         "Analyse usage data from the repository",
         "Ask each department by email",
-        "Delete anything older than a year"
+        "Delete everything that is older than one year"
       ],
       "correctAnswer": 1,
       "explanation": "The repository records views and usage, which is the reliable way to identify content to retire.",
@@ -329,9 +329,9 @@
       "question": "What does a highly available Tableau Server deployment require?",
       "options": [
         "Disabling extracts",
-        "Daily backups only",
-        "Redundant processes across multiple nodes",
-        "A single larger server"
+        "A daily backup taken of the repository",
+        "Redundant processes across nodes",
+        "A single much larger server"
       ],
       "correctAnswer": 2,
       "explanation": "High availability comes from redundancy: multiple nodes running the key processes so one failure does not stop the platform.",
@@ -344,7 +344,7 @@
     {
       "question": "A live connection to the warehouse is causing heavy load every time users open dashboards. The data only changes nightly. What should change?",
       "options": [
-        "Use a scheduled extract refreshed after the nightly load",
+        "A scheduled extract after the nightly load",
         "Move to a larger warehouse instance",
         "Add more VizQL capacity",
         "Ask users to open dashboards less often"
@@ -361,9 +361,9 @@
       "question": "What is the main risk of building one workbook per audience instead of using row-level security?",
       "options": [
         "Dashboards render more slowly",
-        "Permissions become unnecessary",
+        "Permissions become entirely unnecessary",
         "Extracts refresh faster",
-        "Maintenance multiplies and the copies drift apart"
+        "Maintenance multiplies and copies drift"
       ],
       "correctAnswer": 3,
       "explanation": "Duplicated workbooks must each be updated for every change, and they inevitably diverge.",
@@ -392,8 +392,8 @@
     {
       "question": "A dashboard contains twelve worksheets and nine quick filters, and is slow. What is the most likely cause?",
       "options": [
-        "Row-level security is enabled",
-        "Each worksheet and filter issues queries, so the dashboard is doing too much work",
+        "Row-level security gets enabled automatically",
+        "Every worksheet and filter issues its own queries",
         "The data source is certified",
         "The server needs more disk"
       ],

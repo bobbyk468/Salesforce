@@ -224,7 +224,7 @@
       "question": "Which signal best diagnoses a multi-agent workflow that intermittently produces incomplete output?",
       "options": [
         "Per-step traces with inputs and termination reasons",
-        "The count of runs returning an error status",
+        "The total count of workflow runs returning an error status",
         "Aggregate token consumption per day",
         "Average end-to-end workflow latency"
       ],
@@ -242,7 +242,7 @@
         "An increase in average response length",
         "Any single user complaint after the change",
         "A measured regression against the gating evaluation set",
-        "The change having shipped more than a sprint ago"
+        "The change having been shipped more than a single sprint ago"
       ],
       "correctAnswer": 2,
       "explanation": "Prompt changes need the same gating as code: a defined evaluation before deployment, and a rollback when the measurement regresses against it.",
@@ -303,7 +303,7 @@
     {
       "question": "What is the strongest reason to require human approval on a specific agent action?",
       "options": [
-        "It is hard to reverse and its effects land outside the system",
+        "It is hard to reverse and lands outside the system",
         "It takes longer to complete than other steps",
         "It calls more than one tool in a single sequence",
         "The model reports below-average confidence on it"

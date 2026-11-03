@@ -201,7 +201,7 @@
       "question": "Which set of credentials earns you System Architect?",
       "options": [
         "A single System Architect exam",
-        "Platform Developer I, Integration Architect, Development Lifecycle and Deployment Architect, Identity and Access Management Architect",
+        "Platform Developer I plus the three architect exams",
         "Administrator, Platform App Builder, Data Architect, Sharing and Visibility Architect",
         "Administrator, Advanced Administrator, Platform Developer II"
       ],
@@ -217,7 +217,7 @@
       "question": "A partner's server needs to call the Salesforce API every hour with no person logging in. Which OAuth flow fits best?",
       "options": [
         "Device flow",
-        "Web server flow",
+        "The web server flow",
         "JWT bearer flow",
         "User-agent flow"
       ],
@@ -233,7 +233,7 @@
       "question": "Employees log in to many company apps with Okta. They should log in to Salesforce the same way. What roles do Okta and Salesforce play?",
       "options": [
         "Both are identity providers",
-        "Salesforce is the identity provider and Okta is the service provider",
+        "Salesforce is the identity provider and Okta the service provider instead",
         "Okta is the identity provider and Salesforce is the service provider",
         "Neither, because this needs OAuth only"
       ],
@@ -250,7 +250,7 @@
       "options": [
         "Login flows",
         "Just-in-time provisioning",
-        "Delegated authentication",
+        "Delegated authentication instead",
         "Permission set groups"
       ],
       "correctAnswer": 1,
@@ -267,7 +267,7 @@
         "Use the REST API one record at a time",
         "Enter the records by hand in batches",
         "Load Contacts first, then Accounts",
-        "Load Accounts first with external IDs, then load Contacts using those external IDs to link them"
+        "Load Accounts with external IDs, then Contacts"
       ],
       "correctAnswer": 3,
       "explanation": "Parents must exist before children. External IDs let you link Contacts to Accounts without looking up Salesforce IDs, and Bulk API handles the volume.",
@@ -312,7 +312,7 @@
     {
       "question": "Order data from a warehouse system must be visible to service agents in Salesforce. It changes every few minutes and must not be stored in Salesforce. What fits?",
       "options": [
-        "A custom object updated every hour",
+        "A custom object that is updated once every hour",
         "Salesforce Connect with External Objects",
         "A nightly Bulk API load",
         "Outbound messages"
@@ -328,10 +328,10 @@
     {
       "question": "A trigger needs to send each new Order to an ERP. Calls to the ERP take several seconds. What is the best design?",
       "options": [
-        "Have the trigger start Queueable Apex that makes the callout",
+        "Have the trigger queue Apex for the callout",
         "Ask users to click a button to send each Order",
         "A synchronous callout in the trigger",
-        "A nightly batch job only"
+        "A nightly batch job that sends the orders"
       ],
       "correctAnswer": 0,
       "explanation": "Triggers can't make synchronous callouts. Queueable Apex runs the callout in the background and can be chained or retried.",
@@ -376,7 +376,7 @@
     {
       "question": "The release team wants to check that a deployment will pass in production on Monday, then deploy it fast during a short window on Wednesday. What should they use?",
       "options": [
-        "Validate on Monday, then quick deploy on Wednesday",
+        "Validate Monday, quick deploy Wednesday",
         "A change set uploaded on Wednesday",
         "Deploy on Monday and roll back if needed",
         "Run all tests on Wednesday"
@@ -426,8 +426,8 @@
       "options": [
         "A shared Full sandbox",
         "The production org",
-        "A version control system such as Git",
-        "A spreadsheet of changes"
+        "A version control system like Git",
+        "A spreadsheet listing the changes"
       ],
       "correctAnswer": 2,
       "explanation": "In source-driven development, Git holds the real version of the metadata. Orgs are built and updated from it.",

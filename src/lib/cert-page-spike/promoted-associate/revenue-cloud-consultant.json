@@ -169,8 +169,8 @@
       "question": "Which sequence best describes the Product-to-Cash lifecycle covered by Agentforce Revenue Management?",
       "options": [
         "Only marketing",
-        "Only sales pipeline management",
-        "Product catalog and configuration, pricing and quote, then contracts, orders, assets, and invoicing",
+        "Only the management of the sales pipeline itself",
+        "Catalog, pricing, contracts, orders, assets, invoicing",
         "Only service case management"
       ],
       "correctAnswer": 2,
@@ -184,7 +184,7 @@
     {
       "question": "What does the current Agentforce Revenue Management Consultant credential validate?",
       "options": [
-        "Email marketing only",
+        "Marketing campaign design and execution",
         "Slack workspace administration only",
         "Visual design of CRM pages only",
         "Scoping, designing, building"
@@ -200,8 +200,8 @@
     {
       "question": "Which set best matches the current Agentforce Revenue Management exam scope?",
       "options": [
-        "Catalog management, product configuration and pricing, contracts and orders, asset management, and invoice management",
-        "Only legacy Salesforce CPQ product rules",
+        "Catalog, configuration, pricing, orders, assets, invoices",
+        "Only the legacy Salesforce CPQ product rule engine",
         "Only Marketing Cloud journeys",
         "Only Sales Cloud opportunities"
       ],
@@ -249,8 +249,8 @@
       "question": "In Agentforce Revenue Management, what does the Product Configurator help a consultant do?",
       "options": [
         "Configure Salesforce email sends",
-        "Set permission set assignments for users",
-        "Customize product components and attributes, then validate the configuration",
+        "Set the permission set assignments for all users",
+        "Customise components and attributes, then validate",
         "Create dashboards without product data"
       ],
       "correctAnswer": 2,
@@ -281,9 +281,9 @@
       "question": "Which statement best describes Usage Management in the current Revenue Management preparation material?",
       "options": [
         "It creates marketing email journeys",
-        "It models and tracks usage-based products and prepares usage summaries for invoicing",
+        "It tracks usage products and summarises for invoicing",
         "It assigns Salesforce user roles",
-        "It replaces product catalog management"
+        "It replaces product catalogue management altogether"
       ],
       "correctAnswer": 1,
       "explanation": "Salesforce’s preparation trail describes Usage Management as modeling, tracking, and managing usage-based products through invoice-ready summaries.",
@@ -313,7 +313,7 @@
       "question": "What is a key part of implementation readiness for an Agentforce Revenue Management project?",
       "options": [
         "Choosing a CPQ price book before gathering requirements",
-        "Confirming licenses, permission sets, prerequisites, scope, stakeholders, and adoption plan",
+        "Licences, prerequisites, scope and adoption plan",
         "Assuming every customer uses the same product configuration",
         "Skipping build and testing to shorten delivery"
       ],
@@ -344,7 +344,7 @@
     {
       "question": "A customer needs accurate quotes for different business cases. Which approach is covered by the current Configure, Price, Quote objective?",
       "options": [
-        "Configure pricing procedures for the customer requirements and generate an accurate quote",
+        "Configure pricing procedures, then quote accurately",
         "Use only invoice payment settings",
         "Replace catalog attributes with free-text notes",
         "Defer pricing decisions until after order fulfillment"
@@ -360,10 +360,10 @@
     {
       "question": "When should a consultant identify a need for an API or customization?",
       "options": [
-        "For every catalog item, regardless of requirements",
+        "For every single catalog item, regardless of the requirements",
         "Whenever a user needs a permission set",
         "To avoid discussing solution trade-offs",
-        "When customer requirements cannot be met by the appropriate out-of-the-box capability and an extension is needed"
+        "When out-of-the-box capability cannot meet the requirement"
       ],
       "correctAnswer": 3,
       "explanation": "The current exam guide expects candidates to identify when APIs or customizations are needed and describe the requirements to a developer.",
@@ -378,8 +378,8 @@
       "options": [
         "To replace order management",
         "To issue customer payments",
-        "To structure product information so products and bundles can be managed and configured for selling",
-        "To store marketing email engagement metrics"
+        "To structure products and bundles for selling",
+        "To store the marketing email engagement metrics"
       ],
       "correctAnswer": 2,
       "explanation": "Salesforce’s Product Catalog Management material covers organizing product and bundle information with categories, classifications, and attributes.",
@@ -393,9 +393,9 @@
       "question": "Which delivery practice is explicitly included in Salesforce’s current Revenue Management consultant exam guide?",
       "options": [
         "Skip user acceptance testing after configuration",
-        "Plan and lead discovery, mitigate risks, test, deploy, and drive adoption",
+        "Lead discovery, manage risk, test, deploy, drive adoption",
         "Focus only on writing custom code",
-        "Avoid stakeholder alignment once a quote is generated"
+        "Avoid any stakeholder alignment once a quote has been generated"
       ],
       "correctAnswer": 1,
       "explanation": "The current guide includes discovery and design, project planning, risk mitigation, stakeholder alignment, build, testing, deployment, and adoption.",

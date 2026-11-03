@@ -187,7 +187,7 @@
         "A/B testing",
         "A survey",
         "Tree testing",
-        "Card sorting"
+        "A card sort"
       ],
       "correctAnswer": 2,
       "explanation": "Tree testing checks findability within a structure that already exists.",
@@ -202,7 +202,7 @@
       "options": [
         "Understandable, because grey is ambiguous",
         "Perceivable, because normal text needs at least 4.5:1",
-        "Robust, because grey is not a valid colour value",
+        "Robust, because grey is simply not a valid colour value",
         "Operable, because the text cannot be clicked"
       ],
       "correctAnswer": 1,
@@ -219,7 +219,7 @@
         "Dynamic Forms with a field visibility rule",
         "A compact layout",
         "A new record type",
-        "A validation rule"
+        "A validation rule placed onto the object"
       ],
       "correctAnswer": 0,
       "explanation": "Dynamic Forms allows per-field placement and conditional visibility based on field values.",
@@ -235,7 +235,7 @@
         "Moderated usability testing with a small number of users",
         "Reviewing page view analytics",
         "Counting support tickets",
-        "A satisfaction survey sent to all users"
+        "A satisfaction survey sent out to every single one of the users"
       ],
       "correctAnswer": 0,
       "explanation": "Watching people attempt the task shows where and why they stop, which is a qualitative question.",
@@ -264,7 +264,7 @@
     {
       "question": "Why is building with Lightning Design System components usually the more accessible choice?",
       "options": [
-        "They load faster than custom markup",
+        "They load a great deal faster than any hand-written custom markup does",
         "They cannot be customised",
         "They bypass WCAG requirements",
         "They already implement much of the required markup, focus handling and ARIA"
@@ -299,7 +299,7 @@
         "Whether a prototype is usable",
         "How many users prefer a given colour",
         "How users expect content to be grouped and labelled",
-        "Whether a page meets contrast requirements"
+        "Whether a given page meets the contrast requirements"
       ],
       "correctAnswer": 2,
       "explanation": "Card sorting surfaces the user's own mental model of how information belongs together.",
@@ -313,7 +313,7 @@
       "question": "A long record page overwhelms users, and different teams need different fields. What is the appropriate Salesforce response?",
       "options": [
         "Dynamic Forms, placing fields in sections with visibility rules",
-        "Create a separate object for each team",
+        "Create an entirely separate custom object for each one of the teams",
         "Train users to scroll",
         "Remove the fields nobody uses"
       ],
@@ -361,9 +361,9 @@
       "question": "What does Dynamic Actions control?",
       "options": [
         "Sharing rules on the object",
-        "Which buttons and actions appear, based on the current record context",
+        "Which buttons appear, based on record context",
         "Which fields are required",
-        "The record highlights panel"
+        "The record highlights panel at the top of the page"
       ],
       "correctAnswer": 1,
       "explanation": "Dynamic Actions surfaces only the actions valid in context, reducing the clutter of a fixed button bar.",
@@ -392,10 +392,10 @@
     {
       "question": "Which best describes the relationship between the design thinking phases?",
       "options": [
-        "Iterative: findings from testing can send the team back to earlier phases",
+        "Iterative: testing can send you back a phase",
         "Interchangeable in any order",
         "Optional after the first release",
-        "Strictly sequential and completed once"
+        "Strictly sequential, and completed once and for all"
       ],
       "correctAnswer": 0,
       "explanation": "The phases loop. Testing frequently sends a team back to redefine the problem or generate new options.",

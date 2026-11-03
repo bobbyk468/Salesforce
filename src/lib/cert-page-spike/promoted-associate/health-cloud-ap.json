@@ -169,8 +169,8 @@
       "question": "A care coordinator needs to see everyone involved in a patient's care, including their GP, a specialist and their daughter. What feature shows this?",
       "options": [
         "An Opportunity team",
-        "A household only",
-        "The patient's care team",
+        "The household record for the patient",
+        "The care team record",
         "A price book"
       ],
       "correctAnswer": 2,
@@ -184,10 +184,10 @@
     {
       "question": "A patient leaves hospital and needs a structured plan with goals and tasks for recovery. What should the coordinator create?",
       "options": [
-        "A care plan from a care plan template",
+        "A care plan from a template",
         "A Lead",
         "A Campaign",
-        "A Case only"
+        "A standard Case record and nothing else"
       ],
       "correctAnswer": 0,
       "explanation": "Care plans set out problems, goals and tasks, and templates make them quick and consistent to create.",
@@ -235,7 +235,7 @@
         "Replace the EHR with Health Cloud",
         "Ask nurses to retype the data",
         "Email PDFs of each record",
-        "Integrate with the EHR using FHIR-based APIs or MuleSoft"
+        "Integrate with the EHR over FHIR APIs"
       ],
       "correctAnswer": 3,
       "explanation": "Integration brings clinical data in automatically, while the EHR stays the source of truth.",
@@ -249,9 +249,9 @@
       "question": "Patients should be able to book appointments with the right provider through a self-service site. What should be used?",
       "options": [
         "A price book",
-        "Intelligent appointment management",
+        "Intelligent appointments",
         "A Chatter group",
-        "A web-to-lead form"
+        "A web-to-lead form on the public site"
       ],
       "correctAnswer": 1,
       "explanation": "Intelligent appointment management matches patients with providers by availability, skills and location, including self-service booking.",
@@ -267,7 +267,7 @@
         "A dashboard of all patients",
         "The patient timeline",
         "Setup Audit Trail",
-        "The report builder only"
+        "A custom report built in the report builder"
       ],
       "correctAnswer": 1,
       "explanation": "The timeline shows a patient's events in order on their record.",
@@ -282,8 +282,8 @@
       "options": [
         "A Campaign",
         "A Lead conversion",
-        "An action plan only",
-        "Utilization management with care requests"
+        "An action plan on its own, with nothing else",
+        "Utilization management requests"
       ],
       "correctAnswer": 3,
       "explanation": "Utilization management handles prior authorisation through care requests that reviewers assess.",
@@ -297,9 +297,9 @@
       "question": "A clinic wants to find all diabetic patients who haven't had a check-up in 12 months. What is the best approach?",
       "options": [
         "Search Chatter",
-        "Reports or CRM Analytics on conditions and encounters",
+        "Reports on conditions and encounters",
         "Ask each doctor to remember",
-        "Look at each patient by hand"
+        "Look through each of the patient records by hand"
       ],
       "correctAnswer": 1,
       "explanation": "Reports and analytics on clinical data can find groups of patients who need follow-up.",
@@ -313,8 +313,8 @@
       "question": "Which measure best protects sensitive health data in Health Cloud?",
       "options": [
         "Public Read/Write sharing",
-        "Strict sharing, field-level security, encryption and audit trails",
-        "One shared login for all staff",
+        "Strict sharing, encryption and audit trails",
+        "One single shared login used by all of the staff",
         "Storing data in Chatter"
       ],
       "correctAnswer": 1,
@@ -329,7 +329,7 @@
       "question": "A care plan template for heart failure has standard goals and tasks. A specific patient needs an extra task. What should the coordinator do?",
       "options": [
         "Create a new org",
-        "Change the template for every patient",
+        "Change the care plan template for every single patient",
         "Add the task to that patient's care plan",
         "Delete the care plan"
       ],
@@ -346,8 +346,8 @@
       "options": [
         "Price book entry",
         "Campaign member",
-        "Medication statement or related clinical medication objects",
-        "Opportunity product"
+        "The clinical medication objects",
+        "The standard Opportunity product object"
       ],
       "correctAnswer": 2,
       "explanation": "Health Cloud has clinical objects for medications, aligned to FHIR.",
@@ -360,8 +360,8 @@
     {
       "question": "How are individual patients usually stored in Health Cloud?",
       "options": [
-        "As person accounts",
-        "As Products",
+        "As patient person accounts",
+        "As standard Product records in the catalogue",
         "As Leads",
         "As Users"
       ],
@@ -378,8 +378,8 @@
       "options": [
         "They replace the EHR",
         "They change the price book",
-        "The answers can inform the problems and goals in the care plan",
-        "They are only for marketing"
+        "The answers inform the care plan goals",
+        "They are only ever used for marketing purposes"
       ],
       "correctAnswer": 2,
       "explanation": "Assessment answers help coordinators spot needs and shape the care plan.",
@@ -392,10 +392,10 @@
     {
       "question": "A health network wants to record which providers belong to which networks and specialties. What should be used?",
       "options": [
-        "A Campaign hierarchy",
+        "A standard Campaign hierarchy structure",
         "Opportunity stages",
         "Email templates",
-        "Health Cloud's provider and network records"
+        "The provider and network records"
       ],
       "correctAnswer": 3,
       "explanation": "Health Cloud can store providers, facilities, specialties and networks for referrals and scheduling.",
