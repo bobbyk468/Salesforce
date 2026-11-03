@@ -17,6 +17,10 @@ import { join } from 'path'
 const BUILD_DIR = join(process.cwd(), '.next/server/app')
 const TITLE_MAX = 60
 const DESC_MAX = 160
+// Advisory, not a violation: a title well under the limit wastes space the
+// search result would have shown. Utility pages are legitimately short, so this
+// reports rather than fails, to make drift visible.
+const TITLE_SHORT = 50
 
 function* walkHtml(dir) {
   for (const entry of readdirSync(dir, { withFileTypes: true })) {
@@ -51,6 +55,7 @@ function extractDescription(html) {
 }
 
 let violations = 0
+let shortTitles = 0
 let checked = 0
 
 if (!existsSync(BUILD_DIR)) {
@@ -72,6 +77,7 @@ for (const file of walkHtml(BUILD_DIR)) {
   const desc = extractDescription(html)
   checked++
 
+  if (title && title.length < TITLE_SHORT) shortTitles++
   if (title && title.length > TITLE_MAX) {
     console.error(`TITLE TOO LONG (${title.length} chars) on ${relPath}:\n  "${title}"`)
     violations++
@@ -96,5 +102,8 @@ if (checked === 0) {
 }
 
 console.log(`\nChecked ${checked} pages. Violations: ${violations}`)
+if (shortTitles > 0) {
+  console.log(`Note: ${shortTitles} titles under ${TITLE_SHORT} chars (limit ${TITLE_MAX}) — unused SERP space.`)
+}
 if (violations > 0) process.exit(1)
 else console.log('All titles ≤60 chars and descriptions ≤160 chars. ✓')

@@ -793,10 +793,49 @@ function compactPracticeTitleLabel(label: string): string {
     .replace(/\s+and\s+/gi, ' & '))
 }
 
+/**
+ * Credentials that are not branded "Salesforce". Tableau and Slack run their
+ * own certification programmes, and the Claude pages are Anthropic's, so the
+ * qualifier would be wrong on any of them.
+ */
+function acceptsSalesforceQualifier(label: string): boolean {
+  return !/^(?:Salesforce|Tableau|Slack|Claude)\b/i.test(label)
+}
+
+/**
+ * Several labels were abbreviated to fit the old, tighter titles. "MC
+ * Foundations" is not what anyone searches for. Expand the unambiguous ones
+ * when the result still fits; Dev and Admin are left alone because they stand
+ * for different words on different credentials.
+ */
+function expandTitleAbbreviations(label: string): string {
+  return label
+    .replace(/\bMC\b/g, 'Marketing Cloud')
+    .replace(/\bMgmt\b/g, 'Management')
+    .replace(/\bArch\b/g, 'Architect')
+    .replace(/\bConsult\b/g, 'Consultant')
+    .replace(/\bSpec\b/g, 'Specialist')
+    .replace(/\bFound\./g, 'Foundations')
+    .replace(/\s{2,}/g, ' ')
+    .trim()
+}
+
 function makePracticeExamTitle(label: string, code?: string): string {
   const prefix = code ? `${code} ` : ''
   const variants = [...new Set([label, compactPracticeTitleLabel(label)])]
-  const candidates = variants.map((name) => `${prefix}${name} Practice Exam ${TITLE_YEAR}`)
+  // Most of these titles came in well under the 60-character limit, which wastes
+  // the space a SERP will actually show. Spend it on the "Salesforce" qualifier,
+  // which is how people search, before falling back to the bare label. The code
+  // prefix has to stay first when there is one, so those are left as they were.
+  const expanded = expandTitleAbbreviations(label)
+  const richest = [...new Set([expanded, label])]
+  const qualified =
+    !code && acceptsSalesforceQualifier(label)
+      ? [...richest.map((name) => `Salesforce ${name}`), ...richest, ...variants]
+      : [...richest, ...variants]
+  const candidates = [...new Set(qualified)].map(
+    (name) => `${prefix}${name} Practice Exam ${TITLE_YEAR}`,
+  )
   const title = candidates.find((candidate) => candidate.length <= 60)
   if (title) return title
 
