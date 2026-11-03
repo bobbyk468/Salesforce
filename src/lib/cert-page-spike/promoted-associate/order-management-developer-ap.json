@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Order Management Developer AP validate?",
+      "question": "An order is placed and must be split so each item ships from the nearest warehouse. What handles this?",
       "options": [
-        "Only basics",
-        "Skills and knowledge in configuring and customizing Salesforce Order Management",
-        "Only Slack",
-        "Only reporting"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Accredited Order Management Developer Professionals have demonstrated skills and knowledge in configuring and customizing Salesforce Order Management."
-    },
-    {
-      "question": "What is a key activity for an Order Management Developer?",
-      "options": [
-        "Configuring and customizing Order Management",
-        "Only lists",
-        "Only administration",
-        "Only reporting"
-      ],
-      "correctAnswer": 0,
-      "explanation": "They configure and customize Order Management."
-    },
-    {
-      "question": "Which role typically pursues Order Management Developer AP?",
-      "options": [
-        "Marketers",
-        "Designers only",
-        "Partners and developers working with Order Management",
-        "Sales only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Partners and developers working with Order Management pursue this credential."
-    },
-    {
-      "question": "What does customization in Order Management often involve?",
-      "options": [
-        "Only reports",
-        "Only dashboards",
-        "Only UI",
-        "Fulfillment flows, integrations, and extensions"
+        "An update to the customer's account to record their preferred delivery depot",
+        "A change to the product records so each one names a single fixed warehouse",
+        "A separate order record created manually for each of the warehouses involved",
+        "Order fulfilment routing logic"
       ],
       "correctAnswer": 3,
-      "explanation": "Customization involves fulfillment flows, integrations, and extensions."
+      "explanation": "Routing evaluates the order and allocates items to locations, producing the fulfilment orders that each site then works from.",
+      "whyWrong": [
+        "A preferred depot on the account cannot handle item-level allocation.",
+        "A fixed warehouse per product ignores stock levels and customer location.",
+        "Manually splitting orders does not scale and breaks the link to the original."
+      ]
     },
     {
-      "question": "Which product does Order Management often integrate with?",
+      "question": "What is a fulfilment order in Salesforce Order Management?",
       "options": [
-        "CPQ, Commerce, and fulfillment systems",
-        "Only Slack",
-        "Only Service Cloud",
-        "Only Marketing Cloud"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Order Management integrates with CPQ, Commerce, and fulfillment systems."
-    },
-    {
-      "question": "What does fulfillment flow customization involve?",
-      "options": [
-        "Only dashboards",
-        "Only UI",
-        "Only reports",
-        "Defining steps, actions, and routing for order fulfillment"
+        "The invoice raised against the customer once the goods have been delivered",
+        "The payment authorisation taken at the point the order was first submitted",
+        "The returns request raised by the customer after receiving their delivery",
+        "The part of an order worked by one location"
       ],
       "correctAnswer": 3,
-      "explanation": "Fulfillment flows define steps, actions, and routing logic."
+      "explanation": "A fulfilment order represents the items a single location is responsible for picking, packing and shipping.",
+      "whyWrong": [
+        "Invoicing is a separate financial step.",
+        "Payment authorisation happens at order capture.",
+        "Returns are handled by their own objects and processes."
+      ]
     },
     {
-      "question": "Which technology is used to extend Order Management?",
+      "question": "A customer cancels one item from a three-item order before it ships. What should happen?",
       "options": [
-        "Apex, Platform Events, and APIs",
-        "Only lists",
-        "Only clicks",
-        "Only reports"
+        "The entire order is cancelled and the customer places a replacement order",
+        "The order summary is amended for that item",
+        "The item is shipped anyway and the customer returns it for a refund later",
+        "A credit note is issued while the original order is left entirely unchanged"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Order Management supports changing part of an order, so the cancelled item is removed and the rest continues to fulfilment.",
+      "whyWrong": [
+        "Cancelling everything is disproportionate and loses the other two items.",
+        "Shipping something the customer cancelled creates a needless return.",
+        "A credit without amending the order leaves the records inconsistent."
+      ]
+    },
+    {
+      "question": "What does the order summary represent?",
+      "options": [
+        "The current state of the order as a whole",
+        "The original order exactly as it was submitted, never changing afterwards",
+        "The shipping label generated for each parcel leaving the warehouse",
+        "The list of payments that have been captured against the order so far"
       ],
       "correctAnswer": 0,
-      "explanation": "Developers use Apex, Platform Events, and APIs for customization."
+      "explanation": "The order summary is the living record of the order, reflecting amendments, allocations, shipments and returns as they happen.",
+      "whyWrong": [
+        "An immutable snapshot is what the original order record provides.",
+        "Shipping documents are produced during fulfilment.",
+        "Payments are tracked on their own related records."
+      ]
     },
     {
-      "question": "What is an Order Summary in Order Management?",
+      "question": "A developer needs to run custom logic when an order reaches a particular status. What is the appropriate approach?",
       "options": [
-        "An email",
-        "A report",
-        "A lead",
-        "The consolidated order record that drives orchestration and fulfillment"
+        "A scheduled batch job that polls every open order once each evening",
+        "A validation rule that blocks the record from reaching that status at all",
+        "A flow or Apex triggered by the status change",
+        "A manual review carried out by an agent whenever the status is updated"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Status transitions are the natural hook, and flow or Apex lets the logic run as the change happens rather than later.",
+      "whyWrong": [
+        "Nightly polling delays the action and wastes processing on unchanged orders.",
+        "A validation rule prevents the status rather than reacting to it.",
+        "Manual review does not scale and is not automation."
+      ]
+    },
+    {
+      "question": "Why is idempotency important when integrating a payment service with Order Management?",
+      "options": [
+        "Order summaries can only accept one payment record per order in total",
+        "A retried request must not charge twice",
+        "The payment service requires every request to be sent in a fixed sequence",
+        "Apex callouts are unable to be repeated once they have been attempted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Network failures mean requests get retried, and without idempotency a retry can take a second payment from the customer.",
+      "whyWrong": [
+        "An order can legitimately have several payment records.",
+        "Ordering of requests is a separate concern from safe retries.",
+        "Callouts can be retried; that is precisely why this matters."
+      ]
+    },
+    {
+      "question": "A return is received and the customer is due a refund. What drives the amount?",
+      "options": [
+        "The full value of the original order including all of its shipping charges",
+        "The current list price of the items at the time the return was processed",
+        "A fixed percentage of the order value agreed in the returns policy",
+        "The amount actually paid for the returned items"
       ],
       "correctAnswer": 3,
-      "explanation": "Order Summary is the central record for order lifecycle."
+      "explanation": "The refund reflects what the customer paid for those specific items, taking discounts and proration into account.",
+      "whyWrong": [
+        "Refunding the whole order overpays when only part is returned.",
+        "Prices change, so the current price may not be what was paid.",
+        "A flat percentage ignores what was actually returned."
+      ]
     },
     {
-      "question": "Which integration pattern supports real-time order updates?",
+      "question": "What is the purpose of an order delivery group?",
       "options": [
-        "Batch only",
-        "Platform Events, callouts, or APIs",
-        "Email only",
-        "Manual only"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Platform Events, callouts, and APIs enable real-time integration."
-    },
-    {
-      "question": "What does Fulfillment Order represent?",
-      "options": [
-        "A campaign",
-        "A unit of work for fulfillment (e.g., ship-to location)",
-        "A lead",
-        "A quote"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Fulfillment Orders represent work units for fulfillment execution."
-    },
-    {
-      "question": "Which best practice applies to Order Management development?",
-      "options": [
-        "Single system only",
-        "Ignore error handling",
-        "Implement error handling, logging, and idempotency for integrations",
-        "No testing"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Error handling, logging, and idempotency are critical for reliability."
-    },
-    {
-      "question": "What does custom allocation logic enable?",
-      "options": [
-        "Custom rules for inventory or fulfillment allocation",
-        "Only dashboards",
-        "Only reporting",
-        "Only UI"
+        "It groups items delivered together to one address",
+        "It lists the carriers approved for use within a particular sales region",
+        "It records which of the warehouses holds stock for each product line",
+        "It defines the sequence in which fulfilment orders must be processed"
       ],
       "correctAnswer": 0,
-      "explanation": "Custom allocation logic extends default fulfillment behavior."
+      "explanation": "Delivery groups carry the destination and delivery method for a set of items, which is how one order can ship to several addresses.",
+      "whyWrong": [
+        "Approved carriers are configuration rather than order data.",
+        "Stock location is held against inventory rather than the delivery group.",
+        "Processing sequence is not what a delivery group defines."
+      ]
     },
     {
-      "question": "Which Order Management API supports order creation?",
+      "question": "A high volume of orders arrives during a sale. What should a developer consider?",
       "options": [
-        "SOAP only",
-        "REST only",
-        "Order Management APIs for order and fulfillment lifecycle",
-        "Bulk API only"
+        "Increasing the number of fulfilment locations configured in the system",
+        "Processing each order one at a time to guarantee that nothing is missed",
+        "Bulkifying the logic that processes them",
+        "Disabling the automation temporarily until the sale period has finished"
       ],
       "correctAnswer": 2,
-      "explanation": "Order Management exposes APIs for order and fulfillment operations."
+      "explanation": "Apex governor limits mean row-by-row logic fails at volume, so the processing has to handle records in bulk.",
+      "whyWrong": [
+        "More locations does not fix inefficient code.",
+        "One-at-a-time processing is exactly what breaks under load.",
+        "Turning off automation leaves the orders unprocessed."
+      ]
     },
     {
-      "question": "What is the purpose of fulfillment group configuration?",
+      "question": "What does order capture refer to?",
       "options": [
-        "Only UI",
-        "Only dashboards",
-        "Defining how orders split and route to fulfillment locations",
-        "Only reports"
+        "Taking the payment from the customer's card once goods have shipped",
+        "Recording the proof of delivery supplied by the carrier after shipment",
+        "Creating the order from the customer's purchase",
+        "Allocating the ordered items to the warehouses that will fulfil them"
       ],
       "correctAnswer": 2,
-      "explanation": "Fulfillment groups define order splitting and routing logic."
+      "explanation": "Order capture is the point at which the order is created in the system from the storefront or other channel.",
+      "whyWrong": [
+        "Payment capture is a distinct financial step.",
+        "Proof of delivery is captured at the end of fulfilment.",
+        "Allocation happens after capture, during routing."
+      ]
     },
     {
-      "question": "Which testing approach is important for Order Management customizations?",
+      "question": "A fulfilment location runs out of stock for an allocated item. What is the appropriate handling?",
       "options": [
-        "Manual only",
-        "Unit tests, integration tests, and end-to-end fulfillment tests",
-        "UAT only",
-        "No testing"
+        "Cancel the whole order and notify the customer that it cannot be fulfilled",
+        "Reallocate the item to another location",
+        "Ship the remaining items and silently drop the one that is unavailable",
+        "Hold the order indefinitely until that location receives new stock in"
       ],
       "correctAnswer": 1,
-      "explanation": "Testing should cover unit, integration, and E2E scenarios."
+      "explanation": "Reallocation lets another location with stock take the item, which keeps the order deliverable.",
+      "whyWrong": [
+        "Cancelling everything over one item loses the whole sale.",
+        "Dropping an item without telling the customer is poor service.",
+        "An indefinite hold leaves the customer with no information or goods."
+      ]
+    },
+    {
+      "question": "Why would a developer use platform events in an Order Management integration?",
+      "options": [
+        "To decouple systems that react to order changes",
+        "To calculate the refund amounts due on each of the returned order items",
+        "To enforce the validation rules that apply to each order summary record",
+        "To store the order history in a format that external systems can query"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Platform events let other systems subscribe to what happened without the order process needing to know who is listening.",
+      "whyWrong": [
+        "Refund calculation is business logic, not messaging.",
+        "Validation is enforced on the records themselves.",
+        "Events are a messaging mechanism, not a store to query."
+      ]
+    },
+    {
+      "question": "What distinguishes an order summary from an order?",
+      "options": [
+        "The summary is created manually whereas the order is generated by the system",
+        "The summary is managed and updated after capture",
+        "The summary is visible to the customer and the order only to internal staff",
+        "The summary covers subscriptions while the order covers physical goods"
+      ],
+      "correctAnswer": 1,
+      "explanation": "The original order is the immutable record of what was submitted. The order summary is the managed record that changes through the lifecycle.",
+      "whyWrong": [
+        "Both are created by the system during capture.",
+        "Visibility is a sharing decision rather than the distinction.",
+        "Both can cover any product type."
+      ]
+    },
+    {
+      "question": "A customer asks to change the delivery address after the order has shipped. What is the realistic answer?",
+      "options": [
+        "It cannot change once the parcel is with the carrier",
+        "The address on the order summary is edited and the carrier updated automatically",
+        "The fulfilment order is cancelled and recreated with the new delivery address",
+        "A new delivery group is added to the order to cover the second address"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Once goods are with the carrier the system cannot redirect them, so this becomes a carrier or returns conversation rather than an order change.",
+      "whyWrong": [
+        "Editing the record does not move a parcel already in transit.",
+        "Cancelling a shipped fulfilment order does not recall the goods.",
+        "Adding a delivery group would create a second shipment, not redirect the first."
+      ]
+    },
+    {
+      "question": "Which best describes what Salesforce Order Management is for?",
+      "options": [
+        "Operating the storefront where customers browse and place their orders",
+        "Producing the financial statements that report on revenue recognised",
+        "Managing orders from capture through to returns",
+        "Running the warehouse management system inside each distribution centre"
+      ],
+      "correctAnswer": 2,
+      "explanation": "It covers the order lifecycle: capture, routing and allocation, fulfilment, shipment, amendments, returns and refunds.",
+      "whyWrong": [
+        "The storefront is Commerce Cloud or another channel.",
+        "Financial reporting is an accounting function.",
+        "Warehouse operations are run by dedicated systems."
+      ]
     }
   ]
 }

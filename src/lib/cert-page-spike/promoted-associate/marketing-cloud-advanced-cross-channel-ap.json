@@ -166,169 +166,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "What does Marketing Cloud Advanced Cross Channel AP validate?",
+      "question": "A journey must send an SMS only to contacts who did not open the email sent three days earlier. What routes them?",
       "options": [
-        "Knowledge, skills, and experience with key Marketing Cloud Cross Channel topics",
-        "Only basics",
-        "Only Slack",
-        "Only reporting"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Accredited Marketing Cloud Advanced Cross Channel Professionals have demonstrated knowledge, skills, and experience with key Marketing Cloud Cross Channel topics."
-    },
-    {
-      "question": "What does 'Cross Channel' mean in Marketing Cloud?",
-      "options": [
-        "Only social",
-        "Only SMS",
-        "Coordinating campaigns across email, mobile, web, and other channels",
-        "Only email"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Cross Channel means coordinating campaigns across multiple channels."
-    },
-    {
-      "question": "What is a key activity for an Advanced Cross Channel Professional?",
-      "options": [
-        "Designing and implementing cross-channel marketing solutions",
-        "Only coding",
-        "Only lists",
-        "Only reporting"
-      ],
-      "correctAnswer": 0,
-      "explanation": "They design and implement cross-channel marketing solutions."
-    },
-    {
-      "question": "Which role typically pursues Marketing Cloud Advanced Cross Channel AP?",
-      "options": [
-        "Developers only",
-        "Sales only",
-        "Designers only",
-        "Partners and implementers with advanced Marketing Cloud cross-channel experience"
+        "A decision split evaluated against the contact's stored profile attributes",
+        "A separate journey launched manually for the contacts who did not respond",
+        "A suppression list containing everyone who opened the original email sent",
+        "An engagement split on the email"
       ],
       "correctAnswer": 3,
-      "explanation": "Partners and implementers with cross-channel experience pursue this credential."
+      "explanation": "Engagement splits route on whether the contact opened or clicked a previous send in the journey, which is exactly this condition.",
+      "whyWrong": [
+        "Decision splits read data you already hold, not engagement with a send.",
+        "A second manual journey loses the connection to the original send.",
+        "A suppression list excludes from sending rather than routing within a journey."
+      ]
     },
     {
-      "question": "Which Marketing Cloud products are often part of cross-channel solutions?",
+      "question": "What does a contact need before a journey can send them an SMS?",
       "options": [
-        "Only Email Studio",
-        "Email Studio, Journey Builder, Mobile, Advertising, and more",
-        "Only Automation Studio",
-        "Only Journey Builder"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Cross-channel solutions use Email, Journey Builder, Mobile, Advertising, and more."
-    },
-    {
-      "question": "What does Journey Builder support for cross-channel?",
-      "options": [
-        "SMS only",
-        "Push only",
-        "Email only",
-        "Multi-channel journeys (email, SMS, push, etc.)"
-      ],
-      "correctAnswer": 3,
-      "explanation": "Journey Builder supports multi-channel journeys."
-    },
-    {
-      "question": "Which capability enables cross-channel orchestration?",
-      "options": [
-        "Single channel only",
-        "No orchestration",
-        "Unified contact data and journey orchestration",
-        "Manual only"
+        "A completed purchase recorded against their profile in the last twelve months",
+        "Membership of at least one publication list configured within the account",
+        "A mobile number and a recorded opt-in",
+        "An email address that has already been confirmed as deliverable by the platform"
       ],
       "correctAnswer": 2,
-      "explanation": "Unified data and orchestration enable cross-channel."
+      "explanation": "Mobile messaging requires both a usable number and consent, and consent for SMS is separate from consent for email.",
+      "whyWrong": [
+        "Purchase history is not a prerequisite for messaging.",
+        "Publication lists govern email categories.",
+        "An email address is irrelevant to whether an SMS can be sent."
+      ]
     },
     {
-      "question": "What does Mobile Studio support?",
+      "question": "Why is a single contact key important in a cross-channel journey?",
       "options": [
-        "SMS, push notifications, and in-app messaging",
-        "Push only",
-        "Email only",
-        "SMS only"
+        "It sets the time zone used when the journey calculates its wait periods",
+        "It ties the same person's channels together",
+        "It determines the order in which the journey activities will be executed",
+        "It controls which business unit the journey is permitted to send from"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Without one identifier across email, mobile and push, the same person appears as several contacts and receives duplicate or contradictory messages.",
+      "whyWrong": [
+        "Time zone handling is a separate journey setting.",
+        "Activity order is defined by the journey canvas.",
+        "Business unit scope is configured on the journey itself."
+      ]
+    },
+    {
+      "question": "A journey should pause overnight and resume sending at 9am local time. What supports this?",
+      "options": [
+        "A decision split that routes contacts according to their recorded country",
+        "Send-time and time-zone settings on the activity",
+        "A wait step configured with a fixed duration measured in hours and minutes",
+        "A separate journey version built for each of the time zones being targeted"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Journeys support waiting until a specific time, evaluated against the contact's time zone, rather than only waiting a fixed duration.",
+      "whyWrong": [
+        "Routing by country does not by itself control send time.",
+        "A fixed duration lands at a different local time for each contact.",
+        "A version per time zone is unmanageable and duplicates the logic."
+      ]
+    },
+    {
+      "question": "What is the purpose of a push notification's deep link?",
+      "options": [
+        "It confirms to the platform that the notification was successfully delivered",
+        "It opens the relevant screen inside the app",
+        "It sets how long the notification will remain visible on the device screen",
+        "It records the contact's consent to receive further push notifications later"
+      ],
+      "correctAnswer": 1,
+      "explanation": "A deep link takes the person straight to the content the message is about, instead of dropping them on the app's home screen.",
+      "whyWrong": [
+        "Delivery confirmation is reported separately by the platform.",
+        "Display duration is controlled by the device and the operating system.",
+        "Consent is captured when the app requests permission."
+      ]
+    },
+    {
+      "question": "A campaign runs across email, SMS and push. What is the main risk to manage?",
+      "options": [
+        "Over-messaging the same person",
+        "The three channels being unable to share a single creative design template",
+        "The platform being unable to report on more than one channel at a time",
+        "Each channel requiring its own entirely separate Marketing Cloud account"
       ],
       "correctAnswer": 0,
-      "explanation": "Mobile Studio supports SMS, push, and in-app."
+      "explanation": "The same contact can be reachable on all three, so without frequency limits or suppression they receive the same message repeatedly.",
+      "whyWrong": [
+        "Channels legitimately use different creative formats.",
+        "Cross-channel reporting is a standard capability.",
+        "One account handles multiple channels."
+      ]
     },
     {
-      "question": "Which integration connects cross-channel data?",
+      "question": "What does a journey's entry source re-evaluation setting control?",
       "options": [
-        "No integration",
-        "Slack only",
-        "CDP, Salesforce CRM, and advertising platforms",
-        "Email only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "CDP and CRM connect cross-channel data."
-    },
-    {
-      "question": "What is the purpose of cross-channel marketing?",
-      "options": [
-        "SMS only",
-        "Email only",
-        "Consistent, coordinated experiences across touchpoints",
-        "Single channel only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Cross-channel delivers consistent experiences."
-    },
-    {
-      "question": "Which best practice applies to cross-channel implementation?",
-      "options": [
-        "No identity",
-        "Unified contact identity and channel preferences",
-        "Single channel only",
-        "Ignore data"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Unified identity and preferences support cross-channel."
-    },
-    {
-      "question": "What does Advertising Studio support?",
-      "options": [
-        "Paid media activation across ad platforms",
-        "Push only",
-        "Email only",
-        "SMS only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Advertising Studio supports paid media activation."
-    },
-    {
-      "question": "What is contact stitching in cross-channel marketing?",
-      "options": [
-        "A report",
-        "Merging identity across channels (email, device, anonymous) into a unified profile",
-        "An email metric",
-        "A journey step"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Contact stitching unifies identity across channels for a single customer view."
-    },
-    {
-      "question": "What is the benefit of cross-channel marketing?",
-      "options": [
-        "Siloed only",
-        "No benefit",
-        "Manual only",
-        "Coordinated experiences that improve engagement and conversion"
+        "How long the journey will keep running before it closes automatically",
+        "Which of the available channels the journey is permitted to send through",
+        "How many times a single contact may travel through the journey in total",
+        "How often new qualifying contacts are picked up"
       ],
       "correctAnswer": 3,
-      "explanation": "Cross-channel improves engagement and conversion."
+      "explanation": "Re-evaluation frequency determines how quickly newly qualifying contacts enter, which matters for anything meant to feel responsive.",
+      "whyWrong": [
+        "Journey duration is not set by entry evaluation.",
+        "Channel use is defined by the activities on the canvas.",
+        "Re-entry is governed by a separate contact re-entry setting."
+      ]
     },
     {
-      "question": "Which Marketing Cloud topic is key for Advanced Cross Channel?",
+      "question": "A contact replies STOP to an SMS. What must happen?",
       "options": [
-        "Reports only",
-        "Journey Builder, data model, and channel integration",
-        "Email only",
-        "Slack only"
+        "They are opted out of SMS immediately",
+        "They are removed from every journey and channel across the whole account",
+        "Their email subscription is cancelled at the same time as the SMS opt-out",
+        "A case is created for an agent to review before any action is taken"
+      ],
+      "correctAnswer": 0,
+      "explanation": "STOP is a mandatory opt-out keyword, and it must take effect for mobile messaging without delay or human intervention.",
+      "whyWrong": [
+        "Opting out of SMS does not imply opting out of other channels.",
+        "Email consent is separate and should not be revoked automatically.",
+        "Manual review would delay a legally required opt-out."
+      ]
+    },
+    {
+      "question": "Why would a marketer use a holdout group in a cross-channel programme?",
+      "options": [
+        "To test whether the creative renders correctly on every type of device",
+        "To comply with a requirement that some contacts are never contacted",
+        "To reduce the total message volume the platform has to process each day",
+        "To measure what the programme actually added"
+      ],
+      "correctAnswer": 3,
+      "explanation": "A group deliberately left out of the programme shows what would have happened anyway, which is the only way to attribute the result.",
+      "whyWrong": [
+        "Rendering is checked with test sends and preview tools.",
+        "Holdouts are a measurement device, not a consent mechanism.",
+        "Volume reduction is not the purpose of a holdout."
+      ]
+    },
+    {
+      "question": "What is the difference between an API event and a data extension entry source?",
+      "options": [
+        "One is triggered per contact, the other evaluated in batches",
+        "One can only be used for email while the other supports mobile channels",
+        "One requires a developer to configure whereas the other does not at all",
+        "One works in a sandbox environment and the other only in production"
+      ],
+      "correctAnswer": 0,
+      "explanation": "An API event lets an external system inject a single contact in real time. A data extension source is evaluated on a schedule.",
+      "whyWrong": [
+        "Both entry sources can feed journeys using any channel.",
+        "Both need configuration; neither is developer-only.",
+        "Both work in any environment."
+      ]
+    },
+    {
+      "question": "A journey has been running for a month and the client wants to change an email's subject line. What is required?",
+      "options": [
+        "A direct edit to the email, which the running journey will then pick up",
+        "A pause on the journey while the subject line is amended and then resumed",
+        "A new version of the journey",
+        "A duplicate journey running alongside the original with the new subject"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Running journeys are locked, so the change goes into a new version while contacts already in flight complete the old one.",
+      "whyWrong": [
+        "Journey activities reference a fixed version of the asset.",
+        "Pausing does not unlock the journey for editing.",
+        "Two parallel journeys would double-message the audience."
+      ]
+    },
+    {
+      "question": "Which measure best shows whether adding SMS to an email programme was worthwhile?",
+      "options": [
+        "The click-through rate recorded on the SMS messages that were opened",
+        "Incremental conversion against a comparable group",
+        "The total number of text messages the platform delivered in the period",
+        "The reduction in the number of email sends the programme now requires"
       ],
       "correctAnswer": 1,
-      "explanation": "Journey Builder, data, and channel integration are key."
+      "explanation": "The question is whether SMS added anything, which needs a comparison against a group that received email alone.",
+      "whyWrong": [
+        "SMS click rate alone does not show whether email would have converted anyway.",
+        "Message volume is activity, not value.",
+        "Sending fewer emails is not itself a benefit."
+      ]
+    },
+    {
+      "question": "What should drive the choice of channel for a given message?",
+      "options": [
+        "Urgency, consent and where the person engages",
+        "The channel the marketing team is most comfortable building in",
+        "The channel that produced the highest open rate in the previous quarter",
+        "The channel that currently has the lowest cost per message sent"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Channel choice follows the nature of the message and the person's consent and habits, not internal convenience.",
+      "whyWrong": [
+        "Team familiarity is not a customer-centred reason.",
+        "A past open rate on other content says little about this message.",
+        "Cost alone ignores whether the message will land or be welcome."
+      ]
+    },
+    {
+      "question": "A contact exists in the journey but never reaches the SMS activity. What should be checked first?",
+      "options": [
+        "Whether the contact record includes a completed purchase history",
+        "Whether the business unit has enough remaining send capacity left",
+        "Whether they were routed down a different path",
+        "Whether the email creative contains a valid and tested deep link"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Splits route contacts down different branches, so the usual reason an activity is never reached is that the contact took another path.",
+      "whyWrong": [
+        "Purchase history is not normally a routing condition.",
+        "Capacity would affect many contacts, not one path.",
+        "Deep links affect what happens after a tap, not journey routing."
+      ]
+    },
+    {
+      "question": "Which best describes the point of cross-channel orchestration?",
+      "options": [
+        "Sending the identical message through every available channel at once",
+        "Allowing each channel team to run its own independent campaigns",
+        "One coordinated conversation across channels",
+        "Replacing email entirely with mobile and push messaging over time"
+      ],
+      "correctAnswer": 2,
+      "explanation": "The aim is a single coherent sequence where each channel plays its part and the contact is not messaged twice for the same thing.",
+      "whyWrong": [
+        "Duplicating one message across channels is the problem, not the goal.",
+        "Independent teams produce exactly the uncoordinated experience to avoid.",
+        "Channels complement each other rather than replacing one another."
+      ]
     }
   ]
 }

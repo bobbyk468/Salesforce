@@ -157,169 +157,244 @@
   ],
   "sampleQuestions": [
     {
-      "question": "Which content type allows for dynamic, personalized content based on subscriber data?",
+      "question": "A marketer needs the same footer on 40 emails and expects to change the address in it next month. How should it be built?",
       "options": [
-        "AMPscript",
-        "HTML Block",
-        "Static Content",
-        "Text Block"
+        "As a shared content block used by each email",
+        "As text pasted directly into each of the forty individual email templates",
+        "As an image file containing the address, uploaded once and linked everywhere",
+        "As an AMPscript lookup that retrieves the address from a data extension"
       ],
       "correctAnswer": 0,
-      "explanation": "AMPscript is Marketing Cloud's scripting language for dynamic, personalized email content based on subscriber data."
+      "explanation": "A shared block is referenced rather than copied, so editing it once updates every email that uses it.",
+      "whyWrong": [
+        "Pasted text means forty separate edits and forty chances to miss one.",
+        "Text inside an image cannot be read by screen readers or when images are blocked.",
+        "A lookup per send is unnecessary work for a value that rarely changes."
+      ]
     },
     {
-      "question": "What is a Data Extension used for in Marketing Cloud?",
+      "question": "What is the effect of a double opt-in process?",
       "options": [
-        "To create email templates",
-        "To store subscriber and relational data",
-        "To schedule sends",
-        "To track email opens"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Data Extensions store subscriber data, custom data, and relational data used for segmentation and personalization."
-    },
-    {
-      "question": "Which feature sends emails at the optimal time for each subscriber?",
-      "options": [
-        "Triggered Send",
-        "Automation Studio",
-        "Send Time Optimization",
-        "Journey Builder"
+        "The subscriber receives each campaign twice to improve the chance of an open",
+        "The subscriber's record is created in both the list and a data extension",
+        "The subscriber confirms their address before receiving mail",
+        "The subscriber is added to two separate publication lists within the account"
       ],
       "correctAnswer": 2,
-      "explanation": "Send Time Optimization uses Einstein to send at the best time per subscriber."
+      "explanation": "Double opt-in sends a confirmation message and only subscribes the person once they act on it, which proves the address is valid and wanted.",
+      "whyWrong": [
+        "Sending everything twice would increase complaints sharply.",
+        "It is about consent rather than where the record is stored.",
+        "It concerns confirmation, not list membership."
+      ]
     },
     {
-      "question": "What is the difference between an All Subscribers list and a Data Extension?",
+      "question": "An email renders correctly in most clients but breaks in one older desktop client. What is the usual cause?",
       "options": [
-        "All Subscribers is optional",
-        "Data Extensions only for SMS",
-        "No difference",
-        "All Subscribers is managed by SFMC; Data Extensions allow custom schema and relational data"
+        "The send classification being set to commercial rather than transactional",
+        "Unsupported CSS in that client",
+        "The sending domain not having a published DKIM record configured for it",
+        "The data extension used for the send containing more columns than needed"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Email clients support very different subsets of CSS, which is why table-based layouts and inline styles remain common in email.",
+      "whyWrong": [
+        "Classification governs opt-out handling, not layout.",
+        "Authentication affects delivery, not how markup is rendered.",
+        "Audience structure has no bearing on rendering."
+      ]
+    },
+    {
+      "question": "Why would a marketer segment a large list before sending rather than mailing everyone?",
+      "options": [
+        "Unsegmented sends cannot be reported on within the standard tracking views",
+        "Segmented sends are delivered more quickly than a single large send would be",
+        "The platform imposes a hard limit on how many subscribers one send may include",
+        "Relevance raises engagement and lowers complaints"
       ],
       "correctAnswer": 3,
-      "explanation": "All Subscribers is the system list; Data Extensions provide flexible schema for custom and relational data."
+      "explanation": "Mail that matches what someone cares about gets opened and clicked more and reported as spam less, which protects the sending reputation.",
+      "whyWrong": [
+        "Tracking works the same either way.",
+        "Delivery speed is not the reason to segment.",
+        "There is no practical subscriber limit of this kind."
+      ]
     },
     {
-      "question": "Which metric indicates how many recipients opened an email?",
+      "question": "A send uses a data extension that is not marked as sendable. What happens?",
       "options": [
-        "Send count",
-        "Unsubscribe rate",
-        "Bounce rate",
-        "Open rate"
+        "It cannot be selected as the send audience",
+        "The platform converts the data extension into a subscriber list automatically",
+        "The send proceeds and the subscribers are added to All Subscribers first",
+        "The send proceeds but every subscriber receives the same default content"
+      ],
+      "correctAnswer": 0,
+      "explanation": "A data extension must be sendable and related to subscribers before it can be used as an audience for a send.",
+      "whyWrong": [
+        "There is no automatic conversion to a list.",
+        "No automatic subscriber creation takes place.",
+        "An unsendable extension is not offered as an audience at all."
+      ]
+    },
+    {
+      "question": "What does the term list hygiene refer to?",
+      "options": [
+        "Ensuring every email includes a physical address and unsubscribe footer",
+        "Keeping the folder structure of the account tidy and consistently named",
+        "Removing invalid and inactive addresses over time",
+        "Checking that each send is classified correctly before it is scheduled"
+      ],
+      "correctAnswer": 2,
+      "explanation": "Hygiene is the ongoing work of removing addresses that bounce or never engage, which keeps bounce rates and reputation healthy.",
+      "whyWrong": [
+        "Footer content is a compliance requirement.",
+        "Folder organisation is housekeeping of content, not of the list.",
+        "Classification is a configuration step per send."
+      ]
+    },
+    {
+      "question": "A subscriber opens an email on a phone and clicks a link that leads to a desktop-only page. What is the problem?",
+      "options": [
+        "The email was sent with a commercial rather than transactional classification",
+        "The landing experience is not responsive",
+        "The subscriber's record is missing the mobile number needed for the journey",
+        "The link was tracked, which prevents it opening correctly on a mobile device"
+      ],
+      "correctAnswer": 1,
+      "explanation": "Most email is opened on a phone, so a link that leads somewhere unusable on mobile wastes the engagement the email earned.",
+      "whyWrong": [
+        "Classification has no effect on the destination page.",
+        "A mobile number is irrelevant to opening a web page.",
+        "Link tracking works normally on mobile devices."
+      ]
+    },
+    {
+      "question": "What is the purpose of a seed list?",
+      "options": [
+        "Test addresses that receive the send for checking",
+        "The initial subscribers loaded when a new business unit is first configured",
+        "A set of addresses reserved for transactional messages only within the account",
+        "A list of the subscribers who engage most often with the brand's email"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Seed addresses sit across different mailbox providers and receive the send so you can check rendering and placement in real inboxes.",
+      "whyWrong": [
+        "They are not an onboarding artefact.",
+        "Seed lists are for testing rather than transactional sending.",
+        "Most engaged subscribers are a segment, not a seed list."
+      ]
+    },
+    {
+      "question": "A campaign shows a high open rate and a high unsubscribe rate together. What does this suggest?",
+      "options": [
+        "The sending domain has lost its authentication records in the DNS zone",
+        "The audience was too small for the figures to carry any real meaning",
+        "The subject line promised more than the content gave",
+        "The emails were delivered to the spam folder for most of the recipients"
+      ],
+      "correctAnswer": 2,
+      "explanation": "People opened, so the subject line worked, and then chose to leave, which points at a mismatch between the promise and the content.",
+      "whyWrong": [
+        "Authentication problems reduce delivery rather than driving opt-outs.",
+        "A high rate on a small audience is possible but is not what this pattern shows.",
+        "Mail in the spam folder produces low opens, not high ones."
+      ]
+    },
+    {
+      "question": "Which AMPscript construct would you use to show different content depending on a field value?",
+      "options": [
+        "An IF block evaluating the attribute",
+        "A RaiseError call that stops the send when the field has no value at all",
+        "A Lookup call that retrieves the value from a related data extension row",
+        "A Concat call that joins the field value onto the end of the greeting text"
+      ],
+      "correctAnswer": 0,
+      "explanation": "Conditional logic with IF is what varies the content, which is the heart of personalising beyond simple merge fields.",
+      "whyWrong": [
+        "RaiseError halts processing for that subscriber.",
+        "Lookup retrieves a value but does not itself branch on it.",
+        "Concat joins strings together."
+      ]
+    },
+    {
+      "question": "What should happen to a subscriber who hard bounces twice?",
+      "options": [
+        "They should be re-imported from the original source file to refresh the record",
+        "They should be moved onto a publication list for less frequent contact",
+        "They should be sent a confirmation email asking them to verify the address",
+        "They should be excluded from future sends"
       ],
       "correctAnswer": 3,
-      "explanation": "Open rate measures the percentage of delivered emails that were opened."
+      "explanation": "A hard bounce means the address is permanently bad, so continuing to send to it damages the sending reputation.",
+      "whyWrong": [
+        "Re-importing the same bad address changes nothing.",
+        "Reducing frequency does not help an address that does not exist.",
+        "A confirmation message to a dead address cannot be received."
+      ]
     },
     {
-      "question": "What is a triggered send used for?",
+      "question": "Why does a dedicated IP address suit a high-volume sender more than a shared one?",
       "options": [
-        "Only for unsubscribes",
-        "Batch campaigns only",
-        "Sending emails in real-time based on an event (e.g., welcome, password reset)",
-        "Only for testing"
+        "It removes the need to publish SPF and DKIM records for the sending domain",
+        "It guarantees that the sender's mail is placed in the inbox rather than spam",
+        "Its reputation reflects only that sender's own behaviour",
+        "It allows the sender to bypass the authentication checks made by receivers"
       ],
       "correctAnswer": 2,
-      "explanation": "Triggered sends fire based on events, enabling transactional and event-driven messaging."
+      "explanation": "On a dedicated IP your reputation is yours alone, which is an advantage at volume and a liability if you send carelessly.",
+      "whyWrong": [
+        "SPF and DKIM are still required.",
+        "No IP arrangement guarantees inbox placement.",
+        "Authentication applies regardless of the IP arrangement."
+      ]
     },
     {
-      "question": "Which tool schedules recurring email sends in Marketing Cloud?",
+      "question": "A client wants to know which link in an email drove the most clicks. Where is this found?",
       "options": [
-        "Data Extensions only",
-        "Automation Studio with Email Send activities",
-        "Content Builder only",
-        "Journey Builder only"
+        "In the automation that was used to schedule and execute the send overnight",
+        "In the click activity for that send",
+        "In the All Subscribers list filtered to the subscribers who opened the email",
+        "In the data extension that supplied the audience for the campaign in question"
       ],
       "correctAnswer": 1,
-      "explanation": "Automation Studio can schedule recurring sends; Journey Builder handles journey-based sends."
+      "explanation": "Tracking records clicks per link, which is what lets you compare the performance of different calls to action.",
+      "whyWrong": [
+        "The automation records execution, not click detail.",
+        "All Subscribers holds status, not per-link engagement.",
+        "The audience extension holds who was sent to, not what they clicked."
+      ]
     },
     {
-      "question": "What does CAN-SPAM require for commercial email?",
+      "question": "What is the risk of using a purchased email list?",
       "options": [
-        "Only from address",
-        "Only subject line",
-        "Opt-out mechanism, physical address, and accurate subject/from",
-        "No requirements"
-      ],
-      "correctAnswer": 2,
-      "explanation": "CAN-SPAM requires opt-out, physical address, and accurate from/subject information."
-    },
-    {
-      "question": "Which feature prevents duplicate sends to the same subscriber?",
-      "options": [
-        "Only Send Throttling",
-        "Send Throttling and Suppression lists",
-        "No such feature",
-        "Only Data Extensions"
-      ],
-      "correctAnswer": 1,
-      "explanation": "Suppression lists and send throttling help prevent over-sending and duplicates."
-    },
-    {
-      "question": "What is a send classification used for?",
-      "options": [
-        "Colors only",
-        "Tracking only",
-        "Templates only",
-        "Defining email type (e.g., commercial, transactional) for deliverability and compliance"
+        "Tracking data is unavailable for any send to an imported audience",
+        "The platform charges a higher rate per message for imported addresses",
+        "Purchased addresses cannot be stored inside a sendable data extension",
+        "Complaints and bounces damage the sending reputation"
       ],
       "correctAnswer": 3,
-      "explanation": "Send classifications define email type and affect deliverability and compliance rules."
+      "explanation": "People who never asked to hear from you complain and the lists are full of dead addresses, which harms deliverability for everything you send.",
+      "whyWrong": [
+        "Tracking works regardless of the audience's origin.",
+        "Pricing does not vary by how the address was obtained.",
+        "The addresses can be stored; the problem is the consequence of mailing them."
+      ]
     },
     {
-      "question": "Which block in an email can be personalized with subscriber attributes?",
+      "question": "A send must go out at 8am in each recipient's own local time. What supports this?",
       "options": [
-        "Any content block can use personalization strings or AMPscript",
-        "Only images",
-        "Only subject line",
-        "Only preheader"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Content blocks support personalization strings and AMPscript for dynamic content."
-    },
-    {
-      "question": "What does the Tracking Extract provide?",
-      "options": [
-        "Send, open, click, bounce, and unsubscribe data for reporting",
-        "Template data only",
-        "Email content",
-        "Subscriber data only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Tracking Extract delivers send and engagement data for analytics and reporting."
-    },
-    {
-      "question": "Which email authentication method helps improve deliverability?",
-      "options": [
-        "Only DKIM",
-        "SPF, DKIM, and DMARC",
-        "Only SPF",
-        "No authentication needed"
+        "A separate email created and scheduled by hand for each time zone involved",
+        "A time-zone aware send configuration",
+        "An automation that runs once every hour throughout the whole of the day",
+        "A single send scheduled for 8am in the account's own configured time zone"
       ],
       "correctAnswer": 1,
-      "explanation": "SPF, DKIM, and DMARC authenticate your domain and improve inbox placement."
-    },
-    {
-      "question": "What is a dynamic content block used for?",
-      "options": [
-        "Tracking only",
-        "Static text only",
-        "Showing different content to different segments based on rules",
-        "Images only"
-      ],
-      "correctAnswer": 2,
-      "explanation": "Dynamic content displays different content based on rules and audience attributes."
-    },
-    {
-      "question": "Which report shows link-level click performance?",
-      "options": [
-        "Click report with link-level detail",
-        "Open report only",
-        "Send report only",
-        "Bounce report only"
-      ],
-      "correctAnswer": 0,
-      "explanation": "Click reports show which links were clicked and by whom for optimization."
+      "explanation": "Sending by the recipient's local time requires the platform to stagger delivery against each subscriber's time zone.",
+      "whyWrong": [
+        "Building an email per time zone multiplies the maintenance.",
+        "An hourly automation without time-zone logic does not target 8am locally.",
+        "One fixed time means most recipients get it at the wrong hour."
+      ]
     }
   ]
 }
