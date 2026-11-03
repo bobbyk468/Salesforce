@@ -2010,7 +2010,7 @@ const CERT_SPECIFIC_FAQS: Record<string, FaqItem[]> = {
   'tableau-consultant': [
     {
       question: 'What does a Tableau Consultant do?',
-      answer: 'Tableau Consultants design Tableau solutions, gather requirements, create visualizations, build dashboards, and help organizations leverage Tableau for analytics.',
+      answer: 'Tableau Consultants design Tableau solutions, gather requirements, create visualizations, build dashboards, and help organizations get value from Tableau.',
     },
     {
       question: 'Do I need Tableau experience for Tableau Consultant?',

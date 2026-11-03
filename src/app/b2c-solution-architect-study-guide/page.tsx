@@ -55,7 +55,7 @@ const examSections = [
 const faqItems = [
   {
     question: 'What is the Salesforce B2C Solution Architect certification?',
-    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios, connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into a seamless consumer experience. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
+    answer: 'The B2C Solution Architect certification validates expertise in designing multi-cloud solutions for direct-to-consumer (B2C) scenarios, connecting B2C Commerce Cloud, Marketing Cloud, Service Cloud, Personalisation, and Loyalty Management into one consumer experience. The exam has 60 questions, 120-minute time limit, ~68% passing score, and a $400 fee.',
   },
   {
     question: 'What is the difference between B2B and B2C Solution Architect exams?',

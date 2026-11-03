@@ -167,7 +167,7 @@
         "Use a one-word prompt like 'email' and let Claude determine the content"
       ],
       "correctAnswer": 1,
-      "explanation": "A structured prompt with clear context (product details + segment definitions) and a specific output request (three tailored versions) produces the best results. This leverages Claude's ability to handle multi-part tasks when given complete context.",
+      "explanation": "A structured prompt with clear context (product details + segment definitions) and a specific output request (three tailored versions) produces the best results. This uses Claude's ability to handle multi-part tasks when given complete context.",
       "whyWrong": [
         "Sending three isolated prompts with no shared context forces Claude to reconstruct product details three times and risks inconsistent messaging across segments.",
         "Writing one generic email and manually customizing afterward defeats the purpose of using Claude to draft tailored content in the first place.",

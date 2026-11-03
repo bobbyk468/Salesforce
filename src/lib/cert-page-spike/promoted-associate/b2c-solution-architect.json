@@ -41,7 +41,7 @@
   },
   "certificationCard": {
     "code": "B2C Solution Architect",
-    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management for seamless customer journeys.",
+    "description": "This exam tests your ability to architect multi-cloud B2C solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and Order Management into one customer journey.",
     "examDetails": {
       "questions": 60,
       "passingScore": "~63%",
@@ -83,7 +83,7 @@
   },
   "scenarioTips": {
     "h2": "How to Pass the Salesforce B2C Solution Architect Exam",
-    "intro": "The B2C Solution Architect exam tests multi-cloud architecture for B2C customer experiences. Focus on designing solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and CDP/Data Cloud for seamless customer journeys.",
+    "intro": "The B2C Solution Architect exam tests multi-cloud architecture for B2C customer experiences. Focus on designing solutions spanning Commerce Cloud, Marketing Cloud, Service Cloud, and CDP/Data Cloud into one customer journey.",
     "blocks": [
       {
         "heading": "Multi-Cloud B2C Journeys",

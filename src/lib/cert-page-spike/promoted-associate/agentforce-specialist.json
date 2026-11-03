@@ -349,7 +349,7 @@
         "An outbound email notification to the service team's shared inbox"
       ],
       "correctAnswer": 1,
-      "explanation": "Agentforce includes a standard escalation action that hands the conversation, including full transcript and context, to a human agent via Omni-Channel, ensuring seamless transitions.",
+      "explanation": "Agentforce includes a standard escalation action that hands the conversation, including full transcript and context, to a human agent via Omni-Channel, so the handover is not restarted.",
       "whyWrong": [
         "'Agent Escalation Flow' isn't the actual named Agentforce capability, the real standard action is 'Escalate to Agent.'",
         "A Workflow Rule triggering Case creation on negative sentiment is a possible automation pattern, but it isn't the built-in mechanism for live conversation hand-off.",

@@ -46,7 +46,7 @@ const breadcrumbItems = [
 const examSections = [
   { name: 'Data Modeling/Database Design', weight: 25, note: 'Compare data model designs, platform object features, business and technical metadata, big objects, security and sharing constraints, and data-skew trade-offs.' },
   { name: 'Master Data Management', weight: 5, note: 'Review MDM styles, consolidation and harmonization, survivorship criteria, external reference data, canonical models, hierarchy management, and golden-record decisions.' },
-  { name: 'Salesforce Data Management', weight: 25, note: 'Study license and object choices, consistent persistence, a single customer view, and consolidating or leveraging multiple Salesforce instances.' },
+  { name: 'Salesforce Data Management', weight: 25, note: 'Study license and object choices, consistent persistence, a single customer view, and consolidating or working across multiple Salesforce instances.' },
   { name: 'Data Governance', weight: 10, note: 'Review privacy-aware data models, identification and protection of sensitive information, and enterprise data-governance approaches.' },
   { name: 'Large Data Volume Considerations', weight: 20, note: 'Study scalable models and performance, archiving and purging plans, and when to use virtualized data.' },
   { name: 'Data Migration', weight: 15, note: 'Review data quality at load time, migration performance for large volumes, and Salesforce data export approaches.' },

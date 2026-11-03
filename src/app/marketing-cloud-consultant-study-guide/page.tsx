@@ -173,7 +173,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
               <BookOpen className="h-4 w-4 text-salesforce-blue" />
               Data Management (20%)
             </p>
-            <p>Data architecture decisions drive everything else in a Marketing Cloud implementation. <strong>Data extensions vs lists:</strong> lists are legacy and simpler; data extensions support multi-field subscriber attributes, SQL queries, and complex data models, the answer is almost always data extensions for any new implementation. <strong>Contact Builder:</strong> the data model layer: Contact objects, attribute groups, and population configuration. Know how to set up the Contact model so that data extensions link to the right Contact. <strong>Data retention:</strong> set retention periods per data extension (on send, fixed date, after X days). <strong>Subscriber management at scale:</strong> subscriber key strategy, using CRM Contact ID as the subscriber key enables seamless MC Connect data joining.</p>
+            <p>Data architecture decisions drive everything else in a Marketing Cloud implementation. <strong>Data extensions vs lists:</strong> lists are legacy and simpler; data extensions support multi-field subscriber attributes, SQL queries, and complex data models, the answer is almost always data extensions for any new implementation. <strong>Contact Builder:</strong> the data model layer: Contact objects, attribute groups, and population configuration. Know how to set up the Contact model so that data extensions link to the right Contact. <strong>Data retention:</strong> set retention periods per data extension (on send, fixed date, after X days). <strong>Subscriber management at scale:</strong> subscriber key strategy, using CRM Contact ID as the subscriber key is what lets MC Connect join the data.</p>
           </div>
           <div>
             <p className="font-semibold text-gray-900 mb-1 flex items-center gap-2">
@@ -244,7 +244,7 @@ export default function MarketingCloudConsultantStudyGuidePage() {
           <li>Private domain (SAP) vs shared IP: high-volume brand senders need private domain</li>
           <li>MC Connect: syncs Leads, Contacts, Users, Campaigns, not Accounts directly</li>
           <li>Synchronized Data Extensions: read-only CRM mirror, updates on MC Connect schedule</li>
-          <li>Subscriber key strategy: use CRM Contact ID to enable seamless MC Connect joins</li>
+          <li>Subscriber key strategy: use CRM Contact ID so MC Connect can join cleanly</li>
           <li>Send classifications: commercial (unsubscribe-respected) vs transactional (bypass)</li>
           <li>Journey Builder entry sources: data extension, API event, Salesforce entry, audience</li>
           <li>Journey goal: measure effectiveness and optionally exit contacts who achieve the goal</li>

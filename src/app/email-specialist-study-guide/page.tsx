@@ -163,7 +163,7 @@ export default function EmailSpecialistStudyGuidePage() {
             { week: 'Week 2', focus: 'Subscriber management: All Subscribers, lists vs data extensions, subscriber key, profile centre, preference centre, unsubscribe flows.' },
             { week: 'Week 3', focus: 'Email creation: Content Builder blocks and templates, dynamic content, AMPscript basics for personalisation, A/B testing setup.' },
             { week: 'Week 4', focus: 'Email Sending & Delivery, send classifications, delivery profiles, SAP, STO. Bounce types (hard, soft, technical), suppression lists, compliance.' },
-            { week: 'Week 5', focus: 'Deliverability deep dive: SPF, DKIM, DMARC explained, IP warming, dedicated vs shared IPs, reputation monitoring, CAN-SPAM and GDPR.' },
+            { week: 'Week 5', focus: 'Deliverability in depth: SPF, DKIM, DMARC explained, IP warming, dedicated vs shared IPs, reputation monitoring, CAN-SPAM and GDPR.' },
             { week: 'Week 6', focus: 'Journey Builder, entry sources, all journey activities, decision splits vs engagement splits, goal metrics, testing and activation.' },
             { week: 'Week 7', focus: 'Reporting, tracking metrics, data views (Bounces, Clicks, Opens), Intelligence Reports, tracking extracts, custom reports.' },
             { week: 'Week 8', focus: 'Full mock exams. Focus on Journey Builder scenarios (which activity for which use case) and deliverability questions (which bounce type applies).' },

@@ -171,7 +171,7 @@ export default function PardotConsultantStudyGuidePage() {
           {[
             { week: 'Week 1', focus: 'Pardot fundamentals review', tasks: 'Review Pardot Specialist content if not already certified. Understand the full prospect lifecycle and tracking mechanisms.' },
             { week: 'Week 2', focus: 'Administration & account setup', tasks: 'Study multi-business unit configuration, tracker domain setup, email authentication, and account-level settings.' },
-            { week: 'Week 3', focus: 'Salesforce CRM integration', tasks: 'Deep dive on the Salesforce connector: field mapping, sync behaviour, connected campaigns, and opportunity influence.' },
+            { week: 'Week 3', focus: 'Salesforce CRM integration', tasks: 'Work through the Salesforce connector: field mapping, sync behaviour, connected campaigns, and opportunity influence.' },
             { week: 'Week 4', focus: 'Lead management & scoring', tasks: 'Study scoring models, grading profiles, assignment rules, and the B2B marketing-to-sales handoff workflow design.' },
             { week: 'Week 5', focus: 'Email, forms & landing pages', tasks: 'Study email deliverability best practices, form progressive profiling, completion actions, and form handlers vs native forms.' },
             { week: 'Week 6', focus: 'Engagement Studio & reporting', tasks: 'Build and test Engagement Studio programmes. Study the lifecycle reporter and campaign performance metrics.' },

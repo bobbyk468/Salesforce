@@ -161,7 +161,7 @@ export default function B2bSolutionArchitectStudyGuidePage() {
           {[
             { week: 'Week 1–2', focus: 'B2B fundamentals. Map the B2B buyer journey from awareness to purchase to renewal. Understand how each Salesforce cloud (Sales, CPQ, Revenue, B2B Commerce, Experience) fits into the process.' },
             { week: 'Week 3', focus: 'Sales Cloud for B2B, opportunity management, account hierarchy, partner account relationships, and Sales Cloud reporting for B2B scenarios.' },
-            { week: 'Week 4', focus: 'CPQ deep dive, product bundles, pricing cascade, quote templates, and contract generation. Build a realistic CPQ scenario in a sandbox.' },
+            { week: 'Week 4', focus: 'CPQ in depth, product bundles, pricing cascade, quote templates, and contract generation. Build a realistic CPQ scenario in a sandbox.' },
             { week: 'Week 5', focus: 'Revenue Cloud, billing schedules, invoice generation, revenue recognition, amendments, and evergreen vs fixed-term contracts.' },
             { week: 'Week 6', focus: 'B2B Commerce Cloud, storefront architecture, product catalogue, account-based pricing, order management, and CPQ integration for complex product configuration.' },
             { week: 'Week 7', focus: 'Experience Cloud for partners: PRM features: deal registration, lead distribution, MDF, partner roles, and account hierarchy for partner access.' },
